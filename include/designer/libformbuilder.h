@@ -18,9 +18,9 @@ QFormBuilder* q_formbuilder_new();
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QFormBuilder*
+/// @param self const QFormBuilder*
 ///
-const char** q_formbuilder_plugin_paths(void* self);
+const char** q_formbuilder_plugin_paths(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qformbuilder.html#clearPluginPaths)
 ///
@@ -44,11 +44,11 @@ void q_formbuilder_set_plugin_path(void* self, const char* pluginPaths[static 1]
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qformbuilder.html#customWidgets)
 ///
-/// @param self QFormBuilder*
+/// @param self const QFormBuilder*
 ///
 /// @return libqt_list of QDesignerCustomWidgetInterface*
 ///
-libqt_list q_formbuilder_custom_widgets(void* self);
+libqt_list q_formbuilder_custom_widgets(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qformbuilder.html#createWidget)
 ///
@@ -119,9 +119,9 @@ void q_formbuilder_update_custom_widgets(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QFormBuilder*
-/// @param callback void func()
+/// @param callback void func(QFormBuilder* self)
 ///
-void q_formbuilder_on_update_custom_widgets(void* self, void (*callback)());
+void q_formbuilder_on_update_custom_widgets(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qformbuilder.html#updateCustomWidgets)
 ///
@@ -139,32 +139,13 @@ void q_formbuilder_super_update_custom_widgets(void* self);
 ///
 QWidget* q_formbuilder_widget_by_name(void* self, void* topLevel, const char* name);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qformbuilder.html#widgetByName)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QFormBuilder*
-/// @param callback QWidget* func(QFormBuilder* self, QWidget* topLevel, const char* name)
-///
-void q_formbuilder_on_widget_by_name(void* self, QWidget* (*callback)(void*, void*, const char*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qformbuilder.html#widgetByName)
-///
-/// Base class method implementation
-///
-/// @param self QFormBuilder*
-/// @param topLevel QWidget*
-/// @param name const char*
-///
-QWidget* q_formbuilder_super_widget_by_name(void* self, void* topLevel, const char* name);
-
 /// Inherited from QAbstractFormBuilder
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#workingDirectory)
 ///
-/// @param self QFormBuilder*
+/// @param self const QFormBuilder*
 ///
-QDir* q_formbuilder_working_directory(void* self);
+QDir* q_formbuilder_working_directory(const void* self);
 
 /// Inherited from QAbstractFormBuilder
 ///
@@ -173,7 +154,7 @@ QDir* q_formbuilder_working_directory(void* self);
 /// @param self QFormBuilder*
 /// @param directory QDir*
 ///
-void q_formbuilder_set_working_directory(void* self, void* directory);
+void q_formbuilder_set_working_directory(void* self, const void* directory);
 
 /// Inherited from QAbstractFormBuilder
 ///
@@ -181,9 +162,9 @@ void q_formbuilder_set_working_directory(void* self, void* directory);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QFormBuilder*
+/// @param self const QFormBuilder*
 ///
-const char* q_formbuilder_error_string(void* self);
+const char* q_formbuilder_error_string(const void* self);
 
 /// Inherited from QAbstractFormBuilder
 ///
@@ -364,11 +345,11 @@ void q_formbuilder_on_create_action_group(void* self, QActionGroup* (*callback)(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QFormBuilder*
+/// @param self const QFormBuilder*
 /// @param obj QObject*
 /// @param prop const char*
 ///
-bool q_formbuilder_check_property(void* self, void* obj, const char* prop);
+bool q_formbuilder_check_property(const void* self, void* obj, const char* prop);
 
 /// Inherited from QAbstractFormBuilder
 ///
@@ -376,11 +357,11 @@ bool q_formbuilder_check_property(void* self, void* obj, const char* prop);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QFormBuilder*
+/// @param self const QFormBuilder*
 /// @param obj QObject*
 /// @param prop const char*
 ///
-bool q_formbuilder_super_check_property(void* self, void* obj, const char* prop);
+bool q_formbuilder_super_check_property(const void* self, void* obj, const char* prop);
 
 /// Inherited from QAbstractFormBuilder
 ///
@@ -388,10 +369,10 @@ bool q_formbuilder_super_check_property(void* self, void* obj, const char* prop)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QFormBuilder*
+/// @param self const QFormBuilder*
 /// @param callback bool func(QFormBuilder* self, QObject* obj, const char* prop)
 ///
-void q_formbuilder_on_check_property(void* self, bool (*callback)(void*, void*, const char*));
+void q_formbuilder_on_check_property(const void* self, bool (*callback)(const void*, void*, const char*));
 
 /// Inherited from QAbstractFormBuilder
 ///
@@ -404,7 +385,7 @@ void q_formbuilder_on_check_property(void* self, bool (*callback)(void*, void*, 
 /// @param propertyName const char*
 /// @param value QVariant*
 ///
-bool q_formbuilder_apply_property_internally(void* self, void* o, const char* propertyName, void* value);
+bool q_formbuilder_apply_property_internally(void* self, void* o, const char* propertyName, const void* value);
 
 /// Inherited from QAbstractFormBuilder
 ///
@@ -417,7 +398,7 @@ bool q_formbuilder_apply_property_internally(void* self, void* o, const char* pr
 /// @param propertyName const char*
 /// @param value QVariant*
 ///
-bool q_formbuilder_super_apply_property_internally(void* self, void* o, const char* propertyName, void* value);
+bool q_formbuilder_super_apply_property_internally(void* self, void* o, const char* propertyName, const void* value);
 
 /// Inherited from QAbstractFormBuilder
 ///
@@ -428,7 +409,7 @@ bool q_formbuilder_super_apply_property_internally(void* self, void* o, const ch
 /// @param self QFormBuilder*
 /// @param callback bool func(QFormBuilder* self, QObject* o, const char* propertyName, QVariant* value)
 ///
-void q_formbuilder_on_apply_property_internally(void* self, bool (*callback)(void*, void*, const char*, void*));
+void q_formbuilder_on_apply_property_internally(void* self, bool (*callback)(void*, void*, const char*, const void*));
 
 /// Inherited from QAbstractFormBuilder
 ///
@@ -457,9 +438,9 @@ void q_formbuilder_super_reset(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFormBuilder*
-/// @param callback void func()
+/// @param callback void func(QFormBuilder* self)
 ///
-void q_formbuilder_on_reset(void* self, void (*callback)());
+void q_formbuilder_on_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractFormBuilder
 ///
@@ -488,11 +469,11 @@ QMetaEnum* q_formbuilder_super_tool_bar_area_meta_enum(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFormBuilder*
-/// @param callback QMetaEnum* func()
+/// @param callback QMetaEnum* func(QFormBuilder* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_formbuilder_on_tool_bar_area_meta_enum(void* self, QMetaEnum* (*callback)());
+void q_formbuilder_on_tool_bar_area_meta_enum(void* self, QMetaEnum* (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qformbuilder.html#dtor.QFormBuilder)
 ///

@@ -10,7 +10,7 @@ void q_cborstreamwriter_set_device(void* self, void* device) {
     QCborStreamWriter_SetDevice((QCborStreamWriter*)self, (QIODevice*)device);
 }
 
-QIODevice* q_cborstreamwriter_device(void* self) {
+QIODevice* q_cborstreamwriter_device(const void* self) {
     return QCborStreamWriter_Device((QCborStreamWriter*)self);
 }
 

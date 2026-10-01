@@ -24,26 +24,26 @@ TextGrammarCheck__GrammalecteResultJob* k_textgrammarcheck__grammalecteresultjob
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammalecteResultJob.html)
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 ///
-const QMetaObject* k_textgrammarcheck__grammalecteresultjob_meta_object(void* self);
+const QMetaObject* k_textgrammarcheck__grammalecteresultjob_meta_object(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammalecteResultJob.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
-/// @param callback const QMetaObject* func()
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
+/// @param callback const QMetaObject* func(const TextGrammarCheck__GrammalecteResultJob* self)
 ///
-void k_textgrammarcheck__grammalecteresultjob_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_textgrammarcheck__grammalecteresultjob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammalecteResultJob.html)
 ///
 /// Base class method implementation
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 ///
-const QMetaObject* k_textgrammarcheck__grammalecteresultjob_super_meta_object(void* self);
+const QMetaObject* k_textgrammarcheck__grammalecteresultjob_super_meta_object(const void* self);
 
 /// @param self TextGrammarCheck__GrammalecteResultJob*
 /// @param param1 const char*
@@ -111,9 +111,9 @@ bool k_textgrammarcheck__grammalecteresultjob_can_start(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 ///
-const char* k_textgrammarcheck__grammalecteresultjob_text(void* self);
+const char* k_textgrammarcheck__grammalecteresultjob_text(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammalecteResultJob.html)
 ///
@@ -126,9 +126,9 @@ void k_textgrammarcheck__grammalecteresultjob_set_text(void* self, const char* t
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 ///
-const char* k_textgrammarcheck__grammalecteresultjob_python_path(void* self);
+const char* k_textgrammarcheck__grammalecteresultjob_python_path(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammalecteResultJob.html)
 ///
@@ -141,9 +141,9 @@ void k_textgrammarcheck__grammalecteresultjob_set_python_path(void* self, const 
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 ///
-const char* k_textgrammarcheck__grammalecteresultjob_grammarlecte_cli_path(void* self);
+const char* k_textgrammarcheck__grammalecteresultjob_grammarlecte_cli_path(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammalecteResultJob.html)
 ///
@@ -156,9 +156,9 @@ void k_textgrammarcheck__grammalecteresultjob_set_grammarlecte_cli_path(void* se
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 ///
-const char** k_textgrammarcheck__grammalecteresultjob_arguments(void* self);
+const char** k_textgrammarcheck__grammalecteresultjob_arguments(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammalecteResultJob.html)
 ///
@@ -220,9 +220,9 @@ const char* k_textgrammarcheck__grammalecteresultjob_tr3(const char* s, const ch
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 ///
-const char* k_textgrammarcheck__grammalecteresultjob_object_name(void* self);
+const char* k_textgrammarcheck__grammalecteresultjob_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -237,33 +237,33 @@ void k_textgrammarcheck__grammalecteresultjob_set_object_name(void* self, const 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 ///
-bool k_textgrammarcheck__grammalecteresultjob_is_widget_type(void* self);
+bool k_textgrammarcheck__grammalecteresultjob_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 ///
-bool k_textgrammarcheck__grammalecteresultjob_is_window_type(void* self);
+bool k_textgrammarcheck__grammalecteresultjob_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 ///
-bool k_textgrammarcheck__grammalecteresultjob_is_quick_item_type(void* self);
+bool k_textgrammarcheck__grammalecteresultjob_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 ///
-bool k_textgrammarcheck__grammalecteresultjob_signals_blocked(void* self);
+bool k_textgrammarcheck__grammalecteresultjob_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -278,9 +278,9 @@ bool k_textgrammarcheck__grammalecteresultjob_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 ///
-QThread* k_textgrammarcheck__grammalecteresultjob_thread(void* self);
+QThread* k_textgrammarcheck__grammalecteresultjob_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -331,11 +331,11 @@ void k_textgrammarcheck__grammalecteresultjob_kill_timer2(void* self, int32_t id
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_textgrammarcheck__grammalecteresultjob_children(void* self);
+libqt_list k_textgrammarcheck__grammalecteresultjob_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -373,7 +373,7 @@ void k_textgrammarcheck__grammalecteresultjob_remove_event_filter(void* self, vo
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_textgrammarcheck__grammalecteresultjob_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_textgrammarcheck__grammalecteresultjob_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -384,18 +384,18 @@ QMetaObject__Connection* k_textgrammarcheck__grammalecteresultjob_connect(void* 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_textgrammarcheck__grammalecteresultjob_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_textgrammarcheck__grammalecteresultjob_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_textgrammarcheck__grammalecteresultjob_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_textgrammarcheck__grammalecteresultjob_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -406,7 +406,7 @@ QMetaObject__Connection* k_textgrammarcheck__grammalecteresultjob_connect3(void*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_textgrammarcheck__grammalecteresultjob_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_textgrammarcheck__grammalecteresultjob_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -417,24 +417,24 @@ bool k_textgrammarcheck__grammalecteresultjob_disconnect(void* sender, const cha
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_textgrammarcheck__grammalecteresultjob_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_textgrammarcheck__grammalecteresultjob_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 ///
-bool k_textgrammarcheck__grammalecteresultjob_disconnect3(void* self);
+bool k_textgrammarcheck__grammalecteresultjob_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 /// @param receiver QObject*
 ///
-bool k_textgrammarcheck__grammalecteresultjob_disconnect4(void* self, void* receiver);
+bool k_textgrammarcheck__grammalecteresultjob_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -442,23 +442,23 @@ bool k_textgrammarcheck__grammalecteresultjob_disconnect4(void* self, void* rece
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_textgrammarcheck__grammalecteresultjob_disconnect5(void* param1);
+bool k_textgrammarcheck__grammalecteresultjob_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 ///
-void k_textgrammarcheck__grammalecteresultjob_dump_object_tree(void* self);
+void k_textgrammarcheck__grammalecteresultjob_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 ///
-void k_textgrammarcheck__grammalecteresultjob_dump_object_info(void* self);
+void k_textgrammarcheck__grammalecteresultjob_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -468,16 +468,16 @@ void k_textgrammarcheck__grammalecteresultjob_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_textgrammarcheck__grammalecteresultjob_set_property(void* self, const char* name, void* value);
+bool k_textgrammarcheck__grammalecteresultjob_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 /// @param name const char*
 ///
-QVariant* k_textgrammarcheck__grammalecteresultjob_property(void* self, const char* name);
+QVariant* k_textgrammarcheck__grammalecteresultjob_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -485,9 +485,9 @@ QVariant* k_textgrammarcheck__grammalecteresultjob_property(void* self, const ch
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 ///
-const char** k_textgrammarcheck__grammalecteresultjob_dynamic_property_names(void* self);
+const char** k_textgrammarcheck__grammalecteresultjob_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -501,9 +501,9 @@ QBindingStorage* k_textgrammarcheck__grammalecteresultjob_binding_storage(void* 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 ///
-const QBindingStorage* k_textgrammarcheck__grammalecteresultjob_binding_storage2(void* self);
+const QBindingStorage* k_textgrammarcheck__grammalecteresultjob_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -526,18 +526,18 @@ void k_textgrammarcheck__grammalecteresultjob_on_destroyed(void* self, void (*ca
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 ///
-QObject* k_textgrammarcheck__grammalecteresultjob_parent(void* self);
+QObject* k_textgrammarcheck__grammalecteresultjob_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 /// @param classname const char*
 ///
-bool k_textgrammarcheck__grammalecteresultjob_inherits(void* self, const char* classname);
+bool k_textgrammarcheck__grammalecteresultjob_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -577,7 +577,7 @@ int32_t k_textgrammarcheck__grammalecteresultjob_start_timer23(void* self, int64
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_textgrammarcheck__grammalecteresultjob_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_textgrammarcheck__grammalecteresultjob_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -589,59 +589,59 @@ QMetaObject__Connection* k_textgrammarcheck__grammalecteresultjob_connect5(void*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_textgrammarcheck__grammalecteresultjob_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_textgrammarcheck__grammalecteresultjob_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_textgrammarcheck__grammalecteresultjob_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_textgrammarcheck__grammalecteresultjob_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 /// @param signal const char*
 ///
-bool k_textgrammarcheck__grammalecteresultjob_disconnect1(void* self, const char* signal);
+bool k_textgrammarcheck__grammalecteresultjob_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_textgrammarcheck__grammalecteresultjob_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_textgrammarcheck__grammalecteresultjob_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_textgrammarcheck__grammalecteresultjob_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_textgrammarcheck__grammalecteresultjob_disconnect23(void* self, void* receiver, const char* member);
+bool k_textgrammarcheck__grammalecteresultjob_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_textgrammarcheck__grammalecteresultjob_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -837,7 +837,7 @@ void k_textgrammarcheck__grammalecteresultjob_on_custom_event(void* self, void (
 /// @param self TextGrammarCheck__GrammalecteResultJob*
 /// @param signal QMetaMethod*
 ///
-void k_textgrammarcheck__grammalecteresultjob_connect_notify(void* self, void* signal);
+void k_textgrammarcheck__grammalecteresultjob_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -848,7 +848,7 @@ void k_textgrammarcheck__grammalecteresultjob_connect_notify(void* self, void* s
 /// @param self TextGrammarCheck__GrammalecteResultJob*
 /// @param signal QMetaMethod*
 ///
-void k_textgrammarcheck__grammalecteresultjob_super_connect_notify(void* self, void* signal);
+void k_textgrammarcheck__grammalecteresultjob_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -859,7 +859,7 @@ void k_textgrammarcheck__grammalecteresultjob_super_connect_notify(void* self, v
 /// @param self TextGrammarCheck__GrammalecteResultJob*
 /// @param callback void func(TextGrammarCheck__GrammalecteResultJob* self, QMetaMethod* signal)
 ///
-void k_textgrammarcheck__grammalecteresultjob_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_textgrammarcheck__grammalecteresultjob_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -870,7 +870,7 @@ void k_textgrammarcheck__grammalecteresultjob_on_connect_notify(void* self, void
 /// @param self TextGrammarCheck__GrammalecteResultJob*
 /// @param signal QMetaMethod*
 ///
-void k_textgrammarcheck__grammalecteresultjob_disconnect_notify(void* self, void* signal);
+void k_textgrammarcheck__grammalecteresultjob_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -881,7 +881,7 @@ void k_textgrammarcheck__grammalecteresultjob_disconnect_notify(void* self, void
 /// @param self TextGrammarCheck__GrammalecteResultJob*
 /// @param signal QMetaMethod*
 ///
-void k_textgrammarcheck__grammalecteresultjob_super_disconnect_notify(void* self, void* signal);
+void k_textgrammarcheck__grammalecteresultjob_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -892,7 +892,7 @@ void k_textgrammarcheck__grammalecteresultjob_super_disconnect_notify(void* self
 /// @param self TextGrammarCheck__GrammalecteResultJob*
 /// @param callback void func(TextGrammarCheck__GrammalecteResultJob* self, QMetaMethod* signal)
 ///
-void k_textgrammarcheck__grammalecteresultjob_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_textgrammarcheck__grammalecteresultjob_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -900,9 +900,9 @@ void k_textgrammarcheck__grammalecteresultjob_on_disconnect_notify(void* self, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 ///
-QObject* k_textgrammarcheck__grammalecteresultjob_sender(void* self);
+QObject* k_textgrammarcheck__grammalecteresultjob_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -910,9 +910,9 @@ QObject* k_textgrammarcheck__grammalecteresultjob_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 ///
-QObject* k_textgrammarcheck__grammalecteresultjob_super_sender(void* self);
+QObject* k_textgrammarcheck__grammalecteresultjob_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -920,10 +920,10 @@ QObject* k_textgrammarcheck__grammalecteresultjob_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
-/// @param callback QObject* func()
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
+/// @param callback QObject* func(TextGrammarCheck__GrammalecteResultJob* self)
 ///
-void k_textgrammarcheck__grammalecteresultjob_on_sender(void* self, QObject* (*callback)());
+void k_textgrammarcheck__grammalecteresultjob_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -931,9 +931,9 @@ void k_textgrammarcheck__grammalecteresultjob_on_sender(void* self, QObject* (*c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 ///
-int32_t k_textgrammarcheck__grammalecteresultjob_sender_signal_index(void* self);
+int32_t k_textgrammarcheck__grammalecteresultjob_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -941,9 +941,9 @@ int32_t k_textgrammarcheck__grammalecteresultjob_sender_signal_index(void* self)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 ///
-int32_t k_textgrammarcheck__grammalecteresultjob_super_sender_signal_index(void* self);
+int32_t k_textgrammarcheck__grammalecteresultjob_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -951,10 +951,10 @@ int32_t k_textgrammarcheck__grammalecteresultjob_super_sender_signal_index(void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
-/// @param callback int32_t func()
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
+/// @param callback int32_t func(TextGrammarCheck__GrammalecteResultJob* self)
 ///
-void k_textgrammarcheck__grammalecteresultjob_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_textgrammarcheck__grammalecteresultjob_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -962,10 +962,10 @@ void k_textgrammarcheck__grammalecteresultjob_on_sender_signal_index(void* self,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 /// @param signal const char*
 ///
-int32_t k_textgrammarcheck__grammalecteresultjob_receivers(void* self, const char* signal);
+int32_t k_textgrammarcheck__grammalecteresultjob_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -973,10 +973,10 @@ int32_t k_textgrammarcheck__grammalecteresultjob_receivers(void* self, const cha
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 /// @param signal const char*
 ///
-int32_t k_textgrammarcheck__grammalecteresultjob_super_receivers(void* self, const char* signal);
+int32_t k_textgrammarcheck__grammalecteresultjob_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -984,10 +984,10 @@ int32_t k_textgrammarcheck__grammalecteresultjob_super_receivers(void* self, con
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 /// @param callback int32_t func(TextGrammarCheck__GrammalecteResultJob* self, const char* signal)
 ///
-void k_textgrammarcheck__grammalecteresultjob_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_textgrammarcheck__grammalecteresultjob_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -995,10 +995,10 @@ void k_textgrammarcheck__grammalecteresultjob_on_receivers(void* self, int32_t (
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 /// @param signal QMetaMethod*
 ///
-bool k_textgrammarcheck__grammalecteresultjob_is_signal_connected(void* self, void* signal);
+bool k_textgrammarcheck__grammalecteresultjob_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1006,10 +1006,10 @@ bool k_textgrammarcheck__grammalecteresultjob_is_signal_connected(void* self, vo
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 /// @param signal QMetaMethod*
 ///
-bool k_textgrammarcheck__grammalecteresultjob_super_is_signal_connected(void* self, void* signal);
+bool k_textgrammarcheck__grammalecteresultjob_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1017,10 +1017,10 @@ bool k_textgrammarcheck__grammalecteresultjob_super_is_signal_connected(void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammalecteResultJob*
+/// @param self const TextGrammarCheck__GrammalecteResultJob*
 /// @param callback bool func(TextGrammarCheck__GrammalecteResultJob* self, QMetaMethod* signal)
 ///
-void k_textgrammarcheck__grammalecteresultjob_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_textgrammarcheck__grammalecteresultjob_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

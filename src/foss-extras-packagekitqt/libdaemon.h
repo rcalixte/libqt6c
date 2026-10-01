@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self PackageKit__Daemon*
+/// @param self const PackageKit__Daemon*
 ///
-const QMetaObject* q_packagekit__daemon_meta_object(void* self);
+const QMetaObject* q_packagekit__daemon_meta_object(const void* self);
 
 /// @param self PackageKit__Daemon*
 /// @param param1 const char*
@@ -130,9 +130,9 @@ const char** q_packagekit__daemon_hints();
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
-/// @param self PackageKit__Daemon*
+/// @param self const PackageKit__Daemon*
 ///
-PackageKit__Offline* q_packagekit__daemon_offline(void* self);
+PackageKit__Offline* q_packagekit__daemon_offline(const void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -174,7 +174,7 @@ const char* q_packagekit__daemon_package_data(const char* packageID);
 /// @param value int
 /// @param enumName const char*
 ///
-const char* q_packagekit__daemon_enum_to_string(void* metaObject, int value, const char* enumName);
+const char* q_packagekit__daemon_enum_to_string(const void* metaObject, int value, const char* enumName);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -182,7 +182,7 @@ const char* q_packagekit__daemon_enum_to_string(void* metaObject, int value, con
 /// @param str const char*
 /// @param enumName const char*
 ///
-int32_t q_packagekit__daemon_enum_from_string(void* metaObject, const char* str, const char* enumName);
+int32_t q_packagekit__daemon_enum_from_string(const void* metaObject, const char* str, const char* enumName);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -948,9 +948,9 @@ bool q_packagekit__daemon_event_filter(void* self, void* watched, void* event);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self PackageKit__Daemon*
+/// @param self const PackageKit__Daemon*
 ///
-const char* q_packagekit__daemon_object_name(void* self);
+const char* q_packagekit__daemon_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -965,33 +965,33 @@ void q_packagekit__daemon_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self PackageKit__Daemon*
+/// @param self const PackageKit__Daemon*
 ///
-bool q_packagekit__daemon_is_widget_type(void* self);
+bool q_packagekit__daemon_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self PackageKit__Daemon*
+/// @param self const PackageKit__Daemon*
 ///
-bool q_packagekit__daemon_is_window_type(void* self);
+bool q_packagekit__daemon_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self PackageKit__Daemon*
+/// @param self const PackageKit__Daemon*
 ///
-bool q_packagekit__daemon_is_quick_item_type(void* self);
+bool q_packagekit__daemon_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self PackageKit__Daemon*
+/// @param self const PackageKit__Daemon*
 ///
-bool q_packagekit__daemon_signals_blocked(void* self);
+bool q_packagekit__daemon_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1006,9 +1006,9 @@ bool q_packagekit__daemon_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self PackageKit__Daemon*
+/// @param self const PackageKit__Daemon*
 ///
-QThread* q_packagekit__daemon_thread(void* self);
+QThread* q_packagekit__daemon_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1059,11 +1059,11 @@ void q_packagekit__daemon_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self PackageKit__Daemon*
+/// @param self const PackageKit__Daemon*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_packagekit__daemon_children(void* self);
+libqt_list q_packagekit__daemon_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1101,7 +1101,7 @@ void q_packagekit__daemon_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_packagekit__daemon_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_packagekit__daemon_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1112,18 +1112,18 @@ QMetaObject__Connection* q_packagekit__daemon_connect(void* sender, const char* 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_packagekit__daemon_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_packagekit__daemon_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self PackageKit__Daemon*
+/// @param self const PackageKit__Daemon*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_packagekit__daemon_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_packagekit__daemon_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1134,7 +1134,7 @@ QMetaObject__Connection* q_packagekit__daemon_connect3(void* self, void* sender,
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_packagekit__daemon_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_packagekit__daemon_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1145,24 +1145,24 @@ bool q_packagekit__daemon_disconnect(void* sender, const char* signal, void* rec
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_packagekit__daemon_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_packagekit__daemon_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self PackageKit__Daemon*
+/// @param self const PackageKit__Daemon*
 ///
-bool q_packagekit__daemon_disconnect3(void* self);
+bool q_packagekit__daemon_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self PackageKit__Daemon*
+/// @param self const PackageKit__Daemon*
 /// @param receiver QObject*
 ///
-bool q_packagekit__daemon_disconnect4(void* self, void* receiver);
+bool q_packagekit__daemon_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1170,23 +1170,23 @@ bool q_packagekit__daemon_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_packagekit__daemon_disconnect5(void* param1);
+bool q_packagekit__daemon_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self PackageKit__Daemon*
+/// @param self const PackageKit__Daemon*
 ///
-void q_packagekit__daemon_dump_object_tree(void* self);
+void q_packagekit__daemon_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self PackageKit__Daemon*
+/// @param self const PackageKit__Daemon*
 ///
-void q_packagekit__daemon_dump_object_info(void* self);
+void q_packagekit__daemon_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1196,16 +1196,16 @@ void q_packagekit__daemon_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_packagekit__daemon_set_property(void* self, const char* name, void* value);
+bool q_packagekit__daemon_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self PackageKit__Daemon*
+/// @param self const PackageKit__Daemon*
 /// @param name const char*
 ///
-QVariant* q_packagekit__daemon_property(void* self, const char* name);
+QVariant* q_packagekit__daemon_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1213,9 +1213,9 @@ QVariant* q_packagekit__daemon_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self PackageKit__Daemon*
+/// @param self const PackageKit__Daemon*
 ///
-const char** q_packagekit__daemon_dynamic_property_names(void* self);
+const char** q_packagekit__daemon_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1229,9 +1229,9 @@ QBindingStorage* q_packagekit__daemon_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self PackageKit__Daemon*
+/// @param self const PackageKit__Daemon*
 ///
-const QBindingStorage* q_packagekit__daemon_binding_storage2(void* self);
+const QBindingStorage* q_packagekit__daemon_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1254,18 +1254,18 @@ void q_packagekit__daemon_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self PackageKit__Daemon*
+/// @param self const PackageKit__Daemon*
 ///
-QObject* q_packagekit__daemon_parent(void* self);
+QObject* q_packagekit__daemon_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self PackageKit__Daemon*
+/// @param self const PackageKit__Daemon*
 /// @param classname const char*
 ///
-bool q_packagekit__daemon_inherits(void* self, const char* classname);
+bool q_packagekit__daemon_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1305,7 +1305,7 @@ int32_t q_packagekit__daemon_start_timer23(void* self, int64_t time, int32_t tim
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_packagekit__daemon_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_packagekit__daemon_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1317,59 +1317,59 @@ QMetaObject__Connection* q_packagekit__daemon_connect5(void* sender, const char*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_packagekit__daemon_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_packagekit__daemon_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self PackageKit__Daemon*
+/// @param self const PackageKit__Daemon*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_packagekit__daemon_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_packagekit__daemon_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self PackageKit__Daemon*
+/// @param self const PackageKit__Daemon*
 /// @param signal const char*
 ///
-bool q_packagekit__daemon_disconnect1(void* self, const char* signal);
+bool q_packagekit__daemon_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self PackageKit__Daemon*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_packagekit__daemon_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self PackageKit__Daemon*
+/// @param self const PackageKit__Daemon*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_packagekit__daemon_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_packagekit__daemon_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self PackageKit__Daemon*
+/// @param self const PackageKit__Daemon*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_packagekit__daemon_disconnect23(void* self, void* receiver, const char* member);
+bool q_packagekit__daemon_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const PackageKit__Daemon*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_packagekit__daemon_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

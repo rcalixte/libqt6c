@@ -26,7 +26,7 @@ struct pair_int_int {
 ///
 /// @param other QAccessible*
 ///
-QAccessible* q_accessible_new(void* other);
+QAccessible* q_accessible_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible.html)
 
@@ -141,7 +141,7 @@ void q_accessible_cleanup();
 ///
 /// @return pair_int_int tuple of int and int
 ///
-pair_int_int q_accessible_q_accessible_text_boundary_helper(void* cursor, int32_t boundaryType);
+pair_int_int q_accessible_q_accessible_text_boundary_helper(const void* cursor, int32_t boundaryType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible.html#dtor.QAccessible)
 ///
@@ -157,7 +157,7 @@ void q_accessible_delete(void* self);
 ///
 /// @param other QAccessible__State*
 ///
-QAccessible__State* q_accessible__state_new(void* other);
+QAccessible__State* q_accessible__state_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html)
 
@@ -189,9 +189,9 @@ void q_accessible__state_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#disabled-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_disabled(void* self);
+uint64_t q_accessible__state_disabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#disabled-var)
 ///
@@ -202,9 +202,9 @@ void q_accessible__state_set_disabled(void* self, uint64_t disabled);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#selected-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_selected(void* self);
+uint64_t q_accessible__state_selected(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#selected-var)
 ///
@@ -215,9 +215,9 @@ void q_accessible__state_set_selected(void* self, uint64_t selected);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#focusable-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_focusable(void* self);
+uint64_t q_accessible__state_focusable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#focusable-var)
 ///
@@ -228,9 +228,9 @@ void q_accessible__state_set_focusable(void* self, uint64_t focusable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#focused-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_focused(void* self);
+uint64_t q_accessible__state_focused(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#focused-var)
 ///
@@ -241,9 +241,9 @@ void q_accessible__state_set_focused(void* self, uint64_t focused);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#pressed-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_pressed(void* self);
+uint64_t q_accessible__state_pressed(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#pressed-var)
 ///
@@ -254,9 +254,9 @@ void q_accessible__state_set_pressed(void* self, uint64_t pressed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#checkable-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_checkable(void* self);
+uint64_t q_accessible__state_checkable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#checkable-var)
 ///
@@ -267,9 +267,9 @@ void q_accessible__state_set_checkable(void* self, uint64_t checkable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#checked-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_checked(void* self);
+uint64_t q_accessible__state_checked(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#checked-var)
 ///
@@ -280,9 +280,9 @@ void q_accessible__state_set_checked(void* self, uint64_t checked);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#checkStateMixed-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_check_state_mixed(void* self);
+uint64_t q_accessible__state_check_state_mixed(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#checkStateMixed-var)
 ///
@@ -293,9 +293,9 @@ void q_accessible__state_set_check_state_mixed(void* self, uint64_t checkStateMi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#readOnly-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_read_only(void* self);
+uint64_t q_accessible__state_read_only(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#readOnly-var)
 ///
@@ -306,9 +306,9 @@ void q_accessible__state_set_read_only(void* self, uint64_t readOnly);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#hotTracked-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_hot_tracked(void* self);
+uint64_t q_accessible__state_hot_tracked(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#hotTracked-var)
 ///
@@ -319,9 +319,9 @@ void q_accessible__state_set_hot_tracked(void* self, uint64_t hotTracked);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#defaultButton-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_default_button(void* self);
+uint64_t q_accessible__state_default_button(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#defaultButton-var)
 ///
@@ -332,9 +332,9 @@ void q_accessible__state_set_default_button(void* self, uint64_t defaultButton);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#expanded-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_expanded(void* self);
+uint64_t q_accessible__state_expanded(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#expanded-var)
 ///
@@ -345,9 +345,9 @@ void q_accessible__state_set_expanded(void* self, uint64_t expanded);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#collapsed-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_collapsed(void* self);
+uint64_t q_accessible__state_collapsed(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#collapsed-var)
 ///
@@ -358,9 +358,9 @@ void q_accessible__state_set_collapsed(void* self, uint64_t collapsed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#busy-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_busy(void* self);
+uint64_t q_accessible__state_busy(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#busy-var)
 ///
@@ -371,9 +371,9 @@ void q_accessible__state_set_busy(void* self, uint64_t busy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#expandable-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_expandable(void* self);
+uint64_t q_accessible__state_expandable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#expandable-var)
 ///
@@ -384,9 +384,9 @@ void q_accessible__state_set_expandable(void* self, uint64_t expandable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#marqueed-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_marqueed(void* self);
+uint64_t q_accessible__state_marqueed(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#marqueed-var)
 ///
@@ -397,9 +397,9 @@ void q_accessible__state_set_marqueed(void* self, uint64_t marqueed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#animated-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_animated(void* self);
+uint64_t q_accessible__state_animated(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#animated-var)
 ///
@@ -410,9 +410,9 @@ void q_accessible__state_set_animated(void* self, uint64_t animated);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#invisible-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_invisible(void* self);
+uint64_t q_accessible__state_invisible(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#invisible-var)
 ///
@@ -423,9 +423,9 @@ void q_accessible__state_set_invisible(void* self, uint64_t invisible);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#offscreen-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_offscreen(void* self);
+uint64_t q_accessible__state_offscreen(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#offscreen-var)
 ///
@@ -436,9 +436,9 @@ void q_accessible__state_set_offscreen(void* self, uint64_t offscreen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#sizeable-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_sizeable(void* self);
+uint64_t q_accessible__state_sizeable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#sizeable-var)
 ///
@@ -449,9 +449,9 @@ void q_accessible__state_set_sizeable(void* self, uint64_t sizeable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#movable-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_movable(void* self);
+uint64_t q_accessible__state_movable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#movable-var)
 ///
@@ -462,9 +462,9 @@ void q_accessible__state_set_movable(void* self, uint64_t movable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#selfVoicing-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_self_voicing(void* self);
+uint64_t q_accessible__state_self_voicing(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#selfVoicing-var)
 ///
@@ -475,9 +475,9 @@ void q_accessible__state_set_self_voicing(void* self, uint64_t selfVoicing);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#selectable-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_selectable(void* self);
+uint64_t q_accessible__state_selectable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#selectable-var)
 ///
@@ -488,9 +488,9 @@ void q_accessible__state_set_selectable(void* self, uint64_t selectable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#linked-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_linked(void* self);
+uint64_t q_accessible__state_linked(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#linked-var)
 ///
@@ -501,9 +501,9 @@ void q_accessible__state_set_linked(void* self, uint64_t linked);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#traversed-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_traversed(void* self);
+uint64_t q_accessible__state_traversed(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#traversed-var)
 ///
@@ -514,9 +514,9 @@ void q_accessible__state_set_traversed(void* self, uint64_t traversed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#multiSelectable-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_multi_selectable(void* self);
+uint64_t q_accessible__state_multi_selectable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#multiSelectable-var)
 ///
@@ -527,9 +527,9 @@ void q_accessible__state_set_multi_selectable(void* self, uint64_t multiSelectab
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#extSelectable-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_ext_selectable(void* self);
+uint64_t q_accessible__state_ext_selectable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#extSelectable-var)
 ///
@@ -540,9 +540,9 @@ void q_accessible__state_set_ext_selectable(void* self, uint64_t extSelectable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#passwordEdit-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_password_edit(void* self);
+uint64_t q_accessible__state_password_edit(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#passwordEdit-var)
 ///
@@ -553,9 +553,9 @@ void q_accessible__state_set_password_edit(void* self, uint64_t passwordEdit);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#hasPopup-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_has_popup(void* self);
+uint64_t q_accessible__state_has_popup(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#hasPopup-var)
 ///
@@ -566,9 +566,9 @@ void q_accessible__state_set_has_popup(void* self, uint64_t hasPopup);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#modal-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_modal(void* self);
+uint64_t q_accessible__state_modal(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#modal-var)
 ///
@@ -579,9 +579,9 @@ void q_accessible__state_set_modal(void* self, uint64_t modal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#active-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_active(void* self);
+uint64_t q_accessible__state_active(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#active-var)
 ///
@@ -592,9 +592,9 @@ void q_accessible__state_set_active(void* self, uint64_t active);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#invalid-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_invalid(void* self);
+uint64_t q_accessible__state_invalid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#invalid-var)
 ///
@@ -605,9 +605,9 @@ void q_accessible__state_set_invalid(void* self, uint64_t invalid);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#editable-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_editable(void* self);
+uint64_t q_accessible__state_editable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#editable-var)
 ///
@@ -618,9 +618,9 @@ void q_accessible__state_set_editable(void* self, uint64_t editable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#multiLine-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_multi_line(void* self);
+uint64_t q_accessible__state_multi_line(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#multiLine-var)
 ///
@@ -631,9 +631,9 @@ void q_accessible__state_set_multi_line(void* self, uint64_t multiLine);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#selectableText-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_selectable_text(void* self);
+uint64_t q_accessible__state_selectable_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#selectableText-var)
 ///
@@ -644,9 +644,9 @@ void q_accessible__state_set_selectable_text(void* self, uint64_t selectableText
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#supportsAutoCompletion-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_supports_auto_completion(void* self);
+uint64_t q_accessible__state_supports_auto_completion(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#supportsAutoCompletion-var)
 ///
@@ -657,9 +657,9 @@ void q_accessible__state_set_supports_auto_completion(void* self, uint64_t suppo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#searchEdit-var)
 ///
-/// @param self QAccessible__State*
+/// @param self const QAccessible__State*
 ///
-uint64_t q_accessible__state_search_edit(void* self);
+uint64_t q_accessible__state_search_edit(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-state.html#searchEdit-var)
 ///
@@ -676,19 +676,12 @@ void q_accessible__state_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-activationobserver.html)
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-activationobserver.html#accessibilityActiveChanged)
-///
-/// @param self QAccessible__ActivationObserver*
-/// @param active bool
-///
-void q_accessible__activationobserver_accessibility_active_changed(void* self, bool active);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-activationobserver.html#operator-eq)
 ///
 /// @param self QAccessible__ActivationObserver*
 /// @param param1 QAccessible__ActivationObserver*
 ///
-void q_accessible__activationobserver_operator_assign(void* self, void* param1);
+void q_accessible__activationobserver_operator_assign(void* self, const void* param1);
 
 /// Delete this object from C++ memory.
 ///

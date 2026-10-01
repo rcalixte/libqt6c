@@ -29,7 +29,7 @@ KParts__Part* k_parts__part_new2(void* parent);
 /// @param parent QObject*
 /// @param data KPluginMetaData*
 ///
-KParts__Part* k_parts__part_new3(void* parent, void* data);
+KParts__Part* k_parts__part_new3(void* parent, const void* data);
 
 /// Upcasts to a KParts::PartBase object
 ///
@@ -45,26 +45,26 @@ KParts__Part* k_parts__part_from_k_parts___part_base(void* _kparts__partbase);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-const QMetaObject* k_parts__part_meta_object(void* self);
+const QMetaObject* k_parts__part_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KParts__Part*
-/// @param callback const QMetaObject* func()
+/// @param self const KParts__Part*
+/// @param callback const QMetaObject* func(const KParts__Part* self)
 ///
-void k_parts__part_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_parts__part_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-const QMetaObject* k_parts__part_super_meta_object(void* self);
+const QMetaObject* k_parts__part_super_meta_object(const void* self);
 
 /// @param self KParts__Part*
 /// @param param1 const char*
@@ -127,9 +127,9 @@ QWidget* k_parts__part_widget(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KParts__Part*
-/// @param callback QWidget* func()
+/// @param callback QWidget* func(KParts__Part* self)
 ///
-void k_parts__part_on_widget(void* self, QWidget* (*callback)());
+void k_parts__part_on_widget(void* self, QWidget* (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kparts-part.html#widget)
 ///
@@ -166,9 +166,9 @@ void k_parts__part_super_set_manager(void* self, void* manager);
 
 /// [Upstream resources](https://api.kde.org/kparts-part.html#manager)
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-KParts__PartManager* k_parts__part_manager(void* self);
+KParts__PartManager* k_parts__part_manager(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-part.html#setAutoDeleteWidget)
 ///
@@ -190,7 +190,7 @@ void k_parts__part_set_auto_delete_part(void* self, bool autoDeletePart);
 /// @param widget QWidget*
 /// @param globalPos QPoint*
 ///
-KParts__Part* k_parts__part_hit_test(void* self, void* widget, void* globalPos);
+KParts__Part* k_parts__part_hit_test(void* self, void* widget, const void* globalPos);
 
 /// [Upstream resources](https://api.kde.org/kparts-part.html#hitTest)
 ///
@@ -199,7 +199,7 @@ KParts__Part* k_parts__part_hit_test(void* self, void* widget, void* globalPos);
 /// @param self KParts__Part*
 /// @param callback KParts__Part* func(KParts__Part* self, QWidget* widget, QPoint* globalPos)
 ///
-void k_parts__part_on_hit_test(void* self, KParts__Part* (*callback)(void*, void*, void*));
+void k_parts__part_on_hit_test(void* self, KParts__Part* (*callback)(void*, void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kparts-part.html#hitTest)
 ///
@@ -209,13 +209,13 @@ void k_parts__part_on_hit_test(void* self, KParts__Part* (*callback)(void*, void
 /// @param widget QWidget*
 /// @param globalPos QPoint*
 ///
-KParts__Part* k_parts__part_super_hit_test(void* self, void* widget, void* globalPos);
+KParts__Part* k_parts__part_super_hit_test(void* self, void* widget, const void* globalPos);
 
 /// [Upstream resources](https://api.kde.org/kparts-part.html#metaData)
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-KPluginMetaData* k_parts__part_meta_data(void* self);
+KPluginMetaData* k_parts__part_meta_data(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-part.html#setWindowCaption)
 ///
@@ -352,46 +352,11 @@ void k_parts__part_super_gui_activate_event(void* self, void* event);
 ///
 QWidget* k_parts__part_host_container(void* self, const char* containerName);
 
-/// [Upstream resources](https://api.kde.org/kparts-part.html#hostContainer)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KParts__Part*
-/// @param callback QWidget* func(KParts__Part* self, const char* containerName)
-///
-void k_parts__part_on_host_container(void* self, QWidget* (*callback)(void*, const char*));
-
-/// [Upstream resources](https://api.kde.org/kparts-part.html#hostContainer)
-///
-/// Base class method implementation
-///
-/// @param self KParts__Part*
-/// @param containerName const char*
-///
-QWidget* k_parts__part_super_host_container(void* self, const char* containerName);
-
 /// [Upstream resources](https://api.kde.org/kparts-part.html#slotWidgetDestroyed)
 ///
 /// @param self KParts__Part*
 ///
 void k_parts__part_slot_widget_destroyed(void* self);
-
-/// [Upstream resources](https://api.kde.org/kparts-part.html#slotWidgetDestroyed)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KParts__Part*
-/// @param callback void func()
-///
-void k_parts__part_on_slot_widget_destroyed(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kparts-part.html#slotWidgetDestroyed)
-///
-/// Base class method implementation
-///
-/// @param self KParts__Part*
-///
-void k_parts__part_super_slot_widget_destroyed(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -418,9 +383,9 @@ const char* k_parts__part_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-const char* k_parts__part_object_name(void* self);
+const char* k_parts__part_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -435,33 +400,33 @@ void k_parts__part_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-bool k_parts__part_is_widget_type(void* self);
+bool k_parts__part_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-bool k_parts__part_is_window_type(void* self);
+bool k_parts__part_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-bool k_parts__part_is_quick_item_type(void* self);
+bool k_parts__part_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-bool k_parts__part_signals_blocked(void* self);
+bool k_parts__part_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -476,9 +441,9 @@ bool k_parts__part_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-QThread* k_parts__part_thread(void* self);
+QThread* k_parts__part_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -529,11 +494,11 @@ void k_parts__part_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_parts__part_children(void* self);
+libqt_list k_parts__part_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -571,7 +536,7 @@ void k_parts__part_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_parts__part_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_parts__part_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -582,18 +547,18 @@ QMetaObject__Connection* k_parts__part_connect(void* sender, const char* signal,
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_parts__part_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_parts__part_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_parts__part_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_parts__part_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -604,7 +569,7 @@ QMetaObject__Connection* k_parts__part_connect3(void* self, void* sender, const 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_parts__part_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_parts__part_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -615,24 +580,24 @@ bool k_parts__part_disconnect(void* sender, const char* signal, void* receiver, 
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_parts__part_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_parts__part_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-bool k_parts__part_disconnect3(void* self);
+bool k_parts__part_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 /// @param receiver QObject*
 ///
-bool k_parts__part_disconnect4(void* self, void* receiver);
+bool k_parts__part_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -640,23 +605,23 @@ bool k_parts__part_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_parts__part_disconnect5(void* param1);
+bool k_parts__part_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-void k_parts__part_dump_object_tree(void* self);
+void k_parts__part_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-void k_parts__part_dump_object_info(void* self);
+void k_parts__part_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -666,16 +631,16 @@ void k_parts__part_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_parts__part_set_property(void* self, const char* name, void* value);
+bool k_parts__part_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 /// @param name const char*
 ///
-QVariant* k_parts__part_property(void* self, const char* name);
+QVariant* k_parts__part_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -683,9 +648,9 @@ QVariant* k_parts__part_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-const char** k_parts__part_dynamic_property_names(void* self);
+const char** k_parts__part_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -699,9 +664,9 @@ QBindingStorage* k_parts__part_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-const QBindingStorage* k_parts__part_binding_storage2(void* self);
+const QBindingStorage* k_parts__part_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -724,18 +689,18 @@ void k_parts__part_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-QObject* k_parts__part_parent(void* self);
+QObject* k_parts__part_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 /// @param classname const char*
 ///
-bool k_parts__part_inherits(void* self, const char* classname);
+bool k_parts__part_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -775,7 +740,7 @@ int32_t k_parts__part_start_timer23(void* self, int64_t time, int32_t timerType)
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_parts__part_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_parts__part_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -787,59 +752,59 @@ QMetaObject__Connection* k_parts__part_connect5(void* sender, const char* signal
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_parts__part_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_parts__part_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_parts__part_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_parts__part_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 /// @param signal const char*
 ///
-bool k_parts__part_disconnect1(void* self, const char* signal);
+bool k_parts__part_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KParts__Part*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_parts__part_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_parts__part_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_parts__part_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_parts__part_disconnect23(void* self, void* receiver, const char* member);
+bool k_parts__part_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KParts__Part*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_parts__part_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -872,18 +837,18 @@ void k_parts__part_set_part_object(void* self, void* object);
 ///
 /// [Upstream resources](https://api.kde.org/kparts-partbase.html#partObject)
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-QObject* k_parts__part_part_object(void* self);
+QObject* k_parts__part_part_object(const void* self);
 
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#action)
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 /// @param name const char*
 ///
-QAction* k_parts__part_action(void* self, const char* name);
+QAction* k_parts__part_action(const void* self, const char* name);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -892,15 +857,15 @@ QAction* k_parts__part_action(void* self, const char* name);
 /// @param self KParts__Part*
 /// @param doc QDomDocument*
 ///
-void k_parts__part_set_x_m_l_g_u_i_build_document(void* self, void* doc);
+void k_parts__part_set_x_m_l_g_u_i_build_document(void* self, const void* doc);
 
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#xmlguiBuildDocument)
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-QDomDocument* k_parts__part_xmlgui_build_document(void* self);
+QDomDocument* k_parts__part_xmlgui_build_document(const void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -915,17 +880,17 @@ void k_parts__part_set_factory(void* self, void* factory);
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#factory)
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-KXMLGUIFactory* k_parts__part_factory(void* self);
+KXMLGUIFactory* k_parts__part_factory(const void* self);
 
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#parentClient)
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-KXMLGUIClient* k_parts__part_parent_client(void* self);
+KXMLGUIClient* k_parts__part_parent_client(const void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -968,9 +933,9 @@ void k_parts__part_set_client_builder(void* self, void* builder);
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#clientBuilder)
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-KXMLGUIBuilder* k_parts__part_client_builder(void* self);
+KXMLGUIBuilder* k_parts__part_client_builder(const void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1239,7 +1204,7 @@ void k_parts__part_on_child_event(void* self, void (*callback)(void*, void*));
 /// @param self KParts__Part*
 /// @param signal QMetaMethod*
 ///
-void k_parts__part_connect_notify(void* self, void* signal);
+void k_parts__part_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1250,7 +1215,7 @@ void k_parts__part_connect_notify(void* self, void* signal);
 /// @param self KParts__Part*
 /// @param signal QMetaMethod*
 ///
-void k_parts__part_super_connect_notify(void* self, void* signal);
+void k_parts__part_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1261,7 +1226,7 @@ void k_parts__part_super_connect_notify(void* self, void* signal);
 /// @param self KParts__Part*
 /// @param callback void func(KParts__Part* self, QMetaMethod* signal)
 ///
-void k_parts__part_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_parts__part_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1272,7 +1237,7 @@ void k_parts__part_on_connect_notify(void* self, void (*callback)(void*, void*))
 /// @param self KParts__Part*
 /// @param signal QMetaMethod*
 ///
-void k_parts__part_disconnect_notify(void* self, void* signal);
+void k_parts__part_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1283,7 +1248,7 @@ void k_parts__part_disconnect_notify(void* self, void* signal);
 /// @param self KParts__Part*
 /// @param signal QMetaMethod*
 ///
-void k_parts__part_super_disconnect_notify(void* self, void* signal);
+void k_parts__part_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1294,7 +1259,7 @@ void k_parts__part_super_disconnect_notify(void* self, void* signal);
 /// @param self KParts__Part*
 /// @param callback void func(KParts__Part* self, QMetaMethod* signal)
 ///
-void k_parts__part_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_parts__part_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1302,10 +1267,10 @@ void k_parts__part_on_disconnect_notify(void* self, void (*callback)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 /// @param element QDomElement*
 ///
-QAction* k_parts__part_action2(void* self, void* element);
+QAction* k_parts__part_action2(const void* self, const void* element);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1313,10 +1278,10 @@ QAction* k_parts__part_action2(void* self, void* element);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 /// @param element QDomElement*
 ///
-QAction* k_parts__part_super_action2(void* self, void* element);
+QAction* k_parts__part_super_action2(const void* self, const void* element);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1324,10 +1289,10 @@ QAction* k_parts__part_super_action2(void* self, void* element);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 /// @param callback QAction* func(KParts__Part* self, QDomElement* element)
 ///
-void k_parts__part_on_action2(void* self, QAction* (*callback)(void*, void*));
+void k_parts__part_on_action2(const void* self, QAction* (*callback)(const void*, const void*));
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1335,9 +1300,9 @@ void k_parts__part_on_action2(void* self, QAction* (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-KActionCollection* k_parts__part_action_collection(void* self);
+KActionCollection* k_parts__part_action_collection(const void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1345,9 +1310,9 @@ KActionCollection* k_parts__part_action_collection(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-KActionCollection* k_parts__part_super_action_collection(void* self);
+KActionCollection* k_parts__part_super_action_collection(const void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1355,10 +1320,10 @@ KActionCollection* k_parts__part_super_action_collection(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KParts__Part*
-/// @param callback KActionCollection* func()
+/// @param self const KParts__Part*
+/// @param callback KActionCollection* func(KParts__Part* self)
 ///
-void k_parts__part_on_action_collection(void* self, KActionCollection* (*callback)());
+void k_parts__part_on_action_collection(const void* self, KActionCollection* (*callback)(const void*));
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1368,9 +1333,9 @@ void k_parts__part_on_action_collection(void* self, KActionCollection* (*callbac
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-const char* k_parts__part_component_name(void* self);
+const char* k_parts__part_component_name(const void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1380,9 +1345,9 @@ const char* k_parts__part_component_name(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-const char* k_parts__part_super_component_name(void* self);
+const char* k_parts__part_super_component_name(const void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1390,10 +1355,10 @@ const char* k_parts__part_super_component_name(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KParts__Part*
-/// @param callback const char* func()
+/// @param self const KParts__Part*
+/// @param callback const char* func(KParts__Part* self)
 ///
-void k_parts__part_on_component_name(void* self, const char* (*callback)());
+void k_parts__part_on_component_name(const void* self, const char* (*callback)(const void*));
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1401,9 +1366,9 @@ void k_parts__part_on_component_name(void* self, const char* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-QDomDocument* k_parts__part_dom_document(void* self);
+QDomDocument* k_parts__part_dom_document(const void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1411,9 +1376,9 @@ QDomDocument* k_parts__part_dom_document(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-QDomDocument* k_parts__part_super_dom_document(void* self);
+QDomDocument* k_parts__part_super_dom_document(const void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1421,12 +1386,12 @@ QDomDocument* k_parts__part_super_dom_document(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KParts__Part*
-/// @param callback QDomDocument* func()
+/// @param self const KParts__Part*
+/// @param callback QDomDocument* func(KParts__Part* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_parts__part_on_dom_document(void* self, QDomDocument* (*callback)());
+void k_parts__part_on_dom_document(const void* self, QDomDocument* (*callback)(const void*));
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1436,9 +1401,9 @@ void k_parts__part_on_dom_document(void* self, QDomDocument* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-const char* k_parts__part_xml_file(void* self);
+const char* k_parts__part_xml_file(const void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1448,9 +1413,9 @@ const char* k_parts__part_xml_file(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-const char* k_parts__part_super_xml_file(void* self);
+const char* k_parts__part_super_xml_file(const void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1458,10 +1423,10 @@ const char* k_parts__part_super_xml_file(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KParts__Part*
-/// @param callback const char* func()
+/// @param self const KParts__Part*
+/// @param callback const char* func(KParts__Part* self)
 ///
-void k_parts__part_on_xml_file(void* self, const char* (*callback)());
+void k_parts__part_on_xml_file(const void* self, const char* (*callback)(const void*));
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1471,9 +1436,9 @@ void k_parts__part_on_xml_file(void* self, const char* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-const char* k_parts__part_local_x_m_l_file(void* self);
+const char* k_parts__part_local_x_m_l_file(const void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1483,9 +1448,9 @@ const char* k_parts__part_local_x_m_l_file(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-const char* k_parts__part_super_local_x_m_l_file(void* self);
+const char* k_parts__part_super_local_x_m_l_file(const void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1493,10 +1458,10 @@ const char* k_parts__part_super_local_x_m_l_file(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KParts__Part*
-/// @param callback const char* func()
+/// @param self const KParts__Part*
+/// @param callback const char* func(KParts__Part* self)
 ///
-void k_parts__part_on_local_x_m_l_file(void* self, const char* (*callback)());
+void k_parts__part_on_local_x_m_l_file(const void* self, const char* (*callback)(const void*));
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1648,7 +1613,7 @@ void k_parts__part_on_set_x_m_l(void* self, void (*callback)(void*, const char*,
 /// @param document QDomDocument*
 /// @param merge bool
 ///
-void k_parts__part_set_d_o_m_document(void* self, void* document, bool merge);
+void k_parts__part_set_d_o_m_document(void* self, const void* document, bool merge);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1660,7 +1625,7 @@ void k_parts__part_set_d_o_m_document(void* self, void* document, bool merge);
 /// @param document QDomDocument*
 /// @param merge bool
 ///
-void k_parts__part_super_set_d_o_m_document(void* self, void* document, bool merge);
+void k_parts__part_super_set_d_o_m_document(void* self, const void* document, bool merge);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1671,7 +1636,7 @@ void k_parts__part_super_set_d_o_m_document(void* self, void* document, bool mer
 /// @param self KParts__Part*
 /// @param callback void func(KParts__Part* self, QDomDocument* document, bool merge)
 ///
-void k_parts__part_on_set_d_o_m_document(void* self, void (*callback)(void*, void*, bool));
+void k_parts__part_on_set_d_o_m_document(void* self, void (*callback)(void*, const void*, bool));
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1714,9 +1679,9 @@ void k_parts__part_on_state_changed(void* self, void (*callback)(void*, const ch
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-QObject* k_parts__part_sender(void* self);
+QObject* k_parts__part_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1724,9 +1689,9 @@ QObject* k_parts__part_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-QObject* k_parts__part_super_sender(void* self);
+QObject* k_parts__part_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1734,10 +1699,10 @@ QObject* k_parts__part_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KParts__Part*
-/// @param callback QObject* func()
+/// @param self const KParts__Part*
+/// @param callback QObject* func(KParts__Part* self)
 ///
-void k_parts__part_on_sender(void* self, QObject* (*callback)());
+void k_parts__part_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1745,9 +1710,9 @@ void k_parts__part_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-int32_t k_parts__part_sender_signal_index(void* self);
+int32_t k_parts__part_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1755,9 +1720,9 @@ int32_t k_parts__part_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 ///
-int32_t k_parts__part_super_sender_signal_index(void* self);
+int32_t k_parts__part_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1765,10 +1730,10 @@ int32_t k_parts__part_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KParts__Part*
-/// @param callback int32_t func()
+/// @param self const KParts__Part*
+/// @param callback int32_t func(KParts__Part* self)
 ///
-void k_parts__part_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_parts__part_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1776,10 +1741,10 @@ void k_parts__part_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 /// @param signal const char*
 ///
-int32_t k_parts__part_receivers(void* self, const char* signal);
+int32_t k_parts__part_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1787,10 +1752,10 @@ int32_t k_parts__part_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 /// @param signal const char*
 ///
-int32_t k_parts__part_super_receivers(void* self, const char* signal);
+int32_t k_parts__part_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1798,10 +1763,10 @@ int32_t k_parts__part_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 /// @param callback int32_t func(KParts__Part* self, const char* signal)
 ///
-void k_parts__part_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_parts__part_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1809,10 +1774,10 @@ void k_parts__part_on_receivers(void* self, int32_t (*callback)(void*, const cha
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 /// @param signal QMetaMethod*
 ///
-bool k_parts__part_is_signal_connected(void* self, void* signal);
+bool k_parts__part_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1820,10 +1785,10 @@ bool k_parts__part_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 /// @param signal QMetaMethod*
 ///
-bool k_parts__part_super_is_signal_connected(void* self, void* signal);
+bool k_parts__part_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1831,10 +1796,10 @@ bool k_parts__part_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KParts__Part*
+/// @param self const KParts__Part*
 /// @param callback bool func(KParts__Part* self, QMetaMethod* signal)
 ///
-void k_parts__part_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_parts__part_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1867,9 +1832,9 @@ const char* k_parts__part_super_standards_xml_file_location(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KParts__Part*
-/// @param callback const char* func()
+/// @param callback const char* func(KParts__Part* self)
 ///
-void k_parts__part_on_standards_xml_file_location(void* self, const char* (*callback)());
+void k_parts__part_on_standards_xml_file_location(void* self, const char* (*callback)(void*));
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1898,9 +1863,9 @@ void k_parts__part_super_load_standards_xml_file(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KParts__Part*
-/// @param callback void func()
+/// @param callback void func(KParts__Part* self)
 ///
-void k_parts__part_on_load_standards_xml_file(void* self, void (*callback)());
+void k_parts__part_on_load_standards_xml_file(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///

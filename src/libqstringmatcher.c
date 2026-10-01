@@ -10,7 +10,7 @@ QStringMatcher* q_stringmatcher_new2(const char* pattern) {
     return QStringMatcher_New2(qstring(pattern));
 }
 
-QStringMatcher* q_stringmatcher_new3(void* uc, intptr_t lenVal) {
+QStringMatcher* q_stringmatcher_new3(const void* uc, intptr_t lenVal) {
     return QStringMatcher_New3((QChar*)uc, lenVal);
 }
 
@@ -18,7 +18,7 @@ QStringMatcher* q_stringmatcher_new4(const char* pattern) {
     return QStringMatcher_New4(qstring(pattern));
 }
 
-QStringMatcher* q_stringmatcher_new5(void* other) {
+QStringMatcher* q_stringmatcher_new5(const void* other) {
     return QStringMatcher_New5((QStringMatcher*)other);
 }
 
@@ -26,7 +26,7 @@ QStringMatcher* q_stringmatcher_new6(const char* pattern, int32_t cs) {
     return QStringMatcher_New6(qstring(pattern), cs);
 }
 
-QStringMatcher* q_stringmatcher_new7(void* uc, intptr_t lenVal, int32_t cs) {
+QStringMatcher* q_stringmatcher_new7(const void* uc, intptr_t lenVal, int32_t cs) {
     return QStringMatcher_New7((QChar*)uc, lenVal, cs);
 }
 
@@ -34,7 +34,7 @@ QStringMatcher* q_stringmatcher_new8(const char* pattern, int32_t cs) {
     return QStringMatcher_New8(qstring(pattern), cs);
 }
 
-void q_stringmatcher_operator_assign(void* self, void* other) {
+void q_stringmatcher_operator_assign(void* self, const void* other) {
     QStringMatcher_OperatorAssign((QStringMatcher*)self, (QStringMatcher*)other);
 }
 
@@ -46,45 +46,45 @@ void q_stringmatcher_set_case_sensitivity(void* self, int32_t cs) {
     QStringMatcher_SetCaseSensitivity((QStringMatcher*)self, cs);
 }
 
-intptr_t q_stringmatcher_index_in(void* self, const char* str) {
+intptr_t q_stringmatcher_index_in(const void* self, const char* str) {
     return QStringMatcher_IndexIn((QStringMatcher*)self, qstring(str));
 }
 
-intptr_t q_stringmatcher_index_in2(void* self, void* str, intptr_t length) {
+intptr_t q_stringmatcher_index_in2(const void* self, const void* str, intptr_t length) {
     return QStringMatcher_IndexIn2((QStringMatcher*)self, (QChar*)str, length);
 }
 
-intptr_t q_stringmatcher_index_in3(void* self, const char* str) {
+intptr_t q_stringmatcher_index_in3(const void* self, const char* str) {
     return QStringMatcher_IndexIn3((QStringMatcher*)self, qstring(str));
 }
 
-const char* q_stringmatcher_pattern(void* self) {
+const char* q_stringmatcher_pattern(const void* self) {
     libqt_string _str = QStringMatcher_Pattern((QStringMatcher*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_stringmatcher_pattern_view(void* self) {
+const char* q_stringmatcher_pattern_view(const void* self) {
     libqt_string _str = QStringMatcher_PatternView((QStringMatcher*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t q_stringmatcher_case_sensitivity(void* self) {
+int32_t q_stringmatcher_case_sensitivity(const void* self) {
     return QStringMatcher_CaseSensitivity((QStringMatcher*)self);
 }
 
-intptr_t q_stringmatcher_index_in22(void* self, const char* str, intptr_t from) {
+intptr_t q_stringmatcher_index_in22(const void* self, const char* str, intptr_t from) {
     return QStringMatcher_IndexIn22((QStringMatcher*)self, qstring(str), from);
 }
 
-intptr_t q_stringmatcher_index_in32(void* self, void* str, intptr_t length, intptr_t from) {
+intptr_t q_stringmatcher_index_in32(const void* self, const void* str, intptr_t length, intptr_t from) {
     return QStringMatcher_IndexIn32((QStringMatcher*)self, (QChar*)str, length, from);
 }
 
-intptr_t q_stringmatcher_index_in23(void* self, const char* str, intptr_t from) {
+intptr_t q_stringmatcher_index_in23(const void* self, const char* str, intptr_t from) {
     return QStringMatcher_IndexIn23((QStringMatcher*)self, qstring(str), from);
 }
 

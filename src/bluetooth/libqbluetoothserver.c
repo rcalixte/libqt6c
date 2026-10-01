@@ -17,15 +17,15 @@ QBluetoothServer* q_bluetoothserver_new2(int32_t serverType, void* parent) {
     return QBluetoothServer_New2(serverType, (QObject*)parent);
 }
 
-const QMetaObject* q_bluetoothserver_meta_object(void* self) {
+const QMetaObject* q_bluetoothserver_meta_object(const void* self) {
     return QBluetoothServer_MetaObject((QBluetoothServer*)self);
 }
 
-void q_bluetoothserver_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_bluetoothserver_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QBluetoothServer_OnMetaObject((QBluetoothServer*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_bluetoothserver_super_meta_object(void* self) {
+const QMetaObject* q_bluetoothserver_super_meta_object(const void* self) {
     return QBluetoothServer_SuperMetaObject((QBluetoothServer*)self);
 }
 
@@ -68,11 +68,11 @@ bool q_bluetoothserver_listen(void* self) {
     return QBluetoothServer_Listen((QBluetoothServer*)self);
 }
 
-QBluetoothServiceInfo* q_bluetoothserver_listen2(void* self, void* uuid) {
+QBluetoothServiceInfo* q_bluetoothserver_listen2(void* self, const void* uuid) {
     return QBluetoothServer_Listen2((QBluetoothServer*)self, (QBluetoothUuid*)uuid);
 }
 
-bool q_bluetoothserver_is_listening(void* self) {
+bool q_bluetoothserver_is_listening(const void* self) {
     return QBluetoothServer_IsListening((QBluetoothServer*)self);
 }
 
@@ -80,11 +80,11 @@ void q_bluetoothserver_set_max_pending_connections(void* self, int numConnection
     QBluetoothServer_SetMaxPendingConnections((QBluetoothServer*)self, numConnections);
 }
 
-int32_t q_bluetoothserver_max_pending_connections(void* self) {
+int32_t q_bluetoothserver_max_pending_connections(const void* self) {
     return QBluetoothServer_MaxPendingConnections((QBluetoothServer*)self);
 }
 
-bool q_bluetoothserver_has_pending_connections(void* self) {
+bool q_bluetoothserver_has_pending_connections(const void* self) {
     return QBluetoothServer_HasPendingConnections((QBluetoothServer*)self);
 }
 
@@ -92,11 +92,11 @@ QBluetoothSocket* q_bluetoothserver_next_pending_connection(void* self) {
     return QBluetoothServer_NextPendingConnection((QBluetoothServer*)self);
 }
 
-QBluetoothAddress* q_bluetoothserver_server_address(void* self) {
+QBluetoothAddress* q_bluetoothserver_server_address(const void* self) {
     return QBluetoothServer_ServerAddress((QBluetoothServer*)self);
 }
 
-uint16_t q_bluetoothserver_server_port(void* self) {
+uint16_t q_bluetoothserver_server_port(const void* self) {
     return QBluetoothServer_ServerPort((QBluetoothServer*)self);
 }
 
@@ -104,15 +104,15 @@ void q_bluetoothserver_set_security_flags(void* self, int32_t security) {
     QBluetoothServer_SetSecurityFlags((QBluetoothServer*)self, security);
 }
 
-int32_t q_bluetoothserver_security_flags(void* self) {
+int32_t q_bluetoothserver_security_flags(const void* self) {
     return QBluetoothServer_SecurityFlags((QBluetoothServer*)self);
 }
 
-int32_t q_bluetoothserver_server_type(void* self) {
+int32_t q_bluetoothserver_server_type(const void* self) {
     return QBluetoothServer_ServerType((QBluetoothServer*)self);
 }
 
-int32_t q_bluetoothserver_error(void* self) {
+int32_t q_bluetoothserver_error(const void* self) {
     return QBluetoothServer_Error((QBluetoothServer*)self);
 }
 
@@ -146,19 +146,19 @@ const char* q_bluetoothserver_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-bool q_bluetoothserver_listen1(void* self, void* address) {
+bool q_bluetoothserver_listen1(void* self, const void* address) {
     return QBluetoothServer_Listen1((QBluetoothServer*)self, (QBluetoothAddress*)address);
 }
 
-bool q_bluetoothserver_listen22(void* self, void* address, uint16_t port) {
+bool q_bluetoothserver_listen22(void* self, const void* address, uint16_t port) {
     return QBluetoothServer_Listen22((QBluetoothServer*)self, (QBluetoothAddress*)address, port);
 }
 
-QBluetoothServiceInfo* q_bluetoothserver_listen23(void* self, void* uuid, const char* serviceName) {
+QBluetoothServiceInfo* q_bluetoothserver_listen23(void* self, const void* uuid, const char* serviceName) {
     return QBluetoothServer_Listen23((QBluetoothServer*)self, (QBluetoothUuid*)uuid, qstring(serviceName));
 }
 
-const char* q_bluetoothserver_object_name(void* self) {
+const char* q_bluetoothserver_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -169,19 +169,19 @@ void q_bluetoothserver_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_bluetoothserver_is_widget_type(void* self) {
+bool q_bluetoothserver_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_bluetoothserver_is_window_type(void* self) {
+bool q_bluetoothserver_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_bluetoothserver_is_quick_item_type(void* self) {
+bool q_bluetoothserver_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_bluetoothserver_signals_blocked(void* self) {
+bool q_bluetoothserver_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -189,7 +189,7 @@ bool q_bluetoothserver_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_bluetoothserver_thread(void* self) {
+QThread* q_bluetoothserver_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -213,7 +213,7 @@ void q_bluetoothserver_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_bluetoothserver_children(void* self) {
+libqt_list /* of QObject* */ q_bluetoothserver_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -230,55 +230,55 @@ void q_bluetoothserver_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_bluetoothserver_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_bluetoothserver_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_bluetoothserver_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_bluetoothserver_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_bluetoothserver_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_bluetoothserver_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_bluetoothserver_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_bluetoothserver_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_bluetoothserver_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_bluetoothserver_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_bluetoothserver_disconnect3(void* self) {
+bool q_bluetoothserver_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_bluetoothserver_disconnect4(void* self, void* receiver) {
+bool q_bluetoothserver_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_bluetoothserver_disconnect5(void* param1) {
+bool q_bluetoothserver_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_bluetoothserver_dump_object_tree(void* self) {
+void q_bluetoothserver_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_bluetoothserver_dump_object_info(void* self) {
+void q_bluetoothserver_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_bluetoothserver_set_property(void* self, const char* name, void* value) {
+bool q_bluetoothserver_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_bluetoothserver_property(void* self, const char* name) {
+QVariant* q_bluetoothserver_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_bluetoothserver_dynamic_property_names(void* self) {
+const char** q_bluetoothserver_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -299,7 +299,7 @@ QBindingStorage* q_bluetoothserver_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_bluetoothserver_binding_storage2(void* self) {
+const QBindingStorage* q_bluetoothserver_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -311,11 +311,11 @@ void q_bluetoothserver_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_bluetoothserver_parent(void* self) {
+QObject* q_bluetoothserver_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_bluetoothserver_inherits(void* self, const char* classname) {
+bool q_bluetoothserver_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -331,31 +331,31 @@ int32_t q_bluetoothserver_start_timer23(void* self, int64_t time, int32_t timerT
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_bluetoothserver_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_bluetoothserver_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_bluetoothserver_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_bluetoothserver_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_bluetoothserver_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_bluetoothserver_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_bluetoothserver_disconnect1(void* self, const char* signal) {
+bool q_bluetoothserver_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_bluetoothserver_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_bluetoothserver_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_bluetoothserver_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_bluetoothserver_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_bluetoothserver_disconnect23(void* self, void* receiver, const char* member) {
+bool q_bluetoothserver_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -427,76 +427,44 @@ void q_bluetoothserver_on_custom_event(void* self, void (*callback)(void*, void*
     QBluetoothServer_OnCustomEvent((QBluetoothServer*)self, (intptr_t)callback);
 }
 
-void q_bluetoothserver_connect_notify(void* self, void* signal) {
+void q_bluetoothserver_connect_notify(void* self, const void* signal) {
     QBluetoothServer_ConnectNotify((QBluetoothServer*)self, (QMetaMethod*)signal);
 }
 
-void q_bluetoothserver_super_connect_notify(void* self, void* signal) {
+void q_bluetoothserver_super_connect_notify(void* self, const void* signal) {
     QBluetoothServer_SuperConnectNotify((QBluetoothServer*)self, (QMetaMethod*)signal);
 }
 
-void q_bluetoothserver_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_bluetoothserver_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QBluetoothServer_OnConnectNotify((QBluetoothServer*)self, (intptr_t)callback);
 }
 
-void q_bluetoothserver_disconnect_notify(void* self, void* signal) {
+void q_bluetoothserver_disconnect_notify(void* self, const void* signal) {
     QBluetoothServer_DisconnectNotify((QBluetoothServer*)self, (QMetaMethod*)signal);
 }
 
-void q_bluetoothserver_super_disconnect_notify(void* self, void* signal) {
+void q_bluetoothserver_super_disconnect_notify(void* self, const void* signal) {
     QBluetoothServer_SuperDisconnectNotify((QBluetoothServer*)self, (QMetaMethod*)signal);
 }
 
-void q_bluetoothserver_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_bluetoothserver_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QBluetoothServer_OnDisconnectNotify((QBluetoothServer*)self, (intptr_t)callback);
 }
 
-QObject* q_bluetoothserver_sender(void* self) {
+QObject* q_bluetoothserver_sender(const void* self) {
     return QBluetoothServer_Sender((QBluetoothServer*)self);
 }
 
-QObject* q_bluetoothserver_super_sender(void* self) {
-    return QBluetoothServer_SuperSender((QBluetoothServer*)self);
-}
-
-void q_bluetoothserver_on_sender(void* self, QObject* (*callback)()) {
-    QBluetoothServer_OnSender((QBluetoothServer*)self, (intptr_t)callback);
-}
-
-int32_t q_bluetoothserver_sender_signal_index(void* self) {
+int32_t q_bluetoothserver_sender_signal_index(const void* self) {
     return QBluetoothServer_SenderSignalIndex((QBluetoothServer*)self);
 }
 
-int32_t q_bluetoothserver_super_sender_signal_index(void* self) {
-    return QBluetoothServer_SuperSenderSignalIndex((QBluetoothServer*)self);
-}
-
-void q_bluetoothserver_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QBluetoothServer_OnSenderSignalIndex((QBluetoothServer*)self, (intptr_t)callback);
-}
-
-int32_t q_bluetoothserver_receivers(void* self, const char* signal) {
+int32_t q_bluetoothserver_receivers(const void* self, const char* signal) {
     return QBluetoothServer_Receivers((QBluetoothServer*)self, signal);
 }
 
-int32_t q_bluetoothserver_super_receivers(void* self, const char* signal) {
-    return QBluetoothServer_SuperReceivers((QBluetoothServer*)self, signal);
-}
-
-void q_bluetoothserver_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QBluetoothServer_OnReceivers((QBluetoothServer*)self, (intptr_t)callback);
-}
-
-bool q_bluetoothserver_is_signal_connected(void* self, void* signal) {
+bool q_bluetoothserver_is_signal_connected(const void* self, const void* signal) {
     return QBluetoothServer_IsSignalConnected((QBluetoothServer*)self, (QMetaMethod*)signal);
-}
-
-bool q_bluetoothserver_super_is_signal_connected(void* self, void* signal) {
-    return QBluetoothServer_SuperIsSignalConnected((QBluetoothServer*)self, (QMetaMethod*)signal);
-}
-
-void q_bluetoothserver_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QBluetoothServer_OnIsSignalConnected((QBluetoothServer*)self, (intptr_t)callback);
 }
 
 void q_bluetoothserver_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

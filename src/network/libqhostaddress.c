@@ -5,7 +5,7 @@ QIPv6Address* q_ipv6address_new() {
     return QIPv6Address_New();
 }
 
-QIPv6Address* q_ipv6address_new2(void* param1) {
+QIPv6Address* q_ipv6address_new2(const void* param1) {
     return QIPv6Address_New2((QIPv6Address*)param1);
 }
 
@@ -13,7 +13,7 @@ unsigned char* q_ipv6address_operator_subscript(void* self, int index) {
     return (unsigned char*)QIPv6Address_OperatorSubscript((QIPv6Address*)self, index);
 }
 
-uint8_t q_ipv6address_operator_subscript2(void* self, int index) {
+uint8_t q_ipv6address_operator_subscript2(const void* self, int index) {
     return QIPv6Address_OperatorSubscript2((QIPv6Address*)self, index);
 }
 
@@ -21,7 +21,7 @@ void q_ipv6address_delete(void* self) {
     QIPv6Address_Delete((QIPv6Address*)(self));
 }
 
-size_t q_qhostaddress_h_q_hash(void* key, size_t seed) {
+size_t q_qhostaddress_h_q_hash(const void* key, size_t seed) {
     return qhostaddress_h_QHash((QHostAddress*)key, seed);
 }
 
@@ -37,7 +37,7 @@ QHostAddress* q_hostaddress_new3(unsigned char* ip6Addr) {
     return QHostAddress_New3(ip6Addr);
 }
 
-QHostAddress* q_hostaddress_new4(void* ip6Addr) {
+QHostAddress* q_hostaddress_new4(const void* ip6Addr) {
     return QHostAddress_New4((QIPv6Address*)ip6Addr);
 }
 
@@ -45,7 +45,7 @@ QHostAddress* q_hostaddress_new5(const char* address) {
     return QHostAddress_New5(qstring(address));
 }
 
-QHostAddress* q_hostaddress_new6(void* copy) {
+QHostAddress* q_hostaddress_new6(const void* copy) {
     return QHostAddress_New6((QHostAddress*)copy);
 }
 
@@ -53,7 +53,7 @@ QHostAddress* q_hostaddress_new7(int32_t address) {
     return QHostAddress_New7(address);
 }
 
-void q_hostaddress_operator_assign(void* self, void* other) {
+void q_hostaddress_operator_assign(void* self, const void* other) {
     QHostAddress_OperatorAssign((QHostAddress*)self, (QHostAddress*)other);
 }
 
@@ -73,7 +73,7 @@ void q_hostaddress_set_address2(void* self, unsigned char* ip6Addr) {
     QHostAddress_SetAddress2((QHostAddress*)self, ip6Addr);
 }
 
-void q_hostaddress_set_address3(void* self, void* ip6Addr) {
+void q_hostaddress_set_address3(void* self, const void* ip6Addr) {
     QHostAddress_SetAddress3((QHostAddress*)self, (QIPv6Address*)ip6Addr);
 }
 
@@ -85,26 +85,26 @@ void q_hostaddress_set_address6(void* self, int32_t address) {
     QHostAddress_SetAddress6((QHostAddress*)self, address);
 }
 
-int32_t q_hostaddress_protocol(void* self) {
+int32_t q_hostaddress_protocol(const void* self) {
     return QHostAddress_Protocol((QHostAddress*)self);
 }
 
-uint32_t q_hostaddress_to_i_pv4_address(void* self) {
+uint32_t q_hostaddress_to_i_pv4_address(const void* self) {
     return QHostAddress_ToIPv4Address((QHostAddress*)self);
 }
 
-QIPv6Address* q_hostaddress_to_i_pv6_address(void* self) {
+QIPv6Address* q_hostaddress_to_i_pv6_address(const void* self) {
     return QHostAddress_ToIPv6Address((QHostAddress*)self);
 }
 
-const char* q_hostaddress_to_string(void* self) {
+const char* q_hostaddress_to_string(const void* self) {
     libqt_string _str = QHostAddress_ToString((QHostAddress*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_hostaddress_scope_id(void* self) {
+const char* q_hostaddress_scope_id(const void* self) {
     libqt_string _str = QHostAddress_ScopeId((QHostAddress*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -115,27 +115,27 @@ void q_hostaddress_set_scope_id(void* self, const char* id) {
     QHostAddress_SetScopeId((QHostAddress*)self, qstring(id));
 }
 
-bool q_hostaddress_is_equal(void* self, void* address) {
+bool q_hostaddress_is_equal(const void* self, const void* address) {
     return QHostAddress_IsEqual((QHostAddress*)self, (QHostAddress*)address);
 }
 
-bool q_hostaddress_operator_equal(void* self, void* address) {
+bool q_hostaddress_operator_equal(const void* self, const void* address) {
     return QHostAddress_OperatorEqual((QHostAddress*)self, (QHostAddress*)address);
 }
 
-bool q_hostaddress_operator_equal2(void* self, int32_t address) {
+bool q_hostaddress_operator_equal2(const void* self, int32_t address) {
     return QHostAddress_OperatorEqual2((QHostAddress*)self, address);
 }
 
-bool q_hostaddress_operator_not_equal(void* self, void* address) {
+bool q_hostaddress_operator_not_equal(const void* self, const void* address) {
     return QHostAddress_OperatorNotEqual((QHostAddress*)self, (QHostAddress*)address);
 }
 
-bool q_hostaddress_operator_not_equal2(void* self, int32_t address) {
+bool q_hostaddress_operator_not_equal2(const void* self, int32_t address) {
     return QHostAddress_OperatorNotEqual2((QHostAddress*)self, address);
 }
 
-bool q_hostaddress_is_null(void* self) {
+bool q_hostaddress_is_null(const void* self) {
     return QHostAddress_IsNull((QHostAddress*)self);
 }
 
@@ -143,39 +143,39 @@ void q_hostaddress_clear(void* self) {
     QHostAddress_Clear((QHostAddress*)self);
 }
 
-bool q_hostaddress_is_in_subnet(void* self, void* subnet, int netmask) {
+bool q_hostaddress_is_in_subnet(const void* self, const void* subnet, int netmask) {
     return QHostAddress_IsInSubnet((QHostAddress*)self, (QHostAddress*)subnet, netmask);
 }
 
-bool q_hostaddress_is_loopback(void* self) {
+bool q_hostaddress_is_loopback(const void* self) {
     return QHostAddress_IsLoopback((QHostAddress*)self);
 }
 
-bool q_hostaddress_is_global(void* self) {
+bool q_hostaddress_is_global(const void* self) {
     return QHostAddress_IsGlobal((QHostAddress*)self);
 }
 
-bool q_hostaddress_is_link_local(void* self) {
+bool q_hostaddress_is_link_local(const void* self) {
     return QHostAddress_IsLinkLocal((QHostAddress*)self);
 }
 
-bool q_hostaddress_is_site_local(void* self) {
+bool q_hostaddress_is_site_local(const void* self) {
     return QHostAddress_IsSiteLocal((QHostAddress*)self);
 }
 
-bool q_hostaddress_is_unique_local_unicast(void* self) {
+bool q_hostaddress_is_unique_local_unicast(const void* self) {
     return QHostAddress_IsUniqueLocalUnicast((QHostAddress*)self);
 }
 
-bool q_hostaddress_is_multicast(void* self) {
+bool q_hostaddress_is_multicast(const void* self) {
     return QHostAddress_IsMulticast((QHostAddress*)self);
 }
 
-bool q_hostaddress_is_broadcast(void* self) {
+bool q_hostaddress_is_broadcast(const void* self) {
     return QHostAddress_IsBroadcast((QHostAddress*)self);
 }
 
-bool q_hostaddress_is_private_use(void* self) {
+bool q_hostaddress_is_private_use(const void* self) {
     return QHostAddress_IsPrivateUse((QHostAddress*)self);
 }
 
@@ -183,11 +183,11 @@ pair_qhostaddress_int /* tuple of QHostAddress* and int */ q_hostaddress_parse_s
     return QHostAddress_ParseSubnet(qstring(subnet));
 }
 
-uint32_t q_hostaddress_to_i_pv4_address1(void* self, bool* ok) {
+uint32_t q_hostaddress_to_i_pv4_address1(const void* self, bool* ok) {
     return QHostAddress_ToIPv4Address1((QHostAddress*)self, (bool*)ok);
 }
 
-bool q_hostaddress_is_equal2(void* self, void* address, int32_t mode) {
+bool q_hostaddress_is_equal2(const void* self, const void* address, int32_t mode) {
     return QHostAddress_IsEqual2((QHostAddress*)self, (QHostAddress*)address, mode);
 }
 

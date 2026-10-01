@@ -71,17 +71,17 @@ bool q_messageauthenticationcode_add_data3(void* self, void* device);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QMessageAuthenticationCode*
+/// @param self const QMessageAuthenticationCode*
 ///
-char* q_messageauthenticationcode_result_view(void* self);
+char* q_messageauthenticationcode_result_view(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessageauthenticationcode.html#result)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QMessageAuthenticationCode*
+/// @param self const QMessageAuthenticationCode*
 ///
-char* q_messageauthenticationcode_result(void* self);
+char* q_messageauthenticationcode_result(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessageauthenticationcode.html#hash)
 ///

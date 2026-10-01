@@ -18,51 +18,51 @@ KCountryFlagEmojiIconEngine* k_countryflagemojiiconengine_new(const char* region
 
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#clone)
 ///
-/// @param self KCountryFlagEmojiIconEngine*
+/// @param self const KCountryFlagEmojiIconEngine*
 ///
-QIconEngine* k_countryflagemojiiconengine_clone(void* self);
+QIconEngine* k_countryflagemojiiconengine_clone(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCountryFlagEmojiIconEngine*
-/// @param callback QIconEngine* func()
+/// @param self const KCountryFlagEmojiIconEngine*
+/// @param callback QIconEngine* func(const KCountryFlagEmojiIconEngine* self)
 ///
-void k_countryflagemojiiconengine_on_clone(void* self, QIconEngine* (*callback)());
+void k_countryflagemojiiconengine_on_clone(const void* self, QIconEngine* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#clone)
 ///
 /// Base class method implementation
 ///
-/// @param self KCountryFlagEmojiIconEngine*
+/// @param self const KCountryFlagEmojiIconEngine*
 ///
-QIconEngine* k_countryflagemojiiconengine_super_clone(void* self);
+QIconEngine* k_countryflagemojiiconengine_super_clone(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#key)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCountryFlagEmojiIconEngine*
+/// @param self const KCountryFlagEmojiIconEngine*
 ///
-const char* k_countryflagemojiiconengine_key(void* self);
+const char* k_countryflagemojiiconengine_key(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#key)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCountryFlagEmojiIconEngine*
-/// @param callback const char* func()
+/// @param self const KCountryFlagEmojiIconEngine*
+/// @param callback const char* func(const KCountryFlagEmojiIconEngine* self)
 ///
-void k_countryflagemojiiconengine_on_key(void* self, const char* (*callback)());
+void k_countryflagemojiiconengine_on_key(const void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#key)
 ///
 /// Base class method implementation
 ///
-/// @param self KCountryFlagEmojiIconEngine*
+/// @param self const KCountryFlagEmojiIconEngine*
 ///
-const char* k_countryflagemojiiconengine_super_key(void* self);
+const char* k_countryflagemojiiconengine_super_key(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#paint)
 ///
@@ -72,7 +72,7 @@ const char* k_countryflagemojiiconengine_super_key(void* self);
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-void k_countryflagemojiiconengine_paint(void* self, void* painter, void* rect, int32_t mode, int32_t state);
+void k_countryflagemojiiconengine_paint(void* self, void* painter, const void* rect, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#paint)
 ///
@@ -81,7 +81,7 @@ void k_countryflagemojiiconengine_paint(void* self, void* painter, void* rect, i
 /// @param self KCountryFlagEmojiIconEngine*
 /// @param callback void func(KCountryFlagEmojiIconEngine* self, QPainter* painter, QRect* rect, enum QIcon__Mode mode, enum QIcon__State state)
 ///
-void k_countryflagemojiiconengine_on_paint(void* self, void (*callback)(void*, void*, void*, int32_t, int32_t));
+void k_countryflagemojiiconengine_on_paint(void* self, void (*callback)(void*, void*, const void*, int32_t, int32_t));
 
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#paint)
 ///
@@ -93,7 +93,7 @@ void k_countryflagemojiiconengine_on_paint(void* self, void (*callback)(void*, v
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-void k_countryflagemojiiconengine_super_paint(void* self, void* painter, void* rect, int32_t mode, int32_t state);
+void k_countryflagemojiiconengine_super_paint(void* self, void* painter, const void* rect, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#pixmap)
 ///
@@ -102,7 +102,7 @@ void k_countryflagemojiiconengine_super_paint(void* self, void* painter, void* r
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-QPixmap* k_countryflagemojiiconengine_pixmap(void* self, void* size, int32_t mode, int32_t state);
+QPixmap* k_countryflagemojiiconengine_pixmap(void* self, const void* size, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#pixmap)
 ///
@@ -113,7 +113,7 @@ QPixmap* k_countryflagemojiiconengine_pixmap(void* self, void* size, int32_t mod
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_countryflagemojiiconengine_on_pixmap(void* self, QPixmap* (*callback)(void*, void*, int32_t, int32_t));
+void k_countryflagemojiiconengine_on_pixmap(void* self, QPixmap* (*callback)(void*, const void*, int32_t, int32_t));
 
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#pixmap)
 ///
@@ -124,7 +124,7 @@ void k_countryflagemojiiconengine_on_pixmap(void* self, QPixmap* (*callback)(voi
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-QPixmap* k_countryflagemojiiconengine_super_pixmap(void* self, void* size, int32_t mode, int32_t state);
+QPixmap* k_countryflagemojiiconengine_super_pixmap(void* self, const void* size, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#scaledPixmap)
 ///
@@ -134,7 +134,7 @@ QPixmap* k_countryflagemojiiconengine_super_pixmap(void* self, void* size, int32
 /// @param state enum QIcon__State
 /// @param scale double
 ///
-QPixmap* k_countryflagemojiiconengine_scaled_pixmap(void* self, void* size, int32_t mode, int32_t state, double scale);
+QPixmap* k_countryflagemojiiconengine_scaled_pixmap(void* self, const void* size, int32_t mode, int32_t state, double scale);
 
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#scaledPixmap)
 ///
@@ -145,7 +145,7 @@ QPixmap* k_countryflagemojiiconengine_scaled_pixmap(void* self, void* size, int3
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_countryflagemojiiconengine_on_scaled_pixmap(void* self, QPixmap* (*callback)(void*, void*, int32_t, int32_t, double));
+void k_countryflagemojiiconengine_on_scaled_pixmap(void* self, QPixmap* (*callback)(void*, const void*, int32_t, int32_t, double));
 
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#scaledPixmap)
 ///
@@ -157,7 +157,7 @@ void k_countryflagemojiiconengine_on_scaled_pixmap(void* self, QPixmap* (*callba
 /// @param state enum QIcon__State
 /// @param scale double
 ///
-QPixmap* k_countryflagemojiiconengine_super_scaled_pixmap(void* self, void* size, int32_t mode, int32_t state, double scale);
+QPixmap* k_countryflagemojiiconengine_super_scaled_pixmap(void* self, const void* size, int32_t mode, int32_t state, double scale);
 
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#isNull)
 ///
@@ -170,9 +170,9 @@ bool k_countryflagemojiiconengine_is_null(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KCountryFlagEmojiIconEngine*
-/// @param callback bool func()
+/// @param callback bool func(KCountryFlagEmojiIconEngine* self)
 ///
-void k_countryflagemojiiconengine_on_is_null(void* self, bool (*callback)());
+void k_countryflagemojiiconengine_on_is_null(void* self, bool (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#isNull)
 ///
@@ -186,7 +186,7 @@ bool k_countryflagemojiiconengine_super_is_null(void* self);
 ///
 /// @param font QFont*
 ///
-void k_countryflagemojiiconengine_set_global_default_font(void* font);
+void k_countryflagemojiiconengine_set_global_default_font(const void* font);
 
 /// Inherited from QIconEngine
 ///
@@ -199,7 +199,7 @@ void k_countryflagemojiiconengine_set_global_default_font(void* font);
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-QSize* k_countryflagemojiiconengine_actual_size(void* self, void* size, int32_t mode, int32_t state);
+QSize* k_countryflagemojiiconengine_actual_size(void* self, const void* size, int32_t mode, int32_t state);
 
 /// Inherited from QIconEngine
 ///
@@ -212,7 +212,7 @@ QSize* k_countryflagemojiiconengine_actual_size(void* self, void* size, int32_t 
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-QSize* k_countryflagemojiiconengine_super_actual_size(void* self, void* size, int32_t mode, int32_t state);
+QSize* k_countryflagemojiiconengine_super_actual_size(void* self, const void* size, int32_t mode, int32_t state);
 
 /// Inherited from QIconEngine
 ///
@@ -225,7 +225,7 @@ QSize* k_countryflagemojiiconengine_super_actual_size(void* self, void* size, in
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_countryflagemojiiconengine_on_actual_size(void* self, QSize* (*callback)(void*, void*, int32_t, int32_t));
+void k_countryflagemojiiconengine_on_actual_size(void* self, QSize* (*callback)(void*, const void*, int32_t, int32_t));
 
 /// Inherited from QIconEngine
 ///
@@ -238,7 +238,7 @@ void k_countryflagemojiiconengine_on_actual_size(void* self, QSize* (*callback)(
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-void k_countryflagemojiiconengine_add_pixmap(void* self, void* pixmap, int32_t mode, int32_t state);
+void k_countryflagemojiiconengine_add_pixmap(void* self, const void* pixmap, int32_t mode, int32_t state);
 
 /// Inherited from QIconEngine
 ///
@@ -251,7 +251,7 @@ void k_countryflagemojiiconengine_add_pixmap(void* self, void* pixmap, int32_t m
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-void k_countryflagemojiiconengine_super_add_pixmap(void* self, void* pixmap, int32_t mode, int32_t state);
+void k_countryflagemojiiconengine_super_add_pixmap(void* self, const void* pixmap, int32_t mode, int32_t state);
 
 /// Inherited from QIconEngine
 ///
@@ -262,7 +262,7 @@ void k_countryflagemojiiconengine_super_add_pixmap(void* self, void* pixmap, int
 /// @param self KCountryFlagEmojiIconEngine*
 /// @param callback void func(KCountryFlagEmojiIconEngine* self, QPixmap* pixmap, enum QIcon__Mode mode, enum QIcon__State state)
 ///
-void k_countryflagemojiiconengine_on_add_pixmap(void* self, void (*callback)(void*, void*, int32_t, int32_t));
+void k_countryflagemojiiconengine_on_add_pixmap(void* self, void (*callback)(void*, const void*, int32_t, int32_t));
 
 /// Inherited from QIconEngine
 ///
@@ -276,7 +276,7 @@ void k_countryflagemojiiconengine_on_add_pixmap(void* self, void (*callback)(voi
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-void k_countryflagemojiiconengine_add_file(void* self, const char* fileName, void* size, int32_t mode, int32_t state);
+void k_countryflagemojiiconengine_add_file(void* self, const char* fileName, const void* size, int32_t mode, int32_t state);
 
 /// Inherited from QIconEngine
 ///
@@ -290,7 +290,7 @@ void k_countryflagemojiiconengine_add_file(void* self, const char* fileName, voi
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-void k_countryflagemojiiconengine_super_add_file(void* self, const char* fileName, void* size, int32_t mode, int32_t state);
+void k_countryflagemojiiconengine_super_add_file(void* self, const char* fileName, const void* size, int32_t mode, int32_t state);
 
 /// Inherited from QIconEngine
 ///
@@ -301,7 +301,7 @@ void k_countryflagemojiiconengine_super_add_file(void* self, const char* fileNam
 /// @param self KCountryFlagEmojiIconEngine*
 /// @param callback void func(KCountryFlagEmojiIconEngine* self, const char* fileName, QSize* size, enum QIcon__Mode mode, enum QIcon__State state)
 ///
-void k_countryflagemojiiconengine_on_add_file(void* self, void (*callback)(void*, const char*, void*, int32_t, int32_t));
+void k_countryflagemojiiconengine_on_add_file(void* self, void (*callback)(void*, const char*, const void*, int32_t, int32_t));
 
 /// Inherited from QIconEngine
 ///
@@ -342,10 +342,10 @@ void k_countryflagemojiiconengine_on_read(void* self, bool (*callback)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCountryFlagEmojiIconEngine*
+/// @param self const KCountryFlagEmojiIconEngine*
 /// @param out QDataStream*
 ///
-bool k_countryflagemojiiconengine_write(void* self, void* out);
+bool k_countryflagemojiiconengine_write(const void* self, void* out);
 
 /// Inherited from QIconEngine
 ///
@@ -353,10 +353,10 @@ bool k_countryflagemojiiconengine_write(void* self, void* out);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCountryFlagEmojiIconEngine*
+/// @param self const KCountryFlagEmojiIconEngine*
 /// @param out QDataStream*
 ///
-bool k_countryflagemojiiconengine_super_write(void* self, void* out);
+bool k_countryflagemojiiconengine_super_write(const void* self, void* out);
 
 /// Inherited from QIconEngine
 ///
@@ -364,10 +364,10 @@ bool k_countryflagemojiiconengine_super_write(void* self, void* out);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCountryFlagEmojiIconEngine*
+/// @param self const KCountryFlagEmojiIconEngine*
 /// @param callback bool func(KCountryFlagEmojiIconEngine* self, QDataStream* out)
 ///
-void k_countryflagemojiiconengine_on_write(void* self, bool (*callback)(void*, void*));
+void k_countryflagemojiiconengine_on_write(const void* self, bool (*callback)(const void*, void*));
 
 /// Inherited from QIconEngine
 ///
@@ -439,9 +439,9 @@ const char* k_countryflagemojiiconengine_super_icon_name(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCountryFlagEmojiIconEngine*
-/// @param callback const char* func()
+/// @param callback const char* func(KCountryFlagEmojiIconEngine* self)
 ///
-void k_countryflagemojiiconengine_on_icon_name(void* self, const char* (*callback)());
+void k_countryflagemojiiconengine_on_icon_name(void* self, const char* (*callback)(void*));
 
 /// Inherited from QIconEngine
 ///

@@ -20,20 +20,20 @@ Attica__Distribution* k_attica__distribution_new();
 ///
 /// @param other Attica__Distribution*
 ///
-Attica__Distribution* k_attica__distribution_new2(void* other);
+Attica__Distribution* k_attica__distribution_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-distribution.html#operator-eq)
 ///
 /// @param self Attica__Distribution*
 /// @param other Attica__Distribution*
 ///
-void k_attica__distribution_operator_assign(void* self, void* other);
+void k_attica__distribution_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-distribution.html#id)
 ///
-/// @param self Attica__Distribution*
+/// @param self const Attica__Distribution*
 ///
-uint32_t k_attica__distribution_id(void* self);
+uint32_t k_attica__distribution_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-distribution.html#setId)
 ///
@@ -46,9 +46,9 @@ void k_attica__distribution_set_id(void* self, uint32_t id);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Distribution*
+/// @param self const Attica__Distribution*
 ///
-const char* k_attica__distribution_name(void* self);
+const char* k_attica__distribution_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-distribution.html#setName)
 ///

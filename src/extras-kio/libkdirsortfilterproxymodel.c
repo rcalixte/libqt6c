@@ -23,15 +23,15 @@ KDirSortFilterProxyModel* k_dirsortfilterproxymodel_new2(void* parent) {
     return KDirSortFilterProxyModel_New2((QObject*)parent);
 }
 
-const QMetaObject* k_dirsortfilterproxymodel_meta_object(void* self) {
+const QMetaObject* k_dirsortfilterproxymodel_meta_object(const void* self) {
     return KDirSortFilterProxyModel_MetaObject((KDirSortFilterProxyModel*)self);
 }
 
-void k_dirsortfilterproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_dirsortfilterproxymodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     KDirSortFilterProxyModel_OnMetaObject((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_dirsortfilterproxymodel_super_meta_object(void* self) {
+const QMetaObject* k_dirsortfilterproxymodel_super_meta_object(const void* self) {
     return KDirSortFilterProxyModel_SuperMetaObject((KDirSortFilterProxyModel*)self);
 }
 
@@ -66,31 +66,31 @@ const char* k_dirsortfilterproxymodel_tr(const char* s) {
     return _ret;
 }
 
-bool k_dirsortfilterproxymodel_has_children(void* self, void* parent) {
+bool k_dirsortfilterproxymodel_has_children(const void* self, const void* parent) {
     return KDirSortFilterProxyModel_HasChildren((KDirSortFilterProxyModel*)self, (QModelIndex*)parent);
 }
 
-void k_dirsortfilterproxymodel_on_has_children(void* self, bool (*callback)(void*, void*)) {
+void k_dirsortfilterproxymodel_on_has_children(const void* self, bool (*callback)(const void*, const void*)) {
     KDirSortFilterProxyModel_OnHasChildren((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_dirsortfilterproxymodel_super_has_children(void* self, void* parent) {
+bool k_dirsortfilterproxymodel_super_has_children(const void* self, const void* parent) {
     return KDirSortFilterProxyModel_SuperHasChildren((KDirSortFilterProxyModel*)self, (QModelIndex*)parent);
 }
 
-bool k_dirsortfilterproxymodel_can_fetch_more(void* self, void* parent) {
+bool k_dirsortfilterproxymodel_can_fetch_more(const void* self, const void* parent) {
     return KDirSortFilterProxyModel_CanFetchMore((KDirSortFilterProxyModel*)self, (QModelIndex*)parent);
 }
 
-void k_dirsortfilterproxymodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*)) {
+void k_dirsortfilterproxymodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*)) {
     KDirSortFilterProxyModel_OnCanFetchMore((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_dirsortfilterproxymodel_super_can_fetch_more(void* self, void* parent) {
+bool k_dirsortfilterproxymodel_super_can_fetch_more(const void* self, const void* parent) {
     return KDirSortFilterProxyModel_SuperCanFetchMore((KDirSortFilterProxyModel*)self, (QModelIndex*)parent);
 }
 
-int32_t k_dirsortfilterproxymodel_points_for_permissions(void* info) {
+int32_t k_dirsortfilterproxymodel_points_for_permissions(const void* info) {
     return KDirSortFilterProxyModel_PointsForPermissions((QFileInfo*)info);
 }
 
@@ -98,7 +98,7 @@ void k_dirsortfilterproxymodel_set_sort_folders_first(void* self, bool foldersFi
     KDirSortFilterProxyModel_SetSortFoldersFirst((KDirSortFilterProxyModel*)self, foldersFirst);
 }
 
-bool k_dirsortfilterproxymodel_sort_folders_first(void* self) {
+bool k_dirsortfilterproxymodel_sort_folders_first(const void* self) {
     return KDirSortFilterProxyModel_SortFoldersFirst((KDirSortFilterProxyModel*)self);
 }
 
@@ -106,23 +106,23 @@ void k_dirsortfilterproxymodel_set_sort_hidden_files_last(void* self, bool hidde
     KDirSortFilterProxyModel_SetSortHiddenFilesLast((KDirSortFilterProxyModel*)self, hiddenFilesLast);
 }
 
-bool k_dirsortfilterproxymodel_sort_hidden_files_last(void* self) {
+bool k_dirsortfilterproxymodel_sort_hidden_files_last(const void* self) {
     return KDirSortFilterProxyModel_SortHiddenFilesLast((KDirSortFilterProxyModel*)self);
 }
 
-int32_t k_dirsortfilterproxymodel_supported_drag_options(void* self) {
+int32_t k_dirsortfilterproxymodel_supported_drag_options(const void* self) {
     return KDirSortFilterProxyModel_SupportedDragOptions((KDirSortFilterProxyModel*)self);
 }
 
-bool k_dirsortfilterproxymodel_sub_sort_less_than(void* self, void* left, void* right) {
+bool k_dirsortfilterproxymodel_sub_sort_less_than(const void* self, const void* left, const void* right) {
     return KDirSortFilterProxyModel_SubSortLessThan((KDirSortFilterProxyModel*)self, (QModelIndex*)left, (QModelIndex*)right);
 }
 
-void k_dirsortfilterproxymodel_on_sub_sort_less_than(void* self, bool (*callback)(void*, void*, void*)) {
+void k_dirsortfilterproxymodel_on_sub_sort_less_than(const void* self, bool (*callback)(const void*, const void*, const void*)) {
     KDirSortFilterProxyModel_OnSubSortLessThan((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_dirsortfilterproxymodel_super_sub_sort_less_than(void* self, void* left, void* right) {
+bool k_dirsortfilterproxymodel_super_sub_sort_less_than(const void* self, const void* left, const void* right) {
     return KDirSortFilterProxyModel_SuperSubSortLessThan((KDirSortFilterProxyModel*)self, (QModelIndex*)left, (QModelIndex*)right);
 }
 
@@ -140,7 +140,7 @@ const char* k_dirsortfilterproxymodel_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-bool k_dirsortfilterproxymodel_is_categorized_model(void* self) {
+bool k_dirsortfilterproxymodel_is_categorized_model(const void* self) {
     return KCategorizedSortFilterProxyModel_IsCategorizedModel((KCategorizedSortFilterProxyModel*)self);
 }
 
@@ -148,11 +148,11 @@ void k_dirsortfilterproxymodel_set_categorized_model(void* self, bool categorize
     KCategorizedSortFilterProxyModel_SetCategorizedModel((KCategorizedSortFilterProxyModel*)self, categorizedModel);
 }
 
-int32_t k_dirsortfilterproxymodel_sort_column(void* self) {
+int32_t k_dirsortfilterproxymodel_sort_column(const void* self) {
     return KCategorizedSortFilterProxyModel_SortColumn((KCategorizedSortFilterProxyModel*)self);
 }
 
-int32_t k_dirsortfilterproxymodel_sort_order(void* self) {
+int32_t k_dirsortfilterproxymodel_sort_order(const void* self) {
     return KCategorizedSortFilterProxyModel_SortOrder((KCategorizedSortFilterProxyModel*)self);
 }
 
@@ -160,15 +160,15 @@ void k_dirsortfilterproxymodel_set_sort_categories_by_natural_comparison(void* s
     KCategorizedSortFilterProxyModel_SetSortCategoriesByNaturalComparison((KCategorizedSortFilterProxyModel*)self, sortCategoriesByNaturalComparison);
 }
 
-bool k_dirsortfilterproxymodel_sort_categories_by_natural_comparison(void* self) {
+bool k_dirsortfilterproxymodel_sort_categories_by_natural_comparison(const void* self) {
     return KCategorizedSortFilterProxyModel_SortCategoriesByNaturalComparison((KCategorizedSortFilterProxyModel*)self);
 }
 
-QRegularExpression* k_dirsortfilterproxymodel_filter_regular_expression(void* self) {
+QRegularExpression* k_dirsortfilterproxymodel_filter_regular_expression(const void* self) {
     return QSortFilterProxyModel_FilterRegularExpression((QSortFilterProxyModel*)self);
 }
 
-int32_t k_dirsortfilterproxymodel_filter_key_column(void* self) {
+int32_t k_dirsortfilterproxymodel_filter_key_column(const void* self) {
     return QSortFilterProxyModel_FilterKeyColumn((QSortFilterProxyModel*)self);
 }
 
@@ -176,7 +176,7 @@ void k_dirsortfilterproxymodel_set_filter_key_column(void* self, int column) {
     QSortFilterProxyModel_SetFilterKeyColumn((QSortFilterProxyModel*)self, column);
 }
 
-int32_t k_dirsortfilterproxymodel_filter_case_sensitivity(void* self) {
+int32_t k_dirsortfilterproxymodel_filter_case_sensitivity(const void* self) {
     return QSortFilterProxyModel_FilterCaseSensitivity((QSortFilterProxyModel*)self);
 }
 
@@ -184,7 +184,7 @@ void k_dirsortfilterproxymodel_set_filter_case_sensitivity(void* self, int32_t c
     QSortFilterProxyModel_SetFilterCaseSensitivity((QSortFilterProxyModel*)self, cs);
 }
 
-int32_t k_dirsortfilterproxymodel_sort_case_sensitivity(void* self) {
+int32_t k_dirsortfilterproxymodel_sort_case_sensitivity(const void* self) {
     return QSortFilterProxyModel_SortCaseSensitivity((QSortFilterProxyModel*)self);
 }
 
@@ -192,7 +192,7 @@ void k_dirsortfilterproxymodel_set_sort_case_sensitivity(void* self, int32_t cs)
     QSortFilterProxyModel_SetSortCaseSensitivity((QSortFilterProxyModel*)self, cs);
 }
 
-bool k_dirsortfilterproxymodel_is_sort_locale_aware(void* self) {
+bool k_dirsortfilterproxymodel_is_sort_locale_aware(const void* self) {
     return QSortFilterProxyModel_IsSortLocaleAware((QSortFilterProxyModel*)self);
 }
 
@@ -200,7 +200,7 @@ void k_dirsortfilterproxymodel_set_sort_locale_aware(void* self, bool on) {
     QSortFilterProxyModel_SetSortLocaleAware((QSortFilterProxyModel*)self, on);
 }
 
-bool k_dirsortfilterproxymodel_dynamic_sort_filter(void* self) {
+bool k_dirsortfilterproxymodel_dynamic_sort_filter(const void* self) {
     return QSortFilterProxyModel_DynamicSortFilter((QSortFilterProxyModel*)self);
 }
 
@@ -208,7 +208,7 @@ void k_dirsortfilterproxymodel_set_dynamic_sort_filter(void* self, bool enable) 
     QSortFilterProxyModel_SetDynamicSortFilter((QSortFilterProxyModel*)self, enable);
 }
 
-int32_t k_dirsortfilterproxymodel_sort_role(void* self) {
+int32_t k_dirsortfilterproxymodel_sort_role(const void* self) {
     return QSortFilterProxyModel_SortRole((QSortFilterProxyModel*)self);
 }
 
@@ -216,7 +216,7 @@ void k_dirsortfilterproxymodel_set_sort_role(void* self, int role) {
     QSortFilterProxyModel_SetSortRole((QSortFilterProxyModel*)self, role);
 }
 
-int32_t k_dirsortfilterproxymodel_filter_role(void* self) {
+int32_t k_dirsortfilterproxymodel_filter_role(const void* self) {
     return QSortFilterProxyModel_FilterRole((QSortFilterProxyModel*)self);
 }
 
@@ -224,7 +224,7 @@ void k_dirsortfilterproxymodel_set_filter_role(void* self, int role) {
     QSortFilterProxyModel_SetFilterRole((QSortFilterProxyModel*)self, role);
 }
 
-bool k_dirsortfilterproxymodel_is_recursive_filtering_enabled(void* self) {
+bool k_dirsortfilterproxymodel_is_recursive_filtering_enabled(const void* self) {
     return QSortFilterProxyModel_IsRecursiveFilteringEnabled((QSortFilterProxyModel*)self);
 }
 
@@ -232,7 +232,7 @@ void k_dirsortfilterproxymodel_set_recursive_filtering_enabled(void* self, bool 
     QSortFilterProxyModel_SetRecursiveFilteringEnabled((QSortFilterProxyModel*)self, recursive);
 }
 
-bool k_dirsortfilterproxymodel_auto_accept_child_rows(void* self) {
+bool k_dirsortfilterproxymodel_auto_accept_child_rows(const void* self) {
     return QSortFilterProxyModel_AutoAcceptChildRows((QSortFilterProxyModel*)self);
 }
 
@@ -244,7 +244,7 @@ void k_dirsortfilterproxymodel_set_filter_regular_expression(void* self, const c
     QSortFilterProxyModel_SetFilterRegularExpression((QSortFilterProxyModel*)self, qstring(pattern));
 }
 
-void k_dirsortfilterproxymodel_set_filter_regular_expression2(void* self, void* regularExpression) {
+void k_dirsortfilterproxymodel_set_filter_regular_expression2(void* self, const void* regularExpression) {
     QSortFilterProxyModel_SetFilterRegularExpression2((QSortFilterProxyModel*)self, (QRegularExpression*)regularExpression);
 }
 
@@ -324,11 +324,11 @@ void k_dirsortfilterproxymodel_on_auto_accept_child_rows_changed(void* self, voi
     QSortFilterProxyModel_Connect_AutoAcceptChildRowsChanged((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-QAbstractItemModel* k_dirsortfilterproxymodel_source_model(void* self) {
+QAbstractItemModel* k_dirsortfilterproxymodel_source_model(const void* self) {
     return QAbstractProxyModel_SourceModel((QAbstractProxyModel*)self);
 }
 
-bool k_dirsortfilterproxymodel_has_index(void* self, int row, int column) {
+bool k_dirsortfilterproxymodel_has_index(const void* self, int row, int column) {
     return QAbstractItemModel_HasIndex((QAbstractItemModel*)self, row, column);
 }
 
@@ -348,23 +348,23 @@ bool k_dirsortfilterproxymodel_remove_column(void* self, int column) {
     return QAbstractItemModel_RemoveColumn((QAbstractItemModel*)self, column);
 }
 
-bool k_dirsortfilterproxymodel_move_row(void* self, void* sourceParent, int sourceRow, void* destinationParent, int destinationChild) {
+bool k_dirsortfilterproxymodel_move_row(void* self, const void* sourceParent, int sourceRow, const void* destinationParent, int destinationChild) {
     return QAbstractItemModel_MoveRow((QAbstractItemModel*)self, (QModelIndex*)sourceParent, sourceRow, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool k_dirsortfilterproxymodel_move_column(void* self, void* sourceParent, int sourceColumn, void* destinationParent, int destinationChild) {
+bool k_dirsortfilterproxymodel_move_column(void* self, const void* sourceParent, int sourceColumn, const void* destinationParent, int destinationChild) {
     return QAbstractItemModel_MoveColumn((QAbstractItemModel*)self, (QModelIndex*)sourceParent, sourceColumn, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool k_dirsortfilterproxymodel_check_index(void* self, void* index) {
+bool k_dirsortfilterproxymodel_check_index(const void* self, const void* index) {
     return QAbstractItemModel_CheckIndex((QAbstractItemModel*)self, (QModelIndex*)index);
 }
 
-void k_dirsortfilterproxymodel_data_changed(void* self, void* topLeft, void* bottomRight) {
+void k_dirsortfilterproxymodel_data_changed(void* self, const void* topLeft, const void* bottomRight) {
     QAbstractItemModel_DataChanged((QAbstractItemModel*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight);
 }
 
-void k_dirsortfilterproxymodel_on_data_changed(void* self, void (*callback)(void*, void*, void*)) {
+void k_dirsortfilterproxymodel_on_data_changed(void* self, void (*callback)(void*, const void*, const void*)) {
     QAbstractItemModel_Connect_DataChanged((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -392,35 +392,35 @@ void k_dirsortfilterproxymodel_on_layout_about_to_be_changed(void* self, void (*
     QAbstractItemModel_Connect_LayoutAboutToBeChanged((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-bool k_dirsortfilterproxymodel_has_index3(void* self, int row, int column, void* parent) {
+bool k_dirsortfilterproxymodel_has_index3(const void* self, int row, int column, const void* parent) {
     return QAbstractItemModel_HasIndex3((QAbstractItemModel*)self, row, column, (QModelIndex*)parent);
 }
 
-bool k_dirsortfilterproxymodel_insert_row2(void* self, int row, void* parent) {
+bool k_dirsortfilterproxymodel_insert_row2(void* self, int row, const void* parent) {
     return QAbstractItemModel_InsertRow2((QAbstractItemModel*)self, row, (QModelIndex*)parent);
 }
 
-bool k_dirsortfilterproxymodel_insert_column2(void* self, int column, void* parent) {
+bool k_dirsortfilterproxymodel_insert_column2(void* self, int column, const void* parent) {
     return QAbstractItemModel_InsertColumn2((QAbstractItemModel*)self, column, (QModelIndex*)parent);
 }
 
-bool k_dirsortfilterproxymodel_remove_row2(void* self, int row, void* parent) {
+bool k_dirsortfilterproxymodel_remove_row2(void* self, int row, const void* parent) {
     return QAbstractItemModel_RemoveRow2((QAbstractItemModel*)self, row, (QModelIndex*)parent);
 }
 
-bool k_dirsortfilterproxymodel_remove_column2(void* self, int column, void* parent) {
+bool k_dirsortfilterproxymodel_remove_column2(void* self, int column, const void* parent) {
     return QAbstractItemModel_RemoveColumn2((QAbstractItemModel*)self, column, (QModelIndex*)parent);
 }
 
-bool k_dirsortfilterproxymodel_check_index2(void* self, void* index, int32_t options) {
+bool k_dirsortfilterproxymodel_check_index2(const void* self, const void* index, int32_t options) {
     return QAbstractItemModel_CheckIndex2((QAbstractItemModel*)self, (QModelIndex*)index, options);
 }
 
-void k_dirsortfilterproxymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles) {
+void k_dirsortfilterproxymodel_data_changed3(void* self, const void* topLeft, const void* bottomRight, libqt_list /* of int */ roles) {
     QAbstractItemModel_DataChanged3((QAbstractItemModel*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void k_dirsortfilterproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */)) {
+void k_dirsortfilterproxymodel_on_data_changed3(void* self, void (*callback)(void*, const void*, const void*, libqt_list /* of int */)) {
     QAbstractItemModel_Connect_DataChanged3((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -456,7 +456,7 @@ void k_dirsortfilterproxymodel_on_layout_about_to_be_changed2(void* self, void (
     QAbstractItemModel_Connect_LayoutAboutToBeChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-const char* k_dirsortfilterproxymodel_object_name(void* self) {
+const char* k_dirsortfilterproxymodel_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -467,19 +467,19 @@ void k_dirsortfilterproxymodel_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_dirsortfilterproxymodel_is_widget_type(void* self) {
+bool k_dirsortfilterproxymodel_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_dirsortfilterproxymodel_is_window_type(void* self) {
+bool k_dirsortfilterproxymodel_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_dirsortfilterproxymodel_is_quick_item_type(void* self) {
+bool k_dirsortfilterproxymodel_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_dirsortfilterproxymodel_signals_blocked(void* self) {
+bool k_dirsortfilterproxymodel_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -487,7 +487,7 @@ bool k_dirsortfilterproxymodel_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_dirsortfilterproxymodel_thread(void* self) {
+QThread* k_dirsortfilterproxymodel_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -511,7 +511,7 @@ void k_dirsortfilterproxymodel_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_dirsortfilterproxymodel_children(void* self) {
+libqt_list /* of QObject* */ k_dirsortfilterproxymodel_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -528,55 +528,55 @@ void k_dirsortfilterproxymodel_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_dirsortfilterproxymodel_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_dirsortfilterproxymodel_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_dirsortfilterproxymodel_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_dirsortfilterproxymodel_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_dirsortfilterproxymodel_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_dirsortfilterproxymodel_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_dirsortfilterproxymodel_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_dirsortfilterproxymodel_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_dirsortfilterproxymodel_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_dirsortfilterproxymodel_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_dirsortfilterproxymodel_disconnect3(void* self) {
+bool k_dirsortfilterproxymodel_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_dirsortfilterproxymodel_disconnect4(void* self, void* receiver) {
+bool k_dirsortfilterproxymodel_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_dirsortfilterproxymodel_disconnect5(void* param1) {
+bool k_dirsortfilterproxymodel_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_dirsortfilterproxymodel_dump_object_tree(void* self) {
+void k_dirsortfilterproxymodel_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_dirsortfilterproxymodel_dump_object_info(void* self) {
+void k_dirsortfilterproxymodel_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_dirsortfilterproxymodel_set_property(void* self, const char* name, void* value) {
+bool k_dirsortfilterproxymodel_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_dirsortfilterproxymodel_property(void* self, const char* name) {
+QVariant* k_dirsortfilterproxymodel_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_dirsortfilterproxymodel_dynamic_property_names(void* self) {
+const char** k_dirsortfilterproxymodel_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -597,7 +597,7 @@ QBindingStorage* k_dirsortfilterproxymodel_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_dirsortfilterproxymodel_binding_storage2(void* self) {
+const QBindingStorage* k_dirsortfilterproxymodel_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -609,7 +609,7 @@ void k_dirsortfilterproxymodel_on_destroyed(void* self, void (*callback)(void*))
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-bool k_dirsortfilterproxymodel_inherits(void* self, const char* classname) {
+bool k_dirsortfilterproxymodel_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -625,31 +625,31 @@ int32_t k_dirsortfilterproxymodel_start_timer23(void* self, int64_t time, int32_
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_dirsortfilterproxymodel_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_dirsortfilterproxymodel_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_dirsortfilterproxymodel_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_dirsortfilterproxymodel_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_dirsortfilterproxymodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_dirsortfilterproxymodel_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_dirsortfilterproxymodel_disconnect1(void* self, const char* signal) {
+bool k_dirsortfilterproxymodel_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_dirsortfilterproxymodel_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_dirsortfilterproxymodel_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_dirsortfilterproxymodel_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_dirsortfilterproxymodel_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_dirsortfilterproxymodel_disconnect23(void* self, void* receiver, const char* member) {
+bool k_dirsortfilterproxymodel_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -673,28 +673,28 @@ void k_dirsortfilterproxymodel_on_sort(void* self, void (*callback)(void*, int, 
     KDirSortFilterProxyModel_OnSort((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_dirsortfilterproxymodel_less_than(void* self, void* left, void* right) {
+bool k_dirsortfilterproxymodel_less_than(const void* self, const void* left, const void* right) {
     return KDirSortFilterProxyModel_LessThan((KDirSortFilterProxyModel*)self, (QModelIndex*)left, (QModelIndex*)right);
 }
 
-bool k_dirsortfilterproxymodel_super_less_than(void* self, void* left, void* right) {
+bool k_dirsortfilterproxymodel_super_less_than(const void* self, const void* left, const void* right) {
     return KDirSortFilterProxyModel_SuperLessThan((KDirSortFilterProxyModel*)self, (QModelIndex*)left, (QModelIndex*)right);
 }
 
-void k_dirsortfilterproxymodel_on_less_than(void* self, bool (*callback)(void*, void*, void*)) {
-    KDirSortFilterProxyModel_OnLessThan((KDirSortFilterProxyModel*)self, (intptr_t)callback);
+void k_dirsortfilterproxymodel_on_less_than(const void* self, bool (*callback)(const void*, const void*, const void*)) {
+    KDirSortFilterProxyModel_OnLessThan((const KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t k_dirsortfilterproxymodel_compare_categories(void* self, void* left, void* right) {
+int32_t k_dirsortfilterproxymodel_compare_categories(const void* self, const void* left, const void* right) {
     return KDirSortFilterProxyModel_CompareCategories((KDirSortFilterProxyModel*)self, (QModelIndex*)left, (QModelIndex*)right);
 }
 
-int32_t k_dirsortfilterproxymodel_super_compare_categories(void* self, void* left, void* right) {
+int32_t k_dirsortfilterproxymodel_super_compare_categories(const void* self, const void* left, const void* right) {
     return KDirSortFilterProxyModel_SuperCompareCategories((KDirSortFilterProxyModel*)self, (QModelIndex*)left, (QModelIndex*)right);
 }
 
-void k_dirsortfilterproxymodel_on_compare_categories(void* self, int32_t (*callback)(void*, void*, void*)) {
-    KDirSortFilterProxyModel_OnCompareCategories((KDirSortFilterProxyModel*)self, (intptr_t)callback);
+void k_dirsortfilterproxymodel_on_compare_categories(const void* self, int32_t (*callback)(const void*, const void*, const void*)) {
+    KDirSortFilterProxyModel_OnCompareCategories((const KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
 void k_dirsortfilterproxymodel_set_source_model(void* self, void* sourceModel) {
@@ -709,321 +709,321 @@ void k_dirsortfilterproxymodel_on_set_source_model(void* self, void (*callback)(
     KDirSortFilterProxyModel_OnSetSourceModel((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_dirsortfilterproxymodel_map_to_source(void* self, void* proxyIndex) {
+QModelIndex* k_dirsortfilterproxymodel_map_to_source(const void* self, const void* proxyIndex) {
     return KDirSortFilterProxyModel_MapToSource((KDirSortFilterProxyModel*)self, (QModelIndex*)proxyIndex);
 }
 
-QModelIndex* k_dirsortfilterproxymodel_super_map_to_source(void* self, void* proxyIndex) {
+QModelIndex* k_dirsortfilterproxymodel_super_map_to_source(const void* self, const void* proxyIndex) {
     return KDirSortFilterProxyModel_SuperMapToSource((KDirSortFilterProxyModel*)self, (QModelIndex*)proxyIndex);
 }
 
-void k_dirsortfilterproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(void*, void*)) {
-    KDirSortFilterProxyModel_OnMapToSource((KDirSortFilterProxyModel*)self, (intptr_t)callback);
+void k_dirsortfilterproxymodel_on_map_to_source(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+    KDirSortFilterProxyModel_OnMapToSource((const KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_dirsortfilterproxymodel_map_from_source(void* self, void* sourceIndex) {
+QModelIndex* k_dirsortfilterproxymodel_map_from_source(const void* self, const void* sourceIndex) {
     return KDirSortFilterProxyModel_MapFromSource((KDirSortFilterProxyModel*)self, (QModelIndex*)sourceIndex);
 }
 
-QModelIndex* k_dirsortfilterproxymodel_super_map_from_source(void* self, void* sourceIndex) {
+QModelIndex* k_dirsortfilterproxymodel_super_map_from_source(const void* self, const void* sourceIndex) {
     return KDirSortFilterProxyModel_SuperMapFromSource((KDirSortFilterProxyModel*)self, (QModelIndex*)sourceIndex);
 }
 
-void k_dirsortfilterproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(void*, void*)) {
-    KDirSortFilterProxyModel_OnMapFromSource((KDirSortFilterProxyModel*)self, (intptr_t)callback);
+void k_dirsortfilterproxymodel_on_map_from_source(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+    KDirSortFilterProxyModel_OnMapFromSource((const KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-QItemSelection* k_dirsortfilterproxymodel_map_selection_to_source(void* self, void* proxySelection) {
+QItemSelection* k_dirsortfilterproxymodel_map_selection_to_source(const void* self, const void* proxySelection) {
     return KDirSortFilterProxyModel_MapSelectionToSource((KDirSortFilterProxyModel*)self, (QItemSelection*)proxySelection);
 }
 
-QItemSelection* k_dirsortfilterproxymodel_super_map_selection_to_source(void* self, void* proxySelection) {
+QItemSelection* k_dirsortfilterproxymodel_super_map_selection_to_source(const void* self, const void* proxySelection) {
     return KDirSortFilterProxyModel_SuperMapSelectionToSource((KDirSortFilterProxyModel*)self, (QItemSelection*)proxySelection);
 }
 
-void k_dirsortfilterproxymodel_on_map_selection_to_source(void* self, QItemSelection* (*callback)(void*, void*)) {
-    KDirSortFilterProxyModel_OnMapSelectionToSource((KDirSortFilterProxyModel*)self, (intptr_t)callback);
+void k_dirsortfilterproxymodel_on_map_selection_to_source(const void* self, QItemSelection* (*callback)(const void*, const void*)) {
+    KDirSortFilterProxyModel_OnMapSelectionToSource((const KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-QItemSelection* k_dirsortfilterproxymodel_map_selection_from_source(void* self, void* sourceSelection) {
+QItemSelection* k_dirsortfilterproxymodel_map_selection_from_source(const void* self, const void* sourceSelection) {
     return KDirSortFilterProxyModel_MapSelectionFromSource((KDirSortFilterProxyModel*)self, (QItemSelection*)sourceSelection);
 }
 
-QItemSelection* k_dirsortfilterproxymodel_super_map_selection_from_source(void* self, void* sourceSelection) {
+QItemSelection* k_dirsortfilterproxymodel_super_map_selection_from_source(const void* self, const void* sourceSelection) {
     return KDirSortFilterProxyModel_SuperMapSelectionFromSource((KDirSortFilterProxyModel*)self, (QItemSelection*)sourceSelection);
 }
 
-void k_dirsortfilterproxymodel_on_map_selection_from_source(void* self, QItemSelection* (*callback)(void*, void*)) {
-    KDirSortFilterProxyModel_OnMapSelectionFromSource((KDirSortFilterProxyModel*)self, (intptr_t)callback);
+void k_dirsortfilterproxymodel_on_map_selection_from_source(const void* self, QItemSelection* (*callback)(const void*, const void*)) {
+    KDirSortFilterProxyModel_OnMapSelectionFromSource((const KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_dirsortfilterproxymodel_filter_accepts_row(void* self, int source_row, void* source_parent) {
+bool k_dirsortfilterproxymodel_filter_accepts_row(const void* self, int source_row, const void* source_parent) {
     return KDirSortFilterProxyModel_FilterAcceptsRow((KDirSortFilterProxyModel*)self, source_row, (QModelIndex*)source_parent);
 }
 
-bool k_dirsortfilterproxymodel_super_filter_accepts_row(void* self, int source_row, void* source_parent) {
+bool k_dirsortfilterproxymodel_super_filter_accepts_row(const void* self, int source_row, const void* source_parent) {
     return KDirSortFilterProxyModel_SuperFilterAcceptsRow((KDirSortFilterProxyModel*)self, source_row, (QModelIndex*)source_parent);
 }
 
-void k_dirsortfilterproxymodel_on_filter_accepts_row(void* self, bool (*callback)(void*, int, void*)) {
-    KDirSortFilterProxyModel_OnFilterAcceptsRow((KDirSortFilterProxyModel*)self, (intptr_t)callback);
+void k_dirsortfilterproxymodel_on_filter_accepts_row(const void* self, bool (*callback)(const void*, int, const void*)) {
+    KDirSortFilterProxyModel_OnFilterAcceptsRow((const KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_dirsortfilterproxymodel_filter_accepts_column(void* self, int source_column, void* source_parent) {
+bool k_dirsortfilterproxymodel_filter_accepts_column(const void* self, int source_column, const void* source_parent) {
     return KDirSortFilterProxyModel_FilterAcceptsColumn((KDirSortFilterProxyModel*)self, source_column, (QModelIndex*)source_parent);
 }
 
-bool k_dirsortfilterproxymodel_super_filter_accepts_column(void* self, int source_column, void* source_parent) {
+bool k_dirsortfilterproxymodel_super_filter_accepts_column(const void* self, int source_column, const void* source_parent) {
     return KDirSortFilterProxyModel_SuperFilterAcceptsColumn((KDirSortFilterProxyModel*)self, source_column, (QModelIndex*)source_parent);
 }
 
-void k_dirsortfilterproxymodel_on_filter_accepts_column(void* self, bool (*callback)(void*, int, void*)) {
-    KDirSortFilterProxyModel_OnFilterAcceptsColumn((KDirSortFilterProxyModel*)self, (intptr_t)callback);
+void k_dirsortfilterproxymodel_on_filter_accepts_column(const void* self, bool (*callback)(const void*, int, const void*)) {
+    KDirSortFilterProxyModel_OnFilterAcceptsColumn((const KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_dirsortfilterproxymodel_index(void* self, int row, int column, void* parent) {
+QModelIndex* k_dirsortfilterproxymodel_index(const void* self, int row, int column, const void* parent) {
     return KDirSortFilterProxyModel_Index((KDirSortFilterProxyModel*)self, row, column, (QModelIndex*)parent);
 }
 
-QModelIndex* k_dirsortfilterproxymodel_super_index(void* self, int row, int column, void* parent) {
+QModelIndex* k_dirsortfilterproxymodel_super_index(const void* self, int row, int column, const void* parent) {
     return KDirSortFilterProxyModel_SuperIndex((KDirSortFilterProxyModel*)self, row, column, (QModelIndex*)parent);
 }
 
-void k_dirsortfilterproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
-    KDirSortFilterProxyModel_OnIndex((KDirSortFilterProxyModel*)self, (intptr_t)callback);
+void k_dirsortfilterproxymodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+    KDirSortFilterProxyModel_OnIndex((const KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_dirsortfilterproxymodel_parent(void* self, void* child) {
+QModelIndex* k_dirsortfilterproxymodel_parent(const void* self, const void* child) {
     return KDirSortFilterProxyModel_Parent((KDirSortFilterProxyModel*)self, (QModelIndex*)child);
 }
 
-QModelIndex* k_dirsortfilterproxymodel_super_parent(void* self, void* child) {
+QModelIndex* k_dirsortfilterproxymodel_super_parent(const void* self, const void* child) {
     return KDirSortFilterProxyModel_SuperParent((KDirSortFilterProxyModel*)self, (QModelIndex*)child);
 }
 
-void k_dirsortfilterproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*)) {
-    KDirSortFilterProxyModel_OnParent((KDirSortFilterProxyModel*)self, (intptr_t)callback);
+void k_dirsortfilterproxymodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+    KDirSortFilterProxyModel_OnParent((const KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_dirsortfilterproxymodel_sibling(void* self, int row, int column, void* idx) {
+QModelIndex* k_dirsortfilterproxymodel_sibling(const void* self, int row, int column, const void* idx) {
     return KDirSortFilterProxyModel_Sibling((KDirSortFilterProxyModel*)self, row, column, (QModelIndex*)idx);
 }
 
-QModelIndex* k_dirsortfilterproxymodel_super_sibling(void* self, int row, int column, void* idx) {
+QModelIndex* k_dirsortfilterproxymodel_super_sibling(const void* self, int row, int column, const void* idx) {
     return KDirSortFilterProxyModel_SuperSibling((KDirSortFilterProxyModel*)self, row, column, (QModelIndex*)idx);
 }
 
-void k_dirsortfilterproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
-    KDirSortFilterProxyModel_OnSibling((KDirSortFilterProxyModel*)self, (intptr_t)callback);
+void k_dirsortfilterproxymodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+    KDirSortFilterProxyModel_OnSibling((const KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t k_dirsortfilterproxymodel_row_count(void* self, void* parent) {
+int32_t k_dirsortfilterproxymodel_row_count(const void* self, const void* parent) {
     return KDirSortFilterProxyModel_RowCount((KDirSortFilterProxyModel*)self, (QModelIndex*)parent);
 }
 
-int32_t k_dirsortfilterproxymodel_super_row_count(void* self, void* parent) {
+int32_t k_dirsortfilterproxymodel_super_row_count(const void* self, const void* parent) {
     return KDirSortFilterProxyModel_SuperRowCount((KDirSortFilterProxyModel*)self, (QModelIndex*)parent);
 }
 
-void k_dirsortfilterproxymodel_on_row_count(void* self, int32_t (*callback)(void*, void*)) {
-    KDirSortFilterProxyModel_OnRowCount((KDirSortFilterProxyModel*)self, (intptr_t)callback);
+void k_dirsortfilterproxymodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*)) {
+    KDirSortFilterProxyModel_OnRowCount((const KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t k_dirsortfilterproxymodel_column_count(void* self, void* parent) {
+int32_t k_dirsortfilterproxymodel_column_count(const void* self, const void* parent) {
     return KDirSortFilterProxyModel_ColumnCount((KDirSortFilterProxyModel*)self, (QModelIndex*)parent);
 }
 
-int32_t k_dirsortfilterproxymodel_super_column_count(void* self, void* parent) {
+int32_t k_dirsortfilterproxymodel_super_column_count(const void* self, const void* parent) {
     return KDirSortFilterProxyModel_SuperColumnCount((KDirSortFilterProxyModel*)self, (QModelIndex*)parent);
 }
 
-void k_dirsortfilterproxymodel_on_column_count(void* self, int32_t (*callback)(void*, void*)) {
-    KDirSortFilterProxyModel_OnColumnCount((KDirSortFilterProxyModel*)self, (intptr_t)callback);
+void k_dirsortfilterproxymodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*)) {
+    KDirSortFilterProxyModel_OnColumnCount((const KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-QVariant* k_dirsortfilterproxymodel_data(void* self, void* index, int role) {
+QVariant* k_dirsortfilterproxymodel_data(const void* self, const void* index, int role) {
     return KDirSortFilterProxyModel_Data((KDirSortFilterProxyModel*)self, (QModelIndex*)index, role);
 }
 
-QVariant* k_dirsortfilterproxymodel_super_data(void* self, void* index, int role) {
+QVariant* k_dirsortfilterproxymodel_super_data(const void* self, const void* index, int role) {
     return KDirSortFilterProxyModel_SuperData((KDirSortFilterProxyModel*)self, (QModelIndex*)index, role);
 }
 
-void k_dirsortfilterproxymodel_on_data(void* self, QVariant* (*callback)(void*, void*, int)) {
-    KDirSortFilterProxyModel_OnData((KDirSortFilterProxyModel*)self, (intptr_t)callback);
+void k_dirsortfilterproxymodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int)) {
+    KDirSortFilterProxyModel_OnData((const KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_dirsortfilterproxymodel_set_data(void* self, void* index, void* value, int role) {
+bool k_dirsortfilterproxymodel_set_data(void* self, const void* index, const void* value, int role) {
     return KDirSortFilterProxyModel_SetData((KDirSortFilterProxyModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
-bool k_dirsortfilterproxymodel_super_set_data(void* self, void* index, void* value, int role) {
+bool k_dirsortfilterproxymodel_super_set_data(void* self, const void* index, const void* value, int role) {
     return KDirSortFilterProxyModel_SuperSetData((KDirSortFilterProxyModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
-void k_dirsortfilterproxymodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int)) {
+void k_dirsortfilterproxymodel_on_set_data(void* self, bool (*callback)(void*, const void*, const void*, int)) {
     KDirSortFilterProxyModel_OnSetData((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-QVariant* k_dirsortfilterproxymodel_header_data(void* self, int section, int32_t orientation, int role) {
+QVariant* k_dirsortfilterproxymodel_header_data(const void* self, int section, int32_t orientation, int role) {
     return KDirSortFilterProxyModel_HeaderData((KDirSortFilterProxyModel*)self, section, orientation, role);
 }
 
-QVariant* k_dirsortfilterproxymodel_super_header_data(void* self, int section, int32_t orientation, int role) {
+QVariant* k_dirsortfilterproxymodel_super_header_data(const void* self, int section, int32_t orientation, int role) {
     return KDirSortFilterProxyModel_SuperHeaderData((KDirSortFilterProxyModel*)self, section, orientation, role);
 }
 
-void k_dirsortfilterproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int)) {
-    KDirSortFilterProxyModel_OnHeaderData((KDirSortFilterProxyModel*)self, (intptr_t)callback);
+void k_dirsortfilterproxymodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
+    KDirSortFilterProxyModel_OnHeaderData((const KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_dirsortfilterproxymodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
+bool k_dirsortfilterproxymodel_set_header_data(void* self, int section, int32_t orientation, const void* value, int role) {
     return KDirSortFilterProxyModel_SetHeaderData((KDirSortFilterProxyModel*)self, section, orientation, (QVariant*)value, role);
 }
 
-bool k_dirsortfilterproxymodel_super_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
+bool k_dirsortfilterproxymodel_super_set_header_data(void* self, int section, int32_t orientation, const void* value, int role) {
     return KDirSortFilterProxyModel_SuperSetHeaderData((KDirSortFilterProxyModel*)self, section, orientation, (QVariant*)value, role);
 }
 
-void k_dirsortfilterproxymodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int)) {
+void k_dirsortfilterproxymodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, const void*, int)) {
     KDirSortFilterProxyModel_OnSetHeaderData((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-QMimeData* k_dirsortfilterproxymodel_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
+QMimeData* k_dirsortfilterproxymodel_mime_data(const void* self, libqt_list /* of QModelIndex* */ indexes) {
     return KDirSortFilterProxyModel_MimeData((KDirSortFilterProxyModel*)self, indexes);
 }
 
-QMimeData* k_dirsortfilterproxymodel_super_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
+QMimeData* k_dirsortfilterproxymodel_super_mime_data(const void* self, libqt_list /* of QModelIndex* */ indexes) {
     return KDirSortFilterProxyModel_SuperMimeData((KDirSortFilterProxyModel*)self, indexes);
 }
 
-void k_dirsortfilterproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list /* of QModelIndex* */)) {
-    KDirSortFilterProxyModel_OnMimeData((KDirSortFilterProxyModel*)self, (intptr_t)callback);
+void k_dirsortfilterproxymodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
+    KDirSortFilterProxyModel_OnMimeData((const KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_dirsortfilterproxymodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+bool k_dirsortfilterproxymodel_drop_mime_data(void* self, const void* data, int32_t action, int row, int column, const void* parent) {
     return KDirSortFilterProxyModel_DropMimeData((KDirSortFilterProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-bool k_dirsortfilterproxymodel_super_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+bool k_dirsortfilterproxymodel_super_drop_mime_data(void* self, const void* data, int32_t action, int row, int column, const void* parent) {
     return KDirSortFilterProxyModel_SuperDropMimeData((KDirSortFilterProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void k_dirsortfilterproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
+void k_dirsortfilterproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*, const void*, int32_t, int, int, const void*)) {
     KDirSortFilterProxyModel_OnDropMimeData((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_dirsortfilterproxymodel_insert_rows(void* self, int row, int count, void* parent) {
+bool k_dirsortfilterproxymodel_insert_rows(void* self, int row, int count, const void* parent) {
     return KDirSortFilterProxyModel_InsertRows((KDirSortFilterProxyModel*)self, row, count, (QModelIndex*)parent);
 }
 
-bool k_dirsortfilterproxymodel_super_insert_rows(void* self, int row, int count, void* parent) {
+bool k_dirsortfilterproxymodel_super_insert_rows(void* self, int row, int count, const void* parent) {
     return KDirSortFilterProxyModel_SuperInsertRows((KDirSortFilterProxyModel*)self, row, count, (QModelIndex*)parent);
 }
 
-void k_dirsortfilterproxymodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*)) {
+void k_dirsortfilterproxymodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, const void*)) {
     KDirSortFilterProxyModel_OnInsertRows((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_dirsortfilterproxymodel_insert_columns(void* self, int column, int count, void* parent) {
+bool k_dirsortfilterproxymodel_insert_columns(void* self, int column, int count, const void* parent) {
     return KDirSortFilterProxyModel_InsertColumns((KDirSortFilterProxyModel*)self, column, count, (QModelIndex*)parent);
 }
 
-bool k_dirsortfilterproxymodel_super_insert_columns(void* self, int column, int count, void* parent) {
+bool k_dirsortfilterproxymodel_super_insert_columns(void* self, int column, int count, const void* parent) {
     return KDirSortFilterProxyModel_SuperInsertColumns((KDirSortFilterProxyModel*)self, column, count, (QModelIndex*)parent);
 }
 
-void k_dirsortfilterproxymodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*)) {
+void k_dirsortfilterproxymodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, const void*)) {
     KDirSortFilterProxyModel_OnInsertColumns((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_dirsortfilterproxymodel_remove_rows(void* self, int row, int count, void* parent) {
+bool k_dirsortfilterproxymodel_remove_rows(void* self, int row, int count, const void* parent) {
     return KDirSortFilterProxyModel_RemoveRows((KDirSortFilterProxyModel*)self, row, count, (QModelIndex*)parent);
 }
 
-bool k_dirsortfilterproxymodel_super_remove_rows(void* self, int row, int count, void* parent) {
+bool k_dirsortfilterproxymodel_super_remove_rows(void* self, int row, int count, const void* parent) {
     return KDirSortFilterProxyModel_SuperRemoveRows((KDirSortFilterProxyModel*)self, row, count, (QModelIndex*)parent);
 }
 
-void k_dirsortfilterproxymodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*)) {
+void k_dirsortfilterproxymodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, const void*)) {
     KDirSortFilterProxyModel_OnRemoveRows((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_dirsortfilterproxymodel_remove_columns(void* self, int column, int count, void* parent) {
+bool k_dirsortfilterproxymodel_remove_columns(void* self, int column, int count, const void* parent) {
     return KDirSortFilterProxyModel_RemoveColumns((KDirSortFilterProxyModel*)self, column, count, (QModelIndex*)parent);
 }
 
-bool k_dirsortfilterproxymodel_super_remove_columns(void* self, int column, int count, void* parent) {
+bool k_dirsortfilterproxymodel_super_remove_columns(void* self, int column, int count, const void* parent) {
     return KDirSortFilterProxyModel_SuperRemoveColumns((KDirSortFilterProxyModel*)self, column, count, (QModelIndex*)parent);
 }
 
-void k_dirsortfilterproxymodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*)) {
+void k_dirsortfilterproxymodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, const void*)) {
     KDirSortFilterProxyModel_OnRemoveColumns((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-void k_dirsortfilterproxymodel_fetch_more(void* self, void* parent) {
+void k_dirsortfilterproxymodel_fetch_more(void* self, const void* parent) {
     KDirSortFilterProxyModel_FetchMore((KDirSortFilterProxyModel*)self, (QModelIndex*)parent);
 }
 
-void k_dirsortfilterproxymodel_super_fetch_more(void* self, void* parent) {
+void k_dirsortfilterproxymodel_super_fetch_more(void* self, const void* parent) {
     KDirSortFilterProxyModel_SuperFetchMore((KDirSortFilterProxyModel*)self, (QModelIndex*)parent);
 }
 
-void k_dirsortfilterproxymodel_on_fetch_more(void* self, void (*callback)(void*, void*)) {
+void k_dirsortfilterproxymodel_on_fetch_more(void* self, void (*callback)(void*, const void*)) {
     KDirSortFilterProxyModel_OnFetchMore((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t k_dirsortfilterproxymodel_flags(void* self, void* index) {
+int32_t k_dirsortfilterproxymodel_flags(const void* self, const void* index) {
     return KDirSortFilterProxyModel_Flags((KDirSortFilterProxyModel*)self, (QModelIndex*)index);
 }
 
-int32_t k_dirsortfilterproxymodel_super_flags(void* self, void* index) {
+int32_t k_dirsortfilterproxymodel_super_flags(const void* self, const void* index) {
     return KDirSortFilterProxyModel_SuperFlags((KDirSortFilterProxyModel*)self, (QModelIndex*)index);
 }
 
-void k_dirsortfilterproxymodel_on_flags(void* self, int32_t (*callback)(void*, void*)) {
-    KDirSortFilterProxyModel_OnFlags((KDirSortFilterProxyModel*)self, (intptr_t)callback);
+void k_dirsortfilterproxymodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*)) {
+    KDirSortFilterProxyModel_OnFlags((const KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_dirsortfilterproxymodel_buddy(void* self, void* index) {
+QModelIndex* k_dirsortfilterproxymodel_buddy(const void* self, const void* index) {
     return KDirSortFilterProxyModel_Buddy((KDirSortFilterProxyModel*)self, (QModelIndex*)index);
 }
 
-QModelIndex* k_dirsortfilterproxymodel_super_buddy(void* self, void* index) {
+QModelIndex* k_dirsortfilterproxymodel_super_buddy(const void* self, const void* index) {
     return KDirSortFilterProxyModel_SuperBuddy((KDirSortFilterProxyModel*)self, (QModelIndex*)index);
 }
 
-void k_dirsortfilterproxymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*)) {
-    KDirSortFilterProxyModel_OnBuddy((KDirSortFilterProxyModel*)self, (intptr_t)callback);
+void k_dirsortfilterproxymodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+    KDirSortFilterProxyModel_OnBuddy((const KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QModelIndex* */ k_dirsortfilterproxymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
+libqt_list /* of QModelIndex* */ k_dirsortfilterproxymodel_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags) {
     libqt_list _arr = KDirSortFilterProxyModel_Match((KDirSortFilterProxyModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ k_dirsortfilterproxymodel_super_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
+libqt_list /* of QModelIndex* */ k_dirsortfilterproxymodel_super_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags) {
     libqt_list _arr = KDirSortFilterProxyModel_SuperMatch((KDirSortFilterProxyModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-void k_dirsortfilterproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
-    KDirSortFilterProxyModel_OnMatch((KDirSortFilterProxyModel*)self, (intptr_t)callback);
+void k_dirsortfilterproxymodel_on_match(const void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
+    KDirSortFilterProxyModel_OnMatch((const KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-QSize* k_dirsortfilterproxymodel_span(void* self, void* index) {
+QSize* k_dirsortfilterproxymodel_span(const void* self, const void* index) {
     return KDirSortFilterProxyModel_Span((KDirSortFilterProxyModel*)self, (QModelIndex*)index);
 }
 
-QSize* k_dirsortfilterproxymodel_super_span(void* self, void* index) {
+QSize* k_dirsortfilterproxymodel_super_span(const void* self, const void* index) {
     return KDirSortFilterProxyModel_SuperSpan((KDirSortFilterProxyModel*)self, (QModelIndex*)index);
 }
 
-void k_dirsortfilterproxymodel_on_span(void* self, QSize* (*callback)(void*, void*)) {
-    KDirSortFilterProxyModel_OnSpan((KDirSortFilterProxyModel*)self, (intptr_t)callback);
+void k_dirsortfilterproxymodel_on_span(const void* self, QSize* (*callback)(const void*, const void*)) {
+    KDirSortFilterProxyModel_OnSpan((const KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-const char** k_dirsortfilterproxymodel_mime_types(void* self) {
+const char** k_dirsortfilterproxymodel_mime_types(const void* self) {
     libqt_list _arr = KDirSortFilterProxyModel_MimeTypes((KDirSortFilterProxyModel*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -1040,7 +1040,7 @@ const char** k_dirsortfilterproxymodel_mime_types(void* self) {
     return _ret;
 }
 
-const char** k_dirsortfilterproxymodel_super_mime_types(void* self) {
+const char** k_dirsortfilterproxymodel_super_mime_types(const void* self) {
     libqt_list _arr = KDirSortFilterProxyModel_SuperMimeTypes((KDirSortFilterProxyModel*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -1057,20 +1057,20 @@ const char** k_dirsortfilterproxymodel_super_mime_types(void* self) {
     return _ret;
 }
 
-void k_dirsortfilterproxymodel_on_mime_types(void* self, const char** (*callback)()) {
-    KDirSortFilterProxyModel_OnMimeTypes((KDirSortFilterProxyModel*)self, (intptr_t)callback);
+void k_dirsortfilterproxymodel_on_mime_types(const void* self, const char** (*callback)(const void*)) {
+    KDirSortFilterProxyModel_OnMimeTypes((const KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t k_dirsortfilterproxymodel_supported_drop_actions(void* self) {
+int32_t k_dirsortfilterproxymodel_supported_drop_actions(const void* self) {
     return KDirSortFilterProxyModel_SupportedDropActions((KDirSortFilterProxyModel*)self);
 }
 
-int32_t k_dirsortfilterproxymodel_super_supported_drop_actions(void* self) {
+int32_t k_dirsortfilterproxymodel_super_supported_drop_actions(const void* self) {
     return KDirSortFilterProxyModel_SuperSupportedDropActions((KDirSortFilterProxyModel*)self);
 }
 
-void k_dirsortfilterproxymodel_on_supported_drop_actions(void* self, int32_t (*callback)()) {
-    KDirSortFilterProxyModel_OnSupportedDropActions((KDirSortFilterProxyModel*)self, (intptr_t)callback);
+void k_dirsortfilterproxymodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*)) {
+    KDirSortFilterProxyModel_OnSupportedDropActions((const KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
 bool k_dirsortfilterproxymodel_submit(void* self) {
@@ -1081,7 +1081,7 @@ bool k_dirsortfilterproxymodel_super_submit(void* self) {
     return KDirSortFilterProxyModel_SuperSubmit((KDirSortFilterProxyModel*)self);
 }
 
-void k_dirsortfilterproxymodel_on_submit(void* self, bool (*callback)()) {
+void k_dirsortfilterproxymodel_on_submit(void* self, bool (*callback)(void*)) {
     KDirSortFilterProxyModel_OnSubmit((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
@@ -1093,11 +1093,11 @@ void k_dirsortfilterproxymodel_super_revert(void* self) {
     KDirSortFilterProxyModel_SuperRevert((KDirSortFilterProxyModel*)self);
 }
 
-void k_dirsortfilterproxymodel_on_revert(void* self, void (*callback)()) {
+void k_dirsortfilterproxymodel_on_revert(void* self, void (*callback)(void*)) {
     KDirSortFilterProxyModel_OnRevert((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to QVariant* */ k_dirsortfilterproxymodel_item_data(void* self, void* index) {
+libqt_map /* of int to QVariant* */ k_dirsortfilterproxymodel_item_data(const void* self, const void* index) {
     // Convert QMap<int,QVariant> to libqt_map
     libqt_map _out = KDirSortFilterProxyModel_ItemData((KDirSortFilterProxyModel*)self, (QModelIndex*)index);
     libqt_map _ret;
@@ -1107,7 +1107,7 @@ libqt_map /* of int to QVariant* */ k_dirsortfilterproxymodel_item_data(void* se
     return _ret;
 }
 
-libqt_map /* of int to QVariant* */ k_dirsortfilterproxymodel_super_item_data(void* self, void* index) {
+libqt_map /* of int to QVariant* */ k_dirsortfilterproxymodel_super_item_data(const void* self, const void* index) {
     // Convert QMap<int,QVariant> to libqt_map
     libqt_map _out = KDirSortFilterProxyModel_SuperItemData((KDirSortFilterProxyModel*)self, (QModelIndex*)index);
     libqt_map _ret;
@@ -1117,11 +1117,11 @@ libqt_map /* of int to QVariant* */ k_dirsortfilterproxymodel_super_item_data(vo
     return _ret;
 }
 
-void k_dirsortfilterproxymodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*)) {
-    KDirSortFilterProxyModel_OnItemData((KDirSortFilterProxyModel*)self, (intptr_t)callback);
+void k_dirsortfilterproxymodel_on_item_data(const void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
+    KDirSortFilterProxyModel_OnItemData((const KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_dirsortfilterproxymodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
+bool k_dirsortfilterproxymodel_set_item_data(void* self, const void* index, libqt_map /* of int to QVariant* */ roles) {
     // Convert libqt_map to QMap<int,QVariant>
     libqt_map roles_ret;
     roles_ret.len = roles.len;
@@ -1150,7 +1150,7 @@ bool k_dirsortfilterproxymodel_set_item_data(void* self, void* index, libqt_map 
     return _out;
 }
 
-bool k_dirsortfilterproxymodel_super_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
+bool k_dirsortfilterproxymodel_super_set_item_data(void* self, const void* index, libqt_map /* of int to QVariant* */ roles) {
     // Convert libqt_map to QMap<int,QVariant>
     libqt_map roles_ret;
     roles_ret.len = roles.len;
@@ -1179,47 +1179,47 @@ bool k_dirsortfilterproxymodel_super_set_item_data(void* self, void* index, libq
     return _out;
 }
 
-void k_dirsortfilterproxymodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */)) {
+void k_dirsortfilterproxymodel_on_set_item_data(void* self, bool (*callback)(void*, const void*, libqt_map /* of int to QVariant* */)) {
     KDirSortFilterProxyModel_OnSetItemData((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_dirsortfilterproxymodel_clear_item_data(void* self, void* index) {
+bool k_dirsortfilterproxymodel_clear_item_data(void* self, const void* index) {
     return KDirSortFilterProxyModel_ClearItemData((KDirSortFilterProxyModel*)self, (QModelIndex*)index);
 }
 
-bool k_dirsortfilterproxymodel_super_clear_item_data(void* self, void* index) {
+bool k_dirsortfilterproxymodel_super_clear_item_data(void* self, const void* index) {
     return KDirSortFilterProxyModel_SuperClearItemData((KDirSortFilterProxyModel*)self, (QModelIndex*)index);
 }
 
-void k_dirsortfilterproxymodel_on_clear_item_data(void* self, bool (*callback)(void*, void*)) {
+void k_dirsortfilterproxymodel_on_clear_item_data(void* self, bool (*callback)(void*, const void*)) {
     KDirSortFilterProxyModel_OnClearItemData((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_dirsortfilterproxymodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+bool k_dirsortfilterproxymodel_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent) {
     return KDirSortFilterProxyModel_CanDropMimeData((KDirSortFilterProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-bool k_dirsortfilterproxymodel_super_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+bool k_dirsortfilterproxymodel_super_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent) {
     return KDirSortFilterProxyModel_SuperCanDropMimeData((KDirSortFilterProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void k_dirsortfilterproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
-    KDirSortFilterProxyModel_OnCanDropMimeData((KDirSortFilterProxyModel*)self, (intptr_t)callback);
+void k_dirsortfilterproxymodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
+    KDirSortFilterProxyModel_OnCanDropMimeData((const KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t k_dirsortfilterproxymodel_supported_drag_actions(void* self) {
+int32_t k_dirsortfilterproxymodel_supported_drag_actions(const void* self) {
     return KDirSortFilterProxyModel_SupportedDragActions((KDirSortFilterProxyModel*)self);
 }
 
-int32_t k_dirsortfilterproxymodel_super_supported_drag_actions(void* self) {
+int32_t k_dirsortfilterproxymodel_super_supported_drag_actions(const void* self) {
     return KDirSortFilterProxyModel_SuperSupportedDragActions((KDirSortFilterProxyModel*)self);
 }
 
-void k_dirsortfilterproxymodel_on_supported_drag_actions(void* self, int32_t (*callback)()) {
-    KDirSortFilterProxyModel_OnSupportedDragActions((KDirSortFilterProxyModel*)self, (intptr_t)callback);
+void k_dirsortfilterproxymodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*)) {
+    KDirSortFilterProxyModel_OnSupportedDragActions((const KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ k_dirsortfilterproxymodel_role_names(void* self) {
+libqt_map /* of int to char* */ k_dirsortfilterproxymodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = KDirSortFilterProxyModel_RoleNames((KDirSortFilterProxyModel*)self);
     libqt_map _ret;
@@ -1252,7 +1252,7 @@ libqt_map /* of int to char* */ k_dirsortfilterproxymodel_role_names(void* self)
     return _ret;
 }
 
-libqt_map /* of int to char* */ k_dirsortfilterproxymodel_super_role_names(void* self) {
+libqt_map /* of int to char* */ k_dirsortfilterproxymodel_super_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = KDirSortFilterProxyModel_SuperRoleNames((KDirSortFilterProxyModel*)self);
     libqt_map _ret;
@@ -1285,44 +1285,44 @@ libqt_map /* of int to char* */ k_dirsortfilterproxymodel_super_role_names(void*
     return _ret;
 }
 
-void k_dirsortfilterproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)()) {
-    KDirSortFilterProxyModel_OnRoleNames((KDirSortFilterProxyModel*)self, (intptr_t)callback);
+void k_dirsortfilterproxymodel_on_role_names(const void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+    KDirSortFilterProxyModel_OnRoleNames((const KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_dirsortfilterproxymodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
+bool k_dirsortfilterproxymodel_move_rows(void* self, const void* sourceParent, int sourceRow, int count, const void* destinationParent, int destinationChild) {
     return KDirSortFilterProxyModel_MoveRows((KDirSortFilterProxyModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool k_dirsortfilterproxymodel_super_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
+bool k_dirsortfilterproxymodel_super_move_rows(void* self, const void* sourceParent, int sourceRow, int count, const void* destinationParent, int destinationChild) {
     return KDirSortFilterProxyModel_SuperMoveRows((KDirSortFilterProxyModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-void k_dirsortfilterproxymodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
+void k_dirsortfilterproxymodel_on_move_rows(void* self, bool (*callback)(void*, const void*, int, int, const void*, int)) {
     KDirSortFilterProxyModel_OnMoveRows((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_dirsortfilterproxymodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
+bool k_dirsortfilterproxymodel_move_columns(void* self, const void* sourceParent, int sourceColumn, int count, const void* destinationParent, int destinationChild) {
     return KDirSortFilterProxyModel_MoveColumns((KDirSortFilterProxyModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool k_dirsortfilterproxymodel_super_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
+bool k_dirsortfilterproxymodel_super_move_columns(void* self, const void* sourceParent, int sourceColumn, int count, const void* destinationParent, int destinationChild) {
     return KDirSortFilterProxyModel_SuperMoveColumns((KDirSortFilterProxyModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-void k_dirsortfilterproxymodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
+void k_dirsortfilterproxymodel_on_move_columns(void* self, bool (*callback)(void*, const void*, int, int, const void*, int)) {
     KDirSortFilterProxyModel_OnMoveColumns((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-void k_dirsortfilterproxymodel_multi_data(void* self, void* index, void* roleDataSpan) {
+void k_dirsortfilterproxymodel_multi_data(const void* self, const void* index, void* roleDataSpan) {
     KDirSortFilterProxyModel_MultiData((KDirSortFilterProxyModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void k_dirsortfilterproxymodel_super_multi_data(void* self, void* index, void* roleDataSpan) {
+void k_dirsortfilterproxymodel_super_multi_data(const void* self, const void* index, void* roleDataSpan) {
     KDirSortFilterProxyModel_SuperMultiData((KDirSortFilterProxyModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void k_dirsortfilterproxymodel_on_multi_data(void* self, void (*callback)(void*, void*, void*)) {
-    KDirSortFilterProxyModel_OnMultiData((KDirSortFilterProxyModel*)self, (intptr_t)callback);
+void k_dirsortfilterproxymodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*)) {
+    KDirSortFilterProxyModel_OnMultiData((const KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
 void k_dirsortfilterproxymodel_reset_internal_data(void* self) {
@@ -1333,7 +1333,7 @@ void k_dirsortfilterproxymodel_super_reset_internal_data(void* self) {
     KDirSortFilterProxyModel_SuperResetInternalData((KDirSortFilterProxyModel*)self);
 }
 
-void k_dirsortfilterproxymodel_on_reset_internal_data(void* self, void (*callback)()) {
+void k_dirsortfilterproxymodel_on_reset_internal_data(void* self, void (*callback)(void*)) {
     KDirSortFilterProxyModel_OnResetInternalData((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
@@ -1397,27 +1397,27 @@ void k_dirsortfilterproxymodel_on_custom_event(void* self, void (*callback)(void
     KDirSortFilterProxyModel_OnCustomEvent((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-void k_dirsortfilterproxymodel_connect_notify(void* self, void* signal) {
+void k_dirsortfilterproxymodel_connect_notify(void* self, const void* signal) {
     KDirSortFilterProxyModel_ConnectNotify((KDirSortFilterProxyModel*)self, (QMetaMethod*)signal);
 }
 
-void k_dirsortfilterproxymodel_super_connect_notify(void* self, void* signal) {
+void k_dirsortfilterproxymodel_super_connect_notify(void* self, const void* signal) {
     KDirSortFilterProxyModel_SuperConnectNotify((KDirSortFilterProxyModel*)self, (QMetaMethod*)signal);
 }
 
-void k_dirsortfilterproxymodel_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_dirsortfilterproxymodel_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     KDirSortFilterProxyModel_OnConnectNotify((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-void k_dirsortfilterproxymodel_disconnect_notify(void* self, void* signal) {
+void k_dirsortfilterproxymodel_disconnect_notify(void* self, const void* signal) {
     KDirSortFilterProxyModel_DisconnectNotify((KDirSortFilterProxyModel*)self, (QMetaMethod*)signal);
 }
 
-void k_dirsortfilterproxymodel_super_disconnect_notify(void* self, void* signal) {
+void k_dirsortfilterproxymodel_super_disconnect_notify(void* self, const void* signal) {
     KDirSortFilterProxyModel_SuperDisconnectNotify((KDirSortFilterProxyModel*)self, (QMetaMethod*)signal);
 }
 
-void k_dirsortfilterproxymodel_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_dirsortfilterproxymodel_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     KDirSortFilterProxyModel_OnDisconnectNotify((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
@@ -1425,373 +1425,148 @@ void k_dirsortfilterproxymodel_invalidate_filter(void* self) {
     KDirSortFilterProxyModel_InvalidateFilter((KDirSortFilterProxyModel*)self);
 }
 
-void k_dirsortfilterproxymodel_super_invalidate_filter(void* self) {
-    KDirSortFilterProxyModel_SuperInvalidateFilter((KDirSortFilterProxyModel*)self);
-}
-
-void k_dirsortfilterproxymodel_on_invalidate_filter(void* self, void (*callback)()) {
-    KDirSortFilterProxyModel_OnInvalidateFilter((KDirSortFilterProxyModel*)self, (intptr_t)callback);
-}
-
 void k_dirsortfilterproxymodel_invalidate_rows_filter(void* self) {
     KDirSortFilterProxyModel_InvalidateRowsFilter((KDirSortFilterProxyModel*)self);
-}
-
-void k_dirsortfilterproxymodel_super_invalidate_rows_filter(void* self) {
-    KDirSortFilterProxyModel_SuperInvalidateRowsFilter((KDirSortFilterProxyModel*)self);
-}
-
-void k_dirsortfilterproxymodel_on_invalidate_rows_filter(void* self, void (*callback)()) {
-    KDirSortFilterProxyModel_OnInvalidateRowsFilter((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
 void k_dirsortfilterproxymodel_invalidate_columns_filter(void* self) {
     KDirSortFilterProxyModel_InvalidateColumnsFilter((KDirSortFilterProxyModel*)self);
 }
 
-void k_dirsortfilterproxymodel_super_invalidate_columns_filter(void* self) {
-    KDirSortFilterProxyModel_SuperInvalidateColumnsFilter((KDirSortFilterProxyModel*)self);
-}
-
-void k_dirsortfilterproxymodel_on_invalidate_columns_filter(void* self, void (*callback)()) {
-    KDirSortFilterProxyModel_OnInvalidateColumnsFilter((KDirSortFilterProxyModel*)self, (intptr_t)callback);
-}
-
-QModelIndex* k_dirsortfilterproxymodel_create_source_index(void* self, int row, int col, void* internalPtr) {
+QModelIndex* k_dirsortfilterproxymodel_create_source_index(const void* self, int row, int col, void* internalPtr) {
     return KDirSortFilterProxyModel_CreateSourceIndex((KDirSortFilterProxyModel*)self, row, col, internalPtr);
 }
 
-QModelIndex* k_dirsortfilterproxymodel_super_create_source_index(void* self, int row, int col, void* internalPtr) {
-    return KDirSortFilterProxyModel_SuperCreateSourceIndex((KDirSortFilterProxyModel*)self, row, col, internalPtr);
-}
-
-void k_dirsortfilterproxymodel_on_create_source_index(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
-    KDirSortFilterProxyModel_OnCreateSourceIndex((KDirSortFilterProxyModel*)self, (intptr_t)callback);
-}
-
-QModelIndex* k_dirsortfilterproxymodel_create_index(void* self, int row, int column) {
+QModelIndex* k_dirsortfilterproxymodel_create_index(const void* self, int row, int column) {
     return KDirSortFilterProxyModel_CreateIndex((KDirSortFilterProxyModel*)self, row, column);
 }
 
-QModelIndex* k_dirsortfilterproxymodel_super_create_index(void* self, int row, int column) {
-    return KDirSortFilterProxyModel_SuperCreateIndex((KDirSortFilterProxyModel*)self, row, column);
-}
-
-void k_dirsortfilterproxymodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int)) {
-    KDirSortFilterProxyModel_OnCreateIndex((KDirSortFilterProxyModel*)self, (intptr_t)callback);
-}
-
-void k_dirsortfilterproxymodel_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
+void k_dirsortfilterproxymodel_encode_data(const void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
     KDirSortFilterProxyModel_EncodeData((KDirSortFilterProxyModel*)self, indexes, (QDataStream*)stream);
 }
 
-void k_dirsortfilterproxymodel_super_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
-    KDirSortFilterProxyModel_SuperEncodeData((KDirSortFilterProxyModel*)self, indexes, (QDataStream*)stream);
-}
-
-void k_dirsortfilterproxymodel_on_encode_data(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, void*)) {
-    KDirSortFilterProxyModel_OnEncodeData((KDirSortFilterProxyModel*)self, (intptr_t)callback);
-}
-
-bool k_dirsortfilterproxymodel_decode_data(void* self, int row, int column, void* parent, void* stream) {
+bool k_dirsortfilterproxymodel_decode_data(void* self, int row, int column, const void* parent, void* stream) {
     return KDirSortFilterProxyModel_DecodeData((KDirSortFilterProxyModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
 }
 
-bool k_dirsortfilterproxymodel_super_decode_data(void* self, int row, int column, void* parent, void* stream) {
-    return KDirSortFilterProxyModel_SuperDecodeData((KDirSortFilterProxyModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
-}
-
-void k_dirsortfilterproxymodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*)) {
-    KDirSortFilterProxyModel_OnDecodeData((KDirSortFilterProxyModel*)self, (intptr_t)callback);
-}
-
-void k_dirsortfilterproxymodel_begin_insert_rows(void* self, void* parent, int first, int last) {
+void k_dirsortfilterproxymodel_begin_insert_rows(void* self, const void* parent, int first, int last) {
     KDirSortFilterProxyModel_BeginInsertRows((KDirSortFilterProxyModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void k_dirsortfilterproxymodel_super_begin_insert_rows(void* self, void* parent, int first, int last) {
-    KDirSortFilterProxyModel_SuperBeginInsertRows((KDirSortFilterProxyModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void k_dirsortfilterproxymodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int)) {
-    KDirSortFilterProxyModel_OnBeginInsertRows((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
 void k_dirsortfilterproxymodel_end_insert_rows(void* self) {
     KDirSortFilterProxyModel_EndInsertRows((KDirSortFilterProxyModel*)self);
 }
 
-void k_dirsortfilterproxymodel_super_end_insert_rows(void* self) {
-    KDirSortFilterProxyModel_SuperEndInsertRows((KDirSortFilterProxyModel*)self);
-}
-
-void k_dirsortfilterproxymodel_on_end_insert_rows(void* self, void (*callback)()) {
-    KDirSortFilterProxyModel_OnEndInsertRows((KDirSortFilterProxyModel*)self, (intptr_t)callback);
-}
-
-void k_dirsortfilterproxymodel_begin_remove_rows(void* self, void* parent, int first, int last) {
+void k_dirsortfilterproxymodel_begin_remove_rows(void* self, const void* parent, int first, int last) {
     KDirSortFilterProxyModel_BeginRemoveRows((KDirSortFilterProxyModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void k_dirsortfilterproxymodel_super_begin_remove_rows(void* self, void* parent, int first, int last) {
-    KDirSortFilterProxyModel_SuperBeginRemoveRows((KDirSortFilterProxyModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void k_dirsortfilterproxymodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int)) {
-    KDirSortFilterProxyModel_OnBeginRemoveRows((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
 void k_dirsortfilterproxymodel_end_remove_rows(void* self) {
     KDirSortFilterProxyModel_EndRemoveRows((KDirSortFilterProxyModel*)self);
 }
 
-void k_dirsortfilterproxymodel_super_end_remove_rows(void* self) {
-    KDirSortFilterProxyModel_SuperEndRemoveRows((KDirSortFilterProxyModel*)self);
-}
-
-void k_dirsortfilterproxymodel_on_end_remove_rows(void* self, void (*callback)()) {
-    KDirSortFilterProxyModel_OnEndRemoveRows((KDirSortFilterProxyModel*)self, (intptr_t)callback);
-}
-
-bool k_dirsortfilterproxymodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
+bool k_dirsortfilterproxymodel_begin_move_rows(void* self, const void* sourceParent, int sourceFirst, int sourceLast, const void* destinationParent, int destinationRow) {
     return KDirSortFilterProxyModel_BeginMoveRows((KDirSortFilterProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
-}
-
-bool k_dirsortfilterproxymodel_super_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
-    return KDirSortFilterProxyModel_SuperBeginMoveRows((KDirSortFilterProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
-}
-
-void k_dirsortfilterproxymodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
-    KDirSortFilterProxyModel_OnBeginMoveRows((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
 void k_dirsortfilterproxymodel_end_move_rows(void* self) {
     KDirSortFilterProxyModel_EndMoveRows((KDirSortFilterProxyModel*)self);
 }
 
-void k_dirsortfilterproxymodel_super_end_move_rows(void* self) {
-    KDirSortFilterProxyModel_SuperEndMoveRows((KDirSortFilterProxyModel*)self);
-}
-
-void k_dirsortfilterproxymodel_on_end_move_rows(void* self, void (*callback)()) {
-    KDirSortFilterProxyModel_OnEndMoveRows((KDirSortFilterProxyModel*)self, (intptr_t)callback);
-}
-
-void k_dirsortfilterproxymodel_begin_insert_columns(void* self, void* parent, int first, int last) {
+void k_dirsortfilterproxymodel_begin_insert_columns(void* self, const void* parent, int first, int last) {
     KDirSortFilterProxyModel_BeginInsertColumns((KDirSortFilterProxyModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void k_dirsortfilterproxymodel_super_begin_insert_columns(void* self, void* parent, int first, int last) {
-    KDirSortFilterProxyModel_SuperBeginInsertColumns((KDirSortFilterProxyModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void k_dirsortfilterproxymodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int)) {
-    KDirSortFilterProxyModel_OnBeginInsertColumns((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
 void k_dirsortfilterproxymodel_end_insert_columns(void* self) {
     KDirSortFilterProxyModel_EndInsertColumns((KDirSortFilterProxyModel*)self);
 }
 
-void k_dirsortfilterproxymodel_super_end_insert_columns(void* self) {
-    KDirSortFilterProxyModel_SuperEndInsertColumns((KDirSortFilterProxyModel*)self);
-}
-
-void k_dirsortfilterproxymodel_on_end_insert_columns(void* self, void (*callback)()) {
-    KDirSortFilterProxyModel_OnEndInsertColumns((KDirSortFilterProxyModel*)self, (intptr_t)callback);
-}
-
-void k_dirsortfilterproxymodel_begin_remove_columns(void* self, void* parent, int first, int last) {
+void k_dirsortfilterproxymodel_begin_remove_columns(void* self, const void* parent, int first, int last) {
     KDirSortFilterProxyModel_BeginRemoveColumns((KDirSortFilterProxyModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void k_dirsortfilterproxymodel_super_begin_remove_columns(void* self, void* parent, int first, int last) {
-    KDirSortFilterProxyModel_SuperBeginRemoveColumns((KDirSortFilterProxyModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void k_dirsortfilterproxymodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int)) {
-    KDirSortFilterProxyModel_OnBeginRemoveColumns((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
 void k_dirsortfilterproxymodel_end_remove_columns(void* self) {
     KDirSortFilterProxyModel_EndRemoveColumns((KDirSortFilterProxyModel*)self);
 }
 
-void k_dirsortfilterproxymodel_super_end_remove_columns(void* self) {
-    KDirSortFilterProxyModel_SuperEndRemoveColumns((KDirSortFilterProxyModel*)self);
-}
-
-void k_dirsortfilterproxymodel_on_end_remove_columns(void* self, void (*callback)()) {
-    KDirSortFilterProxyModel_OnEndRemoveColumns((KDirSortFilterProxyModel*)self, (intptr_t)callback);
-}
-
-bool k_dirsortfilterproxymodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
+bool k_dirsortfilterproxymodel_begin_move_columns(void* self, const void* sourceParent, int sourceFirst, int sourceLast, const void* destinationParent, int destinationColumn) {
     return KDirSortFilterProxyModel_BeginMoveColumns((KDirSortFilterProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
-}
-
-bool k_dirsortfilterproxymodel_super_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
-    return KDirSortFilterProxyModel_SuperBeginMoveColumns((KDirSortFilterProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
-}
-
-void k_dirsortfilterproxymodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
-    KDirSortFilterProxyModel_OnBeginMoveColumns((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
 void k_dirsortfilterproxymodel_end_move_columns(void* self) {
     KDirSortFilterProxyModel_EndMoveColumns((KDirSortFilterProxyModel*)self);
 }
 
-void k_dirsortfilterproxymodel_super_end_move_columns(void* self) {
-    KDirSortFilterProxyModel_SuperEndMoveColumns((KDirSortFilterProxyModel*)self);
-}
-
-void k_dirsortfilterproxymodel_on_end_move_columns(void* self, void (*callback)()) {
-    KDirSortFilterProxyModel_OnEndMoveColumns((KDirSortFilterProxyModel*)self, (intptr_t)callback);
-}
-
 void k_dirsortfilterproxymodel_begin_reset_model(void* self) {
     KDirSortFilterProxyModel_BeginResetModel((KDirSortFilterProxyModel*)self);
-}
-
-void k_dirsortfilterproxymodel_super_begin_reset_model(void* self) {
-    KDirSortFilterProxyModel_SuperBeginResetModel((KDirSortFilterProxyModel*)self);
-}
-
-void k_dirsortfilterproxymodel_on_begin_reset_model(void* self, void (*callback)()) {
-    KDirSortFilterProxyModel_OnBeginResetModel((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
 void k_dirsortfilterproxymodel_end_reset_model(void* self) {
     KDirSortFilterProxyModel_EndResetModel((KDirSortFilterProxyModel*)self);
 }
 
-void k_dirsortfilterproxymodel_super_end_reset_model(void* self) {
-    KDirSortFilterProxyModel_SuperEndResetModel((KDirSortFilterProxyModel*)self);
-}
-
-void k_dirsortfilterproxymodel_on_end_reset_model(void* self, void (*callback)()) {
-    KDirSortFilterProxyModel_OnEndResetModel((KDirSortFilterProxyModel*)self, (intptr_t)callback);
-}
-
-void k_dirsortfilterproxymodel_change_persistent_index(void* self, void* from, void* to) {
+void k_dirsortfilterproxymodel_change_persistent_index(void* self, const void* from, const void* to) {
     KDirSortFilterProxyModel_ChangePersistentIndex((KDirSortFilterProxyModel*)self, (QModelIndex*)from, (QModelIndex*)to);
-}
-
-void k_dirsortfilterproxymodel_super_change_persistent_index(void* self, void* from, void* to) {
-    KDirSortFilterProxyModel_SuperChangePersistentIndex((KDirSortFilterProxyModel*)self, (QModelIndex*)from, (QModelIndex*)to);
-}
-
-void k_dirsortfilterproxymodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*)) {
-    KDirSortFilterProxyModel_OnChangePersistentIndex((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
 void k_dirsortfilterproxymodel_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
     KDirSortFilterProxyModel_ChangePersistentIndexList((KDirSortFilterProxyModel*)self, from, to);
 }
 
-void k_dirsortfilterproxymodel_super_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
-    KDirSortFilterProxyModel_SuperChangePersistentIndexList((KDirSortFilterProxyModel*)self, from, to);
-}
-
-void k_dirsortfilterproxymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)) {
-    KDirSortFilterProxyModel_OnChangePersistentIndexList((KDirSortFilterProxyModel*)self, (intptr_t)callback);
-}
-
-libqt_list /* of QModelIndex* */ k_dirsortfilterproxymodel_persistent_index_list(void* self) {
+libqt_list /* of QModelIndex* */ k_dirsortfilterproxymodel_persistent_index_list(const void* self) {
     libqt_list _arr = KDirSortFilterProxyModel_PersistentIndexList((KDirSortFilterProxyModel*)self);
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ k_dirsortfilterproxymodel_super_persistent_index_list(void* self) {
-    libqt_list _arr = KDirSortFilterProxyModel_SuperPersistentIndexList((KDirSortFilterProxyModel*)self);
-    return _arr;
-}
-
-void k_dirsortfilterproxymodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
-    KDirSortFilterProxyModel_OnPersistentIndexList((KDirSortFilterProxyModel*)self, (intptr_t)callback);
-}
-
-QObject* k_dirsortfilterproxymodel_sender(void* self) {
+QObject* k_dirsortfilterproxymodel_sender(const void* self) {
     return KDirSortFilterProxyModel_Sender((KDirSortFilterProxyModel*)self);
 }
 
-QObject* k_dirsortfilterproxymodel_super_sender(void* self) {
-    return KDirSortFilterProxyModel_SuperSender((KDirSortFilterProxyModel*)self);
-}
-
-void k_dirsortfilterproxymodel_on_sender(void* self, QObject* (*callback)()) {
-    KDirSortFilterProxyModel_OnSender((KDirSortFilterProxyModel*)self, (intptr_t)callback);
-}
-
-int32_t k_dirsortfilterproxymodel_sender_signal_index(void* self) {
+int32_t k_dirsortfilterproxymodel_sender_signal_index(const void* self) {
     return KDirSortFilterProxyModel_SenderSignalIndex((KDirSortFilterProxyModel*)self);
 }
 
-int32_t k_dirsortfilterproxymodel_super_sender_signal_index(void* self) {
-    return KDirSortFilterProxyModel_SuperSenderSignalIndex((KDirSortFilterProxyModel*)self);
-}
-
-void k_dirsortfilterproxymodel_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    KDirSortFilterProxyModel_OnSenderSignalIndex((KDirSortFilterProxyModel*)self, (intptr_t)callback);
-}
-
-int32_t k_dirsortfilterproxymodel_receivers(void* self, const char* signal) {
+int32_t k_dirsortfilterproxymodel_receivers(const void* self, const char* signal) {
     return KDirSortFilterProxyModel_Receivers((KDirSortFilterProxyModel*)self, signal);
 }
 
-int32_t k_dirsortfilterproxymodel_super_receivers(void* self, const char* signal) {
-    return KDirSortFilterProxyModel_SuperReceivers((KDirSortFilterProxyModel*)self, signal);
-}
-
-void k_dirsortfilterproxymodel_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    KDirSortFilterProxyModel_OnReceivers((KDirSortFilterProxyModel*)self, (intptr_t)callback);
-}
-
-bool k_dirsortfilterproxymodel_is_signal_connected(void* self, void* signal) {
+bool k_dirsortfilterproxymodel_is_signal_connected(const void* self, const void* signal) {
     return KDirSortFilterProxyModel_IsSignalConnected((KDirSortFilterProxyModel*)self, (QMetaMethod*)signal);
-}
-
-bool k_dirsortfilterproxymodel_super_is_signal_connected(void* self, void* signal) {
-    return KDirSortFilterProxyModel_SuperIsSignalConnected((KDirSortFilterProxyModel*)self, (QMetaMethod*)signal);
-}
-
-void k_dirsortfilterproxymodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    KDirSortFilterProxyModel_OnIsSignalConnected((KDirSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
 void k_dirsortfilterproxymodel_on_source_model_changed(void* self, void (*callback)(void*)) {
     QAbstractProxyModel_Connect_SourceModelChanged((QAbstractProxyModel*)self, (intptr_t)callback);
 }
 
-void k_dirsortfilterproxymodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int)) {
+void k_dirsortfilterproxymodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_RowsAboutToBeInserted((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_dirsortfilterproxymodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int)) {
+void k_dirsortfilterproxymodel_on_rows_inserted(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_RowsInserted((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_dirsortfilterproxymodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int)) {
+void k_dirsortfilterproxymodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_RowsAboutToBeRemoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_dirsortfilterproxymodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int)) {
+void k_dirsortfilterproxymodel_on_rows_removed(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_RowsRemoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_dirsortfilterproxymodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int)) {
+void k_dirsortfilterproxymodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_ColumnsAboutToBeInserted((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_dirsortfilterproxymodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int)) {
+void k_dirsortfilterproxymodel_on_columns_inserted(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_ColumnsInserted((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_dirsortfilterproxymodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int)) {
+void k_dirsortfilterproxymodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_ColumnsAboutToBeRemoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_dirsortfilterproxymodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int)) {
+void k_dirsortfilterproxymodel_on_columns_removed(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_ColumnsRemoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -1803,19 +1578,19 @@ void k_dirsortfilterproxymodel_on_model_reset(void* self, void (*callback)(void*
     QAbstractItemModel_Connect_ModelReset((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_dirsortfilterproxymodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int)) {
+void k_dirsortfilterproxymodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int)) {
     QAbstractItemModel_Connect_RowsAboutToBeMoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_dirsortfilterproxymodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int)) {
+void k_dirsortfilterproxymodel_on_rows_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int)) {
     QAbstractItemModel_Connect_RowsMoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_dirsortfilterproxymodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int)) {
+void k_dirsortfilterproxymodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int)) {
     QAbstractItemModel_Connect_ColumnsAboutToBeMoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_dirsortfilterproxymodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int)) {
+void k_dirsortfilterproxymodel_on_columns_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int)) {
     QAbstractItemModel_Connect_ColumnsMoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 

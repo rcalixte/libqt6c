@@ -20,15 +20,15 @@ Attica__Field* k_attica__field_new();
 ///
 /// @param param1 Attica__Field*
 ///
-Attica__Field* k_attica__field_new2(void* param1);
+Attica__Field* k_attica__field_new2(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/attica-field.html#type-var)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Field*
+/// @param self const Attica__Field*
 ///
-const char* k_attica__field_type(void* self);
+const char* k_attica__field_type(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-field.html#type-var)
 ///
@@ -41,9 +41,9 @@ void k_attica__field_set_type(void* self, const char* type);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Field*
+/// @param self const Attica__Field*
 ///
-const char* k_attica__field_name(void* self);
+const char* k_attica__field_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-field.html#name-var)
 ///
@@ -54,9 +54,9 @@ void k_attica__field_set_name(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/attica-field.html#fieldsize-var)
 ///
-/// @param self Attica__Field*
+/// @param self const Attica__Field*
 ///
-int32_t k_attica__field_fieldsize(void* self);
+int32_t k_attica__field_fieldsize(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-field.html#fieldsize-var)
 ///
@@ -67,9 +67,9 @@ void k_attica__field_set_fieldsize(void* self, int fieldsize);
 
 /// [Upstream resources](https://api.kde.org/attica-field.html#required-var)
 ///
-/// @param self Attica__Field*
+/// @param self const Attica__Field*
 ///
-bool k_attica__field_required(void* self);
+bool k_attica__field_required(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-field.html#required-var)
 ///
@@ -82,9 +82,9 @@ void k_attica__field_set_required(void* self, bool required);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Attica__Field*
+/// @param self const Attica__Field*
 ///
-const char** k_attica__field_options(void* self);
+const char** k_attica__field_options(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-field.html#options-var)
 ///
@@ -98,7 +98,7 @@ void k_attica__field_set_options(void* self, const char* options[static 1]);
 /// @param self Attica__Field*
 /// @param param1 Attica__Field*
 ///
-void k_attica__field_operator_assign(void* self, void* param1);
+void k_attica__field_operator_assign(void* self, const void* param1);
 
 /// Delete this object from C++ memory.
 ///
@@ -118,14 +118,14 @@ Attica__Publisher* k_attica__publisher_new();
 ///
 /// @param other Attica__Publisher*
 ///
-Attica__Publisher* k_attica__publisher_new2(void* other);
+Attica__Publisher* k_attica__publisher_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-publisher.html#operator-eq)
 ///
 /// @param self Attica__Publisher*
 /// @param other Attica__Publisher*
 ///
-void k_attica__publisher_operator_assign(void* self, void* other);
+void k_attica__publisher_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-publisher.html#setId)
 ///
@@ -138,9 +138,9 @@ void k_attica__publisher_set_id(void* self, const char* id);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Publisher*
+/// @param self const Attica__Publisher*
 ///
-const char* k_attica__publisher_id(void* self);
+const char* k_attica__publisher_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-publisher.html#setName)
 ///
@@ -153,9 +153,9 @@ void k_attica__publisher_set_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Publisher*
+/// @param self const Attica__Publisher*
 ///
-const char* k_attica__publisher_name(void* self);
+const char* k_attica__publisher_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-publisher.html#setUrl)
 ///
@@ -168,45 +168,45 @@ void k_attica__publisher_set_url(void* self, const char* url);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Publisher*
+/// @param self const Attica__Publisher*
 ///
-const char* k_attica__publisher_url(void* self);
+const char* k_attica__publisher_url(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-publisher.html#addField)
 ///
 /// @param self Attica__Publisher*
 /// @param param1 Attica__Field*
 ///
-void k_attica__publisher_add_field(void* self, void* param1);
+void k_attica__publisher_add_field(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/attica-publisher.html#fields)
 ///
-/// @param self Attica__Publisher*
+/// @param self const Attica__Publisher*
 ///
 /// @return libqt_list of Attica__Field*
 ///
-libqt_list k_attica__publisher_fields(void* self);
+libqt_list k_attica__publisher_fields(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-publisher.html#addTarget)
 ///
 /// @param self Attica__Publisher*
 /// @param param1 Attica__Target*
 ///
-void k_attica__publisher_add_target(void* self, void* param1);
+void k_attica__publisher_add_target(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/attica-publisher.html#targets)
 ///
-/// @param self Attica__Publisher*
+/// @param self const Attica__Publisher*
 ///
 /// @return libqt_list of Attica__Target*
 ///
-libqt_list k_attica__publisher_targets(void* self);
+libqt_list k_attica__publisher_targets(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-publisher.html#isValid)
 ///
-/// @param self Attica__Publisher*
+/// @param self const Attica__Publisher*
 ///
-bool k_attica__publisher_is_valid(void* self);
+bool k_attica__publisher_is_valid(const void* self);
 
 /// Delete this object from C++ memory.
 ///

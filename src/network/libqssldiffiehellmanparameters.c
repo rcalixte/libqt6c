@@ -2,7 +2,7 @@
 #include "libqssldiffiehellmanparameters.hpp"
 #include "libqssldiffiehellmanparameters.h"
 
-size_t q_qssldiffiehellmanparameters_h_q_hash(void* dhparam, size_t seed) {
+size_t q_qssldiffiehellmanparameters_h_q_hash(const void* dhparam, size_t seed) {
     return qssldiffiehellmanparameters_h_QHash((QSslDiffieHellmanParameters*)dhparam, seed);
 }
 
@@ -10,7 +10,7 @@ QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_new() {
     return QSslDiffieHellmanParameters_New();
 }
 
-QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_new2(void* other) {
+QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_new2(const void* other) {
     return QSslDiffieHellmanParameters_New2((QSslDiffieHellmanParameters*)other);
 }
 
@@ -18,7 +18,7 @@ QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_default_parameters() {
     return QSslDiffieHellmanParameters_DefaultParameters();
 }
 
-void q_ssldiffiehellmanparameters_operator_assign(void* self, void* other) {
+void q_ssldiffiehellmanparameters_operator_assign(void* self, const void* other) {
     QSslDiffieHellmanParameters_OperatorAssign((QSslDiffieHellmanParameters*)self, (QSslDiffieHellmanParameters*)other);
 }
 
@@ -34,19 +34,19 @@ QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded2(void* de
     return QSslDiffieHellmanParameters_FromEncoded2((QIODevice*)device);
 }
 
-bool q_ssldiffiehellmanparameters_is_empty(void* self) {
+bool q_ssldiffiehellmanparameters_is_empty(const void* self) {
     return QSslDiffieHellmanParameters_IsEmpty((QSslDiffieHellmanParameters*)self);
 }
 
-bool q_ssldiffiehellmanparameters_is_valid(void* self) {
+bool q_ssldiffiehellmanparameters_is_valid(const void* self) {
     return QSslDiffieHellmanParameters_IsValid((QSslDiffieHellmanParameters*)self);
 }
 
-int32_t q_ssldiffiehellmanparameters_error(void* self) {
+int32_t q_ssldiffiehellmanparameters_error(const void* self) {
     return QSslDiffieHellmanParameters_Error((QSslDiffieHellmanParameters*)self);
 }
 
-const char* q_ssldiffiehellmanparameters_error_string(void* self) {
+const char* q_ssldiffiehellmanparameters_error_string(const void* self) {
     libqt_string _str = QSslDiffieHellmanParameters_ErrorString((QSslDiffieHellmanParameters*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

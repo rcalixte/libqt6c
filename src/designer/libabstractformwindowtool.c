@@ -17,15 +17,15 @@ QDesignerFormWindowToolInterface* q_designerformwindowtoolinterface_new2(void* p
     return QDesignerFormWindowToolInterface_New2((QObject*)parent);
 }
 
-const QMetaObject* q_designerformwindowtoolinterface_meta_object(void* self) {
+const QMetaObject* q_designerformwindowtoolinterface_meta_object(const void* self) {
     return QDesignerFormWindowToolInterface_MetaObject((QDesignerFormWindowToolInterface*)self);
 }
 
-void q_designerformwindowtoolinterface_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_designerformwindowtoolinterface_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QDesignerFormWindowToolInterface_OnMetaObject((QDesignerFormWindowToolInterface*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_designerformwindowtoolinterface_super_meta_object(void* self) {
+const QMetaObject* q_designerformwindowtoolinterface_super_meta_object(const void* self) {
     return QDesignerFormWindowToolInterface_SuperMetaObject((QDesignerFormWindowToolInterface*)self);
 }
 
@@ -60,76 +60,52 @@ const char* q_designerformwindowtoolinterface_tr(const char* s) {
     return _ret;
 }
 
-QDesignerFormEditorInterface* q_designerformwindowtoolinterface_core(void* self) {
+QDesignerFormEditorInterface* q_designerformwindowtoolinterface_core(const void* self) {
     return QDesignerFormWindowToolInterface_Core((QDesignerFormWindowToolInterface*)self);
 }
 
-void q_designerformwindowtoolinterface_on_core(void* self, QDesignerFormEditorInterface* (*callback)()) {
+void q_designerformwindowtoolinterface_on_core(const void* self, QDesignerFormEditorInterface* (*callback)(const void*)) {
     QDesignerFormWindowToolInterface_OnCore((QDesignerFormWindowToolInterface*)self, (intptr_t)callback);
 }
 
-QDesignerFormEditorInterface* q_designerformwindowtoolinterface_super_core(void* self) {
-    return QDesignerFormWindowToolInterface_SuperCore((QDesignerFormWindowToolInterface*)self);
-}
-
-QDesignerFormWindowInterface* q_designerformwindowtoolinterface_form_window(void* self) {
+QDesignerFormWindowInterface* q_designerformwindowtoolinterface_form_window(const void* self) {
     return QDesignerFormWindowToolInterface_FormWindow((QDesignerFormWindowToolInterface*)self);
 }
 
-void q_designerformwindowtoolinterface_on_form_window(void* self, QDesignerFormWindowInterface* (*callback)()) {
+void q_designerformwindowtoolinterface_on_form_window(const void* self, QDesignerFormWindowInterface* (*callback)(const void*)) {
     QDesignerFormWindowToolInterface_OnFormWindow((QDesignerFormWindowToolInterface*)self, (intptr_t)callback);
 }
 
-QDesignerFormWindowInterface* q_designerformwindowtoolinterface_super_form_window(void* self) {
-    return QDesignerFormWindowToolInterface_SuperFormWindow((QDesignerFormWindowToolInterface*)self);
-}
-
-QWidget* q_designerformwindowtoolinterface_editor(void* self) {
+QWidget* q_designerformwindowtoolinterface_editor(const void* self) {
     return QDesignerFormWindowToolInterface_Editor((QDesignerFormWindowToolInterface*)self);
 }
 
-void q_designerformwindowtoolinterface_on_editor(void* self, QWidget* (*callback)()) {
+void q_designerformwindowtoolinterface_on_editor(const void* self, QWidget* (*callback)(const void*)) {
     QDesignerFormWindowToolInterface_OnEditor((QDesignerFormWindowToolInterface*)self, (intptr_t)callback);
 }
 
-QWidget* q_designerformwindowtoolinterface_super_editor(void* self) {
-    return QDesignerFormWindowToolInterface_SuperEditor((QDesignerFormWindowToolInterface*)self);
-}
-
-QAction* q_designerformwindowtoolinterface_action(void* self) {
+QAction* q_designerformwindowtoolinterface_action(const void* self) {
     return QDesignerFormWindowToolInterface_Action((QDesignerFormWindowToolInterface*)self);
 }
 
-void q_designerformwindowtoolinterface_on_action(void* self, QAction* (*callback)()) {
+void q_designerformwindowtoolinterface_on_action(const void* self, QAction* (*callback)(const void*)) {
     QDesignerFormWindowToolInterface_OnAction((QDesignerFormWindowToolInterface*)self, (intptr_t)callback);
-}
-
-QAction* q_designerformwindowtoolinterface_super_action(void* self) {
-    return QDesignerFormWindowToolInterface_SuperAction((QDesignerFormWindowToolInterface*)self);
 }
 
 void q_designerformwindowtoolinterface_activated(void* self) {
     QDesignerFormWindowToolInterface_Activated((QDesignerFormWindowToolInterface*)self);
 }
 
-void q_designerformwindowtoolinterface_on_activated(void* self, void (*callback)()) {
+void q_designerformwindowtoolinterface_on_activated(void* self, void (*callback)(void*)) {
     QDesignerFormWindowToolInterface_OnActivated((QDesignerFormWindowToolInterface*)self, (intptr_t)callback);
-}
-
-void q_designerformwindowtoolinterface_super_activated(void* self) {
-    QDesignerFormWindowToolInterface_SuperActivated((QDesignerFormWindowToolInterface*)self);
 }
 
 void q_designerformwindowtoolinterface_deactivated(void* self) {
     QDesignerFormWindowToolInterface_Deactivated((QDesignerFormWindowToolInterface*)self);
 }
 
-void q_designerformwindowtoolinterface_on_deactivated(void* self, void (*callback)()) {
+void q_designerformwindowtoolinterface_on_deactivated(void* self, void (*callback)(void*)) {
     QDesignerFormWindowToolInterface_OnDeactivated((QDesignerFormWindowToolInterface*)self, (intptr_t)callback);
-}
-
-void q_designerformwindowtoolinterface_super_deactivated(void* self) {
-    QDesignerFormWindowToolInterface_SuperDeactivated((QDesignerFormWindowToolInterface*)self);
 }
 
 bool q_designerformwindowtoolinterface_handle_event(void* self, void* widget, void* managedWidget, void* event) {
@@ -138,10 +114,6 @@ bool q_designerformwindowtoolinterface_handle_event(void* self, void* widget, vo
 
 void q_designerformwindowtoolinterface_on_handle_event(void* self, bool (*callback)(void*, void*, void*, void*)) {
     QDesignerFormWindowToolInterface_OnHandleEvent((QDesignerFormWindowToolInterface*)self, (intptr_t)callback);
-}
-
-bool q_designerformwindowtoolinterface_super_handle_event(void* self, void* widget, void* managedWidget, void* event) {
-    return QDesignerFormWindowToolInterface_SuperHandleEvent((QDesignerFormWindowToolInterface*)self, (QWidget*)widget, (QWidget*)managedWidget, (QEvent*)event);
 }
 
 const char* q_designerformwindowtoolinterface_tr2(const char* s, const char* c) {
@@ -158,7 +130,7 @@ const char* q_designerformwindowtoolinterface_tr3(const char* s, const char* c, 
     return _ret;
 }
 
-const char* q_designerformwindowtoolinterface_object_name(void* self) {
+const char* q_designerformwindowtoolinterface_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -169,19 +141,19 @@ void q_designerformwindowtoolinterface_set_object_name(void* self, const char* n
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_designerformwindowtoolinterface_is_widget_type(void* self) {
+bool q_designerformwindowtoolinterface_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_designerformwindowtoolinterface_is_window_type(void* self) {
+bool q_designerformwindowtoolinterface_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_designerformwindowtoolinterface_is_quick_item_type(void* self) {
+bool q_designerformwindowtoolinterface_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_designerformwindowtoolinterface_signals_blocked(void* self) {
+bool q_designerformwindowtoolinterface_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -189,7 +161,7 @@ bool q_designerformwindowtoolinterface_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_designerformwindowtoolinterface_thread(void* self) {
+QThread* q_designerformwindowtoolinterface_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -213,7 +185,7 @@ void q_designerformwindowtoolinterface_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_designerformwindowtoolinterface_children(void* self) {
+libqt_list /* of QObject* */ q_designerformwindowtoolinterface_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -230,55 +202,55 @@ void q_designerformwindowtoolinterface_remove_event_filter(void* self, void* obj
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_designerformwindowtoolinterface_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_designerformwindowtoolinterface_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_designerformwindowtoolinterface_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_designerformwindowtoolinterface_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_designerformwindowtoolinterface_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_designerformwindowtoolinterface_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_designerformwindowtoolinterface_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_designerformwindowtoolinterface_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_designerformwindowtoolinterface_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_designerformwindowtoolinterface_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_designerformwindowtoolinterface_disconnect3(void* self) {
+bool q_designerformwindowtoolinterface_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_designerformwindowtoolinterface_disconnect4(void* self, void* receiver) {
+bool q_designerformwindowtoolinterface_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_designerformwindowtoolinterface_disconnect5(void* param1) {
+bool q_designerformwindowtoolinterface_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_designerformwindowtoolinterface_dump_object_tree(void* self) {
+void q_designerformwindowtoolinterface_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_designerformwindowtoolinterface_dump_object_info(void* self) {
+void q_designerformwindowtoolinterface_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_designerformwindowtoolinterface_set_property(void* self, const char* name, void* value) {
+bool q_designerformwindowtoolinterface_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_designerformwindowtoolinterface_property(void* self, const char* name) {
+QVariant* q_designerformwindowtoolinterface_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_designerformwindowtoolinterface_dynamic_property_names(void* self) {
+const char** q_designerformwindowtoolinterface_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -299,7 +271,7 @@ QBindingStorage* q_designerformwindowtoolinterface_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_designerformwindowtoolinterface_binding_storage2(void* self) {
+const QBindingStorage* q_designerformwindowtoolinterface_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -311,11 +283,11 @@ void q_designerformwindowtoolinterface_on_destroyed(void* self, void (*callback)
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_designerformwindowtoolinterface_parent(void* self) {
+QObject* q_designerformwindowtoolinterface_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_designerformwindowtoolinterface_inherits(void* self, const char* classname) {
+bool q_designerformwindowtoolinterface_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -331,31 +303,31 @@ int32_t q_designerformwindowtoolinterface_start_timer23(void* self, int64_t time
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_designerformwindowtoolinterface_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_designerformwindowtoolinterface_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_designerformwindowtoolinterface_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_designerformwindowtoolinterface_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_designerformwindowtoolinterface_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_designerformwindowtoolinterface_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_designerformwindowtoolinterface_disconnect1(void* self, const char* signal) {
+bool q_designerformwindowtoolinterface_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_designerformwindowtoolinterface_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_designerformwindowtoolinterface_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_designerformwindowtoolinterface_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_designerformwindowtoolinterface_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_designerformwindowtoolinterface_disconnect23(void* self, void* receiver, const char* member) {
+bool q_designerformwindowtoolinterface_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -427,76 +399,44 @@ void q_designerformwindowtoolinterface_on_custom_event(void* self, void (*callba
     QDesignerFormWindowToolInterface_OnCustomEvent((QDesignerFormWindowToolInterface*)self, (intptr_t)callback);
 }
 
-void q_designerformwindowtoolinterface_connect_notify(void* self, void* signal) {
+void q_designerformwindowtoolinterface_connect_notify(void* self, const void* signal) {
     QDesignerFormWindowToolInterface_ConnectNotify((QDesignerFormWindowToolInterface*)self, (QMetaMethod*)signal);
 }
 
-void q_designerformwindowtoolinterface_super_connect_notify(void* self, void* signal) {
+void q_designerformwindowtoolinterface_super_connect_notify(void* self, const void* signal) {
     QDesignerFormWindowToolInterface_SuperConnectNotify((QDesignerFormWindowToolInterface*)self, (QMetaMethod*)signal);
 }
 
-void q_designerformwindowtoolinterface_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_designerformwindowtoolinterface_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QDesignerFormWindowToolInterface_OnConnectNotify((QDesignerFormWindowToolInterface*)self, (intptr_t)callback);
 }
 
-void q_designerformwindowtoolinterface_disconnect_notify(void* self, void* signal) {
+void q_designerformwindowtoolinterface_disconnect_notify(void* self, const void* signal) {
     QDesignerFormWindowToolInterface_DisconnectNotify((QDesignerFormWindowToolInterface*)self, (QMetaMethod*)signal);
 }
 
-void q_designerformwindowtoolinterface_super_disconnect_notify(void* self, void* signal) {
+void q_designerformwindowtoolinterface_super_disconnect_notify(void* self, const void* signal) {
     QDesignerFormWindowToolInterface_SuperDisconnectNotify((QDesignerFormWindowToolInterface*)self, (QMetaMethod*)signal);
 }
 
-void q_designerformwindowtoolinterface_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_designerformwindowtoolinterface_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QDesignerFormWindowToolInterface_OnDisconnectNotify((QDesignerFormWindowToolInterface*)self, (intptr_t)callback);
 }
 
-QObject* q_designerformwindowtoolinterface_sender(void* self) {
+QObject* q_designerformwindowtoolinterface_sender(const void* self) {
     return QDesignerFormWindowToolInterface_Sender((QDesignerFormWindowToolInterface*)self);
 }
 
-QObject* q_designerformwindowtoolinterface_super_sender(void* self) {
-    return QDesignerFormWindowToolInterface_SuperSender((QDesignerFormWindowToolInterface*)self);
-}
-
-void q_designerformwindowtoolinterface_on_sender(void* self, QObject* (*callback)()) {
-    QDesignerFormWindowToolInterface_OnSender((QDesignerFormWindowToolInterface*)self, (intptr_t)callback);
-}
-
-int32_t q_designerformwindowtoolinterface_sender_signal_index(void* self) {
+int32_t q_designerformwindowtoolinterface_sender_signal_index(const void* self) {
     return QDesignerFormWindowToolInterface_SenderSignalIndex((QDesignerFormWindowToolInterface*)self);
 }
 
-int32_t q_designerformwindowtoolinterface_super_sender_signal_index(void* self) {
-    return QDesignerFormWindowToolInterface_SuperSenderSignalIndex((QDesignerFormWindowToolInterface*)self);
-}
-
-void q_designerformwindowtoolinterface_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QDesignerFormWindowToolInterface_OnSenderSignalIndex((QDesignerFormWindowToolInterface*)self, (intptr_t)callback);
-}
-
-int32_t q_designerformwindowtoolinterface_receivers(void* self, const char* signal) {
+int32_t q_designerformwindowtoolinterface_receivers(const void* self, const char* signal) {
     return QDesignerFormWindowToolInterface_Receivers((QDesignerFormWindowToolInterface*)self, signal);
 }
 
-int32_t q_designerformwindowtoolinterface_super_receivers(void* self, const char* signal) {
-    return QDesignerFormWindowToolInterface_SuperReceivers((QDesignerFormWindowToolInterface*)self, signal);
-}
-
-void q_designerformwindowtoolinterface_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QDesignerFormWindowToolInterface_OnReceivers((QDesignerFormWindowToolInterface*)self, (intptr_t)callback);
-}
-
-bool q_designerformwindowtoolinterface_is_signal_connected(void* self, void* signal) {
+bool q_designerformwindowtoolinterface_is_signal_connected(const void* self, const void* signal) {
     return QDesignerFormWindowToolInterface_IsSignalConnected((QDesignerFormWindowToolInterface*)self, (QMetaMethod*)signal);
-}
-
-bool q_designerformwindowtoolinterface_super_is_signal_connected(void* self, void* signal) {
-    return QDesignerFormWindowToolInterface_SuperIsSignalConnected((QDesignerFormWindowToolInterface*)self, (QMetaMethod*)signal);
-}
-
-void q_designerformwindowtoolinterface_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QDesignerFormWindowToolInterface_OnIsSignalConnected((QDesignerFormWindowToolInterface*)self, (intptr_t)callback);
 }
 
 void q_designerformwindowtoolinterface_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

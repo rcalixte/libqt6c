@@ -20,13 +20,13 @@ KTextEditor__StyleOptionAnnotationItem* k_texteditor__styleoptionannotationitem_
 ///
 /// @param other KTextEditor__StyleOptionAnnotationItem*
 ///
-KTextEditor__StyleOptionAnnotationItem* k_texteditor__styleoptionannotationitem_new2(void* other);
+KTextEditor__StyleOptionAnnotationItem* k_texteditor__styleoptionannotationitem_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-styleoptionannotationitem.html#wrappedLine-var)
 ///
-/// @param self KTextEditor__StyleOptionAnnotationItem*
+/// @param self const KTextEditor__StyleOptionAnnotationItem*
 ///
-int32_t k_texteditor__styleoptionannotationitem_wrapped_line(void* self);
+int32_t k_texteditor__styleoptionannotationitem_wrapped_line(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-styleoptionannotationitem.html#wrappedLine-var)
 ///
@@ -37,9 +37,9 @@ void k_texteditor__styleoptionannotationitem_set_wrapped_line(void* self, int wr
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-styleoptionannotationitem.html#wrappedLineCount-var)
 ///
-/// @param self KTextEditor__StyleOptionAnnotationItem*
+/// @param self const KTextEditor__StyleOptionAnnotationItem*
 ///
-int32_t k_texteditor__styleoptionannotationitem_wrapped_line_count(void* self);
+int32_t k_texteditor__styleoptionannotationitem_wrapped_line_count(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-styleoptionannotationitem.html#wrappedLineCount-var)
 ///
@@ -50,9 +50,9 @@ void k_texteditor__styleoptionannotationitem_set_wrapped_line_count(void* self, 
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-styleoptionannotationitem.html#visibleWrappedLineInGroup-var)
 ///
-/// @param self KTextEditor__StyleOptionAnnotationItem*
+/// @param self const KTextEditor__StyleOptionAnnotationItem*
 ///
-int32_t k_texteditor__styleoptionannotationitem_visible_wrapped_line_in_group(void* self);
+int32_t k_texteditor__styleoptionannotationitem_visible_wrapped_line_in_group(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-styleoptionannotationitem.html#visibleWrappedLineInGroup-var)
 ///
@@ -63,9 +63,9 @@ void k_texteditor__styleoptionannotationitem_set_visible_wrapped_line_in_group(v
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-styleoptionannotationitem.html#view-var)
 ///
-/// @param self KTextEditor__StyleOptionAnnotationItem*
+/// @param self const KTextEditor__StyleOptionAnnotationItem*
 ///
-KTextEditor__View* k_texteditor__styleoptionannotationitem_view(void* self);
+KTextEditor__View* k_texteditor__styleoptionannotationitem_view(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-styleoptionannotationitem.html#view-var)
 ///
@@ -76,9 +76,9 @@ void k_texteditor__styleoptionannotationitem_set_view(void* self, void* view);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-styleoptionannotationitem.html#decorationSize-var)
 ///
-/// @param self KTextEditor__StyleOptionAnnotationItem*
+/// @param self const KTextEditor__StyleOptionAnnotationItem*
 ///
-QSize* k_texteditor__styleoptionannotationitem_decoration_size(void* self);
+QSize* k_texteditor__styleoptionannotationitem_decoration_size(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-styleoptionannotationitem.html#decorationSize-var)
 ///
@@ -89,9 +89,9 @@ void k_texteditor__styleoptionannotationitem_set_decoration_size(void* self, voi
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-styleoptionannotationitem.html#contentFontMetrics-var)
 ///
-/// @param self KTextEditor__StyleOptionAnnotationItem*
+/// @param self const KTextEditor__StyleOptionAnnotationItem*
 ///
-QFontMetricsF* k_texteditor__styleoptionannotationitem_content_font_metrics(void* self);
+QFontMetricsF* k_texteditor__styleoptionannotationitem_content_font_metrics(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-styleoptionannotationitem.html#contentFontMetrics-var)
 ///
@@ -102,11 +102,11 @@ void k_texteditor__styleoptionannotationitem_set_content_font_metrics(void* self
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-styleoptionannotationitem.html#annotationItemGroupingPosition-var)
 ///
-/// @param self KTextEditor__StyleOptionAnnotationItem*
+/// @param self const KTextEditor__StyleOptionAnnotationItem*
 ///
 /// @return flag of enum KTextEditor__StyleOptionAnnotationItem__AnnotationItemGroupPosition
 ///
-int32_t k_texteditor__styleoptionannotationitem_annotation_item_grouping_position(void* self);
+int32_t k_texteditor__styleoptionannotationitem_annotation_item_grouping_position(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-styleoptionannotationitem.html#annotationItemGroupingPosition-var)
 ///
@@ -120,15 +120,15 @@ void k_texteditor__styleoptionannotationitem_set_annotation_item_grouping_positi
 /// @param self KTextEditor__StyleOptionAnnotationItem*
 /// @param param1 KTextEditor__StyleOptionAnnotationItem*
 ///
-void k_texteditor__styleoptionannotationitem_operator_assign(void* self, void* param1);
+void k_texteditor__styleoptionannotationitem_operator_assign(void* self, const void* param1);
 
 /// Inherited from QStyleOption
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
 ///
-/// @param self KTextEditor__StyleOptionAnnotationItem*
+/// @param self const KTextEditor__StyleOptionAnnotationItem*
 ///
-int32_t k_texteditor__styleoptionannotationitem_version(void* self);
+int32_t k_texteditor__styleoptionannotationitem_version(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -143,9 +143,9 @@ void k_texteditor__styleoptionannotationitem_set_version(void* self, int version
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#type-var)
 ///
-/// @param self KTextEditor__StyleOptionAnnotationItem*
+/// @param self const KTextEditor__StyleOptionAnnotationItem*
 ///
-int32_t k_texteditor__styleoptionannotationitem_type(void* self);
+int32_t k_texteditor__styleoptionannotationitem_type(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -160,11 +160,11 @@ void k_texteditor__styleoptionannotationitem_set_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#state-var)
 ///
-/// @param self KTextEditor__StyleOptionAnnotationItem*
+/// @param self const KTextEditor__StyleOptionAnnotationItem*
 ///
 /// @return flag of enum QStyle__StateFlag
 ///
-int32_t k_texteditor__styleoptionannotationitem_state(void* self);
+int32_t k_texteditor__styleoptionannotationitem_state(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -179,11 +179,11 @@ void k_texteditor__styleoptionannotationitem_set_state(void* self, int32_t state
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#direction-var)
 ///
-/// @param self KTextEditor__StyleOptionAnnotationItem*
+/// @param self const KTextEditor__StyleOptionAnnotationItem*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t k_texteditor__styleoptionannotationitem_direction(void* self);
+int32_t k_texteditor__styleoptionannotationitem_direction(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -198,9 +198,9 @@ void k_texteditor__styleoptionannotationitem_set_direction(void* self, int32_t d
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#rect-var)
 ///
-/// @param self KTextEditor__StyleOptionAnnotationItem*
+/// @param self const KTextEditor__StyleOptionAnnotationItem*
 ///
-QRect* k_texteditor__styleoptionannotationitem_rect(void* self);
+QRect* k_texteditor__styleoptionannotationitem_rect(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -215,9 +215,9 @@ void k_texteditor__styleoptionannotationitem_set_rect(void* self, void* rect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#fontMetrics-var)
 ///
-/// @param self KTextEditor__StyleOptionAnnotationItem*
+/// @param self const KTextEditor__StyleOptionAnnotationItem*
 ///
-QFontMetrics* k_texteditor__styleoptionannotationitem_font_metrics(void* self);
+QFontMetrics* k_texteditor__styleoptionannotationitem_font_metrics(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -232,9 +232,9 @@ void k_texteditor__styleoptionannotationitem_set_font_metrics(void* self, void* 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#palette-var)
 ///
-/// @param self KTextEditor__StyleOptionAnnotationItem*
+/// @param self const KTextEditor__StyleOptionAnnotationItem*
 ///
-QPalette* k_texteditor__styleoptionannotationitem_palette(void* self);
+QPalette* k_texteditor__styleoptionannotationitem_palette(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -249,9 +249,9 @@ void k_texteditor__styleoptionannotationitem_set_palette(void* self, void* palet
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#styleObject-var)
 ///
-/// @param self KTextEditor__StyleOptionAnnotationItem*
+/// @param self const KTextEditor__StyleOptionAnnotationItem*
 ///
-QObject* k_texteditor__styleoptionannotationitem_style_object(void* self);
+QObject* k_texteditor__styleoptionannotationitem_style_object(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -269,7 +269,7 @@ void k_texteditor__styleoptionannotationitem_set_style_object(void* self, void* 
 /// @param self KTextEditor__StyleOptionAnnotationItem*
 /// @param w QWidget*
 ///
-void k_texteditor__styleoptionannotationitem_init_from(void* self, void* w);
+void k_texteditor__styleoptionannotationitem_init_from(void* self, const void* w);
 
 /// Delete this object from C++ memory.
 ///
@@ -281,9 +281,9 @@ void k_texteditor__styleoptionannotationitem_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KTextEditor__AbstractAnnotationItemDelegate*
+/// @param self const KTextEditor__AbstractAnnotationItemDelegate*
 ///
-const QMetaObject* k_texteditor__abstractannotationitemdelegate_meta_object(void* self);
+const QMetaObject* k_texteditor__abstractannotationitemdelegate_meta_object(const void* self);
 
 /// @param self KTextEditor__AbstractAnnotationItemDelegate*
 /// @param param1 const char*
@@ -304,43 +304,6 @@ int32_t k_texteditor__abstractannotationitemdelegate_metacall(void* self, int32_
 /// @param s const char*
 ///
 const char* k_texteditor__abstractannotationitemdelegate_tr(const char* s);
-
-/// [Upstream resources](https://api.kde.org/ktexteditor-abstractannotationitemdelegate.html#paint)
-///
-/// @param self KTextEditor__AbstractAnnotationItemDelegate*
-/// @param painter QPainter*
-/// @param option KTextEditor__StyleOptionAnnotationItem*
-/// @param model KTextEditor__AnnotationModel*
-/// @param line int
-///
-void k_texteditor__abstractannotationitemdelegate_paint(void* self, void* painter, void* option, void* model, int line);
-
-/// [Upstream resources](https://api.kde.org/ktexteditor-abstractannotationitemdelegate.html#sizeHint)
-///
-/// @param self KTextEditor__AbstractAnnotationItemDelegate*
-/// @param option KTextEditor__StyleOptionAnnotationItem*
-/// @param model KTextEditor__AnnotationModel*
-/// @param line int
-///
-QSize* k_texteditor__abstractannotationitemdelegate_size_hint(void* self, void* option, void* model, int line);
-
-/// [Upstream resources](https://api.kde.org/ktexteditor-abstractannotationitemdelegate.html#helpEvent)
-///
-/// @param self KTextEditor__AbstractAnnotationItemDelegate*
-/// @param event QHelpEvent*
-/// @param view KTextEditor__View*
-/// @param option KTextEditor__StyleOptionAnnotationItem*
-/// @param model KTextEditor__AnnotationModel*
-/// @param line int
-///
-bool k_texteditor__abstractannotationitemdelegate_help_event(void* self, void* event, void* view, void* option, void* model, int line);
-
-/// [Upstream resources](https://api.kde.org/ktexteditor-abstractannotationitemdelegate.html#hideTooltip)
-///
-/// @param self KTextEditor__AbstractAnnotationItemDelegate*
-/// @param view KTextEditor__View*
-///
-void k_texteditor__abstractannotationitemdelegate_hide_tooltip(void* self, void* view);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-abstractannotationitemdelegate.html#sizeHintChanged)
 ///
@@ -401,9 +364,9 @@ bool k_texteditor__abstractannotationitemdelegate_event_filter(void* self, void*
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KTextEditor__AbstractAnnotationItemDelegate*
+/// @param self const KTextEditor__AbstractAnnotationItemDelegate*
 ///
-const char* k_texteditor__abstractannotationitemdelegate_object_name(void* self);
+const char* k_texteditor__abstractannotationitemdelegate_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -418,33 +381,33 @@ void k_texteditor__abstractannotationitemdelegate_set_object_name(void* self, co
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KTextEditor__AbstractAnnotationItemDelegate*
+/// @param self const KTextEditor__AbstractAnnotationItemDelegate*
 ///
-bool k_texteditor__abstractannotationitemdelegate_is_widget_type(void* self);
+bool k_texteditor__abstractannotationitemdelegate_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KTextEditor__AbstractAnnotationItemDelegate*
+/// @param self const KTextEditor__AbstractAnnotationItemDelegate*
 ///
-bool k_texteditor__abstractannotationitemdelegate_is_window_type(void* self);
+bool k_texteditor__abstractannotationitemdelegate_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KTextEditor__AbstractAnnotationItemDelegate*
+/// @param self const KTextEditor__AbstractAnnotationItemDelegate*
 ///
-bool k_texteditor__abstractannotationitemdelegate_is_quick_item_type(void* self);
+bool k_texteditor__abstractannotationitemdelegate_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KTextEditor__AbstractAnnotationItemDelegate*
+/// @param self const KTextEditor__AbstractAnnotationItemDelegate*
 ///
-bool k_texteditor__abstractannotationitemdelegate_signals_blocked(void* self);
+bool k_texteditor__abstractannotationitemdelegate_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -459,9 +422,9 @@ bool k_texteditor__abstractannotationitemdelegate_block_signals(void* self, bool
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KTextEditor__AbstractAnnotationItemDelegate*
+/// @param self const KTextEditor__AbstractAnnotationItemDelegate*
 ///
-QThread* k_texteditor__abstractannotationitemdelegate_thread(void* self);
+QThread* k_texteditor__abstractannotationitemdelegate_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -512,11 +475,11 @@ void k_texteditor__abstractannotationitemdelegate_kill_timer2(void* self, int32_
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KTextEditor__AbstractAnnotationItemDelegate*
+/// @param self const KTextEditor__AbstractAnnotationItemDelegate*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_texteditor__abstractannotationitemdelegate_children(void* self);
+libqt_list k_texteditor__abstractannotationitemdelegate_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -554,7 +517,7 @@ void k_texteditor__abstractannotationitemdelegate_remove_event_filter(void* self
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_texteditor__abstractannotationitemdelegate_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_texteditor__abstractannotationitemdelegate_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -565,18 +528,18 @@ QMetaObject__Connection* k_texteditor__abstractannotationitemdelegate_connect(vo
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_texteditor__abstractannotationitemdelegate_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_texteditor__abstractannotationitemdelegate_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KTextEditor__AbstractAnnotationItemDelegate*
+/// @param self const KTextEditor__AbstractAnnotationItemDelegate*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_texteditor__abstractannotationitemdelegate_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_texteditor__abstractannotationitemdelegate_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -587,7 +550,7 @@ QMetaObject__Connection* k_texteditor__abstractannotationitemdelegate_connect3(v
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_texteditor__abstractannotationitemdelegate_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_texteditor__abstractannotationitemdelegate_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -598,24 +561,24 @@ bool k_texteditor__abstractannotationitemdelegate_disconnect(void* sender, const
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_texteditor__abstractannotationitemdelegate_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_texteditor__abstractannotationitemdelegate_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KTextEditor__AbstractAnnotationItemDelegate*
+/// @param self const KTextEditor__AbstractAnnotationItemDelegate*
 ///
-bool k_texteditor__abstractannotationitemdelegate_disconnect3(void* self);
+bool k_texteditor__abstractannotationitemdelegate_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KTextEditor__AbstractAnnotationItemDelegate*
+/// @param self const KTextEditor__AbstractAnnotationItemDelegate*
 /// @param receiver QObject*
 ///
-bool k_texteditor__abstractannotationitemdelegate_disconnect4(void* self, void* receiver);
+bool k_texteditor__abstractannotationitemdelegate_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -623,23 +586,23 @@ bool k_texteditor__abstractannotationitemdelegate_disconnect4(void* self, void* 
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_texteditor__abstractannotationitemdelegate_disconnect5(void* param1);
+bool k_texteditor__abstractannotationitemdelegate_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KTextEditor__AbstractAnnotationItemDelegate*
+/// @param self const KTextEditor__AbstractAnnotationItemDelegate*
 ///
-void k_texteditor__abstractannotationitemdelegate_dump_object_tree(void* self);
+void k_texteditor__abstractannotationitemdelegate_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KTextEditor__AbstractAnnotationItemDelegate*
+/// @param self const KTextEditor__AbstractAnnotationItemDelegate*
 ///
-void k_texteditor__abstractannotationitemdelegate_dump_object_info(void* self);
+void k_texteditor__abstractannotationitemdelegate_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -649,16 +612,16 @@ void k_texteditor__abstractannotationitemdelegate_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_texteditor__abstractannotationitemdelegate_set_property(void* self, const char* name, void* value);
+bool k_texteditor__abstractannotationitemdelegate_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KTextEditor__AbstractAnnotationItemDelegate*
+/// @param self const KTextEditor__AbstractAnnotationItemDelegate*
 /// @param name const char*
 ///
-QVariant* k_texteditor__abstractannotationitemdelegate_property(void* self, const char* name);
+QVariant* k_texteditor__abstractannotationitemdelegate_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -666,9 +629,9 @@ QVariant* k_texteditor__abstractannotationitemdelegate_property(void* self, cons
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KTextEditor__AbstractAnnotationItemDelegate*
+/// @param self const KTextEditor__AbstractAnnotationItemDelegate*
 ///
-const char** k_texteditor__abstractannotationitemdelegate_dynamic_property_names(void* self);
+const char** k_texteditor__abstractannotationitemdelegate_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -682,9 +645,9 @@ QBindingStorage* k_texteditor__abstractannotationitemdelegate_binding_storage(vo
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KTextEditor__AbstractAnnotationItemDelegate*
+/// @param self const KTextEditor__AbstractAnnotationItemDelegate*
 ///
-const QBindingStorage* k_texteditor__abstractannotationitemdelegate_binding_storage2(void* self);
+const QBindingStorage* k_texteditor__abstractannotationitemdelegate_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -707,18 +670,18 @@ void k_texteditor__abstractannotationitemdelegate_on_destroyed(void* self, void 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KTextEditor__AbstractAnnotationItemDelegate*
+/// @param self const KTextEditor__AbstractAnnotationItemDelegate*
 ///
-QObject* k_texteditor__abstractannotationitemdelegate_parent(void* self);
+QObject* k_texteditor__abstractannotationitemdelegate_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KTextEditor__AbstractAnnotationItemDelegate*
+/// @param self const KTextEditor__AbstractAnnotationItemDelegate*
 /// @param classname const char*
 ///
-bool k_texteditor__abstractannotationitemdelegate_inherits(void* self, const char* classname);
+bool k_texteditor__abstractannotationitemdelegate_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -758,7 +721,7 @@ int32_t k_texteditor__abstractannotationitemdelegate_start_timer23(void* self, i
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_texteditor__abstractannotationitemdelegate_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_texteditor__abstractannotationitemdelegate_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -770,59 +733,59 @@ QMetaObject__Connection* k_texteditor__abstractannotationitemdelegate_connect5(v
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_texteditor__abstractannotationitemdelegate_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_texteditor__abstractannotationitemdelegate_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KTextEditor__AbstractAnnotationItemDelegate*
+/// @param self const KTextEditor__AbstractAnnotationItemDelegate*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_texteditor__abstractannotationitemdelegate_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_texteditor__abstractannotationitemdelegate_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KTextEditor__AbstractAnnotationItemDelegate*
+/// @param self const KTextEditor__AbstractAnnotationItemDelegate*
 /// @param signal const char*
 ///
-bool k_texteditor__abstractannotationitemdelegate_disconnect1(void* self, const char* signal);
+bool k_texteditor__abstractannotationitemdelegate_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KTextEditor__AbstractAnnotationItemDelegate*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_texteditor__abstractannotationitemdelegate_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KTextEditor__AbstractAnnotationItemDelegate*
+/// @param self const KTextEditor__AbstractAnnotationItemDelegate*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_texteditor__abstractannotationitemdelegate_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_texteditor__abstractannotationitemdelegate_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KTextEditor__AbstractAnnotationItemDelegate*
+/// @param self const KTextEditor__AbstractAnnotationItemDelegate*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_texteditor__abstractannotationitemdelegate_disconnect23(void* self, void* receiver, const char* member);
+bool k_texteditor__abstractannotationitemdelegate_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KTextEditor__AbstractAnnotationItemDelegate*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_texteditor__abstractannotationitemdelegate_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

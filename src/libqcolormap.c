@@ -2,7 +2,7 @@
 #include "libqcolormap.hpp"
 #include "libqcolormap.h"
 
-QColormap* q_colormap_new(void* colormap) {
+QColormap* q_colormap_new(const void* colormap) {
     return QColormap_New((QColormap*)colormap);
 }
 
@@ -18,31 +18,31 @@ QColormap* q_colormap_instance() {
     return QColormap_Instance();
 }
 
-void q_colormap_operator_assign(void* self, void* colormap) {
+void q_colormap_operator_assign(void* self, const void* colormap) {
     QColormap_OperatorAssign((QColormap*)self, (QColormap*)colormap);
 }
 
-int32_t q_colormap_mode(void* self) {
+int32_t q_colormap_mode(const void* self) {
     return QColormap_Mode((QColormap*)self);
 }
 
-int32_t q_colormap_depth(void* self) {
+int32_t q_colormap_depth(const void* self) {
     return QColormap_Depth((QColormap*)self);
 }
 
-int32_t q_colormap_size(void* self) {
+int32_t q_colormap_size(const void* self) {
     return QColormap_Size((QColormap*)self);
 }
 
-uint32_t q_colormap_pixel(void* self, void* color) {
+uint32_t q_colormap_pixel(const void* self, const void* color) {
     return QColormap_Pixel((QColormap*)self, (QColor*)color);
 }
 
-const QColor* q_colormap_color_at(void* self, uint32_t pixel) {
+const QColor* q_colormap_color_at(const void* self, uint32_t pixel) {
     return QColormap_ColorAt((QColormap*)self, pixel);
 }
 
-libqt_list /* of QColor* */ q_colormap_colormap(void* self) {
+libqt_list /* of QColor* */ q_colormap_colormap(const void* self) {
     libqt_list _arr = QColormap_Colormap((QColormap*)self);
     return _arr;
 }

@@ -21,15 +21,15 @@ QApplication* q_application_new2(int* argc, char** argv, int param3) {
     return QApplication_New2(argc, argv, param3);
 }
 
-const QMetaObject* q_application_meta_object(void* self) {
+const QMetaObject* q_application_meta_object(const void* self) {
     return QApplication_MetaObject((QApplication*)self);
 }
 
-void q_application_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_application_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QApplication_OnMetaObject((QApplication*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_application_super_meta_object(void* self) {
+const QMetaObject* q_application_super_meta_object(const void* self) {
     return QApplication_SuperMetaObject((QApplication*)self);
 }
 
@@ -76,7 +76,7 @@ QStyle* q_application_set_style2(const char* style) {
     return QApplication_SetStyle2(qstring(style));
 }
 
-QPalette* q_application_palette(void* param1) {
+QPalette* q_application_palette(const void* param1) {
     return QApplication_Palette((QWidget*)param1);
 }
 
@@ -84,7 +84,7 @@ QPalette* q_application_palette2(const char* className) {
     return QApplication_Palette2(className);
 }
 
-void q_application_set_palette(void* param1) {
+void q_application_set_palette(const void* param1) {
     QApplication_SetPalette((QPalette*)param1);
 }
 
@@ -92,7 +92,7 @@ QFont* q_application_font() {
     return QApplication_Font();
 }
 
-QFont* q_application_font2(void* param1) {
+QFont* q_application_font2(const void* param1) {
     return QApplication_Font2((QWidget*)param1);
 }
 
@@ -100,7 +100,7 @@ QFont* q_application_font3(const char* className) {
     return QApplication_Font3(className);
 }
 
-void q_application_set_font(void* param1) {
+void q_application_set_font(const void* param1) {
     QApplication_SetFont((QFont*)param1);
 }
 
@@ -138,7 +138,7 @@ void q_application_set_active_window(void* act) {
     QApplication_SetActiveWindow((QWidget*)act);
 }
 
-QWidget* q_application_widget_at(void* p) {
+QWidget* q_application_widget_at(const void* p) {
     return QApplication_WidgetAt((QPoint*)p);
 }
 
@@ -146,7 +146,7 @@ QWidget* q_application_widget_at2(int x, int y) {
     return QApplication_WidgetAt2(x, y);
 }
 
-QWidget* q_application_top_level_at(void* p) {
+QWidget* q_application_top_level_at(const void* p) {
     return QApplication_TopLevelAt((QPoint*)p);
 }
 
@@ -234,16 +234,8 @@ bool q_application_super_notify(void* self, void* param1, void* param2) {
     return QApplication_SuperNotify((QApplication*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-void* q_application_resolve_interface(void* self, const char* name, int revision) {
+void* q_application_resolve_interface(const void* self, const char* name, int revision) {
     return QApplication_ResolveInterface((QApplication*)self, name, revision);
-}
-
-void q_application_on_resolve_interface(void* self, void* (*callback)(void*, const char*, int)) {
-    QApplication_OnResolveInterface((QApplication*)self, (intptr_t)callback);
-}
-
-void* q_application_super_resolve_interface(void* self, const char* name, int revision) {
-    return QApplication_SuperResolveInterface((QApplication*)self, name, revision);
 }
 
 void q_application_focus_changed(void* self, void* old, void* now) {
@@ -254,14 +246,14 @@ void q_application_on_focus_changed(void* self, void (*callback)(void*, void*, v
     QApplication_Connect_FocusChanged((QApplication*)self, (intptr_t)callback);
 }
 
-const char* q_application_style_sheet(void* self) {
+const char* q_application_style_sheet(const void* self) {
     libqt_string _str = QApplication_StyleSheet((QApplication*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_application_auto_sip_enabled(void* self) {
+bool q_application_auto_sip_enabled(const void* self) {
     return QApplication_AutoSipEnabled((QApplication*)self);
 }
 
@@ -307,11 +299,11 @@ const char* q_application_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_application_set_palette2(void* param1, const char* className) {
+void q_application_set_palette2(const void* param1, const char* className) {
     QApplication_SetPalette2((QPalette*)param1, className);
 }
 
-void q_application_set_font2(void* param1, const char* className) {
+void q_application_set_font2(const void* param1, const char* className) {
     QApplication_SetFont2((QFont*)param1, className);
 }
 
@@ -359,7 +351,7 @@ libqt_list /* of QWindow* */ q_application_top_level_windows() {
     return _arr;
 }
 
-void q_application_set_window_icon(void* icon) {
+void q_application_set_window_icon(const void* icon) {
     QGuiApplication_SetWindowIcon((QIcon*)icon);
 }
 
@@ -395,11 +387,11 @@ libqt_list /* of QScreen* */ q_application_screens() {
     return _arr;
 }
 
-QScreen* q_application_screen_at(void* point) {
+QScreen* q_application_screen_at(const void* point) {
     return QGuiApplication_ScreenAt((QPoint*)point);
 }
 
-double q_application_device_pixel_ratio(void* self) {
+double q_application_device_pixel_ratio(const void* self) {
     return QGuiApplication_DevicePixelRatio((QGuiApplication*)self);
 }
 
@@ -407,11 +399,11 @@ QCursor* q_application_override_cursor() {
     return QGuiApplication_OverrideCursor();
 }
 
-void q_application_set_override_cursor(void* overrideCursor) {
+void q_application_set_override_cursor(const void* overrideCursor) {
     QGuiApplication_SetOverrideCursor((QCursor*)overrideCursor);
 }
 
-void q_application_change_override_cursor(void* param1) {
+void q_application_change_override_cursor(const void* param1) {
     QGuiApplication_ChangeOverrideCursor((QCursor*)param1);
 }
 
@@ -491,25 +483,25 @@ int32_t q_application_high_dpi_scale_factor_rounding_policy() {
     return QGuiApplication_HighDpiScaleFactorRoundingPolicy();
 }
 
-bool q_application_is_session_restored(void* self) {
+bool q_application_is_session_restored(const void* self) {
     return QGuiApplication_IsSessionRestored((QGuiApplication*)self);
 }
 
-const char* q_application_session_id(void* self) {
+const char* q_application_session_id(const void* self) {
     libqt_string _str = QGuiApplication_SessionId((QGuiApplication*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_application_session_key(void* self) {
+const char* q_application_session_key(const void* self) {
     libqt_string _str = QGuiApplication_SessionKey((QGuiApplication*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_application_is_saving_session(void* self) {
+bool q_application_is_saving_session(const void* self) {
     return QGuiApplication_IsSavingSession((QGuiApplication*)self);
 }
 
@@ -613,19 +605,19 @@ void q_application_on_application_display_name_changed(void* self, void (*callba
     QGuiApplication_Connect_ApplicationDisplayNameChanged((QGuiApplication*)self, (intptr_t)callback);
 }
 
-void q_application_palette_changed(void* self, void* pal) {
+void q_application_palette_changed(void* self, const void* pal) {
     QGuiApplication_PaletteChanged((QGuiApplication*)self, (QPalette*)pal);
 }
 
-void q_application_on_palette_changed(void* self, void (*callback)(void*, void*)) {
+void q_application_on_palette_changed(void* self, void (*callback)(void*, const void*)) {
     QGuiApplication_Connect_PaletteChanged((QGuiApplication*)self, (intptr_t)callback);
 }
 
-void q_application_font_changed(void* self, void* font) {
+void q_application_font_changed(void* self, const void* font) {
     QGuiApplication_FontChanged((QGuiApplication*)self, (QFont*)font);
 }
 
-void q_application_on_font_changed(void* self, void (*callback)(void*, void*)) {
+void q_application_on_font_changed(void* self, void (*callback)(void*, const void*)) {
     QGuiApplication_Connect_FontChanged((QGuiApplication*)self, (intptr_t)callback);
 }
 
@@ -772,7 +764,7 @@ int64_t q_application_application_pid() {
     return QCoreApplication_ApplicationPid();
 }
 
-int32_t q_application_check_permission(void* self, void* permission) {
+int32_t q_application_check_permission(void* self, const void* permission) {
     return QCoreApplication_CheckPermission((QCoreApplication*)self, (QPermission*)permission);
 }
 
@@ -936,7 +928,7 @@ void q_application_exit1(int retcode) {
     QCoreApplication_Exit1(retcode);
 }
 
-const char* q_application_object_name(void* self) {
+const char* q_application_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -947,19 +939,19 @@ void q_application_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_application_is_widget_type(void* self) {
+bool q_application_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_application_is_window_type(void* self) {
+bool q_application_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_application_is_quick_item_type(void* self) {
+bool q_application_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_application_signals_blocked(void* self) {
+bool q_application_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -967,7 +959,7 @@ bool q_application_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_application_thread(void* self) {
+QThread* q_application_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -991,7 +983,7 @@ void q_application_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_application_children(void* self) {
+libqt_list /* of QObject* */ q_application_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1008,55 +1000,55 @@ void q_application_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_application_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_application_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_application_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_application_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_application_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_application_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_application_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_application_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_application_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_application_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_application_disconnect3(void* self) {
+bool q_application_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_application_disconnect4(void* self, void* receiver) {
+bool q_application_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_application_disconnect5(void* param1) {
+bool q_application_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_application_dump_object_tree(void* self) {
+void q_application_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_application_dump_object_info(void* self) {
+void q_application_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_application_set_property(void* self, const char* name, void* value) {
+bool q_application_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_application_property(void* self, const char* name) {
+QVariant* q_application_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_application_dynamic_property_names(void* self) {
+const char** q_application_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -1077,7 +1069,7 @@ QBindingStorage* q_application_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_application_binding_storage2(void* self) {
+const QBindingStorage* q_application_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -1089,11 +1081,11 @@ void q_application_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_application_parent(void* self) {
+QObject* q_application_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_application_inherits(void* self, const char* classname) {
+bool q_application_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -1109,31 +1101,31 @@ int32_t q_application_start_timer23(void* self, int64_t time, int32_t timerType)
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_application_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_application_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_application_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_application_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_application_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_application_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_application_disconnect1(void* self, const char* signal) {
+bool q_application_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_application_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_application_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_application_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_application_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_application_disconnect23(void* self, void* receiver, const char* member) {
+bool q_application_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -1193,76 +1185,44 @@ void q_application_on_custom_event(void* self, void (*callback)(void*, void*)) {
     QApplication_OnCustomEvent((QApplication*)self, (intptr_t)callback);
 }
 
-void q_application_connect_notify(void* self, void* signal) {
+void q_application_connect_notify(void* self, const void* signal) {
     QApplication_ConnectNotify((QApplication*)self, (QMetaMethod*)signal);
 }
 
-void q_application_super_connect_notify(void* self, void* signal) {
+void q_application_super_connect_notify(void* self, const void* signal) {
     QApplication_SuperConnectNotify((QApplication*)self, (QMetaMethod*)signal);
 }
 
-void q_application_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_application_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QApplication_OnConnectNotify((QApplication*)self, (intptr_t)callback);
 }
 
-void q_application_disconnect_notify(void* self, void* signal) {
+void q_application_disconnect_notify(void* self, const void* signal) {
     QApplication_DisconnectNotify((QApplication*)self, (QMetaMethod*)signal);
 }
 
-void q_application_super_disconnect_notify(void* self, void* signal) {
+void q_application_super_disconnect_notify(void* self, const void* signal) {
     QApplication_SuperDisconnectNotify((QApplication*)self, (QMetaMethod*)signal);
 }
 
-void q_application_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_application_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QApplication_OnDisconnectNotify((QApplication*)self, (intptr_t)callback);
 }
 
-QObject* q_application_sender(void* self) {
+QObject* q_application_sender(const void* self) {
     return QApplication_Sender((QApplication*)self);
 }
 
-QObject* q_application_super_sender(void* self) {
-    return QApplication_SuperSender((QApplication*)self);
-}
-
-void q_application_on_sender(void* self, QObject* (*callback)()) {
-    QApplication_OnSender((QApplication*)self, (intptr_t)callback);
-}
-
-int32_t q_application_sender_signal_index(void* self) {
+int32_t q_application_sender_signal_index(const void* self) {
     return QApplication_SenderSignalIndex((QApplication*)self);
 }
 
-int32_t q_application_super_sender_signal_index(void* self) {
-    return QApplication_SuperSenderSignalIndex((QApplication*)self);
-}
-
-void q_application_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QApplication_OnSenderSignalIndex((QApplication*)self, (intptr_t)callback);
-}
-
-int32_t q_application_receivers(void* self, const char* signal) {
+int32_t q_application_receivers(const void* self, const char* signal) {
     return QApplication_Receivers((QApplication*)self, signal);
 }
 
-int32_t q_application_super_receivers(void* self, const char* signal) {
-    return QApplication_SuperReceivers((QApplication*)self, signal);
-}
-
-void q_application_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QApplication_OnReceivers((QApplication*)self, (intptr_t)callback);
-}
-
-bool q_application_is_signal_connected(void* self, void* signal) {
+bool q_application_is_signal_connected(const void* self, const void* signal) {
     return QApplication_IsSignalConnected((QApplication*)self, (QMetaMethod*)signal);
-}
-
-bool q_application_super_is_signal_connected(void* self, void* signal) {
-    return QApplication_SuperIsSignalConnected((QApplication*)self, (QMetaMethod*)signal);
-}
-
-void q_application_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QApplication_OnIsSignalConnected((QApplication*)self, (intptr_t)callback);
 }
 
 void q_application_on_about_to_quit(void* self, void (*callback)(void*)) {

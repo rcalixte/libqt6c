@@ -56,7 +56,7 @@ const char** k_urlmimedata_mime_data_types() {
     return _ret;
 }
 
-libqt_list /* of QUrl* */ k_urlmimedata_urls_from_mime_data(void* mimeData, int32_t decodeOptions, libqt_map* /* of const char* to const char* */ metaData) {
+libqt_list /* of QUrl* */ k_urlmimedata_urls_from_mime_data(const void* mimeData, int32_t decodeOptions, libqt_map* /* of const char* to const char* */ metaData) {
     // Convert libqt_map to QMap<QString,QString>
     libqt_map metaData_ret;
     metaData_ret.len = metaData->len;

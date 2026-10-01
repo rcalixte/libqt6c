@@ -20,14 +20,14 @@ Attica__BuildServiceJobOutput* k_attica__buildservicejoboutput_new();
 ///
 /// @param other Attica__BuildServiceJobOutput*
 ///
-Attica__BuildServiceJobOutput* k_attica__buildservicejoboutput_new2(void* other);
+Attica__BuildServiceJobOutput* k_attica__buildservicejoboutput_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-buildservicejoboutput.html#operator-eq)
 ///
 /// @param self Attica__BuildServiceJobOutput*
 /// @param other Attica__BuildServiceJobOutput*
 ///
-void k_attica__buildservicejoboutput_operator_assign(void* self, void* other);
+void k_attica__buildservicejoboutput_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-buildservicejoboutput.html#setOutput)
 ///
@@ -40,33 +40,33 @@ void k_attica__buildservicejoboutput_set_output(void* self, const char* output);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__BuildServiceJobOutput*
+/// @param self const Attica__BuildServiceJobOutput*
 ///
-const char* k_attica__buildservicejoboutput_output(void* self);
+const char* k_attica__buildservicejoboutput_output(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-buildservicejoboutput.html#isRunning)
 ///
-/// @param self Attica__BuildServiceJobOutput*
+/// @param self const Attica__BuildServiceJobOutput*
 ///
-bool k_attica__buildservicejoboutput_is_running(void* self);
+bool k_attica__buildservicejoboutput_is_running(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-buildservicejoboutput.html#isCompleted)
 ///
-/// @param self Attica__BuildServiceJobOutput*
+/// @param self const Attica__BuildServiceJobOutput*
 ///
-bool k_attica__buildservicejoboutput_is_completed(void* self);
+bool k_attica__buildservicejoboutput_is_completed(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-buildservicejoboutput.html#isFailed)
 ///
-/// @param self Attica__BuildServiceJobOutput*
+/// @param self const Attica__BuildServiceJobOutput*
 ///
-bool k_attica__buildservicejoboutput_is_failed(void* self);
+bool k_attica__buildservicejoboutput_is_failed(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-buildservicejoboutput.html#isValid)
 ///
-/// @param self Attica__BuildServiceJobOutput*
+/// @param self const Attica__BuildServiceJobOutput*
 ///
-bool k_attica__buildservicejoboutput_is_valid(void* self);
+bool k_attica__buildservicejoboutput_is_valid(const void* self);
 
 /// Delete this object from C++ memory.
 ///

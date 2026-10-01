@@ -79,7 +79,7 @@ void QImageCapture_Connect_ImageAvailable(QImageCapture* self, intptr_t slot);
 void QImageCapture_ImageSaved(QImageCapture* self, int id, const libqt_string fileName);
 void QImageCapture_Connect_ImageSaved(QImageCapture* self, intptr_t slot);
 int QImageCapture_CaptureToFile1(QImageCapture* self, const libqt_string location);
-void QImageCapture_OnMetaObject(const QImageCapture* self, intptr_t slot);
+void QImageCapture_OnMetaObject(QImageCapture* self, intptr_t slot);
 QMetaObject* QImageCapture_SuperMetaObject(const QImageCapture* self);
 void QImageCapture_OnMetacast(QImageCapture* self, intptr_t slot);
 void* QImageCapture_SuperMetacast(QImageCapture* self, const char* param1);
@@ -107,17 +107,9 @@ void QImageCapture_DisconnectNotify(QImageCapture* self, const QMetaMethod* sign
 void QImageCapture_OnDisconnectNotify(QImageCapture* self, intptr_t slot);
 void QImageCapture_SuperDisconnectNotify(QImageCapture* self, const QMetaMethod* signal);
 QObject* QImageCapture_Sender(const QImageCapture* self);
-void QImageCapture_OnSender(const QImageCapture* self, intptr_t slot);
-QObject* QImageCapture_SuperSender(const QImageCapture* self);
 int QImageCapture_SenderSignalIndex(const QImageCapture* self);
-void QImageCapture_OnSenderSignalIndex(const QImageCapture* self, intptr_t slot);
-int QImageCapture_SuperSenderSignalIndex(const QImageCapture* self);
 int QImageCapture_Receivers(const QImageCapture* self, const char* signal);
-void QImageCapture_OnReceivers(const QImageCapture* self, intptr_t slot);
-int QImageCapture_SuperReceivers(const QImageCapture* self, const char* signal);
 bool QImageCapture_IsSignalConnected(const QImageCapture* self, const QMetaMethod* signal);
-void QImageCapture_OnIsSignalConnected(const QImageCapture* self, intptr_t slot);
-bool QImageCapture_SuperIsSignalConnected(const QImageCapture* self, const QMetaMethod* signal);
 void QImageCapture_Delete(QImageCapture* self);
 
 #ifdef __cplusplus

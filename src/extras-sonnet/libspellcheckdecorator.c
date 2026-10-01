@@ -16,15 +16,15 @@ Sonnet__SpellCheckDecorator* k_sonnet__spellcheckdecorator_new2(void* textEdit) 
     return Sonnet__SpellCheckDecorator_New2((QPlainTextEdit*)textEdit);
 }
 
-const QMetaObject* k_sonnet__spellcheckdecorator_meta_object(void* self) {
+const QMetaObject* k_sonnet__spellcheckdecorator_meta_object(const void* self) {
     return Sonnet__SpellCheckDecorator_MetaObject((Sonnet__SpellCheckDecorator*)self);
 }
 
-void k_sonnet__spellcheckdecorator_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_sonnet__spellcheckdecorator_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     Sonnet__SpellCheckDecorator_OnMetaObject((Sonnet__SpellCheckDecorator*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_sonnet__spellcheckdecorator_super_meta_object(void* self) {
+const QMetaObject* k_sonnet__spellcheckdecorator_super_meta_object(const void* self) {
     return Sonnet__SpellCheckDecorator_SuperMetaObject((Sonnet__SpellCheckDecorator*)self);
 }
 
@@ -63,7 +63,7 @@ void k_sonnet__spellcheckdecorator_set_highlighter(void* self, void* highlighter
     Sonnet__SpellCheckDecorator_SetHighlighter((Sonnet__SpellCheckDecorator*)self, (Sonnet__Highlighter*)highlighter);
 }
 
-Sonnet__Highlighter* k_sonnet__spellcheckdecorator_highlighter(void* self) {
+Sonnet__Highlighter* k_sonnet__spellcheckdecorator_highlighter(const void* self) {
     return Sonnet__SpellCheckDecorator_Highlighter((Sonnet__SpellCheckDecorator*)self);
 }
 
@@ -79,15 +79,15 @@ bool k_sonnet__spellcheckdecorator_super_event_filter(void* self, void* obj, voi
     return Sonnet__SpellCheckDecorator_SuperEventFilter((Sonnet__SpellCheckDecorator*)self, (QObject*)obj, (QEvent*)event);
 }
 
-bool k_sonnet__spellcheckdecorator_is_spell_checking_enabled_for_block(void* self, const char* textBlock) {
+bool k_sonnet__spellcheckdecorator_is_spell_checking_enabled_for_block(const void* self, const char* textBlock) {
     return Sonnet__SpellCheckDecorator_IsSpellCheckingEnabledForBlock((Sonnet__SpellCheckDecorator*)self, qstring(textBlock));
 }
 
-void k_sonnet__spellcheckdecorator_on_is_spell_checking_enabled_for_block(void* self, bool (*callback)(void*, const char*)) {
+void k_sonnet__spellcheckdecorator_on_is_spell_checking_enabled_for_block(const void* self, bool (*callback)(const void*, const char*)) {
     Sonnet__SpellCheckDecorator_OnIsSpellCheckingEnabledForBlock((Sonnet__SpellCheckDecorator*)self, (intptr_t)callback);
 }
 
-bool k_sonnet__spellcheckdecorator_super_is_spell_checking_enabled_for_block(void* self, const char* textBlock) {
+bool k_sonnet__spellcheckdecorator_super_is_spell_checking_enabled_for_block(const void* self, const char* textBlock) {
     return Sonnet__SpellCheckDecorator_SuperIsSpellCheckingEnabledForBlock((Sonnet__SpellCheckDecorator*)self, qstring(textBlock));
 }
 
@@ -105,7 +105,7 @@ const char* k_sonnet__spellcheckdecorator_tr3(const char* s, const char* c, int 
     return _ret;
 }
 
-const char* k_sonnet__spellcheckdecorator_object_name(void* self) {
+const char* k_sonnet__spellcheckdecorator_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -116,19 +116,19 @@ void k_sonnet__spellcheckdecorator_set_object_name(void* self, const char* name)
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_sonnet__spellcheckdecorator_is_widget_type(void* self) {
+bool k_sonnet__spellcheckdecorator_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_sonnet__spellcheckdecorator_is_window_type(void* self) {
+bool k_sonnet__spellcheckdecorator_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_sonnet__spellcheckdecorator_is_quick_item_type(void* self) {
+bool k_sonnet__spellcheckdecorator_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_sonnet__spellcheckdecorator_signals_blocked(void* self) {
+bool k_sonnet__spellcheckdecorator_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -136,7 +136,7 @@ bool k_sonnet__spellcheckdecorator_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_sonnet__spellcheckdecorator_thread(void* self) {
+QThread* k_sonnet__spellcheckdecorator_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -160,7 +160,7 @@ void k_sonnet__spellcheckdecorator_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_sonnet__spellcheckdecorator_children(void* self) {
+libqt_list /* of QObject* */ k_sonnet__spellcheckdecorator_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -177,55 +177,55 @@ void k_sonnet__spellcheckdecorator_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_sonnet__spellcheckdecorator_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_sonnet__spellcheckdecorator_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_sonnet__spellcheckdecorator_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_sonnet__spellcheckdecorator_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_sonnet__spellcheckdecorator_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_sonnet__spellcheckdecorator_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_sonnet__spellcheckdecorator_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_sonnet__spellcheckdecorator_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_sonnet__spellcheckdecorator_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_sonnet__spellcheckdecorator_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_sonnet__spellcheckdecorator_disconnect3(void* self) {
+bool k_sonnet__spellcheckdecorator_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_sonnet__spellcheckdecorator_disconnect4(void* self, void* receiver) {
+bool k_sonnet__spellcheckdecorator_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_sonnet__spellcheckdecorator_disconnect5(void* param1) {
+bool k_sonnet__spellcheckdecorator_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_sonnet__spellcheckdecorator_dump_object_tree(void* self) {
+void k_sonnet__spellcheckdecorator_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_sonnet__spellcheckdecorator_dump_object_info(void* self) {
+void k_sonnet__spellcheckdecorator_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_sonnet__spellcheckdecorator_set_property(void* self, const char* name, void* value) {
+bool k_sonnet__spellcheckdecorator_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_sonnet__spellcheckdecorator_property(void* self, const char* name) {
+QVariant* k_sonnet__spellcheckdecorator_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_sonnet__spellcheckdecorator_dynamic_property_names(void* self) {
+const char** k_sonnet__spellcheckdecorator_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -246,7 +246,7 @@ QBindingStorage* k_sonnet__spellcheckdecorator_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_sonnet__spellcheckdecorator_binding_storage2(void* self) {
+const QBindingStorage* k_sonnet__spellcheckdecorator_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -258,11 +258,11 @@ void k_sonnet__spellcheckdecorator_on_destroyed(void* self, void (*callback)(voi
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_sonnet__spellcheckdecorator_parent(void* self) {
+QObject* k_sonnet__spellcheckdecorator_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_sonnet__spellcheckdecorator_inherits(void* self, const char* classname) {
+bool k_sonnet__spellcheckdecorator_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -278,31 +278,31 @@ int32_t k_sonnet__spellcheckdecorator_start_timer23(void* self, int64_t time, in
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_sonnet__spellcheckdecorator_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_sonnet__spellcheckdecorator_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_sonnet__spellcheckdecorator_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_sonnet__spellcheckdecorator_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_sonnet__spellcheckdecorator_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_sonnet__spellcheckdecorator_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_sonnet__spellcheckdecorator_disconnect1(void* self, const char* signal) {
+bool k_sonnet__spellcheckdecorator_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_sonnet__spellcheckdecorator_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_sonnet__spellcheckdecorator_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_sonnet__spellcheckdecorator_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_sonnet__spellcheckdecorator_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_sonnet__spellcheckdecorator_disconnect23(void* self, void* receiver, const char* member) {
+bool k_sonnet__spellcheckdecorator_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -362,76 +362,44 @@ void k_sonnet__spellcheckdecorator_on_custom_event(void* self, void (*callback)(
     Sonnet__SpellCheckDecorator_OnCustomEvent((Sonnet__SpellCheckDecorator*)self, (intptr_t)callback);
 }
 
-void k_sonnet__spellcheckdecorator_connect_notify(void* self, void* signal) {
+void k_sonnet__spellcheckdecorator_connect_notify(void* self, const void* signal) {
     Sonnet__SpellCheckDecorator_ConnectNotify((Sonnet__SpellCheckDecorator*)self, (QMetaMethod*)signal);
 }
 
-void k_sonnet__spellcheckdecorator_super_connect_notify(void* self, void* signal) {
+void k_sonnet__spellcheckdecorator_super_connect_notify(void* self, const void* signal) {
     Sonnet__SpellCheckDecorator_SuperConnectNotify((Sonnet__SpellCheckDecorator*)self, (QMetaMethod*)signal);
 }
 
-void k_sonnet__spellcheckdecorator_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_sonnet__spellcheckdecorator_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     Sonnet__SpellCheckDecorator_OnConnectNotify((Sonnet__SpellCheckDecorator*)self, (intptr_t)callback);
 }
 
-void k_sonnet__spellcheckdecorator_disconnect_notify(void* self, void* signal) {
+void k_sonnet__spellcheckdecorator_disconnect_notify(void* self, const void* signal) {
     Sonnet__SpellCheckDecorator_DisconnectNotify((Sonnet__SpellCheckDecorator*)self, (QMetaMethod*)signal);
 }
 
-void k_sonnet__spellcheckdecorator_super_disconnect_notify(void* self, void* signal) {
+void k_sonnet__spellcheckdecorator_super_disconnect_notify(void* self, const void* signal) {
     Sonnet__SpellCheckDecorator_SuperDisconnectNotify((Sonnet__SpellCheckDecorator*)self, (QMetaMethod*)signal);
 }
 
-void k_sonnet__spellcheckdecorator_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_sonnet__spellcheckdecorator_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     Sonnet__SpellCheckDecorator_OnDisconnectNotify((Sonnet__SpellCheckDecorator*)self, (intptr_t)callback);
 }
 
-QObject* k_sonnet__spellcheckdecorator_sender(void* self) {
+QObject* k_sonnet__spellcheckdecorator_sender(const void* self) {
     return Sonnet__SpellCheckDecorator_Sender((Sonnet__SpellCheckDecorator*)self);
 }
 
-QObject* k_sonnet__spellcheckdecorator_super_sender(void* self) {
-    return Sonnet__SpellCheckDecorator_SuperSender((Sonnet__SpellCheckDecorator*)self);
-}
-
-void k_sonnet__spellcheckdecorator_on_sender(void* self, QObject* (*callback)()) {
-    Sonnet__SpellCheckDecorator_OnSender((Sonnet__SpellCheckDecorator*)self, (intptr_t)callback);
-}
-
-int32_t k_sonnet__spellcheckdecorator_sender_signal_index(void* self) {
+int32_t k_sonnet__spellcheckdecorator_sender_signal_index(const void* self) {
     return Sonnet__SpellCheckDecorator_SenderSignalIndex((Sonnet__SpellCheckDecorator*)self);
 }
 
-int32_t k_sonnet__spellcheckdecorator_super_sender_signal_index(void* self) {
-    return Sonnet__SpellCheckDecorator_SuperSenderSignalIndex((Sonnet__SpellCheckDecorator*)self);
-}
-
-void k_sonnet__spellcheckdecorator_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    Sonnet__SpellCheckDecorator_OnSenderSignalIndex((Sonnet__SpellCheckDecorator*)self, (intptr_t)callback);
-}
-
-int32_t k_sonnet__spellcheckdecorator_receivers(void* self, const char* signal) {
+int32_t k_sonnet__spellcheckdecorator_receivers(const void* self, const char* signal) {
     return Sonnet__SpellCheckDecorator_Receivers((Sonnet__SpellCheckDecorator*)self, signal);
 }
 
-int32_t k_sonnet__spellcheckdecorator_super_receivers(void* self, const char* signal) {
-    return Sonnet__SpellCheckDecorator_SuperReceivers((Sonnet__SpellCheckDecorator*)self, signal);
-}
-
-void k_sonnet__spellcheckdecorator_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    Sonnet__SpellCheckDecorator_OnReceivers((Sonnet__SpellCheckDecorator*)self, (intptr_t)callback);
-}
-
-bool k_sonnet__spellcheckdecorator_is_signal_connected(void* self, void* signal) {
+bool k_sonnet__spellcheckdecorator_is_signal_connected(const void* self, const void* signal) {
     return Sonnet__SpellCheckDecorator_IsSignalConnected((Sonnet__SpellCheckDecorator*)self, (QMetaMethod*)signal);
-}
-
-bool k_sonnet__spellcheckdecorator_super_is_signal_connected(void* self, void* signal) {
-    return Sonnet__SpellCheckDecorator_SuperIsSignalConnected((Sonnet__SpellCheckDecorator*)self, (QMetaMethod*)signal);
-}
-
-void k_sonnet__spellcheckdecorator_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    Sonnet__SpellCheckDecorator_OnIsSignalConnected((Sonnet__SpellCheckDecorator*)self, (intptr_t)callback);
 }
 
 void k_sonnet__spellcheckdecorator_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

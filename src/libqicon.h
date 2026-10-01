@@ -20,7 +20,7 @@ QIcon* q_icon_new();
 ///
 /// @param pixmap QPixmap*
 ///
-QIcon* q_icon_new2(void* pixmap);
+QIcon* q_icon_new2(const void* pixmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html)
 
@@ -28,7 +28,7 @@ QIcon* q_icon_new2(void* pixmap);
 ///
 /// @param other QIcon*
 ///
-QIcon* q_icon_new3(void* other);
+QIcon* q_icon_new3(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html)
 
@@ -51,7 +51,7 @@ QIcon* q_icon_new5(void* engine);
 /// @param self QIcon*
 /// @param other QIcon*
 ///
-void q_icon_operator_assign(void* self, void* other);
+void q_icon_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#swap)
 ///
@@ -62,101 +62,101 @@ void q_icon_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#operator-QVariant)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 ///
-QVariant* q_icon_to_q_variant(void* self);
+QVariant* q_icon_to_q_variant(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#pixmap)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param size QSize*
 ///
-QPixmap* q_icon_pixmap(void* self, void* size);
+QPixmap* q_icon_pixmap(const void* self, const void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#pixmap)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param w int
 /// @param h int
 ///
-QPixmap* q_icon_pixmap2(void* self, int w, int h);
+QPixmap* q_icon_pixmap2(const void* self, int w, int h);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#pixmap)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param extent int
 ///
-QPixmap* q_icon_pixmap3(void* self, int extent);
+QPixmap* q_icon_pixmap3(const void* self, int extent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#pixmap)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param size QSize*
 /// @param devicePixelRatio double
 ///
-QPixmap* q_icon_pixmap4(void* self, void* size, double devicePixelRatio);
+QPixmap* q_icon_pixmap4(const void* self, const void* size, double devicePixelRatio);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#pixmap)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param window QWindow*
 /// @param size QSize*
 ///
-QPixmap* q_icon_pixmap5(void* self, void* window, void* size);
+QPixmap* q_icon_pixmap5(const void* self, void* window, const void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#actualSize)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param size QSize*
 ///
-QSize* q_icon_actual_size(void* self, void* size);
+QSize* q_icon_actual_size(const void* self, const void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#actualSize)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param window QWindow*
 /// @param size QSize*
 ///
-QSize* q_icon_actual_size2(void* self, void* window, void* size);
+QSize* q_icon_actual_size2(const void* self, void* window, const void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 ///
-const char* q_icon_name(void* self);
+const char* q_icon_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#paint)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param painter QPainter*
 /// @param rect QRect*
 ///
-void q_icon_paint(void* self, void* painter, void* rect);
+void q_icon_paint(const void* self, void* painter, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#paint)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param painter QPainter*
 /// @param x int
 /// @param y int
 /// @param w int
 /// @param h int
 ///
-void q_icon_paint2(void* self, void* painter, int x, int y, int w, int h);
+void q_icon_paint2(const void* self, void* painter, int x, int y, int w, int h);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#isNull)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 ///
-bool q_icon_is_null(void* self);
+bool q_icon_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#isDetached)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 ///
-bool q_icon_is_detached(void* self);
+bool q_icon_is_detached(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#detach)
 ///
@@ -166,16 +166,16 @@ void q_icon_detach(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#cacheKey)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 ///
-int64_t q_icon_cache_key(void* self);
+int64_t q_icon_cache_key(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#addPixmap)
 ///
 /// @param self QIcon*
 /// @param pixmap QPixmap*
 ///
-void q_icon_add_pixmap(void* self, void* pixmap);
+void q_icon_add_pixmap(void* self, const void* pixmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#addFile)
 ///
@@ -186,11 +186,11 @@ void q_icon_add_file(void* self, const char* fileName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#availableSizes)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 ///
 /// @return libqt_list of QSize*
 ///
-libqt_list q_icon_available_sizes(void* self);
+libqt_list q_icon_available_sizes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#setIsMask)
 ///
@@ -201,9 +201,9 @@ void q_icon_set_is_mask(void* self, bool isMask);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#isMask)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 ///
-bool q_icon_is_mask(void* self);
+bool q_icon_is_mask(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#fromTheme)
 ///
@@ -216,7 +216,7 @@ QIcon* q_icon_from_theme(const char* name);
 /// @param name const char*
 /// @param fallback QIcon*
 ///
-QIcon* q_icon_from_theme2(const char* name, void* fallback);
+QIcon* q_icon_from_theme2(const char* name, const void* fallback);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#hasThemeIcon)
 ///
@@ -235,7 +235,7 @@ QIcon* q_icon_from_theme3(int32_t icon);
 /// @param icon enum QIcon__ThemeIcon
 /// @param fallback QIcon*
 ///
-QIcon* q_icon_from_theme4(int32_t icon, void* fallback);
+QIcon* q_icon_from_theme4(int32_t icon, const void* fallback);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#hasThemeIcon)
 ///
@@ -293,164 +293,164 @@ void q_icon_set_fallback_theme_name(const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#pixmap)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param size QSize*
 /// @param mode enum QIcon__Mode
 ///
-QPixmap* q_icon_pixmap22(void* self, void* size, int32_t mode);
+QPixmap* q_icon_pixmap22(const void* self, const void* size, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#pixmap)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param size QSize*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-QPixmap* q_icon_pixmap32(void* self, void* size, int32_t mode, int32_t state);
+QPixmap* q_icon_pixmap32(const void* self, const void* size, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#pixmap)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param w int
 /// @param h int
 /// @param mode enum QIcon__Mode
 ///
-QPixmap* q_icon_pixmap33(void* self, int w, int h, int32_t mode);
+QPixmap* q_icon_pixmap33(const void* self, int w, int h, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#pixmap)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param w int
 /// @param h int
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-QPixmap* q_icon_pixmap42(void* self, int w, int h, int32_t mode, int32_t state);
+QPixmap* q_icon_pixmap42(const void* self, int w, int h, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#pixmap)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param extent int
 /// @param mode enum QIcon__Mode
 ///
-QPixmap* q_icon_pixmap23(void* self, int extent, int32_t mode);
+QPixmap* q_icon_pixmap23(const void* self, int extent, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#pixmap)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param extent int
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-QPixmap* q_icon_pixmap34(void* self, int extent, int32_t mode, int32_t state);
+QPixmap* q_icon_pixmap34(const void* self, int extent, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#pixmap)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param size QSize*
 /// @param devicePixelRatio double
 /// @param mode enum QIcon__Mode
 ///
-QPixmap* q_icon_pixmap35(void* self, void* size, double devicePixelRatio, int32_t mode);
+QPixmap* q_icon_pixmap35(const void* self, const void* size, double devicePixelRatio, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#pixmap)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param size QSize*
 /// @param devicePixelRatio double
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-QPixmap* q_icon_pixmap43(void* self, void* size, double devicePixelRatio, int32_t mode, int32_t state);
+QPixmap* q_icon_pixmap43(const void* self, const void* size, double devicePixelRatio, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#pixmap)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param window QWindow*
 /// @param size QSize*
 /// @param mode enum QIcon__Mode
 ///
-QPixmap* q_icon_pixmap36(void* self, void* window, void* size, int32_t mode);
+QPixmap* q_icon_pixmap36(const void* self, void* window, const void* size, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#pixmap)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param window QWindow*
 /// @param size QSize*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-QPixmap* q_icon_pixmap44(void* self, void* window, void* size, int32_t mode, int32_t state);
+QPixmap* q_icon_pixmap44(const void* self, void* window, const void* size, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#actualSize)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param size QSize*
 /// @param mode enum QIcon__Mode
 ///
-QSize* q_icon_actual_size22(void* self, void* size, int32_t mode);
+QSize* q_icon_actual_size22(const void* self, const void* size, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#actualSize)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param size QSize*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-QSize* q_icon_actual_size3(void* self, void* size, int32_t mode, int32_t state);
+QSize* q_icon_actual_size3(const void* self, const void* size, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#actualSize)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param window QWindow*
 /// @param size QSize*
 /// @param mode enum QIcon__Mode
 ///
-QSize* q_icon_actual_size32(void* self, void* window, void* size, int32_t mode);
+QSize* q_icon_actual_size32(const void* self, void* window, const void* size, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#actualSize)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param window QWindow*
 /// @param size QSize*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-QSize* q_icon_actual_size4(void* self, void* window, void* size, int32_t mode, int32_t state);
+QSize* q_icon_actual_size4(const void* self, void* window, const void* size, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#paint)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param painter QPainter*
 /// @param rect QRect*
 /// @param alignment flag of enum Qt__AlignmentFlag
 ///
-void q_icon_paint3(void* self, void* painter, void* rect, int32_t alignment);
+void q_icon_paint3(const void* self, void* painter, const void* rect, int32_t alignment);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#paint)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param painter QPainter*
 /// @param rect QRect*
 /// @param alignment flag of enum Qt__AlignmentFlag
 /// @param mode enum QIcon__Mode
 ///
-void q_icon_paint4(void* self, void* painter, void* rect, int32_t alignment, int32_t mode);
+void q_icon_paint4(const void* self, void* painter, const void* rect, int32_t alignment, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#paint)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param painter QPainter*
 /// @param rect QRect*
 /// @param alignment flag of enum Qt__AlignmentFlag
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-void q_icon_paint5(void* self, void* painter, void* rect, int32_t alignment, int32_t mode, int32_t state);
+void q_icon_paint5(const void* self, void* painter, const void* rect, int32_t alignment, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#paint)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param painter QPainter*
 /// @param x int
 /// @param y int
@@ -458,11 +458,11 @@ void q_icon_paint5(void* self, void* painter, void* rect, int32_t alignment, int
 /// @param h int
 /// @param alignment flag of enum Qt__AlignmentFlag
 ///
-void q_icon_paint6(void* self, void* painter, int x, int y, int w, int h, int32_t alignment);
+void q_icon_paint6(const void* self, void* painter, int x, int y, int w, int h, int32_t alignment);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#paint)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param painter QPainter*
 /// @param x int
 /// @param y int
@@ -471,11 +471,11 @@ void q_icon_paint6(void* self, void* painter, int x, int y, int w, int h, int32_
 /// @param alignment flag of enum Qt__AlignmentFlag
 /// @param mode enum QIcon__Mode
 ///
-void q_icon_paint7(void* self, void* painter, int x, int y, int w, int h, int32_t alignment, int32_t mode);
+void q_icon_paint7(const void* self, void* painter, int x, int y, int w, int h, int32_t alignment, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#paint)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param painter QPainter*
 /// @param x int
 /// @param y int
@@ -485,7 +485,7 @@ void q_icon_paint7(void* self, void* painter, int x, int y, int w, int h, int32_
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-void q_icon_paint8(void* self, void* painter, int x, int y, int w, int h, int32_t alignment, int32_t mode, int32_t state);
+void q_icon_paint8(const void* self, void* painter, int x, int y, int w, int h, int32_t alignment, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#addPixmap)
 ///
@@ -493,7 +493,7 @@ void q_icon_paint8(void* self, void* painter, int x, int y, int w, int h, int32_
 /// @param pixmap QPixmap*
 /// @param mode enum QIcon__Mode
 ///
-void q_icon_add_pixmap2(void* self, void* pixmap, int32_t mode);
+void q_icon_add_pixmap2(void* self, const void* pixmap, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#addPixmap)
 ///
@@ -502,7 +502,7 @@ void q_icon_add_pixmap2(void* self, void* pixmap, int32_t mode);
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-void q_icon_add_pixmap3(void* self, void* pixmap, int32_t mode, int32_t state);
+void q_icon_add_pixmap3(void* self, const void* pixmap, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#addFile)
 ///
@@ -510,7 +510,7 @@ void q_icon_add_pixmap3(void* self, void* pixmap, int32_t mode, int32_t state);
 /// @param fileName const char*
 /// @param size QSize*
 ///
-void q_icon_add_file2(void* self, const char* fileName, void* size);
+void q_icon_add_file2(void* self, const char* fileName, const void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#addFile)
 ///
@@ -519,7 +519,7 @@ void q_icon_add_file2(void* self, const char* fileName, void* size);
 /// @param size QSize*
 /// @param mode enum QIcon__Mode
 ///
-void q_icon_add_file3(void* self, const char* fileName, void* size, int32_t mode);
+void q_icon_add_file3(void* self, const char* fileName, const void* size, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#addFile)
 ///
@@ -529,26 +529,26 @@ void q_icon_add_file3(void* self, const char* fileName, void* size, int32_t mode
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-void q_icon_add_file4(void* self, const char* fileName, void* size, int32_t mode, int32_t state);
+void q_icon_add_file4(void* self, const char* fileName, const void* size, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#availableSizes)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param mode enum QIcon__Mode
 ///
 /// @return libqt_list of QSize*
 ///
-libqt_list q_icon_available_sizes1(void* self, int32_t mode);
+libqt_list q_icon_available_sizes1(const void* self, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#availableSizes)
 ///
-/// @param self QIcon*
+/// @param self const QIcon*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
 /// @return libqt_list of QSize*
 ///
-libqt_list q_icon_available_sizes2(void* self, int32_t mode, int32_t state);
+libqt_list q_icon_available_sizes2(const void* self, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#dtor.QIcon)
 ///

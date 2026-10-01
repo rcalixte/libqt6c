@@ -30,7 +30,7 @@ QQmlExpression* q_qmlexpression_new2(void* param1, void* param2, const char* par
 ///
 /// @param param1 QQmlScriptString*
 ///
-QQmlExpression* q_qmlexpression_new3(void* param1);
+QQmlExpression* q_qmlexpression_new3(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlexpression.html)
 
@@ -50,7 +50,7 @@ QQmlExpression* q_qmlexpression_new4(void* param1, void* param2, const char* par
 /// @param param1 QQmlScriptString*
 /// @param param2 QQmlContext*
 ///
-QQmlExpression* q_qmlexpression_new5(void* param1, void* param2);
+QQmlExpression* q_qmlexpression_new5(const void* param1, void* param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlexpression.html)
 
@@ -60,7 +60,7 @@ QQmlExpression* q_qmlexpression_new5(void* param1, void* param2);
 /// @param param2 QQmlContext*
 /// @param param3 QObject*
 ///
-QQmlExpression* q_qmlexpression_new6(void* param1, void* param2, void* param3);
+QQmlExpression* q_qmlexpression_new6(const void* param1, void* param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlexpression.html)
 
@@ -71,30 +71,30 @@ QQmlExpression* q_qmlexpression_new6(void* param1, void* param2, void* param3);
 /// @param param3 QObject*
 /// @param param4 QObject*
 ///
-QQmlExpression* q_qmlexpression_new7(void* param1, void* param2, void* param3, void* param4);
+QQmlExpression* q_qmlexpression_new7(const void* param1, void* param2, void* param3, void* param4);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 ///
-const QMetaObject* q_qmlexpression_meta_object(void* self);
+const QMetaObject* q_qmlexpression_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QQmlExpression*
-/// @param callback const QMetaObject* func()
+/// @param self const QQmlExpression*
+/// @param callback const QMetaObject* func(const QQmlExpression* self)
 ///
-void q_qmlexpression_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_qmlexpression_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 ///
-const QMetaObject* q_qmlexpression_super_meta_object(void* self);
+const QMetaObject* q_qmlexpression_super_meta_object(const void* self);
 
 /// @param self QQmlExpression*
 /// @param param1 const char*
@@ -148,23 +148,23 @@ const char* q_qmlexpression_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlexpression.html#engine)
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 ///
-QQmlEngine* q_qmlexpression_engine(void* self);
+QQmlEngine* q_qmlexpression_engine(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlexpression.html#context)
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 ///
-QQmlContext* q_qmlexpression_context(void* self);
+QQmlContext* q_qmlexpression_context(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlexpression.html#expression)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 ///
-const char* q_qmlexpression_expression(void* self);
+const char* q_qmlexpression_expression(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlexpression.html#setExpression)
 ///
@@ -175,9 +175,9 @@ void q_qmlexpression_set_expression(void* self, const char* expression);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlexpression.html#notifyOnValueChanged)
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 ///
-bool q_qmlexpression_notify_on_value_changed(void* self);
+bool q_qmlexpression_notify_on_value_changed(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlexpression.html#setNotifyOnValueChanged)
 ///
@@ -190,21 +190,21 @@ void q_qmlexpression_set_notify_on_value_changed(void* self, bool notifyOnValueC
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 ///
-const char* q_qmlexpression_source_file(void* self);
+const char* q_qmlexpression_source_file(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlexpression.html#lineNumber)
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 ///
-int32_t q_qmlexpression_line_number(void* self);
+int32_t q_qmlexpression_line_number(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlexpression.html#columnNumber)
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 ///
-int32_t q_qmlexpression_column_number(void* self);
+int32_t q_qmlexpression_column_number(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlexpression.html#setSourceLocation)
 ///
@@ -216,15 +216,15 @@ void q_qmlexpression_set_source_location(void* self, const char* fileName, int l
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlexpression.html#scopeObject)
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 ///
-QObject* q_qmlexpression_scope_object(void* self);
+QObject* q_qmlexpression_scope_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlexpression.html#hasError)
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 ///
-bool q_qmlexpression_has_error(void* self);
+bool q_qmlexpression_has_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlexpression.html#clearError)
 ///
@@ -234,9 +234,9 @@ void q_qmlexpression_clear_error(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlexpression.html#error)
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 ///
-QQmlError* q_qmlexpression_error(void* self);
+QQmlError* q_qmlexpression_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlexpression.html#evaluate)
 ///
@@ -298,9 +298,9 @@ QVariant* q_qmlexpression_evaluate1(void* self, bool* valueIsUndefined);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 ///
-const char* q_qmlexpression_object_name(void* self);
+const char* q_qmlexpression_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -315,33 +315,33 @@ void q_qmlexpression_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 ///
-bool q_qmlexpression_is_widget_type(void* self);
+bool q_qmlexpression_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 ///
-bool q_qmlexpression_is_window_type(void* self);
+bool q_qmlexpression_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 ///
-bool q_qmlexpression_is_quick_item_type(void* self);
+bool q_qmlexpression_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 ///
-bool q_qmlexpression_signals_blocked(void* self);
+bool q_qmlexpression_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -356,9 +356,9 @@ bool q_qmlexpression_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 ///
-QThread* q_qmlexpression_thread(void* self);
+QThread* q_qmlexpression_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -409,11 +409,11 @@ void q_qmlexpression_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_qmlexpression_children(void* self);
+libqt_list q_qmlexpression_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -451,7 +451,7 @@ void q_qmlexpression_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_qmlexpression_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_qmlexpression_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -462,18 +462,18 @@ QMetaObject__Connection* q_qmlexpression_connect(void* sender, const char* signa
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_qmlexpression_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_qmlexpression_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_qmlexpression_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_qmlexpression_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -484,7 +484,7 @@ QMetaObject__Connection* q_qmlexpression_connect3(void* self, void* sender, cons
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_qmlexpression_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_qmlexpression_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -495,24 +495,24 @@ bool q_qmlexpression_disconnect(void* sender, const char* signal, void* receiver
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_qmlexpression_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_qmlexpression_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 ///
-bool q_qmlexpression_disconnect3(void* self);
+bool q_qmlexpression_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 /// @param receiver QObject*
 ///
-bool q_qmlexpression_disconnect4(void* self, void* receiver);
+bool q_qmlexpression_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -520,23 +520,23 @@ bool q_qmlexpression_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_qmlexpression_disconnect5(void* param1);
+bool q_qmlexpression_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 ///
-void q_qmlexpression_dump_object_tree(void* self);
+void q_qmlexpression_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 ///
-void q_qmlexpression_dump_object_info(void* self);
+void q_qmlexpression_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -546,16 +546,16 @@ void q_qmlexpression_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_qmlexpression_set_property(void* self, const char* name, void* value);
+bool q_qmlexpression_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 /// @param name const char*
 ///
-QVariant* q_qmlexpression_property(void* self, const char* name);
+QVariant* q_qmlexpression_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -563,9 +563,9 @@ QVariant* q_qmlexpression_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 ///
-const char** q_qmlexpression_dynamic_property_names(void* self);
+const char** q_qmlexpression_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -579,9 +579,9 @@ QBindingStorage* q_qmlexpression_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 ///
-const QBindingStorage* q_qmlexpression_binding_storage2(void* self);
+const QBindingStorage* q_qmlexpression_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -604,18 +604,18 @@ void q_qmlexpression_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 ///
-QObject* q_qmlexpression_parent(void* self);
+QObject* q_qmlexpression_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 /// @param classname const char*
 ///
-bool q_qmlexpression_inherits(void* self, const char* classname);
+bool q_qmlexpression_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -655,7 +655,7 @@ int32_t q_qmlexpression_start_timer23(void* self, int64_t time, int32_t timerTyp
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_qmlexpression_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_qmlexpression_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -667,59 +667,59 @@ QMetaObject__Connection* q_qmlexpression_connect5(void* sender, const char* sign
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_qmlexpression_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_qmlexpression_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_qmlexpression_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_qmlexpression_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 /// @param signal const char*
 ///
-bool q_qmlexpression_disconnect1(void* self, const char* signal);
+bool q_qmlexpression_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQmlExpression*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_qmlexpression_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_qmlexpression_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_qmlexpression_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_qmlexpression_disconnect23(void* self, void* receiver, const char* member);
+bool q_qmlexpression_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QQmlExpression*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_qmlexpression_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -915,7 +915,7 @@ void q_qmlexpression_on_custom_event(void* self, void (*callback)(void*, void*))
 /// @param self QQmlExpression*
 /// @param signal QMetaMethod*
 ///
-void q_qmlexpression_connect_notify(void* self, void* signal);
+void q_qmlexpression_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -926,7 +926,7 @@ void q_qmlexpression_connect_notify(void* self, void* signal);
 /// @param self QQmlExpression*
 /// @param signal QMetaMethod*
 ///
-void q_qmlexpression_super_connect_notify(void* self, void* signal);
+void q_qmlexpression_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -937,7 +937,7 @@ void q_qmlexpression_super_connect_notify(void* self, void* signal);
 /// @param self QQmlExpression*
 /// @param callback void func(QQmlExpression* self, QMetaMethod* signal)
 ///
-void q_qmlexpression_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_qmlexpression_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -948,7 +948,7 @@ void q_qmlexpression_on_connect_notify(void* self, void (*callback)(void*, void*
 /// @param self QQmlExpression*
 /// @param signal QMetaMethod*
 ///
-void q_qmlexpression_disconnect_notify(void* self, void* signal);
+void q_qmlexpression_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -959,7 +959,7 @@ void q_qmlexpression_disconnect_notify(void* self, void* signal);
 /// @param self QQmlExpression*
 /// @param signal QMetaMethod*
 ///
-void q_qmlexpression_super_disconnect_notify(void* self, void* signal);
+void q_qmlexpression_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -970,7 +970,7 @@ void q_qmlexpression_super_disconnect_notify(void* self, void* signal);
 /// @param self QQmlExpression*
 /// @param callback void func(QQmlExpression* self, QMetaMethod* signal)
 ///
-void q_qmlexpression_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_qmlexpression_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -978,9 +978,9 @@ void q_qmlexpression_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 ///
-QObject* q_qmlexpression_sender(void* self);
+QObject* q_qmlexpression_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -988,9 +988,9 @@ QObject* q_qmlexpression_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 ///
-QObject* q_qmlexpression_super_sender(void* self);
+QObject* q_qmlexpression_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -998,10 +998,10 @@ QObject* q_qmlexpression_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQmlExpression*
-/// @param callback QObject* func()
+/// @param self const QQmlExpression*
+/// @param callback QObject* func(QQmlExpression* self)
 ///
-void q_qmlexpression_on_sender(void* self, QObject* (*callback)());
+void q_qmlexpression_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1009,9 +1009,9 @@ void q_qmlexpression_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 ///
-int32_t q_qmlexpression_sender_signal_index(void* self);
+int32_t q_qmlexpression_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1019,9 +1019,9 @@ int32_t q_qmlexpression_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 ///
-int32_t q_qmlexpression_super_sender_signal_index(void* self);
+int32_t q_qmlexpression_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1029,10 +1029,10 @@ int32_t q_qmlexpression_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQmlExpression*
-/// @param callback int32_t func()
+/// @param self const QQmlExpression*
+/// @param callback int32_t func(QQmlExpression* self)
 ///
-void q_qmlexpression_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_qmlexpression_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1040,10 +1040,10 @@ void q_qmlexpression_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 /// @param signal const char*
 ///
-int32_t q_qmlexpression_receivers(void* self, const char* signal);
+int32_t q_qmlexpression_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1051,10 +1051,10 @@ int32_t q_qmlexpression_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 /// @param signal const char*
 ///
-int32_t q_qmlexpression_super_receivers(void* self, const char* signal);
+int32_t q_qmlexpression_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1062,10 +1062,10 @@ int32_t q_qmlexpression_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 /// @param callback int32_t func(QQmlExpression* self, const char* signal)
 ///
-void q_qmlexpression_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_qmlexpression_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1073,10 +1073,10 @@ void q_qmlexpression_on_receivers(void* self, int32_t (*callback)(void*, const c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 /// @param signal QMetaMethod*
 ///
-bool q_qmlexpression_is_signal_connected(void* self, void* signal);
+bool q_qmlexpression_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1084,10 +1084,10 @@ bool q_qmlexpression_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 /// @param signal QMetaMethod*
 ///
-bool q_qmlexpression_super_is_signal_connected(void* self, void* signal);
+bool q_qmlexpression_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1095,10 +1095,10 @@ bool q_qmlexpression_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQmlExpression*
+/// @param self const QQmlExpression*
 /// @param callback bool func(QQmlExpression* self, QMetaMethod* signal)
 ///
-void q_qmlexpression_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_qmlexpression_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

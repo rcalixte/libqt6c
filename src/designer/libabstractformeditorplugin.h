@@ -16,28 +16,24 @@ QDesignerFormEditorPluginInterface* q_designerformeditorplugininterface_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorplugininterface.html#isInitialized)
 ///
-/// @param self QDesignerFormEditorPluginInterface*
+/// @warning This method must be implemented with `q_designerformeditorplugininterface_on_is_initialized` before it can be called.
 ///
-bool q_designerformeditorplugininterface_is_initialized(void* self);
+/// @param self const QDesignerFormEditorPluginInterface*
+///
+bool q_designerformeditorplugininterface_is_initialized(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorplugininterface.html#isInitialized)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerFormEditorPluginInterface*
-/// @param callback bool func()
+/// @param self const QDesignerFormEditorPluginInterface*
+/// @param callback bool func(const QDesignerFormEditorPluginInterface* self)
 ///
-void q_designerformeditorplugininterface_on_is_initialized(void* self, bool (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorplugininterface.html#isInitialized)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerFormEditorPluginInterface*
-///
-bool q_designerformeditorplugininterface_super_is_initialized(void* self);
+void q_designerformeditorplugininterface_on_is_initialized(const void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorplugininterface.html#initialize)
+///
+/// @warning This method must be implemented with `q_designerformeditorplugininterface_on_initialize` before it can be called.
 ///
 /// @param self QDesignerFormEditorPluginInterface*
 /// @param core QDesignerFormEditorInterface*
@@ -53,60 +49,39 @@ void q_designerformeditorplugininterface_initialize(void* self, void* core);
 ///
 void q_designerformeditorplugininterface_on_initialize(void* self, void (*callback)(void*, void*));
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorplugininterface.html#initialize)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerFormEditorPluginInterface*
-/// @param core QDesignerFormEditorInterface*
-///
-void q_designerformeditorplugininterface_super_initialize(void* self, void* core);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorplugininterface.html#action)
 ///
-/// @param self QDesignerFormEditorPluginInterface*
+/// @warning This method must be implemented with `q_designerformeditorplugininterface_on_action` before it can be called.
 ///
-QAction* q_designerformeditorplugininterface_action(void* self);
+/// @param self const QDesignerFormEditorPluginInterface*
+///
+QAction* q_designerformeditorplugininterface_action(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorplugininterface.html#action)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerFormEditorPluginInterface*
-/// @param callback QAction* func()
+/// @param self const QDesignerFormEditorPluginInterface*
+/// @param callback QAction* func(const QDesignerFormEditorPluginInterface* self)
 ///
-void q_designerformeditorplugininterface_on_action(void* self, QAction* (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorplugininterface.html#action)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerFormEditorPluginInterface*
-///
-QAction* q_designerformeditorplugininterface_super_action(void* self);
+void q_designerformeditorplugininterface_on_action(const void* self, QAction* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorplugininterface.html#core)
 ///
-/// @param self QDesignerFormEditorPluginInterface*
+/// @warning This method must be implemented with `q_designerformeditorplugininterface_on_core` before it can be called.
 ///
-QDesignerFormEditorInterface* q_designerformeditorplugininterface_core(void* self);
+/// @param self const QDesignerFormEditorPluginInterface*
+///
+QDesignerFormEditorInterface* q_designerformeditorplugininterface_core(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorplugininterface.html#core)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerFormEditorPluginInterface*
-/// @param callback QDesignerFormEditorInterface* func()
+/// @param self const QDesignerFormEditorPluginInterface*
+/// @param callback QDesignerFormEditorInterface* func(const QDesignerFormEditorPluginInterface* self)
 ///
-void q_designerformeditorplugininterface_on_core(void* self, QDesignerFormEditorInterface* (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorplugininterface.html#core)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerFormEditorPluginInterface*
-///
-QDesignerFormEditorInterface* q_designerformeditorplugininterface_super_core(void* self);
+void q_designerformeditorplugininterface_on_core(const void* self, QDesignerFormEditorInterface* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorplugininterface.html#dtor.QDesignerFormEditorPluginInterface)
 ///

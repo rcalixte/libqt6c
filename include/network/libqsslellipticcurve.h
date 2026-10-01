@@ -30,7 +30,7 @@ size_t q_qsslellipticcurve_h_q_hash2(void* curve, size_t seed);
 ///
 /// @param other QSslEllipticCurve*
 ///
-QSslEllipticCurve* q_sslellipticcurve_new(void* other);
+QSslEllipticCurve* q_sslellipticcurve_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslellipticcurve.html)
 
@@ -52,7 +52,7 @@ QSslEllipticCurve* q_sslellipticcurve_new3();
 ///
 /// @param param1 QSslEllipticCurve*
 ///
-QSslEllipticCurve* q_sslellipticcurve_new4(void* param1);
+QSslEllipticCurve* q_sslellipticcurve_new4(const void* param1);
 
 /// q_sslellipticcurve_copy_assign shallow copies `other` into `self`.
 ///
@@ -84,29 +84,29 @@ QSslEllipticCurve* q_sslellipticcurve_from_long_name(const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSslEllipticCurve*
+/// @param self const QSslEllipticCurve*
 ///
-const char* q_sslellipticcurve_short_name(void* self);
+const char* q_sslellipticcurve_short_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslellipticcurve.html#longName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSslEllipticCurve*
+/// @param self const QSslEllipticCurve*
 ///
-const char* q_sslellipticcurve_long_name(void* self);
+const char* q_sslellipticcurve_long_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslellipticcurve.html#isValid)
 ///
-/// @param self QSslEllipticCurve*
+/// @param self const QSslEllipticCurve*
 ///
-bool q_sslellipticcurve_is_valid(void* self);
+bool q_sslellipticcurve_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslellipticcurve.html#isTlsNamedCurve)
 ///
-/// @param self QSslEllipticCurve*
+/// @param self const QSslEllipticCurve*
 ///
-bool q_sslellipticcurve_is_tls_named_curve(void* self);
+bool q_sslellipticcurve_is_tls_named_curve(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslellipticcurve.html#dtor.QSslEllipticCurve)
 ///

@@ -22,14 +22,14 @@ QDebug* q_debug_new(void* device);
 ///
 /// @param o QDebug*
 ///
-QDebug* q_debug_new2(void* o);
+QDebug* q_debug_new2(const void* o);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#operator-eq)
 ///
 /// @param self QDebug*
 /// @param other QDebug*
 ///
-void q_debug_operator_assign(void* self, void* other);
+void q_debug_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#swap)
 ///
@@ -71,9 +71,9 @@ QDebug* q_debug_verbosity(void* self, int verbosityLevel);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#verbosity)
 ///
-/// @param self QDebug*
+/// @param self const QDebug*
 ///
-int32_t q_debug_verbosity2(void* self);
+int32_t q_debug_verbosity2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#setVerbosity)
 ///
@@ -84,9 +84,9 @@ void q_debug_set_verbosity(void* self, int verbosityLevel);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#autoInsertSpaces)
 ///
-/// @param self QDebug*
+/// @param self const QDebug*
 ///
-bool q_debug_auto_insert_spaces(void* self);
+bool q_debug_auto_insert_spaces(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#setAutoInsertSpaces)
 ///
@@ -97,9 +97,9 @@ void q_debug_set_auto_insert_spaces(void* self, bool b);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#quoteStrings)
 ///
-/// @param self QDebug*
+/// @param self const QDebug*
 ///
-bool q_debug_quote_strings(void* self);
+bool q_debug_quote_strings(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#setQuoteStrings)
 ///
@@ -310,7 +310,7 @@ void q_debugstatesaver_delete(void* self);
 ///
 /// @param other QNoDebug*
 ///
-QNoDebug* q_nodebug_new(void* other);
+QNoDebug* q_nodebug_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnodebug.html)
 
@@ -416,7 +416,7 @@ void q_qdebug_q_meta_enum_flag_debug_operator(void* debug, size_t sizeofT, uint3
 /// @param meta QMetaObject*
 /// @param name const char*
 ///
-QDebug* q_qdebug_q_meta_enum_debug_operator(void* param1, int64_t value, void* meta, const char* name);
+QDebug* q_qdebug_q_meta_enum_debug_operator(void* param1, int64_t value, const void* meta, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#qt_QMetaEnum_flagDebugOperator)
 ///
@@ -425,7 +425,7 @@ QDebug* q_qdebug_q_meta_enum_debug_operator(void* param1, int64_t value, void* m
 /// @param meta QMetaObject*
 /// @param name const char*
 ///
-QDebug* q_qdebug_q_meta_enum_flag_debug_operator2(void* dbg, uint64_t value, void* meta, const char* name);
+QDebug* q_qdebug_q_meta_enum_flag_debug_operator2(void* dbg, uint64_t value, const void* meta, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#public-types)
 

@@ -22,9 +22,9 @@ bool q_opengltextureblitter_create(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltextureblitter.html#isCreated)
 ///
-/// @param self QOpenGLTextureBlitter*
+/// @param self const QOpenGLTextureBlitter*
 ///
-bool q_opengltextureblitter_is_created(void* self);
+bool q_opengltextureblitter_is_created(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltextureblitter.html#destroy)
 ///
@@ -34,15 +34,15 @@ void q_opengltextureblitter_destroy(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltextureblitter.html#supportsExternalOESTarget)
 ///
-/// @param self QOpenGLTextureBlitter*
+/// @param self const QOpenGLTextureBlitter*
 ///
-bool q_opengltextureblitter_supports_external_o_e_s_target(void* self);
+bool q_opengltextureblitter_supports_external_o_e_s_target(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltextureblitter.html#supportsRectangleTarget)
 ///
-/// @param self QOpenGLTextureBlitter*
+/// @param self const QOpenGLTextureBlitter*
 ///
-bool q_opengltextureblitter_supports_rectangle_target(void* self);
+bool q_opengltextureblitter_supports_rectangle_target(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltextureblitter.html#bind)
 ///
@@ -77,14 +77,14 @@ void q_opengltextureblitter_set_opacity(void* self, float opacity);
 /// @param targetTransform QMatrix4x4*
 /// @param sourceOrigin enum QOpenGLTextureBlitter__Origin
 ///
-void q_opengltextureblitter_blit(void* self, uint32_t texture, void* targetTransform, int32_t sourceOrigin);
+void q_opengltextureblitter_blit(void* self, uint32_t texture, const void* targetTransform, int32_t sourceOrigin);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltextureblitter.html#targetTransform)
 ///
 /// @param target QRectF*
 /// @param viewport QRect*
 ///
-QMatrix4x4* q_opengltextureblitter_target_transform(void* target, void* viewport);
+QMatrix4x4* q_opengltextureblitter_target_transform(const void* target, const void* viewport);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltextureblitter.html#bind)
 ///

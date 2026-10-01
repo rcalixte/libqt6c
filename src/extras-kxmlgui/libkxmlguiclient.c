@@ -15,105 +15,105 @@ KXMLGUIClient* k_xmlguiclient_new2(void* parent) {
     return KXMLGUIClient_New2((KXMLGUIClient*)parent);
 }
 
-QAction* k_xmlguiclient_action(void* self, const char* name) {
+QAction* k_xmlguiclient_action(const void* self, const char* name) {
     return KXMLGUIClient_Action((KXMLGUIClient*)self, qstring(name));
 }
 
-QAction* k_xmlguiclient_action2(void* self, void* element) {
+QAction* k_xmlguiclient_action2(const void* self, const void* element) {
     return KXMLGUIClient_Action2((KXMLGUIClient*)self, (QDomElement*)element);
 }
 
-void k_xmlguiclient_on_action2(void* self, QAction* (*callback)(void*, void*)) {
+void k_xmlguiclient_on_action2(const void* self, QAction* (*callback)(const void*, const void*)) {
     KXMLGUIClient_OnAction2((KXMLGUIClient*)self, (intptr_t)callback);
 }
 
-QAction* k_xmlguiclient_super_action2(void* self, void* element) {
+QAction* k_xmlguiclient_super_action2(const void* self, const void* element) {
     return KXMLGUIClient_SuperAction2((KXMLGUIClient*)self, (QDomElement*)element);
 }
 
-KActionCollection* k_xmlguiclient_action_collection(void* self) {
+KActionCollection* k_xmlguiclient_action_collection(const void* self) {
     return KXMLGUIClient_ActionCollection((KXMLGUIClient*)self);
 }
 
-void k_xmlguiclient_on_action_collection(void* self, KActionCollection* (*callback)()) {
+void k_xmlguiclient_on_action_collection(const void* self, KActionCollection* (*callback)(const void*)) {
     KXMLGUIClient_OnActionCollection((KXMLGUIClient*)self, (intptr_t)callback);
 }
 
-KActionCollection* k_xmlguiclient_super_action_collection(void* self) {
+KActionCollection* k_xmlguiclient_super_action_collection(const void* self) {
     return KXMLGUIClient_SuperActionCollection((KXMLGUIClient*)self);
 }
 
-const char* k_xmlguiclient_component_name(void* self) {
+const char* k_xmlguiclient_component_name(const void* self) {
     libqt_string _str = KXMLGUIClient_ComponentName((KXMLGUIClient*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_xmlguiclient_on_component_name(void* self, const char* (*callback)()) {
+void k_xmlguiclient_on_component_name(const void* self, const char* (*callback)(const void*)) {
     KXMLGUIClient_OnComponentName((KXMLGUIClient*)self, (intptr_t)callback);
 }
 
-const char* k_xmlguiclient_super_component_name(void* self) {
+const char* k_xmlguiclient_super_component_name(const void* self) {
     libqt_string _str = KXMLGUIClient_SuperComponentName((KXMLGUIClient*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QDomDocument* k_xmlguiclient_dom_document(void* self) {
+QDomDocument* k_xmlguiclient_dom_document(const void* self) {
     return KXMLGUIClient_DomDocument((KXMLGUIClient*)self);
 }
 
-void k_xmlguiclient_on_dom_document(void* self, QDomDocument* (*callback)()) {
+void k_xmlguiclient_on_dom_document(const void* self, QDomDocument* (*callback)(const void*)) {
     KXMLGUIClient_OnDomDocument((KXMLGUIClient*)self, (intptr_t)callback);
 }
 
-QDomDocument* k_xmlguiclient_super_dom_document(void* self) {
+QDomDocument* k_xmlguiclient_super_dom_document(const void* self) {
     return KXMLGUIClient_SuperDomDocument((KXMLGUIClient*)self);
 }
 
-const char* k_xmlguiclient_xml_file(void* self) {
+const char* k_xmlguiclient_xml_file(const void* self) {
     libqt_string _str = KXMLGUIClient_XmlFile((KXMLGUIClient*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_xmlguiclient_on_xml_file(void* self, const char* (*callback)()) {
+void k_xmlguiclient_on_xml_file(const void* self, const char* (*callback)(const void*)) {
     KXMLGUIClient_OnXmlFile((KXMLGUIClient*)self, (intptr_t)callback);
 }
 
-const char* k_xmlguiclient_super_xml_file(void* self) {
+const char* k_xmlguiclient_super_xml_file(const void* self) {
     libqt_string _str = KXMLGUIClient_SuperXmlFile((KXMLGUIClient*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_xmlguiclient_local_x_m_l_file(void* self) {
+const char* k_xmlguiclient_local_x_m_l_file(const void* self) {
     libqt_string _str = KXMLGUIClient_LocalXMLFile((KXMLGUIClient*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_xmlguiclient_on_local_x_m_l_file(void* self, const char* (*callback)()) {
+void k_xmlguiclient_on_local_x_m_l_file(const void* self, const char* (*callback)(const void*)) {
     KXMLGUIClient_OnLocalXMLFile((KXMLGUIClient*)self, (intptr_t)callback);
 }
 
-const char* k_xmlguiclient_super_local_x_m_l_file(void* self) {
+const char* k_xmlguiclient_super_local_x_m_l_file(const void* self) {
     libqt_string _str = KXMLGUIClient_SuperLocalXMLFile((KXMLGUIClient*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_xmlguiclient_set_x_m_l_g_u_i_build_document(void* self, void* doc) {
+void k_xmlguiclient_set_x_m_l_g_u_i_build_document(void* self, const void* doc) {
     KXMLGUIClient_SetXMLGUIBuildDocument((KXMLGUIClient*)self, (QDomDocument*)doc);
 }
 
-QDomDocument* k_xmlguiclient_xmlgui_build_document(void* self) {
+QDomDocument* k_xmlguiclient_xmlgui_build_document(const void* self) {
     return KXMLGUIClient_XmlguiBuildDocument((KXMLGUIClient*)self);
 }
 
@@ -121,11 +121,11 @@ void k_xmlguiclient_set_factory(void* self, void* factory) {
     KXMLGUIClient_SetFactory((KXMLGUIClient*)self, (KXMLGUIFactory*)factory);
 }
 
-KXMLGUIFactory* k_xmlguiclient_factory(void* self) {
+KXMLGUIFactory* k_xmlguiclient_factory(const void* self) {
     return KXMLGUIClient_Factory((KXMLGUIClient*)self);
 }
 
-KXMLGUIClient* k_xmlguiclient_parent_client(void* self) {
+KXMLGUIClient* k_xmlguiclient_parent_client(const void* self) {
     return KXMLGUIClient_ParentClient((KXMLGUIClient*)self);
 }
 
@@ -146,7 +146,7 @@ void k_xmlguiclient_set_client_builder(void* self, void* builder) {
     KXMLGUIClient_SetClientBuilder((KXMLGUIClient*)self, (KXMLGUIBuilder*)builder);
 }
 
-KXMLGUIBuilder* k_xmlguiclient_client_builder(void* self) {
+KXMLGUIBuilder* k_xmlguiclient_client_builder(const void* self) {
     return KXMLGUIClient_ClientBuilder((KXMLGUIClient*)self);
 }
 
@@ -245,27 +245,8 @@ const char* k_xmlguiclient_standards_xml_file_location(void* self) {
     return _ret;
 }
 
-void k_xmlguiclient_on_standards_xml_file_location(void* self, const char* (*callback)()) {
-    KXMLGUIClient_OnStandardsXmlFileLocation((KXMLGUIClient*)self, (intptr_t)callback);
-}
-
-const char* k_xmlguiclient_super_standards_xml_file_location(void* self) {
-    libqt_string _str = KXMLGUIClient_SuperStandardsXmlFileLocation((KXMLGUIClient*)self);
-    char* _ret = qstring_to_char(_str);
-    libqt_string_free(&_str);
-    return _ret;
-}
-
 void k_xmlguiclient_load_standards_xml_file(void* self) {
     KXMLGUIClient_LoadStandardsXmlFile((KXMLGUIClient*)self);
-}
-
-void k_xmlguiclient_on_load_standards_xml_file(void* self, void (*callback)()) {
-    KXMLGUIClient_OnLoadStandardsXmlFile((KXMLGUIClient*)self, (intptr_t)callback);
-}
-
-void k_xmlguiclient_super_load_standards_xml_file(void* self) {
-    KXMLGUIClient_SuperLoadStandardsXmlFile((KXMLGUIClient*)self);
 }
 
 void k_xmlguiclient_set_local_x_m_l_file(void* self, const char* file) {
@@ -292,15 +273,15 @@ void k_xmlguiclient_super_set_x_m_l(void* self, const char* document, bool merge
     KXMLGUIClient_SuperSetXML((KXMLGUIClient*)self, qstring(document), merge);
 }
 
-void k_xmlguiclient_set_d_o_m_document(void* self, void* document, bool merge) {
+void k_xmlguiclient_set_d_o_m_document(void* self, const void* document, bool merge) {
     KXMLGUIClient_SetDOMDocument((KXMLGUIClient*)self, (QDomDocument*)document, merge);
 }
 
-void k_xmlguiclient_on_set_d_o_m_document(void* self, void (*callback)(void*, void*, bool)) {
+void k_xmlguiclient_on_set_d_o_m_document(void* self, void (*callback)(void*, const void*, bool)) {
     KXMLGUIClient_OnSetDOMDocument((KXMLGUIClient*)self, (intptr_t)callback);
 }
 
-void k_xmlguiclient_super_set_d_o_m_document(void* self, void* document, bool merge) {
+void k_xmlguiclient_super_set_d_o_m_document(void* self, const void* document, bool merge) {
     KXMLGUIClient_SuperSetDOMDocument((KXMLGUIClient*)self, (QDomDocument*)document, merge);
 }
 
@@ -328,7 +309,7 @@ KXMLGUIClient__StateChange* k_xmlguiclient__statechange_new() {
     return KXMLGUIClient__StateChange_New();
 }
 
-const char** k_xmlguiclient__statechange_actions_to_enable(void* self) {
+const char** k_xmlguiclient__statechange_actions_to_enable(const void* self) {
     libqt_list actionsToEnable_arr = KXMLGUIClient__StateChange_ActionsToEnable((KXMLGUIClient__StateChange*)self);
     const libqt_string* actionsToEnable_qstr = (libqt_string*)actionsToEnable_arr.data.ptr;
     const char** actionsToEnable_ret = (const char**)malloc((actionsToEnable_arr.len + 1) * sizeof(const char*));
@@ -359,7 +340,7 @@ void k_xmlguiclient__statechange_set_actions_to_enable(void* self, const char* a
     free(actionsToEnable_qstr);
 }
 
-const char** k_xmlguiclient__statechange_actions_to_disable(void* self) {
+const char** k_xmlguiclient__statechange_actions_to_disable(const void* self) {
     libqt_list actionsToDisable_arr = KXMLGUIClient__StateChange_ActionsToDisable((KXMLGUIClient__StateChange*)self);
     const libqt_string* actionsToDisable_qstr = (libqt_string*)actionsToDisable_arr.data.ptr;
     const char** actionsToDisable_ret = (const char**)malloc((actionsToDisable_arr.len + 1) * sizeof(const char*));

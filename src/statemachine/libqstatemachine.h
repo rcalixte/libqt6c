@@ -41,26 +41,26 @@ QStateMachine* q_statemachine_new4(int32_t childMode, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
-const QMetaObject* q_statemachine_meta_object(void* self);
+const QMetaObject* q_statemachine_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QStateMachine*
-/// @param callback const QMetaObject* func()
+/// @param self const QStateMachine*
+/// @param callback const QMetaObject* func(const QStateMachine* self)
 ///
-void q_statemachine_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_statemachine_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
-const QMetaObject* q_statemachine_super_meta_object(void* self);
+const QMetaObject* q_statemachine_super_meta_object(const void* self);
 
 /// @param self QStateMachine*
 /// @param param1 const char*
@@ -128,19 +128,19 @@ void q_statemachine_remove_state(void* self, void* state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatemachine.html#error)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
 /// @return enum QStateMachine__Error
 ///
-int32_t q_statemachine_error(void* self);
+int32_t q_statemachine_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatemachine.html#errorString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
-const char* q_statemachine_error_string(void* self);
+const char* q_statemachine_error_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatemachine.html#clearError)
 ///
@@ -150,15 +150,15 @@ void q_statemachine_clear_error(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatemachine.html#isRunning)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
-bool q_statemachine_is_running(void* self);
+bool q_statemachine_is_running(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatemachine.html#isAnimated)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
-bool q_statemachine_is_animated(void* self);
+bool q_statemachine_is_animated(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatemachine.html#setAnimated)
 ///
@@ -176,11 +176,11 @@ void q_statemachine_add_default_animation(void* self, void* animation);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatemachine.html#defaultAnimations)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
 /// @return libqt_list of QAbstractAnimation*
 ///
-libqt_list q_statemachine_default_animations(void* self);
+libqt_list q_statemachine_default_animations(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatemachine.html#removeDefaultAnimation)
 ///
@@ -191,11 +191,11 @@ void q_statemachine_remove_default_animation(void* self, void* animation);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatemachine.html#globalRestorePolicy)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
 /// @return enum QState__RestorePolicy
 ///
-int32_t q_statemachine_global_restore_policy(void* self);
+int32_t q_statemachine_global_restore_policy(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatemachine.html#setGlobalRestorePolicy)
 ///
@@ -228,11 +228,11 @@ bool q_statemachine_cancel_delayed_event(void* self, int id);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatemachine.html#configuration)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
 /// @return libqt_list set of QAbstractState*
 ///
-libqt_list q_statemachine_configuration(void* self);
+libqt_list q_statemachine_configuration(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatemachine.html#eventFilter)
 ///
@@ -508,9 +508,9 @@ void q_statemachine_post_event2(void* self, void* event, int32_t priority);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstate.html#errorState)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
-QAbstractState* q_statemachine_error_state(void* self);
+QAbstractState* q_statemachine_error_state(const void* self);
 
 /// Inherited from QState
 ///
@@ -539,7 +539,7 @@ void q_statemachine_add_transition(void* self, void* transition);
 /// @param signal const char*
 /// @param target QAbstractState*
 ///
-QSignalTransition* q_statemachine_add_transition2(void* self, void* sender, const char* signal, void* target);
+QSignalTransition* q_statemachine_add_transition2(void* self, const void* sender, const char* signal, void* target);
 
 /// Inherited from QState
 ///
@@ -563,19 +563,19 @@ void q_statemachine_remove_transition(void* self, void* transition);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstate.html#transitions)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
 /// @return libqt_list of QAbstractTransition*
 ///
-libqt_list q_statemachine_transitions(void* self);
+libqt_list q_statemachine_transitions(const void* self);
 
 /// Inherited from QState
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstate.html#initialState)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
-QAbstractState* q_statemachine_initial_state(void* self);
+QAbstractState* q_statemachine_initial_state(const void* self);
 
 /// Inherited from QState
 ///
@@ -590,11 +590,11 @@ void q_statemachine_set_initial_state(void* self, void* state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstate.html#childMode)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
 /// @return enum QState__ChildMode
 ///
-int32_t q_statemachine_child_mode(void* self);
+int32_t q_statemachine_child_mode(const void* self);
 
 /// Inherited from QState
 ///
@@ -614,31 +614,31 @@ void q_statemachine_set_child_mode(void* self, int32_t mode);
 /// @param name const char*
 /// @param value QVariant*
 ///
-void q_statemachine_assign_property(void* self, void* object, const char* name, void* value);
+void q_statemachine_assign_property(void* self, void* object, const char* name, const void* value);
 
 /// Inherited from QAbstractState
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractstate.html#parentState)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
-QState* q_statemachine_parent_state(void* self);
+QState* q_statemachine_parent_state(const void* self);
 
 /// Inherited from QAbstractState
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractstate.html#machine)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
-QStateMachine* q_statemachine_machine(void* self);
+QStateMachine* q_statemachine_machine(const void* self);
 
 /// Inherited from QAbstractState
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractstate.html#active)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
-bool q_statemachine_active(void* self);
+bool q_statemachine_active(const void* self);
 
 /// Inherited from QAbstractState
 ///
@@ -664,9 +664,9 @@ void q_statemachine_on_active_changed(void* self, void (*callback)(void*, bool))
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
-const char* q_statemachine_object_name(void* self);
+const char* q_statemachine_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -681,33 +681,33 @@ void q_statemachine_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
-bool q_statemachine_is_widget_type(void* self);
+bool q_statemachine_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
-bool q_statemachine_is_window_type(void* self);
+bool q_statemachine_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
-bool q_statemachine_is_quick_item_type(void* self);
+bool q_statemachine_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
-bool q_statemachine_signals_blocked(void* self);
+bool q_statemachine_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -722,9 +722,9 @@ bool q_statemachine_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
-QThread* q_statemachine_thread(void* self);
+QThread* q_statemachine_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -775,11 +775,11 @@ void q_statemachine_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_statemachine_children(void* self);
+libqt_list q_statemachine_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -817,7 +817,7 @@ void q_statemachine_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_statemachine_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_statemachine_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -828,18 +828,18 @@ QMetaObject__Connection* q_statemachine_connect(void* sender, const char* signal
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_statemachine_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_statemachine_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_statemachine_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_statemachine_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -850,7 +850,7 @@ QMetaObject__Connection* q_statemachine_connect3(void* self, void* sender, const
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_statemachine_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_statemachine_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -861,24 +861,24 @@ bool q_statemachine_disconnect(void* sender, const char* signal, void* receiver,
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_statemachine_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_statemachine_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
-bool q_statemachine_disconnect3(void* self);
+bool q_statemachine_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 /// @param receiver QObject*
 ///
-bool q_statemachine_disconnect4(void* self, void* receiver);
+bool q_statemachine_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -886,23 +886,23 @@ bool q_statemachine_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_statemachine_disconnect5(void* param1);
+bool q_statemachine_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
-void q_statemachine_dump_object_tree(void* self);
+void q_statemachine_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
-void q_statemachine_dump_object_info(void* self);
+void q_statemachine_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -912,16 +912,16 @@ void q_statemachine_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_statemachine_set_property(void* self, const char* name, void* value);
+bool q_statemachine_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 /// @param name const char*
 ///
-QVariant* q_statemachine_property(void* self, const char* name);
+QVariant* q_statemachine_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -929,9 +929,9 @@ QVariant* q_statemachine_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
-const char** q_statemachine_dynamic_property_names(void* self);
+const char** q_statemachine_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -945,9 +945,9 @@ QBindingStorage* q_statemachine_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
-const QBindingStorage* q_statemachine_binding_storage2(void* self);
+const QBindingStorage* q_statemachine_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -970,18 +970,18 @@ void q_statemachine_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
-QObject* q_statemachine_parent(void* self);
+QObject* q_statemachine_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 /// @param classname const char*
 ///
-bool q_statemachine_inherits(void* self, const char* classname);
+bool q_statemachine_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1021,7 +1021,7 @@ int32_t q_statemachine_start_timer23(void* self, int64_t time, int32_t timerType
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_statemachine_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_statemachine_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1033,59 +1033,59 @@ QMetaObject__Connection* q_statemachine_connect5(void* sender, const char* signa
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_statemachine_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_statemachine_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_statemachine_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_statemachine_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 /// @param signal const char*
 ///
-bool q_statemachine_disconnect1(void* self, const char* signal);
+bool q_statemachine_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QStateMachine*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_statemachine_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_statemachine_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_statemachine_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_statemachine_disconnect23(void* self, void* receiver, const char* member);
+bool q_statemachine_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QStateMachine*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_statemachine_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1213,7 +1213,7 @@ void q_statemachine_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QStateMachine*
 /// @param signal QMetaMethod*
 ///
-void q_statemachine_connect_notify(void* self, void* signal);
+void q_statemachine_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1224,7 +1224,7 @@ void q_statemachine_connect_notify(void* self, void* signal);
 /// @param self QStateMachine*
 /// @param signal QMetaMethod*
 ///
-void q_statemachine_super_connect_notify(void* self, void* signal);
+void q_statemachine_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1235,7 +1235,7 @@ void q_statemachine_super_connect_notify(void* self, void* signal);
 /// @param self QStateMachine*
 /// @param callback void func(QStateMachine* self, QMetaMethod* signal)
 ///
-void q_statemachine_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_statemachine_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1246,7 +1246,7 @@ void q_statemachine_on_connect_notify(void* self, void (*callback)(void*, void*)
 /// @param self QStateMachine*
 /// @param signal QMetaMethod*
 ///
-void q_statemachine_disconnect_notify(void* self, void* signal);
+void q_statemachine_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1257,7 +1257,7 @@ void q_statemachine_disconnect_notify(void* self, void* signal);
 /// @param self QStateMachine*
 /// @param signal QMetaMethod*
 ///
-void q_statemachine_super_disconnect_notify(void* self, void* signal);
+void q_statemachine_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1268,7 +1268,7 @@ void q_statemachine_super_disconnect_notify(void* self, void* signal);
 /// @param self QStateMachine*
 /// @param callback void func(QStateMachine* self, QMetaMethod* signal)
 ///
-void q_statemachine_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_statemachine_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1276,9 +1276,9 @@ void q_statemachine_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
-QObject* q_statemachine_sender(void* self);
+QObject* q_statemachine_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1286,9 +1286,9 @@ QObject* q_statemachine_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
-QObject* q_statemachine_super_sender(void* self);
+QObject* q_statemachine_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1296,10 +1296,10 @@ QObject* q_statemachine_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QStateMachine*
-/// @param callback QObject* func()
+/// @param self const QStateMachine*
+/// @param callback QObject* func(QStateMachine* self)
 ///
-void q_statemachine_on_sender(void* self, QObject* (*callback)());
+void q_statemachine_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1307,9 +1307,9 @@ void q_statemachine_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
-int32_t q_statemachine_sender_signal_index(void* self);
+int32_t q_statemachine_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1317,9 +1317,9 @@ int32_t q_statemachine_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 ///
-int32_t q_statemachine_super_sender_signal_index(void* self);
+int32_t q_statemachine_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1327,10 +1327,10 @@ int32_t q_statemachine_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QStateMachine*
-/// @param callback int32_t func()
+/// @param self const QStateMachine*
+/// @param callback int32_t func(QStateMachine* self)
 ///
-void q_statemachine_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_statemachine_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1338,10 +1338,10 @@ void q_statemachine_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 /// @param signal const char*
 ///
-int32_t q_statemachine_receivers(void* self, const char* signal);
+int32_t q_statemachine_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1349,10 +1349,10 @@ int32_t q_statemachine_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 /// @param signal const char*
 ///
-int32_t q_statemachine_super_receivers(void* self, const char* signal);
+int32_t q_statemachine_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1360,10 +1360,10 @@ int32_t q_statemachine_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 /// @param callback int32_t func(QStateMachine* self, const char* signal)
 ///
-void q_statemachine_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_statemachine_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1371,10 +1371,10 @@ void q_statemachine_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 /// @param signal QMetaMethod*
 ///
-bool q_statemachine_is_signal_connected(void* self, void* signal);
+bool q_statemachine_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1382,10 +1382,10 @@ bool q_statemachine_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 /// @param signal QMetaMethod*
 ///
-bool q_statemachine_super_is_signal_connected(void* self, void* signal);
+bool q_statemachine_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1393,10 +1393,10 @@ bool q_statemachine_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QStateMachine*
+/// @param self const QStateMachine*
 /// @param callback bool func(QStateMachine* self, QMetaMethod* signal)
 ///
-void q_statemachine_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_statemachine_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatemachine.html#started)
 ///
@@ -1528,60 +1528,60 @@ QStateMachine__SignalEvent* q_statemachine__signalevent_new(void* sender, int si
 ///
 /// @param param1 QStateMachine__SignalEvent*
 ///
-QStateMachine__SignalEvent* q_statemachine__signalevent_new2(void* param1);
+QStateMachine__SignalEvent* q_statemachine__signalevent_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatemachine-signalevent.html#sender)
 ///
-/// @param self QStateMachine__SignalEvent*
+/// @param self const QStateMachine__SignalEvent*
 ///
-QObject* q_statemachine__signalevent_sender(void* self);
+QObject* q_statemachine__signalevent_sender(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatemachine-signalevent.html#signalIndex)
 ///
-/// @param self QStateMachine__SignalEvent*
+/// @param self const QStateMachine__SignalEvent*
 ///
-int32_t q_statemachine__signalevent_signal_index(void* self);
+int32_t q_statemachine__signalevent_signal_index(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatemachine-signalevent.html#arguments)
 ///
-/// @param self QStateMachine__SignalEvent*
+/// @param self const QStateMachine__SignalEvent*
 ///
 /// @return libqt_list of QVariant*
 ///
-libqt_list q_statemachine__signalevent_arguments(void* self);
+libqt_list q_statemachine__signalevent_arguments(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatemachine-signalevent.html#operator-eq)
 ///
 /// @param self QStateMachine__SignalEvent*
 /// @param param1 QStateMachine__SignalEvent*
 ///
-void q_statemachine__signalevent_operator_assign(void* self, void* param1);
+void q_statemachine__signalevent_operator_assign(void* self, const void* param1);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// @param self QStateMachine__SignalEvent*
+/// @param self const QStateMachine__SignalEvent*
 ///
 /// @return enum QEvent__Type
 ///
-int32_t q_statemachine__signalevent_type(void* self);
+int32_t q_statemachine__signalevent_type(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// @param self QStateMachine__SignalEvent*
+/// @param self const QStateMachine__SignalEvent*
 ///
-bool q_statemachine__signalevent_spontaneous(void* self);
+bool q_statemachine__signalevent_spontaneous(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// @param self QStateMachine__SignalEvent*
+/// @param self const QStateMachine__SignalEvent*
 ///
-bool q_statemachine__signalevent_is_accepted(void* self);
+bool q_statemachine__signalevent_is_accepted(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -1603,25 +1603,25 @@ void q_statemachine__signalevent_ignore(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// @param self QStateMachine__SignalEvent*
+/// @param self const QStateMachine__SignalEvent*
 ///
-bool q_statemachine__signalevent_is_input_event(void* self);
+bool q_statemachine__signalevent_is_input_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// @param self QStateMachine__SignalEvent*
+/// @param self const QStateMachine__SignalEvent*
 ///
-bool q_statemachine__signalevent_is_pointer_event(void* self);
+bool q_statemachine__signalevent_is_pointer_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// @param self QStateMachine__SignalEvent*
+/// @param self const QStateMachine__SignalEvent*
 ///
-bool q_statemachine__signalevent_is_single_point_event(void* self);
+bool q_statemachine__signalevent_is_single_point_event(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -1676,9 +1676,9 @@ void q_statemachine__signalevent_on_set_accepted(void* self, void (*callback)(vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QStateMachine__SignalEvent*
+/// @param self const QStateMachine__SignalEvent*
 ///
-QEvent* q_statemachine__signalevent_clone(void* self);
+QEvent* q_statemachine__signalevent_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -1686,9 +1686,9 @@ QEvent* q_statemachine__signalevent_clone(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QStateMachine__SignalEvent*
+/// @param self const QStateMachine__SignalEvent*
 ///
-QEvent* q_statemachine__signalevent_super_clone(void* self);
+QEvent* q_statemachine__signalevent_super_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -1696,10 +1696,10 @@ QEvent* q_statemachine__signalevent_super_clone(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QStateMachine__SignalEvent*
-/// @param callback QEvent* func()
+/// @param self const QStateMachine__SignalEvent*
+/// @param callback QEvent* func(QStateMachine__SignalEvent* self)
 ///
-void q_statemachine__signalevent_on_clone(void* self, QEvent* (*callback)());
+void q_statemachine__signalevent_on_clone(const void* self, QEvent* (*callback)(const void*));
 
 /// Delete this object from C++ memory.
 ///
@@ -1722,52 +1722,52 @@ QStateMachine__WrappedEvent* q_statemachine__wrappedevent_new(void* object, void
 ///
 /// @param param1 QStateMachine__WrappedEvent*
 ///
-QStateMachine__WrappedEvent* q_statemachine__wrappedevent_new2(void* param1);
+QStateMachine__WrappedEvent* q_statemachine__wrappedevent_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatemachine-wrappedevent.html#object)
 ///
-/// @param self QStateMachine__WrappedEvent*
+/// @param self const QStateMachine__WrappedEvent*
 ///
-QObject* q_statemachine__wrappedevent_object(void* self);
+QObject* q_statemachine__wrappedevent_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatemachine-wrappedevent.html#event)
 ///
-/// @param self QStateMachine__WrappedEvent*
+/// @param self const QStateMachine__WrappedEvent*
 ///
-QEvent* q_statemachine__wrappedevent_event(void* self);
+QEvent* q_statemachine__wrappedevent_event(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatemachine-wrappedevent.html#operator-eq)
 ///
 /// @param self QStateMachine__WrappedEvent*
 /// @param param1 QStateMachine__WrappedEvent*
 ///
-void q_statemachine__wrappedevent_operator_assign(void* self, void* param1);
+void q_statemachine__wrappedevent_operator_assign(void* self, const void* param1);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// @param self QStateMachine__WrappedEvent*
+/// @param self const QStateMachine__WrappedEvent*
 ///
 /// @return enum QEvent__Type
 ///
-int32_t q_statemachine__wrappedevent_type(void* self);
+int32_t q_statemachine__wrappedevent_type(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// @param self QStateMachine__WrappedEvent*
+/// @param self const QStateMachine__WrappedEvent*
 ///
-bool q_statemachine__wrappedevent_spontaneous(void* self);
+bool q_statemachine__wrappedevent_spontaneous(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// @param self QStateMachine__WrappedEvent*
+/// @param self const QStateMachine__WrappedEvent*
 ///
-bool q_statemachine__wrappedevent_is_accepted(void* self);
+bool q_statemachine__wrappedevent_is_accepted(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -1789,25 +1789,25 @@ void q_statemachine__wrappedevent_ignore(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// @param self QStateMachine__WrappedEvent*
+/// @param self const QStateMachine__WrappedEvent*
 ///
-bool q_statemachine__wrappedevent_is_input_event(void* self);
+bool q_statemachine__wrappedevent_is_input_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// @param self QStateMachine__WrappedEvent*
+/// @param self const QStateMachine__WrappedEvent*
 ///
-bool q_statemachine__wrappedevent_is_pointer_event(void* self);
+bool q_statemachine__wrappedevent_is_pointer_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// @param self QStateMachine__WrappedEvent*
+/// @param self const QStateMachine__WrappedEvent*
 ///
-bool q_statemachine__wrappedevent_is_single_point_event(void* self);
+bool q_statemachine__wrappedevent_is_single_point_event(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -1862,9 +1862,9 @@ void q_statemachine__wrappedevent_on_set_accepted(void* self, void (*callback)(v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QStateMachine__WrappedEvent*
+/// @param self const QStateMachine__WrappedEvent*
 ///
-QEvent* q_statemachine__wrappedevent_clone(void* self);
+QEvent* q_statemachine__wrappedevent_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -1872,9 +1872,9 @@ QEvent* q_statemachine__wrappedevent_clone(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QStateMachine__WrappedEvent*
+/// @param self const QStateMachine__WrappedEvent*
 ///
-QEvent* q_statemachine__wrappedevent_super_clone(void* self);
+QEvent* q_statemachine__wrappedevent_super_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -1882,10 +1882,10 @@ QEvent* q_statemachine__wrappedevent_super_clone(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QStateMachine__WrappedEvent*
-/// @param callback QEvent* func()
+/// @param self const QStateMachine__WrappedEvent*
+/// @param callback QEvent* func(QStateMachine__WrappedEvent* self)
 ///
-void q_statemachine__wrappedevent_on_clone(void* self, QEvent* (*callback)());
+void q_statemachine__wrappedevent_on_clone(const void* self, QEvent* (*callback)(const void*));
 
 /// Delete this object from C++ memory.
 ///

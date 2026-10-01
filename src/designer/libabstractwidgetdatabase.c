@@ -12,22 +12,15 @@ QDesignerWidgetDataBaseItemInterface* q_designerwidgetdatabaseiteminterface_new(
     return QDesignerWidgetDataBaseItemInterface_New();
 }
 
-const char* q_designerwidgetdatabaseiteminterface_name(void* self) {
+const char* q_designerwidgetdatabaseiteminterface_name(const void* self) {
     libqt_string _str = QDesignerWidgetDataBaseItemInterface_Name((QDesignerWidgetDataBaseItemInterface*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_designerwidgetdatabaseiteminterface_on_name(void* self, const char* (*callback)()) {
+void q_designerwidgetdatabaseiteminterface_on_name(const void* self, const char* (*callback)(const void*)) {
     QDesignerWidgetDataBaseItemInterface_OnName((QDesignerWidgetDataBaseItemInterface*)self, (intptr_t)callback);
-}
-
-const char* q_designerwidgetdatabaseiteminterface_super_name(void* self) {
-    libqt_string _str = QDesignerWidgetDataBaseItemInterface_SuperName((QDesignerWidgetDataBaseItemInterface*)self);
-    char* _ret = qstring_to_char(_str);
-    libqt_string_free(&_str);
-    return _ret;
 }
 
 void q_designerwidgetdatabaseiteminterface_set_name(void* self, const char* name) {
@@ -38,26 +31,15 @@ void q_designerwidgetdatabaseiteminterface_on_set_name(void* self, void (*callba
     QDesignerWidgetDataBaseItemInterface_OnSetName((QDesignerWidgetDataBaseItemInterface*)self, (intptr_t)callback);
 }
 
-void q_designerwidgetdatabaseiteminterface_super_set_name(void* self, const char* name) {
-    QDesignerWidgetDataBaseItemInterface_SuperSetName((QDesignerWidgetDataBaseItemInterface*)self, qstring(name));
-}
-
-const char* q_designerwidgetdatabaseiteminterface_group(void* self) {
+const char* q_designerwidgetdatabaseiteminterface_group(const void* self) {
     libqt_string _str = QDesignerWidgetDataBaseItemInterface_Group((QDesignerWidgetDataBaseItemInterface*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_designerwidgetdatabaseiteminterface_on_group(void* self, const char* (*callback)()) {
+void q_designerwidgetdatabaseiteminterface_on_group(const void* self, const char* (*callback)(const void*)) {
     QDesignerWidgetDataBaseItemInterface_OnGroup((QDesignerWidgetDataBaseItemInterface*)self, (intptr_t)callback);
-}
-
-const char* q_designerwidgetdatabaseiteminterface_super_group(void* self) {
-    libqt_string _str = QDesignerWidgetDataBaseItemInterface_SuperGroup((QDesignerWidgetDataBaseItemInterface*)self);
-    char* _ret = qstring_to_char(_str);
-    libqt_string_free(&_str);
-    return _ret;
 }
 
 void q_designerwidgetdatabaseiteminterface_set_group(void* self, const char* group) {
@@ -68,26 +50,15 @@ void q_designerwidgetdatabaseiteminterface_on_set_group(void* self, void (*callb
     QDesignerWidgetDataBaseItemInterface_OnSetGroup((QDesignerWidgetDataBaseItemInterface*)self, (intptr_t)callback);
 }
 
-void q_designerwidgetdatabaseiteminterface_super_set_group(void* self, const char* group) {
-    QDesignerWidgetDataBaseItemInterface_SuperSetGroup((QDesignerWidgetDataBaseItemInterface*)self, qstring(group));
-}
-
-const char* q_designerwidgetdatabaseiteminterface_tool_tip(void* self) {
+const char* q_designerwidgetdatabaseiteminterface_tool_tip(const void* self) {
     libqt_string _str = QDesignerWidgetDataBaseItemInterface_ToolTip((QDesignerWidgetDataBaseItemInterface*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_designerwidgetdatabaseiteminterface_on_tool_tip(void* self, const char* (*callback)()) {
+void q_designerwidgetdatabaseiteminterface_on_tool_tip(const void* self, const char* (*callback)(const void*)) {
     QDesignerWidgetDataBaseItemInterface_OnToolTip((QDesignerWidgetDataBaseItemInterface*)self, (intptr_t)callback);
-}
-
-const char* q_designerwidgetdatabaseiteminterface_super_tool_tip(void* self) {
-    libqt_string _str = QDesignerWidgetDataBaseItemInterface_SuperToolTip((QDesignerWidgetDataBaseItemInterface*)self);
-    char* _ret = qstring_to_char(_str);
-    libqt_string_free(&_str);
-    return _ret;
 }
 
 void q_designerwidgetdatabaseiteminterface_set_tool_tip(void* self, const char* toolTip) {
@@ -98,26 +69,15 @@ void q_designerwidgetdatabaseiteminterface_on_set_tool_tip(void* self, void (*ca
     QDesignerWidgetDataBaseItemInterface_OnSetToolTip((QDesignerWidgetDataBaseItemInterface*)self, (intptr_t)callback);
 }
 
-void q_designerwidgetdatabaseiteminterface_super_set_tool_tip(void* self, const char* toolTip) {
-    QDesignerWidgetDataBaseItemInterface_SuperSetToolTip((QDesignerWidgetDataBaseItemInterface*)self, qstring(toolTip));
-}
-
-const char* q_designerwidgetdatabaseiteminterface_whats_this(void* self) {
+const char* q_designerwidgetdatabaseiteminterface_whats_this(const void* self) {
     libqt_string _str = QDesignerWidgetDataBaseItemInterface_WhatsThis((QDesignerWidgetDataBaseItemInterface*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_designerwidgetdatabaseiteminterface_on_whats_this(void* self, const char* (*callback)()) {
+void q_designerwidgetdatabaseiteminterface_on_whats_this(const void* self, const char* (*callback)(const void*)) {
     QDesignerWidgetDataBaseItemInterface_OnWhatsThis((QDesignerWidgetDataBaseItemInterface*)self, (intptr_t)callback);
-}
-
-const char* q_designerwidgetdatabaseiteminterface_super_whats_this(void* self) {
-    libqt_string _str = QDesignerWidgetDataBaseItemInterface_SuperWhatsThis((QDesignerWidgetDataBaseItemInterface*)self);
-    char* _ret = qstring_to_char(_str);
-    libqt_string_free(&_str);
-    return _ret;
 }
 
 void q_designerwidgetdatabaseiteminterface_set_whats_this(void* self, const char* whatsThis) {
@@ -128,26 +88,15 @@ void q_designerwidgetdatabaseiteminterface_on_set_whats_this(void* self, void (*
     QDesignerWidgetDataBaseItemInterface_OnSetWhatsThis((QDesignerWidgetDataBaseItemInterface*)self, (intptr_t)callback);
 }
 
-void q_designerwidgetdatabaseiteminterface_super_set_whats_this(void* self, const char* whatsThis) {
-    QDesignerWidgetDataBaseItemInterface_SuperSetWhatsThis((QDesignerWidgetDataBaseItemInterface*)self, qstring(whatsThis));
-}
-
-const char* q_designerwidgetdatabaseiteminterface_include_file(void* self) {
+const char* q_designerwidgetdatabaseiteminterface_include_file(const void* self) {
     libqt_string _str = QDesignerWidgetDataBaseItemInterface_IncludeFile((QDesignerWidgetDataBaseItemInterface*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_designerwidgetdatabaseiteminterface_on_include_file(void* self, const char* (*callback)()) {
+void q_designerwidgetdatabaseiteminterface_on_include_file(const void* self, const char* (*callback)(const void*)) {
     QDesignerWidgetDataBaseItemInterface_OnIncludeFile((QDesignerWidgetDataBaseItemInterface*)self, (intptr_t)callback);
-}
-
-const char* q_designerwidgetdatabaseiteminterface_super_include_file(void* self) {
-    libqt_string _str = QDesignerWidgetDataBaseItemInterface_SuperIncludeFile((QDesignerWidgetDataBaseItemInterface*)self);
-    char* _ret = qstring_to_char(_str);
-    libqt_string_free(&_str);
-    return _ret;
 }
 
 void q_designerwidgetdatabaseiteminterface_set_include_file(void* self, const char* includeFile) {
@@ -158,44 +107,28 @@ void q_designerwidgetdatabaseiteminterface_on_set_include_file(void* self, void 
     QDesignerWidgetDataBaseItemInterface_OnSetIncludeFile((QDesignerWidgetDataBaseItemInterface*)self, (intptr_t)callback);
 }
 
-void q_designerwidgetdatabaseiteminterface_super_set_include_file(void* self, const char* includeFile) {
-    QDesignerWidgetDataBaseItemInterface_SuperSetIncludeFile((QDesignerWidgetDataBaseItemInterface*)self, qstring(includeFile));
-}
-
-QIcon* q_designerwidgetdatabaseiteminterface_icon(void* self) {
+QIcon* q_designerwidgetdatabaseiteminterface_icon(const void* self) {
     return QDesignerWidgetDataBaseItemInterface_Icon((QDesignerWidgetDataBaseItemInterface*)self);
 }
 
-void q_designerwidgetdatabaseiteminterface_on_icon(void* self, QIcon* (*callback)()) {
+void q_designerwidgetdatabaseiteminterface_on_icon(const void* self, QIcon* (*callback)(const void*)) {
     QDesignerWidgetDataBaseItemInterface_OnIcon((QDesignerWidgetDataBaseItemInterface*)self, (intptr_t)callback);
 }
 
-QIcon* q_designerwidgetdatabaseiteminterface_super_icon(void* self) {
-    return QDesignerWidgetDataBaseItemInterface_SuperIcon((QDesignerWidgetDataBaseItemInterface*)self);
-}
-
-void q_designerwidgetdatabaseiteminterface_set_icon(void* self, void* icon) {
+void q_designerwidgetdatabaseiteminterface_set_icon(void* self, const void* icon) {
     QDesignerWidgetDataBaseItemInterface_SetIcon((QDesignerWidgetDataBaseItemInterface*)self, (QIcon*)icon);
 }
 
-void q_designerwidgetdatabaseiteminterface_on_set_icon(void* self, void (*callback)(void*, void*)) {
+void q_designerwidgetdatabaseiteminterface_on_set_icon(void* self, void (*callback)(void*, const void*)) {
     QDesignerWidgetDataBaseItemInterface_OnSetIcon((QDesignerWidgetDataBaseItemInterface*)self, (intptr_t)callback);
 }
 
-void q_designerwidgetdatabaseiteminterface_super_set_icon(void* self, void* icon) {
-    QDesignerWidgetDataBaseItemInterface_SuperSetIcon((QDesignerWidgetDataBaseItemInterface*)self, (QIcon*)icon);
-}
-
-bool q_designerwidgetdatabaseiteminterface_is_compat(void* self) {
+bool q_designerwidgetdatabaseiteminterface_is_compat(const void* self) {
     return QDesignerWidgetDataBaseItemInterface_IsCompat((QDesignerWidgetDataBaseItemInterface*)self);
 }
 
-void q_designerwidgetdatabaseiteminterface_on_is_compat(void* self, bool (*callback)()) {
+void q_designerwidgetdatabaseiteminterface_on_is_compat(const void* self, bool (*callback)(const void*)) {
     QDesignerWidgetDataBaseItemInterface_OnIsCompat((QDesignerWidgetDataBaseItemInterface*)self, (intptr_t)callback);
-}
-
-bool q_designerwidgetdatabaseiteminterface_super_is_compat(void* self) {
-    return QDesignerWidgetDataBaseItemInterface_SuperIsCompat((QDesignerWidgetDataBaseItemInterface*)self);
 }
 
 void q_designerwidgetdatabaseiteminterface_set_compat(void* self, bool compat) {
@@ -206,20 +139,12 @@ void q_designerwidgetdatabaseiteminterface_on_set_compat(void* self, void (*call
     QDesignerWidgetDataBaseItemInterface_OnSetCompat((QDesignerWidgetDataBaseItemInterface*)self, (intptr_t)callback);
 }
 
-void q_designerwidgetdatabaseiteminterface_super_set_compat(void* self, bool compat) {
-    QDesignerWidgetDataBaseItemInterface_SuperSetCompat((QDesignerWidgetDataBaseItemInterface*)self, compat);
-}
-
-bool q_designerwidgetdatabaseiteminterface_is_container(void* self) {
+bool q_designerwidgetdatabaseiteminterface_is_container(const void* self) {
     return QDesignerWidgetDataBaseItemInterface_IsContainer((QDesignerWidgetDataBaseItemInterface*)self);
 }
 
-void q_designerwidgetdatabaseiteminterface_on_is_container(void* self, bool (*callback)()) {
+void q_designerwidgetdatabaseiteminterface_on_is_container(const void* self, bool (*callback)(const void*)) {
     QDesignerWidgetDataBaseItemInterface_OnIsContainer((QDesignerWidgetDataBaseItemInterface*)self, (intptr_t)callback);
-}
-
-bool q_designerwidgetdatabaseiteminterface_super_is_container(void* self) {
-    return QDesignerWidgetDataBaseItemInterface_SuperIsContainer((QDesignerWidgetDataBaseItemInterface*)self);
 }
 
 void q_designerwidgetdatabaseiteminterface_set_container(void* self, bool container) {
@@ -230,20 +155,12 @@ void q_designerwidgetdatabaseiteminterface_on_set_container(void* self, void (*c
     QDesignerWidgetDataBaseItemInterface_OnSetContainer((QDesignerWidgetDataBaseItemInterface*)self, (intptr_t)callback);
 }
 
-void q_designerwidgetdatabaseiteminterface_super_set_container(void* self, bool container) {
-    QDesignerWidgetDataBaseItemInterface_SuperSetContainer((QDesignerWidgetDataBaseItemInterface*)self, container);
-}
-
-bool q_designerwidgetdatabaseiteminterface_is_custom(void* self) {
+bool q_designerwidgetdatabaseiteminterface_is_custom(const void* self) {
     return QDesignerWidgetDataBaseItemInterface_IsCustom((QDesignerWidgetDataBaseItemInterface*)self);
 }
 
-void q_designerwidgetdatabaseiteminterface_on_is_custom(void* self, bool (*callback)()) {
+void q_designerwidgetdatabaseiteminterface_on_is_custom(const void* self, bool (*callback)(const void*)) {
     QDesignerWidgetDataBaseItemInterface_OnIsCustom((QDesignerWidgetDataBaseItemInterface*)self, (intptr_t)callback);
-}
-
-bool q_designerwidgetdatabaseiteminterface_super_is_custom(void* self) {
-    return QDesignerWidgetDataBaseItemInterface_SuperIsCustom((QDesignerWidgetDataBaseItemInterface*)self);
 }
 
 void q_designerwidgetdatabaseiteminterface_set_custom(void* self, bool custom) {
@@ -254,26 +171,15 @@ void q_designerwidgetdatabaseiteminterface_on_set_custom(void* self, void (*call
     QDesignerWidgetDataBaseItemInterface_OnSetCustom((QDesignerWidgetDataBaseItemInterface*)self, (intptr_t)callback);
 }
 
-void q_designerwidgetdatabaseiteminterface_super_set_custom(void* self, bool custom) {
-    QDesignerWidgetDataBaseItemInterface_SuperSetCustom((QDesignerWidgetDataBaseItemInterface*)self, custom);
-}
-
-const char* q_designerwidgetdatabaseiteminterface_plugin_path(void* self) {
+const char* q_designerwidgetdatabaseiteminterface_plugin_path(const void* self) {
     libqt_string _str = QDesignerWidgetDataBaseItemInterface_PluginPath((QDesignerWidgetDataBaseItemInterface*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_designerwidgetdatabaseiteminterface_on_plugin_path(void* self, const char* (*callback)()) {
+void q_designerwidgetdatabaseiteminterface_on_plugin_path(const void* self, const char* (*callback)(const void*)) {
     QDesignerWidgetDataBaseItemInterface_OnPluginPath((QDesignerWidgetDataBaseItemInterface*)self, (intptr_t)callback);
-}
-
-const char* q_designerwidgetdatabaseiteminterface_super_plugin_path(void* self) {
-    libqt_string _str = QDesignerWidgetDataBaseItemInterface_SuperPluginPath((QDesignerWidgetDataBaseItemInterface*)self);
-    char* _ret = qstring_to_char(_str);
-    libqt_string_free(&_str);
-    return _ret;
 }
 
 void q_designerwidgetdatabaseiteminterface_set_plugin_path(void* self, const char* path) {
@@ -284,20 +190,12 @@ void q_designerwidgetdatabaseiteminterface_on_set_plugin_path(void* self, void (
     QDesignerWidgetDataBaseItemInterface_OnSetPluginPath((QDesignerWidgetDataBaseItemInterface*)self, (intptr_t)callback);
 }
 
-void q_designerwidgetdatabaseiteminterface_super_set_plugin_path(void* self, const char* path) {
-    QDesignerWidgetDataBaseItemInterface_SuperSetPluginPath((QDesignerWidgetDataBaseItemInterface*)self, qstring(path));
-}
-
-bool q_designerwidgetdatabaseiteminterface_is_promoted(void* self) {
+bool q_designerwidgetdatabaseiteminterface_is_promoted(const void* self) {
     return QDesignerWidgetDataBaseItemInterface_IsPromoted((QDesignerWidgetDataBaseItemInterface*)self);
 }
 
-void q_designerwidgetdatabaseiteminterface_on_is_promoted(void* self, bool (*callback)()) {
+void q_designerwidgetdatabaseiteminterface_on_is_promoted(const void* self, bool (*callback)(const void*)) {
     QDesignerWidgetDataBaseItemInterface_OnIsPromoted((QDesignerWidgetDataBaseItemInterface*)self, (intptr_t)callback);
-}
-
-bool q_designerwidgetdatabaseiteminterface_super_is_promoted(void* self) {
-    return QDesignerWidgetDataBaseItemInterface_SuperIsPromoted((QDesignerWidgetDataBaseItemInterface*)self);
 }
 
 void q_designerwidgetdatabaseiteminterface_set_promoted(void* self, bool b) {
@@ -308,26 +206,15 @@ void q_designerwidgetdatabaseiteminterface_on_set_promoted(void* self, void (*ca
     QDesignerWidgetDataBaseItemInterface_OnSetPromoted((QDesignerWidgetDataBaseItemInterface*)self, (intptr_t)callback);
 }
 
-void q_designerwidgetdatabaseiteminterface_super_set_promoted(void* self, bool b) {
-    QDesignerWidgetDataBaseItemInterface_SuperSetPromoted((QDesignerWidgetDataBaseItemInterface*)self, b);
-}
-
-const char* q_designerwidgetdatabaseiteminterface_extends(void* self) {
+const char* q_designerwidgetdatabaseiteminterface_extends(const void* self) {
     libqt_string _str = QDesignerWidgetDataBaseItemInterface_Extends((QDesignerWidgetDataBaseItemInterface*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_designerwidgetdatabaseiteminterface_on_extends(void* self, const char* (*callback)()) {
+void q_designerwidgetdatabaseiteminterface_on_extends(const void* self, const char* (*callback)(const void*)) {
     QDesignerWidgetDataBaseItemInterface_OnExtends((QDesignerWidgetDataBaseItemInterface*)self, (intptr_t)callback);
-}
-
-const char* q_designerwidgetdatabaseiteminterface_super_extends(void* self) {
-    libqt_string _str = QDesignerWidgetDataBaseItemInterface_SuperExtends((QDesignerWidgetDataBaseItemInterface*)self);
-    char* _ret = qstring_to_char(_str);
-    libqt_string_free(&_str);
-    return _ret;
 }
 
 void q_designerwidgetdatabaseiteminterface_set_extends(void* self, const char* s) {
@@ -338,10 +225,6 @@ void q_designerwidgetdatabaseiteminterface_on_set_extends(void* self, void (*cal
     QDesignerWidgetDataBaseItemInterface_OnSetExtends((QDesignerWidgetDataBaseItemInterface*)self, (intptr_t)callback);
 }
 
-void q_designerwidgetdatabaseiteminterface_super_set_extends(void* self, const char* s) {
-    QDesignerWidgetDataBaseItemInterface_SuperSetExtends((QDesignerWidgetDataBaseItemInterface*)self, qstring(s));
-}
-
 void q_designerwidgetdatabaseiteminterface_set_default_property_values(void* self, libqt_list /* of QVariant* */ list) {
     QDesignerWidgetDataBaseItemInterface_SetDefaultPropertyValues((QDesignerWidgetDataBaseItemInterface*)self, list);
 }
@@ -350,22 +233,13 @@ void q_designerwidgetdatabaseiteminterface_on_set_default_property_values(void* 
     QDesignerWidgetDataBaseItemInterface_OnSetDefaultPropertyValues((QDesignerWidgetDataBaseItemInterface*)self, (intptr_t)callback);
 }
 
-void q_designerwidgetdatabaseiteminterface_super_set_default_property_values(void* self, libqt_list /* of QVariant* */ list) {
-    QDesignerWidgetDataBaseItemInterface_SuperSetDefaultPropertyValues((QDesignerWidgetDataBaseItemInterface*)self, list);
-}
-
-libqt_list /* of QVariant* */ q_designerwidgetdatabaseiteminterface_default_property_values(void* self) {
+libqt_list /* of QVariant* */ q_designerwidgetdatabaseiteminterface_default_property_values(const void* self) {
     libqt_list _arr = QDesignerWidgetDataBaseItemInterface_DefaultPropertyValues((QDesignerWidgetDataBaseItemInterface*)self);
     return _arr;
 }
 
-void q_designerwidgetdatabaseiteminterface_on_default_property_values(void* self, libqt_list /* of QVariant* */ (*callback)()) {
+void q_designerwidgetdatabaseiteminterface_on_default_property_values(const void* self, libqt_list /* of QVariant* */ (*callback)(const void*)) {
     QDesignerWidgetDataBaseItemInterface_OnDefaultPropertyValues((QDesignerWidgetDataBaseItemInterface*)self, (intptr_t)callback);
-}
-
-libqt_list /* of QVariant* */ q_designerwidgetdatabaseiteminterface_super_default_property_values(void* self) {
-    libqt_list _arr = QDesignerWidgetDataBaseItemInterface_SuperDefaultPropertyValues((QDesignerWidgetDataBaseItemInterface*)self);
-    return _arr;
 }
 
 void q_designerwidgetdatabaseiteminterface_delete(void* self) {
@@ -380,15 +254,15 @@ QDesignerWidgetDataBaseInterface* q_designerwidgetdatabaseinterface_new2(void* p
     return QDesignerWidgetDataBaseInterface_New2((QObject*)parent);
 }
 
-const QMetaObject* q_designerwidgetdatabaseinterface_meta_object(void* self) {
+const QMetaObject* q_designerwidgetdatabaseinterface_meta_object(const void* self) {
     return QDesignerWidgetDataBaseInterface_MetaObject((QDesignerWidgetDataBaseInterface*)self);
 }
 
-void q_designerwidgetdatabaseinterface_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_designerwidgetdatabaseinterface_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QDesignerWidgetDataBaseInterface_OnMetaObject((QDesignerWidgetDataBaseInterface*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_designerwidgetdatabaseinterface_super_meta_object(void* self) {
+const QMetaObject* q_designerwidgetdatabaseinterface_super_meta_object(const void* self) {
     return QDesignerWidgetDataBaseInterface_SuperMetaObject((QDesignerWidgetDataBaseInterface*)self);
 }
 
@@ -423,39 +297,39 @@ const char* q_designerwidgetdatabaseinterface_tr(const char* s) {
     return _ret;
 }
 
-int32_t q_designerwidgetdatabaseinterface_count(void* self) {
+int32_t q_designerwidgetdatabaseinterface_count(const void* self) {
     return QDesignerWidgetDataBaseInterface_Count((QDesignerWidgetDataBaseInterface*)self);
 }
 
-void q_designerwidgetdatabaseinterface_on_count(void* self, int32_t (*callback)()) {
+void q_designerwidgetdatabaseinterface_on_count(const void* self, int32_t (*callback)(const void*)) {
     QDesignerWidgetDataBaseInterface_OnCount((QDesignerWidgetDataBaseInterface*)self, (intptr_t)callback);
 }
 
-int32_t q_designerwidgetdatabaseinterface_super_count(void* self) {
+int32_t q_designerwidgetdatabaseinterface_super_count(const void* self) {
     return QDesignerWidgetDataBaseInterface_SuperCount((QDesignerWidgetDataBaseInterface*)self);
 }
 
-QDesignerWidgetDataBaseItemInterface* q_designerwidgetdatabaseinterface_item(void* self, int index) {
+QDesignerWidgetDataBaseItemInterface* q_designerwidgetdatabaseinterface_item(const void* self, int index) {
     return QDesignerWidgetDataBaseInterface_Item((QDesignerWidgetDataBaseInterface*)self, index);
 }
 
-void q_designerwidgetdatabaseinterface_on_item(void* self, QDesignerWidgetDataBaseItemInterface* (*callback)(void*, int)) {
+void q_designerwidgetdatabaseinterface_on_item(const void* self, QDesignerWidgetDataBaseItemInterface* (*callback)(const void*, int)) {
     QDesignerWidgetDataBaseInterface_OnItem((QDesignerWidgetDataBaseInterface*)self, (intptr_t)callback);
 }
 
-QDesignerWidgetDataBaseItemInterface* q_designerwidgetdatabaseinterface_super_item(void* self, int index) {
+QDesignerWidgetDataBaseItemInterface* q_designerwidgetdatabaseinterface_super_item(const void* self, int index) {
     return QDesignerWidgetDataBaseInterface_SuperItem((QDesignerWidgetDataBaseInterface*)self, index);
 }
 
-int32_t q_designerwidgetdatabaseinterface_index_of(void* self, void* item) {
+int32_t q_designerwidgetdatabaseinterface_index_of(const void* self, void* item) {
     return QDesignerWidgetDataBaseInterface_IndexOf((QDesignerWidgetDataBaseInterface*)self, (QDesignerWidgetDataBaseItemInterface*)item);
 }
 
-void q_designerwidgetdatabaseinterface_on_index_of(void* self, int32_t (*callback)(void*, void*)) {
+void q_designerwidgetdatabaseinterface_on_index_of(const void* self, int32_t (*callback)(const void*, void*)) {
     QDesignerWidgetDataBaseInterface_OnIndexOf((QDesignerWidgetDataBaseInterface*)self, (intptr_t)callback);
 }
 
-int32_t q_designerwidgetdatabaseinterface_super_index_of(void* self, void* item) {
+int32_t q_designerwidgetdatabaseinterface_super_index_of(const void* self, void* item) {
     return QDesignerWidgetDataBaseInterface_SuperIndexOf((QDesignerWidgetDataBaseInterface*)self, (QDesignerWidgetDataBaseItemInterface*)item);
 }
 
@@ -483,47 +357,47 @@ void q_designerwidgetdatabaseinterface_super_append(void* self, void* item) {
     QDesignerWidgetDataBaseInterface_SuperAppend((QDesignerWidgetDataBaseInterface*)self, (QDesignerWidgetDataBaseItemInterface*)item);
 }
 
-int32_t q_designerwidgetdatabaseinterface_index_of_object(void* self, void* object, bool resolveName) {
+int32_t q_designerwidgetdatabaseinterface_index_of_object(const void* self, void* object, bool resolveName) {
     return QDesignerWidgetDataBaseInterface_IndexOfObject((QDesignerWidgetDataBaseInterface*)self, (QObject*)object, resolveName);
 }
 
-void q_designerwidgetdatabaseinterface_on_index_of_object(void* self, int32_t (*callback)(void*, void*, bool)) {
+void q_designerwidgetdatabaseinterface_on_index_of_object(const void* self, int32_t (*callback)(const void*, void*, bool)) {
     QDesignerWidgetDataBaseInterface_OnIndexOfObject((QDesignerWidgetDataBaseInterface*)self, (intptr_t)callback);
 }
 
-int32_t q_designerwidgetdatabaseinterface_super_index_of_object(void* self, void* object, bool resolveName) {
+int32_t q_designerwidgetdatabaseinterface_super_index_of_object(const void* self, void* object, bool resolveName) {
     return QDesignerWidgetDataBaseInterface_SuperIndexOfObject((QDesignerWidgetDataBaseInterface*)self, (QObject*)object, resolveName);
 }
 
-int32_t q_designerwidgetdatabaseinterface_index_of_class_name(void* self, const char* className, bool resolveName) {
+int32_t q_designerwidgetdatabaseinterface_index_of_class_name(const void* self, const char* className, bool resolveName) {
     return QDesignerWidgetDataBaseInterface_IndexOfClassName((QDesignerWidgetDataBaseInterface*)self, qstring(className), resolveName);
 }
 
-void q_designerwidgetdatabaseinterface_on_index_of_class_name(void* self, int32_t (*callback)(void*, const char*, bool)) {
+void q_designerwidgetdatabaseinterface_on_index_of_class_name(const void* self, int32_t (*callback)(const void*, const char*, bool)) {
     QDesignerWidgetDataBaseInterface_OnIndexOfClassName((QDesignerWidgetDataBaseInterface*)self, (intptr_t)callback);
 }
 
-int32_t q_designerwidgetdatabaseinterface_super_index_of_class_name(void* self, const char* className, bool resolveName) {
+int32_t q_designerwidgetdatabaseinterface_super_index_of_class_name(const void* self, const char* className, bool resolveName) {
     return QDesignerWidgetDataBaseInterface_SuperIndexOfClassName((QDesignerWidgetDataBaseInterface*)self, qstring(className), resolveName);
 }
 
-QDesignerFormEditorInterface* q_designerwidgetdatabaseinterface_core(void* self) {
+QDesignerFormEditorInterface* q_designerwidgetdatabaseinterface_core(const void* self) {
     return QDesignerWidgetDataBaseInterface_Core((QDesignerWidgetDataBaseInterface*)self);
 }
 
-void q_designerwidgetdatabaseinterface_on_core(void* self, QDesignerFormEditorInterface* (*callback)()) {
+void q_designerwidgetdatabaseinterface_on_core(const void* self, QDesignerFormEditorInterface* (*callback)(const void*)) {
     QDesignerWidgetDataBaseInterface_OnCore((QDesignerWidgetDataBaseInterface*)self, (intptr_t)callback);
 }
 
-QDesignerFormEditorInterface* q_designerwidgetdatabaseinterface_super_core(void* self) {
+QDesignerFormEditorInterface* q_designerwidgetdatabaseinterface_super_core(const void* self) {
     return QDesignerWidgetDataBaseInterface_SuperCore((QDesignerWidgetDataBaseInterface*)self);
 }
 
-bool q_designerwidgetdatabaseinterface_is_container(void* self, void* object) {
+bool q_designerwidgetdatabaseinterface_is_container(const void* self, void* object) {
     return QDesignerWidgetDataBaseInterface_IsContainer((QDesignerWidgetDataBaseInterface*)self, (QObject*)object);
 }
 
-bool q_designerwidgetdatabaseinterface_is_custom(void* self, void* object) {
+bool q_designerwidgetdatabaseinterface_is_custom(const void* self, void* object) {
     return QDesignerWidgetDataBaseInterface_IsCustom((QDesignerWidgetDataBaseInterface*)self, (QObject*)object);
 }
 
@@ -549,15 +423,15 @@ const char* q_designerwidgetdatabaseinterface_tr3(const char* s, const char* c, 
     return _ret;
 }
 
-bool q_designerwidgetdatabaseinterface_is_container2(void* self, void* object, bool resolveName) {
+bool q_designerwidgetdatabaseinterface_is_container2(const void* self, void* object, bool resolveName) {
     return QDesignerWidgetDataBaseInterface_IsContainer2((QDesignerWidgetDataBaseInterface*)self, (QObject*)object, resolveName);
 }
 
-bool q_designerwidgetdatabaseinterface_is_custom2(void* self, void* object, bool resolveName) {
+bool q_designerwidgetdatabaseinterface_is_custom2(const void* self, void* object, bool resolveName) {
     return QDesignerWidgetDataBaseInterface_IsCustom2((QDesignerWidgetDataBaseInterface*)self, (QObject*)object, resolveName);
 }
 
-const char* q_designerwidgetdatabaseinterface_object_name(void* self) {
+const char* q_designerwidgetdatabaseinterface_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -568,19 +442,19 @@ void q_designerwidgetdatabaseinterface_set_object_name(void* self, const char* n
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_designerwidgetdatabaseinterface_is_widget_type(void* self) {
+bool q_designerwidgetdatabaseinterface_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_designerwidgetdatabaseinterface_is_window_type(void* self) {
+bool q_designerwidgetdatabaseinterface_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_designerwidgetdatabaseinterface_is_quick_item_type(void* self) {
+bool q_designerwidgetdatabaseinterface_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_designerwidgetdatabaseinterface_signals_blocked(void* self) {
+bool q_designerwidgetdatabaseinterface_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -588,7 +462,7 @@ bool q_designerwidgetdatabaseinterface_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_designerwidgetdatabaseinterface_thread(void* self) {
+QThread* q_designerwidgetdatabaseinterface_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -612,7 +486,7 @@ void q_designerwidgetdatabaseinterface_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_designerwidgetdatabaseinterface_children(void* self) {
+libqt_list /* of QObject* */ q_designerwidgetdatabaseinterface_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -629,55 +503,55 @@ void q_designerwidgetdatabaseinterface_remove_event_filter(void* self, void* obj
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_designerwidgetdatabaseinterface_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_designerwidgetdatabaseinterface_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_designerwidgetdatabaseinterface_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_designerwidgetdatabaseinterface_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_designerwidgetdatabaseinterface_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_designerwidgetdatabaseinterface_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_designerwidgetdatabaseinterface_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_designerwidgetdatabaseinterface_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_designerwidgetdatabaseinterface_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_designerwidgetdatabaseinterface_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_designerwidgetdatabaseinterface_disconnect3(void* self) {
+bool q_designerwidgetdatabaseinterface_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_designerwidgetdatabaseinterface_disconnect4(void* self, void* receiver) {
+bool q_designerwidgetdatabaseinterface_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_designerwidgetdatabaseinterface_disconnect5(void* param1) {
+bool q_designerwidgetdatabaseinterface_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_designerwidgetdatabaseinterface_dump_object_tree(void* self) {
+void q_designerwidgetdatabaseinterface_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_designerwidgetdatabaseinterface_dump_object_info(void* self) {
+void q_designerwidgetdatabaseinterface_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_designerwidgetdatabaseinterface_set_property(void* self, const char* name, void* value) {
+bool q_designerwidgetdatabaseinterface_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_designerwidgetdatabaseinterface_property(void* self, const char* name) {
+QVariant* q_designerwidgetdatabaseinterface_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_designerwidgetdatabaseinterface_dynamic_property_names(void* self) {
+const char** q_designerwidgetdatabaseinterface_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -698,7 +572,7 @@ QBindingStorage* q_designerwidgetdatabaseinterface_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_designerwidgetdatabaseinterface_binding_storage2(void* self) {
+const QBindingStorage* q_designerwidgetdatabaseinterface_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -710,11 +584,11 @@ void q_designerwidgetdatabaseinterface_on_destroyed(void* self, void (*callback)
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_designerwidgetdatabaseinterface_parent(void* self) {
+QObject* q_designerwidgetdatabaseinterface_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_designerwidgetdatabaseinterface_inherits(void* self, const char* classname) {
+bool q_designerwidgetdatabaseinterface_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -730,31 +604,31 @@ int32_t q_designerwidgetdatabaseinterface_start_timer23(void* self, int64_t time
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_designerwidgetdatabaseinterface_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_designerwidgetdatabaseinterface_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_designerwidgetdatabaseinterface_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_designerwidgetdatabaseinterface_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_designerwidgetdatabaseinterface_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_designerwidgetdatabaseinterface_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_designerwidgetdatabaseinterface_disconnect1(void* self, const char* signal) {
+bool q_designerwidgetdatabaseinterface_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_designerwidgetdatabaseinterface_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_designerwidgetdatabaseinterface_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_designerwidgetdatabaseinterface_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_designerwidgetdatabaseinterface_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_designerwidgetdatabaseinterface_disconnect23(void* self, void* receiver, const char* member) {
+bool q_designerwidgetdatabaseinterface_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -826,76 +700,44 @@ void q_designerwidgetdatabaseinterface_on_custom_event(void* self, void (*callba
     QDesignerWidgetDataBaseInterface_OnCustomEvent((QDesignerWidgetDataBaseInterface*)self, (intptr_t)callback);
 }
 
-void q_designerwidgetdatabaseinterface_connect_notify(void* self, void* signal) {
+void q_designerwidgetdatabaseinterface_connect_notify(void* self, const void* signal) {
     QDesignerWidgetDataBaseInterface_ConnectNotify((QDesignerWidgetDataBaseInterface*)self, (QMetaMethod*)signal);
 }
 
-void q_designerwidgetdatabaseinterface_super_connect_notify(void* self, void* signal) {
+void q_designerwidgetdatabaseinterface_super_connect_notify(void* self, const void* signal) {
     QDesignerWidgetDataBaseInterface_SuperConnectNotify((QDesignerWidgetDataBaseInterface*)self, (QMetaMethod*)signal);
 }
 
-void q_designerwidgetdatabaseinterface_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_designerwidgetdatabaseinterface_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QDesignerWidgetDataBaseInterface_OnConnectNotify((QDesignerWidgetDataBaseInterface*)self, (intptr_t)callback);
 }
 
-void q_designerwidgetdatabaseinterface_disconnect_notify(void* self, void* signal) {
+void q_designerwidgetdatabaseinterface_disconnect_notify(void* self, const void* signal) {
     QDesignerWidgetDataBaseInterface_DisconnectNotify((QDesignerWidgetDataBaseInterface*)self, (QMetaMethod*)signal);
 }
 
-void q_designerwidgetdatabaseinterface_super_disconnect_notify(void* self, void* signal) {
+void q_designerwidgetdatabaseinterface_super_disconnect_notify(void* self, const void* signal) {
     QDesignerWidgetDataBaseInterface_SuperDisconnectNotify((QDesignerWidgetDataBaseInterface*)self, (QMetaMethod*)signal);
 }
 
-void q_designerwidgetdatabaseinterface_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_designerwidgetdatabaseinterface_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QDesignerWidgetDataBaseInterface_OnDisconnectNotify((QDesignerWidgetDataBaseInterface*)self, (intptr_t)callback);
 }
 
-QObject* q_designerwidgetdatabaseinterface_sender(void* self) {
+QObject* q_designerwidgetdatabaseinterface_sender(const void* self) {
     return QDesignerWidgetDataBaseInterface_Sender((QDesignerWidgetDataBaseInterface*)self);
 }
 
-QObject* q_designerwidgetdatabaseinterface_super_sender(void* self) {
-    return QDesignerWidgetDataBaseInterface_SuperSender((QDesignerWidgetDataBaseInterface*)self);
-}
-
-void q_designerwidgetdatabaseinterface_on_sender(void* self, QObject* (*callback)()) {
-    QDesignerWidgetDataBaseInterface_OnSender((QDesignerWidgetDataBaseInterface*)self, (intptr_t)callback);
-}
-
-int32_t q_designerwidgetdatabaseinterface_sender_signal_index(void* self) {
+int32_t q_designerwidgetdatabaseinterface_sender_signal_index(const void* self) {
     return QDesignerWidgetDataBaseInterface_SenderSignalIndex((QDesignerWidgetDataBaseInterface*)self);
 }
 
-int32_t q_designerwidgetdatabaseinterface_super_sender_signal_index(void* self) {
-    return QDesignerWidgetDataBaseInterface_SuperSenderSignalIndex((QDesignerWidgetDataBaseInterface*)self);
-}
-
-void q_designerwidgetdatabaseinterface_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QDesignerWidgetDataBaseInterface_OnSenderSignalIndex((QDesignerWidgetDataBaseInterface*)self, (intptr_t)callback);
-}
-
-int32_t q_designerwidgetdatabaseinterface_receivers(void* self, const char* signal) {
+int32_t q_designerwidgetdatabaseinterface_receivers(const void* self, const char* signal) {
     return QDesignerWidgetDataBaseInterface_Receivers((QDesignerWidgetDataBaseInterface*)self, signal);
 }
 
-int32_t q_designerwidgetdatabaseinterface_super_receivers(void* self, const char* signal) {
-    return QDesignerWidgetDataBaseInterface_SuperReceivers((QDesignerWidgetDataBaseInterface*)self, signal);
-}
-
-void q_designerwidgetdatabaseinterface_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QDesignerWidgetDataBaseInterface_OnReceivers((QDesignerWidgetDataBaseInterface*)self, (intptr_t)callback);
-}
-
-bool q_designerwidgetdatabaseinterface_is_signal_connected(void* self, void* signal) {
+bool q_designerwidgetdatabaseinterface_is_signal_connected(const void* self, const void* signal) {
     return QDesignerWidgetDataBaseInterface_IsSignalConnected((QDesignerWidgetDataBaseInterface*)self, (QMetaMethod*)signal);
-}
-
-bool q_designerwidgetdatabaseinterface_super_is_signal_connected(void* self, void* signal) {
-    return QDesignerWidgetDataBaseInterface_SuperIsSignalConnected((QDesignerWidgetDataBaseInterface*)self, (QMetaMethod*)signal);
-}
-
-void q_designerwidgetdatabaseinterface_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QDesignerWidgetDataBaseInterface_OnIsSignalConnected((QDesignerWidgetDataBaseInterface*)self, (intptr_t)callback);
 }
 
 void q_designerwidgetdatabaseinterface_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

@@ -5,47 +5,47 @@ KNotifyConfig* k_notifyconfig_new(const char* applicationName, const char* event
     return KNotifyConfig_New(qstring(applicationName), qstring(eventId));
 }
 
-KNotifyConfig* k_notifyconfig_new2(void* other) {
+KNotifyConfig* k_notifyconfig_new2(const void* other) {
     return KNotifyConfig_New2((KNotifyConfig*)other);
 }
 
-void k_notifyconfig_operator_assign(void* self, void* other) {
+void k_notifyconfig_operator_assign(void* self, const void* other) {
     KNotifyConfig_OperatorAssign((KNotifyConfig*)self, (KNotifyConfig*)other);
 }
 
-const char* k_notifyconfig_application_name(void* self) {
+const char* k_notifyconfig_application_name(const void* self) {
     libqt_string _str = KNotifyConfig_ApplicationName((KNotifyConfig*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_notifyconfig_event_id(void* self) {
+const char* k_notifyconfig_event_id(const void* self) {
     libqt_string _str = KNotifyConfig_EventId((KNotifyConfig*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_notifyconfig_is_valid(void* self) {
+bool k_notifyconfig_is_valid(const void* self) {
     return KNotifyConfig_IsValid((KNotifyConfig*)self);
 }
 
-const char* k_notifyconfig_read_global_entry(void* self, const char* key) {
+const char* k_notifyconfig_read_global_entry(const void* self, const char* key) {
     libqt_string _str = KNotifyConfig_ReadGlobalEntry((KNotifyConfig*)self, qstring(key));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_notifyconfig_read_entry(void* self, const char* key) {
+const char* k_notifyconfig_read_entry(const void* self, const char* key) {
     libqt_string _str = KNotifyConfig_ReadEntry((KNotifyConfig*)self, qstring(key));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_notifyconfig_read_path_entry(void* self, const char* key) {
+const char* k_notifyconfig_read_path_entry(const void* self, const char* key) {
     libqt_string _str = KNotifyConfig_ReadPathEntry((KNotifyConfig*)self, qstring(key));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

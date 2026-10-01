@@ -24,26 +24,26 @@ QsciLexerJavaScript* q_scilexerjavascript_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-const QMetaObject* q_scilexerjavascript_meta_object(void* self);
+const QMetaObject* q_scilexerjavascript_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QsciLexerJavaScript*
-/// @param callback const QMetaObject* func()
+/// @param self const QsciLexerJavaScript*
+/// @param callback const QMetaObject* func(const QsciLexerJavaScript* self)
 ///
-void q_scilexerjavascript_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_scilexerjavascript_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-const QMetaObject* q_scilexerjavascript_super_meta_object(void* self);
+const QMetaObject* q_scilexerjavascript_super_meta_object(const void* self);
 
 /// @param self QsciLexerJavaScript*
 /// @param param1 const char*
@@ -99,55 +99,55 @@ const char* q_scilexerjavascript_tr(const char* s);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-const char* q_scilexerjavascript_language(void* self);
+const char* q_scilexerjavascript_language(const void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerJavaScript.html)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param style int
 ///
-QColor* q_scilexerjavascript_default_color(void* self, int style);
+QColor* q_scilexerjavascript_default_color(const void* self, int style);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerJavaScript.html)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param style int
 ///
-bool q_scilexerjavascript_default_eol_fill(void* self, int style);
+bool q_scilexerjavascript_default_eol_fill(const void* self, int style);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerJavaScript.html)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param style int
 ///
-QFont* q_scilexerjavascript_default_font(void* self, int style);
+QFont* q_scilexerjavascript_default_font(const void* self, int style);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerJavaScript.html)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param style int
 ///
-QColor* q_scilexerjavascript_default_paper(void* self, int style);
+QColor* q_scilexerjavascript_default_paper(const void* self, int style);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerJavaScript.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param set int
 ///
-const char* q_scilexerjavascript_keywords(void* self, int set);
+const char* q_scilexerjavascript_keywords(const void* self, int set);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerJavaScript.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param style int
 ///
-const char* q_scilexerjavascript_description(void* self, int style);
+const char* q_scilexerjavascript_description(const void* self, int style);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -172,41 +172,41 @@ const char* q_scilexerjavascript_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerCPP.html)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-bool q_scilexerjavascript_fold_at_else(void* self);
+bool q_scilexerjavascript_fold_at_else(const void* self);
 
 /// Inherited from QsciLexerCPP
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerCPP.html)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-bool q_scilexerjavascript_fold_comments(void* self);
+bool q_scilexerjavascript_fold_comments(const void* self);
 
 /// Inherited from QsciLexerCPP
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerCPP.html)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-bool q_scilexerjavascript_fold_compact(void* self);
+bool q_scilexerjavascript_fold_compact(const void* self);
 
 /// Inherited from QsciLexerCPP
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerCPP.html)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-bool q_scilexerjavascript_fold_preprocessor(void* self);
+bool q_scilexerjavascript_fold_preprocessor(const void* self);
 
 /// Inherited from QsciLexerCPP
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerCPP.html)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-bool q_scilexerjavascript_style_preprocessor(void* self);
+bool q_scilexerjavascript_style_preprocessor(const void* self);
 
 /// Inherited from QsciLexerCPP
 ///
@@ -221,9 +221,9 @@ void q_scilexerjavascript_set_dollars_allowed(void* self, bool allowed);
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerCPP.html)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-bool q_scilexerjavascript_dollars_allowed(void* self);
+bool q_scilexerjavascript_dollars_allowed(const void* self);
 
 /// Inherited from QsciLexerCPP
 ///
@@ -238,9 +238,9 @@ void q_scilexerjavascript_set_highlight_triple_quoted_strings(void* self, bool e
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerCPP.html)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-bool q_scilexerjavascript_highlight_triple_quoted_strings(void* self);
+bool q_scilexerjavascript_highlight_triple_quoted_strings(const void* self);
 
 /// Inherited from QsciLexerCPP
 ///
@@ -255,9 +255,9 @@ void q_scilexerjavascript_set_highlight_hash_quoted_strings(void* self, bool ena
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerCPP.html)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-bool q_scilexerjavascript_highlight_hash_quoted_strings(void* self);
+bool q_scilexerjavascript_highlight_hash_quoted_strings(const void* self);
 
 /// Inherited from QsciLexerCPP
 ///
@@ -272,9 +272,9 @@ void q_scilexerjavascript_set_highlight_back_quoted_strings(void* self, bool ena
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerCPP.html)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-bool q_scilexerjavascript_highlight_back_quoted_strings(void* self);
+bool q_scilexerjavascript_highlight_back_quoted_strings(const void* self);
 
 /// Inherited from QsciLexerCPP
 ///
@@ -289,9 +289,9 @@ void q_scilexerjavascript_set_highlight_escape_sequences(void* self, bool enable
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerCPP.html)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-bool q_scilexerjavascript_highlight_escape_sequences(void* self);
+bool q_scilexerjavascript_highlight_escape_sequences(const void* self);
 
 /// Inherited from QsciLexerCPP
 ///
@@ -306,9 +306,9 @@ void q_scilexerjavascript_set_verbatim_string_escape_sequences_allowed(void* sel
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerCPP.html)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-bool q_scilexerjavascript_verbatim_string_escape_sequences_allowed(void* self);
+bool q_scilexerjavascript_verbatim_string_escape_sequences_allowed(const void* self);
 
 /// Inherited from QsciLexerCPP
 ///
@@ -316,10 +316,10 @@ bool q_scilexerjavascript_verbatim_string_escape_sequences_allowed(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param style int*
 ///
-const char* q_scilexerjavascript_block_end1(void* self, int* style);
+const char* q_scilexerjavascript_block_end1(const void* self, int* style);
 
 /// Inherited from QsciLexerCPP
 ///
@@ -327,10 +327,10 @@ const char* q_scilexerjavascript_block_end1(void* self, int* style);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param style int*
 ///
-const char* q_scilexerjavascript_block_start1(void* self, int* style);
+const char* q_scilexerjavascript_block_start1(const void* self, int* style);
 
 /// Inherited from QsciLexerCPP
 ///
@@ -338,18 +338,18 @@ const char* q_scilexerjavascript_block_start1(void* self, int* style);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param style int*
 ///
-const char* q_scilexerjavascript_block_start_keyword1(void* self, int* style);
+const char* q_scilexerjavascript_block_start_keyword1(const void* self, int* style);
 
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-QsciAbstractAPIs* q_scilexerjavascript_apis(void* self);
+QsciAbstractAPIs* q_scilexerjavascript_apis(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -363,9 +363,9 @@ int32_t q_scilexerjavascript_auto_indent_style(void* self);
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-QsciScintilla* q_scilexerjavascript_editor(void* self);
+QsciScintilla* q_scilexerjavascript_editor(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -383,7 +383,7 @@ void q_scilexerjavascript_set_a_p_is(void* self, void* apis);
 /// @param self QsciLexerJavaScript*
 /// @param c QColor*
 ///
-void q_scilexerjavascript_set_default_color(void* self, void* c);
+void q_scilexerjavascript_set_default_color(void* self, const void* c);
 
 /// Inherited from QsciLexer
 ///
@@ -392,7 +392,7 @@ void q_scilexerjavascript_set_default_color(void* self, void* c);
 /// @param self QsciLexerJavaScript*
 /// @param f QFont*
 ///
-void q_scilexerjavascript_set_default_font(void* self, void* f);
+void q_scilexerjavascript_set_default_font(void* self, const void* f);
 
 /// Inherited from QsciLexer
 ///
@@ -401,7 +401,7 @@ void q_scilexerjavascript_set_default_font(void* self, void* f);
 /// @param self QsciLexerJavaScript*
 /// @param c QColor*
 ///
-void q_scilexerjavascript_set_default_paper(void* self, void* c);
+void q_scilexerjavascript_set_default_paper(void* self, const void* c);
 
 /// Inherited from QsciLexer
 ///
@@ -416,10 +416,10 @@ bool q_scilexerjavascript_read_settings(void* self, void* qs);
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param qs QSettings*
 ///
-bool q_scilexerjavascript_write_settings(void* self, void* qs);
+bool q_scilexerjavascript_write_settings(const void* self, void* qs);
 
 /// Inherited from QsciLexer
 ///
@@ -429,7 +429,7 @@ bool q_scilexerjavascript_write_settings(void* self, void* qs);
 /// @param c QColor*
 /// @param style int
 ///
-void q_scilexerjavascript_color_changed(void* self, void* c, int style);
+void q_scilexerjavascript_color_changed(void* self, const void* c, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -438,7 +438,7 @@ void q_scilexerjavascript_color_changed(void* self, void* c, int style);
 /// @param self QsciLexerJavaScript*
 /// @param callback void func(QsciLexerJavaScript* self, QColor* c, int style)
 ///
-void q_scilexerjavascript_on_color_changed(void* self, void (*callback)(void*, void*, int));
+void q_scilexerjavascript_on_color_changed(void* self, void (*callback)(void*, const void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -467,7 +467,7 @@ void q_scilexerjavascript_on_eol_fill_changed(void* self, void (*callback)(void*
 /// @param f QFont*
 /// @param style int
 ///
-void q_scilexerjavascript_font_changed(void* self, void* f, int style);
+void q_scilexerjavascript_font_changed(void* self, const void* f, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -476,7 +476,7 @@ void q_scilexerjavascript_font_changed(void* self, void* f, int style);
 /// @param self QsciLexerJavaScript*
 /// @param callback void func(QsciLexerJavaScript* self, QFont* f, int style)
 ///
-void q_scilexerjavascript_on_font_changed(void* self, void (*callback)(void*, void*, int));
+void q_scilexerjavascript_on_font_changed(void* self, void (*callback)(void*, const void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -486,7 +486,7 @@ void q_scilexerjavascript_on_font_changed(void* self, void (*callback)(void*, vo
 /// @param c QColor*
 /// @param style int
 ///
-void q_scilexerjavascript_paper_changed(void* self, void* c, int style);
+void q_scilexerjavascript_paper_changed(void* self, const void* c, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -495,7 +495,7 @@ void q_scilexerjavascript_paper_changed(void* self, void* c, int style);
 /// @param self QsciLexerJavaScript*
 /// @param callback void func(QsciLexerJavaScript* self, QColor* c, int style)
 ///
-void q_scilexerjavascript_on_paper_changed(void* self, void (*callback)(void*, void*, int));
+void q_scilexerjavascript_on_paper_changed(void* self, void (*callback)(void*, const void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -530,11 +530,11 @@ bool q_scilexerjavascript_read_settings2(void* self, void* qs, const char* prefi
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param qs QSettings*
 /// @param prefix const char*
 ///
-bool q_scilexerjavascript_write_settings2(void* self, void* qs, const char* prefix);
+bool q_scilexerjavascript_write_settings2(const void* self, void* qs, const char* prefix);
 
 /// Inherited from QObject
 ///
@@ -542,9 +542,9 @@ bool q_scilexerjavascript_write_settings2(void* self, void* qs, const char* pref
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-const char* q_scilexerjavascript_object_name(void* self);
+const char* q_scilexerjavascript_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -559,33 +559,33 @@ void q_scilexerjavascript_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-bool q_scilexerjavascript_is_widget_type(void* self);
+bool q_scilexerjavascript_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-bool q_scilexerjavascript_is_window_type(void* self);
+bool q_scilexerjavascript_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-bool q_scilexerjavascript_is_quick_item_type(void* self);
+bool q_scilexerjavascript_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-bool q_scilexerjavascript_signals_blocked(void* self);
+bool q_scilexerjavascript_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -600,9 +600,9 @@ bool q_scilexerjavascript_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-QThread* q_scilexerjavascript_thread(void* self);
+QThread* q_scilexerjavascript_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -653,11 +653,11 @@ void q_scilexerjavascript_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_scilexerjavascript_children(void* self);
+libqt_list q_scilexerjavascript_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -695,7 +695,7 @@ void q_scilexerjavascript_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_scilexerjavascript_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_scilexerjavascript_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -706,18 +706,18 @@ QMetaObject__Connection* q_scilexerjavascript_connect(void* sender, const char* 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_scilexerjavascript_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_scilexerjavascript_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_scilexerjavascript_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_scilexerjavascript_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -728,7 +728,7 @@ QMetaObject__Connection* q_scilexerjavascript_connect3(void* self, void* sender,
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_scilexerjavascript_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_scilexerjavascript_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -739,24 +739,24 @@ bool q_scilexerjavascript_disconnect(void* sender, const char* signal, void* rec
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_scilexerjavascript_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_scilexerjavascript_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-bool q_scilexerjavascript_disconnect3(void* self);
+bool q_scilexerjavascript_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param receiver QObject*
 ///
-bool q_scilexerjavascript_disconnect4(void* self, void* receiver);
+bool q_scilexerjavascript_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -764,23 +764,23 @@ bool q_scilexerjavascript_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_scilexerjavascript_disconnect5(void* param1);
+bool q_scilexerjavascript_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-void q_scilexerjavascript_dump_object_tree(void* self);
+void q_scilexerjavascript_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-void q_scilexerjavascript_dump_object_info(void* self);
+void q_scilexerjavascript_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -790,16 +790,16 @@ void q_scilexerjavascript_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_scilexerjavascript_set_property(void* self, const char* name, void* value);
+bool q_scilexerjavascript_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param name const char*
 ///
-QVariant* q_scilexerjavascript_property(void* self, const char* name);
+QVariant* q_scilexerjavascript_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -807,9 +807,9 @@ QVariant* q_scilexerjavascript_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-const char** q_scilexerjavascript_dynamic_property_names(void* self);
+const char** q_scilexerjavascript_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -823,9 +823,9 @@ QBindingStorage* q_scilexerjavascript_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-const QBindingStorage* q_scilexerjavascript_binding_storage2(void* self);
+const QBindingStorage* q_scilexerjavascript_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -848,18 +848,18 @@ void q_scilexerjavascript_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-QObject* q_scilexerjavascript_parent(void* self);
+QObject* q_scilexerjavascript_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param classname const char*
 ///
-bool q_scilexerjavascript_inherits(void* self, const char* classname);
+bool q_scilexerjavascript_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -899,7 +899,7 @@ int32_t q_scilexerjavascript_start_timer23(void* self, int64_t time, int32_t tim
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_scilexerjavascript_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_scilexerjavascript_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -911,59 +911,59 @@ QMetaObject__Connection* q_scilexerjavascript_connect5(void* sender, const char*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_scilexerjavascript_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_scilexerjavascript_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_scilexerjavascript_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_scilexerjavascript_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param signal const char*
 ///
-bool q_scilexerjavascript_disconnect1(void* self, const char* signal);
+bool q_scilexerjavascript_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QsciLexerJavaScript*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_scilexerjavascript_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_scilexerjavascript_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_scilexerjavascript_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_scilexerjavascript_disconnect23(void* self, void* receiver, const char* member);
+bool q_scilexerjavascript_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QsciLexerJavaScript*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_scilexerjavascript_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1156,9 +1156,9 @@ void q_scilexerjavascript_on_set_style_preprocessor(void* self, void (*callback)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-const char* q_scilexerjavascript_lexer(void* self);
+const char* q_scilexerjavascript_lexer(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1168,9 +1168,9 @@ const char* q_scilexerjavascript_lexer(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-const char* q_scilexerjavascript_super_lexer(void* self);
+const char* q_scilexerjavascript_super_lexer(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1178,10 +1178,10 @@ const char* q_scilexerjavascript_super_lexer(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
-/// @param callback const char* func()
+/// @param self const QsciLexerJavaScript*
+/// @param callback const char* func(QsciLexerJavaScript* self)
 ///
-void q_scilexerjavascript_on_lexer(void* self, const char* (*callback)());
+void q_scilexerjavascript_on_lexer(const void* self, const char* (*callback)(const void*));
 
 /// Inherited from QsciLexer
 ///
@@ -1189,9 +1189,9 @@ void q_scilexerjavascript_on_lexer(void* self, const char* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-int32_t q_scilexerjavascript_lexer_id(void* self);
+int32_t q_scilexerjavascript_lexer_id(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1199,9 +1199,9 @@ int32_t q_scilexerjavascript_lexer_id(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-int32_t q_scilexerjavascript_super_lexer_id(void* self);
+int32_t q_scilexerjavascript_super_lexer_id(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1209,10 +1209,10 @@ int32_t q_scilexerjavascript_super_lexer_id(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
-/// @param callback int32_t func()
+/// @param self const QsciLexerJavaScript*
+/// @param callback int32_t func(QsciLexerJavaScript* self)
 ///
-void q_scilexerjavascript_on_lexer_id(void* self, int32_t (*callback)());
+void q_scilexerjavascript_on_lexer_id(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QsciLexer
 ///
@@ -1222,9 +1222,9 @@ void q_scilexerjavascript_on_lexer_id(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-const char* q_scilexerjavascript_auto_completion_fillups(void* self);
+const char* q_scilexerjavascript_auto_completion_fillups(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1234,9 +1234,9 @@ const char* q_scilexerjavascript_auto_completion_fillups(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-const char* q_scilexerjavascript_super_auto_completion_fillups(void* self);
+const char* q_scilexerjavascript_super_auto_completion_fillups(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1244,10 +1244,10 @@ const char* q_scilexerjavascript_super_auto_completion_fillups(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
-/// @param callback const char* func()
+/// @param self const QsciLexerJavaScript*
+/// @param callback const char* func(QsciLexerJavaScript* self)
 ///
-void q_scilexerjavascript_on_auto_completion_fillups(void* self, const char* (*callback)());
+void q_scilexerjavascript_on_auto_completion_fillups(const void* self, const char* (*callback)(const void*));
 
 /// Inherited from QsciLexer
 ///
@@ -1257,9 +1257,9 @@ void q_scilexerjavascript_on_auto_completion_fillups(void* self, const char* (*c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-const char** q_scilexerjavascript_auto_completion_word_separators(void* self);
+const char** q_scilexerjavascript_auto_completion_word_separators(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1269,9 +1269,9 @@ const char** q_scilexerjavascript_auto_completion_word_separators(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-const char** q_scilexerjavascript_super_auto_completion_word_separators(void* self);
+const char** q_scilexerjavascript_super_auto_completion_word_separators(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1279,10 +1279,10 @@ const char** q_scilexerjavascript_super_auto_completion_word_separators(void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
-/// @param callback const char** func()
+/// @param self const QsciLexerJavaScript*
+/// @param callback const char** func(QsciLexerJavaScript* self)
 ///
-void q_scilexerjavascript_on_auto_completion_word_separators(void* self, const char** (*callback)());
+void q_scilexerjavascript_on_auto_completion_word_separators(const void* self, const char** (*callback)(const void*));
 
 /// Inherited from QsciLexer
 ///
@@ -1292,10 +1292,10 @@ void q_scilexerjavascript_on_auto_completion_word_separators(void* self, const c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param style int*
 ///
-const char* q_scilexerjavascript_block_end(void* self, int* style);
+const char* q_scilexerjavascript_block_end(const void* self, int* style);
 
 /// Inherited from QsciLexer
 ///
@@ -1305,10 +1305,10 @@ const char* q_scilexerjavascript_block_end(void* self, int* style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param style int*
 ///
-const char* q_scilexerjavascript_super_block_end(void* self, int* style);
+const char* q_scilexerjavascript_super_block_end(const void* self, int* style);
 
 /// Inherited from QsciLexer
 ///
@@ -1316,10 +1316,10 @@ const char* q_scilexerjavascript_super_block_end(void* self, int* style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param callback const char* func(QsciLexerJavaScript* self, int* style)
 ///
-void q_scilexerjavascript_on_block_end(void* self, const char* (*callback)(void*, int*));
+void q_scilexerjavascript_on_block_end(const void* self, const char* (*callback)(const void*, int*));
 
 /// Inherited from QsciLexer
 ///
@@ -1327,9 +1327,9 @@ void q_scilexerjavascript_on_block_end(void* self, const char* (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-int32_t q_scilexerjavascript_block_lookback(void* self);
+int32_t q_scilexerjavascript_block_lookback(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1337,9 +1337,9 @@ int32_t q_scilexerjavascript_block_lookback(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-int32_t q_scilexerjavascript_super_block_lookback(void* self);
+int32_t q_scilexerjavascript_super_block_lookback(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1347,10 +1347,10 @@ int32_t q_scilexerjavascript_super_block_lookback(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
-/// @param callback int32_t func()
+/// @param self const QsciLexerJavaScript*
+/// @param callback int32_t func(QsciLexerJavaScript* self)
 ///
-void q_scilexerjavascript_on_block_lookback(void* self, int32_t (*callback)());
+void q_scilexerjavascript_on_block_lookback(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QsciLexer
 ///
@@ -1360,10 +1360,10 @@ void q_scilexerjavascript_on_block_lookback(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param style int*
 ///
-const char* q_scilexerjavascript_block_start(void* self, int* style);
+const char* q_scilexerjavascript_block_start(const void* self, int* style);
 
 /// Inherited from QsciLexer
 ///
@@ -1373,10 +1373,10 @@ const char* q_scilexerjavascript_block_start(void* self, int* style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param style int*
 ///
-const char* q_scilexerjavascript_super_block_start(void* self, int* style);
+const char* q_scilexerjavascript_super_block_start(const void* self, int* style);
 
 /// Inherited from QsciLexer
 ///
@@ -1384,10 +1384,10 @@ const char* q_scilexerjavascript_super_block_start(void* self, int* style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param callback const char* func(QsciLexerJavaScript* self, int* style)
 ///
-void q_scilexerjavascript_on_block_start(void* self, const char* (*callback)(void*, int*));
+void q_scilexerjavascript_on_block_start(const void* self, const char* (*callback)(const void*, int*));
 
 /// Inherited from QsciLexer
 ///
@@ -1397,10 +1397,10 @@ void q_scilexerjavascript_on_block_start(void* self, const char* (*callback)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param style int*
 ///
-const char* q_scilexerjavascript_block_start_keyword(void* self, int* style);
+const char* q_scilexerjavascript_block_start_keyword(const void* self, int* style);
 
 /// Inherited from QsciLexer
 ///
@@ -1410,10 +1410,10 @@ const char* q_scilexerjavascript_block_start_keyword(void* self, int* style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param style int*
 ///
-const char* q_scilexerjavascript_super_block_start_keyword(void* self, int* style);
+const char* q_scilexerjavascript_super_block_start_keyword(const void* self, int* style);
 
 /// Inherited from QsciLexer
 ///
@@ -1421,10 +1421,10 @@ const char* q_scilexerjavascript_super_block_start_keyword(void* self, int* styl
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param callback const char* func(QsciLexerJavaScript* self, int* style)
 ///
-void q_scilexerjavascript_on_block_start_keyword(void* self, const char* (*callback)(void*, int*));
+void q_scilexerjavascript_on_block_start_keyword(const void* self, const char* (*callback)(const void*, int*));
 
 /// Inherited from QsciLexer
 ///
@@ -1432,9 +1432,9 @@ void q_scilexerjavascript_on_block_start_keyword(void* self, const char* (*callb
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-int32_t q_scilexerjavascript_brace_style(void* self);
+int32_t q_scilexerjavascript_brace_style(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1442,9 +1442,9 @@ int32_t q_scilexerjavascript_brace_style(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-int32_t q_scilexerjavascript_super_brace_style(void* self);
+int32_t q_scilexerjavascript_super_brace_style(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1452,10 +1452,10 @@ int32_t q_scilexerjavascript_super_brace_style(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
-/// @param callback int32_t func()
+/// @param self const QsciLexerJavaScript*
+/// @param callback int32_t func(QsciLexerJavaScript* self)
 ///
-void q_scilexerjavascript_on_brace_style(void* self, int32_t (*callback)());
+void q_scilexerjavascript_on_brace_style(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QsciLexer
 ///
@@ -1463,9 +1463,9 @@ void q_scilexerjavascript_on_brace_style(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-bool q_scilexerjavascript_case_sensitive(void* self);
+bool q_scilexerjavascript_case_sensitive(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1473,9 +1473,9 @@ bool q_scilexerjavascript_case_sensitive(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-bool q_scilexerjavascript_super_case_sensitive(void* self);
+bool q_scilexerjavascript_super_case_sensitive(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1483,10 +1483,10 @@ bool q_scilexerjavascript_super_case_sensitive(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
-/// @param callback bool func()
+/// @param self const QsciLexerJavaScript*
+/// @param callback bool func(QsciLexerJavaScript* self)
 ///
-void q_scilexerjavascript_on_case_sensitive(void* self, bool (*callback)());
+void q_scilexerjavascript_on_case_sensitive(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QsciLexer
 ///
@@ -1494,10 +1494,10 @@ void q_scilexerjavascript_on_case_sensitive(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param style int
 ///
-QColor* q_scilexerjavascript_color(void* self, int style);
+QColor* q_scilexerjavascript_color(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1505,10 +1505,10 @@ QColor* q_scilexerjavascript_color(void* self, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param style int
 ///
-QColor* q_scilexerjavascript_super_color(void* self, int style);
+QColor* q_scilexerjavascript_super_color(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1516,12 +1516,12 @@ QColor* q_scilexerjavascript_super_color(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param callback QColor* func(QsciLexerJavaScript* self, int style)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_scilexerjavascript_on_color(void* self, QColor* (*callback)(void*, int));
+void q_scilexerjavascript_on_color(const void* self, QColor* (*callback)(const void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1529,10 +1529,10 @@ void q_scilexerjavascript_on_color(void* self, QColor* (*callback)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param style int
 ///
-bool q_scilexerjavascript_eol_fill(void* self, int style);
+bool q_scilexerjavascript_eol_fill(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1540,10 +1540,10 @@ bool q_scilexerjavascript_eol_fill(void* self, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param style int
 ///
-bool q_scilexerjavascript_super_eol_fill(void* self, int style);
+bool q_scilexerjavascript_super_eol_fill(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1551,10 +1551,10 @@ bool q_scilexerjavascript_super_eol_fill(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param callback bool func(QsciLexerJavaScript* self, int style)
 ///
-void q_scilexerjavascript_on_eol_fill(void* self, bool (*callback)(void*, int));
+void q_scilexerjavascript_on_eol_fill(const void* self, bool (*callback)(const void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1562,10 +1562,10 @@ void q_scilexerjavascript_on_eol_fill(void* self, bool (*callback)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param style int
 ///
-QFont* q_scilexerjavascript_font(void* self, int style);
+QFont* q_scilexerjavascript_font(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1573,10 +1573,10 @@ QFont* q_scilexerjavascript_font(void* self, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param style int
 ///
-QFont* q_scilexerjavascript_super_font(void* self, int style);
+QFont* q_scilexerjavascript_super_font(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1584,12 +1584,12 @@ QFont* q_scilexerjavascript_super_font(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param callback QFont* func(QsciLexerJavaScript* self, int style)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_scilexerjavascript_on_font(void* self, QFont* (*callback)(void*, int));
+void q_scilexerjavascript_on_font(const void* self, QFont* (*callback)(const void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1597,9 +1597,9 @@ void q_scilexerjavascript_on_font(void* self, QFont* (*callback)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-int32_t q_scilexerjavascript_indentation_guide_view(void* self);
+int32_t q_scilexerjavascript_indentation_guide_view(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1607,9 +1607,9 @@ int32_t q_scilexerjavascript_indentation_guide_view(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-int32_t q_scilexerjavascript_super_indentation_guide_view(void* self);
+int32_t q_scilexerjavascript_super_indentation_guide_view(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1617,10 +1617,10 @@ int32_t q_scilexerjavascript_super_indentation_guide_view(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
-/// @param callback int32_t func()
+/// @param self const QsciLexerJavaScript*
+/// @param callback int32_t func(QsciLexerJavaScript* self)
 ///
-void q_scilexerjavascript_on_indentation_guide_view(void* self, int32_t (*callback)());
+void q_scilexerjavascript_on_indentation_guide_view(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QsciLexer
 ///
@@ -1628,9 +1628,9 @@ void q_scilexerjavascript_on_indentation_guide_view(void* self, int32_t (*callba
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-int32_t q_scilexerjavascript_default_style(void* self);
+int32_t q_scilexerjavascript_default_style(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1638,9 +1638,9 @@ int32_t q_scilexerjavascript_default_style(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-int32_t q_scilexerjavascript_super_default_style(void* self);
+int32_t q_scilexerjavascript_super_default_style(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1648,10 +1648,10 @@ int32_t q_scilexerjavascript_super_default_style(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
-/// @param callback int32_t func()
+/// @param self const QsciLexerJavaScript*
+/// @param callback int32_t func(QsciLexerJavaScript* self)
 ///
-void q_scilexerjavascript_on_default_style(void* self, int32_t (*callback)());
+void q_scilexerjavascript_on_default_style(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QsciLexer
 ///
@@ -1659,10 +1659,10 @@ void q_scilexerjavascript_on_default_style(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param style int
 ///
-QColor* q_scilexerjavascript_paper(void* self, int style);
+QColor* q_scilexerjavascript_paper(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1670,10 +1670,10 @@ QColor* q_scilexerjavascript_paper(void* self, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param style int
 ///
-QColor* q_scilexerjavascript_super_paper(void* self, int style);
+QColor* q_scilexerjavascript_super_paper(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1681,12 +1681,12 @@ QColor* q_scilexerjavascript_super_paper(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param callback QColor* func(QsciLexerJavaScript* self, int style)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_scilexerjavascript_on_paper(void* self, QColor* (*callback)(void*, int));
+void q_scilexerjavascript_on_paper(const void* self, QColor* (*callback)(const void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1694,10 +1694,10 @@ void q_scilexerjavascript_on_paper(void* self, QColor* (*callback)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param style int
 ///
-QColor* q_scilexerjavascript_default_color2(void* self, int style);
+QColor* q_scilexerjavascript_default_color2(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1705,10 +1705,10 @@ QColor* q_scilexerjavascript_default_color2(void* self, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param style int
 ///
-QColor* q_scilexerjavascript_super_default_color2(void* self, int style);
+QColor* q_scilexerjavascript_super_default_color2(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1716,12 +1716,12 @@ QColor* q_scilexerjavascript_super_default_color2(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param callback QColor* func(QsciLexerJavaScript* self, int style)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_scilexerjavascript_on_default_color2(void* self, QColor* (*callback)(void*, int));
+void q_scilexerjavascript_on_default_color2(const void* self, QColor* (*callback)(const void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1729,10 +1729,10 @@ void q_scilexerjavascript_on_default_color2(void* self, QColor* (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param style int
 ///
-QFont* q_scilexerjavascript_default_font2(void* self, int style);
+QFont* q_scilexerjavascript_default_font2(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1740,10 +1740,10 @@ QFont* q_scilexerjavascript_default_font2(void* self, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param style int
 ///
-QFont* q_scilexerjavascript_super_default_font2(void* self, int style);
+QFont* q_scilexerjavascript_super_default_font2(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1751,12 +1751,12 @@ QFont* q_scilexerjavascript_super_default_font2(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param callback QFont* func(QsciLexerJavaScript* self, int style)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_scilexerjavascript_on_default_font2(void* self, QFont* (*callback)(void*, int));
+void q_scilexerjavascript_on_default_font2(const void* self, QFont* (*callback)(const void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1764,10 +1764,10 @@ void q_scilexerjavascript_on_default_font2(void* self, QFont* (*callback)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param style int
 ///
-QColor* q_scilexerjavascript_default_paper2(void* self, int style);
+QColor* q_scilexerjavascript_default_paper2(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1775,10 +1775,10 @@ QColor* q_scilexerjavascript_default_paper2(void* self, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param style int
 ///
-QColor* q_scilexerjavascript_super_default_paper2(void* self, int style);
+QColor* q_scilexerjavascript_super_default_paper2(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1786,12 +1786,12 @@ QColor* q_scilexerjavascript_super_default_paper2(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param callback QColor* func(QsciLexerJavaScript* self, int style)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_scilexerjavascript_on_default_paper2(void* self, QColor* (*callback)(void*, int));
+void q_scilexerjavascript_on_default_paper2(const void* self, QColor* (*callback)(const void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1853,9 +1853,9 @@ void q_scilexerjavascript_super_refresh_properties(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJavaScript*
-/// @param callback void func()
+/// @param callback void func(QsciLexerJavaScript* self)
 ///
-void q_scilexerjavascript_on_refresh_properties(void* self, void (*callback)());
+void q_scilexerjavascript_on_refresh_properties(void* self, void (*callback)(void*));
 
 /// Inherited from QsciLexer
 ///
@@ -1863,9 +1863,9 @@ void q_scilexerjavascript_on_refresh_properties(void* self, void (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-int32_t q_scilexerjavascript_style_bits_needed(void* self);
+int32_t q_scilexerjavascript_style_bits_needed(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1873,9 +1873,9 @@ int32_t q_scilexerjavascript_style_bits_needed(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-int32_t q_scilexerjavascript_super_style_bits_needed(void* self);
+int32_t q_scilexerjavascript_super_style_bits_needed(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1883,10 +1883,10 @@ int32_t q_scilexerjavascript_super_style_bits_needed(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
-/// @param callback int32_t func()
+/// @param self const QsciLexerJavaScript*
+/// @param callback int32_t func(QsciLexerJavaScript* self)
 ///
-void q_scilexerjavascript_on_style_bits_needed(void* self, int32_t (*callback)());
+void q_scilexerjavascript_on_style_bits_needed(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QsciLexer
 ///
@@ -1896,9 +1896,9 @@ void q_scilexerjavascript_on_style_bits_needed(void* self, int32_t (*callback)()
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-const char* q_scilexerjavascript_word_characters(void* self);
+const char* q_scilexerjavascript_word_characters(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1908,9 +1908,9 @@ const char* q_scilexerjavascript_word_characters(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-const char* q_scilexerjavascript_super_word_characters(void* self);
+const char* q_scilexerjavascript_super_word_characters(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1918,10 +1918,10 @@ const char* q_scilexerjavascript_super_word_characters(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
-/// @param callback const char* func()
+/// @param self const QsciLexerJavaScript*
+/// @param callback const char* func(QsciLexerJavaScript* self)
 ///
-void q_scilexerjavascript_on_word_characters(void* self, const char* (*callback)());
+void q_scilexerjavascript_on_word_characters(const void* self, const char* (*callback)(const void*));
 
 /// Inherited from QsciLexer
 ///
@@ -1966,7 +1966,7 @@ void q_scilexerjavascript_on_set_auto_indent_style(void* self, void (*callback)(
 /// @param c QColor*
 /// @param style int
 ///
-void q_scilexerjavascript_set_color(void* self, void* c, int style);
+void q_scilexerjavascript_set_color(void* self, const void* c, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1978,7 +1978,7 @@ void q_scilexerjavascript_set_color(void* self, void* c, int style);
 /// @param c QColor*
 /// @param style int
 ///
-void q_scilexerjavascript_super_set_color(void* self, void* c, int style);
+void q_scilexerjavascript_super_set_color(void* self, const void* c, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1989,7 +1989,7 @@ void q_scilexerjavascript_super_set_color(void* self, void* c, int style);
 /// @param self QsciLexerJavaScript*
 /// @param callback void func(QsciLexerJavaScript* self, QColor* c, int style)
 ///
-void q_scilexerjavascript_on_set_color(void* self, void (*callback)(void*, void*, int));
+void q_scilexerjavascript_on_set_color(void* self, void (*callback)(void*, const void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -2036,7 +2036,7 @@ void q_scilexerjavascript_on_set_eol_fill(void* self, void (*callback)(void*, bo
 /// @param f QFont*
 /// @param style int
 ///
-void q_scilexerjavascript_set_font(void* self, void* f, int style);
+void q_scilexerjavascript_set_font(void* self, const void* f, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -2048,7 +2048,7 @@ void q_scilexerjavascript_set_font(void* self, void* f, int style);
 /// @param f QFont*
 /// @param style int
 ///
-void q_scilexerjavascript_super_set_font(void* self, void* f, int style);
+void q_scilexerjavascript_super_set_font(void* self, const void* f, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -2059,7 +2059,7 @@ void q_scilexerjavascript_super_set_font(void* self, void* f, int style);
 /// @param self QsciLexerJavaScript*
 /// @param callback void func(QsciLexerJavaScript* self, QFont* f, int style)
 ///
-void q_scilexerjavascript_on_set_font(void* self, void (*callback)(void*, void*, int));
+void q_scilexerjavascript_on_set_font(void* self, void (*callback)(void*, const void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -2071,7 +2071,7 @@ void q_scilexerjavascript_on_set_font(void* self, void (*callback)(void*, void*,
 /// @param c QColor*
 /// @param style int
 ///
-void q_scilexerjavascript_set_paper(void* self, void* c, int style);
+void q_scilexerjavascript_set_paper(void* self, const void* c, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -2083,7 +2083,7 @@ void q_scilexerjavascript_set_paper(void* self, void* c, int style);
 /// @param c QColor*
 /// @param style int
 ///
-void q_scilexerjavascript_super_set_paper(void* self, void* c, int style);
+void q_scilexerjavascript_super_set_paper(void* self, const void* c, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -2094,7 +2094,7 @@ void q_scilexerjavascript_super_set_paper(void* self, void* c, int style);
 /// @param self QsciLexerJavaScript*
 /// @param callback void func(QsciLexerJavaScript* self, QColor* c, int style)
 ///
-void q_scilexerjavascript_on_set_paper(void* self, void (*callback)(void*, void*, int));
+void q_scilexerjavascript_on_set_paper(void* self, void (*callback)(void*, const void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -2137,11 +2137,11 @@ void q_scilexerjavascript_on_read_properties(void* self, bool (*callback)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param qs QSettings*
 /// @param prefix const char*
 ///
-bool q_scilexerjavascript_write_properties(void* self, void* qs, const char* prefix);
+bool q_scilexerjavascript_write_properties(const void* self, void* qs, const char* prefix);
 
 /// Inherited from QsciLexer
 ///
@@ -2149,11 +2149,11 @@ bool q_scilexerjavascript_write_properties(void* self, void* qs, const char* pre
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param qs QSettings*
 /// @param prefix const char*
 ///
-bool q_scilexerjavascript_super_write_properties(void* self, void* qs, const char* prefix);
+bool q_scilexerjavascript_super_write_properties(const void* self, void* qs, const char* prefix);
 
 /// Inherited from QsciLexer
 ///
@@ -2161,10 +2161,10 @@ bool q_scilexerjavascript_super_write_properties(void* self, void* qs, const cha
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param callback bool func(QsciLexerJavaScript* self, QSettings* qs, const char* prefix)
 ///
-void q_scilexerjavascript_on_write_properties(void* self, bool (*callback)(void*, void*, const char*));
+void q_scilexerjavascript_on_write_properties(const void* self, bool (*callback)(const void*, void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2342,7 +2342,7 @@ void q_scilexerjavascript_on_custom_event(void* self, void (*callback)(void*, vo
 /// @param self QsciLexerJavaScript*
 /// @param signal QMetaMethod*
 ///
-void q_scilexerjavascript_connect_notify(void* self, void* signal);
+void q_scilexerjavascript_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2353,7 +2353,7 @@ void q_scilexerjavascript_connect_notify(void* self, void* signal);
 /// @param self QsciLexerJavaScript*
 /// @param signal QMetaMethod*
 ///
-void q_scilexerjavascript_super_connect_notify(void* self, void* signal);
+void q_scilexerjavascript_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2364,7 +2364,7 @@ void q_scilexerjavascript_super_connect_notify(void* self, void* signal);
 /// @param self QsciLexerJavaScript*
 /// @param callback void func(QsciLexerJavaScript* self, QMetaMethod* signal)
 ///
-void q_scilexerjavascript_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_scilexerjavascript_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2375,7 +2375,7 @@ void q_scilexerjavascript_on_connect_notify(void* self, void (*callback)(void*, 
 /// @param self QsciLexerJavaScript*
 /// @param signal QMetaMethod*
 ///
-void q_scilexerjavascript_disconnect_notify(void* self, void* signal);
+void q_scilexerjavascript_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2386,7 +2386,7 @@ void q_scilexerjavascript_disconnect_notify(void* self, void* signal);
 /// @param self QsciLexerJavaScript*
 /// @param signal QMetaMethod*
 ///
-void q_scilexerjavascript_super_disconnect_notify(void* self, void* signal);
+void q_scilexerjavascript_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2397,7 +2397,7 @@ void q_scilexerjavascript_super_disconnect_notify(void* self, void* signal);
 /// @param self QsciLexerJavaScript*
 /// @param callback void func(QsciLexerJavaScript* self, QMetaMethod* signal)
 ///
-void q_scilexerjavascript_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_scilexerjavascript_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QsciLexer
 ///
@@ -2407,10 +2407,10 @@ void q_scilexerjavascript_on_disconnect_notify(void* self, void (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param text const char*
 ///
-char* q_scilexerjavascript_text_as_bytes(void* self, const char* text);
+char* q_scilexerjavascript_text_as_bytes(const void* self, const char* text);
 
 /// Inherited from QsciLexer
 ///
@@ -2420,10 +2420,10 @@ char* q_scilexerjavascript_text_as_bytes(void* self, const char* text);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param text const char*
 ///
-char* q_scilexerjavascript_super_text_as_bytes(void* self, const char* text);
+char* q_scilexerjavascript_super_text_as_bytes(const void* self, const char* text);
 
 /// Inherited from QsciLexer
 ///
@@ -2431,10 +2431,10 @@ char* q_scilexerjavascript_super_text_as_bytes(void* self, const char* text);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param callback libqt_string func(QsciLexerJavaScript* self, const char* text)
 ///
-void q_scilexerjavascript_on_text_as_bytes(void* self, libqt_string (*callback)(void*, const char*));
+void q_scilexerjavascript_on_text_as_bytes(const void* self, libqt_string (*callback)(const void*, const char*));
 
 /// Inherited from QsciLexer
 ///
@@ -2444,11 +2444,11 @@ void q_scilexerjavascript_on_text_as_bytes(void* self, libqt_string (*callback)(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param bytes const char*
 /// @param size int
 ///
-const char* q_scilexerjavascript_bytes_as_text(void* self, const char* bytes, int size);
+const char* q_scilexerjavascript_bytes_as_text(const void* self, const char* bytes, int size);
 
 /// Inherited from QsciLexer
 ///
@@ -2458,11 +2458,11 @@ const char* q_scilexerjavascript_bytes_as_text(void* self, const char* bytes, in
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param bytes const char*
 /// @param size int
 ///
-const char* q_scilexerjavascript_super_bytes_as_text(void* self, const char* bytes, int size);
+const char* q_scilexerjavascript_super_bytes_as_text(const void* self, const char* bytes, int size);
 
 /// Inherited from QsciLexer
 ///
@@ -2470,10 +2470,10 @@ const char* q_scilexerjavascript_super_bytes_as_text(void* self, const char* byt
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param callback const char* func(QsciLexerJavaScript* self, const char* bytes, int size)
 ///
-void q_scilexerjavascript_on_bytes_as_text(void* self, const char* (*callback)(void*, const char*, int));
+void q_scilexerjavascript_on_bytes_as_text(const void* self, const char* (*callback)(const void*, const char*, int));
 
 /// Inherited from QObject
 ///
@@ -2481,9 +2481,9 @@ void q_scilexerjavascript_on_bytes_as_text(void* self, const char* (*callback)(v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-QObject* q_scilexerjavascript_sender(void* self);
+QObject* q_scilexerjavascript_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2491,9 +2491,9 @@ QObject* q_scilexerjavascript_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-QObject* q_scilexerjavascript_super_sender(void* self);
+QObject* q_scilexerjavascript_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2501,10 +2501,10 @@ QObject* q_scilexerjavascript_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
-/// @param callback QObject* func()
+/// @param self const QsciLexerJavaScript*
+/// @param callback QObject* func(QsciLexerJavaScript* self)
 ///
-void q_scilexerjavascript_on_sender(void* self, QObject* (*callback)());
+void q_scilexerjavascript_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2512,9 +2512,9 @@ void q_scilexerjavascript_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-int32_t q_scilexerjavascript_sender_signal_index(void* self);
+int32_t q_scilexerjavascript_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2522,9 +2522,9 @@ int32_t q_scilexerjavascript_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 ///
-int32_t q_scilexerjavascript_super_sender_signal_index(void* self);
+int32_t q_scilexerjavascript_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2532,10 +2532,10 @@ int32_t q_scilexerjavascript_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
-/// @param callback int32_t func()
+/// @param self const QsciLexerJavaScript*
+/// @param callback int32_t func(QsciLexerJavaScript* self)
 ///
-void q_scilexerjavascript_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_scilexerjavascript_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2543,10 +2543,10 @@ void q_scilexerjavascript_on_sender_signal_index(void* self, int32_t (*callback)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param signal const char*
 ///
-int32_t q_scilexerjavascript_receivers(void* self, const char* signal);
+int32_t q_scilexerjavascript_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2554,10 +2554,10 @@ int32_t q_scilexerjavascript_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param signal const char*
 ///
-int32_t q_scilexerjavascript_super_receivers(void* self, const char* signal);
+int32_t q_scilexerjavascript_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2565,10 +2565,10 @@ int32_t q_scilexerjavascript_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param callback int32_t func(QsciLexerJavaScript* self, const char* signal)
 ///
-void q_scilexerjavascript_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_scilexerjavascript_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2576,10 +2576,10 @@ void q_scilexerjavascript_on_receivers(void* self, int32_t (*callback)(void*, co
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param signal QMetaMethod*
 ///
-bool q_scilexerjavascript_is_signal_connected(void* self, void* signal);
+bool q_scilexerjavascript_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2587,10 +2587,10 @@ bool q_scilexerjavascript_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param signal QMetaMethod*
 ///
-bool q_scilexerjavascript_super_is_signal_connected(void* self, void* signal);
+bool q_scilexerjavascript_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2598,10 +2598,10 @@ bool q_scilexerjavascript_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerJavaScript*
+/// @param self const QsciLexerJavaScript*
 /// @param callback bool func(QsciLexerJavaScript* self, QMetaMethod* signal)
 ///
-void q_scilexerjavascript_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_scilexerjavascript_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

@@ -20,15 +20,15 @@ TextEmoticonsCore__UnicodeEmoticon* k_textemoticonscore__unicodeemoticon_new();
 ///
 /// @param param1 TextEmoticonsCore__UnicodeEmoticon*
 ///
-TextEmoticonsCore__UnicodeEmoticon* k_textemoticonscore__unicodeemoticon_new2(void* param1);
+TextEmoticonsCore__UnicodeEmoticon* k_textemoticonscore__unicodeemoticon_new2(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1UnicodeEmoticon.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextEmoticonsCore__UnicodeEmoticon*
+/// @param self const TextEmoticonsCore__UnicodeEmoticon*
 ///
-const char* k_textemoticonscore__unicodeemoticon_identifier(void* self);
+const char* k_textemoticonscore__unicodeemoticon_identifier(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1UnicodeEmoticon.html)
 ///
@@ -41,17 +41,17 @@ void k_textemoticonscore__unicodeemoticon_set_identifier(void* self, const char*
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextEmoticonsCore__UnicodeEmoticon*
+/// @param self const TextEmoticonsCore__UnicodeEmoticon*
 ///
-const char* k_textemoticonscore__unicodeemoticon_unicode(void* self);
+const char* k_textemoticonscore__unicodeemoticon_unicode(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1UnicodeEmoticon.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextEmoticonsCore__UnicodeEmoticon*
+/// @param self const TextEmoticonsCore__UnicodeEmoticon*
 ///
-const char* k_textemoticonscore__unicodeemoticon_unicode_display(void* self);
+const char* k_textemoticonscore__unicodeemoticon_unicode_display(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1UnicodeEmoticon.html)
 ///
@@ -64,9 +64,9 @@ void k_textemoticonscore__unicodeemoticon_set_unicode(void* self, const char* un
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextEmoticonsCore__UnicodeEmoticon*
+/// @param self const TextEmoticonsCore__UnicodeEmoticon*
 ///
-const char* k_textemoticonscore__unicodeemoticon_category(void* self);
+const char* k_textemoticonscore__unicodeemoticon_category(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1UnicodeEmoticon.html)
 ///
@@ -79,9 +79,9 @@ void k_textemoticonscore__unicodeemoticon_set_category(void* self, const char* c
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self TextEmoticonsCore__UnicodeEmoticon*
+/// @param self const TextEmoticonsCore__UnicodeEmoticon*
 ///
-const char** k_textemoticonscore__unicodeemoticon_aliases(void* self);
+const char** k_textemoticonscore__unicodeemoticon_aliases(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1UnicodeEmoticon.html)
 ///
@@ -92,22 +92,22 @@ void k_textemoticonscore__unicodeemoticon_set_aliases(void* self, const char* al
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1UnicodeEmoticon.html)
 ///
-/// @param self TextEmoticonsCore__UnicodeEmoticon*
+/// @param self const TextEmoticonsCore__UnicodeEmoticon*
 /// @param identifier const char*
 ///
-bool k_textemoticonscore__unicodeemoticon_has_emoji(void* self, const char* identifier);
+bool k_textemoticonscore__unicodeemoticon_has_emoji(const void* self, const char* identifier);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1UnicodeEmoticon.html)
 ///
-/// @param self TextEmoticonsCore__UnicodeEmoticon*
+/// @param self const TextEmoticonsCore__UnicodeEmoticon*
 ///
-bool k_textemoticonscore__unicodeemoticon_is_valid(void* self);
+bool k_textemoticonscore__unicodeemoticon_is_valid(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1UnicodeEmoticon.html)
 ///
-/// @param self TextEmoticonsCore__UnicodeEmoticon*
+/// @param self const TextEmoticonsCore__UnicodeEmoticon*
 ///
-int32_t k_textemoticonscore__unicodeemoticon_order(void* self);
+int32_t k_textemoticonscore__unicodeemoticon_order(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1UnicodeEmoticon.html)
 ///
@@ -120,9 +120,9 @@ void k_textemoticonscore__unicodeemoticon_set_order(void* self, int order);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextEmoticonsCore__UnicodeEmoticon*
+/// @param self const TextEmoticonsCore__UnicodeEmoticon*
 ///
-const char* k_textemoticonscore__unicodeemoticon_key(void* self);
+const char* k_textemoticonscore__unicodeemoticon_key(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1UnicodeEmoticon.html)
 ///
@@ -133,17 +133,17 @@ void k_textemoticonscore__unicodeemoticon_set_key(void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1UnicodeEmoticon.html)
 ///
-/// @param self TextEmoticonsCore__UnicodeEmoticon*
+/// @param self const TextEmoticonsCore__UnicodeEmoticon*
 /// @param other TextEmoticonsCore__UnicodeEmoticon*
 ///
-bool k_textemoticonscore__unicodeemoticon_operator_equal(void* self, void* other);
+bool k_textemoticonscore__unicodeemoticon_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1UnicodeEmoticon.html)
 ///
 /// @param self TextEmoticonsCore__UnicodeEmoticon*
 /// @param param1 TextEmoticonsCore__UnicodeEmoticon*
 ///
-void k_textemoticonscore__unicodeemoticon_operator_assign(void* self, void* param1);
+void k_textemoticonscore__unicodeemoticon_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1UnicodeEmoticon.html)
 ///

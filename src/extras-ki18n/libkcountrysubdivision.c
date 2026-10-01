@@ -6,54 +6,54 @@ KCountrySubdivision* k_countrysubdivision_new() {
     return KCountrySubdivision_New();
 }
 
-KCountrySubdivision* k_countrysubdivision_new2(void* param1) {
+KCountrySubdivision* k_countrysubdivision_new2(const void* param1) {
     return KCountrySubdivision_New2((KCountrySubdivision*)param1);
 }
 
-void k_countrysubdivision_operator_assign(void* self, void* param1) {
+void k_countrysubdivision_operator_assign(void* self, const void* param1) {
     KCountrySubdivision_OperatorAssign((KCountrySubdivision*)self, (KCountrySubdivision*)param1);
 }
 
-bool k_countrysubdivision_operator_equal(void* self, void* other) {
+bool k_countrysubdivision_operator_equal(const void* self, const void* other) {
     return KCountrySubdivision_OperatorEqual((KCountrySubdivision*)self, (KCountrySubdivision*)other);
 }
 
-bool k_countrysubdivision_operator_not_equal(void* self, void* other) {
+bool k_countrysubdivision_operator_not_equal(const void* self, const void* other) {
     return KCountrySubdivision_OperatorNotEqual((KCountrySubdivision*)self, (KCountrySubdivision*)other);
 }
 
-bool k_countrysubdivision_is_valid(void* self) {
+bool k_countrysubdivision_is_valid(const void* self) {
     return KCountrySubdivision_IsValid((KCountrySubdivision*)self);
 }
 
-const char* k_countrysubdivision_code(void* self) {
+const char* k_countrysubdivision_code(const void* self) {
     libqt_string _str = KCountrySubdivision_Code((KCountrySubdivision*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_countrysubdivision_name(void* self) {
+const char* k_countrysubdivision_name(const void* self) {
     libqt_string _str = KCountrySubdivision_Name((KCountrySubdivision*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-KCountry* k_countrysubdivision_country(void* self) {
+KCountry* k_countrysubdivision_country(const void* self) {
     return KCountrySubdivision_Country((KCountrySubdivision*)self);
 }
 
-KCountrySubdivision* k_countrysubdivision_parent(void* self) {
+KCountrySubdivision* k_countrysubdivision_parent(const void* self) {
     return KCountrySubdivision_Parent((KCountrySubdivision*)self);
 }
 
-libqt_list /* of const char* */ k_countrysubdivision_time_zone_ids(void* self) {
+libqt_list /* of const char* */ k_countrysubdivision_time_zone_ids(const void* self) {
     libqt_list _arr = KCountrySubdivision_TimeZoneIds((KCountrySubdivision*)self);
     return _arr;
 }
 
-libqt_list /* of KCountrySubdivision* */ k_countrysubdivision_subdivisions(void* self) {
+libqt_list /* of KCountrySubdivision* */ k_countrysubdivision_subdivisions(const void* self) {
     libqt_list _arr = KCountrySubdivision_Subdivisions((KCountrySubdivision*)self);
     return _arr;
 }

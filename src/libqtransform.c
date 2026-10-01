@@ -8,7 +8,7 @@
 #include "libqtransform.hpp"
 #include "libqtransform.h"
 
-QTransform* q_transform_new(void* other) {
+QTransform* q_transform_new(const void* other) {
     return QTransform_New((QTransform*)other);
 }
 
@@ -32,7 +32,7 @@ QTransform* q_transform_new6(double h11, double h12, double h21, double h22, dou
     return QTransform_New6(h11, h12, h21, h22, dx, dy);
 }
 
-QTransform* q_transform_new7(void* other) {
+QTransform* q_transform_new7(const void* other) {
     return QTransform_New7((QTransform*)other);
 }
 
@@ -44,83 +44,83 @@ void q_transform_move_assign(void* self, void* other) {
     QTransform_MoveAssign((QTransform*)self, (QTransform*)other);
 }
 
-void q_transform_operator_assign(void* self, void* param1) {
+void q_transform_operator_assign(void* self, const void* param1) {
     QTransform_OperatorAssign((QTransform*)self, (QTransform*)param1);
 }
 
-bool q_transform_is_affine(void* self) {
+bool q_transform_is_affine(const void* self) {
     return QTransform_IsAffine((QTransform*)self);
 }
 
-bool q_transform_is_identity(void* self) {
+bool q_transform_is_identity(const void* self) {
     return QTransform_IsIdentity((QTransform*)self);
 }
 
-bool q_transform_is_invertible(void* self) {
+bool q_transform_is_invertible(const void* self) {
     return QTransform_IsInvertible((QTransform*)self);
 }
 
-bool q_transform_is_scaling(void* self) {
+bool q_transform_is_scaling(const void* self) {
     return QTransform_IsScaling((QTransform*)self);
 }
 
-bool q_transform_is_rotating(void* self) {
+bool q_transform_is_rotating(const void* self) {
     return QTransform_IsRotating((QTransform*)self);
 }
 
-bool q_transform_is_translating(void* self) {
+bool q_transform_is_translating(const void* self) {
     return QTransform_IsTranslating((QTransform*)self);
 }
 
-int32_t q_transform_type(void* self) {
+int32_t q_transform_type(const void* self) {
     return QTransform_Type((QTransform*)self);
 }
 
-double q_transform_determinant(void* self) {
+double q_transform_determinant(const void* self) {
     return QTransform_Determinant((QTransform*)self);
 }
 
-double q_transform_m11(void* self) {
+double q_transform_m11(const void* self) {
     return QTransform_M11((QTransform*)self);
 }
 
-double q_transform_m12(void* self) {
+double q_transform_m12(const void* self) {
     return QTransform_M12((QTransform*)self);
 }
 
-double q_transform_m13(void* self) {
+double q_transform_m13(const void* self) {
     return QTransform_M13((QTransform*)self);
 }
 
-double q_transform_m21(void* self) {
+double q_transform_m21(const void* self) {
     return QTransform_M21((QTransform*)self);
 }
 
-double q_transform_m22(void* self) {
+double q_transform_m22(const void* self) {
     return QTransform_M22((QTransform*)self);
 }
 
-double q_transform_m23(void* self) {
+double q_transform_m23(const void* self) {
     return QTransform_M23((QTransform*)self);
 }
 
-double q_transform_m31(void* self) {
+double q_transform_m31(const void* self) {
     return QTransform_M31((QTransform*)self);
 }
 
-double q_transform_m32(void* self) {
+double q_transform_m32(const void* self) {
     return QTransform_M32((QTransform*)self);
 }
 
-double q_transform_m33(void* self) {
+double q_transform_m33(const void* self) {
     return QTransform_M33((QTransform*)self);
 }
 
-double q_transform_dx(void* self) {
+double q_transform_dx(const void* self) {
     return QTransform_Dx((QTransform*)self);
 }
 
-double q_transform_dy(void* self) {
+double q_transform_dy(const void* self) {
     return QTransform_Dy((QTransform*)self);
 }
 
@@ -128,15 +128,15 @@ void q_transform_set_matrix(void* self, double m11, double m12, double m13, doub
     QTransform_SetMatrix((QTransform*)self, m11, m12, m13, m21, m22, m23, m31, m32, m33);
 }
 
-QTransform* q_transform_inverted(void* self) {
+QTransform* q_transform_inverted(const void* self) {
     return QTransform_Inverted((QTransform*)self);
 }
 
-QTransform* q_transform_adjoint(void* self) {
+QTransform* q_transform_adjoint(const void* self) {
     return QTransform_Adjoint((QTransform*)self);
 }
 
-QTransform* q_transform_transposed(void* self) {
+QTransform* q_transform_transposed(const void* self) {
     return QTransform_Transposed((QTransform*)self);
 }
 
@@ -168,35 +168,35 @@ QTransform* q_transform_rotate_radians2(void* self, double a) {
     return QTransform_RotateRadians2((QTransform*)self, a);
 }
 
-bool q_transform_square_to_quad(void* square, void* result) {
+bool q_transform_square_to_quad(const void* square, void* result) {
     return QTransform_SquareToQuad((QPolygonF*)square, (QTransform*)result);
 }
 
-bool q_transform_quad_to_square(void* quad, void* result) {
+bool q_transform_quad_to_square(const void* quad, void* result) {
     return QTransform_QuadToSquare((QPolygonF*)quad, (QTransform*)result);
 }
 
-bool q_transform_quad_to_quad(void* one, void* two, void* result) {
+bool q_transform_quad_to_quad(const void* one, const void* two, void* result) {
     return QTransform_QuadToQuad((QPolygonF*)one, (QPolygonF*)two, (QTransform*)result);
 }
 
-bool q_transform_operator_equal(void* self, void* param1) {
+bool q_transform_operator_equal(const void* self, const void* param1) {
     return QTransform_OperatorEqual((QTransform*)self, (QTransform*)param1);
 }
 
-bool q_transform_operator_not_equal(void* self, void* param1) {
+bool q_transform_operator_not_equal(const void* self, const void* param1) {
     return QTransform_OperatorNotEqual((QTransform*)self, (QTransform*)param1);
 }
 
-QTransform* q_transform_operator_multiply_assign(void* self, void* param1) {
+QTransform* q_transform_operator_multiply_assign(void* self, const void* param1) {
     return QTransform_OperatorMultiplyAssign((QTransform*)self, (QTransform*)param1);
 }
 
-QTransform* q_transform_operator_multiply(void* self, void* o) {
+QTransform* q_transform_operator_multiply(const void* self, const void* o) {
     return QTransform_OperatorMultiply((QTransform*)self, (QTransform*)o);
 }
 
-QVariant* q_transform_to_q_variant(void* self) {
+QVariant* q_transform_to_q_variant(const void* self) {
     return QTransform_ToQVariant((QTransform*)self);
 }
 
@@ -204,55 +204,55 @@ void q_transform_reset(void* self) {
     QTransform_Reset((QTransform*)self);
 }
 
-QPoint* q_transform_map(void* self, void* p) {
+QPoint* q_transform_map(const void* self, const void* p) {
     return QTransform_Map((QTransform*)self, (QPoint*)p);
 }
 
-QPointF* q_transform_map2(void* self, void* p) {
+QPointF* q_transform_map2(const void* self, const void* p) {
     return QTransform_Map2((QTransform*)self, (QPointF*)p);
 }
 
-QLine* q_transform_map3(void* self, void* l) {
+QLine* q_transform_map3(const void* self, const void* l) {
     return QTransform_Map3((QTransform*)self, (QLine*)l);
 }
 
-QLineF* q_transform_map4(void* self, void* l) {
+QLineF* q_transform_map4(const void* self, const void* l) {
     return QTransform_Map4((QTransform*)self, (QLineF*)l);
 }
 
-QPolygonF* q_transform_map5(void* self, void* a) {
+QPolygonF* q_transform_map5(const void* self, const void* a) {
     return QTransform_Map5((QTransform*)self, (QPolygonF*)a);
 }
 
-QPolygon* q_transform_map6(void* self, void* a) {
+QPolygon* q_transform_map6(const void* self, const void* a) {
     return QTransform_Map6((QTransform*)self, (QPolygon*)a);
 }
 
-QRegion* q_transform_map7(void* self, void* r) {
+QRegion* q_transform_map7(const void* self, const void* r) {
     return QTransform_Map7((QTransform*)self, (QRegion*)r);
 }
 
-QPainterPath* q_transform_map8(void* self, void* p) {
+QPainterPath* q_transform_map8(const void* self, const void* p) {
     return QTransform_Map8((QTransform*)self, (QPainterPath*)p);
 }
 
-QPolygon* q_transform_map_to_polygon(void* self, void* r) {
+QPolygon* q_transform_map_to_polygon(const void* self, const void* r) {
     return QTransform_MapToPolygon((QTransform*)self, (QRect*)r);
 }
 
-QRect* q_transform_map_rect(void* self, void* param1) {
+QRect* q_transform_map_rect(const void* self, const void* param1) {
     return QTransform_MapRect((QTransform*)self, (QRect*)param1);
 }
 
-QRectF* q_transform_map_rect2(void* self, void* param1) {
+QRectF* q_transform_map_rect2(const void* self, const void* param1) {
     return QTransform_MapRect2((QTransform*)self, (QRectF*)param1);
 }
 
-void q_transform_map9(void* self, int x, int y, int* tx, int* ty) {
+void q_transform_map9(const void* self, int x, int y, int* tx, int* ty) {
     QTransform_Map9((QTransform*)self, x, y, tx, ty);
 }
 
-void q_transform_map10(void* self, double x, double y, double* tx, double* ty) {
+void q_transform_map10(const void* self, double x, double y, double* tx, double* ty) {
     QTransform_Map10((QTransform*)self, x, y, tx, ty);
 }
 
@@ -280,7 +280,7 @@ QTransform* q_transform_from_scale(double dx, double dy) {
     return QTransform_FromScale(dx, dy);
 }
 
-QTransform* q_transform_inverted1(void* self, bool* invertible) {
+QTransform* q_transform_inverted1(const void* self, bool* invertible) {
     return QTransform_Inverted1((QTransform*)self, (bool*)invertible);
 }
 
@@ -296,10 +296,10 @@ void q_transform_delete(void* self) {
     QTransform_Delete((QTransform*)(self));
 }
 
-size_t q_qtransform_h_q_hash(void* key, size_t seed) {
+size_t q_qtransform_h_q_hash(const void* key, size_t seed) {
     return qtransform_h_QHash((QTransform*)key, seed);
 }
 
-bool q_qtransform_h_q_fuzzy_compare(void* t1, void* t2) {
+bool q_qtransform_h_q_fuzzy_compare(const void* t1, const void* t2) {
     return qtransform_h_QFuzzyCompare((QTransform*)t1, (QTransform*)t2);
 }

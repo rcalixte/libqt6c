@@ -5,7 +5,7 @@
 #include "libqsqlresult.hpp"
 #include "libqsqlresult.h"
 
-QVariant* q_sqlresult_handle(void* self) {
+QVariant* q_sqlresult_handle(const void* self) {
     return QSqlResult_Handle((QSqlResult*)self);
 }
 

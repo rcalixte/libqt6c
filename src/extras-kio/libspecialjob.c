@@ -12,23 +12,23 @@
 #include "libspecialjob.hpp"
 #include "libspecialjob.h"
 
-KIO__SpecialJob* k_io__specialjob_new(void* url) {
+KIO__SpecialJob* k_io__specialjob_new(const void* url) {
     return KIO__SpecialJob_New((QUrl*)url);
 }
 
-KIO__SpecialJob* k_io__specialjob_new2(void* url, char* data) {
+KIO__SpecialJob* k_io__specialjob_new2(const void* url, char* data) {
     return KIO__SpecialJob_New2((QUrl*)url, qstring(data));
 }
 
-const QMetaObject* k_io__specialjob_meta_object(void* self) {
+const QMetaObject* k_io__specialjob_meta_object(const void* self) {
     return KIO__SpecialJob_MetaObject((KIO__SpecialJob*)self);
 }
 
-void k_io__specialjob_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_io__specialjob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     KIO__SpecialJob_OnMetaObject((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_io__specialjob_super_meta_object(void* self) {
+const QMetaObject* k_io__specialjob_super_meta_object(const void* self) {
     return KIO__SpecialJob_SuperMetaObject((KIO__SpecialJob*)self);
 }
 
@@ -67,7 +67,7 @@ void k_io__specialjob_set_arguments(void* self, char* data) {
     KIO__SpecialJob_SetArguments((KIO__SpecialJob*)self, qstring(data));
 }
 
-char* k_io__specialjob_arguments(void* self) {
+char* k_io__specialjob_arguments(const void* self) {
     libqt_string _str = KIO__SpecialJob_Arguments((KIO__SpecialJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -88,11 +88,11 @@ const char* k_io__specialjob_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void k_io__specialjob_set_modification_time(void* self, void* mtime) {
+void k_io__specialjob_set_modification_time(void* self, const void* mtime) {
     KIO__TransferJob_SetModificationTime((KIO__TransferJob*)self, (QDateTime*)mtime);
 }
 
-bool k_io__specialjob_is_error_page(void* self) {
+bool k_io__specialjob_is_error_page(const void* self) {
     return KIO__TransferJob_IsErrorPage((KIO__TransferJob*)self);
 }
 
@@ -104,14 +104,14 @@ void k_io__specialjob_send_async_data(void* self, char* data) {
     KIO__TransferJob_SendAsyncData((KIO__TransferJob*)self, qstring(data));
 }
 
-const char* k_io__specialjob_mimetype(void* self) {
+const char* k_io__specialjob_mimetype(const void* self) {
     libqt_string _str = KIO__TransferJob_Mimetype((KIO__TransferJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QUrl* k_io__specialjob_redirect_url(void* self) {
+QUrl* k_io__specialjob_redirect_url(const void* self) {
     return KIO__TransferJob_RedirectUrl((KIO__TransferJob*)self);
 }
 
@@ -135,19 +135,19 @@ void k_io__specialjob_on_data_req(void* self, void (*callback)(void*, void*, lib
     KIO__TransferJob_Connect_DataReq((KIO__TransferJob*)self, (intptr_t)callback);
 }
 
-void k_io__specialjob_redirection(void* self, void* job, void* url) {
+void k_io__specialjob_redirection(void* self, void* job, const void* url) {
     KIO__TransferJob_Redirection((KIO__TransferJob*)self, (KIO__Job*)job, (QUrl*)url);
 }
 
-void k_io__specialjob_on_redirection(void* self, void (*callback)(void*, void*, void*)) {
+void k_io__specialjob_on_redirection(void* self, void (*callback)(void*, void*, const void*)) {
     KIO__TransferJob_Connect_Redirection((KIO__TransferJob*)self, (intptr_t)callback);
 }
 
-void k_io__specialjob_permanent_redirection(void* self, void* job, void* fromUrl, void* toUrl) {
+void k_io__specialjob_permanent_redirection(void* self, void* job, const void* fromUrl, const void* toUrl) {
     KIO__TransferJob_PermanentRedirection((KIO__TransferJob*)self, (KIO__Job*)job, (QUrl*)fromUrl, (QUrl*)toUrl);
 }
 
-void k_io__specialjob_on_permanent_redirection(void* self, void (*callback)(void*, void*, void*, void*)) {
+void k_io__specialjob_on_permanent_redirection(void* self, void (*callback)(void*, void*, const void*, const void*)) {
     KIO__TransferJob_Connect_PermanentRedirection((KIO__TransferJob*)self, (intptr_t)callback);
 }
 
@@ -167,7 +167,7 @@ void k_io__specialjob_on_can_resume(void* self, void (*callback)(void*, void*, u
     KIO__TransferJob_Connect_CanResume((KIO__TransferJob*)self, (intptr_t)callback);
 }
 
-const QUrl* k_io__specialjob_url(void* self) {
+const QUrl* k_io__specialjob_url(const void* self) {
     return KIO__SimpleJob_Url((KIO__SimpleJob*)self);
 }
 
@@ -175,7 +175,7 @@ void k_io__specialjob_remove_on_hold() {
     KIO__SimpleJob_RemoveOnHold();
 }
 
-bool k_io__specialjob_is_redirection_handling_enabled(void* self) {
+bool k_io__specialjob_is_redirection_handling_enabled(const void* self) {
     return KIO__SimpleJob_IsRedirectionHandlingEnabled((KIO__SimpleJob*)self);
 }
 
@@ -187,7 +187,7 @@ void k_io__specialjob_slot_error(void* self, int param1, const char* param2) {
     KIO__SimpleJob_SlotError((KIO__SimpleJob*)self, param1, qstring(param2));
 }
 
-KIO__JobUiDelegateExtension* k_io__specialjob_ui_delegate_extension(void* self) {
+KIO__JobUiDelegateExtension* k_io__specialjob_ui_delegate_extension(const void* self) {
     return KIO__Job_UiDelegateExtension((KIO__Job*)self);
 }
 
@@ -195,7 +195,7 @@ void k_io__specialjob_set_ui_delegate_extension(void* self, void* extension) {
     KIO__Job_SetUiDelegateExtension((KIO__Job*)self, (KIO__JobUiDelegateExtension*)extension);
 }
 
-const char** k_io__specialjob_detailed_error_strings(void* self) {
+const char** k_io__specialjob_detailed_error_strings(const void* self) {
     libqt_list _arr = KIO__Job_DetailedErrorStrings((KIO__Job*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -216,11 +216,11 @@ void k_io__specialjob_set_parent_job(void* self, void* parentJob) {
     KIO__Job_SetParentJob((KIO__Job*)self, (KIO__Job*)parentJob);
 }
 
-KIO__Job* k_io__specialjob_parent_job(void* self) {
+KIO__Job* k_io__specialjob_parent_job(const void* self) {
     return KIO__Job_ParentJob((KIO__Job*)self);
 }
 
-void k_io__specialjob_set_meta_data(void* self, void* metaData) {
+void k_io__specialjob_set_meta_data(void* self, const void* metaData) {
     KIO__Job_SetMetaData((KIO__Job*)self, (KIO__MetaData*)metaData);
 }
 
@@ -284,11 +284,11 @@ void k_io__specialjob_merge_meta_data(void* self, libqt_map /* of const char* to
     free(values_ret.values);
 }
 
-KIO__MetaData* k_io__specialjob_outgoing_meta_data(void* self) {
+KIO__MetaData* k_io__specialjob_outgoing_meta_data(const void* self) {
     return KIO__Job_OutgoingMetaData((KIO__Job*)self);
 }
 
-KIO__MetaData* k_io__specialjob_meta_data(void* self) {
+KIO__MetaData* k_io__specialjob_meta_data(const void* self) {
     return KIO__Job_MetaData((KIO__Job*)self);
 }
 
@@ -307,7 +307,7 @@ void k_io__specialjob_on_connected(void* self, void (*callback)(void*, void*)) {
     KIO__Job_Connect_Connected((KIO__Job*)self, (intptr_t)callback);
 }
 
-const char** k_io__specialjob_detailed_error_strings1(void* self, void* reqUrl) {
+const char** k_io__specialjob_detailed_error_strings1(const void* self, const void* reqUrl) {
     libqt_list _arr = KIO__Job_DetailedErrorStrings1((KIO__Job*)self, (QUrl*)reqUrl);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -324,7 +324,7 @@ const char** k_io__specialjob_detailed_error_strings1(void* self, void* reqUrl) 
     return _ret;
 }
 
-const char** k_io__specialjob_detailed_error_strings2(void* self, void* reqUrl, int method) {
+const char** k_io__specialjob_detailed_error_strings2(const void* self, const void* reqUrl, int method) {
     libqt_list _arr = KIO__Job_DetailedErrorStrings2((KIO__Job*)self, (QUrl*)reqUrl, method);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -345,15 +345,15 @@ void k_io__specialjob_set_ui_delegate(void* self, void* delegate) {
     KJob_SetUiDelegate((KJob*)self, (KJobUiDelegate*)delegate);
 }
 
-KJobUiDelegate* k_io__specialjob_ui_delegate(void* self) {
+KJobUiDelegate* k_io__specialjob_ui_delegate(const void* self) {
     return KJob_UiDelegate((KJob*)self);
 }
 
-int32_t k_io__specialjob_capabilities(void* self) {
+int32_t k_io__specialjob_capabilities(const void* self) {
     return KJob_Capabilities((KJob*)self);
 }
 
-bool k_io__specialjob_is_suspended(void* self) {
+bool k_io__specialjob_is_suspended(const void* self) {
     return KJob_IsSuspended((KJob*)self);
 }
 
@@ -373,26 +373,26 @@ bool k_io__specialjob_exec(void* self) {
     return KJob_Exec((KJob*)self);
 }
 
-int32_t k_io__specialjob_error(void* self) {
+int32_t k_io__specialjob_error(const void* self) {
     return KJob_Error((KJob*)self);
 }
 
-const char* k_io__specialjob_error_text(void* self) {
+const char* k_io__specialjob_error_text(const void* self) {
     libqt_string _str = KJob_ErrorText((KJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-uintptr_t k_io__specialjob_processed_amount(void* self, int32_t unit) {
+uintptr_t k_io__specialjob_processed_amount(const void* self, int32_t unit) {
     return KJob_ProcessedAmount((KJob*)self, unit);
 }
 
-uintptr_t k_io__specialjob_total_amount(void* self, int32_t unit) {
+uintptr_t k_io__specialjob_total_amount(const void* self, int32_t unit) {
     return KJob_TotalAmount((KJob*)self, unit);
 }
 
-uintptr_t k_io__specialjob_percent(void* self) {
+uintptr_t k_io__specialjob_percent(const void* self) {
     return KJob_Percent((KJob*)self);
 }
 
@@ -400,7 +400,7 @@ void k_io__specialjob_set_auto_delete(void* self, bool autodelete) {
     KJob_SetAutoDelete((KJob*)self, autodelete);
 }
 
-bool k_io__specialjob_is_auto_delete(void* self) {
+bool k_io__specialjob_is_auto_delete(const void* self) {
     return KJob_IsAutoDelete((KJob*)self);
 }
 
@@ -408,15 +408,15 @@ void k_io__specialjob_set_finished_notification_hidden(void* self) {
     KJob_SetFinishedNotificationHidden((KJob*)self);
 }
 
-bool k_io__specialjob_is_finished_notification_hidden(void* self) {
+bool k_io__specialjob_is_finished_notification_hidden(const void* self) {
     return KJob_IsFinishedNotificationHidden((KJob*)self);
 }
 
-bool k_io__specialjob_is_started_with_exec(void* self) {
+bool k_io__specialjob_is_started_with_exec(const void* self) {
     return KJob_IsStartedWithExec((KJob*)self);
 }
 
-int64_t k_io__specialjob_elapsed_time(void* self) {
+int64_t k_io__specialjob_elapsed_time(const void* self) {
     return KJob_ElapsedTime((KJob*)self);
 }
 
@@ -468,7 +468,7 @@ void k_io__specialjob_set_finished_notification_hidden1(void* self, bool hide) {
     KJob_SetFinishedNotificationHidden1((KJob*)self, hide);
 }
 
-const char* k_io__specialjob_object_name(void* self) {
+const char* k_io__specialjob_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -479,19 +479,19 @@ void k_io__specialjob_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_io__specialjob_is_widget_type(void* self) {
+bool k_io__specialjob_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_io__specialjob_is_window_type(void* self) {
+bool k_io__specialjob_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_io__specialjob_is_quick_item_type(void* self) {
+bool k_io__specialjob_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_io__specialjob_signals_blocked(void* self) {
+bool k_io__specialjob_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -499,7 +499,7 @@ bool k_io__specialjob_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_io__specialjob_thread(void* self) {
+QThread* k_io__specialjob_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -523,7 +523,7 @@ void k_io__specialjob_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_io__specialjob_children(void* self) {
+libqt_list /* of QObject* */ k_io__specialjob_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -540,55 +540,55 @@ void k_io__specialjob_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_io__specialjob_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_io__specialjob_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_io__specialjob_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_io__specialjob_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_io__specialjob_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_io__specialjob_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_io__specialjob_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_io__specialjob_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_io__specialjob_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_io__specialjob_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_io__specialjob_disconnect3(void* self) {
+bool k_io__specialjob_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_io__specialjob_disconnect4(void* self, void* receiver) {
+bool k_io__specialjob_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_io__specialjob_disconnect5(void* param1) {
+bool k_io__specialjob_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_io__specialjob_dump_object_tree(void* self) {
+void k_io__specialjob_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_io__specialjob_dump_object_info(void* self) {
+void k_io__specialjob_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_io__specialjob_set_property(void* self, const char* name, void* value) {
+bool k_io__specialjob_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_io__specialjob_property(void* self, const char* name) {
+QVariant* k_io__specialjob_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_io__specialjob_dynamic_property_names(void* self) {
+const char** k_io__specialjob_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -609,7 +609,7 @@ QBindingStorage* k_io__specialjob_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_io__specialjob_binding_storage2(void* self) {
+const QBindingStorage* k_io__specialjob_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -621,11 +621,11 @@ void k_io__specialjob_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_io__specialjob_parent(void* self) {
+QObject* k_io__specialjob_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_io__specialjob_inherits(void* self, const char* classname) {
+bool k_io__specialjob_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -641,31 +641,31 @@ int32_t k_io__specialjob_start_timer23(void* self, int64_t time, int32_t timerTy
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_io__specialjob_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_io__specialjob_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_io__specialjob_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_io__specialjob_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_io__specialjob_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_io__specialjob_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_io__specialjob_disconnect1(void* self, const char* signal) {
+bool k_io__specialjob_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_io__specialjob_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_io__specialjob_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_io__specialjob_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_io__specialjob_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_io__specialjob_disconnect23(void* self, void* receiver, const char* member) {
+bool k_io__specialjob_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -685,19 +685,19 @@ bool k_io__specialjob_super_do_resume(void* self) {
     return KIO__SpecialJob_SuperDoResume((KIO__SpecialJob*)self);
 }
 
-void k_io__specialjob_on_do_resume(void* self, bool (*callback)()) {
+void k_io__specialjob_on_do_resume(void* self, bool (*callback)(void*)) {
     KIO__SpecialJob_OnDoResume((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
-void k_io__specialjob_slot_redirection(void* self, void* url) {
+void k_io__specialjob_slot_redirection(void* self, const void* url) {
     KIO__SpecialJob_SlotRedirection((KIO__SpecialJob*)self, (QUrl*)url);
 }
 
-void k_io__specialjob_super_slot_redirection(void* self, void* url) {
+void k_io__specialjob_super_slot_redirection(void* self, const void* url) {
     KIO__SpecialJob_SuperSlotRedirection((KIO__SpecialJob*)self, (QUrl*)url);
 }
 
-void k_io__specialjob_on_slot_redirection(void* self, void (*callback)(void*, void*)) {
+void k_io__specialjob_on_slot_redirection(void* self, void (*callback)(void*, const void*)) {
     KIO__SpecialJob_OnSlotRedirection((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
@@ -709,7 +709,7 @@ void k_io__specialjob_super_slot_finished(void* self) {
     KIO__SpecialJob_SuperSlotFinished((KIO__SpecialJob*)self);
 }
 
-void k_io__specialjob_on_slot_finished(void* self, void (*callback)()) {
+void k_io__specialjob_on_slot_finished(void* self, void (*callback)(void*)) {
     KIO__SpecialJob_OnSlotFinished((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
@@ -733,7 +733,7 @@ void k_io__specialjob_super_slot_data_req(void* self) {
     KIO__SpecialJob_SuperSlotDataReq((KIO__SpecialJob*)self);
 }
 
-void k_io__specialjob_on_slot_data_req(void* self, void (*callback)()) {
+void k_io__specialjob_on_slot_data_req(void* self, void (*callback)(void*)) {
     KIO__SpecialJob_OnSlotDataReq((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
@@ -757,7 +757,7 @@ bool k_io__specialjob_super_do_suspend(void* self) {
     return KIO__SpecialJob_SuperDoSuspend((KIO__SpecialJob*)self);
 }
 
-void k_io__specialjob_on_do_suspend(void* self, bool (*callback)()) {
+void k_io__specialjob_on_do_suspend(void* self, bool (*callback)(void*)) {
     KIO__SpecialJob_OnDoSuspend((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
@@ -769,7 +769,7 @@ bool k_io__specialjob_super_do_kill(void* self) {
     return KIO__SpecialJob_SuperDoKill((KIO__SpecialJob*)self);
 }
 
-void k_io__specialjob_on_do_kill(void* self, bool (*callback)()) {
+void k_io__specialjob_on_do_kill(void* self, bool (*callback)(void*)) {
     KIO__SpecialJob_OnDoKill((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
@@ -781,7 +781,7 @@ void k_io__specialjob_super_put_on_hold(void* self) {
     KIO__SpecialJob_SuperPutOnHold((KIO__SpecialJob*)self);
 }
 
-void k_io__specialjob_on_put_on_hold(void* self, void (*callback)()) {
+void k_io__specialjob_on_put_on_hold(void* self, void (*callback)(void*)) {
     KIO__SpecialJob_OnPutOnHold((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
@@ -797,15 +797,15 @@ void k_io__specialjob_on_slot_warning(void* self, void (*callback)(void*, const 
     KIO__SpecialJob_OnSlotWarning((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
-void k_io__specialjob_slot_meta_data(void* self, void* _metaData) {
+void k_io__specialjob_slot_meta_data(void* self, const void* _metaData) {
     KIO__SpecialJob_SlotMetaData((KIO__SpecialJob*)self, (KIO__MetaData*)_metaData);
 }
 
-void k_io__specialjob_super_slot_meta_data(void* self, void* _metaData) {
+void k_io__specialjob_super_slot_meta_data(void* self, const void* _metaData) {
     KIO__SpecialJob_SuperSlotMetaData((KIO__SpecialJob*)self, (KIO__MetaData*)_metaData);
 }
 
-void k_io__specialjob_on_slot_meta_data(void* self, void (*callback)(void*, void*)) {
+void k_io__specialjob_on_slot_meta_data(void* self, void (*callback)(void*, const void*)) {
     KIO__SpecialJob_OnSlotMetaData((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
@@ -817,26 +817,26 @@ void k_io__specialjob_super_start(void* self) {
     KIO__SpecialJob_SuperStart((KIO__SpecialJob*)self);
 }
 
-void k_io__specialjob_on_start(void* self, void (*callback)()) {
+void k_io__specialjob_on_start(void* self, void (*callback)(void*)) {
     KIO__SpecialJob_OnStart((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
-const char* k_io__specialjob_error_string(void* self) {
+const char* k_io__specialjob_error_string(const void* self) {
     libqt_string _str = KIO__SpecialJob_ErrorString((KIO__SpecialJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_io__specialjob_super_error_string(void* self) {
+const char* k_io__specialjob_super_error_string(const void* self) {
     libqt_string _str = KIO__SpecialJob_SuperErrorString((KIO__SpecialJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_io__specialjob_on_error_string(void* self, const char* (*callback)()) {
-    KIO__SpecialJob_OnErrorString((KIO__SpecialJob*)self, (intptr_t)callback);
+void k_io__specialjob_on_error_string(const void* self, const char* (*callback)(const void*)) {
+    KIO__SpecialJob_OnErrorString((const KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
 bool k_io__specialjob_add_subjob(void* self, void* job) {
@@ -947,258 +947,105 @@ void k_io__specialjob_on_custom_event(void* self, void (*callback)(void*, void*)
     KIO__SpecialJob_OnCustomEvent((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
-void k_io__specialjob_connect_notify(void* self, void* signal) {
+void k_io__specialjob_connect_notify(void* self, const void* signal) {
     KIO__SpecialJob_ConnectNotify((KIO__SpecialJob*)self, (QMetaMethod*)signal);
 }
 
-void k_io__specialjob_super_connect_notify(void* self, void* signal) {
+void k_io__specialjob_super_connect_notify(void* self, const void* signal) {
     KIO__SpecialJob_SuperConnectNotify((KIO__SpecialJob*)self, (QMetaMethod*)signal);
 }
 
-void k_io__specialjob_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_io__specialjob_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     KIO__SpecialJob_OnConnectNotify((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
-void k_io__specialjob_disconnect_notify(void* self, void* signal) {
+void k_io__specialjob_disconnect_notify(void* self, const void* signal) {
     KIO__SpecialJob_DisconnectNotify((KIO__SpecialJob*)self, (QMetaMethod*)signal);
 }
 
-void k_io__specialjob_super_disconnect_notify(void* self, void* signal) {
+void k_io__specialjob_super_disconnect_notify(void* self, const void* signal) {
     KIO__SpecialJob_SuperDisconnectNotify((KIO__SpecialJob*)self, (QMetaMethod*)signal);
 }
 
-void k_io__specialjob_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_io__specialjob_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     KIO__SpecialJob_OnDisconnectNotify((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
-bool k_io__specialjob_has_subjobs(void* self) {
+bool k_io__specialjob_has_subjobs(const void* self) {
     return KIO__SpecialJob_HasSubjobs((KIO__SpecialJob*)self);
 }
 
-bool k_io__specialjob_super_has_subjobs(void* self) {
-    return KIO__SpecialJob_SuperHasSubjobs((KIO__SpecialJob*)self);
-}
-
-void k_io__specialjob_on_has_subjobs(void* self, bool (*callback)()) {
-    KIO__SpecialJob_OnHasSubjobs((KIO__SpecialJob*)self, (intptr_t)callback);
-}
-
-libqt_list /* of KJob* */ k_io__specialjob_subjobs(void* self) {
+libqt_list /* of KJob* */ k_io__specialjob_subjobs(const void* self) {
     libqt_list _arr = KIO__SpecialJob_Subjobs((KIO__SpecialJob*)self);
     return _arr;
-}
-
-libqt_list /* of KJob* */ k_io__specialjob_super_subjobs(void* self) {
-    libqt_list _arr = KIO__SpecialJob_SuperSubjobs((KIO__SpecialJob*)self);
-    return _arr;
-}
-
-void k_io__specialjob_on_subjobs(void* self, libqt_list /* of KJob* */ (*callback)()) {
-    KIO__SpecialJob_OnSubjobs((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
 void k_io__specialjob_clear_subjobs(void* self) {
     KIO__SpecialJob_ClearSubjobs((KIO__SpecialJob*)self);
 }
 
-void k_io__specialjob_super_clear_subjobs(void* self) {
-    KIO__SpecialJob_SuperClearSubjobs((KIO__SpecialJob*)self);
-}
-
-void k_io__specialjob_on_clear_subjobs(void* self, void (*callback)()) {
-    KIO__SpecialJob_OnClearSubjobs((KIO__SpecialJob*)self, (intptr_t)callback);
-}
-
 void k_io__specialjob_set_capabilities(void* self, int32_t capabilities) {
     KIO__SpecialJob_SetCapabilities((KIO__SpecialJob*)self, capabilities);
 }
 
-void k_io__specialjob_super_set_capabilities(void* self, int32_t capabilities) {
-    KIO__SpecialJob_SuperSetCapabilities((KIO__SpecialJob*)self, capabilities);
-}
-
-void k_io__specialjob_on_set_capabilities(void* self, void (*callback)(void*, int32_t)) {
-    KIO__SpecialJob_OnSetCapabilities((KIO__SpecialJob*)self, (intptr_t)callback);
-}
-
-bool k_io__specialjob_is_finished(void* self) {
+bool k_io__specialjob_is_finished(const void* self) {
     return KIO__SpecialJob_IsFinished((KIO__SpecialJob*)self);
-}
-
-bool k_io__specialjob_super_is_finished(void* self) {
-    return KIO__SpecialJob_SuperIsFinished((KIO__SpecialJob*)self);
-}
-
-void k_io__specialjob_on_is_finished(void* self, bool (*callback)()) {
-    KIO__SpecialJob_OnIsFinished((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
 void k_io__specialjob_set_error(void* self, int errorCode) {
     KIO__SpecialJob_SetError((KIO__SpecialJob*)self, errorCode);
 }
 
-void k_io__specialjob_super_set_error(void* self, int errorCode) {
-    KIO__SpecialJob_SuperSetError((KIO__SpecialJob*)self, errorCode);
-}
-
-void k_io__specialjob_on_set_error(void* self, void (*callback)(void*, int)) {
-    KIO__SpecialJob_OnSetError((KIO__SpecialJob*)self, (intptr_t)callback);
-}
-
 void k_io__specialjob_set_error_text(void* self, const char* errorText) {
     KIO__SpecialJob_SetErrorText((KIO__SpecialJob*)self, qstring(errorText));
-}
-
-void k_io__specialjob_super_set_error_text(void* self, const char* errorText) {
-    KIO__SpecialJob_SuperSetErrorText((KIO__SpecialJob*)self, qstring(errorText));
-}
-
-void k_io__specialjob_on_set_error_text(void* self, void (*callback)(void*, const char*)) {
-    KIO__SpecialJob_OnSetErrorText((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
 void k_io__specialjob_set_processed_amount(void* self, int32_t unit, uintptr_t amount) {
     KIO__SpecialJob_SetProcessedAmount((KIO__SpecialJob*)self, unit, amount);
 }
 
-void k_io__specialjob_super_set_processed_amount(void* self, int32_t unit, uintptr_t amount) {
-    KIO__SpecialJob_SuperSetProcessedAmount((KIO__SpecialJob*)self, unit, amount);
-}
-
-void k_io__specialjob_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uintptr_t)) {
-    KIO__SpecialJob_OnSetProcessedAmount((KIO__SpecialJob*)self, (intptr_t)callback);
-}
-
 void k_io__specialjob_set_total_amount(void* self, int32_t unit, uintptr_t amount) {
     KIO__SpecialJob_SetTotalAmount((KIO__SpecialJob*)self, unit, amount);
-}
-
-void k_io__specialjob_super_set_total_amount(void* self, int32_t unit, uintptr_t amount) {
-    KIO__SpecialJob_SuperSetTotalAmount((KIO__SpecialJob*)self, unit, amount);
-}
-
-void k_io__specialjob_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uintptr_t)) {
-    KIO__SpecialJob_OnSetTotalAmount((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
 void k_io__specialjob_set_progress_unit(void* self, int32_t unit) {
     KIO__SpecialJob_SetProgressUnit((KIO__SpecialJob*)self, unit);
 }
 
-void k_io__specialjob_super_set_progress_unit(void* self, int32_t unit) {
-    KIO__SpecialJob_SuperSetProgressUnit((KIO__SpecialJob*)self, unit);
-}
-
-void k_io__specialjob_on_set_progress_unit(void* self, void (*callback)(void*, int32_t)) {
-    KIO__SpecialJob_OnSetProgressUnit((KIO__SpecialJob*)self, (intptr_t)callback);
-}
-
 void k_io__specialjob_set_percent(void* self, uintptr_t percentage) {
     KIO__SpecialJob_SetPercent((KIO__SpecialJob*)self, percentage);
-}
-
-void k_io__specialjob_super_set_percent(void* self, uintptr_t percentage) {
-    KIO__SpecialJob_SuperSetPercent((KIO__SpecialJob*)self, percentage);
-}
-
-void k_io__specialjob_on_set_percent(void* self, void (*callback)(void*, uintptr_t)) {
-    KIO__SpecialJob_OnSetPercent((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
 void k_io__specialjob_emit_result(void* self) {
     KIO__SpecialJob_EmitResult((KIO__SpecialJob*)self);
 }
 
-void k_io__specialjob_super_emit_result(void* self) {
-    KIO__SpecialJob_SuperEmitResult((KIO__SpecialJob*)self);
-}
-
-void k_io__specialjob_on_emit_result(void* self, void (*callback)()) {
-    KIO__SpecialJob_OnEmitResult((KIO__SpecialJob*)self, (intptr_t)callback);
-}
-
 void k_io__specialjob_emit_percent(void* self, uintptr_t processedAmount, uintptr_t totalAmount) {
     KIO__SpecialJob_EmitPercent((KIO__SpecialJob*)self, processedAmount, totalAmount);
-}
-
-void k_io__specialjob_super_emit_percent(void* self, uintptr_t processedAmount, uintptr_t totalAmount) {
-    KIO__SpecialJob_SuperEmitPercent((KIO__SpecialJob*)self, processedAmount, totalAmount);
-}
-
-void k_io__specialjob_on_emit_percent(void* self, void (*callback)(void*, uintptr_t, uintptr_t)) {
-    KIO__SpecialJob_OnEmitPercent((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
 void k_io__specialjob_emit_speed(void* self, uintptr_t speed) {
     KIO__SpecialJob_EmitSpeed((KIO__SpecialJob*)self, speed);
 }
 
-void k_io__specialjob_super_emit_speed(void* self, uintptr_t speed) {
-    KIO__SpecialJob_SuperEmitSpeed((KIO__SpecialJob*)self, speed);
-}
-
-void k_io__specialjob_on_emit_speed(void* self, void (*callback)(void*, uintptr_t)) {
-    KIO__SpecialJob_OnEmitSpeed((KIO__SpecialJob*)self, (intptr_t)callback);
-}
-
 void k_io__specialjob_start_elapsed_timer(void* self) {
     KIO__SpecialJob_StartElapsedTimer((KIO__SpecialJob*)self);
 }
 
-void k_io__specialjob_super_start_elapsed_timer(void* self) {
-    KIO__SpecialJob_SuperStartElapsedTimer((KIO__SpecialJob*)self);
-}
-
-void k_io__specialjob_on_start_elapsed_timer(void* self, void (*callback)()) {
-    KIO__SpecialJob_OnStartElapsedTimer((KIO__SpecialJob*)self, (intptr_t)callback);
-}
-
-QObject* k_io__specialjob_sender(void* self) {
+QObject* k_io__specialjob_sender(const void* self) {
     return KIO__SpecialJob_Sender((KIO__SpecialJob*)self);
 }
 
-QObject* k_io__specialjob_super_sender(void* self) {
-    return KIO__SpecialJob_SuperSender((KIO__SpecialJob*)self);
-}
-
-void k_io__specialjob_on_sender(void* self, QObject* (*callback)()) {
-    KIO__SpecialJob_OnSender((KIO__SpecialJob*)self, (intptr_t)callback);
-}
-
-int32_t k_io__specialjob_sender_signal_index(void* self) {
+int32_t k_io__specialjob_sender_signal_index(const void* self) {
     return KIO__SpecialJob_SenderSignalIndex((KIO__SpecialJob*)self);
 }
 
-int32_t k_io__specialjob_super_sender_signal_index(void* self) {
-    return KIO__SpecialJob_SuperSenderSignalIndex((KIO__SpecialJob*)self);
-}
-
-void k_io__specialjob_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    KIO__SpecialJob_OnSenderSignalIndex((KIO__SpecialJob*)self, (intptr_t)callback);
-}
-
-int32_t k_io__specialjob_receivers(void* self, const char* signal) {
+int32_t k_io__specialjob_receivers(const void* self, const char* signal) {
     return KIO__SpecialJob_Receivers((KIO__SpecialJob*)self, signal);
 }
 
-int32_t k_io__specialjob_super_receivers(void* self, const char* signal) {
-    return KIO__SpecialJob_SuperReceivers((KIO__SpecialJob*)self, signal);
-}
-
-void k_io__specialjob_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    KIO__SpecialJob_OnReceivers((KIO__SpecialJob*)self, (intptr_t)callback);
-}
-
-bool k_io__specialjob_is_signal_connected(void* self, void* signal) {
+bool k_io__specialjob_is_signal_connected(const void* self, const void* signal) {
     return KIO__SpecialJob_IsSignalConnected((KIO__SpecialJob*)self, (QMetaMethod*)signal);
-}
-
-bool k_io__specialjob_super_is_signal_connected(void* self, void* signal) {
-    return KIO__SpecialJob_SuperIsSignalConnected((KIO__SpecialJob*)self, (QMetaMethod*)signal);
-}
-
-void k_io__specialjob_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    KIO__SpecialJob_OnIsSignalConnected((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
 void k_io__specialjob_on_finished(void* self, void (*callback)(void*, void*)) {

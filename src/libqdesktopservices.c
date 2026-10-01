@@ -3,7 +3,7 @@
 #include "libqdesktopservices.hpp"
 #include "libqdesktopservices.h"
 
-QDesktopServices* q_desktopservices_new(void* other) {
+QDesktopServices* q_desktopservices_new(const void* other) {
     return QDesktopServices_New((QDesktopServices*)other);
 }
 
@@ -19,7 +19,7 @@ void q_desktopservices_move_assign(void* self, void* other) {
     QDesktopServices_MoveAssign((QDesktopServices*)self, (QDesktopServices*)other);
 }
 
-bool q_desktopservices_open_url(void* url) {
+bool q_desktopservices_open_url(const void* url) {
     return QDesktopServices_OpenUrl((QUrl*)url);
 }
 

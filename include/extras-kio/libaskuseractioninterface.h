@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KIO__AskUserActionInterface*
+/// @param self const KIO__AskUserActionInterface*
 ///
-const QMetaObject* k_io__askuseractioninterface_meta_object(void* self);
+const QMetaObject* k_io__askuseractioninterface_meta_object(const void* self);
 
 /// @param self KIO__AskUserActionInterface*
 /// @param param1 const char*
@@ -36,66 +36,6 @@ int32_t k_io__askuseractioninterface_metacall(void* self, int32_t param1, int pa
 ///
 const char* k_io__askuseractioninterface_tr(const char* s);
 
-/// [Upstream resources](https://api.kde.org/kio-askuseractioninterface.html#askUserRename)
-///
-/// @param self KIO__AskUserActionInterface*
-/// @param job KJob*
-/// @param title const char*
-/// @param src QUrl*
-/// @param dest QUrl*
-/// @param options flag of enum KIO__RenameDialog_Option
-/// @param sizeSrc uintptr_t
-/// @param sizeDest uintptr_t
-/// @param ctimeSrc QDateTime*
-/// @param ctimeDest QDateTime*
-/// @param mtimeSrc QDateTime*
-/// @param mtimeDest QDateTime*
-///
-void k_io__askuseractioninterface_ask_user_rename(void* self, void* job, const char* title, void* src, void* dest, int32_t options, uintptr_t sizeSrc, uintptr_t sizeDest, void* ctimeSrc, void* ctimeDest, void* mtimeSrc, void* mtimeDest);
-
-/// [Upstream resources](https://api.kde.org/kio-askuseractioninterface.html#askUserSkip)
-///
-/// @param self KIO__AskUserActionInterface*
-/// @param job KJob*
-/// @param options flag of enum KIO__SkipDialog_Option
-/// @param errorText const char*
-///
-void k_io__askuseractioninterface_ask_user_skip(void* self, void* job, int32_t options, const char* errorText);
-
-/// [Upstream resources](https://api.kde.org/kio-askuseractioninterface.html#askUserDelete)
-///
-/// @param self KIO__AskUserActionInterface*
-/// @param urls libqt_list of QUrl*
-/// @param deletionType enum KIO__AskUserActionInterface__DeletionType
-/// @param confirmationType enum KIO__AskUserActionInterface__ConfirmationType
-/// @param parent QWidget*
-///
-void k_io__askuseractioninterface_ask_user_delete(void* self, libqt_list urls, int32_t deletionType, int32_t confirmationType, void* parent);
-
-/// [Upstream resources](https://api.kde.org/kio-askuseractioninterface.html#requestUserMessageBox)
-///
-/// @param self KIO__AskUserActionInterface*
-/// @param type enum KIO__AskUserActionInterface__MessageDialogType
-/// @param text const char*
-/// @param title const char*
-/// @param primaryActionText const char*
-/// @param secondatyActionText const char*
-/// @param primaryActionIconName const char*
-/// @param secondatyActionIconName const char*
-/// @param dontAskAgainName const char*
-/// @param details const char*
-/// @param parent QWidget*
-///
-void k_io__askuseractioninterface_request_user_message_box(void* self, int32_t type, const char* text, const char* title, const char* primaryActionText, const char* secondatyActionText, const char* primaryActionIconName, const char* secondatyActionIconName, const char* dontAskAgainName, const char* details, void* parent);
-
-/// [Upstream resources](https://api.kde.org/kio-askuseractioninterface.html#askIgnoreSslErrors)
-///
-/// @param self KIO__AskUserActionInterface*
-/// @param sslErrorData libqt_map of const char* to QVariant*
-/// @param parent QWidget*
-///
-void k_io__askuseractioninterface_ask_ignore_ssl_errors(void* self, libqt_map sslErrorData, void* parent);
-
 /// [Upstream resources](https://api.kde.org/kio-askuseractioninterface.html#askUserRenameResult)
 ///
 /// @param self KIO__AskUserActionInterface*
@@ -103,14 +43,14 @@ void k_io__askuseractioninterface_ask_ignore_ssl_errors(void* self, libqt_map ss
 /// @param newUrl QUrl*
 /// @param parentJob KJob*
 ///
-void k_io__askuseractioninterface_ask_user_rename_result(void* self, int32_t result, void* newUrl, void* parentJob);
+void k_io__askuseractioninterface_ask_user_rename_result(void* self, int32_t result, const void* newUrl, void* parentJob);
 
 /// [Upstream resources](https://api.kde.org/kio-askuseractioninterface.html#askUserRenameResult)
 ///
 /// @param self KIO__AskUserActionInterface*
 /// @param callback void func(KIO__AskUserActionInterface* self, enum KIO__RenameDialog_Result result, QUrl* newUrl, KJob* parentJob)
 ///
-void k_io__askuseractioninterface_on_ask_user_rename_result(void* self, void (*callback)(void*, int32_t, void*, void*));
+void k_io__askuseractioninterface_on_ask_user_rename_result(void* self, void (*callback)(void*, int32_t, const void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kio-askuseractioninterface.html#askUserSkipResult)
 ///
@@ -216,9 +156,9 @@ bool k_io__askuseractioninterface_event_filter(void* self, void* watched, void* 
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__AskUserActionInterface*
+/// @param self const KIO__AskUserActionInterface*
 ///
-const char* k_io__askuseractioninterface_object_name(void* self);
+const char* k_io__askuseractioninterface_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -233,33 +173,33 @@ void k_io__askuseractioninterface_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KIO__AskUserActionInterface*
+/// @param self const KIO__AskUserActionInterface*
 ///
-bool k_io__askuseractioninterface_is_widget_type(void* self);
+bool k_io__askuseractioninterface_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KIO__AskUserActionInterface*
+/// @param self const KIO__AskUserActionInterface*
 ///
-bool k_io__askuseractioninterface_is_window_type(void* self);
+bool k_io__askuseractioninterface_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KIO__AskUserActionInterface*
+/// @param self const KIO__AskUserActionInterface*
 ///
-bool k_io__askuseractioninterface_is_quick_item_type(void* self);
+bool k_io__askuseractioninterface_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KIO__AskUserActionInterface*
+/// @param self const KIO__AskUserActionInterface*
 ///
-bool k_io__askuseractioninterface_signals_blocked(void* self);
+bool k_io__askuseractioninterface_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -274,9 +214,9 @@ bool k_io__askuseractioninterface_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KIO__AskUserActionInterface*
+/// @param self const KIO__AskUserActionInterface*
 ///
-QThread* k_io__askuseractioninterface_thread(void* self);
+QThread* k_io__askuseractioninterface_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -327,11 +267,11 @@ void k_io__askuseractioninterface_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KIO__AskUserActionInterface*
+/// @param self const KIO__AskUserActionInterface*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_io__askuseractioninterface_children(void* self);
+libqt_list k_io__askuseractioninterface_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -369,7 +309,7 @@ void k_io__askuseractioninterface_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_io__askuseractioninterface_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_io__askuseractioninterface_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -380,18 +320,18 @@ QMetaObject__Connection* k_io__askuseractioninterface_connect(void* sender, cons
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_io__askuseractioninterface_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_io__askuseractioninterface_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KIO__AskUserActionInterface*
+/// @param self const KIO__AskUserActionInterface*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_io__askuseractioninterface_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_io__askuseractioninterface_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -402,7 +342,7 @@ QMetaObject__Connection* k_io__askuseractioninterface_connect3(void* self, void*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_io__askuseractioninterface_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_io__askuseractioninterface_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -413,24 +353,24 @@ bool k_io__askuseractioninterface_disconnect(void* sender, const char* signal, v
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_io__askuseractioninterface_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_io__askuseractioninterface_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KIO__AskUserActionInterface*
+/// @param self const KIO__AskUserActionInterface*
 ///
-bool k_io__askuseractioninterface_disconnect3(void* self);
+bool k_io__askuseractioninterface_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KIO__AskUserActionInterface*
+/// @param self const KIO__AskUserActionInterface*
 /// @param receiver QObject*
 ///
-bool k_io__askuseractioninterface_disconnect4(void* self, void* receiver);
+bool k_io__askuseractioninterface_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -438,23 +378,23 @@ bool k_io__askuseractioninterface_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_io__askuseractioninterface_disconnect5(void* param1);
+bool k_io__askuseractioninterface_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KIO__AskUserActionInterface*
+/// @param self const KIO__AskUserActionInterface*
 ///
-void k_io__askuseractioninterface_dump_object_tree(void* self);
+void k_io__askuseractioninterface_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KIO__AskUserActionInterface*
+/// @param self const KIO__AskUserActionInterface*
 ///
-void k_io__askuseractioninterface_dump_object_info(void* self);
+void k_io__askuseractioninterface_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -464,16 +404,16 @@ void k_io__askuseractioninterface_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_io__askuseractioninterface_set_property(void* self, const char* name, void* value);
+bool k_io__askuseractioninterface_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KIO__AskUserActionInterface*
+/// @param self const KIO__AskUserActionInterface*
 /// @param name const char*
 ///
-QVariant* k_io__askuseractioninterface_property(void* self, const char* name);
+QVariant* k_io__askuseractioninterface_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -481,9 +421,9 @@ QVariant* k_io__askuseractioninterface_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KIO__AskUserActionInterface*
+/// @param self const KIO__AskUserActionInterface*
 ///
-const char** k_io__askuseractioninterface_dynamic_property_names(void* self);
+const char** k_io__askuseractioninterface_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -497,9 +437,9 @@ QBindingStorage* k_io__askuseractioninterface_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KIO__AskUserActionInterface*
+/// @param self const KIO__AskUserActionInterface*
 ///
-const QBindingStorage* k_io__askuseractioninterface_binding_storage2(void* self);
+const QBindingStorage* k_io__askuseractioninterface_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -522,18 +462,18 @@ void k_io__askuseractioninterface_on_destroyed(void* self, void (*callback)(void
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KIO__AskUserActionInterface*
+/// @param self const KIO__AskUserActionInterface*
 ///
-QObject* k_io__askuseractioninterface_parent(void* self);
+QObject* k_io__askuseractioninterface_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KIO__AskUserActionInterface*
+/// @param self const KIO__AskUserActionInterface*
 /// @param classname const char*
 ///
-bool k_io__askuseractioninterface_inherits(void* self, const char* classname);
+bool k_io__askuseractioninterface_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -573,7 +513,7 @@ int32_t k_io__askuseractioninterface_start_timer23(void* self, int64_t time, int
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_io__askuseractioninterface_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_io__askuseractioninterface_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -585,59 +525,59 @@ QMetaObject__Connection* k_io__askuseractioninterface_connect5(void* sender, con
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_io__askuseractioninterface_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_io__askuseractioninterface_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KIO__AskUserActionInterface*
+/// @param self const KIO__AskUserActionInterface*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_io__askuseractioninterface_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_io__askuseractioninterface_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KIO__AskUserActionInterface*
+/// @param self const KIO__AskUserActionInterface*
 /// @param signal const char*
 ///
-bool k_io__askuseractioninterface_disconnect1(void* self, const char* signal);
+bool k_io__askuseractioninterface_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KIO__AskUserActionInterface*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_io__askuseractioninterface_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KIO__AskUserActionInterface*
+/// @param self const KIO__AskUserActionInterface*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_io__askuseractioninterface_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_io__askuseractioninterface_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KIO__AskUserActionInterface*
+/// @param self const KIO__AskUserActionInterface*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_io__askuseractioninterface_disconnect23(void* self, void* receiver, const char* member);
+bool k_io__askuseractioninterface_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KIO__AskUserActionInterface*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_io__askuseractioninterface_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

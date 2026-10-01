@@ -14,7 +14,7 @@
 ///
 /// @param other KConfigConversionCheck__supported*
 ///
-KConfigConversionCheck__supported* k_configconversioncheck__supported_new(void* other);
+KConfigConversionCheck__supported* k_configconversioncheck__supported_new(const void* other);
 
 /// [Upstream resources](https://api.kde.org/kconfigconversioncheck-supported.html)
 
@@ -50,7 +50,7 @@ void k_configconversioncheck__supported_delete(void* self);
 ///
 /// @param other KConfigConversionCheck__unsupported*
 ///
-KConfigConversionCheck__unsupported* k_configconversioncheck__unsupported_new(void* other);
+KConfigConversionCheck__unsupported* k_configconversioncheck__unsupported_new(const void* other);
 
 /// [Upstream resources](https://api.kde.org/kconfigconversioncheck-unsupported.html)
 

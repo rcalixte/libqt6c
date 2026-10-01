@@ -9,7 +9,7 @@ KPlotAxis* k_plotaxis_new2(const char* label) {
     return KPlotAxis_New2(qstring(label));
 }
 
-bool k_plotaxis_is_visible(void* self) {
+bool k_plotaxis_is_visible(const void* self) {
     return KPlotAxis_IsVisible((KPlotAxis*)self);
 }
 
@@ -17,7 +17,7 @@ void k_plotaxis_set_visible(void* self, bool visible) {
     KPlotAxis_SetVisible((KPlotAxis*)self, visible);
 }
 
-bool k_plotaxis_are_tick_labels_shown(void* self) {
+bool k_plotaxis_are_tick_labels_shown(const void* self) {
     return KPlotAxis_AreTickLabelsShown((KPlotAxis*)self);
 }
 
@@ -29,14 +29,14 @@ void k_plotaxis_set_label(void* self, const char* label) {
     KPlotAxis_SetLabel((KPlotAxis*)self, qstring(label));
 }
 
-const char* k_plotaxis_label(void* self) {
+const char* k_plotaxis_label(const void* self) {
     libqt_string _str = KPlotAxis_Label((KPlotAxis*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_plotaxis_tick_label(void* self, double value) {
+const char* k_plotaxis_tick_label(const void* self, double value) {
     libqt_string _str = KPlotAxis_TickLabel((KPlotAxis*)self, value);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -47,15 +47,15 @@ void k_plotaxis_set_tick_label_format(void* self) {
     KPlotAxis_SetTickLabelFormat((KPlotAxis*)self);
 }
 
-int32_t k_plotaxis_tick_label_width(void* self) {
+int32_t k_plotaxis_tick_label_width(const void* self) {
     return KPlotAxis_TickLabelWidth((KPlotAxis*)self);
 }
 
-char k_plotaxis_tick_label_format(void* self) {
+char k_plotaxis_tick_label_format(const void* self) {
     return KPlotAxis_TickLabelFormat((KPlotAxis*)self);
 }
 
-int32_t k_plotaxis_tick_label_precision(void* self) {
+int32_t k_plotaxis_tick_label_precision(const void* self) {
     return KPlotAxis_TickLabelPrecision((KPlotAxis*)self);
 }
 
@@ -63,12 +63,12 @@ void k_plotaxis_set_tick_marks(void* self, double x0, double length) {
     KPlotAxis_SetTickMarks((KPlotAxis*)self, x0, length);
 }
 
-libqt_list /* of double */ k_plotaxis_major_tick_marks(void* self) {
+libqt_list /* of double */ k_plotaxis_major_tick_marks(const void* self) {
     libqt_list _arr = KPlotAxis_MajorTickMarks((KPlotAxis*)self);
     return _arr;
 }
 
-libqt_list /* of double */ k_plotaxis_minor_tick_marks(void* self) {
+libqt_list /* of double */ k_plotaxis_minor_tick_marks(const void* self) {
     libqt_list _arr = KPlotAxis_MinorTickMarks((KPlotAxis*)self);
     return _arr;
 }

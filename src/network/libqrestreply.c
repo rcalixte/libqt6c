@@ -11,7 +11,7 @@ void q_restreply_swap(void* self, void* other) {
     QRestReply_Swap((QRestReply*)self, (QRestReply*)other);
 }
 
-QNetworkReply* q_restreply_network_reply(void* self) {
+QNetworkReply* q_restreply_network_reply(const void* self) {
     return QRestReply_NetworkReply((QRestReply*)self);
 }
 
@@ -33,27 +33,27 @@ const char* q_restreply_read_text(void* self) {
     return _ret;
 }
 
-bool q_restreply_is_success(void* self) {
+bool q_restreply_is_success(const void* self) {
     return QRestReply_IsSuccess((QRestReply*)self);
 }
 
-int32_t q_restreply_http_status(void* self) {
+int32_t q_restreply_http_status(const void* self) {
     return QRestReply_HttpStatus((QRestReply*)self);
 }
 
-bool q_restreply_is_http_status_success(void* self) {
+bool q_restreply_is_http_status_success(const void* self) {
     return QRestReply_IsHttpStatusSuccess((QRestReply*)self);
 }
 
-bool q_restreply_has_error(void* self) {
+bool q_restreply_has_error(const void* self) {
     return QRestReply_HasError((QRestReply*)self);
 }
 
-int32_t q_restreply_error(void* self) {
+int32_t q_restreply_error(const void* self) {
     return QRestReply_Error((QRestReply*)self);
 }
 
-const char* q_restreply_error_string(void* self) {
+const char* q_restreply_error_string(const void* self) {
     libqt_string _str = QRestReply_ErrorString((QRestReply*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

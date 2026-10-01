@@ -1,7 +1,7 @@
 #include "libqscopedpointer.hpp"
 #include "libqscopedpointer.h"
 
-QScopedPointerPodDeleter* q_scopedpointerpoddeleter_new(void* other) {
+QScopedPointerPodDeleter* q_scopedpointerpoddeleter_new(const void* other) {
     return QScopedPointerPodDeleter_New((QScopedPointerPodDeleter*)other);
 }
 
@@ -21,7 +21,7 @@ void q_scopedpointerpoddeleter_cleanup(void* pointer) {
     QScopedPointerPodDeleter_Cleanup(pointer);
 }
 
-void q_scopedpointerpoddeleter_operator_call(void* self, void* pointer) {
+void q_scopedpointerpoddeleter_operator_call(const void* self, void* pointer) {
     QScopedPointerPodDeleter_OperatorCall((QScopedPointerPodDeleter*)self, pointer);
 }
 

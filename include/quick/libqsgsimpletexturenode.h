@@ -19,7 +19,7 @@ QSGSimpleTextureNode* q_sgsimpletexturenode_new();
 /// @param self QSGSimpleTextureNode*
 /// @param rect QRectF*
 ///
-void q_sgsimpletexturenode_set_rect(void* self, void* rect);
+void q_sgsimpletexturenode_set_rect(void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgsimpletexturenode.html#setRect)
 ///
@@ -33,16 +33,16 @@ void q_sgsimpletexturenode_set_rect2(void* self, double x, double y, double w, d
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgsimpletexturenode.html#rect)
 ///
-/// @param self QSGSimpleTextureNode*
+/// @param self const QSGSimpleTextureNode*
 ///
-QRectF* q_sgsimpletexturenode_rect(void* self);
+QRectF* q_sgsimpletexturenode_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgsimpletexturenode.html#setSourceRect)
 ///
 /// @param self QSGSimpleTextureNode*
 /// @param r QRectF*
 ///
-void q_sgsimpletexturenode_set_source_rect(void* self, void* r);
+void q_sgsimpletexturenode_set_source_rect(void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgsimpletexturenode.html#setSourceRect)
 ///
@@ -56,9 +56,9 @@ void q_sgsimpletexturenode_set_source_rect2(void* self, double x, double y, doub
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgsimpletexturenode.html#sourceRect)
 ///
-/// @param self QSGSimpleTextureNode*
+/// @param self const QSGSimpleTextureNode*
 ///
-QRectF* q_sgsimpletexturenode_source_rect(void* self);
+QRectF* q_sgsimpletexturenode_source_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgsimpletexturenode.html#setTexture)
 ///
@@ -69,9 +69,9 @@ void q_sgsimpletexturenode_set_texture(void* self, void* texture);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgsimpletexturenode.html#texture)
 ///
-/// @param self QSGSimpleTextureNode*
+/// @param self const QSGSimpleTextureNode*
 ///
-QSGTexture* q_sgsimpletexturenode_texture(void* self);
+QSGTexture* q_sgsimpletexturenode_texture(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgsimpletexturenode.html#setFiltering)
 ///
@@ -82,11 +82,11 @@ void q_sgsimpletexturenode_set_filtering(void* self, int32_t filtering);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgsimpletexturenode.html#filtering)
 ///
-/// @param self QSGSimpleTextureNode*
+/// @param self const QSGSimpleTextureNode*
 ///
 /// @return enum QSGTexture__Filtering
 ///
-int32_t q_sgsimpletexturenode_filtering(void* self);
+int32_t q_sgsimpletexturenode_filtering(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgsimpletexturenode.html#setTextureCoordinatesTransform)
 ///
@@ -97,11 +97,11 @@ void q_sgsimpletexturenode_set_texture_coordinates_transform(void* self, int32_t
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgsimpletexturenode.html#textureCoordinatesTransform)
 ///
-/// @param self QSGSimpleTextureNode*
+/// @param self const QSGSimpleTextureNode*
 ///
 /// @return flag of enum QSGSimpleTextureNode__TextureCoordinatesTransformFlag
 ///
-int32_t q_sgsimpletexturenode_texture_coordinates_transform(void* self);
+int32_t q_sgsimpletexturenode_texture_coordinates_transform(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgsimpletexturenode.html#setOwnsTexture)
 ///
@@ -112,9 +112,9 @@ void q_sgsimpletexturenode_set_owns_texture(void* self, bool owns);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgsimpletexturenode.html#ownsTexture)
 ///
-/// @param self QSGSimpleTextureNode*
+/// @param self const QSGSimpleTextureNode*
 ///
-bool q_sgsimpletexturenode_owns_texture(void* self);
+bool q_sgsimpletexturenode_owns_texture(const void* self);
 
 /// Inherited from QSGGeometryNode
 ///
@@ -129,9 +129,9 @@ void q_sgsimpletexturenode_set_material(void* self, void* material);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometrynode.html#material)
 ///
-/// @param self QSGSimpleTextureNode*
+/// @param self const QSGSimpleTextureNode*
 ///
-QSGMaterial* q_sgsimpletexturenode_material(void* self);
+QSGMaterial* q_sgsimpletexturenode_material(const void* self);
 
 /// Inherited from QSGGeometryNode
 ///
@@ -146,17 +146,17 @@ void q_sgsimpletexturenode_set_opaque_material(void* self, void* material);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometrynode.html#opaqueMaterial)
 ///
-/// @param self QSGSimpleTextureNode*
+/// @param self const QSGSimpleTextureNode*
 ///
-QSGMaterial* q_sgsimpletexturenode_opaque_material(void* self);
+QSGMaterial* q_sgsimpletexturenode_opaque_material(const void* self);
 
 /// Inherited from QSGGeometryNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometrynode.html#activeMaterial)
 ///
-/// @param self QSGSimpleTextureNode*
+/// @param self const QSGSimpleTextureNode*
 ///
-QSGMaterial* q_sgsimpletexturenode_active_material(void* self);
+QSGMaterial* q_sgsimpletexturenode_active_material(const void* self);
 
 /// Inherited from QSGGeometryNode
 ///
@@ -171,9 +171,9 @@ void q_sgsimpletexturenode_set_render_order(void* self, int order);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometrynode.html#renderOrder)
 ///
-/// @param self QSGSimpleTextureNode*
+/// @param self const QSGSimpleTextureNode*
 ///
-int32_t q_sgsimpletexturenode_render_order(void* self);
+int32_t q_sgsimpletexturenode_render_order(const void* self);
 
 /// Inherited from QSGGeometryNode
 ///
@@ -188,9 +188,9 @@ void q_sgsimpletexturenode_set_inherited_opacity(void* self, double opacity);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometrynode.html#inheritedOpacity)
 ///
-/// @param self QSGSimpleTextureNode*
+/// @param self const QSGSimpleTextureNode*
 ///
-double q_sgsimpletexturenode_inherited_opacity(void* self);
+double q_sgsimpletexturenode_inherited_opacity(const void* self);
 
 /// Inherited from QSGBasicGeometryNode
 ///
@@ -205,9 +205,9 @@ void q_sgsimpletexturenode_set_geometry(void* self, void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgbasicgeometrynode.html#geometry)
 ///
-/// @param self QSGSimpleTextureNode*
+/// @param self const QSGSimpleTextureNode*
 ///
-const QSGGeometry* q_sgsimpletexturenode_geometry(void* self);
+const QSGGeometry* q_sgsimpletexturenode_geometry(const void* self);
 
 /// Inherited from QSGBasicGeometryNode
 ///
@@ -221,17 +221,17 @@ QSGGeometry* q_sgsimpletexturenode_geometry2(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgbasicgeometrynode.html#matrix)
 ///
-/// @param self QSGSimpleTextureNode*
+/// @param self const QSGSimpleTextureNode*
 ///
-const QMatrix4x4* q_sgsimpletexturenode_matrix(void* self);
+const QMatrix4x4* q_sgsimpletexturenode_matrix(const void* self);
 
 /// Inherited from QSGBasicGeometryNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgbasicgeometrynode.html#clipList)
 ///
-/// @param self QSGSimpleTextureNode*
+/// @param self const QSGSimpleTextureNode*
 ///
-const QSGClipNode* q_sgsimpletexturenode_clip_list(void* self);
+const QSGClipNode* q_sgsimpletexturenode_clip_list(const void* self);
 
 /// Inherited from QSGBasicGeometryNode
 ///
@@ -240,7 +240,7 @@ const QSGClipNode* q_sgsimpletexturenode_clip_list(void* self);
 /// @param self QSGSimpleTextureNode*
 /// @param m QMatrix4x4*
 ///
-void q_sgsimpletexturenode_set_renderer_matrix(void* self, void* m);
+void q_sgsimpletexturenode_set_renderer_matrix(void* self, const void* m);
 
 /// Inherited from QSGBasicGeometryNode
 ///
@@ -249,15 +249,15 @@ void q_sgsimpletexturenode_set_renderer_matrix(void* self, void* m);
 /// @param self QSGSimpleTextureNode*
 /// @param c QSGClipNode*
 ///
-void q_sgsimpletexturenode_set_renderer_clip_list(void* self, void* c);
+void q_sgsimpletexturenode_set_renderer_clip_list(void* self, const void* c);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#parent)
 ///
-/// @param self QSGSimpleTextureNode*
+/// @param self const QSGSimpleTextureNode*
 ///
-QSGNode* q_sgsimpletexturenode_parent(void* self);
+QSGNode* q_sgsimpletexturenode_parent(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -327,60 +327,60 @@ void q_sgsimpletexturenode_reparent_child_nodes_to(void* self, void* newParent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#childCount)
 ///
-/// @param self QSGSimpleTextureNode*
+/// @param self const QSGSimpleTextureNode*
 ///
-int32_t q_sgsimpletexturenode_child_count(void* self);
+int32_t q_sgsimpletexturenode_child_count(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#childAtIndex)
 ///
-/// @param self QSGSimpleTextureNode*
+/// @param self const QSGSimpleTextureNode*
 /// @param i int
 ///
-QSGNode* q_sgsimpletexturenode_child_at_index(void* self, int i);
+QSGNode* q_sgsimpletexturenode_child_at_index(const void* self, int i);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#firstChild)
 ///
-/// @param self QSGSimpleTextureNode*
+/// @param self const QSGSimpleTextureNode*
 ///
-QSGNode* q_sgsimpletexturenode_first_child(void* self);
+QSGNode* q_sgsimpletexturenode_first_child(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#lastChild)
 ///
-/// @param self QSGSimpleTextureNode*
+/// @param self const QSGSimpleTextureNode*
 ///
-QSGNode* q_sgsimpletexturenode_last_child(void* self);
+QSGNode* q_sgsimpletexturenode_last_child(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#nextSibling)
 ///
-/// @param self QSGSimpleTextureNode*
+/// @param self const QSGSimpleTextureNode*
 ///
-QSGNode* q_sgsimpletexturenode_next_sibling(void* self);
+QSGNode* q_sgsimpletexturenode_next_sibling(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#previousSibling)
 ///
-/// @param self QSGSimpleTextureNode*
+/// @param self const QSGSimpleTextureNode*
 ///
-QSGNode* q_sgsimpletexturenode_previous_sibling(void* self);
+QSGNode* q_sgsimpletexturenode_previous_sibling(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#type)
 ///
-/// @param self QSGSimpleTextureNode*
+/// @param self const QSGSimpleTextureNode*
 ///
 /// @return enum QSGNode__NodeType
 ///
-int32_t q_sgsimpletexturenode_type(void* self);
+int32_t q_sgsimpletexturenode_type(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -403,21 +403,21 @@ void q_sgsimpletexturenode_mark_dirty(void* self, int32_t bits);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#dirtyState)
 ///
-/// @param self QSGSimpleTextureNode*
+/// @param self const QSGSimpleTextureNode*
 ///
 /// @return flag of enum QSGNode__DirtyStateBit
 ///
-int32_t q_sgsimpletexturenode_dirty_state(void* self);
+int32_t q_sgsimpletexturenode_dirty_state(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#flags)
 ///
-/// @param self QSGSimpleTextureNode*
+/// @param self const QSGSimpleTextureNode*
 ///
 /// @return flag of enum QSGNode__Flag
 ///
-int32_t q_sgsimpletexturenode_flags(void* self);
+int32_t q_sgsimpletexturenode_flags(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -463,9 +463,9 @@ void q_sgsimpletexturenode_set_flags2(void* self, int32_t param1, bool param2);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSGSimpleTextureNode*
+/// @param self const QSGSimpleTextureNode*
 ///
-bool q_sgsimpletexturenode_is_subtree_blocked(void* self);
+bool q_sgsimpletexturenode_is_subtree_blocked(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -473,9 +473,9 @@ bool q_sgsimpletexturenode_is_subtree_blocked(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSGSimpleTextureNode*
+/// @param self const QSGSimpleTextureNode*
 ///
-bool q_sgsimpletexturenode_super_is_subtree_blocked(void* self);
+bool q_sgsimpletexturenode_super_is_subtree_blocked(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -483,10 +483,10 @@ bool q_sgsimpletexturenode_super_is_subtree_blocked(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSGSimpleTextureNode*
-/// @param callback bool func()
+/// @param self const QSGSimpleTextureNode*
+/// @param callback bool func(QSGSimpleTextureNode* self)
 ///
-void q_sgsimpletexturenode_on_is_subtree_blocked(void* self, bool (*callback)());
+void q_sgsimpletexturenode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QSGNode
 ///
@@ -515,9 +515,9 @@ void q_sgsimpletexturenode_super_preprocess(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSGSimpleTextureNode*
-/// @param callback void func()
+/// @param callback void func(QSGSimpleTextureNode* self)
 ///
-void q_sgsimpletexturenode_on_preprocess(void* self, void (*callback)());
+void q_sgsimpletexturenode_on_preprocess(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgsimpletexturenode.html#dtor.QSGSimpleTextureNode)
 ///

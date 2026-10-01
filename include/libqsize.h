@@ -14,7 +14,7 @@
 ///
 /// @param other QSize*
 ///
-QSize* q_size_new(void* other);
+QSize* q_size_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsize.html)
 
@@ -45,7 +45,7 @@ QSize* q_size_new4(int w, int h);
 ///
 /// @param param1 QSize*
 ///
-QSize* q_size_new5(void* param1);
+QSize* q_size_new5(const void* param1);
 
 /// q_size_copy_assign shallow copies `other` into `self`.
 ///
@@ -63,33 +63,33 @@ void q_size_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsize.html#isNull)
 ///
-/// @param self QSize*
+/// @param self const QSize*
 ///
-bool q_size_is_null(void* self);
+bool q_size_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsize.html#isEmpty)
 ///
-/// @param self QSize*
+/// @param self const QSize*
 ///
-bool q_size_is_empty(void* self);
+bool q_size_is_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsize.html#isValid)
 ///
-/// @param self QSize*
+/// @param self const QSize*
 ///
-bool q_size_is_valid(void* self);
+bool q_size_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsize.html#width)
 ///
-/// @param self QSize*
+/// @param self const QSize*
 ///
-int32_t q_size_width(void* self);
+int32_t q_size_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsize.html#height)
 ///
-/// @param self QSize*
+/// @param self const QSize*
 ///
-int32_t q_size_height(void* self);
+int32_t q_size_height(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsize.html#setWidth)
 ///
@@ -113,9 +113,9 @@ void q_size_transpose(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsize.html#transposed)
 ///
-/// @param self QSize*
+/// @param self const QSize*
 ///
-QSize* q_size_transposed(void* self);
+QSize* q_size_transposed(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsize.html#scale)
 ///
@@ -132,52 +132,52 @@ void q_size_scale(void* self, int w, int h, int32_t mode);
 /// @param s QSize*
 /// @param mode enum Qt__AspectRatioMode
 ///
-void q_size_scale2(void* self, void* s, int32_t mode);
+void q_size_scale2(void* self, const void* s, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsize.html#scaled)
 ///
-/// @param self QSize*
+/// @param self const QSize*
 /// @param w int
 /// @param h int
 /// @param mode enum Qt__AspectRatioMode
 ///
-QSize* q_size_scaled(void* self, int w, int h, int32_t mode);
+QSize* q_size_scaled(const void* self, int w, int h, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsize.html#scaled)
 ///
-/// @param self QSize*
+/// @param self const QSize*
 /// @param s QSize*
 /// @param mode enum Qt__AspectRatioMode
 ///
-QSize* q_size_scaled2(void* self, void* s, int32_t mode);
+QSize* q_size_scaled2(const void* self, const void* s, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsize.html#expandedTo)
 ///
-/// @param self QSize*
+/// @param self const QSize*
 /// @param param1 QSize*
 ///
-QSize* q_size_expanded_to(void* self, void* param1);
+QSize* q_size_expanded_to(const void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsize.html#boundedTo)
 ///
-/// @param self QSize*
+/// @param self const QSize*
 /// @param param1 QSize*
 ///
-QSize* q_size_bounded_to(void* self, void* param1);
+QSize* q_size_bounded_to(const void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsize.html#grownBy)
 ///
-/// @param self QSize*
+/// @param self const QSize*
 /// @param m QMargins*
 ///
-QSize* q_size_grown_by(void* self, void* m);
+QSize* q_size_grown_by(const void* self, void* m);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsize.html#shrunkBy)
 ///
-/// @param self QSize*
+/// @param self const QSize*
 /// @param m QMargins*
 ///
-QSize* q_size_shrunk_by(void* self, void* m);
+QSize* q_size_shrunk_by(const void* self, void* m);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsize.html#rwidth)
 ///
@@ -196,14 +196,14 @@ int* q_size_rheight(void* self);
 /// @param self QSize*
 /// @param param1 QSize*
 ///
-QSize* q_size_operator_plus_assign(void* self, void* param1);
+QSize* q_size_operator_plus_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsize.html#operator--eq)
 ///
 /// @param self QSize*
 /// @param param1 QSize*
 ///
-QSize* q_size_operator_minus_assign(void* self, void* param1);
+QSize* q_size_operator_minus_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsize.html#operator-2a-eq)
 ///
@@ -221,16 +221,16 @@ QSize* q_size_operator_divide_assign(void* self, double c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsize.html#toSizeF)
 ///
-/// @param self QSize*
+/// @param self const QSize*
 ///
-QSizeF* q_size_to_size_f(void* self);
+QSizeF* q_size_to_size_f(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsize.html#operator-eq)
 ///
 /// @param self QSize*
 /// @param param1 QSize*
 ///
-void q_size_operator_assign(void* self, void* param1);
+void q_size_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsize.html#dtor.QSize)
 ///
@@ -247,7 +247,7 @@ void q_size_delete(void* self);
 /// @param s QSize*
 /// @param seed size_t
 ///
-size_t q_qsize_q_hash(void* s, size_t seed);
+size_t q_qsize_q_hash(const void* s, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizef.html)
 
@@ -255,7 +255,7 @@ size_t q_qsize_q_hash(void* s, size_t seed);
 ///
 /// @param other QSizeF*
 ///
-QSizeF* q_sizef_new(void* other);
+QSizeF* q_sizef_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizef.html)
 
@@ -277,7 +277,7 @@ QSizeF* q_sizef_new3();
 ///
 /// @param sz QSize*
 ///
-QSizeF* q_sizef_new4(void* sz);
+QSizeF* q_sizef_new4(const void* sz);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizef.html)
 
@@ -294,7 +294,7 @@ QSizeF* q_sizef_new5(double w, double h);
 ///
 /// @param param1 QSizeF*
 ///
-QSizeF* q_sizef_new6(void* param1);
+QSizeF* q_sizef_new6(const void* param1);
 
 /// q_sizef_copy_assign shallow copies `other` into `self`.
 ///
@@ -312,33 +312,33 @@ void q_sizef_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizef.html#isNull)
 ///
-/// @param self QSizeF*
+/// @param self const QSizeF*
 ///
-bool q_sizef_is_null(void* self);
+bool q_sizef_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizef.html#isEmpty)
 ///
-/// @param self QSizeF*
+/// @param self const QSizeF*
 ///
-bool q_sizef_is_empty(void* self);
+bool q_sizef_is_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizef.html#isValid)
 ///
-/// @param self QSizeF*
+/// @param self const QSizeF*
 ///
-bool q_sizef_is_valid(void* self);
+bool q_sizef_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizef.html#width)
 ///
-/// @param self QSizeF*
+/// @param self const QSizeF*
 ///
-double q_sizef_width(void* self);
+double q_sizef_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizef.html#height)
 ///
-/// @param self QSizeF*
+/// @param self const QSizeF*
 ///
-double q_sizef_height(void* self);
+double q_sizef_height(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizef.html#setWidth)
 ///
@@ -362,9 +362,9 @@ void q_sizef_transpose(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizef.html#transposed)
 ///
-/// @param self QSizeF*
+/// @param self const QSizeF*
 ///
-QSizeF* q_sizef_transposed(void* self);
+QSizeF* q_sizef_transposed(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizef.html#scale)
 ///
@@ -381,52 +381,52 @@ void q_sizef_scale(void* self, double w, double h, int32_t mode);
 /// @param s QSizeF*
 /// @param mode enum Qt__AspectRatioMode
 ///
-void q_sizef_scale2(void* self, void* s, int32_t mode);
+void q_sizef_scale2(void* self, const void* s, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizef.html#scaled)
 ///
-/// @param self QSizeF*
+/// @param self const QSizeF*
 /// @param w double
 /// @param h double
 /// @param mode enum Qt__AspectRatioMode
 ///
-QSizeF* q_sizef_scaled(void* self, double w, double h, int32_t mode);
+QSizeF* q_sizef_scaled(const void* self, double w, double h, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizef.html#scaled)
 ///
-/// @param self QSizeF*
+/// @param self const QSizeF*
 /// @param s QSizeF*
 /// @param mode enum Qt__AspectRatioMode
 ///
-QSizeF* q_sizef_scaled2(void* self, void* s, int32_t mode);
+QSizeF* q_sizef_scaled2(const void* self, const void* s, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizef.html#expandedTo)
 ///
-/// @param self QSizeF*
+/// @param self const QSizeF*
 /// @param param1 QSizeF*
 ///
-QSizeF* q_sizef_expanded_to(void* self, void* param1);
+QSizeF* q_sizef_expanded_to(const void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizef.html#boundedTo)
 ///
-/// @param self QSizeF*
+/// @param self const QSizeF*
 /// @param param1 QSizeF*
 ///
-QSizeF* q_sizef_bounded_to(void* self, void* param1);
+QSizeF* q_sizef_bounded_to(const void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizef.html#grownBy)
 ///
-/// @param self QSizeF*
+/// @param self const QSizeF*
 /// @param m QMarginsF*
 ///
-QSizeF* q_sizef_grown_by(void* self, void* m);
+QSizeF* q_sizef_grown_by(const void* self, void* m);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizef.html#shrunkBy)
 ///
-/// @param self QSizeF*
+/// @param self const QSizeF*
 /// @param m QMarginsF*
 ///
-QSizeF* q_sizef_shrunk_by(void* self, void* m);
+QSizeF* q_sizef_shrunk_by(const void* self, void* m);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizef.html#rwidth)
 ///
@@ -445,14 +445,14 @@ double* q_sizef_rheight(void* self);
 /// @param self QSizeF*
 /// @param param1 QSizeF*
 ///
-QSizeF* q_sizef_operator_plus_assign(void* self, void* param1);
+QSizeF* q_sizef_operator_plus_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizef.html#operator--eq)
 ///
 /// @param self QSizeF*
 /// @param param1 QSizeF*
 ///
-QSizeF* q_sizef_operator_minus_assign(void* self, void* param1);
+QSizeF* q_sizef_operator_minus_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizef.html#operator-2a-eq)
 ///
@@ -470,16 +470,16 @@ QSizeF* q_sizef_operator_divide_assign(void* self, double c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizef.html#toSize)
 ///
-/// @param self QSizeF*
+/// @param self const QSizeF*
 ///
-QSize* q_sizef_to_size(void* self);
+QSize* q_sizef_to_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizef.html#operator-eq)
 ///
 /// @param self QSizeF*
 /// @param param1 QSizeF*
 ///
-void q_sizef_operator_assign(void* self, void* param1);
+void q_sizef_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizef.html#dtor.QSizeF)
 ///

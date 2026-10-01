@@ -24,9 +24,9 @@ KUiServerV2JobTracker* k_uiserverv2jobtracker_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KUiServerV2JobTracker*
+/// @param self const KUiServerV2JobTracker*
 ///
-const QMetaObject* k_uiserverv2jobtracker_meta_object(void* self);
+const QMetaObject* k_uiserverv2jobtracker_meta_object(const void* self);
 
 /// @param self KUiServerV2JobTracker*
 /// @param param1 const char*
@@ -106,9 +106,9 @@ bool k_uiserverv2jobtracker_event_filter(void* self, void* watched, void* event)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUiServerV2JobTracker*
+/// @param self const KUiServerV2JobTracker*
 ///
-const char* k_uiserverv2jobtracker_object_name(void* self);
+const char* k_uiserverv2jobtracker_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -123,33 +123,33 @@ void k_uiserverv2jobtracker_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KUiServerV2JobTracker*
+/// @param self const KUiServerV2JobTracker*
 ///
-bool k_uiserverv2jobtracker_is_widget_type(void* self);
+bool k_uiserverv2jobtracker_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KUiServerV2JobTracker*
+/// @param self const KUiServerV2JobTracker*
 ///
-bool k_uiserverv2jobtracker_is_window_type(void* self);
+bool k_uiserverv2jobtracker_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KUiServerV2JobTracker*
+/// @param self const KUiServerV2JobTracker*
 ///
-bool k_uiserverv2jobtracker_is_quick_item_type(void* self);
+bool k_uiserverv2jobtracker_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KUiServerV2JobTracker*
+/// @param self const KUiServerV2JobTracker*
 ///
-bool k_uiserverv2jobtracker_signals_blocked(void* self);
+bool k_uiserverv2jobtracker_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -164,9 +164,9 @@ bool k_uiserverv2jobtracker_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KUiServerV2JobTracker*
+/// @param self const KUiServerV2JobTracker*
 ///
-QThread* k_uiserverv2jobtracker_thread(void* self);
+QThread* k_uiserverv2jobtracker_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -217,11 +217,11 @@ void k_uiserverv2jobtracker_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KUiServerV2JobTracker*
+/// @param self const KUiServerV2JobTracker*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_uiserverv2jobtracker_children(void* self);
+libqt_list k_uiserverv2jobtracker_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -259,7 +259,7 @@ void k_uiserverv2jobtracker_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_uiserverv2jobtracker_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_uiserverv2jobtracker_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -270,18 +270,18 @@ QMetaObject__Connection* k_uiserverv2jobtracker_connect(void* sender, const char
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_uiserverv2jobtracker_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_uiserverv2jobtracker_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KUiServerV2JobTracker*
+/// @param self const KUiServerV2JobTracker*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_uiserverv2jobtracker_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_uiserverv2jobtracker_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -292,7 +292,7 @@ QMetaObject__Connection* k_uiserverv2jobtracker_connect3(void* self, void* sende
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_uiserverv2jobtracker_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_uiserverv2jobtracker_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -303,24 +303,24 @@ bool k_uiserverv2jobtracker_disconnect(void* sender, const char* signal, void* r
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_uiserverv2jobtracker_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_uiserverv2jobtracker_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KUiServerV2JobTracker*
+/// @param self const KUiServerV2JobTracker*
 ///
-bool k_uiserverv2jobtracker_disconnect3(void* self);
+bool k_uiserverv2jobtracker_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KUiServerV2JobTracker*
+/// @param self const KUiServerV2JobTracker*
 /// @param receiver QObject*
 ///
-bool k_uiserverv2jobtracker_disconnect4(void* self, void* receiver);
+bool k_uiserverv2jobtracker_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -328,23 +328,23 @@ bool k_uiserverv2jobtracker_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_uiserverv2jobtracker_disconnect5(void* param1);
+bool k_uiserverv2jobtracker_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KUiServerV2JobTracker*
+/// @param self const KUiServerV2JobTracker*
 ///
-void k_uiserverv2jobtracker_dump_object_tree(void* self);
+void k_uiserverv2jobtracker_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KUiServerV2JobTracker*
+/// @param self const KUiServerV2JobTracker*
 ///
-void k_uiserverv2jobtracker_dump_object_info(void* self);
+void k_uiserverv2jobtracker_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -354,16 +354,16 @@ void k_uiserverv2jobtracker_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_uiserverv2jobtracker_set_property(void* self, const char* name, void* value);
+bool k_uiserverv2jobtracker_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KUiServerV2JobTracker*
+/// @param self const KUiServerV2JobTracker*
 /// @param name const char*
 ///
-QVariant* k_uiserverv2jobtracker_property(void* self, const char* name);
+QVariant* k_uiserverv2jobtracker_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -371,9 +371,9 @@ QVariant* k_uiserverv2jobtracker_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KUiServerV2JobTracker*
+/// @param self const KUiServerV2JobTracker*
 ///
-const char** k_uiserverv2jobtracker_dynamic_property_names(void* self);
+const char** k_uiserverv2jobtracker_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -387,9 +387,9 @@ QBindingStorage* k_uiserverv2jobtracker_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KUiServerV2JobTracker*
+/// @param self const KUiServerV2JobTracker*
 ///
-const QBindingStorage* k_uiserverv2jobtracker_binding_storage2(void* self);
+const QBindingStorage* k_uiserverv2jobtracker_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -412,18 +412,18 @@ void k_uiserverv2jobtracker_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KUiServerV2JobTracker*
+/// @param self const KUiServerV2JobTracker*
 ///
-QObject* k_uiserverv2jobtracker_parent(void* self);
+QObject* k_uiserverv2jobtracker_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KUiServerV2JobTracker*
+/// @param self const KUiServerV2JobTracker*
 /// @param classname const char*
 ///
-bool k_uiserverv2jobtracker_inherits(void* self, const char* classname);
+bool k_uiserverv2jobtracker_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -463,7 +463,7 @@ int32_t k_uiserverv2jobtracker_start_timer23(void* self, int64_t time, int32_t t
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_uiserverv2jobtracker_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_uiserverv2jobtracker_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -475,59 +475,59 @@ QMetaObject__Connection* k_uiserverv2jobtracker_connect5(void* sender, const cha
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_uiserverv2jobtracker_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_uiserverv2jobtracker_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KUiServerV2JobTracker*
+/// @param self const KUiServerV2JobTracker*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_uiserverv2jobtracker_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_uiserverv2jobtracker_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KUiServerV2JobTracker*
+/// @param self const KUiServerV2JobTracker*
 /// @param signal const char*
 ///
-bool k_uiserverv2jobtracker_disconnect1(void* self, const char* signal);
+bool k_uiserverv2jobtracker_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KUiServerV2JobTracker*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_uiserverv2jobtracker_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KUiServerV2JobTracker*
+/// @param self const KUiServerV2JobTracker*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_uiserverv2jobtracker_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_uiserverv2jobtracker_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KUiServerV2JobTracker*
+/// @param self const KUiServerV2JobTracker*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_uiserverv2jobtracker_disconnect23(void* self, void* receiver, const char* member);
+bool k_uiserverv2jobtracker_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KUiServerV2JobTracker*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_uiserverv2jobtracker_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

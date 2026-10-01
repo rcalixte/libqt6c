@@ -8,7 +8,7 @@ const char* q_qobjectdefs_q_flag_location(const char* method) {
     return qobjectdefs_QFlagLocation(method);
 }
 
-QGenericArgument* q_genericargument_new(void* other) {
+QGenericArgument* q_genericargument_new(const void* other) {
     return QGenericArgument_New((QGenericArgument*)other);
 }
 
@@ -20,7 +20,7 @@ QGenericArgument* q_genericargument_new3() {
     return QGenericArgument_New3();
 }
 
-QGenericArgument* q_genericargument_new4(void* param1) {
+QGenericArgument* q_genericargument_new4(const void* param1) {
     return QGenericArgument_New4((QGenericArgument*)param1);
 }
 
@@ -40,11 +40,11 @@ void q_genericargument_move_assign(void* self, void* other) {
     QGenericArgument_MoveAssign((QGenericArgument*)self, (QGenericArgument*)other);
 }
 
-void* q_genericargument_data(void* self) {
+void* q_genericargument_data(const void* self) {
     return QGenericArgument_Data((QGenericArgument*)self);
 }
 
-const char* q_genericargument_name(void* self) {
+const char* q_genericargument_name(const void* self) {
     return QGenericArgument_Name((QGenericArgument*)self);
 }
 
@@ -52,7 +52,7 @@ void q_genericargument_delete(void* self) {
     QGenericArgument_Delete((QGenericArgument*)(self));
 }
 
-QGenericReturnArgument* q_genericreturnargument_new(void* other) {
+QGenericReturnArgument* q_genericreturnargument_new(const void* other) {
     return QGenericReturnArgument_New((QGenericReturnArgument*)other);
 }
 
@@ -64,7 +64,7 @@ QGenericReturnArgument* q_genericreturnargument_new3() {
     return QGenericReturnArgument_New3();
 }
 
-QGenericReturnArgument* q_genericreturnargument_new4(void* param1) {
+QGenericReturnArgument* q_genericreturnargument_new4(const void* param1) {
     return QGenericReturnArgument_New4((QGenericReturnArgument*)param1);
 }
 
@@ -84,11 +84,11 @@ void q_genericreturnargument_move_assign(void* self, void* other) {
     QGenericReturnArgument_MoveAssign((QGenericReturnArgument*)self, (QGenericReturnArgument*)other);
 }
 
-void* q_genericreturnargument_data(void* self) {
+void* q_genericreturnargument_data(const void* self) {
     return QGenericArgument_Data((QGenericArgument*)self);
 }
 
-const char* q_genericreturnargument_name(void* self) {
+const char* q_genericreturnargument_name(const void* self) {
     return QGenericArgument_Name((QGenericArgument*)self);
 }
 
@@ -96,7 +96,7 @@ void q_genericreturnargument_delete(void* self) {
     QGenericReturnArgument_Delete((QGenericReturnArgument*)(self));
 }
 
-const char* q_metamethodargument_name(void* self) {
+const char* q_metamethodargument_name(const void* self) {
     return QMetaMethodArgument_Name((QMetaMethodArgument*)self);
 }
 
@@ -108,7 +108,7 @@ void q_metamethodargument_delete(void* self) {
     QMetaMethodArgument_Delete((QMetaMethodArgument*)(self));
 }
 
-const char* q_metamethodreturnargument_name(void* self) {
+const char* q_metamethodreturnargument_name(const void* self) {
     return QMetaMethodReturnArgument_Name((QMetaMethodReturnArgument*)self);
 }
 
@@ -124,126 +124,126 @@ QMetaObject* q_metaobject_new() {
     return QMetaObject_New();
 }
 
-QMetaObject* q_metaobject_new2(void* param1) {
+QMetaObject* q_metaobject_new2(const void* param1) {
     return QMetaObject_New2((QMetaObject*)param1);
 }
 
-const char* q_metaobject_class_name(void* self) {
+const char* q_metaobject_class_name(const void* self) {
     return QMetaObject_ClassName((QMetaObject*)self);
 }
 
-const QMetaObject* q_metaobject_super_class(void* self) {
+const QMetaObject* q_metaobject_super_class(const void* self) {
     return QMetaObject_SuperClass((QMetaObject*)self);
 }
 
-bool q_metaobject_inherits(void* self, void* metaObject) {
+bool q_metaobject_inherits(const void* self, const void* metaObject) {
     return QMetaObject_Inherits((QMetaObject*)self, (QMetaObject*)metaObject);
 }
 
-QObject* q_metaobject_cast(void* self, void* obj) {
+QObject* q_metaobject_cast(const void* self, void* obj) {
     return QMetaObject_Cast((QMetaObject*)self, (QObject*)obj);
 }
 
-const QObject* q_metaobject_cast2(void* self, void* obj) {
+const QObject* q_metaobject_cast2(const void* self, const void* obj) {
     return QMetaObject_Cast2((QMetaObject*)self, (QObject*)obj);
 }
 
-const char* q_metaobject_tr(void* self, const char* s, const char* c) {
+const char* q_metaobject_tr(const void* self, const char* s, const char* c) {
     libqt_string _str = QMetaObject_Tr((QMetaObject*)self, s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QMetaType* q_metaobject_meta_type(void* self) {
+QMetaType* q_metaobject_meta_type(const void* self) {
     return QMetaObject_MetaType((QMetaObject*)self);
 }
 
-int32_t q_metaobject_method_offset(void* self) {
+int32_t q_metaobject_method_offset(const void* self) {
     return QMetaObject_MethodOffset((QMetaObject*)self);
 }
 
-int32_t q_metaobject_enumerator_offset(void* self) {
+int32_t q_metaobject_enumerator_offset(const void* self) {
     return QMetaObject_EnumeratorOffset((QMetaObject*)self);
 }
 
-int32_t q_metaobject_property_offset(void* self) {
+int32_t q_metaobject_property_offset(const void* self) {
     return QMetaObject_PropertyOffset((QMetaObject*)self);
 }
 
-int32_t q_metaobject_class_info_offset(void* self) {
+int32_t q_metaobject_class_info_offset(const void* self) {
     return QMetaObject_ClassInfoOffset((QMetaObject*)self);
 }
 
-int32_t q_metaobject_constructor_count(void* self) {
+int32_t q_metaobject_constructor_count(const void* self) {
     return QMetaObject_ConstructorCount((QMetaObject*)self);
 }
 
-int32_t q_metaobject_method_count(void* self) {
+int32_t q_metaobject_method_count(const void* self) {
     return QMetaObject_MethodCount((QMetaObject*)self);
 }
 
-int32_t q_metaobject_enumerator_count(void* self) {
+int32_t q_metaobject_enumerator_count(const void* self) {
     return QMetaObject_EnumeratorCount((QMetaObject*)self);
 }
 
-int32_t q_metaobject_property_count(void* self) {
+int32_t q_metaobject_property_count(const void* self) {
     return QMetaObject_PropertyCount((QMetaObject*)self);
 }
 
-int32_t q_metaobject_class_info_count(void* self) {
+int32_t q_metaobject_class_info_count(const void* self) {
     return QMetaObject_ClassInfoCount((QMetaObject*)self);
 }
 
-int32_t q_metaobject_index_of_constructor(void* self, const char* constructor) {
+int32_t q_metaobject_index_of_constructor(const void* self, const char* constructor) {
     return QMetaObject_IndexOfConstructor((QMetaObject*)self, constructor);
 }
 
-int32_t q_metaobject_index_of_method(void* self, const char* method) {
+int32_t q_metaobject_index_of_method(const void* self, const char* method) {
     return QMetaObject_IndexOfMethod((QMetaObject*)self, method);
 }
 
-int32_t q_metaobject_index_of_signal(void* self, const char* signal) {
+int32_t q_metaobject_index_of_signal(const void* self, const char* signal) {
     return QMetaObject_IndexOfSignal((QMetaObject*)self, signal);
 }
 
-int32_t q_metaobject_index_of_slot(void* self, const char* slot) {
+int32_t q_metaobject_index_of_slot(const void* self, const char* slot) {
     return QMetaObject_IndexOfSlot((QMetaObject*)self, slot);
 }
 
-int32_t q_metaobject_index_of_enumerator(void* self, const char* name) {
+int32_t q_metaobject_index_of_enumerator(const void* self, const char* name) {
     return QMetaObject_IndexOfEnumerator((QMetaObject*)self, name);
 }
 
-int32_t q_metaobject_index_of_property(void* self, const char* name) {
+int32_t q_metaobject_index_of_property(const void* self, const char* name) {
     return QMetaObject_IndexOfProperty((QMetaObject*)self, name);
 }
 
-int32_t q_metaobject_index_of_class_info(void* self, const char* name) {
+int32_t q_metaobject_index_of_class_info(const void* self, const char* name) {
     return QMetaObject_IndexOfClassInfo((QMetaObject*)self, name);
 }
 
-QMetaMethod* q_metaobject_constructor(void* self, int index) {
+QMetaMethod* q_metaobject_constructor(const void* self, int index) {
     return QMetaObject_Constructor((QMetaObject*)self, index);
 }
 
-QMetaMethod* q_metaobject_method(void* self, int index) {
+QMetaMethod* q_metaobject_method(const void* self, int index) {
     return QMetaObject_Method((QMetaObject*)self, index);
 }
 
-QMetaEnum* q_metaobject_enumerator(void* self, int index) {
+QMetaEnum* q_metaobject_enumerator(const void* self, int index) {
     return QMetaObject_Enumerator((QMetaObject*)self, index);
 }
 
-QMetaProperty* q_metaobject_property(void* self, int index) {
+QMetaProperty* q_metaobject_property(const void* self, int index) {
     return QMetaObject_Property((QMetaObject*)self, index);
 }
 
-QMetaClassInfo* q_metaobject_class_info(void* self, int index) {
+QMetaClassInfo* q_metaobject_class_info(const void* self, int index) {
     return QMetaObject_ClassInfo((QMetaObject*)self, index);
 }
 
-QMetaProperty* q_metaobject_user_property(void* self) {
+QMetaProperty* q_metaobject_user_property(const void* self) {
     return QMetaObject_UserProperty((QMetaObject*)self);
 }
 
@@ -251,7 +251,7 @@ bool q_metaobject_check_connect_args(const char* signal, const char* method) {
     return QMetaObject_CheckConnectArgs(signal, method);
 }
 
-bool q_metaobject_check_connect_args2(void* signal, void* method) {
+bool q_metaobject_check_connect_args2(const void* signal, const void* method) {
     return QMetaObject_CheckConnectArgs2((QMetaMethod*)signal, (QMetaMethod*)method);
 }
 
@@ -269,15 +269,15 @@ char* q_metaobject_normalized_type(const char* type) {
     return _ret;
 }
 
-QMetaObject__Connection* q_metaobject_connect(void* sender, int signal_index, void* receiver, int method_index) {
+QMetaObject__Connection* q_metaobject_connect(const void* sender, int signal_index, const void* receiver, int method_index) {
     return QMetaObject_Connect((QObject*)sender, signal_index, (QObject*)receiver, method_index);
 }
 
-bool q_metaobject_disconnect(void* sender, int signal_index, void* receiver, int method_index) {
+bool q_metaobject_disconnect(const void* sender, int signal_index, const void* receiver, int method_index) {
     return QMetaObject_Disconnect((QObject*)sender, signal_index, (QObject*)receiver, method_index);
 }
 
-bool q_metaobject_disconnect_one(void* sender, int signal_index, void* receiver, int method_index) {
+bool q_metaobject_disconnect_one(const void* sender, int signal_index, const void* receiver, int method_index) {
     return QMetaObject_DisconnectOne((QObject*)sender, signal_index, (QObject*)receiver, method_index);
 }
 
@@ -289,7 +289,7 @@ void q_metaobject_activate(void* sender, int signal_index, void* argv) {
     QMetaObject_Activate((QObject*)sender, signal_index, argv);
 }
 
-void q_metaobject_activate2(void* sender, void* param2, int local_signal_index, void* argv) {
+void q_metaobject_activate2(void* sender, const void* param2, int local_signal_index, void* argv) {
     QMetaObject_Activate2((QObject*)sender, (QMetaObject*)param2, local_signal_index, argv);
 }
 
@@ -313,11 +313,11 @@ bool q_metaobject_invoke_method4(void* obj, const char* member, void* val0) {
     return QMetaObject_InvokeMethod4((QObject*)obj, member, (QGenericArgument*)val0);
 }
 
-QObject* q_metaobject_new_instance(void* self, void* val0) {
+QObject* q_metaobject_new_instance(const void* self, void* val0) {
     return QMetaObject_NewInstance((QMetaObject*)self, (QGenericArgument*)val0);
 }
 
-int32_t q_metaobject_static_metacall(void* self, int32_t param1, int param2, void* param3) {
+int32_t q_metaobject_static_metacall(const void* self, int32_t param1, int param2, void* param3) {
     return QMetaObject_StaticMetacall((QMetaObject*)self, param1, param2, param3);
 }
 
@@ -325,7 +325,7 @@ int32_t q_metaobject_metacall(void* param1, int32_t param2, int param3, void* pa
     return QMetaObject_Metacall((QObject*)param1, param2, param3, param4);
 }
 
-QMetaObject__Data* q_metaobject_d(void* self) {
+QMetaObject__Data* q_metaobject_d(const void* self) {
     return QMetaObject_D((QMetaObject*)self);
 }
 
@@ -333,22 +333,22 @@ void q_metaobject_set_d(void* self, void* d) {
     QMetaObject_SetD((QMetaObject*)self, (QMetaObject__Data*)d);
 }
 
-void q_metaobject_operator_assign(void* self, void* param1) {
+void q_metaobject_operator_assign(void* self, const void* param1) {
     QMetaObject_OperatorAssign((QMetaObject*)self, (QMetaObject*)param1);
 }
 
-const char* q_metaobject_tr3(void* self, const char* s, const char* c, int n) {
+const char* q_metaobject_tr3(const void* self, const char* s, const char* c, int n) {
     libqt_string _str = QMetaObject_Tr3((QMetaObject*)self, s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QMetaObject__Connection* q_metaobject_connect5(void* sender, int signal_index, void* receiver, int method_index, int type) {
+QMetaObject__Connection* q_metaobject_connect5(const void* sender, int signal_index, const void* receiver, int method_index, int type) {
     return QMetaObject_Connect5((QObject*)sender, signal_index, (QObject*)receiver, method_index, type);
 }
 
-QMetaObject__Connection* q_metaobject_connect6(void* sender, int signal_index, void* receiver, int method_index, int type, int* types) {
+QMetaObject__Connection* q_metaobject_connect6(const void* sender, int signal_index, const void* receiver, int method_index, int type, int* types) {
     return QMetaObject_Connect6((QObject*)sender, signal_index, (QObject*)receiver, method_index, type, types);
 }
 
@@ -504,39 +504,39 @@ bool q_metaobject_invoke_method124(void* obj, const char* member, void* val0, vo
     return QMetaObject_InvokeMethod124((QObject*)obj, member, (QGenericArgument*)val0, (QGenericArgument*)val1, (QGenericArgument*)val2, (QGenericArgument*)val3, (QGenericArgument*)val4, (QGenericArgument*)val5, (QGenericArgument*)val6, (QGenericArgument*)val7, (QGenericArgument*)val8, (QGenericArgument*)val9);
 }
 
-QObject* q_metaobject_new_instance2(void* self, void* val0, void* val1) {
+QObject* q_metaobject_new_instance2(const void* self, void* val0, void* val1) {
     return QMetaObject_NewInstance2((QMetaObject*)self, (QGenericArgument*)val0, (QGenericArgument*)val1);
 }
 
-QObject* q_metaobject_new_instance3(void* self, void* val0, void* val1, void* val2) {
+QObject* q_metaobject_new_instance3(const void* self, void* val0, void* val1, void* val2) {
     return QMetaObject_NewInstance3((QMetaObject*)self, (QGenericArgument*)val0, (QGenericArgument*)val1, (QGenericArgument*)val2);
 }
 
-QObject* q_metaobject_new_instance4(void* self, void* val0, void* val1, void* val2, void* val3) {
+QObject* q_metaobject_new_instance4(const void* self, void* val0, void* val1, void* val2, void* val3) {
     return QMetaObject_NewInstance4((QMetaObject*)self, (QGenericArgument*)val0, (QGenericArgument*)val1, (QGenericArgument*)val2, (QGenericArgument*)val3);
 }
 
-QObject* q_metaobject_new_instance5(void* self, void* val0, void* val1, void* val2, void* val3, void* val4) {
+QObject* q_metaobject_new_instance5(const void* self, void* val0, void* val1, void* val2, void* val3, void* val4) {
     return QMetaObject_NewInstance5((QMetaObject*)self, (QGenericArgument*)val0, (QGenericArgument*)val1, (QGenericArgument*)val2, (QGenericArgument*)val3, (QGenericArgument*)val4);
 }
 
-QObject* q_metaobject_new_instance6(void* self, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5) {
+QObject* q_metaobject_new_instance6(const void* self, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5) {
     return QMetaObject_NewInstance6((QMetaObject*)self, (QGenericArgument*)val0, (QGenericArgument*)val1, (QGenericArgument*)val2, (QGenericArgument*)val3, (QGenericArgument*)val4, (QGenericArgument*)val5);
 }
 
-QObject* q_metaobject_new_instance7(void* self, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6) {
+QObject* q_metaobject_new_instance7(const void* self, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6) {
     return QMetaObject_NewInstance7((QMetaObject*)self, (QGenericArgument*)val0, (QGenericArgument*)val1, (QGenericArgument*)val2, (QGenericArgument*)val3, (QGenericArgument*)val4, (QGenericArgument*)val5, (QGenericArgument*)val6);
 }
 
-QObject* q_metaobject_new_instance8(void* self, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7) {
+QObject* q_metaobject_new_instance8(const void* self, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7) {
     return QMetaObject_NewInstance8((QMetaObject*)self, (QGenericArgument*)val0, (QGenericArgument*)val1, (QGenericArgument*)val2, (QGenericArgument*)val3, (QGenericArgument*)val4, (QGenericArgument*)val5, (QGenericArgument*)val6, (QGenericArgument*)val7);
 }
 
-QObject* q_metaobject_new_instance9(void* self, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8) {
+QObject* q_metaobject_new_instance9(const void* self, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8) {
     return QMetaObject_NewInstance9((QMetaObject*)self, (QGenericArgument*)val0, (QGenericArgument*)val1, (QGenericArgument*)val2, (QGenericArgument*)val3, (QGenericArgument*)val4, (QGenericArgument*)val5, (QGenericArgument*)val6, (QGenericArgument*)val7, (QGenericArgument*)val8);
 }
 
-QObject* q_metaobject_new_instance10(void* self, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8, void* val9) {
+QObject* q_metaobject_new_instance10(const void* self, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8, void* val9) {
     return QMetaObject_NewInstance10((QMetaObject*)self, (QGenericArgument*)val0, (QGenericArgument*)val1, (QGenericArgument*)val2, (QGenericArgument*)val3, (QGenericArgument*)val4, (QGenericArgument*)val5, (QGenericArgument*)val6, (QGenericArgument*)val7, (QGenericArgument*)val8, (QGenericArgument*)val9);
 }
 
@@ -548,11 +548,11 @@ QMetaObject__Connection* q_metaobject__connection_new() {
     return QMetaObject__Connection_New();
 }
 
-QMetaObject__Connection* q_metaobject__connection_new2(void* other) {
+QMetaObject__Connection* q_metaobject__connection_new2(const void* other) {
     return QMetaObject__Connection_New2((QMetaObject__Connection*)other);
 }
 
-void q_metaobject__connection_operator_assign(void* self, void* other) {
+void q_metaobject__connection_operator_assign(void* self, const void* other) {
     QMetaObject__Connection_OperatorAssign((QMetaObject__Connection*)self, (QMetaObject__Connection*)other);
 }
 
@@ -568,7 +568,7 @@ QMetaObject__SuperData* q_metaobject__superdata_new() {
     return QMetaObject__SuperData_New();
 }
 
-QMetaObject__SuperData* q_metaobject__superdata_new2(void* mo) {
+QMetaObject__SuperData* q_metaobject__superdata_new2(const void* mo) {
     return QMetaObject__SuperData_New2((QMetaObject*)mo);
 }
 
@@ -576,27 +576,27 @@ QMetaObject__SuperData* q_metaobject__superdata_new3(QMetaObject* (*g)()) {
     return QMetaObject__SuperData_New3((intptr_t)g);
 }
 
-QMetaObject__SuperData* q_metaobject__superdata_new4(void* param1) {
+QMetaObject__SuperData* q_metaobject__superdata_new4(const void* param1) {
     return QMetaObject__SuperData_New4((QMetaObject__SuperData*)param1);
 }
 
-const QMetaObject* q_metaobject__superdata_direct(void* self) {
+const QMetaObject* q_metaobject__superdata_direct(const void* self) {
     return QMetaObject__SuperData_Direct((QMetaObject__SuperData*)self);
 }
 
-void q_metaobject__superdata_set_direct(void* self, void* direct) {
+void q_metaobject__superdata_set_direct(void* self, const void* direct) {
     QMetaObject__SuperData_SetDirect((QMetaObject__SuperData*)self, (QMetaObject*)direct);
 }
 
-const QMetaObject* q_metaobject__superdata_operator_minus_greater(void* self) {
+const QMetaObject* q_metaobject__superdata_operator_minus_greater(const void* self) {
     return QMetaObject__SuperData_OperatorMinusGreater((QMetaObject__SuperData*)self);
 }
 
-const QMetaObject* q_metaobject__superdata_to_const_q_meta_object_multiply(void* self) {
+const QMetaObject* q_metaobject__superdata_to_const_q_meta_object_multiply(const void* self) {
     return QMetaObject__SuperData_ToConstQMetaObjectMultiply((QMetaObject__SuperData*)self);
 }
 
-void q_metaobject__superdata_operator_assign(void* self, void* param1) {
+void q_metaobject__superdata_operator_assign(void* self, const void* param1) {
     QMetaObject__SuperData_OperatorAssign((QMetaObject__SuperData*)self, (QMetaObject__SuperData*)param1);
 }
 
@@ -608,11 +608,11 @@ QMetaObject__Data* q_metaobject__data_new() {
     return QMetaObject__Data_New();
 }
 
-QMetaObject__Data* q_metaobject__data_new2(void* param1) {
+QMetaObject__Data* q_metaobject__data_new2(const void* param1) {
     return QMetaObject__Data_New2((QMetaObject__Data*)param1);
 }
 
-QMetaObject__SuperData* q_metaobject__data_superdata(void* self) {
+QMetaObject__SuperData* q_metaobject__data_superdata(const void* self) {
     return QMetaObject__Data_Superdata((QMetaObject__Data*)self);
 }
 
@@ -620,7 +620,7 @@ void q_metaobject__data_set_superdata(void* self, void* superdata) {
     QMetaObject__Data_SetSuperdata((QMetaObject__Data*)self, (QMetaObject__SuperData*)superdata);
 }
 
-const uint32_t* q_metaobject__data_stringdata(void* self) {
+const uint32_t* q_metaobject__data_stringdata(const void* self) {
     return (uint32_t*)QMetaObject__Data_Stringdata((QMetaObject__Data*)self);
 }
 
@@ -628,7 +628,7 @@ void q_metaobject__data_set_stringdata(void* self, uint32_t* stringdata) {
     QMetaObject__Data_SetStringdata((QMetaObject__Data*)self, stringdata);
 }
 
-const uint32_t* q_metaobject__data_data(void* self) {
+const uint32_t* q_metaobject__data_data(const void* self) {
     return (uint32_t*)QMetaObject__Data_Data((QMetaObject__Data*)self);
 }
 
@@ -636,15 +636,15 @@ void q_metaobject__data_set_data(void* self, uint32_t* data) {
     QMetaObject__Data_SetData((QMetaObject__Data*)self, data);
 }
 
-const QMetaObject__SuperData* q_metaobject__data_related_meta_objects(void* self) {
+const QMetaObject__SuperData* q_metaobject__data_related_meta_objects(const void* self) {
     return QMetaObject__Data_RelatedMetaObjects((QMetaObject__Data*)self);
 }
 
-void q_metaobject__data_set_related_meta_objects(void* self, void* relatedMetaObjects) {
+void q_metaobject__data_set_related_meta_objects(void* self, const void* relatedMetaObjects) {
     QMetaObject__Data_SetRelatedMetaObjects((QMetaObject__Data*)self, (QMetaObject__SuperData*)relatedMetaObjects);
 }
 
-void q_metaobject__data_operator_assign(void* self, void* param1) {
+void q_metaobject__data_operator_assign(void* self, const void* param1) {
     QMetaObject__Data_OperatorAssign((QMetaObject__Data*)self, (QMetaObject__Data*)param1);
 }
 

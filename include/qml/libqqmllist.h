@@ -20,7 +20,7 @@ QQmlListReference* q_qmllistreference_new();
 ///
 /// @param variant QVariant*
 ///
-QQmlListReference* q_qmllistreference_new2(void* variant);
+QQmlListReference* q_qmllistreference_new2(const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmllistreference.html)
 
@@ -37,7 +37,7 @@ QQmlListReference* q_qmllistreference_new3(void* o, const char* property);
 ///
 /// @param variant QVariant*
 ///
-QQmlListReference* q_qmllistreference_new4(void* variant);
+QQmlListReference* q_qmllistreference_new4(const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmllistreference.html)
 
@@ -54,7 +54,7 @@ QQmlListReference* q_qmllistreference_new5(void* o, const char* property);
 ///
 /// @param param1 QQmlListReference*
 ///
-QQmlListReference* q_qmllistreference_new6(void* param1);
+QQmlListReference* q_qmllistreference_new6(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmllistreference.html)
 
@@ -63,7 +63,7 @@ QQmlListReference* q_qmllistreference_new6(void* param1);
 /// @param variant QVariant*
 /// @param engine QQmlEngine*
 ///
-QQmlListReference* q_qmllistreference_new7(void* variant, void* engine);
+QQmlListReference* q_qmllistreference_new7(const void* variant, void* engine);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmllistreference.html)
 
@@ -80,126 +80,126 @@ QQmlListReference* q_qmllistreference_new8(void* o, const char* property, void* 
 /// @param self QQmlListReference*
 /// @param param1 QQmlListReference*
 ///
-void q_qmllistreference_operator_assign(void* self, void* param1);
+void q_qmllistreference_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmllistreference.html#isValid)
 ///
-/// @param self QQmlListReference*
+/// @param self const QQmlListReference*
 ///
-bool q_qmllistreference_is_valid(void* self);
+bool q_qmllistreference_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmllistreference.html#object)
 ///
-/// @param self QQmlListReference*
+/// @param self const QQmlListReference*
 ///
-QObject* q_qmllistreference_object(void* self);
+QObject* q_qmllistreference_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmllistreference.html#listElementType)
 ///
-/// @param self QQmlListReference*
+/// @param self const QQmlListReference*
 ///
-const QMetaObject* q_qmllistreference_list_element_type(void* self);
+const QMetaObject* q_qmllistreference_list_element_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmllistreference.html#canAppend)
 ///
-/// @param self QQmlListReference*
+/// @param self const QQmlListReference*
 ///
-bool q_qmllistreference_can_append(void* self);
+bool q_qmllistreference_can_append(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmllistreference.html#canAt)
 ///
-/// @param self QQmlListReference*
+/// @param self const QQmlListReference*
 ///
-bool q_qmllistreference_can_at(void* self);
+bool q_qmllistreference_can_at(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmllistreference.html#canClear)
 ///
-/// @param self QQmlListReference*
+/// @param self const QQmlListReference*
 ///
-bool q_qmllistreference_can_clear(void* self);
+bool q_qmllistreference_can_clear(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmllistreference.html#canCount)
 ///
-/// @param self QQmlListReference*
+/// @param self const QQmlListReference*
 ///
-bool q_qmllistreference_can_count(void* self);
+bool q_qmllistreference_can_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmllistreference.html#canReplace)
 ///
-/// @param self QQmlListReference*
+/// @param self const QQmlListReference*
 ///
-bool q_qmllistreference_can_replace(void* self);
+bool q_qmllistreference_can_replace(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmllistreference.html#canRemoveLast)
 ///
-/// @param self QQmlListReference*
+/// @param self const QQmlListReference*
 ///
-bool q_qmllistreference_can_remove_last(void* self);
+bool q_qmllistreference_can_remove_last(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmllistreference.html#isManipulable)
 ///
-/// @param self QQmlListReference*
+/// @param self const QQmlListReference*
 ///
-bool q_qmllistreference_is_manipulable(void* self);
+bool q_qmllistreference_is_manipulable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmllistreference.html#isReadable)
 ///
-/// @param self QQmlListReference*
+/// @param self const QQmlListReference*
 ///
-bool q_qmllistreference_is_readable(void* self);
+bool q_qmllistreference_is_readable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmllistreference.html#append)
 ///
-/// @param self QQmlListReference*
+/// @param self const QQmlListReference*
 /// @param param1 QObject*
 ///
-bool q_qmllistreference_append(void* self, void* param1);
+bool q_qmllistreference_append(const void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmllistreference.html#at)
 ///
-/// @param self QQmlListReference*
+/// @param self const QQmlListReference*
 /// @param param1 intptr_t
 ///
-QObject* q_qmllistreference_at(void* self, intptr_t param1);
+QObject* q_qmllistreference_at(const void* self, intptr_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmllistreference.html#clear)
 ///
-/// @param self QQmlListReference*
+/// @param self const QQmlListReference*
 ///
-bool q_qmllistreference_clear(void* self);
+bool q_qmllistreference_clear(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmllistreference.html#count)
 ///
-/// @param self QQmlListReference*
+/// @param self const QQmlListReference*
 ///
-intptr_t q_qmllistreference_count(void* self);
+intptr_t q_qmllistreference_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmllistreference.html#size)
 ///
-/// @param self QQmlListReference*
+/// @param self const QQmlListReference*
 ///
-intptr_t q_qmllistreference_size(void* self);
+intptr_t q_qmllistreference_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmllistreference.html#replace)
 ///
-/// @param self QQmlListReference*
+/// @param self const QQmlListReference*
 /// @param param1 intptr_t
 /// @param param2 QObject*
 ///
-bool q_qmllistreference_replace(void* self, intptr_t param1, void* param2);
+bool q_qmllistreference_replace(const void* self, intptr_t param1, void* param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmllistreference.html#removeLast)
 ///
-/// @param self QQmlListReference*
+/// @param self const QQmlListReference*
 ///
-bool q_qmllistreference_remove_last(void* self);
+bool q_qmllistreference_remove_last(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmllistreference.html#operator-eq-eq)
 ///
-/// @param self QQmlListReference*
+/// @param self const QQmlListReference*
 /// @param other QQmlListReference*
 ///
-bool q_qmllistreference_operator_equal(void* self, void* other);
+bool q_qmllistreference_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmllistreference.html#dtor.QQmlListReference)
 ///

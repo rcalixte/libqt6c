@@ -24,15 +24,15 @@ TextGrammarCheck__LanguageToolComboBox* k_textgrammarcheck__languagetoolcombobox
     return TextGrammarCheck__LanguageToolComboBox_New2();
 }
 
-const QMetaObject* k_textgrammarcheck__languagetoolcombobox_meta_object(void* self) {
+const QMetaObject* k_textgrammarcheck__languagetoolcombobox_meta_object(const void* self) {
     return TextGrammarCheck__LanguageToolComboBox_MetaObject((TextGrammarCheck__LanguageToolComboBox*)self);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_textgrammarcheck__languagetoolcombobox_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     TextGrammarCheck__LanguageToolComboBox_OnMetaObject((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_textgrammarcheck__languagetoolcombobox_super_meta_object(void* self) {
+const QMetaObject* k_textgrammarcheck__languagetoolcombobox_super_meta_object(const void* self) {
     return TextGrammarCheck__LanguageToolComboBox_SuperMetaObject((TextGrammarCheck__LanguageToolComboBox*)self);
 }
 
@@ -71,7 +71,7 @@ void k_textgrammarcheck__languagetoolcombobox_set_language(void* self, const cha
     TextGrammarCheck__LanguageToolComboBox_SetLanguage((TextGrammarCheck__LanguageToolComboBox*)self, qstring(str));
 }
 
-const char* k_textgrammarcheck__languagetoolcombobox_language(void* self) {
+const char* k_textgrammarcheck__languagetoolcombobox_language(const void* self) {
     libqt_string _str = TextGrammarCheck__LanguageToolComboBox_Language((TextGrammarCheck__LanguageToolComboBox*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -92,7 +92,7 @@ const char* k_textgrammarcheck__languagetoolcombobox_tr3(const char* s, const ch
     return _ret;
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_max_visible_items(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_max_visible_items(const void* self) {
     return QComboBox_MaxVisibleItems((QComboBox*)self);
 }
 
@@ -100,7 +100,7 @@ void k_textgrammarcheck__languagetoolcombobox_set_max_visible_items(void* self, 
     QComboBox_SetMaxVisibleItems((QComboBox*)self, maxItems);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_count(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_count(const void* self) {
     return QComboBox_Count((QComboBox*)self);
 }
 
@@ -108,11 +108,11 @@ void k_textgrammarcheck__languagetoolcombobox_set_max_count(void* self, int max)
     QComboBox_SetMaxCount((QComboBox*)self, max);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_max_count(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_max_count(const void* self) {
     return QComboBox_MaxCount((QComboBox*)self);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_duplicates_enabled(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_duplicates_enabled(const void* self) {
     return QComboBox_DuplicatesEnabled((QComboBox*)self);
 }
 
@@ -124,19 +124,19 @@ void k_textgrammarcheck__languagetoolcombobox_set_frame(void* self, bool frame) 
     QComboBox_SetFrame((QComboBox*)self, frame);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_has_frame(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_has_frame(const void* self) {
     return QComboBox_HasFrame((QComboBox*)self);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_find_text(void* self, const char* text) {
+int32_t k_textgrammarcheck__languagetoolcombobox_find_text(const void* self, const char* text) {
     return QComboBox_FindText((QComboBox*)self, qstring(text));
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_find_data(void* self, void* data) {
+int32_t k_textgrammarcheck__languagetoolcombobox_find_data(const void* self, const void* data) {
     return QComboBox_FindData((QComboBox*)self, (QVariant*)data);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_insert_policy(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_insert_policy(const void* self) {
     return QComboBox_InsertPolicy((QComboBox*)self);
 }
 
@@ -144,7 +144,7 @@ void k_textgrammarcheck__languagetoolcombobox_set_insert_policy(void* self, int3
     QComboBox_SetInsertPolicy((QComboBox*)self, policy);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_size_adjust_policy(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_size_adjust_policy(const void* self) {
     return QComboBox_SizeAdjustPolicy((QComboBox*)self);
 }
 
@@ -152,7 +152,7 @@ void k_textgrammarcheck__languagetoolcombobox_set_size_adjust_policy(void* self,
     QComboBox_SetSizeAdjustPolicy((QComboBox*)self, policy);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_minimum_contents_length(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_minimum_contents_length(const void* self) {
     return QComboBox_MinimumContentsLength((QComboBox*)self);
 }
 
@@ -160,11 +160,11 @@ void k_textgrammarcheck__languagetoolcombobox_set_minimum_contents_length(void* 
     QComboBox_SetMinimumContentsLength((QComboBox*)self, characters);
 }
 
-QSize* k_textgrammarcheck__languagetoolcombobox_icon_size(void* self) {
+QSize* k_textgrammarcheck__languagetoolcombobox_icon_size(const void* self) {
     return QComboBox_IconSize((QComboBox*)self);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_set_icon_size(void* self, void* size) {
+void k_textgrammarcheck__languagetoolcombobox_set_icon_size(void* self, const void* size) {
     QComboBox_SetIconSize((QComboBox*)self, (QSize*)size);
 }
 
@@ -172,14 +172,14 @@ void k_textgrammarcheck__languagetoolcombobox_set_placeholder_text(void* self, c
     QComboBox_SetPlaceholderText((QComboBox*)self, qstring(placeholderText));
 }
 
-const char* k_textgrammarcheck__languagetoolcombobox_placeholder_text(void* self) {
+const char* k_textgrammarcheck__languagetoolcombobox_placeholder_text(const void* self) {
     libqt_string _str = QComboBox_PlaceholderText((QComboBox*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_is_editable(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_is_editable(const void* self) {
     return QComboBox_IsEditable((QComboBox*)self);
 }
 
@@ -191,15 +191,15 @@ void k_textgrammarcheck__languagetoolcombobox_set_line_edit(void* self, void* ed
     QComboBox_SetLineEdit((QComboBox*)self, (QLineEdit*)edit);
 }
 
-QLineEdit* k_textgrammarcheck__languagetoolcombobox_line_edit(void* self) {
+QLineEdit* k_textgrammarcheck__languagetoolcombobox_line_edit(const void* self) {
     return QComboBox_LineEdit((QComboBox*)self);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_set_validator(void* self, void* v) {
+void k_textgrammarcheck__languagetoolcombobox_set_validator(void* self, const void* v) {
     QComboBox_SetValidator((QComboBox*)self, (QValidator*)v);
 }
 
-const QValidator* k_textgrammarcheck__languagetoolcombobox_validator(void* self) {
+const QValidator* k_textgrammarcheck__languagetoolcombobox_validator(const void* self) {
     return QComboBox_Validator((QComboBox*)self);
 }
 
@@ -207,11 +207,11 @@ void k_textgrammarcheck__languagetoolcombobox_set_completer(void* self, void* c)
     QComboBox_SetCompleter((QComboBox*)self, (QCompleter*)c);
 }
 
-QCompleter* k_textgrammarcheck__languagetoolcombobox_completer(void* self) {
+QCompleter* k_textgrammarcheck__languagetoolcombobox_completer(const void* self) {
     return QComboBox_Completer((QComboBox*)self);
 }
 
-QAbstractItemDelegate* k_textgrammarcheck__languagetoolcombobox_item_delegate(void* self) {
+QAbstractItemDelegate* k_textgrammarcheck__languagetoolcombobox_item_delegate(const void* self) {
     return QComboBox_ItemDelegate((QComboBox*)self);
 }
 
@@ -219,19 +219,19 @@ void k_textgrammarcheck__languagetoolcombobox_set_item_delegate(void* self, void
     QComboBox_SetItemDelegate((QComboBox*)self, (QAbstractItemDelegate*)delegate);
 }
 
-QAbstractItemModel* k_textgrammarcheck__languagetoolcombobox_model(void* self) {
+QAbstractItemModel* k_textgrammarcheck__languagetoolcombobox_model(const void* self) {
     return QComboBox_Model((QComboBox*)self);
 }
 
-QModelIndex* k_textgrammarcheck__languagetoolcombobox_root_model_index(void* self) {
+QModelIndex* k_textgrammarcheck__languagetoolcombobox_root_model_index(const void* self) {
     return QComboBox_RootModelIndex((QComboBox*)self);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_set_root_model_index(void* self, void* index) {
+void k_textgrammarcheck__languagetoolcombobox_set_root_model_index(void* self, const void* index) {
     QComboBox_SetRootModelIndex((QComboBox*)self, (QModelIndex*)index);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_model_column(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_model_column(const void* self) {
     return QComboBox_ModelColumn((QComboBox*)self);
 }
 
@@ -239,33 +239,33 @@ void k_textgrammarcheck__languagetoolcombobox_set_model_column(void* self, int v
     QComboBox_SetModelColumn((QComboBox*)self, visibleColumn);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_current_index(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_current_index(const void* self) {
     return QComboBox_CurrentIndex((QComboBox*)self);
 }
 
-const char* k_textgrammarcheck__languagetoolcombobox_current_text(void* self) {
+const char* k_textgrammarcheck__languagetoolcombobox_current_text(const void* self) {
     libqt_string _str = QComboBox_CurrentText((QComboBox*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QVariant* k_textgrammarcheck__languagetoolcombobox_current_data(void* self) {
+QVariant* k_textgrammarcheck__languagetoolcombobox_current_data(const void* self) {
     return QComboBox_CurrentData((QComboBox*)self);
 }
 
-const char* k_textgrammarcheck__languagetoolcombobox_item_text(void* self, int index) {
+const char* k_textgrammarcheck__languagetoolcombobox_item_text(const void* self, int index) {
     libqt_string _str = QComboBox_ItemText((QComboBox*)self, index);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QIcon* k_textgrammarcheck__languagetoolcombobox_item_icon(void* self, int index) {
+QIcon* k_textgrammarcheck__languagetoolcombobox_item_icon(const void* self, int index) {
     return QComboBox_ItemIcon((QComboBox*)self, index);
 }
 
-QVariant* k_textgrammarcheck__languagetoolcombobox_item_data(void* self, int index) {
+QVariant* k_textgrammarcheck__languagetoolcombobox_item_data(const void* self, int index) {
     return QComboBox_ItemData((QComboBox*)self, index);
 }
 
@@ -273,7 +273,7 @@ void k_textgrammarcheck__languagetoolcombobox_add_item(void* self, const char* t
     QComboBox_AddItem((QComboBox*)self, qstring(text));
 }
 
-void k_textgrammarcheck__languagetoolcombobox_add_item2(void* self, void* icon, const char* text) {
+void k_textgrammarcheck__languagetoolcombobox_add_item2(void* self, const void* icon, const char* text) {
     QComboBox_AddItem2((QComboBox*)self, (QIcon*)icon, qstring(text));
 }
 
@@ -295,7 +295,7 @@ void k_textgrammarcheck__languagetoolcombobox_insert_item(void* self, int index,
     QComboBox_InsertItem((QComboBox*)self, index, qstring(text));
 }
 
-void k_textgrammarcheck__languagetoolcombobox_insert_item2(void* self, int index, void* icon, const char* text) {
+void k_textgrammarcheck__languagetoolcombobox_insert_item2(void* self, int index, const void* icon, const char* text) {
     QComboBox_InsertItem2((QComboBox*)self, index, (QIcon*)icon, qstring(text));
 }
 
@@ -325,15 +325,15 @@ void k_textgrammarcheck__languagetoolcombobox_set_item_text(void* self, int inde
     QComboBox_SetItemText((QComboBox*)self, index, qstring(text));
 }
 
-void k_textgrammarcheck__languagetoolcombobox_set_item_icon(void* self, int index, void* icon) {
+void k_textgrammarcheck__languagetoolcombobox_set_item_icon(void* self, int index, const void* icon) {
     QComboBox_SetItemIcon((QComboBox*)self, index, (QIcon*)icon);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_set_item_data(void* self, int index, void* value) {
+void k_textgrammarcheck__languagetoolcombobox_set_item_data(void* self, int index, const void* value) {
     QComboBox_SetItemData((QComboBox*)self, index, (QVariant*)value);
 }
 
-QAbstractItemView* k_textgrammarcheck__languagetoolcombobox_view(void* self) {
+QAbstractItemView* k_textgrammarcheck__languagetoolcombobox_view(const void* self) {
     return QComboBox_View((QComboBox*)self);
 }
 
@@ -341,7 +341,7 @@ void k_textgrammarcheck__languagetoolcombobox_set_view(void* self, void* itemVie
     QComboBox_SetView((QComboBox*)self, (QAbstractItemView*)itemView);
 }
 
-QVariant* k_textgrammarcheck__languagetoolcombobox_input_method_query2(void* self, int32_t query, void* argument) {
+QVariant* k_textgrammarcheck__languagetoolcombobox_input_method_query2(const void* self, int32_t query, const void* argument) {
     return QComboBox_InputMethodQuery2((QComboBox*)self, query, (QVariant*)argument);
 }
 
@@ -421,43 +421,43 @@ void k_textgrammarcheck__languagetoolcombobox_on_current_text_changed(void* self
     QComboBox_Connect_CurrentTextChanged((QComboBox*)self, (intptr_t)callback);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_find_text2(void* self, const char* text, int32_t flags) {
+int32_t k_textgrammarcheck__languagetoolcombobox_find_text2(const void* self, const char* text, int32_t flags) {
     return QComboBox_FindText2((QComboBox*)self, qstring(text), flags);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_find_data2(void* self, void* data, int role) {
+int32_t k_textgrammarcheck__languagetoolcombobox_find_data2(const void* self, const void* data, int role) {
     return QComboBox_FindData2((QComboBox*)self, (QVariant*)data, role);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_find_data3(void* self, void* data, int role, int32_t flags) {
+int32_t k_textgrammarcheck__languagetoolcombobox_find_data3(const void* self, const void* data, int role, int32_t flags) {
     return QComboBox_FindData3((QComboBox*)self, (QVariant*)data, role, flags);
 }
 
-QVariant* k_textgrammarcheck__languagetoolcombobox_current_data1(void* self, int role) {
+QVariant* k_textgrammarcheck__languagetoolcombobox_current_data1(const void* self, int role) {
     return QComboBox_CurrentData1((QComboBox*)self, role);
 }
 
-QVariant* k_textgrammarcheck__languagetoolcombobox_item_data2(void* self, int index, int role) {
+QVariant* k_textgrammarcheck__languagetoolcombobox_item_data2(const void* self, int index, int role) {
     return QComboBox_ItemData2((QComboBox*)self, index, role);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_add_item22(void* self, const char* text, void* userData) {
+void k_textgrammarcheck__languagetoolcombobox_add_item22(void* self, const char* text, const void* userData) {
     QComboBox_AddItem22((QComboBox*)self, qstring(text), (QVariant*)userData);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_add_item3(void* self, void* icon, const char* text, void* userData) {
+void k_textgrammarcheck__languagetoolcombobox_add_item3(void* self, const void* icon, const char* text, const void* userData) {
     QComboBox_AddItem3((QComboBox*)self, (QIcon*)icon, qstring(text), (QVariant*)userData);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_insert_item3(void* self, int index, const char* text, void* userData) {
+void k_textgrammarcheck__languagetoolcombobox_insert_item3(void* self, int index, const char* text, const void* userData) {
     QComboBox_InsertItem3((QComboBox*)self, index, qstring(text), (QVariant*)userData);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_insert_item4(void* self, int index, void* icon, const char* text, void* userData) {
+void k_textgrammarcheck__languagetoolcombobox_insert_item4(void* self, int index, const void* icon, const char* text, const void* userData) {
     QComboBox_InsertItem4((QComboBox*)self, index, (QIcon*)icon, qstring(text), (QVariant*)userData);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_set_item_data3(void* self, int index, void* value, int role) {
+void k_textgrammarcheck__languagetoolcombobox_set_item_data3(void* self, int index, const void* value, int role) {
     QComboBox_SetItemData3((QComboBox*)self, index, (QVariant*)value, role);
 }
 
@@ -469,7 +469,7 @@ TextGrammarCheck__LanguageToolComboBox* k_textgrammarcheck__languagetoolcombobox
     return (TextGrammarCheck__LanguageToolComboBox*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
-uintptr_t k_textgrammarcheck__languagetoolcombobox_win_id(void* self) {
+uintptr_t k_textgrammarcheck__languagetoolcombobox_win_id(const void* self) {
     return QWidget_WinId((QWidget*)self);
 }
 
@@ -477,15 +477,15 @@ void k_textgrammarcheck__languagetoolcombobox_create_win_id(void* self) {
     QWidget_CreateWinId((QWidget*)self);
 }
 
-uintptr_t k_textgrammarcheck__languagetoolcombobox_internal_win_id(void* self) {
+uintptr_t k_textgrammarcheck__languagetoolcombobox_internal_win_id(const void* self) {
     return QWidget_InternalWinId((QWidget*)self);
 }
 
-uintptr_t k_textgrammarcheck__languagetoolcombobox_effective_win_id(void* self) {
+uintptr_t k_textgrammarcheck__languagetoolcombobox_effective_win_id(const void* self) {
     return QWidget_EffectiveWinId((QWidget*)self);
 }
 
-QStyle* k_textgrammarcheck__languagetoolcombobox_style(void* self) {
+QStyle* k_textgrammarcheck__languagetoolcombobox_style(const void* self) {
     return QWidget_Style((QWidget*)self);
 }
 
@@ -493,19 +493,19 @@ void k_textgrammarcheck__languagetoolcombobox_set_style(void* self, void* style)
     QWidget_SetStyle((QWidget*)self, (QStyle*)style);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_is_top_level(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_is_top_level(const void* self) {
     return QWidget_IsTopLevel((QWidget*)self);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_is_window(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_is_window(const void* self) {
     return QWidget_IsWindow((QWidget*)self);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_is_modal(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_is_modal(const void* self) {
     return QWidget_IsModal((QWidget*)self);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_window_modality(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_window_modality(const void* self) {
     return QWidget_WindowModality((QWidget*)self);
 }
 
@@ -513,11 +513,11 @@ void k_textgrammarcheck__languagetoolcombobox_set_window_modality(void* self, in
     QWidget_SetWindowModality((QWidget*)self, windowModality);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_is_enabled(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_is_enabled(const void* self) {
     return QWidget_IsEnabled((QWidget*)self);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_is_enabled_to(void* self, void* param1) {
+bool k_textgrammarcheck__languagetoolcombobox_is_enabled_to(const void* self, const void* param1) {
     return QWidget_IsEnabledTo((QWidget*)self, (QWidget*)param1);
 }
 
@@ -533,83 +533,83 @@ void k_textgrammarcheck__languagetoolcombobox_set_window_modified(void* self, bo
     QWidget_SetWindowModified((QWidget*)self, windowModified);
 }
 
-QRect* k_textgrammarcheck__languagetoolcombobox_frame_geometry(void* self) {
+QRect* k_textgrammarcheck__languagetoolcombobox_frame_geometry(const void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-const QRect* k_textgrammarcheck__languagetoolcombobox_geometry(void* self) {
+const QRect* k_textgrammarcheck__languagetoolcombobox_geometry(const void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
-QRect* k_textgrammarcheck__languagetoolcombobox_normal_geometry(void* self) {
+QRect* k_textgrammarcheck__languagetoolcombobox_normal_geometry(const void* self) {
     return QWidget_NormalGeometry((QWidget*)self);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_x(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_x(const void* self) {
     return QWidget_X((QWidget*)self);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_y(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_y(const void* self) {
     return QWidget_Y((QWidget*)self);
 }
 
-QPoint* k_textgrammarcheck__languagetoolcombobox_pos(void* self) {
+QPoint* k_textgrammarcheck__languagetoolcombobox_pos(const void* self) {
     return QWidget_Pos((QWidget*)self);
 }
 
-QSize* k_textgrammarcheck__languagetoolcombobox_frame_size(void* self) {
+QSize* k_textgrammarcheck__languagetoolcombobox_frame_size(const void* self) {
     return QWidget_FrameSize((QWidget*)self);
 }
 
-QSize* k_textgrammarcheck__languagetoolcombobox_size(void* self) {
+QSize* k_textgrammarcheck__languagetoolcombobox_size(const void* self) {
     return QWidget_Size((QWidget*)self);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_width(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_width(const void* self) {
     return QWidget_Width((QWidget*)self);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_height(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_height(const void* self) {
     return QWidget_Height((QWidget*)self);
 }
 
-QRect* k_textgrammarcheck__languagetoolcombobox_rect(void* self) {
+QRect* k_textgrammarcheck__languagetoolcombobox_rect(const void* self) {
     return QWidget_Rect((QWidget*)self);
 }
 
-QRect* k_textgrammarcheck__languagetoolcombobox_children_rect(void* self) {
+QRect* k_textgrammarcheck__languagetoolcombobox_children_rect(const void* self) {
     return QWidget_ChildrenRect((QWidget*)self);
 }
 
-QRegion* k_textgrammarcheck__languagetoolcombobox_children_region(void* self) {
+QRegion* k_textgrammarcheck__languagetoolcombobox_children_region(const void* self) {
     return QWidget_ChildrenRegion((QWidget*)self);
 }
 
-QSize* k_textgrammarcheck__languagetoolcombobox_minimum_size(void* self) {
+QSize* k_textgrammarcheck__languagetoolcombobox_minimum_size(const void* self) {
     return QWidget_MinimumSize((QWidget*)self);
 }
 
-QSize* k_textgrammarcheck__languagetoolcombobox_maximum_size(void* self) {
+QSize* k_textgrammarcheck__languagetoolcombobox_maximum_size(const void* self) {
     return QWidget_MaximumSize((QWidget*)self);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_minimum_width(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_minimum_width(const void* self) {
     return QWidget_MinimumWidth((QWidget*)self);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_minimum_height(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_minimum_height(const void* self) {
     return QWidget_MinimumHeight((QWidget*)self);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_maximum_width(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_maximum_width(const void* self) {
     return QWidget_MaximumWidth((QWidget*)self);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_maximum_height(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_maximum_height(const void* self) {
     return QWidget_MaximumHeight((QWidget*)self);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_set_minimum_size(void* self, void* minimumSize) {
+void k_textgrammarcheck__languagetoolcombobox_set_minimum_size(void* self, const void* minimumSize) {
     QWidget_SetMinimumSize((QWidget*)self, (QSize*)minimumSize);
 }
 
@@ -617,7 +617,7 @@ void k_textgrammarcheck__languagetoolcombobox_set_minimum_size2(void* self, int 
     QWidget_SetMinimumSize2((QWidget*)self, minw, minh);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_set_maximum_size(void* self, void* maximumSize) {
+void k_textgrammarcheck__languagetoolcombobox_set_maximum_size(void* self, const void* maximumSize) {
     QWidget_SetMaximumSize((QWidget*)self, (QSize*)maximumSize);
 }
 
@@ -641,11 +641,11 @@ void k_textgrammarcheck__languagetoolcombobox_set_maximum_height(void* self, int
     QWidget_SetMaximumHeight((QWidget*)self, maxh);
 }
 
-QSize* k_textgrammarcheck__languagetoolcombobox_size_increment(void* self) {
+QSize* k_textgrammarcheck__languagetoolcombobox_size_increment(const void* self) {
     return QWidget_SizeIncrement((QWidget*)self);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_set_size_increment(void* self, void* sizeIncrement) {
+void k_textgrammarcheck__languagetoolcombobox_set_size_increment(void* self, const void* sizeIncrement) {
     QWidget_SetSizeIncrement((QWidget*)self, (QSize*)sizeIncrement);
 }
 
@@ -653,11 +653,11 @@ void k_textgrammarcheck__languagetoolcombobox_set_size_increment2(void* self, in
     QWidget_SetSizeIncrement2((QWidget*)self, w, h);
 }
 
-QSize* k_textgrammarcheck__languagetoolcombobox_base_size(void* self) {
+QSize* k_textgrammarcheck__languagetoolcombobox_base_size(const void* self) {
     return QWidget_BaseSize((QWidget*)self);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_set_base_size(void* self, void* baseSize) {
+void k_textgrammarcheck__languagetoolcombobox_set_base_size(void* self, const void* baseSize) {
     QWidget_SetBaseSize((QWidget*)self, (QSize*)baseSize);
 }
 
@@ -665,7 +665,7 @@ void k_textgrammarcheck__languagetoolcombobox_set_base_size2(void* self, int bas
     QWidget_SetBaseSize2((QWidget*)self, basew, baseh);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_set_fixed_size(void* self, void* fixedSize) {
+void k_textgrammarcheck__languagetoolcombobox_set_fixed_size(void* self, const void* fixedSize) {
     QWidget_SetFixedSize((QWidget*)self, (QSize*)fixedSize);
 }
 
@@ -681,71 +681,71 @@ void k_textgrammarcheck__languagetoolcombobox_set_fixed_height(void* self, int h
     QWidget_SetFixedHeight((QWidget*)self, h);
 }
 
-QPointF* k_textgrammarcheck__languagetoolcombobox_map_to_global(void* self, void* param1) {
+QPointF* k_textgrammarcheck__languagetoolcombobox_map_to_global(const void* self, const void* param1) {
     return QWidget_MapToGlobal((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* k_textgrammarcheck__languagetoolcombobox_map_to_global2(void* self, void* param1) {
+QPoint* k_textgrammarcheck__languagetoolcombobox_map_to_global2(const void* self, const void* param1) {
     return QWidget_MapToGlobal2((QWidget*)self, (QPoint*)param1);
 }
 
-QPointF* k_textgrammarcheck__languagetoolcombobox_map_from_global(void* self, void* param1) {
+QPointF* k_textgrammarcheck__languagetoolcombobox_map_from_global(const void* self, const void* param1) {
     return QWidget_MapFromGlobal((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* k_textgrammarcheck__languagetoolcombobox_map_from_global2(void* self, void* param1) {
+QPoint* k_textgrammarcheck__languagetoolcombobox_map_from_global2(const void* self, const void* param1) {
     return QWidget_MapFromGlobal2((QWidget*)self, (QPoint*)param1);
 }
 
-QPointF* k_textgrammarcheck__languagetoolcombobox_map_to_parent(void* self, void* param1) {
+QPointF* k_textgrammarcheck__languagetoolcombobox_map_to_parent(const void* self, const void* param1) {
     return QWidget_MapToParent((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* k_textgrammarcheck__languagetoolcombobox_map_to_parent2(void* self, void* param1) {
+QPoint* k_textgrammarcheck__languagetoolcombobox_map_to_parent2(const void* self, const void* param1) {
     return QWidget_MapToParent2((QWidget*)self, (QPoint*)param1);
 }
 
-QPointF* k_textgrammarcheck__languagetoolcombobox_map_from_parent(void* self, void* param1) {
+QPointF* k_textgrammarcheck__languagetoolcombobox_map_from_parent(const void* self, const void* param1) {
     return QWidget_MapFromParent((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* k_textgrammarcheck__languagetoolcombobox_map_from_parent2(void* self, void* param1) {
+QPoint* k_textgrammarcheck__languagetoolcombobox_map_from_parent2(const void* self, const void* param1) {
     return QWidget_MapFromParent2((QWidget*)self, (QPoint*)param1);
 }
 
-QPointF* k_textgrammarcheck__languagetoolcombobox_map_to(void* self, void* param1, void* param2) {
+QPointF* k_textgrammarcheck__languagetoolcombobox_map_to(const void* self, const void* param1, const void* param2) {
     return QWidget_MapTo((QWidget*)self, (QWidget*)param1, (QPointF*)param2);
 }
 
-QPoint* k_textgrammarcheck__languagetoolcombobox_map_to2(void* self, void* param1, void* param2) {
+QPoint* k_textgrammarcheck__languagetoolcombobox_map_to2(const void* self, const void* param1, const void* param2) {
     return QWidget_MapTo2((QWidget*)self, (QWidget*)param1, (QPoint*)param2);
 }
 
-QPointF* k_textgrammarcheck__languagetoolcombobox_map_from(void* self, void* param1, void* param2) {
+QPointF* k_textgrammarcheck__languagetoolcombobox_map_from(const void* self, const void* param1, const void* param2) {
     return QWidget_MapFrom((QWidget*)self, (QWidget*)param1, (QPointF*)param2);
 }
 
-QPoint* k_textgrammarcheck__languagetoolcombobox_map_from2(void* self, void* param1, void* param2) {
+QPoint* k_textgrammarcheck__languagetoolcombobox_map_from2(const void* self, const void* param1, const void* param2) {
     return QWidget_MapFrom2((QWidget*)self, (QWidget*)param1, (QPoint*)param2);
 }
 
-QWidget* k_textgrammarcheck__languagetoolcombobox_window(void* self) {
+QWidget* k_textgrammarcheck__languagetoolcombobox_window(const void* self) {
     return QWidget_Window((QWidget*)self);
 }
 
-QWidget* k_textgrammarcheck__languagetoolcombobox_native_parent_widget(void* self) {
+QWidget* k_textgrammarcheck__languagetoolcombobox_native_parent_widget(const void* self) {
     return QWidget_NativeParentWidget((QWidget*)self);
 }
 
-QWidget* k_textgrammarcheck__languagetoolcombobox_top_level_widget(void* self) {
+QWidget* k_textgrammarcheck__languagetoolcombobox_top_level_widget(const void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-const QPalette* k_textgrammarcheck__languagetoolcombobox_palette(void* self) {
+const QPalette* k_textgrammarcheck__languagetoolcombobox_palette(const void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_set_palette(void* self, void* palette) {
+void k_textgrammarcheck__languagetoolcombobox_set_palette(void* self, const void* palette) {
     QWidget_SetPalette((QWidget*)self, (QPalette*)palette);
 }
 
@@ -753,7 +753,7 @@ void k_textgrammarcheck__languagetoolcombobox_set_background_role(void* self, in
     QWidget_SetBackgroundRole((QWidget*)self, backgroundRole);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_background_role(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_background_role(const void* self) {
     return QWidget_BackgroundRole((QWidget*)self);
 }
 
@@ -761,31 +761,31 @@ void k_textgrammarcheck__languagetoolcombobox_set_foreground_role(void* self, in
     QWidget_SetForegroundRole((QWidget*)self, foregroundRole);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_foreground_role(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_foreground_role(const void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-const QFont* k_textgrammarcheck__languagetoolcombobox_font(void* self) {
+const QFont* k_textgrammarcheck__languagetoolcombobox_font(const void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_set_font(void* self, void* font) {
+void k_textgrammarcheck__languagetoolcombobox_set_font(void* self, const void* font) {
     QWidget_SetFont((QWidget*)self, (QFont*)font);
 }
 
-QFontMetrics* k_textgrammarcheck__languagetoolcombobox_font_metrics(void* self) {
+QFontMetrics* k_textgrammarcheck__languagetoolcombobox_font_metrics(const void* self) {
     return QWidget_FontMetrics((QWidget*)self);
 }
 
-QFontInfo* k_textgrammarcheck__languagetoolcombobox_font_info(void* self) {
+QFontInfo* k_textgrammarcheck__languagetoolcombobox_font_info(const void* self) {
     return QWidget_FontInfo((QWidget*)self);
 }
 
-QCursor* k_textgrammarcheck__languagetoolcombobox_cursor(void* self) {
+QCursor* k_textgrammarcheck__languagetoolcombobox_cursor(const void* self) {
     return QWidget_Cursor((QWidget*)self);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_set_cursor(void* self, void* cursor) {
+void k_textgrammarcheck__languagetoolcombobox_set_cursor(void* self, const void* cursor) {
     QWidget_SetCursor((QWidget*)self, (QCursor*)cursor);
 }
 
@@ -797,11 +797,11 @@ void k_textgrammarcheck__languagetoolcombobox_set_mouse_tracking(void* self, boo
     QWidget_SetMouseTracking((QWidget*)self, enable);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_has_mouse_tracking(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_has_mouse_tracking(const void* self) {
     return QWidget_HasMouseTracking((QWidget*)self);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_under_mouse(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_under_mouse(const void* self) {
     return QWidget_UnderMouse((QWidget*)self);
 }
 
@@ -809,19 +809,19 @@ void k_textgrammarcheck__languagetoolcombobox_set_tablet_tracking(void* self, bo
     QWidget_SetTabletTracking((QWidget*)self, enable);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_has_tablet_tracking(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_has_tablet_tracking(const void* self) {
     return QWidget_HasTabletTracking((QWidget*)self);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_set_mask(void* self, void* mask) {
+void k_textgrammarcheck__languagetoolcombobox_set_mask(void* self, const void* mask) {
     QWidget_SetMask((QWidget*)self, (QBitmap*)mask);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_set_mask2(void* self, void* mask) {
+void k_textgrammarcheck__languagetoolcombobox_set_mask2(void* self, const void* mask) {
     QWidget_SetMask2((QWidget*)self, (QRegion*)mask);
 }
 
-QRegion* k_textgrammarcheck__languagetoolcombobox_mask(void* self) {
+QRegion* k_textgrammarcheck__languagetoolcombobox_mask(const void* self) {
     return QWidget_Mask((QWidget*)self);
 }
 
@@ -841,7 +841,7 @@ QPixmap* k_textgrammarcheck__languagetoolcombobox_grab(void* self) {
     return QWidget_Grab((QWidget*)self);
 }
 
-QGraphicsEffect* k_textgrammarcheck__languagetoolcombobox_graphics_effect(void* self) {
+QGraphicsEffect* k_textgrammarcheck__languagetoolcombobox_graphics_effect(const void* self) {
     return QWidget_GraphicsEffect((QWidget*)self);
 }
 
@@ -865,25 +865,25 @@ void k_textgrammarcheck__languagetoolcombobox_set_style_sheet(void* self, const 
     QWidget_SetStyleSheet((QWidget*)self, qstring(styleSheet));
 }
 
-const char* k_textgrammarcheck__languagetoolcombobox_style_sheet(void* self) {
+const char* k_textgrammarcheck__languagetoolcombobox_style_sheet(const void* self) {
     libqt_string _str = QWidget_StyleSheet((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_textgrammarcheck__languagetoolcombobox_window_title(void* self) {
+const char* k_textgrammarcheck__languagetoolcombobox_window_title(const void* self) {
     libqt_string _str = QWidget_WindowTitle((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_textgrammarcheck__languagetoolcombobox_set_window_icon(void* self, void* icon) {
+void k_textgrammarcheck__languagetoolcombobox_set_window_icon(void* self, const void* icon) {
     QWidget_SetWindowIcon((QWidget*)self, (QIcon*)icon);
 }
 
-QIcon* k_textgrammarcheck__languagetoolcombobox_window_icon(void* self) {
+QIcon* k_textgrammarcheck__languagetoolcombobox_window_icon(const void* self) {
     return QWidget_WindowIcon((QWidget*)self);
 }
 
@@ -891,7 +891,7 @@ void k_textgrammarcheck__languagetoolcombobox_set_window_icon_text(void* self, c
     QWidget_SetWindowIconText((QWidget*)self, qstring(windowIconText));
 }
 
-const char* k_textgrammarcheck__languagetoolcombobox_window_icon_text(void* self) {
+const char* k_textgrammarcheck__languagetoolcombobox_window_icon_text(const void* self) {
     libqt_string _str = QWidget_WindowIconText((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -902,7 +902,7 @@ void k_textgrammarcheck__languagetoolcombobox_set_window_role(void* self, const 
     QWidget_SetWindowRole((QWidget*)self, qstring(windowRole));
 }
 
-const char* k_textgrammarcheck__languagetoolcombobox_window_role(void* self) {
+const char* k_textgrammarcheck__languagetoolcombobox_window_role(const void* self) {
     libqt_string _str = QWidget_WindowRole((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -913,7 +913,7 @@ void k_textgrammarcheck__languagetoolcombobox_set_window_file_path(void* self, c
     QWidget_SetWindowFilePath((QWidget*)self, qstring(filePath));
 }
 
-const char* k_textgrammarcheck__languagetoolcombobox_window_file_path(void* self) {
+const char* k_textgrammarcheck__languagetoolcombobox_window_file_path(const void* self) {
     libqt_string _str = QWidget_WindowFilePath((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -924,11 +924,11 @@ void k_textgrammarcheck__languagetoolcombobox_set_window_opacity(void* self, dou
     QWidget_SetWindowOpacity((QWidget*)self, level);
 }
 
-double k_textgrammarcheck__languagetoolcombobox_window_opacity(void* self) {
+double k_textgrammarcheck__languagetoolcombobox_window_opacity(const void* self) {
     return QWidget_WindowOpacity((QWidget*)self);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_is_window_modified(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_is_window_modified(const void* self) {
     return QWidget_IsWindowModified((QWidget*)self);
 }
 
@@ -936,7 +936,7 @@ void k_textgrammarcheck__languagetoolcombobox_set_tool_tip(void* self, const cha
     QWidget_SetToolTip((QWidget*)self, qstring(toolTip));
 }
 
-const char* k_textgrammarcheck__languagetoolcombobox_tool_tip(void* self) {
+const char* k_textgrammarcheck__languagetoolcombobox_tool_tip(const void* self) {
     libqt_string _str = QWidget_ToolTip((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -947,7 +947,7 @@ void k_textgrammarcheck__languagetoolcombobox_set_tool_tip_duration(void* self, 
     QWidget_SetToolTipDuration((QWidget*)self, msec);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_tool_tip_duration(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_tool_tip_duration(const void* self) {
     return QWidget_ToolTipDuration((QWidget*)self);
 }
 
@@ -955,7 +955,7 @@ void k_textgrammarcheck__languagetoolcombobox_set_status_tip(void* self, const c
     QWidget_SetStatusTip((QWidget*)self, qstring(statusTip));
 }
 
-const char* k_textgrammarcheck__languagetoolcombobox_status_tip(void* self) {
+const char* k_textgrammarcheck__languagetoolcombobox_status_tip(const void* self) {
     libqt_string _str = QWidget_StatusTip((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -966,14 +966,14 @@ void k_textgrammarcheck__languagetoolcombobox_set_whats_this(void* self, const c
     QWidget_SetWhatsThis((QWidget*)self, qstring(whatsThis));
 }
 
-const char* k_textgrammarcheck__languagetoolcombobox_whats_this(void* self) {
+const char* k_textgrammarcheck__languagetoolcombobox_whats_this(const void* self) {
     libqt_string _str = QWidget_WhatsThis((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_textgrammarcheck__languagetoolcombobox_accessible_name(void* self) {
+const char* k_textgrammarcheck__languagetoolcombobox_accessible_name(const void* self) {
     libqt_string _str = QWidget_AccessibleName((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -984,7 +984,7 @@ void k_textgrammarcheck__languagetoolcombobox_set_accessible_name(void* self, co
     QWidget_SetAccessibleName((QWidget*)self, qstring(name));
 }
 
-const char* k_textgrammarcheck__languagetoolcombobox_accessible_description(void* self) {
+const char* k_textgrammarcheck__languagetoolcombobox_accessible_description(const void* self) {
     libqt_string _str = QWidget_AccessibleDescription((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -999,7 +999,7 @@ void k_textgrammarcheck__languagetoolcombobox_set_layout_direction(void* self, i
     QWidget_SetLayoutDirection((QWidget*)self, direction);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_layout_direction(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_layout_direction(const void* self) {
     return QWidget_LayoutDirection((QWidget*)self);
 }
 
@@ -1007,11 +1007,11 @@ void k_textgrammarcheck__languagetoolcombobox_unset_layout_direction(void* self)
     QWidget_UnsetLayoutDirection((QWidget*)self);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_set_locale(void* self, void* locale) {
+void k_textgrammarcheck__languagetoolcombobox_set_locale(void* self, const void* locale) {
     QWidget_SetLocale((QWidget*)self, (QLocale*)locale);
 }
 
-QLocale* k_textgrammarcheck__languagetoolcombobox_locale(void* self) {
+QLocale* k_textgrammarcheck__languagetoolcombobox_locale(const void* self) {
     return QWidget_Locale((QWidget*)self);
 }
 
@@ -1019,11 +1019,11 @@ void k_textgrammarcheck__languagetoolcombobox_unset_locale(void* self) {
     QWidget_UnsetLocale((QWidget*)self);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_is_right_to_left(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_is_right_to_left(const void* self) {
     return QWidget_IsRightToLeft((QWidget*)self);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_is_left_to_right(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_is_left_to_right(const void* self) {
     return QWidget_IsLeftToRight((QWidget*)self);
 }
 
@@ -1031,7 +1031,7 @@ void k_textgrammarcheck__languagetoolcombobox_set_focus(void* self) {
     QWidget_SetFocus((QWidget*)self);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_is_active_window(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_is_active_window(const void* self) {
     return QWidget_IsActiveWindow((QWidget*)self);
 }
 
@@ -1047,7 +1047,7 @@ void k_textgrammarcheck__languagetoolcombobox_set_focus2(void* self, int32_t rea
     QWidget_SetFocus2((QWidget*)self, reason);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_focus_policy(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_focus_policy(const void* self) {
     return QWidget_FocusPolicy((QWidget*)self);
 }
 
@@ -1055,7 +1055,7 @@ void k_textgrammarcheck__languagetoolcombobox_set_focus_policy(void* self, int32
     QWidget_SetFocusPolicy((QWidget*)self, policy);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_has_focus(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_has_focus(const void* self) {
     return QWidget_HasFocus((QWidget*)self);
 }
 
@@ -1067,11 +1067,11 @@ void k_textgrammarcheck__languagetoolcombobox_set_focus_proxy(void* self, void* 
     QWidget_SetFocusProxy((QWidget*)self, (QWidget*)focusProxy);
 }
 
-QWidget* k_textgrammarcheck__languagetoolcombobox_focus_proxy(void* self) {
+QWidget* k_textgrammarcheck__languagetoolcombobox_focus_proxy(const void* self) {
     return QWidget_FocusProxy((QWidget*)self);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_context_menu_policy(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_context_menu_policy(const void* self) {
     return QWidget_ContextMenuPolicy((QWidget*)self);
 }
 
@@ -1083,7 +1083,7 @@ void k_textgrammarcheck__languagetoolcombobox_grab_mouse(void* self) {
     QWidget_GrabMouse((QWidget*)self);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_grab_mouse2(void* self, void* param1) {
+void k_textgrammarcheck__languagetoolcombobox_grab_mouse2(void* self, const void* param1) {
     QWidget_GrabMouse2((QWidget*)self, (QCursor*)param1);
 }
 
@@ -1099,7 +1099,7 @@ void k_textgrammarcheck__languagetoolcombobox_release_keyboard(void* self) {
     QWidget_ReleaseKeyboard((QWidget*)self);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_grab_shortcut(void* self, void* key) {
+int32_t k_textgrammarcheck__languagetoolcombobox_grab_shortcut(void* self, const void* key) {
     return QWidget_GrabShortcut((QWidget*)self, (QKeySequence*)key);
 }
 
@@ -1123,7 +1123,7 @@ QWidget* k_textgrammarcheck__languagetoolcombobox_keyboard_grabber() {
     return QWidget_KeyboardGrabber();
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_updates_enabled(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_updates_enabled(const void* self) {
     return QWidget_UpdatesEnabled((QWidget*)self);
 }
 
@@ -1131,7 +1131,7 @@ void k_textgrammarcheck__languagetoolcombobox_set_updates_enabled(void* self, bo
     QWidget_SetUpdatesEnabled((QWidget*)self, enable);
 }
 
-QGraphicsProxyWidget* k_textgrammarcheck__languagetoolcombobox_graphics_proxy_widget(void* self) {
+QGraphicsProxyWidget* k_textgrammarcheck__languagetoolcombobox_graphics_proxy_widget(const void* self) {
     return QWidget_GraphicsProxyWidget((QWidget*)self);
 }
 
@@ -1147,11 +1147,11 @@ void k_textgrammarcheck__languagetoolcombobox_update2(void* self, int x, int y, 
     QWidget_Update2((QWidget*)self, x, y, w, h);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_update3(void* self, void* param1) {
+void k_textgrammarcheck__languagetoolcombobox_update3(void* self, const void* param1) {
     QWidget_Update3((QWidget*)self, (QRect*)param1);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_update4(void* self, void* param1) {
+void k_textgrammarcheck__languagetoolcombobox_update4(void* self, const void* param1) {
     QWidget_Update4((QWidget*)self, (QRegion*)param1);
 }
 
@@ -1159,11 +1159,11 @@ void k_textgrammarcheck__languagetoolcombobox_repaint2(void* self, int x, int y,
     QWidget_Repaint2((QWidget*)self, x, y, w, h);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_repaint3(void* self, void* param1) {
+void k_textgrammarcheck__languagetoolcombobox_repaint3(void* self, const void* param1) {
     QWidget_Repaint3((QWidget*)self, (QRect*)param1);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_repaint4(void* self, void* param1) {
+void k_textgrammarcheck__languagetoolcombobox_repaint4(void* self, const void* param1) {
     QWidget_Repaint4((QWidget*)self, (QRegion*)param1);
 }
 
@@ -1215,7 +1215,7 @@ void k_textgrammarcheck__languagetoolcombobox_move(void* self, int x, int y) {
     QWidget_Move((QWidget*)self, x, y);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_move2(void* self, void* param1) {
+void k_textgrammarcheck__languagetoolcombobox_move2(void* self, const void* param1) {
     QWidget_Move2((QWidget*)self, (QPoint*)param1);
 }
 
@@ -1223,7 +1223,7 @@ void k_textgrammarcheck__languagetoolcombobox_resize(void* self, int w, int h) {
     QWidget_Resize((QWidget*)self, w, h);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_resize2(void* self, void* param1) {
+void k_textgrammarcheck__languagetoolcombobox_resize2(void* self, const void* param1) {
     QWidget_Resize2((QWidget*)self, (QSize*)param1);
 }
 
@@ -1231,11 +1231,11 @@ void k_textgrammarcheck__languagetoolcombobox_set_geometry(void* self, int x, in
     QWidget_SetGeometry((QWidget*)self, x, y, w, h);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_set_geometry2(void* self, void* geometry) {
+void k_textgrammarcheck__languagetoolcombobox_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* k_textgrammarcheck__languagetoolcombobox_save_geometry(void* self) {
+char* k_textgrammarcheck__languagetoolcombobox_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1250,31 +1250,31 @@ void k_textgrammarcheck__languagetoolcombobox_adjust_size(void* self) {
     QWidget_AdjustSize((QWidget*)self);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_is_visible(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_is_visible(const void* self) {
     return QWidget_IsVisible((QWidget*)self);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_is_visible_to(void* self, void* param1) {
+bool k_textgrammarcheck__languagetoolcombobox_is_visible_to(const void* self, const void* param1) {
     return QWidget_IsVisibleTo((QWidget*)self, (QWidget*)param1);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_is_hidden(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_is_hidden(const void* self) {
     return QWidget_IsHidden((QWidget*)self);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_is_minimized(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_is_minimized(const void* self) {
     return QWidget_IsMinimized((QWidget*)self);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_is_maximized(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_is_maximized(const void* self) {
     return QWidget_IsMaximized((QWidget*)self);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_is_full_screen(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_is_full_screen(const void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_window_state(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_window_state(const void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
@@ -1286,7 +1286,7 @@ void k_textgrammarcheck__languagetoolcombobox_override_window_state(void* self, 
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
-QSizePolicy* k_textgrammarcheck__languagetoolcombobox_size_policy(void* self) {
+QSizePolicy* k_textgrammarcheck__languagetoolcombobox_size_policy(const void* self) {
     return QWidget_SizePolicy((QWidget*)self);
 }
 
@@ -1298,7 +1298,7 @@ void k_textgrammarcheck__languagetoolcombobox_set_size_policy2(void* self, int32
     QWidget_SetSizePolicy2((QWidget*)self, horizontal, vertical);
 }
 
-QRegion* k_textgrammarcheck__languagetoolcombobox_visible_region(void* self) {
+QRegion* k_textgrammarcheck__languagetoolcombobox_visible_region(const void* self) {
     return QWidget_VisibleRegion((QWidget*)self);
 }
 
@@ -1306,19 +1306,19 @@ void k_textgrammarcheck__languagetoolcombobox_set_contents_margins(void* self, i
     QWidget_SetContentsMargins((QWidget*)self, left, top, right, bottom);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_set_contents_margins2(void* self, void* margins) {
+void k_textgrammarcheck__languagetoolcombobox_set_contents_margins2(void* self, const void* margins) {
     QWidget_SetContentsMargins2((QWidget*)self, (QMargins*)margins);
 }
 
-QMargins* k_textgrammarcheck__languagetoolcombobox_contents_margins(void* self) {
+QMargins* k_textgrammarcheck__languagetoolcombobox_contents_margins(const void* self) {
     return QWidget_ContentsMargins((QWidget*)self);
 }
 
-QRect* k_textgrammarcheck__languagetoolcombobox_contents_rect(void* self) {
+QRect* k_textgrammarcheck__languagetoolcombobox_contents_rect(const void* self) {
     return QWidget_ContentsRect((QWidget*)self);
 }
 
-QLayout* k_textgrammarcheck__languagetoolcombobox_layout(void* self) {
+QLayout* k_textgrammarcheck__languagetoolcombobox_layout(const void* self) {
     return QWidget_Layout((QWidget*)self);
 }
 
@@ -1342,23 +1342,23 @@ void k_textgrammarcheck__languagetoolcombobox_scroll(void* self, int dx, int dy)
     QWidget_Scroll((QWidget*)self, dx, dy);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_scroll2(void* self, int dx, int dy, void* param3) {
+void k_textgrammarcheck__languagetoolcombobox_scroll2(void* self, int dx, int dy, const void* param3) {
     QWidget_Scroll2((QWidget*)self, dx, dy, (QRect*)param3);
 }
 
-QWidget* k_textgrammarcheck__languagetoolcombobox_focus_widget(void* self) {
+QWidget* k_textgrammarcheck__languagetoolcombobox_focus_widget(const void* self) {
     return QWidget_FocusWidget((QWidget*)self);
 }
 
-QWidget* k_textgrammarcheck__languagetoolcombobox_next_in_focus_chain(void* self) {
+QWidget* k_textgrammarcheck__languagetoolcombobox_next_in_focus_chain(const void* self) {
     return QWidget_NextInFocusChain((QWidget*)self);
 }
 
-QWidget* k_textgrammarcheck__languagetoolcombobox_previous_in_focus_chain(void* self) {
+QWidget* k_textgrammarcheck__languagetoolcombobox_previous_in_focus_chain(const void* self) {
     return QWidget_PreviousInFocusChain((QWidget*)self);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_accept_drops(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_accept_drops(const void* self) {
     return QWidget_AcceptDrops((QWidget*)self);
 }
 
@@ -1386,7 +1386,7 @@ void k_textgrammarcheck__languagetoolcombobox_remove_action(void* self, void* ac
     QWidget_RemoveAction((QWidget*)self, (QAction*)action);
 }
 
-libqt_list /* of QAction* */ k_textgrammarcheck__languagetoolcombobox_actions(void* self) {
+libqt_list /* of QAction* */ k_textgrammarcheck__languagetoolcombobox_actions(const void* self) {
     libqt_list _arr = QWidget_Actions((QWidget*)self);
     return _arr;
 }
@@ -1395,19 +1395,19 @@ QAction* k_textgrammarcheck__languagetoolcombobox_add_action2(void* self, const 
     return QWidget_AddAction2((QWidget*)self, qstring(text));
 }
 
-QAction* k_textgrammarcheck__languagetoolcombobox_add_action3(void* self, void* icon, const char* text) {
+QAction* k_textgrammarcheck__languagetoolcombobox_add_action3(void* self, const void* icon, const char* text) {
     return QWidget_AddAction3((QWidget*)self, (QIcon*)icon, qstring(text));
 }
 
-QAction* k_textgrammarcheck__languagetoolcombobox_add_action4(void* self, const char* text, void* shortcut) {
+QAction* k_textgrammarcheck__languagetoolcombobox_add_action4(void* self, const char* text, const void* shortcut) {
     return QWidget_AddAction4((QWidget*)self, qstring(text), (QKeySequence*)shortcut);
 }
 
-QAction* k_textgrammarcheck__languagetoolcombobox_add_action5(void* self, void* icon, const char* text, void* shortcut) {
+QAction* k_textgrammarcheck__languagetoolcombobox_add_action5(void* self, const void* icon, const char* text, const void* shortcut) {
     return QWidget_AddAction5((QWidget*)self, (QIcon*)icon, qstring(text), (QKeySequence*)shortcut);
 }
 
-QWidget* k_textgrammarcheck__languagetoolcombobox_parent_widget(void* self) {
+QWidget* k_textgrammarcheck__languagetoolcombobox_parent_widget(const void* self) {
     return QWidget_ParentWidget((QWidget*)self);
 }
 
@@ -1415,7 +1415,7 @@ void k_textgrammarcheck__languagetoolcombobox_set_window_flags(void* self, int32
     QWidget_SetWindowFlags((QWidget*)self, type);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_window_flags(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_window_flags(const void* self) {
     return QWidget_WindowFlags((QWidget*)self);
 }
 
@@ -1427,7 +1427,7 @@ void k_textgrammarcheck__languagetoolcombobox_override_window_flags(void* self, 
     QWidget_OverrideWindowFlags((QWidget*)self, type);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_window_type(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_window_type(const void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
@@ -1435,15 +1435,15 @@ QWidget* k_textgrammarcheck__languagetoolcombobox_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 
-QWidget* k_textgrammarcheck__languagetoolcombobox_child_at(void* self, int x, int y) {
+QWidget* k_textgrammarcheck__languagetoolcombobox_child_at(const void* self, int x, int y) {
     return QWidget_ChildAt((QWidget*)self, x, y);
 }
 
-QWidget* k_textgrammarcheck__languagetoolcombobox_child_at2(void* self, void* p) {
+QWidget* k_textgrammarcheck__languagetoolcombobox_child_at2(const void* self, const void* p) {
     return QWidget_ChildAt2((QWidget*)self, (QPoint*)p);
 }
 
-QWidget* k_textgrammarcheck__languagetoolcombobox_child_at3(void* self, void* p) {
+QWidget* k_textgrammarcheck__languagetoolcombobox_child_at3(const void* self, const void* p) {
     return QWidget_ChildAt3((QWidget*)self, (QPointF*)p);
 }
 
@@ -1451,19 +1451,19 @@ void k_textgrammarcheck__languagetoolcombobox_set_attribute(void* self, int32_t 
     QWidget_SetAttribute((QWidget*)self, param1);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_test_attribute(void* self, int32_t param1) {
+bool k_textgrammarcheck__languagetoolcombobox_test_attribute(const void* self, int32_t param1) {
     return QWidget_TestAttribute((QWidget*)self, param1);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_ensure_polished(void* self) {
+void k_textgrammarcheck__languagetoolcombobox_ensure_polished(const void* self) {
     QWidget_EnsurePolished((QWidget*)self);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_is_ancestor_of(void* self, void* child) {
+bool k_textgrammarcheck__languagetoolcombobox_is_ancestor_of(const void* self, const void* child) {
     return QWidget_IsAncestorOf((QWidget*)self, (QWidget*)child);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_auto_fill_background(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_auto_fill_background(const void* self) {
     return QWidget_AutoFillBackground((QWidget*)self);
 }
 
@@ -1471,15 +1471,15 @@ void k_textgrammarcheck__languagetoolcombobox_set_auto_fill_background(void* sel
     QWidget_SetAutoFillBackground((QWidget*)self, enabled);
 }
 
-QBackingStore* k_textgrammarcheck__languagetoolcombobox_backing_store(void* self) {
+QBackingStore* k_textgrammarcheck__languagetoolcombobox_backing_store(const void* self) {
     return QWidget_BackingStore((QWidget*)self);
 }
 
-QWindow* k_textgrammarcheck__languagetoolcombobox_window_handle(void* self) {
+QWindow* k_textgrammarcheck__languagetoolcombobox_window_handle(const void* self) {
     return QWidget_WindowHandle((QWidget*)self);
 }
 
-QScreen* k_textgrammarcheck__languagetoolcombobox_screen(void* self) {
+QScreen* k_textgrammarcheck__languagetoolcombobox_screen(const void* self) {
     return QWidget_Screen((QWidget*)self);
 }
 
@@ -1499,11 +1499,11 @@ void k_textgrammarcheck__languagetoolcombobox_on_window_title_changed(void* self
     QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_window_icon_changed(void* self, void* icon) {
+void k_textgrammarcheck__languagetoolcombobox_window_icon_changed(void* self, const void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+void k_textgrammarcheck__languagetoolcombobox_on_window_icon_changed(void* self, void (*callback)(void*, const void*)) {
     QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
@@ -1515,15 +1515,15 @@ void k_textgrammarcheck__languagetoolcombobox_on_window_icon_text_changed(void* 
     QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_custom_context_menu_requested(void* self, void* pos) {
+void k_textgrammarcheck__languagetoolcombobox_custom_context_menu_requested(void* self, const void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+void k_textgrammarcheck__languagetoolcombobox_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*)) {
     QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_input_method_hints(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_input_method_hints(const void* self) {
     return QWidget_InputMethodHints((QWidget*)self);
 }
 
@@ -1531,31 +1531,31 @@ void k_textgrammarcheck__languagetoolcombobox_set_input_method_hints(void* self,
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_render22(void* self, void* target, void* targetOffset) {
+void k_textgrammarcheck__languagetoolcombobox_render22(void* self, void* target, const void* targetOffset) {
     QWidget_Render22((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_render3(void* self, void* target, void* targetOffset, void* sourceRegion) {
+void k_textgrammarcheck__languagetoolcombobox_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion) {
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
+void k_textgrammarcheck__languagetoolcombobox_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_render23(void* self, void* painter, void* targetOffset) {
+void k_textgrammarcheck__languagetoolcombobox_render23(void* self, void* painter, const void* targetOffset) {
     QWidget_Render23((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_render32(void* self, void* painter, void* targetOffset, void* sourceRegion) {
+void k_textgrammarcheck__languagetoolcombobox_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion) {
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
+void k_textgrammarcheck__languagetoolcombobox_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
-QPixmap* k_textgrammarcheck__languagetoolcombobox_grab1(void* self, void* rectangle) {
+QPixmap* k_textgrammarcheck__languagetoolcombobox_grab1(void* self, const void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
@@ -1563,7 +1563,7 @@ void k_textgrammarcheck__languagetoolcombobox_grab_gesture2(void* self, int32_t 
     QWidget_GrabGesture2((QWidget*)self, type, flags);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_grab_shortcut2(void* self, void* key, int32_t context) {
+int32_t k_textgrammarcheck__languagetoolcombobox_grab_shortcut2(void* self, const void* key, int32_t context) {
     return QWidget_GrabShortcut2((QWidget*)self, (QKeySequence*)key, context);
 }
 
@@ -1591,7 +1591,7 @@ QWidget* k_textgrammarcheck__languagetoolcombobox_create_window_container3(void*
     return QWidget_CreateWindowContainer3((QWindow*)window, (QWidget*)parent, flags);
 }
 
-const char* k_textgrammarcheck__languagetoolcombobox_object_name(void* self) {
+const char* k_textgrammarcheck__languagetoolcombobox_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1602,19 +1602,19 @@ void k_textgrammarcheck__languagetoolcombobox_set_object_name(void* self, const 
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_is_widget_type(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_is_window_type(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_is_quick_item_type(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_signals_blocked(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -1622,7 +1622,7 @@ bool k_textgrammarcheck__languagetoolcombobox_block_signals(void* self, bool b) 
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_textgrammarcheck__languagetoolcombobox_thread(void* self) {
+QThread* k_textgrammarcheck__languagetoolcombobox_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -1646,7 +1646,7 @@ void k_textgrammarcheck__languagetoolcombobox_kill_timer2(void* self, int32_t id
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_textgrammarcheck__languagetoolcombobox_children(void* self) {
+libqt_list /* of QObject* */ k_textgrammarcheck__languagetoolcombobox_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1659,55 +1659,55 @@ void k_textgrammarcheck__languagetoolcombobox_remove_event_filter(void* self, vo
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_textgrammarcheck__languagetoolcombobox_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_textgrammarcheck__languagetoolcombobox_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_textgrammarcheck__languagetoolcombobox_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_textgrammarcheck__languagetoolcombobox_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_textgrammarcheck__languagetoolcombobox_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_textgrammarcheck__languagetoolcombobox_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_textgrammarcheck__languagetoolcombobox_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_textgrammarcheck__languagetoolcombobox_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_disconnect3(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_disconnect4(void* self, void* receiver) {
+bool k_textgrammarcheck__languagetoolcombobox_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_disconnect5(void* param1) {
+bool k_textgrammarcheck__languagetoolcombobox_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_dump_object_tree(void* self) {
+void k_textgrammarcheck__languagetoolcombobox_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_dump_object_info(void* self) {
+void k_textgrammarcheck__languagetoolcombobox_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_set_property(void* self, const char* name, void* value) {
+bool k_textgrammarcheck__languagetoolcombobox_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_textgrammarcheck__languagetoolcombobox_property(void* self, const char* name) {
+QVariant* k_textgrammarcheck__languagetoolcombobox_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_textgrammarcheck__languagetoolcombobox_dynamic_property_names(void* self) {
+const char** k_textgrammarcheck__languagetoolcombobox_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -1728,7 +1728,7 @@ QBindingStorage* k_textgrammarcheck__languagetoolcombobox_binding_storage(void* 
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_textgrammarcheck__languagetoolcombobox_binding_storage2(void* self) {
+const QBindingStorage* k_textgrammarcheck__languagetoolcombobox_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -1740,11 +1740,11 @@ void k_textgrammarcheck__languagetoolcombobox_on_destroyed(void* self, void (*ca
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_textgrammarcheck__languagetoolcombobox_parent(void* self) {
+QObject* k_textgrammarcheck__languagetoolcombobox_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_inherits(void* self, const char* classname) {
+bool k_textgrammarcheck__languagetoolcombobox_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -1760,31 +1760,31 @@ int32_t k_textgrammarcheck__languagetoolcombobox_start_timer23(void* self, int64
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_textgrammarcheck__languagetoolcombobox_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_textgrammarcheck__languagetoolcombobox_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_textgrammarcheck__languagetoolcombobox_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_textgrammarcheck__languagetoolcombobox_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_textgrammarcheck__languagetoolcombobox_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_textgrammarcheck__languagetoolcombobox_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_disconnect1(void* self, const char* signal) {
+bool k_textgrammarcheck__languagetoolcombobox_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_textgrammarcheck__languagetoolcombobox_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_textgrammarcheck__languagetoolcombobox_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_disconnect23(void* self, void* receiver, const char* member) {
+bool k_textgrammarcheck__languagetoolcombobox_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -1796,47 +1796,47 @@ void k_textgrammarcheck__languagetoolcombobox_on_destroyed1(void* self, void (*c
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_painting_active(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_painting_active(const void* self) {
     return QPaintDevice_PaintingActive(k_textgrammarcheck__languagetoolcombobox_as_q_paint_device(self));
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_width_m_m(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_width_m_m(const void* self) {
     return QPaintDevice_WidthMM(k_textgrammarcheck__languagetoolcombobox_as_q_paint_device(self));
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_height_m_m(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_height_m_m(const void* self) {
     return QPaintDevice_HeightMM(k_textgrammarcheck__languagetoolcombobox_as_q_paint_device(self));
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_logical_dpi_x(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_logical_dpi_x(const void* self) {
     return QPaintDevice_LogicalDpiX(k_textgrammarcheck__languagetoolcombobox_as_q_paint_device(self));
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_logical_dpi_y(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_logical_dpi_y(const void* self) {
     return QPaintDevice_LogicalDpiY(k_textgrammarcheck__languagetoolcombobox_as_q_paint_device(self));
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_physical_dpi_x(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_physical_dpi_x(const void* self) {
     return QPaintDevice_PhysicalDpiX(k_textgrammarcheck__languagetoolcombobox_as_q_paint_device(self));
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_physical_dpi_y(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_physical_dpi_y(const void* self) {
     return QPaintDevice_PhysicalDpiY(k_textgrammarcheck__languagetoolcombobox_as_q_paint_device(self));
 }
 
-double k_textgrammarcheck__languagetoolcombobox_device_pixel_ratio(void* self) {
+double k_textgrammarcheck__languagetoolcombobox_device_pixel_ratio(const void* self) {
     return QPaintDevice_DevicePixelRatio(k_textgrammarcheck__languagetoolcombobox_as_q_paint_device(self));
 }
 
-double k_textgrammarcheck__languagetoolcombobox_device_pixel_ratio_f(void* self) {
+double k_textgrammarcheck__languagetoolcombobox_device_pixel_ratio_f(const void* self) {
     return QPaintDevice_DevicePixelRatioF(k_textgrammarcheck__languagetoolcombobox_as_q_paint_device(self));
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_color_count(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_color_count(const void* self) {
     return QPaintDevice_ColorCount(k_textgrammarcheck__languagetoolcombobox_as_q_paint_device(self));
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_depth(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_depth(const void* self) {
     return QPaintDevice_Depth(k_textgrammarcheck__languagetoolcombobox_as_q_paint_device(self));
 }
 
@@ -1860,28 +1860,28 @@ void k_textgrammarcheck__languagetoolcombobox_on_set_model(void* self, void (*ca
     TextGrammarCheck__LanguageToolComboBox_OnSetModel((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
 }
 
-QSize* k_textgrammarcheck__languagetoolcombobox_size_hint(void* self) {
+QSize* k_textgrammarcheck__languagetoolcombobox_size_hint(const void* self) {
     return TextGrammarCheck__LanguageToolComboBox_SizeHint((TextGrammarCheck__LanguageToolComboBox*)self);
 }
 
-QSize* k_textgrammarcheck__languagetoolcombobox_super_size_hint(void* self) {
+QSize* k_textgrammarcheck__languagetoolcombobox_super_size_hint(const void* self) {
     return TextGrammarCheck__LanguageToolComboBox_SuperSizeHint((TextGrammarCheck__LanguageToolComboBox*)self);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_on_size_hint(void* self, QSize* (*callback)()) {
-    TextGrammarCheck__LanguageToolComboBox_OnSizeHint((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
+void k_textgrammarcheck__languagetoolcombobox_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+    TextGrammarCheck__LanguageToolComboBox_OnSizeHint((const TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
 }
 
-QSize* k_textgrammarcheck__languagetoolcombobox_minimum_size_hint(void* self) {
+QSize* k_textgrammarcheck__languagetoolcombobox_minimum_size_hint(const void* self) {
     return TextGrammarCheck__LanguageToolComboBox_MinimumSizeHint((TextGrammarCheck__LanguageToolComboBox*)self);
 }
 
-QSize* k_textgrammarcheck__languagetoolcombobox_super_minimum_size_hint(void* self) {
+QSize* k_textgrammarcheck__languagetoolcombobox_super_minimum_size_hint(const void* self) {
     return TextGrammarCheck__LanguageToolComboBox_SuperMinimumSizeHint((TextGrammarCheck__LanguageToolComboBox*)self);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_on_minimum_size_hint(void* self, QSize* (*callback)()) {
-    TextGrammarCheck__LanguageToolComboBox_OnMinimumSizeHint((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
+void k_textgrammarcheck__languagetoolcombobox_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
+    TextGrammarCheck__LanguageToolComboBox_OnMinimumSizeHint((const TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
 }
 
 void k_textgrammarcheck__languagetoolcombobox_show_popup(void* self) {
@@ -1892,7 +1892,7 @@ void k_textgrammarcheck__languagetoolcombobox_super_show_popup(void* self) {
     TextGrammarCheck__LanguageToolComboBox_SuperShowPopup((TextGrammarCheck__LanguageToolComboBox*)self);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_on_show_popup(void* self, void (*callback)()) {
+void k_textgrammarcheck__languagetoolcombobox_on_show_popup(void* self, void (*callback)(void*)) {
     TextGrammarCheck__LanguageToolComboBox_OnShowPopup((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
 }
 
@@ -1904,7 +1904,7 @@ void k_textgrammarcheck__languagetoolcombobox_super_hide_popup(void* self) {
     TextGrammarCheck__LanguageToolComboBox_SuperHidePopup((TextGrammarCheck__LanguageToolComboBox*)self);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_on_hide_popup(void* self, void (*callback)()) {
+void k_textgrammarcheck__languagetoolcombobox_on_hide_popup(void* self, void (*callback)(void*)) {
     TextGrammarCheck__LanguageToolComboBox_OnHidePopup((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
 }
 
@@ -1920,16 +1920,16 @@ void k_textgrammarcheck__languagetoolcombobox_on_event(void* self, bool (*callba
     TextGrammarCheck__LanguageToolComboBox_OnEvent((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
 }
 
-QVariant* k_textgrammarcheck__languagetoolcombobox_input_method_query(void* self, int32_t param1) {
+QVariant* k_textgrammarcheck__languagetoolcombobox_input_method_query(const void* self, int32_t param1) {
     return TextGrammarCheck__LanguageToolComboBox_InputMethodQuery((TextGrammarCheck__LanguageToolComboBox*)self, param1);
 }
 
-QVariant* k_textgrammarcheck__languagetoolcombobox_super_input_method_query(void* self, int32_t param1) {
+QVariant* k_textgrammarcheck__languagetoolcombobox_super_input_method_query(const void* self, int32_t param1) {
     return TextGrammarCheck__LanguageToolComboBox_SuperInputMethodQuery((TextGrammarCheck__LanguageToolComboBox*)self, param1);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
-    TextGrammarCheck__LanguageToolComboBox_OnInputMethodQuery((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
+void k_textgrammarcheck__languagetoolcombobox_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
+    TextGrammarCheck__LanguageToolComboBox_OnInputMethodQuery((const TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
 }
 
 void k_textgrammarcheck__languagetoolcombobox_focus_in_event(void* self, void* e) {
@@ -2100,28 +2100,28 @@ void k_textgrammarcheck__languagetoolcombobox_on_input_method_event(void* self, 
     TextGrammarCheck__LanguageToolComboBox_OnInputMethodEvent((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_init_style_option(void* self, void* option) {
+void k_textgrammarcheck__languagetoolcombobox_init_style_option(const void* self, void* option) {
     TextGrammarCheck__LanguageToolComboBox_InitStyleOption((TextGrammarCheck__LanguageToolComboBox*)self, (QStyleOptionComboBox*)option);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_super_init_style_option(void* self, void* option) {
+void k_textgrammarcheck__languagetoolcombobox_super_init_style_option(const void* self, void* option) {
     TextGrammarCheck__LanguageToolComboBox_SuperInitStyleOption((TextGrammarCheck__LanguageToolComboBox*)self, (QStyleOptionComboBox*)option);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_on_init_style_option(void* self, void (*callback)(void*, void*)) {
-    TextGrammarCheck__LanguageToolComboBox_OnInitStyleOption((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
+void k_textgrammarcheck__languagetoolcombobox_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
+    TextGrammarCheck__LanguageToolComboBox_OnInitStyleOption((const TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_dev_type(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_dev_type(const void* self) {
     return TextGrammarCheck__LanguageToolComboBox_DevType((TextGrammarCheck__LanguageToolComboBox*)self);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_super_dev_type(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_super_dev_type(const void* self) {
     return TextGrammarCheck__LanguageToolComboBox_SuperDevType((TextGrammarCheck__LanguageToolComboBox*)self);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_on_dev_type(void* self, int32_t (*callback)()) {
-    TextGrammarCheck__LanguageToolComboBox_OnDevType((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
+void k_textgrammarcheck__languagetoolcombobox_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
+    TextGrammarCheck__LanguageToolComboBox_OnDevType((const TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
 }
 
 void k_textgrammarcheck__languagetoolcombobox_set_visible(void* self, bool visible) {
@@ -2136,40 +2136,40 @@ void k_textgrammarcheck__languagetoolcombobox_on_set_visible(void* self, void (*
     TextGrammarCheck__LanguageToolComboBox_OnSetVisible((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_height_for_width(void* self, int param1) {
+int32_t k_textgrammarcheck__languagetoolcombobox_height_for_width(const void* self, int param1) {
     return TextGrammarCheck__LanguageToolComboBox_HeightForWidth((TextGrammarCheck__LanguageToolComboBox*)self, param1);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_super_height_for_width(void* self, int param1) {
+int32_t k_textgrammarcheck__languagetoolcombobox_super_height_for_width(const void* self, int param1) {
     return TextGrammarCheck__LanguageToolComboBox_SuperHeightForWidth((TextGrammarCheck__LanguageToolComboBox*)self, param1);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
-    TextGrammarCheck__LanguageToolComboBox_OnHeightForWidth((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
+void k_textgrammarcheck__languagetoolcombobox_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
+    TextGrammarCheck__LanguageToolComboBox_OnHeightForWidth((const TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_has_height_for_width(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_has_height_for_width(const void* self) {
     return TextGrammarCheck__LanguageToolComboBox_HasHeightForWidth((TextGrammarCheck__LanguageToolComboBox*)self);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_super_has_height_for_width(void* self) {
+bool k_textgrammarcheck__languagetoolcombobox_super_has_height_for_width(const void* self) {
     return TextGrammarCheck__LanguageToolComboBox_SuperHasHeightForWidth((TextGrammarCheck__LanguageToolComboBox*)self);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_on_has_height_for_width(void* self, bool (*callback)()) {
-    TextGrammarCheck__LanguageToolComboBox_OnHasHeightForWidth((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
+void k_textgrammarcheck__languagetoolcombobox_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
+    TextGrammarCheck__LanguageToolComboBox_OnHasHeightForWidth((const TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
 }
 
-QPaintEngine* k_textgrammarcheck__languagetoolcombobox_paint_engine(void* self) {
+QPaintEngine* k_textgrammarcheck__languagetoolcombobox_paint_engine(const void* self) {
     return TextGrammarCheck__LanguageToolComboBox_PaintEngine((TextGrammarCheck__LanguageToolComboBox*)self);
 }
 
-QPaintEngine* k_textgrammarcheck__languagetoolcombobox_super_paint_engine(void* self) {
+QPaintEngine* k_textgrammarcheck__languagetoolcombobox_super_paint_engine(const void* self) {
     return TextGrammarCheck__LanguageToolComboBox_SuperPaintEngine((TextGrammarCheck__LanguageToolComboBox*)self);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
-    TextGrammarCheck__LanguageToolComboBox_OnPaintEngine((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
+void k_textgrammarcheck__languagetoolcombobox_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
+    TextGrammarCheck__LanguageToolComboBox_OnPaintEngine((const TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
 }
 
 void k_textgrammarcheck__languagetoolcombobox_mouse_double_click_event(void* self, void* event) {
@@ -2328,52 +2328,52 @@ void k_textgrammarcheck__languagetoolcombobox_on_native_event(void* self, bool (
     TextGrammarCheck__LanguageToolComboBox_OnNativeEvent((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_metric(void* self, int32_t param1) {
+int32_t k_textgrammarcheck__languagetoolcombobox_metric(const void* self, int32_t param1) {
     return TextGrammarCheck__LanguageToolComboBox_Metric((TextGrammarCheck__LanguageToolComboBox*)self, param1);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_super_metric(void* self, int32_t param1) {
+int32_t k_textgrammarcheck__languagetoolcombobox_super_metric(const void* self, int32_t param1) {
     return TextGrammarCheck__LanguageToolComboBox_SuperMetric((TextGrammarCheck__LanguageToolComboBox*)self, param1);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
-    TextGrammarCheck__LanguageToolComboBox_OnMetric((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
+void k_textgrammarcheck__languagetoolcombobox_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
+    TextGrammarCheck__LanguageToolComboBox_OnMetric((const TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_init_painter(void* self, void* painter) {
+void k_textgrammarcheck__languagetoolcombobox_init_painter(const void* self, void* painter) {
     TextGrammarCheck__LanguageToolComboBox_InitPainter((TextGrammarCheck__LanguageToolComboBox*)self, (QPainter*)painter);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_super_init_painter(void* self, void* painter) {
+void k_textgrammarcheck__languagetoolcombobox_super_init_painter(const void* self, void* painter) {
     TextGrammarCheck__LanguageToolComboBox_SuperInitPainter((TextGrammarCheck__LanguageToolComboBox*)self, (QPainter*)painter);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_on_init_painter(void* self, void (*callback)(void*, void*)) {
-    TextGrammarCheck__LanguageToolComboBox_OnInitPainter((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
+void k_textgrammarcheck__languagetoolcombobox_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
+    TextGrammarCheck__LanguageToolComboBox_OnInitPainter((const TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_textgrammarcheck__languagetoolcombobox_redirected(void* self, void* offset) {
+QPaintDevice* k_textgrammarcheck__languagetoolcombobox_redirected(const void* self, void* offset) {
     return TextGrammarCheck__LanguageToolComboBox_Redirected((TextGrammarCheck__LanguageToolComboBox*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_textgrammarcheck__languagetoolcombobox_super_redirected(void* self, void* offset) {
+QPaintDevice* k_textgrammarcheck__languagetoolcombobox_super_redirected(const void* self, void* offset) {
     return TextGrammarCheck__LanguageToolComboBox_SuperRedirected((TextGrammarCheck__LanguageToolComboBox*)self, (QPoint*)offset);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
-    TextGrammarCheck__LanguageToolComboBox_OnRedirected((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
+void k_textgrammarcheck__languagetoolcombobox_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    TextGrammarCheck__LanguageToolComboBox_OnRedirected((const TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
 }
 
-QPainter* k_textgrammarcheck__languagetoolcombobox_shared_painter(void* self) {
+QPainter* k_textgrammarcheck__languagetoolcombobox_shared_painter(const void* self) {
     return TextGrammarCheck__LanguageToolComboBox_SharedPainter((TextGrammarCheck__LanguageToolComboBox*)self);
 }
 
-QPainter* k_textgrammarcheck__languagetoolcombobox_super_shared_painter(void* self) {
+QPainter* k_textgrammarcheck__languagetoolcombobox_super_shared_painter(const void* self) {
     return TextGrammarCheck__LanguageToolComboBox_SuperSharedPainter((TextGrammarCheck__LanguageToolComboBox*)self);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_on_shared_painter(void* self, QPainter* (*callback)()) {
-    TextGrammarCheck__LanguageToolComboBox_OnSharedPainter((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
+void k_textgrammarcheck__languagetoolcombobox_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
+    TextGrammarCheck__LanguageToolComboBox_OnSharedPainter((const TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
 }
 
 bool k_textgrammarcheck__languagetoolcombobox_focus_next_prev_child(void* self, bool next) {
@@ -2436,27 +2436,27 @@ void k_textgrammarcheck__languagetoolcombobox_on_custom_event(void* self, void (
     TextGrammarCheck__LanguageToolComboBox_OnCustomEvent((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_connect_notify(void* self, void* signal) {
+void k_textgrammarcheck__languagetoolcombobox_connect_notify(void* self, const void* signal) {
     TextGrammarCheck__LanguageToolComboBox_ConnectNotify((TextGrammarCheck__LanguageToolComboBox*)self, (QMetaMethod*)signal);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_super_connect_notify(void* self, void* signal) {
+void k_textgrammarcheck__languagetoolcombobox_super_connect_notify(void* self, const void* signal) {
     TextGrammarCheck__LanguageToolComboBox_SuperConnectNotify((TextGrammarCheck__LanguageToolComboBox*)self, (QMetaMethod*)signal);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_textgrammarcheck__languagetoolcombobox_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     TextGrammarCheck__LanguageToolComboBox_OnConnectNotify((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_disconnect_notify(void* self, void* signal) {
+void k_textgrammarcheck__languagetoolcombobox_disconnect_notify(void* self, const void* signal) {
     TextGrammarCheck__LanguageToolComboBox_DisconnectNotify((TextGrammarCheck__LanguageToolComboBox*)self, (QMetaMethod*)signal);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_super_disconnect_notify(void* self, void* signal) {
+void k_textgrammarcheck__languagetoolcombobox_super_disconnect_notify(void* self, const void* signal) {
     TextGrammarCheck__LanguageToolComboBox_SuperDisconnectNotify((TextGrammarCheck__LanguageToolComboBox*)self, (QMetaMethod*)signal);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_textgrammarcheck__languagetoolcombobox_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     TextGrammarCheck__LanguageToolComboBox_OnDisconnectNotify((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
 }
 
@@ -2464,120 +2464,40 @@ void k_textgrammarcheck__languagetoolcombobox_update_micro_focus(void* self) {
     TextGrammarCheck__LanguageToolComboBox_UpdateMicroFocus((TextGrammarCheck__LanguageToolComboBox*)self);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_super_update_micro_focus(void* self) {
-    TextGrammarCheck__LanguageToolComboBox_SuperUpdateMicroFocus((TextGrammarCheck__LanguageToolComboBox*)self);
-}
-
-void k_textgrammarcheck__languagetoolcombobox_on_update_micro_focus(void* self, void (*callback)()) {
-    TextGrammarCheck__LanguageToolComboBox_OnUpdateMicroFocus((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
-}
-
 void k_textgrammarcheck__languagetoolcombobox_create(void* self) {
     TextGrammarCheck__LanguageToolComboBox_Create((TextGrammarCheck__LanguageToolComboBox*)self);
-}
-
-void k_textgrammarcheck__languagetoolcombobox_super_create(void* self) {
-    TextGrammarCheck__LanguageToolComboBox_SuperCreate((TextGrammarCheck__LanguageToolComboBox*)self);
-}
-
-void k_textgrammarcheck__languagetoolcombobox_on_create(void* self, void (*callback)()) {
-    TextGrammarCheck__LanguageToolComboBox_OnCreate((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
 }
 
 void k_textgrammarcheck__languagetoolcombobox_destroy(void* self) {
     TextGrammarCheck__LanguageToolComboBox_Destroy((TextGrammarCheck__LanguageToolComboBox*)self);
 }
 
-void k_textgrammarcheck__languagetoolcombobox_super_destroy(void* self) {
-    TextGrammarCheck__LanguageToolComboBox_SuperDestroy((TextGrammarCheck__LanguageToolComboBox*)self);
-}
-
-void k_textgrammarcheck__languagetoolcombobox_on_destroy(void* self, void (*callback)()) {
-    TextGrammarCheck__LanguageToolComboBox_OnDestroy((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
-}
-
 bool k_textgrammarcheck__languagetoolcombobox_focus_next_child(void* self) {
     return TextGrammarCheck__LanguageToolComboBox_FocusNextChild((TextGrammarCheck__LanguageToolComboBox*)self);
-}
-
-bool k_textgrammarcheck__languagetoolcombobox_super_focus_next_child(void* self) {
-    return TextGrammarCheck__LanguageToolComboBox_SuperFocusNextChild((TextGrammarCheck__LanguageToolComboBox*)self);
-}
-
-void k_textgrammarcheck__languagetoolcombobox_on_focus_next_child(void* self, bool (*callback)()) {
-    TextGrammarCheck__LanguageToolComboBox_OnFocusNextChild((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
 }
 
 bool k_textgrammarcheck__languagetoolcombobox_focus_previous_child(void* self) {
     return TextGrammarCheck__LanguageToolComboBox_FocusPreviousChild((TextGrammarCheck__LanguageToolComboBox*)self);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_super_focus_previous_child(void* self) {
-    return TextGrammarCheck__LanguageToolComboBox_SuperFocusPreviousChild((TextGrammarCheck__LanguageToolComboBox*)self);
-}
-
-void k_textgrammarcheck__languagetoolcombobox_on_focus_previous_child(void* self, bool (*callback)()) {
-    TextGrammarCheck__LanguageToolComboBox_OnFocusPreviousChild((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
-}
-
-QObject* k_textgrammarcheck__languagetoolcombobox_sender(void* self) {
+QObject* k_textgrammarcheck__languagetoolcombobox_sender(const void* self) {
     return TextGrammarCheck__LanguageToolComboBox_Sender((TextGrammarCheck__LanguageToolComboBox*)self);
 }
 
-QObject* k_textgrammarcheck__languagetoolcombobox_super_sender(void* self) {
-    return TextGrammarCheck__LanguageToolComboBox_SuperSender((TextGrammarCheck__LanguageToolComboBox*)self);
-}
-
-void k_textgrammarcheck__languagetoolcombobox_on_sender(void* self, QObject* (*callback)()) {
-    TextGrammarCheck__LanguageToolComboBox_OnSender((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
-}
-
-int32_t k_textgrammarcheck__languagetoolcombobox_sender_signal_index(void* self) {
+int32_t k_textgrammarcheck__languagetoolcombobox_sender_signal_index(const void* self) {
     return TextGrammarCheck__LanguageToolComboBox_SenderSignalIndex((TextGrammarCheck__LanguageToolComboBox*)self);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_super_sender_signal_index(void* self) {
-    return TextGrammarCheck__LanguageToolComboBox_SuperSenderSignalIndex((TextGrammarCheck__LanguageToolComboBox*)self);
-}
-
-void k_textgrammarcheck__languagetoolcombobox_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    TextGrammarCheck__LanguageToolComboBox_OnSenderSignalIndex((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
-}
-
-int32_t k_textgrammarcheck__languagetoolcombobox_receivers(void* self, const char* signal) {
+int32_t k_textgrammarcheck__languagetoolcombobox_receivers(const void* self, const char* signal) {
     return TextGrammarCheck__LanguageToolComboBox_Receivers((TextGrammarCheck__LanguageToolComboBox*)self, signal);
 }
 
-int32_t k_textgrammarcheck__languagetoolcombobox_super_receivers(void* self, const char* signal) {
-    return TextGrammarCheck__LanguageToolComboBox_SuperReceivers((TextGrammarCheck__LanguageToolComboBox*)self, signal);
-}
-
-void k_textgrammarcheck__languagetoolcombobox_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    TextGrammarCheck__LanguageToolComboBox_OnReceivers((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
-}
-
-bool k_textgrammarcheck__languagetoolcombobox_is_signal_connected(void* self, void* signal) {
+bool k_textgrammarcheck__languagetoolcombobox_is_signal_connected(const void* self, const void* signal) {
     return TextGrammarCheck__LanguageToolComboBox_IsSignalConnected((TextGrammarCheck__LanguageToolComboBox*)self, (QMetaMethod*)signal);
 }
 
-bool k_textgrammarcheck__languagetoolcombobox_super_is_signal_connected(void* self, void* signal) {
-    return TextGrammarCheck__LanguageToolComboBox_SuperIsSignalConnected((TextGrammarCheck__LanguageToolComboBox*)self, (QMetaMethod*)signal);
-}
-
-void k_textgrammarcheck__languagetoolcombobox_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    TextGrammarCheck__LanguageToolComboBox_OnIsSignalConnected((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
-}
-
-double k_textgrammarcheck__languagetoolcombobox_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+double k_textgrammarcheck__languagetoolcombobox_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB) {
     return TextGrammarCheck__LanguageToolComboBox_GetDecodedMetricF((TextGrammarCheck__LanguageToolComboBox*)self, metricA, metricB);
-}
-
-double k_textgrammarcheck__languagetoolcombobox_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return TextGrammarCheck__LanguageToolComboBox_SuperGetDecodedMetricF((TextGrammarCheck__LanguageToolComboBox*)self, metricA, metricB);
-}
-
-void k_textgrammarcheck__languagetoolcombobox_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {
-    TextGrammarCheck__LanguageToolComboBox_OnGetDecodedMetricF((TextGrammarCheck__LanguageToolComboBox*)self, (intptr_t)callback);
 }
 
 void k_textgrammarcheck__languagetoolcombobox_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

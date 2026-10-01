@@ -39,176 +39,176 @@ KIconTheme* k_icontheme_new3(const char* name, const char* appName, const char* 
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIconTheme*
+/// @param self const KIconTheme*
 ///
-const char* k_icontheme_name(void* self);
+const char* k_icontheme_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#internalName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIconTheme*
+/// @param self const KIconTheme*
 ///
-const char* k_icontheme_internal_name(void* self);
+const char* k_icontheme_internal_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#description)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIconTheme*
+/// @param self const KIconTheme*
 ///
-const char* k_icontheme_description(void* self);
+const char* k_icontheme_description(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#example)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIconTheme*
+/// @param self const KIconTheme*
 ///
-const char* k_icontheme_example(void* self);
+const char* k_icontheme_example(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#screenshot)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIconTheme*
+/// @param self const KIconTheme*
 ///
-const char* k_icontheme_screenshot(void* self);
+const char* k_icontheme_screenshot(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#dir)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIconTheme*
+/// @param self const KIconTheme*
 ///
-const char* k_icontheme_dir(void* self);
+const char* k_icontheme_dir(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#inherits)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KIconTheme*
+/// @param self const KIconTheme*
 ///
-const char** k_icontheme_inherits(void* self);
+const char** k_icontheme_inherits(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#isValid)
 ///
-/// @param self KIconTheme*
+/// @param self const KIconTheme*
 ///
-bool k_icontheme_is_valid(void* self);
+bool k_icontheme_is_valid(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#isHidden)
 ///
-/// @param self KIconTheme*
+/// @param self const KIconTheme*
 ///
-bool k_icontheme_is_hidden(void* self);
+bool k_icontheme_is_hidden(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#depth)
 ///
-/// @param self KIconTheme*
+/// @param self const KIconTheme*
 ///
-int32_t k_icontheme_depth(void* self);
+int32_t k_icontheme_depth(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#defaultSize)
 ///
-/// @param self KIconTheme*
+/// @param self const KIconTheme*
 /// @param group enum KIconLoader__Group
 ///
-int32_t k_icontheme_default_size(void* self, int32_t group);
+int32_t k_icontheme_default_size(const void* self, int32_t group);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#querySizes)
 ///
-/// @param self KIconTheme*
+/// @param self const KIconTheme*
 /// @param group enum KIconLoader__Group
 ///
 /// @return libqt_list of int
 ///
-libqt_list k_icontheme_query_sizes(void* self, int32_t group);
+libqt_list k_icontheme_query_sizes(const void* self, int32_t group);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#queryIcons)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KIconTheme*
+/// @param self const KIconTheme*
 ///
-const char** k_icontheme_query_icons(void* self);
+const char** k_icontheme_query_icons(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#queryIcons)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KIconTheme*
+/// @param self const KIconTheme*
 /// @param size int
 ///
-const char** k_icontheme_query_icons2(void* self, int size);
+const char** k_icontheme_query_icons2(const void* self, int size);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#queryIconsByContext)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KIconTheme*
+/// @param self const KIconTheme*
 /// @param size int
 ///
-const char** k_icontheme_query_icons_by_context(void* self, int size);
+const char** k_icontheme_query_icons_by_context(const void* self, int size);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#iconPath)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIconTheme*
+/// @param self const KIconTheme*
 /// @param name const char*
 /// @param size int
 /// @param match enum KIconLoader__MatchType
 ///
-const char* k_icontheme_icon_path(void* self, const char* name, int size, int32_t match);
+const char* k_icontheme_icon_path(const void* self, const char* name, int size, int32_t match);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#iconPath)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIconTheme*
+/// @param self const KIconTheme*
 /// @param name const char*
 /// @param size int
 /// @param match enum KIconLoader__MatchType
 /// @param scale double
 ///
-const char* k_icontheme_icon_path2(void* self, const char* name, int size, int32_t match, double scale);
+const char* k_icontheme_icon_path2(const void* self, const char* name, int size, int32_t match, double scale);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#iconPathByName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIconTheme*
+/// @param self const KIconTheme*
 /// @param name const char*
 /// @param size int
 /// @param match enum KIconLoader__MatchType
 ///
-const char* k_icontheme_icon_path_by_name(void* self, const char* name, int size, int32_t match);
+const char* k_icontheme_icon_path_by_name(const void* self, const char* name, int size, int32_t match);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#iconPathByName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIconTheme*
+/// @param self const KIconTheme*
 /// @param name const char*
 /// @param size int
 /// @param match enum KIconLoader__MatchType
 /// @param scale double
 ///
-const char* k_icontheme_icon_path_by_name2(void* self, const char* name, int size, int32_t match, double scale);
+const char* k_icontheme_icon_path_by_name2(const void* self, const char* name, int size, int32_t match, double scale);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#hasContext)
 ///
-/// @param self KIconTheme*
+/// @param self const KIconTheme*
 /// @param context enum KIconLoader__Context
 ///
-bool k_icontheme_has_context(void* self, int32_t context);
+bool k_icontheme_has_context(const void* self, int32_t context);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#followsColorScheme)
 ///
-/// @param self KIconTheme*
+/// @param self const KIconTheme*
 ///
-bool k_icontheme_follows_color_scheme(void* self);
+bool k_icontheme_follows_color_scheme(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#list)
 ///
@@ -246,21 +246,21 @@ void k_icontheme_init_theme();
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KIconTheme*
+/// @param self const KIconTheme*
 /// @param size int
 /// @param context enum KIconLoader__Context
 ///
-const char** k_icontheme_query_icons22(void* self, int size, int32_t context);
+const char** k_icontheme_query_icons22(const void* self, int size, int32_t context);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#queryIconsByContext)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KIconTheme*
+/// @param self const KIconTheme*
 /// @param size int
 /// @param context enum KIconLoader__Context
 ///
-const char** k_icontheme_query_icons_by_context2(void* self, int size, int32_t context);
+const char** k_icontheme_query_icons_by_context2(const void* self, int size, int32_t context);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#dtor.KIconTheme)
 ///

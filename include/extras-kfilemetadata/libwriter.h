@@ -15,15 +15,15 @@
 /// @param self KFileMetaData__Writer*
 /// @param data KFileMetaData__WriteData*
 ///
-void k_filemetadata__writer_write(void* self, void* data);
+void k_filemetadata__writer_write(void* self, const void* data);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-writer.html#mimetypes)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KFileMetaData__Writer*
+/// @param self const KFileMetaData__Writer*
 ///
-const char** k_filemetadata__writer_mimetypes(void* self);
+const char** k_filemetadata__writer_mimetypes(const void* self);
 
 /// Delete this object from C++ memory.
 ///

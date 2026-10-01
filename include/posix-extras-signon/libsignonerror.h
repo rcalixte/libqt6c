@@ -20,7 +20,7 @@ SignOn__Error* q_signon__error_new();
 ///
 /// @param src SignOn__Error*
 ///
-SignOn__Error* q_signon__error_new2(void* src);
+SignOn__Error* q_signon__error_new2(const void* src);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Error.html)
 
@@ -44,7 +44,7 @@ SignOn__Error* q_signon__error_new4(int type, const char* message);
 /// @param self SignOn__Error*
 /// @param src SignOn__Error*
 ///
-void q_signon__error_operator_assign(void* self, void* src);
+void q_signon__error_operator_assign(void* self, const void* src);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Error.html)
 ///
@@ -62,17 +62,17 @@ void q_signon__error_set_message(void* self, const char* message);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Error.html)
 ///
-/// @param self SignOn__Error*
+/// @param self const SignOn__Error*
 ///
-int32_t q_signon__error_type(void* self);
+int32_t q_signon__error_type(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Error.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self SignOn__Error*
+/// @param self const SignOn__Error*
 ///
-const char* q_signon__error_message(void* self);
+const char* q_signon__error_message(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Error.html)
 ///

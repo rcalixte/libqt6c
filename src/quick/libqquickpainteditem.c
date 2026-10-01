@@ -24,15 +24,15 @@ QQuickPaintedItem* q_quickpainteditem_new2(void* parent) {
     return QQuickPaintedItem_New2((QQuickItem*)parent);
 }
 
-const QMetaObject* q_quickpainteditem_meta_object(void* self) {
+const QMetaObject* q_quickpainteditem_meta_object(const void* self) {
     return QQuickPaintedItem_MetaObject((QQuickPaintedItem*)self);
 }
 
-void q_quickpainteditem_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_quickpainteditem_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QQuickPaintedItem_OnMetaObject((QQuickPaintedItem*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_quickpainteditem_super_meta_object(void* self) {
+const QMetaObject* q_quickpainteditem_super_meta_object(const void* self) {
     return QQuickPaintedItem_SuperMetaObject((QQuickPaintedItem*)self);
 }
 
@@ -71,7 +71,7 @@ void q_quickpainteditem_update(void* self) {
     QQuickPaintedItem_Update((QQuickPaintedItem*)self);
 }
 
-bool q_quickpainteditem_opaque_painting(void* self) {
+bool q_quickpainteditem_opaque_painting(const void* self) {
     return QQuickPaintedItem_OpaquePainting((QQuickPaintedItem*)self);
 }
 
@@ -79,7 +79,7 @@ void q_quickpainteditem_set_opaque_painting(void* self, bool opaque) {
     QQuickPaintedItem_SetOpaquePainting((QQuickPaintedItem*)self, opaque);
 }
 
-bool q_quickpainteditem_antialiasing(void* self) {
+bool q_quickpainteditem_antialiasing(const void* self) {
     return QQuickPaintedItem_Antialiasing((QQuickPaintedItem*)self);
 }
 
@@ -87,7 +87,7 @@ void q_quickpainteditem_set_antialiasing(void* self, bool enable) {
     QQuickPaintedItem_SetAntialiasing((QQuickPaintedItem*)self, enable);
 }
 
-bool q_quickpainteditem_mipmap(void* self) {
+bool q_quickpainteditem_mipmap(const void* self) {
     return QQuickPaintedItem_Mipmap((QQuickPaintedItem*)self);
 }
 
@@ -95,7 +95,7 @@ void q_quickpainteditem_set_mipmap(void* self, bool enable) {
     QQuickPaintedItem_SetMipmap((QQuickPaintedItem*)self, enable);
 }
 
-int32_t q_quickpainteditem_performance_hints(void* self) {
+int32_t q_quickpainteditem_performance_hints(const void* self) {
     return QQuickPaintedItem_PerformanceHints((QQuickPaintedItem*)self);
 }
 
@@ -107,15 +107,15 @@ void q_quickpainteditem_set_performance_hints(void* self, int32_t hints) {
     QQuickPaintedItem_SetPerformanceHints((QQuickPaintedItem*)self, hints);
 }
 
-QRectF* q_quickpainteditem_contents_bounding_rect(void* self) {
+QRectF* q_quickpainteditem_contents_bounding_rect(const void* self) {
     return QQuickPaintedItem_ContentsBoundingRect((QQuickPaintedItem*)self);
 }
 
-QSize* q_quickpainteditem_contents_size(void* self) {
+QSize* q_quickpainteditem_contents_size(const void* self) {
     return QQuickPaintedItem_ContentsSize((QQuickPaintedItem*)self);
 }
 
-void q_quickpainteditem_set_contents_size(void* self, void* contentsSize) {
+void q_quickpainteditem_set_contents_size(void* self, const void* contentsSize) {
     QQuickPaintedItem_SetContentsSize((QQuickPaintedItem*)self, (QSize*)contentsSize);
 }
 
@@ -123,7 +123,7 @@ void q_quickpainteditem_reset_contents_size(void* self) {
     QQuickPaintedItem_ResetContentsSize((QQuickPaintedItem*)self);
 }
 
-double q_quickpainteditem_contents_scale(void* self) {
+double q_quickpainteditem_contents_scale(const void* self) {
     return QQuickPaintedItem_ContentsScale((QQuickPaintedItem*)self);
 }
 
@@ -131,23 +131,23 @@ void q_quickpainteditem_set_contents_scale(void* self, double contentsScale) {
     QQuickPaintedItem_SetContentsScale((QQuickPaintedItem*)self, contentsScale);
 }
 
-QSize* q_quickpainteditem_texture_size(void* self) {
+QSize* q_quickpainteditem_texture_size(const void* self) {
     return QQuickPaintedItem_TextureSize((QQuickPaintedItem*)self);
 }
 
-void q_quickpainteditem_set_texture_size(void* self, void* size) {
+void q_quickpainteditem_set_texture_size(void* self, const void* size) {
     QQuickPaintedItem_SetTextureSize((QQuickPaintedItem*)self, (QSize*)size);
 }
 
-QColor* q_quickpainteditem_fill_color(void* self) {
+QColor* q_quickpainteditem_fill_color(const void* self) {
     return QQuickPaintedItem_FillColor((QQuickPaintedItem*)self);
 }
 
-void q_quickpainteditem_set_fill_color(void* self, void* fillColor) {
+void q_quickpainteditem_set_fill_color(void* self, const void* fillColor) {
     QQuickPaintedItem_SetFillColor((QQuickPaintedItem*)self, (QColor*)fillColor);
 }
 
-int32_t q_quickpainteditem_render_target(void* self) {
+int32_t q_quickpainteditem_render_target(const void* self) {
     return QQuickPaintedItem_RenderTarget((QQuickPaintedItem*)self);
 }
 
@@ -163,31 +163,27 @@ void q_quickpainteditem_on_paint(void* self, void (*callback)(void*, void*)) {
     QQuickPaintedItem_OnPaint((QQuickPaintedItem*)self, (intptr_t)callback);
 }
 
-void q_quickpainteditem_super_paint(void* self, void* painter) {
-    QQuickPaintedItem_SuperPaint((QQuickPaintedItem*)self, (QPainter*)painter);
-}
-
-bool q_quickpainteditem_is_texture_provider(void* self) {
+bool q_quickpainteditem_is_texture_provider(const void* self) {
     return QQuickPaintedItem_IsTextureProvider((QQuickPaintedItem*)self);
 }
 
-void q_quickpainteditem_on_is_texture_provider(void* self, bool (*callback)()) {
+void q_quickpainteditem_on_is_texture_provider(const void* self, bool (*callback)(const void*)) {
     QQuickPaintedItem_OnIsTextureProvider((QQuickPaintedItem*)self, (intptr_t)callback);
 }
 
-bool q_quickpainteditem_super_is_texture_provider(void* self) {
+bool q_quickpainteditem_super_is_texture_provider(const void* self) {
     return QQuickPaintedItem_SuperIsTextureProvider((QQuickPaintedItem*)self);
 }
 
-QSGTextureProvider* q_quickpainteditem_texture_provider(void* self) {
+QSGTextureProvider* q_quickpainteditem_texture_provider(const void* self) {
     return QQuickPaintedItem_TextureProvider((QQuickPaintedItem*)self);
 }
 
-void q_quickpainteditem_on_texture_provider(void* self, QSGTextureProvider* (*callback)()) {
+void q_quickpainteditem_on_texture_provider(const void* self, QSGTextureProvider* (*callback)(const void*)) {
     QQuickPaintedItem_OnTextureProvider((QQuickPaintedItem*)self, (intptr_t)callback);
 }
 
-QSGTextureProvider* q_quickpainteditem_super_texture_provider(void* self) {
+QSGTextureProvider* q_quickpainteditem_super_texture_provider(const void* self) {
     return QQuickPaintedItem_SuperTextureProvider((QQuickPaintedItem*)self);
 }
 
@@ -247,7 +243,7 @@ void q_quickpainteditem_release_resources(void* self) {
     QQuickPaintedItem_ReleaseResources((QQuickPaintedItem*)self);
 }
 
-void q_quickpainteditem_on_release_resources(void* self, void (*callback)()) {
+void q_quickpainteditem_on_release_resources(void* self, void (*callback)(void*)) {
     QQuickPaintedItem_OnReleaseResources((QQuickPaintedItem*)self, (intptr_t)callback);
 }
 
@@ -255,15 +251,15 @@ void q_quickpainteditem_super_release_resources(void* self) {
     QQuickPaintedItem_SuperReleaseResources((QQuickPaintedItem*)self);
 }
 
-void q_quickpainteditem_item_change(void* self, int32_t param1, void* param2) {
+void q_quickpainteditem_item_change(void* self, int32_t param1, const void* param2) {
     QQuickPaintedItem_ItemChange((QQuickPaintedItem*)self, param1, (QQuickItem__ItemChangeData*)param2);
 }
 
-void q_quickpainteditem_on_item_change(void* self, void (*callback)(void*, int32_t, void*)) {
+void q_quickpainteditem_on_item_change(void* self, void (*callback)(void*, int32_t, const void*)) {
     QQuickPaintedItem_OnItemChange((QQuickPaintedItem*)self, (intptr_t)callback);
 }
 
-void q_quickpainteditem_super_item_change(void* self, int32_t param1, void* param2) {
+void q_quickpainteditem_super_item_change(void* self, int32_t param1, const void* param2) {
     QQuickPaintedItem_SuperItemChange((QQuickPaintedItem*)self, param1, (QQuickItem__ItemChangeData*)param2);
 }
 
@@ -281,7 +277,7 @@ const char* q_quickpainteditem_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_quickpainteditem_update1(void* self, void* rect) {
+void q_quickpainteditem_update1(void* self, const void* rect) {
     QQuickPaintedItem_Update1((QQuickPaintedItem*)self, (QRect*)rect);
 }
 
@@ -297,11 +293,11 @@ QQuickPaintedItem* q_quickpainteditem_from_q_qml_parser_status(void* _qqmlparser
     return (QQuickPaintedItem*)QQuickItem_FromQQmlParserStatus((QQmlParserStatus*)_qqmlparserstatus);
 }
 
-QQuickWindow* q_quickpainteditem_window(void* self) {
+QQuickWindow* q_quickpainteditem_window(const void* self) {
     return QQuickItem_Window((QQuickItem*)self);
 }
 
-QQuickItem* q_quickpainteditem_parent_item(void* self) {
+QQuickItem* q_quickpainteditem_parent_item(const void* self) {
     return QQuickItem_ParentItem((QQuickItem*)self);
 }
 
@@ -309,11 +305,11 @@ void q_quickpainteditem_set_parent_item(void* self, void* parent) {
     QQuickItem_SetParentItem((QQuickItem*)self, (QQuickItem*)parent);
 }
 
-void q_quickpainteditem_stack_before(void* self, void* param1) {
+void q_quickpainteditem_stack_before(void* self, const void* param1) {
     QQuickItem_StackBefore((QQuickItem*)self, (QQuickItem*)param1);
 }
 
-void q_quickpainteditem_stack_after(void* self, void* param1) {
+void q_quickpainteditem_stack_after(void* self, const void* param1) {
     QQuickItem_StackAfter((QQuickItem*)self, (QQuickItem*)param1);
 }
 
@@ -321,12 +317,12 @@ QRectF* q_quickpainteditem_children_rect(void* self) {
     return QQuickItem_ChildrenRect((QQuickItem*)self);
 }
 
-libqt_list /* of QQuickItem* */ q_quickpainteditem_child_items(void* self) {
+libqt_list /* of QQuickItem* */ q_quickpainteditem_child_items(const void* self) {
     libqt_list _arr = QQuickItem_ChildItems((QQuickItem*)self);
     return _arr;
 }
 
-bool q_quickpainteditem_clip(void* self) {
+bool q_quickpainteditem_clip(const void* self) {
     return QQuickItem_Clip((QQuickItem*)self);
 }
 
@@ -334,7 +330,7 @@ void q_quickpainteditem_set_clip(void* self, bool clip) {
     QQuickItem_SetClip((QQuickItem*)self, clip);
 }
 
-const char* q_quickpainteditem_state(void* self) {
+const char* q_quickpainteditem_state(const void* self) {
     libqt_string _str = QQuickItem_State((QQuickItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -345,7 +341,7 @@ void q_quickpainteditem_set_state(void* self, const char* state) {
     QQuickItem_SetState((QQuickItem*)self, qstring(state));
 }
 
-double q_quickpainteditem_baseline_offset(void* self) {
+double q_quickpainteditem_baseline_offset(const void* self) {
     return QQuickItem_BaselineOffset((QQuickItem*)self);
 }
 
@@ -353,15 +349,15 @@ void q_quickpainteditem_set_baseline_offset(void* self, double baselineOffset) {
     QQuickItem_SetBaselineOffset((QQuickItem*)self, baselineOffset);
 }
 
-double q_quickpainteditem_x(void* self) {
+double q_quickpainteditem_x(const void* self) {
     return QQuickItem_X((QQuickItem*)self);
 }
 
-double q_quickpainteditem_y(void* self) {
+double q_quickpainteditem_y(const void* self) {
     return QQuickItem_Y((QQuickItem*)self);
 }
 
-QPointF* q_quickpainteditem_position(void* self) {
+QPointF* q_quickpainteditem_position(const void* self) {
     return QQuickItem_Position((QQuickItem*)self);
 }
 
@@ -373,11 +369,11 @@ void q_quickpainteditem_set_y(void* self, double y) {
     QQuickItem_SetY((QQuickItem*)self, y);
 }
 
-void q_quickpainteditem_set_position(void* self, void* position) {
+void q_quickpainteditem_set_position(void* self, const void* position) {
     QQuickItem_SetPosition((QQuickItem*)self, (QPointF*)position);
 }
 
-double q_quickpainteditem_width(void* self) {
+double q_quickpainteditem_width(const void* self) {
     return QQuickItem_Width((QQuickItem*)self);
 }
 
@@ -393,11 +389,11 @@ void q_quickpainteditem_set_implicit_width(void* self, double implicitWidth) {
     QQuickItem_SetImplicitWidth((QQuickItem*)self, implicitWidth);
 }
 
-double q_quickpainteditem_implicit_width(void* self) {
+double q_quickpainteditem_implicit_width(const void* self) {
     return QQuickItem_ImplicitWidth((QQuickItem*)self);
 }
 
-double q_quickpainteditem_height(void* self) {
+double q_quickpainteditem_height(const void* self) {
     return QQuickItem_Height((QQuickItem*)self);
 }
 
@@ -413,19 +409,19 @@ void q_quickpainteditem_set_implicit_height(void* self, double implicitHeight) {
     QQuickItem_SetImplicitHeight((QQuickItem*)self, implicitHeight);
 }
 
-double q_quickpainteditem_implicit_height(void* self) {
+double q_quickpainteditem_implicit_height(const void* self) {
     return QQuickItem_ImplicitHeight((QQuickItem*)self);
 }
 
-QSizeF* q_quickpainteditem_size(void* self) {
+QSizeF* q_quickpainteditem_size(const void* self) {
     return QQuickItem_Size((QQuickItem*)self);
 }
 
-void q_quickpainteditem_set_size(void* self, void* size) {
+void q_quickpainteditem_set_size(void* self, const void* size) {
     QQuickItem_SetSize((QQuickItem*)self, (QSizeF*)size);
 }
 
-int32_t q_quickpainteditem_transform_origin(void* self) {
+int32_t q_quickpainteditem_transform_origin(const void* self) {
     return QQuickItem_TransformOrigin((QQuickItem*)self);
 }
 
@@ -433,15 +429,15 @@ void q_quickpainteditem_set_transform_origin(void* self, int32_t transformOrigin
     QQuickItem_SetTransformOrigin((QQuickItem*)self, transformOrigin);
 }
 
-QPointF* q_quickpainteditem_transform_origin_point(void* self) {
+QPointF* q_quickpainteditem_transform_origin_point(const void* self) {
     return QQuickItem_TransformOriginPoint((QQuickItem*)self);
 }
 
-void q_quickpainteditem_set_transform_origin_point(void* self, void* transformOriginPoint) {
+void q_quickpainteditem_set_transform_origin_point(void* self, const void* transformOriginPoint) {
     QQuickItem_SetTransformOriginPoint((QQuickItem*)self, (QPointF*)transformOriginPoint);
 }
 
-double q_quickpainteditem_z(void* self) {
+double q_quickpainteditem_z(const void* self) {
     return QQuickItem_Z((QQuickItem*)self);
 }
 
@@ -449,7 +445,7 @@ void q_quickpainteditem_set_z(void* self, double z) {
     QQuickItem_SetZ((QQuickItem*)self, z);
 }
 
-double q_quickpainteditem_rotation(void* self) {
+double q_quickpainteditem_rotation(const void* self) {
     return QQuickItem_Rotation((QQuickItem*)self);
 }
 
@@ -457,7 +453,7 @@ void q_quickpainteditem_set_rotation(void* self, double rotation) {
     QQuickItem_SetRotation((QQuickItem*)self, rotation);
 }
 
-double q_quickpainteditem_scale(void* self) {
+double q_quickpainteditem_scale(const void* self) {
     return QQuickItem_Scale((QQuickItem*)self);
 }
 
@@ -465,7 +461,7 @@ void q_quickpainteditem_set_scale(void* self, double scale) {
     QQuickItem_SetScale((QQuickItem*)self, scale);
 }
 
-double q_quickpainteditem_opacity(void* self) {
+double q_quickpainteditem_opacity(const void* self) {
     return QQuickItem_Opacity((QQuickItem*)self);
 }
 
@@ -473,7 +469,7 @@ void q_quickpainteditem_set_opacity(void* self, double opacity) {
     QQuickItem_SetOpacity((QQuickItem*)self, opacity);
 }
 
-bool q_quickpainteditem_is_visible(void* self) {
+bool q_quickpainteditem_is_visible(const void* self) {
     return QQuickItem_IsVisible((QQuickItem*)self);
 }
 
@@ -481,7 +477,7 @@ void q_quickpainteditem_set_visible(void* self, bool visible) {
     QQuickItem_SetVisible((QQuickItem*)self, visible);
 }
 
-bool q_quickpainteditem_is_enabled(void* self) {
+bool q_quickpainteditem_is_enabled(const void* self) {
     return QQuickItem_IsEnabled((QQuickItem*)self);
 }
 
@@ -489,7 +485,7 @@ void q_quickpainteditem_set_enabled(void* self, bool enabled) {
     QQuickItem_SetEnabled((QQuickItem*)self, enabled);
 }
 
-bool q_quickpainteditem_smooth(void* self) {
+bool q_quickpainteditem_smooth(const void* self) {
     return QQuickItem_Smooth((QQuickItem*)self);
 }
 
@@ -497,7 +493,7 @@ void q_quickpainteditem_set_smooth(void* self, bool smooth) {
     QQuickItem_SetSmooth((QQuickItem*)self, smooth);
 }
 
-bool q_quickpainteditem_active_focus_on_tab(void* self) {
+bool q_quickpainteditem_active_focus_on_tab(const void* self) {
     return QQuickItem_ActiveFocusOnTab((QQuickItem*)self);
 }
 
@@ -509,7 +505,7 @@ void q_quickpainteditem_reset_antialiasing(void* self) {
     QQuickItem_ResetAntialiasing((QQuickItem*)self);
 }
 
-int32_t q_quickpainteditem_flags(void* self) {
+int32_t q_quickpainteditem_flags(const void* self) {
     return QQuickItem_Flags((QQuickItem*)self);
 }
 
@@ -521,15 +517,15 @@ void q_quickpainteditem_set_flags(void* self, int32_t flags) {
     QQuickItem_SetFlags((QQuickItem*)self, flags);
 }
 
-QQuickItem* q_quickpainteditem_viewport_item(void* self) {
+QQuickItem* q_quickpainteditem_viewport_item(const void* self) {
     return QQuickItem_ViewportItem((QQuickItem*)self);
 }
 
-bool q_quickpainteditem_has_active_focus(void* self) {
+bool q_quickpainteditem_has_active_focus(const void* self) {
     return QQuickItem_HasActiveFocus((QQuickItem*)self);
 }
 
-bool q_quickpainteditem_has_focus(void* self) {
+bool q_quickpainteditem_has_focus(const void* self) {
     return QQuickItem_HasFocus((QQuickItem*)self);
 }
 
@@ -541,15 +537,15 @@ void q_quickpainteditem_set_focus2(void* self, bool focus, int32_t reason) {
     QQuickItem_SetFocus2((QQuickItem*)self, focus, reason);
 }
 
-bool q_quickpainteditem_is_focus_scope(void* self) {
+bool q_quickpainteditem_is_focus_scope(const void* self) {
     return QQuickItem_IsFocusScope((QQuickItem*)self);
 }
 
-QQuickItem* q_quickpainteditem_scoped_focus_item(void* self) {
+QQuickItem* q_quickpainteditem_scoped_focus_item(const void* self) {
     return QQuickItem_ScopedFocusItem((QQuickItem*)self);
 }
 
-int32_t q_quickpainteditem_focus_policy(void* self) {
+int32_t q_quickpainteditem_focus_policy(const void* self) {
     return QQuickItem_FocusPolicy((QQuickItem*)self);
 }
 
@@ -557,11 +553,11 @@ void q_quickpainteditem_set_focus_policy(void* self, int32_t policy) {
     QQuickItem_SetFocusPolicy((QQuickItem*)self, policy);
 }
 
-bool q_quickpainteditem_is_ancestor_of(void* self, void* child) {
+bool q_quickpainteditem_is_ancestor_of(const void* self, const void* child) {
     return QQuickItem_IsAncestorOf((QQuickItem*)self, (QQuickItem*)child);
 }
 
-int32_t q_quickpainteditem_accepted_mouse_buttons(void* self) {
+int32_t q_quickpainteditem_accepted_mouse_buttons(const void* self) {
     return QQuickItem_AcceptedMouseButtons((QQuickItem*)self);
 }
 
@@ -569,7 +565,7 @@ void q_quickpainteditem_set_accepted_mouse_buttons(void* self, int32_t buttons) 
     QQuickItem_SetAcceptedMouseButtons((QQuickItem*)self, buttons);
 }
 
-bool q_quickpainteditem_accept_hover_events(void* self) {
+bool q_quickpainteditem_accept_hover_events(const void* self) {
     return QQuickItem_AcceptHoverEvents((QQuickItem*)self);
 }
 
@@ -577,7 +573,7 @@ void q_quickpainteditem_set_accept_hover_events(void* self, bool enabled) {
     QQuickItem_SetAcceptHoverEvents((QQuickItem*)self, enabled);
 }
 
-bool q_quickpainteditem_accept_touch_events(void* self) {
+bool q_quickpainteditem_accept_touch_events(const void* self) {
     return QQuickItem_AcceptTouchEvents((QQuickItem*)self);
 }
 
@@ -585,11 +581,11 @@ void q_quickpainteditem_set_accept_touch_events(void* self, bool accept) {
     QQuickItem_SetAcceptTouchEvents((QQuickItem*)self, accept);
 }
 
-QCursor* q_quickpainteditem_cursor(void* self) {
+QCursor* q_quickpainteditem_cursor(const void* self) {
     return QQuickItem_Cursor((QQuickItem*)self);
 }
 
-void q_quickpainteditem_set_cursor(void* self, void* cursor) {
+void q_quickpainteditem_set_cursor(void* self, const void* cursor) {
     QQuickItem_SetCursor((QQuickItem*)self, (QCursor*)cursor);
 }
 
@@ -597,7 +593,7 @@ void q_quickpainteditem_unset_cursor(void* self) {
     QQuickItem_UnsetCursor((QQuickItem*)self);
 }
 
-bool q_quickpainteditem_is_under_mouse(void* self) {
+bool q_quickpainteditem_is_under_mouse(const void* self) {
     return QQuickItem_IsUnderMouse((QQuickItem*)self);
 }
 
@@ -609,7 +605,7 @@ void q_quickpainteditem_ungrab_mouse(void* self) {
     QQuickItem_UngrabMouse((QQuickItem*)self);
 }
 
-bool q_quickpainteditem_keep_mouse_grab(void* self) {
+bool q_quickpainteditem_keep_mouse_grab(const void* self) {
     return QQuickItem_KeepMouseGrab((QQuickItem*)self);
 }
 
@@ -617,7 +613,7 @@ void q_quickpainteditem_set_keep_mouse_grab(void* self, bool keepMouseGrab) {
     QQuickItem_SetKeepMouseGrab((QQuickItem*)self, keepMouseGrab);
 }
 
-bool q_quickpainteditem_filters_child_mouse_events(void* self) {
+bool q_quickpainteditem_filters_child_mouse_events(const void* self) {
     return QQuickItem_FiltersChildMouseEvents((QQuickItem*)self);
 }
 
@@ -633,7 +629,7 @@ void q_quickpainteditem_ungrab_touch_points(void* self) {
     QQuickItem_UngrabTouchPoints((QQuickItem*)self);
 }
 
-bool q_quickpainteditem_keep_touch_grab(void* self) {
+bool q_quickpainteditem_keep_touch_grab(const void* self) {
     return QQuickItem_KeepTouchGrab((QQuickItem*)self);
 }
 
@@ -641,11 +637,11 @@ void q_quickpainteditem_set_keep_touch_grab(void* self, bool keepTouchGrab) {
     QQuickItem_SetKeepTouchGrab((QQuickItem*)self, keepTouchGrab);
 }
 
-bool q_quickpainteditem_grab_to_image(void* self, void* callback) {
+bool q_quickpainteditem_grab_to_image(void* self, const void* callback) {
     return QQuickItem_GrabToImage((QQuickItem*)self, (QJSValue*)callback);
 }
 
-QObject* q_quickpainteditem_containment_mask(void* self) {
+QObject* q_quickpainteditem_containment_mask(const void* self) {
     return QQuickItem_ContainmentMask((QQuickItem*)self);
 }
 
@@ -653,31 +649,31 @@ void q_quickpainteditem_set_containment_mask(void* self, void* mask) {
     QQuickItem_SetContainmentMask((QQuickItem*)self, (QObject*)mask);
 }
 
-QTransform* q_quickpainteditem_item_transform(void* self, void* param1, bool* param2) {
+QTransform* q_quickpainteditem_item_transform(const void* self, void* param1, bool* param2) {
     return QQuickItem_ItemTransform((QQuickItem*)self, (QQuickItem*)param1, (bool*)param2);
 }
 
-QPointF* q_quickpainteditem_map_to_scene(void* self, void* point) {
+QPointF* q_quickpainteditem_map_to_scene(const void* self, const void* point) {
     return QQuickItem_MapToScene((QQuickItem*)self, (QPointF*)point);
 }
 
-QRectF* q_quickpainteditem_map_rect_to_item(void* self, void* item, void* rect) {
+QRectF* q_quickpainteditem_map_rect_to_item(const void* self, const void* item, const void* rect) {
     return QQuickItem_MapRectToItem((QQuickItem*)self, (QQuickItem*)item, (QRectF*)rect);
 }
 
-QRectF* q_quickpainteditem_map_rect_to_scene(void* self, void* rect) {
+QRectF* q_quickpainteditem_map_rect_to_scene(const void* self, const void* rect) {
     return QQuickItem_MapRectToScene((QQuickItem*)self, (QRectF*)rect);
 }
 
-QPointF* q_quickpainteditem_map_from_scene(void* self, void* point) {
+QPointF* q_quickpainteditem_map_from_scene(const void* self, const void* point) {
     return QQuickItem_MapFromScene((QQuickItem*)self, (QPointF*)point);
 }
 
-QRectF* q_quickpainteditem_map_rect_from_item(void* self, void* item, void* rect) {
+QRectF* q_quickpainteditem_map_rect_from_item(const void* self, const void* item, const void* rect) {
     return QQuickItem_MapRectFromItem((QQuickItem*)self, (QQuickItem*)item, (QRectF*)rect);
 }
 
-QRectF* q_quickpainteditem_map_rect_from_scene(void* self, void* rect) {
+QRectF* q_quickpainteditem_map_rect_from_scene(const void* self, const void* rect) {
     return QQuickItem_MapRectFromScene((QQuickItem*)self, (QRectF*)rect);
 }
 
@@ -685,51 +681,51 @@ void q_quickpainteditem_polish(void* self) {
     QQuickItem_Polish((QQuickItem*)self);
 }
 
-QPointF* q_quickpainteditem_map_from_item2(void* self, void* item, void* point) {
+QPointF* q_quickpainteditem_map_from_item2(const void* self, const void* item, const void* point) {
     return QQuickItem_MapFromItem2((QQuickItem*)self, (QQuickItem*)item, (QPointF*)point);
 }
 
-QPointF* q_quickpainteditem_map_from_item3(void* self, void* item, double x, double y) {
+QPointF* q_quickpainteditem_map_from_item3(void* self, const void* item, double x, double y) {
     return QQuickItem_MapFromItem3((QQuickItem*)self, (QQuickItem*)item, x, y);
 }
 
-QRectF* q_quickpainteditem_map_from_item4(void* self, void* item, void* rect) {
+QRectF* q_quickpainteditem_map_from_item4(const void* self, const void* item, const void* rect) {
     return QQuickItem_MapFromItem4((QQuickItem*)self, (QQuickItem*)item, (QRectF*)rect);
 }
 
-QRectF* q_quickpainteditem_map_from_item5(void* self, void* item, double x, double y, double width, double height) {
+QRectF* q_quickpainteditem_map_from_item5(const void* self, const void* item, double x, double y, double width, double height) {
     return QQuickItem_MapFromItem5((QQuickItem*)self, (QQuickItem*)item, x, y, width, height);
 }
 
-QPointF* q_quickpainteditem_map_to_item2(void* self, void* item, void* point) {
+QPointF* q_quickpainteditem_map_to_item2(const void* self, const void* item, const void* point) {
     return QQuickItem_MapToItem2((QQuickItem*)self, (QQuickItem*)item, (QPointF*)point);
 }
 
-QPointF* q_quickpainteditem_map_to_item3(void* self, void* item, double x, double y) {
+QPointF* q_quickpainteditem_map_to_item3(void* self, const void* item, double x, double y) {
     return QQuickItem_MapToItem3((QQuickItem*)self, (QQuickItem*)item, x, y);
 }
 
-QRectF* q_quickpainteditem_map_to_item4(void* self, void* item, void* rect) {
+QRectF* q_quickpainteditem_map_to_item4(const void* self, const void* item, const void* rect) {
     return QQuickItem_MapToItem4((QQuickItem*)self, (QQuickItem*)item, (QRectF*)rect);
 }
 
-QRectF* q_quickpainteditem_map_to_item5(void* self, void* item, double x, double y, double width, double height) {
+QRectF* q_quickpainteditem_map_to_item5(const void* self, const void* item, double x, double y, double width, double height) {
     return QQuickItem_MapToItem5((QQuickItem*)self, (QQuickItem*)item, x, y, width, height);
 }
 
-QPointF* q_quickpainteditem_map_from_global2(void* self, double x, double y) {
+QPointF* q_quickpainteditem_map_from_global2(const void* self, double x, double y) {
     return QQuickItem_MapFromGlobal2((QQuickItem*)self, x, y);
 }
 
-QPointF* q_quickpainteditem_map_from_global3(void* self, void* point) {
+QPointF* q_quickpainteditem_map_from_global3(const void* self, const void* point) {
     return QQuickItem_MapFromGlobal3((QQuickItem*)self, (QPointF*)point);
 }
 
-QPointF* q_quickpainteditem_map_to_global2(void* self, double x, double y) {
+QPointF* q_quickpainteditem_map_to_global2(const void* self, double x, double y) {
     return QQuickItem_MapToGlobal2((QQuickItem*)self, x, y);
 }
 
-QPointF* q_quickpainteditem_map_to_global3(void* self, void* point) {
+QPointF* q_quickpainteditem_map_to_global3(const void* self, const void* point) {
     return QQuickItem_MapToGlobal3((QQuickItem*)self, (QPointF*)point);
 }
 
@@ -745,7 +741,7 @@ QQuickItem* q_quickpainteditem_next_item_in_focus_chain(void* self) {
     return QQuickItem_NextItemInFocusChain((QQuickItem*)self);
 }
 
-QQuickItem* q_quickpainteditem_child_at(void* self, double x, double y) {
+QQuickItem* q_quickpainteditem_child_at(const void* self, double x, double y) {
     return QQuickItem_ChildAt((QQuickItem*)self, x, y);
 }
 
@@ -753,15 +749,15 @@ void q_quickpainteditem_ensure_polished(void* self) {
     QQuickItem_EnsurePolished((QQuickItem*)self);
 }
 
-void q_quickpainteditem_dump_item_tree(void* self) {
+void q_quickpainteditem_dump_item_tree(const void* self) {
     QQuickItem_DumpItemTree((QQuickItem*)self);
 }
 
-void q_quickpainteditem_children_rect_changed(void* self, void* param1) {
+void q_quickpainteditem_children_rect_changed(void* self, const void* param1) {
     QQuickItem_ChildrenRectChanged((QQuickItem*)self, (QRectF*)param1);
 }
 
-void q_quickpainteditem_on_children_rect_changed(void* self, void (*callback)(void*, void*)) {
+void q_quickpainteditem_on_children_rect_changed(void* self, void (*callback)(void*, const void*)) {
     QQuickItem_Connect_ChildrenRectChanged((QQuickItem*)self, (intptr_t)callback);
 }
 
@@ -1001,7 +997,7 @@ void q_quickpainteditem_set_flag2(void* self, int32_t flag, bool enabled) {
     QQuickItem_SetFlag2((QQuickItem*)self, flag, enabled);
 }
 
-bool q_quickpainteditem_grab_to_image22(void* self, void* callback, void* targetSize) {
+bool q_quickpainteditem_grab_to_image22(void* self, const void* callback, const void* targetSize) {
     return QQuickItem_GrabToImage22((QQuickItem*)self, (QJSValue*)callback, (QSize*)targetSize);
 }
 
@@ -1009,7 +1005,7 @@ QQuickItem* q_quickpainteditem_next_item_in_focus_chain1(void* self, bool forwar
     return QQuickItem_NextItemInFocusChain1((QQuickItem*)self, forward);
 }
 
-const char* q_quickpainteditem_object_name(void* self) {
+const char* q_quickpainteditem_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1020,19 +1016,19 @@ void q_quickpainteditem_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_quickpainteditem_is_widget_type(void* self) {
+bool q_quickpainteditem_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_quickpainteditem_is_window_type(void* self) {
+bool q_quickpainteditem_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_quickpainteditem_is_quick_item_type(void* self) {
+bool q_quickpainteditem_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_quickpainteditem_signals_blocked(void* self) {
+bool q_quickpainteditem_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -1040,7 +1036,7 @@ bool q_quickpainteditem_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_quickpainteditem_thread(void* self) {
+QThread* q_quickpainteditem_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -1064,7 +1060,7 @@ void q_quickpainteditem_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_quickpainteditem_children(void* self) {
+libqt_list /* of QObject* */ q_quickpainteditem_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1081,55 +1077,55 @@ void q_quickpainteditem_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_quickpainteditem_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_quickpainteditem_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_quickpainteditem_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_quickpainteditem_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_quickpainteditem_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_quickpainteditem_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_quickpainteditem_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_quickpainteditem_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_quickpainteditem_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_quickpainteditem_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_quickpainteditem_disconnect3(void* self) {
+bool q_quickpainteditem_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_quickpainteditem_disconnect4(void* self, void* receiver) {
+bool q_quickpainteditem_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_quickpainteditem_disconnect5(void* param1) {
+bool q_quickpainteditem_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_quickpainteditem_dump_object_tree(void* self) {
+void q_quickpainteditem_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_quickpainteditem_dump_object_info(void* self) {
+void q_quickpainteditem_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_quickpainteditem_set_property(void* self, const char* name, void* value) {
+bool q_quickpainteditem_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_quickpainteditem_property(void* self, const char* name) {
+QVariant* q_quickpainteditem_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_quickpainteditem_dynamic_property_names(void* self) {
+const char** q_quickpainteditem_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -1150,7 +1146,7 @@ QBindingStorage* q_quickpainteditem_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_quickpainteditem_binding_storage2(void* self) {
+const QBindingStorage* q_quickpainteditem_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -1162,11 +1158,11 @@ void q_quickpainteditem_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_quickpainteditem_parent(void* self) {
+QObject* q_quickpainteditem_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_quickpainteditem_inherits(void* self, const char* classname) {
+bool q_quickpainteditem_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -1182,31 +1178,31 @@ int32_t q_quickpainteditem_start_timer23(void* self, int64_t time, int32_t timer
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_quickpainteditem_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_quickpainteditem_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_quickpainteditem_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_quickpainteditem_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_quickpainteditem_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_quickpainteditem_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_quickpainteditem_disconnect1(void* self, const char* signal) {
+bool q_quickpainteditem_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_quickpainteditem_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_quickpainteditem_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_quickpainteditem_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_quickpainteditem_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_quickpainteditem_disconnect23(void* self, void* receiver, const char* member) {
+bool q_quickpainteditem_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -1218,56 +1214,56 @@ void q_quickpainteditem_on_destroyed1(void* self, void (*callback)(void*, void*)
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void q_quickpainteditem_operator_assign(void* self, void* param1) {
+void q_quickpainteditem_operator_assign(void* self, const void* param1) {
     QQmlParserStatus_OperatorAssign(q_quickpainteditem_as_q_qml_parser_status(self), (QQmlParserStatus*)param1);
 }
 
-QRectF* q_quickpainteditem_bounding_rect(void* self) {
+QRectF* q_quickpainteditem_bounding_rect(const void* self) {
     return QQuickPaintedItem_BoundingRect((QQuickPaintedItem*)self);
 }
 
-QRectF* q_quickpainteditem_super_bounding_rect(void* self) {
+QRectF* q_quickpainteditem_super_bounding_rect(const void* self) {
     return QQuickPaintedItem_SuperBoundingRect((QQuickPaintedItem*)self);
 }
 
-void q_quickpainteditem_on_bounding_rect(void* self, QRectF* (*callback)()) {
-    QQuickPaintedItem_OnBoundingRect((QQuickPaintedItem*)self, (intptr_t)callback);
+void q_quickpainteditem_on_bounding_rect(const void* self, QRectF* (*callback)(const void*)) {
+    QQuickPaintedItem_OnBoundingRect((const QQuickPaintedItem*)self, (intptr_t)callback);
 }
 
-QRectF* q_quickpainteditem_clip_rect(void* self) {
+QRectF* q_quickpainteditem_clip_rect(const void* self) {
     return QQuickPaintedItem_ClipRect((QQuickPaintedItem*)self);
 }
 
-QRectF* q_quickpainteditem_super_clip_rect(void* self) {
+QRectF* q_quickpainteditem_super_clip_rect(const void* self) {
     return QQuickPaintedItem_SuperClipRect((QQuickPaintedItem*)self);
 }
 
-void q_quickpainteditem_on_clip_rect(void* self, QRectF* (*callback)()) {
-    QQuickPaintedItem_OnClipRect((QQuickPaintedItem*)self, (intptr_t)callback);
+void q_quickpainteditem_on_clip_rect(const void* self, QRectF* (*callback)(const void*)) {
+    QQuickPaintedItem_OnClipRect((const QQuickPaintedItem*)self, (intptr_t)callback);
 }
 
-bool q_quickpainteditem_contains(void* self, void* point) {
+bool q_quickpainteditem_contains(const void* self, const void* point) {
     return QQuickPaintedItem_Contains((QQuickPaintedItem*)self, (QPointF*)point);
 }
 
-bool q_quickpainteditem_super_contains(void* self, void* point) {
+bool q_quickpainteditem_super_contains(const void* self, const void* point) {
     return QQuickPaintedItem_SuperContains((QQuickPaintedItem*)self, (QPointF*)point);
 }
 
-void q_quickpainteditem_on_contains(void* self, bool (*callback)(void*, void*)) {
-    QQuickPaintedItem_OnContains((QQuickPaintedItem*)self, (intptr_t)callback);
+void q_quickpainteditem_on_contains(const void* self, bool (*callback)(const void*, const void*)) {
+    QQuickPaintedItem_OnContains((const QQuickPaintedItem*)self, (intptr_t)callback);
 }
 
-QVariant* q_quickpainteditem_input_method_query(void* self, int32_t query) {
+QVariant* q_quickpainteditem_input_method_query(const void* self, int32_t query) {
     return QQuickPaintedItem_InputMethodQuery((QQuickPaintedItem*)self, query);
 }
 
-QVariant* q_quickpainteditem_super_input_method_query(void* self, int32_t query) {
+QVariant* q_quickpainteditem_super_input_method_query(const void* self, int32_t query) {
     return QQuickPaintedItem_SuperInputMethodQuery((QQuickPaintedItem*)self, query);
 }
 
-void q_quickpainteditem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
-    QQuickPaintedItem_OnInputMethodQuery((QQuickPaintedItem*)self, (intptr_t)callback);
+void q_quickpainteditem_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QQuickPaintedItem_OnInputMethodQuery((const QQuickPaintedItem*)self, (intptr_t)callback);
 }
 
 bool q_quickpainteditem_event(void* self, void* param1) {
@@ -1282,15 +1278,15 @@ void q_quickpainteditem_on_event(void* self, bool (*callback)(void*, void*)) {
     QQuickPaintedItem_OnEvent((QQuickPaintedItem*)self, (intptr_t)callback);
 }
 
-void q_quickpainteditem_geometry_change(void* self, void* newGeometry, void* oldGeometry) {
+void q_quickpainteditem_geometry_change(void* self, const void* newGeometry, const void* oldGeometry) {
     QQuickPaintedItem_GeometryChange((QQuickPaintedItem*)self, (QRectF*)newGeometry, (QRectF*)oldGeometry);
 }
 
-void q_quickpainteditem_super_geometry_change(void* self, void* newGeometry, void* oldGeometry) {
+void q_quickpainteditem_super_geometry_change(void* self, const void* newGeometry, const void* oldGeometry) {
     QQuickPaintedItem_SuperGeometryChange((QQuickPaintedItem*)self, (QRectF*)newGeometry, (QRectF*)oldGeometry);
 }
 
-void q_quickpainteditem_on_geometry_change(void* self, void (*callback)(void*, void*, void*)) {
+void q_quickpainteditem_on_geometry_change(void* self, void (*callback)(void*, const void*, const void*)) {
     QQuickPaintedItem_OnGeometryChange((QQuickPaintedItem*)self, (intptr_t)callback);
 }
 
@@ -1302,7 +1298,7 @@ void q_quickpainteditem_super_class_begin(void* self) {
     QQuickPaintedItem_SuperClassBegin((QQuickPaintedItem*)self);
 }
 
-void q_quickpainteditem_on_class_begin(void* self, void (*callback)()) {
+void q_quickpainteditem_on_class_begin(void* self, void (*callback)(void*)) {
     QQuickPaintedItem_OnClassBegin((QQuickPaintedItem*)self, (intptr_t)callback);
 }
 
@@ -1314,7 +1310,7 @@ void q_quickpainteditem_super_component_complete(void* self) {
     QQuickPaintedItem_SuperComponentComplete((QQuickPaintedItem*)self);
 }
 
-void q_quickpainteditem_on_component_complete(void* self, void (*callback)()) {
+void q_quickpainteditem_on_component_complete(void* self, void (*callback)(void*)) {
     QQuickPaintedItem_OnComponentComplete((QQuickPaintedItem*)self, (intptr_t)callback);
 }
 
@@ -1434,7 +1430,7 @@ void q_quickpainteditem_super_mouse_ungrab_event(void* self) {
     QQuickPaintedItem_SuperMouseUngrabEvent((QQuickPaintedItem*)self);
 }
 
-void q_quickpainteditem_on_mouse_ungrab_event(void* self, void (*callback)()) {
+void q_quickpainteditem_on_mouse_ungrab_event(void* self, void (*callback)(void*)) {
     QQuickPaintedItem_OnMouseUngrabEvent((QQuickPaintedItem*)self, (intptr_t)callback);
 }
 
@@ -1446,7 +1442,7 @@ void q_quickpainteditem_super_touch_ungrab_event(void* self) {
     QQuickPaintedItem_SuperTouchUngrabEvent((QQuickPaintedItem*)self);
 }
 
-void q_quickpainteditem_on_touch_ungrab_event(void* self, void (*callback)()) {
+void q_quickpainteditem_on_touch_ungrab_event(void* self, void (*callback)(void*)) {
     QQuickPaintedItem_OnTouchUngrabEvent((QQuickPaintedItem*)self, (intptr_t)callback);
 }
 
@@ -1578,7 +1574,7 @@ void q_quickpainteditem_super_update_polish(void* self) {
     QQuickPaintedItem_SuperUpdatePolish((QQuickPaintedItem*)self);
 }
 
-void q_quickpainteditem_on_update_polish(void* self, void (*callback)()) {
+void q_quickpainteditem_on_update_polish(void* self, void (*callback)(void*)) {
     QQuickPaintedItem_OnUpdatePolish((QQuickPaintedItem*)self, (intptr_t)callback);
 }
 
@@ -1630,136 +1626,64 @@ void q_quickpainteditem_on_custom_event(void* self, void (*callback)(void*, void
     QQuickPaintedItem_OnCustomEvent((QQuickPaintedItem*)self, (intptr_t)callback);
 }
 
-void q_quickpainteditem_connect_notify(void* self, void* signal) {
+void q_quickpainteditem_connect_notify(void* self, const void* signal) {
     QQuickPaintedItem_ConnectNotify((QQuickPaintedItem*)self, (QMetaMethod*)signal);
 }
 
-void q_quickpainteditem_super_connect_notify(void* self, void* signal) {
+void q_quickpainteditem_super_connect_notify(void* self, const void* signal) {
     QQuickPaintedItem_SuperConnectNotify((QQuickPaintedItem*)self, (QMetaMethod*)signal);
 }
 
-void q_quickpainteditem_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_quickpainteditem_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QQuickPaintedItem_OnConnectNotify((QQuickPaintedItem*)self, (intptr_t)callback);
 }
 
-void q_quickpainteditem_disconnect_notify(void* self, void* signal) {
+void q_quickpainteditem_disconnect_notify(void* self, const void* signal) {
     QQuickPaintedItem_DisconnectNotify((QQuickPaintedItem*)self, (QMetaMethod*)signal);
 }
 
-void q_quickpainteditem_super_disconnect_notify(void* self, void* signal) {
+void q_quickpainteditem_super_disconnect_notify(void* self, const void* signal) {
     QQuickPaintedItem_SuperDisconnectNotify((QQuickPaintedItem*)self, (QMetaMethod*)signal);
 }
 
-void q_quickpainteditem_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_quickpainteditem_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QQuickPaintedItem_OnDisconnectNotify((QQuickPaintedItem*)self, (intptr_t)callback);
 }
 
-bool q_quickpainteditem_is_component_complete(void* self) {
+bool q_quickpainteditem_is_component_complete(const void* self) {
     return QQuickPaintedItem_IsComponentComplete((QQuickPaintedItem*)self);
-}
-
-bool q_quickpainteditem_super_is_component_complete(void* self) {
-    return QQuickPaintedItem_SuperIsComponentComplete((QQuickPaintedItem*)self);
-}
-
-void q_quickpainteditem_on_is_component_complete(void* self, bool (*callback)()) {
-    QQuickPaintedItem_OnIsComponentComplete((QQuickPaintedItem*)self, (intptr_t)callback);
 }
 
 void q_quickpainteditem_update_input_method(void* self) {
     QQuickPaintedItem_UpdateInputMethod((QQuickPaintedItem*)self);
 }
 
-void q_quickpainteditem_super_update_input_method(void* self) {
-    QQuickPaintedItem_SuperUpdateInputMethod((QQuickPaintedItem*)self);
-}
-
-void q_quickpainteditem_on_update_input_method(void* self, void (*callback)()) {
-    QQuickPaintedItem_OnUpdateInputMethod((QQuickPaintedItem*)self, (intptr_t)callback);
-}
-
-bool q_quickpainteditem_width_valid(void* self) {
+bool q_quickpainteditem_width_valid(const void* self) {
     return QQuickPaintedItem_WidthValid((QQuickPaintedItem*)self);
 }
 
-bool q_quickpainteditem_super_width_valid(void* self) {
-    return QQuickPaintedItem_SuperWidthValid((QQuickPaintedItem*)self);
-}
-
-void q_quickpainteditem_on_width_valid(void* self, bool (*callback)()) {
-    QQuickPaintedItem_OnWidthValid((QQuickPaintedItem*)self, (intptr_t)callback);
-}
-
-bool q_quickpainteditem_height_valid(void* self) {
+bool q_quickpainteditem_height_valid(const void* self) {
     return QQuickPaintedItem_HeightValid((QQuickPaintedItem*)self);
-}
-
-bool q_quickpainteditem_super_height_valid(void* self) {
-    return QQuickPaintedItem_SuperHeightValid((QQuickPaintedItem*)self);
-}
-
-void q_quickpainteditem_on_height_valid(void* self, bool (*callback)()) {
-    QQuickPaintedItem_OnHeightValid((QQuickPaintedItem*)self, (intptr_t)callback);
 }
 
 void q_quickpainteditem_set_implicit_size(void* self, double param1, double param2) {
     QQuickPaintedItem_SetImplicitSize((QQuickPaintedItem*)self, param1, param2);
 }
 
-void q_quickpainteditem_super_set_implicit_size(void* self, double param1, double param2) {
-    QQuickPaintedItem_SuperSetImplicitSize((QQuickPaintedItem*)self, param1, param2);
-}
-
-void q_quickpainteditem_on_set_implicit_size(void* self, void (*callback)(void*, double, double)) {
-    QQuickPaintedItem_OnSetImplicitSize((QQuickPaintedItem*)self, (intptr_t)callback);
-}
-
-QObject* q_quickpainteditem_sender(void* self) {
+QObject* q_quickpainteditem_sender(const void* self) {
     return QQuickPaintedItem_Sender((QQuickPaintedItem*)self);
 }
 
-QObject* q_quickpainteditem_super_sender(void* self) {
-    return QQuickPaintedItem_SuperSender((QQuickPaintedItem*)self);
-}
-
-void q_quickpainteditem_on_sender(void* self, QObject* (*callback)()) {
-    QQuickPaintedItem_OnSender((QQuickPaintedItem*)self, (intptr_t)callback);
-}
-
-int32_t q_quickpainteditem_sender_signal_index(void* self) {
+int32_t q_quickpainteditem_sender_signal_index(const void* self) {
     return QQuickPaintedItem_SenderSignalIndex((QQuickPaintedItem*)self);
 }
 
-int32_t q_quickpainteditem_super_sender_signal_index(void* self) {
-    return QQuickPaintedItem_SuperSenderSignalIndex((QQuickPaintedItem*)self);
-}
-
-void q_quickpainteditem_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QQuickPaintedItem_OnSenderSignalIndex((QQuickPaintedItem*)self, (intptr_t)callback);
-}
-
-int32_t q_quickpainteditem_receivers(void* self, const char* signal) {
+int32_t q_quickpainteditem_receivers(const void* self, const char* signal) {
     return QQuickPaintedItem_Receivers((QQuickPaintedItem*)self, signal);
 }
 
-int32_t q_quickpainteditem_super_receivers(void* self, const char* signal) {
-    return QQuickPaintedItem_SuperReceivers((QQuickPaintedItem*)self, signal);
-}
-
-void q_quickpainteditem_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QQuickPaintedItem_OnReceivers((QQuickPaintedItem*)self, (intptr_t)callback);
-}
-
-bool q_quickpainteditem_is_signal_connected(void* self, void* signal) {
+bool q_quickpainteditem_is_signal_connected(const void* self, const void* signal) {
     return QQuickPaintedItem_IsSignalConnected((QQuickPaintedItem*)self, (QMetaMethod*)signal);
-}
-
-bool q_quickpainteditem_super_is_signal_connected(void* self, void* signal) {
-    return QQuickPaintedItem_SuperIsSignalConnected((QQuickPaintedItem*)self, (QMetaMethod*)signal);
-}
-
-void q_quickpainteditem_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QQuickPaintedItem_OnIsSignalConnected((QQuickPaintedItem*)self, (intptr_t)callback);
 }
 
 void q_quickpainteditem_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

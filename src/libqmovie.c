@@ -43,15 +43,15 @@ QMovie* q_movie_new8(const char* fileName, char* format, void* parent) {
     return QMovie_New8(qstring(fileName), qstring(format), (QObject*)parent);
 }
 
-const QMetaObject* q_movie_meta_object(void* self) {
+const QMetaObject* q_movie_meta_object(const void* self) {
     return QMovie_MetaObject((QMovie*)self);
 }
 
-void q_movie_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_movie_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QMovie_OnMetaObject((QMovie*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_movie_super_meta_object(void* self) {
+const QMetaObject* q_movie_super_meta_object(const void* self) {
     return QMovie_SuperMetaObject((QMovie*)self);
 }
 
@@ -107,7 +107,7 @@ void q_movie_set_device(void* self, void* device) {
     QMovie_SetDevice((QMovie*)self, (QIODevice*)device);
 }
 
-QIODevice* q_movie_device(void* self) {
+QIODevice* q_movie_device(const void* self) {
     return QMovie_Device((QMovie*)self);
 }
 
@@ -115,7 +115,7 @@ void q_movie_set_file_name(void* self, const char* fileName) {
     QMovie_SetFileName((QMovie*)self, qstring(fileName));
 }
 
-const char* q_movie_file_name(void* self) {
+const char* q_movie_file_name(const void* self) {
     libqt_string _str = QMovie_FileName((QMovie*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -126,46 +126,46 @@ void q_movie_set_format(void* self, char* format) {
     QMovie_SetFormat((QMovie*)self, qstring(format));
 }
 
-char* q_movie_format(void* self) {
+char* q_movie_format(const void* self) {
     libqt_string _str = QMovie_Format((QMovie*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_movie_set_background_color(void* self, void* color) {
+void q_movie_set_background_color(void* self, const void* color) {
     QMovie_SetBackgroundColor((QMovie*)self, (QColor*)color);
 }
 
-QColor* q_movie_background_color(void* self) {
+QColor* q_movie_background_color(const void* self) {
     return QMovie_BackgroundColor((QMovie*)self);
 }
 
-int32_t q_movie_state(void* self) {
+int32_t q_movie_state(const void* self) {
     return QMovie_State((QMovie*)self);
 }
 
-QRect* q_movie_frame_rect(void* self) {
+QRect* q_movie_frame_rect(const void* self) {
     return QMovie_FrameRect((QMovie*)self);
 }
 
-QImage* q_movie_current_image(void* self) {
+QImage* q_movie_current_image(const void* self) {
     return QMovie_CurrentImage((QMovie*)self);
 }
 
-QPixmap* q_movie_current_pixmap(void* self) {
+QPixmap* q_movie_current_pixmap(const void* self) {
     return QMovie_CurrentPixmap((QMovie*)self);
 }
 
-bool q_movie_is_valid(void* self) {
+bool q_movie_is_valid(const void* self) {
     return QMovie_IsValid((QMovie*)self);
 }
 
-int32_t q_movie_last_error(void* self) {
+int32_t q_movie_last_error(const void* self) {
     return QMovie_LastError((QMovie*)self);
 }
 
-const char* q_movie_last_error_string(void* self) {
+const char* q_movie_last_error_string(const void* self) {
     libqt_string _str = QMovie_LastErrorString((QMovie*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -176,23 +176,23 @@ bool q_movie_jump_to_frame(void* self, int frameNumber) {
     return QMovie_JumpToFrame((QMovie*)self, frameNumber);
 }
 
-int32_t q_movie_loop_count(void* self) {
+int32_t q_movie_loop_count(const void* self) {
     return QMovie_LoopCount((QMovie*)self);
 }
 
-int32_t q_movie_frame_count(void* self) {
+int32_t q_movie_frame_count(const void* self) {
     return QMovie_FrameCount((QMovie*)self);
 }
 
-int32_t q_movie_next_frame_delay(void* self) {
+int32_t q_movie_next_frame_delay(const void* self) {
     return QMovie_NextFrameDelay((QMovie*)self);
 }
 
-int32_t q_movie_current_frame_number(void* self) {
+int32_t q_movie_current_frame_number(const void* self) {
     return QMovie_CurrentFrameNumber((QMovie*)self);
 }
 
-int32_t q_movie_speed(void* self) {
+int32_t q_movie_speed(const void* self) {
     return QMovie_Speed((QMovie*)self);
 }
 
@@ -200,11 +200,11 @@ QSize* q_movie_scaled_size(void* self) {
     return QMovie_ScaledSize((QMovie*)self);
 }
 
-void q_movie_set_scaled_size(void* self, void* size) {
+void q_movie_set_scaled_size(void* self, const void* size) {
     QMovie_SetScaledSize((QMovie*)self, (QSize*)size);
 }
 
-int32_t q_movie_cache_mode(void* self) {
+int32_t q_movie_cache_mode(const void* self) {
     return QMovie_CacheMode((QMovie*)self);
 }
 
@@ -220,19 +220,19 @@ void q_movie_on_started(void* self, void (*callback)(void*)) {
     QMovie_Connect_Started((QMovie*)self, (intptr_t)callback);
 }
 
-void q_movie_resized(void* self, void* size) {
+void q_movie_resized(void* self, const void* size) {
     QMovie_Resized((QMovie*)self, (QSize*)size);
 }
 
-void q_movie_on_resized(void* self, void (*callback)(void*, void*)) {
+void q_movie_on_resized(void* self, void (*callback)(void*, const void*)) {
     QMovie_Connect_Resized((QMovie*)self, (intptr_t)callback);
 }
 
-void q_movie_updated(void* self, void* rect) {
+void q_movie_updated(void* self, const void* rect) {
     QMovie_Updated((QMovie*)self, (QRect*)rect);
 }
 
-void q_movie_on_updated(void* self, void (*callback)(void*, void*)) {
+void q_movie_on_updated(void* self, void (*callback)(void*, const void*)) {
     QMovie_Connect_Updated((QMovie*)self, (intptr_t)callback);
 }
 
@@ -302,7 +302,7 @@ const char* q_movie_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-const char* q_movie_object_name(void* self) {
+const char* q_movie_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -313,19 +313,19 @@ void q_movie_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_movie_is_widget_type(void* self) {
+bool q_movie_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_movie_is_window_type(void* self) {
+bool q_movie_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_movie_is_quick_item_type(void* self) {
+bool q_movie_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_movie_signals_blocked(void* self) {
+bool q_movie_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -333,7 +333,7 @@ bool q_movie_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_movie_thread(void* self) {
+QThread* q_movie_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -357,7 +357,7 @@ void q_movie_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_movie_children(void* self) {
+libqt_list /* of QObject* */ q_movie_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -374,55 +374,55 @@ void q_movie_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_movie_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_movie_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_movie_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_movie_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_movie_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_movie_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_movie_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_movie_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_movie_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_movie_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_movie_disconnect3(void* self) {
+bool q_movie_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_movie_disconnect4(void* self, void* receiver) {
+bool q_movie_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_movie_disconnect5(void* param1) {
+bool q_movie_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_movie_dump_object_tree(void* self) {
+void q_movie_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_movie_dump_object_info(void* self) {
+void q_movie_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_movie_set_property(void* self, const char* name, void* value) {
+bool q_movie_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_movie_property(void* self, const char* name) {
+QVariant* q_movie_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_movie_dynamic_property_names(void* self) {
+const char** q_movie_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -443,7 +443,7 @@ QBindingStorage* q_movie_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_movie_binding_storage2(void* self) {
+const QBindingStorage* q_movie_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -455,11 +455,11 @@ void q_movie_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_movie_parent(void* self) {
+QObject* q_movie_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_movie_inherits(void* self, const char* classname) {
+bool q_movie_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -475,31 +475,31 @@ int32_t q_movie_start_timer23(void* self, int64_t time, int32_t timerType) {
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_movie_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_movie_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_movie_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_movie_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_movie_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_movie_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_movie_disconnect1(void* self, const char* signal) {
+bool q_movie_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_movie_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_movie_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_movie_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_movie_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_movie_disconnect23(void* self, void* receiver, const char* member) {
+bool q_movie_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -571,76 +571,44 @@ void q_movie_on_custom_event(void* self, void (*callback)(void*, void*)) {
     QMovie_OnCustomEvent((QMovie*)self, (intptr_t)callback);
 }
 
-void q_movie_connect_notify(void* self, void* signal) {
+void q_movie_connect_notify(void* self, const void* signal) {
     QMovie_ConnectNotify((QMovie*)self, (QMetaMethod*)signal);
 }
 
-void q_movie_super_connect_notify(void* self, void* signal) {
+void q_movie_super_connect_notify(void* self, const void* signal) {
     QMovie_SuperConnectNotify((QMovie*)self, (QMetaMethod*)signal);
 }
 
-void q_movie_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_movie_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QMovie_OnConnectNotify((QMovie*)self, (intptr_t)callback);
 }
 
-void q_movie_disconnect_notify(void* self, void* signal) {
+void q_movie_disconnect_notify(void* self, const void* signal) {
     QMovie_DisconnectNotify((QMovie*)self, (QMetaMethod*)signal);
 }
 
-void q_movie_super_disconnect_notify(void* self, void* signal) {
+void q_movie_super_disconnect_notify(void* self, const void* signal) {
     QMovie_SuperDisconnectNotify((QMovie*)self, (QMetaMethod*)signal);
 }
 
-void q_movie_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_movie_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QMovie_OnDisconnectNotify((QMovie*)self, (intptr_t)callback);
 }
 
-QObject* q_movie_sender(void* self) {
+QObject* q_movie_sender(const void* self) {
     return QMovie_Sender((QMovie*)self);
 }
 
-QObject* q_movie_super_sender(void* self) {
-    return QMovie_SuperSender((QMovie*)self);
-}
-
-void q_movie_on_sender(void* self, QObject* (*callback)()) {
-    QMovie_OnSender((QMovie*)self, (intptr_t)callback);
-}
-
-int32_t q_movie_sender_signal_index(void* self) {
+int32_t q_movie_sender_signal_index(const void* self) {
     return QMovie_SenderSignalIndex((QMovie*)self);
 }
 
-int32_t q_movie_super_sender_signal_index(void* self) {
-    return QMovie_SuperSenderSignalIndex((QMovie*)self);
-}
-
-void q_movie_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QMovie_OnSenderSignalIndex((QMovie*)self, (intptr_t)callback);
-}
-
-int32_t q_movie_receivers(void* self, const char* signal) {
+int32_t q_movie_receivers(const void* self, const char* signal) {
     return QMovie_Receivers((QMovie*)self, signal);
 }
 
-int32_t q_movie_super_receivers(void* self, const char* signal) {
-    return QMovie_SuperReceivers((QMovie*)self, signal);
-}
-
-void q_movie_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QMovie_OnReceivers((QMovie*)self, (intptr_t)callback);
-}
-
-bool q_movie_is_signal_connected(void* self, void* signal) {
+bool q_movie_is_signal_connected(const void* self, const void* signal) {
     return QMovie_IsSignalConnected((QMovie*)self, (QMetaMethod*)signal);
-}
-
-bool q_movie_super_is_signal_connected(void* self, void* signal) {
-    return QMovie_SuperIsSignalConnected((QMovie*)self, (QMetaMethod*)signal);
-}
-
-void q_movie_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QMovie_OnIsSignalConnected((QMovie*)self, (intptr_t)callback);
 }
 
 void q_movie_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

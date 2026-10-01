@@ -16,7 +16,7 @@
 /// @param key const char*
 /// @param defaultValue QJsonValue*
 ///
-QJsonValue* k_jsonutils_read_translated_value(void* jo, const char* key, void* defaultValue);
+QJsonValue* k_jsonutils_read_translated_value(const void* jo, const char* key, const void* defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kjsonutils.html#readTranslatedString)
 ///
@@ -26,5 +26,5 @@ QJsonValue* k_jsonutils_read_translated_value(void* jo, const char* key, void* d
 /// @param key const char*
 /// @param defaultValue const char*
 ///
-const char* k_jsonutils_read_translated_string(void* jo, const char* key, const char* defaultValue);
+const char* k_jsonutils_read_translated_string(const void* jo, const char* key, const char* defaultValue);
 #endif

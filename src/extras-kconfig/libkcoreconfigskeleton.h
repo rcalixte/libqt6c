@@ -23,7 +23,7 @@ KConfigSkeletonItem* k_configskeletonitem_new(const char* _group, const char* _k
 ///
 /// @param param1 KConfigSkeletonItem*
 ///
-KConfigSkeletonItem* k_configskeletonitem_new2(void* param1);
+KConfigSkeletonItem* k_configskeletonitem_new2(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#setGroup)
 ///
@@ -36,23 +36,23 @@ void k_configskeletonitem_set_group(void* self, const char* _group);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KConfigSkeletonItem*
+/// @param self const KConfigSkeletonItem*
 ///
-const char* k_configskeletonitem_group(void* self);
+const char* k_configskeletonitem_group(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#setGroup)
 ///
 /// @param self KConfigSkeletonItem*
 /// @param cg KConfigGroup*
 ///
-void k_configskeletonitem_set_group2(void* self, void* cg);
+void k_configskeletonitem_set_group2(void* self, const void* cg);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#configGroup)
 ///
-/// @param self KConfigSkeletonItem*
+/// @param self const KConfigSkeletonItem*
 /// @param config KConfig*
 ///
-KConfigGroup* k_configskeletonitem_config_group(void* self, void* config);
+KConfigGroup* k_configskeletonitem_config_group(const void* self, void* config);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#setKey)
 ///
@@ -65,9 +65,9 @@ void k_configskeletonitem_set_key(void* self, const char* _key);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KConfigSkeletonItem*
+/// @param self const KConfigSkeletonItem*
 ///
-const char* k_configskeletonitem_key(void* self);
+const char* k_configskeletonitem_key(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#setName)
 ///
@@ -80,9 +80,9 @@ void k_configskeletonitem_set_name(void* self, const char* _name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KConfigSkeletonItem*
+/// @param self const KConfigSkeletonItem*
 ///
-const char* k_configskeletonitem_name(void* self);
+const char* k_configskeletonitem_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#setLabel)
 ///
@@ -95,9 +95,9 @@ void k_configskeletonitem_set_label(void* self, const char* l);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KConfigSkeletonItem*
+/// @param self const KConfigSkeletonItem*
 ///
-const char* k_configskeletonitem_label(void* self);
+const char* k_configskeletonitem_label(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#setToolTip)
 ///
@@ -110,9 +110,9 @@ void k_configskeletonitem_set_tool_tip(void* self, const char* t);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KConfigSkeletonItem*
+/// @param self const KConfigSkeletonItem*
 ///
-const char* k_configskeletonitem_tool_tip(void* self);
+const char* k_configskeletonitem_tool_tip(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#setWhatsThis)
 ///
@@ -125,9 +125,9 @@ void k_configskeletonitem_set_whats_this(void* self, const char* w);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KConfigSkeletonItem*
+/// @param self const KConfigSkeletonItem*
 ///
-const char* k_configskeletonitem_whats_this(void* self);
+const char* k_configskeletonitem_whats_this(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#setWriteFlags)
 ///
@@ -138,13 +138,15 @@ void k_configskeletonitem_set_write_flags(void* self, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#writeFlags)
 ///
-/// @param self KConfigSkeletonItem*
+/// @param self const KConfigSkeletonItem*
 ///
 /// @return flag of enum KConfigBase__WriteConfigFlag
 ///
-int32_t k_configskeletonitem_write_flags(void* self);
+int32_t k_configskeletonitem_write_flags(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#readConfig)
+///
+/// @warning This method must be implemented with `k_configskeletonitem_on_read_config` before it can be called.
 ///
 /// @param self KConfigSkeletonItem*
 /// @param param1 KConfig*
@@ -160,16 +162,9 @@ void k_configskeletonitem_read_config(void* self, void* param1);
 ///
 void k_configskeletonitem_on_read_config(void* self, void (*callback)(void*, void*));
 
-/// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#readConfig)
-///
-/// Base class method implementation
-///
-/// @param self KConfigSkeletonItem*
-/// @param param1 KConfig*
-///
-void k_configskeletonitem_super_read_config(void* self, void* param1);
-
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#writeConfig)
+///
+/// @warning This method must be implemented with `k_configskeletonitem_on_write_config` before it can be called.
 ///
 /// @param self KConfigSkeletonItem*
 /// @param param1 KConfig*
@@ -185,16 +180,9 @@ void k_configskeletonitem_write_config(void* self, void* param1);
 ///
 void k_configskeletonitem_on_write_config(void* self, void (*callback)(void*, void*));
 
-/// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#writeConfig)
-///
-/// Base class method implementation
-///
-/// @param self KConfigSkeletonItem*
-/// @param param1 KConfig*
-///
-void k_configskeletonitem_super_write_config(void* self, void* param1);
-
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#readDefault)
+///
+/// @warning This method must be implemented with `k_configskeletonitem_on_read_default` before it can be called.
 ///
 /// @param self KConfigSkeletonItem*
 /// @param param1 KConfig*
@@ -210,21 +198,14 @@ void k_configskeletonitem_read_default(void* self, void* param1);
 ///
 void k_configskeletonitem_on_read_default(void* self, void (*callback)(void*, void*));
 
-/// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#readDefault)
-///
-/// Base class method implementation
-///
-/// @param self KConfigSkeletonItem*
-/// @param param1 KConfig*
-///
-void k_configskeletonitem_super_read_default(void* self, void* param1);
-
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#setProperty)
+///
+/// @warning This method must be implemented with `k_configskeletonitem_on_set_property` before it can be called.
 ///
 /// @param self KConfigSkeletonItem*
 /// @param p QVariant*
 ///
-void k_configskeletonitem_set_property(void* self, void* p);
+void k_configskeletonitem_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#setProperty)
 ///
@@ -233,118 +214,98 @@ void k_configskeletonitem_set_property(void* self, void* p);
 /// @param self KConfigSkeletonItem*
 /// @param callback void func(KConfigSkeletonItem* self, QVariant* p)
 ///
-void k_configskeletonitem_on_set_property(void* self, void (*callback)(void*, void*));
-
-/// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#setProperty)
-///
-/// Base class method implementation
-///
-/// @param self KConfigSkeletonItem*
-/// @param p QVariant*
-///
-void k_configskeletonitem_super_set_property(void* self, void* p);
+void k_configskeletonitem_on_set_property(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#isEqual)
 ///
-/// @param self KConfigSkeletonItem*
+/// @warning This method must be implemented with `k_configskeletonitem_on_is_equal` before it can be called.
+///
+/// @param self const KConfigSkeletonItem*
 /// @param p QVariant*
 ///
-bool k_configskeletonitem_is_equal(void* self, void* p);
+bool k_configskeletonitem_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#isEqual)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KConfigSkeletonItem*
-/// @param callback bool func(KConfigSkeletonItem* self, QVariant* p)
+/// @param self const KConfigSkeletonItem*
+/// @param callback bool func(const KConfigSkeletonItem* self, QVariant* p)
 ///
-void k_configskeletonitem_on_is_equal(void* self, bool (*callback)(void*, void*));
-
-/// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#isEqual)
-///
-/// Base class method implementation
-///
-/// @param self KConfigSkeletonItem*
-/// @param p QVariant*
-///
-bool k_configskeletonitem_super_is_equal(void* self, void* p);
+void k_configskeletonitem_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#property)
 ///
-/// @param self KConfigSkeletonItem*
+/// @warning This method must be implemented with `k_configskeletonitem_on_property` before it can be called.
 ///
-QVariant* k_configskeletonitem_property(void* self);
+/// @param self const KConfigSkeletonItem*
+///
+QVariant* k_configskeletonitem_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#property)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KConfigSkeletonItem*
-/// @param callback QVariant* func()
+/// @param self const KConfigSkeletonItem*
+/// @param callback QVariant* func(const KConfigSkeletonItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_configskeletonitem_on_property(void* self, QVariant* (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#property)
-///
-/// Base class method implementation
-///
-/// @param self KConfigSkeletonItem*
-///
-QVariant* k_configskeletonitem_super_property(void* self);
+void k_configskeletonitem_on_property(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#minValue)
 ///
-/// @param self KConfigSkeletonItem*
+/// @param self const KConfigSkeletonItem*
 ///
-QVariant* k_configskeletonitem_min_value(void* self);
+QVariant* k_configskeletonitem_min_value(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#minValue)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KConfigSkeletonItem*
-/// @param callback QVariant* func()
+/// @param self const KConfigSkeletonItem*
+/// @param callback QVariant* func(const KConfigSkeletonItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_configskeletonitem_on_min_value(void* self, QVariant* (*callback)());
+void k_configskeletonitem_on_min_value(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#minValue)
 ///
 /// Base class method implementation
 ///
-/// @param self KConfigSkeletonItem*
+/// @param self const KConfigSkeletonItem*
 ///
-QVariant* k_configskeletonitem_super_min_value(void* self);
+QVariant* k_configskeletonitem_super_min_value(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#maxValue)
 ///
-/// @param self KConfigSkeletonItem*
+/// @param self const KConfigSkeletonItem*
 ///
-QVariant* k_configskeletonitem_max_value(void* self);
+QVariant* k_configskeletonitem_max_value(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#maxValue)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KConfigSkeletonItem*
-/// @param callback QVariant* func()
+/// @param self const KConfigSkeletonItem*
+/// @param callback QVariant* func(const KConfigSkeletonItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_configskeletonitem_on_max_value(void* self, QVariant* (*callback)());
+void k_configskeletonitem_on_max_value(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#maxValue)
 ///
 /// Base class method implementation
 ///
-/// @param self KConfigSkeletonItem*
+/// @param self const KConfigSkeletonItem*
 ///
-QVariant* k_configskeletonitem_super_max_value(void* self);
+QVariant* k_configskeletonitem_super_max_value(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#setDefault)
+///
+/// @warning This method must be implemented with `k_configskeletonitem_on_set_default` before it can be called.
 ///
 /// @param self KConfigSkeletonItem*
 ///
@@ -355,19 +316,13 @@ void k_configskeletonitem_set_default(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KConfigSkeletonItem*
-/// @param callback void func()
+/// @param callback void func(KConfigSkeletonItem* self)
 ///
-void k_configskeletonitem_on_set_default(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#setDefault)
-///
-/// Base class method implementation
-///
-/// @param self KConfigSkeletonItem*
-///
-void k_configskeletonitem_super_set_default(void* self);
+void k_configskeletonitem_on_set_default(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#swapDefault)
+///
+/// @warning This method must be implemented with `k_configskeletonitem_on_swap_default` before it can be called.
 ///
 /// @param self KConfigSkeletonItem*
 ///
@@ -378,66 +333,40 @@ void k_configskeletonitem_swap_default(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KConfigSkeletonItem*
-/// @param callback void func()
+/// @param callback void func(KConfigSkeletonItem* self)
 ///
-void k_configskeletonitem_on_swap_default(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#swapDefault)
-///
-/// Base class method implementation
-///
-/// @param self KConfigSkeletonItem*
-///
-void k_configskeletonitem_super_swap_default(void* self);
+void k_configskeletonitem_on_swap_default(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#isImmutable)
 ///
-/// @param self KConfigSkeletonItem*
+/// @param self const KConfigSkeletonItem*
 ///
-bool k_configskeletonitem_is_immutable(void* self);
+bool k_configskeletonitem_is_immutable(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#isDefault)
 ///
-/// @param self KConfigSkeletonItem*
+/// @param self const KConfigSkeletonItem*
 ///
-bool k_configskeletonitem_is_default(void* self);
+bool k_configskeletonitem_is_default(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#isSaveNeeded)
 ///
-/// @param self KConfigSkeletonItem*
+/// @param self const KConfigSkeletonItem*
 ///
-bool k_configskeletonitem_is_save_needed(void* self);
+bool k_configskeletonitem_is_save_needed(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#getDefault)
 ///
-/// @param self KConfigSkeletonItem*
+/// @param self const KConfigSkeletonItem*
 ///
-QVariant* k_configskeletonitem_get_default(void* self);
+QVariant* k_configskeletonitem_get_default(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#readImmutability)
 ///
 /// @param self KConfigSkeletonItem*
 /// @param group KConfigGroup*
 ///
-void k_configskeletonitem_read_immutability(void* self, void* group);
-
-/// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#readImmutability)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KConfigSkeletonItem*
-/// @param callback void func(KConfigSkeletonItem* self, KConfigGroup* group)
-///
-void k_configskeletonitem_on_read_immutability(void* self, void (*callback)(void*, void*));
-
-/// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#readImmutability)
-///
-/// Base class method implementation
-///
-/// @param self KConfigSkeletonItem*
-/// @param group KConfigGroup*
-///
-void k_configskeletonitem_super_read_immutability(void* self, void* group);
+void k_configskeletonitem_read_immutability(void* self, const void* group);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#dtor.KConfigSkeletonItem)
 ///
@@ -455,7 +384,7 @@ void k_configskeletonitem_delete(void* self);
 /// @param propertyName char*
 /// @param defaultValue QVariant*
 ///
-KPropertySkeletonItem* k_propertyskeletonitem_new(void* object, char* propertyName, void* defaultValue);
+KPropertySkeletonItem* k_propertyskeletonitem_new(void* object, char* propertyName, const void* defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kpropertyskeletonitem.html)
 
@@ -463,39 +392,39 @@ KPropertySkeletonItem* k_propertyskeletonitem_new(void* object, char* propertyNa
 ///
 /// @param param1 KPropertySkeletonItem*
 ///
-KPropertySkeletonItem* k_propertyskeletonitem_new2(void* param1);
+KPropertySkeletonItem* k_propertyskeletonitem_new2(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kpropertyskeletonitem.html#property)
 ///
-/// @param self KPropertySkeletonItem*
+/// @param self const KPropertySkeletonItem*
 ///
-QVariant* k_propertyskeletonitem_property(void* self);
+QVariant* k_propertyskeletonitem_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kpropertyskeletonitem.html#property)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KPropertySkeletonItem*
-/// @param callback QVariant* func()
+/// @param self const KPropertySkeletonItem*
+/// @param callback QVariant* func(const KPropertySkeletonItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_propertyskeletonitem_on_property(void* self, QVariant* (*callback)());
+void k_propertyskeletonitem_on_property(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kpropertyskeletonitem.html#property)
 ///
 /// Base class method implementation
 ///
-/// @param self KPropertySkeletonItem*
+/// @param self const KPropertySkeletonItem*
 ///
-QVariant* k_propertyskeletonitem_super_property(void* self);
+QVariant* k_propertyskeletonitem_super_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kpropertyskeletonitem.html#setProperty)
 ///
 /// @param self KPropertySkeletonItem*
 /// @param p QVariant*
 ///
-void k_propertyskeletonitem_set_property(void* self, void* p);
+void k_propertyskeletonitem_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kpropertyskeletonitem.html#setProperty)
 ///
@@ -504,7 +433,7 @@ void k_propertyskeletonitem_set_property(void* self, void* p);
 /// @param self KPropertySkeletonItem*
 /// @param callback void func(KPropertySkeletonItem* self, QVariant* p)
 ///
-void k_propertyskeletonitem_on_set_property(void* self, void (*callback)(void*, void*));
+void k_propertyskeletonitem_on_set_property(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kpropertyskeletonitem.html#setProperty)
 ///
@@ -513,32 +442,32 @@ void k_propertyskeletonitem_on_set_property(void* self, void (*callback)(void*, 
 /// @param self KPropertySkeletonItem*
 /// @param p QVariant*
 ///
-void k_propertyskeletonitem_super_set_property(void* self, void* p);
+void k_propertyskeletonitem_super_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kpropertyskeletonitem.html#isEqual)
 ///
-/// @param self KPropertySkeletonItem*
+/// @param self const KPropertySkeletonItem*
 /// @param p QVariant*
 ///
-bool k_propertyskeletonitem_is_equal(void* self, void* p);
+bool k_propertyskeletonitem_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kpropertyskeletonitem.html#isEqual)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KPropertySkeletonItem*
-/// @param callback bool func(KPropertySkeletonItem* self, QVariant* p)
+/// @param self const KPropertySkeletonItem*
+/// @param callback bool func(const KPropertySkeletonItem* self, QVariant* p)
 ///
-void k_propertyskeletonitem_on_is_equal(void* self, bool (*callback)(void*, void*));
+void k_propertyskeletonitem_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kpropertyskeletonitem.html#isEqual)
 ///
 /// Base class method implementation
 ///
-/// @param self KPropertySkeletonItem*
+/// @param self const KPropertySkeletonItem*
 /// @param p QVariant*
 ///
-bool k_propertyskeletonitem_super_is_equal(void* self, void* p);
+bool k_propertyskeletonitem_super_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kpropertyskeletonitem.html#readConfig)
 ///
@@ -626,9 +555,9 @@ void k_propertyskeletonitem_set_default(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KPropertySkeletonItem*
-/// @param callback void func()
+/// @param callback void func(KPropertySkeletonItem* self)
 ///
-void k_propertyskeletonitem_on_set_default(void* self, void (*callback)());
+void k_propertyskeletonitem_on_set_default(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kpropertyskeletonitem.html#setDefault)
 ///
@@ -649,9 +578,9 @@ void k_propertyskeletonitem_swap_default(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KPropertySkeletonItem*
-/// @param callback void func()
+/// @param callback void func(KPropertySkeletonItem* self)
 ///
-void k_propertyskeletonitem_on_swap_default(void* self, void (*callback)());
+void k_propertyskeletonitem_on_swap_default(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kpropertyskeletonitem.html#swapDefault)
 ///
@@ -683,9 +612,9 @@ void k_propertyskeletonitem_set_group(void* self, const char* _group);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KPropertySkeletonItem*
+/// @param self const KPropertySkeletonItem*
 ///
-const char* k_propertyskeletonitem_group(void* self);
+const char* k_propertyskeletonitem_group(const void* self);
 
 /// Inherited from KConfigSkeletonItem
 ///
@@ -694,16 +623,16 @@ const char* k_propertyskeletonitem_group(void* self);
 /// @param self KPropertySkeletonItem*
 /// @param cg KConfigGroup*
 ///
-void k_propertyskeletonitem_set_group2(void* self, void* cg);
+void k_propertyskeletonitem_set_group2(void* self, const void* cg);
 
 /// Inherited from KConfigSkeletonItem
 ///
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#configGroup)
 ///
-/// @param self KPropertySkeletonItem*
+/// @param self const KPropertySkeletonItem*
 /// @param config KConfig*
 ///
-KConfigGroup* k_propertyskeletonitem_config_group(void* self, void* config);
+KConfigGroup* k_propertyskeletonitem_config_group(const void* self, void* config);
 
 /// Inherited from KConfigSkeletonItem
 ///
@@ -720,9 +649,9 @@ void k_propertyskeletonitem_set_key(void* self, const char* _key);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KPropertySkeletonItem*
+/// @param self const KPropertySkeletonItem*
 ///
-const char* k_propertyskeletonitem_key(void* self);
+const char* k_propertyskeletonitem_key(const void* self);
 
 /// Inherited from KConfigSkeletonItem
 ///
@@ -739,9 +668,9 @@ void k_propertyskeletonitem_set_name(void* self, const char* _name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KPropertySkeletonItem*
+/// @param self const KPropertySkeletonItem*
 ///
-const char* k_propertyskeletonitem_name(void* self);
+const char* k_propertyskeletonitem_name(const void* self);
 
 /// Inherited from KConfigSkeletonItem
 ///
@@ -758,9 +687,9 @@ void k_propertyskeletonitem_set_label(void* self, const char* l);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KPropertySkeletonItem*
+/// @param self const KPropertySkeletonItem*
 ///
-const char* k_propertyskeletonitem_label(void* self);
+const char* k_propertyskeletonitem_label(const void* self);
 
 /// Inherited from KConfigSkeletonItem
 ///
@@ -777,9 +706,9 @@ void k_propertyskeletonitem_set_tool_tip(void* self, const char* t);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KPropertySkeletonItem*
+/// @param self const KPropertySkeletonItem*
 ///
-const char* k_propertyskeletonitem_tool_tip(void* self);
+const char* k_propertyskeletonitem_tool_tip(const void* self);
 
 /// Inherited from KConfigSkeletonItem
 ///
@@ -796,9 +725,9 @@ void k_propertyskeletonitem_set_whats_this(void* self, const char* w);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KPropertySkeletonItem*
+/// @param self const KPropertySkeletonItem*
 ///
-const char* k_propertyskeletonitem_whats_this(void* self);
+const char* k_propertyskeletonitem_whats_this(const void* self);
 
 /// Inherited from KConfigSkeletonItem
 ///
@@ -813,43 +742,43 @@ void k_propertyskeletonitem_set_write_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#writeFlags)
 ///
-/// @param self KPropertySkeletonItem*
+/// @param self const KPropertySkeletonItem*
 ///
 /// @return flag of enum KConfigBase__WriteConfigFlag
 ///
-int32_t k_propertyskeletonitem_write_flags(void* self);
+int32_t k_propertyskeletonitem_write_flags(const void* self);
 
 /// Inherited from KConfigSkeletonItem
 ///
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#isImmutable)
 ///
-/// @param self KPropertySkeletonItem*
+/// @param self const KPropertySkeletonItem*
 ///
-bool k_propertyskeletonitem_is_immutable(void* self);
+bool k_propertyskeletonitem_is_immutable(const void* self);
 
 /// Inherited from KConfigSkeletonItem
 ///
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#isDefault)
 ///
-/// @param self KPropertySkeletonItem*
+/// @param self const KPropertySkeletonItem*
 ///
-bool k_propertyskeletonitem_is_default(void* self);
+bool k_propertyskeletonitem_is_default(const void* self);
 
 /// Inherited from KConfigSkeletonItem
 ///
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#isSaveNeeded)
 ///
-/// @param self KPropertySkeletonItem*
+/// @param self const KPropertySkeletonItem*
 ///
-bool k_propertyskeletonitem_is_save_needed(void* self);
+bool k_propertyskeletonitem_is_save_needed(const void* self);
 
 /// Inherited from KConfigSkeletonItem
 ///
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#getDefault)
 ///
-/// @param self KPropertySkeletonItem*
+/// @param self const KPropertySkeletonItem*
 ///
-QVariant* k_propertyskeletonitem_get_default(void* self);
+QVariant* k_propertyskeletonitem_get_default(const void* self);
 
 /// Inherited from KConfigSkeletonItem
 ///
@@ -857,9 +786,9 @@ QVariant* k_propertyskeletonitem_get_default(void* self);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KPropertySkeletonItem*
+/// @param self const KPropertySkeletonItem*
 ///
-QVariant* k_propertyskeletonitem_min_value(void* self);
+QVariant* k_propertyskeletonitem_min_value(const void* self);
 
 /// Inherited from KConfigSkeletonItem
 ///
@@ -867,9 +796,9 @@ QVariant* k_propertyskeletonitem_min_value(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KPropertySkeletonItem*
+/// @param self const KPropertySkeletonItem*
 ///
-QVariant* k_propertyskeletonitem_super_min_value(void* self);
+QVariant* k_propertyskeletonitem_super_min_value(const void* self);
 
 /// Inherited from KConfigSkeletonItem
 ///
@@ -877,12 +806,12 @@ QVariant* k_propertyskeletonitem_super_min_value(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KPropertySkeletonItem*
-/// @param callback QVariant* func()
+/// @param self const KPropertySkeletonItem*
+/// @param callback QVariant* func(KPropertySkeletonItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_propertyskeletonitem_on_min_value(void* self, QVariant* (*callback)());
+void k_propertyskeletonitem_on_min_value(const void* self, QVariant* (*callback)(const void*));
 
 /// Inherited from KConfigSkeletonItem
 ///
@@ -890,9 +819,9 @@ void k_propertyskeletonitem_on_min_value(void* self, QVariant* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KPropertySkeletonItem*
+/// @param self const KPropertySkeletonItem*
 ///
-QVariant* k_propertyskeletonitem_max_value(void* self);
+QVariant* k_propertyskeletonitem_max_value(const void* self);
 
 /// Inherited from KConfigSkeletonItem
 ///
@@ -900,9 +829,9 @@ QVariant* k_propertyskeletonitem_max_value(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KPropertySkeletonItem*
+/// @param self const KPropertySkeletonItem*
 ///
-QVariant* k_propertyskeletonitem_super_max_value(void* self);
+QVariant* k_propertyskeletonitem_super_max_value(const void* self);
 
 /// Inherited from KConfigSkeletonItem
 ///
@@ -910,12 +839,12 @@ QVariant* k_propertyskeletonitem_super_max_value(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KPropertySkeletonItem*
-/// @param callback QVariant* func()
+/// @param self const KPropertySkeletonItem*
+/// @param callback QVariant* func(KPropertySkeletonItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_propertyskeletonitem_on_max_value(void* self, QVariant* (*callback)());
+void k_propertyskeletonitem_on_max_value(const void* self, QVariant* (*callback)(const void*));
 
 /// Inherited from KConfigSkeletonItem
 ///
@@ -926,7 +855,7 @@ void k_propertyskeletonitem_on_max_value(void* self, QVariant* (*callback)());
 /// @param self KPropertySkeletonItem*
 /// @param group KConfigGroup*
 ///
-void k_propertyskeletonitem_read_immutability(void* self, void* group);
+void k_propertyskeletonitem_read_immutability(void* self, const void* group);
 
 /// Inherited from KConfigSkeletonItem
 ///
@@ -937,7 +866,7 @@ void k_propertyskeletonitem_read_immutability(void* self, void* group);
 /// @param self KPropertySkeletonItem*
 /// @param group KConfigGroup*
 ///
-void k_propertyskeletonitem_super_read_immutability(void* self, void* group);
+void k_propertyskeletonitem_super_read_immutability(void* self, const void* group);
 
 /// Inherited from KConfigSkeletonItem
 ///
@@ -948,7 +877,7 @@ void k_propertyskeletonitem_super_read_immutability(void* self, void* group);
 /// @param self KPropertySkeletonItem*
 /// @param callback void func(KPropertySkeletonItem* self, KConfigGroup* group)
 ///
-void k_propertyskeletonitem_on_read_immutability(void* self, void (*callback)(void*, void*));
+void k_propertyskeletonitem_on_read_immutability(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kpropertyskeletonitem.html#dtor.KPropertySkeletonItem)
 ///
@@ -986,32 +915,32 @@ void k_configcompilersignallingitem_read_default(void* self, void* param1);
 /// @param self KConfigCompilerSignallingItem*
 /// @param p QVariant*
 ///
-void k_configcompilersignallingitem_set_property(void* self, void* p);
+void k_configcompilersignallingitem_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kconfigcompilersignallingitem.html#isEqual)
 ///
-/// @param self KConfigCompilerSignallingItem*
+/// @param self const KConfigCompilerSignallingItem*
 /// @param p QVariant*
 ///
-bool k_configcompilersignallingitem_is_equal(void* self, void* p);
+bool k_configcompilersignallingitem_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kconfigcompilersignallingitem.html#property)
 ///
-/// @param self KConfigCompilerSignallingItem*
+/// @param self const KConfigCompilerSignallingItem*
 ///
-QVariant* k_configcompilersignallingitem_property(void* self);
+QVariant* k_configcompilersignallingitem_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfigcompilersignallingitem.html#minValue)
 ///
-/// @param self KConfigCompilerSignallingItem*
+/// @param self const KConfigCompilerSignallingItem*
 ///
-QVariant* k_configcompilersignallingitem_min_value(void* self);
+QVariant* k_configcompilersignallingitem_min_value(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfigcompilersignallingitem.html#maxValue)
 ///
-/// @param self KConfigCompilerSignallingItem*
+/// @param self const KConfigCompilerSignallingItem*
 ///
-QVariant* k_configcompilersignallingitem_max_value(void* self);
+QVariant* k_configcompilersignallingitem_max_value(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfigcompilersignallingitem.html#setDefault)
 ///
@@ -1034,25 +963,25 @@ void k_configcompilersignallingitem_set_write_flags(void* self, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kconfigcompilersignallingitem.html#writeFlags)
 ///
-/// @param self KConfigCompilerSignallingItem*
+/// @param self const KConfigCompilerSignallingItem*
 ///
 /// @return flag of enum KConfigBase__WriteConfigFlag
 ///
-int32_t k_configcompilersignallingitem_write_flags(void* self);
+int32_t k_configcompilersignallingitem_write_flags(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfigcompilersignallingitem.html#setGroup)
 ///
 /// @param self KConfigCompilerSignallingItem*
 /// @param cg KConfigGroup*
 ///
-void k_configcompilersignallingitem_set_group(void* self, void* cg);
+void k_configcompilersignallingitem_set_group(void* self, const void* cg);
 
 /// [Upstream resources](https://api.kde.org/kconfigcompilersignallingitem.html#configGroup)
 ///
-/// @param self KConfigCompilerSignallingItem*
+/// @param self const KConfigCompilerSignallingItem*
 /// @param config KConfig*
 ///
-KConfigGroup* k_configcompilersignallingitem_config_group(void* self, void* config);
+KConfigGroup* k_configcompilersignallingitem_config_group(const void* self, void* config);
 
 /// Inherited from KConfigSkeletonItem
 ///
@@ -1060,9 +989,9 @@ KConfigGroup* k_configcompilersignallingitem_config_group(void* self, void* conf
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KConfigCompilerSignallingItem*
+/// @param self const KConfigCompilerSignallingItem*
 ///
-const char* k_configcompilersignallingitem_group(void* self);
+const char* k_configcompilersignallingitem_group(const void* self);
 
 /// Inherited from KConfigSkeletonItem
 ///
@@ -1071,7 +1000,7 @@ const char* k_configcompilersignallingitem_group(void* self);
 /// @param self KConfigCompilerSignallingItem*
 /// @param cg KConfigGroup*
 ///
-void k_configcompilersignallingitem_set_group2(void* self, void* cg);
+void k_configcompilersignallingitem_set_group2(void* self, const void* cg);
 
 /// Inherited from KConfigSkeletonItem
 ///
@@ -1088,9 +1017,9 @@ void k_configcompilersignallingitem_set_key(void* self, const char* _key);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KConfigCompilerSignallingItem*
+/// @param self const KConfigCompilerSignallingItem*
 ///
-const char* k_configcompilersignallingitem_key(void* self);
+const char* k_configcompilersignallingitem_key(const void* self);
 
 /// Inherited from KConfigSkeletonItem
 ///
@@ -1107,9 +1036,9 @@ void k_configcompilersignallingitem_set_name(void* self, const char* _name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KConfigCompilerSignallingItem*
+/// @param self const KConfigCompilerSignallingItem*
 ///
-const char* k_configcompilersignallingitem_name(void* self);
+const char* k_configcompilersignallingitem_name(const void* self);
 
 /// Inherited from KConfigSkeletonItem
 ///
@@ -1126,9 +1055,9 @@ void k_configcompilersignallingitem_set_label(void* self, const char* l);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KConfigCompilerSignallingItem*
+/// @param self const KConfigCompilerSignallingItem*
 ///
-const char* k_configcompilersignallingitem_label(void* self);
+const char* k_configcompilersignallingitem_label(const void* self);
 
 /// Inherited from KConfigSkeletonItem
 ///
@@ -1145,9 +1074,9 @@ void k_configcompilersignallingitem_set_tool_tip(void* self, const char* t);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KConfigCompilerSignallingItem*
+/// @param self const KConfigCompilerSignallingItem*
 ///
-const char* k_configcompilersignallingitem_tool_tip(void* self);
+const char* k_configcompilersignallingitem_tool_tip(const void* self);
 
 /// Inherited from KConfigSkeletonItem
 ///
@@ -1164,41 +1093,41 @@ void k_configcompilersignallingitem_set_whats_this(void* self, const char* w);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KConfigCompilerSignallingItem*
+/// @param self const KConfigCompilerSignallingItem*
 ///
-const char* k_configcompilersignallingitem_whats_this(void* self);
+const char* k_configcompilersignallingitem_whats_this(const void* self);
 
 /// Inherited from KConfigSkeletonItem
 ///
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#isImmutable)
 ///
-/// @param self KConfigCompilerSignallingItem*
+/// @param self const KConfigCompilerSignallingItem*
 ///
-bool k_configcompilersignallingitem_is_immutable(void* self);
+bool k_configcompilersignallingitem_is_immutable(const void* self);
 
 /// Inherited from KConfigSkeletonItem
 ///
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#isDefault)
 ///
-/// @param self KConfigCompilerSignallingItem*
+/// @param self const KConfigCompilerSignallingItem*
 ///
-bool k_configcompilersignallingitem_is_default(void* self);
+bool k_configcompilersignallingitem_is_default(const void* self);
 
 /// Inherited from KConfigSkeletonItem
 ///
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#isSaveNeeded)
 ///
-/// @param self KConfigCompilerSignallingItem*
+/// @param self const KConfigCompilerSignallingItem*
 ///
-bool k_configcompilersignallingitem_is_save_needed(void* self);
+bool k_configcompilersignallingitem_is_save_needed(const void* self);
 
 /// Inherited from KConfigSkeletonItem
 ///
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#getDefault)
 ///
-/// @param self KConfigCompilerSignallingItem*
+/// @param self const KConfigCompilerSignallingItem*
 ///
-QVariant* k_configcompilersignallingitem_get_default(void* self);
+QVariant* k_configcompilersignallingitem_get_default(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfigcompilersignallingitem.html#dtor.KConfigCompilerSignallingItem)
 ///
@@ -1233,26 +1162,26 @@ KCoreConfigSkeleton* k_coreconfigskeleton_new3(const char* configname, void* par
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 ///
-const QMetaObject* k_coreconfigskeleton_meta_object(void* self);
+const QMetaObject* k_coreconfigskeleton_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton*
-/// @param callback const QMetaObject* func()
+/// @param self const KCoreConfigSkeleton*
+/// @param callback const QMetaObject* func(const KCoreConfigSkeleton* self)
 ///
-void k_coreconfigskeleton_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_coreconfigskeleton_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 ///
-const QMetaObject* k_coreconfigskeleton_super_meta_object(void* self);
+const QMetaObject* k_coreconfigskeleton_super_meta_object(const void* self);
 
 /// @param self KCoreConfigSkeleton*
 /// @param param1 const char*
@@ -1315,9 +1244,9 @@ void k_coreconfigskeleton_set_defaults(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KCoreConfigSkeleton*
-/// @param callback void func()
+/// @param callback void func(KCoreConfigSkeleton* self)
 ///
-void k_coreconfigskeleton_on_set_defaults(void* self, void (*callback)());
+void k_coreconfigskeleton_on_set_defaults(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#setDefaults)
 ///
@@ -1341,15 +1270,15 @@ void k_coreconfigskeleton_read(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#isDefaults)
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 ///
-bool k_coreconfigskeleton_is_defaults(void* self);
+bool k_coreconfigskeleton_is_defaults(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#isSaveNeeded)
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 ///
-bool k_coreconfigskeleton_is_save_needed(void* self);
+bool k_coreconfigskeleton_is_save_needed(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#setCurrentGroup)
 ///
@@ -1362,9 +1291,9 @@ void k_coreconfigskeleton_set_current_group(void* self, const char* group);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 ///
-const char* k_coreconfigskeleton_current_group(void* self);
+const char* k_coreconfigskeleton_current_group(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItem)
 ///
@@ -1533,17 +1462,17 @@ KConfig* k_coreconfigskeleton_config(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#config)
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 ///
-const KConfig* k_coreconfigskeleton_config2(void* self);
+const KConfig* k_coreconfigskeleton_config2(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#items)
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 ///
 /// @return libqt_list of KConfigSkeletonItem*
 ///
-libqt_list k_coreconfigskeleton_items(void* self);
+libqt_list k_coreconfigskeleton_items(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#removeItem)
 ///
@@ -1560,17 +1489,17 @@ void k_coreconfigskeleton_clear_items(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#isImmutable)
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 /// @param name const char*
 ///
-bool k_coreconfigskeleton_is_immutable(void* self, const char* name);
+bool k_coreconfigskeleton_is_immutable(const void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#findItem)
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 /// @param name const char*
 ///
-KConfigSkeletonItem* k_coreconfigskeleton_find_item(void* self, const char* name);
+KConfigSkeletonItem* k_coreconfigskeleton_find_item(const void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#useDefaults)
 ///
@@ -1652,9 +1581,9 @@ void k_coreconfigskeleton_usr_set_defaults(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KCoreConfigSkeleton*
-/// @param callback void func()
+/// @param callback void func(KCoreConfigSkeleton* self)
 ///
-void k_coreconfigskeleton_on_usr_set_defaults(void* self, void (*callback)());
+void k_coreconfigskeleton_on_usr_set_defaults(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#usrSetDefaults)
 ///
@@ -1675,9 +1604,9 @@ void k_coreconfigskeleton_usr_read(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KCoreConfigSkeleton*
-/// @param callback void func()
+/// @param callback void func(KCoreConfigSkeleton* self)
 ///
-void k_coreconfigskeleton_on_usr_read(void* self, void (*callback)());
+void k_coreconfigskeleton_on_usr_read(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#usrRead)
 ///
@@ -1698,9 +1627,9 @@ bool k_coreconfigskeleton_usr_save(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KCoreConfigSkeleton*
-/// @param callback bool func()
+/// @param callback bool func(KCoreConfigSkeleton* self)
 ///
-void k_coreconfigskeleton_on_usr_save(void* self, bool (*callback)());
+void k_coreconfigskeleton_on_usr_save(void* self, bool (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#usrSave)
 ///
@@ -1801,7 +1730,7 @@ KCoreConfigSkeleton__ItemPath* k_coreconfigskeleton_add_item_path4(void* self, c
 /// @param reference QVariant*
 /// @param defaultValue QVariant*
 ///
-KCoreConfigSkeleton__ItemProperty* k_coreconfigskeleton_add_item_property3(void* self, const char* name, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemProperty* k_coreconfigskeleton_add_item_property3(void* self, const char* name, void* reference, const void* defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemProperty)
 ///
@@ -1811,7 +1740,7 @@ KCoreConfigSkeleton__ItemProperty* k_coreconfigskeleton_add_item_property3(void*
 /// @param defaultValue QVariant*
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemProperty* k_coreconfigskeleton_add_item_property4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+KCoreConfigSkeleton__ItemProperty* k_coreconfigskeleton_add_item_property4(void* self, const char* name, void* reference, const void* defaultValue, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemBool)
 ///
@@ -1934,7 +1863,7 @@ KCoreConfigSkeleton__ItemDouble* k_coreconfigskeleton_add_item_double4(void* sel
 /// @param reference QRect*
 /// @param defaultValue QRect*
 ///
-KCoreConfigSkeleton__ItemRect* k_coreconfigskeleton_add_item_rect3(void* self, const char* name, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemRect* k_coreconfigskeleton_add_item_rect3(void* self, const char* name, void* reference, const void* defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemRect)
 ///
@@ -1944,7 +1873,7 @@ KCoreConfigSkeleton__ItemRect* k_coreconfigskeleton_add_item_rect3(void* self, c
 /// @param defaultValue QRect*
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemRect* k_coreconfigskeleton_add_item_rect4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+KCoreConfigSkeleton__ItemRect* k_coreconfigskeleton_add_item_rect4(void* self, const char* name, void* reference, const void* defaultValue, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemRectF)
 ///
@@ -1953,7 +1882,7 @@ KCoreConfigSkeleton__ItemRect* k_coreconfigskeleton_add_item_rect4(void* self, c
 /// @param reference QRectF*
 /// @param defaultValue QRectF*
 ///
-KCoreConfigSkeleton__ItemRectF* k_coreconfigskeleton_add_item_rect_f3(void* self, const char* name, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemRectF* k_coreconfigskeleton_add_item_rect_f3(void* self, const char* name, void* reference, const void* defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemRectF)
 ///
@@ -1963,7 +1892,7 @@ KCoreConfigSkeleton__ItemRectF* k_coreconfigskeleton_add_item_rect_f3(void* self
 /// @param defaultValue QRectF*
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemRectF* k_coreconfigskeleton_add_item_rect_f4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+KCoreConfigSkeleton__ItemRectF* k_coreconfigskeleton_add_item_rect_f4(void* self, const char* name, void* reference, const void* defaultValue, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemPoint)
 ///
@@ -1972,7 +1901,7 @@ KCoreConfigSkeleton__ItemRectF* k_coreconfigskeleton_add_item_rect_f4(void* self
 /// @param reference QPoint*
 /// @param defaultValue QPoint*
 ///
-KCoreConfigSkeleton__ItemPoint* k_coreconfigskeleton_add_item_point3(void* self, const char* name, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemPoint* k_coreconfigskeleton_add_item_point3(void* self, const char* name, void* reference, const void* defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemPoint)
 ///
@@ -1982,7 +1911,7 @@ KCoreConfigSkeleton__ItemPoint* k_coreconfigskeleton_add_item_point3(void* self,
 /// @param defaultValue QPoint*
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemPoint* k_coreconfigskeleton_add_item_point4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+KCoreConfigSkeleton__ItemPoint* k_coreconfigskeleton_add_item_point4(void* self, const char* name, void* reference, const void* defaultValue, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemPointF)
 ///
@@ -1991,7 +1920,7 @@ KCoreConfigSkeleton__ItemPoint* k_coreconfigskeleton_add_item_point4(void* self,
 /// @param reference QPointF*
 /// @param defaultValue QPointF*
 ///
-KCoreConfigSkeleton__ItemPointF* k_coreconfigskeleton_add_item_point_f3(void* self, const char* name, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemPointF* k_coreconfigskeleton_add_item_point_f3(void* self, const char* name, void* reference, const void* defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemPointF)
 ///
@@ -2001,7 +1930,7 @@ KCoreConfigSkeleton__ItemPointF* k_coreconfigskeleton_add_item_point_f3(void* se
 /// @param defaultValue QPointF*
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemPointF* k_coreconfigskeleton_add_item_point_f4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+KCoreConfigSkeleton__ItemPointF* k_coreconfigskeleton_add_item_point_f4(void* self, const char* name, void* reference, const void* defaultValue, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemSize)
 ///
@@ -2010,7 +1939,7 @@ KCoreConfigSkeleton__ItemPointF* k_coreconfigskeleton_add_item_point_f4(void* se
 /// @param reference QSize*
 /// @param defaultValue QSize*
 ///
-KCoreConfigSkeleton__ItemSize* k_coreconfigskeleton_add_item_size3(void* self, const char* name, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemSize* k_coreconfigskeleton_add_item_size3(void* self, const char* name, void* reference, const void* defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemSize)
 ///
@@ -2020,7 +1949,7 @@ KCoreConfigSkeleton__ItemSize* k_coreconfigskeleton_add_item_size3(void* self, c
 /// @param defaultValue QSize*
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemSize* k_coreconfigskeleton_add_item_size4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+KCoreConfigSkeleton__ItemSize* k_coreconfigskeleton_add_item_size4(void* self, const char* name, void* reference, const void* defaultValue, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemSizeF)
 ///
@@ -2029,7 +1958,7 @@ KCoreConfigSkeleton__ItemSize* k_coreconfigskeleton_add_item_size4(void* self, c
 /// @param reference QSizeF*
 /// @param defaultValue QSizeF*
 ///
-KCoreConfigSkeleton__ItemSizeF* k_coreconfigskeleton_add_item_size_f3(void* self, const char* name, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemSizeF* k_coreconfigskeleton_add_item_size_f3(void* self, const char* name, void* reference, const void* defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemSizeF)
 ///
@@ -2039,7 +1968,7 @@ KCoreConfigSkeleton__ItemSizeF* k_coreconfigskeleton_add_item_size_f3(void* self
 /// @param defaultValue QSizeF*
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemSizeF* k_coreconfigskeleton_add_item_size_f4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+KCoreConfigSkeleton__ItemSizeF* k_coreconfigskeleton_add_item_size_f4(void* self, const char* name, void* reference, const void* defaultValue, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemDateTime)
 ///
@@ -2048,7 +1977,7 @@ KCoreConfigSkeleton__ItemSizeF* k_coreconfigskeleton_add_item_size_f4(void* self
 /// @param reference QDateTime*
 /// @param defaultValue QDateTime*
 ///
-KCoreConfigSkeleton__ItemDateTime* k_coreconfigskeleton_add_item_date_time3(void* self, const char* name, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemDateTime* k_coreconfigskeleton_add_item_date_time3(void* self, const char* name, void* reference, const void* defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemDateTime)
 ///
@@ -2058,7 +1987,7 @@ KCoreConfigSkeleton__ItemDateTime* k_coreconfigskeleton_add_item_date_time3(void
 /// @param defaultValue QDateTime*
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemDateTime* k_coreconfigskeleton_add_item_date_time4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+KCoreConfigSkeleton__ItemDateTime* k_coreconfigskeleton_add_item_date_time4(void* self, const char* name, void* reference, const void* defaultValue, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemStringList)
 ///
@@ -2104,9 +2033,9 @@ KCoreConfigSkeleton__ItemIntList* k_coreconfigskeleton_add_item_int_list4(void* 
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 ///
-const char* k_coreconfigskeleton_object_name(void* self);
+const char* k_coreconfigskeleton_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2121,33 +2050,33 @@ void k_coreconfigskeleton_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 ///
-bool k_coreconfigskeleton_is_widget_type(void* self);
+bool k_coreconfigskeleton_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 ///
-bool k_coreconfigskeleton_is_window_type(void* self);
+bool k_coreconfigskeleton_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 ///
-bool k_coreconfigskeleton_is_quick_item_type(void* self);
+bool k_coreconfigskeleton_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 ///
-bool k_coreconfigskeleton_signals_blocked(void* self);
+bool k_coreconfigskeleton_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2162,9 +2091,9 @@ bool k_coreconfigskeleton_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 ///
-QThread* k_coreconfigskeleton_thread(void* self);
+QThread* k_coreconfigskeleton_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2215,11 +2144,11 @@ void k_coreconfigskeleton_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_coreconfigskeleton_children(void* self);
+libqt_list k_coreconfigskeleton_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2257,7 +2186,7 @@ void k_coreconfigskeleton_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_coreconfigskeleton_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_coreconfigskeleton_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2268,18 +2197,18 @@ QMetaObject__Connection* k_coreconfigskeleton_connect(void* sender, const char* 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_coreconfigskeleton_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_coreconfigskeleton_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_coreconfigskeleton_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_coreconfigskeleton_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2290,7 +2219,7 @@ QMetaObject__Connection* k_coreconfigskeleton_connect3(void* self, void* sender,
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_coreconfigskeleton_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_coreconfigskeleton_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2301,24 +2230,24 @@ bool k_coreconfigskeleton_disconnect(void* sender, const char* signal, void* rec
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_coreconfigskeleton_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_coreconfigskeleton_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 ///
-bool k_coreconfigskeleton_disconnect3(void* self);
+bool k_coreconfigskeleton_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 /// @param receiver QObject*
 ///
-bool k_coreconfigskeleton_disconnect4(void* self, void* receiver);
+bool k_coreconfigskeleton_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -2326,23 +2255,23 @@ bool k_coreconfigskeleton_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_coreconfigskeleton_disconnect5(void* param1);
+bool k_coreconfigskeleton_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 ///
-void k_coreconfigskeleton_dump_object_tree(void* self);
+void k_coreconfigskeleton_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 ///
-void k_coreconfigskeleton_dump_object_info(void* self);
+void k_coreconfigskeleton_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2352,16 +2281,16 @@ void k_coreconfigskeleton_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_coreconfigskeleton_set_property(void* self, const char* name, void* value);
+bool k_coreconfigskeleton_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 /// @param name const char*
 ///
-QVariant* k_coreconfigskeleton_property(void* self, const char* name);
+QVariant* k_coreconfigskeleton_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -2369,9 +2298,9 @@ QVariant* k_coreconfigskeleton_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 ///
-const char** k_coreconfigskeleton_dynamic_property_names(void* self);
+const char** k_coreconfigskeleton_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2385,9 +2314,9 @@ QBindingStorage* k_coreconfigskeleton_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 ///
-const QBindingStorage* k_coreconfigskeleton_binding_storage2(void* self);
+const QBindingStorage* k_coreconfigskeleton_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2410,18 +2339,18 @@ void k_coreconfigskeleton_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 ///
-QObject* k_coreconfigskeleton_parent(void* self);
+QObject* k_coreconfigskeleton_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 /// @param classname const char*
 ///
-bool k_coreconfigskeleton_inherits(void* self, const char* classname);
+bool k_coreconfigskeleton_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -2461,7 +2390,7 @@ int32_t k_coreconfigskeleton_start_timer23(void* self, int64_t time, int32_t tim
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_coreconfigskeleton_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_coreconfigskeleton_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -2473,59 +2402,59 @@ QMetaObject__Connection* k_coreconfigskeleton_connect5(void* sender, const char*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_coreconfigskeleton_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_coreconfigskeleton_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_coreconfigskeleton_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_coreconfigskeleton_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 /// @param signal const char*
 ///
-bool k_coreconfigskeleton_disconnect1(void* self, const char* signal);
+bool k_coreconfigskeleton_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KCoreConfigSkeleton*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_coreconfigskeleton_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_coreconfigskeleton_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_coreconfigskeleton_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_coreconfigskeleton_disconnect23(void* self, void* receiver, const char* member);
+bool k_coreconfigskeleton_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KCoreConfigSkeleton*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_coreconfigskeleton_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2721,7 +2650,7 @@ void k_coreconfigskeleton_on_custom_event(void* self, void (*callback)(void*, vo
 /// @param self KCoreConfigSkeleton*
 /// @param signal QMetaMethod*
 ///
-void k_coreconfigskeleton_connect_notify(void* self, void* signal);
+void k_coreconfigskeleton_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2732,7 +2661,7 @@ void k_coreconfigskeleton_connect_notify(void* self, void* signal);
 /// @param self KCoreConfigSkeleton*
 /// @param signal QMetaMethod*
 ///
-void k_coreconfigskeleton_super_connect_notify(void* self, void* signal);
+void k_coreconfigskeleton_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2743,7 +2672,7 @@ void k_coreconfigskeleton_super_connect_notify(void* self, void* signal);
 /// @param self KCoreConfigSkeleton*
 /// @param callback void func(KCoreConfigSkeleton* self, QMetaMethod* signal)
 ///
-void k_coreconfigskeleton_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_coreconfigskeleton_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2754,7 +2683,7 @@ void k_coreconfigskeleton_on_connect_notify(void* self, void (*callback)(void*, 
 /// @param self KCoreConfigSkeleton*
 /// @param signal QMetaMethod*
 ///
-void k_coreconfigskeleton_disconnect_notify(void* self, void* signal);
+void k_coreconfigskeleton_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2765,7 +2694,7 @@ void k_coreconfigskeleton_disconnect_notify(void* self, void* signal);
 /// @param self KCoreConfigSkeleton*
 /// @param signal QMetaMethod*
 ///
-void k_coreconfigskeleton_super_disconnect_notify(void* self, void* signal);
+void k_coreconfigskeleton_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2776,7 +2705,7 @@ void k_coreconfigskeleton_super_disconnect_notify(void* self, void* signal);
 /// @param self KCoreConfigSkeleton*
 /// @param callback void func(KCoreConfigSkeleton* self, QMetaMethod* signal)
 ///
-void k_coreconfigskeleton_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_coreconfigskeleton_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2784,9 +2713,9 @@ void k_coreconfigskeleton_on_disconnect_notify(void* self, void (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 ///
-QObject* k_coreconfigskeleton_sender(void* self);
+QObject* k_coreconfigskeleton_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2794,9 +2723,9 @@ QObject* k_coreconfigskeleton_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 ///
-QObject* k_coreconfigskeleton_super_sender(void* self);
+QObject* k_coreconfigskeleton_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2804,10 +2733,10 @@ QObject* k_coreconfigskeleton_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton*
-/// @param callback QObject* func()
+/// @param self const KCoreConfigSkeleton*
+/// @param callback QObject* func(KCoreConfigSkeleton* self)
 ///
-void k_coreconfigskeleton_on_sender(void* self, QObject* (*callback)());
+void k_coreconfigskeleton_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2815,9 +2744,9 @@ void k_coreconfigskeleton_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 ///
-int32_t k_coreconfigskeleton_sender_signal_index(void* self);
+int32_t k_coreconfigskeleton_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2825,9 +2754,9 @@ int32_t k_coreconfigskeleton_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 ///
-int32_t k_coreconfigskeleton_super_sender_signal_index(void* self);
+int32_t k_coreconfigskeleton_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2835,10 +2764,10 @@ int32_t k_coreconfigskeleton_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton*
-/// @param callback int32_t func()
+/// @param self const KCoreConfigSkeleton*
+/// @param callback int32_t func(KCoreConfigSkeleton* self)
 ///
-void k_coreconfigskeleton_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_coreconfigskeleton_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2846,10 +2775,10 @@ void k_coreconfigskeleton_on_sender_signal_index(void* self, int32_t (*callback)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 /// @param signal const char*
 ///
-int32_t k_coreconfigskeleton_receivers(void* self, const char* signal);
+int32_t k_coreconfigskeleton_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2857,10 +2786,10 @@ int32_t k_coreconfigskeleton_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 /// @param signal const char*
 ///
-int32_t k_coreconfigskeleton_super_receivers(void* self, const char* signal);
+int32_t k_coreconfigskeleton_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2868,10 +2797,10 @@ int32_t k_coreconfigskeleton_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 /// @param callback int32_t func(KCoreConfigSkeleton* self, const char* signal)
 ///
-void k_coreconfigskeleton_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_coreconfigskeleton_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2879,10 +2808,10 @@ void k_coreconfigskeleton_on_receivers(void* self, int32_t (*callback)(void*, co
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 /// @param signal QMetaMethod*
 ///
-bool k_coreconfigskeleton_is_signal_connected(void* self, void* signal);
+bool k_coreconfigskeleton_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2890,10 +2819,10 @@ bool k_coreconfigskeleton_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 /// @param signal QMetaMethod*
 ///
-bool k_coreconfigskeleton_super_is_signal_connected(void* self, void* signal);
+bool k_coreconfigskeleton_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2901,10 +2830,10 @@ bool k_coreconfigskeleton_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton*
+/// @param self const KCoreConfigSkeleton*
 /// @param callback bool func(KCoreConfigSkeleton* self, QMetaMethod* signal)
 ///
-void k_coreconfigskeleton_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_coreconfigskeleton_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -3013,7 +2942,7 @@ void k_coreconfigskeleton__itemstring_super_read_config(void* self, void* config
 /// @param self KCoreConfigSkeleton__ItemString*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemstring_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemstring_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstring.html#setProperty)
 ///
@@ -3022,7 +2951,7 @@ void k_coreconfigskeleton__itemstring_set_property(void* self, void* p);
 /// @param self KCoreConfigSkeleton__ItemString*
 /// @param callback void func(KCoreConfigSkeleton__ItemString* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemstring_on_set_property(void* self, void (*callback)(void*, void*));
+void k_coreconfigskeleton__itemstring_on_set_property(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstring.html#setProperty)
 ///
@@ -3031,57 +2960,57 @@ void k_coreconfigskeleton__itemstring_on_set_property(void* self, void (*callbac
 /// @param self KCoreConfigSkeleton__ItemString*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemstring_super_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemstring_super_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstring.html#isEqual)
 ///
-/// @param self KCoreConfigSkeleton__ItemString*
+/// @param self const KCoreConfigSkeleton__ItemString*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemstring_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemstring_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstring.html#isEqual)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemString*
-/// @param callback bool func(KCoreConfigSkeleton__ItemString* self, QVariant* p)
+/// @param self const KCoreConfigSkeleton__ItemString*
+/// @param callback bool func(const KCoreConfigSkeleton__ItemString* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemstring_on_is_equal(void* self, bool (*callback)(void*, void*));
+void k_coreconfigskeleton__itemstring_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstring.html#isEqual)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemString*
+/// @param self const KCoreConfigSkeleton__ItemString*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemstring_super_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemstring_super_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstring.html#property)
 ///
-/// @param self KCoreConfigSkeleton__ItemString*
+/// @param self const KCoreConfigSkeleton__ItemString*
 ///
-QVariant* k_coreconfigskeleton__itemstring_property(void* self);
+QVariant* k_coreconfigskeleton__itemstring_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstring.html#property)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemString*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemString*
+/// @param callback QVariant* func(const KCoreConfigSkeleton__ItemString* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemstring_on_property(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itemstring_on_property(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstring.html#property)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemString*
+/// @param self const KCoreConfigSkeleton__ItemString*
 ///
-QVariant* k_coreconfigskeleton__itemstring_super_property(void* self);
+QVariant* k_coreconfigskeleton__itemstring_super_property(const void* self);
 
 /// Delete this object from C++ memory.
 ///
@@ -3185,7 +3114,7 @@ void k_coreconfigskeleton__itempassword_on_read_config(void* self, void (*callba
 /// @param self KCoreConfigSkeleton__ItemPassword*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itempassword_set_property(void* self, void* p);
+void k_coreconfigskeleton__itempassword_set_property(void* self, const void* p);
 
 /// Inherited from KCoreConfigSkeleton::ItemString
 ///
@@ -3196,7 +3125,7 @@ void k_coreconfigskeleton__itempassword_set_property(void* self, void* p);
 /// @param self KCoreConfigSkeleton__ItemPassword*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itempassword_super_set_property(void* self, void* p);
+void k_coreconfigskeleton__itempassword_super_set_property(void* self, const void* p);
 
 /// Inherited from KCoreConfigSkeleton::ItemString
 ///
@@ -3207,7 +3136,7 @@ void k_coreconfigskeleton__itempassword_super_set_property(void* self, void* p);
 /// @param self KCoreConfigSkeleton__ItemPassword*
 /// @param callback void func(KCoreConfigSkeleton__ItemPassword* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itempassword_on_set_property(void* self, void (*callback)(void*, void*));
+void k_coreconfigskeleton__itempassword_on_set_property(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from KCoreConfigSkeleton::ItemString
 ///
@@ -3215,10 +3144,10 @@ void k_coreconfigskeleton__itempassword_on_set_property(void* self, void (*callb
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton__ItemPassword*
+/// @param self const KCoreConfigSkeleton__ItemPassword*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itempassword_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itempassword_is_equal(const void* self, const void* p);
 
 /// Inherited from KCoreConfigSkeleton::ItemString
 ///
@@ -3226,10 +3155,10 @@ bool k_coreconfigskeleton__itempassword_is_equal(void* self, void* p);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton__ItemPassword*
+/// @param self const KCoreConfigSkeleton__ItemPassword*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itempassword_super_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itempassword_super_is_equal(const void* self, const void* p);
 
 /// Inherited from KCoreConfigSkeleton::ItemString
 ///
@@ -3237,10 +3166,10 @@ bool k_coreconfigskeleton__itempassword_super_is_equal(void* self, void* p);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton__ItemPassword*
+/// @param self const KCoreConfigSkeleton__ItemPassword*
 /// @param callback bool func(KCoreConfigSkeleton__ItemPassword* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itempassword_on_is_equal(void* self, bool (*callback)(void*, void*));
+void k_coreconfigskeleton__itempassword_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from KCoreConfigSkeleton::ItemString
 ///
@@ -3248,9 +3177,9 @@ void k_coreconfigskeleton__itempassword_on_is_equal(void* self, bool (*callback)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton__ItemPassword*
+/// @param self const KCoreConfigSkeleton__ItemPassword*
 ///
-QVariant* k_coreconfigskeleton__itempassword_property(void* self);
+QVariant* k_coreconfigskeleton__itempassword_property(const void* self);
 
 /// Inherited from KCoreConfigSkeleton::ItemString
 ///
@@ -3258,9 +3187,9 @@ QVariant* k_coreconfigskeleton__itempassword_property(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton__ItemPassword*
+/// @param self const KCoreConfigSkeleton__ItemPassword*
 ///
-QVariant* k_coreconfigskeleton__itempassword_super_property(void* self);
+QVariant* k_coreconfigskeleton__itempassword_super_property(const void* self);
 
 /// Inherited from KCoreConfigSkeleton::ItemString
 ///
@@ -3268,12 +3197,12 @@ QVariant* k_coreconfigskeleton__itempassword_super_property(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton__ItemPassword*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemPassword*
+/// @param callback QVariant* func(KCoreConfigSkeleton__ItemPassword* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itempassword_on_property(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itempassword_on_property(const void* self, QVariant* (*callback)(const void*));
 
 /// Delete this object from C++ memory.
 ///
@@ -3377,7 +3306,7 @@ void k_coreconfigskeleton__itempath_on_read_config(void* self, void (*callback)(
 /// @param self KCoreConfigSkeleton__ItemPath*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itempath_set_property(void* self, void* p);
+void k_coreconfigskeleton__itempath_set_property(void* self, const void* p);
 
 /// Inherited from KCoreConfigSkeleton::ItemString
 ///
@@ -3388,7 +3317,7 @@ void k_coreconfigskeleton__itempath_set_property(void* self, void* p);
 /// @param self KCoreConfigSkeleton__ItemPath*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itempath_super_set_property(void* self, void* p);
+void k_coreconfigskeleton__itempath_super_set_property(void* self, const void* p);
 
 /// Inherited from KCoreConfigSkeleton::ItemString
 ///
@@ -3399,7 +3328,7 @@ void k_coreconfigskeleton__itempath_super_set_property(void* self, void* p);
 /// @param self KCoreConfigSkeleton__ItemPath*
 /// @param callback void func(KCoreConfigSkeleton__ItemPath* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itempath_on_set_property(void* self, void (*callback)(void*, void*));
+void k_coreconfigskeleton__itempath_on_set_property(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from KCoreConfigSkeleton::ItemString
 ///
@@ -3407,10 +3336,10 @@ void k_coreconfigskeleton__itempath_on_set_property(void* self, void (*callback)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton__ItemPath*
+/// @param self const KCoreConfigSkeleton__ItemPath*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itempath_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itempath_is_equal(const void* self, const void* p);
 
 /// Inherited from KCoreConfigSkeleton::ItemString
 ///
@@ -3418,10 +3347,10 @@ bool k_coreconfigskeleton__itempath_is_equal(void* self, void* p);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton__ItemPath*
+/// @param self const KCoreConfigSkeleton__ItemPath*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itempath_super_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itempath_super_is_equal(const void* self, const void* p);
 
 /// Inherited from KCoreConfigSkeleton::ItemString
 ///
@@ -3429,10 +3358,10 @@ bool k_coreconfigskeleton__itempath_super_is_equal(void* self, void* p);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton__ItemPath*
+/// @param self const KCoreConfigSkeleton__ItemPath*
 /// @param callback bool func(KCoreConfigSkeleton__ItemPath* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itempath_on_is_equal(void* self, bool (*callback)(void*, void*));
+void k_coreconfigskeleton__itempath_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from KCoreConfigSkeleton::ItemString
 ///
@@ -3440,9 +3369,9 @@ void k_coreconfigskeleton__itempath_on_is_equal(void* self, bool (*callback)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton__ItemPath*
+/// @param self const KCoreConfigSkeleton__ItemPath*
 ///
-QVariant* k_coreconfigskeleton__itempath_property(void* self);
+QVariant* k_coreconfigskeleton__itempath_property(const void* self);
 
 /// Inherited from KCoreConfigSkeleton::ItemString
 ///
@@ -3450,9 +3379,9 @@ QVariant* k_coreconfigskeleton__itempath_property(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton__ItemPath*
+/// @param self const KCoreConfigSkeleton__ItemPath*
 ///
-QVariant* k_coreconfigskeleton__itempath_super_property(void* self);
+QVariant* k_coreconfigskeleton__itempath_super_property(const void* self);
 
 /// Inherited from KCoreConfigSkeleton::ItemString
 ///
@@ -3460,12 +3389,12 @@ QVariant* k_coreconfigskeleton__itempath_super_property(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton__ItemPath*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemPath*
+/// @param callback QVariant* func(KCoreConfigSkeleton__ItemPath* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itempath_on_property(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itempath_on_property(const void* self, QVariant* (*callback)(const void*));
 
 /// Delete this object from C++ memory.
 ///
@@ -3492,7 +3421,7 @@ KCoreConfigSkeleton__ItemUrl* k_coreconfigskeleton__itemurl_new(const char* _gro
 /// @param reference QUrl*
 /// @param defaultValue QUrl*
 ///
-KCoreConfigSkeleton__ItemUrl* k_coreconfigskeleton__itemurl_new2(const char* _group, const char* _key, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemUrl* k_coreconfigskeleton__itemurl_new2(const char* _group, const char* _key, void* reference, const void* defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurl.html#writeConfig)
 ///
@@ -3549,7 +3478,7 @@ void k_coreconfigskeleton__itemurl_super_read_config(void* self, void* config);
 /// @param self KCoreConfigSkeleton__ItemUrl*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemurl_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemurl_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurl.html#setProperty)
 ///
@@ -3558,7 +3487,7 @@ void k_coreconfigskeleton__itemurl_set_property(void* self, void* p);
 /// @param self KCoreConfigSkeleton__ItemUrl*
 /// @param callback void func(KCoreConfigSkeleton__ItemUrl* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemurl_on_set_property(void* self, void (*callback)(void*, void*));
+void k_coreconfigskeleton__itemurl_on_set_property(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurl.html#setProperty)
 ///
@@ -3567,57 +3496,57 @@ void k_coreconfigskeleton__itemurl_on_set_property(void* self, void (*callback)(
 /// @param self KCoreConfigSkeleton__ItemUrl*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemurl_super_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemurl_super_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurl.html#isEqual)
 ///
-/// @param self KCoreConfigSkeleton__ItemUrl*
+/// @param self const KCoreConfigSkeleton__ItemUrl*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemurl_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemurl_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurl.html#isEqual)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemUrl*
-/// @param callback bool func(KCoreConfigSkeleton__ItemUrl* self, QVariant* p)
+/// @param self const KCoreConfigSkeleton__ItemUrl*
+/// @param callback bool func(const KCoreConfigSkeleton__ItemUrl* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemurl_on_is_equal(void* self, bool (*callback)(void*, void*));
+void k_coreconfigskeleton__itemurl_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurl.html#isEqual)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemUrl*
+/// @param self const KCoreConfigSkeleton__ItemUrl*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemurl_super_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemurl_super_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurl.html#property)
 ///
-/// @param self KCoreConfigSkeleton__ItemUrl*
+/// @param self const KCoreConfigSkeleton__ItemUrl*
 ///
-QVariant* k_coreconfigskeleton__itemurl_property(void* self);
+QVariant* k_coreconfigskeleton__itemurl_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurl.html#property)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemUrl*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemUrl*
+/// @param callback QVariant* func(const KCoreConfigSkeleton__ItemUrl* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemurl_on_property(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itemurl_on_property(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurl.html#property)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemUrl*
+/// @param self const KCoreConfigSkeleton__ItemUrl*
 ///
-QVariant* k_coreconfigskeleton__itemurl_super_property(void* self);
+QVariant* k_coreconfigskeleton__itemurl_super_property(const void* self);
 
 /// Delete this object from C++ memory.
 ///
@@ -3644,7 +3573,7 @@ KCoreConfigSkeleton__ItemProperty* k_coreconfigskeleton__itemproperty_new(const 
 /// @param reference QVariant*
 /// @param defaultValue QVariant*
 ///
-KCoreConfigSkeleton__ItemProperty* k_coreconfigskeleton__itemproperty_new2(const char* _group, const char* _key, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemProperty* k_coreconfigskeleton__itemproperty_new2(const char* _group, const char* _key, void* reference, const void* defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemproperty.html#readConfig)
 ///
@@ -3676,7 +3605,7 @@ void k_coreconfigskeleton__itemproperty_super_read_config(void* self, void* conf
 /// @param self KCoreConfigSkeleton__ItemProperty*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemproperty_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemproperty_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemproperty.html#setProperty)
 ///
@@ -3685,7 +3614,7 @@ void k_coreconfigskeleton__itemproperty_set_property(void* self, void* p);
 /// @param self KCoreConfigSkeleton__ItemProperty*
 /// @param callback void func(KCoreConfigSkeleton__ItemProperty* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemproperty_on_set_property(void* self, void (*callback)(void*, void*));
+void k_coreconfigskeleton__itemproperty_on_set_property(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemproperty.html#setProperty)
 ///
@@ -3694,57 +3623,57 @@ void k_coreconfigskeleton__itemproperty_on_set_property(void* self, void (*callb
 /// @param self KCoreConfigSkeleton__ItemProperty*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemproperty_super_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemproperty_super_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemproperty.html#isEqual)
 ///
-/// @param self KCoreConfigSkeleton__ItemProperty*
+/// @param self const KCoreConfigSkeleton__ItemProperty*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemproperty_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemproperty_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemproperty.html#isEqual)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemProperty*
-/// @param callback bool func(KCoreConfigSkeleton__ItemProperty* self, QVariant* p)
+/// @param self const KCoreConfigSkeleton__ItemProperty*
+/// @param callback bool func(const KCoreConfigSkeleton__ItemProperty* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemproperty_on_is_equal(void* self, bool (*callback)(void*, void*));
+void k_coreconfigskeleton__itemproperty_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemproperty.html#isEqual)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemProperty*
+/// @param self const KCoreConfigSkeleton__ItemProperty*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemproperty_super_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemproperty_super_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemproperty.html#property)
 ///
-/// @param self KCoreConfigSkeleton__ItemProperty*
+/// @param self const KCoreConfigSkeleton__ItemProperty*
 ///
-QVariant* k_coreconfigskeleton__itemproperty_property(void* self);
+QVariant* k_coreconfigskeleton__itemproperty_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemproperty.html#property)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemProperty*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemProperty*
+/// @param callback QVariant* func(const KCoreConfigSkeleton__ItemProperty* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemproperty_on_property(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itemproperty_on_property(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemproperty.html#property)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemProperty*
+/// @param self const KCoreConfigSkeleton__ItemProperty*
 ///
-QVariant* k_coreconfigskeleton__itemproperty_super_property(void* self);
+QVariant* k_coreconfigskeleton__itemproperty_super_property(const void* self);
 
 /// Delete this object from C++ memory.
 ///
@@ -3803,7 +3732,7 @@ void k_coreconfigskeleton__itembool_super_read_config(void* self, void* config);
 /// @param self KCoreConfigSkeleton__ItemBool*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itembool_set_property(void* self, void* p);
+void k_coreconfigskeleton__itembool_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itembool.html#setProperty)
 ///
@@ -3812,7 +3741,7 @@ void k_coreconfigskeleton__itembool_set_property(void* self, void* p);
 /// @param self KCoreConfigSkeleton__ItemBool*
 /// @param callback void func(KCoreConfigSkeleton__ItemBool* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itembool_on_set_property(void* self, void (*callback)(void*, void*));
+void k_coreconfigskeleton__itembool_on_set_property(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itembool.html#setProperty)
 ///
@@ -3821,57 +3750,57 @@ void k_coreconfigskeleton__itembool_on_set_property(void* self, void (*callback)
 /// @param self KCoreConfigSkeleton__ItemBool*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itembool_super_set_property(void* self, void* p);
+void k_coreconfigskeleton__itembool_super_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itembool.html#isEqual)
 ///
-/// @param self KCoreConfigSkeleton__ItemBool*
+/// @param self const KCoreConfigSkeleton__ItemBool*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itembool_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itembool_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itembool.html#isEqual)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemBool*
-/// @param callback bool func(KCoreConfigSkeleton__ItemBool* self, QVariant* p)
+/// @param self const KCoreConfigSkeleton__ItemBool*
+/// @param callback bool func(const KCoreConfigSkeleton__ItemBool* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itembool_on_is_equal(void* self, bool (*callback)(void*, void*));
+void k_coreconfigskeleton__itembool_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itembool.html#isEqual)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemBool*
+/// @param self const KCoreConfigSkeleton__ItemBool*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itembool_super_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itembool_super_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itembool.html#property)
 ///
-/// @param self KCoreConfigSkeleton__ItemBool*
+/// @param self const KCoreConfigSkeleton__ItemBool*
 ///
-QVariant* k_coreconfigskeleton__itembool_property(void* self);
+QVariant* k_coreconfigskeleton__itembool_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itembool.html#property)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemBool*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemBool*
+/// @param callback QVariant* func(const KCoreConfigSkeleton__ItemBool* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itembool_on_property(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itembool_on_property(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itembool.html#property)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemBool*
+/// @param self const KCoreConfigSkeleton__ItemBool*
 ///
-QVariant* k_coreconfigskeleton__itembool_super_property(void* self);
+QVariant* k_coreconfigskeleton__itembool_super_property(const void* self);
 
 /// Delete this object from C++ memory.
 ///
@@ -3930,7 +3859,7 @@ void k_coreconfigskeleton__itemint_super_read_config(void* self, void* config);
 /// @param self KCoreConfigSkeleton__ItemInt*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemint_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemint_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemint.html#setProperty)
 ///
@@ -3939,7 +3868,7 @@ void k_coreconfigskeleton__itemint_set_property(void* self, void* p);
 /// @param self KCoreConfigSkeleton__ItemInt*
 /// @param callback void func(KCoreConfigSkeleton__ItemInt* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemint_on_set_property(void* self, void (*callback)(void*, void*));
+void k_coreconfigskeleton__itemint_on_set_property(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemint.html#setProperty)
 ///
@@ -3948,107 +3877,107 @@ void k_coreconfigskeleton__itemint_on_set_property(void* self, void (*callback)(
 /// @param self KCoreConfigSkeleton__ItemInt*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemint_super_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemint_super_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemint.html#isEqual)
 ///
-/// @param self KCoreConfigSkeleton__ItemInt*
+/// @param self const KCoreConfigSkeleton__ItemInt*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemint_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemint_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemint.html#isEqual)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemInt*
-/// @param callback bool func(KCoreConfigSkeleton__ItemInt* self, QVariant* p)
+/// @param self const KCoreConfigSkeleton__ItemInt*
+/// @param callback bool func(const KCoreConfigSkeleton__ItemInt* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemint_on_is_equal(void* self, bool (*callback)(void*, void*));
+void k_coreconfigskeleton__itemint_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemint.html#isEqual)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemInt*
+/// @param self const KCoreConfigSkeleton__ItemInt*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemint_super_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemint_super_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemint.html#property)
 ///
-/// @param self KCoreConfigSkeleton__ItemInt*
+/// @param self const KCoreConfigSkeleton__ItemInt*
 ///
-QVariant* k_coreconfigskeleton__itemint_property(void* self);
+QVariant* k_coreconfigskeleton__itemint_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemint.html#property)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemInt*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemInt*
+/// @param callback QVariant* func(const KCoreConfigSkeleton__ItemInt* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemint_on_property(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itemint_on_property(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemint.html#property)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemInt*
+/// @param self const KCoreConfigSkeleton__ItemInt*
 ///
-QVariant* k_coreconfigskeleton__itemint_super_property(void* self);
+QVariant* k_coreconfigskeleton__itemint_super_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemint.html#minValue)
 ///
-/// @param self KCoreConfigSkeleton__ItemInt*
+/// @param self const KCoreConfigSkeleton__ItemInt*
 ///
-QVariant* k_coreconfigskeleton__itemint_min_value(void* self);
+QVariant* k_coreconfigskeleton__itemint_min_value(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemint.html#minValue)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemInt*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemInt*
+/// @param callback QVariant* func(const KCoreConfigSkeleton__ItemInt* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemint_on_min_value(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itemint_on_min_value(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemint.html#minValue)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemInt*
+/// @param self const KCoreConfigSkeleton__ItemInt*
 ///
-QVariant* k_coreconfigskeleton__itemint_super_min_value(void* self);
+QVariant* k_coreconfigskeleton__itemint_super_min_value(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemint.html#maxValue)
 ///
-/// @param self KCoreConfigSkeleton__ItemInt*
+/// @param self const KCoreConfigSkeleton__ItemInt*
 ///
-QVariant* k_coreconfigskeleton__itemint_max_value(void* self);
+QVariant* k_coreconfigskeleton__itemint_max_value(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemint.html#maxValue)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemInt*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemInt*
+/// @param callback QVariant* func(const KCoreConfigSkeleton__ItemInt* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemint_on_max_value(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itemint_on_max_value(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemint.html#maxValue)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemInt*
+/// @param self const KCoreConfigSkeleton__ItemInt*
 ///
-QVariant* k_coreconfigskeleton__itemint_super_max_value(void* self);
+QVariant* k_coreconfigskeleton__itemint_super_max_value(const void* self);
 
 /// Delete this object from C++ memory.
 ///
@@ -4107,7 +4036,7 @@ void k_coreconfigskeleton__itemlonglong_super_read_config(void* self, void* conf
 /// @param self KCoreConfigSkeleton__ItemLongLong*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemlonglong_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemlonglong_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#setProperty)
 ///
@@ -4116,7 +4045,7 @@ void k_coreconfigskeleton__itemlonglong_set_property(void* self, void* p);
 /// @param self KCoreConfigSkeleton__ItemLongLong*
 /// @param callback void func(KCoreConfigSkeleton__ItemLongLong* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemlonglong_on_set_property(void* self, void (*callback)(void*, void*));
+void k_coreconfigskeleton__itemlonglong_on_set_property(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#setProperty)
 ///
@@ -4125,107 +4054,107 @@ void k_coreconfigskeleton__itemlonglong_on_set_property(void* self, void (*callb
 /// @param self KCoreConfigSkeleton__ItemLongLong*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemlonglong_super_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemlonglong_super_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#isEqual)
 ///
-/// @param self KCoreConfigSkeleton__ItemLongLong*
+/// @param self const KCoreConfigSkeleton__ItemLongLong*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemlonglong_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemlonglong_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#isEqual)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemLongLong*
-/// @param callback bool func(KCoreConfigSkeleton__ItemLongLong* self, QVariant* p)
+/// @param self const KCoreConfigSkeleton__ItemLongLong*
+/// @param callback bool func(const KCoreConfigSkeleton__ItemLongLong* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemlonglong_on_is_equal(void* self, bool (*callback)(void*, void*));
+void k_coreconfigskeleton__itemlonglong_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#isEqual)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemLongLong*
+/// @param self const KCoreConfigSkeleton__ItemLongLong*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemlonglong_super_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemlonglong_super_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#property)
 ///
-/// @param self KCoreConfigSkeleton__ItemLongLong*
+/// @param self const KCoreConfigSkeleton__ItemLongLong*
 ///
-QVariant* k_coreconfigskeleton__itemlonglong_property(void* self);
+QVariant* k_coreconfigskeleton__itemlonglong_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#property)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemLongLong*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemLongLong*
+/// @param callback QVariant* func(const KCoreConfigSkeleton__ItemLongLong* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemlonglong_on_property(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itemlonglong_on_property(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#property)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemLongLong*
+/// @param self const KCoreConfigSkeleton__ItemLongLong*
 ///
-QVariant* k_coreconfigskeleton__itemlonglong_super_property(void* self);
+QVariant* k_coreconfigskeleton__itemlonglong_super_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#minValue)
 ///
-/// @param self KCoreConfigSkeleton__ItemLongLong*
+/// @param self const KCoreConfigSkeleton__ItemLongLong*
 ///
-QVariant* k_coreconfigskeleton__itemlonglong_min_value(void* self);
+QVariant* k_coreconfigskeleton__itemlonglong_min_value(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#minValue)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemLongLong*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemLongLong*
+/// @param callback QVariant* func(const KCoreConfigSkeleton__ItemLongLong* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemlonglong_on_min_value(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itemlonglong_on_min_value(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#minValue)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemLongLong*
+/// @param self const KCoreConfigSkeleton__ItemLongLong*
 ///
-QVariant* k_coreconfigskeleton__itemlonglong_super_min_value(void* self);
+QVariant* k_coreconfigskeleton__itemlonglong_super_min_value(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#maxValue)
 ///
-/// @param self KCoreConfigSkeleton__ItemLongLong*
+/// @param self const KCoreConfigSkeleton__ItemLongLong*
 ///
-QVariant* k_coreconfigskeleton__itemlonglong_max_value(void* self);
+QVariant* k_coreconfigskeleton__itemlonglong_max_value(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#maxValue)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemLongLong*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemLongLong*
+/// @param callback QVariant* func(const KCoreConfigSkeleton__ItemLongLong* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemlonglong_on_max_value(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itemlonglong_on_max_value(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#maxValue)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemLongLong*
+/// @param self const KCoreConfigSkeleton__ItemLongLong*
 ///
-QVariant* k_coreconfigskeleton__itemlonglong_super_max_value(void* self);
+QVariant* k_coreconfigskeleton__itemlonglong_super_max_value(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#setMinValue)
 ///
@@ -4259,15 +4188,15 @@ KCoreConfigSkeleton__ItemEnum__Choice* k_coreconfigskeleton__itemenum__choice_ne
 ///
 /// @param param1 KCoreConfigSkeleton__ItemEnum__Choice*
 ///
-KCoreConfigSkeleton__ItemEnum__Choice* k_coreconfigskeleton__itemenum__choice_new2(void* param1);
+KCoreConfigSkeleton__ItemEnum__Choice* k_coreconfigskeleton__itemenum__choice_new2(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemenum-choice.html#name-var)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCoreConfigSkeleton__ItemEnum__Choice*
+/// @param self const KCoreConfigSkeleton__ItemEnum__Choice*
 ///
-const char* k_coreconfigskeleton__itemenum__choice_name(void* self);
+const char* k_coreconfigskeleton__itemenum__choice_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemenum-choice.html#name-var)
 ///
@@ -4280,9 +4209,9 @@ void k_coreconfigskeleton__itemenum__choice_set_name(void* self, const char* nam
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCoreConfigSkeleton__ItemEnum__Choice*
+/// @param self const KCoreConfigSkeleton__ItemEnum__Choice*
 ///
-const char* k_coreconfigskeleton__itemenum__choice_label(void* self);
+const char* k_coreconfigskeleton__itemenum__choice_label(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemenum-choice.html#label-var)
 ///
@@ -4295,9 +4224,9 @@ void k_coreconfigskeleton__itemenum__choice_set_label(void* self, const char* la
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCoreConfigSkeleton__ItemEnum__Choice*
+/// @param self const KCoreConfigSkeleton__ItemEnum__Choice*
 ///
-const char* k_coreconfigskeleton__itemenum__choice_tool_tip(void* self);
+const char* k_coreconfigskeleton__itemenum__choice_tool_tip(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemenum-choice.html#toolTip-var)
 ///
@@ -4310,9 +4239,9 @@ void k_coreconfigskeleton__itemenum__choice_set_tool_tip(void* self, const char*
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCoreConfigSkeleton__ItemEnum__Choice*
+/// @param self const KCoreConfigSkeleton__ItemEnum__Choice*
 ///
-const char* k_coreconfigskeleton__itemenum__choice_whats_this(void* self);
+const char* k_coreconfigskeleton__itemenum__choice_whats_this(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemenum-choice.html#whatsThis-var)
 ///
@@ -4325,9 +4254,9 @@ void k_coreconfigskeleton__itemenum__choice_set_whats_this(void* self, const cha
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCoreConfigSkeleton__ItemEnum__Choice*
+/// @param self const KCoreConfigSkeleton__ItemEnum__Choice*
 ///
-const char* k_coreconfigskeleton__itemenum__choice_value(void* self);
+const char* k_coreconfigskeleton__itemenum__choice_value(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemenum-choice.html#value-var)
 ///
@@ -4341,7 +4270,7 @@ void k_coreconfigskeleton__itemenum__choice_set_value(void* self, const char* va
 /// @param self KCoreConfigSkeleton__ItemEnum__Choice*
 /// @param param1 KCoreConfigSkeleton__ItemEnum__Choice*
 ///
-void k_coreconfigskeleton__itemenum__choice_operator_assign(void* self, void* param1);
+void k_coreconfigskeleton__itemenum__choice_operator_assign(void* self, const void* param1);
 
 /// Delete this object from C++ memory.
 ///
@@ -4374,11 +4303,11 @@ KCoreConfigSkeleton__ItemEnum* k_coreconfigskeleton__itemenum_new2(const char* _
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemenum.html#choices)
 ///
-/// @param self KCoreConfigSkeleton__ItemEnum*
+/// @param self const KCoreConfigSkeleton__ItemEnum*
 ///
 /// @return libqt_list of KCoreConfigSkeleton__ItemEnum__Choice*
 ///
-libqt_list k_coreconfigskeleton__itemenum_choices(void* self);
+libqt_list k_coreconfigskeleton__itemenum_choices(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemenum.html#readConfig)
 ///
@@ -4434,10 +4363,10 @@ void k_coreconfigskeleton__itemenum_super_write_config(void* self, void* config)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCoreConfigSkeleton__ItemEnum*
+/// @param self const KCoreConfigSkeleton__ItemEnum*
 /// @param name const char*
 ///
-const char* k_coreconfigskeleton__itemenum_value_for_choice(void* self, const char* name);
+const char* k_coreconfigskeleton__itemenum_value_for_choice(const void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemenum.html#setValueForChoice)
 ///
@@ -4456,7 +4385,7 @@ void k_coreconfigskeleton__itemenum_set_value_for_choice(void* self, const char*
 /// @param self KCoreConfigSkeleton__ItemEnum*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemenum_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemenum_set_property(void* self, const void* p);
 
 /// Inherited from KCoreConfigSkeleton::ItemInt
 ///
@@ -4467,7 +4396,7 @@ void k_coreconfigskeleton__itemenum_set_property(void* self, void* p);
 /// @param self KCoreConfigSkeleton__ItemEnum*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemenum_super_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemenum_super_set_property(void* self, const void* p);
 
 /// Inherited from KCoreConfigSkeleton::ItemInt
 ///
@@ -4478,7 +4407,7 @@ void k_coreconfigskeleton__itemenum_super_set_property(void* self, void* p);
 /// @param self KCoreConfigSkeleton__ItemEnum*
 /// @param callback void func(KCoreConfigSkeleton__ItemEnum* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemenum_on_set_property(void* self, void (*callback)(void*, void*));
+void k_coreconfigskeleton__itemenum_on_set_property(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from KCoreConfigSkeleton::ItemInt
 ///
@@ -4486,10 +4415,10 @@ void k_coreconfigskeleton__itemenum_on_set_property(void* self, void (*callback)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton__ItemEnum*
+/// @param self const KCoreConfigSkeleton__ItemEnum*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemenum_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemenum_is_equal(const void* self, const void* p);
 
 /// Inherited from KCoreConfigSkeleton::ItemInt
 ///
@@ -4497,10 +4426,10 @@ bool k_coreconfigskeleton__itemenum_is_equal(void* self, void* p);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton__ItemEnum*
+/// @param self const KCoreConfigSkeleton__ItemEnum*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemenum_super_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemenum_super_is_equal(const void* self, const void* p);
 
 /// Inherited from KCoreConfigSkeleton::ItemInt
 ///
@@ -4508,10 +4437,10 @@ bool k_coreconfigskeleton__itemenum_super_is_equal(void* self, void* p);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton__ItemEnum*
+/// @param self const KCoreConfigSkeleton__ItemEnum*
 /// @param callback bool func(KCoreConfigSkeleton__ItemEnum* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemenum_on_is_equal(void* self, bool (*callback)(void*, void*));
+void k_coreconfigskeleton__itemenum_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from KCoreConfigSkeleton::ItemInt
 ///
@@ -4519,9 +4448,9 @@ void k_coreconfigskeleton__itemenum_on_is_equal(void* self, bool (*callback)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton__ItemEnum*
+/// @param self const KCoreConfigSkeleton__ItemEnum*
 ///
-QVariant* k_coreconfigskeleton__itemenum_property(void* self);
+QVariant* k_coreconfigskeleton__itemenum_property(const void* self);
 
 /// Inherited from KCoreConfigSkeleton::ItemInt
 ///
@@ -4529,9 +4458,9 @@ QVariant* k_coreconfigskeleton__itemenum_property(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton__ItemEnum*
+/// @param self const KCoreConfigSkeleton__ItemEnum*
 ///
-QVariant* k_coreconfigskeleton__itemenum_super_property(void* self);
+QVariant* k_coreconfigskeleton__itemenum_super_property(const void* self);
 
 /// Inherited from KCoreConfigSkeleton::ItemInt
 ///
@@ -4539,12 +4468,12 @@ QVariant* k_coreconfigskeleton__itemenum_super_property(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton__ItemEnum*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemEnum*
+/// @param callback QVariant* func(KCoreConfigSkeleton__ItemEnum* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemenum_on_property(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itemenum_on_property(const void* self, QVariant* (*callback)(const void*));
 
 /// Inherited from KCoreConfigSkeleton::ItemInt
 ///
@@ -4552,9 +4481,9 @@ void k_coreconfigskeleton__itemenum_on_property(void* self, QVariant* (*callback
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton__ItemEnum*
+/// @param self const KCoreConfigSkeleton__ItemEnum*
 ///
-QVariant* k_coreconfigskeleton__itemenum_min_value(void* self);
+QVariant* k_coreconfigskeleton__itemenum_min_value(const void* self);
 
 /// Inherited from KCoreConfigSkeleton::ItemInt
 ///
@@ -4562,9 +4491,9 @@ QVariant* k_coreconfigskeleton__itemenum_min_value(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton__ItemEnum*
+/// @param self const KCoreConfigSkeleton__ItemEnum*
 ///
-QVariant* k_coreconfigskeleton__itemenum_super_min_value(void* self);
+QVariant* k_coreconfigskeleton__itemenum_super_min_value(const void* self);
 
 /// Inherited from KCoreConfigSkeleton::ItemInt
 ///
@@ -4572,12 +4501,12 @@ QVariant* k_coreconfigskeleton__itemenum_super_min_value(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton__ItemEnum*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemEnum*
+/// @param callback QVariant* func(KCoreConfigSkeleton__ItemEnum* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemenum_on_min_value(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itemenum_on_min_value(const void* self, QVariant* (*callback)(const void*));
 
 /// Inherited from KCoreConfigSkeleton::ItemInt
 ///
@@ -4585,9 +4514,9 @@ void k_coreconfigskeleton__itemenum_on_min_value(void* self, QVariant* (*callbac
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton__ItemEnum*
+/// @param self const KCoreConfigSkeleton__ItemEnum*
 ///
-QVariant* k_coreconfigskeleton__itemenum_max_value(void* self);
+QVariant* k_coreconfigskeleton__itemenum_max_value(const void* self);
 
 /// Inherited from KCoreConfigSkeleton::ItemInt
 ///
@@ -4595,9 +4524,9 @@ QVariant* k_coreconfigskeleton__itemenum_max_value(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton__ItemEnum*
+/// @param self const KCoreConfigSkeleton__ItemEnum*
 ///
-QVariant* k_coreconfigskeleton__itemenum_super_max_value(void* self);
+QVariant* k_coreconfigskeleton__itemenum_super_max_value(const void* self);
 
 /// Inherited from KCoreConfigSkeleton::ItemInt
 ///
@@ -4605,12 +4534,12 @@ QVariant* k_coreconfigskeleton__itemenum_super_max_value(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton__ItemEnum*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemEnum*
+/// @param callback QVariant* func(KCoreConfigSkeleton__ItemEnum* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemenum_on_max_value(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itemenum_on_max_value(const void* self, QVariant* (*callback)(const void*));
 
 /// Delete this object from C++ memory.
 ///
@@ -4669,7 +4598,7 @@ void k_coreconfigskeleton__itemuint_super_read_config(void* self, void* config);
 /// @param self KCoreConfigSkeleton__ItemUInt*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemuint_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemuint_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemuint.html#setProperty)
 ///
@@ -4678,7 +4607,7 @@ void k_coreconfigskeleton__itemuint_set_property(void* self, void* p);
 /// @param self KCoreConfigSkeleton__ItemUInt*
 /// @param callback void func(KCoreConfigSkeleton__ItemUInt* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemuint_on_set_property(void* self, void (*callback)(void*, void*));
+void k_coreconfigskeleton__itemuint_on_set_property(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemuint.html#setProperty)
 ///
@@ -4687,107 +4616,107 @@ void k_coreconfigskeleton__itemuint_on_set_property(void* self, void (*callback)
 /// @param self KCoreConfigSkeleton__ItemUInt*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemuint_super_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemuint_super_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemuint.html#isEqual)
 ///
-/// @param self KCoreConfigSkeleton__ItemUInt*
+/// @param self const KCoreConfigSkeleton__ItemUInt*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemuint_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemuint_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemuint.html#isEqual)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemUInt*
-/// @param callback bool func(KCoreConfigSkeleton__ItemUInt* self, QVariant* p)
+/// @param self const KCoreConfigSkeleton__ItemUInt*
+/// @param callback bool func(const KCoreConfigSkeleton__ItemUInt* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemuint_on_is_equal(void* self, bool (*callback)(void*, void*));
+void k_coreconfigskeleton__itemuint_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemuint.html#isEqual)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemUInt*
+/// @param self const KCoreConfigSkeleton__ItemUInt*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemuint_super_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemuint_super_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemuint.html#property)
 ///
-/// @param self KCoreConfigSkeleton__ItemUInt*
+/// @param self const KCoreConfigSkeleton__ItemUInt*
 ///
-QVariant* k_coreconfigskeleton__itemuint_property(void* self);
+QVariant* k_coreconfigskeleton__itemuint_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemuint.html#property)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemUInt*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemUInt*
+/// @param callback QVariant* func(const KCoreConfigSkeleton__ItemUInt* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemuint_on_property(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itemuint_on_property(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemuint.html#property)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemUInt*
+/// @param self const KCoreConfigSkeleton__ItemUInt*
 ///
-QVariant* k_coreconfigskeleton__itemuint_super_property(void* self);
+QVariant* k_coreconfigskeleton__itemuint_super_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemuint.html#minValue)
 ///
-/// @param self KCoreConfigSkeleton__ItemUInt*
+/// @param self const KCoreConfigSkeleton__ItemUInt*
 ///
-QVariant* k_coreconfigskeleton__itemuint_min_value(void* self);
+QVariant* k_coreconfigskeleton__itemuint_min_value(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemuint.html#minValue)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemUInt*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemUInt*
+/// @param callback QVariant* func(const KCoreConfigSkeleton__ItemUInt* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemuint_on_min_value(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itemuint_on_min_value(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemuint.html#minValue)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemUInt*
+/// @param self const KCoreConfigSkeleton__ItemUInt*
 ///
-QVariant* k_coreconfigskeleton__itemuint_super_min_value(void* self);
+QVariant* k_coreconfigskeleton__itemuint_super_min_value(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemuint.html#maxValue)
 ///
-/// @param self KCoreConfigSkeleton__ItemUInt*
+/// @param self const KCoreConfigSkeleton__ItemUInt*
 ///
-QVariant* k_coreconfigskeleton__itemuint_max_value(void* self);
+QVariant* k_coreconfigskeleton__itemuint_max_value(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemuint.html#maxValue)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemUInt*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemUInt*
+/// @param callback QVariant* func(const KCoreConfigSkeleton__ItemUInt* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemuint_on_max_value(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itemuint_on_max_value(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemuint.html#maxValue)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemUInt*
+/// @param self const KCoreConfigSkeleton__ItemUInt*
 ///
-QVariant* k_coreconfigskeleton__itemuint_super_max_value(void* self);
+QVariant* k_coreconfigskeleton__itemuint_super_max_value(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemuint.html#setMinValue)
 ///
@@ -4860,7 +4789,7 @@ void k_coreconfigskeleton__itemulonglong_super_read_config(void* self, void* con
 /// @param self KCoreConfigSkeleton__ItemULongLong*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemulonglong_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemulonglong_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#setProperty)
 ///
@@ -4869,7 +4798,7 @@ void k_coreconfigskeleton__itemulonglong_set_property(void* self, void* p);
 /// @param self KCoreConfigSkeleton__ItemULongLong*
 /// @param callback void func(KCoreConfigSkeleton__ItemULongLong* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemulonglong_on_set_property(void* self, void (*callback)(void*, void*));
+void k_coreconfigskeleton__itemulonglong_on_set_property(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#setProperty)
 ///
@@ -4878,107 +4807,107 @@ void k_coreconfigskeleton__itemulonglong_on_set_property(void* self, void (*call
 /// @param self KCoreConfigSkeleton__ItemULongLong*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemulonglong_super_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemulonglong_super_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#isEqual)
 ///
-/// @param self KCoreConfigSkeleton__ItemULongLong*
+/// @param self const KCoreConfigSkeleton__ItemULongLong*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemulonglong_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemulonglong_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#isEqual)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemULongLong*
-/// @param callback bool func(KCoreConfigSkeleton__ItemULongLong* self, QVariant* p)
+/// @param self const KCoreConfigSkeleton__ItemULongLong*
+/// @param callback bool func(const KCoreConfigSkeleton__ItemULongLong* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemulonglong_on_is_equal(void* self, bool (*callback)(void*, void*));
+void k_coreconfigskeleton__itemulonglong_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#isEqual)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemULongLong*
+/// @param self const KCoreConfigSkeleton__ItemULongLong*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemulonglong_super_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemulonglong_super_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#property)
 ///
-/// @param self KCoreConfigSkeleton__ItemULongLong*
+/// @param self const KCoreConfigSkeleton__ItemULongLong*
 ///
-QVariant* k_coreconfigskeleton__itemulonglong_property(void* self);
+QVariant* k_coreconfigskeleton__itemulonglong_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#property)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemULongLong*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemULongLong*
+/// @param callback QVariant* func(const KCoreConfigSkeleton__ItemULongLong* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemulonglong_on_property(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itemulonglong_on_property(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#property)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemULongLong*
+/// @param self const KCoreConfigSkeleton__ItemULongLong*
 ///
-QVariant* k_coreconfigskeleton__itemulonglong_super_property(void* self);
+QVariant* k_coreconfigskeleton__itemulonglong_super_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#minValue)
 ///
-/// @param self KCoreConfigSkeleton__ItemULongLong*
+/// @param self const KCoreConfigSkeleton__ItemULongLong*
 ///
-QVariant* k_coreconfigskeleton__itemulonglong_min_value(void* self);
+QVariant* k_coreconfigskeleton__itemulonglong_min_value(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#minValue)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemULongLong*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemULongLong*
+/// @param callback QVariant* func(const KCoreConfigSkeleton__ItemULongLong* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemulonglong_on_min_value(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itemulonglong_on_min_value(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#minValue)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemULongLong*
+/// @param self const KCoreConfigSkeleton__ItemULongLong*
 ///
-QVariant* k_coreconfigskeleton__itemulonglong_super_min_value(void* self);
+QVariant* k_coreconfigskeleton__itemulonglong_super_min_value(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#maxValue)
 ///
-/// @param self KCoreConfigSkeleton__ItemULongLong*
+/// @param self const KCoreConfigSkeleton__ItemULongLong*
 ///
-QVariant* k_coreconfigskeleton__itemulonglong_max_value(void* self);
+QVariant* k_coreconfigskeleton__itemulonglong_max_value(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#maxValue)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemULongLong*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemULongLong*
+/// @param callback QVariant* func(const KCoreConfigSkeleton__ItemULongLong* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemulonglong_on_max_value(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itemulonglong_on_max_value(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#maxValue)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemULongLong*
+/// @param self const KCoreConfigSkeleton__ItemULongLong*
 ///
-QVariant* k_coreconfigskeleton__itemulonglong_super_max_value(void* self);
+QVariant* k_coreconfigskeleton__itemulonglong_super_max_value(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#setMinValue)
 ///
@@ -5051,7 +4980,7 @@ void k_coreconfigskeleton__itemdouble_super_read_config(void* self, void* config
 /// @param self KCoreConfigSkeleton__ItemDouble*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemdouble_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemdouble_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#setProperty)
 ///
@@ -5060,7 +4989,7 @@ void k_coreconfigskeleton__itemdouble_set_property(void* self, void* p);
 /// @param self KCoreConfigSkeleton__ItemDouble*
 /// @param callback void func(KCoreConfigSkeleton__ItemDouble* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemdouble_on_set_property(void* self, void (*callback)(void*, void*));
+void k_coreconfigskeleton__itemdouble_on_set_property(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#setProperty)
 ///
@@ -5069,107 +4998,107 @@ void k_coreconfigskeleton__itemdouble_on_set_property(void* self, void (*callbac
 /// @param self KCoreConfigSkeleton__ItemDouble*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemdouble_super_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemdouble_super_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#isEqual)
 ///
-/// @param self KCoreConfigSkeleton__ItemDouble*
+/// @param self const KCoreConfigSkeleton__ItemDouble*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemdouble_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemdouble_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#isEqual)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemDouble*
-/// @param callback bool func(KCoreConfigSkeleton__ItemDouble* self, QVariant* p)
+/// @param self const KCoreConfigSkeleton__ItemDouble*
+/// @param callback bool func(const KCoreConfigSkeleton__ItemDouble* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemdouble_on_is_equal(void* self, bool (*callback)(void*, void*));
+void k_coreconfigskeleton__itemdouble_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#isEqual)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemDouble*
+/// @param self const KCoreConfigSkeleton__ItemDouble*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemdouble_super_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemdouble_super_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#property)
 ///
-/// @param self KCoreConfigSkeleton__ItemDouble*
+/// @param self const KCoreConfigSkeleton__ItemDouble*
 ///
-QVariant* k_coreconfigskeleton__itemdouble_property(void* self);
+QVariant* k_coreconfigskeleton__itemdouble_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#property)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemDouble*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemDouble*
+/// @param callback QVariant* func(const KCoreConfigSkeleton__ItemDouble* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemdouble_on_property(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itemdouble_on_property(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#property)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemDouble*
+/// @param self const KCoreConfigSkeleton__ItemDouble*
 ///
-QVariant* k_coreconfigskeleton__itemdouble_super_property(void* self);
+QVariant* k_coreconfigskeleton__itemdouble_super_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#minValue)
 ///
-/// @param self KCoreConfigSkeleton__ItemDouble*
+/// @param self const KCoreConfigSkeleton__ItemDouble*
 ///
-QVariant* k_coreconfigskeleton__itemdouble_min_value(void* self);
+QVariant* k_coreconfigskeleton__itemdouble_min_value(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#minValue)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemDouble*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemDouble*
+/// @param callback QVariant* func(const KCoreConfigSkeleton__ItemDouble* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemdouble_on_min_value(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itemdouble_on_min_value(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#minValue)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemDouble*
+/// @param self const KCoreConfigSkeleton__ItemDouble*
 ///
-QVariant* k_coreconfigskeleton__itemdouble_super_min_value(void* self);
+QVariant* k_coreconfigskeleton__itemdouble_super_min_value(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#maxValue)
 ///
-/// @param self KCoreConfigSkeleton__ItemDouble*
+/// @param self const KCoreConfigSkeleton__ItemDouble*
 ///
-QVariant* k_coreconfigskeleton__itemdouble_max_value(void* self);
+QVariant* k_coreconfigskeleton__itemdouble_max_value(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#maxValue)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemDouble*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemDouble*
+/// @param callback QVariant* func(const KCoreConfigSkeleton__ItemDouble* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemdouble_on_max_value(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itemdouble_on_max_value(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#maxValue)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemDouble*
+/// @param self const KCoreConfigSkeleton__ItemDouble*
 ///
-QVariant* k_coreconfigskeleton__itemdouble_super_max_value(void* self);
+QVariant* k_coreconfigskeleton__itemdouble_super_max_value(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#setMinValue)
 ///
@@ -5210,7 +5139,7 @@ KCoreConfigSkeleton__ItemRect* k_coreconfigskeleton__itemrect_new(const char* _g
 /// @param reference QRect*
 /// @param defaultValue QRect*
 ///
-KCoreConfigSkeleton__ItemRect* k_coreconfigskeleton__itemrect_new2(const char* _group, const char* _key, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemRect* k_coreconfigskeleton__itemrect_new2(const char* _group, const char* _key, void* reference, const void* defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemrect.html#readConfig)
 ///
@@ -5242,7 +5171,7 @@ void k_coreconfigskeleton__itemrect_super_read_config(void* self, void* config);
 /// @param self KCoreConfigSkeleton__ItemRect*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemrect_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemrect_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemrect.html#setProperty)
 ///
@@ -5251,7 +5180,7 @@ void k_coreconfigskeleton__itemrect_set_property(void* self, void* p);
 /// @param self KCoreConfigSkeleton__ItemRect*
 /// @param callback void func(KCoreConfigSkeleton__ItemRect* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemrect_on_set_property(void* self, void (*callback)(void*, void*));
+void k_coreconfigskeleton__itemrect_on_set_property(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemrect.html#setProperty)
 ///
@@ -5260,57 +5189,57 @@ void k_coreconfigskeleton__itemrect_on_set_property(void* self, void (*callback)
 /// @param self KCoreConfigSkeleton__ItemRect*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemrect_super_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemrect_super_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemrect.html#isEqual)
 ///
-/// @param self KCoreConfigSkeleton__ItemRect*
+/// @param self const KCoreConfigSkeleton__ItemRect*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemrect_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemrect_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemrect.html#isEqual)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemRect*
-/// @param callback bool func(KCoreConfigSkeleton__ItemRect* self, QVariant* p)
+/// @param self const KCoreConfigSkeleton__ItemRect*
+/// @param callback bool func(const KCoreConfigSkeleton__ItemRect* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemrect_on_is_equal(void* self, bool (*callback)(void*, void*));
+void k_coreconfigskeleton__itemrect_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemrect.html#isEqual)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemRect*
+/// @param self const KCoreConfigSkeleton__ItemRect*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemrect_super_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemrect_super_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemrect.html#property)
 ///
-/// @param self KCoreConfigSkeleton__ItemRect*
+/// @param self const KCoreConfigSkeleton__ItemRect*
 ///
-QVariant* k_coreconfigskeleton__itemrect_property(void* self);
+QVariant* k_coreconfigskeleton__itemrect_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemrect.html#property)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemRect*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemRect*
+/// @param callback QVariant* func(const KCoreConfigSkeleton__ItemRect* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemrect_on_property(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itemrect_on_property(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemrect.html#property)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemRect*
+/// @param self const KCoreConfigSkeleton__ItemRect*
 ///
-QVariant* k_coreconfigskeleton__itemrect_super_property(void* self);
+QVariant* k_coreconfigskeleton__itemrect_super_property(const void* self);
 
 /// Delete this object from C++ memory.
 ///
@@ -5337,7 +5266,7 @@ KCoreConfigSkeleton__ItemRectF* k_coreconfigskeleton__itemrectf_new(const char* 
 /// @param reference QRectF*
 /// @param defaultValue QRectF*
 ///
-KCoreConfigSkeleton__ItemRectF* k_coreconfigskeleton__itemrectf_new2(const char* _group, const char* _key, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemRectF* k_coreconfigskeleton__itemrectf_new2(const char* _group, const char* _key, void* reference, const void* defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemrectf.html#readConfig)
 ///
@@ -5369,7 +5298,7 @@ void k_coreconfigskeleton__itemrectf_super_read_config(void* self, void* config)
 /// @param self KCoreConfigSkeleton__ItemRectF*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemrectf_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemrectf_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemrectf.html#setProperty)
 ///
@@ -5378,7 +5307,7 @@ void k_coreconfigskeleton__itemrectf_set_property(void* self, void* p);
 /// @param self KCoreConfigSkeleton__ItemRectF*
 /// @param callback void func(KCoreConfigSkeleton__ItemRectF* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemrectf_on_set_property(void* self, void (*callback)(void*, void*));
+void k_coreconfigskeleton__itemrectf_on_set_property(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemrectf.html#setProperty)
 ///
@@ -5387,57 +5316,57 @@ void k_coreconfigskeleton__itemrectf_on_set_property(void* self, void (*callback
 /// @param self KCoreConfigSkeleton__ItemRectF*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemrectf_super_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemrectf_super_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemrectf.html#isEqual)
 ///
-/// @param self KCoreConfigSkeleton__ItemRectF*
+/// @param self const KCoreConfigSkeleton__ItemRectF*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemrectf_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemrectf_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemrectf.html#isEqual)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemRectF*
-/// @param callback bool func(KCoreConfigSkeleton__ItemRectF* self, QVariant* p)
+/// @param self const KCoreConfigSkeleton__ItemRectF*
+/// @param callback bool func(const KCoreConfigSkeleton__ItemRectF* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemrectf_on_is_equal(void* self, bool (*callback)(void*, void*));
+void k_coreconfigskeleton__itemrectf_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemrectf.html#isEqual)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemRectF*
+/// @param self const KCoreConfigSkeleton__ItemRectF*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemrectf_super_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemrectf_super_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemrectf.html#property)
 ///
-/// @param self KCoreConfigSkeleton__ItemRectF*
+/// @param self const KCoreConfigSkeleton__ItemRectF*
 ///
-QVariant* k_coreconfigskeleton__itemrectf_property(void* self);
+QVariant* k_coreconfigskeleton__itemrectf_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemrectf.html#property)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemRectF*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemRectF*
+/// @param callback QVariant* func(const KCoreConfigSkeleton__ItemRectF* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemrectf_on_property(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itemrectf_on_property(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemrectf.html#property)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemRectF*
+/// @param self const KCoreConfigSkeleton__ItemRectF*
 ///
-QVariant* k_coreconfigskeleton__itemrectf_super_property(void* self);
+QVariant* k_coreconfigskeleton__itemrectf_super_property(const void* self);
 
 /// Delete this object from C++ memory.
 ///
@@ -5464,7 +5393,7 @@ KCoreConfigSkeleton__ItemPoint* k_coreconfigskeleton__itempoint_new(const char* 
 /// @param reference QPoint*
 /// @param defaultValue QPoint*
 ///
-KCoreConfigSkeleton__ItemPoint* k_coreconfigskeleton__itempoint_new2(const char* _group, const char* _key, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemPoint* k_coreconfigskeleton__itempoint_new2(const char* _group, const char* _key, void* reference, const void* defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempoint.html#readConfig)
 ///
@@ -5496,7 +5425,7 @@ void k_coreconfigskeleton__itempoint_super_read_config(void* self, void* config)
 /// @param self KCoreConfigSkeleton__ItemPoint*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itempoint_set_property(void* self, void* p);
+void k_coreconfigskeleton__itempoint_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempoint.html#setProperty)
 ///
@@ -5505,7 +5434,7 @@ void k_coreconfigskeleton__itempoint_set_property(void* self, void* p);
 /// @param self KCoreConfigSkeleton__ItemPoint*
 /// @param callback void func(KCoreConfigSkeleton__ItemPoint* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itempoint_on_set_property(void* self, void (*callback)(void*, void*));
+void k_coreconfigskeleton__itempoint_on_set_property(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempoint.html#setProperty)
 ///
@@ -5514,57 +5443,57 @@ void k_coreconfigskeleton__itempoint_on_set_property(void* self, void (*callback
 /// @param self KCoreConfigSkeleton__ItemPoint*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itempoint_super_set_property(void* self, void* p);
+void k_coreconfigskeleton__itempoint_super_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempoint.html#isEqual)
 ///
-/// @param self KCoreConfigSkeleton__ItemPoint*
+/// @param self const KCoreConfigSkeleton__ItemPoint*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itempoint_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itempoint_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempoint.html#isEqual)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemPoint*
-/// @param callback bool func(KCoreConfigSkeleton__ItemPoint* self, QVariant* p)
+/// @param self const KCoreConfigSkeleton__ItemPoint*
+/// @param callback bool func(const KCoreConfigSkeleton__ItemPoint* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itempoint_on_is_equal(void* self, bool (*callback)(void*, void*));
+void k_coreconfigskeleton__itempoint_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempoint.html#isEqual)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemPoint*
+/// @param self const KCoreConfigSkeleton__ItemPoint*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itempoint_super_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itempoint_super_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempoint.html#property)
 ///
-/// @param self KCoreConfigSkeleton__ItemPoint*
+/// @param self const KCoreConfigSkeleton__ItemPoint*
 ///
-QVariant* k_coreconfigskeleton__itempoint_property(void* self);
+QVariant* k_coreconfigskeleton__itempoint_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempoint.html#property)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemPoint*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemPoint*
+/// @param callback QVariant* func(const KCoreConfigSkeleton__ItemPoint* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itempoint_on_property(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itempoint_on_property(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempoint.html#property)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemPoint*
+/// @param self const KCoreConfigSkeleton__ItemPoint*
 ///
-QVariant* k_coreconfigskeleton__itempoint_super_property(void* self);
+QVariant* k_coreconfigskeleton__itempoint_super_property(const void* self);
 
 /// Delete this object from C++ memory.
 ///
@@ -5591,7 +5520,7 @@ KCoreConfigSkeleton__ItemPointF* k_coreconfigskeleton__itempointf_new(const char
 /// @param reference QPointF*
 /// @param defaultValue QPointF*
 ///
-KCoreConfigSkeleton__ItemPointF* k_coreconfigskeleton__itempointf_new2(const char* _group, const char* _key, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemPointF* k_coreconfigskeleton__itempointf_new2(const char* _group, const char* _key, void* reference, const void* defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempointf.html#readConfig)
 ///
@@ -5623,7 +5552,7 @@ void k_coreconfigskeleton__itempointf_super_read_config(void* self, void* config
 /// @param self KCoreConfigSkeleton__ItemPointF*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itempointf_set_property(void* self, void* p);
+void k_coreconfigskeleton__itempointf_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempointf.html#setProperty)
 ///
@@ -5632,7 +5561,7 @@ void k_coreconfigskeleton__itempointf_set_property(void* self, void* p);
 /// @param self KCoreConfigSkeleton__ItemPointF*
 /// @param callback void func(KCoreConfigSkeleton__ItemPointF* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itempointf_on_set_property(void* self, void (*callback)(void*, void*));
+void k_coreconfigskeleton__itempointf_on_set_property(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempointf.html#setProperty)
 ///
@@ -5641,57 +5570,57 @@ void k_coreconfigskeleton__itempointf_on_set_property(void* self, void (*callbac
 /// @param self KCoreConfigSkeleton__ItemPointF*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itempointf_super_set_property(void* self, void* p);
+void k_coreconfigskeleton__itempointf_super_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempointf.html#isEqual)
 ///
-/// @param self KCoreConfigSkeleton__ItemPointF*
+/// @param self const KCoreConfigSkeleton__ItemPointF*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itempointf_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itempointf_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempointf.html#isEqual)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemPointF*
-/// @param callback bool func(KCoreConfigSkeleton__ItemPointF* self, QVariant* p)
+/// @param self const KCoreConfigSkeleton__ItemPointF*
+/// @param callback bool func(const KCoreConfigSkeleton__ItemPointF* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itempointf_on_is_equal(void* self, bool (*callback)(void*, void*));
+void k_coreconfigskeleton__itempointf_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempointf.html#isEqual)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemPointF*
+/// @param self const KCoreConfigSkeleton__ItemPointF*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itempointf_super_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itempointf_super_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempointf.html#property)
 ///
-/// @param self KCoreConfigSkeleton__ItemPointF*
+/// @param self const KCoreConfigSkeleton__ItemPointF*
 ///
-QVariant* k_coreconfigskeleton__itempointf_property(void* self);
+QVariant* k_coreconfigskeleton__itempointf_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempointf.html#property)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemPointF*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemPointF*
+/// @param callback QVariant* func(const KCoreConfigSkeleton__ItemPointF* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itempointf_on_property(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itempointf_on_property(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempointf.html#property)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemPointF*
+/// @param self const KCoreConfigSkeleton__ItemPointF*
 ///
-QVariant* k_coreconfigskeleton__itempointf_super_property(void* self);
+QVariant* k_coreconfigskeleton__itempointf_super_property(const void* self);
 
 /// Delete this object from C++ memory.
 ///
@@ -5718,7 +5647,7 @@ KCoreConfigSkeleton__ItemSize* k_coreconfigskeleton__itemsize_new(const char* _g
 /// @param reference QSize*
 /// @param defaultValue QSize*
 ///
-KCoreConfigSkeleton__ItemSize* k_coreconfigskeleton__itemsize_new2(const char* _group, const char* _key, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemSize* k_coreconfigskeleton__itemsize_new2(const char* _group, const char* _key, void* reference, const void* defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemsize.html#readConfig)
 ///
@@ -5750,7 +5679,7 @@ void k_coreconfigskeleton__itemsize_super_read_config(void* self, void* config);
 /// @param self KCoreConfigSkeleton__ItemSize*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemsize_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemsize_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemsize.html#setProperty)
 ///
@@ -5759,7 +5688,7 @@ void k_coreconfigskeleton__itemsize_set_property(void* self, void* p);
 /// @param self KCoreConfigSkeleton__ItemSize*
 /// @param callback void func(KCoreConfigSkeleton__ItemSize* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemsize_on_set_property(void* self, void (*callback)(void*, void*));
+void k_coreconfigskeleton__itemsize_on_set_property(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemsize.html#setProperty)
 ///
@@ -5768,57 +5697,57 @@ void k_coreconfigskeleton__itemsize_on_set_property(void* self, void (*callback)
 /// @param self KCoreConfigSkeleton__ItemSize*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemsize_super_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemsize_super_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemsize.html#isEqual)
 ///
-/// @param self KCoreConfigSkeleton__ItemSize*
+/// @param self const KCoreConfigSkeleton__ItemSize*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemsize_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemsize_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemsize.html#isEqual)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemSize*
-/// @param callback bool func(KCoreConfigSkeleton__ItemSize* self, QVariant* p)
+/// @param self const KCoreConfigSkeleton__ItemSize*
+/// @param callback bool func(const KCoreConfigSkeleton__ItemSize* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemsize_on_is_equal(void* self, bool (*callback)(void*, void*));
+void k_coreconfigskeleton__itemsize_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemsize.html#isEqual)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemSize*
+/// @param self const KCoreConfigSkeleton__ItemSize*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemsize_super_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemsize_super_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemsize.html#property)
 ///
-/// @param self KCoreConfigSkeleton__ItemSize*
+/// @param self const KCoreConfigSkeleton__ItemSize*
 ///
-QVariant* k_coreconfigskeleton__itemsize_property(void* self);
+QVariant* k_coreconfigskeleton__itemsize_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemsize.html#property)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemSize*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemSize*
+/// @param callback QVariant* func(const KCoreConfigSkeleton__ItemSize* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemsize_on_property(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itemsize_on_property(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemsize.html#property)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemSize*
+/// @param self const KCoreConfigSkeleton__ItemSize*
 ///
-QVariant* k_coreconfigskeleton__itemsize_super_property(void* self);
+QVariant* k_coreconfigskeleton__itemsize_super_property(const void* self);
 
 /// Delete this object from C++ memory.
 ///
@@ -5845,7 +5774,7 @@ KCoreConfigSkeleton__ItemSizeF* k_coreconfigskeleton__itemsizef_new(const char* 
 /// @param reference QSizeF*
 /// @param defaultValue QSizeF*
 ///
-KCoreConfigSkeleton__ItemSizeF* k_coreconfigskeleton__itemsizef_new2(const char* _group, const char* _key, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemSizeF* k_coreconfigskeleton__itemsizef_new2(const char* _group, const char* _key, void* reference, const void* defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemsizef.html#readConfig)
 ///
@@ -5877,7 +5806,7 @@ void k_coreconfigskeleton__itemsizef_super_read_config(void* self, void* config)
 /// @param self KCoreConfigSkeleton__ItemSizeF*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemsizef_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemsizef_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemsizef.html#setProperty)
 ///
@@ -5886,7 +5815,7 @@ void k_coreconfigskeleton__itemsizef_set_property(void* self, void* p);
 /// @param self KCoreConfigSkeleton__ItemSizeF*
 /// @param callback void func(KCoreConfigSkeleton__ItemSizeF* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemsizef_on_set_property(void* self, void (*callback)(void*, void*));
+void k_coreconfigskeleton__itemsizef_on_set_property(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemsizef.html#setProperty)
 ///
@@ -5895,57 +5824,57 @@ void k_coreconfigskeleton__itemsizef_on_set_property(void* self, void (*callback
 /// @param self KCoreConfigSkeleton__ItemSizeF*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemsizef_super_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemsizef_super_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemsizef.html#isEqual)
 ///
-/// @param self KCoreConfigSkeleton__ItemSizeF*
+/// @param self const KCoreConfigSkeleton__ItemSizeF*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemsizef_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemsizef_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemsizef.html#isEqual)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemSizeF*
-/// @param callback bool func(KCoreConfigSkeleton__ItemSizeF* self, QVariant* p)
+/// @param self const KCoreConfigSkeleton__ItemSizeF*
+/// @param callback bool func(const KCoreConfigSkeleton__ItemSizeF* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemsizef_on_is_equal(void* self, bool (*callback)(void*, void*));
+void k_coreconfigskeleton__itemsizef_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemsizef.html#isEqual)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemSizeF*
+/// @param self const KCoreConfigSkeleton__ItemSizeF*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemsizef_super_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemsizef_super_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemsizef.html#property)
 ///
-/// @param self KCoreConfigSkeleton__ItemSizeF*
+/// @param self const KCoreConfigSkeleton__ItemSizeF*
 ///
-QVariant* k_coreconfigskeleton__itemsizef_property(void* self);
+QVariant* k_coreconfigskeleton__itemsizef_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemsizef.html#property)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemSizeF*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemSizeF*
+/// @param callback QVariant* func(const KCoreConfigSkeleton__ItemSizeF* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemsizef_on_property(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itemsizef_on_property(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemsizef.html#property)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemSizeF*
+/// @param self const KCoreConfigSkeleton__ItemSizeF*
 ///
-QVariant* k_coreconfigskeleton__itemsizef_super_property(void* self);
+QVariant* k_coreconfigskeleton__itemsizef_super_property(const void* self);
 
 /// Delete this object from C++ memory.
 ///
@@ -5972,7 +5901,7 @@ KCoreConfigSkeleton__ItemDateTime* k_coreconfigskeleton__itemdatetime_new(const 
 /// @param reference QDateTime*
 /// @param defaultValue QDateTime*
 ///
-KCoreConfigSkeleton__ItemDateTime* k_coreconfigskeleton__itemdatetime_new2(const char* _group, const char* _key, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemDateTime* k_coreconfigskeleton__itemdatetime_new2(const char* _group, const char* _key, void* reference, const void* defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdatetime.html#readConfig)
 ///
@@ -6004,7 +5933,7 @@ void k_coreconfigskeleton__itemdatetime_super_read_config(void* self, void* conf
 /// @param self KCoreConfigSkeleton__ItemDateTime*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemdatetime_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemdatetime_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdatetime.html#setProperty)
 ///
@@ -6013,7 +5942,7 @@ void k_coreconfigskeleton__itemdatetime_set_property(void* self, void* p);
 /// @param self KCoreConfigSkeleton__ItemDateTime*
 /// @param callback void func(KCoreConfigSkeleton__ItemDateTime* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemdatetime_on_set_property(void* self, void (*callback)(void*, void*));
+void k_coreconfigskeleton__itemdatetime_on_set_property(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdatetime.html#setProperty)
 ///
@@ -6022,57 +5951,57 @@ void k_coreconfigskeleton__itemdatetime_on_set_property(void* self, void (*callb
 /// @param self KCoreConfigSkeleton__ItemDateTime*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemdatetime_super_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemdatetime_super_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdatetime.html#isEqual)
 ///
-/// @param self KCoreConfigSkeleton__ItemDateTime*
+/// @param self const KCoreConfigSkeleton__ItemDateTime*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemdatetime_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemdatetime_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdatetime.html#isEqual)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemDateTime*
-/// @param callback bool func(KCoreConfigSkeleton__ItemDateTime* self, QVariant* p)
+/// @param self const KCoreConfigSkeleton__ItemDateTime*
+/// @param callback bool func(const KCoreConfigSkeleton__ItemDateTime* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemdatetime_on_is_equal(void* self, bool (*callback)(void*, void*));
+void k_coreconfigskeleton__itemdatetime_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdatetime.html#isEqual)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemDateTime*
+/// @param self const KCoreConfigSkeleton__ItemDateTime*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemdatetime_super_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemdatetime_super_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdatetime.html#property)
 ///
-/// @param self KCoreConfigSkeleton__ItemDateTime*
+/// @param self const KCoreConfigSkeleton__ItemDateTime*
 ///
-QVariant* k_coreconfigskeleton__itemdatetime_property(void* self);
+QVariant* k_coreconfigskeleton__itemdatetime_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdatetime.html#property)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemDateTime*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemDateTime*
+/// @param callback QVariant* func(const KCoreConfigSkeleton__ItemDateTime* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemdatetime_on_property(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itemdatetime_on_property(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdatetime.html#property)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemDateTime*
+/// @param self const KCoreConfigSkeleton__ItemDateTime*
 ///
-QVariant* k_coreconfigskeleton__itemdatetime_super_property(void* self);
+QVariant* k_coreconfigskeleton__itemdatetime_super_property(const void* self);
 
 /// Delete this object from C++ memory.
 ///
@@ -6131,7 +6060,7 @@ void k_coreconfigskeleton__itemstringlist_super_read_config(void* self, void* co
 /// @param self KCoreConfigSkeleton__ItemStringList*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemstringlist_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemstringlist_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstringlist.html#setProperty)
 ///
@@ -6140,7 +6069,7 @@ void k_coreconfigskeleton__itemstringlist_set_property(void* self, void* p);
 /// @param self KCoreConfigSkeleton__ItemStringList*
 /// @param callback void func(KCoreConfigSkeleton__ItemStringList* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemstringlist_on_set_property(void* self, void (*callback)(void*, void*));
+void k_coreconfigskeleton__itemstringlist_on_set_property(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstringlist.html#setProperty)
 ///
@@ -6149,57 +6078,57 @@ void k_coreconfigskeleton__itemstringlist_on_set_property(void* self, void (*cal
 /// @param self KCoreConfigSkeleton__ItemStringList*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemstringlist_super_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemstringlist_super_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstringlist.html#isEqual)
 ///
-/// @param self KCoreConfigSkeleton__ItemStringList*
+/// @param self const KCoreConfigSkeleton__ItemStringList*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemstringlist_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemstringlist_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstringlist.html#isEqual)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemStringList*
-/// @param callback bool func(KCoreConfigSkeleton__ItemStringList* self, QVariant* p)
+/// @param self const KCoreConfigSkeleton__ItemStringList*
+/// @param callback bool func(const KCoreConfigSkeleton__ItemStringList* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemstringlist_on_is_equal(void* self, bool (*callback)(void*, void*));
+void k_coreconfigskeleton__itemstringlist_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstringlist.html#isEqual)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemStringList*
+/// @param self const KCoreConfigSkeleton__ItemStringList*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemstringlist_super_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemstringlist_super_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstringlist.html#property)
 ///
-/// @param self KCoreConfigSkeleton__ItemStringList*
+/// @param self const KCoreConfigSkeleton__ItemStringList*
 ///
-QVariant* k_coreconfigskeleton__itemstringlist_property(void* self);
+QVariant* k_coreconfigskeleton__itemstringlist_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstringlist.html#property)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemStringList*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemStringList*
+/// @param callback QVariant* func(const KCoreConfigSkeleton__ItemStringList* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemstringlist_on_property(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itemstringlist_on_property(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstringlist.html#property)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemStringList*
+/// @param self const KCoreConfigSkeleton__ItemStringList*
 ///
-QVariant* k_coreconfigskeleton__itemstringlist_super_property(void* self);
+QVariant* k_coreconfigskeleton__itemstringlist_super_property(const void* self);
 
 /// Delete this object from C++ memory.
 ///
@@ -6287,7 +6216,7 @@ void k_coreconfigskeleton__itempathlist_super_write_config(void* self, void* con
 /// @param self KCoreConfigSkeleton__ItemPathList*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itempathlist_set_property(void* self, void* p);
+void k_coreconfigskeleton__itempathlist_set_property(void* self, const void* p);
 
 /// Inherited from KCoreConfigSkeleton::ItemStringList
 ///
@@ -6298,7 +6227,7 @@ void k_coreconfigskeleton__itempathlist_set_property(void* self, void* p);
 /// @param self KCoreConfigSkeleton__ItemPathList*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itempathlist_super_set_property(void* self, void* p);
+void k_coreconfigskeleton__itempathlist_super_set_property(void* self, const void* p);
 
 /// Inherited from KCoreConfigSkeleton::ItemStringList
 ///
@@ -6309,7 +6238,7 @@ void k_coreconfigskeleton__itempathlist_super_set_property(void* self, void* p);
 /// @param self KCoreConfigSkeleton__ItemPathList*
 /// @param callback void func(KCoreConfigSkeleton__ItemPathList* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itempathlist_on_set_property(void* self, void (*callback)(void*, void*));
+void k_coreconfigskeleton__itempathlist_on_set_property(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from KCoreConfigSkeleton::ItemStringList
 ///
@@ -6317,10 +6246,10 @@ void k_coreconfigskeleton__itempathlist_on_set_property(void* self, void (*callb
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton__ItemPathList*
+/// @param self const KCoreConfigSkeleton__ItemPathList*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itempathlist_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itempathlist_is_equal(const void* self, const void* p);
 
 /// Inherited from KCoreConfigSkeleton::ItemStringList
 ///
@@ -6328,10 +6257,10 @@ bool k_coreconfigskeleton__itempathlist_is_equal(void* self, void* p);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton__ItemPathList*
+/// @param self const KCoreConfigSkeleton__ItemPathList*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itempathlist_super_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itempathlist_super_is_equal(const void* self, const void* p);
 
 /// Inherited from KCoreConfigSkeleton::ItemStringList
 ///
@@ -6339,10 +6268,10 @@ bool k_coreconfigskeleton__itempathlist_super_is_equal(void* self, void* p);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton__ItemPathList*
+/// @param self const KCoreConfigSkeleton__ItemPathList*
 /// @param callback bool func(KCoreConfigSkeleton__ItemPathList* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itempathlist_on_is_equal(void* self, bool (*callback)(void*, void*));
+void k_coreconfigskeleton__itempathlist_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from KCoreConfigSkeleton::ItemStringList
 ///
@@ -6350,9 +6279,9 @@ void k_coreconfigskeleton__itempathlist_on_is_equal(void* self, bool (*callback)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton__ItemPathList*
+/// @param self const KCoreConfigSkeleton__ItemPathList*
 ///
-QVariant* k_coreconfigskeleton__itempathlist_property(void* self);
+QVariant* k_coreconfigskeleton__itempathlist_property(const void* self);
 
 /// Inherited from KCoreConfigSkeleton::ItemStringList
 ///
@@ -6360,9 +6289,9 @@ QVariant* k_coreconfigskeleton__itempathlist_property(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton__ItemPathList*
+/// @param self const KCoreConfigSkeleton__ItemPathList*
 ///
-QVariant* k_coreconfigskeleton__itempathlist_super_property(void* self);
+QVariant* k_coreconfigskeleton__itempathlist_super_property(const void* self);
 
 /// Inherited from KCoreConfigSkeleton::ItemStringList
 ///
@@ -6370,12 +6299,12 @@ QVariant* k_coreconfigskeleton__itempathlist_super_property(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCoreConfigSkeleton__ItemPathList*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemPathList*
+/// @param callback QVariant* func(KCoreConfigSkeleton__ItemPathList* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itempathlist_on_property(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itempathlist_on_property(const void* self, QVariant* (*callback)(const void*));
 
 /// Delete this object from C++ memory.
 ///
@@ -6459,7 +6388,7 @@ void k_coreconfigskeleton__itemurllist_super_write_config(void* self, void* conf
 /// @param self KCoreConfigSkeleton__ItemUrlList*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemurllist_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemurllist_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#setProperty)
 ///
@@ -6468,7 +6397,7 @@ void k_coreconfigskeleton__itemurllist_set_property(void* self, void* p);
 /// @param self KCoreConfigSkeleton__ItemUrlList*
 /// @param callback void func(KCoreConfigSkeleton__ItemUrlList* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemurllist_on_set_property(void* self, void (*callback)(void*, void*));
+void k_coreconfigskeleton__itemurllist_on_set_property(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#setProperty)
 ///
@@ -6477,57 +6406,57 @@ void k_coreconfigskeleton__itemurllist_on_set_property(void* self, void (*callba
 /// @param self KCoreConfigSkeleton__ItemUrlList*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemurllist_super_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemurllist_super_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#isEqual)
 ///
-/// @param self KCoreConfigSkeleton__ItemUrlList*
+/// @param self const KCoreConfigSkeleton__ItemUrlList*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemurllist_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemurllist_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#isEqual)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemUrlList*
-/// @param callback bool func(KCoreConfigSkeleton__ItemUrlList* self, QVariant* p)
+/// @param self const KCoreConfigSkeleton__ItemUrlList*
+/// @param callback bool func(const KCoreConfigSkeleton__ItemUrlList* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemurllist_on_is_equal(void* self, bool (*callback)(void*, void*));
+void k_coreconfigskeleton__itemurllist_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#isEqual)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemUrlList*
+/// @param self const KCoreConfigSkeleton__ItemUrlList*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemurllist_super_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemurllist_super_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#property)
 ///
-/// @param self KCoreConfigSkeleton__ItemUrlList*
+/// @param self const KCoreConfigSkeleton__ItemUrlList*
 ///
-QVariant* k_coreconfigskeleton__itemurllist_property(void* self);
+QVariant* k_coreconfigskeleton__itemurllist_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#property)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemUrlList*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemUrlList*
+/// @param callback QVariant* func(const KCoreConfigSkeleton__ItemUrlList* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemurllist_on_property(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itemurllist_on_property(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#property)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemUrlList*
+/// @param self const KCoreConfigSkeleton__ItemUrlList*
 ///
-QVariant* k_coreconfigskeleton__itemurllist_super_property(void* self);
+QVariant* k_coreconfigskeleton__itemurllist_super_property(const void* self);
 
 /// Delete this object from C++ memory.
 ///
@@ -6586,7 +6515,7 @@ void k_coreconfigskeleton__itemintlist_super_read_config(void* self, void* confi
 /// @param self KCoreConfigSkeleton__ItemIntList*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemintlist_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemintlist_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemintlist.html#setProperty)
 ///
@@ -6595,7 +6524,7 @@ void k_coreconfigskeleton__itemintlist_set_property(void* self, void* p);
 /// @param self KCoreConfigSkeleton__ItemIntList*
 /// @param callback void func(KCoreConfigSkeleton__ItemIntList* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemintlist_on_set_property(void* self, void (*callback)(void*, void*));
+void k_coreconfigskeleton__itemintlist_on_set_property(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemintlist.html#setProperty)
 ///
@@ -6604,57 +6533,57 @@ void k_coreconfigskeleton__itemintlist_on_set_property(void* self, void (*callba
 /// @param self KCoreConfigSkeleton__ItemIntList*
 /// @param p QVariant*
 ///
-void k_coreconfigskeleton__itemintlist_super_set_property(void* self, void* p);
+void k_coreconfigskeleton__itemintlist_super_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemintlist.html#isEqual)
 ///
-/// @param self KCoreConfigSkeleton__ItemIntList*
+/// @param self const KCoreConfigSkeleton__ItemIntList*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemintlist_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemintlist_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemintlist.html#isEqual)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemIntList*
-/// @param callback bool func(KCoreConfigSkeleton__ItemIntList* self, QVariant* p)
+/// @param self const KCoreConfigSkeleton__ItemIntList*
+/// @param callback bool func(const KCoreConfigSkeleton__ItemIntList* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemintlist_on_is_equal(void* self, bool (*callback)(void*, void*));
+void k_coreconfigskeleton__itemintlist_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemintlist.html#isEqual)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemIntList*
+/// @param self const KCoreConfigSkeleton__ItemIntList*
 /// @param p QVariant*
 ///
-bool k_coreconfigskeleton__itemintlist_super_is_equal(void* self, void* p);
+bool k_coreconfigskeleton__itemintlist_super_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemintlist.html#property)
 ///
-/// @param self KCoreConfigSkeleton__ItemIntList*
+/// @param self const KCoreConfigSkeleton__ItemIntList*
 ///
-QVariant* k_coreconfigskeleton__itemintlist_property(void* self);
+QVariant* k_coreconfigskeleton__itemintlist_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemintlist.html#property)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCoreConfigSkeleton__ItemIntList*
-/// @param callback QVariant* func()
+/// @param self const KCoreConfigSkeleton__ItemIntList*
+/// @param callback QVariant* func(const KCoreConfigSkeleton__ItemIntList* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemintlist_on_property(void* self, QVariant* (*callback)());
+void k_coreconfigskeleton__itemintlist_on_property(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemintlist.html#property)
 ///
 /// Base class method implementation
 ///
-/// @param self KCoreConfigSkeleton__ItemIntList*
+/// @param self const KCoreConfigSkeleton__ItemIntList*
 ///
-QVariant* k_coreconfigskeleton__itemintlist_super_property(void* self);
+QVariant* k_coreconfigskeleton__itemintlist_super_property(const void* self);
 
 /// Delete this object from C++ memory.
 ///

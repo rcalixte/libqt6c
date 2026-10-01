@@ -1,7 +1,7 @@
 #include "libqsgmaterialtype.hpp"
 #include "libqsgmaterialtype.h"
 
-QSGMaterialType* q_sgmaterialtype_new(void* other) {
+QSGMaterialType* q_sgmaterialtype_new(const void* other) {
     return QSGMaterialType_New((QSGMaterialType*)other);
 }
 

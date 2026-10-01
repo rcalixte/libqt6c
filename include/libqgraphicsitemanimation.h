@@ -46,26 +46,26 @@ QGraphicsItemAnimation* q_graphicsitemanimation_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 ///
-const QMetaObject* q_graphicsitemanimation_meta_object(void* self);
+const QMetaObject* q_graphicsitemanimation_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsItemAnimation*
-/// @param callback const QMetaObject* func()
+/// @param self const QGraphicsItemAnimation*
+/// @param callback const QMetaObject* func(const QGraphicsItemAnimation* self)
 ///
-void q_graphicsitemanimation_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_graphicsitemanimation_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 ///
-const QMetaObject* q_graphicsitemanimation_super_meta_object(void* self);
+const QMetaObject* q_graphicsitemanimation_super_meta_object(const void* self);
 
 /// @param self QGraphicsItemAnimation*
 /// @param param1 const char*
@@ -119,9 +119,9 @@ const char* q_graphicsitemanimation_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#item)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 ///
-QGraphicsItem* q_graphicsitemanimation_item(void* self);
+QGraphicsItem* q_graphicsitemanimation_item(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#setItem)
 ///
@@ -132,9 +132,9 @@ void q_graphicsitemanimation_set_item(void* self, void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#timeLine)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 ///
-QTimeLine* q_graphicsitemanimation_time_line(void* self);
+QTimeLine* q_graphicsitemanimation_time_line(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#setTimeLine)
 ///
@@ -145,18 +145,18 @@ void q_graphicsitemanimation_set_time_line(void* self, void* timeLine);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#posAt)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 /// @param step double
 ///
-QPointF* q_graphicsitemanimation_pos_at(void* self, double step);
+QPointF* q_graphicsitemanimation_pos_at(const void* self, double step);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#posList)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 ///
 /// @return libqt_list of pair_double_qpointf tuple of double and QPointF*
 ///
-libqt_list q_graphicsitemanimation_pos_list(void* self);
+libqt_list q_graphicsitemanimation_pos_list(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#setPosAt)
 ///
@@ -164,29 +164,29 @@ libqt_list q_graphicsitemanimation_pos_list(void* self);
 /// @param step double
 /// @param pos QPointF*
 ///
-void q_graphicsitemanimation_set_pos_at(void* self, double step, void* pos);
+void q_graphicsitemanimation_set_pos_at(void* self, double step, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#transformAt)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 /// @param step double
 ///
-QTransform* q_graphicsitemanimation_transform_at(void* self, double step);
+QTransform* q_graphicsitemanimation_transform_at(const void* self, double step);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#rotationAt)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 /// @param step double
 ///
-double q_graphicsitemanimation_rotation_at(void* self, double step);
+double q_graphicsitemanimation_rotation_at(const void* self, double step);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#rotationList)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 ///
 /// @return libqt_list of pair_double_double tuple of double and double
 ///
-libqt_list q_graphicsitemanimation_rotation_list(void* self);
+libqt_list q_graphicsitemanimation_rotation_list(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#setRotationAt)
 ///
@@ -198,25 +198,25 @@ void q_graphicsitemanimation_set_rotation_at(void* self, double step, double ang
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#xTranslationAt)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 /// @param step double
 ///
-double q_graphicsitemanimation_x_translation_at(void* self, double step);
+double q_graphicsitemanimation_x_translation_at(const void* self, double step);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#yTranslationAt)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 /// @param step double
 ///
-double q_graphicsitemanimation_y_translation_at(void* self, double step);
+double q_graphicsitemanimation_y_translation_at(const void* self, double step);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#translationList)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 ///
 /// @return libqt_list of pair_double_qpointf tuple of double and QPointF*
 ///
-libqt_list q_graphicsitemanimation_translation_list(void* self);
+libqt_list q_graphicsitemanimation_translation_list(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#setTranslationAt)
 ///
@@ -229,25 +229,25 @@ void q_graphicsitemanimation_set_translation_at(void* self, double step, double 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#verticalScaleAt)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 /// @param step double
 ///
-double q_graphicsitemanimation_vertical_scale_at(void* self, double step);
+double q_graphicsitemanimation_vertical_scale_at(const void* self, double step);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#horizontalScaleAt)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 /// @param step double
 ///
-double q_graphicsitemanimation_horizontal_scale_at(void* self, double step);
+double q_graphicsitemanimation_horizontal_scale_at(const void* self, double step);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#scaleList)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 ///
 /// @return libqt_list of pair_double_qpointf tuple of double and QPointF*
 ///
-libqt_list q_graphicsitemanimation_scale_list(void* self);
+libqt_list q_graphicsitemanimation_scale_list(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#setScaleAt)
 ///
@@ -260,25 +260,25 @@ void q_graphicsitemanimation_set_scale_at(void* self, double step, double sx, do
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#verticalShearAt)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 /// @param step double
 ///
-double q_graphicsitemanimation_vertical_shear_at(void* self, double step);
+double q_graphicsitemanimation_vertical_shear_at(const void* self, double step);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#horizontalShearAt)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 /// @param step double
 ///
-double q_graphicsitemanimation_horizontal_shear_at(void* self, double step);
+double q_graphicsitemanimation_horizontal_shear_at(const void* self, double step);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#shearList)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 ///
 /// @return libqt_list of pair_double_qpointf tuple of double and QPointF*
 ///
-libqt_list q_graphicsitemanimation_shear_list(void* self);
+libqt_list q_graphicsitemanimation_shear_list(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#setShearAt)
 ///
@@ -377,9 +377,9 @@ const char* q_graphicsitemanimation_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 ///
-const char* q_graphicsitemanimation_object_name(void* self);
+const char* q_graphicsitemanimation_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -394,33 +394,33 @@ void q_graphicsitemanimation_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 ///
-bool q_graphicsitemanimation_is_widget_type(void* self);
+bool q_graphicsitemanimation_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 ///
-bool q_graphicsitemanimation_is_window_type(void* self);
+bool q_graphicsitemanimation_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 ///
-bool q_graphicsitemanimation_is_quick_item_type(void* self);
+bool q_graphicsitemanimation_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 ///
-bool q_graphicsitemanimation_signals_blocked(void* self);
+bool q_graphicsitemanimation_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -435,9 +435,9 @@ bool q_graphicsitemanimation_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 ///
-QThread* q_graphicsitemanimation_thread(void* self);
+QThread* q_graphicsitemanimation_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -488,11 +488,11 @@ void q_graphicsitemanimation_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_graphicsitemanimation_children(void* self);
+libqt_list q_graphicsitemanimation_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -530,7 +530,7 @@ void q_graphicsitemanimation_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_graphicsitemanimation_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_graphicsitemanimation_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -541,18 +541,18 @@ QMetaObject__Connection* q_graphicsitemanimation_connect(void* sender, const cha
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_graphicsitemanimation_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_graphicsitemanimation_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_graphicsitemanimation_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_graphicsitemanimation_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -563,7 +563,7 @@ QMetaObject__Connection* q_graphicsitemanimation_connect3(void* self, void* send
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_graphicsitemanimation_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_graphicsitemanimation_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -574,24 +574,24 @@ bool q_graphicsitemanimation_disconnect(void* sender, const char* signal, void* 
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_graphicsitemanimation_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_graphicsitemanimation_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 ///
-bool q_graphicsitemanimation_disconnect3(void* self);
+bool q_graphicsitemanimation_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 /// @param receiver QObject*
 ///
-bool q_graphicsitemanimation_disconnect4(void* self, void* receiver);
+bool q_graphicsitemanimation_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -599,23 +599,23 @@ bool q_graphicsitemanimation_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_graphicsitemanimation_disconnect5(void* param1);
+bool q_graphicsitemanimation_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 ///
-void q_graphicsitemanimation_dump_object_tree(void* self);
+void q_graphicsitemanimation_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 ///
-void q_graphicsitemanimation_dump_object_info(void* self);
+void q_graphicsitemanimation_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -625,16 +625,16 @@ void q_graphicsitemanimation_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_graphicsitemanimation_set_property(void* self, const char* name, void* value);
+bool q_graphicsitemanimation_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 /// @param name const char*
 ///
-QVariant* q_graphicsitemanimation_property(void* self, const char* name);
+QVariant* q_graphicsitemanimation_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -642,9 +642,9 @@ QVariant* q_graphicsitemanimation_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 ///
-const char** q_graphicsitemanimation_dynamic_property_names(void* self);
+const char** q_graphicsitemanimation_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -658,9 +658,9 @@ QBindingStorage* q_graphicsitemanimation_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 ///
-const QBindingStorage* q_graphicsitemanimation_binding_storage2(void* self);
+const QBindingStorage* q_graphicsitemanimation_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -683,18 +683,18 @@ void q_graphicsitemanimation_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 ///
-QObject* q_graphicsitemanimation_parent(void* self);
+QObject* q_graphicsitemanimation_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 /// @param classname const char*
 ///
-bool q_graphicsitemanimation_inherits(void* self, const char* classname);
+bool q_graphicsitemanimation_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -734,7 +734,7 @@ int32_t q_graphicsitemanimation_start_timer23(void* self, int64_t time, int32_t 
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_graphicsitemanimation_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_graphicsitemanimation_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -746,59 +746,59 @@ QMetaObject__Connection* q_graphicsitemanimation_connect5(void* sender, const ch
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_graphicsitemanimation_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_graphicsitemanimation_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_graphicsitemanimation_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_graphicsitemanimation_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 /// @param signal const char*
 ///
-bool q_graphicsitemanimation_disconnect1(void* self, const char* signal);
+bool q_graphicsitemanimation_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsItemAnimation*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_graphicsitemanimation_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_graphicsitemanimation_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_graphicsitemanimation_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_graphicsitemanimation_disconnect23(void* self, void* receiver, const char* member);
+bool q_graphicsitemanimation_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QGraphicsItemAnimation*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_graphicsitemanimation_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -994,7 +994,7 @@ void q_graphicsitemanimation_on_custom_event(void* self, void (*callback)(void*,
 /// @param self QGraphicsItemAnimation*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsitemanimation_connect_notify(void* self, void* signal);
+void q_graphicsitemanimation_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1005,7 +1005,7 @@ void q_graphicsitemanimation_connect_notify(void* self, void* signal);
 /// @param self QGraphicsItemAnimation*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsitemanimation_super_connect_notify(void* self, void* signal);
+void q_graphicsitemanimation_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1016,7 +1016,7 @@ void q_graphicsitemanimation_super_connect_notify(void* self, void* signal);
 /// @param self QGraphicsItemAnimation*
 /// @param callback void func(QGraphicsItemAnimation* self, QMetaMethod* signal)
 ///
-void q_graphicsitemanimation_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_graphicsitemanimation_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1027,7 +1027,7 @@ void q_graphicsitemanimation_on_connect_notify(void* self, void (*callback)(void
 /// @param self QGraphicsItemAnimation*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsitemanimation_disconnect_notify(void* self, void* signal);
+void q_graphicsitemanimation_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1038,7 +1038,7 @@ void q_graphicsitemanimation_disconnect_notify(void* self, void* signal);
 /// @param self QGraphicsItemAnimation*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsitemanimation_super_disconnect_notify(void* self, void* signal);
+void q_graphicsitemanimation_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1049,7 +1049,7 @@ void q_graphicsitemanimation_super_disconnect_notify(void* self, void* signal);
 /// @param self QGraphicsItemAnimation*
 /// @param callback void func(QGraphicsItemAnimation* self, QMetaMethod* signal)
 ///
-void q_graphicsitemanimation_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_graphicsitemanimation_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1057,9 +1057,9 @@ void q_graphicsitemanimation_on_disconnect_notify(void* self, void (*callback)(v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 ///
-QObject* q_graphicsitemanimation_sender(void* self);
+QObject* q_graphicsitemanimation_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1067,9 +1067,9 @@ QObject* q_graphicsitemanimation_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 ///
-QObject* q_graphicsitemanimation_super_sender(void* self);
+QObject* q_graphicsitemanimation_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1077,10 +1077,10 @@ QObject* q_graphicsitemanimation_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsItemAnimation*
-/// @param callback QObject* func()
+/// @param self const QGraphicsItemAnimation*
+/// @param callback QObject* func(QGraphicsItemAnimation* self)
 ///
-void q_graphicsitemanimation_on_sender(void* self, QObject* (*callback)());
+void q_graphicsitemanimation_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1088,9 +1088,9 @@ void q_graphicsitemanimation_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 ///
-int32_t q_graphicsitemanimation_sender_signal_index(void* self);
+int32_t q_graphicsitemanimation_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1098,9 +1098,9 @@ int32_t q_graphicsitemanimation_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 ///
-int32_t q_graphicsitemanimation_super_sender_signal_index(void* self);
+int32_t q_graphicsitemanimation_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1108,10 +1108,10 @@ int32_t q_graphicsitemanimation_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsItemAnimation*
-/// @param callback int32_t func()
+/// @param self const QGraphicsItemAnimation*
+/// @param callback int32_t func(QGraphicsItemAnimation* self)
 ///
-void q_graphicsitemanimation_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_graphicsitemanimation_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1119,10 +1119,10 @@ void q_graphicsitemanimation_on_sender_signal_index(void* self, int32_t (*callba
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 /// @param signal const char*
 ///
-int32_t q_graphicsitemanimation_receivers(void* self, const char* signal);
+int32_t q_graphicsitemanimation_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1130,10 +1130,10 @@ int32_t q_graphicsitemanimation_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 /// @param signal const char*
 ///
-int32_t q_graphicsitemanimation_super_receivers(void* self, const char* signal);
+int32_t q_graphicsitemanimation_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1141,10 +1141,10 @@ int32_t q_graphicsitemanimation_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 /// @param callback int32_t func(QGraphicsItemAnimation* self, const char* signal)
 ///
-void q_graphicsitemanimation_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_graphicsitemanimation_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1152,10 +1152,10 @@ void q_graphicsitemanimation_on_receivers(void* self, int32_t (*callback)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 /// @param signal QMetaMethod*
 ///
-bool q_graphicsitemanimation_is_signal_connected(void* self, void* signal);
+bool q_graphicsitemanimation_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1163,10 +1163,10 @@ bool q_graphicsitemanimation_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 /// @param signal QMetaMethod*
 ///
-bool q_graphicsitemanimation_super_is_signal_connected(void* self, void* signal);
+bool q_graphicsitemanimation_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1174,10 +1174,10 @@ bool q_graphicsitemanimation_super_is_signal_connected(void* self, void* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsItemAnimation*
+/// @param self const QGraphicsItemAnimation*
 /// @param callback bool func(QGraphicsItemAnimation* self, QMetaMethod* signal)
 ///
-void q_graphicsitemanimation_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_graphicsitemanimation_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

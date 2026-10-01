@@ -25,7 +25,7 @@
 /// @param encoding int
 /// @param compressedSize int64_t
 ///
-KZipFileEntry* k_zipfileentry_new(void* zip, const char* name, int access, void* date, const char* user, const char* group, const char* symlink, const char* path, int64_t start, int64_t uncompressedSize, int encoding, int64_t compressedSize);
+KZipFileEntry* k_zipfileentry_new(void* zip, const char* name, int access, const void* date, const char* user, const char* group, const char* symlink, const char* path, int64_t start, int64_t uncompressedSize, int encoding, int64_t compressedSize);
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html)
 
@@ -33,19 +33,19 @@ KZipFileEntry* k_zipfileentry_new(void* zip, const char* name, int access, void*
 ///
 /// @param param1 KZipFileEntry*
 ///
-KZipFileEntry* k_zipfileentry_new2(void* param1);
+KZipFileEntry* k_zipfileentry_new2(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#encoding)
 ///
-/// @param self KZipFileEntry*
+/// @param self const KZipFileEntry*
 ///
-int32_t k_zipfileentry_encoding(void* self);
+int32_t k_zipfileentry_encoding(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#compressedSize)
 ///
-/// @param self KZipFileEntry*
+/// @param self const KZipFileEntry*
 ///
-int64_t k_zipfileentry_compressed_size(void* self);
+int64_t k_zipfileentry_compressed_size(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#setCompressedSize)
 ///
@@ -63,15 +63,15 @@ void k_zipfileentry_set_header_start(void* self, int64_t headerstart);
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#headerStart)
 ///
-/// @param self KZipFileEntry*
+/// @param self const KZipFileEntry*
 ///
-int64_t k_zipfileentry_header_start(void* self);
+int64_t k_zipfileentry_header_start(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#crc32)
 ///
-/// @param self KZipFileEntry*
+/// @param self const KZipFileEntry*
 ///
-uintptr_t k_zipfileentry_crc32(void* self);
+uintptr_t k_zipfileentry_crc32(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#setCRC32)
 ///
@@ -84,73 +84,73 @@ void k_zipfileentry_set_c_r_c32(void* self, uintptr_t crc32);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KZipFileEntry*
+/// @param self const KZipFileEntry*
 ///
-const char* k_zipfileentry_path(void* self);
+const char* k_zipfileentry_path(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#data)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KZipFileEntry*
+/// @param self const KZipFileEntry*
 ///
-char* k_zipfileentry_data(void* self);
+char* k_zipfileentry_data(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#data)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KZipFileEntry*
-/// @param callback libqt_string func()
+/// @param self const KZipFileEntry*
+/// @param callback libqt_string func(const KZipFileEntry* self)
 ///
-void k_zipfileentry_on_data(void* self, libqt_string (*callback)());
+void k_zipfileentry_on_data(const void* self, libqt_string (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#data)
 ///
 /// Base class method implementation
 ///
-/// @param self KZipFileEntry*
+/// @param self const KZipFileEntry*
 ///
-char* k_zipfileentry_super_data(void* self);
+char* k_zipfileentry_super_data(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#createDevice)
 ///
-/// @param self KZipFileEntry*
+/// @param self const KZipFileEntry*
 ///
-QIODevice* k_zipfileentry_create_device(void* self);
+QIODevice* k_zipfileentry_create_device(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#createDevice)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KZipFileEntry*
-/// @param callback QIODevice* func()
+/// @param self const KZipFileEntry*
+/// @param callback QIODevice* func(const KZipFileEntry* self)
 ///
-void k_zipfileentry_on_create_device(void* self, QIODevice* (*callback)());
+void k_zipfileentry_on_create_device(const void* self, QIODevice* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#createDevice)
 ///
 /// Base class method implementation
 ///
-/// @param self KZipFileEntry*
+/// @param self const KZipFileEntry*
 ///
-QIODevice* k_zipfileentry_super_create_device(void* self);
+QIODevice* k_zipfileentry_super_create_device(const void* self);
 
 /// Inherited from KArchiveFile
 ///
 /// [Upstream resources](https://api.kde.org/karchivefile.html#position)
 ///
-/// @param self KZipFileEntry*
+/// @param self const KZipFileEntry*
 ///
-int64_t k_zipfileentry_position(void* self);
+int64_t k_zipfileentry_position(const void* self);
 
 /// Inherited from KArchiveFile
 ///
 /// [Upstream resources](https://api.kde.org/karchivefile.html#size)
 ///
-/// @param self KZipFileEntry*
+/// @param self const KZipFileEntry*
 ///
-int64_t k_zipfileentry_size(void* self);
+int64_t k_zipfileentry_size(const void* self);
 
 /// Inherited from KArchiveFile
 ///
@@ -165,18 +165,18 @@ void k_zipfileentry_set_size(void* self, int64_t s);
 ///
 /// [Upstream resources](https://api.kde.org/karchivefile.html#copyTo)
 ///
-/// @param self KZipFileEntry*
+/// @param self const KZipFileEntry*
 /// @param dest const char*
 ///
-bool k_zipfileentry_copy_to(void* self, const char* dest);
+bool k_zipfileentry_copy_to(const void* self, const char* dest);
 
 /// Inherited from KArchiveEntry
 ///
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#date)
 ///
-/// @param self KZipFileEntry*
+/// @param self const KZipFileEntry*
 ///
-QDateTime* k_zipfileentry_date(void* self);
+QDateTime* k_zipfileentry_date(const void* self);
 
 /// Inherited from KArchiveEntry
 ///
@@ -184,17 +184,17 @@ QDateTime* k_zipfileentry_date(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KZipFileEntry*
+/// @param self const KZipFileEntry*
 ///
-const char* k_zipfileentry_name(void* self);
+const char* k_zipfileentry_name(const void* self);
 
 /// Inherited from KArchiveEntry
 ///
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#permissions)
 ///
-/// @param self KZipFileEntry*
+/// @param self const KZipFileEntry*
 ///
-mode_t k_zipfileentry_permissions(void* self);
+mode_t k_zipfileentry_permissions(const void* self);
 
 /// Inherited from KArchiveEntry
 ///
@@ -202,9 +202,9 @@ mode_t k_zipfileentry_permissions(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KZipFileEntry*
+/// @param self const KZipFileEntry*
 ///
-const char* k_zipfileentry_user(void* self);
+const char* k_zipfileentry_user(const void* self);
 
 /// Inherited from KArchiveEntry
 ///
@@ -212,9 +212,9 @@ const char* k_zipfileentry_user(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KZipFileEntry*
+/// @param self const KZipFileEntry*
 ///
-const char* k_zipfileentry_group(void* self);
+const char* k_zipfileentry_group(const void* self);
 
 /// Inherited from KArchiveEntry
 ///
@@ -222,9 +222,9 @@ const char* k_zipfileentry_group(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KZipFileEntry*
+/// @param self const KZipFileEntry*
 ///
-const char* k_zipfileentry_sym_link_target(void* self);
+const char* k_zipfileentry_sym_link_target(const void* self);
 
 /// Inherited from KArchiveFile
 ///
@@ -232,9 +232,9 @@ const char* k_zipfileentry_sym_link_target(void* self);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KZipFileEntry*
+/// @param self const KZipFileEntry*
 ///
-bool k_zipfileentry_is_file(void* self);
+bool k_zipfileentry_is_file(const void* self);
 
 /// Inherited from KArchiveFile
 ///
@@ -242,9 +242,9 @@ bool k_zipfileentry_is_file(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KZipFileEntry*
+/// @param self const KZipFileEntry*
 ///
-bool k_zipfileentry_super_is_file(void* self);
+bool k_zipfileentry_super_is_file(const void* self);
 
 /// Inherited from KArchiveFile
 ///
@@ -252,10 +252,10 @@ bool k_zipfileentry_super_is_file(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KZipFileEntry*
-/// @param callback bool func()
+/// @param self const KZipFileEntry*
+/// @param callback bool func(KZipFileEntry* self)
 ///
-void k_zipfileentry_on_is_file(void* self, bool (*callback)());
+void k_zipfileentry_on_is_file(const void* self, bool (*callback)(const void*));
 
 /// Inherited from KArchiveFile
 ///
@@ -298,9 +298,9 @@ void k_zipfileentry_on_virtual_hook(void* self, void (*callback)(void*, int, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KZipFileEntry*
+/// @param self const KZipFileEntry*
 ///
-bool k_zipfileentry_is_directory(void* self);
+bool k_zipfileentry_is_directory(const void* self);
 
 /// Inherited from KArchiveEntry
 ///
@@ -308,9 +308,9 @@ bool k_zipfileentry_is_directory(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KZipFileEntry*
+/// @param self const KZipFileEntry*
 ///
-bool k_zipfileentry_super_is_directory(void* self);
+bool k_zipfileentry_super_is_directory(const void* self);
 
 /// Inherited from KArchiveEntry
 ///
@@ -318,10 +318,10 @@ bool k_zipfileentry_super_is_directory(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KZipFileEntry*
-/// @param callback bool func()
+/// @param self const KZipFileEntry*
+/// @param callback bool func(KZipFileEntry* self)
 ///
-void k_zipfileentry_on_is_directory(void* self, bool (*callback)());
+void k_zipfileentry_on_is_directory(const void* self, bool (*callback)(const void*));
 
 /// Inherited from KArchiveEntry
 ///
@@ -329,9 +329,9 @@ void k_zipfileentry_on_is_directory(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KZipFileEntry*
+/// @param self const KZipFileEntry*
 ///
-KArchive* k_zipfileentry_archive(void* self);
+KArchive* k_zipfileentry_archive(const void* self);
 
 /// Inherited from KArchiveEntry
 ///
@@ -339,9 +339,9 @@ KArchive* k_zipfileentry_archive(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KZipFileEntry*
+/// @param self const KZipFileEntry*
 ///
-KArchive* k_zipfileentry_super_archive(void* self);
+KArchive* k_zipfileentry_super_archive(const void* self);
 
 /// Inherited from KArchiveEntry
 ///
@@ -349,10 +349,10 @@ KArchive* k_zipfileentry_super_archive(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KZipFileEntry*
-/// @param callback KArchive* func()
+/// @param self const KZipFileEntry*
+/// @param callback KArchive* func(KZipFileEntry* self)
 ///
-void k_zipfileentry_on_archive(void* self, KArchive* (*callback)());
+void k_zipfileentry_on_archive(const void* self, KArchive* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#dtor.KZipFileEntry)
 ///

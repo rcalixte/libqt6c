@@ -20,7 +20,7 @@ QPlaceResult* q_placeresult_new();
 ///
 /// @param other QPlaceSearchResult*
 ///
-QPlaceResult* q_placeresult_new2(void* other);
+QPlaceResult* q_placeresult_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceresult.html)
 
@@ -28,13 +28,13 @@ QPlaceResult* q_placeresult_new2(void* other);
 ///
 /// @param param1 QPlaceResult*
 ///
-QPlaceResult* q_placeresult_new3(void* param1);
+QPlaceResult* q_placeresult_new3(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceresult.html#distance)
 ///
-/// @param self QPlaceResult*
+/// @param self const QPlaceResult*
 ///
-double q_placeresult_distance(void* self);
+double q_placeresult_distance(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceresult.html#setDistance)
 ///
@@ -45,22 +45,22 @@ void q_placeresult_set_distance(void* self, double distance);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceresult.html#place)
 ///
-/// @param self QPlaceResult*
+/// @param self const QPlaceResult*
 ///
-QPlace* q_placeresult_place(void* self);
+QPlace* q_placeresult_place(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceresult.html#setPlace)
 ///
 /// @param self QPlaceResult*
 /// @param place QPlace*
 ///
-void q_placeresult_set_place(void* self, void* place);
+void q_placeresult_set_place(void* self, const void* place);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceresult.html#isSponsored)
 ///
-/// @param self QPlaceResult*
+/// @param self const QPlaceResult*
 ///
-bool q_placeresult_is_sponsored(void* self);
+bool q_placeresult_is_sponsored(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceresult.html#setSponsored)
 ///
@@ -74,35 +74,35 @@ void q_placeresult_set_sponsored(void* self, bool sponsored);
 /// @param self QPlaceResult*
 /// @param param1 QPlaceResult*
 ///
-void q_placeresult_operator_assign(void* self, void* param1);
+void q_placeresult_operator_assign(void* self, const void* param1);
 
 /// Inherited from QPlaceSearchResult
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchresult.html#operator-eq-eq)
 ///
-/// @param self QPlaceResult*
+/// @param self const QPlaceResult*
 /// @param other QPlaceSearchResult*
 ///
-bool q_placeresult_operator_equal(void* self, void* other);
+bool q_placeresult_operator_equal(const void* self, const void* other);
 
 /// Inherited from QPlaceSearchResult
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchresult.html#operator-not-eq)
 ///
-/// @param self QPlaceResult*
+/// @param self const QPlaceResult*
 /// @param other QPlaceSearchResult*
 ///
-bool q_placeresult_operator_not_equal(void* self, void* other);
+bool q_placeresult_operator_not_equal(const void* self, const void* other);
 
 /// Inherited from QPlaceSearchResult
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchresult.html#type)
 ///
-/// @param self QPlaceResult*
+/// @param self const QPlaceResult*
 ///
 /// @return enum QPlaceSearchResult__SearchResultType
 ///
-int32_t q_placeresult_type(void* self);
+int32_t q_placeresult_type(const void* self);
 
 /// Inherited from QPlaceSearchResult
 ///
@@ -110,9 +110,9 @@ int32_t q_placeresult_type(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPlaceResult*
+/// @param self const QPlaceResult*
 ///
-const char* q_placeresult_title(void* self);
+const char* q_placeresult_title(const void* self);
 
 /// Inherited from QPlaceSearchResult
 ///
@@ -127,9 +127,9 @@ void q_placeresult_set_title(void* self, const char* title);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchresult.html#icon)
 ///
-/// @param self QPlaceResult*
+/// @param self const QPlaceResult*
 ///
-QPlaceIcon* q_placeresult_icon(void* self);
+QPlaceIcon* q_placeresult_icon(const void* self);
 
 /// Inherited from QPlaceSearchResult
 ///
@@ -138,7 +138,7 @@ QPlaceIcon* q_placeresult_icon(void* self);
 /// @param self QPlaceResult*
 /// @param icon QPlaceIcon*
 ///
-void q_placeresult_set_icon(void* self, void* icon);
+void q_placeresult_set_icon(void* self, const void* icon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceresult.html#dtor.QPlaceResult)
 ///

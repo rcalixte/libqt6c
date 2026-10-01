@@ -36,20 +36,20 @@ QBluetoothAddress* q_bluetoothaddress_new3(const char* address);
 ///
 /// @param other QBluetoothAddress*
 ///
-QBluetoothAddress* q_bluetoothaddress_new4(void* other);
+QBluetoothAddress* q_bluetoothaddress_new4(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothaddress.html#operator-eq)
 ///
 /// @param self QBluetoothAddress*
 /// @param other QBluetoothAddress*
 ///
-void q_bluetoothaddress_operator_assign(void* self, void* other);
+void q_bluetoothaddress_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothaddress.html#isNull)
 ///
-/// @param self QBluetoothAddress*
+/// @param self const QBluetoothAddress*
 ///
-bool q_bluetoothaddress_is_null(void* self);
+bool q_bluetoothaddress_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothaddress.html#clear)
 ///
@@ -59,17 +59,17 @@ void q_bluetoothaddress_clear(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothaddress.html#toUInt64)
 ///
-/// @param self QBluetoothAddress*
+/// @param self const QBluetoothAddress*
 ///
-uint64_t q_bluetoothaddress_to_u_int64(void* self);
+uint64_t q_bluetoothaddress_to_u_int64(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothaddress.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QBluetoothAddress*
+/// @param self const QBluetoothAddress*
 ///
-const char* q_bluetoothaddress_to_string(void* self);
+const char* q_bluetoothaddress_to_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothaddress.html#dtor.QBluetoothAddress)
 ///

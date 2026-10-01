@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QOpenGLContextGroup*
+/// @param self const QOpenGLContextGroup*
 ///
-const QMetaObject* q_openglcontextgroup_meta_object(void* self);
+const QMetaObject* q_openglcontextgroup_meta_object(const void* self);
 
 /// @param self QOpenGLContextGroup*
 /// @param param1 const char*
@@ -38,11 +38,11 @@ const char* q_openglcontextgroup_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontextgroup.html#shares)
 ///
-/// @param self QOpenGLContextGroup*
+/// @param self const QOpenGLContextGroup*
 ///
 /// @return libqt_list of QOpenGLContext*
 ///
-libqt_list q_openglcontextgroup_shares(void* self);
+libqt_list q_openglcontextgroup_shares(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontextgroup.html#currentContextGroup)
 ///
@@ -92,9 +92,9 @@ bool q_openglcontextgroup_event_filter(void* self, void* watched, void* event);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QOpenGLContextGroup*
+/// @param self const QOpenGLContextGroup*
 ///
-const char* q_openglcontextgroup_object_name(void* self);
+const char* q_openglcontextgroup_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -109,33 +109,33 @@ void q_openglcontextgroup_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QOpenGLContextGroup*
+/// @param self const QOpenGLContextGroup*
 ///
-bool q_openglcontextgroup_is_widget_type(void* self);
+bool q_openglcontextgroup_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QOpenGLContextGroup*
+/// @param self const QOpenGLContextGroup*
 ///
-bool q_openglcontextgroup_is_window_type(void* self);
+bool q_openglcontextgroup_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QOpenGLContextGroup*
+/// @param self const QOpenGLContextGroup*
 ///
-bool q_openglcontextgroup_is_quick_item_type(void* self);
+bool q_openglcontextgroup_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QOpenGLContextGroup*
+/// @param self const QOpenGLContextGroup*
 ///
-bool q_openglcontextgroup_signals_blocked(void* self);
+bool q_openglcontextgroup_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -150,9 +150,9 @@ bool q_openglcontextgroup_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QOpenGLContextGroup*
+/// @param self const QOpenGLContextGroup*
 ///
-QThread* q_openglcontextgroup_thread(void* self);
+QThread* q_openglcontextgroup_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -203,11 +203,11 @@ void q_openglcontextgroup_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QOpenGLContextGroup*
+/// @param self const QOpenGLContextGroup*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_openglcontextgroup_children(void* self);
+libqt_list q_openglcontextgroup_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -245,7 +245,7 @@ void q_openglcontextgroup_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_openglcontextgroup_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_openglcontextgroup_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -256,18 +256,18 @@ QMetaObject__Connection* q_openglcontextgroup_connect(void* sender, const char* 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_openglcontextgroup_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_openglcontextgroup_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QOpenGLContextGroup*
+/// @param self const QOpenGLContextGroup*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_openglcontextgroup_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_openglcontextgroup_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -278,7 +278,7 @@ QMetaObject__Connection* q_openglcontextgroup_connect3(void* self, void* sender,
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_openglcontextgroup_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_openglcontextgroup_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -289,24 +289,24 @@ bool q_openglcontextgroup_disconnect(void* sender, const char* signal, void* rec
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_openglcontextgroup_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_openglcontextgroup_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLContextGroup*
+/// @param self const QOpenGLContextGroup*
 ///
-bool q_openglcontextgroup_disconnect3(void* self);
+bool q_openglcontextgroup_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLContextGroup*
+/// @param self const QOpenGLContextGroup*
 /// @param receiver QObject*
 ///
-bool q_openglcontextgroup_disconnect4(void* self, void* receiver);
+bool q_openglcontextgroup_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -314,23 +314,23 @@ bool q_openglcontextgroup_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_openglcontextgroup_disconnect5(void* param1);
+bool q_openglcontextgroup_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QOpenGLContextGroup*
+/// @param self const QOpenGLContextGroup*
 ///
-void q_openglcontextgroup_dump_object_tree(void* self);
+void q_openglcontextgroup_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QOpenGLContextGroup*
+/// @param self const QOpenGLContextGroup*
 ///
-void q_openglcontextgroup_dump_object_info(void* self);
+void q_openglcontextgroup_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -340,16 +340,16 @@ void q_openglcontextgroup_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_openglcontextgroup_set_property(void* self, const char* name, void* value);
+bool q_openglcontextgroup_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QOpenGLContextGroup*
+/// @param self const QOpenGLContextGroup*
 /// @param name const char*
 ///
-QVariant* q_openglcontextgroup_property(void* self, const char* name);
+QVariant* q_openglcontextgroup_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -357,9 +357,9 @@ QVariant* q_openglcontextgroup_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QOpenGLContextGroup*
+/// @param self const QOpenGLContextGroup*
 ///
-const char** q_openglcontextgroup_dynamic_property_names(void* self);
+const char** q_openglcontextgroup_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -373,9 +373,9 @@ QBindingStorage* q_openglcontextgroup_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QOpenGLContextGroup*
+/// @param self const QOpenGLContextGroup*
 ///
-const QBindingStorage* q_openglcontextgroup_binding_storage2(void* self);
+const QBindingStorage* q_openglcontextgroup_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -398,18 +398,18 @@ void q_openglcontextgroup_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QOpenGLContextGroup*
+/// @param self const QOpenGLContextGroup*
 ///
-QObject* q_openglcontextgroup_parent(void* self);
+QObject* q_openglcontextgroup_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QOpenGLContextGroup*
+/// @param self const QOpenGLContextGroup*
 /// @param classname const char*
 ///
-bool q_openglcontextgroup_inherits(void* self, const char* classname);
+bool q_openglcontextgroup_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -449,7 +449,7 @@ int32_t q_openglcontextgroup_start_timer23(void* self, int64_t time, int32_t tim
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_openglcontextgroup_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_openglcontextgroup_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -461,59 +461,59 @@ QMetaObject__Connection* q_openglcontextgroup_connect5(void* sender, const char*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_openglcontextgroup_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_openglcontextgroup_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QOpenGLContextGroup*
+/// @param self const QOpenGLContextGroup*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_openglcontextgroup_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_openglcontextgroup_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLContextGroup*
+/// @param self const QOpenGLContextGroup*
 /// @param signal const char*
 ///
-bool q_openglcontextgroup_disconnect1(void* self, const char* signal);
+bool q_openglcontextgroup_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLContextGroup*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_openglcontextgroup_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QOpenGLContextGroup*
+/// @param self const QOpenGLContextGroup*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_openglcontextgroup_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_openglcontextgroup_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLContextGroup*
+/// @param self const QOpenGLContextGroup*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_openglcontextgroup_disconnect23(void* self, void* receiver, const char* member);
+bool q_openglcontextgroup_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QOpenGLContextGroup*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_openglcontextgroup_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -568,26 +568,26 @@ QOpenGLContext* q_openglcontext_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 ///
-const QMetaObject* q_openglcontext_meta_object(void* self);
+const QMetaObject* q_openglcontext_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QOpenGLContext*
-/// @param callback const QMetaObject* func()
+/// @param self const QOpenGLContext*
+/// @param callback const QMetaObject* func(const QOpenGLContext* self)
 ///
-void q_openglcontext_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_openglcontext_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 ///
-const QMetaObject* q_openglcontext_super_meta_object(void* self);
+const QMetaObject* q_openglcontext_super_meta_object(const void* self);
 
 /// @param self QOpenGLContext*
 /// @param param1 const char*
@@ -644,7 +644,7 @@ const char* q_openglcontext_tr(const char* s);
 /// @param self QOpenGLContext*
 /// @param format QSurfaceFormat*
 ///
-void q_openglcontext_set_format(void* self, void* format);
+void q_openglcontext_set_format(void* self, const void* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontext.html#setShareContext)
 ///
@@ -668,39 +668,39 @@ bool q_openglcontext_create(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontext.html#isValid)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 ///
-bool q_openglcontext_is_valid(void* self);
+bool q_openglcontext_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontext.html#format)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 ///
-QSurfaceFormat* q_openglcontext_format(void* self);
+QSurfaceFormat* q_openglcontext_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontext.html#shareContext)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 ///
-QOpenGLContext* q_openglcontext_share_context(void* self);
+QOpenGLContext* q_openglcontext_share_context(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontext.html#shareGroup)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 ///
-QOpenGLContextGroup* q_openglcontext_share_group(void* self);
+QOpenGLContextGroup* q_openglcontext_share_group(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontext.html#screen)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 ///
-QScreen* q_openglcontext_screen(void* self);
+QScreen* q_openglcontext_screen(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontext.html#defaultFramebufferObject)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 ///
-uint32_t q_openglcontext_default_framebuffer_object(void* self);
+uint32_t q_openglcontext_default_framebuffer_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontext.html#makeCurrent)
 ///
@@ -724,27 +724,27 @@ void q_openglcontext_swap_buffers(void* self, void* surface);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontext.html#getProcAddress)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 /// @param procName char*
 ///
 /// @return void (*QFunctionPointer)()
 ///
-QFunctionPointer q_openglcontext_get_proc_address(void* self, char* procName);
+QFunctionPointer q_openglcontext_get_proc_address(const void* self, char* procName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontext.html#getProcAddress)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 /// @param procName const char*
 ///
 /// @return void (*QFunctionPointer)()
 ///
-QFunctionPointer q_openglcontext_get_proc_address2(void* self, const char* procName);
+QFunctionPointer q_openglcontext_get_proc_address2(const void* self, const char* procName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontext.html#surface)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 ///
-QSurface* q_openglcontext_surface(void* self);
+QSurface* q_openglcontext_surface(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontext.html#currentContext)
 ///
@@ -759,30 +759,30 @@ bool q_openglcontext_are_sharing(void* first, void* second);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontext.html#functions)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 ///
-QOpenGLFunctions* q_openglcontext_functions(void* self);
+QOpenGLFunctions* q_openglcontext_functions(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontext.html#extraFunctions)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 ///
-QOpenGLExtraFunctions* q_openglcontext_extra_functions(void* self);
+QOpenGLExtraFunctions* q_openglcontext_extra_functions(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontext.html#extensions)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 ///
 /// @return libqt_list set of char*
 ///
-libqt_list q_openglcontext_extensions(void* self);
+libqt_list q_openglcontext_extensions(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontext.html#hasExtension)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 /// @param extension char*
 ///
-bool q_openglcontext_has_extension(void* self, char* extension);
+bool q_openglcontext_has_extension(const void* self, char* extension);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontext.html#openGLModuleType)
 ///
@@ -792,9 +792,9 @@ int32_t q_openglcontext_open_g_l_module_type();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontext.html#isOpenGLES)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 ///
-bool q_openglcontext_is_open_g_l_e_s(void* self);
+bool q_openglcontext_is_open_g_l_e_s(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontext.html#supportsThreadedOpenGL)
 ///
@@ -806,30 +806,11 @@ QOpenGLContext* q_openglcontext_global_share_context();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontext.html#resolveInterface)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 /// @param name const char*
 /// @param revision int
 ///
-void* q_openglcontext_resolve_interface(void* self, const char* name, int revision);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontext.html#resolveInterface)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QOpenGLContext*
-/// @param callback void* func(QOpenGLContext* self, const char* name, int revision)
-///
-void q_openglcontext_on_resolve_interface(void* self, void* (*callback)(void*, const char*, int));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontext.html#resolveInterface)
-///
-/// Base class method implementation
-///
-/// @param self QOpenGLContext*
-/// @param name const char*
-/// @param revision int
-///
-void* q_openglcontext_super_resolve_interface(void* self, const char* name, int revision);
+void* q_openglcontext_resolve_interface(const void* self, const char* name, int revision);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontext.html#aboutToBeDestroyed)
 ///
@@ -869,9 +850,9 @@ const char* q_openglcontext_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 ///
-const char* q_openglcontext_object_name(void* self);
+const char* q_openglcontext_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -886,33 +867,33 @@ void q_openglcontext_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 ///
-bool q_openglcontext_is_widget_type(void* self);
+bool q_openglcontext_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 ///
-bool q_openglcontext_is_window_type(void* self);
+bool q_openglcontext_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 ///
-bool q_openglcontext_is_quick_item_type(void* self);
+bool q_openglcontext_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 ///
-bool q_openglcontext_signals_blocked(void* self);
+bool q_openglcontext_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -927,9 +908,9 @@ bool q_openglcontext_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 ///
-QThread* q_openglcontext_thread(void* self);
+QThread* q_openglcontext_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -980,11 +961,11 @@ void q_openglcontext_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_openglcontext_children(void* self);
+libqt_list q_openglcontext_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1022,7 +1003,7 @@ void q_openglcontext_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_openglcontext_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_openglcontext_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1033,18 +1014,18 @@ QMetaObject__Connection* q_openglcontext_connect(void* sender, const char* signa
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_openglcontext_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_openglcontext_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_openglcontext_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_openglcontext_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1055,7 +1036,7 @@ QMetaObject__Connection* q_openglcontext_connect3(void* self, void* sender, cons
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_openglcontext_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_openglcontext_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1066,24 +1047,24 @@ bool q_openglcontext_disconnect(void* sender, const char* signal, void* receiver
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_openglcontext_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_openglcontext_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 ///
-bool q_openglcontext_disconnect3(void* self);
+bool q_openglcontext_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 /// @param receiver QObject*
 ///
-bool q_openglcontext_disconnect4(void* self, void* receiver);
+bool q_openglcontext_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1091,23 +1072,23 @@ bool q_openglcontext_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_openglcontext_disconnect5(void* param1);
+bool q_openglcontext_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 ///
-void q_openglcontext_dump_object_tree(void* self);
+void q_openglcontext_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 ///
-void q_openglcontext_dump_object_info(void* self);
+void q_openglcontext_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1117,16 +1098,16 @@ void q_openglcontext_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_openglcontext_set_property(void* self, const char* name, void* value);
+bool q_openglcontext_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 /// @param name const char*
 ///
-QVariant* q_openglcontext_property(void* self, const char* name);
+QVariant* q_openglcontext_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1134,9 +1115,9 @@ QVariant* q_openglcontext_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 ///
-const char** q_openglcontext_dynamic_property_names(void* self);
+const char** q_openglcontext_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1150,9 +1131,9 @@ QBindingStorage* q_openglcontext_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 ///
-const QBindingStorage* q_openglcontext_binding_storage2(void* self);
+const QBindingStorage* q_openglcontext_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1175,18 +1156,18 @@ void q_openglcontext_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 ///
-QObject* q_openglcontext_parent(void* self);
+QObject* q_openglcontext_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 /// @param classname const char*
 ///
-bool q_openglcontext_inherits(void* self, const char* classname);
+bool q_openglcontext_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1226,7 +1207,7 @@ int32_t q_openglcontext_start_timer23(void* self, int64_t time, int32_t timerTyp
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_openglcontext_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_openglcontext_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1238,59 +1219,59 @@ QMetaObject__Connection* q_openglcontext_connect5(void* sender, const char* sign
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_openglcontext_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_openglcontext_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_openglcontext_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_openglcontext_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 /// @param signal const char*
 ///
-bool q_openglcontext_disconnect1(void* self, const char* signal);
+bool q_openglcontext_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLContext*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_openglcontext_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_openglcontext_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_openglcontext_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_openglcontext_disconnect23(void* self, void* receiver, const char* member);
+bool q_openglcontext_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QOpenGLContext*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_openglcontext_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1486,7 +1467,7 @@ void q_openglcontext_on_custom_event(void* self, void (*callback)(void*, void*))
 /// @param self QOpenGLContext*
 /// @param signal QMetaMethod*
 ///
-void q_openglcontext_connect_notify(void* self, void* signal);
+void q_openglcontext_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1497,7 +1478,7 @@ void q_openglcontext_connect_notify(void* self, void* signal);
 /// @param self QOpenGLContext*
 /// @param signal QMetaMethod*
 ///
-void q_openglcontext_super_connect_notify(void* self, void* signal);
+void q_openglcontext_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1508,7 +1489,7 @@ void q_openglcontext_super_connect_notify(void* self, void* signal);
 /// @param self QOpenGLContext*
 /// @param callback void func(QOpenGLContext* self, QMetaMethod* signal)
 ///
-void q_openglcontext_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_openglcontext_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1519,7 +1500,7 @@ void q_openglcontext_on_connect_notify(void* self, void (*callback)(void*, void*
 /// @param self QOpenGLContext*
 /// @param signal QMetaMethod*
 ///
-void q_openglcontext_disconnect_notify(void* self, void* signal);
+void q_openglcontext_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1530,7 +1511,7 @@ void q_openglcontext_disconnect_notify(void* self, void* signal);
 /// @param self QOpenGLContext*
 /// @param signal QMetaMethod*
 ///
-void q_openglcontext_super_disconnect_notify(void* self, void* signal);
+void q_openglcontext_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1541,7 +1522,7 @@ void q_openglcontext_super_disconnect_notify(void* self, void* signal);
 /// @param self QOpenGLContext*
 /// @param callback void func(QOpenGLContext* self, QMetaMethod* signal)
 ///
-void q_openglcontext_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_openglcontext_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1549,9 +1530,9 @@ void q_openglcontext_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 ///
-QObject* q_openglcontext_sender(void* self);
+QObject* q_openglcontext_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1559,9 +1540,9 @@ QObject* q_openglcontext_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 ///
-QObject* q_openglcontext_super_sender(void* self);
+QObject* q_openglcontext_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1569,10 +1550,10 @@ QObject* q_openglcontext_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLContext*
-/// @param callback QObject* func()
+/// @param self const QOpenGLContext*
+/// @param callback QObject* func(QOpenGLContext* self)
 ///
-void q_openglcontext_on_sender(void* self, QObject* (*callback)());
+void q_openglcontext_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1580,9 +1561,9 @@ void q_openglcontext_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 ///
-int32_t q_openglcontext_sender_signal_index(void* self);
+int32_t q_openglcontext_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1590,9 +1571,9 @@ int32_t q_openglcontext_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 ///
-int32_t q_openglcontext_super_sender_signal_index(void* self);
+int32_t q_openglcontext_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1600,10 +1581,10 @@ int32_t q_openglcontext_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLContext*
-/// @param callback int32_t func()
+/// @param self const QOpenGLContext*
+/// @param callback int32_t func(QOpenGLContext* self)
 ///
-void q_openglcontext_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_openglcontext_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1611,10 +1592,10 @@ void q_openglcontext_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 /// @param signal const char*
 ///
-int32_t q_openglcontext_receivers(void* self, const char* signal);
+int32_t q_openglcontext_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1622,10 +1603,10 @@ int32_t q_openglcontext_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 /// @param signal const char*
 ///
-int32_t q_openglcontext_super_receivers(void* self, const char* signal);
+int32_t q_openglcontext_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1633,10 +1614,10 @@ int32_t q_openglcontext_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 /// @param callback int32_t func(QOpenGLContext* self, const char* signal)
 ///
-void q_openglcontext_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_openglcontext_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1644,10 +1625,10 @@ void q_openglcontext_on_receivers(void* self, int32_t (*callback)(void*, const c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 /// @param signal QMetaMethod*
 ///
-bool q_openglcontext_is_signal_connected(void* self, void* signal);
+bool q_openglcontext_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1655,10 +1636,10 @@ bool q_openglcontext_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 /// @param signal QMetaMethod*
 ///
-bool q_openglcontext_super_is_signal_connected(void* self, void* signal);
+bool q_openglcontext_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1666,10 +1647,10 @@ bool q_openglcontext_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLContext*
+/// @param self const QOpenGLContext*
 /// @param callback bool func(QOpenGLContext* self, QMetaMethod* signal)
 ///
-void q_openglcontext_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_openglcontext_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

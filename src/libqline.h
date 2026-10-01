@@ -14,7 +14,7 @@
 ///
 /// @param other QLine*
 ///
-QLine* q_line_new(void* other);
+QLine* q_line_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qline.html)
 
@@ -37,7 +37,7 @@ QLine* q_line_new3();
 /// @param pt1 QPoint*
 /// @param pt2 QPoint*
 ///
-QLine* q_line_new4(void* pt1, void* pt2);
+QLine* q_line_new4(const void* pt1, const void* pt2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qline.html)
 
@@ -56,7 +56,7 @@ QLine* q_line_new5(int x1, int y1, int x2, int y2);
 ///
 /// @param param1 QLine*
 ///
-QLine* q_line_new6(void* param1);
+QLine* q_line_new6(const void* param1);
 
 /// q_line_copy_assign shallow copies `other` into `self`.
 ///
@@ -74,64 +74,64 @@ void q_line_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qline.html#isNull)
 ///
-/// @param self QLine*
+/// @param self const QLine*
 ///
-bool q_line_is_null(void* self);
+bool q_line_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qline.html#p1)
 ///
-/// @param self QLine*
+/// @param self const QLine*
 ///
-QPoint* q_line_p1(void* self);
+QPoint* q_line_p1(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qline.html#p2)
 ///
-/// @param self QLine*
+/// @param self const QLine*
 ///
-QPoint* q_line_p2(void* self);
+QPoint* q_line_p2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qline.html#x1)
 ///
-/// @param self QLine*
+/// @param self const QLine*
 ///
-int32_t q_line_x1(void* self);
+int32_t q_line_x1(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qline.html#y1)
 ///
-/// @param self QLine*
+/// @param self const QLine*
 ///
-int32_t q_line_y1(void* self);
+int32_t q_line_y1(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qline.html#x2)
 ///
-/// @param self QLine*
+/// @param self const QLine*
 ///
-int32_t q_line_x2(void* self);
+int32_t q_line_x2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qline.html#y2)
 ///
-/// @param self QLine*
+/// @param self const QLine*
 ///
-int32_t q_line_y2(void* self);
+int32_t q_line_y2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qline.html#dx)
 ///
-/// @param self QLine*
+/// @param self const QLine*
 ///
-int32_t q_line_dx(void* self);
+int32_t q_line_dx(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qline.html#dy)
 ///
-/// @param self QLine*
+/// @param self const QLine*
 ///
-int32_t q_line_dy(void* self);
+int32_t q_line_dy(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qline.html#translate)
 ///
 /// @param self QLine*
 /// @param p QPoint*
 ///
-void q_line_translate(void* self, void* p);
+void q_line_translate(void* self, const void* p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qline.html#translate)
 ///
@@ -143,38 +143,38 @@ void q_line_translate2(void* self, int dx, int dy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qline.html#translated)
 ///
-/// @param self QLine*
+/// @param self const QLine*
 /// @param p QPoint*
 ///
-QLine* q_line_translated(void* self, void* p);
+QLine* q_line_translated(const void* self, const void* p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qline.html#translated)
 ///
-/// @param self QLine*
+/// @param self const QLine*
 /// @param dx int
 /// @param dy int
 ///
-QLine* q_line_translated2(void* self, int dx, int dy);
+QLine* q_line_translated2(const void* self, int dx, int dy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qline.html#center)
 ///
-/// @param self QLine*
+/// @param self const QLine*
 ///
-QPoint* q_line_center(void* self);
+QPoint* q_line_center(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qline.html#setP1)
 ///
 /// @param self QLine*
 /// @param p1 QPoint*
 ///
-void q_line_set_p1(void* self, void* p1);
+void q_line_set_p1(void* self, const void* p1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qline.html#setP2)
 ///
 /// @param self QLine*
 /// @param p2 QPoint*
 ///
-void q_line_set_p2(void* self, void* p2);
+void q_line_set_p2(void* self, const void* p2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qline.html#setPoints)
 ///
@@ -182,7 +182,7 @@ void q_line_set_p2(void* self, void* p2);
 /// @param p1 QPoint*
 /// @param p2 QPoint*
 ///
-void q_line_set_points(void* self, void* p1, void* p2);
+void q_line_set_points(void* self, const void* p1, const void* p2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qline.html#setLine)
 ///
@@ -196,9 +196,9 @@ void q_line_set_line(void* self, int x1, int y1, int x2, int y2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qline.html#toLineF)
 ///
-/// @param self QLine*
+/// @param self const QLine*
 ///
-QLineF* q_line_to_line_f(void* self);
+QLineF* q_line_to_line_f(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qline.html#dtor.QLine)
 ///
@@ -214,7 +214,7 @@ void q_line_delete(void* self);
 ///
 /// @param other QLineF*
 ///
-QLineF* q_linef_new(void* other);
+QLineF* q_linef_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html)
 
@@ -237,7 +237,7 @@ QLineF* q_linef_new3();
 /// @param pt1 QPointF*
 /// @param pt2 QPointF*
 ///
-QLineF* q_linef_new4(void* pt1, void* pt2);
+QLineF* q_linef_new4(const void* pt1, const void* pt2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html)
 
@@ -256,7 +256,7 @@ QLineF* q_linef_new5(double x1, double y1, double x2, double y2);
 ///
 /// @param line QLine*
 ///
-QLineF* q_linef_new6(void* line);
+QLineF* q_linef_new6(const void* line);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html)
 
@@ -264,7 +264,7 @@ QLineF* q_linef_new6(void* line);
 ///
 /// @param param1 QLineF*
 ///
-QLineF* q_linef_new7(void* param1);
+QLineF* q_linef_new7(const void* param1);
 
 /// q_linef_copy_assign shallow copies `other` into `self`.
 ///
@@ -289,63 +289,63 @@ QLineF* q_linef_from_polar(double length, double angle);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#isNull)
 ///
-/// @param self QLineF*
+/// @param self const QLineF*
 ///
-bool q_linef_is_null(void* self);
+bool q_linef_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#p1)
 ///
-/// @param self QLineF*
+/// @param self const QLineF*
 ///
-QPointF* q_linef_p1(void* self);
+QPointF* q_linef_p1(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#p2)
 ///
-/// @param self QLineF*
+/// @param self const QLineF*
 ///
-QPointF* q_linef_p2(void* self);
+QPointF* q_linef_p2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#x1)
 ///
-/// @param self QLineF*
+/// @param self const QLineF*
 ///
-double q_linef_x1(void* self);
+double q_linef_x1(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#y1)
 ///
-/// @param self QLineF*
+/// @param self const QLineF*
 ///
-double q_linef_y1(void* self);
+double q_linef_y1(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#x2)
 ///
-/// @param self QLineF*
+/// @param self const QLineF*
 ///
-double q_linef_x2(void* self);
+double q_linef_x2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#y2)
 ///
-/// @param self QLineF*
+/// @param self const QLineF*
 ///
-double q_linef_y2(void* self);
+double q_linef_y2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#dx)
 ///
-/// @param self QLineF*
+/// @param self const QLineF*
 ///
-double q_linef_dx(void* self);
+double q_linef_dx(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#dy)
 ///
-/// @param self QLineF*
+/// @param self const QLineF*
 ///
-double q_linef_dy(void* self);
+double q_linef_dy(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#length)
 ///
-/// @param self QLineF*
+/// @param self const QLineF*
 ///
-double q_linef_length(void* self);
+double q_linef_length(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#setLength)
 ///
@@ -356,9 +356,9 @@ void q_linef_set_length(void* self, double lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#angle)
 ///
-/// @param self QLineF*
+/// @param self const QLineF*
 ///
-double q_linef_angle(void* self);
+double q_linef_angle(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#setAngle)
 ///
@@ -369,45 +369,45 @@ void q_linef_set_angle(void* self, double angle);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#angleTo)
 ///
-/// @param self QLineF*
+/// @param self const QLineF*
 /// @param l QLineF*
 ///
-double q_linef_angle_to(void* self, void* l);
+double q_linef_angle_to(const void* self, const void* l);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#unitVector)
 ///
-/// @param self QLineF*
+/// @param self const QLineF*
 ///
-QLineF* q_linef_unit_vector(void* self);
+QLineF* q_linef_unit_vector(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#normalVector)
 ///
-/// @param self QLineF*
+/// @param self const QLineF*
 ///
-QLineF* q_linef_normal_vector(void* self);
+QLineF* q_linef_normal_vector(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#intersects)
 ///
-/// @param self QLineF*
+/// @param self const QLineF*
 /// @param l QLineF*
 ///
 /// @return enum QLineF__IntersectionType
 ///
-int32_t q_linef_intersects(void* self, void* l);
+int32_t q_linef_intersects(const void* self, const void* l);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#pointAt)
 ///
-/// @param self QLineF*
+/// @param self const QLineF*
 /// @param t double
 ///
-QPointF* q_linef_point_at(void* self, double t);
+QPointF* q_linef_point_at(const void* self, double t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#translate)
 ///
 /// @param self QLineF*
 /// @param p QPointF*
 ///
-void q_linef_translate(void* self, void* p);
+void q_linef_translate(void* self, const void* p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#translate)
 ///
@@ -419,38 +419,38 @@ void q_linef_translate2(void* self, double dx, double dy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#translated)
 ///
-/// @param self QLineF*
+/// @param self const QLineF*
 /// @param p QPointF*
 ///
-QLineF* q_linef_translated(void* self, void* p);
+QLineF* q_linef_translated(const void* self, const void* p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#translated)
 ///
-/// @param self QLineF*
+/// @param self const QLineF*
 /// @param dx double
 /// @param dy double
 ///
-QLineF* q_linef_translated2(void* self, double dx, double dy);
+QLineF* q_linef_translated2(const void* self, double dx, double dy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#center)
 ///
-/// @param self QLineF*
+/// @param self const QLineF*
 ///
-QPointF* q_linef_center(void* self);
+QPointF* q_linef_center(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#setP1)
 ///
 /// @param self QLineF*
 /// @param p1 QPointF*
 ///
-void q_linef_set_p1(void* self, void* p1);
+void q_linef_set_p1(void* self, const void* p1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#setP2)
 ///
 /// @param self QLineF*
 /// @param p2 QPointF*
 ///
-void q_linef_set_p2(void* self, void* p2);
+void q_linef_set_p2(void* self, const void* p2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#setPoints)
 ///
@@ -458,7 +458,7 @@ void q_linef_set_p2(void* self, void* p2);
 /// @param p1 QPointF*
 /// @param p2 QPointF*
 ///
-void q_linef_set_points(void* self, void* p1, void* p2);
+void q_linef_set_points(void* self, const void* p1, const void* p2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#setLine)
 ///
@@ -472,19 +472,19 @@ void q_linef_set_line(void* self, double x1, double y1, double x2, double y2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#toLine)
 ///
-/// @param self QLineF*
+/// @param self const QLineF*
 ///
-QLine* q_linef_to_line(void* self);
+QLine* q_linef_to_line(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#intersects)
 ///
-/// @param self QLineF*
+/// @param self const QLineF*
 /// @param l QLineF*
 /// @param intersectionPoint QPointF*
 ///
 /// @return enum QLineF__IntersectionType
 ///
-int32_t q_linef_intersects2(void* self, void* l, void* intersectionPoint);
+int32_t q_linef_intersects2(const void* self, const void* l, void* intersectionPoint);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#dtor.QLineF)
 ///

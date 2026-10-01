@@ -12,6 +12,8 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtextnode.html#setColor)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self QSGTextNode*
 /// @param color QColor*
 ///
@@ -19,11 +21,15 @@ void q_sgtextnode_set_color(void* self, void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtextnode.html#color)
 ///
-/// @param self QSGTextNode*
+/// @warning Use caution when calling this method as it might not be defined.
 ///
-QColor* q_sgtextnode_color(void* self);
+/// @param self const QSGTextNode*
+///
+QColor* q_sgtextnode_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtextnode.html#setTextStyle)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self QSGTextNode*
 /// @param textStyle enum QSGTextNode__TextStyle
@@ -31,6 +37,8 @@ QColor* q_sgtextnode_color(void* self);
 void q_sgtextnode_set_text_style(void* self, uint8_t textStyle);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtextnode.html#textStyle)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self QSGTextNode*
 ///
@@ -40,6 +48,8 @@ uint8_t q_sgtextnode_text_style(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtextnode.html#setStyleColor)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self QSGTextNode*
 /// @param styleColor QColor*
 ///
@@ -47,11 +57,15 @@ void q_sgtextnode_set_style_color(void* self, void* styleColor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtextnode.html#styleColor)
 ///
-/// @param self QSGTextNode*
+/// @warning Use caution when calling this method as it might not be defined.
 ///
-QColor* q_sgtextnode_style_color(void* self);
+/// @param self const QSGTextNode*
+///
+QColor* q_sgtextnode_style_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtextnode.html#setLinkColor)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self QSGTextNode*
 /// @param linkColor QColor*
@@ -60,11 +74,15 @@ void q_sgtextnode_set_link_color(void* self, void* linkColor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtextnode.html#linkColor)
 ///
-/// @param self QSGTextNode*
+/// @warning Use caution when calling this method as it might not be defined.
 ///
-QColor* q_sgtextnode_link_color(void* self);
+/// @param self const QSGTextNode*
+///
+QColor* q_sgtextnode_link_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtextnode.html#setSelectionColor)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self QSGTextNode*
 /// @param selectionColor QColor*
@@ -73,11 +91,15 @@ void q_sgtextnode_set_selection_color(void* self, void* selectionColor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtextnode.html#selectionColor)
 ///
-/// @param self QSGTextNode*
+/// @warning Use caution when calling this method as it might not be defined.
 ///
-QColor* q_sgtextnode_selection_color(void* self);
+/// @param self const QSGTextNode*
+///
+QColor* q_sgtextnode_selection_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtextnode.html#setSelectionTextColor)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self QSGTextNode*
 /// @param selectionTextColor QColor*
@@ -86,11 +108,15 @@ void q_sgtextnode_set_selection_text_color(void* self, void* selectionTextColor)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtextnode.html#selectionTextColor)
 ///
-/// @param self QSGTextNode*
+/// @warning Use caution when calling this method as it might not be defined.
 ///
-QColor* q_sgtextnode_selection_text_color(void* self);
+/// @param self const QSGTextNode*
+///
+QColor* q_sgtextnode_selection_text_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtextnode.html#setRenderType)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self QSGTextNode*
 /// @param renderType enum QSGTextNode__RenderType
@@ -99,13 +125,17 @@ void q_sgtextnode_set_render_type(void* self, uint8_t renderType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtextnode.html#renderType)
 ///
-/// @param self QSGTextNode*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const QSGTextNode*
 ///
 /// @return enum QSGTextNode__RenderType
 ///
-uint8_t q_sgtextnode_render_type(void* self);
+uint8_t q_sgtextnode_render_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtextnode.html#setRenderTypeQuality)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self QSGTextNode*
 /// @param renderTypeQuality int
@@ -114,11 +144,15 @@ void q_sgtextnode_set_render_type_quality(void* self, int renderTypeQuality);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtextnode.html#renderTypeQuality)
 ///
-/// @param self QSGTextNode*
+/// @warning Use caution when calling this method as it might not be defined.
 ///
-int32_t q_sgtextnode_render_type_quality(void* self);
+/// @param self const QSGTextNode*
+///
+int32_t q_sgtextnode_render_type_quality(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtextnode.html#setFiltering)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self QSGTextNode*
 /// @param filtering enum QSGTexture__Filtering
@@ -127,13 +161,17 @@ void q_sgtextnode_set_filtering(void* self, int32_t filtering);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtextnode.html#filtering)
 ///
-/// @param self QSGTextNode*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const QSGTextNode*
 ///
 /// @return enum QSGTexture__Filtering
 ///
-int32_t q_sgtextnode_filtering(void* self);
+int32_t q_sgtextnode_filtering(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtextnode.html#clear)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self QSGTextNode*
 ///
@@ -141,16 +179,20 @@ void q_sgtextnode_clear(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtextnode.html#setViewport)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self QSGTextNode*
 /// @param viewport QRectF*
 ///
-void q_sgtextnode_set_viewport(void* self, void* viewport);
+void q_sgtextnode_set_viewport(void* self, const void* viewport);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtextnode.html#viewport)
 ///
-/// @param self QSGTextNode*
+/// @warning Use caution when calling this method as it might not be defined.
 ///
-QRectF* q_sgtextnode_viewport(void* self);
+/// @param self const QSGTextNode*
+///
+QRectF* q_sgtextnode_viewport(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtextnode.html#addTextLayout)
 ///
@@ -236,15 +278,15 @@ void q_sgtextnode_add_text_document4(void* self, void* position, void* document,
 /// @param self QSGTextNode*
 /// @param matrix QMatrix4x4*
 ///
-void q_sgtextnode_set_matrix(void* self, void* matrix);
+void q_sgtextnode_set_matrix(void* self, const void* matrix);
 
 /// Inherited from QSGTransformNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtransformnode.html#matrix)
 ///
-/// @param self QSGTextNode*
+/// @param self const QSGTextNode*
 ///
-const QMatrix4x4* q_sgtextnode_matrix(void* self);
+const QMatrix4x4* q_sgtextnode_matrix(const void* self);
 
 /// Inherited from QSGTransformNode
 ///
@@ -253,23 +295,23 @@ const QMatrix4x4* q_sgtextnode_matrix(void* self);
 /// @param self QSGTextNode*
 /// @param matrix QMatrix4x4*
 ///
-void q_sgtextnode_set_combined_matrix(void* self, void* matrix);
+void q_sgtextnode_set_combined_matrix(void* self, const void* matrix);
 
 /// Inherited from QSGTransformNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtransformnode.html#combinedMatrix)
 ///
-/// @param self QSGTextNode*
+/// @param self const QSGTextNode*
 ///
-const QMatrix4x4* q_sgtextnode_combined_matrix(void* self);
+const QMatrix4x4* q_sgtextnode_combined_matrix(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#parent)
 ///
-/// @param self QSGTextNode*
+/// @param self const QSGTextNode*
 ///
-QSGNode* q_sgtextnode_parent(void* self);
+QSGNode* q_sgtextnode_parent(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -339,60 +381,60 @@ void q_sgtextnode_reparent_child_nodes_to(void* self, void* newParent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#childCount)
 ///
-/// @param self QSGTextNode*
+/// @param self const QSGTextNode*
 ///
-int32_t q_sgtextnode_child_count(void* self);
+int32_t q_sgtextnode_child_count(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#childAtIndex)
 ///
-/// @param self QSGTextNode*
+/// @param self const QSGTextNode*
 /// @param i int
 ///
-QSGNode* q_sgtextnode_child_at_index(void* self, int i);
+QSGNode* q_sgtextnode_child_at_index(const void* self, int i);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#firstChild)
 ///
-/// @param self QSGTextNode*
+/// @param self const QSGTextNode*
 ///
-QSGNode* q_sgtextnode_first_child(void* self);
+QSGNode* q_sgtextnode_first_child(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#lastChild)
 ///
-/// @param self QSGTextNode*
+/// @param self const QSGTextNode*
 ///
-QSGNode* q_sgtextnode_last_child(void* self);
+QSGNode* q_sgtextnode_last_child(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#nextSibling)
 ///
-/// @param self QSGTextNode*
+/// @param self const QSGTextNode*
 ///
-QSGNode* q_sgtextnode_next_sibling(void* self);
+QSGNode* q_sgtextnode_next_sibling(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#previousSibling)
 ///
-/// @param self QSGTextNode*
+/// @param self const QSGTextNode*
 ///
-QSGNode* q_sgtextnode_previous_sibling(void* self);
+QSGNode* q_sgtextnode_previous_sibling(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#type)
 ///
-/// @param self QSGTextNode*
+/// @param self const QSGTextNode*
 ///
 /// @return enum QSGNode__NodeType
 ///
-int32_t q_sgtextnode_type(void* self);
+int32_t q_sgtextnode_type(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -415,29 +457,29 @@ void q_sgtextnode_mark_dirty(void* self, int32_t bits);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#dirtyState)
 ///
-/// @param self QSGTextNode*
+/// @param self const QSGTextNode*
 ///
 /// @return flag of enum QSGNode__DirtyStateBit
 ///
-int32_t q_sgtextnode_dirty_state(void* self);
+int32_t q_sgtextnode_dirty_state(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#isSubtreeBlocked)
 ///
-/// @param self QSGTextNode*
+/// @param self const QSGTextNode*
 ///
-bool q_sgtextnode_is_subtree_blocked(void* self);
+bool q_sgtextnode_is_subtree_blocked(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#flags)
 ///
-/// @param self QSGTextNode*
+/// @param self const QSGTextNode*
 ///
 /// @return flag of enum QSGNode__Flag
 ///
-int32_t q_sgtextnode_flags(void* self);
+int32_t q_sgtextnode_flags(const void* self);
 
 /// Inherited from QSGNode
 ///

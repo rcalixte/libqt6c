@@ -48,7 +48,7 @@ void KBookmarkManager_Error(KBookmarkManager* self, const libqt_string errorMess
 void KBookmarkManager_Connect_Error(KBookmarkManager* self, intptr_t slot);
 bool KBookmarkManager_SaveAs2(const KBookmarkManager* self, const libqt_string filename, bool toolbarCache);
 bool KBookmarkManager_Save1(const KBookmarkManager* self, bool toolbarCache);
-void KBookmarkManager_OnMetaObject(const KBookmarkManager* self, intptr_t slot);
+void KBookmarkManager_OnMetaObject(KBookmarkManager* self, intptr_t slot);
 QMetaObject* KBookmarkManager_SuperMetaObject(const KBookmarkManager* self);
 void KBookmarkManager_OnMetacast(KBookmarkManager* self, intptr_t slot);
 void* KBookmarkManager_SuperMetacast(KBookmarkManager* self, const char* param1);
@@ -76,17 +76,9 @@ void KBookmarkManager_DisconnectNotify(KBookmarkManager* self, const QMetaMethod
 void KBookmarkManager_OnDisconnectNotify(KBookmarkManager* self, intptr_t slot);
 void KBookmarkManager_SuperDisconnectNotify(KBookmarkManager* self, const QMetaMethod* signal);
 QObject* KBookmarkManager_Sender(const KBookmarkManager* self);
-void KBookmarkManager_OnSender(const KBookmarkManager* self, intptr_t slot);
-QObject* KBookmarkManager_SuperSender(const KBookmarkManager* self);
 int KBookmarkManager_SenderSignalIndex(const KBookmarkManager* self);
-void KBookmarkManager_OnSenderSignalIndex(const KBookmarkManager* self, intptr_t slot);
-int KBookmarkManager_SuperSenderSignalIndex(const KBookmarkManager* self);
 int KBookmarkManager_Receivers(const KBookmarkManager* self, const char* signal);
-void KBookmarkManager_OnReceivers(const KBookmarkManager* self, intptr_t slot);
-int KBookmarkManager_SuperReceivers(const KBookmarkManager* self, const char* signal);
 bool KBookmarkManager_IsSignalConnected(const KBookmarkManager* self, const QMetaMethod* signal);
-void KBookmarkManager_OnIsSignalConnected(const KBookmarkManager* self, intptr_t slot);
-bool KBookmarkManager_SuperIsSignalConnected(const KBookmarkManager* self, const QMetaMethod* signal);
 void KBookmarkManager_Delete(KBookmarkManager* self);
 
 #ifdef __cplusplus

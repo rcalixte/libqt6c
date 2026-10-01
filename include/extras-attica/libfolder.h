@@ -20,14 +20,14 @@ Attica__Folder* k_attica__folder_new();
 ///
 /// @param other Attica__Folder*
 ///
-Attica__Folder* k_attica__folder_new2(void* other);
+Attica__Folder* k_attica__folder_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-folder.html#operator-eq)
 ///
 /// @param self Attica__Folder*
 /// @param other Attica__Folder*
 ///
-void k_attica__folder_operator_assign(void* self, void* other);
+void k_attica__folder_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-folder.html#setId)
 ///
@@ -40,9 +40,9 @@ void k_attica__folder_set_id(void* self, const char* id);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Folder*
+/// @param self const Attica__Folder*
 ///
-const char* k_attica__folder_id(void* self);
+const char* k_attica__folder_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-folder.html#setName)
 ///
@@ -55,9 +55,9 @@ void k_attica__folder_set_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Folder*
+/// @param self const Attica__Folder*
 ///
-const char* k_attica__folder_name(void* self);
+const char* k_attica__folder_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-folder.html#setMessageCount)
 ///
@@ -68,9 +68,9 @@ void k_attica__folder_set_message_count(void* self, int messageCount);
 
 /// [Upstream resources](https://api.kde.org/attica-folder.html#messageCount)
 ///
-/// @param self Attica__Folder*
+/// @param self const Attica__Folder*
 ///
-int32_t k_attica__folder_message_count(void* self);
+int32_t k_attica__folder_message_count(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-folder.html#setType)
 ///
@@ -83,15 +83,15 @@ void k_attica__folder_set_type(void* self, const char* type);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Folder*
+/// @param self const Attica__Folder*
 ///
-const char* k_attica__folder_type(void* self);
+const char* k_attica__folder_type(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-folder.html#isValid)
 ///
-/// @param self Attica__Folder*
+/// @param self const Attica__Folder*
 ///
-bool k_attica__folder_is_valid(void* self);
+bool k_attica__folder_is_valid(const void* self);
 
 /// Delete this object from C++ memory.
 ///

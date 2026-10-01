@@ -14,7 +14,7 @@
 ///
 /// @param other QJSPrimitiveUndefined*
 ///
-QJSPrimitiveUndefined* q_jsprimitiveundefined_new(void* other);
+QJSPrimitiveUndefined* q_jsprimitiveundefined_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsprimitiveundefined.html)
 
@@ -36,7 +36,7 @@ QJSPrimitiveUndefined* q_jsprimitiveundefined_new3();
 ///
 /// @param param1 QJSPrimitiveUndefined*
 ///
-QJSPrimitiveUndefined* q_jsprimitiveundefined_new4(void* param1);
+QJSPrimitiveUndefined* q_jsprimitiveundefined_new4(const void* param1);
 
 /// q_jsprimitiveundefined_copy_assign shallow copies `other` into `self`.
 ///
@@ -66,7 +66,7 @@ void q_jsprimitiveundefined_delete(void* self);
 ///
 /// @param other QJSPrimitiveNull*
 ///
-QJSPrimitiveNull* q_jsprimitivenull_new(void* other);
+QJSPrimitiveNull* q_jsprimitivenull_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsprimitivenull.html)
 
@@ -88,7 +88,7 @@ QJSPrimitiveNull* q_jsprimitivenull_new3();
 ///
 /// @param param1 QJSPrimitiveNull*
 ///
-QJSPrimitiveNull* q_jsprimitivenull_new4(void* param1);
+QJSPrimitiveNull* q_jsprimitivenull_new4(const void* param1);
 
 /// q_jsprimitivenull_copy_assign shallow copies `other` into `self`.
 ///
@@ -173,7 +173,7 @@ QJSPrimitiveValue* q_jsprimitivevalue_new7(const char* string);
 /// @param type QMetaType*
 /// @param value void*
 ///
-QJSPrimitiveValue* q_jsprimitivevalue_new8(void* type, void* value);
+QJSPrimitiveValue* q_jsprimitivevalue_new8(const void* type, void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsprimitivevalue.html)
 
@@ -189,7 +189,7 @@ QJSPrimitiveValue* q_jsprimitivevalue_new9(void* type);
 ///
 /// @param variant QVariant*
 ///
-QJSPrimitiveValue* q_jsprimitivevalue_new10(void* variant);
+QJSPrimitiveValue* q_jsprimitivevalue_new10(const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsprimitivevalue.html)
 
@@ -197,21 +197,21 @@ QJSPrimitiveValue* q_jsprimitivevalue_new10(void* variant);
 ///
 /// @param param1 QJSPrimitiveValue*
 ///
-QJSPrimitiveValue* q_jsprimitivevalue_new11(void* param1);
+QJSPrimitiveValue* q_jsprimitivevalue_new11(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsprimitivevalue.html#type)
 ///
-/// @param self QJSPrimitiveValue*
+/// @param self const QJSPrimitiveValue*
 ///
 /// @return enum QJSPrimitiveValue__Type
 ///
-uint8_t q_jsprimitivevalue_type(void* self);
+uint8_t q_jsprimitivevalue_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsprimitivevalue.html#metaType)
 ///
-/// @param self QJSPrimitiveValue*
+/// @param self const QJSPrimitiveValue*
 ///
-QMetaType* q_jsprimitivevalue_meta_type(void* self);
+QMetaType* q_jsprimitivevalue_meta_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsprimitivevalue.html#data)
 ///
@@ -221,47 +221,47 @@ void* q_jsprimitivevalue_data(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsprimitivevalue.html#data)
 ///
-/// @param self QJSPrimitiveValue*
+/// @param self const QJSPrimitiveValue*
 ///
-const void* q_jsprimitivevalue_data2(void* self);
+const void* q_jsprimitivevalue_data2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsprimitivevalue.html#constData)
 ///
-/// @param self QJSPrimitiveValue*
+/// @param self const QJSPrimitiveValue*
 ///
-const void* q_jsprimitivevalue_const_data(void* self);
+const void* q_jsprimitivevalue_const_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsprimitivevalue.html#toBoolean)
 ///
-/// @param self QJSPrimitiveValue*
+/// @param self const QJSPrimitiveValue*
 ///
-bool q_jsprimitivevalue_to_boolean(void* self);
+bool q_jsprimitivevalue_to_boolean(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsprimitivevalue.html#toInteger)
 ///
-/// @param self QJSPrimitiveValue*
+/// @param self const QJSPrimitiveValue*
 ///
-int32_t q_jsprimitivevalue_to_integer(void* self);
+int32_t q_jsprimitivevalue_to_integer(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsprimitivevalue.html#toDouble)
 ///
-/// @param self QJSPrimitiveValue*
+/// @param self const QJSPrimitiveValue*
 ///
-double q_jsprimitivevalue_to_double(void* self);
+double q_jsprimitivevalue_to_double(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsprimitivevalue.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QJSPrimitiveValue*
+/// @param self const QJSPrimitiveValue*
 ///
-const char* q_jsprimitivevalue_to_string(void* self);
+const char* q_jsprimitivevalue_to_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsprimitivevalue.html#toVariant)
 ///
-/// @param self QJSPrimitiveValue*
+/// @param self const QJSPrimitiveValue*
 ///
-QVariant* q_jsprimitivevalue_to_variant(void* self);
+QVariant* q_jsprimitivevalue_to_variant(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsprimitivevalue.html#operator-2b-2b)
 ///
@@ -303,24 +303,24 @@ QJSPrimitiveValue* q_jsprimitivevalue_operator_minus(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsprimitivevalue.html#strictlyEquals)
 ///
-/// @param self QJSPrimitiveValue*
+/// @param self const QJSPrimitiveValue*
 /// @param other QJSPrimitiveValue*
 ///
-bool q_jsprimitivevalue_strictly_equals(void* self, void* other);
+bool q_jsprimitivevalue_strictly_equals(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsprimitivevalue.html#equals)
 ///
-/// @param self QJSPrimitiveValue*
+/// @param self const QJSPrimitiveValue*
 /// @param other QJSPrimitiveValue*
 ///
-bool q_jsprimitivevalue_equals(void* self, void* other);
+bool q_jsprimitivevalue_equals(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsprimitivevalue.html#operator-eq)
 ///
 /// @param self QJSPrimitiveValue*
 /// @param param1 QJSPrimitiveValue*
 ///
-void q_jsprimitivevalue_operator_assign(void* self, void* param1);
+void q_jsprimitivevalue_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsprimitivevalue.html#dtor.QJSPrimitiveValue)
 ///

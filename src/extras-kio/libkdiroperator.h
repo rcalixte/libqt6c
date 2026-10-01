@@ -20,7 +20,7 @@ KDirOperator* k_diroperator_new();
 ///
 /// @param urlName QUrl*
 ///
-KDirOperator* k_diroperator_new2(void* urlName);
+KDirOperator* k_diroperator_new2(const void* urlName);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html)
 
@@ -29,30 +29,30 @@ KDirOperator* k_diroperator_new2(void* urlName);
 /// @param urlName QUrl*
 /// @param parent QWidget*
 ///
-KDirOperator* k_diroperator_new3(void* urlName, void* parent);
+KDirOperator* k_diroperator_new3(const void* urlName, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-const QMetaObject* k_diroperator_meta_object(void* self);
+const QMetaObject* k_diroperator_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KDirOperator*
-/// @param callback const QMetaObject* func()
+/// @param self const KDirOperator*
+/// @param callback const QMetaObject* func(const KDirOperator* self)
 ///
-void k_diroperator_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_diroperator_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-const QMetaObject* k_diroperator_super_meta_object(void* self);
+const QMetaObject* k_diroperator_super_meta_object(const void* self);
 
 /// @param self KDirOperator*
 /// @param param1 const char*
@@ -131,9 +131,9 @@ void k_diroperator_super_set_show_hidden_files(void* self, bool s);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#showHiddenFiles)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_show_hidden_files(void* self);
+bool k_diroperator_show_hidden_files(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#close)
 ///
@@ -152,9 +152,9 @@ void k_diroperator_set_name_filter(void* self, const char* filter);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-const char* k_diroperator_name_filter(void* self);
+const char* k_diroperator_name_filter(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setMimeFilter)
 ///
@@ -167,9 +167,9 @@ void k_diroperator_set_mime_filter(void* self, const char* mimetypes[static 1]);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-const char** k_diroperator_mime_filter(void* self);
+const char** k_diroperator_mime_filter(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setNewFileMenuSupportedMimeTypes)
 ///
@@ -182,9 +182,9 @@ void k_diroperator_set_new_file_menu_supported_mime_types(void* self, const char
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-const char** k_diroperator_new_file_menu_supported_mime_types(void* self);
+const char** k_diroperator_new_file_menu_supported_mime_types(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setNewFileMenuSelectDirWhenAlreadyExist)
 ///
@@ -201,9 +201,9 @@ void k_diroperator_clear_filter(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#url)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QUrl* k_diroperator_url(void* self);
+QUrl* k_diroperator_url(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setUrl)
 ///
@@ -211,7 +211,7 @@ QUrl* k_diroperator_url(void* self);
 /// @param url QUrl*
 /// @param clearforward bool
 ///
-void k_diroperator_set_url(void* self, void* url, bool clearforward);
+void k_diroperator_set_url(void* self, const void* url, bool clearforward);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setUrl)
 ///
@@ -220,7 +220,7 @@ void k_diroperator_set_url(void* self, void* url, bool clearforward);
 /// @param self KDirOperator*
 /// @param callback void func(KDirOperator* self, QUrl* url, bool clearforward)
 ///
-void k_diroperator_on_set_url(void* self, void (*callback)(void*, void*, bool));
+void k_diroperator_on_set_url(void* self, void (*callback)(void*, const void*, bool));
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setUrl)
 ///
@@ -230,21 +230,21 @@ void k_diroperator_on_set_url(void* self, void (*callback)(void*, void*, bool));
 /// @param url QUrl*
 /// @param clearforward bool
 ///
-void k_diroperator_super_set_url(void* self, void* url, bool clearforward);
+void k_diroperator_super_set_url(void* self, const void* url, bool clearforward);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setCurrentItem)
 ///
 /// @param self KDirOperator*
 /// @param url QUrl*
 ///
-void k_diroperator_set_current_item(void* self, void* url);
+void k_diroperator_set_current_item(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setCurrentItem)
 ///
 /// @param self KDirOperator*
 /// @param item KFileItem*
 ///
-void k_diroperator_set_current_item2(void* self, void* item);
+void k_diroperator_set_current_item2(void* self, const void* item);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setCurrentItems)
 ///
@@ -258,13 +258,13 @@ void k_diroperator_set_current_items(void* self, libqt_list urls);
 /// @param self KDirOperator*
 /// @param items KFileItemList*
 ///
-void k_diroperator_set_current_items2(void* self, void* items);
+void k_diroperator_set_current_items2(void* self, const void* items);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#view)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QAbstractItemView* k_diroperator_view(void* self);
+QAbstractItemView* k_diroperator_view(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setViewMode)
 ///
@@ -275,11 +275,11 @@ void k_diroperator_set_view_mode(void* self, int32_t viewKind);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#viewMode)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
 /// @return enum KFile__FileView
 ///
-int32_t k_diroperator_view_mode(void* self);
+int32_t k_diroperator_view_mode(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setSorting)
 ///
@@ -290,29 +290,29 @@ void k_diroperator_set_sorting(void* self, int32_t sorting);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#sorting)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
 /// @return flag of enum QDir__SortFlag
 ///
-int32_t k_diroperator_sorting(void* self);
+int32_t k_diroperator_sorting(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#isRoot)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_is_root(void* self);
+bool k_diroperator_is_root(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#dirLister)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-KDirLister* k_diroperator_dir_lister(void* self);
+KDirLister* k_diroperator_dir_lister(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#progressBar)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QProgressBar* k_diroperator_progress_bar(void* self);
+QProgressBar* k_diroperator_progress_bar(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setMode)
 ///
@@ -341,11 +341,11 @@ void k_diroperator_super_set_mode(void* self, int32_t m);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#mode)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
 /// @return flag of enum KFile__Mode
 ///
-int32_t k_diroperator_mode(void* self);
+int32_t k_diroperator_mode(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setPreviewWidget)
 ///
@@ -374,55 +374,55 @@ void k_diroperator_super_set_preview_widget(void* self, void* w);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#selectedItems)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-KFileItemList* k_diroperator_selected_items(void* self);
+KFileItemList* k_diroperator_selected_items(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#isSelected)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param item KFileItem*
 ///
-bool k_diroperator_is_selected(void* self, void* item);
+bool k_diroperator_is_selected(const void* self, const void* item);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#numDirs)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-int32_t k_diroperator_num_dirs(void* self);
+int32_t k_diroperator_num_dirs(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#numFiles)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-int32_t k_diroperator_num_files(void* self);
+int32_t k_diroperator_num_files(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#completionObject)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-KCompletion* k_diroperator_completion_object(void* self);
+KCompletion* k_diroperator_completion_object(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#dirCompletionObject)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-KCompletion* k_diroperator_dir_completion_object(void* self);
+KCompletion* k_diroperator_dir_completion_object(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#action)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param action enum KDirOperator__Action
 ///
-QAction* k_diroperator_action(void* self, int32_t action);
+QAction* k_diroperator_action(const void* self, int32_t action);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#allActions)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list k_diroperator_all_actions(void* self);
+libqt_list k_diroperator_all_actions(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setViewConfig)
 ///
@@ -451,16 +451,16 @@ void k_diroperator_super_set_view_config(void* self, void* configGroup);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#viewConfigGroup)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-KConfigGroup* k_diroperator_view_config_group(void* self);
+KConfigGroup* k_diroperator_view_config_group(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#readConfig)
 ///
 /// @param self KDirOperator*
 /// @param configGroup KConfigGroup*
 ///
-void k_diroperator_read_config(void* self, void* configGroup);
+void k_diroperator_read_config(void* self, const void* configGroup);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#readConfig)
 ///
@@ -469,7 +469,7 @@ void k_diroperator_read_config(void* self, void* configGroup);
 /// @param self KDirOperator*
 /// @param callback void func(KDirOperator* self, KConfigGroup* configGroup)
 ///
-void k_diroperator_on_read_config(void* self, void (*callback)(void*, void*));
+void k_diroperator_on_read_config(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#readConfig)
 ///
@@ -478,7 +478,7 @@ void k_diroperator_on_read_config(void* self, void (*callback)(void*, void*));
 /// @param self KDirOperator*
 /// @param configGroup KConfigGroup*
 ///
-void k_diroperator_super_read_config(void* self, void* configGroup);
+void k_diroperator_super_read_config(void* self, const void* configGroup);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#writeConfig)
 ///
@@ -514,9 +514,9 @@ void k_diroperator_set_only_double_click_selects_files(void* self, bool enable);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#onlyDoubleClickSelectsFiles)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_only_double_click_selects_files(void* self);
+bool k_diroperator_only_double_click_selects_files(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setFollowNewDirectories)
 ///
@@ -527,9 +527,9 @@ void k_diroperator_set_follow_new_directories(void* self, bool enable);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#followNewDirectories)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_follow_new_directories(void* self);
+bool k_diroperator_follow_new_directories(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setFollowSelectedDirectories)
 ///
@@ -540,9 +540,9 @@ void k_diroperator_set_follow_selected_directories(void* self, bool enable);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#followSelectedDirectories)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_follow_selected_directories(void* self);
+bool k_diroperator_follow_selected_directories(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#del)
 ///
@@ -552,7 +552,7 @@ bool k_diroperator_follow_selected_directories(void* self);
 /// @param ask bool
 /// @param showProgress bool
 ///
-KIO__DeleteJob* k_diroperator_del(void* self, void* items, void* parent, bool ask, bool showProgress);
+KIO__DeleteJob* k_diroperator_del(void* self, const void* items, void* parent, bool ask, bool showProgress);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#del)
 ///
@@ -561,7 +561,7 @@ KIO__DeleteJob* k_diroperator_del(void* self, void* items, void* parent, bool as
 /// @param self KDirOperator*
 /// @param callback KIO__DeleteJob* func(KDirOperator* self, KFileItemList* items, QWidget* parent, bool ask, bool showProgress)
 ///
-void k_diroperator_on_del(void* self, KIO__DeleteJob* (*callback)(void*, void*, void*, bool, bool));
+void k_diroperator_on_del(void* self, KIO__DeleteJob* (*callback)(void*, const void*, void*, bool, bool));
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#del)
 ///
@@ -573,7 +573,7 @@ void k_diroperator_on_del(void* self, KIO__DeleteJob* (*callback)(void*, void*, 
 /// @param ask bool
 /// @param showProgress bool
 ///
-KIO__DeleteJob* k_diroperator_super_del(void* self, void* items, void* parent, bool ask, bool showProgress);
+KIO__DeleteJob* k_diroperator_super_del(void* self, const void* items, void* parent, bool ask, bool showProgress);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#clearHistory)
 ///
@@ -608,15 +608,15 @@ void k_diroperator_super_set_enable_dir_highlighting(void* self, bool enable);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#dirHighlighting)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_dir_highlighting(void* self);
+bool k_diroperator_dir_highlighting(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#dirOnlyMode)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_dir_only_mode(void* self);
+bool k_diroperator_dir_only_mode(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#dirOnlyMode)
 ///
@@ -689,7 +689,7 @@ void k_diroperator_super_set_drop_options(void* self, int options);
 /// @param ask bool
 /// @param showProgress bool
 ///
-KIO__CopyJob* k_diroperator_trash(void* self, void* items, void* parent, bool ask, bool showProgress);
+KIO__CopyJob* k_diroperator_trash(void* self, const void* items, void* parent, bool ask, bool showProgress);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#trash)
 ///
@@ -698,7 +698,7 @@ KIO__CopyJob* k_diroperator_trash(void* self, void* items, void* parent, bool as
 /// @param self KDirOperator*
 /// @param callback KIO__CopyJob* func(KDirOperator* self, KFileItemList* items, QWidget* parent, bool ask, bool showProgress)
 ///
-void k_diroperator_on_trash(void* self, KIO__CopyJob* (*callback)(void*, void*, void*, bool, bool));
+void k_diroperator_on_trash(void* self, KIO__CopyJob* (*callback)(void*, const void*, void*, bool, bool));
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#trash)
 ///
@@ -710,13 +710,13 @@ void k_diroperator_on_trash(void* self, KIO__CopyJob* (*callback)(void*, void*, 
 /// @param ask bool
 /// @param showProgress bool
 ///
-KIO__CopyJob* k_diroperator_super_trash(void* self, void* items, void* parent, bool ask, bool showProgress);
+KIO__CopyJob* k_diroperator_super_trash(void* self, const void* items, void* parent, bool ask, bool showProgress);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#previewGenerator)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-KFilePreviewGenerator* k_diroperator_preview_generator(void* self);
+KFilePreviewGenerator* k_diroperator_preview_generator(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setInlinePreviewShown)
 ///
@@ -727,11 +727,11 @@ void k_diroperator_set_inline_preview_shown(void* self, bool show);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#decorationPosition)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
 /// @return enum QStyleOptionViewItem__Position
 ///
-int32_t k_diroperator_decoration_position(void* self);
+int32_t k_diroperator_decoration_position(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setDecorationPosition)
 ///
@@ -742,15 +742,15 @@ void k_diroperator_set_decoration_position(void* self, int32_t position);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#isInlinePreviewShown)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_is_inline_preview_shown(void* self);
+bool k_diroperator_is_inline_preview_shown(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#iconSize)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-int32_t k_diroperator_icon_size(void* self);
+int32_t k_diroperator_icon_size(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setIsSaving)
 ///
@@ -761,17 +761,17 @@ void k_diroperator_set_is_saving(void* self, bool isSaving);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#isSaving)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_is_saving(void* self);
+bool k_diroperator_is_saving(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#supportedSchemes)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-const char** k_diroperator_supported_schemes(void* self);
+const char** k_diroperator_supported_schemes(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#showOpenWithActions)
 ///
@@ -869,45 +869,11 @@ void k_diroperator_super_resize_event(void* self, void* event);
 ///
 void k_diroperator_setup_actions(void* self);
 
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#setupActions)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KDirOperator*
-/// @param callback void func()
-///
-void k_diroperator_on_setup_actions(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#setupActions)
-///
-/// Base class method implementation
-///
-/// @param self KDirOperator*
-///
-void k_diroperator_super_setup_actions(void* self);
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#updateSortActions)
 ///
 /// @param self KDirOperator*
 ///
 void k_diroperator_update_sort_actions(void* self);
-
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#updateSortActions)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KDirOperator*
-/// @param callback void func()
-///
-void k_diroperator_on_update_sort_actions(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#updateSortActions)
-///
-/// Base class method implementation
-///
-/// @param self KDirOperator*
-///
-void k_diroperator_super_update_sort_actions(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#updateViewActions)
 ///
@@ -915,45 +881,11 @@ void k_diroperator_super_update_sort_actions(void* self);
 ///
 void k_diroperator_update_view_actions(void* self);
 
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#updateViewActions)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KDirOperator*
-/// @param callback void func()
-///
-void k_diroperator_on_update_view_actions(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#updateViewActions)
-///
-/// Base class method implementation
-///
-/// @param self KDirOperator*
-///
-void k_diroperator_super_update_view_actions(void* self);
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setupMenu)
 ///
 /// @param self KDirOperator*
 ///
 void k_diroperator_setup_menu2(void* self);
-
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#setupMenu)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KDirOperator*
-/// @param callback void func()
-///
-void k_diroperator_on_setup_menu2(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#setupMenu)
-///
-/// Base class method implementation
-///
-/// @param self KDirOperator*
-///
-void k_diroperator_super_setup_menu2(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#prepareCompletionObjects)
 ///
@@ -961,45 +893,11 @@ void k_diroperator_super_setup_menu2(void* self);
 ///
 void k_diroperator_prepare_completion_objects(void* self);
 
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#prepareCompletionObjects)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KDirOperator*
-/// @param callback void func()
-///
-void k_diroperator_on_prepare_completion_objects(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#prepareCompletionObjects)
-///
-/// Base class method implementation
-///
-/// @param self KDirOperator*
-///
-void k_diroperator_super_prepare_completion_objects(void* self);
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#checkPreviewSupport)
 ///
 /// @param self KDirOperator*
 ///
 bool k_diroperator_check_preview_support(void* self);
-
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#checkPreviewSupport)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KDirOperator*
-/// @param callback bool func()
-///
-void k_diroperator_on_check_preview_support(void* self, bool (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#checkPreviewSupport)
-///
-/// Base class method implementation
-///
-/// @param self KDirOperator*
-///
-bool k_diroperator_super_check_preview_support(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#activatedMenu)
 ///
@@ -1007,7 +905,7 @@ bool k_diroperator_super_check_preview_support(void* self);
 /// @param item KFileItem*
 /// @param pos QPoint*
 ///
-void k_diroperator_activated_menu(void* self, void* item, void* pos);
+void k_diroperator_activated_menu(void* self, const void* item, const void* pos);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#activatedMenu)
 ///
@@ -1016,7 +914,7 @@ void k_diroperator_activated_menu(void* self, void* item, void* pos);
 /// @param self KDirOperator*
 /// @param callback void func(KDirOperator* self, KFileItem* item, QPoint* pos)
 ///
-void k_diroperator_on_activated_menu(void* self, void (*callback)(void*, void*, void*));
+void k_diroperator_on_activated_menu(void* self, void (*callback)(void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#activatedMenu)
 ///
@@ -1026,7 +924,7 @@ void k_diroperator_on_activated_menu(void* self, void (*callback)(void*, void*, 
 /// @param item KFileItem*
 /// @param pos QPoint*
 ///
-void k_diroperator_super_activated_menu(void* self, void* item, void* pos);
+void k_diroperator_super_activated_menu(void* self, const void* item, const void* pos);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#changeEvent)
 ///
@@ -1091,9 +989,9 @@ void k_diroperator_back(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KDirOperator*
-/// @param callback void func()
+/// @param callback void func(KDirOperator* self)
 ///
-void k_diroperator_on_back(void* self, void (*callback)());
+void k_diroperator_on_back(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#back)
 ///
@@ -1114,9 +1012,9 @@ void k_diroperator_forward(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KDirOperator*
-/// @param callback void func()
+/// @param callback void func(KDirOperator* self)
 ///
-void k_diroperator_on_forward(void* self, void (*callback)());
+void k_diroperator_on_forward(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#forward)
 ///
@@ -1137,9 +1035,9 @@ void k_diroperator_home(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KDirOperator*
-/// @param callback void func()
+/// @param callback void func(KDirOperator* self)
 ///
-void k_diroperator_on_home(void* self, void (*callback)());
+void k_diroperator_on_home(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#home)
 ///
@@ -1160,9 +1058,9 @@ void k_diroperator_cd_up(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KDirOperator*
-/// @param callback void func()
+/// @param callback void func(KDirOperator* self)
 ///
-void k_diroperator_on_cd_up(void* self, void (*callback)());
+void k_diroperator_on_cd_up(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#cdUp)
 ///
@@ -1189,9 +1087,9 @@ void k_diroperator_reread_dir(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KDirOperator*
-/// @param callback void func()
+/// @param callback void func(KDirOperator* self)
 ///
-void k_diroperator_on_reread_dir(void* self, void (*callback)());
+void k_diroperator_on_reread_dir(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#rereadDir)
 ///
@@ -1212,9 +1110,9 @@ void k_diroperator_mkdir(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KDirOperator*
-/// @param callback void func()
+/// @param callback void func(KDirOperator* self)
 ///
-void k_diroperator_on_mkdir(void* self, void (*callback)());
+void k_diroperator_on_mkdir(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#mkdir)
 ///
@@ -1235,9 +1133,9 @@ void k_diroperator_delete_selected(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KDirOperator*
-/// @param callback void func()
+/// @param callback void func(KDirOperator* self)
 ///
-void k_diroperator_on_delete_selected(void* self, void (*callback)());
+void k_diroperator_on_delete_selected(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#deleteSelected)
 ///
@@ -1288,9 +1186,9 @@ void k_diroperator_trash_selected(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KDirOperator*
-/// @param callback void func()
+/// @param callback void func(KDirOperator* self)
 ///
-void k_diroperator_on_trash_selected(void* self, void (*callback)());
+void k_diroperator_on_trash_selected(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#trashSelected)
 ///
@@ -1320,52 +1218,18 @@ void k_diroperator_set_supported_schemes(void* self, const char* schemes[static 
 ///
 void k_diroperator_reset_cursor(void* self);
 
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#resetCursor)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KDirOperator*
-/// @param callback void func()
-///
-void k_diroperator_on_reset_cursor(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#resetCursor)
-///
-/// Base class method implementation
-///
-/// @param self KDirOperator*
-///
-void k_diroperator_super_reset_cursor(void* self);
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#pathChanged)
 ///
 /// @param self KDirOperator*
 ///
 void k_diroperator_path_changed(void* self);
 
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#pathChanged)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KDirOperator*
-/// @param callback void func()
-///
-void k_diroperator_on_path_changed(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#pathChanged)
-///
-/// Base class method implementation
-///
-/// @param self KDirOperator*
-///
-void k_diroperator_super_path_changed(void* self);
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#selectDir)
 ///
 /// @param self KDirOperator*
 /// @param item KFileItem*
 ///
-void k_diroperator_select_dir(void* self, void* item);
+void k_diroperator_select_dir(void* self, const void* item);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#selectDir)
 ///
@@ -1374,7 +1238,7 @@ void k_diroperator_select_dir(void* self, void* item);
 /// @param self KDirOperator*
 /// @param callback void func(KDirOperator* self, KFileItem* item)
 ///
-void k_diroperator_on_select_dir(void* self, void (*callback)(void*, void*));
+void k_diroperator_on_select_dir(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#selectDir)
 ///
@@ -1383,57 +1247,21 @@ void k_diroperator_on_select_dir(void* self, void (*callback)(void*, void*));
 /// @param self KDirOperator*
 /// @param item KFileItem*
 ///
-void k_diroperator_super_select_dir(void* self, void* item);
+void k_diroperator_super_select_dir(void* self, const void* item);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#selectFile)
 ///
 /// @param self KDirOperator*
 /// @param item KFileItem*
 ///
-void k_diroperator_select_file(void* self, void* item);
-
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#selectFile)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KDirOperator*
-/// @param callback void func(KDirOperator* self, KFileItem* item)
-///
-void k_diroperator_on_select_file(void* self, void (*callback)(void*, void*));
-
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#selectFile)
-///
-/// Base class method implementation
-///
-/// @param self KDirOperator*
-/// @param item KFileItem*
-///
-void k_diroperator_super_select_file(void* self, void* item);
+void k_diroperator_select_file(void* self, const void* item);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#highlightFile)
 ///
 /// @param self KDirOperator*
 /// @param item KFileItem*
 ///
-void k_diroperator_highlight_file(void* self, void* item);
-
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#highlightFile)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KDirOperator*
-/// @param callback void func(KDirOperator* self, KFileItem* item)
-///
-void k_diroperator_on_highlight_file(void* self, void (*callback)(void*, void*));
-
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#highlightFile)
-///
-/// Base class method implementation
-///
-/// @param self KDirOperator*
-/// @param item KFileItem*
-///
-void k_diroperator_super_highlight_file(void* self, void* item);
+void k_diroperator_highlight_file(void* self, const void* item);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#sortByName)
 ///
@@ -1441,45 +1269,11 @@ void k_diroperator_super_highlight_file(void* self, void* item);
 ///
 void k_diroperator_sort_by_name(void* self);
 
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#sortByName)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KDirOperator*
-/// @param callback void func()
-///
-void k_diroperator_on_sort_by_name(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#sortByName)
-///
-/// Base class method implementation
-///
-/// @param self KDirOperator*
-///
-void k_diroperator_super_sort_by_name(void* self);
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#sortBySize)
 ///
 /// @param self KDirOperator*
 ///
 void k_diroperator_sort_by_size(void* self);
-
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#sortBySize)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KDirOperator*
-/// @param callback void func()
-///
-void k_diroperator_on_sort_by_size(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#sortBySize)
-///
-/// Base class method implementation
-///
-/// @param self KDirOperator*
-///
-void k_diroperator_super_sort_by_size(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#sortByDate)
 ///
@@ -1487,45 +1281,11 @@ void k_diroperator_super_sort_by_size(void* self);
 ///
 void k_diroperator_sort_by_date(void* self);
 
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#sortByDate)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KDirOperator*
-/// @param callback void func()
-///
-void k_diroperator_on_sort_by_date(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#sortByDate)
-///
-/// Base class method implementation
-///
-/// @param self KDirOperator*
-///
-void k_diroperator_super_sort_by_date(void* self);
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#sortByType)
 ///
 /// @param self KDirOperator*
 ///
 void k_diroperator_sort_by_type(void* self);
-
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#sortByType)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KDirOperator*
-/// @param callback void func()
-///
-void k_diroperator_on_sort_by_type(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#sortByType)
-///
-/// Base class method implementation
-///
-/// @param self KDirOperator*
-///
-void k_diroperator_super_sort_by_type(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#sortReversed)
 ///
@@ -1533,68 +1293,17 @@ void k_diroperator_super_sort_by_type(void* self);
 ///
 void k_diroperator_sort_reversed(void* self);
 
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#sortReversed)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KDirOperator*
-/// @param callback void func()
-///
-void k_diroperator_on_sort_reversed(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#sortReversed)
-///
-/// Base class method implementation
-///
-/// @param self KDirOperator*
-///
-void k_diroperator_super_sort_reversed(void* self);
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#toggleDirsFirst)
 ///
 /// @param self KDirOperator*
 ///
 void k_diroperator_toggle_dirs_first(void* self);
 
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#toggleDirsFirst)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KDirOperator*
-/// @param callback void func()
-///
-void k_diroperator_on_toggle_dirs_first(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#toggleDirsFirst)
-///
-/// Base class method implementation
-///
-/// @param self KDirOperator*
-///
-void k_diroperator_super_toggle_dirs_first(void* self);
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#toggleIgnoreCase)
 ///
 /// @param self KDirOperator*
 ///
 void k_diroperator_toggle_ignore_case(void* self);
-
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#toggleIgnoreCase)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KDirOperator*
-/// @param callback void func()
-///
-void k_diroperator_on_toggle_ignore_case(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#toggleIgnoreCase)
-///
-/// Base class method implementation
-///
-/// @param self KDirOperator*
-///
-void k_diroperator_super_toggle_ignore_case(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#slotCompletionMatch)
 ///
@@ -1603,37 +1312,19 @@ void k_diroperator_super_toggle_ignore_case(void* self);
 ///
 void k_diroperator_slot_completion_match(void* self, const char* match);
 
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#slotCompletionMatch)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KDirOperator*
-/// @param callback void func(KDirOperator* self, const char* match)
-///
-void k_diroperator_on_slot_completion_match(void* self, void (*callback)(void*, const char*));
-
-/// [Upstream resources](https://api.kde.org/kdiroperator.html#slotCompletionMatch)
-///
-/// Base class method implementation
-///
-/// @param self KDirOperator*
-/// @param match const char*
-///
-void k_diroperator_super_slot_completion_match(void* self, const char* match);
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#urlEntered)
 ///
 /// @param self KDirOperator*
 /// @param param1 QUrl*
 ///
-void k_diroperator_url_entered(void* self, void* param1);
+void k_diroperator_url_entered(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#urlEntered)
 ///
 /// @param self KDirOperator*
 /// @param callback void func(KDirOperator* self, QUrl* param1)
 ///
-void k_diroperator_on_url_entered(void* self, void (*callback)(void*, void*));
+void k_diroperator_on_url_entered(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#updateInformation)
 ///
@@ -1696,42 +1387,42 @@ void k_diroperator_on_view_changed(void* self, void (*callback)(void*, void*));
 /// @param self KDirOperator*
 /// @param item KFileItem*
 ///
-void k_diroperator_file_highlighted(void* self, void* item);
+void k_diroperator_file_highlighted(void* self, const void* item);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#fileHighlighted)
 ///
 /// @param self KDirOperator*
 /// @param callback void func(KDirOperator* self, KFileItem* item)
 ///
-void k_diroperator_on_file_highlighted(void* self, void (*callback)(void*, void*));
+void k_diroperator_on_file_highlighted(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#dirActivated)
 ///
 /// @param self KDirOperator*
 /// @param item KFileItem*
 ///
-void k_diroperator_dir_activated(void* self, void* item);
+void k_diroperator_dir_activated(void* self, const void* item);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#dirActivated)
 ///
 /// @param self KDirOperator*
 /// @param callback void func(KDirOperator* self, KFileItem* item)
 ///
-void k_diroperator_on_dir_activated(void* self, void (*callback)(void*, void*));
+void k_diroperator_on_dir_activated(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#fileSelected)
 ///
 /// @param self KDirOperator*
 /// @param item KFileItem*
 ///
-void k_diroperator_file_selected(void* self, void* item);
+void k_diroperator_file_selected(void* self, const void* item);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#fileSelected)
 ///
 /// @param self KDirOperator*
 /// @param callback void func(KDirOperator* self, KFileItem* item)
 ///
-void k_diroperator_on_file_selected(void* self, void (*callback)(void*, void*));
+void k_diroperator_on_file_selected(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#dropped)
 ///
@@ -1740,14 +1431,14 @@ void k_diroperator_on_file_selected(void* self, void (*callback)(void*, void*));
 /// @param event QDropEvent*
 /// @param urls libqt_list of QUrl*
 ///
-void k_diroperator_dropped(void* self, void* item, void* event, libqt_list urls);
+void k_diroperator_dropped(void* self, const void* item, void* event, libqt_list urls);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#dropped)
 ///
 /// @param self KDirOperator*
 /// @param callback void func(KDirOperator* self, KFileItem* item, QDropEvent* event, libqt_list of QUrl* urls)
 ///
-void k_diroperator_on_dropped(void* self, void (*callback)(void*, void*, void*, libqt_list));
+void k_diroperator_on_dropped(void* self, void (*callback)(void*, const void*, void*, libqt_list));
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#contextMenuAboutToShow)
 ///
@@ -1755,14 +1446,14 @@ void k_diroperator_on_dropped(void* self, void (*callback)(void*, void*, void*, 
 /// @param item KFileItem*
 /// @param menu QMenu*
 ///
-void k_diroperator_context_menu_about_to_show(void* self, void* item, void* menu);
+void k_diroperator_context_menu_about_to_show(void* self, const void* item, void* menu);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#contextMenuAboutToShow)
 ///
 /// @param self KDirOperator*
 /// @param callback void func(KDirOperator* self, KFileItem* item, QMenu* menu)
 ///
-void k_diroperator_on_context_menu_about_to_show(void* self, void (*callback)(void*, void*, void*));
+void k_diroperator_on_context_menu_about_to_show(void* self, void (*callback)(void*, const void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#currentIconSizeChanged)
 ///
@@ -1844,9 +1535,9 @@ KDirOperator* k_diroperator_from_q_paint_device(void* _qpaintdevice);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-uintptr_t k_diroperator_win_id(void* self);
+uintptr_t k_diroperator_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1860,25 +1551,25 @@ void k_diroperator_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-uintptr_t k_diroperator_internal_win_id(void* self);
+uintptr_t k_diroperator_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-uintptr_t k_diroperator_effective_win_id(void* self);
+uintptr_t k_diroperator_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QStyle* k_diroperator_style(void* self);
+QStyle* k_diroperator_style(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1893,35 +1584,35 @@ void k_diroperator_set_style(void* self, void* style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_is_top_level(void* self);
+bool k_diroperator_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_is_window(void* self);
+bool k_diroperator_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_is_modal(void* self);
+bool k_diroperator_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t k_diroperator_window_modality(void* self);
+int32_t k_diroperator_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1936,18 +1627,18 @@ void k_diroperator_set_window_modality(void* self, int32_t windowModality);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_is_enabled(void* self);
+bool k_diroperator_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param param1 QWidget*
 ///
-bool k_diroperator_is_enabled_to(void* self, void* param1);
+bool k_diroperator_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1980,153 +1671,153 @@ void k_diroperator_set_window_modified(void* self, bool windowModified);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QRect* k_diroperator_frame_geometry(void* self);
+QRect* k_diroperator_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-const QRect* k_diroperator_geometry(void* self);
+const QRect* k_diroperator_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QRect* k_diroperator_normal_geometry(void* self);
+QRect* k_diroperator_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-int32_t k_diroperator_x(void* self);
+int32_t k_diroperator_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-int32_t k_diroperator_y(void* self);
+int32_t k_diroperator_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QPoint* k_diroperator_pos(void* self);
+QPoint* k_diroperator_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QSize* k_diroperator_frame_size(void* self);
+QSize* k_diroperator_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QSize* k_diroperator_size(void* self);
+QSize* k_diroperator_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-int32_t k_diroperator_width(void* self);
+int32_t k_diroperator_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-int32_t k_diroperator_height(void* self);
+int32_t k_diroperator_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QRect* k_diroperator_rect(void* self);
+QRect* k_diroperator_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QRect* k_diroperator_children_rect(void* self);
+QRect* k_diroperator_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QRegion* k_diroperator_children_region(void* self);
+QRegion* k_diroperator_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QSize* k_diroperator_minimum_size(void* self);
+QSize* k_diroperator_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QSize* k_diroperator_maximum_size(void* self);
+QSize* k_diroperator_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-int32_t k_diroperator_minimum_width(void* self);
+int32_t k_diroperator_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-int32_t k_diroperator_minimum_height(void* self);
+int32_t k_diroperator_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-int32_t k_diroperator_maximum_width(void* self);
+int32_t k_diroperator_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-int32_t k_diroperator_maximum_height(void* self);
+int32_t k_diroperator_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2135,7 +1826,7 @@ int32_t k_diroperator_maximum_height(void* self);
 /// @param self KDirOperator*
 /// @param minimumSize QSize*
 ///
-void k_diroperator_set_minimum_size(void* self, void* minimumSize);
+void k_diroperator_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -2154,7 +1845,7 @@ void k_diroperator_set_minimum_size2(void* self, int minw, int minh);
 /// @param self KDirOperator*
 /// @param maximumSize QSize*
 ///
-void k_diroperator_set_maximum_size(void* self, void* maximumSize);
+void k_diroperator_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -2206,9 +1897,9 @@ void k_diroperator_set_maximum_height(void* self, int maxh);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QSize* k_diroperator_size_increment(void* self);
+QSize* k_diroperator_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2217,7 +1908,7 @@ QSize* k_diroperator_size_increment(void* self);
 /// @param self KDirOperator*
 /// @param sizeIncrement QSize*
 ///
-void k_diroperator_set_size_increment(void* self, void* sizeIncrement);
+void k_diroperator_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -2233,9 +1924,9 @@ void k_diroperator_set_size_increment2(void* self, int w, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QSize* k_diroperator_base_size(void* self);
+QSize* k_diroperator_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2244,7 +1935,7 @@ QSize* k_diroperator_base_size(void* self);
 /// @param self KDirOperator*
 /// @param baseSize QSize*
 ///
-void k_diroperator_set_base_size(void* self, void* baseSize);
+void k_diroperator_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -2263,7 +1954,7 @@ void k_diroperator_set_base_size2(void* self, int basew, int baseh);
 /// @param self KDirOperator*
 /// @param fixedSize QSize*
 ///
-void k_diroperator_set_fixed_size(void* self, void* fixedSize);
+void k_diroperator_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -2297,145 +1988,145 @@ void k_diroperator_set_fixed_height(void* self, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param param1 QPointF*
 ///
-QPointF* k_diroperator_map_to_global(void* self, void* param1);
+QPointF* k_diroperator_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param param1 QPoint*
 ///
-QPoint* k_diroperator_map_to_global2(void* self, void* param1);
+QPoint* k_diroperator_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param param1 QPointF*
 ///
-QPointF* k_diroperator_map_from_global(void* self, void* param1);
+QPointF* k_diroperator_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param param1 QPoint*
 ///
-QPoint* k_diroperator_map_from_global2(void* self, void* param1);
+QPoint* k_diroperator_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param param1 QPointF*
 ///
-QPointF* k_diroperator_map_to_parent(void* self, void* param1);
+QPointF* k_diroperator_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param param1 QPoint*
 ///
-QPoint* k_diroperator_map_to_parent2(void* self, void* param1);
+QPoint* k_diroperator_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param param1 QPointF*
 ///
-QPointF* k_diroperator_map_from_parent(void* self, void* param1);
+QPointF* k_diroperator_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param param1 QPoint*
 ///
-QPoint* k_diroperator_map_from_parent2(void* self, void* param1);
+QPoint* k_diroperator_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_diroperator_map_to(void* self, void* param1, void* param2);
+QPointF* k_diroperator_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_diroperator_map_to2(void* self, void* param1, void* param2);
+QPoint* k_diroperator_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_diroperator_map_from(void* self, void* param1, void* param2);
+QPointF* k_diroperator_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_diroperator_map_from2(void* self, void* param1, void* param2);
+QPoint* k_diroperator_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QWidget* k_diroperator_window(void* self);
+QWidget* k_diroperator_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QWidget* k_diroperator_native_parent_widget(void* self);
+QWidget* k_diroperator_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QWidget* k_diroperator_top_level_widget(void* self);
+QWidget* k_diroperator_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-const QPalette* k_diroperator_palette(void* self);
+const QPalette* k_diroperator_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2444,7 +2135,7 @@ const QPalette* k_diroperator_palette(void* self);
 /// @param self KDirOperator*
 /// @param palette QPalette*
 ///
-void k_diroperator_set_palette(void* self, void* palette);
+void k_diroperator_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -2459,11 +2150,11 @@ void k_diroperator_set_background_role(void* self, int32_t backgroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_diroperator_background_role(void* self);
+int32_t k_diroperator_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2478,19 +2169,19 @@ void k_diroperator_set_foreground_role(void* self, int32_t foregroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_diroperator_foreground_role(void* self);
+int32_t k_diroperator_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-const QFont* k_diroperator_font(void* self);
+const QFont* k_diroperator_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2499,31 +2190,31 @@ const QFont* k_diroperator_font(void* self);
 /// @param self KDirOperator*
 /// @param font QFont*
 ///
-void k_diroperator_set_font(void* self, void* font);
+void k_diroperator_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QFontMetrics* k_diroperator_font_metrics(void* self);
+QFontMetrics* k_diroperator_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QFontInfo* k_diroperator_font_info(void* self);
+QFontInfo* k_diroperator_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QCursor* k_diroperator_cursor(void* self);
+QCursor* k_diroperator_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2532,7 +2223,7 @@ QCursor* k_diroperator_cursor(void* self);
 /// @param self KDirOperator*
 /// @param cursor QCursor*
 ///
-void k_diroperator_set_cursor(void* self, void* cursor);
+void k_diroperator_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -2555,17 +2246,17 @@ void k_diroperator_set_mouse_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_has_mouse_tracking(void* self);
+bool k_diroperator_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_under_mouse(void* self);
+bool k_diroperator_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2580,9 +2271,9 @@ void k_diroperator_set_tablet_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_has_tablet_tracking(void* self);
+bool k_diroperator_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2591,7 +2282,7 @@ bool k_diroperator_has_tablet_tracking(void* self);
 /// @param self KDirOperator*
 /// @param mask QBitmap*
 ///
-void k_diroperator_set_mask(void* self, void* mask);
+void k_diroperator_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -2600,15 +2291,15 @@ void k_diroperator_set_mask(void* self, void* mask);
 /// @param self KDirOperator*
 /// @param mask QRegion*
 ///
-void k_diroperator_set_mask2(void* self, void* mask);
+void k_diroperator_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QRegion* k_diroperator_mask(void* self);
+QRegion* k_diroperator_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2648,9 +2339,9 @@ QPixmap* k_diroperator_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QGraphicsEffect* k_diroperator_graphics_effect(void* self);
+QGraphicsEffect* k_diroperator_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2703,9 +2394,9 @@ void k_diroperator_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-const char* k_diroperator_style_sheet(void* self);
+const char* k_diroperator_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2713,9 +2404,9 @@ const char* k_diroperator_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-const char* k_diroperator_window_title(void* self);
+const char* k_diroperator_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2724,15 +2415,15 @@ const char* k_diroperator_window_title(void* self);
 /// @param self KDirOperator*
 /// @param icon QIcon*
 ///
-void k_diroperator_set_window_icon(void* self, void* icon);
+void k_diroperator_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QIcon* k_diroperator_window_icon(void* self);
+QIcon* k_diroperator_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2749,9 +2440,9 @@ void k_diroperator_set_window_icon_text(void* self, const char* windowIconText);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-const char* k_diroperator_window_icon_text(void* self);
+const char* k_diroperator_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2768,9 +2459,9 @@ void k_diroperator_set_window_role(void* self, const char* windowRole);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-const char* k_diroperator_window_role(void* self);
+const char* k_diroperator_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2787,9 +2478,9 @@ void k_diroperator_set_window_file_path(void* self, const char* filePath);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-const char* k_diroperator_window_file_path(void* self);
+const char* k_diroperator_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2804,17 +2495,17 @@ void k_diroperator_set_window_opacity(void* self, double level);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-double k_diroperator_window_opacity(void* self);
+double k_diroperator_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_is_window_modified(void* self);
+bool k_diroperator_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2831,9 +2522,9 @@ void k_diroperator_set_tool_tip(void* self, const char* toolTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-const char* k_diroperator_tool_tip(void* self);
+const char* k_diroperator_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2848,9 +2539,9 @@ void k_diroperator_set_tool_tip_duration(void* self, int msec);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-int32_t k_diroperator_tool_tip_duration(void* self);
+int32_t k_diroperator_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2867,9 +2558,9 @@ void k_diroperator_set_status_tip(void* self, const char* statusTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-const char* k_diroperator_status_tip(void* self);
+const char* k_diroperator_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2886,9 +2577,9 @@ void k_diroperator_set_whats_this(void* self, const char* whatsThis);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-const char* k_diroperator_whats_this(void* self);
+const char* k_diroperator_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2896,9 +2587,9 @@ const char* k_diroperator_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-const char* k_diroperator_accessible_name(void* self);
+const char* k_diroperator_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2915,9 +2606,9 @@ void k_diroperator_set_accessible_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-const char* k_diroperator_accessible_description(void* self);
+const char* k_diroperator_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2941,11 +2632,11 @@ void k_diroperator_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t k_diroperator_layout_direction(void* self);
+int32_t k_diroperator_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2962,15 +2653,15 @@ void k_diroperator_unset_layout_direction(void* self);
 /// @param self KDirOperator*
 /// @param locale QLocale*
 ///
-void k_diroperator_set_locale(void* self, void* locale);
+void k_diroperator_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QLocale* k_diroperator_locale(void* self);
+QLocale* k_diroperator_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2984,17 +2675,17 @@ void k_diroperator_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_is_right_to_left(void* self);
+bool k_diroperator_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_is_left_to_right(void* self);
+bool k_diroperator_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3008,9 +2699,9 @@ void k_diroperator_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_is_active_window(void* self);
+bool k_diroperator_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3041,11 +2732,11 @@ void k_diroperator_set_focus2(void* self, int32_t reason);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t k_diroperator_focus_policy(void* self);
+int32_t k_diroperator_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3060,9 +2751,9 @@ void k_diroperator_set_focus_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_has_focus(void* self);
+bool k_diroperator_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3086,19 +2777,19 @@ void k_diroperator_set_focus_proxy(void* self, void* focusProxy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QWidget* k_diroperator_focus_proxy(void* self);
+QWidget* k_diroperator_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t k_diroperator_context_menu_policy(void* self);
+int32_t k_diroperator_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3124,7 +2815,7 @@ void k_diroperator_grab_mouse(void* self);
 /// @param self KDirOperator*
 /// @param param1 QCursor*
 ///
-void k_diroperator_grab_mouse2(void* self, void* param1);
+void k_diroperator_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3157,7 +2848,7 @@ void k_diroperator_release_keyboard(void* self);
 /// @param self KDirOperator*
 /// @param key QKeySequence*
 ///
-int32_t k_diroperator_grab_shortcut(void* self, void* key);
+int32_t k_diroperator_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -3202,9 +2893,9 @@ QWidget* k_diroperator_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_updates_enabled(void* self);
+bool k_diroperator_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3219,9 +2910,9 @@ void k_diroperator_set_updates_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QGraphicsProxyWidget* k_diroperator_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* k_diroperator_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3258,7 +2949,7 @@ void k_diroperator_update2(void* self, int x, int y, int w, int h);
 /// @param self KDirOperator*
 /// @param param1 QRect*
 ///
-void k_diroperator_update3(void* self, void* param1);
+void k_diroperator_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3267,7 +2958,7 @@ void k_diroperator_update3(void* self, void* param1);
 /// @param self KDirOperator*
 /// @param param1 QRegion*
 ///
-void k_diroperator_update4(void* self, void* param1);
+void k_diroperator_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3288,7 +2979,7 @@ void k_diroperator_repaint2(void* self, int x, int y, int w, int h);
 /// @param self KDirOperator*
 /// @param param1 QRect*
 ///
-void k_diroperator_repaint3(void* self, void* param1);
+void k_diroperator_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3297,7 +2988,7 @@ void k_diroperator_repaint3(void* self, void* param1);
 /// @param self KDirOperator*
 /// @param param1 QRegion*
 ///
-void k_diroperator_repaint4(void* self, void* param1);
+void k_diroperator_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3398,7 +3089,7 @@ void k_diroperator_move(void* self, int x, int y);
 /// @param self KDirOperator*
 /// @param param1 QPoint*
 ///
-void k_diroperator_move2(void* self, void* param1);
+void k_diroperator_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3417,7 +3108,7 @@ void k_diroperator_resize(void* self, int w, int h);
 /// @param self KDirOperator*
 /// @param param1 QSize*
 ///
-void k_diroperator_resize2(void* self, void* param1);
+void k_diroperator_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3438,7 +3129,7 @@ void k_diroperator_set_geometry(void* self, int x, int y, int w, int h);
 /// @param self KDirOperator*
 /// @param geometry QRect*
 ///
-void k_diroperator_set_geometry2(void* self, void* geometry);
+void k_diroperator_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -3446,9 +3137,9 @@ void k_diroperator_set_geometry2(void* self, void* geometry);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-char* k_diroperator_save_geometry(void* self);
+char* k_diroperator_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3471,60 +3162,60 @@ void k_diroperator_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_is_visible(void* self);
+bool k_diroperator_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param param1 QWidget*
 ///
-bool k_diroperator_is_visible_to(void* self, void* param1);
+bool k_diroperator_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_is_hidden(void* self);
+bool k_diroperator_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_is_minimized(void* self);
+bool k_diroperator_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_is_maximized(void* self);
+bool k_diroperator_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_is_full_screen(void* self);
+bool k_diroperator_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t k_diroperator_window_state(void* self);
+int32_t k_diroperator_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3548,9 +3239,9 @@ void k_diroperator_override_window_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QSizePolicy* k_diroperator_size_policy(void* self);
+QSizePolicy* k_diroperator_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3575,9 +3266,9 @@ void k_diroperator_set_size_policy2(void* self, int32_t horizontal, int32_t vert
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QRegion* k_diroperator_visible_region(void* self);
+QRegion* k_diroperator_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3598,31 +3289,31 @@ void k_diroperator_set_contents_margins(void* self, int left, int top, int right
 /// @param self KDirOperator*
 /// @param margins QMargins*
 ///
-void k_diroperator_set_contents_margins2(void* self, void* margins);
+void k_diroperator_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QMargins* k_diroperator_contents_margins(void* self);
+QMargins* k_diroperator_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QRect* k_diroperator_contents_rect(void* self);
+QRect* k_diroperator_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QLayout* k_diroperator_layout(void* self);
+QLayout* k_diroperator_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3679,39 +3370,39 @@ void k_diroperator_scroll(void* self, int dx, int dy);
 /// @param dy int
 /// @param param3 QRect*
 ///
-void k_diroperator_scroll2(void* self, int dx, int dy, void* param3);
+void k_diroperator_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QWidget* k_diroperator_focus_widget(void* self);
+QWidget* k_diroperator_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QWidget* k_diroperator_next_in_focus_chain(void* self);
+QWidget* k_diroperator_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QWidget* k_diroperator_previous_in_focus_chain(void* self);
+QWidget* k_diroperator_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_accept_drops(void* self);
+bool k_diroperator_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3764,11 +3455,11 @@ void k_diroperator_remove_action(void* self, void* action);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list k_diroperator_actions(void* self);
+libqt_list k_diroperator_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3787,7 +3478,7 @@ QAction* k_diroperator_add_action2(void* self, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* k_diroperator_add_action3(void* self, void* icon, const char* text);
+QAction* k_diroperator_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -3797,7 +3488,7 @@ QAction* k_diroperator_add_action3(void* self, void* icon, const char* text);
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_diroperator_add_action4(void* self, const char* text, void* shortcut);
+QAction* k_diroperator_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -3808,15 +3499,15 @@ QAction* k_diroperator_add_action4(void* self, const char* text, void* shortcut)
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_diroperator_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* k_diroperator_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QWidget* k_diroperator_parent_widget(void* self);
+QWidget* k_diroperator_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3831,11 +3522,11 @@ void k_diroperator_set_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t k_diroperator_window_flags(void* self);
+int32_t k_diroperator_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3859,11 +3550,11 @@ void k_diroperator_override_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t k_diroperator_window_type(void* self);
+int32_t k_diroperator_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3877,29 +3568,29 @@ QWidget* k_diroperator_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param x int
 /// @param y int
 ///
-QWidget* k_diroperator_child_at(void* self, int x, int y);
+QWidget* k_diroperator_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param p QPoint*
 ///
-QWidget* k_diroperator_child_at2(void* self, void* p);
+QWidget* k_diroperator_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param p QPointF*
 ///
-QWidget* k_diroperator_child_at3(void* self, void* p);
+QWidget* k_diroperator_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -3914,35 +3605,35 @@ void k_diroperator_set_attribute(void* self, int32_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool k_diroperator_test_attribute(void* self, int32_t param1);
+bool k_diroperator_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-void k_diroperator_ensure_polished(void* self);
+void k_diroperator_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param child QWidget*
 ///
-bool k_diroperator_is_ancestor_of(void* self, void* child);
+bool k_diroperator_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_auto_fill_background(void* self);
+bool k_diroperator_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3957,25 +3648,25 @@ void k_diroperator_set_auto_fill_background(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QBackingStore* k_diroperator_backing_store(void* self);
+QBackingStore* k_diroperator_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QWindow* k_diroperator_window_handle(void* self);
+QWindow* k_diroperator_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QScreen* k_diroperator_screen(void* self);
+QScreen* k_diroperator_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4019,7 +3710,7 @@ void k_diroperator_on_window_title_changed(void* self, void (*callback)(void*, c
 /// @param self KDirOperator*
 /// @param icon QIcon*
 ///
-void k_diroperator_window_icon_changed(void* self, void* icon);
+void k_diroperator_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -4028,7 +3719,7 @@ void k_diroperator_window_icon_changed(void* self, void* icon);
 /// @param self KDirOperator*
 /// @param callback void func(KDirOperator* self, QIcon* icon)
 ///
-void k_diroperator_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void k_diroperator_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -4055,7 +3746,7 @@ void k_diroperator_on_window_icon_text_changed(void* self, void (*callback)(void
 /// @param self KDirOperator*
 /// @param pos QPoint*
 ///
-void k_diroperator_custom_context_menu_requested(void* self, void* pos);
+void k_diroperator_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -4064,17 +3755,17 @@ void k_diroperator_custom_context_menu_requested(void* self, void* pos);
 /// @param self KDirOperator*
 /// @param callback void func(KDirOperator* self, QPoint* pos)
 ///
-void k_diroperator_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void k_diroperator_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t k_diroperator_input_method_hints(void* self);
+int32_t k_diroperator_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4093,7 +3784,7 @@ void k_diroperator_set_input_method_hints(void* self, int32_t hints);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void k_diroperator_render22(void* self, void* target, void* targetOffset);
+void k_diroperator_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -4104,7 +3795,7 @@ void k_diroperator_render22(void* self, void* target, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_diroperator_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void k_diroperator_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -4116,7 +3807,7 @@ void k_diroperator_render3(void* self, void* target, void* targetOffset, void* s
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_diroperator_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_diroperator_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -4126,7 +3817,7 @@ void k_diroperator_render4(void* self, void* target, void* targetOffset, void* s
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void k_diroperator_render23(void* self, void* painter, void* targetOffset);
+void k_diroperator_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -4137,7 +3828,7 @@ void k_diroperator_render23(void* self, void* painter, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_diroperator_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void k_diroperator_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -4149,7 +3840,7 @@ void k_diroperator_render32(void* self, void* painter, void* targetOffset, void*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_diroperator_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_diroperator_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -4158,7 +3849,7 @@ void k_diroperator_render42(void* self, void* painter, void* targetOffset, void*
 /// @param self KDirOperator*
 /// @param rectangle QRect*
 ///
-QPixmap* k_diroperator_grab1(void* self, void* rectangle);
+QPixmap* k_diroperator_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -4178,7 +3869,7 @@ void k_diroperator_grab_gesture2(void* self, int32_t type, int32_t flags);
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t k_diroperator_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t k_diroperator_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -4245,9 +3936,9 @@ QWidget* k_diroperator_create_window_container3(void* window, void* parent, int3
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-const char* k_diroperator_object_name(void* self);
+const char* k_diroperator_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4262,33 +3953,33 @@ void k_diroperator_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_is_widget_type(void* self);
+bool k_diroperator_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_is_window_type(void* self);
+bool k_diroperator_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_is_quick_item_type(void* self);
+bool k_diroperator_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_signals_blocked(void* self);
+bool k_diroperator_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4303,9 +3994,9 @@ bool k_diroperator_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QThread* k_diroperator_thread(void* self);
+QThread* k_diroperator_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4356,11 +4047,11 @@ void k_diroperator_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_diroperator_children(void* self);
+libqt_list k_diroperator_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4389,7 +4080,7 @@ void k_diroperator_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_diroperator_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_diroperator_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4400,18 +4091,18 @@ QMetaObject__Connection* k_diroperator_connect(void* sender, const char* signal,
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_diroperator_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_diroperator_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_diroperator_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_diroperator_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4422,7 +4113,7 @@ QMetaObject__Connection* k_diroperator_connect3(void* self, void* sender, const 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_diroperator_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_diroperator_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4433,24 +4124,24 @@ bool k_diroperator_disconnect(void* sender, const char* signal, void* receiver, 
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_diroperator_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_diroperator_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_disconnect3(void* self);
+bool k_diroperator_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param receiver QObject*
 ///
-bool k_diroperator_disconnect4(void* self, void* receiver);
+bool k_diroperator_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -4458,23 +4149,23 @@ bool k_diroperator_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_diroperator_disconnect5(void* param1);
+bool k_diroperator_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-void k_diroperator_dump_object_tree(void* self);
+void k_diroperator_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-void k_diroperator_dump_object_info(void* self);
+void k_diroperator_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4484,16 +4175,16 @@ void k_diroperator_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_diroperator_set_property(void* self, const char* name, void* value);
+bool k_diroperator_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param name const char*
 ///
-QVariant* k_diroperator_property(void* self, const char* name);
+QVariant* k_diroperator_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -4501,9 +4192,9 @@ QVariant* k_diroperator_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-const char** k_diroperator_dynamic_property_names(void* self);
+const char** k_diroperator_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4517,9 +4208,9 @@ QBindingStorage* k_diroperator_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-const QBindingStorage* k_diroperator_binding_storage2(void* self);
+const QBindingStorage* k_diroperator_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4542,18 +4233,18 @@ void k_diroperator_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QObject* k_diroperator_parent(void* self);
+QObject* k_diroperator_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param classname const char*
 ///
-bool k_diroperator_inherits(void* self, const char* classname);
+bool k_diroperator_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -4593,7 +4284,7 @@ int32_t k_diroperator_start_timer23(void* self, int64_t time, int32_t timerType)
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_diroperator_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_diroperator_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -4605,59 +4296,59 @@ QMetaObject__Connection* k_diroperator_connect5(void* sender, const char* signal
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_diroperator_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_diroperator_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_diroperator_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_diroperator_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param signal const char*
 ///
-bool k_diroperator_disconnect1(void* self, const char* signal);
+bool k_diroperator_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KDirOperator*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_diroperator_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_diroperator_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_diroperator_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_diroperator_disconnect23(void* self, void* receiver, const char* member);
+bool k_diroperator_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KDirOperator*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_diroperator_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4681,89 +4372,89 @@ void k_diroperator_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_painting_active(void* self);
+bool k_diroperator_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-int32_t k_diroperator_width_m_m(void* self);
+int32_t k_diroperator_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-int32_t k_diroperator_height_m_m(void* self);
+int32_t k_diroperator_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-int32_t k_diroperator_logical_dpi_x(void* self);
+int32_t k_diroperator_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-int32_t k_diroperator_logical_dpi_y(void* self);
+int32_t k_diroperator_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-int32_t k_diroperator_physical_dpi_x(void* self);
+int32_t k_diroperator_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-int32_t k_diroperator_physical_dpi_y(void* self);
+int32_t k_diroperator_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-double k_diroperator_device_pixel_ratio(void* self);
+double k_diroperator_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-double k_diroperator_device_pixel_ratio_f(void* self);
+double k_diroperator_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-int32_t k_diroperator_color_count(void* self);
+int32_t k_diroperator_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-int32_t k_diroperator_depth(void* self);
+int32_t k_diroperator_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -4786,9 +4477,9 @@ int32_t k_diroperator_encode_metric_f(int32_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-int32_t k_diroperator_dev_type(void* self);
+int32_t k_diroperator_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4796,9 +4487,9 @@ int32_t k_diroperator_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-int32_t k_diroperator_super_dev_type(void* self);
+int32_t k_diroperator_super_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4806,10 +4497,10 @@ int32_t k_diroperator_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KDirOperator*
-/// @param callback int32_t func()
+/// @param self const KDirOperator*
+/// @param callback int32_t func(KDirOperator* self)
 ///
-void k_diroperator_on_dev_type(void* self, int32_t (*callback)());
+void k_diroperator_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4850,9 +4541,9 @@ void k_diroperator_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QSize* k_diroperator_size_hint(void* self);
+QSize* k_diroperator_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4860,9 +4551,9 @@ QSize* k_diroperator_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QSize* k_diroperator_super_size_hint(void* self);
+QSize* k_diroperator_super_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4870,12 +4561,12 @@ QSize* k_diroperator_super_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KDirOperator*
-/// @param callback QSize* func()
+/// @param self const KDirOperator*
+/// @param callback QSize* func(KDirOperator* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_diroperator_on_size_hint(void* self, QSize* (*callback)());
+void k_diroperator_on_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4883,9 +4574,9 @@ void k_diroperator_on_size_hint(void* self, QSize* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QSize* k_diroperator_minimum_size_hint(void* self);
+QSize* k_diroperator_minimum_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4893,9 +4584,9 @@ QSize* k_diroperator_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QSize* k_diroperator_super_minimum_size_hint(void* self);
+QSize* k_diroperator_super_minimum_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4903,12 +4594,12 @@ QSize* k_diroperator_super_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KDirOperator*
-/// @param callback QSize* func()
+/// @param self const KDirOperator*
+/// @param callback QSize* func(KDirOperator* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_diroperator_on_minimum_size_hint(void* self, QSize* (*callback)());
+void k_diroperator_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4916,10 +4607,10 @@ void k_diroperator_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param param1 int
 ///
-int32_t k_diroperator_height_for_width(void* self, int param1);
+int32_t k_diroperator_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -4927,10 +4618,10 @@ int32_t k_diroperator_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param param1 int
 ///
-int32_t k_diroperator_super_height_for_width(void* self, int param1);
+int32_t k_diroperator_super_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -4938,10 +4629,10 @@ int32_t k_diroperator_super_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param callback int32_t func(KDirOperator* self, int param1)
 ///
-void k_diroperator_on_height_for_width(void* self, int32_t (*callback)(void*, int));
+void k_diroperator_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -4949,9 +4640,9 @@ void k_diroperator_on_height_for_width(void* self, int32_t (*callback)(void*, in
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_has_height_for_width(void* self);
+bool k_diroperator_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4959,9 +4650,9 @@ bool k_diroperator_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-bool k_diroperator_super_has_height_for_width(void* self);
+bool k_diroperator_super_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4969,10 +4660,10 @@ bool k_diroperator_super_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KDirOperator*
-/// @param callback bool func()
+/// @param self const KDirOperator*
+/// @param callback bool func(KDirOperator* self)
 ///
-void k_diroperator_on_has_height_for_width(void* self, bool (*callback)());
+void k_diroperator_on_has_height_for_width(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4980,9 +4671,9 @@ void k_diroperator_on_has_height_for_width(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QPaintEngine* k_diroperator_paint_engine(void* self);
+QPaintEngine* k_diroperator_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4990,9 +4681,9 @@ QPaintEngine* k_diroperator_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QPaintEngine* k_diroperator_super_paint_engine(void* self);
+QPaintEngine* k_diroperator_super_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5000,10 +4691,10 @@ QPaintEngine* k_diroperator_super_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KDirOperator*
-/// @param callback QPaintEngine* func()
+/// @param self const KDirOperator*
+/// @param callback QPaintEngine* func(KDirOperator* self)
 ///
-void k_diroperator_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void k_diroperator_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5840,10 +5531,10 @@ void k_diroperator_on_native_event(void* self, bool (*callback)(void*, libqt_str
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_diroperator_metric(void* self, int32_t param1);
+int32_t k_diroperator_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5851,10 +5542,10 @@ int32_t k_diroperator_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_diroperator_super_metric(void* self, int32_t param1);
+int32_t k_diroperator_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5862,10 +5553,10 @@ int32_t k_diroperator_super_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param callback int32_t func(KDirOperator* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_diroperator_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void k_diroperator_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5873,10 +5564,10 @@ void k_diroperator_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param painter QPainter*
 ///
-void k_diroperator_init_painter(void* self, void* painter);
+void k_diroperator_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -5884,10 +5575,10 @@ void k_diroperator_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param painter QPainter*
 ///
-void k_diroperator_super_init_painter(void* self, void* painter);
+void k_diroperator_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -5895,10 +5586,10 @@ void k_diroperator_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param callback void func(KDirOperator* self, QPainter* painter)
 ///
-void k_diroperator_on_init_painter(void* self, void (*callback)(void*, void*));
+void k_diroperator_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5906,10 +5597,10 @@ void k_diroperator_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_diroperator_redirected(void* self, void* offset);
+QPaintDevice* k_diroperator_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -5917,10 +5608,10 @@ QPaintDevice* k_diroperator_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_diroperator_super_redirected(void* self, void* offset);
+QPaintDevice* k_diroperator_super_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -5928,10 +5619,10 @@ QPaintDevice* k_diroperator_super_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param callback QPaintDevice* func(KDirOperator* self, QPoint* offset)
 ///
-void k_diroperator_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void k_diroperator_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5939,9 +5630,9 @@ void k_diroperator_on_redirected(void* self, QPaintDevice* (*callback)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QPainter* k_diroperator_shared_painter(void* self);
+QPainter* k_diroperator_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5949,9 +5640,9 @@ QPainter* k_diroperator_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QPainter* k_diroperator_super_shared_painter(void* self);
+QPainter* k_diroperator_super_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5959,10 +5650,10 @@ QPainter* k_diroperator_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KDirOperator*
-/// @param callback QPainter* func()
+/// @param self const KDirOperator*
+/// @param callback QPainter* func(KDirOperator* self)
 ///
-void k_diroperator_on_shared_painter(void* self, QPainter* (*callback)());
+void k_diroperator_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -6003,10 +5694,10 @@ void k_diroperator_on_input_method_event(void* self, void (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_diroperator_input_method_query(void* self, int32_t param1);
+QVariant* k_diroperator_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -6014,10 +5705,10 @@ QVariant* k_diroperator_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_diroperator_super_input_method_query(void* self, int32_t param1);
+QVariant* k_diroperator_super_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -6025,12 +5716,12 @@ QVariant* k_diroperator_super_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param callback QVariant* func(KDirOperator* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_diroperator_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void k_diroperator_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -6173,7 +5864,7 @@ void k_diroperator_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self KDirOperator*
 /// @param signal QMetaMethod*
 ///
-void k_diroperator_connect_notify(void* self, void* signal);
+void k_diroperator_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6184,7 +5875,7 @@ void k_diroperator_connect_notify(void* self, void* signal);
 /// @param self KDirOperator*
 /// @param signal QMetaMethod*
 ///
-void k_diroperator_super_connect_notify(void* self, void* signal);
+void k_diroperator_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6195,7 +5886,7 @@ void k_diroperator_super_connect_notify(void* self, void* signal);
 /// @param self KDirOperator*
 /// @param callback void func(KDirOperator* self, QMetaMethod* signal)
 ///
-void k_diroperator_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_diroperator_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -6206,7 +5897,7 @@ void k_diroperator_on_connect_notify(void* self, void (*callback)(void*, void*))
 /// @param self KDirOperator*
 /// @param signal QMetaMethod*
 ///
-void k_diroperator_disconnect_notify(void* self, void* signal);
+void k_diroperator_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6217,7 +5908,7 @@ void k_diroperator_disconnect_notify(void* self, void* signal);
 /// @param self KDirOperator*
 /// @param signal QMetaMethod*
 ///
-void k_diroperator_super_disconnect_notify(void* self, void* signal);
+void k_diroperator_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6228,7 +5919,7 @@ void k_diroperator_super_disconnect_notify(void* self, void* signal);
 /// @param self KDirOperator*
 /// @param callback void func(KDirOperator* self, QMetaMethod* signal)
 ///
-void k_diroperator_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_diroperator_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -6257,9 +5948,9 @@ void k_diroperator_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDirOperator*
-/// @param callback void func()
+/// @param callback void func(KDirOperator* self)
 ///
-void k_diroperator_on_update_micro_focus(void* self, void (*callback)());
+void k_diroperator_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -6288,9 +5979,9 @@ void k_diroperator_super_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDirOperator*
-/// @param callback void func()
+/// @param callback void func(KDirOperator* self)
 ///
-void k_diroperator_on_create(void* self, void (*callback)());
+void k_diroperator_on_create(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -6319,9 +6010,9 @@ void k_diroperator_super_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDirOperator*
-/// @param callback void func()
+/// @param callback void func(KDirOperator* self)
 ///
-void k_diroperator_on_destroy(void* self, void (*callback)());
+void k_diroperator_on_destroy(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -6350,9 +6041,9 @@ bool k_diroperator_super_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDirOperator*
-/// @param callback bool func()
+/// @param callback bool func(KDirOperator* self)
 ///
-void k_diroperator_on_focus_next_child(void* self, bool (*callback)());
+void k_diroperator_on_focus_next_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -6381,9 +6072,9 @@ bool k_diroperator_super_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDirOperator*
-/// @param callback bool func()
+/// @param callback bool func(KDirOperator* self)
 ///
-void k_diroperator_on_focus_previous_child(void* self, bool (*callback)());
+void k_diroperator_on_focus_previous_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -6391,9 +6082,9 @@ void k_diroperator_on_focus_previous_child(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QObject* k_diroperator_sender(void* self);
+QObject* k_diroperator_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6401,9 +6092,9 @@ QObject* k_diroperator_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-QObject* k_diroperator_super_sender(void* self);
+QObject* k_diroperator_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6411,10 +6102,10 @@ QObject* k_diroperator_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KDirOperator*
-/// @param callback QObject* func()
+/// @param self const KDirOperator*
+/// @param callback QObject* func(KDirOperator* self)
 ///
-void k_diroperator_on_sender(void* self, QObject* (*callback)());
+void k_diroperator_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6422,9 +6113,9 @@ void k_diroperator_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-int32_t k_diroperator_sender_signal_index(void* self);
+int32_t k_diroperator_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6432,9 +6123,9 @@ int32_t k_diroperator_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 ///
-int32_t k_diroperator_super_sender_signal_index(void* self);
+int32_t k_diroperator_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6442,10 +6133,10 @@ int32_t k_diroperator_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KDirOperator*
-/// @param callback int32_t func()
+/// @param self const KDirOperator*
+/// @param callback int32_t func(KDirOperator* self)
 ///
-void k_diroperator_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_diroperator_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6453,10 +6144,10 @@ void k_diroperator_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param signal const char*
 ///
-int32_t k_diroperator_receivers(void* self, const char* signal);
+int32_t k_diroperator_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -6464,10 +6155,10 @@ int32_t k_diroperator_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param signal const char*
 ///
-int32_t k_diroperator_super_receivers(void* self, const char* signal);
+int32_t k_diroperator_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -6475,10 +6166,10 @@ int32_t k_diroperator_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param callback int32_t func(KDirOperator* self, const char* signal)
 ///
-void k_diroperator_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_diroperator_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -6486,10 +6177,10 @@ void k_diroperator_on_receivers(void* self, int32_t (*callback)(void*, const cha
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param signal QMetaMethod*
 ///
-bool k_diroperator_is_signal_connected(void* self, void* signal);
+bool k_diroperator_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6497,10 +6188,10 @@ bool k_diroperator_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param signal QMetaMethod*
 ///
-bool k_diroperator_super_is_signal_connected(void* self, void* signal);
+bool k_diroperator_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6508,10 +6199,10 @@ bool k_diroperator_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param callback bool func(KDirOperator* self, QMetaMethod* signal)
 ///
-void k_diroperator_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_diroperator_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -6519,11 +6210,11 @@ void k_diroperator_on_is_signal_connected(void* self, bool (*callback)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_diroperator_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_diroperator_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -6531,11 +6222,11 @@ double k_diroperator_get_decoded_metric_f(void* self, int32_t metricA, int32_t m
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_diroperator_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_diroperator_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -6543,10 +6234,10 @@ double k_diroperator_super_get_decoded_metric_f(void* self, int32_t metricA, int
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KDirOperator*
+/// @param self const KDirOperator*
 /// @param callback double func(KDirOperator* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_diroperator_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void k_diroperator_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

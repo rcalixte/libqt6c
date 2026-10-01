@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QScroller*
+/// @param self const QScroller*
 ///
-const QMetaObject* q_scroller_meta_object(void* self);
+const QMetaObject* q_scroller_meta_object(const void* self);
 
 /// @param self QScroller*
 /// @param param1 const char*
@@ -52,7 +52,7 @@ QScroller* q_scroller_scroller(void* target);
 ///
 /// @param target QObject*
 ///
-const QScroller* q_scroller_scroller2(void* target);
+const QScroller* q_scroller_scroller2(const void* target);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscroller.html#grabGesture)
 ///
@@ -84,17 +84,17 @@ libqt_list q_scroller_active_scrollers();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscroller.html#target)
 ///
-/// @param self QScroller*
+/// @param self const QScroller*
 ///
-QObject* q_scroller_target(void* self);
+QObject* q_scroller_target(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscroller.html#state)
 ///
-/// @param self QScroller*
+/// @param self const QScroller*
 ///
 /// @return enum QScroller__State
 ///
-int32_t q_scroller_state(void* self);
+int32_t q_scroller_state(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscroller.html#handleInput)
 ///
@@ -102,7 +102,7 @@ int32_t q_scroller_state(void* self);
 /// @param input enum QScroller__Input
 /// @param position QPointF*
 ///
-bool q_scroller_handle_input(void* self, int32_t input, void* position);
+bool q_scroller_handle_input(void* self, int32_t input, const void* position);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscroller.html#stop)
 ///
@@ -112,27 +112,27 @@ void q_scroller_stop(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscroller.html#velocity)
 ///
-/// @param self QScroller*
+/// @param self const QScroller*
 ///
-QPointF* q_scroller_velocity(void* self);
+QPointF* q_scroller_velocity(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscroller.html#finalPosition)
 ///
-/// @param self QScroller*
+/// @param self const QScroller*
 ///
-QPointF* q_scroller_final_position(void* self);
+QPointF* q_scroller_final_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscroller.html#pixelPerMeter)
 ///
-/// @param self QScroller*
+/// @param self const QScroller*
 ///
-QPointF* q_scroller_pixel_per_meter(void* self);
+QPointF* q_scroller_pixel_per_meter(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscroller.html#scrollerProperties)
 ///
-/// @param self QScroller*
+/// @param self const QScroller*
 ///
-QScrollerProperties* q_scroller_scroller_properties(void* self);
+QScrollerProperties* q_scroller_scroller_properties(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscroller.html#setSnapPositionsX)
 ///
@@ -169,14 +169,14 @@ void q_scroller_set_snap_positions_y2(void* self, double first, double interval)
 /// @param self QScroller*
 /// @param prop QScrollerProperties*
 ///
-void q_scroller_set_scroller_properties(void* self, void* prop);
+void q_scroller_set_scroller_properties(void* self, const void* prop);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscroller.html#scrollTo)
 ///
 /// @param self QScroller*
 /// @param pos QPointF*
 ///
-void q_scroller_scroll_to(void* self, void* pos);
+void q_scroller_scroll_to(void* self, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscroller.html#scrollTo)
 ///
@@ -184,7 +184,7 @@ void q_scroller_scroll_to(void* self, void* pos);
 /// @param pos QPointF*
 /// @param scrollTime int
 ///
-void q_scroller_scroll_to2(void* self, void* pos, int scrollTime);
+void q_scroller_scroll_to2(void* self, const void* pos, int scrollTime);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscroller.html#ensureVisible)
 ///
@@ -193,7 +193,7 @@ void q_scroller_scroll_to2(void* self, void* pos, int scrollTime);
 /// @param xmargin double
 /// @param ymargin double
 ///
-void q_scroller_ensure_visible(void* self, void* rect, double xmargin, double ymargin);
+void q_scroller_ensure_visible(void* self, const void* rect, double xmargin, double ymargin);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscroller.html#ensureVisible)
 ///
@@ -203,7 +203,7 @@ void q_scroller_ensure_visible(void* self, void* rect, double xmargin, double ym
 /// @param ymargin double
 /// @param scrollTime int
 ///
-void q_scroller_ensure_visible2(void* self, void* rect, double xmargin, double ymargin, int scrollTime);
+void q_scroller_ensure_visible2(void* self, const void* rect, double xmargin, double ymargin, int scrollTime);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscroller.html#resendPrepareEvent)
 ///
@@ -230,14 +230,14 @@ void q_scroller_on_state_changed(void* self, void (*callback)(void*, int32_t));
 /// @param self QScroller*
 /// @param param1 QScrollerProperties*
 ///
-void q_scroller_scroller_properties_changed(void* self, void* param1);
+void q_scroller_scroller_properties_changed(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscroller.html#scrollerPropertiesChanged)
 ///
 /// @param self QScroller*
 /// @param callback void func(QScroller* self, QScrollerProperties* param1)
 ///
-void q_scroller_on_scroller_properties_changed(void* self, void (*callback)(void*, void*));
+void q_scroller_on_scroller_properties_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -274,7 +274,7 @@ int32_t q_scroller_grab_gesture2(void* target, int32_t gestureType);
 /// @param position QPointF*
 /// @param timestamp int64_t
 ///
-bool q_scroller_handle_input3(void* self, int32_t input, void* position, int64_t timestamp);
+bool q_scroller_handle_input3(void* self, int32_t input, const void* position, int64_t timestamp);
 
 /// Inherited from QObject
 ///
@@ -301,9 +301,9 @@ bool q_scroller_event_filter(void* self, void* watched, void* event);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QScroller*
+/// @param self const QScroller*
 ///
-const char* q_scroller_object_name(void* self);
+const char* q_scroller_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -318,33 +318,33 @@ void q_scroller_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QScroller*
+/// @param self const QScroller*
 ///
-bool q_scroller_is_widget_type(void* self);
+bool q_scroller_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QScroller*
+/// @param self const QScroller*
 ///
-bool q_scroller_is_window_type(void* self);
+bool q_scroller_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QScroller*
+/// @param self const QScroller*
 ///
-bool q_scroller_is_quick_item_type(void* self);
+bool q_scroller_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QScroller*
+/// @param self const QScroller*
 ///
-bool q_scroller_signals_blocked(void* self);
+bool q_scroller_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -359,9 +359,9 @@ bool q_scroller_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QScroller*
+/// @param self const QScroller*
 ///
-QThread* q_scroller_thread(void* self);
+QThread* q_scroller_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -412,11 +412,11 @@ void q_scroller_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QScroller*
+/// @param self const QScroller*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_scroller_children(void* self);
+libqt_list q_scroller_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -454,7 +454,7 @@ void q_scroller_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_scroller_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_scroller_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -465,18 +465,18 @@ QMetaObject__Connection* q_scroller_connect(void* sender, const char* signal, vo
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_scroller_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_scroller_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QScroller*
+/// @param self const QScroller*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_scroller_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_scroller_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -487,7 +487,7 @@ QMetaObject__Connection* q_scroller_connect3(void* self, void* sender, const cha
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_scroller_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_scroller_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -498,24 +498,24 @@ bool q_scroller_disconnect(void* sender, const char* signal, void* receiver, con
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_scroller_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_scroller_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QScroller*
+/// @param self const QScroller*
 ///
-bool q_scroller_disconnect3(void* self);
+bool q_scroller_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QScroller*
+/// @param self const QScroller*
 /// @param receiver QObject*
 ///
-bool q_scroller_disconnect4(void* self, void* receiver);
+bool q_scroller_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -523,23 +523,23 @@ bool q_scroller_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_scroller_disconnect5(void* param1);
+bool q_scroller_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QScroller*
+/// @param self const QScroller*
 ///
-void q_scroller_dump_object_tree(void* self);
+void q_scroller_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QScroller*
+/// @param self const QScroller*
 ///
-void q_scroller_dump_object_info(void* self);
+void q_scroller_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -549,16 +549,16 @@ void q_scroller_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_scroller_set_property(void* self, const char* name, void* value);
+bool q_scroller_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QScroller*
+/// @param self const QScroller*
 /// @param name const char*
 ///
-QVariant* q_scroller_property(void* self, const char* name);
+QVariant* q_scroller_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -566,9 +566,9 @@ QVariant* q_scroller_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QScroller*
+/// @param self const QScroller*
 ///
-const char** q_scroller_dynamic_property_names(void* self);
+const char** q_scroller_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -582,9 +582,9 @@ QBindingStorage* q_scroller_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QScroller*
+/// @param self const QScroller*
 ///
-const QBindingStorage* q_scroller_binding_storage2(void* self);
+const QBindingStorage* q_scroller_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -607,18 +607,18 @@ void q_scroller_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QScroller*
+/// @param self const QScroller*
 ///
-QObject* q_scroller_parent(void* self);
+QObject* q_scroller_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QScroller*
+/// @param self const QScroller*
 /// @param classname const char*
 ///
-bool q_scroller_inherits(void* self, const char* classname);
+bool q_scroller_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -658,7 +658,7 @@ int32_t q_scroller_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_scroller_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_scroller_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -670,59 +670,59 @@ QMetaObject__Connection* q_scroller_connect5(void* sender, const char* signal, v
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_scroller_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_scroller_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QScroller*
+/// @param self const QScroller*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_scroller_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_scroller_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QScroller*
+/// @param self const QScroller*
 /// @param signal const char*
 ///
-bool q_scroller_disconnect1(void* self, const char* signal);
+bool q_scroller_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QScroller*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_scroller_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QScroller*
+/// @param self const QScroller*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_scroller_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_scroller_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QScroller*
+/// @param self const QScroller*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_scroller_disconnect23(void* self, void* receiver, const char* member);
+bool q_scroller_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QScroller*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_scroller_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

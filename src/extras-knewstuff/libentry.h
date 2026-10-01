@@ -23,7 +23,7 @@ const char* k_nscore_replace_b_b_code(const char* unformattedText);
 /// @param entry KNSCore__Entry*
 /// @param seed size_t
 ///
-size_t k_nscore_q_hash(void* entry, size_t seed);
+size_t k_nscore_q_hash(const void* entry, size_t seed);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html)
 
@@ -37,34 +37,34 @@ KNSCore__Entry* k_nscore__entry_new();
 ///
 /// @param other KNSCore__Entry*
 ///
-KNSCore__Entry* k_nscore__entry_new2(void* other);
+KNSCore__Entry* k_nscore__entry_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#operator-eq)
 ///
 /// @param self KNSCore__Entry*
 /// @param other KNSCore__Entry*
 ///
-void k_nscore__entry_operator_assign(void* self, void* other);
+void k_nscore__entry_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#operator-eq-eq)
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 /// @param other KNSCore__Entry*
 ///
-bool k_nscore__entry_operator_equal(void* self, void* other);
+bool k_nscore__entry_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#operator-lt)
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 /// @param other KNSCore__Entry*
 ///
-bool k_nscore__entry_operator_lesser(void* self, void* other);
+bool k_nscore__entry_operator_lesser(const void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#isValid)
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
-bool k_nscore__entry_is_valid(void* self);
+bool k_nscore__entry_is_valid(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#setName)
 ///
@@ -77,9 +77,9 @@ void k_nscore__entry_set_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
-const char* k_nscore__entry_name(void* self);
+const char* k_nscore__entry_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#setUniqueId)
 ///
@@ -92,9 +92,9 @@ void k_nscore__entry_set_unique_id(void* self, const char* id);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
-const char* k_nscore__entry_unique_id(void* self);
+const char* k_nscore__entry_unique_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#setCategory)
 ///
@@ -107,35 +107,35 @@ void k_nscore__entry_set_category(void* self, const char* category);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
-const char* k_nscore__entry_category(void* self);
+const char* k_nscore__entry_category(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#setHomepage)
 ///
 /// @param self KNSCore__Entry*
 /// @param page QUrl*
 ///
-void k_nscore__entry_set_homepage(void* self, void* page);
+void k_nscore__entry_set_homepage(void* self, const void* page);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#homepage)
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
-QUrl* k_nscore__entry_homepage(void* self);
+QUrl* k_nscore__entry_homepage(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#setAuthor)
 ///
 /// @param self KNSCore__Entry*
 /// @param author KNSCore__Author*
 ///
-void k_nscore__entry_set_author(void* self, void* author);
+void k_nscore__entry_set_author(void* self, const void* author);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#author)
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
-KNSCore__Author* k_nscore__entry_author(void* self);
+KNSCore__Author* k_nscore__entry_author(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#setLicense)
 ///
@@ -148,9 +148,9 @@ void k_nscore__entry_set_license(void* self, const char* license);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
-const char* k_nscore__entry_license(void* self);
+const char* k_nscore__entry_license(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#setSummary)
 ///
@@ -163,9 +163,9 @@ void k_nscore__entry_set_summary(void* self, const char* summary);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
-const char* k_nscore__entry_short_summary(void* self);
+const char* k_nscore__entry_short_summary(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#setShortSummary)
 ///
@@ -178,9 +178,9 @@ void k_nscore__entry_set_short_summary(void* self, const char* summary);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
-const char* k_nscore__entry_summary(void* self);
+const char* k_nscore__entry_summary(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#setChangelog)
 ///
@@ -193,9 +193,9 @@ void k_nscore__entry_set_changelog(void* self, const char* changelog);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
-const char* k_nscore__entry_changelog(void* self);
+const char* k_nscore__entry_changelog(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#setVersion)
 ///
@@ -208,22 +208,22 @@ void k_nscore__entry_set_version(void* self, const char* version);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
-const char* k_nscore__entry_version(void* self);
+const char* k_nscore__entry_version(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#setReleaseDate)
 ///
 /// @param self KNSCore__Entry*
 /// @param releasedate QDate*
 ///
-void k_nscore__entry_set_release_date(void* self, void* releasedate);
+void k_nscore__entry_set_release_date(void* self, const void* releasedate);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#releaseDate)
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
-QDate* k_nscore__entry_release_date(void* self);
+QDate* k_nscore__entry_release_date(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#setUpdateVersion)
 ///
@@ -236,22 +236,22 @@ void k_nscore__entry_set_update_version(void* self, const char* version);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
-const char* k_nscore__entry_update_version(void* self);
+const char* k_nscore__entry_update_version(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#setUpdateReleaseDate)
 ///
 /// @param self KNSCore__Entry*
 /// @param releasedate QDate*
 ///
-void k_nscore__entry_set_update_release_date(void* self, void* releasedate);
+void k_nscore__entry_set_update_release_date(void* self, const void* releasedate);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#updateReleaseDate)
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
-QDate* k_nscore__entry_update_release_date(void* self);
+QDate* k_nscore__entry_update_release_date(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#setPayload)
 ///
@@ -264,9 +264,9 @@ void k_nscore__entry_set_payload(void* self, const char* url);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
-const char* k_nscore__entry_payload(void* self);
+const char* k_nscore__entry_payload(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#setPreviewUrl)
 ///
@@ -279,22 +279,22 @@ void k_nscore__entry_set_preview_url(void* self, const char* url);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
-const char* k_nscore__entry_preview_url(void* self);
+const char* k_nscore__entry_preview_url(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#previewImage)
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
-QImage* k_nscore__entry_preview_image(void* self);
+QImage* k_nscore__entry_preview_image(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#setPreviewImage)
 ///
 /// @param self KNSCore__Entry*
 /// @param image QImage*
 ///
-void k_nscore__entry_set_preview_image(void* self, void* image);
+void k_nscore__entry_set_preview_image(void* self, const void* image);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#setInstalledFiles)
 ///
@@ -307,17 +307,17 @@ void k_nscore__entry_set_installed_files(void* self, const char* files[static 1]
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
-const char** k_nscore__entry_installed_files(void* self);
+const char** k_nscore__entry_installed_files(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#uninstalledFiles)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
-const char** k_nscore__entry_uninstalled_files(void* self);
+const char** k_nscore__entry_uninstalled_files(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#setRating)
 ///
@@ -328,9 +328,9 @@ void k_nscore__entry_set_rating(void* self, int rating);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#rating)
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
-int32_t k_nscore__entry_rating(void* self);
+int32_t k_nscore__entry_rating(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#setNumberOfComments)
 ///
@@ -341,9 +341,9 @@ void k_nscore__entry_set_number_of_comments(void* self, int comments);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#numberOfComments)
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
-int32_t k_nscore__entry_number_of_comments(void* self);
+int32_t k_nscore__entry_number_of_comments(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#setDownloadCount)
 ///
@@ -354,15 +354,15 @@ void k_nscore__entry_set_download_count(void* self, int downloads);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#downloadCount)
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
-int32_t k_nscore__entry_download_count(void* self);
+int32_t k_nscore__entry_download_count(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#numberFans)
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
-int32_t k_nscore__entry_number_fans(void* self);
+int32_t k_nscore__entry_number_fans(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#setNumberFans)
 ///
@@ -373,9 +373,9 @@ void k_nscore__entry_set_number_fans(void* self, int fans);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#numberKnowledgebaseEntries)
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
-int32_t k_nscore__entry_number_knowledgebase_entries(void* self);
+int32_t k_nscore__entry_number_knowledgebase_entries(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#setNumberKnowledgebaseEntries)
 ///
@@ -388,9 +388,9 @@ void k_nscore__entry_set_number_knowledgebase_entries(void* self, int num);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
-const char* k_nscore__entry_knowledgebase_link(void* self);
+const char* k_nscore__entry_knowledgebase_link(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#setKnowledgebaseLink)
 ///
@@ -401,24 +401,24 @@ void k_nscore__entry_set_knowledgebase_link(void* self, const char* link);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#downloadLinkCount)
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
-int32_t k_nscore__entry_download_link_count(void* self);
+int32_t k_nscore__entry_download_link_count(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#downloadLinkInformationList)
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
 /// @return libqt_list of KNSCore__Entry__DownloadLinkInformation*
 ///
-libqt_list k_nscore__entry_download_link_information_list(void* self);
+libqt_list k_nscore__entry_download_link_information_list(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#appendDownloadLinkInformation)
 ///
 /// @param self KNSCore__Entry*
 /// @param info KNSCore__Entry__DownloadLinkInformation*
 ///
-void k_nscore__entry_append_download_link_information(void* self, void* info);
+void k_nscore__entry_append_download_link_information(void* self, const void* info);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#clearDownloadLinkInformation)
 ///
@@ -430,9 +430,9 @@ void k_nscore__entry_clear_download_link_information(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
-const char* k_nscore__entry_donation_link(void* self);
+const char* k_nscore__entry_donation_link(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#setDonationLink)
 ///
@@ -445,9 +445,9 @@ void k_nscore__entry_set_donation_link(void* self, const char* link);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
-const char** k_nscore__entry_tags(void* self);
+const char** k_nscore__entry_tags(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#setTags)
 ///
@@ -460,9 +460,9 @@ void k_nscore__entry_set_tags(void* self, const char* tags[static 1]);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
-const char* k_nscore__entry_provider_id(void* self);
+const char* k_nscore__entry_provider_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#setProviderId)
 ///
@@ -480,11 +480,11 @@ void k_nscore__entry_set_source(void* self, int32_t source);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#source)
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
 /// @return enum KNSCore__Entry__Source
 ///
-int32_t k_nscore__entry_source(void* self);
+int32_t k_nscore__entry_source(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#setEntryType)
 ///
@@ -495,11 +495,11 @@ void k_nscore__entry_set_entry_type(void* self, int32_t type);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#entryType)
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
 /// @return enum KNSCore__Entry__EntryType
 ///
-int32_t k_nscore__entry_entry_type(void* self);
+int32_t k_nscore__entry_entry_type(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#setEntryXML)
 ///
@@ -517,11 +517,11 @@ void k_nscore__entry_set_status(void* self, int32_t status);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#status)
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 ///
 /// @return enum KNSCore__Entry__Status
 ///
-int32_t k_nscore__entry_status(void* self);
+int32_t k_nscore__entry_status(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#setEntryDeleted)
 ///
@@ -541,17 +541,17 @@ void k_nscore__entry_set_preview_url2(void* self, const char* url, int32_t type)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 /// @param type enum KNSCore__Entry__PreviewType
 ///
-const char* k_nscore__entry_preview_url1(void* self, int32_t type);
+const char* k_nscore__entry_preview_url1(const void* self, int32_t type);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#previewImage)
 ///
-/// @param self KNSCore__Entry*
+/// @param self const KNSCore__Entry*
 /// @param type enum KNSCore__Entry__PreviewType
 ///
-QImage* k_nscore__entry_preview_image1(void* self, int32_t type);
+QImage* k_nscore__entry_preview_image1(const void* self, int32_t type);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#setPreviewImage)
 ///
@@ -559,7 +559,7 @@ QImage* k_nscore__entry_preview_image1(void* self, int32_t type);
 /// @param image QImage*
 /// @param type enum KNSCore__Entry__PreviewType
 ///
-void k_nscore__entry_set_preview_image2(void* self, void* image, int32_t type);
+void k_nscore__entry_set_preview_image2(void* self, const void* image, int32_t type);
 
 /// Delete this object from C++ memory.
 ///
@@ -579,15 +579,15 @@ KNSCore__Entry__DownloadLinkInformation* k_nscore__entry__downloadlinkinformatio
 ///
 /// @param param1 KNSCore__Entry__DownloadLinkInformation*
 ///
-KNSCore__Entry__DownloadLinkInformation* k_nscore__entry__downloadlinkinformation_new2(void* param1);
+KNSCore__Entry__DownloadLinkInformation* k_nscore__entry__downloadlinkinformation_new2(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry-downloadlinkinformation.html#name-var)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Entry__DownloadLinkInformation*
+/// @param self const KNSCore__Entry__DownloadLinkInformation*
 ///
-const char* k_nscore__entry__downloadlinkinformation_name(void* self);
+const char* k_nscore__entry__downloadlinkinformation_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry-downloadlinkinformation.html#name-var)
 ///
@@ -600,9 +600,9 @@ void k_nscore__entry__downloadlinkinformation_set_name(void* self, const char* n
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Entry__DownloadLinkInformation*
+/// @param self const KNSCore__Entry__DownloadLinkInformation*
 ///
-const char* k_nscore__entry__downloadlinkinformation_price_amount(void* self);
+const char* k_nscore__entry__downloadlinkinformation_price_amount(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry-downloadlinkinformation.html#priceAmount-var)
 ///
@@ -615,9 +615,9 @@ void k_nscore__entry__downloadlinkinformation_set_price_amount(void* self, const
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Entry__DownloadLinkInformation*
+/// @param self const KNSCore__Entry__DownloadLinkInformation*
 ///
-const char* k_nscore__entry__downloadlinkinformation_distribution_type(void* self);
+const char* k_nscore__entry__downloadlinkinformation_distribution_type(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry-downloadlinkinformation.html#distributionType-var)
 ///
@@ -630,9 +630,9 @@ void k_nscore__entry__downloadlinkinformation_set_distribution_type(void* self, 
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Entry__DownloadLinkInformation*
+/// @param self const KNSCore__Entry__DownloadLinkInformation*
 ///
-const char* k_nscore__entry__downloadlinkinformation_description_link(void* self);
+const char* k_nscore__entry__downloadlinkinformation_description_link(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry-downloadlinkinformation.html#descriptionLink-var)
 ///
@@ -643,9 +643,9 @@ void k_nscore__entry__downloadlinkinformation_set_description_link(void* self, c
 
 /// [Upstream resources](https://api.kde.org/knscore-entry-downloadlinkinformation.html#id-var)
 ///
-/// @param self KNSCore__Entry__DownloadLinkInformation*
+/// @param self const KNSCore__Entry__DownloadLinkInformation*
 ///
-int32_t k_nscore__entry__downloadlinkinformation_id(void* self);
+int32_t k_nscore__entry__downloadlinkinformation_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry-downloadlinkinformation.html#id-var)
 ///
@@ -656,9 +656,9 @@ void k_nscore__entry__downloadlinkinformation_set_id(void* self, int id);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry-downloadlinkinformation.html#isDownloadtypeLink-var)
 ///
-/// @param self KNSCore__Entry__DownloadLinkInformation*
+/// @param self const KNSCore__Entry__DownloadLinkInformation*
 ///
-bool k_nscore__entry__downloadlinkinformation_is_downloadtype_link(void* self);
+bool k_nscore__entry__downloadlinkinformation_is_downloadtype_link(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry-downloadlinkinformation.html#isDownloadtypeLink-var)
 ///
@@ -669,9 +669,9 @@ void k_nscore__entry__downloadlinkinformation_set_is_downloadtype_link(void* sel
 
 /// [Upstream resources](https://api.kde.org/knscore-entry-downloadlinkinformation.html#size-var)
 ///
-/// @param self KNSCore__Entry__DownloadLinkInformation*
+/// @param self const KNSCore__Entry__DownloadLinkInformation*
 ///
-uint64_t k_nscore__entry__downloadlinkinformation_size(void* self);
+uint64_t k_nscore__entry__downloadlinkinformation_size(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry-downloadlinkinformation.html#size-var)
 ///
@@ -684,9 +684,9 @@ void k_nscore__entry__downloadlinkinformation_set_size(void* self, uint64_t size
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KNSCore__Entry__DownloadLinkInformation*
+/// @param self const KNSCore__Entry__DownloadLinkInformation*
 ///
-const char** k_nscore__entry__downloadlinkinformation_tags(void* self);
+const char** k_nscore__entry__downloadlinkinformation_tags(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry-downloadlinkinformation.html#tags-var)
 ///
@@ -700,7 +700,7 @@ void k_nscore__entry__downloadlinkinformation_set_tags(void* self, const char* t
 /// @param self KNSCore__Entry__DownloadLinkInformation*
 /// @param param1 KNSCore__Entry__DownloadLinkInformation*
 ///
-void k_nscore__entry__downloadlinkinformation_operator_assign(void* self, void* param1);
+void k_nscore__entry__downloadlinkinformation_operator_assign(void* self, const void* param1);
 
 /// Delete this object from C++ memory.
 ///

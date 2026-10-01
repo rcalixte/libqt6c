@@ -2,7 +2,7 @@
 #include "libqgenericpluginfactory.hpp"
 #include "libqgenericpluginfactory.h"
 
-QGenericPluginFactory* q_genericpluginfactory_new(void* other) {
+QGenericPluginFactory* q_genericpluginfactory_new(const void* other) {
     return QGenericPluginFactory_New((QGenericPluginFactory*)other);
 }
 

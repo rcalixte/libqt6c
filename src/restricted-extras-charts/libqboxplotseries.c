@@ -17,15 +17,15 @@ QBoxPlotSeries* q_boxplotseries_new2(void* parent) {
     return QBoxPlotSeries_New2((QObject*)parent);
 }
 
-const QMetaObject* q_boxplotseries_meta_object(void* self) {
+const QMetaObject* q_boxplotseries_meta_object(const void* self) {
     return QBoxPlotSeries_MetaObject((QBoxPlotSeries*)self);
 }
 
-void q_boxplotseries_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_boxplotseries_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QBoxPlotSeries_OnMetaObject((QBoxPlotSeries*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_boxplotseries_super_meta_object(void* self) {
+const QMetaObject* q_boxplotseries_super_meta_object(const void* self) {
     return QBoxPlotSeries_SuperMetaObject((QBoxPlotSeries*)self);
 }
 
@@ -80,11 +80,11 @@ bool q_boxplotseries_insert(void* self, int index, void* box) {
     return QBoxPlotSeries_Insert((QBoxPlotSeries*)self, index, (QBoxSet*)box);
 }
 
-int32_t q_boxplotseries_count(void* self) {
+int32_t q_boxplotseries_count(const void* self) {
     return QBoxPlotSeries_Count((QBoxPlotSeries*)self);
 }
 
-libqt_list /* of QBoxSet* */ q_boxplotseries_box_sets(void* self) {
+libqt_list /* of QBoxSet* */ q_boxplotseries_box_sets(const void* self) {
     libqt_list _arr = QBoxPlotSeries_BoxSets((QBoxPlotSeries*)self);
     return _arr;
 }
@@ -93,15 +93,15 @@ void q_boxplotseries_clear(void* self) {
     QBoxPlotSeries_Clear((QBoxPlotSeries*)self);
 }
 
-int32_t q_boxplotseries_type(void* self) {
+int32_t q_boxplotseries_type(const void* self) {
     return QBoxPlotSeries_Type((QBoxPlotSeries*)self);
 }
 
-void q_boxplotseries_on_type(void* self, int32_t (*callback)()) {
+void q_boxplotseries_on_type(const void* self, int32_t (*callback)(const void*)) {
     QBoxPlotSeries_OnType((QBoxPlotSeries*)self, (intptr_t)callback);
 }
 
-int32_t q_boxplotseries_super_type(void* self) {
+int32_t q_boxplotseries_super_type(const void* self) {
     return QBoxPlotSeries_SuperType((QBoxPlotSeries*)self);
 }
 
@@ -121,19 +121,19 @@ double q_boxplotseries_box_width(void* self) {
     return QBoxPlotSeries_BoxWidth((QBoxPlotSeries*)self);
 }
 
-void q_boxplotseries_set_brush(void* self, void* brush) {
+void q_boxplotseries_set_brush(void* self, const void* brush) {
     QBoxPlotSeries_SetBrush((QBoxPlotSeries*)self, (QBrush*)brush);
 }
 
-QBrush* q_boxplotseries_brush(void* self) {
+QBrush* q_boxplotseries_brush(const void* self) {
     return QBoxPlotSeries_Brush((QBoxPlotSeries*)self);
 }
 
-void q_boxplotseries_set_pen(void* self, void* pen) {
+void q_boxplotseries_set_pen(void* self, const void* pen) {
     QBoxPlotSeries_SetPen((QBoxPlotSeries*)self, (QPen*)pen);
 }
 
-QPen* q_boxplotseries_pen(void* self) {
+QPen* q_boxplotseries_pen(const void* self) {
     return QBoxPlotSeries_Pen((QBoxPlotSeries*)self);
 }
 
@@ -251,7 +251,7 @@ void q_boxplotseries_set_name(void* self, const char* name) {
     QAbstractSeries_SetName((QAbstractSeries*)self, qstring(name));
 }
 
-const char* q_boxplotseries_name(void* self) {
+const char* q_boxplotseries_name(const void* self) {
     libqt_string _str = QAbstractSeries_Name((QAbstractSeries*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -262,11 +262,11 @@ void q_boxplotseries_set_visible(void* self) {
     QAbstractSeries_SetVisible((QAbstractSeries*)self);
 }
 
-bool q_boxplotseries_is_visible(void* self) {
+bool q_boxplotseries_is_visible(const void* self) {
     return QAbstractSeries_IsVisible((QAbstractSeries*)self);
 }
 
-double q_boxplotseries_opacity(void* self) {
+double q_boxplotseries_opacity(const void* self) {
     return QAbstractSeries_Opacity((QAbstractSeries*)self);
 }
 
@@ -278,11 +278,11 @@ void q_boxplotseries_set_use_open_g_l(void* self) {
     QAbstractSeries_SetUseOpenGL((QAbstractSeries*)self);
 }
 
-bool q_boxplotseries_use_open_g_l(void* self) {
+bool q_boxplotseries_use_open_g_l(const void* self) {
     return QAbstractSeries_UseOpenGL((QAbstractSeries*)self);
 }
 
-QChart* q_boxplotseries_chart(void* self) {
+QChart* q_boxplotseries_chart(const void* self) {
     return QAbstractSeries_Chart((QAbstractSeries*)self);
 }
 
@@ -347,7 +347,7 @@ void q_boxplotseries_set_use_open_g_l1(void* self, bool enable) {
     QAbstractSeries_SetUseOpenGL1((QAbstractSeries*)self, enable);
 }
 
-const char* q_boxplotseries_object_name(void* self) {
+const char* q_boxplotseries_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -358,19 +358,19 @@ void q_boxplotseries_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_boxplotseries_is_widget_type(void* self) {
+bool q_boxplotseries_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_boxplotseries_is_window_type(void* self) {
+bool q_boxplotseries_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_boxplotseries_is_quick_item_type(void* self) {
+bool q_boxplotseries_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_boxplotseries_signals_blocked(void* self) {
+bool q_boxplotseries_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -378,7 +378,7 @@ bool q_boxplotseries_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_boxplotseries_thread(void* self) {
+QThread* q_boxplotseries_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -402,7 +402,7 @@ void q_boxplotseries_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_boxplotseries_children(void* self) {
+libqt_list /* of QObject* */ q_boxplotseries_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -419,55 +419,55 @@ void q_boxplotseries_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_boxplotseries_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_boxplotseries_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_boxplotseries_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_boxplotseries_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_boxplotseries_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_boxplotseries_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_boxplotseries_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_boxplotseries_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_boxplotseries_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_boxplotseries_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_boxplotseries_disconnect3(void* self) {
+bool q_boxplotseries_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_boxplotseries_disconnect4(void* self, void* receiver) {
+bool q_boxplotseries_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_boxplotseries_disconnect5(void* param1) {
+bool q_boxplotseries_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_boxplotseries_dump_object_tree(void* self) {
+void q_boxplotseries_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_boxplotseries_dump_object_info(void* self) {
+void q_boxplotseries_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_boxplotseries_set_property(void* self, const char* name, void* value) {
+bool q_boxplotseries_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_boxplotseries_property(void* self, const char* name) {
+QVariant* q_boxplotseries_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_boxplotseries_dynamic_property_names(void* self) {
+const char** q_boxplotseries_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -488,7 +488,7 @@ QBindingStorage* q_boxplotseries_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_boxplotseries_binding_storage2(void* self) {
+const QBindingStorage* q_boxplotseries_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -500,11 +500,11 @@ void q_boxplotseries_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_boxplotseries_parent(void* self) {
+QObject* q_boxplotseries_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_boxplotseries_inherits(void* self, const char* classname) {
+bool q_boxplotseries_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -520,31 +520,31 @@ int32_t q_boxplotseries_start_timer23(void* self, int64_t time, int32_t timerTyp
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_boxplotseries_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_boxplotseries_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_boxplotseries_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_boxplotseries_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_boxplotseries_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_boxplotseries_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_boxplotseries_disconnect1(void* self, const char* signal) {
+bool q_boxplotseries_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_boxplotseries_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_boxplotseries_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_boxplotseries_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_boxplotseries_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_boxplotseries_disconnect23(void* self, void* receiver, const char* member) {
+bool q_boxplotseries_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -616,76 +616,44 @@ void q_boxplotseries_on_custom_event(void* self, void (*callback)(void*, void*))
     QBoxPlotSeries_OnCustomEvent((QBoxPlotSeries*)self, (intptr_t)callback);
 }
 
-void q_boxplotseries_connect_notify(void* self, void* signal) {
+void q_boxplotseries_connect_notify(void* self, const void* signal) {
     QBoxPlotSeries_ConnectNotify((QBoxPlotSeries*)self, (QMetaMethod*)signal);
 }
 
-void q_boxplotseries_super_connect_notify(void* self, void* signal) {
+void q_boxplotseries_super_connect_notify(void* self, const void* signal) {
     QBoxPlotSeries_SuperConnectNotify((QBoxPlotSeries*)self, (QMetaMethod*)signal);
 }
 
-void q_boxplotseries_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_boxplotseries_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QBoxPlotSeries_OnConnectNotify((QBoxPlotSeries*)self, (intptr_t)callback);
 }
 
-void q_boxplotseries_disconnect_notify(void* self, void* signal) {
+void q_boxplotseries_disconnect_notify(void* self, const void* signal) {
     QBoxPlotSeries_DisconnectNotify((QBoxPlotSeries*)self, (QMetaMethod*)signal);
 }
 
-void q_boxplotseries_super_disconnect_notify(void* self, void* signal) {
+void q_boxplotseries_super_disconnect_notify(void* self, const void* signal) {
     QBoxPlotSeries_SuperDisconnectNotify((QBoxPlotSeries*)self, (QMetaMethod*)signal);
 }
 
-void q_boxplotseries_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_boxplotseries_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QBoxPlotSeries_OnDisconnectNotify((QBoxPlotSeries*)self, (intptr_t)callback);
 }
 
-QObject* q_boxplotseries_sender(void* self) {
+QObject* q_boxplotseries_sender(const void* self) {
     return QBoxPlotSeries_Sender((QBoxPlotSeries*)self);
 }
 
-QObject* q_boxplotseries_super_sender(void* self) {
-    return QBoxPlotSeries_SuperSender((QBoxPlotSeries*)self);
-}
-
-void q_boxplotseries_on_sender(void* self, QObject* (*callback)()) {
-    QBoxPlotSeries_OnSender((QBoxPlotSeries*)self, (intptr_t)callback);
-}
-
-int32_t q_boxplotseries_sender_signal_index(void* self) {
+int32_t q_boxplotseries_sender_signal_index(const void* self) {
     return QBoxPlotSeries_SenderSignalIndex((QBoxPlotSeries*)self);
 }
 
-int32_t q_boxplotseries_super_sender_signal_index(void* self) {
-    return QBoxPlotSeries_SuperSenderSignalIndex((QBoxPlotSeries*)self);
-}
-
-void q_boxplotseries_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QBoxPlotSeries_OnSenderSignalIndex((QBoxPlotSeries*)self, (intptr_t)callback);
-}
-
-int32_t q_boxplotseries_receivers(void* self, const char* signal) {
+int32_t q_boxplotseries_receivers(const void* self, const char* signal) {
     return QBoxPlotSeries_Receivers((QBoxPlotSeries*)self, signal);
 }
 
-int32_t q_boxplotseries_super_receivers(void* self, const char* signal) {
-    return QBoxPlotSeries_SuperReceivers((QBoxPlotSeries*)self, signal);
-}
-
-void q_boxplotseries_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QBoxPlotSeries_OnReceivers((QBoxPlotSeries*)self, (intptr_t)callback);
-}
-
-bool q_boxplotseries_is_signal_connected(void* self, void* signal) {
+bool q_boxplotseries_is_signal_connected(const void* self, const void* signal) {
     return QBoxPlotSeries_IsSignalConnected((QBoxPlotSeries*)self, (QMetaMethod*)signal);
-}
-
-bool q_boxplotseries_super_is_signal_connected(void* self, void* signal) {
-    return QBoxPlotSeries_SuperIsSignalConnected((QBoxPlotSeries*)self, (QMetaMethod*)signal);
-}
-
-void q_boxplotseries_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QBoxPlotSeries_OnIsSignalConnected((QBoxPlotSeries*)self, (intptr_t)callback);
 }
 
 void q_boxplotseries_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

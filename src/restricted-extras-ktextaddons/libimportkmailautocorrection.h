@@ -20,7 +20,7 @@ TextAutoCorrectionCore__ImportKMailAutocorrection* k_textautocorrectioncore__imp
 ///
 /// @param param1 TextAutoCorrectionCore__ImportKMailAutocorrection*
 ///
-TextAutoCorrectionCore__ImportKMailAutocorrection* k_textautocorrectioncore__importkmailautocorrection_new2(void* param1);
+TextAutoCorrectionCore__ImportKMailAutocorrection* k_textautocorrectioncore__importkmailautocorrection_new2(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportKMailAutocorrection.html)
 ///
@@ -56,27 +56,27 @@ bool k_textautocorrectioncore__importkmailautocorrection_super_import(void* self
 /// @param self TextAutoCorrectionCore__ImportKMailAutocorrection*
 /// @param param1 TextAutoCorrectionCore__ImportKMailAutocorrection*
 ///
-void k_textautocorrectioncore__importkmailautocorrection_operator_assign(void* self, void* param1);
+void k_textautocorrectioncore__importkmailautocorrection_operator_assign(void* self, const void* param1);
 
 /// Inherited from TextAutoCorrectionCore::ImportAbstractAutocorrection
 ///
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportAbstractAutocorrection.html)
 ///
-/// @param self TextAutoCorrectionCore__ImportKMailAutocorrection*
+/// @param self const TextAutoCorrectionCore__ImportKMailAutocorrection*
 ///
 /// @return libqt_list set of const char*
 ///
-libqt_list k_textautocorrectioncore__importkmailautocorrection_upper_case_exceptions(void* self);
+libqt_list k_textautocorrectioncore__importkmailautocorrection_upper_case_exceptions(const void* self);
 
 /// Inherited from TextAutoCorrectionCore::ImportAbstractAutocorrection
 ///
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportAbstractAutocorrection.html)
 ///
-/// @param self TextAutoCorrectionCore__ImportKMailAutocorrection*
+/// @param self const TextAutoCorrectionCore__ImportKMailAutocorrection*
 ///
 /// @return libqt_list set of const char*
 ///
-libqt_list k_textautocorrectioncore__importkmailautocorrection_two_upper_letter_exceptions(void* self);
+libqt_list k_textautocorrectioncore__importkmailautocorrection_two_upper_letter_exceptions(const void* self);
 
 /// Inherited from TextAutoCorrectionCore::ImportAbstractAutocorrection
 ///
@@ -94,11 +94,11 @@ libqt_list k_textautocorrectioncore__importkmailautocorrection_two_upper_letter_
 /// free(map.values);
 /// ```
 ///
-/// @param self TextAutoCorrectionCore__ImportKMailAutocorrection*
+/// @param self const TextAutoCorrectionCore__ImportKMailAutocorrection*
 ///
 /// @return libqt_map of const char* to const char*
 ///
-libqt_map k_textautocorrectioncore__importkmailautocorrection_autocorrect_entries(void* self);
+libqt_map k_textautocorrectioncore__importkmailautocorrection_autocorrect_entries(const void* self);
 
 /// Inherited from TextAutoCorrectionCore::ImportAbstractAutocorrection
 ///
@@ -116,43 +116,43 @@ libqt_map k_textautocorrectioncore__importkmailautocorrection_autocorrect_entrie
 /// free(map.values);
 /// ```
 ///
-/// @param self TextAutoCorrectionCore__ImportKMailAutocorrection*
+/// @param self const TextAutoCorrectionCore__ImportKMailAutocorrection*
 ///
 /// @return libqt_map of const char* to const char*
 ///
-libqt_map k_textautocorrectioncore__importkmailautocorrection_super_script_entries(void* self);
+libqt_map k_textautocorrectioncore__importkmailautocorrection_super_script_entries(const void* self);
 
 /// Inherited from TextAutoCorrectionCore::ImportAbstractAutocorrection
 ///
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportAbstractAutocorrection.html)
 ///
-/// @param self TextAutoCorrectionCore__ImportKMailAutocorrection*
+/// @param self const TextAutoCorrectionCore__ImportKMailAutocorrection*
 ///
-TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrectioncore__importkmailautocorrection_typographic_single_quotes(void* self);
+TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrectioncore__importkmailautocorrection_typographic_single_quotes(const void* self);
 
 /// Inherited from TextAutoCorrectionCore::ImportAbstractAutocorrection
 ///
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportAbstractAutocorrection.html)
 ///
-/// @param self TextAutoCorrectionCore__ImportKMailAutocorrection*
+/// @param self const TextAutoCorrectionCore__ImportKMailAutocorrection*
 ///
-TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrectioncore__importkmailautocorrection_typographic_double_quotes(void* self);
+TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrectioncore__importkmailautocorrection_typographic_double_quotes(const void* self);
 
 /// Inherited from TextAutoCorrectionCore::ImportAbstractAutocorrection
 ///
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportAbstractAutocorrection.html)
 ///
-/// @param self TextAutoCorrectionCore__ImportKMailAutocorrection*
+/// @param self const TextAutoCorrectionCore__ImportKMailAutocorrection*
 ///
-int32_t k_textautocorrectioncore__importkmailautocorrection_max_find_string_lenght(void* self);
+int32_t k_textautocorrectioncore__importkmailautocorrection_max_find_string_lenght(const void* self);
 
 /// Inherited from TextAutoCorrectionCore::ImportAbstractAutocorrection
 ///
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportAbstractAutocorrection.html)
 ///
-/// @param self TextAutoCorrectionCore__ImportKMailAutocorrection*
+/// @param self const TextAutoCorrectionCore__ImportKMailAutocorrection*
 ///
-int32_t k_textautocorrectioncore__importkmailautocorrection_min_find_string_lenght(void* self);
+int32_t k_textautocorrectioncore__importkmailautocorrection_min_find_string_lenght(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportKMailAutocorrection.html)
 ///

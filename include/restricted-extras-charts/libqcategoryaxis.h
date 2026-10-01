@@ -24,26 +24,26 @@ QCategoryAxis* q_categoryaxis_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-const QMetaObject* q_categoryaxis_meta_object(void* self);
+const QMetaObject* q_categoryaxis_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QCategoryAxis*
-/// @param callback const QMetaObject* func()
+/// @param self const QCategoryAxis*
+/// @param callback const QMetaObject* func(const QCategoryAxis* self)
 ///
-void q_categoryaxis_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_categoryaxis_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-const QMetaObject* q_categoryaxis_super_meta_object(void* self);
+const QMetaObject* q_categoryaxis_super_meta_object(const void* self);
 
 /// @param self QCategoryAxis*
 /// @param param1 const char*
@@ -97,30 +97,30 @@ const char* q_categoryaxis_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcategoryaxis-qtcharts.html#type)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
 /// @return enum QAbstractAxis__AxisType
 ///
-int32_t q_categoryaxis_type(void* self);
+int32_t q_categoryaxis_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcategoryaxis-qtcharts.html#type)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QCategoryAxis*
-/// @param callback int32_t func()
+/// @param self const QCategoryAxis*
+/// @param callback int32_t func(const QCategoryAxis* self)
 ///
-void q_categoryaxis_on_type(void* self, int32_t (*callback)());
+void q_categoryaxis_on_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcategoryaxis-qtcharts.html#type)
 ///
 /// Base class method implementation
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
 /// @return enum QAbstractAxis__AxisType
 ///
-int32_t q_categoryaxis_super_type(void* self);
+int32_t q_categoryaxis_super_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcategoryaxis-qtcharts.html#append)
 ///
@@ -147,9 +147,9 @@ void q_categoryaxis_replace_label(void* self, const char* oldLabel, const char* 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcategoryaxis-qtcharts.html#startValue)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-double q_categoryaxis_start_value(void* self);
+double q_categoryaxis_start_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcategoryaxis-qtcharts.html#setStartValue)
 ///
@@ -160,10 +160,10 @@ void q_categoryaxis_set_start_value(void* self, double min);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcategoryaxis-qtcharts.html#endValue)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 /// @param categoryLabel const char*
 ///
-double q_categoryaxis_end_value(void* self, const char* categoryLabel);
+double q_categoryaxis_end_value(const void* self, const char* categoryLabel);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcategoryaxis-qtcharts.html#categoriesLabels)
 ///
@@ -175,17 +175,17 @@ const char** q_categoryaxis_categories_labels(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcategoryaxis-qtcharts.html#count)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-int32_t q_categoryaxis_count(void* self);
+int32_t q_categoryaxis_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcategoryaxis-qtcharts.html#labelsPosition)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
 /// @return enum QCategoryAxis__AxisLabelsPosition
 ///
-int32_t q_categoryaxis_labels_position(void* self);
+int32_t q_categoryaxis_labels_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcategoryaxis-qtcharts.html#setLabelsPosition)
 ///
@@ -242,10 +242,10 @@ const char* q_categoryaxis_tr3(const char* s, const char* c, int n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcategoryaxis-qtcharts.html#startValue)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 /// @param categoryLabel const char*
 ///
-double q_categoryaxis_start_value1(void* self, const char* categoryLabel);
+double q_categoryaxis_start_value1(const void* self, const char* categoryLabel);
 
 /// Inherited from QValueAxis
 ///
@@ -260,9 +260,9 @@ void q_categoryaxis_set_min(void* self, double min);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalueaxis.html#min)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-double q_categoryaxis_min(void* self);
+double q_categoryaxis_min(const void* self);
 
 /// Inherited from QValueAxis
 ///
@@ -277,9 +277,9 @@ void q_categoryaxis_set_max(void* self, double max);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalueaxis.html#max)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-double q_categoryaxis_max(void* self);
+double q_categoryaxis_max(const void* self);
 
 /// Inherited from QValueAxis
 ///
@@ -304,9 +304,9 @@ void q_categoryaxis_set_tick_count(void* self, int count);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalueaxis.html#tickCount)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-int32_t q_categoryaxis_tick_count(void* self);
+int32_t q_categoryaxis_tick_count(const void* self);
 
 /// Inherited from QValueAxis
 ///
@@ -321,9 +321,9 @@ void q_categoryaxis_set_minor_tick_count(void* self, int count);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalueaxis.html#minorTickCount)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-int32_t q_categoryaxis_minor_tick_count(void* self);
+int32_t q_categoryaxis_minor_tick_count(const void* self);
 
 /// Inherited from QValueAxis
 ///
@@ -338,9 +338,9 @@ void q_categoryaxis_set_tick_anchor(void* self, double anchor);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalueaxis.html#tickAnchor)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-double q_categoryaxis_tick_anchor(void* self);
+double q_categoryaxis_tick_anchor(const void* self);
 
 /// Inherited from QValueAxis
 ///
@@ -355,9 +355,9 @@ void q_categoryaxis_set_tick_interval(void* self, double insterval);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalueaxis.html#tickInterval)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-double q_categoryaxis_tick_interval(void* self);
+double q_categoryaxis_tick_interval(const void* self);
 
 /// Inherited from QValueAxis
 ///
@@ -372,11 +372,11 @@ void q_categoryaxis_set_tick_type(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalueaxis.html#tickType)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
 /// @return enum QValueAxis__TickType
 ///
-int32_t q_categoryaxis_tick_type(void* self);
+int32_t q_categoryaxis_tick_type(const void* self);
 
 /// Inherited from QValueAxis
 ///
@@ -393,9 +393,9 @@ void q_categoryaxis_set_label_format(void* self, const char* format);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-const char* q_categoryaxis_label_format(void* self);
+const char* q_categoryaxis_label_format(const void* self);
 
 /// Inherited from QValueAxis
 ///
@@ -572,9 +572,9 @@ void q_categoryaxis_on_tick_type_changed(void* self, void (*callback)(void*, int
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#isVisible)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-bool q_categoryaxis_is_visible(void* self);
+bool q_categoryaxis_is_visible(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -604,9 +604,9 @@ void q_categoryaxis_hide(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#isLineVisible)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-bool q_categoryaxis_is_line_visible(void* self);
+bool q_categoryaxis_is_line_visible(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -623,15 +623,15 @@ void q_categoryaxis_set_line_visible(void* self);
 /// @param self QCategoryAxis*
 /// @param pen QPen*
 ///
-void q_categoryaxis_set_line_pen(void* self, void* pen);
+void q_categoryaxis_set_line_pen(void* self, const void* pen);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#linePen)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-QPen* q_categoryaxis_line_pen(void* self);
+QPen* q_categoryaxis_line_pen(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -646,17 +646,17 @@ void q_categoryaxis_set_line_pen_color(void* self, void* color);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#linePenColor)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-QColor* q_categoryaxis_line_pen_color(void* self);
+QColor* q_categoryaxis_line_pen_color(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#isGridLineVisible)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-bool q_categoryaxis_is_grid_line_visible(void* self);
+bool q_categoryaxis_is_grid_line_visible(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -673,23 +673,23 @@ void q_categoryaxis_set_grid_line_visible(void* self);
 /// @param self QCategoryAxis*
 /// @param pen QPen*
 ///
-void q_categoryaxis_set_grid_line_pen(void* self, void* pen);
+void q_categoryaxis_set_grid_line_pen(void* self, const void* pen);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#gridLinePen)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-QPen* q_categoryaxis_grid_line_pen(void* self);
+QPen* q_categoryaxis_grid_line_pen(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#isMinorGridLineVisible)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-bool q_categoryaxis_is_minor_grid_line_visible(void* self);
+bool q_categoryaxis_is_minor_grid_line_visible(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -706,15 +706,15 @@ void q_categoryaxis_set_minor_grid_line_visible(void* self);
 /// @param self QCategoryAxis*
 /// @param pen QPen*
 ///
-void q_categoryaxis_set_minor_grid_line_pen(void* self, void* pen);
+void q_categoryaxis_set_minor_grid_line_pen(void* self, const void* pen);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridLinePen)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-QPen* q_categoryaxis_minor_grid_line_pen(void* self);
+QPen* q_categoryaxis_minor_grid_line_pen(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -723,7 +723,7 @@ QPen* q_categoryaxis_minor_grid_line_pen(void* self);
 /// @param self QCategoryAxis*
 /// @param color QColor*
 ///
-void q_categoryaxis_set_grid_line_color(void* self, void* color);
+void q_categoryaxis_set_grid_line_color(void* self, const void* color);
 
 /// Inherited from QAbstractAxis
 ///
@@ -740,7 +740,7 @@ QColor* q_categoryaxis_grid_line_color(void* self);
 /// @param self QCategoryAxis*
 /// @param color QColor*
 ///
-void q_categoryaxis_set_minor_grid_line_color(void* self, void* color);
+void q_categoryaxis_set_minor_grid_line_color(void* self, const void* color);
 
 /// Inherited from QAbstractAxis
 ///
@@ -754,9 +754,9 @@ QColor* q_categoryaxis_minor_grid_line_color(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#labelsVisible)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-bool q_categoryaxis_labels_visible(void* self);
+bool q_categoryaxis_labels_visible(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -773,15 +773,15 @@ void q_categoryaxis_set_labels_visible(void* self);
 /// @param self QCategoryAxis*
 /// @param brush QBrush*
 ///
-void q_categoryaxis_set_labels_brush(void* self, void* brush);
+void q_categoryaxis_set_labels_brush(void* self, const void* brush);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#labelsBrush)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-QBrush* q_categoryaxis_labels_brush(void* self);
+QBrush* q_categoryaxis_labels_brush(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -790,15 +790,15 @@ QBrush* q_categoryaxis_labels_brush(void* self);
 /// @param self QCategoryAxis*
 /// @param font QFont*
 ///
-void q_categoryaxis_set_labels_font(void* self, void* font);
+void q_categoryaxis_set_labels_font(void* self, const void* font);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#labelsFont)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-QFont* q_categoryaxis_labels_font(void* self);
+QFont* q_categoryaxis_labels_font(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -813,9 +813,9 @@ void q_categoryaxis_set_labels_angle(void* self, int angle);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#labelsAngle)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-int32_t q_categoryaxis_labels_angle(void* self);
+int32_t q_categoryaxis_labels_angle(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -830,17 +830,17 @@ void q_categoryaxis_set_labels_color(void* self, void* color);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#labelsColor)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-QColor* q_categoryaxis_labels_color(void* self);
+QColor* q_categoryaxis_labels_color(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#isTitleVisible)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-bool q_categoryaxis_is_title_visible(void* self);
+bool q_categoryaxis_is_title_visible(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -857,15 +857,15 @@ void q_categoryaxis_set_title_visible(void* self);
 /// @param self QCategoryAxis*
 /// @param brush QBrush*
 ///
-void q_categoryaxis_set_title_brush(void* self, void* brush);
+void q_categoryaxis_set_title_brush(void* self, const void* brush);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#titleBrush)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-QBrush* q_categoryaxis_title_brush(void* self);
+QBrush* q_categoryaxis_title_brush(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -874,15 +874,15 @@ QBrush* q_categoryaxis_title_brush(void* self);
 /// @param self QCategoryAxis*
 /// @param font QFont*
 ///
-void q_categoryaxis_set_title_font(void* self, void* font);
+void q_categoryaxis_set_title_font(void* self, const void* font);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#titleFont)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-QFont* q_categoryaxis_title_font(void* self);
+QFont* q_categoryaxis_title_font(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -899,17 +899,17 @@ void q_categoryaxis_set_title_text(void* self, const char* title);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-const char* q_categoryaxis_title_text(void* self);
+const char* q_categoryaxis_title_text(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#shadesVisible)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-bool q_categoryaxis_shades_visible(void* self);
+bool q_categoryaxis_shades_visible(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -926,15 +926,15 @@ void q_categoryaxis_set_shades_visible(void* self);
 /// @param self QCategoryAxis*
 /// @param pen QPen*
 ///
-void q_categoryaxis_set_shades_pen(void* self, void* pen);
+void q_categoryaxis_set_shades_pen(void* self, const void* pen);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#shadesPen)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-QPen* q_categoryaxis_shades_pen(void* self);
+QPen* q_categoryaxis_shades_pen(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -943,15 +943,15 @@ QPen* q_categoryaxis_shades_pen(void* self);
 /// @param self QCategoryAxis*
 /// @param brush QBrush*
 ///
-void q_categoryaxis_set_shades_brush(void* self, void* brush);
+void q_categoryaxis_set_shades_brush(void* self, const void* brush);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#shadesBrush)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-QBrush* q_categoryaxis_shades_brush(void* self);
+QBrush* q_categoryaxis_shades_brush(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -966,9 +966,9 @@ void q_categoryaxis_set_shades_color(void* self, void* color);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#shadesColor)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-QColor* q_categoryaxis_shades_color(void* self);
+QColor* q_categoryaxis_shades_color(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -983,29 +983,29 @@ void q_categoryaxis_set_shades_border_color(void* self, void* color);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#shadesBorderColor)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-QColor* q_categoryaxis_shades_border_color(void* self);
+QColor* q_categoryaxis_shades_border_color(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#orientation)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
 /// @return enum Qt__Orientation
 ///
-int32_t q_categoryaxis_orientation(void* self);
+int32_t q_categoryaxis_orientation(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#alignment)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 ///
-int32_t q_categoryaxis_alignment(void* self);
+int32_t q_categoryaxis_alignment(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -1019,9 +1019,9 @@ void q_categoryaxis_set_reverse(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#isReverse)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-bool q_categoryaxis_is_reverse(void* self);
+bool q_categoryaxis_is_reverse(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -1035,17 +1035,17 @@ void q_categoryaxis_set_labels_editable(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#labelsEditable)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-bool q_categoryaxis_labels_editable(void* self);
+bool q_categoryaxis_labels_editable(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#labelsTruncated)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-bool q_categoryaxis_labels_truncated(void* self);
+bool q_categoryaxis_labels_truncated(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -1059,9 +1059,9 @@ void q_categoryaxis_set_truncate_labels(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#truncateLabels)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-bool q_categoryaxis_truncate_labels(void* self);
+bool q_categoryaxis_truncate_labels(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -1088,7 +1088,7 @@ void q_categoryaxis_on_visible_changed(void* self, void (*callback)(void*, bool)
 /// @param self QCategoryAxis*
 /// @param pen QPen*
 ///
-void q_categoryaxis_line_pen_changed(void* self, void* pen);
+void q_categoryaxis_line_pen_changed(void* self, const void* pen);
 
 /// Inherited from QAbstractAxis
 ///
@@ -1097,7 +1097,7 @@ void q_categoryaxis_line_pen_changed(void* self, void* pen);
 /// @param self QCategoryAxis*
 /// @param callback void func(QCategoryAxis* self, QPen* pen)
 ///
-void q_categoryaxis_on_line_pen_changed(void* self, void (*callback)(void*, void*));
+void q_categoryaxis_on_line_pen_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractAxis
 ///
@@ -1142,7 +1142,7 @@ void q_categoryaxis_on_labels_visible_changed(void* self, void (*callback)(void*
 /// @param self QCategoryAxis*
 /// @param brush QBrush*
 ///
-void q_categoryaxis_labels_brush_changed(void* self, void* brush);
+void q_categoryaxis_labels_brush_changed(void* self, const void* brush);
 
 /// Inherited from QAbstractAxis
 ///
@@ -1151,7 +1151,7 @@ void q_categoryaxis_labels_brush_changed(void* self, void* brush);
 /// @param self QCategoryAxis*
 /// @param callback void func(QCategoryAxis* self, QBrush* brush)
 ///
-void q_categoryaxis_on_labels_brush_changed(void* self, void (*callback)(void*, void*));
+void q_categoryaxis_on_labels_brush_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractAxis
 ///
@@ -1160,7 +1160,7 @@ void q_categoryaxis_on_labels_brush_changed(void* self, void (*callback)(void*, 
 /// @param self QCategoryAxis*
 /// @param pen QFont*
 ///
-void q_categoryaxis_labels_font_changed(void* self, void* pen);
+void q_categoryaxis_labels_font_changed(void* self, const void* pen);
 
 /// Inherited from QAbstractAxis
 ///
@@ -1169,7 +1169,7 @@ void q_categoryaxis_labels_font_changed(void* self, void* pen);
 /// @param self QCategoryAxis*
 /// @param callback void func(QCategoryAxis* self, QFont* pen)
 ///
-void q_categoryaxis_on_labels_font_changed(void* self, void (*callback)(void*, void*));
+void q_categoryaxis_on_labels_font_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractAxis
 ///
@@ -1196,7 +1196,7 @@ void q_categoryaxis_on_labels_angle_changed(void* self, void (*callback)(void*, 
 /// @param self QCategoryAxis*
 /// @param pen QPen*
 ///
-void q_categoryaxis_grid_line_pen_changed(void* self, void* pen);
+void q_categoryaxis_grid_line_pen_changed(void* self, const void* pen);
 
 /// Inherited from QAbstractAxis
 ///
@@ -1205,7 +1205,7 @@ void q_categoryaxis_grid_line_pen_changed(void* self, void* pen);
 /// @param self QCategoryAxis*
 /// @param callback void func(QCategoryAxis* self, QPen* pen)
 ///
-void q_categoryaxis_on_grid_line_pen_changed(void* self, void (*callback)(void*, void*));
+void q_categoryaxis_on_grid_line_pen_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractAxis
 ///
@@ -1250,7 +1250,7 @@ void q_categoryaxis_on_minor_grid_visible_changed(void* self, void (*callback)(v
 /// @param self QCategoryAxis*
 /// @param pen QPen*
 ///
-void q_categoryaxis_minor_grid_line_pen_changed(void* self, void* pen);
+void q_categoryaxis_minor_grid_line_pen_changed(void* self, const void* pen);
 
 /// Inherited from QAbstractAxis
 ///
@@ -1259,7 +1259,7 @@ void q_categoryaxis_minor_grid_line_pen_changed(void* self, void* pen);
 /// @param self QCategoryAxis*
 /// @param callback void func(QCategoryAxis* self, QPen* pen)
 ///
-void q_categoryaxis_on_minor_grid_line_pen_changed(void* self, void (*callback)(void*, void*));
+void q_categoryaxis_on_minor_grid_line_pen_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractAxis
 ///
@@ -1268,7 +1268,7 @@ void q_categoryaxis_on_minor_grid_line_pen_changed(void* self, void (*callback)(
 /// @param self QCategoryAxis*
 /// @param color QColor*
 ///
-void q_categoryaxis_grid_line_color_changed(void* self, void* color);
+void q_categoryaxis_grid_line_color_changed(void* self, const void* color);
 
 /// Inherited from QAbstractAxis
 ///
@@ -1277,7 +1277,7 @@ void q_categoryaxis_grid_line_color_changed(void* self, void* color);
 /// @param self QCategoryAxis*
 /// @param callback void func(QCategoryAxis* self, QColor* color)
 ///
-void q_categoryaxis_on_grid_line_color_changed(void* self, void (*callback)(void*, void*));
+void q_categoryaxis_on_grid_line_color_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractAxis
 ///
@@ -1286,7 +1286,7 @@ void q_categoryaxis_on_grid_line_color_changed(void* self, void (*callback)(void
 /// @param self QCategoryAxis*
 /// @param color QColor*
 ///
-void q_categoryaxis_minor_grid_line_color_changed(void* self, void* color);
+void q_categoryaxis_minor_grid_line_color_changed(void* self, const void* color);
 
 /// Inherited from QAbstractAxis
 ///
@@ -1295,7 +1295,7 @@ void q_categoryaxis_minor_grid_line_color_changed(void* self, void* color);
 /// @param self QCategoryAxis*
 /// @param callback void func(QCategoryAxis* self, QColor* color)
 ///
-void q_categoryaxis_on_minor_grid_line_color_changed(void* self, void (*callback)(void*, void*));
+void q_categoryaxis_on_minor_grid_line_color_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractAxis
 ///
@@ -1358,7 +1358,7 @@ void q_categoryaxis_on_title_text_changed(void* self, void (*callback)(void*, co
 /// @param self QCategoryAxis*
 /// @param brush QBrush*
 ///
-void q_categoryaxis_title_brush_changed(void* self, void* brush);
+void q_categoryaxis_title_brush_changed(void* self, const void* brush);
 
 /// Inherited from QAbstractAxis
 ///
@@ -1367,7 +1367,7 @@ void q_categoryaxis_title_brush_changed(void* self, void* brush);
 /// @param self QCategoryAxis*
 /// @param callback void func(QCategoryAxis* self, QBrush* brush)
 ///
-void q_categoryaxis_on_title_brush_changed(void* self, void (*callback)(void*, void*));
+void q_categoryaxis_on_title_brush_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractAxis
 ///
@@ -1394,7 +1394,7 @@ void q_categoryaxis_on_title_visible_changed(void* self, void (*callback)(void*,
 /// @param self QCategoryAxis*
 /// @param font QFont*
 ///
-void q_categoryaxis_title_font_changed(void* self, void* font);
+void q_categoryaxis_title_font_changed(void* self, const void* font);
 
 /// Inherited from QAbstractAxis
 ///
@@ -1403,7 +1403,7 @@ void q_categoryaxis_title_font_changed(void* self, void* font);
 /// @param self QCategoryAxis*
 /// @param callback void func(QCategoryAxis* self, QFont* font)
 ///
-void q_categoryaxis_on_title_font_changed(void* self, void (*callback)(void*, void*));
+void q_categoryaxis_on_title_font_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractAxis
 ///
@@ -1466,7 +1466,7 @@ void q_categoryaxis_on_shades_border_color_changed(void* self, void (*callback)(
 /// @param self QCategoryAxis*
 /// @param pen QPen*
 ///
-void q_categoryaxis_shades_pen_changed(void* self, void* pen);
+void q_categoryaxis_shades_pen_changed(void* self, const void* pen);
 
 /// Inherited from QAbstractAxis
 ///
@@ -1475,7 +1475,7 @@ void q_categoryaxis_shades_pen_changed(void* self, void* pen);
 /// @param self QCategoryAxis*
 /// @param callback void func(QCategoryAxis* self, QPen* pen)
 ///
-void q_categoryaxis_on_shades_pen_changed(void* self, void (*callback)(void*, void*));
+void q_categoryaxis_on_shades_pen_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractAxis
 ///
@@ -1484,7 +1484,7 @@ void q_categoryaxis_on_shades_pen_changed(void* self, void (*callback)(void*, vo
 /// @param self QCategoryAxis*
 /// @param brush QBrush*
 ///
-void q_categoryaxis_shades_brush_changed(void* self, void* brush);
+void q_categoryaxis_shades_brush_changed(void* self, const void* brush);
 
 /// Inherited from QAbstractAxis
 ///
@@ -1493,7 +1493,7 @@ void q_categoryaxis_shades_brush_changed(void* self, void* brush);
 /// @param self QCategoryAxis*
 /// @param callback void func(QCategoryAxis* self, QBrush* brush)
 ///
-void q_categoryaxis_on_shades_brush_changed(void* self, void (*callback)(void*, void*));
+void q_categoryaxis_on_shades_brush_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractAxis
 ///
@@ -1663,9 +1663,9 @@ void q_categoryaxis_set_truncate_labels1(void* self, bool truncateLabels);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-const char* q_categoryaxis_object_name(void* self);
+const char* q_categoryaxis_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1680,33 +1680,33 @@ void q_categoryaxis_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-bool q_categoryaxis_is_widget_type(void* self);
+bool q_categoryaxis_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-bool q_categoryaxis_is_window_type(void* self);
+bool q_categoryaxis_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-bool q_categoryaxis_is_quick_item_type(void* self);
+bool q_categoryaxis_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-bool q_categoryaxis_signals_blocked(void* self);
+bool q_categoryaxis_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1721,9 +1721,9 @@ bool q_categoryaxis_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-QThread* q_categoryaxis_thread(void* self);
+QThread* q_categoryaxis_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1774,11 +1774,11 @@ void q_categoryaxis_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_categoryaxis_children(void* self);
+libqt_list q_categoryaxis_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1816,7 +1816,7 @@ void q_categoryaxis_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_categoryaxis_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_categoryaxis_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1827,18 +1827,18 @@ QMetaObject__Connection* q_categoryaxis_connect(void* sender, const char* signal
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_categoryaxis_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_categoryaxis_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_categoryaxis_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_categoryaxis_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1849,7 +1849,7 @@ QMetaObject__Connection* q_categoryaxis_connect3(void* self, void* sender, const
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_categoryaxis_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_categoryaxis_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1860,24 +1860,24 @@ bool q_categoryaxis_disconnect(void* sender, const char* signal, void* receiver,
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_categoryaxis_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_categoryaxis_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-bool q_categoryaxis_disconnect3(void* self);
+bool q_categoryaxis_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 /// @param receiver QObject*
 ///
-bool q_categoryaxis_disconnect4(void* self, void* receiver);
+bool q_categoryaxis_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1885,23 +1885,23 @@ bool q_categoryaxis_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_categoryaxis_disconnect5(void* param1);
+bool q_categoryaxis_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-void q_categoryaxis_dump_object_tree(void* self);
+void q_categoryaxis_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-void q_categoryaxis_dump_object_info(void* self);
+void q_categoryaxis_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1911,16 +1911,16 @@ void q_categoryaxis_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_categoryaxis_set_property(void* self, const char* name, void* value);
+bool q_categoryaxis_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 /// @param name const char*
 ///
-QVariant* q_categoryaxis_property(void* self, const char* name);
+QVariant* q_categoryaxis_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1928,9 +1928,9 @@ QVariant* q_categoryaxis_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-const char** q_categoryaxis_dynamic_property_names(void* self);
+const char** q_categoryaxis_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1944,9 +1944,9 @@ QBindingStorage* q_categoryaxis_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-const QBindingStorage* q_categoryaxis_binding_storage2(void* self);
+const QBindingStorage* q_categoryaxis_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1969,18 +1969,18 @@ void q_categoryaxis_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-QObject* q_categoryaxis_parent(void* self);
+QObject* q_categoryaxis_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 /// @param classname const char*
 ///
-bool q_categoryaxis_inherits(void* self, const char* classname);
+bool q_categoryaxis_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -2020,7 +2020,7 @@ int32_t q_categoryaxis_start_timer23(void* self, int64_t time, int32_t timerType
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_categoryaxis_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_categoryaxis_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -2032,59 +2032,59 @@ QMetaObject__Connection* q_categoryaxis_connect5(void* sender, const char* signa
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_categoryaxis_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_categoryaxis_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_categoryaxis_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_categoryaxis_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 /// @param signal const char*
 ///
-bool q_categoryaxis_disconnect1(void* self, const char* signal);
+bool q_categoryaxis_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QCategoryAxis*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_categoryaxis_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_categoryaxis_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_categoryaxis_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_categoryaxis_disconnect23(void* self, void* receiver, const char* member);
+bool q_categoryaxis_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QCategoryAxis*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_categoryaxis_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2280,7 +2280,7 @@ void q_categoryaxis_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QCategoryAxis*
 /// @param signal QMetaMethod*
 ///
-void q_categoryaxis_connect_notify(void* self, void* signal);
+void q_categoryaxis_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2291,7 +2291,7 @@ void q_categoryaxis_connect_notify(void* self, void* signal);
 /// @param self QCategoryAxis*
 /// @param signal QMetaMethod*
 ///
-void q_categoryaxis_super_connect_notify(void* self, void* signal);
+void q_categoryaxis_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2302,7 +2302,7 @@ void q_categoryaxis_super_connect_notify(void* self, void* signal);
 /// @param self QCategoryAxis*
 /// @param callback void func(QCategoryAxis* self, QMetaMethod* signal)
 ///
-void q_categoryaxis_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_categoryaxis_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2313,7 +2313,7 @@ void q_categoryaxis_on_connect_notify(void* self, void (*callback)(void*, void*)
 /// @param self QCategoryAxis*
 /// @param signal QMetaMethod*
 ///
-void q_categoryaxis_disconnect_notify(void* self, void* signal);
+void q_categoryaxis_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2324,7 +2324,7 @@ void q_categoryaxis_disconnect_notify(void* self, void* signal);
 /// @param self QCategoryAxis*
 /// @param signal QMetaMethod*
 ///
-void q_categoryaxis_super_disconnect_notify(void* self, void* signal);
+void q_categoryaxis_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2335,7 +2335,7 @@ void q_categoryaxis_super_disconnect_notify(void* self, void* signal);
 /// @param self QCategoryAxis*
 /// @param callback void func(QCategoryAxis* self, QMetaMethod* signal)
 ///
-void q_categoryaxis_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_categoryaxis_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2343,9 +2343,9 @@ void q_categoryaxis_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-QObject* q_categoryaxis_sender(void* self);
+QObject* q_categoryaxis_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2353,9 +2353,9 @@ QObject* q_categoryaxis_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-QObject* q_categoryaxis_super_sender(void* self);
+QObject* q_categoryaxis_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2363,10 +2363,10 @@ QObject* q_categoryaxis_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QCategoryAxis*
-/// @param callback QObject* func()
+/// @param self const QCategoryAxis*
+/// @param callback QObject* func(QCategoryAxis* self)
 ///
-void q_categoryaxis_on_sender(void* self, QObject* (*callback)());
+void q_categoryaxis_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2374,9 +2374,9 @@ void q_categoryaxis_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-int32_t q_categoryaxis_sender_signal_index(void* self);
+int32_t q_categoryaxis_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2384,9 +2384,9 @@ int32_t q_categoryaxis_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 ///
-int32_t q_categoryaxis_super_sender_signal_index(void* self);
+int32_t q_categoryaxis_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2394,10 +2394,10 @@ int32_t q_categoryaxis_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QCategoryAxis*
-/// @param callback int32_t func()
+/// @param self const QCategoryAxis*
+/// @param callback int32_t func(QCategoryAxis* self)
 ///
-void q_categoryaxis_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_categoryaxis_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2405,10 +2405,10 @@ void q_categoryaxis_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 /// @param signal const char*
 ///
-int32_t q_categoryaxis_receivers(void* self, const char* signal);
+int32_t q_categoryaxis_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2416,10 +2416,10 @@ int32_t q_categoryaxis_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 /// @param signal const char*
 ///
-int32_t q_categoryaxis_super_receivers(void* self, const char* signal);
+int32_t q_categoryaxis_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2427,10 +2427,10 @@ int32_t q_categoryaxis_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 /// @param callback int32_t func(QCategoryAxis* self, const char* signal)
 ///
-void q_categoryaxis_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_categoryaxis_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2438,10 +2438,10 @@ void q_categoryaxis_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 /// @param signal QMetaMethod*
 ///
-bool q_categoryaxis_is_signal_connected(void* self, void* signal);
+bool q_categoryaxis_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2449,10 +2449,10 @@ bool q_categoryaxis_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 /// @param signal QMetaMethod*
 ///
-bool q_categoryaxis_super_is_signal_connected(void* self, void* signal);
+bool q_categoryaxis_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2460,10 +2460,10 @@ bool q_categoryaxis_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QCategoryAxis*
+/// @param self const QCategoryAxis*
 /// @param callback bool func(QCategoryAxis* self, QMetaMethod* signal)
 ///
-void q_categoryaxis_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_categoryaxis_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

@@ -14,7 +14,7 @@
 #include "libqnetworkreply.hpp"
 #include "libqnetworkreply.h"
 
-const QMetaObject* q_networkreply_meta_object(void* self) {
+const QMetaObject* q_networkreply_meta_object(const void* self) {
     return QNetworkReply_MetaObject((QNetworkReply*)self);
 }
 
@@ -37,11 +37,11 @@ void q_networkreply_close(void* self) {
     QNetworkReply_Close((QNetworkReply*)self);
 }
 
-bool q_networkreply_is_sequential(void* self) {
+bool q_networkreply_is_sequential(const void* self) {
     return QNetworkReply_IsSequential((QNetworkReply*)self);
 }
 
-int64_t q_networkreply_read_buffer_size(void* self) {
+int64_t q_networkreply_read_buffer_size(const void* self) {
     return QNetworkReply_ReadBufferSize((QNetworkReply*)self);
 }
 
@@ -49,43 +49,43 @@ void q_networkreply_set_read_buffer_size(void* self, int64_t size) {
     QNetworkReply_SetReadBufferSize((QNetworkReply*)self, size);
 }
 
-QNetworkAccessManager* q_networkreply_manager(void* self) {
+QNetworkAccessManager* q_networkreply_manager(const void* self) {
     return QNetworkReply_Manager((QNetworkReply*)self);
 }
 
-int32_t q_networkreply_operation(void* self) {
+int32_t q_networkreply_operation(const void* self) {
     return QNetworkReply_Operation((QNetworkReply*)self);
 }
 
-QNetworkRequest* q_networkreply_request(void* self) {
+QNetworkRequest* q_networkreply_request(const void* self) {
     return QNetworkReply_Request((QNetworkReply*)self);
 }
 
-int32_t q_networkreply_error(void* self) {
+int32_t q_networkreply_error(const void* self) {
     return QNetworkReply_Error((QNetworkReply*)self);
 }
 
-bool q_networkreply_is_finished(void* self) {
+bool q_networkreply_is_finished(const void* self) {
     return QNetworkReply_IsFinished((QNetworkReply*)self);
 }
 
-bool q_networkreply_is_running(void* self) {
+bool q_networkreply_is_running(const void* self) {
     return QNetworkReply_IsRunning((QNetworkReply*)self);
 }
 
-QUrl* q_networkreply_url(void* self) {
+QUrl* q_networkreply_url(const void* self) {
     return QNetworkReply_Url((QNetworkReply*)self);
 }
 
-QVariant* q_networkreply_header(void* self, int32_t header) {
+QVariant* q_networkreply_header(const void* self, int32_t header) {
     return QNetworkReply_Header((QNetworkReply*)self, header);
 }
 
-bool q_networkreply_has_raw_header(void* self, const char* headerName) {
+bool q_networkreply_has_raw_header(const void* self, const char* headerName) {
     return QNetworkReply_HasRawHeader((QNetworkReply*)self, headerName);
 }
 
-const char** q_networkreply_raw_header_list(void* self) {
+const char** q_networkreply_raw_header_list(const void* self) {
     libqt_list _arr = QNetworkReply_RawHeaderList((QNetworkReply*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -102,14 +102,14 @@ const char** q_networkreply_raw_header_list(void* self) {
     return _ret;
 }
 
-char* q_networkreply_raw_header(void* self, const char* headerName) {
+char* q_networkreply_raw_header(const void* self, const char* headerName) {
     libqt_string _str = QNetworkReply_RawHeader((QNetworkReply*)self, headerName);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-libqt_list /* of libqt_pair tuple of char* and char* */ q_networkreply_raw_header_pairs(void* self) {
+libqt_list /* of libqt_pair tuple of char* and char* */ q_networkreply_raw_header_pairs(const void* self) {
     libqt_list _arr = QNetworkReply_RawHeaderPairs((QNetworkReply*)self);
     libqt_pair* _data = (libqt_pair*)_arr.data.ptr;
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -125,19 +125,19 @@ libqt_list /* of libqt_pair tuple of char* and char* */ q_networkreply_raw_heade
     return _arr;
 }
 
-QHttpHeaders* q_networkreply_headers(void* self) {
+QHttpHeaders* q_networkreply_headers(const void* self) {
     return QNetworkReply_Headers((QNetworkReply*)self);
 }
 
-QVariant* q_networkreply_attribute(void* self, int32_t code) {
+QVariant* q_networkreply_attribute(const void* self, int32_t code) {
     return QNetworkReply_Attribute((QNetworkReply*)self, code);
 }
 
-QSslConfiguration* q_networkreply_ssl_configuration(void* self) {
+QSslConfiguration* q_networkreply_ssl_configuration(const void* self) {
     return QNetworkReply_SslConfiguration((QNetworkReply*)self);
 }
 
-void q_networkreply_set_ssl_configuration(void* self, void* configuration) {
+void q_networkreply_set_ssl_configuration(void* self, const void* configuration) {
     QNetworkReply_SetSslConfiguration((QNetworkReply*)self, (QSslConfiguration*)configuration);
 }
 
@@ -217,11 +217,11 @@ void q_networkreply_on_pre_shared_key_authentication_required(void* self, void (
     QNetworkReply_Connect_PreSharedKeyAuthenticationRequired((QNetworkReply*)self, (intptr_t)callback);
 }
 
-void q_networkreply_redirected(void* self, void* url) {
+void q_networkreply_redirected(void* self, const void* url) {
     QNetworkReply_Redirected((QNetworkReply*)self, (QUrl*)url);
 }
 
-void q_networkreply_on_redirected(void* self, void (*callback)(void*, void*)) {
+void q_networkreply_on_redirected(void* self, void (*callback)(void*, const void*)) {
     QNetworkReply_Connect_Redirected((QNetworkReply*)self, (intptr_t)callback);
 }
 
@@ -267,7 +267,7 @@ QIODeviceBase* q_networkreply_as_q_i_o_device_base(void* self) {
     return QIODevice_AsQIODeviceBase((QIODevice*)self);
 }
 
-int32_t q_networkreply_open_mode(void* self) {
+int32_t q_networkreply_open_mode(const void* self) {
     return QIODevice_OpenMode((QIODevice*)self);
 }
 
@@ -275,31 +275,31 @@ void q_networkreply_set_text_mode_enabled(void* self, bool enabled) {
     QIODevice_SetTextModeEnabled((QIODevice*)self, enabled);
 }
 
-bool q_networkreply_is_text_mode_enabled(void* self) {
+bool q_networkreply_is_text_mode_enabled(const void* self) {
     return QIODevice_IsTextModeEnabled((QIODevice*)self);
 }
 
-bool q_networkreply_is_open(void* self) {
+bool q_networkreply_is_open(const void* self) {
     return QIODevice_IsOpen((QIODevice*)self);
 }
 
-bool q_networkreply_is_readable(void* self) {
+bool q_networkreply_is_readable(const void* self) {
     return QIODevice_IsReadable((QIODevice*)self);
 }
 
-bool q_networkreply_is_writable(void* self) {
+bool q_networkreply_is_writable(const void* self) {
     return QIODevice_IsWritable((QIODevice*)self);
 }
 
-int32_t q_networkreply_read_channel_count(void* self) {
+int32_t q_networkreply_read_channel_count(const void* self) {
     return QIODevice_ReadChannelCount((QIODevice*)self);
 }
 
-int32_t q_networkreply_write_channel_count(void* self) {
+int32_t q_networkreply_write_channel_count(const void* self) {
     return QIODevice_WriteChannelCount((QIODevice*)self);
 }
 
-int32_t q_networkreply_current_read_channel(void* self) {
+int32_t q_networkreply_current_read_channel(const void* self) {
     return QIODevice_CurrentReadChannel((QIODevice*)self);
 }
 
@@ -307,7 +307,7 @@ void q_networkreply_set_current_read_channel(void* self, int channel) {
     QIODevice_SetCurrentReadChannel((QIODevice*)self, channel);
 }
 
-int32_t q_networkreply_current_write_channel(void* self) {
+int32_t q_networkreply_current_write_channel(const void* self) {
     return QIODevice_CurrentWriteChannel((QIODevice*)self);
 }
 
@@ -319,11 +319,11 @@ bool q_networkreply_open(void* self, int32_t mode) {
     return QIODevice_Open((QIODevice*)self, mode);
 }
 
-int64_t q_networkreply_pos(void* self) {
+int64_t q_networkreply_pos(const void* self) {
     return QIODevice_Pos((QIODevice*)self);
 }
 
-int64_t q_networkreply_size(void* self) {
+int64_t q_networkreply_size(const void* self) {
     return QIODevice_Size((QIODevice*)self);
 }
 
@@ -331,7 +331,7 @@ bool q_networkreply_seek(void* self, int64_t pos) {
     return QIODevice_Seek((QIODevice*)self, pos);
 }
 
-bool q_networkreply_at_end(void* self) {
+bool q_networkreply_at_end(const void* self) {
     return QIODevice_AtEnd((QIODevice*)self);
 }
 
@@ -339,11 +339,11 @@ bool q_networkreply_reset(void* self) {
     return QIODevice_Reset((QIODevice*)self);
 }
 
-int64_t q_networkreply_bytes_available(void* self) {
+int64_t q_networkreply_bytes_available(const void* self) {
     return QIODevice_BytesAvailable((QIODevice*)self);
 }
 
-int64_t q_networkreply_bytes_to_write(void* self) {
+int64_t q_networkreply_bytes_to_write(const void* self) {
     return QIODevice_BytesToWrite((QIODevice*)self);
 }
 
@@ -376,7 +376,7 @@ char* q_networkreply_read_line2(void* self) {
     return _ret;
 }
 
-bool q_networkreply_can_read_line(void* self) {
+bool q_networkreply_can_read_line(const void* self) {
     return QIODevice_CanReadLine((QIODevice*)self);
 }
 
@@ -392,7 +392,7 @@ void q_networkreply_rollback_transaction(void* self) {
     QIODevice_RollbackTransaction((QIODevice*)self);
 }
 
-bool q_networkreply_is_transaction_started(void* self) {
+bool q_networkreply_is_transaction_started(const void* self) {
     return QIODevice_IsTransactionStarted((QIODevice*)self);
 }
 
@@ -443,7 +443,7 @@ bool q_networkreply_get_char(void* self, char* c) {
     return QIODevice_GetChar((QIODevice*)self, c);
 }
 
-const char* q_networkreply_error_string(void* self) {
+const char* q_networkreply_error_string(const void* self) {
     libqt_string _str = QIODevice_ErrorString((QIODevice*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -513,7 +513,7 @@ bool q_networkreply_event_filter(void* self, void* watched, void* event) {
     return QObject_EventFilter((QObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
-const char* q_networkreply_object_name(void* self) {
+const char* q_networkreply_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -524,19 +524,19 @@ void q_networkreply_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_networkreply_is_widget_type(void* self) {
+bool q_networkreply_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_networkreply_is_window_type(void* self) {
+bool q_networkreply_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_networkreply_is_quick_item_type(void* self) {
+bool q_networkreply_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_networkreply_signals_blocked(void* self) {
+bool q_networkreply_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -544,7 +544,7 @@ bool q_networkreply_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_networkreply_thread(void* self) {
+QThread* q_networkreply_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -568,7 +568,7 @@ void q_networkreply_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_networkreply_children(void* self) {
+libqt_list /* of QObject* */ q_networkreply_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -585,55 +585,55 @@ void q_networkreply_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_networkreply_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_networkreply_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_networkreply_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_networkreply_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_networkreply_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_networkreply_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_networkreply_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_networkreply_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_networkreply_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_networkreply_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_networkreply_disconnect3(void* self) {
+bool q_networkreply_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_networkreply_disconnect4(void* self, void* receiver) {
+bool q_networkreply_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_networkreply_disconnect5(void* param1) {
+bool q_networkreply_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_networkreply_dump_object_tree(void* self) {
+void q_networkreply_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_networkreply_dump_object_info(void* self) {
+void q_networkreply_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_networkreply_set_property(void* self, const char* name, void* value) {
+bool q_networkreply_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_networkreply_property(void* self, const char* name) {
+QVariant* q_networkreply_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_networkreply_dynamic_property_names(void* self) {
+const char** q_networkreply_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -654,7 +654,7 @@ QBindingStorage* q_networkreply_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_networkreply_binding_storage2(void* self) {
+const QBindingStorage* q_networkreply_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -666,11 +666,11 @@ void q_networkreply_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_networkreply_parent(void* self) {
+QObject* q_networkreply_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_networkreply_inherits(void* self, const char* classname) {
+bool q_networkreply_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -686,31 +686,31 @@ int32_t q_networkreply_start_timer23(void* self, int64_t time, int32_t timerType
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_networkreply_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_networkreply_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_networkreply_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_networkreply_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_networkreply_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_networkreply_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_networkreply_disconnect1(void* self, const char* signal) {
+bool q_networkreply_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_networkreply_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_networkreply_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_networkreply_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_networkreply_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_networkreply_disconnect23(void* self, void* receiver, const char* member) {
+bool q_networkreply_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 

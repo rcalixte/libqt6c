@@ -20,36 +20,36 @@ QAuthenticator* q_authenticator_new();
 ///
 /// @param other QAuthenticator*
 ///
-QAuthenticator* q_authenticator_new2(void* other);
+QAuthenticator* q_authenticator_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qauthenticator.html#operator-eq)
 ///
 /// @param self QAuthenticator*
 /// @param other QAuthenticator*
 ///
-void q_authenticator_operator_assign(void* self, void* other);
+void q_authenticator_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qauthenticator.html#operator-eq-eq)
 ///
-/// @param self QAuthenticator*
+/// @param self const QAuthenticator*
 /// @param other QAuthenticator*
 ///
-bool q_authenticator_operator_equal(void* self, void* other);
+bool q_authenticator_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qauthenticator.html#operator-not-eq)
 ///
-/// @param self QAuthenticator*
+/// @param self const QAuthenticator*
 /// @param other QAuthenticator*
 ///
-bool q_authenticator_operator_not_equal(void* self, void* other);
+bool q_authenticator_operator_not_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qauthenticator.html#user)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QAuthenticator*
+/// @param self const QAuthenticator*
 ///
-const char* q_authenticator_user(void* self);
+const char* q_authenticator_user(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qauthenticator.html#setUser)
 ///
@@ -62,9 +62,9 @@ void q_authenticator_set_user(void* self, const char* user);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QAuthenticator*
+/// @param self const QAuthenticator*
 ///
-const char* q_authenticator_password(void* self);
+const char* q_authenticator_password(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qauthenticator.html#setPassword)
 ///
@@ -77,9 +77,9 @@ void q_authenticator_set_password(void* self, const char* password);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QAuthenticator*
+/// @param self const QAuthenticator*
 ///
-const char* q_authenticator_realm(void* self);
+const char* q_authenticator_realm(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qauthenticator.html#setRealm)
 ///
@@ -90,10 +90,10 @@ void q_authenticator_set_realm(void* self, const char* realm);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qauthenticator.html#option)
 ///
-/// @param self QAuthenticator*
+/// @param self const QAuthenticator*
 /// @param opt const char*
 ///
-QVariant* q_authenticator_option(void* self, const char* opt);
+QVariant* q_authenticator_option(const void* self, const char* opt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qauthenticator.html#options)
 ///
@@ -109,11 +109,11 @@ QVariant* q_authenticator_option(void* self, const char* opt);
 /// free(map.values);
 /// ```
 ///
-/// @param self QAuthenticator*
+/// @param self const QAuthenticator*
 ///
 /// @return libqt_map of const char* to QVariant*
 ///
-libqt_map q_authenticator_options(void* self);
+libqt_map q_authenticator_options(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qauthenticator.html#setOption)
 ///
@@ -121,13 +121,13 @@ libqt_map q_authenticator_options(void* self);
 /// @param opt const char*
 /// @param value QVariant*
 ///
-void q_authenticator_set_option(void* self, const char* opt, void* value);
+void q_authenticator_set_option(void* self, const char* opt, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qauthenticator.html#isNull)
 ///
-/// @param self QAuthenticator*
+/// @param self const QAuthenticator*
 ///
-bool q_authenticator_is_null(void* self);
+bool q_authenticator_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qauthenticator.html#detach)
 ///

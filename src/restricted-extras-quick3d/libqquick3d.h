@@ -14,7 +14,7 @@
 ///
 /// @param other QQuick3D*
 ///
-QQuick3D* q_quick3d_new(void* other);
+QQuick3D* q_quick3d_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3d.html)
 

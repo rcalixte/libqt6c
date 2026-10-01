@@ -20,22 +20,22 @@ Attica__HomePageEntry* k_attica__homepageentry_new();
 ///
 /// @param other Attica__HomePageEntry*
 ///
-Attica__HomePageEntry* k_attica__homepageentry_new2(void* other);
+Attica__HomePageEntry* k_attica__homepageentry_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-homepageentry.html#operator-eq)
 ///
 /// @param self Attica__HomePageEntry*
 /// @param other Attica__HomePageEntry*
 ///
-void k_attica__homepageentry_operator_assign(void* self, void* other);
+void k_attica__homepageentry_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-homepageentry.html#type)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__HomePageEntry*
+/// @param self const Attica__HomePageEntry*
 ///
-const char* k_attica__homepageentry_type(void* self);
+const char* k_attica__homepageentry_type(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-homepageentry.html#setType)
 ///
@@ -46,16 +46,16 @@ void k_attica__homepageentry_set_type(void* self, const char* type);
 
 /// [Upstream resources](https://api.kde.org/attica-homepageentry.html#url)
 ///
-/// @param self Attica__HomePageEntry*
+/// @param self const Attica__HomePageEntry*
 ///
-QUrl* k_attica__homepageentry_url(void* self);
+QUrl* k_attica__homepageentry_url(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-homepageentry.html#setUrl)
 ///
 /// @param self Attica__HomePageEntry*
 /// @param url QUrl*
 ///
-void k_attica__homepageentry_set_url(void* self, void* url);
+void k_attica__homepageentry_set_url(void* self, const void* url);
 
 /// Delete this object from C++ memory.
 ///

@@ -20,32 +20,32 @@ QBluetoothServiceInfo* q_bluetoothserviceinfo_new();
 ///
 /// @param other QBluetoothServiceInfo*
 ///
-QBluetoothServiceInfo* q_bluetoothserviceinfo_new2(void* other);
+QBluetoothServiceInfo* q_bluetoothserviceinfo_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothserviceinfo.html#isValid)
 ///
-/// @param self QBluetoothServiceInfo*
+/// @param self const QBluetoothServiceInfo*
 ///
-bool q_bluetoothserviceinfo_is_valid(void* self);
+bool q_bluetoothserviceinfo_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothserviceinfo.html#isComplete)
 ///
-/// @param self QBluetoothServiceInfo*
+/// @param self const QBluetoothServiceInfo*
 ///
-bool q_bluetoothserviceinfo_is_complete(void* self);
+bool q_bluetoothserviceinfo_is_complete(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothserviceinfo.html#setDevice)
 ///
 /// @param self QBluetoothServiceInfo*
 /// @param info QBluetoothDeviceInfo*
 ///
-void q_bluetoothserviceinfo_set_device(void* self, void* info);
+void q_bluetoothserviceinfo_set_device(void* self, const void* info);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothserviceinfo.html#device)
 ///
-/// @param self QBluetoothServiceInfo*
+/// @param self const QBluetoothServiceInfo*
 ///
-QBluetoothDeviceInfo* q_bluetoothserviceinfo_device(void* self);
+QBluetoothDeviceInfo* q_bluetoothserviceinfo_device(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothserviceinfo.html#setAttribute)
 ///
@@ -53,7 +53,7 @@ QBluetoothDeviceInfo* q_bluetoothserviceinfo_device(void* self);
 /// @param attributeId uint16_t
 /// @param value QVariant*
 ///
-void q_bluetoothserviceinfo_set_attribute(void* self, uint16_t attributeId, void* value);
+void q_bluetoothserviceinfo_set_attribute(void* self, uint16_t attributeId, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothserviceinfo.html#setAttribute)
 ///
@@ -61,7 +61,7 @@ void q_bluetoothserviceinfo_set_attribute(void* self, uint16_t attributeId, void
 /// @param attributeId uint16_t
 /// @param value QBluetoothUuid*
 ///
-void q_bluetoothserviceinfo_set_attribute2(void* self, uint16_t attributeId, void* value);
+void q_bluetoothserviceinfo_set_attribute2(void* self, uint16_t attributeId, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothserviceinfo.html#setAttribute)
 ///
@@ -69,7 +69,7 @@ void q_bluetoothserviceinfo_set_attribute2(void* self, uint16_t attributeId, voi
 /// @param attributeId uint16_t
 /// @param value QBluetoothServiceInfo__Sequence*
 ///
-void q_bluetoothserviceinfo_set_attribute3(void* self, uint16_t attributeId, void* value);
+void q_bluetoothserviceinfo_set_attribute3(void* self, uint16_t attributeId, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothserviceinfo.html#setAttribute)
 ///
@@ -77,29 +77,29 @@ void q_bluetoothserviceinfo_set_attribute3(void* self, uint16_t attributeId, voi
 /// @param attributeId uint16_t
 /// @param value QBluetoothServiceInfo__Alternative*
 ///
-void q_bluetoothserviceinfo_set_attribute4(void* self, uint16_t attributeId, void* value);
+void q_bluetoothserviceinfo_set_attribute4(void* self, uint16_t attributeId, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothserviceinfo.html#attribute)
 ///
-/// @param self QBluetoothServiceInfo*
+/// @param self const QBluetoothServiceInfo*
 /// @param attributeId uint16_t
 ///
-QVariant* q_bluetoothserviceinfo_attribute(void* self, uint16_t attributeId);
+QVariant* q_bluetoothserviceinfo_attribute(const void* self, uint16_t attributeId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothserviceinfo.html#attributes)
 ///
-/// @param self QBluetoothServiceInfo*
+/// @param self const QBluetoothServiceInfo*
 ///
 /// @return libqt_list of uint16_t
 ///
-libqt_list q_bluetoothserviceinfo_attributes(void* self);
+libqt_list q_bluetoothserviceinfo_attributes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothserviceinfo.html#contains)
 ///
-/// @param self QBluetoothServiceInfo*
+/// @param self const QBluetoothServiceInfo*
 /// @param attributeId uint16_t
 ///
-bool q_bluetoothserviceinfo_contains(void* self, uint16_t attributeId);
+bool q_bluetoothserviceinfo_contains(const void* self, uint16_t attributeId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothserviceinfo.html#removeAttribute)
 ///
@@ -119,9 +119,9 @@ void q_bluetoothserviceinfo_set_service_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QBluetoothServiceInfo*
+/// @param self const QBluetoothServiceInfo*
 ///
-const char* q_bluetoothserviceinfo_service_name(void* self);
+const char* q_bluetoothserviceinfo_service_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothserviceinfo.html#setServiceDescription)
 ///
@@ -134,9 +134,9 @@ void q_bluetoothserviceinfo_set_service_description(void* self, const char* desc
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QBluetoothServiceInfo*
+/// @param self const QBluetoothServiceInfo*
 ///
-const char* q_bluetoothserviceinfo_service_description(void* self);
+const char* q_bluetoothserviceinfo_service_description(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothserviceinfo.html#setServiceProvider)
 ///
@@ -149,36 +149,36 @@ void q_bluetoothserviceinfo_set_service_provider(void* self, const char* provide
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QBluetoothServiceInfo*
+/// @param self const QBluetoothServiceInfo*
 ///
-const char* q_bluetoothserviceinfo_service_provider(void* self);
+const char* q_bluetoothserviceinfo_service_provider(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothserviceinfo.html#socketProtocol)
 ///
-/// @param self QBluetoothServiceInfo*
+/// @param self const QBluetoothServiceInfo*
 ///
 /// @return enum QBluetoothServiceInfo__Protocol
 ///
-int32_t q_bluetoothserviceinfo_socket_protocol(void* self);
+int32_t q_bluetoothserviceinfo_socket_protocol(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothserviceinfo.html#protocolServiceMultiplexer)
 ///
-/// @param self QBluetoothServiceInfo*
+/// @param self const QBluetoothServiceInfo*
 ///
-int32_t q_bluetoothserviceinfo_protocol_service_multiplexer(void* self);
+int32_t q_bluetoothserviceinfo_protocol_service_multiplexer(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothserviceinfo.html#serverChannel)
 ///
-/// @param self QBluetoothServiceInfo*
+/// @param self const QBluetoothServiceInfo*
 ///
-int32_t q_bluetoothserviceinfo_server_channel(void* self);
+int32_t q_bluetoothserviceinfo_server_channel(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothserviceinfo.html#protocolDescriptor)
 ///
-/// @param self QBluetoothServiceInfo*
+/// @param self const QBluetoothServiceInfo*
 /// @param protocol enum QBluetoothUuid__ProtocolUuid
 ///
-QBluetoothServiceInfo__Sequence* q_bluetoothserviceinfo_protocol_descriptor(void* self, int32_t protocol);
+QBluetoothServiceInfo__Sequence* q_bluetoothserviceinfo_protocol_descriptor(const void* self, int32_t protocol);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothserviceinfo.html#setServiceAvailability)
 ///
@@ -189,43 +189,43 @@ void q_bluetoothserviceinfo_set_service_availability(void* self, uint8_t availab
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothserviceinfo.html#serviceAvailability)
 ///
-/// @param self QBluetoothServiceInfo*
+/// @param self const QBluetoothServiceInfo*
 ///
-uint8_t q_bluetoothserviceinfo_service_availability(void* self);
+uint8_t q_bluetoothserviceinfo_service_availability(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothserviceinfo.html#setServiceUuid)
 ///
 /// @param self QBluetoothServiceInfo*
 /// @param uuid QBluetoothUuid*
 ///
-void q_bluetoothserviceinfo_set_service_uuid(void* self, void* uuid);
+void q_bluetoothserviceinfo_set_service_uuid(void* self, const void* uuid);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothserviceinfo.html#serviceUuid)
 ///
-/// @param self QBluetoothServiceInfo*
+/// @param self const QBluetoothServiceInfo*
 ///
-QBluetoothUuid* q_bluetoothserviceinfo_service_uuid(void* self);
+QBluetoothUuid* q_bluetoothserviceinfo_service_uuid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothserviceinfo.html#serviceClassUuids)
 ///
-/// @param self QBluetoothServiceInfo*
+/// @param self const QBluetoothServiceInfo*
 ///
 /// @return libqt_list of QBluetoothUuid*
 ///
-libqt_list q_bluetoothserviceinfo_service_class_uuids(void* self);
+libqt_list q_bluetoothserviceinfo_service_class_uuids(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothserviceinfo.html#operator-eq)
 ///
 /// @param self QBluetoothServiceInfo*
 /// @param other QBluetoothServiceInfo*
 ///
-void q_bluetoothserviceinfo_operator_assign(void* self, void* other);
+void q_bluetoothserviceinfo_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothserviceinfo.html#isRegistered)
 ///
-/// @param self QBluetoothServiceInfo*
+/// @param self const QBluetoothServiceInfo*
 ///
-bool q_bluetoothserviceinfo_is_registered(void* self);
+bool q_bluetoothserviceinfo_is_registered(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothserviceinfo.html#registerService)
 ///
@@ -244,7 +244,7 @@ bool q_bluetoothserviceinfo_unregister_service(void* self);
 /// @param self QBluetoothServiceInfo*
 /// @param localAdapter QBluetoothAddress*
 ///
-bool q_bluetoothserviceinfo_register_service1(void* self, void* localAdapter);
+bool q_bluetoothserviceinfo_register_service1(void* self, const void* localAdapter);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothserviceinfo.html#dtor.QBluetoothServiceInfo)
 ///
@@ -274,7 +274,7 @@ QBluetoothServiceInfo__Sequence* q_bluetoothserviceinfo__sequence_new2(libqt_lis
 ///
 /// @param param1 QBluetoothServiceInfo__Sequence*
 ///
-QBluetoothServiceInfo__Sequence* q_bluetoothserviceinfo__sequence_new3(void* param1);
+QBluetoothServiceInfo__Sequence* q_bluetoothserviceinfo__sequence_new3(const void* param1);
 
 /// Delete this object from C++ memory.
 ///
@@ -302,7 +302,7 @@ QBluetoothServiceInfo__Alternative* q_bluetoothserviceinfo__alternative_new2(lib
 ///
 /// @param param1 QBluetoothServiceInfo__Alternative*
 ///
-QBluetoothServiceInfo__Alternative* q_bluetoothserviceinfo__alternative_new3(void* param1);
+QBluetoothServiceInfo__Alternative* q_bluetoothserviceinfo__alternative_new3(const void* param1);
 
 /// Delete this object from C++ memory.
 ///

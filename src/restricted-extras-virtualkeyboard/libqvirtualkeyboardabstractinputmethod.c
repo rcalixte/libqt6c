@@ -17,15 +17,15 @@ QVirtualKeyboardAbstractInputMethod* q_virtualkeyboardabstractinputmethod_new2(v
     return QVirtualKeyboardAbstractInputMethod_New2((QObject*)parent);
 }
 
-const QMetaObject* q_virtualkeyboardabstractinputmethod_meta_object(void* self) {
+const QMetaObject* q_virtualkeyboardabstractinputmethod_meta_object(const void* self) {
     return QVirtualKeyboardAbstractInputMethod_MetaObject((QVirtualKeyboardAbstractInputMethod*)self);
 }
 
-void q_virtualkeyboardabstractinputmethod_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_virtualkeyboardabstractinputmethod_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QVirtualKeyboardAbstractInputMethod_OnMetaObject((QVirtualKeyboardAbstractInputMethod*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_virtualkeyboardabstractinputmethod_super_meta_object(void* self) {
+const QMetaObject* q_virtualkeyboardabstractinputmethod_super_meta_object(const void* self) {
     return QVirtualKeyboardAbstractInputMethod_SuperMetaObject((QVirtualKeyboardAbstractInputMethod*)self);
 }
 
@@ -60,11 +60,11 @@ const char* q_virtualkeyboardabstractinputmethod_tr(const char* s) {
     return _ret;
 }
 
-QVirtualKeyboardInputContext* q_virtualkeyboardabstractinputmethod_input_context(void* self) {
+QVirtualKeyboardInputContext* q_virtualkeyboardabstractinputmethod_input_context(const void* self) {
     return QVirtualKeyboardAbstractInputMethod_InputContext((QVirtualKeyboardAbstractInputMethod*)self);
 }
 
-QVirtualKeyboardInputEngine* q_virtualkeyboardabstractinputmethod_input_engine(void* self) {
+QVirtualKeyboardInputEngine* q_virtualkeyboardabstractinputmethod_input_engine(const void* self) {
     return QVirtualKeyboardAbstractInputMethod_InputEngine((QVirtualKeyboardAbstractInputMethod*)self);
 }
 
@@ -77,21 +77,12 @@ void q_virtualkeyboardabstractinputmethod_on_input_modes(void* self, libqt_list 
     QVirtualKeyboardAbstractInputMethod_OnInputModes((QVirtualKeyboardAbstractInputMethod*)self, (intptr_t)callback);
 }
 
-libqt_list /* of enum QVirtualKeyboardInputEngine__InputMode */ q_virtualkeyboardabstractinputmethod_super_input_modes(void* self, const char* locale) {
-    libqt_list _arr = QVirtualKeyboardAbstractInputMethod_SuperInputModes((QVirtualKeyboardAbstractInputMethod*)self, qstring(locale));
-    return _arr;
-}
-
 bool q_virtualkeyboardabstractinputmethod_set_input_mode(void* self, const char* locale, int32_t inputMode) {
     return QVirtualKeyboardAbstractInputMethod_SetInputMode((QVirtualKeyboardAbstractInputMethod*)self, qstring(locale), inputMode);
 }
 
 void q_virtualkeyboardabstractinputmethod_on_set_input_mode(void* self, bool (*callback)(void*, const char*, int32_t)) {
     QVirtualKeyboardAbstractInputMethod_OnSetInputMode((QVirtualKeyboardAbstractInputMethod*)self, (intptr_t)callback);
-}
-
-bool q_virtualkeyboardabstractinputmethod_super_set_input_mode(void* self, const char* locale, int32_t inputMode) {
-    return QVirtualKeyboardAbstractInputMethod_SuperSetInputMode((QVirtualKeyboardAbstractInputMethod*)self, qstring(locale), inputMode);
 }
 
 bool q_virtualkeyboardabstractinputmethod_set_text_case(void* self, int32_t textCase) {
@@ -102,10 +93,6 @@ void q_virtualkeyboardabstractinputmethod_on_set_text_case(void* self, bool (*ca
     QVirtualKeyboardAbstractInputMethod_OnSetTextCase((QVirtualKeyboardAbstractInputMethod*)self, (intptr_t)callback);
 }
 
-bool q_virtualkeyboardabstractinputmethod_super_set_text_case(void* self, int32_t textCase) {
-    return QVirtualKeyboardAbstractInputMethod_SuperSetTextCase((QVirtualKeyboardAbstractInputMethod*)self, textCase);
-}
-
 bool q_virtualkeyboardabstractinputmethod_key_event(void* self, int32_t key, const char* text, int32_t modifiers) {
     return QVirtualKeyboardAbstractInputMethod_KeyEvent((QVirtualKeyboardAbstractInputMethod*)self, key, qstring(text), modifiers);
 }
@@ -114,16 +101,12 @@ void q_virtualkeyboardabstractinputmethod_on_key_event(void* self, bool (*callba
     QVirtualKeyboardAbstractInputMethod_OnKeyEvent((QVirtualKeyboardAbstractInputMethod*)self, (intptr_t)callback);
 }
 
-bool q_virtualkeyboardabstractinputmethod_super_key_event(void* self, int32_t key, const char* text, int32_t modifiers) {
-    return QVirtualKeyboardAbstractInputMethod_SuperKeyEvent((QVirtualKeyboardAbstractInputMethod*)self, key, qstring(text), modifiers);
-}
-
 libqt_list /* of enum QVirtualKeyboardSelectionListModel__Type */ q_virtualkeyboardabstractinputmethod_selection_lists(void* self) {
     libqt_list _arr = QVirtualKeyboardAbstractInputMethod_SelectionLists((QVirtualKeyboardAbstractInputMethod*)self);
     return _arr;
 }
 
-void q_virtualkeyboardabstractinputmethod_on_selection_lists(void* self, libqt_list /* of enum QVirtualKeyboardSelectionListModel__Type */ (*callback)()) {
+void q_virtualkeyboardabstractinputmethod_on_selection_lists(void* self, libqt_list /* of enum QVirtualKeyboardSelectionListModel__Type */ (*callback)(void*)) {
     QVirtualKeyboardAbstractInputMethod_OnSelectionLists((QVirtualKeyboardAbstractInputMethod*)self, (intptr_t)callback);
 }
 
@@ -180,16 +163,16 @@ bool q_virtualkeyboardabstractinputmethod_super_selection_list_remove_item(void*
     return QVirtualKeyboardAbstractInputMethod_SuperSelectionListRemoveItem((QVirtualKeyboardAbstractInputMethod*)self, type, index);
 }
 
-libqt_list /* of enum QVirtualKeyboardInputEngine__PatternRecognitionMode */ q_virtualkeyboardabstractinputmethod_pattern_recognition_modes(void* self) {
+libqt_list /* of enum QVirtualKeyboardInputEngine__PatternRecognitionMode */ q_virtualkeyboardabstractinputmethod_pattern_recognition_modes(const void* self) {
     libqt_list _arr = QVirtualKeyboardAbstractInputMethod_PatternRecognitionModes((QVirtualKeyboardAbstractInputMethod*)self);
     return _arr;
 }
 
-void q_virtualkeyboardabstractinputmethod_on_pattern_recognition_modes(void* self, libqt_list /* of enum QVirtualKeyboardInputEngine__PatternRecognitionMode */ (*callback)()) {
+void q_virtualkeyboardabstractinputmethod_on_pattern_recognition_modes(const void* self, libqt_list /* of enum QVirtualKeyboardInputEngine__PatternRecognitionMode */ (*callback)(const void*)) {
     QVirtualKeyboardAbstractInputMethod_OnPatternRecognitionModes((QVirtualKeyboardAbstractInputMethod*)self, (intptr_t)callback);
 }
 
-libqt_list /* of enum QVirtualKeyboardInputEngine__PatternRecognitionMode */ q_virtualkeyboardabstractinputmethod_super_pattern_recognition_modes(void* self) {
+libqt_list /* of enum QVirtualKeyboardInputEngine__PatternRecognitionMode */ q_virtualkeyboardabstractinputmethod_super_pattern_recognition_modes(const void* self) {
     libqt_list _arr = QVirtualKeyboardAbstractInputMethod_SuperPatternRecognitionModes((QVirtualKeyboardAbstractInputMethod*)self);
     return _arr;
 }
@@ -363,7 +346,7 @@ void q_virtualkeyboardabstractinputmethod_reset(void* self) {
     QVirtualKeyboardAbstractInputMethod_Reset((QVirtualKeyboardAbstractInputMethod*)self);
 }
 
-void q_virtualkeyboardabstractinputmethod_on_reset(void* self, void (*callback)()) {
+void q_virtualkeyboardabstractinputmethod_on_reset(void* self, void (*callback)(void*)) {
     QVirtualKeyboardAbstractInputMethod_OnReset((QVirtualKeyboardAbstractInputMethod*)self, (intptr_t)callback);
 }
 
@@ -375,7 +358,7 @@ void q_virtualkeyboardabstractinputmethod_update(void* self) {
     QVirtualKeyboardAbstractInputMethod_Update((QVirtualKeyboardAbstractInputMethod*)self);
 }
 
-void q_virtualkeyboardabstractinputmethod_on_update(void* self, void (*callback)()) {
+void q_virtualkeyboardabstractinputmethod_on_update(void* self, void (*callback)(void*)) {
     QVirtualKeyboardAbstractInputMethod_OnUpdate((QVirtualKeyboardAbstractInputMethod*)self, (intptr_t)callback);
 }
 
@@ -387,7 +370,7 @@ void q_virtualkeyboardabstractinputmethod_clear_input_mode(void* self) {
     QVirtualKeyboardAbstractInputMethod_ClearInputMode((QVirtualKeyboardAbstractInputMethod*)self);
 }
 
-void q_virtualkeyboardabstractinputmethod_on_clear_input_mode(void* self, void (*callback)()) {
+void q_virtualkeyboardabstractinputmethod_on_clear_input_mode(void* self, void (*callback)(void*)) {
     QVirtualKeyboardAbstractInputMethod_OnClearInputMode((QVirtualKeyboardAbstractInputMethod*)self, (intptr_t)callback);
 }
 
@@ -409,7 +392,7 @@ const char* q_virtualkeyboardabstractinputmethod_tr3(const char* s, const char* 
     return _ret;
 }
 
-const char* q_virtualkeyboardabstractinputmethod_object_name(void* self) {
+const char* q_virtualkeyboardabstractinputmethod_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -420,19 +403,19 @@ void q_virtualkeyboardabstractinputmethod_set_object_name(void* self, const char
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_virtualkeyboardabstractinputmethod_is_widget_type(void* self) {
+bool q_virtualkeyboardabstractinputmethod_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_virtualkeyboardabstractinputmethod_is_window_type(void* self) {
+bool q_virtualkeyboardabstractinputmethod_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_virtualkeyboardabstractinputmethod_is_quick_item_type(void* self) {
+bool q_virtualkeyboardabstractinputmethod_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_virtualkeyboardabstractinputmethod_signals_blocked(void* self) {
+bool q_virtualkeyboardabstractinputmethod_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -440,7 +423,7 @@ bool q_virtualkeyboardabstractinputmethod_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_virtualkeyboardabstractinputmethod_thread(void* self) {
+QThread* q_virtualkeyboardabstractinputmethod_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -464,7 +447,7 @@ void q_virtualkeyboardabstractinputmethod_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_virtualkeyboardabstractinputmethod_children(void* self) {
+libqt_list /* of QObject* */ q_virtualkeyboardabstractinputmethod_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -481,55 +464,55 @@ void q_virtualkeyboardabstractinputmethod_remove_event_filter(void* self, void* 
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_virtualkeyboardabstractinputmethod_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_virtualkeyboardabstractinputmethod_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_virtualkeyboardabstractinputmethod_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_virtualkeyboardabstractinputmethod_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_virtualkeyboardabstractinputmethod_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_virtualkeyboardabstractinputmethod_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_virtualkeyboardabstractinputmethod_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_virtualkeyboardabstractinputmethod_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_virtualkeyboardabstractinputmethod_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_virtualkeyboardabstractinputmethod_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_virtualkeyboardabstractinputmethod_disconnect3(void* self) {
+bool q_virtualkeyboardabstractinputmethod_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_virtualkeyboardabstractinputmethod_disconnect4(void* self, void* receiver) {
+bool q_virtualkeyboardabstractinputmethod_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_virtualkeyboardabstractinputmethod_disconnect5(void* param1) {
+bool q_virtualkeyboardabstractinputmethod_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_virtualkeyboardabstractinputmethod_dump_object_tree(void* self) {
+void q_virtualkeyboardabstractinputmethod_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_virtualkeyboardabstractinputmethod_dump_object_info(void* self) {
+void q_virtualkeyboardabstractinputmethod_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_virtualkeyboardabstractinputmethod_set_property(void* self, const char* name, void* value) {
+bool q_virtualkeyboardabstractinputmethod_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_virtualkeyboardabstractinputmethod_property(void* self, const char* name) {
+QVariant* q_virtualkeyboardabstractinputmethod_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_virtualkeyboardabstractinputmethod_dynamic_property_names(void* self) {
+const char** q_virtualkeyboardabstractinputmethod_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -550,7 +533,7 @@ QBindingStorage* q_virtualkeyboardabstractinputmethod_binding_storage(void* self
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_virtualkeyboardabstractinputmethod_binding_storage2(void* self) {
+const QBindingStorage* q_virtualkeyboardabstractinputmethod_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -562,11 +545,11 @@ void q_virtualkeyboardabstractinputmethod_on_destroyed(void* self, void (*callba
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_virtualkeyboardabstractinputmethod_parent(void* self) {
+QObject* q_virtualkeyboardabstractinputmethod_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_virtualkeyboardabstractinputmethod_inherits(void* self, const char* classname) {
+bool q_virtualkeyboardabstractinputmethod_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -582,31 +565,31 @@ int32_t q_virtualkeyboardabstractinputmethod_start_timer23(void* self, int64_t t
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_virtualkeyboardabstractinputmethod_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_virtualkeyboardabstractinputmethod_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_virtualkeyboardabstractinputmethod_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_virtualkeyboardabstractinputmethod_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_virtualkeyboardabstractinputmethod_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_virtualkeyboardabstractinputmethod_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_virtualkeyboardabstractinputmethod_disconnect1(void* self, const char* signal) {
+bool q_virtualkeyboardabstractinputmethod_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_virtualkeyboardabstractinputmethod_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_virtualkeyboardabstractinputmethod_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_virtualkeyboardabstractinputmethod_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_virtualkeyboardabstractinputmethod_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_virtualkeyboardabstractinputmethod_disconnect23(void* self, void* receiver, const char* member) {
+bool q_virtualkeyboardabstractinputmethod_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -678,76 +661,44 @@ void q_virtualkeyboardabstractinputmethod_on_custom_event(void* self, void (*cal
     QVirtualKeyboardAbstractInputMethod_OnCustomEvent((QVirtualKeyboardAbstractInputMethod*)self, (intptr_t)callback);
 }
 
-void q_virtualkeyboardabstractinputmethod_connect_notify(void* self, void* signal) {
+void q_virtualkeyboardabstractinputmethod_connect_notify(void* self, const void* signal) {
     QVirtualKeyboardAbstractInputMethod_ConnectNotify((QVirtualKeyboardAbstractInputMethod*)self, (QMetaMethod*)signal);
 }
 
-void q_virtualkeyboardabstractinputmethod_super_connect_notify(void* self, void* signal) {
+void q_virtualkeyboardabstractinputmethod_super_connect_notify(void* self, const void* signal) {
     QVirtualKeyboardAbstractInputMethod_SuperConnectNotify((QVirtualKeyboardAbstractInputMethod*)self, (QMetaMethod*)signal);
 }
 
-void q_virtualkeyboardabstractinputmethod_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_virtualkeyboardabstractinputmethod_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QVirtualKeyboardAbstractInputMethod_OnConnectNotify((QVirtualKeyboardAbstractInputMethod*)self, (intptr_t)callback);
 }
 
-void q_virtualkeyboardabstractinputmethod_disconnect_notify(void* self, void* signal) {
+void q_virtualkeyboardabstractinputmethod_disconnect_notify(void* self, const void* signal) {
     QVirtualKeyboardAbstractInputMethod_DisconnectNotify((QVirtualKeyboardAbstractInputMethod*)self, (QMetaMethod*)signal);
 }
 
-void q_virtualkeyboardabstractinputmethod_super_disconnect_notify(void* self, void* signal) {
+void q_virtualkeyboardabstractinputmethod_super_disconnect_notify(void* self, const void* signal) {
     QVirtualKeyboardAbstractInputMethod_SuperDisconnectNotify((QVirtualKeyboardAbstractInputMethod*)self, (QMetaMethod*)signal);
 }
 
-void q_virtualkeyboardabstractinputmethod_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_virtualkeyboardabstractinputmethod_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QVirtualKeyboardAbstractInputMethod_OnDisconnectNotify((QVirtualKeyboardAbstractInputMethod*)self, (intptr_t)callback);
 }
 
-QObject* q_virtualkeyboardabstractinputmethod_sender(void* self) {
+QObject* q_virtualkeyboardabstractinputmethod_sender(const void* self) {
     return QVirtualKeyboardAbstractInputMethod_Sender((QVirtualKeyboardAbstractInputMethod*)self);
 }
 
-QObject* q_virtualkeyboardabstractinputmethod_super_sender(void* self) {
-    return QVirtualKeyboardAbstractInputMethod_SuperSender((QVirtualKeyboardAbstractInputMethod*)self);
-}
-
-void q_virtualkeyboardabstractinputmethod_on_sender(void* self, QObject* (*callback)()) {
-    QVirtualKeyboardAbstractInputMethod_OnSender((QVirtualKeyboardAbstractInputMethod*)self, (intptr_t)callback);
-}
-
-int32_t q_virtualkeyboardabstractinputmethod_sender_signal_index(void* self) {
+int32_t q_virtualkeyboardabstractinputmethod_sender_signal_index(const void* self) {
     return QVirtualKeyboardAbstractInputMethod_SenderSignalIndex((QVirtualKeyboardAbstractInputMethod*)self);
 }
 
-int32_t q_virtualkeyboardabstractinputmethod_super_sender_signal_index(void* self) {
-    return QVirtualKeyboardAbstractInputMethod_SuperSenderSignalIndex((QVirtualKeyboardAbstractInputMethod*)self);
-}
-
-void q_virtualkeyboardabstractinputmethod_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QVirtualKeyboardAbstractInputMethod_OnSenderSignalIndex((QVirtualKeyboardAbstractInputMethod*)self, (intptr_t)callback);
-}
-
-int32_t q_virtualkeyboardabstractinputmethod_receivers(void* self, const char* signal) {
+int32_t q_virtualkeyboardabstractinputmethod_receivers(const void* self, const char* signal) {
     return QVirtualKeyboardAbstractInputMethod_Receivers((QVirtualKeyboardAbstractInputMethod*)self, signal);
 }
 
-int32_t q_virtualkeyboardabstractinputmethod_super_receivers(void* self, const char* signal) {
-    return QVirtualKeyboardAbstractInputMethod_SuperReceivers((QVirtualKeyboardAbstractInputMethod*)self, signal);
-}
-
-void q_virtualkeyboardabstractinputmethod_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QVirtualKeyboardAbstractInputMethod_OnReceivers((QVirtualKeyboardAbstractInputMethod*)self, (intptr_t)callback);
-}
-
-bool q_virtualkeyboardabstractinputmethod_is_signal_connected(void* self, void* signal) {
+bool q_virtualkeyboardabstractinputmethod_is_signal_connected(const void* self, const void* signal) {
     return QVirtualKeyboardAbstractInputMethod_IsSignalConnected((QVirtualKeyboardAbstractInputMethod*)self, (QMetaMethod*)signal);
-}
-
-bool q_virtualkeyboardabstractinputmethod_super_is_signal_connected(void* self, void* signal) {
-    return QVirtualKeyboardAbstractInputMethod_SuperIsSignalConnected((QVirtualKeyboardAbstractInputMethod*)self, (QMetaMethod*)signal);
-}
-
-void q_virtualkeyboardabstractinputmethod_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QVirtualKeyboardAbstractInputMethod_OnIsSignalConnected((QVirtualKeyboardAbstractInputMethod*)self, (intptr_t)callback);
 }
 
 void q_virtualkeyboardabstractinputmethod_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

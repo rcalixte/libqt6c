@@ -20,14 +20,14 @@ QPdfLink* q_pdflink_new();
 ///
 /// @param other QPdfLink*
 ///
-QPdfLink* q_pdflink_new2(void* other);
+QPdfLink* q_pdflink_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdflink.html#operator-eq)
 ///
 /// @param self QPdfLink*
 /// @param other QPdfLink*
 ///
-void q_pdflink_operator_assign(void* self, void* other);
+void q_pdflink_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdflink.html#swap)
 ///
@@ -38,78 +38,78 @@ void q_pdflink_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdflink.html#isValid)
 ///
-/// @param self QPdfLink*
+/// @param self const QPdfLink*
 ///
-bool q_pdflink_is_valid(void* self);
+bool q_pdflink_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdflink.html#page)
 ///
-/// @param self QPdfLink*
+/// @param self const QPdfLink*
 ///
-int32_t q_pdflink_page(void* self);
+int32_t q_pdflink_page(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdflink.html#location)
 ///
-/// @param self QPdfLink*
+/// @param self const QPdfLink*
 ///
-QPointF* q_pdflink_location(void* self);
+QPointF* q_pdflink_location(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdflink.html#zoom)
 ///
-/// @param self QPdfLink*
+/// @param self const QPdfLink*
 ///
-double q_pdflink_zoom(void* self);
+double q_pdflink_zoom(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdflink.html#url)
 ///
-/// @param self QPdfLink*
+/// @param self const QPdfLink*
 ///
-QUrl* q_pdflink_url(void* self);
+QUrl* q_pdflink_url(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdflink.html#contextBefore)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPdfLink*
+/// @param self const QPdfLink*
 ///
-const char* q_pdflink_context_before(void* self);
+const char* q_pdflink_context_before(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdflink.html#contextAfter)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPdfLink*
+/// @param self const QPdfLink*
 ///
-const char* q_pdflink_context_after(void* self);
+const char* q_pdflink_context_after(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdflink.html#rectangles)
 ///
-/// @param self QPdfLink*
+/// @param self const QPdfLink*
 ///
 /// @return libqt_list of QRectF*
 ///
-libqt_list q_pdflink_rectangles(void* self);
+libqt_list q_pdflink_rectangles(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdflink.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPdfLink*
+/// @param self const QPdfLink*
 ///
-const char* q_pdflink_to_string(void* self);
+const char* q_pdflink_to_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdflink.html#copyToClipboard)
 ///
-/// @param self QPdfLink*
+/// @param self const QPdfLink*
 ///
-void q_pdflink_copy_to_clipboard(void* self);
+void q_pdflink_copy_to_clipboard(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdflink.html#copyToClipboard)
 ///
-/// @param self QPdfLink*
+/// @param self const QPdfLink*
 /// @param mode enum QClipboard__Mode
 ///
-void q_pdflink_copy_to_clipboard1(void* self, int32_t mode);
+void q_pdflink_copy_to_clipboard1(const void* self, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdflink.html#dtor.QPdfLink)
 ///

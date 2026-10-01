@@ -14,7 +14,7 @@
 ///
 /// @param other QStyleFactory*
 ///
-QStyleFactory* q_stylefactory_new(void* other);
+QStyleFactory* q_stylefactory_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylefactory.html)
 

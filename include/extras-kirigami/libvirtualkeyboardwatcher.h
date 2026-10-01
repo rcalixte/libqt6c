@@ -24,26 +24,26 @@ Kirigami__Platform__VirtualKeyboardWatcher* k_kirigami__platform__virtualkeyboar
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 ///
-const QMetaObject* k_kirigami__platform__virtualkeyboardwatcher_meta_object(void* self);
+const QMetaObject* k_kirigami__platform__virtualkeyboardwatcher_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
-/// @param callback const QMetaObject* func()
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param callback const QMetaObject* func(const Kirigami__Platform__VirtualKeyboardWatcher* self)
 ///
-void k_kirigami__platform__virtualkeyboardwatcher_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_kirigami__platform__virtualkeyboardwatcher_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 ///
-const QMetaObject* k_kirigami__platform__virtualkeyboardwatcher_super_meta_object(void* self);
+const QMetaObject* k_kirigami__platform__virtualkeyboardwatcher_super_meta_object(const void* self);
 
 /// @param self Kirigami__Platform__VirtualKeyboardWatcher*
 /// @param param1 const char*
@@ -97,9 +97,9 @@ const char* k_kirigami__platform__virtualkeyboardwatcher_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-virtualkeyboardwatcher.html#available)
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 ///
-bool k_kirigami__platform__virtualkeyboardwatcher_available(void* self);
+bool k_kirigami__platform__virtualkeyboardwatcher_available(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-virtualkeyboardwatcher.html#availableChanged)
 ///
@@ -109,9 +109,9 @@ void k_kirigami__platform__virtualkeyboardwatcher_available_changed(void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-virtualkeyboardwatcher.html#enabled)
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 ///
-bool k_kirigami__platform__virtualkeyboardwatcher_enabled(void* self);
+bool k_kirigami__platform__virtualkeyboardwatcher_enabled(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-virtualkeyboardwatcher.html#enabledChanged)
 ///
@@ -121,9 +121,9 @@ void k_kirigami__platform__virtualkeyboardwatcher_enabled_changed(void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-virtualkeyboardwatcher.html#active)
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 ///
-bool k_kirigami__platform__virtualkeyboardwatcher_active(void* self);
+bool k_kirigami__platform__virtualkeyboardwatcher_active(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-virtualkeyboardwatcher.html#activeChanged)
 ///
@@ -133,9 +133,9 @@ void k_kirigami__platform__virtualkeyboardwatcher_active_changed(void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-virtualkeyboardwatcher.html#visible)
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 ///
-bool k_kirigami__platform__virtualkeyboardwatcher_visible(void* self);
+bool k_kirigami__platform__virtualkeyboardwatcher_visible(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-virtualkeyboardwatcher.html#visibleChanged)
 ///
@@ -145,9 +145,9 @@ void k_kirigami__platform__virtualkeyboardwatcher_visible_changed(void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-virtualkeyboardwatcher.html#willShowOnActive)
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 ///
-bool k_kirigami__platform__virtualkeyboardwatcher_will_show_on_active(void* self);
+bool k_kirigami__platform__virtualkeyboardwatcher_will_show_on_active(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-virtualkeyboardwatcher.html#willShowOnActiveChanged)
 ///
@@ -184,9 +184,9 @@ const char* k_kirigami__platform__virtualkeyboardwatcher_tr3(const char* s, cons
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 ///
-const char* k_kirigami__platform__virtualkeyboardwatcher_object_name(void* self);
+const char* k_kirigami__platform__virtualkeyboardwatcher_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -201,33 +201,33 @@ void k_kirigami__platform__virtualkeyboardwatcher_set_object_name(void* self, co
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 ///
-bool k_kirigami__platform__virtualkeyboardwatcher_is_widget_type(void* self);
+bool k_kirigami__platform__virtualkeyboardwatcher_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 ///
-bool k_kirigami__platform__virtualkeyboardwatcher_is_window_type(void* self);
+bool k_kirigami__platform__virtualkeyboardwatcher_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 ///
-bool k_kirigami__platform__virtualkeyboardwatcher_is_quick_item_type(void* self);
+bool k_kirigami__platform__virtualkeyboardwatcher_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 ///
-bool k_kirigami__platform__virtualkeyboardwatcher_signals_blocked(void* self);
+bool k_kirigami__platform__virtualkeyboardwatcher_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -242,9 +242,9 @@ bool k_kirigami__platform__virtualkeyboardwatcher_block_signals(void* self, bool
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 ///
-QThread* k_kirigami__platform__virtualkeyboardwatcher_thread(void* self);
+QThread* k_kirigami__platform__virtualkeyboardwatcher_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -295,11 +295,11 @@ void k_kirigami__platform__virtualkeyboardwatcher_kill_timer2(void* self, int32_
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_kirigami__platform__virtualkeyboardwatcher_children(void* self);
+libqt_list k_kirigami__platform__virtualkeyboardwatcher_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -337,7 +337,7 @@ void k_kirigami__platform__virtualkeyboardwatcher_remove_event_filter(void* self
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_kirigami__platform__virtualkeyboardwatcher_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_kirigami__platform__virtualkeyboardwatcher_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -348,18 +348,18 @@ QMetaObject__Connection* k_kirigami__platform__virtualkeyboardwatcher_connect(vo
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_kirigami__platform__virtualkeyboardwatcher_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_kirigami__platform__virtualkeyboardwatcher_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_kirigami__platform__virtualkeyboardwatcher_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_kirigami__platform__virtualkeyboardwatcher_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -370,7 +370,7 @@ QMetaObject__Connection* k_kirigami__platform__virtualkeyboardwatcher_connect3(v
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_kirigami__platform__virtualkeyboardwatcher_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_kirigami__platform__virtualkeyboardwatcher_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -381,24 +381,24 @@ bool k_kirigami__platform__virtualkeyboardwatcher_disconnect(void* sender, const
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_kirigami__platform__virtualkeyboardwatcher_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_kirigami__platform__virtualkeyboardwatcher_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 ///
-bool k_kirigami__platform__virtualkeyboardwatcher_disconnect3(void* self);
+bool k_kirigami__platform__virtualkeyboardwatcher_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 /// @param receiver QObject*
 ///
-bool k_kirigami__platform__virtualkeyboardwatcher_disconnect4(void* self, void* receiver);
+bool k_kirigami__platform__virtualkeyboardwatcher_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -406,23 +406,23 @@ bool k_kirigami__platform__virtualkeyboardwatcher_disconnect4(void* self, void* 
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_kirigami__platform__virtualkeyboardwatcher_disconnect5(void* param1);
+bool k_kirigami__platform__virtualkeyboardwatcher_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 ///
-void k_kirigami__platform__virtualkeyboardwatcher_dump_object_tree(void* self);
+void k_kirigami__platform__virtualkeyboardwatcher_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 ///
-void k_kirigami__platform__virtualkeyboardwatcher_dump_object_info(void* self);
+void k_kirigami__platform__virtualkeyboardwatcher_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -432,16 +432,16 @@ void k_kirigami__platform__virtualkeyboardwatcher_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_kirigami__platform__virtualkeyboardwatcher_set_property(void* self, const char* name, void* value);
+bool k_kirigami__platform__virtualkeyboardwatcher_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 /// @param name const char*
 ///
-QVariant* k_kirigami__platform__virtualkeyboardwatcher_property(void* self, const char* name);
+QVariant* k_kirigami__platform__virtualkeyboardwatcher_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -449,9 +449,9 @@ QVariant* k_kirigami__platform__virtualkeyboardwatcher_property(void* self, cons
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 ///
-const char** k_kirigami__platform__virtualkeyboardwatcher_dynamic_property_names(void* self);
+const char** k_kirigami__platform__virtualkeyboardwatcher_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -465,9 +465,9 @@ QBindingStorage* k_kirigami__platform__virtualkeyboardwatcher_binding_storage(vo
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 ///
-const QBindingStorage* k_kirigami__platform__virtualkeyboardwatcher_binding_storage2(void* self);
+const QBindingStorage* k_kirigami__platform__virtualkeyboardwatcher_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -490,18 +490,18 @@ void k_kirigami__platform__virtualkeyboardwatcher_on_destroyed(void* self, void 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 ///
-QObject* k_kirigami__platform__virtualkeyboardwatcher_parent(void* self);
+QObject* k_kirigami__platform__virtualkeyboardwatcher_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 /// @param classname const char*
 ///
-bool k_kirigami__platform__virtualkeyboardwatcher_inherits(void* self, const char* classname);
+bool k_kirigami__platform__virtualkeyboardwatcher_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -541,7 +541,7 @@ int32_t k_kirigami__platform__virtualkeyboardwatcher_start_timer23(void* self, i
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_kirigami__platform__virtualkeyboardwatcher_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_kirigami__platform__virtualkeyboardwatcher_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -553,59 +553,59 @@ QMetaObject__Connection* k_kirigami__platform__virtualkeyboardwatcher_connect5(v
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_kirigami__platform__virtualkeyboardwatcher_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_kirigami__platform__virtualkeyboardwatcher_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_kirigami__platform__virtualkeyboardwatcher_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_kirigami__platform__virtualkeyboardwatcher_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 /// @param signal const char*
 ///
-bool k_kirigami__platform__virtualkeyboardwatcher_disconnect1(void* self, const char* signal);
+bool k_kirigami__platform__virtualkeyboardwatcher_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_kirigami__platform__virtualkeyboardwatcher_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_kirigami__platform__virtualkeyboardwatcher_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_kirigami__platform__virtualkeyboardwatcher_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_kirigami__platform__virtualkeyboardwatcher_disconnect23(void* self, void* receiver, const char* member);
+bool k_kirigami__platform__virtualkeyboardwatcher_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_kirigami__platform__virtualkeyboardwatcher_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -801,7 +801,7 @@ void k_kirigami__platform__virtualkeyboardwatcher_on_custom_event(void* self, vo
 /// @param self Kirigami__Platform__VirtualKeyboardWatcher*
 /// @param signal QMetaMethod*
 ///
-void k_kirigami__platform__virtualkeyboardwatcher_connect_notify(void* self, void* signal);
+void k_kirigami__platform__virtualkeyboardwatcher_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -812,7 +812,7 @@ void k_kirigami__platform__virtualkeyboardwatcher_connect_notify(void* self, voi
 /// @param self Kirigami__Platform__VirtualKeyboardWatcher*
 /// @param signal QMetaMethod*
 ///
-void k_kirigami__platform__virtualkeyboardwatcher_super_connect_notify(void* self, void* signal);
+void k_kirigami__platform__virtualkeyboardwatcher_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -823,7 +823,7 @@ void k_kirigami__platform__virtualkeyboardwatcher_super_connect_notify(void* sel
 /// @param self Kirigami__Platform__VirtualKeyboardWatcher*
 /// @param callback void func(Kirigami__Platform__VirtualKeyboardWatcher* self, QMetaMethod* signal)
 ///
-void k_kirigami__platform__virtualkeyboardwatcher_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_kirigami__platform__virtualkeyboardwatcher_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -834,7 +834,7 @@ void k_kirigami__platform__virtualkeyboardwatcher_on_connect_notify(void* self, 
 /// @param self Kirigami__Platform__VirtualKeyboardWatcher*
 /// @param signal QMetaMethod*
 ///
-void k_kirigami__platform__virtualkeyboardwatcher_disconnect_notify(void* self, void* signal);
+void k_kirigami__platform__virtualkeyboardwatcher_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -845,7 +845,7 @@ void k_kirigami__platform__virtualkeyboardwatcher_disconnect_notify(void* self, 
 /// @param self Kirigami__Platform__VirtualKeyboardWatcher*
 /// @param signal QMetaMethod*
 ///
-void k_kirigami__platform__virtualkeyboardwatcher_super_disconnect_notify(void* self, void* signal);
+void k_kirigami__platform__virtualkeyboardwatcher_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -856,7 +856,7 @@ void k_kirigami__platform__virtualkeyboardwatcher_super_disconnect_notify(void* 
 /// @param self Kirigami__Platform__VirtualKeyboardWatcher*
 /// @param callback void func(Kirigami__Platform__VirtualKeyboardWatcher* self, QMetaMethod* signal)
 ///
-void k_kirigami__platform__virtualkeyboardwatcher_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_kirigami__platform__virtualkeyboardwatcher_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -864,9 +864,9 @@ void k_kirigami__platform__virtualkeyboardwatcher_on_disconnect_notify(void* sel
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 ///
-QObject* k_kirigami__platform__virtualkeyboardwatcher_sender(void* self);
+QObject* k_kirigami__platform__virtualkeyboardwatcher_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -874,9 +874,9 @@ QObject* k_kirigami__platform__virtualkeyboardwatcher_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 ///
-QObject* k_kirigami__platform__virtualkeyboardwatcher_super_sender(void* self);
+QObject* k_kirigami__platform__virtualkeyboardwatcher_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -884,10 +884,10 @@ QObject* k_kirigami__platform__virtualkeyboardwatcher_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
-/// @param callback QObject* func()
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param callback QObject* func(Kirigami__Platform__VirtualKeyboardWatcher* self)
 ///
-void k_kirigami__platform__virtualkeyboardwatcher_on_sender(void* self, QObject* (*callback)());
+void k_kirigami__platform__virtualkeyboardwatcher_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -895,9 +895,9 @@ void k_kirigami__platform__virtualkeyboardwatcher_on_sender(void* self, QObject*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 ///
-int32_t k_kirigami__platform__virtualkeyboardwatcher_sender_signal_index(void* self);
+int32_t k_kirigami__platform__virtualkeyboardwatcher_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -905,9 +905,9 @@ int32_t k_kirigami__platform__virtualkeyboardwatcher_sender_signal_index(void* s
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 ///
-int32_t k_kirigami__platform__virtualkeyboardwatcher_super_sender_signal_index(void* self);
+int32_t k_kirigami__platform__virtualkeyboardwatcher_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -915,10 +915,10 @@ int32_t k_kirigami__platform__virtualkeyboardwatcher_super_sender_signal_index(v
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
-/// @param callback int32_t func()
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param callback int32_t func(Kirigami__Platform__VirtualKeyboardWatcher* self)
 ///
-void k_kirigami__platform__virtualkeyboardwatcher_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_kirigami__platform__virtualkeyboardwatcher_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -926,10 +926,10 @@ void k_kirigami__platform__virtualkeyboardwatcher_on_sender_signal_index(void* s
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 /// @param signal const char*
 ///
-int32_t k_kirigami__platform__virtualkeyboardwatcher_receivers(void* self, const char* signal);
+int32_t k_kirigami__platform__virtualkeyboardwatcher_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -937,10 +937,10 @@ int32_t k_kirigami__platform__virtualkeyboardwatcher_receivers(void* self, const
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 /// @param signal const char*
 ///
-int32_t k_kirigami__platform__virtualkeyboardwatcher_super_receivers(void* self, const char* signal);
+int32_t k_kirigami__platform__virtualkeyboardwatcher_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -948,10 +948,10 @@ int32_t k_kirigami__platform__virtualkeyboardwatcher_super_receivers(void* self,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 /// @param callback int32_t func(Kirigami__Platform__VirtualKeyboardWatcher* self, const char* signal)
 ///
-void k_kirigami__platform__virtualkeyboardwatcher_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_kirigami__platform__virtualkeyboardwatcher_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -959,10 +959,10 @@ void k_kirigami__platform__virtualkeyboardwatcher_on_receivers(void* self, int32
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 /// @param signal QMetaMethod*
 ///
-bool k_kirigami__platform__virtualkeyboardwatcher_is_signal_connected(void* self, void* signal);
+bool k_kirigami__platform__virtualkeyboardwatcher_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -970,10 +970,10 @@ bool k_kirigami__platform__virtualkeyboardwatcher_is_signal_connected(void* self
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 /// @param signal QMetaMethod*
 ///
-bool k_kirigami__platform__virtualkeyboardwatcher_super_is_signal_connected(void* self, void* signal);
+bool k_kirigami__platform__virtualkeyboardwatcher_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -981,10 +981,10 @@ bool k_kirigami__platform__virtualkeyboardwatcher_super_is_signal_connected(void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Kirigami__Platform__VirtualKeyboardWatcher*
+/// @param self const Kirigami__Platform__VirtualKeyboardWatcher*
 /// @param callback bool func(Kirigami__Platform__VirtualKeyboardWatcher* self, QMetaMethod* signal)
 ///
-void k_kirigami__platform__virtualkeyboardwatcher_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_kirigami__platform__virtualkeyboardwatcher_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

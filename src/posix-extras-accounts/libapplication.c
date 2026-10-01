@@ -6,65 +6,65 @@ Accounts__Application* q_accounts__application_new() {
     return Accounts__Application_New();
 }
 
-Accounts__Application* q_accounts__application_new2(void* other) {
+Accounts__Application* q_accounts__application_new2(const void* other) {
     return Accounts__Application_New2((Accounts__Application*)other);
 }
 
-void q_accounts__application_operator_assign(void* self, void* other) {
+void q_accounts__application_operator_assign(void* self, const void* other) {
     Accounts__Application_OperatorAssign((Accounts__Application*)self, (Accounts__Application*)other);
 }
 
-bool q_accounts__application_is_valid(void* self) {
+bool q_accounts__application_is_valid(const void* self) {
     return Accounts__Application_IsValid((Accounts__Application*)self);
 }
 
-const char* q_accounts__application_name(void* self) {
+const char* q_accounts__application_name(const void* self) {
     libqt_string _str = Accounts__Application_Name((Accounts__Application*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_accounts__application_display_name(void* self) {
+const char* q_accounts__application_display_name(const void* self) {
     libqt_string _str = Accounts__Application_DisplayName((Accounts__Application*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_accounts__application_description(void* self) {
+const char* q_accounts__application_description(const void* self) {
     libqt_string _str = Accounts__Application_Description((Accounts__Application*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_accounts__application_icon_name(void* self) {
+const char* q_accounts__application_icon_name(const void* self) {
     libqt_string _str = Accounts__Application_IconName((Accounts__Application*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_accounts__application_desktop_file_path(void* self) {
+const char* q_accounts__application_desktop_file_path(const void* self) {
     libqt_string _str = Accounts__Application_DesktopFilePath((Accounts__Application*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_accounts__application_tr_catalog(void* self) {
+const char* q_accounts__application_tr_catalog(const void* self) {
     libqt_string _str = Accounts__Application_TrCatalog((Accounts__Application*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_accounts__application_supports_service(void* self, void* service) {
+bool q_accounts__application_supports_service(const void* self, const void* service) {
     return Accounts__Application_SupportsService((Accounts__Application*)self, (Accounts__Service*)service);
 }
 
-const char* q_accounts__application_service_usage(void* self, void* service) {
+const char* q_accounts__application_service_usage(const void* self, const void* service) {
     libqt_string _str = Accounts__Application_ServiceUsage((Accounts__Application*)self, (Accounts__Service*)service);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

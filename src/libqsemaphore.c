@@ -30,7 +30,7 @@ void q_semaphore_release(void* self) {
     QSemaphore_Release((QSemaphore*)self);
 }
 
-int32_t q_semaphore_available(void* self) {
+int32_t q_semaphore_available(const void* self) {
     return QSemaphore_Available((QSemaphore*)self);
 }
 
@@ -78,7 +78,7 @@ void q_semaphorereleaser_swap(void* self, void* other) {
     QSemaphoreReleaser_Swap((QSemaphoreReleaser*)self, (QSemaphoreReleaser*)other);
 }
 
-QSemaphore* q_semaphorereleaser_semaphore(void* self) {
+QSemaphore* q_semaphorereleaser_semaphore(const void* self) {
     return QSemaphoreReleaser_Semaphore((QSemaphoreReleaser*)self);
 }
 

@@ -23,7 +23,7 @@ QOperatingSystemVersionBase* q_operatingsystemversionbase_new(int32_t osType, in
 ///
 /// @param param1 QOperatingSystemVersionBase*
 ///
-QOperatingSystemVersionBase* q_operatingsystemversionbase_new2(void* param1);
+QOperatingSystemVersionBase* q_operatingsystemversionbase_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html)
 
@@ -66,49 +66,49 @@ int32_t q_operatingsystemversionbase_current_type();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html#version)
 ///
-/// @param self QOperatingSystemVersionBase*
+/// @param self const QOperatingSystemVersionBase*
 ///
-QVersionNumber* q_operatingsystemversionbase_version(void* self);
+QVersionNumber* q_operatingsystemversionbase_version(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html#majorVersion)
 ///
-/// @param self QOperatingSystemVersionBase*
+/// @param self const QOperatingSystemVersionBase*
 ///
-int32_t q_operatingsystemversionbase_major_version(void* self);
+int32_t q_operatingsystemversionbase_major_version(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html#minorVersion)
 ///
-/// @param self QOperatingSystemVersionBase*
+/// @param self const QOperatingSystemVersionBase*
 ///
-int32_t q_operatingsystemversionbase_minor_version(void* self);
+int32_t q_operatingsystemversionbase_minor_version(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html#microVersion)
 ///
-/// @param self QOperatingSystemVersionBase*
+/// @param self const QOperatingSystemVersionBase*
 ///
-int32_t q_operatingsystemversionbase_micro_version(void* self);
+int32_t q_operatingsystemversionbase_micro_version(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html#segmentCount)
 ///
-/// @param self QOperatingSystemVersionBase*
+/// @param self const QOperatingSystemVersionBase*
 ///
-int32_t q_operatingsystemversionbase_segment_count(void* self);
+int32_t q_operatingsystemversionbase_segment_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html#type)
 ///
-/// @param self QOperatingSystemVersionBase*
+/// @param self const QOperatingSystemVersionBase*
 ///
 /// @return enum QOperatingSystemVersionBase__OSType
 ///
-int32_t q_operatingsystemversionbase_type(void* self);
+int32_t q_operatingsystemversionbase_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QOperatingSystemVersionBase*
+/// @param self const QOperatingSystemVersionBase*
 ///
-const char* q_operatingsystemversionbase_name2(void* self);
+const char* q_operatingsystemversionbase_name2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html#dtor.QOperatingSystemVersionBase)
 ///
@@ -138,7 +138,7 @@ QOperatingSystemVersionUnexported* q_operatingsystemversionunexported_new2();
 ///
 /// @param param1 QOperatingSystemVersionUnexported*
 ///
-QOperatingSystemVersionUnexported* q_operatingsystemversionunexported_new3(void* param1);
+QOperatingSystemVersionUnexported* q_operatingsystemversionunexported_new3(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversionunexported.html)
 
@@ -179,51 +179,51 @@ int32_t q_operatingsystemversionunexported_current_type();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html#version)
 ///
-/// @param self QOperatingSystemVersionUnexported*
+/// @param self const QOperatingSystemVersionUnexported*
 ///
-QVersionNumber* q_operatingsystemversionunexported_version(void* self);
+QVersionNumber* q_operatingsystemversionunexported_version(const void* self);
 
 /// Inherited from QOperatingSystemVersionBase
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html#majorVersion)
 ///
-/// @param self QOperatingSystemVersionUnexported*
+/// @param self const QOperatingSystemVersionUnexported*
 ///
-int32_t q_operatingsystemversionunexported_major_version(void* self);
+int32_t q_operatingsystemversionunexported_major_version(const void* self);
 
 /// Inherited from QOperatingSystemVersionBase
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html#minorVersion)
 ///
-/// @param self QOperatingSystemVersionUnexported*
+/// @param self const QOperatingSystemVersionUnexported*
 ///
-int32_t q_operatingsystemversionunexported_minor_version(void* self);
+int32_t q_operatingsystemversionunexported_minor_version(const void* self);
 
 /// Inherited from QOperatingSystemVersionBase
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html#microVersion)
 ///
-/// @param self QOperatingSystemVersionUnexported*
+/// @param self const QOperatingSystemVersionUnexported*
 ///
-int32_t q_operatingsystemversionunexported_micro_version(void* self);
+int32_t q_operatingsystemversionunexported_micro_version(const void* self);
 
 /// Inherited from QOperatingSystemVersionBase
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html#segmentCount)
 ///
-/// @param self QOperatingSystemVersionUnexported*
+/// @param self const QOperatingSystemVersionUnexported*
 ///
-int32_t q_operatingsystemversionunexported_segment_count(void* self);
+int32_t q_operatingsystemversionunexported_segment_count(const void* self);
 
 /// Inherited from QOperatingSystemVersionBase
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html#type)
 ///
-/// @param self QOperatingSystemVersionUnexported*
+/// @param self const QOperatingSystemVersionUnexported*
 ///
 /// @return enum QOperatingSystemVersionBase__OSType
 ///
-int32_t q_operatingsystemversionunexported_type(void* self);
+int32_t q_operatingsystemversionunexported_type(const void* self);
 
 /// Inherited from QOperatingSystemVersionBase
 ///
@@ -231,9 +231,9 @@ int32_t q_operatingsystemversionunexported_type(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QOperatingSystemVersionUnexported*
+/// @param self const QOperatingSystemVersionUnexported*
 ///
-const char* q_operatingsystemversionunexported_name2(void* self);
+const char* q_operatingsystemversionunexported_name2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversionunexported.html#dtor.QOperatingSystemVersionUnexported)
 ///
@@ -249,7 +249,7 @@ void q_operatingsystemversionunexported_delete(void* self);
 ///
 /// @param osversion QOperatingSystemVersionBase*
 ///
-QOperatingSystemVersion* q_operatingsystemversion_new(void* osversion);
+QOperatingSystemVersion* q_operatingsystemversion_new(const void* osversion);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversion.html)
 
@@ -266,7 +266,7 @@ QOperatingSystemVersion* q_operatingsystemversion_new2(int32_t osType, int vmajo
 ///
 /// @param param1 QOperatingSystemVersion*
 ///
-QOperatingSystemVersion* q_operatingsystemversion_new3(void* param1);
+QOperatingSystemVersion* q_operatingsystemversion_new3(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversion.html)
 
@@ -297,11 +297,11 @@ int32_t q_operatingsystemversion_current_type();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversion.html#type)
 ///
-/// @param self QOperatingSystemVersion*
+/// @param self const QOperatingSystemVersion*
 ///
 /// @return enum QOperatingSystemVersion__OSType
 ///
-int32_t q_operatingsystemversion_type(void* self);
+int32_t q_operatingsystemversion_type(const void* self);
 
 /// Inherited from QOperatingSystemVersionBase
 ///
@@ -323,41 +323,41 @@ const char* q_operatingsystemversion_name(void* osversion);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html#version)
 ///
-/// @param self QOperatingSystemVersion*
+/// @param self const QOperatingSystemVersion*
 ///
-QVersionNumber* q_operatingsystemversion_version(void* self);
+QVersionNumber* q_operatingsystemversion_version(const void* self);
 
 /// Inherited from QOperatingSystemVersionBase
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html#majorVersion)
 ///
-/// @param self QOperatingSystemVersion*
+/// @param self const QOperatingSystemVersion*
 ///
-int32_t q_operatingsystemversion_major_version(void* self);
+int32_t q_operatingsystemversion_major_version(const void* self);
 
 /// Inherited from QOperatingSystemVersionBase
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html#minorVersion)
 ///
-/// @param self QOperatingSystemVersion*
+/// @param self const QOperatingSystemVersion*
 ///
-int32_t q_operatingsystemversion_minor_version(void* self);
+int32_t q_operatingsystemversion_minor_version(const void* self);
 
 /// Inherited from QOperatingSystemVersionBase
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html#microVersion)
 ///
-/// @param self QOperatingSystemVersion*
+/// @param self const QOperatingSystemVersion*
 ///
-int32_t q_operatingsystemversion_micro_version(void* self);
+int32_t q_operatingsystemversion_micro_version(const void* self);
 
 /// Inherited from QOperatingSystemVersionBase
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html#segmentCount)
 ///
-/// @param self QOperatingSystemVersion*
+/// @param self const QOperatingSystemVersion*
 ///
-int32_t q_operatingsystemversion_segment_count(void* self);
+int32_t q_operatingsystemversion_segment_count(const void* self);
 
 /// Inherited from QOperatingSystemVersionBase
 ///
@@ -365,9 +365,9 @@ int32_t q_operatingsystemversion_segment_count(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QOperatingSystemVersion*
+/// @param self const QOperatingSystemVersion*
 ///
-const char* q_operatingsystemversion_name2(void* self);
+const char* q_operatingsystemversion_name2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qoperatingsystemversion.html#dtor.QOperatingSystemVersion)
 ///

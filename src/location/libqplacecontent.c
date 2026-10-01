@@ -8,7 +8,7 @@ QPlaceContent* q_placecontent_new() {
     return QPlaceContent_New();
 }
 
-QPlaceContent* q_placecontent_new2(void* other) {
+QPlaceContent* q_placecontent_new2(const void* other) {
     return QPlaceContent_New2((QPlaceContent*)other);
 }
 
@@ -16,7 +16,7 @@ QPlaceContent* q_placecontent_new3(int32_t type) {
     return QPlaceContent_New3(type);
 }
 
-void q_placecontent_operator_assign(void* self, void* other) {
+void q_placecontent_operator_assign(void* self, const void* other) {
     QPlaceContent_OperatorAssign((QPlaceContent*)self, (QPlaceContent*)other);
 }
 
@@ -28,48 +28,48 @@ void q_placecontent_detach(void* self) {
     QPlaceContent_Detach((QPlaceContent*)self);
 }
 
-bool q_placecontent_operator_equal(void* self, void* other) {
+bool q_placecontent_operator_equal(const void* self, const void* other) {
     return QPlaceContent_OperatorEqual((QPlaceContent*)self, (QPlaceContent*)other);
 }
 
-bool q_placecontent_operator_not_equal(void* self, void* other) {
+bool q_placecontent_operator_not_equal(const void* self, const void* other) {
     return QPlaceContent_OperatorNotEqual((QPlaceContent*)self, (QPlaceContent*)other);
 }
 
-int32_t q_placecontent_type(void* self) {
+int32_t q_placecontent_type(const void* self) {
     return QPlaceContent_Type((QPlaceContent*)self);
 }
 
-libqt_list /* of enum QPlaceContent__DataTag */ q_placecontent_data_tags(void* self) {
+libqt_list /* of enum QPlaceContent__DataTag */ q_placecontent_data_tags(const void* self) {
     libqt_list _arr = QPlaceContent_DataTags((QPlaceContent*)self);
     return _arr;
 }
 
-QVariant* q_placecontent_value(void* self, int32_t tag) {
+QVariant* q_placecontent_value(const void* self, int32_t tag) {
     return QPlaceContent_Value((QPlaceContent*)self, tag);
 }
 
-void q_placecontent_set_value(void* self, int32_t tag, void* param2) {
+void q_placecontent_set_value(void* self, int32_t tag, const void* param2) {
     QPlaceContent_SetValue((QPlaceContent*)self, tag, (QVariant*)param2);
 }
 
-QPlaceSupplier* q_placecontent_supplier(void* self) {
+QPlaceSupplier* q_placecontent_supplier(const void* self) {
     return QPlaceContent_Supplier((QPlaceContent*)self);
 }
 
-void q_placecontent_set_supplier(void* self, void* supplier) {
+void q_placecontent_set_supplier(void* self, const void* supplier) {
     QPlaceContent_SetSupplier((QPlaceContent*)self, (QPlaceSupplier*)supplier);
 }
 
-QPlaceUser* q_placecontent_user(void* self) {
+QPlaceUser* q_placecontent_user(const void* self) {
     return QPlaceContent_User((QPlaceContent*)self);
 }
 
-void q_placecontent_set_user(void* self, void* user) {
+void q_placecontent_set_user(void* self, const void* user) {
     QPlaceContent_SetUser((QPlaceContent*)self, (QPlaceUser*)user);
 }
 
-const char* q_placecontent_attribution(void* self) {
+const char* q_placecontent_attribution(const void* self) {
     libqt_string _str = QPlaceContent_Attribution((QPlaceContent*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

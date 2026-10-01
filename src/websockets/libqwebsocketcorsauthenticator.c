@@ -5,7 +5,7 @@ QWebSocketCorsAuthenticator* q_websocketcorsauthenticator_new(const char* origin
     return QWebSocketCorsAuthenticator_New(qstring(origin));
 }
 
-QWebSocketCorsAuthenticator* q_websocketcorsauthenticator_new2(void* other) {
+QWebSocketCorsAuthenticator* q_websocketcorsauthenticator_new2(const void* other) {
     return QWebSocketCorsAuthenticator_New2((QWebSocketCorsAuthenticator*)other);
 }
 
@@ -13,11 +13,11 @@ void q_websocketcorsauthenticator_swap(void* self, void* other) {
     QWebSocketCorsAuthenticator_Swap((QWebSocketCorsAuthenticator*)self, (QWebSocketCorsAuthenticator*)other);
 }
 
-void q_websocketcorsauthenticator_operator_assign(void* self, void* other) {
+void q_websocketcorsauthenticator_operator_assign(void* self, const void* other) {
     QWebSocketCorsAuthenticator_OperatorAssign((QWebSocketCorsAuthenticator*)self, (QWebSocketCorsAuthenticator*)other);
 }
 
-const char* q_websocketcorsauthenticator_origin(void* self) {
+const char* q_websocketcorsauthenticator_origin(const void* self) {
     libqt_string _str = QWebSocketCorsAuthenticator_Origin((QWebSocketCorsAuthenticator*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -28,7 +28,7 @@ void q_websocketcorsauthenticator_set_allowed(void* self, bool allowed) {
     QWebSocketCorsAuthenticator_SetAllowed((QWebSocketCorsAuthenticator*)self, allowed);
 }
 
-bool q_websocketcorsauthenticator_allowed(void* self) {
+bool q_websocketcorsauthenticator_allowed(const void* self) {
     return QWebSocketCorsAuthenticator_Allowed((QWebSocketCorsAuthenticator*)self);
 }
 

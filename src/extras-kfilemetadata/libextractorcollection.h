@@ -16,12 +16,12 @@ KFileMetaData__ExtractorCollection* k_filemetadata__extractorcollection_new();
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-extractorcollection.html#fetchExtractors)
 ///
-/// @param self KFileMetaData__ExtractorCollection*
+/// @param self const KFileMetaData__ExtractorCollection*
 /// @param mimetype const char*
 ///
 /// @return libqt_list of KFileMetaData__Extractor*
 ///
-libqt_list k_filemetadata__extractorcollection_fetch_extractors(void* self, const char* mimetype);
+libqt_list k_filemetadata__extractorcollection_fetch_extractors(const void* self, const char* mimetype);
 
 /// Delete this object from C++ memory.
 ///

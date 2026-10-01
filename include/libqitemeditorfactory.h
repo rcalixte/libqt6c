@@ -10,27 +10,12 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemeditorcreatorbase.html)
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qitemeditorcreatorbase.html#createWidget)
-///
-/// @param self QItemEditorCreatorBase*
-/// @param parent QWidget*
-///
-QWidget* q_itemeditorcreatorbase_create_widget(void* self, void* parent);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qitemeditorcreatorbase.html#valuePropertyName)
-///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
-///
-/// @param self QItemEditorCreatorBase*
-///
-char* q_itemeditorcreatorbase_value_property_name(void* self);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemeditorcreatorbase.html#operator-eq)
 ///
 /// @param self QItemEditorCreatorBase*
 /// @param param1 QItemEditorCreatorBase*
 ///
-void q_itemeditorcreatorbase_operator_assign(void* self, void* param1);
+void q_itemeditorcreatorbase_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemeditorcreatorbase.html#dtor.QItemEditorCreatorBase)
 ///
@@ -52,61 +37,61 @@ QItemEditorFactory* q_itemeditorfactory_new();
 ///
 /// @param param1 QItemEditorFactory*
 ///
-QItemEditorFactory* q_itemeditorfactory_new2(void* param1);
+QItemEditorFactory* q_itemeditorfactory_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemeditorfactory.html#createEditor)
 ///
-/// @param self QItemEditorFactory*
+/// @param self const QItemEditorFactory*
 /// @param userType int
 /// @param parent QWidget*
 ///
-QWidget* q_itemeditorfactory_create_editor(void* self, int userType, void* parent);
+QWidget* q_itemeditorfactory_create_editor(const void* self, int userType, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemeditorfactory.html#createEditor)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QItemEditorFactory*
-/// @param callback QWidget* func(QItemEditorFactory* self, int userType, QWidget* parent)
+/// @param self const QItemEditorFactory*
+/// @param callback QWidget* func(const QItemEditorFactory* self, int userType, QWidget* parent)
 ///
-void q_itemeditorfactory_on_create_editor(void* self, QWidget* (*callback)(void*, int, void*));
+void q_itemeditorfactory_on_create_editor(const void* self, QWidget* (*callback)(const void*, int, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemeditorfactory.html#createEditor)
 ///
 /// Base class method implementation
 ///
-/// @param self QItemEditorFactory*
+/// @param self const QItemEditorFactory*
 /// @param userType int
 /// @param parent QWidget*
 ///
-QWidget* q_itemeditorfactory_super_create_editor(void* self, int userType, void* parent);
+QWidget* q_itemeditorfactory_super_create_editor(const void* self, int userType, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemeditorfactory.html#valuePropertyName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QItemEditorFactory*
+/// @param self const QItemEditorFactory*
 /// @param userType int
 ///
-char* q_itemeditorfactory_value_property_name(void* self, int userType);
+char* q_itemeditorfactory_value_property_name(const void* self, int userType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemeditorfactory.html#valuePropertyName)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QItemEditorFactory*
-/// @param callback libqt_string func(QItemEditorFactory* self, int userType)
+/// @param self const QItemEditorFactory*
+/// @param callback libqt_string func(const QItemEditorFactory* self, int userType)
 ///
-void q_itemeditorfactory_on_value_property_name(void* self, libqt_string (*callback)(void*, int));
+void q_itemeditorfactory_on_value_property_name(const void* self, libqt_string (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemeditorfactory.html#valuePropertyName)
 ///
 /// Base class method implementation
 ///
-/// @param self QItemEditorFactory*
+/// @param self const QItemEditorFactory*
 /// @param userType int
 ///
-char* q_itemeditorfactory_super_value_property_name(void* self, int userType);
+char* q_itemeditorfactory_super_value_property_name(const void* self, int userType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemeditorfactory.html#registerEditor)
 ///
@@ -131,7 +116,7 @@ void q_itemeditorfactory_set_default_factory(void* factory);
 /// @param self QItemEditorFactory*
 /// @param param1 QItemEditorFactory*
 ///
-void q_itemeditorfactory_operator_assign(void* self, void* param1);
+void q_itemeditorfactory_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemeditorfactory.html#dtor.QItemEditorFactory)
 ///

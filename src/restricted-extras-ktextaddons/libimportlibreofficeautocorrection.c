@@ -6,7 +6,7 @@ TextAutoCorrectionCore__ImportLibreOfficeAutocorrection* k_textautocorrectioncor
     return TextAutoCorrectionCore__ImportLibreOfficeAutocorrection_New();
 }
 
-TextAutoCorrectionCore__ImportLibreOfficeAutocorrection* k_textautocorrectioncore__importlibreofficeautocorrection_new2(void* param1) {
+TextAutoCorrectionCore__ImportLibreOfficeAutocorrection* k_textautocorrectioncore__importlibreofficeautocorrection_new2(const void* param1) {
     return TextAutoCorrectionCore__ImportLibreOfficeAutocorrection_New2((TextAutoCorrectionCore__ImportLibreOfficeAutocorrection*)param1);
 }
 
@@ -22,19 +22,19 @@ bool k_textautocorrectioncore__importlibreofficeautocorrection_super_import(void
     return TextAutoCorrectionCore__ImportLibreOfficeAutocorrection_SuperImport((TextAutoCorrectionCore__ImportLibreOfficeAutocorrection*)self, qstring(fileName), qstring(errorMessage), loadAttribute);
 }
 
-void k_textautocorrectioncore__importlibreofficeautocorrection_operator_assign(void* self, void* param1) {
+void k_textautocorrectioncore__importlibreofficeautocorrection_operator_assign(void* self, const void* param1) {
     TextAutoCorrectionCore__ImportLibreOfficeAutocorrection_OperatorAssign((TextAutoCorrectionCore__ImportLibreOfficeAutocorrection*)self, (TextAutoCorrectionCore__ImportLibreOfficeAutocorrection*)param1);
 }
 
-libqt_list /* set of const char* */ k_textautocorrectioncore__importlibreofficeautocorrection_upper_case_exceptions(void* self) {
+libqt_list /* set of const char* */ k_textautocorrectioncore__importlibreofficeautocorrection_upper_case_exceptions(const void* self) {
     return TextAutoCorrectionCore__ImportAbstractAutocorrection_UpperCaseExceptions((TextAutoCorrectionCore__ImportAbstractAutocorrection*)self);
 }
 
-libqt_list /* set of const char* */ k_textautocorrectioncore__importlibreofficeautocorrection_two_upper_letter_exceptions(void* self) {
+libqt_list /* set of const char* */ k_textautocorrectioncore__importlibreofficeautocorrection_two_upper_letter_exceptions(const void* self) {
     return TextAutoCorrectionCore__ImportAbstractAutocorrection_TwoUpperLetterExceptions((TextAutoCorrectionCore__ImportAbstractAutocorrection*)self);
 }
 
-libqt_map /* of const char* to const char* */ k_textautocorrectioncore__importlibreofficeautocorrection_autocorrect_entries(void* self) {
+libqt_map /* of const char* to const char* */ k_textautocorrectioncore__importlibreofficeautocorrection_autocorrect_entries(const void* self) {
     // Convert QHash<QString,QString> to libqt_map
     libqt_map _out = TextAutoCorrectionCore__ImportAbstractAutocorrection_AutocorrectEntries((TextAutoCorrectionCore__ImportAbstractAutocorrection*)self);
     libqt_map _ret;
@@ -89,7 +89,7 @@ libqt_map /* of const char* to const char* */ k_textautocorrectioncore__importli
     return _ret;
 }
 
-libqt_map /* of const char* to const char* */ k_textautocorrectioncore__importlibreofficeautocorrection_super_script_entries(void* self) {
+libqt_map /* of const char* to const char* */ k_textautocorrectioncore__importlibreofficeautocorrection_super_script_entries(const void* self) {
     // Convert QHash<QString,QString> to libqt_map
     libqt_map _out = TextAutoCorrectionCore__ImportAbstractAutocorrection_SuperScriptEntries((TextAutoCorrectionCore__ImportAbstractAutocorrection*)self);
     libqt_map _ret;
@@ -144,19 +144,19 @@ libqt_map /* of const char* to const char* */ k_textautocorrectioncore__importli
     return _ret;
 }
 
-TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrectioncore__importlibreofficeautocorrection_typographic_single_quotes(void* self) {
+TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrectioncore__importlibreofficeautocorrection_typographic_single_quotes(const void* self) {
     return TextAutoCorrectionCore__ImportAbstractAutocorrection_TypographicSingleQuotes((TextAutoCorrectionCore__ImportAbstractAutocorrection*)self);
 }
 
-TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrectioncore__importlibreofficeautocorrection_typographic_double_quotes(void* self) {
+TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrectioncore__importlibreofficeautocorrection_typographic_double_quotes(const void* self) {
     return TextAutoCorrectionCore__ImportAbstractAutocorrection_TypographicDoubleQuotes((TextAutoCorrectionCore__ImportAbstractAutocorrection*)self);
 }
 
-int32_t k_textautocorrectioncore__importlibreofficeautocorrection_max_find_string_lenght(void* self) {
+int32_t k_textautocorrectioncore__importlibreofficeautocorrection_max_find_string_lenght(const void* self) {
     return TextAutoCorrectionCore__ImportAbstractAutocorrection_MaxFindStringLenght((TextAutoCorrectionCore__ImportAbstractAutocorrection*)self);
 }
 
-int32_t k_textautocorrectioncore__importlibreofficeautocorrection_min_find_string_lenght(void* self) {
+int32_t k_textautocorrectioncore__importlibreofficeautocorrection_min_find_string_lenght(const void* self) {
     return TextAutoCorrectionCore__ImportAbstractAutocorrection_MinFindStringLenght((TextAutoCorrectionCore__ImportAbstractAutocorrection*)self);
 }
 

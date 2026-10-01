@@ -34,15 +34,15 @@ KFilePlacesView* k_fileplacesview_new2() {
     return KFilePlacesView_New2();
 }
 
-const QMetaObject* k_fileplacesview_meta_object(void* self) {
+const QMetaObject* k_fileplacesview_meta_object(const void* self) {
     return KFilePlacesView_MetaObject((KFilePlacesView*)self);
 }
 
-void k_fileplacesview_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_fileplacesview_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     KFilePlacesView_OnMetaObject((KFilePlacesView*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_fileplacesview_super_meta_object(void* self) {
+const QMetaObject* k_fileplacesview_super_meta_object(const void* self) {
     return KFilePlacesView_SuperMetaObject((KFilePlacesView*)self);
 }
 
@@ -77,7 +77,7 @@ const char* k_fileplacesview_tr(const char* s) {
     return _ret;
 }
 
-bool k_fileplacesview_all_places_shown(void* self) {
+bool k_fileplacesview_all_places_shown(const void* self) {
     return KFilePlacesView_AllPlacesShown((KFilePlacesView*)self);
 }
 
@@ -85,7 +85,7 @@ void k_fileplacesview_set_drop_on_place_enabled(void* self, bool enabled) {
     KFilePlacesView_SetDropOnPlaceEnabled((KFilePlacesView*)self, enabled);
 }
 
-bool k_fileplacesview_is_drop_on_place_enabled(void* self) {
+bool k_fileplacesview_is_drop_on_place_enabled(const void* self) {
     return KFilePlacesView_IsDropOnPlaceEnabled((KFilePlacesView*)self);
 }
 
@@ -93,7 +93,7 @@ void k_fileplacesview_set_drag_auto_activation_delay(void* self, int delay) {
     KFilePlacesView_SetDragAutoActivationDelay((KFilePlacesView*)self, delay);
 }
 
-int32_t k_fileplacesview_drag_auto_activation_delay(void* self) {
+int32_t k_fileplacesview_drag_auto_activation_delay(const void* self) {
     return KFilePlacesView_DragAutoActivationDelay((KFilePlacesView*)self);
 }
 
@@ -101,27 +101,27 @@ void k_fileplacesview_set_auto_resize_items_enabled(void* self, bool enabled) {
     KFilePlacesView_SetAutoResizeItemsEnabled((KFilePlacesView*)self, enabled);
 }
 
-bool k_fileplacesview_is_auto_resize_items_enabled(void* self) {
+bool k_fileplacesview_is_auto_resize_items_enabled(const void* self) {
     return KFilePlacesView_IsAutoResizeItemsEnabled((KFilePlacesView*)self);
 }
 
-void k_fileplacesview_set_teardown_function(void* self, void (*teardownFunc)(void* funcparam1)) {
+void k_fileplacesview_set_teardown_function(void* self, void (*teardownFunc)(const void* funcparam1)) {
     KFilePlacesView_SetTeardownFunction((KFilePlacesView*)self, (intptr_t)teardownFunc);
 }
 
-QSize* k_fileplacesview_size_hint(void* self) {
+QSize* k_fileplacesview_size_hint(const void* self) {
     return KFilePlacesView_SizeHint((KFilePlacesView*)self);
 }
 
-void k_fileplacesview_on_size_hint(void* self, QSize* (*callback)()) {
+void k_fileplacesview_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
     KFilePlacesView_OnSizeHint((KFilePlacesView*)self, (intptr_t)callback);
 }
 
-QSize* k_fileplacesview_super_size_hint(void* self) {
+QSize* k_fileplacesview_super_size_hint(const void* self) {
     return KFilePlacesView_SuperSizeHint((KFilePlacesView*)self);
 }
 
-void k_fileplacesview_set_url(void* self, void* url) {
+void k_fileplacesview_set_url(void* self, const void* url) {
     KFilePlacesView_SetUrl((KFilePlacesView*)self, (QUrl*)url);
 }
 
@@ -285,67 +285,67 @@ void k_fileplacesview_super_mouse_press_event(void* self, void* event) {
     KFilePlacesView_SuperMousePressEvent((KFilePlacesView*)self, (QMouseEvent*)event);
 }
 
-void k_fileplacesview_rows_inserted(void* self, void* parent, int start, int end) {
+void k_fileplacesview_rows_inserted(void* self, const void* parent, int start, int end) {
     KFilePlacesView_RowsInserted((KFilePlacesView*)self, (QModelIndex*)parent, start, end);
 }
 
-void k_fileplacesview_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int)) {
+void k_fileplacesview_on_rows_inserted(void* self, void (*callback)(void*, const void*, int, int)) {
     KFilePlacesView_OnRowsInserted((KFilePlacesView*)self, (intptr_t)callback);
 }
 
-void k_fileplacesview_super_rows_inserted(void* self, void* parent, int start, int end) {
+void k_fileplacesview_super_rows_inserted(void* self, const void* parent, int start, int end) {
     KFilePlacesView_SuperRowsInserted((KFilePlacesView*)self, (QModelIndex*)parent, start, end);
 }
 
-void k_fileplacesview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles) {
+void k_fileplacesview_data_changed(void* self, const void* topLeft, const void* bottomRight, libqt_list /* of int */ roles) {
     KFilePlacesView_DataChanged((KFilePlacesView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void k_fileplacesview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */)) {
+void k_fileplacesview_on_data_changed(void* self, void (*callback)(void*, const void*, const void*, libqt_list /* of int */)) {
     KFilePlacesView_OnDataChanged((KFilePlacesView*)self, (intptr_t)callback);
 }
 
-void k_fileplacesview_super_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles) {
+void k_fileplacesview_super_data_changed(void* self, const void* topLeft, const void* bottomRight, libqt_list /* of int */ roles) {
     KFilePlacesView_SuperDataChanged((KFilePlacesView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void k_fileplacesview_place_activated(void* self, void* url) {
+void k_fileplacesview_place_activated(void* self, const void* url) {
     KFilePlacesView_PlaceActivated((KFilePlacesView*)self, (QUrl*)url);
 }
 
-void k_fileplacesview_on_place_activated(void* self, void (*callback)(void*, void*)) {
+void k_fileplacesview_on_place_activated(void* self, void (*callback)(void*, const void*)) {
     KFilePlacesView_Connect_PlaceActivated((KFilePlacesView*)self, (intptr_t)callback);
 }
 
-void k_fileplacesview_tab_requested(void* self, void* url) {
+void k_fileplacesview_tab_requested(void* self, const void* url) {
     KFilePlacesView_TabRequested((KFilePlacesView*)self, (QUrl*)url);
 }
 
-void k_fileplacesview_on_tab_requested(void* self, void (*callback)(void*, void*)) {
+void k_fileplacesview_on_tab_requested(void* self, void (*callback)(void*, const void*)) {
     KFilePlacesView_Connect_TabRequested((KFilePlacesView*)self, (intptr_t)callback);
 }
 
-void k_fileplacesview_active_tab_requested(void* self, void* url) {
+void k_fileplacesview_active_tab_requested(void* self, const void* url) {
     KFilePlacesView_ActiveTabRequested((KFilePlacesView*)self, (QUrl*)url);
 }
 
-void k_fileplacesview_on_active_tab_requested(void* self, void (*callback)(void*, void*)) {
+void k_fileplacesview_on_active_tab_requested(void* self, void (*callback)(void*, const void*)) {
     KFilePlacesView_Connect_ActiveTabRequested((KFilePlacesView*)self, (intptr_t)callback);
 }
 
-void k_fileplacesview_new_window_requested(void* self, void* url) {
+void k_fileplacesview_new_window_requested(void* self, const void* url) {
     KFilePlacesView_NewWindowRequested((KFilePlacesView*)self, (QUrl*)url);
 }
 
-void k_fileplacesview_on_new_window_requested(void* self, void (*callback)(void*, void*)) {
+void k_fileplacesview_on_new_window_requested(void* self, void (*callback)(void*, const void*)) {
     KFilePlacesView_Connect_NewWindowRequested((KFilePlacesView*)self, (intptr_t)callback);
 }
 
-void k_fileplacesview_context_menu_about_to_show(void* self, void* index, void* menu) {
+void k_fileplacesview_context_menu_about_to_show(void* self, const void* index, void* menu) {
     KFilePlacesView_ContextMenuAboutToShow((KFilePlacesView*)self, (QModelIndex*)index, (QMenu*)menu);
 }
 
-void k_fileplacesview_on_context_menu_about_to_show(void* self, void (*callback)(void*, void*, void*)) {
+void k_fileplacesview_on_context_menu_about_to_show(void* self, void (*callback)(void*, const void*, void*)) {
     KFilePlacesView_Connect_ContextMenuAboutToShow((KFilePlacesView*)self, (intptr_t)callback);
 }
 
@@ -357,19 +357,19 @@ void k_fileplacesview_on_all_places_shown_changed(void* self, void (*callback)(v
     KFilePlacesView_Connect_AllPlacesShownChanged((KFilePlacesView*)self, (intptr_t)callback);
 }
 
-void k_fileplacesview_url_changed(void* self, void* url) {
+void k_fileplacesview_url_changed(void* self, const void* url) {
     KFilePlacesView_UrlChanged((KFilePlacesView*)self, (QUrl*)url);
 }
 
-void k_fileplacesview_on_url_changed(void* self, void (*callback)(void*, void*)) {
+void k_fileplacesview_on_url_changed(void* self, void (*callback)(void*, const void*)) {
     KFilePlacesView_Connect_UrlChanged((KFilePlacesView*)self, (intptr_t)callback);
 }
 
-void k_fileplacesview_urls_dropped(void* self, void* dest, void* event, void* parent) {
+void k_fileplacesview_urls_dropped(void* self, const void* dest, void* event, void* parent) {
     KFilePlacesView_UrlsDropped((KFilePlacesView*)self, (QUrl*)dest, (QDropEvent*)event, (QWidget*)parent);
 }
 
-void k_fileplacesview_on_urls_dropped(void* self, void (*callback)(void*, void*, void*, void*)) {
+void k_fileplacesview_on_urls_dropped(void* self, void (*callback)(void*, const void*, void*, void*)) {
     KFilePlacesView_Connect_UrlsDropped((KFilePlacesView*)self, (intptr_t)callback);
 }
 
@@ -391,7 +391,7 @@ void k_fileplacesview_set_movement(void* self, int32_t movement) {
     QListView_SetMovement((QListView*)self, movement);
 }
 
-int32_t k_fileplacesview_movement(void* self) {
+int32_t k_fileplacesview_movement(const void* self) {
     return QListView_Movement((QListView*)self);
 }
 
@@ -399,7 +399,7 @@ void k_fileplacesview_set_flow(void* self, int32_t flow) {
     QListView_SetFlow((QListView*)self, flow);
 }
 
-int32_t k_fileplacesview_flow(void* self) {
+int32_t k_fileplacesview_flow(const void* self) {
     return QListView_Flow((QListView*)self);
 }
 
@@ -407,7 +407,7 @@ void k_fileplacesview_set_wrapping(void* self, bool enable) {
     QListView_SetWrapping((QListView*)self, enable);
 }
 
-bool k_fileplacesview_is_wrapping(void* self) {
+bool k_fileplacesview_is_wrapping(const void* self) {
     return QListView_IsWrapping((QListView*)self);
 }
 
@@ -415,7 +415,7 @@ void k_fileplacesview_set_resize_mode(void* self, int32_t mode) {
     QListView_SetResizeMode((QListView*)self, mode);
 }
 
-int32_t k_fileplacesview_resize_mode(void* self) {
+int32_t k_fileplacesview_resize_mode(const void* self) {
     return QListView_ResizeMode((QListView*)self);
 }
 
@@ -423,7 +423,7 @@ void k_fileplacesview_set_layout_mode(void* self, int32_t mode) {
     QListView_SetLayoutMode((QListView*)self, mode);
 }
 
-int32_t k_fileplacesview_layout_mode(void* self) {
+int32_t k_fileplacesview_layout_mode(const void* self) {
     return QListView_LayoutMode((QListView*)self);
 }
 
@@ -431,7 +431,7 @@ void k_fileplacesview_set_spacing(void* self, int space) {
     QListView_SetSpacing((QListView*)self, space);
 }
 
-int32_t k_fileplacesview_spacing(void* self) {
+int32_t k_fileplacesview_spacing(const void* self) {
     return QListView_Spacing((QListView*)self);
 }
 
@@ -439,15 +439,15 @@ void k_fileplacesview_set_batch_size(void* self, int batchSize) {
     QListView_SetBatchSize((QListView*)self, batchSize);
 }
 
-int32_t k_fileplacesview_batch_size(void* self) {
+int32_t k_fileplacesview_batch_size(const void* self) {
     return QListView_BatchSize((QListView*)self);
 }
 
-void k_fileplacesview_set_grid_size(void* self, void* size) {
+void k_fileplacesview_set_grid_size(void* self, const void* size) {
     QListView_SetGridSize((QListView*)self, (QSize*)size);
 }
 
-QSize* k_fileplacesview_grid_size(void* self) {
+QSize* k_fileplacesview_grid_size(const void* self) {
     return QListView_GridSize((QListView*)self);
 }
 
@@ -455,7 +455,7 @@ void k_fileplacesview_set_view_mode(void* self, int32_t mode) {
     QListView_SetViewMode((QListView*)self, mode);
 }
 
-int32_t k_fileplacesview_view_mode(void* self) {
+int32_t k_fileplacesview_view_mode(const void* self) {
     return QListView_ViewMode((QListView*)self);
 }
 
@@ -463,7 +463,7 @@ void k_fileplacesview_clear_property_flags(void* self) {
     QListView_ClearPropertyFlags((QListView*)self);
 }
 
-bool k_fileplacesview_is_row_hidden(void* self, int row) {
+bool k_fileplacesview_is_row_hidden(const void* self, int row) {
     return QListView_IsRowHidden((QListView*)self, row);
 }
 
@@ -475,7 +475,7 @@ void k_fileplacesview_set_model_column(void* self, int column) {
     QListView_SetModelColumn((QListView*)self, column);
 }
 
-int32_t k_fileplacesview_model_column(void* self) {
+int32_t k_fileplacesview_model_column(const void* self) {
     return QListView_ModelColumn((QListView*)self);
 }
 
@@ -483,7 +483,7 @@ void k_fileplacesview_set_uniform_item_sizes(void* self, bool enable) {
     QListView_SetUniformItemSizes((QListView*)self, enable);
 }
 
-bool k_fileplacesview_uniform_item_sizes(void* self) {
+bool k_fileplacesview_uniform_item_sizes(const void* self) {
     return QListView_UniformItemSizes((QListView*)self);
 }
 
@@ -491,7 +491,7 @@ void k_fileplacesview_set_word_wrap(void* self, bool on) {
     QListView_SetWordWrap((QListView*)self, on);
 }
 
-bool k_fileplacesview_word_wrap(void* self) {
+bool k_fileplacesview_word_wrap(const void* self) {
     return QListView_WordWrap((QListView*)self);
 }
 
@@ -499,7 +499,7 @@ void k_fileplacesview_set_selection_rect_visible(void* self, bool show) {
     QListView_SetSelectionRectVisible((QListView*)self, show);
 }
 
-bool k_fileplacesview_is_selection_rect_visible(void* self) {
+bool k_fileplacesview_is_selection_rect_visible(const void* self) {
     return QListView_IsSelectionRectVisible((QListView*)self);
 }
 
@@ -507,7 +507,7 @@ void k_fileplacesview_set_item_alignment(void* self, int32_t alignment) {
     QListView_SetItemAlignment((QListView*)self, alignment);
 }
 
-int32_t k_fileplacesview_item_alignment(void* self) {
+int32_t k_fileplacesview_item_alignment(const void* self) {
     return QListView_ItemAlignment((QListView*)self);
 }
 
@@ -519,11 +519,11 @@ void k_fileplacesview_on_indexes_moved(void* self, void (*callback)(void*, libqt
     QListView_Connect_IndexesMoved((QListView*)self, (intptr_t)callback);
 }
 
-QAbstractItemModel* k_fileplacesview_model(void* self) {
+QAbstractItemModel* k_fileplacesview_model(const void* self) {
     return QAbstractItemView_Model((QAbstractItemView*)self);
 }
 
-QItemSelectionModel* k_fileplacesview_selection_model(void* self) {
+QItemSelectionModel* k_fileplacesview_selection_model(const void* self) {
     return QAbstractItemView_SelectionModel((QAbstractItemView*)self);
 }
 
@@ -531,7 +531,7 @@ void k_fileplacesview_set_item_delegate(void* self, void* delegate) {
     QAbstractItemView_SetItemDelegate((QAbstractItemView*)self, (QAbstractItemDelegate*)delegate);
 }
 
-QAbstractItemDelegate* k_fileplacesview_item_delegate(void* self) {
+QAbstractItemDelegate* k_fileplacesview_item_delegate(const void* self) {
     return QAbstractItemView_ItemDelegate((QAbstractItemView*)self);
 }
 
@@ -539,7 +539,7 @@ void k_fileplacesview_set_selection_mode(void* self, int32_t mode) {
     QAbstractItemView_SetSelectionMode((QAbstractItemView*)self, mode);
 }
 
-int32_t k_fileplacesview_selection_mode(void* self) {
+int32_t k_fileplacesview_selection_mode(const void* self) {
     return QAbstractItemView_SelectionMode((QAbstractItemView*)self);
 }
 
@@ -547,15 +547,15 @@ void k_fileplacesview_set_selection_behavior(void* self, int32_t behavior) {
     QAbstractItemView_SetSelectionBehavior((QAbstractItemView*)self, behavior);
 }
 
-int32_t k_fileplacesview_selection_behavior(void* self) {
+int32_t k_fileplacesview_selection_behavior(const void* self) {
     return QAbstractItemView_SelectionBehavior((QAbstractItemView*)self);
 }
 
-QModelIndex* k_fileplacesview_current_index(void* self) {
+QModelIndex* k_fileplacesview_current_index(const void* self) {
     return QAbstractItemView_CurrentIndex((QAbstractItemView*)self);
 }
 
-QModelIndex* k_fileplacesview_root_index(void* self) {
+QModelIndex* k_fileplacesview_root_index(const void* self) {
     return QAbstractItemView_RootIndex((QAbstractItemView*)self);
 }
 
@@ -563,7 +563,7 @@ void k_fileplacesview_set_edit_triggers(void* self, int32_t triggers) {
     QAbstractItemView_SetEditTriggers((QAbstractItemView*)self, triggers);
 }
 
-int32_t k_fileplacesview_edit_triggers(void* self) {
+int32_t k_fileplacesview_edit_triggers(const void* self) {
     return QAbstractItemView_EditTriggers((QAbstractItemView*)self);
 }
 
@@ -571,7 +571,7 @@ void k_fileplacesview_set_vertical_scroll_mode(void* self, int32_t mode) {
     QAbstractItemView_SetVerticalScrollMode((QAbstractItemView*)self, mode);
 }
 
-int32_t k_fileplacesview_vertical_scroll_mode(void* self) {
+int32_t k_fileplacesview_vertical_scroll_mode(const void* self) {
     return QAbstractItemView_VerticalScrollMode((QAbstractItemView*)self);
 }
 
@@ -583,7 +583,7 @@ void k_fileplacesview_set_horizontal_scroll_mode(void* self, int32_t mode) {
     QAbstractItemView_SetHorizontalScrollMode((QAbstractItemView*)self, mode);
 }
 
-int32_t k_fileplacesview_horizontal_scroll_mode(void* self) {
+int32_t k_fileplacesview_horizontal_scroll_mode(const void* self) {
     return QAbstractItemView_HorizontalScrollMode((QAbstractItemView*)self);
 }
 
@@ -595,7 +595,7 @@ void k_fileplacesview_set_auto_scroll(void* self, bool enable) {
     QAbstractItemView_SetAutoScroll((QAbstractItemView*)self, enable);
 }
 
-bool k_fileplacesview_has_auto_scroll(void* self) {
+bool k_fileplacesview_has_auto_scroll(const void* self) {
     return QAbstractItemView_HasAutoScroll((QAbstractItemView*)self);
 }
 
@@ -603,7 +603,7 @@ void k_fileplacesview_set_auto_scroll_margin(void* self, int margin) {
     QAbstractItemView_SetAutoScrollMargin((QAbstractItemView*)self, margin);
 }
 
-int32_t k_fileplacesview_auto_scroll_margin(void* self) {
+int32_t k_fileplacesview_auto_scroll_margin(const void* self) {
     return QAbstractItemView_AutoScrollMargin((QAbstractItemView*)self);
 }
 
@@ -611,7 +611,7 @@ void k_fileplacesview_set_tab_key_navigation(void* self, bool enable) {
     QAbstractItemView_SetTabKeyNavigation((QAbstractItemView*)self, enable);
 }
 
-bool k_fileplacesview_tab_key_navigation(void* self) {
+bool k_fileplacesview_tab_key_navigation(const void* self) {
     return QAbstractItemView_TabKeyNavigation((QAbstractItemView*)self);
 }
 
@@ -619,7 +619,7 @@ void k_fileplacesview_set_drop_indicator_shown(void* self, bool enable) {
     QAbstractItemView_SetDropIndicatorShown((QAbstractItemView*)self, enable);
 }
 
-bool k_fileplacesview_show_drop_indicator(void* self) {
+bool k_fileplacesview_show_drop_indicator(const void* self) {
     return QAbstractItemView_ShowDropIndicator((QAbstractItemView*)self);
 }
 
@@ -627,7 +627,7 @@ void k_fileplacesview_set_drag_enabled(void* self, bool enable) {
     QAbstractItemView_SetDragEnabled((QAbstractItemView*)self, enable);
 }
 
-bool k_fileplacesview_drag_enabled(void* self) {
+bool k_fileplacesview_drag_enabled(const void* self) {
     return QAbstractItemView_DragEnabled((QAbstractItemView*)self);
 }
 
@@ -635,7 +635,7 @@ void k_fileplacesview_set_drag_drop_overwrite_mode(void* self, bool overwrite) {
     QAbstractItemView_SetDragDropOverwriteMode((QAbstractItemView*)self, overwrite);
 }
 
-bool k_fileplacesview_drag_drop_overwrite_mode(void* self) {
+bool k_fileplacesview_drag_drop_overwrite_mode(const void* self) {
     return QAbstractItemView_DragDropOverwriteMode((QAbstractItemView*)self);
 }
 
@@ -643,7 +643,7 @@ void k_fileplacesview_set_drag_drop_mode(void* self, int32_t behavior) {
     QAbstractItemView_SetDragDropMode((QAbstractItemView*)self, behavior);
 }
 
-int32_t k_fileplacesview_drag_drop_mode(void* self) {
+int32_t k_fileplacesview_drag_drop_mode(const void* self) {
     return QAbstractItemView_DragDropMode((QAbstractItemView*)self);
 }
 
@@ -651,7 +651,7 @@ void k_fileplacesview_set_default_drop_action(void* self, int32_t dropAction) {
     QAbstractItemView_SetDefaultDropAction((QAbstractItemView*)self, dropAction);
 }
 
-int32_t k_fileplacesview_default_drop_action(void* self) {
+int32_t k_fileplacesview_default_drop_action(const void* self) {
     return QAbstractItemView_DefaultDropAction((QAbstractItemView*)self);
 }
 
@@ -659,15 +659,15 @@ void k_fileplacesview_set_alternating_row_colors(void* self, bool enable) {
     QAbstractItemView_SetAlternatingRowColors((QAbstractItemView*)self, enable);
 }
 
-bool k_fileplacesview_alternating_row_colors(void* self) {
+bool k_fileplacesview_alternating_row_colors(const void* self) {
     return QAbstractItemView_AlternatingRowColors((QAbstractItemView*)self);
 }
 
-void k_fileplacesview_set_icon_size(void* self, void* size) {
+void k_fileplacesview_set_icon_size(void* self, const void* size) {
     QAbstractItemView_SetIconSize((QAbstractItemView*)self, (QSize*)size);
 }
 
-QSize* k_fileplacesview_icon_size(void* self) {
+QSize* k_fileplacesview_icon_size(const void* self) {
     return QAbstractItemView_IconSize((QAbstractItemView*)self);
 }
 
@@ -675,31 +675,31 @@ void k_fileplacesview_set_text_elide_mode(void* self, int32_t mode) {
     QAbstractItemView_SetTextElideMode((QAbstractItemView*)self, mode);
 }
 
-int32_t k_fileplacesview_text_elide_mode(void* self) {
+int32_t k_fileplacesview_text_elide_mode(const void* self) {
     return QAbstractItemView_TextElideMode((QAbstractItemView*)self);
 }
 
-QSize* k_fileplacesview_size_hint_for_index(void* self, void* index) {
+QSize* k_fileplacesview_size_hint_for_index(const void* self, const void* index) {
     return QAbstractItemView_SizeHintForIndex((QAbstractItemView*)self, (QModelIndex*)index);
 }
 
-void k_fileplacesview_open_persistent_editor(void* self, void* index) {
+void k_fileplacesview_open_persistent_editor(void* self, const void* index) {
     QAbstractItemView_OpenPersistentEditor((QAbstractItemView*)self, (QModelIndex*)index);
 }
 
-void k_fileplacesview_close_persistent_editor(void* self, void* index) {
+void k_fileplacesview_close_persistent_editor(void* self, const void* index) {
     QAbstractItemView_ClosePersistentEditor((QAbstractItemView*)self, (QModelIndex*)index);
 }
 
-bool k_fileplacesview_is_persistent_editor_open(void* self, void* index) {
+bool k_fileplacesview_is_persistent_editor_open(const void* self, const void* index) {
     return QAbstractItemView_IsPersistentEditorOpen((QAbstractItemView*)self, (QModelIndex*)index);
 }
 
-void k_fileplacesview_set_index_widget(void* self, void* index, void* widget) {
+void k_fileplacesview_set_index_widget(void* self, const void* index, void* widget) {
     QAbstractItemView_SetIndexWidget((QAbstractItemView*)self, (QModelIndex*)index, (QWidget*)widget);
 }
 
-QWidget* k_fileplacesview_index_widget(void* self, void* index) {
+QWidget* k_fileplacesview_index_widget(const void* self, const void* index) {
     return QAbstractItemView_IndexWidget((QAbstractItemView*)self, (QModelIndex*)index);
 }
 
@@ -707,7 +707,7 @@ void k_fileplacesview_set_item_delegate_for_row(void* self, int row, void* deleg
     QAbstractItemView_SetItemDelegateForRow((QAbstractItemView*)self, row, (QAbstractItemDelegate*)delegate);
 }
 
-QAbstractItemDelegate* k_fileplacesview_item_delegate_for_row(void* self, int row) {
+QAbstractItemDelegate* k_fileplacesview_item_delegate_for_row(const void* self, int row) {
     return QAbstractItemView_ItemDelegateForRow((QAbstractItemView*)self, row);
 }
 
@@ -715,15 +715,15 @@ void k_fileplacesview_set_item_delegate_for_column(void* self, int column, void*
     QAbstractItemView_SetItemDelegateForColumn((QAbstractItemView*)self, column, (QAbstractItemDelegate*)delegate);
 }
 
-QAbstractItemDelegate* k_fileplacesview_item_delegate_for_column(void* self, int column) {
+QAbstractItemDelegate* k_fileplacesview_item_delegate_for_column(const void* self, int column) {
     return QAbstractItemView_ItemDelegateForColumn((QAbstractItemView*)self, column);
 }
 
-QAbstractItemDelegate* k_fileplacesview_item_delegate2(void* self, void* index) {
+QAbstractItemDelegate* k_fileplacesview_item_delegate2(const void* self, const void* index) {
     return QAbstractItemView_ItemDelegate2((QAbstractItemView*)self, (QModelIndex*)index);
 }
 
-void k_fileplacesview_edit(void* self, void* index) {
+void k_fileplacesview_edit(void* self, const void* index) {
     QAbstractItemView_Edit((QAbstractItemView*)self, (QModelIndex*)index);
 }
 
@@ -731,7 +731,7 @@ void k_fileplacesview_clear_selection(void* self) {
     QAbstractItemView_ClearSelection((QAbstractItemView*)self);
 }
 
-void k_fileplacesview_set_current_index(void* self, void* index) {
+void k_fileplacesview_set_current_index(void* self, const void* index) {
     QAbstractItemView_SetCurrentIndex((QAbstractItemView*)self, (QModelIndex*)index);
 }
 
@@ -743,47 +743,47 @@ void k_fileplacesview_scroll_to_bottom(void* self) {
     QAbstractItemView_ScrollToBottom((QAbstractItemView*)self);
 }
 
-void k_fileplacesview_update(void* self, void* index) {
+void k_fileplacesview_update(void* self, const void* index) {
     QAbstractItemView_Update((QAbstractItemView*)self, (QModelIndex*)index);
 }
 
-void k_fileplacesview_pressed(void* self, void* index) {
+void k_fileplacesview_pressed(void* self, const void* index) {
     QAbstractItemView_Pressed((QAbstractItemView*)self, (QModelIndex*)index);
 }
 
-void k_fileplacesview_on_pressed(void* self, void (*callback)(void*, void*)) {
+void k_fileplacesview_on_pressed(void* self, void (*callback)(void*, const void*)) {
     QAbstractItemView_Connect_Pressed((QAbstractItemView*)self, (intptr_t)callback);
 }
 
-void k_fileplacesview_clicked(void* self, void* index) {
+void k_fileplacesview_clicked(void* self, const void* index) {
     QAbstractItemView_Clicked((QAbstractItemView*)self, (QModelIndex*)index);
 }
 
-void k_fileplacesview_on_clicked(void* self, void (*callback)(void*, void*)) {
+void k_fileplacesview_on_clicked(void* self, void (*callback)(void*, const void*)) {
     QAbstractItemView_Connect_Clicked((QAbstractItemView*)self, (intptr_t)callback);
 }
 
-void k_fileplacesview_double_clicked(void* self, void* index) {
+void k_fileplacesview_double_clicked(void* self, const void* index) {
     QAbstractItemView_DoubleClicked((QAbstractItemView*)self, (QModelIndex*)index);
 }
 
-void k_fileplacesview_on_double_clicked(void* self, void (*callback)(void*, void*)) {
+void k_fileplacesview_on_double_clicked(void* self, void (*callback)(void*, const void*)) {
     QAbstractItemView_Connect_DoubleClicked((QAbstractItemView*)self, (intptr_t)callback);
 }
 
-void k_fileplacesview_activated(void* self, void* index) {
+void k_fileplacesview_activated(void* self, const void* index) {
     QAbstractItemView_Activated((QAbstractItemView*)self, (QModelIndex*)index);
 }
 
-void k_fileplacesview_on_activated(void* self, void (*callback)(void*, void*)) {
+void k_fileplacesview_on_activated(void* self, void (*callback)(void*, const void*)) {
     QAbstractItemView_Connect_Activated((QAbstractItemView*)self, (intptr_t)callback);
 }
 
-void k_fileplacesview_entered(void* self, void* index) {
+void k_fileplacesview_entered(void* self, const void* index) {
     QAbstractItemView_Entered((QAbstractItemView*)self, (QModelIndex*)index);
 }
 
-void k_fileplacesview_on_entered(void* self, void (*callback)(void*, void*)) {
+void k_fileplacesview_on_entered(void* self, void (*callback)(void*, const void*)) {
     QAbstractItemView_Connect_Entered((QAbstractItemView*)self, (intptr_t)callback);
 }
 
@@ -795,15 +795,15 @@ void k_fileplacesview_on_viewport_entered(void* self, void (*callback)(void*)) {
     QAbstractItemView_Connect_ViewportEntered((QAbstractItemView*)self, (intptr_t)callback);
 }
 
-void k_fileplacesview_icon_size_changed(void* self, void* size) {
+void k_fileplacesview_icon_size_changed(void* self, const void* size) {
     QAbstractItemView_IconSizeChanged((QAbstractItemView*)self, (QSize*)size);
 }
 
-void k_fileplacesview_on_icon_size_changed(void* self, void (*callback)(void*, void*)) {
+void k_fileplacesview_on_icon_size_changed(void* self, void (*callback)(void*, const void*)) {
     QAbstractItemView_Connect_IconSizeChanged((QAbstractItemView*)self, (intptr_t)callback);
 }
 
-int32_t k_fileplacesview_vertical_scroll_bar_policy(void* self) {
+int32_t k_fileplacesview_vertical_scroll_bar_policy(const void* self) {
     return QAbstractScrollArea_VerticalScrollBarPolicy((QAbstractScrollArea*)self);
 }
 
@@ -811,7 +811,7 @@ void k_fileplacesview_set_vertical_scroll_bar_policy(void* self, int32_t vertica
     QAbstractScrollArea_SetVerticalScrollBarPolicy((QAbstractScrollArea*)self, verticalScrollBarPolicy);
 }
 
-QScrollBar* k_fileplacesview_vertical_scroll_bar(void* self) {
+QScrollBar* k_fileplacesview_vertical_scroll_bar(const void* self) {
     return QAbstractScrollArea_VerticalScrollBar((QAbstractScrollArea*)self);
 }
 
@@ -819,7 +819,7 @@ void k_fileplacesview_set_vertical_scroll_bar(void* self, void* scrollbar) {
     QAbstractScrollArea_SetVerticalScrollBar((QAbstractScrollArea*)self, (QScrollBar*)scrollbar);
 }
 
-int32_t k_fileplacesview_horizontal_scroll_bar_policy(void* self) {
+int32_t k_fileplacesview_horizontal_scroll_bar_policy(const void* self) {
     return QAbstractScrollArea_HorizontalScrollBarPolicy((QAbstractScrollArea*)self);
 }
 
@@ -827,7 +827,7 @@ void k_fileplacesview_set_horizontal_scroll_bar_policy(void* self, int32_t horiz
     QAbstractScrollArea_SetHorizontalScrollBarPolicy((QAbstractScrollArea*)self, horizontalScrollBarPolicy);
 }
 
-QScrollBar* k_fileplacesview_horizontal_scroll_bar(void* self) {
+QScrollBar* k_fileplacesview_horizontal_scroll_bar(const void* self) {
     return QAbstractScrollArea_HorizontalScrollBar((QAbstractScrollArea*)self);
 }
 
@@ -835,7 +835,7 @@ void k_fileplacesview_set_horizontal_scroll_bar(void* self, void* scrollbar) {
     QAbstractScrollArea_SetHorizontalScrollBar((QAbstractScrollArea*)self, (QScrollBar*)scrollbar);
 }
 
-QWidget* k_fileplacesview_corner_widget(void* self) {
+QWidget* k_fileplacesview_corner_widget(const void* self) {
     return QAbstractScrollArea_CornerWidget((QAbstractScrollArea*)self);
 }
 
@@ -852,7 +852,7 @@ libqt_list /* of QWidget* */ k_fileplacesview_scroll_bar_widgets(void* self, int
     return _arr;
 }
 
-QWidget* k_fileplacesview_viewport(void* self) {
+QWidget* k_fileplacesview_viewport(const void* self) {
     return QAbstractScrollArea_Viewport((QAbstractScrollArea*)self);
 }
 
@@ -860,11 +860,11 @@ void k_fileplacesview_set_viewport(void* self, void* widget) {
     QAbstractScrollArea_SetViewport((QAbstractScrollArea*)self, (QWidget*)widget);
 }
 
-QSize* k_fileplacesview_maximum_viewport_size(void* self) {
+QSize* k_fileplacesview_maximum_viewport_size(const void* self) {
     return QAbstractScrollArea_MaximumViewportSize((QAbstractScrollArea*)self);
 }
 
-int32_t k_fileplacesview_size_adjust_policy(void* self) {
+int32_t k_fileplacesview_size_adjust_policy(const void* self) {
     return QAbstractScrollArea_SizeAdjustPolicy((QAbstractScrollArea*)self);
 }
 
@@ -872,7 +872,7 @@ void k_fileplacesview_set_size_adjust_policy(void* self, int32_t policy) {
     QAbstractScrollArea_SetSizeAdjustPolicy((QAbstractScrollArea*)self, policy);
 }
 
-int32_t k_fileplacesview_frame_style(void* self) {
+int32_t k_fileplacesview_frame_style(const void* self) {
     return QFrame_FrameStyle((QFrame*)self);
 }
 
@@ -880,11 +880,11 @@ void k_fileplacesview_set_frame_style(void* self, int frameStyle) {
     QFrame_SetFrameStyle((QFrame*)self, frameStyle);
 }
 
-int32_t k_fileplacesview_frame_width(void* self) {
+int32_t k_fileplacesview_frame_width(const void* self) {
     return QFrame_FrameWidth((QFrame*)self);
 }
 
-int32_t k_fileplacesview_frame_shape(void* self) {
+int32_t k_fileplacesview_frame_shape(const void* self) {
     return QFrame_FrameShape((QFrame*)self);
 }
 
@@ -892,7 +892,7 @@ void k_fileplacesview_set_frame_shape(void* self, int32_t frameShape) {
     QFrame_SetFrameShape((QFrame*)self, frameShape);
 }
 
-int32_t k_fileplacesview_frame_shadow(void* self) {
+int32_t k_fileplacesview_frame_shadow(const void* self) {
     return QFrame_FrameShadow((QFrame*)self);
 }
 
@@ -900,7 +900,7 @@ void k_fileplacesview_set_frame_shadow(void* self, int32_t frameShadow) {
     QFrame_SetFrameShadow((QFrame*)self, frameShadow);
 }
 
-int32_t k_fileplacesview_line_width(void* self) {
+int32_t k_fileplacesview_line_width(const void* self) {
     return QFrame_LineWidth((QFrame*)self);
 }
 
@@ -908,7 +908,7 @@ void k_fileplacesview_set_line_width(void* self, int lineWidth) {
     QFrame_SetLineWidth((QFrame*)self, lineWidth);
 }
 
-int32_t k_fileplacesview_mid_line_width(void* self) {
+int32_t k_fileplacesview_mid_line_width(const void* self) {
     return QFrame_MidLineWidth((QFrame*)self);
 }
 
@@ -916,11 +916,11 @@ void k_fileplacesview_set_mid_line_width(void* self, int midLineWidth) {
     QFrame_SetMidLineWidth((QFrame*)self, midLineWidth);
 }
 
-QRect* k_fileplacesview_frame_rect(void* self) {
+QRect* k_fileplacesview_frame_rect(const void* self) {
     return QFrame_FrameRect((QFrame*)self);
 }
 
-void k_fileplacesview_set_frame_rect(void* self, void* frameRect) {
+void k_fileplacesview_set_frame_rect(void* self, const void* frameRect) {
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
 }
 
@@ -932,7 +932,7 @@ KFilePlacesView* k_fileplacesview_from_q_paint_device(void* _qpaintdevice) {
     return (KFilePlacesView*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
-uintptr_t k_fileplacesview_win_id(void* self) {
+uintptr_t k_fileplacesview_win_id(const void* self) {
     return QWidget_WinId((QWidget*)self);
 }
 
@@ -940,15 +940,15 @@ void k_fileplacesview_create_win_id(void* self) {
     QWidget_CreateWinId((QWidget*)self);
 }
 
-uintptr_t k_fileplacesview_internal_win_id(void* self) {
+uintptr_t k_fileplacesview_internal_win_id(const void* self) {
     return QWidget_InternalWinId((QWidget*)self);
 }
 
-uintptr_t k_fileplacesview_effective_win_id(void* self) {
+uintptr_t k_fileplacesview_effective_win_id(const void* self) {
     return QWidget_EffectiveWinId((QWidget*)self);
 }
 
-QStyle* k_fileplacesview_style(void* self) {
+QStyle* k_fileplacesview_style(const void* self) {
     return QWidget_Style((QWidget*)self);
 }
 
@@ -956,19 +956,19 @@ void k_fileplacesview_set_style(void* self, void* style) {
     QWidget_SetStyle((QWidget*)self, (QStyle*)style);
 }
 
-bool k_fileplacesview_is_top_level(void* self) {
+bool k_fileplacesview_is_top_level(const void* self) {
     return QWidget_IsTopLevel((QWidget*)self);
 }
 
-bool k_fileplacesview_is_window(void* self) {
+bool k_fileplacesview_is_window(const void* self) {
     return QWidget_IsWindow((QWidget*)self);
 }
 
-bool k_fileplacesview_is_modal(void* self) {
+bool k_fileplacesview_is_modal(const void* self) {
     return QWidget_IsModal((QWidget*)self);
 }
 
-int32_t k_fileplacesview_window_modality(void* self) {
+int32_t k_fileplacesview_window_modality(const void* self) {
     return QWidget_WindowModality((QWidget*)self);
 }
 
@@ -976,11 +976,11 @@ void k_fileplacesview_set_window_modality(void* self, int32_t windowModality) {
     QWidget_SetWindowModality((QWidget*)self, windowModality);
 }
 
-bool k_fileplacesview_is_enabled(void* self) {
+bool k_fileplacesview_is_enabled(const void* self) {
     return QWidget_IsEnabled((QWidget*)self);
 }
 
-bool k_fileplacesview_is_enabled_to(void* self, void* param1) {
+bool k_fileplacesview_is_enabled_to(const void* self, const void* param1) {
     return QWidget_IsEnabledTo((QWidget*)self, (QWidget*)param1);
 }
 
@@ -996,83 +996,83 @@ void k_fileplacesview_set_window_modified(void* self, bool windowModified) {
     QWidget_SetWindowModified((QWidget*)self, windowModified);
 }
 
-QRect* k_fileplacesview_frame_geometry(void* self) {
+QRect* k_fileplacesview_frame_geometry(const void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-const QRect* k_fileplacesview_geometry(void* self) {
+const QRect* k_fileplacesview_geometry(const void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
-QRect* k_fileplacesview_normal_geometry(void* self) {
+QRect* k_fileplacesview_normal_geometry(const void* self) {
     return QWidget_NormalGeometry((QWidget*)self);
 }
 
-int32_t k_fileplacesview_x(void* self) {
+int32_t k_fileplacesview_x(const void* self) {
     return QWidget_X((QWidget*)self);
 }
 
-int32_t k_fileplacesview_y(void* self) {
+int32_t k_fileplacesview_y(const void* self) {
     return QWidget_Y((QWidget*)self);
 }
 
-QPoint* k_fileplacesview_pos(void* self) {
+QPoint* k_fileplacesview_pos(const void* self) {
     return QWidget_Pos((QWidget*)self);
 }
 
-QSize* k_fileplacesview_frame_size(void* self) {
+QSize* k_fileplacesview_frame_size(const void* self) {
     return QWidget_FrameSize((QWidget*)self);
 }
 
-QSize* k_fileplacesview_size(void* self) {
+QSize* k_fileplacesview_size(const void* self) {
     return QWidget_Size((QWidget*)self);
 }
 
-int32_t k_fileplacesview_width(void* self) {
+int32_t k_fileplacesview_width(const void* self) {
     return QWidget_Width((QWidget*)self);
 }
 
-int32_t k_fileplacesview_height(void* self) {
+int32_t k_fileplacesview_height(const void* self) {
     return QWidget_Height((QWidget*)self);
 }
 
-QRect* k_fileplacesview_rect(void* self) {
+QRect* k_fileplacesview_rect(const void* self) {
     return QWidget_Rect((QWidget*)self);
 }
 
-QRect* k_fileplacesview_children_rect(void* self) {
+QRect* k_fileplacesview_children_rect(const void* self) {
     return QWidget_ChildrenRect((QWidget*)self);
 }
 
-QRegion* k_fileplacesview_children_region(void* self) {
+QRegion* k_fileplacesview_children_region(const void* self) {
     return QWidget_ChildrenRegion((QWidget*)self);
 }
 
-QSize* k_fileplacesview_minimum_size(void* self) {
+QSize* k_fileplacesview_minimum_size(const void* self) {
     return QWidget_MinimumSize((QWidget*)self);
 }
 
-QSize* k_fileplacesview_maximum_size(void* self) {
+QSize* k_fileplacesview_maximum_size(const void* self) {
     return QWidget_MaximumSize((QWidget*)self);
 }
 
-int32_t k_fileplacesview_minimum_width(void* self) {
+int32_t k_fileplacesview_minimum_width(const void* self) {
     return QWidget_MinimumWidth((QWidget*)self);
 }
 
-int32_t k_fileplacesview_minimum_height(void* self) {
+int32_t k_fileplacesview_minimum_height(const void* self) {
     return QWidget_MinimumHeight((QWidget*)self);
 }
 
-int32_t k_fileplacesview_maximum_width(void* self) {
+int32_t k_fileplacesview_maximum_width(const void* self) {
     return QWidget_MaximumWidth((QWidget*)self);
 }
 
-int32_t k_fileplacesview_maximum_height(void* self) {
+int32_t k_fileplacesview_maximum_height(const void* self) {
     return QWidget_MaximumHeight((QWidget*)self);
 }
 
-void k_fileplacesview_set_minimum_size(void* self, void* minimumSize) {
+void k_fileplacesview_set_minimum_size(void* self, const void* minimumSize) {
     QWidget_SetMinimumSize((QWidget*)self, (QSize*)minimumSize);
 }
 
@@ -1080,7 +1080,7 @@ void k_fileplacesview_set_minimum_size2(void* self, int minw, int minh) {
     QWidget_SetMinimumSize2((QWidget*)self, minw, minh);
 }
 
-void k_fileplacesview_set_maximum_size(void* self, void* maximumSize) {
+void k_fileplacesview_set_maximum_size(void* self, const void* maximumSize) {
     QWidget_SetMaximumSize((QWidget*)self, (QSize*)maximumSize);
 }
 
@@ -1104,11 +1104,11 @@ void k_fileplacesview_set_maximum_height(void* self, int maxh) {
     QWidget_SetMaximumHeight((QWidget*)self, maxh);
 }
 
-QSize* k_fileplacesview_size_increment(void* self) {
+QSize* k_fileplacesview_size_increment(const void* self) {
     return QWidget_SizeIncrement((QWidget*)self);
 }
 
-void k_fileplacesview_set_size_increment(void* self, void* sizeIncrement) {
+void k_fileplacesview_set_size_increment(void* self, const void* sizeIncrement) {
     QWidget_SetSizeIncrement((QWidget*)self, (QSize*)sizeIncrement);
 }
 
@@ -1116,11 +1116,11 @@ void k_fileplacesview_set_size_increment2(void* self, int w, int h) {
     QWidget_SetSizeIncrement2((QWidget*)self, w, h);
 }
 
-QSize* k_fileplacesview_base_size(void* self) {
+QSize* k_fileplacesview_base_size(const void* self) {
     return QWidget_BaseSize((QWidget*)self);
 }
 
-void k_fileplacesview_set_base_size(void* self, void* baseSize) {
+void k_fileplacesview_set_base_size(void* self, const void* baseSize) {
     QWidget_SetBaseSize((QWidget*)self, (QSize*)baseSize);
 }
 
@@ -1128,7 +1128,7 @@ void k_fileplacesview_set_base_size2(void* self, int basew, int baseh) {
     QWidget_SetBaseSize2((QWidget*)self, basew, baseh);
 }
 
-void k_fileplacesview_set_fixed_size(void* self, void* fixedSize) {
+void k_fileplacesview_set_fixed_size(void* self, const void* fixedSize) {
     QWidget_SetFixedSize((QWidget*)self, (QSize*)fixedSize);
 }
 
@@ -1144,71 +1144,71 @@ void k_fileplacesview_set_fixed_height(void* self, int h) {
     QWidget_SetFixedHeight((QWidget*)self, h);
 }
 
-QPointF* k_fileplacesview_map_to_global(void* self, void* param1) {
+QPointF* k_fileplacesview_map_to_global(const void* self, const void* param1) {
     return QWidget_MapToGlobal((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* k_fileplacesview_map_to_global2(void* self, void* param1) {
+QPoint* k_fileplacesview_map_to_global2(const void* self, const void* param1) {
     return QWidget_MapToGlobal2((QWidget*)self, (QPoint*)param1);
 }
 
-QPointF* k_fileplacesview_map_from_global(void* self, void* param1) {
+QPointF* k_fileplacesview_map_from_global(const void* self, const void* param1) {
     return QWidget_MapFromGlobal((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* k_fileplacesview_map_from_global2(void* self, void* param1) {
+QPoint* k_fileplacesview_map_from_global2(const void* self, const void* param1) {
     return QWidget_MapFromGlobal2((QWidget*)self, (QPoint*)param1);
 }
 
-QPointF* k_fileplacesview_map_to_parent(void* self, void* param1) {
+QPointF* k_fileplacesview_map_to_parent(const void* self, const void* param1) {
     return QWidget_MapToParent((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* k_fileplacesview_map_to_parent2(void* self, void* param1) {
+QPoint* k_fileplacesview_map_to_parent2(const void* self, const void* param1) {
     return QWidget_MapToParent2((QWidget*)self, (QPoint*)param1);
 }
 
-QPointF* k_fileplacesview_map_from_parent(void* self, void* param1) {
+QPointF* k_fileplacesview_map_from_parent(const void* self, const void* param1) {
     return QWidget_MapFromParent((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* k_fileplacesview_map_from_parent2(void* self, void* param1) {
+QPoint* k_fileplacesview_map_from_parent2(const void* self, const void* param1) {
     return QWidget_MapFromParent2((QWidget*)self, (QPoint*)param1);
 }
 
-QPointF* k_fileplacesview_map_to(void* self, void* param1, void* param2) {
+QPointF* k_fileplacesview_map_to(const void* self, const void* param1, const void* param2) {
     return QWidget_MapTo((QWidget*)self, (QWidget*)param1, (QPointF*)param2);
 }
 
-QPoint* k_fileplacesview_map_to2(void* self, void* param1, void* param2) {
+QPoint* k_fileplacesview_map_to2(const void* self, const void* param1, const void* param2) {
     return QWidget_MapTo2((QWidget*)self, (QWidget*)param1, (QPoint*)param2);
 }
 
-QPointF* k_fileplacesview_map_from(void* self, void* param1, void* param2) {
+QPointF* k_fileplacesview_map_from(const void* self, const void* param1, const void* param2) {
     return QWidget_MapFrom((QWidget*)self, (QWidget*)param1, (QPointF*)param2);
 }
 
-QPoint* k_fileplacesview_map_from2(void* self, void* param1, void* param2) {
+QPoint* k_fileplacesview_map_from2(const void* self, const void* param1, const void* param2) {
     return QWidget_MapFrom2((QWidget*)self, (QWidget*)param1, (QPoint*)param2);
 }
 
-QWidget* k_fileplacesview_window(void* self) {
+QWidget* k_fileplacesview_window(const void* self) {
     return QWidget_Window((QWidget*)self);
 }
 
-QWidget* k_fileplacesview_native_parent_widget(void* self) {
+QWidget* k_fileplacesview_native_parent_widget(const void* self) {
     return QWidget_NativeParentWidget((QWidget*)self);
 }
 
-QWidget* k_fileplacesview_top_level_widget(void* self) {
+QWidget* k_fileplacesview_top_level_widget(const void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-const QPalette* k_fileplacesview_palette(void* self) {
+const QPalette* k_fileplacesview_palette(const void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
-void k_fileplacesview_set_palette(void* self, void* palette) {
+void k_fileplacesview_set_palette(void* self, const void* palette) {
     QWidget_SetPalette((QWidget*)self, (QPalette*)palette);
 }
 
@@ -1216,7 +1216,7 @@ void k_fileplacesview_set_background_role(void* self, int32_t backgroundRole) {
     QWidget_SetBackgroundRole((QWidget*)self, backgroundRole);
 }
 
-int32_t k_fileplacesview_background_role(void* self) {
+int32_t k_fileplacesview_background_role(const void* self) {
     return QWidget_BackgroundRole((QWidget*)self);
 }
 
@@ -1224,31 +1224,31 @@ void k_fileplacesview_set_foreground_role(void* self, int32_t foregroundRole) {
     QWidget_SetForegroundRole((QWidget*)self, foregroundRole);
 }
 
-int32_t k_fileplacesview_foreground_role(void* self) {
+int32_t k_fileplacesview_foreground_role(const void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-const QFont* k_fileplacesview_font(void* self) {
+const QFont* k_fileplacesview_font(const void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
-void k_fileplacesview_set_font(void* self, void* font) {
+void k_fileplacesview_set_font(void* self, const void* font) {
     QWidget_SetFont((QWidget*)self, (QFont*)font);
 }
 
-QFontMetrics* k_fileplacesview_font_metrics(void* self) {
+QFontMetrics* k_fileplacesview_font_metrics(const void* self) {
     return QWidget_FontMetrics((QWidget*)self);
 }
 
-QFontInfo* k_fileplacesview_font_info(void* self) {
+QFontInfo* k_fileplacesview_font_info(const void* self) {
     return QWidget_FontInfo((QWidget*)self);
 }
 
-QCursor* k_fileplacesview_cursor(void* self) {
+QCursor* k_fileplacesview_cursor(const void* self) {
     return QWidget_Cursor((QWidget*)self);
 }
 
-void k_fileplacesview_set_cursor(void* self, void* cursor) {
+void k_fileplacesview_set_cursor(void* self, const void* cursor) {
     QWidget_SetCursor((QWidget*)self, (QCursor*)cursor);
 }
 
@@ -1260,11 +1260,11 @@ void k_fileplacesview_set_mouse_tracking(void* self, bool enable) {
     QWidget_SetMouseTracking((QWidget*)self, enable);
 }
 
-bool k_fileplacesview_has_mouse_tracking(void* self) {
+bool k_fileplacesview_has_mouse_tracking(const void* self) {
     return QWidget_HasMouseTracking((QWidget*)self);
 }
 
-bool k_fileplacesview_under_mouse(void* self) {
+bool k_fileplacesview_under_mouse(const void* self) {
     return QWidget_UnderMouse((QWidget*)self);
 }
 
@@ -1272,19 +1272,19 @@ void k_fileplacesview_set_tablet_tracking(void* self, bool enable) {
     QWidget_SetTabletTracking((QWidget*)self, enable);
 }
 
-bool k_fileplacesview_has_tablet_tracking(void* self) {
+bool k_fileplacesview_has_tablet_tracking(const void* self) {
     return QWidget_HasTabletTracking((QWidget*)self);
 }
 
-void k_fileplacesview_set_mask(void* self, void* mask) {
+void k_fileplacesview_set_mask(void* self, const void* mask) {
     QWidget_SetMask((QWidget*)self, (QBitmap*)mask);
 }
 
-void k_fileplacesview_set_mask2(void* self, void* mask) {
+void k_fileplacesview_set_mask2(void* self, const void* mask) {
     QWidget_SetMask2((QWidget*)self, (QRegion*)mask);
 }
 
-QRegion* k_fileplacesview_mask(void* self) {
+QRegion* k_fileplacesview_mask(const void* self) {
     return QWidget_Mask((QWidget*)self);
 }
 
@@ -1304,7 +1304,7 @@ QPixmap* k_fileplacesview_grab(void* self) {
     return QWidget_Grab((QWidget*)self);
 }
 
-QGraphicsEffect* k_fileplacesview_graphics_effect(void* self) {
+QGraphicsEffect* k_fileplacesview_graphics_effect(const void* self) {
     return QWidget_GraphicsEffect((QWidget*)self);
 }
 
@@ -1328,25 +1328,25 @@ void k_fileplacesview_set_style_sheet(void* self, const char* styleSheet) {
     QWidget_SetStyleSheet((QWidget*)self, qstring(styleSheet));
 }
 
-const char* k_fileplacesview_style_sheet(void* self) {
+const char* k_fileplacesview_style_sheet(const void* self) {
     libqt_string _str = QWidget_StyleSheet((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_fileplacesview_window_title(void* self) {
+const char* k_fileplacesview_window_title(const void* self) {
     libqt_string _str = QWidget_WindowTitle((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_fileplacesview_set_window_icon(void* self, void* icon) {
+void k_fileplacesview_set_window_icon(void* self, const void* icon) {
     QWidget_SetWindowIcon((QWidget*)self, (QIcon*)icon);
 }
 
-QIcon* k_fileplacesview_window_icon(void* self) {
+QIcon* k_fileplacesview_window_icon(const void* self) {
     return QWidget_WindowIcon((QWidget*)self);
 }
 
@@ -1354,7 +1354,7 @@ void k_fileplacesview_set_window_icon_text(void* self, const char* windowIconTex
     QWidget_SetWindowIconText((QWidget*)self, qstring(windowIconText));
 }
 
-const char* k_fileplacesview_window_icon_text(void* self) {
+const char* k_fileplacesview_window_icon_text(const void* self) {
     libqt_string _str = QWidget_WindowIconText((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1365,7 +1365,7 @@ void k_fileplacesview_set_window_role(void* self, const char* windowRole) {
     QWidget_SetWindowRole((QWidget*)self, qstring(windowRole));
 }
 
-const char* k_fileplacesview_window_role(void* self) {
+const char* k_fileplacesview_window_role(const void* self) {
     libqt_string _str = QWidget_WindowRole((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1376,7 +1376,7 @@ void k_fileplacesview_set_window_file_path(void* self, const char* filePath) {
     QWidget_SetWindowFilePath((QWidget*)self, qstring(filePath));
 }
 
-const char* k_fileplacesview_window_file_path(void* self) {
+const char* k_fileplacesview_window_file_path(const void* self) {
     libqt_string _str = QWidget_WindowFilePath((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1387,11 +1387,11 @@ void k_fileplacesview_set_window_opacity(void* self, double level) {
     QWidget_SetWindowOpacity((QWidget*)self, level);
 }
 
-double k_fileplacesview_window_opacity(void* self) {
+double k_fileplacesview_window_opacity(const void* self) {
     return QWidget_WindowOpacity((QWidget*)self);
 }
 
-bool k_fileplacesview_is_window_modified(void* self) {
+bool k_fileplacesview_is_window_modified(const void* self) {
     return QWidget_IsWindowModified((QWidget*)self);
 }
 
@@ -1399,7 +1399,7 @@ void k_fileplacesview_set_tool_tip(void* self, const char* toolTip) {
     QWidget_SetToolTip((QWidget*)self, qstring(toolTip));
 }
 
-const char* k_fileplacesview_tool_tip(void* self) {
+const char* k_fileplacesview_tool_tip(const void* self) {
     libqt_string _str = QWidget_ToolTip((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1410,7 +1410,7 @@ void k_fileplacesview_set_tool_tip_duration(void* self, int msec) {
     QWidget_SetToolTipDuration((QWidget*)self, msec);
 }
 
-int32_t k_fileplacesview_tool_tip_duration(void* self) {
+int32_t k_fileplacesview_tool_tip_duration(const void* self) {
     return QWidget_ToolTipDuration((QWidget*)self);
 }
 
@@ -1418,7 +1418,7 @@ void k_fileplacesview_set_status_tip(void* self, const char* statusTip) {
     QWidget_SetStatusTip((QWidget*)self, qstring(statusTip));
 }
 
-const char* k_fileplacesview_status_tip(void* self) {
+const char* k_fileplacesview_status_tip(const void* self) {
     libqt_string _str = QWidget_StatusTip((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1429,14 +1429,14 @@ void k_fileplacesview_set_whats_this(void* self, const char* whatsThis) {
     QWidget_SetWhatsThis((QWidget*)self, qstring(whatsThis));
 }
 
-const char* k_fileplacesview_whats_this(void* self) {
+const char* k_fileplacesview_whats_this(const void* self) {
     libqt_string _str = QWidget_WhatsThis((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_fileplacesview_accessible_name(void* self) {
+const char* k_fileplacesview_accessible_name(const void* self) {
     libqt_string _str = QWidget_AccessibleName((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1447,7 +1447,7 @@ void k_fileplacesview_set_accessible_name(void* self, const char* name) {
     QWidget_SetAccessibleName((QWidget*)self, qstring(name));
 }
 
-const char* k_fileplacesview_accessible_description(void* self) {
+const char* k_fileplacesview_accessible_description(const void* self) {
     libqt_string _str = QWidget_AccessibleDescription((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1462,7 +1462,7 @@ void k_fileplacesview_set_layout_direction(void* self, int32_t direction) {
     QWidget_SetLayoutDirection((QWidget*)self, direction);
 }
 
-int32_t k_fileplacesview_layout_direction(void* self) {
+int32_t k_fileplacesview_layout_direction(const void* self) {
     return QWidget_LayoutDirection((QWidget*)self);
 }
 
@@ -1470,11 +1470,11 @@ void k_fileplacesview_unset_layout_direction(void* self) {
     QWidget_UnsetLayoutDirection((QWidget*)self);
 }
 
-void k_fileplacesview_set_locale(void* self, void* locale) {
+void k_fileplacesview_set_locale(void* self, const void* locale) {
     QWidget_SetLocale((QWidget*)self, (QLocale*)locale);
 }
 
-QLocale* k_fileplacesview_locale(void* self) {
+QLocale* k_fileplacesview_locale(const void* self) {
     return QWidget_Locale((QWidget*)self);
 }
 
@@ -1482,11 +1482,11 @@ void k_fileplacesview_unset_locale(void* self) {
     QWidget_UnsetLocale((QWidget*)self);
 }
 
-bool k_fileplacesview_is_right_to_left(void* self) {
+bool k_fileplacesview_is_right_to_left(const void* self) {
     return QWidget_IsRightToLeft((QWidget*)self);
 }
 
-bool k_fileplacesview_is_left_to_right(void* self) {
+bool k_fileplacesview_is_left_to_right(const void* self) {
     return QWidget_IsLeftToRight((QWidget*)self);
 }
 
@@ -1494,7 +1494,7 @@ void k_fileplacesview_set_focus(void* self) {
     QWidget_SetFocus((QWidget*)self);
 }
 
-bool k_fileplacesview_is_active_window(void* self) {
+bool k_fileplacesview_is_active_window(const void* self) {
     return QWidget_IsActiveWindow((QWidget*)self);
 }
 
@@ -1510,7 +1510,7 @@ void k_fileplacesview_set_focus2(void* self, int32_t reason) {
     QWidget_SetFocus2((QWidget*)self, reason);
 }
 
-int32_t k_fileplacesview_focus_policy(void* self) {
+int32_t k_fileplacesview_focus_policy(const void* self) {
     return QWidget_FocusPolicy((QWidget*)self);
 }
 
@@ -1518,7 +1518,7 @@ void k_fileplacesview_set_focus_policy(void* self, int32_t policy) {
     QWidget_SetFocusPolicy((QWidget*)self, policy);
 }
 
-bool k_fileplacesview_has_focus(void* self) {
+bool k_fileplacesview_has_focus(const void* self) {
     return QWidget_HasFocus((QWidget*)self);
 }
 
@@ -1530,11 +1530,11 @@ void k_fileplacesview_set_focus_proxy(void* self, void* focusProxy) {
     QWidget_SetFocusProxy((QWidget*)self, (QWidget*)focusProxy);
 }
 
-QWidget* k_fileplacesview_focus_proxy(void* self) {
+QWidget* k_fileplacesview_focus_proxy(const void* self) {
     return QWidget_FocusProxy((QWidget*)self);
 }
 
-int32_t k_fileplacesview_context_menu_policy(void* self) {
+int32_t k_fileplacesview_context_menu_policy(const void* self) {
     return QWidget_ContextMenuPolicy((QWidget*)self);
 }
 
@@ -1546,7 +1546,7 @@ void k_fileplacesview_grab_mouse(void* self) {
     QWidget_GrabMouse((QWidget*)self);
 }
 
-void k_fileplacesview_grab_mouse2(void* self, void* param1) {
+void k_fileplacesview_grab_mouse2(void* self, const void* param1) {
     QWidget_GrabMouse2((QWidget*)self, (QCursor*)param1);
 }
 
@@ -1562,7 +1562,7 @@ void k_fileplacesview_release_keyboard(void* self) {
     QWidget_ReleaseKeyboard((QWidget*)self);
 }
 
-int32_t k_fileplacesview_grab_shortcut(void* self, void* key) {
+int32_t k_fileplacesview_grab_shortcut(void* self, const void* key) {
     return QWidget_GrabShortcut((QWidget*)self, (QKeySequence*)key);
 }
 
@@ -1586,7 +1586,7 @@ QWidget* k_fileplacesview_keyboard_grabber() {
     return QWidget_KeyboardGrabber();
 }
 
-bool k_fileplacesview_updates_enabled(void* self) {
+bool k_fileplacesview_updates_enabled(const void* self) {
     return QWidget_UpdatesEnabled((QWidget*)self);
 }
 
@@ -1594,7 +1594,7 @@ void k_fileplacesview_set_updates_enabled(void* self, bool enable) {
     QWidget_SetUpdatesEnabled((QWidget*)self, enable);
 }
 
-QGraphicsProxyWidget* k_fileplacesview_graphics_proxy_widget(void* self) {
+QGraphicsProxyWidget* k_fileplacesview_graphics_proxy_widget(const void* self) {
     return QWidget_GraphicsProxyWidget((QWidget*)self);
 }
 
@@ -1606,11 +1606,11 @@ void k_fileplacesview_update2(void* self, int x, int y, int w, int h) {
     QWidget_Update2((QWidget*)self, x, y, w, h);
 }
 
-void k_fileplacesview_update3(void* self, void* param1) {
+void k_fileplacesview_update3(void* self, const void* param1) {
     QWidget_Update3((QWidget*)self, (QRect*)param1);
 }
 
-void k_fileplacesview_update4(void* self, void* param1) {
+void k_fileplacesview_update4(void* self, const void* param1) {
     QWidget_Update4((QWidget*)self, (QRegion*)param1);
 }
 
@@ -1618,11 +1618,11 @@ void k_fileplacesview_repaint2(void* self, int x, int y, int w, int h) {
     QWidget_Repaint2((QWidget*)self, x, y, w, h);
 }
 
-void k_fileplacesview_repaint3(void* self, void* param1) {
+void k_fileplacesview_repaint3(void* self, const void* param1) {
     QWidget_Repaint3((QWidget*)self, (QRect*)param1);
 }
 
-void k_fileplacesview_repaint4(void* self, void* param1) {
+void k_fileplacesview_repaint4(void* self, const void* param1) {
     QWidget_Repaint4((QWidget*)self, (QRegion*)param1);
 }
 
@@ -1674,7 +1674,7 @@ void k_fileplacesview_move(void* self, int x, int y) {
     QWidget_Move((QWidget*)self, x, y);
 }
 
-void k_fileplacesview_move2(void* self, void* param1) {
+void k_fileplacesview_move2(void* self, const void* param1) {
     QWidget_Move2((QWidget*)self, (QPoint*)param1);
 }
 
@@ -1682,7 +1682,7 @@ void k_fileplacesview_resize(void* self, int w, int h) {
     QWidget_Resize((QWidget*)self, w, h);
 }
 
-void k_fileplacesview_resize2(void* self, void* param1) {
+void k_fileplacesview_resize2(void* self, const void* param1) {
     QWidget_Resize2((QWidget*)self, (QSize*)param1);
 }
 
@@ -1690,11 +1690,11 @@ void k_fileplacesview_set_geometry(void* self, int x, int y, int w, int h) {
     QWidget_SetGeometry((QWidget*)self, x, y, w, h);
 }
 
-void k_fileplacesview_set_geometry2(void* self, void* geometry) {
+void k_fileplacesview_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* k_fileplacesview_save_geometry(void* self) {
+char* k_fileplacesview_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1709,31 +1709,31 @@ void k_fileplacesview_adjust_size(void* self) {
     QWidget_AdjustSize((QWidget*)self);
 }
 
-bool k_fileplacesview_is_visible(void* self) {
+bool k_fileplacesview_is_visible(const void* self) {
     return QWidget_IsVisible((QWidget*)self);
 }
 
-bool k_fileplacesview_is_visible_to(void* self, void* param1) {
+bool k_fileplacesview_is_visible_to(const void* self, const void* param1) {
     return QWidget_IsVisibleTo((QWidget*)self, (QWidget*)param1);
 }
 
-bool k_fileplacesview_is_hidden(void* self) {
+bool k_fileplacesview_is_hidden(const void* self) {
     return QWidget_IsHidden((QWidget*)self);
 }
 
-bool k_fileplacesview_is_minimized(void* self) {
+bool k_fileplacesview_is_minimized(const void* self) {
     return QWidget_IsMinimized((QWidget*)self);
 }
 
-bool k_fileplacesview_is_maximized(void* self) {
+bool k_fileplacesview_is_maximized(const void* self) {
     return QWidget_IsMaximized((QWidget*)self);
 }
 
-bool k_fileplacesview_is_full_screen(void* self) {
+bool k_fileplacesview_is_full_screen(const void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int32_t k_fileplacesview_window_state(void* self) {
+int32_t k_fileplacesview_window_state(const void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
@@ -1745,7 +1745,7 @@ void k_fileplacesview_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
-QSizePolicy* k_fileplacesview_size_policy(void* self) {
+QSizePolicy* k_fileplacesview_size_policy(const void* self) {
     return QWidget_SizePolicy((QWidget*)self);
 }
 
@@ -1757,7 +1757,7 @@ void k_fileplacesview_set_size_policy2(void* self, int32_t horizontal, int32_t v
     QWidget_SetSizePolicy2((QWidget*)self, horizontal, vertical);
 }
 
-QRegion* k_fileplacesview_visible_region(void* self) {
+QRegion* k_fileplacesview_visible_region(const void* self) {
     return QWidget_VisibleRegion((QWidget*)self);
 }
 
@@ -1765,19 +1765,19 @@ void k_fileplacesview_set_contents_margins(void* self, int left, int top, int ri
     QWidget_SetContentsMargins((QWidget*)self, left, top, right, bottom);
 }
 
-void k_fileplacesview_set_contents_margins2(void* self, void* margins) {
+void k_fileplacesview_set_contents_margins2(void* self, const void* margins) {
     QWidget_SetContentsMargins2((QWidget*)self, (QMargins*)margins);
 }
 
-QMargins* k_fileplacesview_contents_margins(void* self) {
+QMargins* k_fileplacesview_contents_margins(const void* self) {
     return QWidget_ContentsMargins((QWidget*)self);
 }
 
-QRect* k_fileplacesview_contents_rect(void* self) {
+QRect* k_fileplacesview_contents_rect(const void* self) {
     return QWidget_ContentsRect((QWidget*)self);
 }
 
-QLayout* k_fileplacesview_layout(void* self) {
+QLayout* k_fileplacesview_layout(const void* self) {
     return QWidget_Layout((QWidget*)self);
 }
 
@@ -1801,23 +1801,23 @@ void k_fileplacesview_scroll(void* self, int dx, int dy) {
     QWidget_Scroll((QWidget*)self, dx, dy);
 }
 
-void k_fileplacesview_scroll2(void* self, int dx, int dy, void* param3) {
+void k_fileplacesview_scroll2(void* self, int dx, int dy, const void* param3) {
     QWidget_Scroll2((QWidget*)self, dx, dy, (QRect*)param3);
 }
 
-QWidget* k_fileplacesview_focus_widget(void* self) {
+QWidget* k_fileplacesview_focus_widget(const void* self) {
     return QWidget_FocusWidget((QWidget*)self);
 }
 
-QWidget* k_fileplacesview_next_in_focus_chain(void* self) {
+QWidget* k_fileplacesview_next_in_focus_chain(const void* self) {
     return QWidget_NextInFocusChain((QWidget*)self);
 }
 
-QWidget* k_fileplacesview_previous_in_focus_chain(void* self) {
+QWidget* k_fileplacesview_previous_in_focus_chain(const void* self) {
     return QWidget_PreviousInFocusChain((QWidget*)self);
 }
 
-bool k_fileplacesview_accept_drops(void* self) {
+bool k_fileplacesview_accept_drops(const void* self) {
     return QWidget_AcceptDrops((QWidget*)self);
 }
 
@@ -1845,7 +1845,7 @@ void k_fileplacesview_remove_action(void* self, void* action) {
     QWidget_RemoveAction((QWidget*)self, (QAction*)action);
 }
 
-libqt_list /* of QAction* */ k_fileplacesview_actions(void* self) {
+libqt_list /* of QAction* */ k_fileplacesview_actions(const void* self) {
     libqt_list _arr = QWidget_Actions((QWidget*)self);
     return _arr;
 }
@@ -1854,19 +1854,19 @@ QAction* k_fileplacesview_add_action2(void* self, const char* text) {
     return QWidget_AddAction2((QWidget*)self, qstring(text));
 }
 
-QAction* k_fileplacesview_add_action3(void* self, void* icon, const char* text) {
+QAction* k_fileplacesview_add_action3(void* self, const void* icon, const char* text) {
     return QWidget_AddAction3((QWidget*)self, (QIcon*)icon, qstring(text));
 }
 
-QAction* k_fileplacesview_add_action4(void* self, const char* text, void* shortcut) {
+QAction* k_fileplacesview_add_action4(void* self, const char* text, const void* shortcut) {
     return QWidget_AddAction4((QWidget*)self, qstring(text), (QKeySequence*)shortcut);
 }
 
-QAction* k_fileplacesview_add_action5(void* self, void* icon, const char* text, void* shortcut) {
+QAction* k_fileplacesview_add_action5(void* self, const void* icon, const char* text, const void* shortcut) {
     return QWidget_AddAction5((QWidget*)self, (QIcon*)icon, qstring(text), (QKeySequence*)shortcut);
 }
 
-QWidget* k_fileplacesview_parent_widget(void* self) {
+QWidget* k_fileplacesview_parent_widget(const void* self) {
     return QWidget_ParentWidget((QWidget*)self);
 }
 
@@ -1874,7 +1874,7 @@ void k_fileplacesview_set_window_flags(void* self, int32_t type) {
     QWidget_SetWindowFlags((QWidget*)self, type);
 }
 
-int32_t k_fileplacesview_window_flags(void* self) {
+int32_t k_fileplacesview_window_flags(const void* self) {
     return QWidget_WindowFlags((QWidget*)self);
 }
 
@@ -1886,7 +1886,7 @@ void k_fileplacesview_override_window_flags(void* self, int32_t type) {
     QWidget_OverrideWindowFlags((QWidget*)self, type);
 }
 
-int32_t k_fileplacesview_window_type(void* self) {
+int32_t k_fileplacesview_window_type(const void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
@@ -1894,15 +1894,15 @@ QWidget* k_fileplacesview_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 
-QWidget* k_fileplacesview_child_at(void* self, int x, int y) {
+QWidget* k_fileplacesview_child_at(const void* self, int x, int y) {
     return QWidget_ChildAt((QWidget*)self, x, y);
 }
 
-QWidget* k_fileplacesview_child_at2(void* self, void* p) {
+QWidget* k_fileplacesview_child_at2(const void* self, const void* p) {
     return QWidget_ChildAt2((QWidget*)self, (QPoint*)p);
 }
 
-QWidget* k_fileplacesview_child_at3(void* self, void* p) {
+QWidget* k_fileplacesview_child_at3(const void* self, const void* p) {
     return QWidget_ChildAt3((QWidget*)self, (QPointF*)p);
 }
 
@@ -1910,19 +1910,19 @@ void k_fileplacesview_set_attribute(void* self, int32_t param1) {
     QWidget_SetAttribute((QWidget*)self, param1);
 }
 
-bool k_fileplacesview_test_attribute(void* self, int32_t param1) {
+bool k_fileplacesview_test_attribute(const void* self, int32_t param1) {
     return QWidget_TestAttribute((QWidget*)self, param1);
 }
 
-void k_fileplacesview_ensure_polished(void* self) {
+void k_fileplacesview_ensure_polished(const void* self) {
     QWidget_EnsurePolished((QWidget*)self);
 }
 
-bool k_fileplacesview_is_ancestor_of(void* self, void* child) {
+bool k_fileplacesview_is_ancestor_of(const void* self, const void* child) {
     return QWidget_IsAncestorOf((QWidget*)self, (QWidget*)child);
 }
 
-bool k_fileplacesview_auto_fill_background(void* self) {
+bool k_fileplacesview_auto_fill_background(const void* self) {
     return QWidget_AutoFillBackground((QWidget*)self);
 }
 
@@ -1930,15 +1930,15 @@ void k_fileplacesview_set_auto_fill_background(void* self, bool enabled) {
     QWidget_SetAutoFillBackground((QWidget*)self, enabled);
 }
 
-QBackingStore* k_fileplacesview_backing_store(void* self) {
+QBackingStore* k_fileplacesview_backing_store(const void* self) {
     return QWidget_BackingStore((QWidget*)self);
 }
 
-QWindow* k_fileplacesview_window_handle(void* self) {
+QWindow* k_fileplacesview_window_handle(const void* self) {
     return QWidget_WindowHandle((QWidget*)self);
 }
 
-QScreen* k_fileplacesview_screen(void* self) {
+QScreen* k_fileplacesview_screen(const void* self) {
     return QWidget_Screen((QWidget*)self);
 }
 
@@ -1958,11 +1958,11 @@ void k_fileplacesview_on_window_title_changed(void* self, void (*callback)(void*
     QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
-void k_fileplacesview_window_icon_changed(void* self, void* icon) {
+void k_fileplacesview_window_icon_changed(void* self, const void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void k_fileplacesview_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+void k_fileplacesview_on_window_icon_changed(void* self, void (*callback)(void*, const void*)) {
     QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
@@ -1974,15 +1974,15 @@ void k_fileplacesview_on_window_icon_text_changed(void* self, void (*callback)(v
     QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
-void k_fileplacesview_custom_context_menu_requested(void* self, void* pos) {
+void k_fileplacesview_custom_context_menu_requested(void* self, const void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void k_fileplacesview_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+void k_fileplacesview_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*)) {
     QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
-int32_t k_fileplacesview_input_method_hints(void* self) {
+int32_t k_fileplacesview_input_method_hints(const void* self) {
     return QWidget_InputMethodHints((QWidget*)self);
 }
 
@@ -1990,31 +1990,31 @@ void k_fileplacesview_set_input_method_hints(void* self, int32_t hints) {
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
-void k_fileplacesview_render22(void* self, void* target, void* targetOffset) {
+void k_fileplacesview_render22(void* self, void* target, const void* targetOffset) {
     QWidget_Render22((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset);
 }
 
-void k_fileplacesview_render3(void* self, void* target, void* targetOffset, void* sourceRegion) {
+void k_fileplacesview_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion) {
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_fileplacesview_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
+void k_fileplacesview_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
-void k_fileplacesview_render23(void* self, void* painter, void* targetOffset) {
+void k_fileplacesview_render23(void* self, void* painter, const void* targetOffset) {
     QWidget_Render23((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset);
 }
 
-void k_fileplacesview_render32(void* self, void* painter, void* targetOffset, void* sourceRegion) {
+void k_fileplacesview_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion) {
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_fileplacesview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
+void k_fileplacesview_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
-QPixmap* k_fileplacesview_grab1(void* self, void* rectangle) {
+QPixmap* k_fileplacesview_grab1(void* self, const void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
@@ -2022,7 +2022,7 @@ void k_fileplacesview_grab_gesture2(void* self, int32_t type, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, type, flags);
 }
 
-int32_t k_fileplacesview_grab_shortcut2(void* self, void* key, int32_t context) {
+int32_t k_fileplacesview_grab_shortcut2(void* self, const void* key, int32_t context) {
     return QWidget_GrabShortcut2((QWidget*)self, (QKeySequence*)key, context);
 }
 
@@ -2050,7 +2050,7 @@ QWidget* k_fileplacesview_create_window_container3(void* window, void* parent, i
     return QWidget_CreateWindowContainer3((QWindow*)window, (QWidget*)parent, flags);
 }
 
-const char* k_fileplacesview_object_name(void* self) {
+const char* k_fileplacesview_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -2061,19 +2061,19 @@ void k_fileplacesview_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_fileplacesview_is_widget_type(void* self) {
+bool k_fileplacesview_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_fileplacesview_is_window_type(void* self) {
+bool k_fileplacesview_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_fileplacesview_is_quick_item_type(void* self) {
+bool k_fileplacesview_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_fileplacesview_signals_blocked(void* self) {
+bool k_fileplacesview_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -2081,7 +2081,7 @@ bool k_fileplacesview_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_fileplacesview_thread(void* self) {
+QThread* k_fileplacesview_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -2105,7 +2105,7 @@ void k_fileplacesview_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_fileplacesview_children(void* self) {
+libqt_list /* of QObject* */ k_fileplacesview_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -2118,55 +2118,55 @@ void k_fileplacesview_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_fileplacesview_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_fileplacesview_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_fileplacesview_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_fileplacesview_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_fileplacesview_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_fileplacesview_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_fileplacesview_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_fileplacesview_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_fileplacesview_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_fileplacesview_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_fileplacesview_disconnect3(void* self) {
+bool k_fileplacesview_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_fileplacesview_disconnect4(void* self, void* receiver) {
+bool k_fileplacesview_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_fileplacesview_disconnect5(void* param1) {
+bool k_fileplacesview_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_fileplacesview_dump_object_tree(void* self) {
+void k_fileplacesview_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_fileplacesview_dump_object_info(void* self) {
+void k_fileplacesview_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_fileplacesview_set_property(void* self, const char* name, void* value) {
+bool k_fileplacesview_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_fileplacesview_property(void* self, const char* name) {
+QVariant* k_fileplacesview_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_fileplacesview_dynamic_property_names(void* self) {
+const char** k_fileplacesview_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -2187,7 +2187,7 @@ QBindingStorage* k_fileplacesview_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_fileplacesview_binding_storage2(void* self) {
+const QBindingStorage* k_fileplacesview_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -2199,11 +2199,11 @@ void k_fileplacesview_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_fileplacesview_parent(void* self) {
+QObject* k_fileplacesview_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_fileplacesview_inherits(void* self, const char* classname) {
+bool k_fileplacesview_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -2219,31 +2219,31 @@ int32_t k_fileplacesview_start_timer23(void* self, int64_t time, int32_t timerTy
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_fileplacesview_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_fileplacesview_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_fileplacesview_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_fileplacesview_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_fileplacesview_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_fileplacesview_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_fileplacesview_disconnect1(void* self, const char* signal) {
+bool k_fileplacesview_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_fileplacesview_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_fileplacesview_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_fileplacesview_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_fileplacesview_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_fileplacesview_disconnect23(void* self, void* receiver, const char* member) {
+bool k_fileplacesview_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -2255,47 +2255,47 @@ void k_fileplacesview_on_destroyed1(void* self, void (*callback)(void*, void*)) 
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-bool k_fileplacesview_painting_active(void* self) {
+bool k_fileplacesview_painting_active(const void* self) {
     return QPaintDevice_PaintingActive(k_fileplacesview_as_q_paint_device(self));
 }
 
-int32_t k_fileplacesview_width_m_m(void* self) {
+int32_t k_fileplacesview_width_m_m(const void* self) {
     return QPaintDevice_WidthMM(k_fileplacesview_as_q_paint_device(self));
 }
 
-int32_t k_fileplacesview_height_m_m(void* self) {
+int32_t k_fileplacesview_height_m_m(const void* self) {
     return QPaintDevice_HeightMM(k_fileplacesview_as_q_paint_device(self));
 }
 
-int32_t k_fileplacesview_logical_dpi_x(void* self) {
+int32_t k_fileplacesview_logical_dpi_x(const void* self) {
     return QPaintDevice_LogicalDpiX(k_fileplacesview_as_q_paint_device(self));
 }
 
-int32_t k_fileplacesview_logical_dpi_y(void* self) {
+int32_t k_fileplacesview_logical_dpi_y(const void* self) {
     return QPaintDevice_LogicalDpiY(k_fileplacesview_as_q_paint_device(self));
 }
 
-int32_t k_fileplacesview_physical_dpi_x(void* self) {
+int32_t k_fileplacesview_physical_dpi_x(const void* self) {
     return QPaintDevice_PhysicalDpiX(k_fileplacesview_as_q_paint_device(self));
 }
 
-int32_t k_fileplacesview_physical_dpi_y(void* self) {
+int32_t k_fileplacesview_physical_dpi_y(const void* self) {
     return QPaintDevice_PhysicalDpiY(k_fileplacesview_as_q_paint_device(self));
 }
 
-double k_fileplacesview_device_pixel_ratio(void* self) {
+double k_fileplacesview_device_pixel_ratio(const void* self) {
     return QPaintDevice_DevicePixelRatio(k_fileplacesview_as_q_paint_device(self));
 }
 
-double k_fileplacesview_device_pixel_ratio_f(void* self) {
+double k_fileplacesview_device_pixel_ratio_f(const void* self) {
     return QPaintDevice_DevicePixelRatioF(k_fileplacesview_as_q_paint_device(self));
 }
 
-int32_t k_fileplacesview_color_count(void* self) {
+int32_t k_fileplacesview_color_count(const void* self) {
     return QPaintDevice_ColorCount(k_fileplacesview_as_q_paint_device(self));
 }
 
-int32_t k_fileplacesview_depth(void* self) {
+int32_t k_fileplacesview_depth(const void* self) {
     return QPaintDevice_Depth(k_fileplacesview_as_q_paint_device(self));
 }
 
@@ -2307,40 +2307,40 @@ int32_t k_fileplacesview_encode_metric_f(int32_t metric, double value) {
     return QPaintDevice_EncodeMetricF(metric, value);
 }
 
-QRect* k_fileplacesview_visual_rect(void* self, void* index) {
+QRect* k_fileplacesview_visual_rect(const void* self, const void* index) {
     return KFilePlacesView_VisualRect((KFilePlacesView*)self, (QModelIndex*)index);
 }
 
-QRect* k_fileplacesview_super_visual_rect(void* self, void* index) {
+QRect* k_fileplacesview_super_visual_rect(const void* self, const void* index) {
     return KFilePlacesView_SuperVisualRect((KFilePlacesView*)self, (QModelIndex*)index);
 }
 
-void k_fileplacesview_on_visual_rect(void* self, QRect* (*callback)(void*, void*)) {
-    KFilePlacesView_OnVisualRect((KFilePlacesView*)self, (intptr_t)callback);
+void k_fileplacesview_on_visual_rect(const void* self, QRect* (*callback)(const void*, const void*)) {
+    KFilePlacesView_OnVisualRect((const KFilePlacesView*)self, (intptr_t)callback);
 }
 
-void k_fileplacesview_scroll_to(void* self, void* index, int32_t hint) {
+void k_fileplacesview_scroll_to(void* self, const void* index, int32_t hint) {
     KFilePlacesView_ScrollTo((KFilePlacesView*)self, (QModelIndex*)index, hint);
 }
 
-void k_fileplacesview_super_scroll_to(void* self, void* index, int32_t hint) {
+void k_fileplacesview_super_scroll_to(void* self, const void* index, int32_t hint) {
     KFilePlacesView_SuperScrollTo((KFilePlacesView*)self, (QModelIndex*)index, hint);
 }
 
-void k_fileplacesview_on_scroll_to(void* self, void (*callback)(void*, void*, int32_t)) {
+void k_fileplacesview_on_scroll_to(void* self, void (*callback)(void*, const void*, int32_t)) {
     KFilePlacesView_OnScrollTo((KFilePlacesView*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_fileplacesview_index_at(void* self, void* p) {
+QModelIndex* k_fileplacesview_index_at(const void* self, const void* p) {
     return KFilePlacesView_IndexAt((KFilePlacesView*)self, (QPoint*)p);
 }
 
-QModelIndex* k_fileplacesview_super_index_at(void* self, void* p) {
+QModelIndex* k_fileplacesview_super_index_at(const void* self, const void* p) {
     return KFilePlacesView_SuperIndexAt((KFilePlacesView*)self, (QPoint*)p);
 }
 
-void k_fileplacesview_on_index_at(void* self, QModelIndex* (*callback)(void*, void*)) {
-    KFilePlacesView_OnIndexAt((KFilePlacesView*)self, (intptr_t)callback);
+void k_fileplacesview_on_index_at(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+    KFilePlacesView_OnIndexAt((const KFilePlacesView*)self, (intptr_t)callback);
 }
 
 void k_fileplacesview_do_items_layout(void* self) {
@@ -2351,7 +2351,7 @@ void k_fileplacesview_super_do_items_layout(void* self) {
     KFilePlacesView_SuperDoItemsLayout((KFilePlacesView*)self);
 }
 
-void k_fileplacesview_on_do_items_layout(void* self, void (*callback)()) {
+void k_fileplacesview_on_do_items_layout(void* self, void (*callback)(void*)) {
     KFilePlacesView_OnDoItemsLayout((KFilePlacesView*)self, (intptr_t)callback);
 }
 
@@ -2363,19 +2363,19 @@ void k_fileplacesview_super_reset(void* self) {
     KFilePlacesView_SuperReset((KFilePlacesView*)self);
 }
 
-void k_fileplacesview_on_reset(void* self, void (*callback)()) {
+void k_fileplacesview_on_reset(void* self, void (*callback)(void*)) {
     KFilePlacesView_OnReset((KFilePlacesView*)self, (intptr_t)callback);
 }
 
-void k_fileplacesview_set_root_index(void* self, void* index) {
+void k_fileplacesview_set_root_index(void* self, const void* index) {
     KFilePlacesView_SetRootIndex((KFilePlacesView*)self, (QModelIndex*)index);
 }
 
-void k_fileplacesview_super_set_root_index(void* self, void* index) {
+void k_fileplacesview_super_set_root_index(void* self, const void* index) {
     KFilePlacesView_SuperSetRootIndex((KFilePlacesView*)self, (QModelIndex*)index);
 }
 
-void k_fileplacesview_on_set_root_index(void* self, void (*callback)(void*, void*)) {
+void k_fileplacesview_on_set_root_index(void* self, void (*callback)(void*, const void*)) {
     KFilePlacesView_OnSetRootIndex((KFilePlacesView*)self, (intptr_t)callback);
 }
 
@@ -2403,15 +2403,15 @@ void k_fileplacesview_on_scroll_contents_by(void* self, void (*callback)(void*, 
     KFilePlacesView_OnScrollContentsBy((KFilePlacesView*)self, (intptr_t)callback);
 }
 
-void k_fileplacesview_rows_about_to_be_removed(void* self, void* parent, int start, int end) {
+void k_fileplacesview_rows_about_to_be_removed(void* self, const void* parent, int start, int end) {
     KFilePlacesView_RowsAboutToBeRemoved((KFilePlacesView*)self, (QModelIndex*)parent, start, end);
 }
 
-void k_fileplacesview_super_rows_about_to_be_removed(void* self, void* parent, int start, int end) {
+void k_fileplacesview_super_rows_about_to_be_removed(void* self, const void* parent, int start, int end) {
     KFilePlacesView_SuperRowsAboutToBeRemoved((KFilePlacesView*)self, (QModelIndex*)parent, start, end);
 }
 
-void k_fileplacesview_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int)) {
+void k_fileplacesview_on_rows_about_to_be_removed(void* self, void (*callback)(void*, const void*, int, int)) {
     KFilePlacesView_OnRowsAboutToBeRemoved((KFilePlacesView*)self, (intptr_t)callback);
 }
 
@@ -2463,40 +2463,40 @@ void k_fileplacesview_on_timer_event(void* self, void (*callback)(void*, void*))
     KFilePlacesView_OnTimerEvent((KFilePlacesView*)self, (intptr_t)callback);
 }
 
-void k_fileplacesview_init_view_item_option(void* self, void* option) {
+void k_fileplacesview_init_view_item_option(const void* self, void* option) {
     KFilePlacesView_InitViewItemOption((KFilePlacesView*)self, (QStyleOptionViewItem*)option);
 }
 
-void k_fileplacesview_super_init_view_item_option(void* self, void* option) {
+void k_fileplacesview_super_init_view_item_option(const void* self, void* option) {
     KFilePlacesView_SuperInitViewItemOption((KFilePlacesView*)self, (QStyleOptionViewItem*)option);
 }
 
-void k_fileplacesview_on_init_view_item_option(void* self, void (*callback)(void*, void*)) {
-    KFilePlacesView_OnInitViewItemOption((KFilePlacesView*)self, (intptr_t)callback);
+void k_fileplacesview_on_init_view_item_option(const void* self, void (*callback)(const void*, void*)) {
+    KFilePlacesView_OnInitViewItemOption((const KFilePlacesView*)self, (intptr_t)callback);
 }
 
-int32_t k_fileplacesview_horizontal_offset(void* self) {
+int32_t k_fileplacesview_horizontal_offset(const void* self) {
     return KFilePlacesView_HorizontalOffset((KFilePlacesView*)self);
 }
 
-int32_t k_fileplacesview_super_horizontal_offset(void* self) {
+int32_t k_fileplacesview_super_horizontal_offset(const void* self) {
     return KFilePlacesView_SuperHorizontalOffset((KFilePlacesView*)self);
 }
 
-void k_fileplacesview_on_horizontal_offset(void* self, int32_t (*callback)()) {
-    KFilePlacesView_OnHorizontalOffset((KFilePlacesView*)self, (intptr_t)callback);
+void k_fileplacesview_on_horizontal_offset(const void* self, int32_t (*callback)(const void*)) {
+    KFilePlacesView_OnHorizontalOffset((const KFilePlacesView*)self, (intptr_t)callback);
 }
 
-int32_t k_fileplacesview_vertical_offset(void* self) {
+int32_t k_fileplacesview_vertical_offset(const void* self) {
     return KFilePlacesView_VerticalOffset((KFilePlacesView*)self);
 }
 
-int32_t k_fileplacesview_super_vertical_offset(void* self) {
+int32_t k_fileplacesview_super_vertical_offset(const void* self) {
     return KFilePlacesView_SuperVerticalOffset((KFilePlacesView*)self);
 }
 
-void k_fileplacesview_on_vertical_offset(void* self, int32_t (*callback)()) {
-    KFilePlacesView_OnVerticalOffset((KFilePlacesView*)self, (intptr_t)callback);
+void k_fileplacesview_on_vertical_offset(const void* self, int32_t (*callback)(const void*)) {
+    KFilePlacesView_OnVerticalOffset((const KFilePlacesView*)self, (intptr_t)callback);
 }
 
 QModelIndex* k_fileplacesview_move_cursor(void* self, int32_t cursorAction, int32_t modifiers) {
@@ -2511,42 +2511,42 @@ void k_fileplacesview_on_move_cursor(void* self, QModelIndex* (*callback)(void*,
     KFilePlacesView_OnMoveCursor((KFilePlacesView*)self, (intptr_t)callback);
 }
 
-void k_fileplacesview_set_selection(void* self, void* rect, int32_t command) {
+void k_fileplacesview_set_selection(void* self, const void* rect, int32_t command) {
     KFilePlacesView_SetSelection((KFilePlacesView*)self, (QRect*)rect, command);
 }
 
-void k_fileplacesview_super_set_selection(void* self, void* rect, int32_t command) {
+void k_fileplacesview_super_set_selection(void* self, const void* rect, int32_t command) {
     KFilePlacesView_SuperSetSelection((KFilePlacesView*)self, (QRect*)rect, command);
 }
 
-void k_fileplacesview_on_set_selection(void* self, void (*callback)(void*, void*, int32_t)) {
+void k_fileplacesview_on_set_selection(void* self, void (*callback)(void*, const void*, int32_t)) {
     KFilePlacesView_OnSetSelection((KFilePlacesView*)self, (intptr_t)callback);
 }
 
-QRegion* k_fileplacesview_visual_region_for_selection(void* self, void* selection) {
+QRegion* k_fileplacesview_visual_region_for_selection(const void* self, const void* selection) {
     return KFilePlacesView_VisualRegionForSelection((KFilePlacesView*)self, (QItemSelection*)selection);
 }
 
-QRegion* k_fileplacesview_super_visual_region_for_selection(void* self, void* selection) {
+QRegion* k_fileplacesview_super_visual_region_for_selection(const void* self, const void* selection) {
     return KFilePlacesView_SuperVisualRegionForSelection((KFilePlacesView*)self, (QItemSelection*)selection);
 }
 
-void k_fileplacesview_on_visual_region_for_selection(void* self, QRegion* (*callback)(void*, void*)) {
-    KFilePlacesView_OnVisualRegionForSelection((KFilePlacesView*)self, (intptr_t)callback);
+void k_fileplacesview_on_visual_region_for_selection(const void* self, QRegion* (*callback)(const void*, const void*)) {
+    KFilePlacesView_OnVisualRegionForSelection((const KFilePlacesView*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QModelIndex* */ k_fileplacesview_selected_indexes(void* self) {
+libqt_list /* of QModelIndex* */ k_fileplacesview_selected_indexes(const void* self) {
     libqt_list _arr = KFilePlacesView_SelectedIndexes((KFilePlacesView*)self);
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ k_fileplacesview_super_selected_indexes(void* self) {
+libqt_list /* of QModelIndex* */ k_fileplacesview_super_selected_indexes(const void* self) {
     libqt_list _arr = KFilePlacesView_SuperSelectedIndexes((KFilePlacesView*)self);
     return _arr;
 }
 
-void k_fileplacesview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
-    KFilePlacesView_OnSelectedIndexes((KFilePlacesView*)self, (intptr_t)callback);
+void k_fileplacesview_on_selected_indexes(const void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*)) {
+    KFilePlacesView_OnSelectedIndexes((const KFilePlacesView*)self, (intptr_t)callback);
 }
 
 void k_fileplacesview_update_geometries(void* self) {
@@ -2557,56 +2557,56 @@ void k_fileplacesview_super_update_geometries(void* self) {
     KFilePlacesView_SuperUpdateGeometries((KFilePlacesView*)self);
 }
 
-void k_fileplacesview_on_update_geometries(void* self, void (*callback)()) {
+void k_fileplacesview_on_update_geometries(void* self, void (*callback)(void*)) {
     KFilePlacesView_OnUpdateGeometries((KFilePlacesView*)self, (intptr_t)callback);
 }
 
-bool k_fileplacesview_is_index_hidden(void* self, void* index) {
+bool k_fileplacesview_is_index_hidden(const void* self, const void* index) {
     return KFilePlacesView_IsIndexHidden((KFilePlacesView*)self, (QModelIndex*)index);
 }
 
-bool k_fileplacesview_super_is_index_hidden(void* self, void* index) {
+bool k_fileplacesview_super_is_index_hidden(const void* self, const void* index) {
     return KFilePlacesView_SuperIsIndexHidden((KFilePlacesView*)self, (QModelIndex*)index);
 }
 
-void k_fileplacesview_on_is_index_hidden(void* self, bool (*callback)(void*, void*)) {
-    KFilePlacesView_OnIsIndexHidden((KFilePlacesView*)self, (intptr_t)callback);
+void k_fileplacesview_on_is_index_hidden(const void* self, bool (*callback)(const void*, const void*)) {
+    KFilePlacesView_OnIsIndexHidden((const KFilePlacesView*)self, (intptr_t)callback);
 }
 
-void k_fileplacesview_selection_changed(void* self, void* selected, void* deselected) {
+void k_fileplacesview_selection_changed(void* self, const void* selected, const void* deselected) {
     KFilePlacesView_SelectionChanged((KFilePlacesView*)self, (QItemSelection*)selected, (QItemSelection*)deselected);
 }
 
-void k_fileplacesview_super_selection_changed(void* self, void* selected, void* deselected) {
+void k_fileplacesview_super_selection_changed(void* self, const void* selected, const void* deselected) {
     KFilePlacesView_SuperSelectionChanged((KFilePlacesView*)self, (QItemSelection*)selected, (QItemSelection*)deselected);
 }
 
-void k_fileplacesview_on_selection_changed(void* self, void (*callback)(void*, void*, void*)) {
+void k_fileplacesview_on_selection_changed(void* self, void (*callback)(void*, const void*, const void*)) {
     KFilePlacesView_OnSelectionChanged((KFilePlacesView*)self, (intptr_t)callback);
 }
 
-void k_fileplacesview_current_changed(void* self, void* current, void* previous) {
+void k_fileplacesview_current_changed(void* self, const void* current, const void* previous) {
     KFilePlacesView_CurrentChanged((KFilePlacesView*)self, (QModelIndex*)current, (QModelIndex*)previous);
 }
 
-void k_fileplacesview_super_current_changed(void* self, void* current, void* previous) {
+void k_fileplacesview_super_current_changed(void* self, const void* current, const void* previous) {
     KFilePlacesView_SuperCurrentChanged((KFilePlacesView*)self, (QModelIndex*)current, (QModelIndex*)previous);
 }
 
-void k_fileplacesview_on_current_changed(void* self, void (*callback)(void*, void*, void*)) {
+void k_fileplacesview_on_current_changed(void* self, void (*callback)(void*, const void*, const void*)) {
     KFilePlacesView_OnCurrentChanged((KFilePlacesView*)self, (intptr_t)callback);
 }
 
-QSize* k_fileplacesview_viewport_size_hint(void* self) {
+QSize* k_fileplacesview_viewport_size_hint(const void* self) {
     return KFilePlacesView_ViewportSizeHint((KFilePlacesView*)self);
 }
 
-QSize* k_fileplacesview_super_viewport_size_hint(void* self) {
+QSize* k_fileplacesview_super_viewport_size_hint(const void* self) {
     return KFilePlacesView_SuperViewportSizeHint((KFilePlacesView*)self);
 }
 
-void k_fileplacesview_on_viewport_size_hint(void* self, QSize* (*callback)()) {
-    KFilePlacesView_OnViewportSizeHint((KFilePlacesView*)self, (intptr_t)callback);
+void k_fileplacesview_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*)) {
+    KFilePlacesView_OnViewportSizeHint((const KFilePlacesView*)self, (intptr_t)callback);
 }
 
 void k_fileplacesview_set_selection_model(void* self, void* selectionModel) {
@@ -2633,52 +2633,52 @@ void k_fileplacesview_on_keyboard_search(void* self, void (*callback)(void*, con
     KFilePlacesView_OnKeyboardSearch((KFilePlacesView*)self, (intptr_t)callback);
 }
 
-int32_t k_fileplacesview_size_hint_for_row(void* self, int row) {
+int32_t k_fileplacesview_size_hint_for_row(const void* self, int row) {
     return KFilePlacesView_SizeHintForRow((KFilePlacesView*)self, row);
 }
 
-int32_t k_fileplacesview_super_size_hint_for_row(void* self, int row) {
+int32_t k_fileplacesview_super_size_hint_for_row(const void* self, int row) {
     return KFilePlacesView_SuperSizeHintForRow((KFilePlacesView*)self, row);
 }
 
-void k_fileplacesview_on_size_hint_for_row(void* self, int32_t (*callback)(void*, int)) {
-    KFilePlacesView_OnSizeHintForRow((KFilePlacesView*)self, (intptr_t)callback);
+void k_fileplacesview_on_size_hint_for_row(const void* self, int32_t (*callback)(const void*, int)) {
+    KFilePlacesView_OnSizeHintForRow((const KFilePlacesView*)self, (intptr_t)callback);
 }
 
-int32_t k_fileplacesview_size_hint_for_column(void* self, int column) {
+int32_t k_fileplacesview_size_hint_for_column(const void* self, int column) {
     return KFilePlacesView_SizeHintForColumn((KFilePlacesView*)self, column);
 }
 
-int32_t k_fileplacesview_super_size_hint_for_column(void* self, int column) {
+int32_t k_fileplacesview_super_size_hint_for_column(const void* self, int column) {
     return KFilePlacesView_SuperSizeHintForColumn((KFilePlacesView*)self, column);
 }
 
-void k_fileplacesview_on_size_hint_for_column(void* self, int32_t (*callback)(void*, int)) {
-    KFilePlacesView_OnSizeHintForColumn((KFilePlacesView*)self, (intptr_t)callback);
+void k_fileplacesview_on_size_hint_for_column(const void* self, int32_t (*callback)(const void*, int)) {
+    KFilePlacesView_OnSizeHintForColumn((const KFilePlacesView*)self, (intptr_t)callback);
 }
 
-QAbstractItemDelegate* k_fileplacesview_item_delegate_for_index(void* self, void* index) {
+QAbstractItemDelegate* k_fileplacesview_item_delegate_for_index(const void* self, const void* index) {
     return KFilePlacesView_ItemDelegateForIndex((KFilePlacesView*)self, (QModelIndex*)index);
 }
 
-QAbstractItemDelegate* k_fileplacesview_super_item_delegate_for_index(void* self, void* index) {
+QAbstractItemDelegate* k_fileplacesview_super_item_delegate_for_index(const void* self, const void* index) {
     return KFilePlacesView_SuperItemDelegateForIndex((KFilePlacesView*)self, (QModelIndex*)index);
 }
 
-void k_fileplacesview_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*callback)(void*, void*)) {
-    KFilePlacesView_OnItemDelegateForIndex((KFilePlacesView*)self, (intptr_t)callback);
+void k_fileplacesview_on_item_delegate_for_index(const void* self, QAbstractItemDelegate* (*callback)(const void*, const void*)) {
+    KFilePlacesView_OnItemDelegateForIndex((const KFilePlacesView*)self, (intptr_t)callback);
 }
 
-QVariant* k_fileplacesview_input_method_query(void* self, int32_t query) {
+QVariant* k_fileplacesview_input_method_query(const void* self, int32_t query) {
     return KFilePlacesView_InputMethodQuery((KFilePlacesView*)self, query);
 }
 
-QVariant* k_fileplacesview_super_input_method_query(void* self, int32_t query) {
+QVariant* k_fileplacesview_super_input_method_query(const void* self, int32_t query) {
     return KFilePlacesView_SuperInputMethodQuery((KFilePlacesView*)self, query);
 }
 
-void k_fileplacesview_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
-    KFilePlacesView_OnInputMethodQuery((KFilePlacesView*)self, (intptr_t)callback);
+void k_fileplacesview_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KFilePlacesView_OnInputMethodQuery((const KFilePlacesView*)self, (intptr_t)callback);
 }
 
 void k_fileplacesview_select_all(void* self) {
@@ -2689,7 +2689,7 @@ void k_fileplacesview_super_select_all(void* self) {
     KFilePlacesView_SuperSelectAll((KFilePlacesView*)self);
 }
 
-void k_fileplacesview_on_select_all(void* self, void (*callback)()) {
+void k_fileplacesview_on_select_all(void* self, void (*callback)(void*)) {
     KFilePlacesView_OnSelectAll((KFilePlacesView*)self, (intptr_t)callback);
 }
 
@@ -2701,7 +2701,7 @@ void k_fileplacesview_super_update_editor_data(void* self) {
     KFilePlacesView_SuperUpdateEditorData((KFilePlacesView*)self);
 }
 
-void k_fileplacesview_on_update_editor_data(void* self, void (*callback)()) {
+void k_fileplacesview_on_update_editor_data(void* self, void (*callback)(void*)) {
     KFilePlacesView_OnUpdateEditorData((KFilePlacesView*)self, (intptr_t)callback);
 }
 
@@ -2713,7 +2713,7 @@ void k_fileplacesview_super_update_editor_geometries(void* self) {
     KFilePlacesView_SuperUpdateEditorGeometries((KFilePlacesView*)self);
 }
 
-void k_fileplacesview_on_update_editor_geometries(void* self, void (*callback)()) {
+void k_fileplacesview_on_update_editor_geometries(void* self, void (*callback)(void*)) {
     KFilePlacesView_OnUpdateEditorGeometries((KFilePlacesView*)self, (intptr_t)callback);
 }
 
@@ -2801,28 +2801,28 @@ void k_fileplacesview_on_editor_destroyed(void* self, void (*callback)(void*, vo
     KFilePlacesView_OnEditorDestroyed((KFilePlacesView*)self, (intptr_t)callback);
 }
 
-bool k_fileplacesview_edit2(void* self, void* index, int32_t trigger, void* event) {
+bool k_fileplacesview_edit2(void* self, const void* index, int32_t trigger, void* event) {
     return KFilePlacesView_Edit2((KFilePlacesView*)self, (QModelIndex*)index, trigger, (QEvent*)event);
 }
 
-bool k_fileplacesview_super_edit2(void* self, void* index, int32_t trigger, void* event) {
+bool k_fileplacesview_super_edit2(void* self, const void* index, int32_t trigger, void* event) {
     return KFilePlacesView_SuperEdit2((KFilePlacesView*)self, (QModelIndex*)index, trigger, (QEvent*)event);
 }
 
-void k_fileplacesview_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, void*)) {
+void k_fileplacesview_on_edit2(void* self, bool (*callback)(void*, const void*, int32_t, void*)) {
     KFilePlacesView_OnEdit2((KFilePlacesView*)self, (intptr_t)callback);
 }
 
-int32_t k_fileplacesview_selection_command(void* self, void* index, void* event) {
+int32_t k_fileplacesview_selection_command(const void* self, const void* index, const void* event) {
     return KFilePlacesView_SelectionCommand((KFilePlacesView*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
-int32_t k_fileplacesview_super_selection_command(void* self, void* index, void* event) {
+int32_t k_fileplacesview_super_selection_command(const void* self, const void* index, const void* event) {
     return KFilePlacesView_SuperSelectionCommand((KFilePlacesView*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
-void k_fileplacesview_on_selection_command(void* self, int32_t (*callback)(void*, void*, void*)) {
-    KFilePlacesView_OnSelectionCommand((KFilePlacesView*)self, (intptr_t)callback);
+void k_fileplacesview_on_selection_command(const void* self, int32_t (*callback)(const void*, const void*, const void*)) {
+    KFilePlacesView_OnSelectionCommand((const KFilePlacesView*)self, (intptr_t)callback);
 }
 
 bool k_fileplacesview_focus_next_prev_child(void* self, bool next) {
@@ -2909,16 +2909,16 @@ void k_fileplacesview_on_event_filter(void* self, bool (*callback)(void*, void*,
     KFilePlacesView_OnEventFilter((KFilePlacesView*)self, (intptr_t)callback);
 }
 
-QSize* k_fileplacesview_minimum_size_hint(void* self) {
+QSize* k_fileplacesview_minimum_size_hint(const void* self) {
     return KFilePlacesView_MinimumSizeHint((KFilePlacesView*)self);
 }
 
-QSize* k_fileplacesview_super_minimum_size_hint(void* self) {
+QSize* k_fileplacesview_super_minimum_size_hint(const void* self) {
     return KFilePlacesView_SuperMinimumSizeHint((KFilePlacesView*)self);
 }
 
-void k_fileplacesview_on_minimum_size_hint(void* self, QSize* (*callback)()) {
-    KFilePlacesView_OnMinimumSizeHint((KFilePlacesView*)self, (intptr_t)callback);
+void k_fileplacesview_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
+    KFilePlacesView_OnMinimumSizeHint((const KFilePlacesView*)self, (intptr_t)callback);
 }
 
 void k_fileplacesview_setup_viewport(void* self, void* viewport) {
@@ -2945,28 +2945,28 @@ void k_fileplacesview_on_change_event(void* self, void (*callback)(void*, void*)
     KFilePlacesView_OnChangeEvent((KFilePlacesView*)self, (intptr_t)callback);
 }
 
-void k_fileplacesview_init_style_option(void* self, void* option) {
+void k_fileplacesview_init_style_option(const void* self, void* option) {
     KFilePlacesView_InitStyleOption((KFilePlacesView*)self, (QStyleOptionFrame*)option);
 }
 
-void k_fileplacesview_super_init_style_option(void* self, void* option) {
+void k_fileplacesview_super_init_style_option(const void* self, void* option) {
     KFilePlacesView_SuperInitStyleOption((KFilePlacesView*)self, (QStyleOptionFrame*)option);
 }
 
-void k_fileplacesview_on_init_style_option(void* self, void (*callback)(void*, void*)) {
-    KFilePlacesView_OnInitStyleOption((KFilePlacesView*)self, (intptr_t)callback);
+void k_fileplacesview_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
+    KFilePlacesView_OnInitStyleOption((const KFilePlacesView*)self, (intptr_t)callback);
 }
 
-int32_t k_fileplacesview_dev_type(void* self) {
+int32_t k_fileplacesview_dev_type(const void* self) {
     return KFilePlacesView_DevType((KFilePlacesView*)self);
 }
 
-int32_t k_fileplacesview_super_dev_type(void* self) {
+int32_t k_fileplacesview_super_dev_type(const void* self) {
     return KFilePlacesView_SuperDevType((KFilePlacesView*)self);
 }
 
-void k_fileplacesview_on_dev_type(void* self, int32_t (*callback)()) {
-    KFilePlacesView_OnDevType((KFilePlacesView*)self, (intptr_t)callback);
+void k_fileplacesview_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
+    KFilePlacesView_OnDevType((const KFilePlacesView*)self, (intptr_t)callback);
 }
 
 void k_fileplacesview_set_visible(void* self, bool visible) {
@@ -2981,40 +2981,40 @@ void k_fileplacesview_on_set_visible(void* self, void (*callback)(void*, bool)) 
     KFilePlacesView_OnSetVisible((KFilePlacesView*)self, (intptr_t)callback);
 }
 
-int32_t k_fileplacesview_height_for_width(void* self, int param1) {
+int32_t k_fileplacesview_height_for_width(const void* self, int param1) {
     return KFilePlacesView_HeightForWidth((KFilePlacesView*)self, param1);
 }
 
-int32_t k_fileplacesview_super_height_for_width(void* self, int param1) {
+int32_t k_fileplacesview_super_height_for_width(const void* self, int param1) {
     return KFilePlacesView_SuperHeightForWidth((KFilePlacesView*)self, param1);
 }
 
-void k_fileplacesview_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
-    KFilePlacesView_OnHeightForWidth((KFilePlacesView*)self, (intptr_t)callback);
+void k_fileplacesview_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
+    KFilePlacesView_OnHeightForWidth((const KFilePlacesView*)self, (intptr_t)callback);
 }
 
-bool k_fileplacesview_has_height_for_width(void* self) {
+bool k_fileplacesview_has_height_for_width(const void* self) {
     return KFilePlacesView_HasHeightForWidth((KFilePlacesView*)self);
 }
 
-bool k_fileplacesview_super_has_height_for_width(void* self) {
+bool k_fileplacesview_super_has_height_for_width(const void* self) {
     return KFilePlacesView_SuperHasHeightForWidth((KFilePlacesView*)self);
 }
 
-void k_fileplacesview_on_has_height_for_width(void* self, bool (*callback)()) {
-    KFilePlacesView_OnHasHeightForWidth((KFilePlacesView*)self, (intptr_t)callback);
+void k_fileplacesview_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
+    KFilePlacesView_OnHasHeightForWidth((const KFilePlacesView*)self, (intptr_t)callback);
 }
 
-QPaintEngine* k_fileplacesview_paint_engine(void* self) {
+QPaintEngine* k_fileplacesview_paint_engine(const void* self) {
     return KFilePlacesView_PaintEngine((KFilePlacesView*)self);
 }
 
-QPaintEngine* k_fileplacesview_super_paint_engine(void* self) {
+QPaintEngine* k_fileplacesview_super_paint_engine(const void* self) {
     return KFilePlacesView_SuperPaintEngine((KFilePlacesView*)self);
 }
 
-void k_fileplacesview_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
-    KFilePlacesView_OnPaintEngine((KFilePlacesView*)self, (intptr_t)callback);
+void k_fileplacesview_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
+    KFilePlacesView_OnPaintEngine((const KFilePlacesView*)self, (intptr_t)callback);
 }
 
 void k_fileplacesview_key_release_event(void* self, void* event) {
@@ -3113,52 +3113,52 @@ void k_fileplacesview_on_native_event(void* self, bool (*callback)(void*, libqt_
     KFilePlacesView_OnNativeEvent((KFilePlacesView*)self, (intptr_t)callback);
 }
 
-int32_t k_fileplacesview_metric(void* self, int32_t param1) {
+int32_t k_fileplacesview_metric(const void* self, int32_t param1) {
     return KFilePlacesView_Metric((KFilePlacesView*)self, param1);
 }
 
-int32_t k_fileplacesview_super_metric(void* self, int32_t param1) {
+int32_t k_fileplacesview_super_metric(const void* self, int32_t param1) {
     return KFilePlacesView_SuperMetric((KFilePlacesView*)self, param1);
 }
 
-void k_fileplacesview_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
-    KFilePlacesView_OnMetric((KFilePlacesView*)self, (intptr_t)callback);
+void k_fileplacesview_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
+    KFilePlacesView_OnMetric((const KFilePlacesView*)self, (intptr_t)callback);
 }
 
-void k_fileplacesview_init_painter(void* self, void* painter) {
+void k_fileplacesview_init_painter(const void* self, void* painter) {
     KFilePlacesView_InitPainter((KFilePlacesView*)self, (QPainter*)painter);
 }
 
-void k_fileplacesview_super_init_painter(void* self, void* painter) {
+void k_fileplacesview_super_init_painter(const void* self, void* painter) {
     KFilePlacesView_SuperInitPainter((KFilePlacesView*)self, (QPainter*)painter);
 }
 
-void k_fileplacesview_on_init_painter(void* self, void (*callback)(void*, void*)) {
-    KFilePlacesView_OnInitPainter((KFilePlacesView*)self, (intptr_t)callback);
+void k_fileplacesview_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
+    KFilePlacesView_OnInitPainter((const KFilePlacesView*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_fileplacesview_redirected(void* self, void* offset) {
+QPaintDevice* k_fileplacesview_redirected(const void* self, void* offset) {
     return KFilePlacesView_Redirected((KFilePlacesView*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_fileplacesview_super_redirected(void* self, void* offset) {
+QPaintDevice* k_fileplacesview_super_redirected(const void* self, void* offset) {
     return KFilePlacesView_SuperRedirected((KFilePlacesView*)self, (QPoint*)offset);
 }
 
-void k_fileplacesview_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
-    KFilePlacesView_OnRedirected((KFilePlacesView*)self, (intptr_t)callback);
+void k_fileplacesview_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KFilePlacesView_OnRedirected((const KFilePlacesView*)self, (intptr_t)callback);
 }
 
-QPainter* k_fileplacesview_shared_painter(void* self) {
+QPainter* k_fileplacesview_shared_painter(const void* self) {
     return KFilePlacesView_SharedPainter((KFilePlacesView*)self);
 }
 
-QPainter* k_fileplacesview_super_shared_painter(void* self) {
+QPainter* k_fileplacesview_super_shared_painter(const void* self) {
     return KFilePlacesView_SuperSharedPainter((KFilePlacesView*)self);
 }
 
-void k_fileplacesview_on_shared_painter(void* self, QPainter* (*callback)()) {
-    KFilePlacesView_OnSharedPainter((KFilePlacesView*)self, (intptr_t)callback);
+void k_fileplacesview_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
+    KFilePlacesView_OnSharedPainter((const KFilePlacesView*)self, (intptr_t)callback);
 }
 
 void k_fileplacesview_child_event(void* self, void* event) {
@@ -3185,27 +3185,27 @@ void k_fileplacesview_on_custom_event(void* self, void (*callback)(void*, void*)
     KFilePlacesView_OnCustomEvent((KFilePlacesView*)self, (intptr_t)callback);
 }
 
-void k_fileplacesview_connect_notify(void* self, void* signal) {
+void k_fileplacesview_connect_notify(void* self, const void* signal) {
     KFilePlacesView_ConnectNotify((KFilePlacesView*)self, (QMetaMethod*)signal);
 }
 
-void k_fileplacesview_super_connect_notify(void* self, void* signal) {
+void k_fileplacesview_super_connect_notify(void* self, const void* signal) {
     KFilePlacesView_SuperConnectNotify((KFilePlacesView*)self, (QMetaMethod*)signal);
 }
 
-void k_fileplacesview_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_fileplacesview_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     KFilePlacesView_OnConnectNotify((KFilePlacesView*)self, (intptr_t)callback);
 }
 
-void k_fileplacesview_disconnect_notify(void* self, void* signal) {
+void k_fileplacesview_disconnect_notify(void* self, const void* signal) {
     KFilePlacesView_DisconnectNotify((KFilePlacesView*)self, (QMetaMethod*)signal);
 }
 
-void k_fileplacesview_super_disconnect_notify(void* self, void* signal) {
+void k_fileplacesview_super_disconnect_notify(void* self, const void* signal) {
     KFilePlacesView_SuperDisconnectNotify((KFilePlacesView*)self, (QMetaMethod*)signal);
 }
 
-void k_fileplacesview_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_fileplacesview_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     KFilePlacesView_OnDisconnectNotify((KFilePlacesView*)self, (intptr_t)callback);
 }
 
@@ -3213,336 +3213,112 @@ void k_fileplacesview_resize_contents(void* self, int width, int height) {
     KFilePlacesView_ResizeContents((KFilePlacesView*)self, width, height);
 }
 
-void k_fileplacesview_super_resize_contents(void* self, int width, int height) {
-    KFilePlacesView_SuperResizeContents((KFilePlacesView*)self, width, height);
-}
-
-void k_fileplacesview_on_resize_contents(void* self, void (*callback)(void*, int, int)) {
-    KFilePlacesView_OnResizeContents((KFilePlacesView*)self, (intptr_t)callback);
-}
-
-QSize* k_fileplacesview_contents_size(void* self) {
+QSize* k_fileplacesview_contents_size(const void* self) {
     return KFilePlacesView_ContentsSize((KFilePlacesView*)self);
 }
 
-QSize* k_fileplacesview_super_contents_size(void* self) {
-    return KFilePlacesView_SuperContentsSize((KFilePlacesView*)self);
-}
-
-void k_fileplacesview_on_contents_size(void* self, QSize* (*callback)()) {
-    KFilePlacesView_OnContentsSize((KFilePlacesView*)self, (intptr_t)callback);
-}
-
-QRect* k_fileplacesview_rect_for_index(void* self, void* index) {
+QRect* k_fileplacesview_rect_for_index(const void* self, const void* index) {
     return KFilePlacesView_RectForIndex((KFilePlacesView*)self, (QModelIndex*)index);
 }
 
-QRect* k_fileplacesview_super_rect_for_index(void* self, void* index) {
-    return KFilePlacesView_SuperRectForIndex((KFilePlacesView*)self, (QModelIndex*)index);
-}
-
-void k_fileplacesview_on_rect_for_index(void* self, QRect* (*callback)(void*, void*)) {
-    KFilePlacesView_OnRectForIndex((KFilePlacesView*)self, (intptr_t)callback);
-}
-
-void k_fileplacesview_set_position_for_index(void* self, void* position, void* index) {
+void k_fileplacesview_set_position_for_index(void* self, const void* position, const void* index) {
     KFilePlacesView_SetPositionForIndex((KFilePlacesView*)self, (QPoint*)position, (QModelIndex*)index);
 }
 
-void k_fileplacesview_super_set_position_for_index(void* self, void* position, void* index) {
-    KFilePlacesView_SuperSetPositionForIndex((KFilePlacesView*)self, (QPoint*)position, (QModelIndex*)index);
-}
-
-void k_fileplacesview_on_set_position_for_index(void* self, void (*callback)(void*, void*, void*)) {
-    KFilePlacesView_OnSetPositionForIndex((KFilePlacesView*)self, (intptr_t)callback);
-}
-
-int32_t k_fileplacesview_state(void* self) {
+int32_t k_fileplacesview_state(const void* self) {
     return KFilePlacesView_State((KFilePlacesView*)self);
-}
-
-int32_t k_fileplacesview_super_state(void* self) {
-    return KFilePlacesView_SuperState((KFilePlacesView*)self);
-}
-
-void k_fileplacesview_on_state(void* self, int32_t (*callback)()) {
-    KFilePlacesView_OnState((KFilePlacesView*)self, (intptr_t)callback);
 }
 
 void k_fileplacesview_set_state(void* self, int32_t state) {
     KFilePlacesView_SetState((KFilePlacesView*)self, state);
 }
 
-void k_fileplacesview_super_set_state(void* self, int32_t state) {
-    KFilePlacesView_SuperSetState((KFilePlacesView*)self, state);
-}
-
-void k_fileplacesview_on_set_state(void* self, void (*callback)(void*, int32_t)) {
-    KFilePlacesView_OnSetState((KFilePlacesView*)self, (intptr_t)callback);
-}
-
 void k_fileplacesview_schedule_delayed_items_layout(void* self) {
     KFilePlacesView_ScheduleDelayedItemsLayout((KFilePlacesView*)self);
-}
-
-void k_fileplacesview_super_schedule_delayed_items_layout(void* self) {
-    KFilePlacesView_SuperScheduleDelayedItemsLayout((KFilePlacesView*)self);
-}
-
-void k_fileplacesview_on_schedule_delayed_items_layout(void* self, void (*callback)()) {
-    KFilePlacesView_OnScheduleDelayedItemsLayout((KFilePlacesView*)self, (intptr_t)callback);
 }
 
 void k_fileplacesview_execute_delayed_items_layout(void* self) {
     KFilePlacesView_ExecuteDelayedItemsLayout((KFilePlacesView*)self);
 }
 
-void k_fileplacesview_super_execute_delayed_items_layout(void* self) {
-    KFilePlacesView_SuperExecuteDelayedItemsLayout((KFilePlacesView*)self);
-}
-
-void k_fileplacesview_on_execute_delayed_items_layout(void* self, void (*callback)()) {
-    KFilePlacesView_OnExecuteDelayedItemsLayout((KFilePlacesView*)self, (intptr_t)callback);
-}
-
-void k_fileplacesview_set_dirty_region(void* self, void* region) {
+void k_fileplacesview_set_dirty_region(void* self, const void* region) {
     KFilePlacesView_SetDirtyRegion((KFilePlacesView*)self, (QRegion*)region);
-}
-
-void k_fileplacesview_super_set_dirty_region(void* self, void* region) {
-    KFilePlacesView_SuperSetDirtyRegion((KFilePlacesView*)self, (QRegion*)region);
-}
-
-void k_fileplacesview_on_set_dirty_region(void* self, void (*callback)(void*, void*)) {
-    KFilePlacesView_OnSetDirtyRegion((KFilePlacesView*)self, (intptr_t)callback);
 }
 
 void k_fileplacesview_scroll_dirty_region(void* self, int dx, int dy) {
     KFilePlacesView_ScrollDirtyRegion((KFilePlacesView*)self, dx, dy);
 }
 
-void k_fileplacesview_super_scroll_dirty_region(void* self, int dx, int dy) {
-    KFilePlacesView_SuperScrollDirtyRegion((KFilePlacesView*)self, dx, dy);
-}
-
-void k_fileplacesview_on_scroll_dirty_region(void* self, void (*callback)(void*, int, int)) {
-    KFilePlacesView_OnScrollDirtyRegion((KFilePlacesView*)self, (intptr_t)callback);
-}
-
-QPoint* k_fileplacesview_dirty_region_offset(void* self) {
+QPoint* k_fileplacesview_dirty_region_offset(const void* self) {
     return KFilePlacesView_DirtyRegionOffset((KFilePlacesView*)self);
-}
-
-QPoint* k_fileplacesview_super_dirty_region_offset(void* self) {
-    return KFilePlacesView_SuperDirtyRegionOffset((KFilePlacesView*)self);
-}
-
-void k_fileplacesview_on_dirty_region_offset(void* self, QPoint* (*callback)()) {
-    KFilePlacesView_OnDirtyRegionOffset((KFilePlacesView*)self, (intptr_t)callback);
 }
 
 void k_fileplacesview_start_auto_scroll(void* self) {
     KFilePlacesView_StartAutoScroll((KFilePlacesView*)self);
 }
 
-void k_fileplacesview_super_start_auto_scroll(void* self) {
-    KFilePlacesView_SuperStartAutoScroll((KFilePlacesView*)self);
-}
-
-void k_fileplacesview_on_start_auto_scroll(void* self, void (*callback)()) {
-    KFilePlacesView_OnStartAutoScroll((KFilePlacesView*)self, (intptr_t)callback);
-}
-
 void k_fileplacesview_stop_auto_scroll(void* self) {
     KFilePlacesView_StopAutoScroll((KFilePlacesView*)self);
-}
-
-void k_fileplacesview_super_stop_auto_scroll(void* self) {
-    KFilePlacesView_SuperStopAutoScroll((KFilePlacesView*)self);
-}
-
-void k_fileplacesview_on_stop_auto_scroll(void* self, void (*callback)()) {
-    KFilePlacesView_OnStopAutoScroll((KFilePlacesView*)self, (intptr_t)callback);
 }
 
 void k_fileplacesview_do_auto_scroll(void* self) {
     KFilePlacesView_DoAutoScroll((KFilePlacesView*)self);
 }
 
-void k_fileplacesview_super_do_auto_scroll(void* self) {
-    KFilePlacesView_SuperDoAutoScroll((KFilePlacesView*)self);
-}
-
-void k_fileplacesview_on_do_auto_scroll(void* self, void (*callback)()) {
-    KFilePlacesView_OnDoAutoScroll((KFilePlacesView*)self, (intptr_t)callback);
-}
-
-int32_t k_fileplacesview_drop_indicator_position(void* self) {
+int32_t k_fileplacesview_drop_indicator_position(const void* self) {
     return KFilePlacesView_DropIndicatorPosition((KFilePlacesView*)self);
-}
-
-int32_t k_fileplacesview_super_drop_indicator_position(void* self) {
-    return KFilePlacesView_SuperDropIndicatorPosition((KFilePlacesView*)self);
-}
-
-void k_fileplacesview_on_drop_indicator_position(void* self, int32_t (*callback)()) {
-    KFilePlacesView_OnDropIndicatorPosition((KFilePlacesView*)self, (intptr_t)callback);
 }
 
 void k_fileplacesview_set_viewport_margins(void* self, int left, int top, int right, int bottom) {
     KFilePlacesView_SetViewportMargins((KFilePlacesView*)self, left, top, right, bottom);
 }
 
-void k_fileplacesview_super_set_viewport_margins(void* self, int left, int top, int right, int bottom) {
-    KFilePlacesView_SuperSetViewportMargins((KFilePlacesView*)self, left, top, right, bottom);
-}
-
-void k_fileplacesview_on_set_viewport_margins(void* self, void (*callback)(void*, int, int, int, int)) {
-    KFilePlacesView_OnSetViewportMargins((KFilePlacesView*)self, (intptr_t)callback);
-}
-
-QMargins* k_fileplacesview_viewport_margins(void* self) {
+QMargins* k_fileplacesview_viewport_margins(const void* self) {
     return KFilePlacesView_ViewportMargins((KFilePlacesView*)self);
-}
-
-QMargins* k_fileplacesview_super_viewport_margins(void* self) {
-    return KFilePlacesView_SuperViewportMargins((KFilePlacesView*)self);
-}
-
-void k_fileplacesview_on_viewport_margins(void* self, QMargins* (*callback)()) {
-    KFilePlacesView_OnViewportMargins((KFilePlacesView*)self, (intptr_t)callback);
 }
 
 void k_fileplacesview_draw_frame(void* self, void* param1) {
     KFilePlacesView_DrawFrame((KFilePlacesView*)self, (QPainter*)param1);
 }
 
-void k_fileplacesview_super_draw_frame(void* self, void* param1) {
-    KFilePlacesView_SuperDrawFrame((KFilePlacesView*)self, (QPainter*)param1);
-}
-
-void k_fileplacesview_on_draw_frame(void* self, void (*callback)(void*, void*)) {
-    KFilePlacesView_OnDrawFrame((KFilePlacesView*)self, (intptr_t)callback);
-}
-
 void k_fileplacesview_update_micro_focus(void* self) {
     KFilePlacesView_UpdateMicroFocus((KFilePlacesView*)self);
-}
-
-void k_fileplacesview_super_update_micro_focus(void* self) {
-    KFilePlacesView_SuperUpdateMicroFocus((KFilePlacesView*)self);
-}
-
-void k_fileplacesview_on_update_micro_focus(void* self, void (*callback)()) {
-    KFilePlacesView_OnUpdateMicroFocus((KFilePlacesView*)self, (intptr_t)callback);
 }
 
 void k_fileplacesview_create(void* self) {
     KFilePlacesView_Create((KFilePlacesView*)self);
 }
 
-void k_fileplacesview_super_create(void* self) {
-    KFilePlacesView_SuperCreate((KFilePlacesView*)self);
-}
-
-void k_fileplacesview_on_create(void* self, void (*callback)()) {
-    KFilePlacesView_OnCreate((KFilePlacesView*)self, (intptr_t)callback);
-}
-
 void k_fileplacesview_destroy(void* self) {
     KFilePlacesView_Destroy((KFilePlacesView*)self);
-}
-
-void k_fileplacesview_super_destroy(void* self) {
-    KFilePlacesView_SuperDestroy((KFilePlacesView*)self);
-}
-
-void k_fileplacesview_on_destroy(void* self, void (*callback)()) {
-    KFilePlacesView_OnDestroy((KFilePlacesView*)self, (intptr_t)callback);
 }
 
 bool k_fileplacesview_focus_next_child(void* self) {
     return KFilePlacesView_FocusNextChild((KFilePlacesView*)self);
 }
 
-bool k_fileplacesview_super_focus_next_child(void* self) {
-    return KFilePlacesView_SuperFocusNextChild((KFilePlacesView*)self);
-}
-
-void k_fileplacesview_on_focus_next_child(void* self, bool (*callback)()) {
-    KFilePlacesView_OnFocusNextChild((KFilePlacesView*)self, (intptr_t)callback);
-}
-
 bool k_fileplacesview_focus_previous_child(void* self) {
     return KFilePlacesView_FocusPreviousChild((KFilePlacesView*)self);
 }
 
-bool k_fileplacesview_super_focus_previous_child(void* self) {
-    return KFilePlacesView_SuperFocusPreviousChild((KFilePlacesView*)self);
-}
-
-void k_fileplacesview_on_focus_previous_child(void* self, bool (*callback)()) {
-    KFilePlacesView_OnFocusPreviousChild((KFilePlacesView*)self, (intptr_t)callback);
-}
-
-QObject* k_fileplacesview_sender(void* self) {
+QObject* k_fileplacesview_sender(const void* self) {
     return KFilePlacesView_Sender((KFilePlacesView*)self);
 }
 
-QObject* k_fileplacesview_super_sender(void* self) {
-    return KFilePlacesView_SuperSender((KFilePlacesView*)self);
-}
-
-void k_fileplacesview_on_sender(void* self, QObject* (*callback)()) {
-    KFilePlacesView_OnSender((KFilePlacesView*)self, (intptr_t)callback);
-}
-
-int32_t k_fileplacesview_sender_signal_index(void* self) {
+int32_t k_fileplacesview_sender_signal_index(const void* self) {
     return KFilePlacesView_SenderSignalIndex((KFilePlacesView*)self);
 }
 
-int32_t k_fileplacesview_super_sender_signal_index(void* self) {
-    return KFilePlacesView_SuperSenderSignalIndex((KFilePlacesView*)self);
-}
-
-void k_fileplacesview_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    KFilePlacesView_OnSenderSignalIndex((KFilePlacesView*)self, (intptr_t)callback);
-}
-
-int32_t k_fileplacesview_receivers(void* self, const char* signal) {
+int32_t k_fileplacesview_receivers(const void* self, const char* signal) {
     return KFilePlacesView_Receivers((KFilePlacesView*)self, signal);
 }
 
-int32_t k_fileplacesview_super_receivers(void* self, const char* signal) {
-    return KFilePlacesView_SuperReceivers((KFilePlacesView*)self, signal);
-}
-
-void k_fileplacesview_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    KFilePlacesView_OnReceivers((KFilePlacesView*)self, (intptr_t)callback);
-}
-
-bool k_fileplacesview_is_signal_connected(void* self, void* signal) {
+bool k_fileplacesview_is_signal_connected(const void* self, const void* signal) {
     return KFilePlacesView_IsSignalConnected((KFilePlacesView*)self, (QMetaMethod*)signal);
 }
 
-bool k_fileplacesview_super_is_signal_connected(void* self, void* signal) {
-    return KFilePlacesView_SuperIsSignalConnected((KFilePlacesView*)self, (QMetaMethod*)signal);
-}
-
-void k_fileplacesview_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    KFilePlacesView_OnIsSignalConnected((KFilePlacesView*)self, (intptr_t)callback);
-}
-
-double k_fileplacesview_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+double k_fileplacesview_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB) {
     return KFilePlacesView_GetDecodedMetricF((KFilePlacesView*)self, metricA, metricB);
-}
-
-double k_fileplacesview_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KFilePlacesView_SuperGetDecodedMetricF((KFilePlacesView*)self, metricA, metricB);
-}
-
-void k_fileplacesview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {
-    KFilePlacesView_OnGetDecodedMetricF((KFilePlacesView*)self, (intptr_t)callback);
 }
 
 void k_fileplacesview_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

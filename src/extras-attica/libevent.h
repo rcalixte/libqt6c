@@ -20,14 +20,14 @@ Attica__Event* k_attica__event_new();
 ///
 /// @param other Attica__Event*
 ///
-Attica__Event* k_attica__event_new2(void* other);
+Attica__Event* k_attica__event_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-event.html#operator-eq)
 ///
 /// @param self Attica__Event*
 /// @param other Attica__Event*
 ///
-void k_attica__event_operator_assign(void* self, void* other);
+void k_attica__event_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-event.html#setId)
 ///
@@ -40,9 +40,9 @@ void k_attica__event_set_id(void* self, const char* id);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Event*
+/// @param self const Attica__Event*
 ///
-const char* k_attica__event_id(void* self);
+const char* k_attica__event_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-event.html#setName)
 ///
@@ -55,9 +55,9 @@ void k_attica__event_set_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Event*
+/// @param self const Attica__Event*
 ///
-const char* k_attica__event_name(void* self);
+const char* k_attica__event_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-event.html#setDescription)
 ///
@@ -70,9 +70,9 @@ void k_attica__event_set_description(void* self, const char* description);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Event*
+/// @param self const Attica__Event*
 ///
-const char* k_attica__event_description(void* self);
+const char* k_attica__event_description(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-event.html#setUser)
 ///
@@ -85,35 +85,35 @@ void k_attica__event_set_user(void* self, const char* user);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Event*
+/// @param self const Attica__Event*
 ///
-const char* k_attica__event_user(void* self);
+const char* k_attica__event_user(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-event.html#setStartDate)
 ///
 /// @param self Attica__Event*
 /// @param startDate QDate*
 ///
-void k_attica__event_set_start_date(void* self, void* startDate);
+void k_attica__event_set_start_date(void* self, const void* startDate);
 
 /// [Upstream resources](https://api.kde.org/attica-event.html#startDate)
 ///
-/// @param self Attica__Event*
+/// @param self const Attica__Event*
 ///
-QDate* k_attica__event_start_date(void* self);
+QDate* k_attica__event_start_date(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-event.html#setEndDate)
 ///
 /// @param self Attica__Event*
 /// @param endDate QDate*
 ///
-void k_attica__event_set_end_date(void* self, void* endDate);
+void k_attica__event_set_end_date(void* self, const void* endDate);
 
 /// [Upstream resources](https://api.kde.org/attica-event.html#endDate)
 ///
-/// @param self Attica__Event*
+/// @param self const Attica__Event*
 ///
-QDate* k_attica__event_end_date(void* self);
+QDate* k_attica__event_end_date(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-event.html#setLatitude)
 ///
@@ -124,9 +124,9 @@ void k_attica__event_set_latitude(void* self, double latitude);
 
 /// [Upstream resources](https://api.kde.org/attica-event.html#latitude)
 ///
-/// @param self Attica__Event*
+/// @param self const Attica__Event*
 ///
-double k_attica__event_latitude(void* self);
+double k_attica__event_latitude(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-event.html#setLongitude)
 ///
@@ -137,22 +137,22 @@ void k_attica__event_set_longitude(void* self, double longitude);
 
 /// [Upstream resources](https://api.kde.org/attica-event.html#longitude)
 ///
-/// @param self Attica__Event*
+/// @param self const Attica__Event*
 ///
-double k_attica__event_longitude(void* self);
+double k_attica__event_longitude(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-event.html#setHomepage)
 ///
 /// @param self Attica__Event*
 /// @param homepage QUrl*
 ///
-void k_attica__event_set_homepage(void* self, void* homepage);
+void k_attica__event_set_homepage(void* self, const void* homepage);
 
 /// [Upstream resources](https://api.kde.org/attica-event.html#homepage)
 ///
-/// @param self Attica__Event*
+/// @param self const Attica__Event*
 ///
-QUrl* k_attica__event_homepage(void* self);
+QUrl* k_attica__event_homepage(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-event.html#setCountry)
 ///
@@ -165,9 +165,9 @@ void k_attica__event_set_country(void* self, const char* country);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Event*
+/// @param self const Attica__Event*
 ///
-const char* k_attica__event_country(void* self);
+const char* k_attica__event_country(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-event.html#setCity)
 ///
@@ -180,9 +180,9 @@ void k_attica__event_set_city(void* self, const char* city);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Event*
+/// @param self const Attica__Event*
 ///
-const char* k_attica__event_city(void* self);
+const char* k_attica__event_city(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-event.html#addExtendedAttribute)
 ///
@@ -196,10 +196,10 @@ void k_attica__event_add_extended_attribute(void* self, const char* key, const c
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Event*
+/// @param self const Attica__Event*
 /// @param key const char*
 ///
-const char* k_attica__event_extended_attribute(void* self, const char* key);
+const char* k_attica__event_extended_attribute(const void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/attica-event.html#extendedAttributes)
 ///
@@ -215,17 +215,17 @@ const char* k_attica__event_extended_attribute(void* self, const char* key);
 /// free(map.values);
 /// ```
 ///
-/// @param self Attica__Event*
+/// @param self const Attica__Event*
 ///
 /// @return libqt_map of const char* to const char*
 ///
-libqt_map k_attica__event_extended_attributes(void* self);
+libqt_map k_attica__event_extended_attributes(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-event.html#isValid)
 ///
-/// @param self Attica__Event*
+/// @param self const Attica__Event*
 ///
-bool k_attica__event_is_valid(void* self);
+bool k_attica__event_is_valid(const void* self);
 
 /// Delete this object from C++ memory.
 ///

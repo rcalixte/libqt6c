@@ -10,24 +10,12 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractundoitem.html)
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstractundoitem.html#undo)
-///
-/// @param self QAbstractUndoItem*
-///
-void q_abstractundoitem_undo(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstractundoitem.html#redo)
-///
-/// @param self QAbstractUndoItem*
-///
-void q_abstractundoitem_redo(void* self);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractundoitem.html#operator-eq)
 ///
 /// @param self QAbstractUndoItem*
 /// @param param1 QAbstractUndoItem*
 ///
-void q_abstractundoitem_operator_assign(void* self, void* param1);
+void q_abstractundoitem_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractundoitem.html#dtor.QAbstractUndoItem)
 ///
@@ -70,26 +58,26 @@ QTextDocument* q_textdocument_new4(const char* text, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-const QMetaObject* q_textdocument_meta_object(void* self);
+const QMetaObject* q_textdocument_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QTextDocument*
-/// @param callback const QMetaObject* func()
+/// @param self const QTextDocument*
+/// @param callback const QMetaObject* func(const QTextDocument* self)
 ///
-void q_textdocument_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_textdocument_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-const QMetaObject* q_textdocument_super_meta_object(void* self);
+const QMetaObject* q_textdocument_super_meta_object(const void* self);
 
 /// @param self QTextDocument*
 /// @param param1 const char*
@@ -143,15 +131,15 @@ const char* q_textdocument_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#clone)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-QTextDocument* q_textdocument_clone(void* self);
+QTextDocument* q_textdocument_clone(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#isEmpty)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-bool q_textdocument_is_empty(void* self);
+bool q_textdocument_is_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#clear)
 ///
@@ -164,9 +152,9 @@ void q_textdocument_clear(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTextDocument*
-/// @param callback void func()
+/// @param callback void func(QTextDocument* self)
 ///
-void q_textdocument_on_clear(void* self, void (*callback)());
+void q_textdocument_on_clear(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#clear)
 ///
@@ -185,39 +173,39 @@ void q_textdocument_set_undo_redo_enabled(void* self, bool enable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#isUndoRedoEnabled)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-bool q_textdocument_is_undo_redo_enabled(void* self);
+bool q_textdocument_is_undo_redo_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#isUndoAvailable)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-bool q_textdocument_is_undo_available(void* self);
+bool q_textdocument_is_undo_available(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#isRedoAvailable)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-bool q_textdocument_is_redo_available(void* self);
+bool q_textdocument_is_redo_available(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#availableUndoSteps)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-int32_t q_textdocument_available_undo_steps(void* self);
+int32_t q_textdocument_available_undo_steps(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#availableRedoSteps)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-int32_t q_textdocument_available_redo_steps(void* self);
+int32_t q_textdocument_available_redo_steps(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#revision)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-int32_t q_textdocument_revision(void* self);
+int32_t q_textdocument_revision(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#setDocumentLayout)
 ///
@@ -228,9 +216,9 @@ void q_textdocument_set_document_layout(void* self, void* layout);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#documentLayout)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-QAbstractTextDocumentLayout* q_textdocument_document_layout(void* self);
+QAbstractTextDocumentLayout* q_textdocument_document_layout(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#setMetaInformation)
 ///
@@ -244,18 +232,18 @@ void q_textdocument_set_meta_information(void* self, int32_t info, const char* p
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param info enum QTextDocument__MetaInformation
 ///
-const char* q_textdocument_meta_information(void* self, int32_t info);
+const char* q_textdocument_meta_information(const void* self, int32_t info);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#toHtml)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-const char* q_textdocument_to_html(void* self);
+const char* q_textdocument_to_html(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#setHtml)
 ///
@@ -268,9 +256,9 @@ void q_textdocument_set_html(void* self, const char* html);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-const char* q_textdocument_to_markdown(void* self);
+const char* q_textdocument_to_markdown(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#setMarkdown)
 ///
@@ -283,17 +271,17 @@ void q_textdocument_set_markdown(void* self, const char* markdown);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-const char* q_textdocument_to_raw_text(void* self);
+const char* q_textdocument_to_raw_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#toPlainText)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-const char* q_textdocument_to_plain_text(void* self);
+const char* q_textdocument_to_plain_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#setPlainText)
 ///
@@ -304,138 +292,138 @@ void q_textdocument_set_plain_text(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#characterAt)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param pos int
 ///
-QChar* q_textdocument_character_at(void* self, int pos);
+QChar* q_textdocument_character_at(const void* self, int pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#find)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param subString const char*
 ///
-QTextCursor* q_textdocument_find(void* self, const char* subString);
+QTextCursor* q_textdocument_find(const void* self, const char* subString);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#find)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param subString const char*
 /// @param cursor QTextCursor*
 ///
-QTextCursor* q_textdocument_find2(void* self, const char* subString, void* cursor);
+QTextCursor* q_textdocument_find2(const void* self, const char* subString, const void* cursor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#find)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param expr QRegularExpression*
 ///
-QTextCursor* q_textdocument_find3(void* self, void* expr);
+QTextCursor* q_textdocument_find3(const void* self, const void* expr);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#find)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param expr QRegularExpression*
 /// @param cursor QTextCursor*
 ///
-QTextCursor* q_textdocument_find4(void* self, void* expr, void* cursor);
+QTextCursor* q_textdocument_find4(const void* self, const void* expr, const void* cursor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#frameAt)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param pos int
 ///
-QTextFrame* q_textdocument_frame_at(void* self, int pos);
+QTextFrame* q_textdocument_frame_at(const void* self, int pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#rootFrame)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-QTextFrame* q_textdocument_root_frame(void* self);
+QTextFrame* q_textdocument_root_frame(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#object)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param objectIndex int
 ///
-QTextObject* q_textdocument_object(void* self, int objectIndex);
+QTextObject* q_textdocument_object(const void* self, int objectIndex);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#objectForFormat)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param param1 QTextFormat*
 ///
-QTextObject* q_textdocument_object_for_format(void* self, void* param1);
+QTextObject* q_textdocument_object_for_format(const void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#findBlock)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param pos int
 ///
-QTextBlock* q_textdocument_find_block(void* self, int pos);
+QTextBlock* q_textdocument_find_block(const void* self, int pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#findBlockByNumber)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param blockNumber int
 ///
-QTextBlock* q_textdocument_find_block_by_number(void* self, int blockNumber);
+QTextBlock* q_textdocument_find_block_by_number(const void* self, int blockNumber);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#findBlockByLineNumber)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param blockNumber int
 ///
-QTextBlock* q_textdocument_find_block_by_line_number(void* self, int blockNumber);
+QTextBlock* q_textdocument_find_block_by_line_number(const void* self, int blockNumber);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#begin)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-QTextBlock* q_textdocument_begin(void* self);
+QTextBlock* q_textdocument_begin(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#end)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-QTextBlock* q_textdocument_end(void* self);
+QTextBlock* q_textdocument_end(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#firstBlock)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-QTextBlock* q_textdocument_first_block(void* self);
+QTextBlock* q_textdocument_first_block(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#lastBlock)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-QTextBlock* q_textdocument_last_block(void* self);
+QTextBlock* q_textdocument_last_block(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#setPageSize)
 ///
 /// @param self QTextDocument*
 /// @param size QSizeF*
 ///
-void q_textdocument_set_page_size(void* self, void* size);
+void q_textdocument_set_page_size(void* self, const void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#pageSize)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-QSizeF* q_textdocument_page_size(void* self);
+QSizeF* q_textdocument_page_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#setDefaultFont)
 ///
 /// @param self QTextDocument*
 /// @param font QFont*
 ///
-void q_textdocument_set_default_font(void* self, void* font);
+void q_textdocument_set_default_font(void* self, const void* font);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#defaultFont)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-QFont* q_textdocument_default_font(void* self);
+QFont* q_textdocument_default_font(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#setSuperScriptBaseline)
 ///
@@ -446,9 +434,9 @@ void q_textdocument_set_super_script_baseline(void* self, double baseline);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#superScriptBaseline)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-double q_textdocument_super_script_baseline(void* self);
+double q_textdocument_super_script_baseline(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#setSubScriptBaseline)
 ///
@@ -459,9 +447,9 @@ void q_textdocument_set_sub_script_baseline(void* self, double baseline);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#subScriptBaseline)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-double q_textdocument_sub_script_baseline(void* self);
+double q_textdocument_sub_script_baseline(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#setBaselineOffset)
 ///
@@ -472,36 +460,36 @@ void q_textdocument_set_baseline_offset(void* self, double baseline);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#baselineOffset)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-double q_textdocument_baseline_offset(void* self);
+double q_textdocument_baseline_offset(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#pageCount)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-int32_t q_textdocument_page_count(void* self);
+int32_t q_textdocument_page_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#isModified)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-bool q_textdocument_is_modified(void* self);
+bool q_textdocument_is_modified(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#print)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param printer QPagedPaintDevice*
 ///
-void q_textdocument_print(void* self, void* printer);
+void q_textdocument_print(const void* self, void* printer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#resource)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param type int
 /// @param name QUrl*
 ///
-QVariant* q_textdocument_resource(void* self, int type, void* name);
+QVariant* q_textdocument_resource(const void* self, int type, const void* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#addResource)
 ///
@@ -510,28 +498,28 @@ QVariant* q_textdocument_resource(void* self, int type, void* name);
 /// @param name QUrl*
 /// @param resource QVariant*
 ///
-void q_textdocument_add_resource(void* self, int type, void* name, void* resource);
+void q_textdocument_add_resource(void* self, int type, const void* name, const void* resource);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#setResourceProvider)
 ///
 /// @param self QTextDocument*
 /// @param provider QVariant* func(QUrl* param1)
 ///
-void q_textdocument_set_resource_provider(void* self, QVariant* (*provider)(void* funcparam1));
+void q_textdocument_set_resource_provider(void* self, QVariant* (*provider)(const void* funcparam1));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#setDefaultResourceProvider)
 ///
 /// @param provider QVariant* func(QUrl* param1)
 ///
-void q_textdocument_set_default_resource_provider(QVariant* (*provider)(void* funcparam1));
+void q_textdocument_set_default_resource_provider(QVariant* (*provider)(const void* funcparam1));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#allFormats)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
 /// @return libqt_list of QTextFormat*
 ///
-libqt_list q_textdocument_all_formats(void* self);
+libqt_list q_textdocument_all_formats(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#markContentsDirty)
 ///
@@ -550,9 +538,9 @@ void q_textdocument_set_use_design_metrics(void* self, bool b);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#useDesignMetrics)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-bool q_textdocument_use_design_metrics(void* self);
+bool q_textdocument_use_design_metrics(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#setLayoutEnabled)
 ///
@@ -563,9 +551,9 @@ void q_textdocument_set_layout_enabled(void* self, bool b);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#isLayoutEnabled)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-bool q_textdocument_is_layout_enabled(void* self);
+bool q_textdocument_is_layout_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#drawContents)
 ///
@@ -583,21 +571,21 @@ void q_textdocument_set_text_width(void* self, double width);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#textWidth)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-double q_textdocument_text_width(void* self);
+double q_textdocument_text_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#idealWidth)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-double q_textdocument_ideal_width(void* self);
+double q_textdocument_ideal_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#indentWidth)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-double q_textdocument_indent_width(void* self);
+double q_textdocument_indent_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#setIndentWidth)
 ///
@@ -608,9 +596,9 @@ void q_textdocument_set_indent_width(void* self, double width);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#documentMargin)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-double q_textdocument_document_margin(void* self);
+double q_textdocument_document_margin(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#setDocumentMargin)
 ///
@@ -627,27 +615,27 @@ void q_textdocument_adjust_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#size)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-QSizeF* q_textdocument_size(void* self);
+QSizeF* q_textdocument_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#blockCount)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-int32_t q_textdocument_block_count(void* self);
+int32_t q_textdocument_block_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#lineCount)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-int32_t q_textdocument_line_count(void* self);
+int32_t q_textdocument_line_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#characterCount)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-int32_t q_textdocument_character_count(void* self);
+int32_t q_textdocument_character_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#setDefaultStyleSheet)
 ///
@@ -660,9 +648,9 @@ void q_textdocument_set_default_style_sheet(void* self, const char* sheet);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-const char* q_textdocument_default_style_sheet(void* self);
+const char* q_textdocument_default_style_sheet(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#undo)
 ///
@@ -686,9 +674,9 @@ void q_textdocument_clear_undo_redo_stacks(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#maximumBlockCount)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-int32_t q_textdocument_maximum_block_count(void* self);
+int32_t q_textdocument_maximum_block_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#setMaximumBlockCount)
 ///
@@ -699,37 +687,37 @@ void q_textdocument_set_maximum_block_count(void* self, int maximum);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#defaultTextOption)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-QTextOption* q_textdocument_default_text_option(void* self);
+QTextOption* q_textdocument_default_text_option(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#setDefaultTextOption)
 ///
 /// @param self QTextDocument*
 /// @param option QTextOption*
 ///
-void q_textdocument_set_default_text_option(void* self, void* option);
+void q_textdocument_set_default_text_option(void* self, const void* option);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#baseUrl)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-QUrl* q_textdocument_base_url(void* self);
+QUrl* q_textdocument_base_url(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#setBaseUrl)
 ///
 /// @param self QTextDocument*
 /// @param url QUrl*
 ///
-void q_textdocument_set_base_url(void* self, void* url);
+void q_textdocument_set_base_url(void* self, const void* url);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#defaultCursorMoveStyle)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
 /// @return enum Qt__CursorMoveStyle
 ///
-int32_t q_textdocument_default_cursor_move_style(void* self);
+int32_t q_textdocument_default_cursor_move_style(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#setDefaultCursorMoveStyle)
 ///
@@ -827,14 +815,14 @@ void q_textdocument_on_modification_changed(void* self, void (*callback)(void*, 
 /// @param self QTextDocument*
 /// @param cursor QTextCursor*
 ///
-void q_textdocument_cursor_position_changed(void* self, void* cursor);
+void q_textdocument_cursor_position_changed(void* self, const void* cursor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#cursorPositionChanged)
 ///
 /// @param self QTextDocument*
 /// @param callback void func(QTextDocument* self, QTextCursor* cursor)
 ///
-void q_textdocument_on_cursor_position_changed(void* self, void (*callback)(void*, void*));
+void q_textdocument_on_cursor_position_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#blockCountChanged)
 ///
@@ -855,14 +843,14 @@ void q_textdocument_on_block_count_changed(void* self, void (*callback)(void*, i
 /// @param self QTextDocument*
 /// @param url QUrl*
 ///
-void q_textdocument_base_url_changed(void* self, void* url);
+void q_textdocument_base_url_changed(void* self, const void* url);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#baseUrlChanged)
 ///
 /// @param self QTextDocument*
 /// @param callback void func(QTextDocument* self, QUrl* url)
 ///
-void q_textdocument_on_base_url_changed(void* self, void (*callback)(void*, void*));
+void q_textdocument_on_base_url_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#documentLayoutChanged)
 ///
@@ -907,7 +895,7 @@ void q_textdocument_set_modified(void* self);
 /// @param self QTextDocument*
 /// @param f QTextFormat*
 ///
-QTextObject* q_textdocument_create_object(void* self, void* f);
+QTextObject* q_textdocument_create_object(void* self, const void* f);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#createObject)
 ///
@@ -916,7 +904,7 @@ QTextObject* q_textdocument_create_object(void* self, void* f);
 /// @param self QTextDocument*
 /// @param callback QTextObject* func(QTextDocument* self, QTextFormat* f)
 ///
-void q_textdocument_on_create_object(void* self, QTextObject* (*callback)(void*, void*));
+void q_textdocument_on_create_object(void* self, QTextObject* (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#createObject)
 ///
@@ -925,7 +913,7 @@ void q_textdocument_on_create_object(void* self, QTextObject* (*callback)(void*,
 /// @param self QTextDocument*
 /// @param f QTextFormat*
 ///
-QTextObject* q_textdocument_super_create_object(void* self, void* f);
+QTextObject* q_textdocument_super_create_object(void* self, const void* f);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#loadResource)
 ///
@@ -933,7 +921,7 @@ QTextObject* q_textdocument_super_create_object(void* self, void* f);
 /// @param type int
 /// @param name QUrl*
 ///
-QVariant* q_textdocument_load_resource(void* self, int type, void* name);
+QVariant* q_textdocument_load_resource(void* self, int type, const void* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#loadResource)
 ///
@@ -944,7 +932,7 @@ QVariant* q_textdocument_load_resource(void* self, int type, void* name);
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_textdocument_on_load_resource(void* self, QVariant* (*callback)(void*, int, void*));
+void q_textdocument_on_load_resource(void* self, QVariant* (*callback)(void*, int, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#loadResource)
 ///
@@ -954,7 +942,7 @@ void q_textdocument_on_load_resource(void* self, QVariant* (*callback)(void*, in
 /// @param type int
 /// @param name QUrl*
 ///
-QVariant* q_textdocument_super_load_resource(void* self, int type, void* name);
+QVariant* q_textdocument_super_load_resource(void* self, int type, const void* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -977,19 +965,19 @@ const char* q_textdocument_tr3(const char* s, const char* c, int n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#clone)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param parent QObject*
 ///
-QTextDocument* q_textdocument_clone1(void* self, void* parent);
+QTextDocument* q_textdocument_clone1(const void* self, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#toMarkdown)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param features flag of enum QTextDocument__MarkdownFeature
 ///
-const char* q_textdocument_to_markdown1(void* self, int32_t features);
+const char* q_textdocument_to_markdown1(const void* self, int32_t features);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#setMarkdown)
 ///
@@ -1001,55 +989,55 @@ void q_textdocument_set_markdown2(void* self, const char* markdown, int32_t feat
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#find)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param subString const char*
 /// @param from int
 ///
-QTextCursor* q_textdocument_find22(void* self, const char* subString, int from);
+QTextCursor* q_textdocument_find22(const void* self, const char* subString, int from);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#find)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param subString const char*
 /// @param from int
 /// @param options flag of enum QTextDocument__FindFlag
 ///
-QTextCursor* q_textdocument_find32(void* self, const char* subString, int from, int32_t options);
+QTextCursor* q_textdocument_find32(const void* self, const char* subString, int from, int32_t options);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#find)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param subString const char*
 /// @param cursor QTextCursor*
 /// @param options flag of enum QTextDocument__FindFlag
 ///
-QTextCursor* q_textdocument_find33(void* self, const char* subString, void* cursor, int32_t options);
+QTextCursor* q_textdocument_find33(const void* self, const char* subString, const void* cursor, int32_t options);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#find)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param expr QRegularExpression*
 /// @param from int
 ///
-QTextCursor* q_textdocument_find23(void* self, void* expr, int from);
+QTextCursor* q_textdocument_find23(const void* self, const void* expr, int from);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#find)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param expr QRegularExpression*
 /// @param from int
 /// @param options flag of enum QTextDocument__FindFlag
 ///
-QTextCursor* q_textdocument_find34(void* self, void* expr, int from, int32_t options);
+QTextCursor* q_textdocument_find34(const void* self, const void* expr, int from, int32_t options);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#find)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param expr QRegularExpression*
 /// @param cursor QTextCursor*
 /// @param options flag of enum QTextDocument__FindFlag
 ///
-QTextCursor* q_textdocument_find35(void* self, void* expr, void* cursor, int32_t options);
+QTextCursor* q_textdocument_find35(const void* self, const void* expr, const void* cursor, int32_t options);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#drawContents)
 ///
@@ -1057,7 +1045,7 @@ QTextCursor* q_textdocument_find35(void* self, void* expr, void* cursor, int32_t
 /// @param painter QPainter*
 /// @param rect QRectF*
 ///
-void q_textdocument_draw_contents2(void* self, void* painter, void* rect);
+void q_textdocument_draw_contents2(void* self, void* painter, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#clearUndoRedoStacks)
 ///
@@ -1079,9 +1067,9 @@ void q_textdocument_set_modified1(void* self, bool m);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-const char* q_textdocument_object_name(void* self);
+const char* q_textdocument_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1096,33 +1084,33 @@ void q_textdocument_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-bool q_textdocument_is_widget_type(void* self);
+bool q_textdocument_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-bool q_textdocument_is_window_type(void* self);
+bool q_textdocument_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-bool q_textdocument_is_quick_item_type(void* self);
+bool q_textdocument_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-bool q_textdocument_signals_blocked(void* self);
+bool q_textdocument_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1137,9 +1125,9 @@ bool q_textdocument_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-QThread* q_textdocument_thread(void* self);
+QThread* q_textdocument_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1190,11 +1178,11 @@ void q_textdocument_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_textdocument_children(void* self);
+libqt_list q_textdocument_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1232,7 +1220,7 @@ void q_textdocument_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_textdocument_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_textdocument_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1243,18 +1231,18 @@ QMetaObject__Connection* q_textdocument_connect(void* sender, const char* signal
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_textdocument_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_textdocument_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_textdocument_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_textdocument_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1265,7 +1253,7 @@ QMetaObject__Connection* q_textdocument_connect3(void* self, void* sender, const
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_textdocument_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_textdocument_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1276,24 +1264,24 @@ bool q_textdocument_disconnect(void* sender, const char* signal, void* receiver,
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_textdocument_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_textdocument_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-bool q_textdocument_disconnect3(void* self);
+bool q_textdocument_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param receiver QObject*
 ///
-bool q_textdocument_disconnect4(void* self, void* receiver);
+bool q_textdocument_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1301,23 +1289,23 @@ bool q_textdocument_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_textdocument_disconnect5(void* param1);
+bool q_textdocument_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-void q_textdocument_dump_object_tree(void* self);
+void q_textdocument_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-void q_textdocument_dump_object_info(void* self);
+void q_textdocument_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1327,16 +1315,16 @@ void q_textdocument_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_textdocument_set_property(void* self, const char* name, void* value);
+bool q_textdocument_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param name const char*
 ///
-QVariant* q_textdocument_property(void* self, const char* name);
+QVariant* q_textdocument_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1344,9 +1332,9 @@ QVariant* q_textdocument_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-const char** q_textdocument_dynamic_property_names(void* self);
+const char** q_textdocument_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1360,9 +1348,9 @@ QBindingStorage* q_textdocument_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-const QBindingStorage* q_textdocument_binding_storage2(void* self);
+const QBindingStorage* q_textdocument_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1385,18 +1373,18 @@ void q_textdocument_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-QObject* q_textdocument_parent(void* self);
+QObject* q_textdocument_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param classname const char*
 ///
-bool q_textdocument_inherits(void* self, const char* classname);
+bool q_textdocument_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1436,7 +1424,7 @@ int32_t q_textdocument_start_timer23(void* self, int64_t time, int32_t timerType
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_textdocument_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_textdocument_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1448,59 +1436,59 @@ QMetaObject__Connection* q_textdocument_connect5(void* sender, const char* signa
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_textdocument_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_textdocument_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_textdocument_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_textdocument_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param signal const char*
 ///
-bool q_textdocument_disconnect1(void* self, const char* signal);
+bool q_textdocument_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTextDocument*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_textdocument_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_textdocument_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_textdocument_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_textdocument_disconnect23(void* self, void* receiver, const char* member);
+bool q_textdocument_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QTextDocument*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_textdocument_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1696,7 +1684,7 @@ void q_textdocument_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QTextDocument*
 /// @param signal QMetaMethod*
 ///
-void q_textdocument_connect_notify(void* self, void* signal);
+void q_textdocument_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1707,7 +1695,7 @@ void q_textdocument_connect_notify(void* self, void* signal);
 /// @param self QTextDocument*
 /// @param signal QMetaMethod*
 ///
-void q_textdocument_super_connect_notify(void* self, void* signal);
+void q_textdocument_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1718,7 +1706,7 @@ void q_textdocument_super_connect_notify(void* self, void* signal);
 /// @param self QTextDocument*
 /// @param callback void func(QTextDocument* self, QMetaMethod* signal)
 ///
-void q_textdocument_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_textdocument_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1729,7 +1717,7 @@ void q_textdocument_on_connect_notify(void* self, void (*callback)(void*, void*)
 /// @param self QTextDocument*
 /// @param signal QMetaMethod*
 ///
-void q_textdocument_disconnect_notify(void* self, void* signal);
+void q_textdocument_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1740,7 +1728,7 @@ void q_textdocument_disconnect_notify(void* self, void* signal);
 /// @param self QTextDocument*
 /// @param signal QMetaMethod*
 ///
-void q_textdocument_super_disconnect_notify(void* self, void* signal);
+void q_textdocument_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1751,7 +1739,7 @@ void q_textdocument_super_disconnect_notify(void* self, void* signal);
 /// @param self QTextDocument*
 /// @param callback void func(QTextDocument* self, QMetaMethod* signal)
 ///
-void q_textdocument_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_textdocument_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1759,9 +1747,9 @@ void q_textdocument_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-QObject* q_textdocument_sender(void* self);
+QObject* q_textdocument_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1769,9 +1757,9 @@ QObject* q_textdocument_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-QObject* q_textdocument_super_sender(void* self);
+QObject* q_textdocument_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1779,10 +1767,10 @@ QObject* q_textdocument_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTextDocument*
-/// @param callback QObject* func()
+/// @param self const QTextDocument*
+/// @param callback QObject* func(QTextDocument* self)
 ///
-void q_textdocument_on_sender(void* self, QObject* (*callback)());
+void q_textdocument_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1790,9 +1778,9 @@ void q_textdocument_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-int32_t q_textdocument_sender_signal_index(void* self);
+int32_t q_textdocument_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1800,9 +1788,9 @@ int32_t q_textdocument_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 ///
-int32_t q_textdocument_super_sender_signal_index(void* self);
+int32_t q_textdocument_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1810,10 +1798,10 @@ int32_t q_textdocument_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTextDocument*
-/// @param callback int32_t func()
+/// @param self const QTextDocument*
+/// @param callback int32_t func(QTextDocument* self)
 ///
-void q_textdocument_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_textdocument_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1821,10 +1809,10 @@ void q_textdocument_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param signal const char*
 ///
-int32_t q_textdocument_receivers(void* self, const char* signal);
+int32_t q_textdocument_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1832,10 +1820,10 @@ int32_t q_textdocument_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param signal const char*
 ///
-int32_t q_textdocument_super_receivers(void* self, const char* signal);
+int32_t q_textdocument_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1843,10 +1831,10 @@ int32_t q_textdocument_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param callback int32_t func(QTextDocument* self, const char* signal)
 ///
-void q_textdocument_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_textdocument_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1854,10 +1842,10 @@ void q_textdocument_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param signal QMetaMethod*
 ///
-bool q_textdocument_is_signal_connected(void* self, void* signal);
+bool q_textdocument_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1865,10 +1853,10 @@ bool q_textdocument_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param signal QMetaMethod*
 ///
-bool q_textdocument_super_is_signal_connected(void* self, void* signal);
+bool q_textdocument_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1876,10 +1864,10 @@ bool q_textdocument_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTextDocument*
+/// @param self const QTextDocument*
 /// @param callback bool func(QTextDocument* self, QMetaMethod* signal)
 ///
-void q_textdocument_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_textdocument_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

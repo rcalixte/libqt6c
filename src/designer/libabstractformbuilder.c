@@ -14,11 +14,11 @@ QAbstractFormBuilder* q_abstractformbuilder_new() {
     return QAbstractFormBuilder_New();
 }
 
-QDir* q_abstractformbuilder_working_directory(void* self) {
+QDir* q_abstractformbuilder_working_directory(const void* self) {
     return QAbstractFormBuilder_WorkingDirectory((QAbstractFormBuilder*)self);
 }
 
-void q_abstractformbuilder_set_working_directory(void* self, void* directory) {
+void q_abstractformbuilder_set_working_directory(void* self, const void* directory) {
     QAbstractFormBuilder_SetWorkingDirectory((QAbstractFormBuilder*)self, (QDir*)directory);
 }
 
@@ -46,7 +46,7 @@ void q_abstractformbuilder_super_save(void* self, void* dev, void* widget) {
     QAbstractFormBuilder_SuperSave((QAbstractFormBuilder*)self, (QIODevice*)dev, (QWidget*)widget);
 }
 
-const char* q_abstractformbuilder_error_string(void* self) {
+const char* q_abstractformbuilder_error_string(const void* self) {
     libqt_string _str = QAbstractFormBuilder_ErrorString((QAbstractFormBuilder*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -65,16 +65,8 @@ void q_abstractformbuilder_super_add_menu_action(void* self, void* action) {
     QAbstractFormBuilder_SuperAddMenuAction((QAbstractFormBuilder*)self, (QAction*)action);
 }
 
-bool q_abstractformbuilder_apply_property_internally(void* self, void* o, const char* propertyName, void* value) {
+bool q_abstractformbuilder_apply_property_internally(void* self, void* o, const char* propertyName, const void* value) {
     return QAbstractFormBuilder_ApplyPropertyInternally((QAbstractFormBuilder*)self, (QObject*)o, qstring(propertyName), (QVariant*)value);
-}
-
-void q_abstractformbuilder_on_apply_property_internally(void* self, bool (*callback)(void*, void*, const char*, void*)) {
-    QAbstractFormBuilder_OnApplyPropertyInternally((QAbstractFormBuilder*)self, (intptr_t)callback);
-}
-
-bool q_abstractformbuilder_super_apply_property_internally(void* self, void* o, const char* propertyName, void* value) {
-    return QAbstractFormBuilder_SuperApplyPropertyInternally((QAbstractFormBuilder*)self, (QObject*)o, qstring(propertyName), (QVariant*)value);
 }
 
 QWidget* q_abstractformbuilder_create_widget(void* self, const char* widgetName, void* parentWidget, const char* name) {
@@ -125,15 +117,15 @@ QActionGroup* q_abstractformbuilder_super_create_action_group(void* self, void* 
     return QAbstractFormBuilder_SuperCreateActionGroup((QAbstractFormBuilder*)self, (QObject*)parent, qstring(name));
 }
 
-bool q_abstractformbuilder_check_property(void* self, void* obj, const char* prop) {
+bool q_abstractformbuilder_check_property(const void* self, void* obj, const char* prop) {
     return QAbstractFormBuilder_CheckProperty((QAbstractFormBuilder*)self, (QObject*)obj, qstring(prop));
 }
 
-void q_abstractformbuilder_on_check_property(void* self, bool (*callback)(void*, void*, const char*)) {
+void q_abstractformbuilder_on_check_property(const void* self, bool (*callback)(const void*, void*, const char*)) {
     QAbstractFormBuilder_OnCheckProperty((QAbstractFormBuilder*)self, (intptr_t)callback);
 }
 
-bool q_abstractformbuilder_super_check_property(void* self, void* obj, const char* prop) {
+bool q_abstractformbuilder_super_check_property(const void* self, void* obj, const char* prop) {
     return QAbstractFormBuilder_SuperCheckProperty((QAbstractFormBuilder*)self, (QObject*)obj, qstring(prop));
 }
 
@@ -141,24 +133,8 @@ void q_abstractformbuilder_reset(void* self) {
     QAbstractFormBuilder_Reset((QAbstractFormBuilder*)self);
 }
 
-void q_abstractformbuilder_on_reset(void* self, void (*callback)()) {
-    QAbstractFormBuilder_OnReset((QAbstractFormBuilder*)self, (intptr_t)callback);
-}
-
-void q_abstractformbuilder_super_reset(void* self) {
-    QAbstractFormBuilder_SuperReset((QAbstractFormBuilder*)self);
-}
-
 QMetaEnum* q_abstractformbuilder_tool_bar_area_meta_enum(void* self) {
     return QAbstractFormBuilder_ToolBarAreaMetaEnum((QAbstractFormBuilder*)self);
-}
-
-void q_abstractformbuilder_on_tool_bar_area_meta_enum(void* self, QMetaEnum* (*callback)()) {
-    QAbstractFormBuilder_OnToolBarAreaMetaEnum((QAbstractFormBuilder*)self, (intptr_t)callback);
-}
-
-QMetaEnum* q_abstractformbuilder_super_tool_bar_area_meta_enum(void* self) {
-    return QAbstractFormBuilder_SuperToolBarAreaMetaEnum((QAbstractFormBuilder*)self);
 }
 
 void q_abstractformbuilder_delete(void* self) {

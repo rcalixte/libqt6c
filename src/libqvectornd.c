@@ -5,7 +5,7 @@
 #include "libqvectornd.hpp"
 #include "libqvectornd.h"
 
-QVector2D* q_vector2d_new(void* other) {
+QVector2D* q_vector2d_new(const void* other) {
     return QVector2D_New((QVector2D*)other);
 }
 
@@ -41,7 +41,7 @@ QVector2D* q_vector2d_new9(void* vector) {
     return QVector2D_New9((QVector4D*)vector);
 }
 
-QVector2D* q_vector2d_new10(void* param1) {
+QVector2D* q_vector2d_new10(const void* param1) {
     return QVector2D_New10((QVector2D*)param1);
 }
 
@@ -53,15 +53,15 @@ void q_vector2d_move_assign(void* self, void* other) {
     QVector2D_MoveAssign((QVector2D*)self, (QVector2D*)other);
 }
 
-bool q_vector2d_is_null(void* self) {
+bool q_vector2d_is_null(const void* self) {
     return QVector2D_IsNull((QVector2D*)self);
 }
 
-float q_vector2d_x(void* self) {
+float q_vector2d_x(const void* self) {
     return QVector2D_X((QVector2D*)self);
 }
 
-float q_vector2d_y(void* self) {
+float q_vector2d_y(const void* self) {
     return QVector2D_Y((QVector2D*)self);
 }
 
@@ -77,19 +77,19 @@ float* q_vector2d_operator_subscript(void* self, int i) {
     return (float*)QVector2D_OperatorSubscript((QVector2D*)self, i);
 }
 
-float q_vector2d_operator_subscript2(void* self, int i) {
+float q_vector2d_operator_subscript2(const void* self, int i) {
     return QVector2D_OperatorSubscript2((QVector2D*)self, i);
 }
 
-float q_vector2d_length(void* self) {
+float q_vector2d_length(const void* self) {
     return QVector2D_Length((QVector2D*)self);
 }
 
-float q_vector2d_length_squared(void* self) {
+float q_vector2d_length_squared(const void* self) {
     return QVector2D_LengthSquared((QVector2D*)self);
 }
 
-QVector2D* q_vector2d_normalized(void* self) {
+QVector2D* q_vector2d_normalized(const void* self) {
     return QVector2D_Normalized((QVector2D*)self);
 }
 
@@ -97,11 +97,11 @@ void q_vector2d_normalize(void* self) {
     QVector2D_Normalize((QVector2D*)self);
 }
 
-float q_vector2d_distance_to_point(void* self, void* point) {
+float q_vector2d_distance_to_point(const void* self, void* point) {
     return QVector2D_DistanceToPoint((QVector2D*)self, (QVector2D*)point);
 }
 
-float q_vector2d_distance_to_line(void* self, void* point, void* direction) {
+float q_vector2d_distance_to_line(const void* self, void* point, void* direction) {
     return QVector2D_DistanceToLine((QVector2D*)self, (QVector2D*)point, (QVector2D*)direction);
 }
 
@@ -133,23 +133,23 @@ float q_vector2d_dot_product(void* v1, void* v2) {
     return QVector2D_DotProduct((QVector2D*)v1, (QVector2D*)v2);
 }
 
-QVector3D* q_vector2d_to_vector3_d(void* self) {
+QVector3D* q_vector2d_to_vector3_d(const void* self) {
     return QVector2D_ToVector3D((QVector2D*)self);
 }
 
-QVector4D* q_vector2d_to_vector4_d(void* self) {
+QVector4D* q_vector2d_to_vector4_d(const void* self) {
     return QVector2D_ToVector4D((QVector2D*)self);
 }
 
-QPoint* q_vector2d_to_point(void* self) {
+QPoint* q_vector2d_to_point(const void* self) {
     return QVector2D_ToPoint((QVector2D*)self);
 }
 
-QPointF* q_vector2d_to_point_f(void* self) {
+QPointF* q_vector2d_to_point_f(const void* self) {
     return QVector2D_ToPointF((QVector2D*)self);
 }
 
-QVariant* q_vector2d_to_q_variant(void* self) {
+QVariant* q_vector2d_to_q_variant(const void* self) {
     return QVector2D_ToQVariant((QVector2D*)self);
 }
 
@@ -157,7 +157,7 @@ void q_vector2d_delete(void* self) {
     QVector2D_Delete((QVector2D*)(self));
 }
 
-QVector3D* q_vector3d_new(void* other) {
+QVector3D* q_vector3d_new(const void* other) {
     return QVector3D_New((QVector3D*)other);
 }
 
@@ -197,7 +197,7 @@ QVector3D* q_vector3d_new10(void* vector) {
     return QVector3D_New10((QVector4D*)vector);
 }
 
-QVector3D* q_vector3d_new11(void* param1) {
+QVector3D* q_vector3d_new11(const void* param1) {
     return QVector3D_New11((QVector3D*)param1);
 }
 
@@ -209,19 +209,19 @@ void q_vector3d_move_assign(void* self, void* other) {
     QVector3D_MoveAssign((QVector3D*)self, (QVector3D*)other);
 }
 
-bool q_vector3d_is_null(void* self) {
+bool q_vector3d_is_null(const void* self) {
     return QVector3D_IsNull((QVector3D*)self);
 }
 
-float q_vector3d_x(void* self) {
+float q_vector3d_x(const void* self) {
     return QVector3D_X((QVector3D*)self);
 }
 
-float q_vector3d_y(void* self) {
+float q_vector3d_y(const void* self) {
     return QVector3D_Y((QVector3D*)self);
 }
 
-float q_vector3d_z(void* self) {
+float q_vector3d_z(const void* self) {
     return QVector3D_Z((QVector3D*)self);
 }
 
@@ -241,19 +241,19 @@ float* q_vector3d_operator_subscript(void* self, int i) {
     return (float*)QVector3D_OperatorSubscript((QVector3D*)self, i);
 }
 
-float q_vector3d_operator_subscript2(void* self, int i) {
+float q_vector3d_operator_subscript2(const void* self, int i) {
     return QVector3D_OperatorSubscript2((QVector3D*)self, i);
 }
 
-float q_vector3d_length(void* self) {
+float q_vector3d_length(const void* self) {
     return QVector3D_Length((QVector3D*)self);
 }
 
-float q_vector3d_length_squared(void* self) {
+float q_vector3d_length_squared(const void* self) {
     return QVector3D_LengthSquared((QVector3D*)self);
 }
 
-QVector3D* q_vector3d_normalized(void* self) {
+QVector3D* q_vector3d_normalized(const void* self) {
     return QVector3D_Normalized((QVector3D*)self);
 }
 
@@ -301,47 +301,47 @@ QVector3D* q_vector3d_normal2(void* v1, void* v2, void* v3) {
     return QVector3D_Normal2((QVector3D*)v1, (QVector3D*)v2, (QVector3D*)v3);
 }
 
-QVector3D* q_vector3d_project(void* self, void* modelView, void* projection, void* viewport) {
+QVector3D* q_vector3d_project(const void* self, const void* modelView, const void* projection, const void* viewport) {
     return QVector3D_Project((QVector3D*)self, (QMatrix4x4*)modelView, (QMatrix4x4*)projection, (QRect*)viewport);
 }
 
-QVector3D* q_vector3d_unproject(void* self, void* modelView, void* projection, void* viewport) {
+QVector3D* q_vector3d_unproject(const void* self, const void* modelView, const void* projection, const void* viewport) {
     return QVector3D_Unproject((QVector3D*)self, (QMatrix4x4*)modelView, (QMatrix4x4*)projection, (QRect*)viewport);
 }
 
-float q_vector3d_distance_to_point(void* self, void* point) {
+float q_vector3d_distance_to_point(const void* self, void* point) {
     return QVector3D_DistanceToPoint((QVector3D*)self, (QVector3D*)point);
 }
 
-float q_vector3d_distance_to_plane(void* self, void* plane, void* normal) {
+float q_vector3d_distance_to_plane(const void* self, void* plane, void* normal) {
     return QVector3D_DistanceToPlane((QVector3D*)self, (QVector3D*)plane, (QVector3D*)normal);
 }
 
-float q_vector3d_distance_to_plane2(void* self, void* plane1, void* plane2, void* plane3) {
+float q_vector3d_distance_to_plane2(const void* self, void* plane1, void* plane2, void* plane3) {
     return QVector3D_DistanceToPlane2((QVector3D*)self, (QVector3D*)plane1, (QVector3D*)plane2, (QVector3D*)plane3);
 }
 
-float q_vector3d_distance_to_line(void* self, void* point, void* direction) {
+float q_vector3d_distance_to_line(const void* self, void* point, void* direction) {
     return QVector3D_DistanceToLine((QVector3D*)self, (QVector3D*)point, (QVector3D*)direction);
 }
 
-QVector2D* q_vector3d_to_vector2_d(void* self) {
+QVector2D* q_vector3d_to_vector2_d(const void* self) {
     return QVector3D_ToVector2D((QVector3D*)self);
 }
 
-QVector4D* q_vector3d_to_vector4_d(void* self) {
+QVector4D* q_vector3d_to_vector4_d(const void* self) {
     return QVector3D_ToVector4D((QVector3D*)self);
 }
 
-QPoint* q_vector3d_to_point(void* self) {
+QPoint* q_vector3d_to_point(const void* self) {
     return QVector3D_ToPoint((QVector3D*)self);
 }
 
-QPointF* q_vector3d_to_point_f(void* self) {
+QPointF* q_vector3d_to_point_f(const void* self) {
     return QVector3D_ToPointF((QVector3D*)self);
 }
 
-QVariant* q_vector3d_to_q_variant(void* self) {
+QVariant* q_vector3d_to_q_variant(const void* self) {
     return QVector3D_ToQVariant((QVector3D*)self);
 }
 
@@ -349,7 +349,7 @@ void q_vector3d_delete(void* self) {
     QVector3D_Delete((QVector3D*)(self));
 }
 
-QVector4D* q_vector4d_new(void* other) {
+QVector4D* q_vector4d_new(const void* other) {
     return QVector4D_New((QVector4D*)other);
 }
 
@@ -393,7 +393,7 @@ QVector4D* q_vector4d_new11(void* vector, float wpos) {
     return QVector4D_New11((QVector3D*)vector, wpos);
 }
 
-QVector4D* q_vector4d_new12(void* param1) {
+QVector4D* q_vector4d_new12(const void* param1) {
     return QVector4D_New12((QVector4D*)param1);
 }
 
@@ -405,23 +405,23 @@ void q_vector4d_move_assign(void* self, void* other) {
     QVector4D_MoveAssign((QVector4D*)self, (QVector4D*)other);
 }
 
-bool q_vector4d_is_null(void* self) {
+bool q_vector4d_is_null(const void* self) {
     return QVector4D_IsNull((QVector4D*)self);
 }
 
-float q_vector4d_x(void* self) {
+float q_vector4d_x(const void* self) {
     return QVector4D_X((QVector4D*)self);
 }
 
-float q_vector4d_y(void* self) {
+float q_vector4d_y(const void* self) {
     return QVector4D_Y((QVector4D*)self);
 }
 
-float q_vector4d_z(void* self) {
+float q_vector4d_z(const void* self) {
     return QVector4D_Z((QVector4D*)self);
 }
 
-float q_vector4d_w(void* self) {
+float q_vector4d_w(const void* self) {
     return QVector4D_W((QVector4D*)self);
 }
 
@@ -445,19 +445,19 @@ float* q_vector4d_operator_subscript(void* self, int i) {
     return (float*)QVector4D_OperatorSubscript((QVector4D*)self, i);
 }
 
-float q_vector4d_operator_subscript2(void* self, int i) {
+float q_vector4d_operator_subscript2(const void* self, int i) {
     return QVector4D_OperatorSubscript2((QVector4D*)self, i);
 }
 
-float q_vector4d_length(void* self) {
+float q_vector4d_length(const void* self) {
     return QVector4D_Length((QVector4D*)self);
 }
 
-float q_vector4d_length_squared(void* self) {
+float q_vector4d_length_squared(const void* self) {
     return QVector4D_LengthSquared((QVector4D*)self);
 }
 
-QVector4D* q_vector4d_normalized(void* self) {
+QVector4D* q_vector4d_normalized(const void* self) {
     return QVector4D_Normalized((QVector4D*)self);
 }
 
@@ -493,31 +493,31 @@ float q_vector4d_dot_product(void* v1, void* v2) {
     return QVector4D_DotProduct((QVector4D*)v1, (QVector4D*)v2);
 }
 
-QVector2D* q_vector4d_to_vector2_d(void* self) {
+QVector2D* q_vector4d_to_vector2_d(const void* self) {
     return QVector4D_ToVector2D((QVector4D*)self);
 }
 
-QVector2D* q_vector4d_to_vector2_d_affine(void* self) {
+QVector2D* q_vector4d_to_vector2_d_affine(const void* self) {
     return QVector4D_ToVector2DAffine((QVector4D*)self);
 }
 
-QVector3D* q_vector4d_to_vector3_d(void* self) {
+QVector3D* q_vector4d_to_vector3_d(const void* self) {
     return QVector4D_ToVector3D((QVector4D*)self);
 }
 
-QVector3D* q_vector4d_to_vector3_d_affine(void* self) {
+QVector3D* q_vector4d_to_vector3_d_affine(const void* self) {
     return QVector4D_ToVector3DAffine((QVector4D*)self);
 }
 
-QPoint* q_vector4d_to_point(void* self) {
+QPoint* q_vector4d_to_point(const void* self) {
     return QVector4D_ToPoint((QVector4D*)self);
 }
 
-QPointF* q_vector4d_to_point_f(void* self) {
+QPointF* q_vector4d_to_point_f(const void* self) {
     return QVector4D_ToPointF((QVector4D*)self);
 }
 
-QVariant* q_vector4d_to_q_variant(void* self) {
+QVariant* q_vector4d_to_q_variant(const void* self) {
     return QVector4D_ToQVariant((QVector4D*)self);
 }
 

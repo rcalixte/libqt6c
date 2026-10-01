@@ -29,7 +29,7 @@ QMediaTimeRange* q_mediatimerange_new2(int64_t start, int64_t end);
 ///
 /// @param param1 QMediaTimeRange__Interval*
 ///
-QMediaTimeRange* q_mediatimerange_new3(void* param1);
+QMediaTimeRange* q_mediatimerange_new3(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange.html)
 
@@ -37,14 +37,14 @@ QMediaTimeRange* q_mediatimerange_new3(void* param1);
 ///
 /// @param range QMediaTimeRange*
 ///
-QMediaTimeRange* q_mediatimerange_new4(void* range);
+QMediaTimeRange* q_mediatimerange_new4(const void* range);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange.html#operator-eq)
 ///
 /// @param self QMediaTimeRange*
 /// @param param1 QMediaTimeRange*
 ///
-void q_mediatimerange_operator_assign(void* self, void* param1);
+void q_mediatimerange_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange.html#swap)
 ///
@@ -64,46 +64,46 @@ void q_mediatimerange_detach(void* self);
 /// @param self QMediaTimeRange*
 /// @param param1 QMediaTimeRange__Interval*
 ///
-void q_mediatimerange_operator_assign2(void* self, void* param1);
+void q_mediatimerange_operator_assign2(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange.html#earliestTime)
 ///
-/// @param self QMediaTimeRange*
+/// @param self const QMediaTimeRange*
 ///
-int64_t q_mediatimerange_earliest_time(void* self);
+int64_t q_mediatimerange_earliest_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange.html#latestTime)
 ///
-/// @param self QMediaTimeRange*
+/// @param self const QMediaTimeRange*
 ///
-int64_t q_mediatimerange_latest_time(void* self);
+int64_t q_mediatimerange_latest_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange.html#intervals)
 ///
-/// @param self QMediaTimeRange*
+/// @param self const QMediaTimeRange*
 ///
 /// @return libqt_list of QMediaTimeRange__Interval*
 ///
-libqt_list q_mediatimerange_intervals(void* self);
+libqt_list q_mediatimerange_intervals(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange.html#isEmpty)
 ///
-/// @param self QMediaTimeRange*
+/// @param self const QMediaTimeRange*
 ///
-bool q_mediatimerange_is_empty(void* self);
+bool q_mediatimerange_is_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange.html#isContinuous)
 ///
-/// @param self QMediaTimeRange*
+/// @param self const QMediaTimeRange*
 ///
-bool q_mediatimerange_is_continuous(void* self);
+bool q_mediatimerange_is_continuous(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange.html#contains)
 ///
-/// @param self QMediaTimeRange*
+/// @param self const QMediaTimeRange*
 /// @param time int64_t
 ///
-bool q_mediatimerange_contains(void* self, int64_t time);
+bool q_mediatimerange_contains(const void* self, int64_t time);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange.html#addInterval)
 ///
@@ -118,14 +118,14 @@ void q_mediatimerange_add_interval(void* self, int64_t start, int64_t end);
 /// @param self QMediaTimeRange*
 /// @param interval QMediaTimeRange__Interval*
 ///
-void q_mediatimerange_add_interval2(void* self, void* interval);
+void q_mediatimerange_add_interval2(void* self, const void* interval);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange.html#addTimeRange)
 ///
 /// @param self QMediaTimeRange*
 /// @param param1 QMediaTimeRange*
 ///
-void q_mediatimerange_add_time_range(void* self, void* param1);
+void q_mediatimerange_add_time_range(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange.html#removeInterval)
 ///
@@ -140,42 +140,42 @@ void q_mediatimerange_remove_interval(void* self, int64_t start, int64_t end);
 /// @param self QMediaTimeRange*
 /// @param interval QMediaTimeRange__Interval*
 ///
-void q_mediatimerange_remove_interval2(void* self, void* interval);
+void q_mediatimerange_remove_interval2(void* self, const void* interval);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange.html#removeTimeRange)
 ///
 /// @param self QMediaTimeRange*
 /// @param param1 QMediaTimeRange*
 ///
-void q_mediatimerange_remove_time_range(void* self, void* param1);
+void q_mediatimerange_remove_time_range(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange.html#operator-2b-eq)
 ///
 /// @param self QMediaTimeRange*
 /// @param param1 QMediaTimeRange*
 ///
-QMediaTimeRange* q_mediatimerange_operator_plus_assign(void* self, void* param1);
+QMediaTimeRange* q_mediatimerange_operator_plus_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange.html#operator-2b-eq)
 ///
 /// @param self QMediaTimeRange*
 /// @param param1 QMediaTimeRange__Interval*
 ///
-QMediaTimeRange* q_mediatimerange_operator_plus_assign2(void* self, void* param1);
+QMediaTimeRange* q_mediatimerange_operator_plus_assign2(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange.html#operator--eq)
 ///
 /// @param self QMediaTimeRange*
 /// @param param1 QMediaTimeRange*
 ///
-QMediaTimeRange* q_mediatimerange_operator_minus_assign(void* self, void* param1);
+QMediaTimeRange* q_mediatimerange_operator_minus_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange.html#operator--eq)
 ///
 /// @param self QMediaTimeRange*
 /// @param param1 QMediaTimeRange__Interval*
 ///
-QMediaTimeRange* q_mediatimerange_operator_minus_assign2(void* self, void* param1);
+QMediaTimeRange* q_mediatimerange_operator_minus_assign2(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange.html#clear)
 ///
@@ -203,7 +203,7 @@ QMediaTimeRange__Interval* q_mediatimerange__interval_new();
 ///
 /// @param other QMediaTimeRange__Interval*
 ///
-QMediaTimeRange__Interval* q_mediatimerange__interval_new2(void* other);
+QMediaTimeRange__Interval* q_mediatimerange__interval_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange-interval.html)
 
@@ -228,7 +228,7 @@ QMediaTimeRange__Interval* q_mediatimerange__interval_new4(int64_t start, int64_
 ///
 /// @param param1 QMediaTimeRange__Interval*
 ///
-QMediaTimeRange__Interval* q_mediatimerange__interval_new5(void* param1);
+QMediaTimeRange__Interval* q_mediatimerange__interval_new5(const void* param1);
 
 /// q_mediatimerange__interval_copy_assign shallow copies `other` into `self`.
 ///
@@ -246,41 +246,41 @@ void q_mediatimerange__interval_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange-interval.html#start)
 ///
-/// @param self QMediaTimeRange__Interval*
+/// @param self const QMediaTimeRange__Interval*
 ///
-int64_t q_mediatimerange__interval_start(void* self);
+int64_t q_mediatimerange__interval_start(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange-interval.html#end)
 ///
-/// @param self QMediaTimeRange__Interval*
+/// @param self const QMediaTimeRange__Interval*
 ///
-int64_t q_mediatimerange__interval_end(void* self);
+int64_t q_mediatimerange__interval_end(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange-interval.html#contains)
 ///
-/// @param self QMediaTimeRange__Interval*
+/// @param self const QMediaTimeRange__Interval*
 /// @param time int64_t
 ///
-bool q_mediatimerange__interval_contains(void* self, int64_t time);
+bool q_mediatimerange__interval_contains(const void* self, int64_t time);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange-interval.html#isNormal)
 ///
-/// @param self QMediaTimeRange__Interval*
+/// @param self const QMediaTimeRange__Interval*
 ///
-bool q_mediatimerange__interval_is_normal(void* self);
+bool q_mediatimerange__interval_is_normal(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange-interval.html#normalized)
 ///
-/// @param self QMediaTimeRange__Interval*
+/// @param self const QMediaTimeRange__Interval*
 ///
-QMediaTimeRange__Interval* q_mediatimerange__interval_normalized(void* self);
+QMediaTimeRange__Interval* q_mediatimerange__interval_normalized(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange-interval.html#translated)
 ///
-/// @param self QMediaTimeRange__Interval*
+/// @param self const QMediaTimeRange__Interval*
 /// @param offset int64_t
 ///
-QMediaTimeRange__Interval* q_mediatimerange__interval_translated(void* self, int64_t offset);
+QMediaTimeRange__Interval* q_mediatimerange__interval_translated(const void* self, int64_t offset);
 
 /// Delete this object from C++ memory.
 ///

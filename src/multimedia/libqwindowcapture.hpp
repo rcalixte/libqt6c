@@ -49,7 +49,7 @@ void QWindowCapture_ErrorChanged(QWindowCapture* self);
 void QWindowCapture_Connect_ErrorChanged(QWindowCapture* self, intptr_t slot);
 void QWindowCapture_ErrorOccurred(QWindowCapture* self, int error, const libqt_string errorString);
 void QWindowCapture_Connect_ErrorOccurred(QWindowCapture* self, intptr_t slot);
-void QWindowCapture_OnMetaObject(const QWindowCapture* self, intptr_t slot);
+void QWindowCapture_OnMetaObject(QWindowCapture* self, intptr_t slot);
 QMetaObject* QWindowCapture_SuperMetaObject(const QWindowCapture* self);
 void QWindowCapture_OnMetacast(QWindowCapture* self, intptr_t slot);
 void* QWindowCapture_SuperMetacast(QWindowCapture* self, const char* param1);
@@ -77,17 +77,9 @@ void QWindowCapture_DisconnectNotify(QWindowCapture* self, const QMetaMethod* si
 void QWindowCapture_OnDisconnectNotify(QWindowCapture* self, intptr_t slot);
 void QWindowCapture_SuperDisconnectNotify(QWindowCapture* self, const QMetaMethod* signal);
 QObject* QWindowCapture_Sender(const QWindowCapture* self);
-void QWindowCapture_OnSender(const QWindowCapture* self, intptr_t slot);
-QObject* QWindowCapture_SuperSender(const QWindowCapture* self);
 int QWindowCapture_SenderSignalIndex(const QWindowCapture* self);
-void QWindowCapture_OnSenderSignalIndex(const QWindowCapture* self, intptr_t slot);
-int QWindowCapture_SuperSenderSignalIndex(const QWindowCapture* self);
 int QWindowCapture_Receivers(const QWindowCapture* self, const char* signal);
-void QWindowCapture_OnReceivers(const QWindowCapture* self, intptr_t slot);
-int QWindowCapture_SuperReceivers(const QWindowCapture* self, const char* signal);
 bool QWindowCapture_IsSignalConnected(const QWindowCapture* self, const QMetaMethod* signal);
-void QWindowCapture_OnIsSignalConnected(const QWindowCapture* self, intptr_t slot);
-bool QWindowCapture_SuperIsSignalConnected(const QWindowCapture* self, const QMetaMethod* signal);
 void QWindowCapture_Delete(QWindowCapture* self);
 
 #ifdef __cplusplus

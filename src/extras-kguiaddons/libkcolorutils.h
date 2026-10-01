@@ -14,19 +14,19 @@
 ///
 /// @param param1 QColor*
 ///
-double k_colorutils_hue(void* param1);
+double k_colorutils_hue(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kcolorutils.html#chroma)
 ///
 /// @param param1 QColor*
 ///
-double k_colorutils_chroma(void* param1);
+double k_colorutils_chroma(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kcolorutils.html#luma)
 ///
 /// @param param1 QColor*
 ///
-double k_colorutils_luma(void* param1);
+double k_colorutils_luma(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kcolorutils.html#getHcy)
 ///
@@ -36,7 +36,7 @@ double k_colorutils_luma(void* param1);
 /// @param luma double*
 /// @param alpha double*
 ///
-void k_colorutils_get_hcy(void* param1, double* hue, double* chroma, double* luma, double* alpha);
+void k_colorutils_get_hcy(const void* param1, double* hue, double* chroma, double* luma, double* alpha);
 
 /// [Upstream resources](https://api.kde.org/kcolorutils.html#hcyColor)
 ///
@@ -52,7 +52,7 @@ QColor* k_colorutils_hcy_color(double hue, double chroma, double luma, double al
 /// @param param1 QColor*
 /// @param param2 QColor*
 ///
-double k_colorutils_contrast_ratio(void* param1, void* param2);
+double k_colorutils_contrast_ratio(const void* param1, const void* param2);
 
 /// [Upstream resources](https://api.kde.org/kcolorutils.html#lighten)
 ///
@@ -60,7 +60,7 @@ double k_colorutils_contrast_ratio(void* param1, void* param2);
 /// @param amount double
 /// @param chromaInverseGain double
 ///
-QColor* k_colorutils_lighten(void* param1, double amount, double chromaInverseGain);
+QColor* k_colorutils_lighten(const void* param1, double amount, double chromaInverseGain);
 
 /// [Upstream resources](https://api.kde.org/kcolorutils.html#darken)
 ///
@@ -68,7 +68,7 @@ QColor* k_colorutils_lighten(void* param1, double amount, double chromaInverseGa
 /// @param amount double
 /// @param chromaGain double
 ///
-QColor* k_colorutils_darken(void* param1, double amount, double chromaGain);
+QColor* k_colorutils_darken(const void* param1, double amount, double chromaGain);
 
 /// [Upstream resources](https://api.kde.org/kcolorutils.html#shade)
 ///
@@ -76,7 +76,7 @@ QColor* k_colorutils_darken(void* param1, double amount, double chromaGain);
 /// @param lumaAmount double
 /// @param chromaAmount double
 ///
-QColor* k_colorutils_shade(void* param1, double lumaAmount, double chromaAmount);
+QColor* k_colorutils_shade(const void* param1, double lumaAmount, double chromaAmount);
 
 /// [Upstream resources](https://api.kde.org/kcolorutils.html#tint)
 ///
@@ -84,7 +84,7 @@ QColor* k_colorutils_shade(void* param1, double lumaAmount, double chromaAmount)
 /// @param color QColor*
 /// @param amount double
 ///
-QColor* k_colorutils_tint(void* base, void* color, double amount);
+QColor* k_colorutils_tint(const void* base, const void* color, double amount);
 
 /// [Upstream resources](https://api.kde.org/kcolorutils.html#mix)
 ///
@@ -92,7 +92,7 @@ QColor* k_colorutils_tint(void* base, void* color, double amount);
 /// @param c2 QColor*
 /// @param bias double
 ///
-QColor* k_colorutils_mix(void* c1, void* c2, double bias);
+QColor* k_colorutils_mix(const void* c1, const void* c2, double bias);
 
 /// [Upstream resources](https://api.kde.org/kcolorutils.html#overlayColors)
 ///
@@ -100,5 +100,5 @@ QColor* k_colorutils_mix(void* c1, void* c2, double bias);
 /// @param paint QColor*
 /// @param comp enum QPainter__CompositionMode
 ///
-QColor* k_colorutils_overlay_colors(void* base, void* paint, int32_t comp);
+QColor* k_colorutils_overlay_colors(const void* base, const void* paint, int32_t comp);
 #endif

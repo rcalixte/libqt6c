@@ -15,15 +15,15 @@ Kirigami__Platform__PlatformPluginFactory* k_irigami__platform__platformpluginfa
     return Kirigami__Platform__PlatformPluginFactory_New2((QObject*)parent);
 }
 
-const QMetaObject* k_irigami__platform__platformpluginfactory_meta_object(void* self) {
+const QMetaObject* k_irigami__platform__platformpluginfactory_meta_object(const void* self) {
     return Kirigami__Platform__PlatformPluginFactory_MetaObject((Kirigami__Platform__PlatformPluginFactory*)self);
 }
 
-void k_irigami__platform__platformpluginfactory_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_irigami__platform__platformpluginfactory_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     Kirigami__Platform__PlatformPluginFactory_OnMetaObject((Kirigami__Platform__PlatformPluginFactory*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_irigami__platform__platformpluginfactory_super_meta_object(void* self) {
+const QMetaObject* k_irigami__platform__platformpluginfactory_super_meta_object(const void* self) {
     return Kirigami__Platform__PlatformPluginFactory_SuperMetaObject((Kirigami__Platform__PlatformPluginFactory*)self);
 }
 
@@ -66,20 +66,12 @@ void k_irigami__platform__platformpluginfactory_on_create_platform_theme(void* s
     Kirigami__Platform__PlatformPluginFactory_OnCreatePlatformTheme((Kirigami__Platform__PlatformPluginFactory*)self, (intptr_t)callback);
 }
 
-Kirigami__Platform__PlatformTheme* k_irigami__platform__platformpluginfactory_super_create_platform_theme(void* self, void* parent) {
-    return Kirigami__Platform__PlatformPluginFactory_SuperCreatePlatformTheme((Kirigami__Platform__PlatformPluginFactory*)self, (QObject*)parent);
-}
-
 Kirigami__Platform__Units* k_irigami__platform__platformpluginfactory_create_units(void* self, void* parent) {
     return Kirigami__Platform__PlatformPluginFactory_CreateUnits((Kirigami__Platform__PlatformPluginFactory*)self, (QObject*)parent);
 }
 
 void k_irigami__platform__platformpluginfactory_on_create_units(void* self, Kirigami__Platform__Units* (*callback)(void*, void*)) {
     Kirigami__Platform__PlatformPluginFactory_OnCreateUnits((Kirigami__Platform__PlatformPluginFactory*)self, (intptr_t)callback);
-}
-
-Kirigami__Platform__Units* k_irigami__platform__platformpluginfactory_super_create_units(void* self, void* parent) {
-    return Kirigami__Platform__PlatformPluginFactory_SuperCreateUnits((Kirigami__Platform__PlatformPluginFactory*)self, (QObject*)parent);
 }
 
 Kirigami__Platform__PlatformPluginFactory* k_irigami__platform__platformpluginfactory_find_plugin() {
@@ -104,7 +96,7 @@ Kirigami__Platform__PlatformPluginFactory* k_irigami__platform__platformpluginfa
     return Kirigami__Platform__PlatformPluginFactory_FindPlugin1(qstring(pluginName));
 }
 
-const char* k_irigami__platform__platformpluginfactory_object_name(void* self) {
+const char* k_irigami__platform__platformpluginfactory_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -115,19 +107,19 @@ void k_irigami__platform__platformpluginfactory_set_object_name(void* self, cons
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_irigami__platform__platformpluginfactory_is_widget_type(void* self) {
+bool k_irigami__platform__platformpluginfactory_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_irigami__platform__platformpluginfactory_is_window_type(void* self) {
+bool k_irigami__platform__platformpluginfactory_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_irigami__platform__platformpluginfactory_is_quick_item_type(void* self) {
+bool k_irigami__platform__platformpluginfactory_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_irigami__platform__platformpluginfactory_signals_blocked(void* self) {
+bool k_irigami__platform__platformpluginfactory_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -135,7 +127,7 @@ bool k_irigami__platform__platformpluginfactory_block_signals(void* self, bool b
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_irigami__platform__platformpluginfactory_thread(void* self) {
+QThread* k_irigami__platform__platformpluginfactory_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -159,7 +151,7 @@ void k_irigami__platform__platformpluginfactory_kill_timer2(void* self, int32_t 
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_irigami__platform__platformpluginfactory_children(void* self) {
+libqt_list /* of QObject* */ k_irigami__platform__platformpluginfactory_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -176,55 +168,55 @@ void k_irigami__platform__platformpluginfactory_remove_event_filter(void* self, 
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_irigami__platform__platformpluginfactory_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_irigami__platform__platformpluginfactory_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_irigami__platform__platformpluginfactory_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_irigami__platform__platformpluginfactory_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_irigami__platform__platformpluginfactory_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_irigami__platform__platformpluginfactory_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_irigami__platform__platformpluginfactory_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_irigami__platform__platformpluginfactory_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_irigami__platform__platformpluginfactory_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_irigami__platform__platformpluginfactory_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_irigami__platform__platformpluginfactory_disconnect3(void* self) {
+bool k_irigami__platform__platformpluginfactory_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_irigami__platform__platformpluginfactory_disconnect4(void* self, void* receiver) {
+bool k_irigami__platform__platformpluginfactory_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_irigami__platform__platformpluginfactory_disconnect5(void* param1) {
+bool k_irigami__platform__platformpluginfactory_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_irigami__platform__platformpluginfactory_dump_object_tree(void* self) {
+void k_irigami__platform__platformpluginfactory_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_irigami__platform__platformpluginfactory_dump_object_info(void* self) {
+void k_irigami__platform__platformpluginfactory_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_irigami__platform__platformpluginfactory_set_property(void* self, const char* name, void* value) {
+bool k_irigami__platform__platformpluginfactory_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_irigami__platform__platformpluginfactory_property(void* self, const char* name) {
+QVariant* k_irigami__platform__platformpluginfactory_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_irigami__platform__platformpluginfactory_dynamic_property_names(void* self) {
+const char** k_irigami__platform__platformpluginfactory_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -245,7 +237,7 @@ QBindingStorage* k_irigami__platform__platformpluginfactory_binding_storage(void
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_irigami__platform__platformpluginfactory_binding_storage2(void* self) {
+const QBindingStorage* k_irigami__platform__platformpluginfactory_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -257,11 +249,11 @@ void k_irigami__platform__platformpluginfactory_on_destroyed(void* self, void (*
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_irigami__platform__platformpluginfactory_parent(void* self) {
+QObject* k_irigami__platform__platformpluginfactory_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_irigami__platform__platformpluginfactory_inherits(void* self, const char* classname) {
+bool k_irigami__platform__platformpluginfactory_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -277,31 +269,31 @@ int32_t k_irigami__platform__platformpluginfactory_start_timer23(void* self, int
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_irigami__platform__platformpluginfactory_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_irigami__platform__platformpluginfactory_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_irigami__platform__platformpluginfactory_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_irigami__platform__platformpluginfactory_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_irigami__platform__platformpluginfactory_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_irigami__platform__platformpluginfactory_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_irigami__platform__platformpluginfactory_disconnect1(void* self, const char* signal) {
+bool k_irigami__platform__platformpluginfactory_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_irigami__platform__platformpluginfactory_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_irigami__platform__platformpluginfactory_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_irigami__platform__platformpluginfactory_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_irigami__platform__platformpluginfactory_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_irigami__platform__platformpluginfactory_disconnect23(void* self, void* receiver, const char* member) {
+bool k_irigami__platform__platformpluginfactory_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -373,76 +365,44 @@ void k_irigami__platform__platformpluginfactory_on_custom_event(void* self, void
     Kirigami__Platform__PlatformPluginFactory_OnCustomEvent((Kirigami__Platform__PlatformPluginFactory*)self, (intptr_t)callback);
 }
 
-void k_irigami__platform__platformpluginfactory_connect_notify(void* self, void* signal) {
+void k_irigami__platform__platformpluginfactory_connect_notify(void* self, const void* signal) {
     Kirigami__Platform__PlatformPluginFactory_ConnectNotify((Kirigami__Platform__PlatformPluginFactory*)self, (QMetaMethod*)signal);
 }
 
-void k_irigami__platform__platformpluginfactory_super_connect_notify(void* self, void* signal) {
+void k_irigami__platform__platformpluginfactory_super_connect_notify(void* self, const void* signal) {
     Kirigami__Platform__PlatformPluginFactory_SuperConnectNotify((Kirigami__Platform__PlatformPluginFactory*)self, (QMetaMethod*)signal);
 }
 
-void k_irigami__platform__platformpluginfactory_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_irigami__platform__platformpluginfactory_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     Kirigami__Platform__PlatformPluginFactory_OnConnectNotify((Kirigami__Platform__PlatformPluginFactory*)self, (intptr_t)callback);
 }
 
-void k_irigami__platform__platformpluginfactory_disconnect_notify(void* self, void* signal) {
+void k_irigami__platform__platformpluginfactory_disconnect_notify(void* self, const void* signal) {
     Kirigami__Platform__PlatformPluginFactory_DisconnectNotify((Kirigami__Platform__PlatformPluginFactory*)self, (QMetaMethod*)signal);
 }
 
-void k_irigami__platform__platformpluginfactory_super_disconnect_notify(void* self, void* signal) {
+void k_irigami__platform__platformpluginfactory_super_disconnect_notify(void* self, const void* signal) {
     Kirigami__Platform__PlatformPluginFactory_SuperDisconnectNotify((Kirigami__Platform__PlatformPluginFactory*)self, (QMetaMethod*)signal);
 }
 
-void k_irigami__platform__platformpluginfactory_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_irigami__platform__platformpluginfactory_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     Kirigami__Platform__PlatformPluginFactory_OnDisconnectNotify((Kirigami__Platform__PlatformPluginFactory*)self, (intptr_t)callback);
 }
 
-QObject* k_irigami__platform__platformpluginfactory_sender(void* self) {
+QObject* k_irigami__platform__platformpluginfactory_sender(const void* self) {
     return Kirigami__Platform__PlatformPluginFactory_Sender((Kirigami__Platform__PlatformPluginFactory*)self);
 }
 
-QObject* k_irigami__platform__platformpluginfactory_super_sender(void* self) {
-    return Kirigami__Platform__PlatformPluginFactory_SuperSender((Kirigami__Platform__PlatformPluginFactory*)self);
-}
-
-void k_irigami__platform__platformpluginfactory_on_sender(void* self, QObject* (*callback)()) {
-    Kirigami__Platform__PlatformPluginFactory_OnSender((Kirigami__Platform__PlatformPluginFactory*)self, (intptr_t)callback);
-}
-
-int32_t k_irigami__platform__platformpluginfactory_sender_signal_index(void* self) {
+int32_t k_irigami__platform__platformpluginfactory_sender_signal_index(const void* self) {
     return Kirigami__Platform__PlatformPluginFactory_SenderSignalIndex((Kirigami__Platform__PlatformPluginFactory*)self);
 }
 
-int32_t k_irigami__platform__platformpluginfactory_super_sender_signal_index(void* self) {
-    return Kirigami__Platform__PlatformPluginFactory_SuperSenderSignalIndex((Kirigami__Platform__PlatformPluginFactory*)self);
-}
-
-void k_irigami__platform__platformpluginfactory_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    Kirigami__Platform__PlatformPluginFactory_OnSenderSignalIndex((Kirigami__Platform__PlatformPluginFactory*)self, (intptr_t)callback);
-}
-
-int32_t k_irigami__platform__platformpluginfactory_receivers(void* self, const char* signal) {
+int32_t k_irigami__platform__platformpluginfactory_receivers(const void* self, const char* signal) {
     return Kirigami__Platform__PlatformPluginFactory_Receivers((Kirigami__Platform__PlatformPluginFactory*)self, signal);
 }
 
-int32_t k_irigami__platform__platformpluginfactory_super_receivers(void* self, const char* signal) {
-    return Kirigami__Platform__PlatformPluginFactory_SuperReceivers((Kirigami__Platform__PlatformPluginFactory*)self, signal);
-}
-
-void k_irigami__platform__platformpluginfactory_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    Kirigami__Platform__PlatformPluginFactory_OnReceivers((Kirigami__Platform__PlatformPluginFactory*)self, (intptr_t)callback);
-}
-
-bool k_irigami__platform__platformpluginfactory_is_signal_connected(void* self, void* signal) {
+bool k_irigami__platform__platformpluginfactory_is_signal_connected(const void* self, const void* signal) {
     return Kirigami__Platform__PlatformPluginFactory_IsSignalConnected((Kirigami__Platform__PlatformPluginFactory*)self, (QMetaMethod*)signal);
-}
-
-bool k_irigami__platform__platformpluginfactory_super_is_signal_connected(void* self, void* signal) {
-    return Kirigami__Platform__PlatformPluginFactory_SuperIsSignalConnected((Kirigami__Platform__PlatformPluginFactory*)self, (QMetaMethod*)signal);
-}
-
-void k_irigami__platform__platformpluginfactory_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    Kirigami__Platform__PlatformPluginFactory_OnIsSignalConnected((Kirigami__Platform__PlatformPluginFactory*)self, (intptr_t)callback);
 }
 
 void k_irigami__platform__platformpluginfactory_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

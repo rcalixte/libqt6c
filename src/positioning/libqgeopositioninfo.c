@@ -3,7 +3,7 @@
 #include "libqgeopositioninfo.hpp"
 #include "libqgeopositioninfo.h"
 
-size_t q_qgeopositioninfo_h_q_hash(void* key, size_t seed) {
+size_t q_qgeopositioninfo_h_q_hash(const void* key, size_t seed) {
     return qgeopositioninfo_h_QHash((QGeoPositionInfo*)key, seed);
 }
 
@@ -11,15 +11,15 @@ QGeoPositionInfo* q_geopositioninfo_new() {
     return QGeoPositionInfo_New();
 }
 
-QGeoPositionInfo* q_geopositioninfo_new2(void* coordinate, void* updateTime) {
+QGeoPositionInfo* q_geopositioninfo_new2(const void* coordinate, const void* updateTime) {
     return QGeoPositionInfo_New2((QGeoCoordinate*)coordinate, (QDateTime*)updateTime);
 }
 
-QGeoPositionInfo* q_geopositioninfo_new3(void* other) {
+QGeoPositionInfo* q_geopositioninfo_new3(const void* other) {
     return QGeoPositionInfo_New3((QGeoPositionInfo*)other);
 }
 
-void q_geopositioninfo_operator_assign(void* self, void* other) {
+void q_geopositioninfo_operator_assign(void* self, const void* other) {
     QGeoPositionInfo_OperatorAssign((QGeoPositionInfo*)self, (QGeoPositionInfo*)other);
 }
 
@@ -27,23 +27,23 @@ void q_geopositioninfo_swap(void* self, void* other) {
     QGeoPositionInfo_Swap((QGeoPositionInfo*)self, (QGeoPositionInfo*)other);
 }
 
-bool q_geopositioninfo_is_valid(void* self) {
+bool q_geopositioninfo_is_valid(const void* self) {
     return QGeoPositionInfo_IsValid((QGeoPositionInfo*)self);
 }
 
-void q_geopositioninfo_set_timestamp(void* self, void* timestamp) {
+void q_geopositioninfo_set_timestamp(void* self, const void* timestamp) {
     QGeoPositionInfo_SetTimestamp((QGeoPositionInfo*)self, (QDateTime*)timestamp);
 }
 
-QDateTime* q_geopositioninfo_timestamp(void* self) {
+QDateTime* q_geopositioninfo_timestamp(const void* self) {
     return QGeoPositionInfo_Timestamp((QGeoPositionInfo*)self);
 }
 
-void q_geopositioninfo_set_coordinate(void* self, void* coordinate) {
+void q_geopositioninfo_set_coordinate(void* self, const void* coordinate) {
     QGeoPositionInfo_SetCoordinate((QGeoPositionInfo*)self, (QGeoCoordinate*)coordinate);
 }
 
-QGeoCoordinate* q_geopositioninfo_coordinate(void* self) {
+QGeoCoordinate* q_geopositioninfo_coordinate(const void* self) {
     return QGeoPositionInfo_Coordinate((QGeoPositionInfo*)self);
 }
 
@@ -51,7 +51,7 @@ void q_geopositioninfo_set_attribute(void* self, int32_t attribute, double value
     QGeoPositionInfo_SetAttribute((QGeoPositionInfo*)self, attribute, value);
 }
 
-double q_geopositioninfo_attribute(void* self, int32_t attribute) {
+double q_geopositioninfo_attribute(const void* self, int32_t attribute) {
     return QGeoPositionInfo_Attribute((QGeoPositionInfo*)self, attribute);
 }
 
@@ -59,7 +59,7 @@ void q_geopositioninfo_remove_attribute(void* self, int32_t attribute) {
     QGeoPositionInfo_RemoveAttribute((QGeoPositionInfo*)self, attribute);
 }
 
-bool q_geopositioninfo_has_attribute(void* self, int32_t attribute) {
+bool q_geopositioninfo_has_attribute(const void* self, int32_t attribute) {
     return QGeoPositionInfo_HasAttribute((QGeoPositionInfo*)self, attribute);
 }
 

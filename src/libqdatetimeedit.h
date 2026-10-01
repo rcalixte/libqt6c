@@ -28,7 +28,7 @@ QDateTimeEdit* q_datetimeedit_new2();
 ///
 /// @param dt QDateTime*
 ///
-QDateTimeEdit* q_datetimeedit_new3(void* dt);
+QDateTimeEdit* q_datetimeedit_new3(const void* dt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html)
 
@@ -53,7 +53,7 @@ QDateTimeEdit* q_datetimeedit_new5(void* t);
 /// @param dt QDateTime*
 /// @param parent QWidget*
 ///
-QDateTimeEdit* q_datetimeedit_new6(void* dt, void* parent);
+QDateTimeEdit* q_datetimeedit_new6(const void* dt, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html)
 
@@ -75,26 +75,26 @@ QDateTimeEdit* q_datetimeedit_new8(void* t, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-const QMetaObject* q_datetimeedit_meta_object(void* self);
+const QMetaObject* q_datetimeedit_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDateTimeEdit*
-/// @param callback const QMetaObject* func()
+/// @param self const QDateTimeEdit*
+/// @param callback const QMetaObject* func(const QDateTimeEdit* self)
 ///
-void q_datetimeedit_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_datetimeedit_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-const QMetaObject* q_datetimeedit_super_meta_object(void* self);
+const QMetaObject* q_datetimeedit_super_meta_object(const void* self);
 
 /// @param self QDateTimeEdit*
 /// @param param1 const char*
@@ -148,27 +148,27 @@ const char* q_datetimeedit_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#dateTime)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QDateTime* q_datetimeedit_date_time(void* self);
+QDateTime* q_datetimeedit_date_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#date)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QDate* q_datetimeedit_date(void* self);
+QDate* q_datetimeedit_date(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#time)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QTime* q_datetimeedit_time(void* self);
+QTime* q_datetimeedit_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#calendar)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QCalendar* q_datetimeedit_calendar(void* self);
+QCalendar* q_datetimeedit_calendar(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#setCalendar)
 ///
@@ -179,9 +179,9 @@ void q_datetimeedit_set_calendar(void* self, void* calendar);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#minimumDateTime)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QDateTime* q_datetimeedit_minimum_date_time(void* self);
+QDateTime* q_datetimeedit_minimum_date_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#clearMinimumDateTime)
 ///
@@ -194,13 +194,13 @@ void q_datetimeedit_clear_minimum_date_time(void* self);
 /// @param self QDateTimeEdit*
 /// @param dt QDateTime*
 ///
-void q_datetimeedit_set_minimum_date_time(void* self, void* dt);
+void q_datetimeedit_set_minimum_date_time(void* self, const void* dt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#maximumDateTime)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QDateTime* q_datetimeedit_maximum_date_time(void* self);
+QDateTime* q_datetimeedit_maximum_date_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#clearMaximumDateTime)
 ///
@@ -213,7 +213,7 @@ void q_datetimeedit_clear_maximum_date_time(void* self);
 /// @param self QDateTimeEdit*
 /// @param dt QDateTime*
 ///
-void q_datetimeedit_set_maximum_date_time(void* self, void* dt);
+void q_datetimeedit_set_maximum_date_time(void* self, const void* dt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#setDateTimeRange)
 ///
@@ -221,13 +221,13 @@ void q_datetimeedit_set_maximum_date_time(void* self, void* dt);
 /// @param min QDateTime*
 /// @param max QDateTime*
 ///
-void q_datetimeedit_set_date_time_range(void* self, void* min, void* max);
+void q_datetimeedit_set_date_time_range(void* self, const void* min, const void* max);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#minimumDate)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QDate* q_datetimeedit_minimum_date(void* self);
+QDate* q_datetimeedit_minimum_date(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#setMinimumDate)
 ///
@@ -244,9 +244,9 @@ void q_datetimeedit_clear_minimum_date(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#maximumDate)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QDate* q_datetimeedit_maximum_date(void* self);
+QDate* q_datetimeedit_maximum_date(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#setMaximumDate)
 ///
@@ -271,9 +271,9 @@ void q_datetimeedit_set_date_range(void* self, void* min, void* max);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#minimumTime)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QTime* q_datetimeedit_minimum_time(void* self);
+QTime* q_datetimeedit_minimum_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#setMinimumTime)
 ///
@@ -290,9 +290,9 @@ void q_datetimeedit_clear_minimum_time(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#maximumTime)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QTime* q_datetimeedit_maximum_time(void* self);
+QTime* q_datetimeedit_maximum_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#setMaximumTime)
 ///
@@ -317,28 +317,28 @@ void q_datetimeedit_set_time_range(void* self, void* min, void* max);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#displayedSections)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
 /// @return flag of enum QDateTimeEdit__Section
 ///
-int32_t q_datetimeedit_displayed_sections(void* self);
+int32_t q_datetimeedit_displayed_sections(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#currentSection)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
 /// @return enum QDateTimeEdit__Section
 ///
-int32_t q_datetimeedit_current_section(void* self);
+int32_t q_datetimeedit_current_section(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#sectionAt)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param index int
 ///
 /// @return enum QDateTimeEdit__Section
 ///
-int32_t q_datetimeedit_section_at(void* self, int index);
+int32_t q_datetimeedit_section_at(const void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#setCurrentSection)
 ///
@@ -349,9 +349,9 @@ void q_datetimeedit_set_current_section(void* self, int32_t section);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#currentSectionIndex)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-int32_t q_datetimeedit_current_section_index(void* self);
+int32_t q_datetimeedit_current_section_index(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#setCurrentSectionIndex)
 ///
@@ -362,9 +362,9 @@ void q_datetimeedit_set_current_section_index(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#calendarWidget)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QCalendarWidget* q_datetimeedit_calendar_widget(void* self);
+QCalendarWidget* q_datetimeedit_calendar_widget(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#setCalendarWidget)
 ///
@@ -375,9 +375,9 @@ void q_datetimeedit_set_calendar_widget(void* self, void* calendarWidget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#sectionCount)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-int32_t q_datetimeedit_section_count(void* self);
+int32_t q_datetimeedit_section_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#setSelectedSection)
 ///
@@ -390,18 +390,18 @@ void q_datetimeedit_set_selected_section(void* self, int32_t section);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param section enum QDateTimeEdit__Section
 ///
-const char* q_datetimeedit_section_text(void* self, int32_t section);
+const char* q_datetimeedit_section_text(const void* self, int32_t section);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#displayFormat)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-const char* q_datetimeedit_display_format(void* self);
+const char* q_datetimeedit_display_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#setDisplayFormat)
 ///
@@ -412,9 +412,9 @@ void q_datetimeedit_set_display_format(void* self, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#calendarPopup)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_calendar_popup(void* self);
+bool q_datetimeedit_calendar_popup(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#setCalendarPopup)
 ///
@@ -425,11 +425,11 @@ void q_datetimeedit_set_calendar_popup(void* self, bool enable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#timeSpec)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
 /// @return enum Qt__TimeSpec
 ///
-int32_t q_datetimeedit_time_spec(void* self);
+int32_t q_datetimeedit_time_spec(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#setTimeSpec)
 ///
@@ -440,41 +440,41 @@ void q_datetimeedit_set_time_spec(void* self, int32_t spec);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#timeZone)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QTimeZone* q_datetimeedit_time_zone(void* self);
+QTimeZone* q_datetimeedit_time_zone(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#setTimeZone)
 ///
 /// @param self QDateTimeEdit*
 /// @param zone QTimeZone*
 ///
-void q_datetimeedit_set_time_zone(void* self, void* zone);
+void q_datetimeedit_set_time_zone(void* self, const void* zone);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#sizeHint)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QSize* q_datetimeedit_size_hint(void* self);
+QSize* q_datetimeedit_size_hint(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDateTimeEdit*
-/// @param callback QSize* func()
+/// @param self const QDateTimeEdit*
+/// @param callback QSize* func(const QDateTimeEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_datetimeedit_on_size_hint(void* self, QSize* (*callback)());
+void q_datetimeedit_on_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#sizeHint)
 ///
 /// Base class method implementation
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QSize* q_datetimeedit_super_size_hint(void* self);
+QSize* q_datetimeedit_super_size_hint(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#clear)
 ///
@@ -487,9 +487,9 @@ void q_datetimeedit_clear(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void func()
+/// @param callback void func(QDateTimeEdit* self)
 ///
-void q_datetimeedit_on_clear(void* self, void (*callback)());
+void q_datetimeedit_on_clear(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#clear)
 ///
@@ -554,14 +554,14 @@ bool q_datetimeedit_super_event(void* self, void* event);
 /// @param self QDateTimeEdit*
 /// @param dateTime QDateTime*
 ///
-void q_datetimeedit_date_time_changed(void* self, void* dateTime);
+void q_datetimeedit_date_time_changed(void* self, const void* dateTime);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#dateTimeChanged)
 ///
 /// @param self QDateTimeEdit*
 /// @param callback void func(QDateTimeEdit* self, QDateTime* dateTime)
 ///
-void q_datetimeedit_on_date_time_changed(void* self, void (*callback)(void*, void*));
+void q_datetimeedit_on_date_time_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#timeChanged)
 ///
@@ -596,7 +596,7 @@ void q_datetimeedit_on_date_changed(void* self, void (*callback)(void*, void*));
 /// @param self QDateTimeEdit*
 /// @param dateTime QDateTime*
 ///
-void q_datetimeedit_set_date_time(void* self, void* dateTime);
+void q_datetimeedit_set_date_time(void* self, const void* dateTime);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#setDate)
 ///
@@ -714,140 +714,140 @@ bool q_datetimeedit_super_focus_next_prev_child(void* self, bool next);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#validate)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param input const char*
 /// @param pos int*
 ///
 /// @return enum QValidator__State
 ///
-int32_t q_datetimeedit_validate(void* self, const char* input, int* pos);
+int32_t q_datetimeedit_validate(const void* self, const char* input, int* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#validate)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDateTimeEdit*
-/// @param callback int32_t func(QDateTimeEdit* self, const char* input, int* pos)
+/// @param self const QDateTimeEdit*
+/// @param callback int32_t func(const QDateTimeEdit* self, const char* input, int* pos)
 ///
-void q_datetimeedit_on_validate(void* self, int32_t (*callback)(void*, const char*, int*));
+void q_datetimeedit_on_validate(const void* self, int32_t (*callback)(const void*, const char*, int*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#validate)
 ///
 /// Base class method implementation
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param input const char*
 /// @param pos int*
 ///
 /// @return enum QValidator__State
 ///
-int32_t q_datetimeedit_super_validate(void* self, const char* input, int* pos);
+int32_t q_datetimeedit_super_validate(const void* self, const char* input, int* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#fixup)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param input const char*
 ///
-void q_datetimeedit_fixup(void* self, const char* input);
+void q_datetimeedit_fixup(const void* self, const char* input);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#fixup)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDateTimeEdit*
-/// @param callback void func(QDateTimeEdit* self, const char* input)
+/// @param self const QDateTimeEdit*
+/// @param callback void func(const QDateTimeEdit* self, const char* input)
 ///
-void q_datetimeedit_on_fixup(void* self, void (*callback)(void*, const char*));
+void q_datetimeedit_on_fixup(const void* self, void (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#fixup)
 ///
 /// Base class method implementation
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param input const char*
 ///
-void q_datetimeedit_super_fixup(void* self, const char* input);
+void q_datetimeedit_super_fixup(const void* self, const char* input);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#dateTimeFromText)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param text const char*
 ///
-QDateTime* q_datetimeedit_date_time_from_text(void* self, const char* text);
+QDateTime* q_datetimeedit_date_time_from_text(const void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#dateTimeFromText)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDateTimeEdit*
-/// @param callback QDateTime* func(QDateTimeEdit* self, const char* text)
+/// @param self const QDateTimeEdit*
+/// @param callback QDateTime* func(const QDateTimeEdit* self, const char* text)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_datetimeedit_on_date_time_from_text(void* self, QDateTime* (*callback)(void*, const char*));
+void q_datetimeedit_on_date_time_from_text(const void* self, QDateTime* (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#dateTimeFromText)
 ///
 /// Base class method implementation
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param text const char*
 ///
-QDateTime* q_datetimeedit_super_date_time_from_text(void* self, const char* text);
+QDateTime* q_datetimeedit_super_date_time_from_text(const void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#textFromDateTime)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param dt QDateTime*
 ///
-const char* q_datetimeedit_text_from_date_time(void* self, void* dt);
+const char* q_datetimeedit_text_from_date_time(const void* self, const void* dt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#textFromDateTime)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDateTimeEdit*
-/// @param callback const char* func(QDateTimeEdit* self, QDateTime* dt)
+/// @param self const QDateTimeEdit*
+/// @param callback const char* func(const QDateTimeEdit* self, QDateTime* dt)
 ///
-void q_datetimeedit_on_text_from_date_time(void* self, const char* (*callback)(void*, void*));
+void q_datetimeedit_on_text_from_date_time(const void* self, const char* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#textFromDateTime)
 ///
 /// Base class method implementation
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param dt QDateTime*
 ///
-const char* q_datetimeedit_super_text_from_date_time(void* self, void* dt);
+const char* q_datetimeedit_super_text_from_date_time(const void* self, const void* dt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#stepEnabled)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
 /// @return flag of enum QAbstractSpinBox__StepEnabledFlag
 ///
-int32_t q_datetimeedit_step_enabled(void* self);
+int32_t q_datetimeedit_step_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#stepEnabled)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDateTimeEdit*
-/// @param callback int32_t func()
+/// @param self const QDateTimeEdit*
+/// @param callback int32_t func(const QDateTimeEdit* self)
 ///
-void q_datetimeedit_on_step_enabled(void* self, int32_t (*callback)());
+void q_datetimeedit_on_step_enabled(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#stepEnabled)
 ///
 /// Base class method implementation
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
 /// @return flag of enum QAbstractSpinBox__StepEnabledFlag
 ///
-int32_t q_datetimeedit_super_step_enabled(void* self);
+int32_t q_datetimeedit_super_step_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#mousePressEvent)
 ///
@@ -901,28 +901,28 @@ void q_datetimeedit_super_paint_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#initStyleOption)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param option QStyleOptionSpinBox*
 ///
-void q_datetimeedit_init_style_option(void* self, void* option);
+void q_datetimeedit_init_style_option(const void* self, void* option);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#initStyleOption)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDateTimeEdit*
-/// @param callback void func(QDateTimeEdit* self, QStyleOptionSpinBox* option)
+/// @param self const QDateTimeEdit*
+/// @param callback void func(const QDateTimeEdit* self, QStyleOptionSpinBox* option)
 ///
-void q_datetimeedit_on_init_style_option(void* self, void (*callback)(void*, void*));
+void q_datetimeedit_on_init_style_option(const void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#initStyleOption)
 ///
 /// Base class method implementation
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param option QStyleOptionSpinBox*
 ///
-void q_datetimeedit_super_init_style_option(void* self, void* option);
+void q_datetimeedit_super_init_style_option(const void* self, void* option);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -947,11 +947,11 @@ const char* q_datetimeedit_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#buttonSymbols)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
 /// @return enum QAbstractSpinBox__ButtonSymbols
 ///
-int32_t q_datetimeedit_button_symbols(void* self);
+int32_t q_datetimeedit_button_symbols(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -975,19 +975,19 @@ void q_datetimeedit_set_correction_mode(void* self, int32_t cm);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#correctionMode)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
 /// @return enum QAbstractSpinBox__CorrectionMode
 ///
-int32_t q_datetimeedit_correction_mode(void* self);
+int32_t q_datetimeedit_correction_mode(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#hasAcceptableInput)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_has_acceptable_input(void* self);
+bool q_datetimeedit_has_acceptable_input(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -995,9 +995,9 @@ bool q_datetimeedit_has_acceptable_input(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-const char* q_datetimeedit_text(void* self);
+const char* q_datetimeedit_text(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -1005,9 +1005,9 @@ const char* q_datetimeedit_text(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-const char* q_datetimeedit_special_value_text(void* self);
+const char* q_datetimeedit_special_value_text(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -1022,9 +1022,9 @@ void q_datetimeedit_set_special_value_text(void* self, const char* txt);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#wrapping)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_wrapping(void* self);
+bool q_datetimeedit_wrapping(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -1048,9 +1048,9 @@ void q_datetimeedit_set_read_only(void* self, bool r);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#isReadOnly)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_is_read_only(void* self);
+bool q_datetimeedit_is_read_only(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -1065,9 +1065,9 @@ void q_datetimeedit_set_keyboard_tracking(void* self, bool kt);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#keyboardTracking)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_keyboard_tracking(void* self);
+bool q_datetimeedit_keyboard_tracking(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -1082,11 +1082,11 @@ void q_datetimeedit_set_alignment(void* self, int32_t flag);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#alignment)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 ///
-int32_t q_datetimeedit_alignment(void* self);
+int32_t q_datetimeedit_alignment(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -1101,9 +1101,9 @@ void q_datetimeedit_set_frame(void* self, bool frame);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#hasFrame)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_has_frame(void* self);
+bool q_datetimeedit_has_frame(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -1118,9 +1118,9 @@ void q_datetimeedit_set_accelerated(void* self, bool on);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#isAccelerated)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_is_accelerated(void* self);
+bool q_datetimeedit_is_accelerated(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -1135,9 +1135,9 @@ void q_datetimeedit_set_group_separator_shown(void* self, bool shown);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#isGroupSeparatorShown)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_is_group_separator_shown(void* self);
+bool q_datetimeedit_is_group_separator_shown(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -1208,9 +1208,9 @@ QDateTimeEdit* q_datetimeedit_from_q_paint_device(void* _qpaintdevice);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-uintptr_t q_datetimeedit_win_id(void* self);
+uintptr_t q_datetimeedit_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1224,25 +1224,25 @@ void q_datetimeedit_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-uintptr_t q_datetimeedit_internal_win_id(void* self);
+uintptr_t q_datetimeedit_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-uintptr_t q_datetimeedit_effective_win_id(void* self);
+uintptr_t q_datetimeedit_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QStyle* q_datetimeedit_style(void* self);
+QStyle* q_datetimeedit_style(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1257,35 +1257,35 @@ void q_datetimeedit_set_style(void* self, void* style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_is_top_level(void* self);
+bool q_datetimeedit_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_is_window(void* self);
+bool q_datetimeedit_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_is_modal(void* self);
+bool q_datetimeedit_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t q_datetimeedit_window_modality(void* self);
+int32_t q_datetimeedit_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1300,18 +1300,18 @@ void q_datetimeedit_set_window_modality(void* self, int32_t windowModality);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_is_enabled(void* self);
+bool q_datetimeedit_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param param1 QWidget*
 ///
-bool q_datetimeedit_is_enabled_to(void* self, void* param1);
+bool q_datetimeedit_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1344,153 +1344,153 @@ void q_datetimeedit_set_window_modified(void* self, bool windowModified);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QRect* q_datetimeedit_frame_geometry(void* self);
+QRect* q_datetimeedit_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-const QRect* q_datetimeedit_geometry(void* self);
+const QRect* q_datetimeedit_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QRect* q_datetimeedit_normal_geometry(void* self);
+QRect* q_datetimeedit_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-int32_t q_datetimeedit_x(void* self);
+int32_t q_datetimeedit_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-int32_t q_datetimeedit_y(void* self);
+int32_t q_datetimeedit_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QPoint* q_datetimeedit_pos(void* self);
+QPoint* q_datetimeedit_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QSize* q_datetimeedit_frame_size(void* self);
+QSize* q_datetimeedit_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QSize* q_datetimeedit_size(void* self);
+QSize* q_datetimeedit_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-int32_t q_datetimeedit_width(void* self);
+int32_t q_datetimeedit_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-int32_t q_datetimeedit_height(void* self);
+int32_t q_datetimeedit_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QRect* q_datetimeedit_rect(void* self);
+QRect* q_datetimeedit_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QRect* q_datetimeedit_children_rect(void* self);
+QRect* q_datetimeedit_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QRegion* q_datetimeedit_children_region(void* self);
+QRegion* q_datetimeedit_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QSize* q_datetimeedit_minimum_size(void* self);
+QSize* q_datetimeedit_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QSize* q_datetimeedit_maximum_size(void* self);
+QSize* q_datetimeedit_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-int32_t q_datetimeedit_minimum_width(void* self);
+int32_t q_datetimeedit_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-int32_t q_datetimeedit_minimum_height(void* self);
+int32_t q_datetimeedit_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-int32_t q_datetimeedit_maximum_width(void* self);
+int32_t q_datetimeedit_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-int32_t q_datetimeedit_maximum_height(void* self);
+int32_t q_datetimeedit_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1499,7 +1499,7 @@ int32_t q_datetimeedit_maximum_height(void* self);
 /// @param self QDateTimeEdit*
 /// @param minimumSize QSize*
 ///
-void q_datetimeedit_set_minimum_size(void* self, void* minimumSize);
+void q_datetimeedit_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -1518,7 +1518,7 @@ void q_datetimeedit_set_minimum_size2(void* self, int minw, int minh);
 /// @param self QDateTimeEdit*
 /// @param maximumSize QSize*
 ///
-void q_datetimeedit_set_maximum_size(void* self, void* maximumSize);
+void q_datetimeedit_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -1570,9 +1570,9 @@ void q_datetimeedit_set_maximum_height(void* self, int maxh);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QSize* q_datetimeedit_size_increment(void* self);
+QSize* q_datetimeedit_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1581,7 +1581,7 @@ QSize* q_datetimeedit_size_increment(void* self);
 /// @param self QDateTimeEdit*
 /// @param sizeIncrement QSize*
 ///
-void q_datetimeedit_set_size_increment(void* self, void* sizeIncrement);
+void q_datetimeedit_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -1597,9 +1597,9 @@ void q_datetimeedit_set_size_increment2(void* self, int w, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QSize* q_datetimeedit_base_size(void* self);
+QSize* q_datetimeedit_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1608,7 +1608,7 @@ QSize* q_datetimeedit_base_size(void* self);
 /// @param self QDateTimeEdit*
 /// @param baseSize QSize*
 ///
-void q_datetimeedit_set_base_size(void* self, void* baseSize);
+void q_datetimeedit_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -1627,7 +1627,7 @@ void q_datetimeedit_set_base_size2(void* self, int basew, int baseh);
 /// @param self QDateTimeEdit*
 /// @param fixedSize QSize*
 ///
-void q_datetimeedit_set_fixed_size(void* self, void* fixedSize);
+void q_datetimeedit_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -1661,145 +1661,145 @@ void q_datetimeedit_set_fixed_height(void* self, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param param1 QPointF*
 ///
-QPointF* q_datetimeedit_map_to_global(void* self, void* param1);
+QPointF* q_datetimeedit_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param param1 QPoint*
 ///
-QPoint* q_datetimeedit_map_to_global2(void* self, void* param1);
+QPoint* q_datetimeedit_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param param1 QPointF*
 ///
-QPointF* q_datetimeedit_map_from_global(void* self, void* param1);
+QPointF* q_datetimeedit_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param param1 QPoint*
 ///
-QPoint* q_datetimeedit_map_from_global2(void* self, void* param1);
+QPoint* q_datetimeedit_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param param1 QPointF*
 ///
-QPointF* q_datetimeedit_map_to_parent(void* self, void* param1);
+QPointF* q_datetimeedit_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param param1 QPoint*
 ///
-QPoint* q_datetimeedit_map_to_parent2(void* self, void* param1);
+QPoint* q_datetimeedit_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param param1 QPointF*
 ///
-QPointF* q_datetimeedit_map_from_parent(void* self, void* param1);
+QPointF* q_datetimeedit_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param param1 QPoint*
 ///
-QPoint* q_datetimeedit_map_from_parent2(void* self, void* param1);
+QPoint* q_datetimeedit_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* q_datetimeedit_map_to(void* self, void* param1, void* param2);
+QPointF* q_datetimeedit_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* q_datetimeedit_map_to2(void* self, void* param1, void* param2);
+QPoint* q_datetimeedit_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* q_datetimeedit_map_from(void* self, void* param1, void* param2);
+QPointF* q_datetimeedit_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* q_datetimeedit_map_from2(void* self, void* param1, void* param2);
+QPoint* q_datetimeedit_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QWidget* q_datetimeedit_window(void* self);
+QWidget* q_datetimeedit_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QWidget* q_datetimeedit_native_parent_widget(void* self);
+QWidget* q_datetimeedit_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QWidget* q_datetimeedit_top_level_widget(void* self);
+QWidget* q_datetimeedit_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-const QPalette* q_datetimeedit_palette(void* self);
+const QPalette* q_datetimeedit_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1808,7 +1808,7 @@ const QPalette* q_datetimeedit_palette(void* self);
 /// @param self QDateTimeEdit*
 /// @param palette QPalette*
 ///
-void q_datetimeedit_set_palette(void* self, void* palette);
+void q_datetimeedit_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -1823,11 +1823,11 @@ void q_datetimeedit_set_background_role(void* self, int32_t backgroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t q_datetimeedit_background_role(void* self);
+int32_t q_datetimeedit_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1842,19 +1842,19 @@ void q_datetimeedit_set_foreground_role(void* self, int32_t foregroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t q_datetimeedit_foreground_role(void* self);
+int32_t q_datetimeedit_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-const QFont* q_datetimeedit_font(void* self);
+const QFont* q_datetimeedit_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1863,31 +1863,31 @@ const QFont* q_datetimeedit_font(void* self);
 /// @param self QDateTimeEdit*
 /// @param font QFont*
 ///
-void q_datetimeedit_set_font(void* self, void* font);
+void q_datetimeedit_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QFontMetrics* q_datetimeedit_font_metrics(void* self);
+QFontMetrics* q_datetimeedit_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QFontInfo* q_datetimeedit_font_info(void* self);
+QFontInfo* q_datetimeedit_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QCursor* q_datetimeedit_cursor(void* self);
+QCursor* q_datetimeedit_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1896,7 +1896,7 @@ QCursor* q_datetimeedit_cursor(void* self);
 /// @param self QDateTimeEdit*
 /// @param cursor QCursor*
 ///
-void q_datetimeedit_set_cursor(void* self, void* cursor);
+void q_datetimeedit_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -1919,17 +1919,17 @@ void q_datetimeedit_set_mouse_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_has_mouse_tracking(void* self);
+bool q_datetimeedit_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_under_mouse(void* self);
+bool q_datetimeedit_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1944,9 +1944,9 @@ void q_datetimeedit_set_tablet_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_has_tablet_tracking(void* self);
+bool q_datetimeedit_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1955,7 +1955,7 @@ bool q_datetimeedit_has_tablet_tracking(void* self);
 /// @param self QDateTimeEdit*
 /// @param mask QBitmap*
 ///
-void q_datetimeedit_set_mask(void* self, void* mask);
+void q_datetimeedit_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -1964,15 +1964,15 @@ void q_datetimeedit_set_mask(void* self, void* mask);
 /// @param self QDateTimeEdit*
 /// @param mask QRegion*
 ///
-void q_datetimeedit_set_mask2(void* self, void* mask);
+void q_datetimeedit_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QRegion* q_datetimeedit_mask(void* self);
+QRegion* q_datetimeedit_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2012,9 +2012,9 @@ QPixmap* q_datetimeedit_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QGraphicsEffect* q_datetimeedit_graphics_effect(void* self);
+QGraphicsEffect* q_datetimeedit_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2067,9 +2067,9 @@ void q_datetimeedit_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-const char* q_datetimeedit_style_sheet(void* self);
+const char* q_datetimeedit_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2077,9 +2077,9 @@ const char* q_datetimeedit_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-const char* q_datetimeedit_window_title(void* self);
+const char* q_datetimeedit_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2088,15 +2088,15 @@ const char* q_datetimeedit_window_title(void* self);
 /// @param self QDateTimeEdit*
 /// @param icon QIcon*
 ///
-void q_datetimeedit_set_window_icon(void* self, void* icon);
+void q_datetimeedit_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QIcon* q_datetimeedit_window_icon(void* self);
+QIcon* q_datetimeedit_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2113,9 +2113,9 @@ void q_datetimeedit_set_window_icon_text(void* self, const char* windowIconText)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-const char* q_datetimeedit_window_icon_text(void* self);
+const char* q_datetimeedit_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2132,9 +2132,9 @@ void q_datetimeedit_set_window_role(void* self, const char* windowRole);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-const char* q_datetimeedit_window_role(void* self);
+const char* q_datetimeedit_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2151,9 +2151,9 @@ void q_datetimeedit_set_window_file_path(void* self, const char* filePath);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-const char* q_datetimeedit_window_file_path(void* self);
+const char* q_datetimeedit_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2168,17 +2168,17 @@ void q_datetimeedit_set_window_opacity(void* self, double level);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-double q_datetimeedit_window_opacity(void* self);
+double q_datetimeedit_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_is_window_modified(void* self);
+bool q_datetimeedit_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2195,9 +2195,9 @@ void q_datetimeedit_set_tool_tip(void* self, const char* toolTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-const char* q_datetimeedit_tool_tip(void* self);
+const char* q_datetimeedit_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2212,9 +2212,9 @@ void q_datetimeedit_set_tool_tip_duration(void* self, int msec);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-int32_t q_datetimeedit_tool_tip_duration(void* self);
+int32_t q_datetimeedit_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2231,9 +2231,9 @@ void q_datetimeedit_set_status_tip(void* self, const char* statusTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-const char* q_datetimeedit_status_tip(void* self);
+const char* q_datetimeedit_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2250,9 +2250,9 @@ void q_datetimeedit_set_whats_this(void* self, const char* whatsThis);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-const char* q_datetimeedit_whats_this(void* self);
+const char* q_datetimeedit_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2260,9 +2260,9 @@ const char* q_datetimeedit_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-const char* q_datetimeedit_accessible_name(void* self);
+const char* q_datetimeedit_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2279,9 +2279,9 @@ void q_datetimeedit_set_accessible_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-const char* q_datetimeedit_accessible_description(void* self);
+const char* q_datetimeedit_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2305,11 +2305,11 @@ void q_datetimeedit_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_datetimeedit_layout_direction(void* self);
+int32_t q_datetimeedit_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2326,15 +2326,15 @@ void q_datetimeedit_unset_layout_direction(void* self);
 /// @param self QDateTimeEdit*
 /// @param locale QLocale*
 ///
-void q_datetimeedit_set_locale(void* self, void* locale);
+void q_datetimeedit_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QLocale* q_datetimeedit_locale(void* self);
+QLocale* q_datetimeedit_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2348,17 +2348,17 @@ void q_datetimeedit_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_is_right_to_left(void* self);
+bool q_datetimeedit_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_is_left_to_right(void* self);
+bool q_datetimeedit_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2372,9 +2372,9 @@ void q_datetimeedit_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_is_active_window(void* self);
+bool q_datetimeedit_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2405,11 +2405,11 @@ void q_datetimeedit_set_focus2(void* self, int32_t reason);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t q_datetimeedit_focus_policy(void* self);
+int32_t q_datetimeedit_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2424,9 +2424,9 @@ void q_datetimeedit_set_focus_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_has_focus(void* self);
+bool q_datetimeedit_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2450,19 +2450,19 @@ void q_datetimeedit_set_focus_proxy(void* self, void* focusProxy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QWidget* q_datetimeedit_focus_proxy(void* self);
+QWidget* q_datetimeedit_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t q_datetimeedit_context_menu_policy(void* self);
+int32_t q_datetimeedit_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2488,7 +2488,7 @@ void q_datetimeedit_grab_mouse(void* self);
 /// @param self QDateTimeEdit*
 /// @param param1 QCursor*
 ///
-void q_datetimeedit_grab_mouse2(void* self, void* param1);
+void q_datetimeedit_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2521,7 +2521,7 @@ void q_datetimeedit_release_keyboard(void* self);
 /// @param self QDateTimeEdit*
 /// @param key QKeySequence*
 ///
-int32_t q_datetimeedit_grab_shortcut(void* self, void* key);
+int32_t q_datetimeedit_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -2566,9 +2566,9 @@ QWidget* q_datetimeedit_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_updates_enabled(void* self);
+bool q_datetimeedit_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2583,9 +2583,9 @@ void q_datetimeedit_set_updates_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QGraphicsProxyWidget* q_datetimeedit_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* q_datetimeedit_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2622,7 +2622,7 @@ void q_datetimeedit_update2(void* self, int x, int y, int w, int h);
 /// @param self QDateTimeEdit*
 /// @param param1 QRect*
 ///
-void q_datetimeedit_update3(void* self, void* param1);
+void q_datetimeedit_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2631,7 +2631,7 @@ void q_datetimeedit_update3(void* self, void* param1);
 /// @param self QDateTimeEdit*
 /// @param param1 QRegion*
 ///
-void q_datetimeedit_update4(void* self, void* param1);
+void q_datetimeedit_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2652,7 +2652,7 @@ void q_datetimeedit_repaint2(void* self, int x, int y, int w, int h);
 /// @param self QDateTimeEdit*
 /// @param param1 QRect*
 ///
-void q_datetimeedit_repaint3(void* self, void* param1);
+void q_datetimeedit_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2661,7 +2661,7 @@ void q_datetimeedit_repaint3(void* self, void* param1);
 /// @param self QDateTimeEdit*
 /// @param param1 QRegion*
 ///
-void q_datetimeedit_repaint4(void* self, void* param1);
+void q_datetimeedit_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2770,7 +2770,7 @@ void q_datetimeedit_move(void* self, int x, int y);
 /// @param self QDateTimeEdit*
 /// @param param1 QPoint*
 ///
-void q_datetimeedit_move2(void* self, void* param1);
+void q_datetimeedit_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2789,7 +2789,7 @@ void q_datetimeedit_resize(void* self, int w, int h);
 /// @param self QDateTimeEdit*
 /// @param param1 QSize*
 ///
-void q_datetimeedit_resize2(void* self, void* param1);
+void q_datetimeedit_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2810,7 +2810,7 @@ void q_datetimeedit_set_geometry(void* self, int x, int y, int w, int h);
 /// @param self QDateTimeEdit*
 /// @param geometry QRect*
 ///
-void q_datetimeedit_set_geometry2(void* self, void* geometry);
+void q_datetimeedit_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -2818,9 +2818,9 @@ void q_datetimeedit_set_geometry2(void* self, void* geometry);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-char* q_datetimeedit_save_geometry(void* self);
+char* q_datetimeedit_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2843,60 +2843,60 @@ void q_datetimeedit_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_is_visible(void* self);
+bool q_datetimeedit_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param param1 QWidget*
 ///
-bool q_datetimeedit_is_visible_to(void* self, void* param1);
+bool q_datetimeedit_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_is_hidden(void* self);
+bool q_datetimeedit_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_is_minimized(void* self);
+bool q_datetimeedit_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_is_maximized(void* self);
+bool q_datetimeedit_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_is_full_screen(void* self);
+bool q_datetimeedit_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t q_datetimeedit_window_state(void* self);
+int32_t q_datetimeedit_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2920,9 +2920,9 @@ void q_datetimeedit_override_window_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QSizePolicy* q_datetimeedit_size_policy(void* self);
+QSizePolicy* q_datetimeedit_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2947,9 +2947,9 @@ void q_datetimeedit_set_size_policy2(void* self, int32_t horizontal, int32_t ver
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QRegion* q_datetimeedit_visible_region(void* self);
+QRegion* q_datetimeedit_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2970,31 +2970,31 @@ void q_datetimeedit_set_contents_margins(void* self, int left, int top, int righ
 /// @param self QDateTimeEdit*
 /// @param margins QMargins*
 ///
-void q_datetimeedit_set_contents_margins2(void* self, void* margins);
+void q_datetimeedit_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QMargins* q_datetimeedit_contents_margins(void* self);
+QMargins* q_datetimeedit_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QRect* q_datetimeedit_contents_rect(void* self);
+QRect* q_datetimeedit_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QLayout* q_datetimeedit_layout(void* self);
+QLayout* q_datetimeedit_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3051,39 +3051,39 @@ void q_datetimeedit_scroll(void* self, int dx, int dy);
 /// @param dy int
 /// @param param3 QRect*
 ///
-void q_datetimeedit_scroll2(void* self, int dx, int dy, void* param3);
+void q_datetimeedit_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QWidget* q_datetimeedit_focus_widget(void* self);
+QWidget* q_datetimeedit_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QWidget* q_datetimeedit_next_in_focus_chain(void* self);
+QWidget* q_datetimeedit_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QWidget* q_datetimeedit_previous_in_focus_chain(void* self);
+QWidget* q_datetimeedit_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_accept_drops(void* self);
+bool q_datetimeedit_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3145,11 +3145,11 @@ void q_datetimeedit_remove_action(void* self, void* action);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list q_datetimeedit_actions(void* self);
+libqt_list q_datetimeedit_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3168,7 +3168,7 @@ QAction* q_datetimeedit_add_action2(void* self, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* q_datetimeedit_add_action3(void* self, void* icon, const char* text);
+QAction* q_datetimeedit_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -3178,7 +3178,7 @@ QAction* q_datetimeedit_add_action3(void* self, void* icon, const char* text);
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* q_datetimeedit_add_action4(void* self, const char* text, void* shortcut);
+QAction* q_datetimeedit_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -3189,15 +3189,15 @@ QAction* q_datetimeedit_add_action4(void* self, const char* text, void* shortcut
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* q_datetimeedit_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* q_datetimeedit_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QWidget* q_datetimeedit_parent_widget(void* self);
+QWidget* q_datetimeedit_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3212,11 +3212,11 @@ void q_datetimeedit_set_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t q_datetimeedit_window_flags(void* self);
+int32_t q_datetimeedit_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3240,11 +3240,11 @@ void q_datetimeedit_override_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t q_datetimeedit_window_type(void* self);
+int32_t q_datetimeedit_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3258,29 +3258,29 @@ QWidget* q_datetimeedit_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param x int
 /// @param y int
 ///
-QWidget* q_datetimeedit_child_at(void* self, int x, int y);
+QWidget* q_datetimeedit_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param p QPoint*
 ///
-QWidget* q_datetimeedit_child_at2(void* self, void* p);
+QWidget* q_datetimeedit_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param p QPointF*
 ///
-QWidget* q_datetimeedit_child_at3(void* self, void* p);
+QWidget* q_datetimeedit_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -3295,35 +3295,35 @@ void q_datetimeedit_set_attribute(void* self, int32_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool q_datetimeedit_test_attribute(void* self, int32_t param1);
+bool q_datetimeedit_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-void q_datetimeedit_ensure_polished(void* self);
+void q_datetimeedit_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param child QWidget*
 ///
-bool q_datetimeedit_is_ancestor_of(void* self, void* child);
+bool q_datetimeedit_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_auto_fill_background(void* self);
+bool q_datetimeedit_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3338,25 +3338,25 @@ void q_datetimeedit_set_auto_fill_background(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QBackingStore* q_datetimeedit_backing_store(void* self);
+QBackingStore* q_datetimeedit_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QWindow* q_datetimeedit_window_handle(void* self);
+QWindow* q_datetimeedit_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QScreen* q_datetimeedit_screen(void* self);
+QScreen* q_datetimeedit_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3400,7 +3400,7 @@ void q_datetimeedit_on_window_title_changed(void* self, void (*callback)(void*, 
 /// @param self QDateTimeEdit*
 /// @param icon QIcon*
 ///
-void q_datetimeedit_window_icon_changed(void* self, void* icon);
+void q_datetimeedit_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -3409,7 +3409,7 @@ void q_datetimeedit_window_icon_changed(void* self, void* icon);
 /// @param self QDateTimeEdit*
 /// @param callback void func(QDateTimeEdit* self, QIcon* icon)
 ///
-void q_datetimeedit_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void q_datetimeedit_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -3436,7 +3436,7 @@ void q_datetimeedit_on_window_icon_text_changed(void* self, void (*callback)(voi
 /// @param self QDateTimeEdit*
 /// @param pos QPoint*
 ///
-void q_datetimeedit_custom_context_menu_requested(void* self, void* pos);
+void q_datetimeedit_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -3445,17 +3445,17 @@ void q_datetimeedit_custom_context_menu_requested(void* self, void* pos);
 /// @param self QDateTimeEdit*
 /// @param callback void func(QDateTimeEdit* self, QPoint* pos)
 ///
-void q_datetimeedit_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void q_datetimeedit_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t q_datetimeedit_input_method_hints(void* self);
+int32_t q_datetimeedit_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3474,7 +3474,7 @@ void q_datetimeedit_set_input_method_hints(void* self, int32_t hints);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void q_datetimeedit_render22(void* self, void* target, void* targetOffset);
+void q_datetimeedit_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -3485,7 +3485,7 @@ void q_datetimeedit_render22(void* self, void* target, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void q_datetimeedit_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void q_datetimeedit_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -3497,7 +3497,7 @@ void q_datetimeedit_render3(void* self, void* target, void* targetOffset, void* 
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void q_datetimeedit_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void q_datetimeedit_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3507,7 +3507,7 @@ void q_datetimeedit_render4(void* self, void* target, void* targetOffset, void* 
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void q_datetimeedit_render23(void* self, void* painter, void* targetOffset);
+void q_datetimeedit_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -3518,7 +3518,7 @@ void q_datetimeedit_render23(void* self, void* painter, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void q_datetimeedit_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void q_datetimeedit_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -3530,7 +3530,7 @@ void q_datetimeedit_render32(void* self, void* painter, void* targetOffset, void
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void q_datetimeedit_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void q_datetimeedit_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3539,7 +3539,7 @@ void q_datetimeedit_render42(void* self, void* painter, void* targetOffset, void
 /// @param self QDateTimeEdit*
 /// @param rectangle QRect*
 ///
-QPixmap* q_datetimeedit_grab1(void* self, void* rectangle);
+QPixmap* q_datetimeedit_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -3559,7 +3559,7 @@ void q_datetimeedit_grab_gesture2(void* self, int32_t type, int32_t flags);
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t q_datetimeedit_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t q_datetimeedit_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -3626,9 +3626,9 @@ QWidget* q_datetimeedit_create_window_container3(void* window, void* parent, int
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-const char* q_datetimeedit_object_name(void* self);
+const char* q_datetimeedit_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3643,33 +3643,33 @@ void q_datetimeedit_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_is_widget_type(void* self);
+bool q_datetimeedit_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_is_window_type(void* self);
+bool q_datetimeedit_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_is_quick_item_type(void* self);
+bool q_datetimeedit_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_signals_blocked(void* self);
+bool q_datetimeedit_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3684,9 +3684,9 @@ bool q_datetimeedit_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QThread* q_datetimeedit_thread(void* self);
+QThread* q_datetimeedit_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3737,11 +3737,11 @@ void q_datetimeedit_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_datetimeedit_children(void* self);
+libqt_list q_datetimeedit_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3770,7 +3770,7 @@ void q_datetimeedit_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_datetimeedit_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_datetimeedit_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3781,18 +3781,18 @@ QMetaObject__Connection* q_datetimeedit_connect(void* sender, const char* signal
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_datetimeedit_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_datetimeedit_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_datetimeedit_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_datetimeedit_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3803,7 +3803,7 @@ QMetaObject__Connection* q_datetimeedit_connect3(void* self, void* sender, const
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_datetimeedit_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_datetimeedit_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3814,24 +3814,24 @@ bool q_datetimeedit_disconnect(void* sender, const char* signal, void* receiver,
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_datetimeedit_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_datetimeedit_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_disconnect3(void* self);
+bool q_datetimeedit_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param receiver QObject*
 ///
-bool q_datetimeedit_disconnect4(void* self, void* receiver);
+bool q_datetimeedit_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -3839,23 +3839,23 @@ bool q_datetimeedit_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_datetimeedit_disconnect5(void* param1);
+bool q_datetimeedit_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-void q_datetimeedit_dump_object_tree(void* self);
+void q_datetimeedit_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-void q_datetimeedit_dump_object_info(void* self);
+void q_datetimeedit_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3865,16 +3865,16 @@ void q_datetimeedit_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_datetimeedit_set_property(void* self, const char* name, void* value);
+bool q_datetimeedit_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param name const char*
 ///
-QVariant* q_datetimeedit_property(void* self, const char* name);
+QVariant* q_datetimeedit_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -3882,9 +3882,9 @@ QVariant* q_datetimeedit_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-const char** q_datetimeedit_dynamic_property_names(void* self);
+const char** q_datetimeedit_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3898,9 +3898,9 @@ QBindingStorage* q_datetimeedit_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-const QBindingStorage* q_datetimeedit_binding_storage2(void* self);
+const QBindingStorage* q_datetimeedit_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3923,18 +3923,18 @@ void q_datetimeedit_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QObject* q_datetimeedit_parent(void* self);
+QObject* q_datetimeedit_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param classname const char*
 ///
-bool q_datetimeedit_inherits(void* self, const char* classname);
+bool q_datetimeedit_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -3974,7 +3974,7 @@ int32_t q_datetimeedit_start_timer23(void* self, int64_t time, int32_t timerType
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_datetimeedit_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_datetimeedit_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -3986,59 +3986,59 @@ QMetaObject__Connection* q_datetimeedit_connect5(void* sender, const char* signa
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_datetimeedit_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_datetimeedit_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_datetimeedit_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_datetimeedit_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param signal const char*
 ///
-bool q_datetimeedit_disconnect1(void* self, const char* signal);
+bool q_datetimeedit_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDateTimeEdit*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_datetimeedit_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_datetimeedit_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_datetimeedit_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_datetimeedit_disconnect23(void* self, void* receiver, const char* member);
+bool q_datetimeedit_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QDateTimeEdit*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_datetimeedit_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4062,89 +4062,89 @@ void q_datetimeedit_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_painting_active(void* self);
+bool q_datetimeedit_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-int32_t q_datetimeedit_width_m_m(void* self);
+int32_t q_datetimeedit_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-int32_t q_datetimeedit_height_m_m(void* self);
+int32_t q_datetimeedit_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-int32_t q_datetimeedit_logical_dpi_x(void* self);
+int32_t q_datetimeedit_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-int32_t q_datetimeedit_logical_dpi_y(void* self);
+int32_t q_datetimeedit_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-int32_t q_datetimeedit_physical_dpi_x(void* self);
+int32_t q_datetimeedit_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-int32_t q_datetimeedit_physical_dpi_y(void* self);
+int32_t q_datetimeedit_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-double q_datetimeedit_device_pixel_ratio(void* self);
+double q_datetimeedit_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-double q_datetimeedit_device_pixel_ratio_f(void* self);
+double q_datetimeedit_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-int32_t q_datetimeedit_color_count(void* self);
+int32_t q_datetimeedit_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-int32_t q_datetimeedit_depth(void* self);
+int32_t q_datetimeedit_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -4167,9 +4167,9 @@ int32_t q_datetimeedit_encode_metric_f(int32_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QSize* q_datetimeedit_minimum_size_hint(void* self);
+QSize* q_datetimeedit_minimum_size_hint(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4177,9 +4177,9 @@ QSize* q_datetimeedit_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QSize* q_datetimeedit_super_minimum_size_hint(void* self);
+QSize* q_datetimeedit_super_minimum_size_hint(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4187,12 +4187,12 @@ QSize* q_datetimeedit_super_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
-/// @param callback QSize* func()
+/// @param self const QDateTimeEdit*
+/// @param callback QSize* func(QDateTimeEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_datetimeedit_on_minimum_size_hint(void* self, QSize* (*callback)());
+void q_datetimeedit_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4200,10 +4200,10 @@ void q_datetimeedit_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_datetimeedit_input_method_query(void* self, int32_t param1);
+QVariant* q_datetimeedit_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4211,10 +4211,10 @@ QVariant* q_datetimeedit_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_datetimeedit_super_input_method_query(void* self, int32_t param1);
+QVariant* q_datetimeedit_super_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4222,12 +4222,12 @@ QVariant* q_datetimeedit_super_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param callback QVariant* func(QDateTimeEdit* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_datetimeedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void q_datetimeedit_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4598,9 +4598,9 @@ void q_datetimeedit_on_show_event(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-int32_t q_datetimeedit_dev_type(void* self);
+int32_t q_datetimeedit_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4608,9 +4608,9 @@ int32_t q_datetimeedit_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-int32_t q_datetimeedit_super_dev_type(void* self);
+int32_t q_datetimeedit_super_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4618,10 +4618,10 @@ int32_t q_datetimeedit_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
-/// @param callback int32_t func()
+/// @param self const QDateTimeEdit*
+/// @param callback int32_t func(QDateTimeEdit* self)
 ///
-void q_datetimeedit_on_dev_type(void* self, int32_t (*callback)());
+void q_datetimeedit_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4662,10 +4662,10 @@ void q_datetimeedit_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param param1 int
 ///
-int32_t q_datetimeedit_height_for_width(void* self, int param1);
+int32_t q_datetimeedit_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -4673,10 +4673,10 @@ int32_t q_datetimeedit_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param param1 int
 ///
-int32_t q_datetimeedit_super_height_for_width(void* self, int param1);
+int32_t q_datetimeedit_super_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -4684,10 +4684,10 @@ int32_t q_datetimeedit_super_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param callback int32_t func(QDateTimeEdit* self, int param1)
 ///
-void q_datetimeedit_on_height_for_width(void* self, int32_t (*callback)(void*, int));
+void q_datetimeedit_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -4695,9 +4695,9 @@ void q_datetimeedit_on_height_for_width(void* self, int32_t (*callback)(void*, i
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_has_height_for_width(void* self);
+bool q_datetimeedit_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4705,9 +4705,9 @@ bool q_datetimeedit_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-bool q_datetimeedit_super_has_height_for_width(void* self);
+bool q_datetimeedit_super_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4715,10 +4715,10 @@ bool q_datetimeedit_super_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
-/// @param callback bool func()
+/// @param self const QDateTimeEdit*
+/// @param callback bool func(QDateTimeEdit* self)
 ///
-void q_datetimeedit_on_has_height_for_width(void* self, bool (*callback)());
+void q_datetimeedit_on_has_height_for_width(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4726,9 +4726,9 @@ void q_datetimeedit_on_has_height_for_width(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QPaintEngine* q_datetimeedit_paint_engine(void* self);
+QPaintEngine* q_datetimeedit_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4736,9 +4736,9 @@ QPaintEngine* q_datetimeedit_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QPaintEngine* q_datetimeedit_super_paint_engine(void* self);
+QPaintEngine* q_datetimeedit_super_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4746,10 +4746,10 @@ QPaintEngine* q_datetimeedit_super_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
-/// @param callback QPaintEngine* func()
+/// @param self const QDateTimeEdit*
+/// @param callback QPaintEngine* func(QDateTimeEdit* self)
 ///
-void q_datetimeedit_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void q_datetimeedit_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5124,10 +5124,10 @@ void q_datetimeedit_on_native_event(void* self, bool (*callback)(void*, libqt_st
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_datetimeedit_metric(void* self, int32_t param1);
+int32_t q_datetimeedit_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5135,10 +5135,10 @@ int32_t q_datetimeedit_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_datetimeedit_super_metric(void* self, int32_t param1);
+int32_t q_datetimeedit_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5146,10 +5146,10 @@ int32_t q_datetimeedit_super_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param callback int32_t func(QDateTimeEdit* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_datetimeedit_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void q_datetimeedit_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5157,10 +5157,10 @@ void q_datetimeedit_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param painter QPainter*
 ///
-void q_datetimeedit_init_painter(void* self, void* painter);
+void q_datetimeedit_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -5168,10 +5168,10 @@ void q_datetimeedit_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param painter QPainter*
 ///
-void q_datetimeedit_super_init_painter(void* self, void* painter);
+void q_datetimeedit_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -5179,10 +5179,10 @@ void q_datetimeedit_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param callback void func(QDateTimeEdit* self, QPainter* painter)
 ///
-void q_datetimeedit_on_init_painter(void* self, void (*callback)(void*, void*));
+void q_datetimeedit_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5190,10 +5190,10 @@ void q_datetimeedit_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_datetimeedit_redirected(void* self, void* offset);
+QPaintDevice* q_datetimeedit_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -5201,10 +5201,10 @@ QPaintDevice* q_datetimeedit_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_datetimeedit_super_redirected(void* self, void* offset);
+QPaintDevice* q_datetimeedit_super_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -5212,10 +5212,10 @@ QPaintDevice* q_datetimeedit_super_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param callback QPaintDevice* func(QDateTimeEdit* self, QPoint* offset)
 ///
-void q_datetimeedit_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void q_datetimeedit_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5223,9 +5223,9 @@ void q_datetimeedit_on_redirected(void* self, QPaintDevice* (*callback)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QPainter* q_datetimeedit_shared_painter(void* self);
+QPainter* q_datetimeedit_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5233,9 +5233,9 @@ QPainter* q_datetimeedit_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QPainter* q_datetimeedit_super_shared_painter(void* self);
+QPainter* q_datetimeedit_super_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5243,10 +5243,10 @@ QPainter* q_datetimeedit_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
-/// @param callback QPainter* func()
+/// @param self const QDateTimeEdit*
+/// @param callback QPainter* func(QDateTimeEdit* self)
 ///
-void q_datetimeedit_on_shared_painter(void* self, QPainter* (*callback)());
+void q_datetimeedit_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5391,7 +5391,7 @@ void q_datetimeedit_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QDateTimeEdit*
 /// @param signal QMetaMethod*
 ///
-void q_datetimeedit_connect_notify(void* self, void* signal);
+void q_datetimeedit_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5402,7 +5402,7 @@ void q_datetimeedit_connect_notify(void* self, void* signal);
 /// @param self QDateTimeEdit*
 /// @param signal QMetaMethod*
 ///
-void q_datetimeedit_super_connect_notify(void* self, void* signal);
+void q_datetimeedit_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5413,7 +5413,7 @@ void q_datetimeedit_super_connect_notify(void* self, void* signal);
 /// @param self QDateTimeEdit*
 /// @param callback void func(QDateTimeEdit* self, QMetaMethod* signal)
 ///
-void q_datetimeedit_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_datetimeedit_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -5424,7 +5424,7 @@ void q_datetimeedit_on_connect_notify(void* self, void (*callback)(void*, void*)
 /// @param self QDateTimeEdit*
 /// @param signal QMetaMethod*
 ///
-void q_datetimeedit_disconnect_notify(void* self, void* signal);
+void q_datetimeedit_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5435,7 +5435,7 @@ void q_datetimeedit_disconnect_notify(void* self, void* signal);
 /// @param self QDateTimeEdit*
 /// @param signal QMetaMethod*
 ///
-void q_datetimeedit_super_disconnect_notify(void* self, void* signal);
+void q_datetimeedit_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5446,7 +5446,7 @@ void q_datetimeedit_super_disconnect_notify(void* self, void* signal);
 /// @param self QDateTimeEdit*
 /// @param callback void func(QDateTimeEdit* self, QMetaMethod* signal)
 ///
-void q_datetimeedit_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_datetimeedit_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -5454,9 +5454,9 @@ void q_datetimeedit_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QLineEdit* q_datetimeedit_line_edit(void* self);
+QLineEdit* q_datetimeedit_line_edit(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -5464,9 +5464,9 @@ QLineEdit* q_datetimeedit_line_edit(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QLineEdit* q_datetimeedit_super_line_edit(void* self);
+QLineEdit* q_datetimeedit_super_line_edit(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -5474,10 +5474,10 @@ QLineEdit* q_datetimeedit_super_line_edit(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
-/// @param callback QLineEdit* func()
+/// @param self const QDateTimeEdit*
+/// @param callback QLineEdit* func(QDateTimeEdit* self)
 ///
-void q_datetimeedit_on_line_edit(void* self, QLineEdit* (*callback)());
+void q_datetimeedit_on_line_edit(const void* self, QLineEdit* (*callback)(const void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -5539,9 +5539,9 @@ void q_datetimeedit_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void func()
+/// @param callback void func(QDateTimeEdit* self)
 ///
-void q_datetimeedit_on_update_micro_focus(void* self, void (*callback)());
+void q_datetimeedit_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5570,9 +5570,9 @@ void q_datetimeedit_super_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void func()
+/// @param callback void func(QDateTimeEdit* self)
 ///
-void q_datetimeedit_on_create(void* self, void (*callback)());
+void q_datetimeedit_on_create(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5601,9 +5601,9 @@ void q_datetimeedit_super_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void func()
+/// @param callback void func(QDateTimeEdit* self)
 ///
-void q_datetimeedit_on_destroy(void* self, void (*callback)());
+void q_datetimeedit_on_destroy(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5632,9 +5632,9 @@ bool q_datetimeedit_super_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback bool func()
+/// @param callback bool func(QDateTimeEdit* self)
 ///
-void q_datetimeedit_on_focus_next_child(void* self, bool (*callback)());
+void q_datetimeedit_on_focus_next_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5663,9 +5663,9 @@ bool q_datetimeedit_super_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback bool func()
+/// @param callback bool func(QDateTimeEdit* self)
 ///
-void q_datetimeedit_on_focus_previous_child(void* self, bool (*callback)());
+void q_datetimeedit_on_focus_previous_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -5673,9 +5673,9 @@ void q_datetimeedit_on_focus_previous_child(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QObject* q_datetimeedit_sender(void* self);
+QObject* q_datetimeedit_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5683,9 +5683,9 @@ QObject* q_datetimeedit_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QObject* q_datetimeedit_super_sender(void* self);
+QObject* q_datetimeedit_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5693,10 +5693,10 @@ QObject* q_datetimeedit_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
-/// @param callback QObject* func()
+/// @param self const QDateTimeEdit*
+/// @param callback QObject* func(QDateTimeEdit* self)
 ///
-void q_datetimeedit_on_sender(void* self, QObject* (*callback)());
+void q_datetimeedit_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5704,9 +5704,9 @@ void q_datetimeedit_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-int32_t q_datetimeedit_sender_signal_index(void* self);
+int32_t q_datetimeedit_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5714,9 +5714,9 @@ int32_t q_datetimeedit_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-int32_t q_datetimeedit_super_sender_signal_index(void* self);
+int32_t q_datetimeedit_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5724,10 +5724,10 @@ int32_t q_datetimeedit_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
-/// @param callback int32_t func()
+/// @param self const QDateTimeEdit*
+/// @param callback int32_t func(QDateTimeEdit* self)
 ///
-void q_datetimeedit_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_datetimeedit_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5735,10 +5735,10 @@ void q_datetimeedit_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param signal const char*
 ///
-int32_t q_datetimeedit_receivers(void* self, const char* signal);
+int32_t q_datetimeedit_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5746,10 +5746,10 @@ int32_t q_datetimeedit_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param signal const char*
 ///
-int32_t q_datetimeedit_super_receivers(void* self, const char* signal);
+int32_t q_datetimeedit_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5757,10 +5757,10 @@ int32_t q_datetimeedit_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param callback int32_t func(QDateTimeEdit* self, const char* signal)
 ///
-void q_datetimeedit_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_datetimeedit_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5768,10 +5768,10 @@ void q_datetimeedit_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param signal QMetaMethod*
 ///
-bool q_datetimeedit_is_signal_connected(void* self, void* signal);
+bool q_datetimeedit_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5779,10 +5779,10 @@ bool q_datetimeedit_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param signal QMetaMethod*
 ///
-bool q_datetimeedit_super_is_signal_connected(void* self, void* signal);
+bool q_datetimeedit_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5790,10 +5790,10 @@ bool q_datetimeedit_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param callback bool func(QDateTimeEdit* self, QMetaMethod* signal)
 ///
-void q_datetimeedit_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_datetimeedit_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5801,11 +5801,11 @@ void q_datetimeedit_on_is_signal_connected(void* self, bool (*callback)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_datetimeedit_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_datetimeedit_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5813,11 +5813,11 @@ double q_datetimeedit_get_decoded_metric_f(void* self, int32_t metricA, int32_t 
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_datetimeedit_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_datetimeedit_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5825,10 +5825,10 @@ double q_datetimeedit_super_get_decoded_metric_f(void* self, int32_t metricA, in
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 /// @param callback double func(QDateTimeEdit* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_datetimeedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void q_datetimeedit_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///
@@ -5882,26 +5882,26 @@ QTimeEdit* q_timeedit_new4(void* time, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-const QMetaObject* q_timeedit_meta_object(void* self);
+const QMetaObject* q_timeedit_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QTimeEdit*
-/// @param callback const QMetaObject* func()
+/// @param self const QTimeEdit*
+/// @param callback const QMetaObject* func(const QTimeEdit* self)
 ///
-void q_timeedit_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_timeedit_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-const QMetaObject* q_timeedit_super_meta_object(void* self);
+const QMetaObject* q_timeedit_super_meta_object(const void* self);
 
 /// @param self QTimeEdit*
 /// @param param1 const char*
@@ -5990,33 +5990,33 @@ const char* q_timeedit_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#dateTime)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QDateTime* q_timeedit_date_time(void* self);
+QDateTime* q_timeedit_date_time(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#date)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QDate* q_timeedit_date(void* self);
+QDate* q_timeedit_date(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#time)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QTime* q_timeedit_time(void* self);
+QTime* q_timeedit_time(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#calendar)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QCalendar* q_timeedit_calendar(void* self);
+QCalendar* q_timeedit_calendar(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -6031,9 +6031,9 @@ void q_timeedit_set_calendar(void* self, void* calendar);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#minimumDateTime)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QDateTime* q_timeedit_minimum_date_time(void* self);
+QDateTime* q_timeedit_minimum_date_time(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -6050,15 +6050,15 @@ void q_timeedit_clear_minimum_date_time(void* self);
 /// @param self QTimeEdit*
 /// @param dt QDateTime*
 ///
-void q_timeedit_set_minimum_date_time(void* self, void* dt);
+void q_timeedit_set_minimum_date_time(void* self, const void* dt);
 
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#maximumDateTime)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QDateTime* q_timeedit_maximum_date_time(void* self);
+QDateTime* q_timeedit_maximum_date_time(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -6075,7 +6075,7 @@ void q_timeedit_clear_maximum_date_time(void* self);
 /// @param self QTimeEdit*
 /// @param dt QDateTime*
 ///
-void q_timeedit_set_maximum_date_time(void* self, void* dt);
+void q_timeedit_set_maximum_date_time(void* self, const void* dt);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -6085,15 +6085,15 @@ void q_timeedit_set_maximum_date_time(void* self, void* dt);
 /// @param min QDateTime*
 /// @param max QDateTime*
 ///
-void q_timeedit_set_date_time_range(void* self, void* min, void* max);
+void q_timeedit_set_date_time_range(void* self, const void* min, const void* max);
 
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#minimumDate)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QDate* q_timeedit_minimum_date(void* self);
+QDate* q_timeedit_minimum_date(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -6116,9 +6116,9 @@ void q_timeedit_clear_minimum_date(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#maximumDate)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QDate* q_timeedit_maximum_date(void* self);
+QDate* q_timeedit_maximum_date(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -6151,9 +6151,9 @@ void q_timeedit_set_date_range(void* self, void* min, void* max);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#minimumTime)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QTime* q_timeedit_minimum_time(void* self);
+QTime* q_timeedit_minimum_time(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -6176,9 +6176,9 @@ void q_timeedit_clear_minimum_time(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#maximumTime)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QTime* q_timeedit_maximum_time(void* self);
+QTime* q_timeedit_maximum_time(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -6211,32 +6211,32 @@ void q_timeedit_set_time_range(void* self, void* min, void* max);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#displayedSections)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
 /// @return flag of enum QDateTimeEdit__Section
 ///
-int32_t q_timeedit_displayed_sections(void* self);
+int32_t q_timeedit_displayed_sections(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#currentSection)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
 /// @return enum QDateTimeEdit__Section
 ///
-int32_t q_timeedit_current_section(void* self);
+int32_t q_timeedit_current_section(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#sectionAt)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param index int
 ///
 /// @return enum QDateTimeEdit__Section
 ///
-int32_t q_timeedit_section_at(void* self, int index);
+int32_t q_timeedit_section_at(const void* self, int index);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -6251,9 +6251,9 @@ void q_timeedit_set_current_section(void* self, int32_t section);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#currentSectionIndex)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-int32_t q_timeedit_current_section_index(void* self);
+int32_t q_timeedit_current_section_index(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -6268,9 +6268,9 @@ void q_timeedit_set_current_section_index(void* self, int index);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#calendarWidget)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QCalendarWidget* q_timeedit_calendar_widget(void* self);
+QCalendarWidget* q_timeedit_calendar_widget(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -6285,9 +6285,9 @@ void q_timeedit_set_calendar_widget(void* self, void* calendarWidget);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#sectionCount)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-int32_t q_timeedit_section_count(void* self);
+int32_t q_timeedit_section_count(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -6304,10 +6304,10 @@ void q_timeedit_set_selected_section(void* self, int32_t section);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param section enum QDateTimeEdit__Section
 ///
-const char* q_timeedit_section_text(void* self, int32_t section);
+const char* q_timeedit_section_text(const void* self, int32_t section);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -6315,9 +6315,9 @@ const char* q_timeedit_section_text(void* self, int32_t section);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-const char* q_timeedit_display_format(void* self);
+const char* q_timeedit_display_format(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -6332,9 +6332,9 @@ void q_timeedit_set_display_format(void* self, const char* format);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#calendarPopup)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_calendar_popup(void* self);
+bool q_timeedit_calendar_popup(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -6349,11 +6349,11 @@ void q_timeedit_set_calendar_popup(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#timeSpec)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
 /// @return enum Qt__TimeSpec
 ///
-int32_t q_timeedit_time_spec(void* self);
+int32_t q_timeedit_time_spec(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -6368,9 +6368,9 @@ void q_timeedit_set_time_spec(void* self, int32_t spec);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#timeZone)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QTimeZone* q_timeedit_time_zone(void* self);
+QTimeZone* q_timeedit_time_zone(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -6379,7 +6379,7 @@ QTimeZone* q_timeedit_time_zone(void* self);
 /// @param self QTimeEdit*
 /// @param zone QTimeZone*
 ///
-void q_timeedit_set_time_zone(void* self, void* zone);
+void q_timeedit_set_time_zone(void* self, const void* zone);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -6388,7 +6388,7 @@ void q_timeedit_set_time_zone(void* self, void* zone);
 /// @param self QTimeEdit*
 /// @param dateTime QDateTime*
 ///
-void q_timeedit_date_time_changed(void* self, void* dateTime);
+void q_timeedit_date_time_changed(void* self, const void* dateTime);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -6397,7 +6397,7 @@ void q_timeedit_date_time_changed(void* self, void* dateTime);
 /// @param self QTimeEdit*
 /// @param callback void func(QTimeEdit* self, QDateTime* dateTime)
 ///
-void q_timeedit_on_date_time_changed(void* self, void (*callback)(void*, void*));
+void q_timeedit_on_date_time_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QDateTimeEdit
 ///
@@ -6442,7 +6442,7 @@ void q_timeedit_on_date_changed(void* self, void (*callback)(void*, void*));
 /// @param self QTimeEdit*
 /// @param dateTime QDateTime*
 ///
-void q_timeedit_set_date_time(void* self, void* dateTime);
+void q_timeedit_set_date_time(void* self, const void* dateTime);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -6466,11 +6466,11 @@ void q_timeedit_set_time(void* self, void* time);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#buttonSymbols)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
 /// @return enum QAbstractSpinBox__ButtonSymbols
 ///
-int32_t q_timeedit_button_symbols(void* self);
+int32_t q_timeedit_button_symbols(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -6494,19 +6494,19 @@ void q_timeedit_set_correction_mode(void* self, int32_t cm);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#correctionMode)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
 /// @return enum QAbstractSpinBox__CorrectionMode
 ///
-int32_t q_timeedit_correction_mode(void* self);
+int32_t q_timeedit_correction_mode(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#hasAcceptableInput)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_has_acceptable_input(void* self);
+bool q_timeedit_has_acceptable_input(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -6514,9 +6514,9 @@ bool q_timeedit_has_acceptable_input(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-const char* q_timeedit_text(void* self);
+const char* q_timeedit_text(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -6524,9 +6524,9 @@ const char* q_timeedit_text(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-const char* q_timeedit_special_value_text(void* self);
+const char* q_timeedit_special_value_text(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -6541,9 +6541,9 @@ void q_timeedit_set_special_value_text(void* self, const char* txt);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#wrapping)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_wrapping(void* self);
+bool q_timeedit_wrapping(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -6567,9 +6567,9 @@ void q_timeedit_set_read_only(void* self, bool r);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#isReadOnly)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_is_read_only(void* self);
+bool q_timeedit_is_read_only(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -6584,9 +6584,9 @@ void q_timeedit_set_keyboard_tracking(void* self, bool kt);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#keyboardTracking)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_keyboard_tracking(void* self);
+bool q_timeedit_keyboard_tracking(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -6601,11 +6601,11 @@ void q_timeedit_set_alignment(void* self, int32_t flag);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#alignment)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 ///
-int32_t q_timeedit_alignment(void* self);
+int32_t q_timeedit_alignment(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -6620,9 +6620,9 @@ void q_timeedit_set_frame(void* self, bool frame);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#hasFrame)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_has_frame(void* self);
+bool q_timeedit_has_frame(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -6637,9 +6637,9 @@ void q_timeedit_set_accelerated(void* self, bool on);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#isAccelerated)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_is_accelerated(void* self);
+bool q_timeedit_is_accelerated(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -6654,9 +6654,9 @@ void q_timeedit_set_group_separator_shown(void* self, bool shown);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#isGroupSeparatorShown)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_is_group_separator_shown(void* self);
+bool q_timeedit_is_group_separator_shown(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -6727,9 +6727,9 @@ QTimeEdit* q_timeedit_from_q_paint_device(void* _qpaintdevice);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-uintptr_t q_timeedit_win_id(void* self);
+uintptr_t q_timeedit_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6743,25 +6743,25 @@ void q_timeedit_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-uintptr_t q_timeedit_internal_win_id(void* self);
+uintptr_t q_timeedit_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-uintptr_t q_timeedit_effective_win_id(void* self);
+uintptr_t q_timeedit_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QStyle* q_timeedit_style(void* self);
+QStyle* q_timeedit_style(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6776,35 +6776,35 @@ void q_timeedit_set_style(void* self, void* style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_is_top_level(void* self);
+bool q_timeedit_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_is_window(void* self);
+bool q_timeedit_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_is_modal(void* self);
+bool q_timeedit_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t q_timeedit_window_modality(void* self);
+int32_t q_timeedit_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6819,18 +6819,18 @@ void q_timeedit_set_window_modality(void* self, int32_t windowModality);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_is_enabled(void* self);
+bool q_timeedit_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param param1 QWidget*
 ///
-bool q_timeedit_is_enabled_to(void* self, void* param1);
+bool q_timeedit_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -6863,153 +6863,153 @@ void q_timeedit_set_window_modified(void* self, bool windowModified);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QRect* q_timeedit_frame_geometry(void* self);
+QRect* q_timeedit_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-const QRect* q_timeedit_geometry(void* self);
+const QRect* q_timeedit_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QRect* q_timeedit_normal_geometry(void* self);
+QRect* q_timeedit_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-int32_t q_timeedit_x(void* self);
+int32_t q_timeedit_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-int32_t q_timeedit_y(void* self);
+int32_t q_timeedit_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QPoint* q_timeedit_pos(void* self);
+QPoint* q_timeedit_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QSize* q_timeedit_frame_size(void* self);
+QSize* q_timeedit_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QSize* q_timeedit_size(void* self);
+QSize* q_timeedit_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-int32_t q_timeedit_width(void* self);
+int32_t q_timeedit_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-int32_t q_timeedit_height(void* self);
+int32_t q_timeedit_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QRect* q_timeedit_rect(void* self);
+QRect* q_timeedit_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QRect* q_timeedit_children_rect(void* self);
+QRect* q_timeedit_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QRegion* q_timeedit_children_region(void* self);
+QRegion* q_timeedit_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QSize* q_timeedit_minimum_size(void* self);
+QSize* q_timeedit_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QSize* q_timeedit_maximum_size(void* self);
+QSize* q_timeedit_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-int32_t q_timeedit_minimum_width(void* self);
+int32_t q_timeedit_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-int32_t q_timeedit_minimum_height(void* self);
+int32_t q_timeedit_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-int32_t q_timeedit_maximum_width(void* self);
+int32_t q_timeedit_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-int32_t q_timeedit_maximum_height(void* self);
+int32_t q_timeedit_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7018,7 +7018,7 @@ int32_t q_timeedit_maximum_height(void* self);
 /// @param self QTimeEdit*
 /// @param minimumSize QSize*
 ///
-void q_timeedit_set_minimum_size(void* self, void* minimumSize);
+void q_timeedit_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -7037,7 +7037,7 @@ void q_timeedit_set_minimum_size2(void* self, int minw, int minh);
 /// @param self QTimeEdit*
 /// @param maximumSize QSize*
 ///
-void q_timeedit_set_maximum_size(void* self, void* maximumSize);
+void q_timeedit_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -7089,9 +7089,9 @@ void q_timeedit_set_maximum_height(void* self, int maxh);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QSize* q_timeedit_size_increment(void* self);
+QSize* q_timeedit_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7100,7 +7100,7 @@ QSize* q_timeedit_size_increment(void* self);
 /// @param self QTimeEdit*
 /// @param sizeIncrement QSize*
 ///
-void q_timeedit_set_size_increment(void* self, void* sizeIncrement);
+void q_timeedit_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -7116,9 +7116,9 @@ void q_timeedit_set_size_increment2(void* self, int w, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QSize* q_timeedit_base_size(void* self);
+QSize* q_timeedit_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7127,7 +7127,7 @@ QSize* q_timeedit_base_size(void* self);
 /// @param self QTimeEdit*
 /// @param baseSize QSize*
 ///
-void q_timeedit_set_base_size(void* self, void* baseSize);
+void q_timeedit_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -7146,7 +7146,7 @@ void q_timeedit_set_base_size2(void* self, int basew, int baseh);
 /// @param self QTimeEdit*
 /// @param fixedSize QSize*
 ///
-void q_timeedit_set_fixed_size(void* self, void* fixedSize);
+void q_timeedit_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -7180,145 +7180,145 @@ void q_timeedit_set_fixed_height(void* self, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param param1 QPointF*
 ///
-QPointF* q_timeedit_map_to_global(void* self, void* param1);
+QPointF* q_timeedit_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param param1 QPoint*
 ///
-QPoint* q_timeedit_map_to_global2(void* self, void* param1);
+QPoint* q_timeedit_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param param1 QPointF*
 ///
-QPointF* q_timeedit_map_from_global(void* self, void* param1);
+QPointF* q_timeedit_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param param1 QPoint*
 ///
-QPoint* q_timeedit_map_from_global2(void* self, void* param1);
+QPoint* q_timeedit_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param param1 QPointF*
 ///
-QPointF* q_timeedit_map_to_parent(void* self, void* param1);
+QPointF* q_timeedit_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param param1 QPoint*
 ///
-QPoint* q_timeedit_map_to_parent2(void* self, void* param1);
+QPoint* q_timeedit_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param param1 QPointF*
 ///
-QPointF* q_timeedit_map_from_parent(void* self, void* param1);
+QPointF* q_timeedit_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param param1 QPoint*
 ///
-QPoint* q_timeedit_map_from_parent2(void* self, void* param1);
+QPoint* q_timeedit_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* q_timeedit_map_to(void* self, void* param1, void* param2);
+QPointF* q_timeedit_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* q_timeedit_map_to2(void* self, void* param1, void* param2);
+QPoint* q_timeedit_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* q_timeedit_map_from(void* self, void* param1, void* param2);
+QPointF* q_timeedit_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* q_timeedit_map_from2(void* self, void* param1, void* param2);
+QPoint* q_timeedit_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QWidget* q_timeedit_window(void* self);
+QWidget* q_timeedit_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QWidget* q_timeedit_native_parent_widget(void* self);
+QWidget* q_timeedit_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QWidget* q_timeedit_top_level_widget(void* self);
+QWidget* q_timeedit_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-const QPalette* q_timeedit_palette(void* self);
+const QPalette* q_timeedit_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7327,7 +7327,7 @@ const QPalette* q_timeedit_palette(void* self);
 /// @param self QTimeEdit*
 /// @param palette QPalette*
 ///
-void q_timeedit_set_palette(void* self, void* palette);
+void q_timeedit_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -7342,11 +7342,11 @@ void q_timeedit_set_background_role(void* self, int32_t backgroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t q_timeedit_background_role(void* self);
+int32_t q_timeedit_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7361,19 +7361,19 @@ void q_timeedit_set_foreground_role(void* self, int32_t foregroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t q_timeedit_foreground_role(void* self);
+int32_t q_timeedit_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-const QFont* q_timeedit_font(void* self);
+const QFont* q_timeedit_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7382,31 +7382,31 @@ const QFont* q_timeedit_font(void* self);
 /// @param self QTimeEdit*
 /// @param font QFont*
 ///
-void q_timeedit_set_font(void* self, void* font);
+void q_timeedit_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QFontMetrics* q_timeedit_font_metrics(void* self);
+QFontMetrics* q_timeedit_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QFontInfo* q_timeedit_font_info(void* self);
+QFontInfo* q_timeedit_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QCursor* q_timeedit_cursor(void* self);
+QCursor* q_timeedit_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7415,7 +7415,7 @@ QCursor* q_timeedit_cursor(void* self);
 /// @param self QTimeEdit*
 /// @param cursor QCursor*
 ///
-void q_timeedit_set_cursor(void* self, void* cursor);
+void q_timeedit_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -7438,17 +7438,17 @@ void q_timeedit_set_mouse_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_has_mouse_tracking(void* self);
+bool q_timeedit_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_under_mouse(void* self);
+bool q_timeedit_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7463,9 +7463,9 @@ void q_timeedit_set_tablet_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_has_tablet_tracking(void* self);
+bool q_timeedit_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7474,7 +7474,7 @@ bool q_timeedit_has_tablet_tracking(void* self);
 /// @param self QTimeEdit*
 /// @param mask QBitmap*
 ///
-void q_timeedit_set_mask(void* self, void* mask);
+void q_timeedit_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -7483,15 +7483,15 @@ void q_timeedit_set_mask(void* self, void* mask);
 /// @param self QTimeEdit*
 /// @param mask QRegion*
 ///
-void q_timeedit_set_mask2(void* self, void* mask);
+void q_timeedit_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QRegion* q_timeedit_mask(void* self);
+QRegion* q_timeedit_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7531,9 +7531,9 @@ QPixmap* q_timeedit_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QGraphicsEffect* q_timeedit_graphics_effect(void* self);
+QGraphicsEffect* q_timeedit_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7586,9 +7586,9 @@ void q_timeedit_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-const char* q_timeedit_style_sheet(void* self);
+const char* q_timeedit_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7596,9 +7596,9 @@ const char* q_timeedit_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-const char* q_timeedit_window_title(void* self);
+const char* q_timeedit_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7607,15 +7607,15 @@ const char* q_timeedit_window_title(void* self);
 /// @param self QTimeEdit*
 /// @param icon QIcon*
 ///
-void q_timeedit_set_window_icon(void* self, void* icon);
+void q_timeedit_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QIcon* q_timeedit_window_icon(void* self);
+QIcon* q_timeedit_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7632,9 +7632,9 @@ void q_timeedit_set_window_icon_text(void* self, const char* windowIconText);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-const char* q_timeedit_window_icon_text(void* self);
+const char* q_timeedit_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7651,9 +7651,9 @@ void q_timeedit_set_window_role(void* self, const char* windowRole);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-const char* q_timeedit_window_role(void* self);
+const char* q_timeedit_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7670,9 +7670,9 @@ void q_timeedit_set_window_file_path(void* self, const char* filePath);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-const char* q_timeedit_window_file_path(void* self);
+const char* q_timeedit_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7687,17 +7687,17 @@ void q_timeedit_set_window_opacity(void* self, double level);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-double q_timeedit_window_opacity(void* self);
+double q_timeedit_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_is_window_modified(void* self);
+bool q_timeedit_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7714,9 +7714,9 @@ void q_timeedit_set_tool_tip(void* self, const char* toolTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-const char* q_timeedit_tool_tip(void* self);
+const char* q_timeedit_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7731,9 +7731,9 @@ void q_timeedit_set_tool_tip_duration(void* self, int msec);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-int32_t q_timeedit_tool_tip_duration(void* self);
+int32_t q_timeedit_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7750,9 +7750,9 @@ void q_timeedit_set_status_tip(void* self, const char* statusTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-const char* q_timeedit_status_tip(void* self);
+const char* q_timeedit_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7769,9 +7769,9 @@ void q_timeedit_set_whats_this(void* self, const char* whatsThis);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-const char* q_timeedit_whats_this(void* self);
+const char* q_timeedit_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7779,9 +7779,9 @@ const char* q_timeedit_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-const char* q_timeedit_accessible_name(void* self);
+const char* q_timeedit_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7798,9 +7798,9 @@ void q_timeedit_set_accessible_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-const char* q_timeedit_accessible_description(void* self);
+const char* q_timeedit_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7824,11 +7824,11 @@ void q_timeedit_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_timeedit_layout_direction(void* self);
+int32_t q_timeedit_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7845,15 +7845,15 @@ void q_timeedit_unset_layout_direction(void* self);
 /// @param self QTimeEdit*
 /// @param locale QLocale*
 ///
-void q_timeedit_set_locale(void* self, void* locale);
+void q_timeedit_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QLocale* q_timeedit_locale(void* self);
+QLocale* q_timeedit_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7867,17 +7867,17 @@ void q_timeedit_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_is_right_to_left(void* self);
+bool q_timeedit_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_is_left_to_right(void* self);
+bool q_timeedit_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7891,9 +7891,9 @@ void q_timeedit_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_is_active_window(void* self);
+bool q_timeedit_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7924,11 +7924,11 @@ void q_timeedit_set_focus2(void* self, int32_t reason);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t q_timeedit_focus_policy(void* self);
+int32_t q_timeedit_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7943,9 +7943,9 @@ void q_timeedit_set_focus_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_has_focus(void* self);
+bool q_timeedit_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7969,19 +7969,19 @@ void q_timeedit_set_focus_proxy(void* self, void* focusProxy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QWidget* q_timeedit_focus_proxy(void* self);
+QWidget* q_timeedit_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t q_timeedit_context_menu_policy(void* self);
+int32_t q_timeedit_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8007,7 +8007,7 @@ void q_timeedit_grab_mouse(void* self);
 /// @param self QTimeEdit*
 /// @param param1 QCursor*
 ///
-void q_timeedit_grab_mouse2(void* self, void* param1);
+void q_timeedit_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -8040,7 +8040,7 @@ void q_timeedit_release_keyboard(void* self);
 /// @param self QTimeEdit*
 /// @param key QKeySequence*
 ///
-int32_t q_timeedit_grab_shortcut(void* self, void* key);
+int32_t q_timeedit_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -8085,9 +8085,9 @@ QWidget* q_timeedit_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_updates_enabled(void* self);
+bool q_timeedit_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8102,9 +8102,9 @@ void q_timeedit_set_updates_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QGraphicsProxyWidget* q_timeedit_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* q_timeedit_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8141,7 +8141,7 @@ void q_timeedit_update2(void* self, int x, int y, int w, int h);
 /// @param self QTimeEdit*
 /// @param param1 QRect*
 ///
-void q_timeedit_update3(void* self, void* param1);
+void q_timeedit_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -8150,7 +8150,7 @@ void q_timeedit_update3(void* self, void* param1);
 /// @param self QTimeEdit*
 /// @param param1 QRegion*
 ///
-void q_timeedit_update4(void* self, void* param1);
+void q_timeedit_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -8171,7 +8171,7 @@ void q_timeedit_repaint2(void* self, int x, int y, int w, int h);
 /// @param self QTimeEdit*
 /// @param param1 QRect*
 ///
-void q_timeedit_repaint3(void* self, void* param1);
+void q_timeedit_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -8180,7 +8180,7 @@ void q_timeedit_repaint3(void* self, void* param1);
 /// @param self QTimeEdit*
 /// @param param1 QRegion*
 ///
-void q_timeedit_repaint4(void* self, void* param1);
+void q_timeedit_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -8289,7 +8289,7 @@ void q_timeedit_move(void* self, int x, int y);
 /// @param self QTimeEdit*
 /// @param param1 QPoint*
 ///
-void q_timeedit_move2(void* self, void* param1);
+void q_timeedit_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -8308,7 +8308,7 @@ void q_timeedit_resize(void* self, int w, int h);
 /// @param self QTimeEdit*
 /// @param param1 QSize*
 ///
-void q_timeedit_resize2(void* self, void* param1);
+void q_timeedit_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -8329,7 +8329,7 @@ void q_timeedit_set_geometry(void* self, int x, int y, int w, int h);
 /// @param self QTimeEdit*
 /// @param geometry QRect*
 ///
-void q_timeedit_set_geometry2(void* self, void* geometry);
+void q_timeedit_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -8337,9 +8337,9 @@ void q_timeedit_set_geometry2(void* self, void* geometry);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-char* q_timeedit_save_geometry(void* self);
+char* q_timeedit_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8362,60 +8362,60 @@ void q_timeedit_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_is_visible(void* self);
+bool q_timeedit_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param param1 QWidget*
 ///
-bool q_timeedit_is_visible_to(void* self, void* param1);
+bool q_timeedit_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_is_hidden(void* self);
+bool q_timeedit_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_is_minimized(void* self);
+bool q_timeedit_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_is_maximized(void* self);
+bool q_timeedit_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_is_full_screen(void* self);
+bool q_timeedit_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t q_timeedit_window_state(void* self);
+int32_t q_timeedit_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8439,9 +8439,9 @@ void q_timeedit_override_window_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QSizePolicy* q_timeedit_size_policy(void* self);
+QSizePolicy* q_timeedit_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8466,9 +8466,9 @@ void q_timeedit_set_size_policy2(void* self, int32_t horizontal, int32_t vertica
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QRegion* q_timeedit_visible_region(void* self);
+QRegion* q_timeedit_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8489,31 +8489,31 @@ void q_timeedit_set_contents_margins(void* self, int left, int top, int right, i
 /// @param self QTimeEdit*
 /// @param margins QMargins*
 ///
-void q_timeedit_set_contents_margins2(void* self, void* margins);
+void q_timeedit_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QMargins* q_timeedit_contents_margins(void* self);
+QMargins* q_timeedit_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QRect* q_timeedit_contents_rect(void* self);
+QRect* q_timeedit_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QLayout* q_timeedit_layout(void* self);
+QLayout* q_timeedit_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8570,39 +8570,39 @@ void q_timeedit_scroll(void* self, int dx, int dy);
 /// @param dy int
 /// @param param3 QRect*
 ///
-void q_timeedit_scroll2(void* self, int dx, int dy, void* param3);
+void q_timeedit_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QWidget* q_timeedit_focus_widget(void* self);
+QWidget* q_timeedit_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QWidget* q_timeedit_next_in_focus_chain(void* self);
+QWidget* q_timeedit_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QWidget* q_timeedit_previous_in_focus_chain(void* self);
+QWidget* q_timeedit_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_accept_drops(void* self);
+bool q_timeedit_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8664,11 +8664,11 @@ void q_timeedit_remove_action(void* self, void* action);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list q_timeedit_actions(void* self);
+libqt_list q_timeedit_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8687,7 +8687,7 @@ QAction* q_timeedit_add_action2(void* self, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* q_timeedit_add_action3(void* self, void* icon, const char* text);
+QAction* q_timeedit_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -8697,7 +8697,7 @@ QAction* q_timeedit_add_action3(void* self, void* icon, const char* text);
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* q_timeedit_add_action4(void* self, const char* text, void* shortcut);
+QAction* q_timeedit_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -8708,15 +8708,15 @@ QAction* q_timeedit_add_action4(void* self, const char* text, void* shortcut);
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* q_timeedit_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* q_timeedit_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QWidget* q_timeedit_parent_widget(void* self);
+QWidget* q_timeedit_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8731,11 +8731,11 @@ void q_timeedit_set_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t q_timeedit_window_flags(void* self);
+int32_t q_timeedit_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8759,11 +8759,11 @@ void q_timeedit_override_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t q_timeedit_window_type(void* self);
+int32_t q_timeedit_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8777,29 +8777,29 @@ QWidget* q_timeedit_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param x int
 /// @param y int
 ///
-QWidget* q_timeedit_child_at(void* self, int x, int y);
+QWidget* q_timeedit_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param p QPoint*
 ///
-QWidget* q_timeedit_child_at2(void* self, void* p);
+QWidget* q_timeedit_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param p QPointF*
 ///
-QWidget* q_timeedit_child_at3(void* self, void* p);
+QWidget* q_timeedit_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -8814,35 +8814,35 @@ void q_timeedit_set_attribute(void* self, int32_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool q_timeedit_test_attribute(void* self, int32_t param1);
+bool q_timeedit_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-void q_timeedit_ensure_polished(void* self);
+void q_timeedit_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param child QWidget*
 ///
-bool q_timeedit_is_ancestor_of(void* self, void* child);
+bool q_timeedit_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_auto_fill_background(void* self);
+bool q_timeedit_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8857,25 +8857,25 @@ void q_timeedit_set_auto_fill_background(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QBackingStore* q_timeedit_backing_store(void* self);
+QBackingStore* q_timeedit_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QWindow* q_timeedit_window_handle(void* self);
+QWindow* q_timeedit_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QScreen* q_timeedit_screen(void* self);
+QScreen* q_timeedit_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8919,7 +8919,7 @@ void q_timeedit_on_window_title_changed(void* self, void (*callback)(void*, cons
 /// @param self QTimeEdit*
 /// @param icon QIcon*
 ///
-void q_timeedit_window_icon_changed(void* self, void* icon);
+void q_timeedit_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -8928,7 +8928,7 @@ void q_timeedit_window_icon_changed(void* self, void* icon);
 /// @param self QTimeEdit*
 /// @param callback void func(QTimeEdit* self, QIcon* icon)
 ///
-void q_timeedit_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void q_timeedit_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -8955,7 +8955,7 @@ void q_timeedit_on_window_icon_text_changed(void* self, void (*callback)(void*, 
 /// @param self QTimeEdit*
 /// @param pos QPoint*
 ///
-void q_timeedit_custom_context_menu_requested(void* self, void* pos);
+void q_timeedit_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -8964,17 +8964,17 @@ void q_timeedit_custom_context_menu_requested(void* self, void* pos);
 /// @param self QTimeEdit*
 /// @param callback void func(QTimeEdit* self, QPoint* pos)
 ///
-void q_timeedit_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void q_timeedit_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t q_timeedit_input_method_hints(void* self);
+int32_t q_timeedit_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8993,7 +8993,7 @@ void q_timeedit_set_input_method_hints(void* self, int32_t hints);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void q_timeedit_render22(void* self, void* target, void* targetOffset);
+void q_timeedit_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -9004,7 +9004,7 @@ void q_timeedit_render22(void* self, void* target, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void q_timeedit_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void q_timeedit_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -9016,7 +9016,7 @@ void q_timeedit_render3(void* self, void* target, void* targetOffset, void* sour
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void q_timeedit_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void q_timeedit_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -9026,7 +9026,7 @@ void q_timeedit_render4(void* self, void* target, void* targetOffset, void* sour
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void q_timeedit_render23(void* self, void* painter, void* targetOffset);
+void q_timeedit_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -9037,7 +9037,7 @@ void q_timeedit_render23(void* self, void* painter, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void q_timeedit_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void q_timeedit_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -9049,7 +9049,7 @@ void q_timeedit_render32(void* self, void* painter, void* targetOffset, void* so
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void q_timeedit_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void q_timeedit_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -9058,7 +9058,7 @@ void q_timeedit_render42(void* self, void* painter, void* targetOffset, void* so
 /// @param self QTimeEdit*
 /// @param rectangle QRect*
 ///
-QPixmap* q_timeedit_grab1(void* self, void* rectangle);
+QPixmap* q_timeedit_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -9078,7 +9078,7 @@ void q_timeedit_grab_gesture2(void* self, int32_t type, int32_t flags);
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t q_timeedit_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t q_timeedit_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -9145,9 +9145,9 @@ QWidget* q_timeedit_create_window_container3(void* window, void* parent, int32_t
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-const char* q_timeedit_object_name(void* self);
+const char* q_timeedit_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -9162,33 +9162,33 @@ void q_timeedit_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_is_widget_type(void* self);
+bool q_timeedit_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_is_window_type(void* self);
+bool q_timeedit_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_is_quick_item_type(void* self);
+bool q_timeedit_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_signals_blocked(void* self);
+bool q_timeedit_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -9203,9 +9203,9 @@ bool q_timeedit_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QThread* q_timeedit_thread(void* self);
+QThread* q_timeedit_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -9256,11 +9256,11 @@ void q_timeedit_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_timeedit_children(void* self);
+libqt_list q_timeedit_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -9289,7 +9289,7 @@ void q_timeedit_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_timeedit_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_timeedit_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -9300,18 +9300,18 @@ QMetaObject__Connection* q_timeedit_connect(void* sender, const char* signal, vo
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_timeedit_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_timeedit_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_timeedit_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_timeedit_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -9322,7 +9322,7 @@ QMetaObject__Connection* q_timeedit_connect3(void* self, void* sender, const cha
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_timeedit_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_timeedit_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -9333,24 +9333,24 @@ bool q_timeedit_disconnect(void* sender, const char* signal, void* receiver, con
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_timeedit_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_timeedit_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_disconnect3(void* self);
+bool q_timeedit_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param receiver QObject*
 ///
-bool q_timeedit_disconnect4(void* self, void* receiver);
+bool q_timeedit_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -9358,23 +9358,23 @@ bool q_timeedit_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_timeedit_disconnect5(void* param1);
+bool q_timeedit_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-void q_timeedit_dump_object_tree(void* self);
+void q_timeedit_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-void q_timeedit_dump_object_info(void* self);
+void q_timeedit_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -9384,16 +9384,16 @@ void q_timeedit_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_timeedit_set_property(void* self, const char* name, void* value);
+bool q_timeedit_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param name const char*
 ///
-QVariant* q_timeedit_property(void* self, const char* name);
+QVariant* q_timeedit_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -9401,9 +9401,9 @@ QVariant* q_timeedit_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-const char** q_timeedit_dynamic_property_names(void* self);
+const char** q_timeedit_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -9417,9 +9417,9 @@ QBindingStorage* q_timeedit_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-const QBindingStorage* q_timeedit_binding_storage2(void* self);
+const QBindingStorage* q_timeedit_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -9442,18 +9442,18 @@ void q_timeedit_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QObject* q_timeedit_parent(void* self);
+QObject* q_timeedit_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param classname const char*
 ///
-bool q_timeedit_inherits(void* self, const char* classname);
+bool q_timeedit_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -9493,7 +9493,7 @@ int32_t q_timeedit_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_timeedit_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_timeedit_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -9505,59 +9505,59 @@ QMetaObject__Connection* q_timeedit_connect5(void* sender, const char* signal, v
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_timeedit_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_timeedit_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_timeedit_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_timeedit_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param signal const char*
 ///
-bool q_timeedit_disconnect1(void* self, const char* signal);
+bool q_timeedit_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTimeEdit*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_timeedit_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_timeedit_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_timeedit_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_timeedit_disconnect23(void* self, void* receiver, const char* member);
+bool q_timeedit_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QTimeEdit*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_timeedit_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -9581,89 +9581,89 @@ void q_timeedit_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_painting_active(void* self);
+bool q_timeedit_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-int32_t q_timeedit_width_m_m(void* self);
+int32_t q_timeedit_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-int32_t q_timeedit_height_m_m(void* self);
+int32_t q_timeedit_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-int32_t q_timeedit_logical_dpi_x(void* self);
+int32_t q_timeedit_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-int32_t q_timeedit_logical_dpi_y(void* self);
+int32_t q_timeedit_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-int32_t q_timeedit_physical_dpi_x(void* self);
+int32_t q_timeedit_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-int32_t q_timeedit_physical_dpi_y(void* self);
+int32_t q_timeedit_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-double q_timeedit_device_pixel_ratio(void* self);
+double q_timeedit_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-double q_timeedit_device_pixel_ratio_f(void* self);
+double q_timeedit_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-int32_t q_timeedit_color_count(void* self);
+int32_t q_timeedit_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-int32_t q_timeedit_depth(void* self);
+int32_t q_timeedit_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -9686,9 +9686,9 @@ int32_t q_timeedit_encode_metric_f(int32_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QSize* q_timeedit_size_hint(void* self);
+QSize* q_timeedit_size_hint(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -9696,9 +9696,9 @@ QSize* q_timeedit_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QSize* q_timeedit_super_size_hint(void* self);
+QSize* q_timeedit_super_size_hint(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -9706,12 +9706,12 @@ QSize* q_timeedit_super_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTimeEdit*
-/// @param callback QSize* func()
+/// @param self const QTimeEdit*
+/// @param callback QSize* func(QTimeEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_timeedit_on_size_hint(void* self, QSize* (*callback)());
+void q_timeedit_on_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QDateTimeEdit
 ///
@@ -9740,9 +9740,9 @@ void q_timeedit_super_clear(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void func()
+/// @param callback void func(QTimeEdit* self)
 ///
-void q_timeedit_on_clear(void* self, void (*callback)());
+void q_timeedit_on_clear(void* self, void (*callback)(void*));
 
 /// Inherited from QDateTimeEdit
 ///
@@ -9948,13 +9948,13 @@ void q_timeedit_on_focus_next_prev_child(void* self, bool (*callback)(void*, boo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param input const char*
 /// @param pos int*
 ///
 /// @return enum QValidator__State
 ///
-int32_t q_timeedit_validate(void* self, const char* input, int* pos);
+int32_t q_timeedit_validate(const void* self, const char* input, int* pos);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -9962,13 +9962,13 @@ int32_t q_timeedit_validate(void* self, const char* input, int* pos);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param input const char*
 /// @param pos int*
 ///
 /// @return enum QValidator__State
 ///
-int32_t q_timeedit_super_validate(void* self, const char* input, int* pos);
+int32_t q_timeedit_super_validate(const void* self, const char* input, int* pos);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -9976,10 +9976,10 @@ int32_t q_timeedit_super_validate(void* self, const char* input, int* pos);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param callback int32_t func(QTimeEdit* self, const char* input, int* pos)
 ///
-void q_timeedit_on_validate(void* self, int32_t (*callback)(void*, const char*, int*));
+void q_timeedit_on_validate(const void* self, int32_t (*callback)(const void*, const char*, int*));
 
 /// Inherited from QDateTimeEdit
 ///
@@ -9987,10 +9987,10 @@ void q_timeedit_on_validate(void* self, int32_t (*callback)(void*, const char*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param input const char*
 ///
-void q_timeedit_fixup(void* self, const char* input);
+void q_timeedit_fixup(const void* self, const char* input);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -9998,10 +9998,10 @@ void q_timeedit_fixup(void* self, const char* input);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param input const char*
 ///
-void q_timeedit_super_fixup(void* self, const char* input);
+void q_timeedit_super_fixup(const void* self, const char* input);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10009,10 +10009,10 @@ void q_timeedit_super_fixup(void* self, const char* input);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param callback void func(QTimeEdit* self, const char* input)
 ///
-void q_timeedit_on_fixup(void* self, void (*callback)(void*, const char*));
+void q_timeedit_on_fixup(const void* self, void (*callback)(const void*, const char*));
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10020,10 +10020,10 @@ void q_timeedit_on_fixup(void* self, void (*callback)(void*, const char*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param text const char*
 ///
-QDateTime* q_timeedit_date_time_from_text(void* self, const char* text);
+QDateTime* q_timeedit_date_time_from_text(const void* self, const char* text);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10031,10 +10031,10 @@ QDateTime* q_timeedit_date_time_from_text(void* self, const char* text);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param text const char*
 ///
-QDateTime* q_timeedit_super_date_time_from_text(void* self, const char* text);
+QDateTime* q_timeedit_super_date_time_from_text(const void* self, const char* text);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10042,12 +10042,12 @@ QDateTime* q_timeedit_super_date_time_from_text(void* self, const char* text);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param callback QDateTime* func(QTimeEdit* self, const char* text)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_timeedit_on_date_time_from_text(void* self, QDateTime* (*callback)(void*, const char*));
+void q_timeedit_on_date_time_from_text(const void* self, QDateTime* (*callback)(const void*, const char*));
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10057,10 +10057,10 @@ void q_timeedit_on_date_time_from_text(void* self, QDateTime* (*callback)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param dt QDateTime*
 ///
-const char* q_timeedit_text_from_date_time(void* self, void* dt);
+const char* q_timeedit_text_from_date_time(const void* self, const void* dt);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10070,10 +10070,10 @@ const char* q_timeedit_text_from_date_time(void* self, void* dt);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param dt QDateTime*
 ///
-const char* q_timeedit_super_text_from_date_time(void* self, void* dt);
+const char* q_timeedit_super_text_from_date_time(const void* self, const void* dt);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10081,10 +10081,10 @@ const char* q_timeedit_super_text_from_date_time(void* self, void* dt);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param callback const char* func(QTimeEdit* self, QDateTime* dt)
 ///
-void q_timeedit_on_text_from_date_time(void* self, const char* (*callback)(void*, void*));
+void q_timeedit_on_text_from_date_time(const void* self, const char* (*callback)(const void*, const void*));
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10092,11 +10092,11 @@ void q_timeedit_on_text_from_date_time(void* self, const char* (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
 /// @return flag of enum QAbstractSpinBox__StepEnabledFlag
 ///
-int32_t q_timeedit_step_enabled(void* self);
+int32_t q_timeedit_step_enabled(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10104,11 +10104,11 @@ int32_t q_timeedit_step_enabled(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
 /// @return flag of enum QAbstractSpinBox__StepEnabledFlag
 ///
-int32_t q_timeedit_super_step_enabled(void* self);
+int32_t q_timeedit_super_step_enabled(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10116,10 +10116,10 @@ int32_t q_timeedit_super_step_enabled(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTimeEdit*
-/// @param callback int32_t func()
+/// @param self const QTimeEdit*
+/// @param callback int32_t func(QTimeEdit* self)
 ///
-void q_timeedit_on_step_enabled(void* self, int32_t (*callback)());
+void q_timeedit_on_step_enabled(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10193,10 +10193,10 @@ void q_timeedit_on_paint_event(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param option QStyleOptionSpinBox*
 ///
-void q_timeedit_init_style_option(void* self, void* option);
+void q_timeedit_init_style_option(const void* self, void* option);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10204,10 +10204,10 @@ void q_timeedit_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param option QStyleOptionSpinBox*
 ///
-void q_timeedit_super_init_style_option(void* self, void* option);
+void q_timeedit_super_init_style_option(const void* self, void* option);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10215,10 +10215,10 @@ void q_timeedit_super_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param callback void func(QTimeEdit* self, QStyleOptionSpinBox* option)
 ///
-void q_timeedit_on_init_style_option(void* self, void (*callback)(void*, void*));
+void q_timeedit_on_init_style_option(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -10226,9 +10226,9 @@ void q_timeedit_on_init_style_option(void* self, void (*callback)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QSize* q_timeedit_minimum_size_hint(void* self);
+QSize* q_timeedit_minimum_size_hint(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -10236,9 +10236,9 @@ QSize* q_timeedit_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QSize* q_timeedit_super_minimum_size_hint(void* self);
+QSize* q_timeedit_super_minimum_size_hint(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -10246,12 +10246,12 @@ QSize* q_timeedit_super_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTimeEdit*
-/// @param callback QSize* func()
+/// @param self const QTimeEdit*
+/// @param callback QSize* func(QTimeEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_timeedit_on_minimum_size_hint(void* self, QSize* (*callback)());
+void q_timeedit_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -10259,10 +10259,10 @@ void q_timeedit_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_timeedit_input_method_query(void* self, int32_t param1);
+QVariant* q_timeedit_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -10270,10 +10270,10 @@ QVariant* q_timeedit_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_timeedit_super_input_method_query(void* self, int32_t param1);
+QVariant* q_timeedit_super_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -10281,12 +10281,12 @@ QVariant* q_timeedit_super_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param callback QVariant* func(QTimeEdit* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_timeedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void q_timeedit_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -10657,9 +10657,9 @@ void q_timeedit_on_show_event(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-int32_t q_timeedit_dev_type(void* self);
+int32_t q_timeedit_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10667,9 +10667,9 @@ int32_t q_timeedit_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-int32_t q_timeedit_super_dev_type(void* self);
+int32_t q_timeedit_super_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10677,10 +10677,10 @@ int32_t q_timeedit_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTimeEdit*
-/// @param callback int32_t func()
+/// @param self const QTimeEdit*
+/// @param callback int32_t func(QTimeEdit* self)
 ///
-void q_timeedit_on_dev_type(void* self, int32_t (*callback)());
+void q_timeedit_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -10721,10 +10721,10 @@ void q_timeedit_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param param1 int
 ///
-int32_t q_timeedit_height_for_width(void* self, int param1);
+int32_t q_timeedit_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -10732,10 +10732,10 @@ int32_t q_timeedit_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param param1 int
 ///
-int32_t q_timeedit_super_height_for_width(void* self, int param1);
+int32_t q_timeedit_super_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -10743,10 +10743,10 @@ int32_t q_timeedit_super_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param callback int32_t func(QTimeEdit* self, int param1)
 ///
-void q_timeedit_on_height_for_width(void* self, int32_t (*callback)(void*, int));
+void q_timeedit_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -10754,9 +10754,9 @@ void q_timeedit_on_height_for_width(void* self, int32_t (*callback)(void*, int))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_has_height_for_width(void* self);
+bool q_timeedit_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10764,9 +10764,9 @@ bool q_timeedit_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-bool q_timeedit_super_has_height_for_width(void* self);
+bool q_timeedit_super_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10774,10 +10774,10 @@ bool q_timeedit_super_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTimeEdit*
-/// @param callback bool func()
+/// @param self const QTimeEdit*
+/// @param callback bool func(QTimeEdit* self)
 ///
-void q_timeedit_on_has_height_for_width(void* self, bool (*callback)());
+void q_timeedit_on_has_height_for_width(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -10785,9 +10785,9 @@ void q_timeedit_on_has_height_for_width(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QPaintEngine* q_timeedit_paint_engine(void* self);
+QPaintEngine* q_timeedit_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10795,9 +10795,9 @@ QPaintEngine* q_timeedit_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QPaintEngine* q_timeedit_super_paint_engine(void* self);
+QPaintEngine* q_timeedit_super_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10805,10 +10805,10 @@ QPaintEngine* q_timeedit_super_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTimeEdit*
-/// @param callback QPaintEngine* func()
+/// @param self const QTimeEdit*
+/// @param callback QPaintEngine* func(QTimeEdit* self)
 ///
-void q_timeedit_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void q_timeedit_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -11183,10 +11183,10 @@ void q_timeedit_on_native_event(void* self, bool (*callback)(void*, libqt_string
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_timeedit_metric(void* self, int32_t param1);
+int32_t q_timeedit_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -11194,10 +11194,10 @@ int32_t q_timeedit_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_timeedit_super_metric(void* self, int32_t param1);
+int32_t q_timeedit_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -11205,10 +11205,10 @@ int32_t q_timeedit_super_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param callback int32_t func(QTimeEdit* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_timeedit_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void q_timeedit_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -11216,10 +11216,10 @@ void q_timeedit_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param painter QPainter*
 ///
-void q_timeedit_init_painter(void* self, void* painter);
+void q_timeedit_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -11227,10 +11227,10 @@ void q_timeedit_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param painter QPainter*
 ///
-void q_timeedit_super_init_painter(void* self, void* painter);
+void q_timeedit_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -11238,10 +11238,10 @@ void q_timeedit_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param callback void func(QTimeEdit* self, QPainter* painter)
 ///
-void q_timeedit_on_init_painter(void* self, void (*callback)(void*, void*));
+void q_timeedit_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -11249,10 +11249,10 @@ void q_timeedit_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_timeedit_redirected(void* self, void* offset);
+QPaintDevice* q_timeedit_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -11260,10 +11260,10 @@ QPaintDevice* q_timeedit_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_timeedit_super_redirected(void* self, void* offset);
+QPaintDevice* q_timeedit_super_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -11271,10 +11271,10 @@ QPaintDevice* q_timeedit_super_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param callback QPaintDevice* func(QTimeEdit* self, QPoint* offset)
 ///
-void q_timeedit_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void q_timeedit_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -11282,9 +11282,9 @@ void q_timeedit_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QPainter* q_timeedit_shared_painter(void* self);
+QPainter* q_timeedit_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -11292,9 +11292,9 @@ QPainter* q_timeedit_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QPainter* q_timeedit_super_shared_painter(void* self);
+QPainter* q_timeedit_super_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -11302,10 +11302,10 @@ QPainter* q_timeedit_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTimeEdit*
-/// @param callback QPainter* func()
+/// @param self const QTimeEdit*
+/// @param callback QPainter* func(QTimeEdit* self)
 ///
-void q_timeedit_on_shared_painter(void* self, QPainter* (*callback)());
+void q_timeedit_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -11450,7 +11450,7 @@ void q_timeedit_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QTimeEdit*
 /// @param signal QMetaMethod*
 ///
-void q_timeedit_connect_notify(void* self, void* signal);
+void q_timeedit_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -11461,7 +11461,7 @@ void q_timeedit_connect_notify(void* self, void* signal);
 /// @param self QTimeEdit*
 /// @param signal QMetaMethod*
 ///
-void q_timeedit_super_connect_notify(void* self, void* signal);
+void q_timeedit_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -11472,7 +11472,7 @@ void q_timeedit_super_connect_notify(void* self, void* signal);
 /// @param self QTimeEdit*
 /// @param callback void func(QTimeEdit* self, QMetaMethod* signal)
 ///
-void q_timeedit_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_timeedit_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -11483,7 +11483,7 @@ void q_timeedit_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QTimeEdit*
 /// @param signal QMetaMethod*
 ///
-void q_timeedit_disconnect_notify(void* self, void* signal);
+void q_timeedit_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -11494,7 +11494,7 @@ void q_timeedit_disconnect_notify(void* self, void* signal);
 /// @param self QTimeEdit*
 /// @param signal QMetaMethod*
 ///
-void q_timeedit_super_disconnect_notify(void* self, void* signal);
+void q_timeedit_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -11505,7 +11505,7 @@ void q_timeedit_super_disconnect_notify(void* self, void* signal);
 /// @param self QTimeEdit*
 /// @param callback void func(QTimeEdit* self, QMetaMethod* signal)
 ///
-void q_timeedit_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_timeedit_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -11513,9 +11513,9 @@ void q_timeedit_on_disconnect_notify(void* self, void (*callback)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QLineEdit* q_timeedit_line_edit(void* self);
+QLineEdit* q_timeedit_line_edit(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -11523,9 +11523,9 @@ QLineEdit* q_timeedit_line_edit(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QLineEdit* q_timeedit_super_line_edit(void* self);
+QLineEdit* q_timeedit_super_line_edit(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -11533,10 +11533,10 @@ QLineEdit* q_timeedit_super_line_edit(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTimeEdit*
-/// @param callback QLineEdit* func()
+/// @param self const QTimeEdit*
+/// @param callback QLineEdit* func(QTimeEdit* self)
 ///
-void q_timeedit_on_line_edit(void* self, QLineEdit* (*callback)());
+void q_timeedit_on_line_edit(const void* self, QLineEdit* (*callback)(const void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -11598,9 +11598,9 @@ void q_timeedit_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void func()
+/// @param callback void func(QTimeEdit* self)
 ///
-void q_timeedit_on_update_micro_focus(void* self, void (*callback)());
+void q_timeedit_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -11629,9 +11629,9 @@ void q_timeedit_super_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void func()
+/// @param callback void func(QTimeEdit* self)
 ///
-void q_timeedit_on_create(void* self, void (*callback)());
+void q_timeedit_on_create(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -11660,9 +11660,9 @@ void q_timeedit_super_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void func()
+/// @param callback void func(QTimeEdit* self)
 ///
-void q_timeedit_on_destroy(void* self, void (*callback)());
+void q_timeedit_on_destroy(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -11691,9 +11691,9 @@ bool q_timeedit_super_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback bool func()
+/// @param callback bool func(QTimeEdit* self)
 ///
-void q_timeedit_on_focus_next_child(void* self, bool (*callback)());
+void q_timeedit_on_focus_next_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -11722,9 +11722,9 @@ bool q_timeedit_super_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback bool func()
+/// @param callback bool func(QTimeEdit* self)
 ///
-void q_timeedit_on_focus_previous_child(void* self, bool (*callback)());
+void q_timeedit_on_focus_previous_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -11732,9 +11732,9 @@ void q_timeedit_on_focus_previous_child(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QObject* q_timeedit_sender(void* self);
+QObject* q_timeedit_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -11742,9 +11742,9 @@ QObject* q_timeedit_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QObject* q_timeedit_super_sender(void* self);
+QObject* q_timeedit_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -11752,10 +11752,10 @@ QObject* q_timeedit_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTimeEdit*
-/// @param callback QObject* func()
+/// @param self const QTimeEdit*
+/// @param callback QObject* func(QTimeEdit* self)
 ///
-void q_timeedit_on_sender(void* self, QObject* (*callback)());
+void q_timeedit_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -11763,9 +11763,9 @@ void q_timeedit_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-int32_t q_timeedit_sender_signal_index(void* self);
+int32_t q_timeedit_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -11773,9 +11773,9 @@ int32_t q_timeedit_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-int32_t q_timeedit_super_sender_signal_index(void* self);
+int32_t q_timeedit_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -11783,10 +11783,10 @@ int32_t q_timeedit_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTimeEdit*
-/// @param callback int32_t func()
+/// @param self const QTimeEdit*
+/// @param callback int32_t func(QTimeEdit* self)
 ///
-void q_timeedit_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_timeedit_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -11794,10 +11794,10 @@ void q_timeedit_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param signal const char*
 ///
-int32_t q_timeedit_receivers(void* self, const char* signal);
+int32_t q_timeedit_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -11805,10 +11805,10 @@ int32_t q_timeedit_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param signal const char*
 ///
-int32_t q_timeedit_super_receivers(void* self, const char* signal);
+int32_t q_timeedit_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -11816,10 +11816,10 @@ int32_t q_timeedit_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param callback int32_t func(QTimeEdit* self, const char* signal)
 ///
-void q_timeedit_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_timeedit_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -11827,10 +11827,10 @@ void q_timeedit_on_receivers(void* self, int32_t (*callback)(void*, const char*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param signal QMetaMethod*
 ///
-bool q_timeedit_is_signal_connected(void* self, void* signal);
+bool q_timeedit_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -11838,10 +11838,10 @@ bool q_timeedit_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param signal QMetaMethod*
 ///
-bool q_timeedit_super_is_signal_connected(void* self, void* signal);
+bool q_timeedit_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -11849,10 +11849,10 @@ bool q_timeedit_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param callback bool func(QTimeEdit* self, QMetaMethod* signal)
 ///
-void q_timeedit_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_timeedit_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -11860,11 +11860,11 @@ void q_timeedit_on_is_signal_connected(void* self, bool (*callback)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_timeedit_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_timeedit_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -11872,11 +11872,11 @@ double q_timeedit_get_decoded_metric_f(void* self, int32_t metricA, int32_t metr
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_timeedit_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_timeedit_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -11884,10 +11884,10 @@ double q_timeedit_super_get_decoded_metric_f(void* self, int32_t metricA, int32_
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 /// @param callback double func(QTimeEdit* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_timeedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void q_timeedit_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///
@@ -11941,26 +11941,26 @@ QDateEdit* q_dateedit_new4(void* date, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-const QMetaObject* q_dateedit_meta_object(void* self);
+const QMetaObject* q_dateedit_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDateEdit*
-/// @param callback const QMetaObject* func()
+/// @param self const QDateEdit*
+/// @param callback const QMetaObject* func(const QDateEdit* self)
 ///
-void q_dateedit_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_dateedit_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-const QMetaObject* q_dateedit_super_meta_object(void* self);
+const QMetaObject* q_dateedit_super_meta_object(const void* self);
 
 /// @param self QDateEdit*
 /// @param param1 const char*
@@ -12049,33 +12049,33 @@ const char* q_dateedit_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#dateTime)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QDateTime* q_dateedit_date_time(void* self);
+QDateTime* q_dateedit_date_time(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#date)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QDate* q_dateedit_date(void* self);
+QDate* q_dateedit_date(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#time)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QTime* q_dateedit_time(void* self);
+QTime* q_dateedit_time(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#calendar)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QCalendar* q_dateedit_calendar(void* self);
+QCalendar* q_dateedit_calendar(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -12090,9 +12090,9 @@ void q_dateedit_set_calendar(void* self, void* calendar);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#minimumDateTime)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QDateTime* q_dateedit_minimum_date_time(void* self);
+QDateTime* q_dateedit_minimum_date_time(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -12109,15 +12109,15 @@ void q_dateedit_clear_minimum_date_time(void* self);
 /// @param self QDateEdit*
 /// @param dt QDateTime*
 ///
-void q_dateedit_set_minimum_date_time(void* self, void* dt);
+void q_dateedit_set_minimum_date_time(void* self, const void* dt);
 
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#maximumDateTime)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QDateTime* q_dateedit_maximum_date_time(void* self);
+QDateTime* q_dateedit_maximum_date_time(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -12134,7 +12134,7 @@ void q_dateedit_clear_maximum_date_time(void* self);
 /// @param self QDateEdit*
 /// @param dt QDateTime*
 ///
-void q_dateedit_set_maximum_date_time(void* self, void* dt);
+void q_dateedit_set_maximum_date_time(void* self, const void* dt);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -12144,15 +12144,15 @@ void q_dateedit_set_maximum_date_time(void* self, void* dt);
 /// @param min QDateTime*
 /// @param max QDateTime*
 ///
-void q_dateedit_set_date_time_range(void* self, void* min, void* max);
+void q_dateedit_set_date_time_range(void* self, const void* min, const void* max);
 
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#minimumDate)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QDate* q_dateedit_minimum_date(void* self);
+QDate* q_dateedit_minimum_date(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -12175,9 +12175,9 @@ void q_dateedit_clear_minimum_date(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#maximumDate)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QDate* q_dateedit_maximum_date(void* self);
+QDate* q_dateedit_maximum_date(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -12210,9 +12210,9 @@ void q_dateedit_set_date_range(void* self, void* min, void* max);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#minimumTime)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QTime* q_dateedit_minimum_time(void* self);
+QTime* q_dateedit_minimum_time(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -12235,9 +12235,9 @@ void q_dateedit_clear_minimum_time(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#maximumTime)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QTime* q_dateedit_maximum_time(void* self);
+QTime* q_dateedit_maximum_time(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -12270,32 +12270,32 @@ void q_dateedit_set_time_range(void* self, void* min, void* max);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#displayedSections)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
 /// @return flag of enum QDateTimeEdit__Section
 ///
-int32_t q_dateedit_displayed_sections(void* self);
+int32_t q_dateedit_displayed_sections(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#currentSection)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
 /// @return enum QDateTimeEdit__Section
 ///
-int32_t q_dateedit_current_section(void* self);
+int32_t q_dateedit_current_section(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#sectionAt)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param index int
 ///
 /// @return enum QDateTimeEdit__Section
 ///
-int32_t q_dateedit_section_at(void* self, int index);
+int32_t q_dateedit_section_at(const void* self, int index);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -12310,9 +12310,9 @@ void q_dateedit_set_current_section(void* self, int32_t section);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#currentSectionIndex)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-int32_t q_dateedit_current_section_index(void* self);
+int32_t q_dateedit_current_section_index(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -12327,9 +12327,9 @@ void q_dateedit_set_current_section_index(void* self, int index);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#calendarWidget)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QCalendarWidget* q_dateedit_calendar_widget(void* self);
+QCalendarWidget* q_dateedit_calendar_widget(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -12344,9 +12344,9 @@ void q_dateedit_set_calendar_widget(void* self, void* calendarWidget);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#sectionCount)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-int32_t q_dateedit_section_count(void* self);
+int32_t q_dateedit_section_count(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -12363,10 +12363,10 @@ void q_dateedit_set_selected_section(void* self, int32_t section);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param section enum QDateTimeEdit__Section
 ///
-const char* q_dateedit_section_text(void* self, int32_t section);
+const char* q_dateedit_section_text(const void* self, int32_t section);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -12374,9 +12374,9 @@ const char* q_dateedit_section_text(void* self, int32_t section);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-const char* q_dateedit_display_format(void* self);
+const char* q_dateedit_display_format(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -12391,9 +12391,9 @@ void q_dateedit_set_display_format(void* self, const char* format);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#calendarPopup)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_calendar_popup(void* self);
+bool q_dateedit_calendar_popup(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -12408,11 +12408,11 @@ void q_dateedit_set_calendar_popup(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#timeSpec)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
 /// @return enum Qt__TimeSpec
 ///
-int32_t q_dateedit_time_spec(void* self);
+int32_t q_dateedit_time_spec(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -12427,9 +12427,9 @@ void q_dateedit_set_time_spec(void* self, int32_t spec);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#timeZone)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QTimeZone* q_dateedit_time_zone(void* self);
+QTimeZone* q_dateedit_time_zone(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -12438,7 +12438,7 @@ QTimeZone* q_dateedit_time_zone(void* self);
 /// @param self QDateEdit*
 /// @param zone QTimeZone*
 ///
-void q_dateedit_set_time_zone(void* self, void* zone);
+void q_dateedit_set_time_zone(void* self, const void* zone);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -12447,7 +12447,7 @@ void q_dateedit_set_time_zone(void* self, void* zone);
 /// @param self QDateEdit*
 /// @param dateTime QDateTime*
 ///
-void q_dateedit_date_time_changed(void* self, void* dateTime);
+void q_dateedit_date_time_changed(void* self, const void* dateTime);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -12456,7 +12456,7 @@ void q_dateedit_date_time_changed(void* self, void* dateTime);
 /// @param self QDateEdit*
 /// @param callback void func(QDateEdit* self, QDateTime* dateTime)
 ///
-void q_dateedit_on_date_time_changed(void* self, void (*callback)(void*, void*));
+void q_dateedit_on_date_time_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QDateTimeEdit
 ///
@@ -12501,7 +12501,7 @@ void q_dateedit_on_date_changed(void* self, void (*callback)(void*, void*));
 /// @param self QDateEdit*
 /// @param dateTime QDateTime*
 ///
-void q_dateedit_set_date_time(void* self, void* dateTime);
+void q_dateedit_set_date_time(void* self, const void* dateTime);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -12525,11 +12525,11 @@ void q_dateedit_set_time(void* self, void* time);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#buttonSymbols)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
 /// @return enum QAbstractSpinBox__ButtonSymbols
 ///
-int32_t q_dateedit_button_symbols(void* self);
+int32_t q_dateedit_button_symbols(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -12553,19 +12553,19 @@ void q_dateedit_set_correction_mode(void* self, int32_t cm);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#correctionMode)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
 /// @return enum QAbstractSpinBox__CorrectionMode
 ///
-int32_t q_dateedit_correction_mode(void* self);
+int32_t q_dateedit_correction_mode(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#hasAcceptableInput)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_has_acceptable_input(void* self);
+bool q_dateedit_has_acceptable_input(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -12573,9 +12573,9 @@ bool q_dateedit_has_acceptable_input(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-const char* q_dateedit_text(void* self);
+const char* q_dateedit_text(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -12583,9 +12583,9 @@ const char* q_dateedit_text(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-const char* q_dateedit_special_value_text(void* self);
+const char* q_dateedit_special_value_text(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -12600,9 +12600,9 @@ void q_dateedit_set_special_value_text(void* self, const char* txt);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#wrapping)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_wrapping(void* self);
+bool q_dateedit_wrapping(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -12626,9 +12626,9 @@ void q_dateedit_set_read_only(void* self, bool r);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#isReadOnly)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_is_read_only(void* self);
+bool q_dateedit_is_read_only(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -12643,9 +12643,9 @@ void q_dateedit_set_keyboard_tracking(void* self, bool kt);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#keyboardTracking)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_keyboard_tracking(void* self);
+bool q_dateedit_keyboard_tracking(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -12660,11 +12660,11 @@ void q_dateedit_set_alignment(void* self, int32_t flag);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#alignment)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 ///
-int32_t q_dateedit_alignment(void* self);
+int32_t q_dateedit_alignment(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -12679,9 +12679,9 @@ void q_dateedit_set_frame(void* self, bool frame);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#hasFrame)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_has_frame(void* self);
+bool q_dateedit_has_frame(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -12696,9 +12696,9 @@ void q_dateedit_set_accelerated(void* self, bool on);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#isAccelerated)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_is_accelerated(void* self);
+bool q_dateedit_is_accelerated(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -12713,9 +12713,9 @@ void q_dateedit_set_group_separator_shown(void* self, bool shown);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#isGroupSeparatorShown)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_is_group_separator_shown(void* self);
+bool q_dateedit_is_group_separator_shown(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -12786,9 +12786,9 @@ QDateEdit* q_dateedit_from_q_paint_device(void* _qpaintdevice);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-uintptr_t q_dateedit_win_id(void* self);
+uintptr_t q_dateedit_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -12802,25 +12802,25 @@ void q_dateedit_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-uintptr_t q_dateedit_internal_win_id(void* self);
+uintptr_t q_dateedit_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-uintptr_t q_dateedit_effective_win_id(void* self);
+uintptr_t q_dateedit_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QStyle* q_dateedit_style(void* self);
+QStyle* q_dateedit_style(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -12835,35 +12835,35 @@ void q_dateedit_set_style(void* self, void* style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_is_top_level(void* self);
+bool q_dateedit_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_is_window(void* self);
+bool q_dateedit_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_is_modal(void* self);
+bool q_dateedit_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t q_dateedit_window_modality(void* self);
+int32_t q_dateedit_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -12878,18 +12878,18 @@ void q_dateedit_set_window_modality(void* self, int32_t windowModality);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_is_enabled(void* self);
+bool q_dateedit_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param param1 QWidget*
 ///
-bool q_dateedit_is_enabled_to(void* self, void* param1);
+bool q_dateedit_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -12922,153 +12922,153 @@ void q_dateedit_set_window_modified(void* self, bool windowModified);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QRect* q_dateedit_frame_geometry(void* self);
+QRect* q_dateedit_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-const QRect* q_dateedit_geometry(void* self);
+const QRect* q_dateedit_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QRect* q_dateedit_normal_geometry(void* self);
+QRect* q_dateedit_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-int32_t q_dateedit_x(void* self);
+int32_t q_dateedit_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-int32_t q_dateedit_y(void* self);
+int32_t q_dateedit_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QPoint* q_dateedit_pos(void* self);
+QPoint* q_dateedit_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QSize* q_dateedit_frame_size(void* self);
+QSize* q_dateedit_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QSize* q_dateedit_size(void* self);
+QSize* q_dateedit_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-int32_t q_dateedit_width(void* self);
+int32_t q_dateedit_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-int32_t q_dateedit_height(void* self);
+int32_t q_dateedit_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QRect* q_dateedit_rect(void* self);
+QRect* q_dateedit_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QRect* q_dateedit_children_rect(void* self);
+QRect* q_dateedit_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QRegion* q_dateedit_children_region(void* self);
+QRegion* q_dateedit_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QSize* q_dateedit_minimum_size(void* self);
+QSize* q_dateedit_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QSize* q_dateedit_maximum_size(void* self);
+QSize* q_dateedit_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-int32_t q_dateedit_minimum_width(void* self);
+int32_t q_dateedit_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-int32_t q_dateedit_minimum_height(void* self);
+int32_t q_dateedit_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-int32_t q_dateedit_maximum_width(void* self);
+int32_t q_dateedit_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-int32_t q_dateedit_maximum_height(void* self);
+int32_t q_dateedit_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -13077,7 +13077,7 @@ int32_t q_dateedit_maximum_height(void* self);
 /// @param self QDateEdit*
 /// @param minimumSize QSize*
 ///
-void q_dateedit_set_minimum_size(void* self, void* minimumSize);
+void q_dateedit_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -13096,7 +13096,7 @@ void q_dateedit_set_minimum_size2(void* self, int minw, int minh);
 /// @param self QDateEdit*
 /// @param maximumSize QSize*
 ///
-void q_dateedit_set_maximum_size(void* self, void* maximumSize);
+void q_dateedit_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -13148,9 +13148,9 @@ void q_dateedit_set_maximum_height(void* self, int maxh);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QSize* q_dateedit_size_increment(void* self);
+QSize* q_dateedit_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -13159,7 +13159,7 @@ QSize* q_dateedit_size_increment(void* self);
 /// @param self QDateEdit*
 /// @param sizeIncrement QSize*
 ///
-void q_dateedit_set_size_increment(void* self, void* sizeIncrement);
+void q_dateedit_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -13175,9 +13175,9 @@ void q_dateedit_set_size_increment2(void* self, int w, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QSize* q_dateedit_base_size(void* self);
+QSize* q_dateedit_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -13186,7 +13186,7 @@ QSize* q_dateedit_base_size(void* self);
 /// @param self QDateEdit*
 /// @param baseSize QSize*
 ///
-void q_dateedit_set_base_size(void* self, void* baseSize);
+void q_dateedit_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -13205,7 +13205,7 @@ void q_dateedit_set_base_size2(void* self, int basew, int baseh);
 /// @param self QDateEdit*
 /// @param fixedSize QSize*
 ///
-void q_dateedit_set_fixed_size(void* self, void* fixedSize);
+void q_dateedit_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -13239,145 +13239,145 @@ void q_dateedit_set_fixed_height(void* self, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param param1 QPointF*
 ///
-QPointF* q_dateedit_map_to_global(void* self, void* param1);
+QPointF* q_dateedit_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param param1 QPoint*
 ///
-QPoint* q_dateedit_map_to_global2(void* self, void* param1);
+QPoint* q_dateedit_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param param1 QPointF*
 ///
-QPointF* q_dateedit_map_from_global(void* self, void* param1);
+QPointF* q_dateedit_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param param1 QPoint*
 ///
-QPoint* q_dateedit_map_from_global2(void* self, void* param1);
+QPoint* q_dateedit_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param param1 QPointF*
 ///
-QPointF* q_dateedit_map_to_parent(void* self, void* param1);
+QPointF* q_dateedit_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param param1 QPoint*
 ///
-QPoint* q_dateedit_map_to_parent2(void* self, void* param1);
+QPoint* q_dateedit_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param param1 QPointF*
 ///
-QPointF* q_dateedit_map_from_parent(void* self, void* param1);
+QPointF* q_dateedit_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param param1 QPoint*
 ///
-QPoint* q_dateedit_map_from_parent2(void* self, void* param1);
+QPoint* q_dateedit_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* q_dateedit_map_to(void* self, void* param1, void* param2);
+QPointF* q_dateedit_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* q_dateedit_map_to2(void* self, void* param1, void* param2);
+QPoint* q_dateedit_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* q_dateedit_map_from(void* self, void* param1, void* param2);
+QPointF* q_dateedit_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* q_dateedit_map_from2(void* self, void* param1, void* param2);
+QPoint* q_dateedit_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QWidget* q_dateedit_window(void* self);
+QWidget* q_dateedit_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QWidget* q_dateedit_native_parent_widget(void* self);
+QWidget* q_dateedit_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QWidget* q_dateedit_top_level_widget(void* self);
+QWidget* q_dateedit_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-const QPalette* q_dateedit_palette(void* self);
+const QPalette* q_dateedit_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -13386,7 +13386,7 @@ const QPalette* q_dateedit_palette(void* self);
 /// @param self QDateEdit*
 /// @param palette QPalette*
 ///
-void q_dateedit_set_palette(void* self, void* palette);
+void q_dateedit_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -13401,11 +13401,11 @@ void q_dateedit_set_background_role(void* self, int32_t backgroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t q_dateedit_background_role(void* self);
+int32_t q_dateedit_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -13420,19 +13420,19 @@ void q_dateedit_set_foreground_role(void* self, int32_t foregroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t q_dateedit_foreground_role(void* self);
+int32_t q_dateedit_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-const QFont* q_dateedit_font(void* self);
+const QFont* q_dateedit_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -13441,31 +13441,31 @@ const QFont* q_dateedit_font(void* self);
 /// @param self QDateEdit*
 /// @param font QFont*
 ///
-void q_dateedit_set_font(void* self, void* font);
+void q_dateedit_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QFontMetrics* q_dateedit_font_metrics(void* self);
+QFontMetrics* q_dateedit_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QFontInfo* q_dateedit_font_info(void* self);
+QFontInfo* q_dateedit_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QCursor* q_dateedit_cursor(void* self);
+QCursor* q_dateedit_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -13474,7 +13474,7 @@ QCursor* q_dateedit_cursor(void* self);
 /// @param self QDateEdit*
 /// @param cursor QCursor*
 ///
-void q_dateedit_set_cursor(void* self, void* cursor);
+void q_dateedit_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -13497,17 +13497,17 @@ void q_dateedit_set_mouse_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_has_mouse_tracking(void* self);
+bool q_dateedit_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_under_mouse(void* self);
+bool q_dateedit_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -13522,9 +13522,9 @@ void q_dateedit_set_tablet_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_has_tablet_tracking(void* self);
+bool q_dateedit_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -13533,7 +13533,7 @@ bool q_dateedit_has_tablet_tracking(void* self);
 /// @param self QDateEdit*
 /// @param mask QBitmap*
 ///
-void q_dateedit_set_mask(void* self, void* mask);
+void q_dateedit_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -13542,15 +13542,15 @@ void q_dateedit_set_mask(void* self, void* mask);
 /// @param self QDateEdit*
 /// @param mask QRegion*
 ///
-void q_dateedit_set_mask2(void* self, void* mask);
+void q_dateedit_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QRegion* q_dateedit_mask(void* self);
+QRegion* q_dateedit_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -13590,9 +13590,9 @@ QPixmap* q_dateedit_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QGraphicsEffect* q_dateedit_graphics_effect(void* self);
+QGraphicsEffect* q_dateedit_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -13645,9 +13645,9 @@ void q_dateedit_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-const char* q_dateedit_style_sheet(void* self);
+const char* q_dateedit_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -13655,9 +13655,9 @@ const char* q_dateedit_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-const char* q_dateedit_window_title(void* self);
+const char* q_dateedit_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -13666,15 +13666,15 @@ const char* q_dateedit_window_title(void* self);
 /// @param self QDateEdit*
 /// @param icon QIcon*
 ///
-void q_dateedit_set_window_icon(void* self, void* icon);
+void q_dateedit_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QIcon* q_dateedit_window_icon(void* self);
+QIcon* q_dateedit_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -13691,9 +13691,9 @@ void q_dateedit_set_window_icon_text(void* self, const char* windowIconText);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-const char* q_dateedit_window_icon_text(void* self);
+const char* q_dateedit_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -13710,9 +13710,9 @@ void q_dateedit_set_window_role(void* self, const char* windowRole);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-const char* q_dateedit_window_role(void* self);
+const char* q_dateedit_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -13729,9 +13729,9 @@ void q_dateedit_set_window_file_path(void* self, const char* filePath);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-const char* q_dateedit_window_file_path(void* self);
+const char* q_dateedit_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -13746,17 +13746,17 @@ void q_dateedit_set_window_opacity(void* self, double level);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-double q_dateedit_window_opacity(void* self);
+double q_dateedit_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_is_window_modified(void* self);
+bool q_dateedit_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -13773,9 +13773,9 @@ void q_dateedit_set_tool_tip(void* self, const char* toolTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-const char* q_dateedit_tool_tip(void* self);
+const char* q_dateedit_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -13790,9 +13790,9 @@ void q_dateedit_set_tool_tip_duration(void* self, int msec);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-int32_t q_dateedit_tool_tip_duration(void* self);
+int32_t q_dateedit_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -13809,9 +13809,9 @@ void q_dateedit_set_status_tip(void* self, const char* statusTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-const char* q_dateedit_status_tip(void* self);
+const char* q_dateedit_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -13828,9 +13828,9 @@ void q_dateedit_set_whats_this(void* self, const char* whatsThis);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-const char* q_dateedit_whats_this(void* self);
+const char* q_dateedit_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -13838,9 +13838,9 @@ const char* q_dateedit_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-const char* q_dateedit_accessible_name(void* self);
+const char* q_dateedit_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -13857,9 +13857,9 @@ void q_dateedit_set_accessible_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-const char* q_dateedit_accessible_description(void* self);
+const char* q_dateedit_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -13883,11 +13883,11 @@ void q_dateedit_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_dateedit_layout_direction(void* self);
+int32_t q_dateedit_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -13904,15 +13904,15 @@ void q_dateedit_unset_layout_direction(void* self);
 /// @param self QDateEdit*
 /// @param locale QLocale*
 ///
-void q_dateedit_set_locale(void* self, void* locale);
+void q_dateedit_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QLocale* q_dateedit_locale(void* self);
+QLocale* q_dateedit_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -13926,17 +13926,17 @@ void q_dateedit_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_is_right_to_left(void* self);
+bool q_dateedit_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_is_left_to_right(void* self);
+bool q_dateedit_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -13950,9 +13950,9 @@ void q_dateedit_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_is_active_window(void* self);
+bool q_dateedit_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -13983,11 +13983,11 @@ void q_dateedit_set_focus2(void* self, int32_t reason);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t q_dateedit_focus_policy(void* self);
+int32_t q_dateedit_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -14002,9 +14002,9 @@ void q_dateedit_set_focus_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_has_focus(void* self);
+bool q_dateedit_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -14028,19 +14028,19 @@ void q_dateedit_set_focus_proxy(void* self, void* focusProxy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QWidget* q_dateedit_focus_proxy(void* self);
+QWidget* q_dateedit_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t q_dateedit_context_menu_policy(void* self);
+int32_t q_dateedit_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -14066,7 +14066,7 @@ void q_dateedit_grab_mouse(void* self);
 /// @param self QDateEdit*
 /// @param param1 QCursor*
 ///
-void q_dateedit_grab_mouse2(void* self, void* param1);
+void q_dateedit_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -14099,7 +14099,7 @@ void q_dateedit_release_keyboard(void* self);
 /// @param self QDateEdit*
 /// @param key QKeySequence*
 ///
-int32_t q_dateedit_grab_shortcut(void* self, void* key);
+int32_t q_dateedit_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -14144,9 +14144,9 @@ QWidget* q_dateedit_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_updates_enabled(void* self);
+bool q_dateedit_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -14161,9 +14161,9 @@ void q_dateedit_set_updates_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QGraphicsProxyWidget* q_dateedit_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* q_dateedit_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -14200,7 +14200,7 @@ void q_dateedit_update2(void* self, int x, int y, int w, int h);
 /// @param self QDateEdit*
 /// @param param1 QRect*
 ///
-void q_dateedit_update3(void* self, void* param1);
+void q_dateedit_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -14209,7 +14209,7 @@ void q_dateedit_update3(void* self, void* param1);
 /// @param self QDateEdit*
 /// @param param1 QRegion*
 ///
-void q_dateedit_update4(void* self, void* param1);
+void q_dateedit_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -14230,7 +14230,7 @@ void q_dateedit_repaint2(void* self, int x, int y, int w, int h);
 /// @param self QDateEdit*
 /// @param param1 QRect*
 ///
-void q_dateedit_repaint3(void* self, void* param1);
+void q_dateedit_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -14239,7 +14239,7 @@ void q_dateedit_repaint3(void* self, void* param1);
 /// @param self QDateEdit*
 /// @param param1 QRegion*
 ///
-void q_dateedit_repaint4(void* self, void* param1);
+void q_dateedit_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -14348,7 +14348,7 @@ void q_dateedit_move(void* self, int x, int y);
 /// @param self QDateEdit*
 /// @param param1 QPoint*
 ///
-void q_dateedit_move2(void* self, void* param1);
+void q_dateedit_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -14367,7 +14367,7 @@ void q_dateedit_resize(void* self, int w, int h);
 /// @param self QDateEdit*
 /// @param param1 QSize*
 ///
-void q_dateedit_resize2(void* self, void* param1);
+void q_dateedit_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -14388,7 +14388,7 @@ void q_dateedit_set_geometry(void* self, int x, int y, int w, int h);
 /// @param self QDateEdit*
 /// @param geometry QRect*
 ///
-void q_dateedit_set_geometry2(void* self, void* geometry);
+void q_dateedit_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -14396,9 +14396,9 @@ void q_dateedit_set_geometry2(void* self, void* geometry);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-char* q_dateedit_save_geometry(void* self);
+char* q_dateedit_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -14421,60 +14421,60 @@ void q_dateedit_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_is_visible(void* self);
+bool q_dateedit_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param param1 QWidget*
 ///
-bool q_dateedit_is_visible_to(void* self, void* param1);
+bool q_dateedit_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_is_hidden(void* self);
+bool q_dateedit_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_is_minimized(void* self);
+bool q_dateedit_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_is_maximized(void* self);
+bool q_dateedit_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_is_full_screen(void* self);
+bool q_dateedit_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t q_dateedit_window_state(void* self);
+int32_t q_dateedit_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -14498,9 +14498,9 @@ void q_dateedit_override_window_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QSizePolicy* q_dateedit_size_policy(void* self);
+QSizePolicy* q_dateedit_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -14525,9 +14525,9 @@ void q_dateedit_set_size_policy2(void* self, int32_t horizontal, int32_t vertica
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QRegion* q_dateedit_visible_region(void* self);
+QRegion* q_dateedit_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -14548,31 +14548,31 @@ void q_dateedit_set_contents_margins(void* self, int left, int top, int right, i
 /// @param self QDateEdit*
 /// @param margins QMargins*
 ///
-void q_dateedit_set_contents_margins2(void* self, void* margins);
+void q_dateedit_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QMargins* q_dateedit_contents_margins(void* self);
+QMargins* q_dateedit_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QRect* q_dateedit_contents_rect(void* self);
+QRect* q_dateedit_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QLayout* q_dateedit_layout(void* self);
+QLayout* q_dateedit_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -14629,39 +14629,39 @@ void q_dateedit_scroll(void* self, int dx, int dy);
 /// @param dy int
 /// @param param3 QRect*
 ///
-void q_dateedit_scroll2(void* self, int dx, int dy, void* param3);
+void q_dateedit_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QWidget* q_dateedit_focus_widget(void* self);
+QWidget* q_dateedit_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QWidget* q_dateedit_next_in_focus_chain(void* self);
+QWidget* q_dateedit_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QWidget* q_dateedit_previous_in_focus_chain(void* self);
+QWidget* q_dateedit_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_accept_drops(void* self);
+bool q_dateedit_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -14723,11 +14723,11 @@ void q_dateedit_remove_action(void* self, void* action);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list q_dateedit_actions(void* self);
+libqt_list q_dateedit_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -14746,7 +14746,7 @@ QAction* q_dateedit_add_action2(void* self, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* q_dateedit_add_action3(void* self, void* icon, const char* text);
+QAction* q_dateedit_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -14756,7 +14756,7 @@ QAction* q_dateedit_add_action3(void* self, void* icon, const char* text);
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* q_dateedit_add_action4(void* self, const char* text, void* shortcut);
+QAction* q_dateedit_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -14767,15 +14767,15 @@ QAction* q_dateedit_add_action4(void* self, const char* text, void* shortcut);
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* q_dateedit_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* q_dateedit_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QWidget* q_dateedit_parent_widget(void* self);
+QWidget* q_dateedit_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -14790,11 +14790,11 @@ void q_dateedit_set_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t q_dateedit_window_flags(void* self);
+int32_t q_dateedit_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -14818,11 +14818,11 @@ void q_dateedit_override_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t q_dateedit_window_type(void* self);
+int32_t q_dateedit_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -14836,29 +14836,29 @@ QWidget* q_dateedit_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param x int
 /// @param y int
 ///
-QWidget* q_dateedit_child_at(void* self, int x, int y);
+QWidget* q_dateedit_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param p QPoint*
 ///
-QWidget* q_dateedit_child_at2(void* self, void* p);
+QWidget* q_dateedit_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param p QPointF*
 ///
-QWidget* q_dateedit_child_at3(void* self, void* p);
+QWidget* q_dateedit_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -14873,35 +14873,35 @@ void q_dateedit_set_attribute(void* self, int32_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool q_dateedit_test_attribute(void* self, int32_t param1);
+bool q_dateedit_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-void q_dateedit_ensure_polished(void* self);
+void q_dateedit_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param child QWidget*
 ///
-bool q_dateedit_is_ancestor_of(void* self, void* child);
+bool q_dateedit_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_auto_fill_background(void* self);
+bool q_dateedit_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -14916,25 +14916,25 @@ void q_dateedit_set_auto_fill_background(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QBackingStore* q_dateedit_backing_store(void* self);
+QBackingStore* q_dateedit_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QWindow* q_dateedit_window_handle(void* self);
+QWindow* q_dateedit_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QScreen* q_dateedit_screen(void* self);
+QScreen* q_dateedit_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -14978,7 +14978,7 @@ void q_dateedit_on_window_title_changed(void* self, void (*callback)(void*, cons
 /// @param self QDateEdit*
 /// @param icon QIcon*
 ///
-void q_dateedit_window_icon_changed(void* self, void* icon);
+void q_dateedit_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -14987,7 +14987,7 @@ void q_dateedit_window_icon_changed(void* self, void* icon);
 /// @param self QDateEdit*
 /// @param callback void func(QDateEdit* self, QIcon* icon)
 ///
-void q_dateedit_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void q_dateedit_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -15014,7 +15014,7 @@ void q_dateedit_on_window_icon_text_changed(void* self, void (*callback)(void*, 
 /// @param self QDateEdit*
 /// @param pos QPoint*
 ///
-void q_dateedit_custom_context_menu_requested(void* self, void* pos);
+void q_dateedit_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -15023,17 +15023,17 @@ void q_dateedit_custom_context_menu_requested(void* self, void* pos);
 /// @param self QDateEdit*
 /// @param callback void func(QDateEdit* self, QPoint* pos)
 ///
-void q_dateedit_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void q_dateedit_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t q_dateedit_input_method_hints(void* self);
+int32_t q_dateedit_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -15052,7 +15052,7 @@ void q_dateedit_set_input_method_hints(void* self, int32_t hints);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void q_dateedit_render22(void* self, void* target, void* targetOffset);
+void q_dateedit_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -15063,7 +15063,7 @@ void q_dateedit_render22(void* self, void* target, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void q_dateedit_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void q_dateedit_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -15075,7 +15075,7 @@ void q_dateedit_render3(void* self, void* target, void* targetOffset, void* sour
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void q_dateedit_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void q_dateedit_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -15085,7 +15085,7 @@ void q_dateedit_render4(void* self, void* target, void* targetOffset, void* sour
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void q_dateedit_render23(void* self, void* painter, void* targetOffset);
+void q_dateedit_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -15096,7 +15096,7 @@ void q_dateedit_render23(void* self, void* painter, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void q_dateedit_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void q_dateedit_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -15108,7 +15108,7 @@ void q_dateedit_render32(void* self, void* painter, void* targetOffset, void* so
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void q_dateedit_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void q_dateedit_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -15117,7 +15117,7 @@ void q_dateedit_render42(void* self, void* painter, void* targetOffset, void* so
 /// @param self QDateEdit*
 /// @param rectangle QRect*
 ///
-QPixmap* q_dateedit_grab1(void* self, void* rectangle);
+QPixmap* q_dateedit_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -15137,7 +15137,7 @@ void q_dateedit_grab_gesture2(void* self, int32_t type, int32_t flags);
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t q_dateedit_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t q_dateedit_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -15204,9 +15204,9 @@ QWidget* q_dateedit_create_window_container3(void* window, void* parent, int32_t
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-const char* q_dateedit_object_name(void* self);
+const char* q_dateedit_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -15221,33 +15221,33 @@ void q_dateedit_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_is_widget_type(void* self);
+bool q_dateedit_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_is_window_type(void* self);
+bool q_dateedit_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_is_quick_item_type(void* self);
+bool q_dateedit_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_signals_blocked(void* self);
+bool q_dateedit_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -15262,9 +15262,9 @@ bool q_dateedit_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QThread* q_dateedit_thread(void* self);
+QThread* q_dateedit_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -15315,11 +15315,11 @@ void q_dateedit_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_dateedit_children(void* self);
+libqt_list q_dateedit_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -15348,7 +15348,7 @@ void q_dateedit_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_dateedit_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_dateedit_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -15359,18 +15359,18 @@ QMetaObject__Connection* q_dateedit_connect(void* sender, const char* signal, vo
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_dateedit_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_dateedit_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_dateedit_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_dateedit_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -15381,7 +15381,7 @@ QMetaObject__Connection* q_dateedit_connect3(void* self, void* sender, const cha
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_dateedit_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_dateedit_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -15392,24 +15392,24 @@ bool q_dateedit_disconnect(void* sender, const char* signal, void* receiver, con
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_dateedit_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_dateedit_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_disconnect3(void* self);
+bool q_dateedit_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param receiver QObject*
 ///
-bool q_dateedit_disconnect4(void* self, void* receiver);
+bool q_dateedit_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -15417,23 +15417,23 @@ bool q_dateedit_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_dateedit_disconnect5(void* param1);
+bool q_dateedit_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-void q_dateedit_dump_object_tree(void* self);
+void q_dateedit_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-void q_dateedit_dump_object_info(void* self);
+void q_dateedit_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -15443,16 +15443,16 @@ void q_dateedit_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_dateedit_set_property(void* self, const char* name, void* value);
+bool q_dateedit_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param name const char*
 ///
-QVariant* q_dateedit_property(void* self, const char* name);
+QVariant* q_dateedit_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -15460,9 +15460,9 @@ QVariant* q_dateedit_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-const char** q_dateedit_dynamic_property_names(void* self);
+const char** q_dateedit_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -15476,9 +15476,9 @@ QBindingStorage* q_dateedit_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-const QBindingStorage* q_dateedit_binding_storage2(void* self);
+const QBindingStorage* q_dateedit_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -15501,18 +15501,18 @@ void q_dateedit_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QObject* q_dateedit_parent(void* self);
+QObject* q_dateedit_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param classname const char*
 ///
-bool q_dateedit_inherits(void* self, const char* classname);
+bool q_dateedit_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -15552,7 +15552,7 @@ int32_t q_dateedit_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_dateedit_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_dateedit_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -15564,59 +15564,59 @@ QMetaObject__Connection* q_dateedit_connect5(void* sender, const char* signal, v
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_dateedit_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_dateedit_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_dateedit_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_dateedit_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param signal const char*
 ///
-bool q_dateedit_disconnect1(void* self, const char* signal);
+bool q_dateedit_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDateEdit*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_dateedit_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_dateedit_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_dateedit_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_dateedit_disconnect23(void* self, void* receiver, const char* member);
+bool q_dateedit_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QDateEdit*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_dateedit_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -15640,89 +15640,89 @@ void q_dateedit_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_painting_active(void* self);
+bool q_dateedit_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-int32_t q_dateedit_width_m_m(void* self);
+int32_t q_dateedit_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-int32_t q_dateedit_height_m_m(void* self);
+int32_t q_dateedit_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-int32_t q_dateedit_logical_dpi_x(void* self);
+int32_t q_dateedit_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-int32_t q_dateedit_logical_dpi_y(void* self);
+int32_t q_dateedit_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-int32_t q_dateedit_physical_dpi_x(void* self);
+int32_t q_dateedit_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-int32_t q_dateedit_physical_dpi_y(void* self);
+int32_t q_dateedit_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-double q_dateedit_device_pixel_ratio(void* self);
+double q_dateedit_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-double q_dateedit_device_pixel_ratio_f(void* self);
+double q_dateedit_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-int32_t q_dateedit_color_count(void* self);
+int32_t q_dateedit_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-int32_t q_dateedit_depth(void* self);
+int32_t q_dateedit_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -15745,9 +15745,9 @@ int32_t q_dateedit_encode_metric_f(int32_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QSize* q_dateedit_size_hint(void* self);
+QSize* q_dateedit_size_hint(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -15755,9 +15755,9 @@ QSize* q_dateedit_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QSize* q_dateedit_super_size_hint(void* self);
+QSize* q_dateedit_super_size_hint(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -15765,12 +15765,12 @@ QSize* q_dateedit_super_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateEdit*
-/// @param callback QSize* func()
+/// @param self const QDateEdit*
+/// @param callback QSize* func(QDateEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_dateedit_on_size_hint(void* self, QSize* (*callback)());
+void q_dateedit_on_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QDateTimeEdit
 ///
@@ -15799,9 +15799,9 @@ void q_dateedit_super_clear(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void func()
+/// @param callback void func(QDateEdit* self)
 ///
-void q_dateedit_on_clear(void* self, void (*callback)());
+void q_dateedit_on_clear(void* self, void (*callback)(void*));
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16007,13 +16007,13 @@ void q_dateedit_on_focus_next_prev_child(void* self, bool (*callback)(void*, boo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param input const char*
 /// @param pos int*
 ///
 /// @return enum QValidator__State
 ///
-int32_t q_dateedit_validate(void* self, const char* input, int* pos);
+int32_t q_dateedit_validate(const void* self, const char* input, int* pos);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16021,13 +16021,13 @@ int32_t q_dateedit_validate(void* self, const char* input, int* pos);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param input const char*
 /// @param pos int*
 ///
 /// @return enum QValidator__State
 ///
-int32_t q_dateedit_super_validate(void* self, const char* input, int* pos);
+int32_t q_dateedit_super_validate(const void* self, const char* input, int* pos);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16035,10 +16035,10 @@ int32_t q_dateedit_super_validate(void* self, const char* input, int* pos);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param callback int32_t func(QDateEdit* self, const char* input, int* pos)
 ///
-void q_dateedit_on_validate(void* self, int32_t (*callback)(void*, const char*, int*));
+void q_dateedit_on_validate(const void* self, int32_t (*callback)(const void*, const char*, int*));
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16046,10 +16046,10 @@ void q_dateedit_on_validate(void* self, int32_t (*callback)(void*, const char*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param input const char*
 ///
-void q_dateedit_fixup(void* self, const char* input);
+void q_dateedit_fixup(const void* self, const char* input);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16057,10 +16057,10 @@ void q_dateedit_fixup(void* self, const char* input);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param input const char*
 ///
-void q_dateedit_super_fixup(void* self, const char* input);
+void q_dateedit_super_fixup(const void* self, const char* input);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16068,10 +16068,10 @@ void q_dateedit_super_fixup(void* self, const char* input);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param callback void func(QDateEdit* self, const char* input)
 ///
-void q_dateedit_on_fixup(void* self, void (*callback)(void*, const char*));
+void q_dateedit_on_fixup(const void* self, void (*callback)(const void*, const char*));
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16079,10 +16079,10 @@ void q_dateedit_on_fixup(void* self, void (*callback)(void*, const char*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param text const char*
 ///
-QDateTime* q_dateedit_date_time_from_text(void* self, const char* text);
+QDateTime* q_dateedit_date_time_from_text(const void* self, const char* text);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16090,10 +16090,10 @@ QDateTime* q_dateedit_date_time_from_text(void* self, const char* text);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param text const char*
 ///
-QDateTime* q_dateedit_super_date_time_from_text(void* self, const char* text);
+QDateTime* q_dateedit_super_date_time_from_text(const void* self, const char* text);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16101,12 +16101,12 @@ QDateTime* q_dateedit_super_date_time_from_text(void* self, const char* text);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param callback QDateTime* func(QDateEdit* self, const char* text)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_dateedit_on_date_time_from_text(void* self, QDateTime* (*callback)(void*, const char*));
+void q_dateedit_on_date_time_from_text(const void* self, QDateTime* (*callback)(const void*, const char*));
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16116,10 +16116,10 @@ void q_dateedit_on_date_time_from_text(void* self, QDateTime* (*callback)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param dt QDateTime*
 ///
-const char* q_dateedit_text_from_date_time(void* self, void* dt);
+const char* q_dateedit_text_from_date_time(const void* self, const void* dt);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16129,10 +16129,10 @@ const char* q_dateedit_text_from_date_time(void* self, void* dt);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param dt QDateTime*
 ///
-const char* q_dateedit_super_text_from_date_time(void* self, void* dt);
+const char* q_dateedit_super_text_from_date_time(const void* self, const void* dt);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16140,10 +16140,10 @@ const char* q_dateedit_super_text_from_date_time(void* self, void* dt);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param callback const char* func(QDateEdit* self, QDateTime* dt)
 ///
-void q_dateedit_on_text_from_date_time(void* self, const char* (*callback)(void*, void*));
+void q_dateedit_on_text_from_date_time(const void* self, const char* (*callback)(const void*, const void*));
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16151,11 +16151,11 @@ void q_dateedit_on_text_from_date_time(void* self, const char* (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
 /// @return flag of enum QAbstractSpinBox__StepEnabledFlag
 ///
-int32_t q_dateedit_step_enabled(void* self);
+int32_t q_dateedit_step_enabled(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16163,11 +16163,11 @@ int32_t q_dateedit_step_enabled(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
 /// @return flag of enum QAbstractSpinBox__StepEnabledFlag
 ///
-int32_t q_dateedit_super_step_enabled(void* self);
+int32_t q_dateedit_super_step_enabled(const void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16175,10 +16175,10 @@ int32_t q_dateedit_super_step_enabled(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateEdit*
-/// @param callback int32_t func()
+/// @param self const QDateEdit*
+/// @param callback int32_t func(QDateEdit* self)
 ///
-void q_dateedit_on_step_enabled(void* self, int32_t (*callback)());
+void q_dateedit_on_step_enabled(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16252,10 +16252,10 @@ void q_dateedit_on_paint_event(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param option QStyleOptionSpinBox*
 ///
-void q_dateedit_init_style_option(void* self, void* option);
+void q_dateedit_init_style_option(const void* self, void* option);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16263,10 +16263,10 @@ void q_dateedit_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param option QStyleOptionSpinBox*
 ///
-void q_dateedit_super_init_style_option(void* self, void* option);
+void q_dateedit_super_init_style_option(const void* self, void* option);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16274,10 +16274,10 @@ void q_dateedit_super_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param callback void func(QDateEdit* self, QStyleOptionSpinBox* option)
 ///
-void q_dateedit_on_init_style_option(void* self, void (*callback)(void*, void*));
+void q_dateedit_on_init_style_option(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -16285,9 +16285,9 @@ void q_dateedit_on_init_style_option(void* self, void (*callback)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QSize* q_dateedit_minimum_size_hint(void* self);
+QSize* q_dateedit_minimum_size_hint(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -16295,9 +16295,9 @@ QSize* q_dateedit_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QSize* q_dateedit_super_minimum_size_hint(void* self);
+QSize* q_dateedit_super_minimum_size_hint(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -16305,12 +16305,12 @@ QSize* q_dateedit_super_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateEdit*
-/// @param callback QSize* func()
+/// @param self const QDateEdit*
+/// @param callback QSize* func(QDateEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_dateedit_on_minimum_size_hint(void* self, QSize* (*callback)());
+void q_dateedit_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -16318,10 +16318,10 @@ void q_dateedit_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_dateedit_input_method_query(void* self, int32_t param1);
+QVariant* q_dateedit_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -16329,10 +16329,10 @@ QVariant* q_dateedit_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_dateedit_super_input_method_query(void* self, int32_t param1);
+QVariant* q_dateedit_super_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -16340,12 +16340,12 @@ QVariant* q_dateedit_super_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param callback QVariant* func(QDateEdit* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_dateedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void q_dateedit_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -16716,9 +16716,9 @@ void q_dateedit_on_show_event(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-int32_t q_dateedit_dev_type(void* self);
+int32_t q_dateedit_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -16726,9 +16726,9 @@ int32_t q_dateedit_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-int32_t q_dateedit_super_dev_type(void* self);
+int32_t q_dateedit_super_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -16736,10 +16736,10 @@ int32_t q_dateedit_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateEdit*
-/// @param callback int32_t func()
+/// @param self const QDateEdit*
+/// @param callback int32_t func(QDateEdit* self)
 ///
-void q_dateedit_on_dev_type(void* self, int32_t (*callback)());
+void q_dateedit_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -16780,10 +16780,10 @@ void q_dateedit_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param param1 int
 ///
-int32_t q_dateedit_height_for_width(void* self, int param1);
+int32_t q_dateedit_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -16791,10 +16791,10 @@ int32_t q_dateedit_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param param1 int
 ///
-int32_t q_dateedit_super_height_for_width(void* self, int param1);
+int32_t q_dateedit_super_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -16802,10 +16802,10 @@ int32_t q_dateedit_super_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param callback int32_t func(QDateEdit* self, int param1)
 ///
-void q_dateedit_on_height_for_width(void* self, int32_t (*callback)(void*, int));
+void q_dateedit_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -16813,9 +16813,9 @@ void q_dateedit_on_height_for_width(void* self, int32_t (*callback)(void*, int))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_has_height_for_width(void* self);
+bool q_dateedit_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -16823,9 +16823,9 @@ bool q_dateedit_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-bool q_dateedit_super_has_height_for_width(void* self);
+bool q_dateedit_super_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -16833,10 +16833,10 @@ bool q_dateedit_super_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateEdit*
-/// @param callback bool func()
+/// @param self const QDateEdit*
+/// @param callback bool func(QDateEdit* self)
 ///
-void q_dateedit_on_has_height_for_width(void* self, bool (*callback)());
+void q_dateedit_on_has_height_for_width(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -16844,9 +16844,9 @@ void q_dateedit_on_has_height_for_width(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QPaintEngine* q_dateedit_paint_engine(void* self);
+QPaintEngine* q_dateedit_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -16854,9 +16854,9 @@ QPaintEngine* q_dateedit_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QPaintEngine* q_dateedit_super_paint_engine(void* self);
+QPaintEngine* q_dateedit_super_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -16864,10 +16864,10 @@ QPaintEngine* q_dateedit_super_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateEdit*
-/// @param callback QPaintEngine* func()
+/// @param self const QDateEdit*
+/// @param callback QPaintEngine* func(QDateEdit* self)
 ///
-void q_dateedit_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void q_dateedit_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -17242,10 +17242,10 @@ void q_dateedit_on_native_event(void* self, bool (*callback)(void*, libqt_string
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_dateedit_metric(void* self, int32_t param1);
+int32_t q_dateedit_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -17253,10 +17253,10 @@ int32_t q_dateedit_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_dateedit_super_metric(void* self, int32_t param1);
+int32_t q_dateedit_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -17264,10 +17264,10 @@ int32_t q_dateedit_super_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param callback int32_t func(QDateEdit* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_dateedit_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void q_dateedit_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -17275,10 +17275,10 @@ void q_dateedit_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param painter QPainter*
 ///
-void q_dateedit_init_painter(void* self, void* painter);
+void q_dateedit_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -17286,10 +17286,10 @@ void q_dateedit_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param painter QPainter*
 ///
-void q_dateedit_super_init_painter(void* self, void* painter);
+void q_dateedit_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -17297,10 +17297,10 @@ void q_dateedit_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param callback void func(QDateEdit* self, QPainter* painter)
 ///
-void q_dateedit_on_init_painter(void* self, void (*callback)(void*, void*));
+void q_dateedit_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -17308,10 +17308,10 @@ void q_dateedit_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_dateedit_redirected(void* self, void* offset);
+QPaintDevice* q_dateedit_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -17319,10 +17319,10 @@ QPaintDevice* q_dateedit_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_dateedit_super_redirected(void* self, void* offset);
+QPaintDevice* q_dateedit_super_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -17330,10 +17330,10 @@ QPaintDevice* q_dateedit_super_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param callback QPaintDevice* func(QDateEdit* self, QPoint* offset)
 ///
-void q_dateedit_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void q_dateedit_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -17341,9 +17341,9 @@ void q_dateedit_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QPainter* q_dateedit_shared_painter(void* self);
+QPainter* q_dateedit_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -17351,9 +17351,9 @@ QPainter* q_dateedit_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QPainter* q_dateedit_super_shared_painter(void* self);
+QPainter* q_dateedit_super_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -17361,10 +17361,10 @@ QPainter* q_dateedit_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateEdit*
-/// @param callback QPainter* func()
+/// @param self const QDateEdit*
+/// @param callback QPainter* func(QDateEdit* self)
 ///
-void q_dateedit_on_shared_painter(void* self, QPainter* (*callback)());
+void q_dateedit_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -17509,7 +17509,7 @@ void q_dateedit_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QDateEdit*
 /// @param signal QMetaMethod*
 ///
-void q_dateedit_connect_notify(void* self, void* signal);
+void q_dateedit_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -17520,7 +17520,7 @@ void q_dateedit_connect_notify(void* self, void* signal);
 /// @param self QDateEdit*
 /// @param signal QMetaMethod*
 ///
-void q_dateedit_super_connect_notify(void* self, void* signal);
+void q_dateedit_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -17531,7 +17531,7 @@ void q_dateedit_super_connect_notify(void* self, void* signal);
 /// @param self QDateEdit*
 /// @param callback void func(QDateEdit* self, QMetaMethod* signal)
 ///
-void q_dateedit_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_dateedit_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -17542,7 +17542,7 @@ void q_dateedit_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QDateEdit*
 /// @param signal QMetaMethod*
 ///
-void q_dateedit_disconnect_notify(void* self, void* signal);
+void q_dateedit_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -17553,7 +17553,7 @@ void q_dateedit_disconnect_notify(void* self, void* signal);
 /// @param self QDateEdit*
 /// @param signal QMetaMethod*
 ///
-void q_dateedit_super_disconnect_notify(void* self, void* signal);
+void q_dateedit_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -17564,7 +17564,7 @@ void q_dateedit_super_disconnect_notify(void* self, void* signal);
 /// @param self QDateEdit*
 /// @param callback void func(QDateEdit* self, QMetaMethod* signal)
 ///
-void q_dateedit_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_dateedit_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -17572,9 +17572,9 @@ void q_dateedit_on_disconnect_notify(void* self, void (*callback)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QLineEdit* q_dateedit_line_edit(void* self);
+QLineEdit* q_dateedit_line_edit(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -17582,9 +17582,9 @@ QLineEdit* q_dateedit_line_edit(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QLineEdit* q_dateedit_super_line_edit(void* self);
+QLineEdit* q_dateedit_super_line_edit(const void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -17592,10 +17592,10 @@ QLineEdit* q_dateedit_super_line_edit(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateEdit*
-/// @param callback QLineEdit* func()
+/// @param self const QDateEdit*
+/// @param callback QLineEdit* func(QDateEdit* self)
 ///
-void q_dateedit_on_line_edit(void* self, QLineEdit* (*callback)());
+void q_dateedit_on_line_edit(const void* self, QLineEdit* (*callback)(const void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -17657,9 +17657,9 @@ void q_dateedit_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void func()
+/// @param callback void func(QDateEdit* self)
 ///
-void q_dateedit_on_update_micro_focus(void* self, void (*callback)());
+void q_dateedit_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -17688,9 +17688,9 @@ void q_dateedit_super_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void func()
+/// @param callback void func(QDateEdit* self)
 ///
-void q_dateedit_on_create(void* self, void (*callback)());
+void q_dateedit_on_create(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -17719,9 +17719,9 @@ void q_dateedit_super_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void func()
+/// @param callback void func(QDateEdit* self)
 ///
-void q_dateedit_on_destroy(void* self, void (*callback)());
+void q_dateedit_on_destroy(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -17750,9 +17750,9 @@ bool q_dateedit_super_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback bool func()
+/// @param callback bool func(QDateEdit* self)
 ///
-void q_dateedit_on_focus_next_child(void* self, bool (*callback)());
+void q_dateedit_on_focus_next_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -17781,9 +17781,9 @@ bool q_dateedit_super_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback bool func()
+/// @param callback bool func(QDateEdit* self)
 ///
-void q_dateedit_on_focus_previous_child(void* self, bool (*callback)());
+void q_dateedit_on_focus_previous_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -17791,9 +17791,9 @@ void q_dateedit_on_focus_previous_child(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QObject* q_dateedit_sender(void* self);
+QObject* q_dateedit_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -17801,9 +17801,9 @@ QObject* q_dateedit_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QObject* q_dateedit_super_sender(void* self);
+QObject* q_dateedit_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -17811,10 +17811,10 @@ QObject* q_dateedit_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateEdit*
-/// @param callback QObject* func()
+/// @param self const QDateEdit*
+/// @param callback QObject* func(QDateEdit* self)
 ///
-void q_dateedit_on_sender(void* self, QObject* (*callback)());
+void q_dateedit_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -17822,9 +17822,9 @@ void q_dateedit_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-int32_t q_dateedit_sender_signal_index(void* self);
+int32_t q_dateedit_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -17832,9 +17832,9 @@ int32_t q_dateedit_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-int32_t q_dateedit_super_sender_signal_index(void* self);
+int32_t q_dateedit_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -17842,10 +17842,10 @@ int32_t q_dateedit_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateEdit*
-/// @param callback int32_t func()
+/// @param self const QDateEdit*
+/// @param callback int32_t func(QDateEdit* self)
 ///
-void q_dateedit_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_dateedit_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -17853,10 +17853,10 @@ void q_dateedit_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param signal const char*
 ///
-int32_t q_dateedit_receivers(void* self, const char* signal);
+int32_t q_dateedit_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -17864,10 +17864,10 @@ int32_t q_dateedit_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param signal const char*
 ///
-int32_t q_dateedit_super_receivers(void* self, const char* signal);
+int32_t q_dateedit_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -17875,10 +17875,10 @@ int32_t q_dateedit_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param callback int32_t func(QDateEdit* self, const char* signal)
 ///
-void q_dateedit_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_dateedit_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -17886,10 +17886,10 @@ void q_dateedit_on_receivers(void* self, int32_t (*callback)(void*, const char*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param signal QMetaMethod*
 ///
-bool q_dateedit_is_signal_connected(void* self, void* signal);
+bool q_dateedit_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -17897,10 +17897,10 @@ bool q_dateedit_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param signal QMetaMethod*
 ///
-bool q_dateedit_super_is_signal_connected(void* self, void* signal);
+bool q_dateedit_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -17908,10 +17908,10 @@ bool q_dateedit_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param callback bool func(QDateEdit* self, QMetaMethod* signal)
 ///
-void q_dateedit_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_dateedit_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -17919,11 +17919,11 @@ void q_dateedit_on_is_signal_connected(void* self, bool (*callback)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_dateedit_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_dateedit_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -17931,11 +17931,11 @@ double q_dateedit_get_decoded_metric_f(void* self, int32_t metricA, int32_t metr
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_dateedit_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_dateedit_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -17943,10 +17943,10 @@ double q_dateedit_super_get_decoded_metric_f(void* self, int32_t metricA, int32_
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 /// @param callback double func(QDateEdit* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_dateedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void q_dateedit_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

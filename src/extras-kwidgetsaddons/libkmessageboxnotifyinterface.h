@@ -16,6 +16,8 @@ KMessageBoxNotifyInterface* k_messageboxnotifyinterface_new();
 
 /// [Upstream resources](https://api.kde.org/kmessageboxnotifyinterface.html#sendNotification)
 ///
+/// @warning This method must be implemented with `k_messageboxnotifyinterface_on_send_notification` before it can be called.
+///
 /// @param self KMessageBoxNotifyInterface*
 /// @param notificationType enum QMessageBox__Icon
 /// @param message const char*
@@ -32,23 +34,12 @@ void k_messageboxnotifyinterface_send_notification(void* self, int32_t notificat
 ///
 void k_messageboxnotifyinterface_on_send_notification(void* self, void (*callback)(void*, int32_t, const char*, void*));
 
-/// [Upstream resources](https://api.kde.org/kmessageboxnotifyinterface.html#sendNotification)
-///
-/// Base class method implementation
-///
-/// @param self KMessageBoxNotifyInterface*
-/// @param notificationType enum QMessageBox__Icon
-/// @param message const char*
-/// @param parent QWidget*
-///
-void k_messageboxnotifyinterface_super_send_notification(void* self, int32_t notificationType, const char* message, void* parent);
-
 /// [Upstream resources](https://api.kde.org/kmessageboxnotifyinterface.html#operator-eq)
 ///
 /// @param self KMessageBoxNotifyInterface*
 /// @param param1 KMessageBoxNotifyInterface*
 ///
-void k_messageboxnotifyinterface_operator_assign(void* self, void* param1);
+void k_messageboxnotifyinterface_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kmessageboxnotifyinterface.html#dtor.KMessageBoxNotifyInterface)
 ///

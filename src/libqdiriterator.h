@@ -14,7 +14,7 @@
 ///
 /// @param dir QDir*
 ///
-QDirIterator* q_diriterator_new(void* dir);
+QDirIterator* q_diriterator_new(const void* dir);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdiriterator.html)
 
@@ -49,7 +49,7 @@ QDirIterator* q_diriterator_new4(const char* path, const char* nameFilters[stati
 /// @param dir QDir*
 /// @param flags flag of enum QDirIterator__IteratorFlag
 ///
-QDirIterator* q_diriterator_new5(void* dir, int32_t flags);
+QDirIterator* q_diriterator_new5(const void* dir, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdiriterator.html)
 
@@ -107,39 +107,39 @@ QFileInfo* q_diriterator_next_file_info(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdiriterator.html#hasNext)
 ///
-/// @param self QDirIterator*
+/// @param self const QDirIterator*
 ///
-bool q_diriterator_has_next(void* self);
+bool q_diriterator_has_next(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdiriterator.html#fileName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDirIterator*
+/// @param self const QDirIterator*
 ///
-const char* q_diriterator_file_name(void* self);
+const char* q_diriterator_file_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdiriterator.html#filePath)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDirIterator*
+/// @param self const QDirIterator*
 ///
-const char* q_diriterator_file_path(void* self);
+const char* q_diriterator_file_path(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdiriterator.html#fileInfo)
 ///
-/// @param self QDirIterator*
+/// @param self const QDirIterator*
 ///
-QFileInfo* q_diriterator_file_info(void* self);
+QFileInfo* q_diriterator_file_info(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdiriterator.html#path)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDirIterator*
+/// @param self const QDirIterator*
 ///
-const char* q_diriterator_path(void* self);
+const char* q_diriterator_path(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdiriterator.html#dtor.QDirIterator)
 ///

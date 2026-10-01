@@ -2,7 +2,7 @@
 #include "libqtreewidgetitemiterator.hpp"
 #include "libqtreewidgetitemiterator.h"
 
-QTreeWidgetItemIterator* q_treewidgetitemiterator_new(void* it) {
+QTreeWidgetItemIterator* q_treewidgetitemiterator_new(const void* it) {
     return QTreeWidgetItemIterator_New((QTreeWidgetItemIterator*)it);
 }
 
@@ -22,7 +22,7 @@ QTreeWidgetItemIterator* q_treewidgetitemiterator_new5(void* item, int32_t flags
     return QTreeWidgetItemIterator_New5((QTreeWidgetItem*)item, flags);
 }
 
-void q_treewidgetitemiterator_operator_assign(void* self, void* it) {
+void q_treewidgetitemiterator_operator_assign(void* self, const void* it) {
     QTreeWidgetItemIterator_OperatorAssign((QTreeWidgetItemIterator*)self, (QTreeWidgetItemIterator*)it);
 }
 
@@ -50,7 +50,7 @@ QTreeWidgetItemIterator* q_treewidgetitemiterator_operator_minus_assign(void* se
     return QTreeWidgetItemIterator_OperatorMinusAssign((QTreeWidgetItemIterator*)self, n);
 }
 
-QTreeWidgetItem* q_treewidgetitemiterator_operator_multiply(void* self) {
+QTreeWidgetItem* q_treewidgetitemiterator_operator_multiply(const void* self) {
     return QTreeWidgetItemIterator_OperatorMultiply((QTreeWidgetItemIterator*)self);
 }
 

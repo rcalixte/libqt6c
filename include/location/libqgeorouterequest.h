@@ -21,7 +21,7 @@ QGeoRouteRequest* q_georouterequest_new();
 /// @param origin QGeoCoordinate*
 /// @param destination QGeoCoordinate*
 ///
-QGeoRouteRequest* q_georouterequest_new2(void* origin, void* destination);
+QGeoRouteRequest* q_georouterequest_new2(const void* origin, const void* destination);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html)
 
@@ -29,7 +29,7 @@ QGeoRouteRequest* q_georouterequest_new2(void* origin, void* destination);
 ///
 /// @param other QGeoRouteRequest*
 ///
-QGeoRouteRequest* q_georouterequest_new3(void* other);
+QGeoRouteRequest* q_georouterequest_new3(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html)
 
@@ -44,7 +44,7 @@ QGeoRouteRequest* q_georouterequest_new4(libqt_list waypoints);
 /// @param self QGeoRouteRequest*
 /// @param other QGeoRouteRequest*
 ///
-void q_georouterequest_operator_assign(void* self, void* other);
+void q_georouterequest_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#swap)
 ///
@@ -62,11 +62,11 @@ void q_georouterequest_set_waypoints(void* self, libqt_list waypoints);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#waypoints)
 ///
-/// @param self QGeoRouteRequest*
+/// @param self const QGeoRouteRequest*
 ///
 /// @return libqt_list of QGeoCoordinate*
 ///
-libqt_list q_georouterequest_waypoints(void* self);
+libqt_list q_georouterequest_waypoints(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#setExcludeAreas)
 ///
@@ -77,11 +77,11 @@ void q_georouterequest_set_exclude_areas(void* self, libqt_list areas);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#excludeAreas)
 ///
-/// @param self QGeoRouteRequest*
+/// @param self const QGeoRouteRequest*
 ///
 /// @return libqt_list of QGeoRectangle*
 ///
-libqt_list q_georouterequest_exclude_areas(void* self);
+libqt_list q_georouterequest_exclude_areas(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#setNumberAlternativeRoutes)
 ///
@@ -92,9 +92,9 @@ void q_georouterequest_set_number_alternative_routes(void* self, int alternative
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#numberAlternativeRoutes)
 ///
-/// @param self QGeoRouteRequest*
+/// @param self const QGeoRouteRequest*
 ///
-int32_t q_georouterequest_number_alternative_routes(void* self);
+int32_t q_georouterequest_number_alternative_routes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#setTravelModes)
 ///
@@ -105,11 +105,11 @@ void q_georouterequest_set_travel_modes(void* self, int32_t travelModes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#travelModes)
 ///
-/// @param self QGeoRouteRequest*
+/// @param self const QGeoRouteRequest*
 ///
 /// @return flag of enum QGeoRouteRequest__TravelMode
 ///
-int32_t q_georouterequest_travel_modes(void* self);
+int32_t q_georouterequest_travel_modes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#setFeatureWeight)
 ///
@@ -121,20 +121,20 @@ void q_georouterequest_set_feature_weight(void* self, int32_t featureType, int32
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#featureWeight)
 ///
-/// @param self QGeoRouteRequest*
+/// @param self const QGeoRouteRequest*
 /// @param featureType enum QGeoRouteRequest__FeatureType
 ///
 /// @return enum QGeoRouteRequest__FeatureWeight
 ///
-int32_t q_georouterequest_feature_weight(void* self, int32_t featureType);
+int32_t q_georouterequest_feature_weight(const void* self, int32_t featureType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#featureTypes)
 ///
-/// @param self QGeoRouteRequest*
+/// @param self const QGeoRouteRequest*
 ///
 /// @return libqt_list of enum QGeoRouteRequest__FeatureType
 ///
-libqt_list q_georouterequest_feature_types(void* self);
+libqt_list q_georouterequest_feature_types(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#setRouteOptimization)
 ///
@@ -145,11 +145,11 @@ void q_georouterequest_set_route_optimization(void* self, int32_t optimization);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#routeOptimization)
 ///
-/// @param self QGeoRouteRequest*
+/// @param self const QGeoRouteRequest*
 ///
 /// @return flag of enum QGeoRouteRequest__RouteOptimization
 ///
-int32_t q_georouterequest_route_optimization(void* self);
+int32_t q_georouterequest_route_optimization(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#setSegmentDetail)
 ///
@@ -160,11 +160,11 @@ void q_georouterequest_set_segment_detail(void* self, int32_t segmentDetail);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#segmentDetail)
 ///
-/// @param self QGeoRouteRequest*
+/// @param self const QGeoRouteRequest*
 ///
 /// @return enum QGeoRouteRequest__SegmentDetail
 ///
-int32_t q_georouterequest_segment_detail(void* self);
+int32_t q_georouterequest_segment_detail(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#setManeuverDetail)
 ///
@@ -175,24 +175,24 @@ void q_georouterequest_set_maneuver_detail(void* self, int32_t maneuverDetail);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#maneuverDetail)
 ///
-/// @param self QGeoRouteRequest*
+/// @param self const QGeoRouteRequest*
 ///
 /// @return enum QGeoRouteRequest__ManeuverDetail
 ///
-int32_t q_georouterequest_maneuver_detail(void* self);
+int32_t q_georouterequest_maneuver_detail(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#setDepartureTime)
 ///
 /// @param self QGeoRouteRequest*
 /// @param departureTime QDateTime*
 ///
-void q_georouterequest_set_departure_time(void* self, void* departureTime);
+void q_georouterequest_set_departure_time(void* self, const void* departureTime);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#departureTime)
 ///
-/// @param self QGeoRouteRequest*
+/// @param self const QGeoRouteRequest*
 ///
-QDateTime* q_georouterequest_departure_time(void* self);
+QDateTime* q_georouterequest_departure_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#dtor.QGeoRouteRequest)
 ///

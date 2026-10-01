@@ -2,7 +2,7 @@
 #include "libqopenglversionfunctions.hpp"
 #include "libqopenglversionfunctions.h"
 
-QOpenGLVersionStatus* q_openglversionstatus_new(void* other) {
+QOpenGLVersionStatus* q_openglversionstatus_new(const void* other) {
     return QOpenGLVersionStatus_New((QOpenGLVersionStatus*)other);
 }
 
@@ -18,11 +18,11 @@ QOpenGLVersionStatus* q_openglversionstatus_new4(int majorVersion, int minorVers
     return QOpenGLVersionStatus_New4(majorVersion, minorVersion, functionStatus);
 }
 
-QOpenGLVersionStatus* q_openglversionstatus_new5(void* param1) {
+QOpenGLVersionStatus* q_openglversionstatus_new5(const void* param1) {
     return QOpenGLVersionStatus_New5((QOpenGLVersionStatus*)param1);
 }
 
-pair_int_int /* tuple of int and int */ q_openglversionstatus_version(void* self) {
+pair_int_int /* tuple of int and int */ q_openglversionstatus_version(const void* self) {
     return QOpenGLVersionStatus_Version((QOpenGLVersionStatus*)self);
 }
 
@@ -30,7 +30,7 @@ void q_openglversionstatus_set_version(void* self, pair_int_int /* tuple of int 
     QOpenGLVersionStatus_SetVersion((QOpenGLVersionStatus*)self, version);
 }
 
-int32_t q_openglversionstatus_status(void* self) {
+int32_t q_openglversionstatus_status(const void* self) {
     return QOpenGLVersionStatus_Status((QOpenGLVersionStatus*)self);
 }
 
@@ -38,7 +38,7 @@ void q_openglversionstatus_set_status(void* self, int32_t status) {
     QOpenGLVersionStatus_SetStatus((QOpenGLVersionStatus*)self, status);
 }
 
-void q_openglversionstatus_operator_assign(void* self, void* param1) {
+void q_openglversionstatus_operator_assign(void* self, const void* param1) {
     QOpenGLVersionStatus_OperatorAssign((QOpenGLVersionStatus*)self, (QOpenGLVersionStatus*)param1);
 }
 
@@ -46,11 +46,11 @@ void q_openglversionstatus_delete(void* self) {
     QOpenGLVersionStatus_Delete((QOpenGLVersionStatus*)(self));
 }
 
-size_t q_qopenglversionfunctions_h_q_hash(void* v, size_t seed) {
+size_t q_qopenglversionfunctions_h_q_hash(const void* v, size_t seed) {
     return qopenglversionfunctions_h_QHash((QOpenGLVersionStatus*)v, seed);
 }
 
-QOpenGLContext* q_openglversionfunctionsbackend_context(void* self) {
+QOpenGLContext* q_openglversionfunctionsbackend_context(const void* self) {
     return QOpenGLVersionFunctionsBackend_Context((QOpenGLVersionFunctionsBackend*)self);
 }
 
@@ -62,7 +62,7 @@ void q_openglversionfunctionsbackend_delete(void* self) {
     QOpenGLVersionFunctionsBackend_Delete((QOpenGLVersionFunctionsBackend*)(self));
 }
 
-QOpenGLVersionFunctionsBackend** q_openglversionfunctionsstorage_backends(void* self) {
+QOpenGLVersionFunctionsBackend** q_openglversionfunctionsstorage_backends(const void* self) {
     return QOpenGLVersionFunctionsStorage_Backends((QOpenGLVersionFunctionsStorage*)self);
 }
 
@@ -82,7 +82,7 @@ void q_abstractopenglfunctions_delete(void* self) {
     QAbstractOpenGLFunctions_Delete((QAbstractOpenGLFunctions*)(self));
 }
 
-QOpenGLContext* q_openglfunctions_1_0_corebackend_context(void* self) {
+QOpenGLContext* q_openglfunctions_1_0_corebackend_context(const void* self) {
     return QOpenGLVersionFunctionsBackend_Context((QOpenGLVersionFunctionsBackend*)self);
 }
 
@@ -90,7 +90,7 @@ void q_openglfunctions_1_0_corebackend_set_context(void* self, void* context) {
     QOpenGLVersionFunctionsBackend_SetContext((QOpenGLVersionFunctionsBackend*)self, (QOpenGLContext*)context);
 }
 
-QOpenGLContext* q_openglfunctions_1_1_corebackend_context(void* self) {
+QOpenGLContext* q_openglfunctions_1_1_corebackend_context(const void* self) {
     return QOpenGLVersionFunctionsBackend_Context((QOpenGLVersionFunctionsBackend*)self);
 }
 
@@ -98,7 +98,7 @@ void q_openglfunctions_1_1_corebackend_set_context(void* self, void* context) {
     QOpenGLVersionFunctionsBackend_SetContext((QOpenGLVersionFunctionsBackend*)self, (QOpenGLContext*)context);
 }
 
-QOpenGLContext* q_openglfunctions_1_2_corebackend_context(void* self) {
+QOpenGLContext* q_openglfunctions_1_2_corebackend_context(const void* self) {
     return QOpenGLVersionFunctionsBackend_Context((QOpenGLVersionFunctionsBackend*)self);
 }
 
@@ -106,7 +106,7 @@ void q_openglfunctions_1_2_corebackend_set_context(void* self, void* context) {
     QOpenGLVersionFunctionsBackend_SetContext((QOpenGLVersionFunctionsBackend*)self, (QOpenGLContext*)context);
 }
 
-QOpenGLContext* q_openglfunctions_1_3_corebackend_context(void* self) {
+QOpenGLContext* q_openglfunctions_1_3_corebackend_context(const void* self) {
     return QOpenGLVersionFunctionsBackend_Context((QOpenGLVersionFunctionsBackend*)self);
 }
 
@@ -114,7 +114,7 @@ void q_openglfunctions_1_3_corebackend_set_context(void* self, void* context) {
     QOpenGLVersionFunctionsBackend_SetContext((QOpenGLVersionFunctionsBackend*)self, (QOpenGLContext*)context);
 }
 
-QOpenGLContext* q_openglfunctions_1_4_corebackend_context(void* self) {
+QOpenGLContext* q_openglfunctions_1_4_corebackend_context(const void* self) {
     return QOpenGLVersionFunctionsBackend_Context((QOpenGLVersionFunctionsBackend*)self);
 }
 
@@ -122,7 +122,7 @@ void q_openglfunctions_1_4_corebackend_set_context(void* self, void* context) {
     QOpenGLVersionFunctionsBackend_SetContext((QOpenGLVersionFunctionsBackend*)self, (QOpenGLContext*)context);
 }
 
-QOpenGLContext* q_openglfunctions_1_5_corebackend_context(void* self) {
+QOpenGLContext* q_openglfunctions_1_5_corebackend_context(const void* self) {
     return QOpenGLVersionFunctionsBackend_Context((QOpenGLVersionFunctionsBackend*)self);
 }
 
@@ -130,7 +130,7 @@ void q_openglfunctions_1_5_corebackend_set_context(void* self, void* context) {
     QOpenGLVersionFunctionsBackend_SetContext((QOpenGLVersionFunctionsBackend*)self, (QOpenGLContext*)context);
 }
 
-QOpenGLContext* q_openglfunctions_2_0_corebackend_context(void* self) {
+QOpenGLContext* q_openglfunctions_2_0_corebackend_context(const void* self) {
     return QOpenGLVersionFunctionsBackend_Context((QOpenGLVersionFunctionsBackend*)self);
 }
 
@@ -138,7 +138,7 @@ void q_openglfunctions_2_0_corebackend_set_context(void* self, void* context) {
     QOpenGLVersionFunctionsBackend_SetContext((QOpenGLVersionFunctionsBackend*)self, (QOpenGLContext*)context);
 }
 
-QOpenGLContext* q_openglfunctions_2_1_corebackend_context(void* self) {
+QOpenGLContext* q_openglfunctions_2_1_corebackend_context(const void* self) {
     return QOpenGLVersionFunctionsBackend_Context((QOpenGLVersionFunctionsBackend*)self);
 }
 
@@ -146,7 +146,7 @@ void q_openglfunctions_2_1_corebackend_set_context(void* self, void* context) {
     QOpenGLVersionFunctionsBackend_SetContext((QOpenGLVersionFunctionsBackend*)self, (QOpenGLContext*)context);
 }
 
-QOpenGLContext* q_openglfunctions_3_0_corebackend_context(void* self) {
+QOpenGLContext* q_openglfunctions_3_0_corebackend_context(const void* self) {
     return QOpenGLVersionFunctionsBackend_Context((QOpenGLVersionFunctionsBackend*)self);
 }
 
@@ -154,7 +154,7 @@ void q_openglfunctions_3_0_corebackend_set_context(void* self, void* context) {
     QOpenGLVersionFunctionsBackend_SetContext((QOpenGLVersionFunctionsBackend*)self, (QOpenGLContext*)context);
 }
 
-QOpenGLContext* q_openglfunctions_3_1_corebackend_context(void* self) {
+QOpenGLContext* q_openglfunctions_3_1_corebackend_context(const void* self) {
     return QOpenGLVersionFunctionsBackend_Context((QOpenGLVersionFunctionsBackend*)self);
 }
 
@@ -162,7 +162,7 @@ void q_openglfunctions_3_1_corebackend_set_context(void* self, void* context) {
     QOpenGLVersionFunctionsBackend_SetContext((QOpenGLVersionFunctionsBackend*)self, (QOpenGLContext*)context);
 }
 
-QOpenGLContext* q_openglfunctions_3_2_corebackend_context(void* self) {
+QOpenGLContext* q_openglfunctions_3_2_corebackend_context(const void* self) {
     return QOpenGLVersionFunctionsBackend_Context((QOpenGLVersionFunctionsBackend*)self);
 }
 
@@ -170,7 +170,7 @@ void q_openglfunctions_3_2_corebackend_set_context(void* self, void* context) {
     QOpenGLVersionFunctionsBackend_SetContext((QOpenGLVersionFunctionsBackend*)self, (QOpenGLContext*)context);
 }
 
-QOpenGLContext* q_openglfunctions_3_3_corebackend_context(void* self) {
+QOpenGLContext* q_openglfunctions_3_3_corebackend_context(const void* self) {
     return QOpenGLVersionFunctionsBackend_Context((QOpenGLVersionFunctionsBackend*)self);
 }
 
@@ -178,7 +178,7 @@ void q_openglfunctions_3_3_corebackend_set_context(void* self, void* context) {
     QOpenGLVersionFunctionsBackend_SetContext((QOpenGLVersionFunctionsBackend*)self, (QOpenGLContext*)context);
 }
 
-QOpenGLContext* q_openglfunctions_4_0_corebackend_context(void* self) {
+QOpenGLContext* q_openglfunctions_4_0_corebackend_context(const void* self) {
     return QOpenGLVersionFunctionsBackend_Context((QOpenGLVersionFunctionsBackend*)self);
 }
 
@@ -186,7 +186,7 @@ void q_openglfunctions_4_0_corebackend_set_context(void* self, void* context) {
     QOpenGLVersionFunctionsBackend_SetContext((QOpenGLVersionFunctionsBackend*)self, (QOpenGLContext*)context);
 }
 
-QOpenGLContext* q_openglfunctions_4_1_corebackend_context(void* self) {
+QOpenGLContext* q_openglfunctions_4_1_corebackend_context(const void* self) {
     return QOpenGLVersionFunctionsBackend_Context((QOpenGLVersionFunctionsBackend*)self);
 }
 
@@ -194,7 +194,7 @@ void q_openglfunctions_4_1_corebackend_set_context(void* self, void* context) {
     QOpenGLVersionFunctionsBackend_SetContext((QOpenGLVersionFunctionsBackend*)self, (QOpenGLContext*)context);
 }
 
-QOpenGLContext* q_openglfunctions_4_2_corebackend_context(void* self) {
+QOpenGLContext* q_openglfunctions_4_2_corebackend_context(const void* self) {
     return QOpenGLVersionFunctionsBackend_Context((QOpenGLVersionFunctionsBackend*)self);
 }
 
@@ -202,7 +202,7 @@ void q_openglfunctions_4_2_corebackend_set_context(void* self, void* context) {
     QOpenGLVersionFunctionsBackend_SetContext((QOpenGLVersionFunctionsBackend*)self, (QOpenGLContext*)context);
 }
 
-QOpenGLContext* q_openglfunctions_4_3_corebackend_context(void* self) {
+QOpenGLContext* q_openglfunctions_4_3_corebackend_context(const void* self) {
     return QOpenGLVersionFunctionsBackend_Context((QOpenGLVersionFunctionsBackend*)self);
 }
 
@@ -210,7 +210,7 @@ void q_openglfunctions_4_3_corebackend_set_context(void* self, void* context) {
     QOpenGLVersionFunctionsBackend_SetContext((QOpenGLVersionFunctionsBackend*)self, (QOpenGLContext*)context);
 }
 
-QOpenGLContext* q_openglfunctions_4_4_corebackend_context(void* self) {
+QOpenGLContext* q_openglfunctions_4_4_corebackend_context(const void* self) {
     return QOpenGLVersionFunctionsBackend_Context((QOpenGLVersionFunctionsBackend*)self);
 }
 
@@ -218,7 +218,7 @@ void q_openglfunctions_4_4_corebackend_set_context(void* self, void* context) {
     QOpenGLVersionFunctionsBackend_SetContext((QOpenGLVersionFunctionsBackend*)self, (QOpenGLContext*)context);
 }
 
-QOpenGLContext* q_openglfunctions_4_5_corebackend_context(void* self) {
+QOpenGLContext* q_openglfunctions_4_5_corebackend_context(const void* self) {
     return QOpenGLVersionFunctionsBackend_Context((QOpenGLVersionFunctionsBackend*)self);
 }
 
@@ -226,7 +226,7 @@ void q_openglfunctions_4_5_corebackend_set_context(void* self, void* context) {
     QOpenGLVersionFunctionsBackend_SetContext((QOpenGLVersionFunctionsBackend*)self, (QOpenGLContext*)context);
 }
 
-QOpenGLContext* q_openglfunctions_1_0_deprecatedbackend_context(void* self) {
+QOpenGLContext* q_openglfunctions_1_0_deprecatedbackend_context(const void* self) {
     return QOpenGLVersionFunctionsBackend_Context((QOpenGLVersionFunctionsBackend*)self);
 }
 
@@ -234,7 +234,7 @@ void q_openglfunctions_1_0_deprecatedbackend_set_context(void* self, void* conte
     QOpenGLVersionFunctionsBackend_SetContext((QOpenGLVersionFunctionsBackend*)self, (QOpenGLContext*)context);
 }
 
-QOpenGLContext* q_openglfunctions_1_1_deprecatedbackend_context(void* self) {
+QOpenGLContext* q_openglfunctions_1_1_deprecatedbackend_context(const void* self) {
     return QOpenGLVersionFunctionsBackend_Context((QOpenGLVersionFunctionsBackend*)self);
 }
 
@@ -242,7 +242,7 @@ void q_openglfunctions_1_1_deprecatedbackend_set_context(void* self, void* conte
     QOpenGLVersionFunctionsBackend_SetContext((QOpenGLVersionFunctionsBackend*)self, (QOpenGLContext*)context);
 }
 
-QOpenGLContext* q_openglfunctions_1_2_deprecatedbackend_context(void* self) {
+QOpenGLContext* q_openglfunctions_1_2_deprecatedbackend_context(const void* self) {
     return QOpenGLVersionFunctionsBackend_Context((QOpenGLVersionFunctionsBackend*)self);
 }
 
@@ -250,7 +250,7 @@ void q_openglfunctions_1_2_deprecatedbackend_set_context(void* self, void* conte
     QOpenGLVersionFunctionsBackend_SetContext((QOpenGLVersionFunctionsBackend*)self, (QOpenGLContext*)context);
 }
 
-QOpenGLContext* q_openglfunctions_1_3_deprecatedbackend_context(void* self) {
+QOpenGLContext* q_openglfunctions_1_3_deprecatedbackend_context(const void* self) {
     return QOpenGLVersionFunctionsBackend_Context((QOpenGLVersionFunctionsBackend*)self);
 }
 
@@ -258,7 +258,7 @@ void q_openglfunctions_1_3_deprecatedbackend_set_context(void* self, void* conte
     QOpenGLVersionFunctionsBackend_SetContext((QOpenGLVersionFunctionsBackend*)self, (QOpenGLContext*)context);
 }
 
-QOpenGLContext* q_openglfunctions_1_4_deprecatedbackend_context(void* self) {
+QOpenGLContext* q_openglfunctions_1_4_deprecatedbackend_context(const void* self) {
     return QOpenGLVersionFunctionsBackend_Context((QOpenGLVersionFunctionsBackend*)self);
 }
 
@@ -266,7 +266,7 @@ void q_openglfunctions_1_4_deprecatedbackend_set_context(void* self, void* conte
     QOpenGLVersionFunctionsBackend_SetContext((QOpenGLVersionFunctionsBackend*)self, (QOpenGLContext*)context);
 }
 
-QOpenGLContext* q_openglfunctions_2_0_deprecatedbackend_context(void* self) {
+QOpenGLContext* q_openglfunctions_2_0_deprecatedbackend_context(const void* self) {
     return QOpenGLVersionFunctionsBackend_Context((QOpenGLVersionFunctionsBackend*)self);
 }
 
@@ -274,7 +274,7 @@ void q_openglfunctions_2_0_deprecatedbackend_set_context(void* self, void* conte
     QOpenGLVersionFunctionsBackend_SetContext((QOpenGLVersionFunctionsBackend*)self, (QOpenGLContext*)context);
 }
 
-QOpenGLContext* q_openglfunctions_3_0_deprecatedbackend_context(void* self) {
+QOpenGLContext* q_openglfunctions_3_0_deprecatedbackend_context(const void* self) {
     return QOpenGLVersionFunctionsBackend_Context((QOpenGLVersionFunctionsBackend*)self);
 }
 
@@ -282,7 +282,7 @@ void q_openglfunctions_3_0_deprecatedbackend_set_context(void* self, void* conte
     QOpenGLVersionFunctionsBackend_SetContext((QOpenGLVersionFunctionsBackend*)self, (QOpenGLContext*)context);
 }
 
-QOpenGLContext* q_openglfunctions_3_3_deprecatedbackend_context(void* self) {
+QOpenGLContext* q_openglfunctions_3_3_deprecatedbackend_context(const void* self) {
     return QOpenGLVersionFunctionsBackend_Context((QOpenGLVersionFunctionsBackend*)self);
 }
 
@@ -290,7 +290,7 @@ void q_openglfunctions_3_3_deprecatedbackend_set_context(void* self, void* conte
     QOpenGLVersionFunctionsBackend_SetContext((QOpenGLVersionFunctionsBackend*)self, (QOpenGLContext*)context);
 }
 
-QOpenGLContext* q_openglfunctions_4_5_deprecatedbackend_context(void* self) {
+QOpenGLContext* q_openglfunctions_4_5_deprecatedbackend_context(const void* self) {
     return QOpenGLVersionFunctionsBackend_Context((QOpenGLVersionFunctionsBackend*)self);
 }
 
@@ -298,7 +298,7 @@ void q_openglfunctions_4_5_deprecatedbackend_set_context(void* self, void* conte
     QOpenGLVersionFunctionsBackend_SetContext((QOpenGLVersionFunctionsBackend*)self, (QOpenGLContext*)context);
 }
 
-GLboolean__GLenum__Function q_openglfunctions_1_0_corebackend__functions_is_enabled(void* self) {
+GLboolean__GLenum__Function q_openglfunctions_1_0_corebackend__functions_is_enabled(const void* self) {
     return (GLboolean__GLenum__Function)QOpenGLFunctions_1_0_CoreBackend__Functions_IsEnabled((QOpenGLFunctions_1_0_CoreBackend__Functions*)self);
 }
 
@@ -310,7 +310,7 @@ void q_openglfunctions_1_0_corebackend__functions_delete(void* self) {
     QOpenGLFunctions_1_0_CoreBackend__Functions_Delete((QOpenGLFunctions_1_0_CoreBackend__Functions*)(self));
 }
 
-GLboolean__GLuint__Function q_openglfunctions_1_1_corebackend__functions_is_texture(void* self) {
+GLboolean__GLuint__Function q_openglfunctions_1_1_corebackend__functions_is_texture(const void* self) {
     return (GLboolean__GLuint__Function)QOpenGLFunctions_1_1_CoreBackend__Functions_IsTexture((QOpenGLFunctions_1_1_CoreBackend__Functions*)self);
 }
 
@@ -322,7 +322,7 @@ void q_openglfunctions_1_1_corebackend__functions_delete(void* self) {
     QOpenGLFunctions_1_1_CoreBackend__Functions_Delete((QOpenGLFunctions_1_1_CoreBackend__Functions*)(self));
 }
 
-GLboolean__GLenum__Function q_openglfunctions_1_5_corebackend__functions_unmap_buffer(void* self) {
+GLboolean__GLenum__Function q_openglfunctions_1_5_corebackend__functions_unmap_buffer(const void* self) {
     return (GLboolean__GLenum__Function)QOpenGLFunctions_1_5_CoreBackend__Functions_UnmapBuffer((QOpenGLFunctions_1_5_CoreBackend__Functions*)self);
 }
 
@@ -330,7 +330,7 @@ void q_openglfunctions_1_5_corebackend__functions_set_unmap_buffer(void* self, u
     QOpenGLFunctions_1_5_CoreBackend__Functions_SetUnmapBuffer((QOpenGLFunctions_1_5_CoreBackend__Functions*)self, (intptr_t)UnmapBuffer);
 }
 
-GLboolean__GLuint__Function q_openglfunctions_1_5_corebackend__functions_is_buffer(void* self) {
+GLboolean__GLuint__Function q_openglfunctions_1_5_corebackend__functions_is_buffer(const void* self) {
     return (GLboolean__GLuint__Function)QOpenGLFunctions_1_5_CoreBackend__Functions_IsBuffer((QOpenGLFunctions_1_5_CoreBackend__Functions*)self);
 }
 
@@ -338,7 +338,7 @@ void q_openglfunctions_1_5_corebackend__functions_set_is_buffer(void* self, uint
     QOpenGLFunctions_1_5_CoreBackend__Functions_SetIsBuffer((QOpenGLFunctions_1_5_CoreBackend__Functions*)self, (intptr_t)IsBuffer);
 }
 
-GLboolean__GLuint__Function q_openglfunctions_1_5_corebackend__functions_is_query(void* self) {
+GLboolean__GLuint__Function q_openglfunctions_1_5_corebackend__functions_is_query(const void* self) {
     return (GLboolean__GLuint__Function)QOpenGLFunctions_1_5_CoreBackend__Functions_IsQuery((QOpenGLFunctions_1_5_CoreBackend__Functions*)self);
 }
 
@@ -350,7 +350,7 @@ void q_openglfunctions_1_5_corebackend__functions_delete(void* self) {
     QOpenGLFunctions_1_5_CoreBackend__Functions_Delete((QOpenGLFunctions_1_5_CoreBackend__Functions*)(self));
 }
 
-GLboolean__GLuint__Function q_openglfunctions_2_0_corebackend__functions_is_shader(void* self) {
+GLboolean__GLuint__Function q_openglfunctions_2_0_corebackend__functions_is_shader(const void* self) {
     return (GLboolean__GLuint__Function)QOpenGLFunctions_2_0_CoreBackend__Functions_IsShader((QOpenGLFunctions_2_0_CoreBackend__Functions*)self);
 }
 
@@ -358,7 +358,7 @@ void q_openglfunctions_2_0_corebackend__functions_set_is_shader(void* self, uint
     QOpenGLFunctions_2_0_CoreBackend__Functions_SetIsShader((QOpenGLFunctions_2_0_CoreBackend__Functions*)self, (intptr_t)IsShader);
 }
 
-GLboolean__GLuint__Function q_openglfunctions_2_0_corebackend__functions_is_program(void* self) {
+GLboolean__GLuint__Function q_openglfunctions_2_0_corebackend__functions_is_program(const void* self) {
     return (GLboolean__GLuint__Function)QOpenGLFunctions_2_0_CoreBackend__Functions_IsProgram((QOpenGLFunctions_2_0_CoreBackend__Functions*)self);
 }
 
@@ -366,7 +366,7 @@ void q_openglfunctions_2_0_corebackend__functions_set_is_program(void* self, uin
     QOpenGLFunctions_2_0_CoreBackend__Functions_SetIsProgram((QOpenGLFunctions_2_0_CoreBackend__Functions*)self, (intptr_t)IsProgram);
 }
 
-GLuint__GLenum__Function q_openglfunctions_2_0_corebackend__functions_create_shader(void* self) {
+GLuint__GLenum__Function q_openglfunctions_2_0_corebackend__functions_create_shader(const void* self) {
     return (GLuint__GLenum__Function)QOpenGLFunctions_2_0_CoreBackend__Functions_CreateShader((QOpenGLFunctions_2_0_CoreBackend__Functions*)self);
 }
 
@@ -374,7 +374,7 @@ void q_openglfunctions_2_0_corebackend__functions_set_create_shader(void* self, 
     QOpenGLFunctions_2_0_CoreBackend__Functions_SetCreateShader((QOpenGLFunctions_2_0_CoreBackend__Functions*)self, (intptr_t)CreateShader);
 }
 
-GLuint__void__Function q_openglfunctions_2_0_corebackend__functions_create_program(void* self) {
+GLuint__void__Function q_openglfunctions_2_0_corebackend__functions_create_program(const void* self) {
     return (GLuint__void__Function)QOpenGLFunctions_2_0_CoreBackend__Functions_CreateProgram((QOpenGLFunctions_2_0_CoreBackend__Functions*)self);
 }
 
@@ -386,7 +386,7 @@ void q_openglfunctions_2_0_corebackend__functions_delete(void* self) {
     QOpenGLFunctions_2_0_CoreBackend__Functions_Delete((QOpenGLFunctions_2_0_CoreBackend__Functions*)(self));
 }
 
-GLboolean__GLuint__Function q_openglfunctions_3_0_corebackend__functions_is_vertex_array(void* self) {
+GLboolean__GLuint__Function q_openglfunctions_3_0_corebackend__functions_is_vertex_array(const void* self) {
     return (GLboolean__GLuint__Function)QOpenGLFunctions_3_0_CoreBackend__Functions_IsVertexArray((QOpenGLFunctions_3_0_CoreBackend__Functions*)self);
 }
 
@@ -394,7 +394,7 @@ void q_openglfunctions_3_0_corebackend__functions_set_is_vertex_array(void* self
     QOpenGLFunctions_3_0_CoreBackend__Functions_SetIsVertexArray((QOpenGLFunctions_3_0_CoreBackend__Functions*)self, (intptr_t)IsVertexArray);
 }
 
-GLboolean__GLuint__Function q_openglfunctions_3_0_corebackend__functions_is_framebuffer(void* self) {
+GLboolean__GLuint__Function q_openglfunctions_3_0_corebackend__functions_is_framebuffer(const void* self) {
     return (GLboolean__GLuint__Function)QOpenGLFunctions_3_0_CoreBackend__Functions_IsFramebuffer((QOpenGLFunctions_3_0_CoreBackend__Functions*)self);
 }
 
@@ -402,7 +402,7 @@ void q_openglfunctions_3_0_corebackend__functions_set_is_framebuffer(void* self,
     QOpenGLFunctions_3_0_CoreBackend__Functions_SetIsFramebuffer((QOpenGLFunctions_3_0_CoreBackend__Functions*)self, (intptr_t)IsFramebuffer);
 }
 
-GLboolean__GLuint__Function q_openglfunctions_3_0_corebackend__functions_is_renderbuffer(void* self) {
+GLboolean__GLuint__Function q_openglfunctions_3_0_corebackend__functions_is_renderbuffer(const void* self) {
     return (GLboolean__GLuint__Function)QOpenGLFunctions_3_0_CoreBackend__Functions_IsRenderbuffer((QOpenGLFunctions_3_0_CoreBackend__Functions*)self);
 }
 
@@ -410,7 +410,7 @@ void q_openglfunctions_3_0_corebackend__functions_set_is_renderbuffer(void* self
     QOpenGLFunctions_3_0_CoreBackend__Functions_SetIsRenderbuffer((QOpenGLFunctions_3_0_CoreBackend__Functions*)self, (intptr_t)IsRenderbuffer);
 }
 
-GLboolean__GLenum_GLuint__Function q_openglfunctions_3_0_corebackend__functions_is_enabledi(void* self) {
+GLboolean__GLenum_GLuint__Function q_openglfunctions_3_0_corebackend__functions_is_enabledi(const void* self) {
     return (GLboolean__GLenum_GLuint__Function)QOpenGLFunctions_3_0_CoreBackend__Functions_IsEnabledi((QOpenGLFunctions_3_0_CoreBackend__Functions*)self);
 }
 
@@ -422,7 +422,7 @@ void q_openglfunctions_3_0_corebackend__functions_delete(void* self) {
     QOpenGLFunctions_3_0_CoreBackend__Functions_Delete((QOpenGLFunctions_3_0_CoreBackend__Functions*)(self));
 }
 
-GLboolean__GLuint__Function q_openglfunctions_3_3_corebackend__functions_is_sampler(void* self) {
+GLboolean__GLuint__Function q_openglfunctions_3_3_corebackend__functions_is_sampler(const void* self) {
     return (GLboolean__GLuint__Function)QOpenGLFunctions_3_3_CoreBackend__Functions_IsSampler((QOpenGLFunctions_3_3_CoreBackend__Functions*)self);
 }
 
@@ -434,7 +434,7 @@ void q_openglfunctions_3_3_corebackend__functions_delete(void* self) {
     QOpenGLFunctions_3_3_CoreBackend__Functions_Delete((QOpenGLFunctions_3_3_CoreBackend__Functions*)(self));
 }
 
-GLboolean__GLuint__Function q_openglfunctions_4_0_corebackend__functions_is_transform_feedback(void* self) {
+GLboolean__GLuint__Function q_openglfunctions_4_0_corebackend__functions_is_transform_feedback(const void* self) {
     return (GLboolean__GLuint__Function)QOpenGLFunctions_4_0_CoreBackend__Functions_IsTransformFeedback((QOpenGLFunctions_4_0_CoreBackend__Functions*)self);
 }
 
@@ -446,7 +446,7 @@ void q_openglfunctions_4_0_corebackend__functions_delete(void* self) {
     QOpenGLFunctions_4_0_CoreBackend__Functions_Delete((QOpenGLFunctions_4_0_CoreBackend__Functions*)(self));
 }
 
-GLboolean__GLuint__Function q_openglfunctions_4_1_corebackend__functions_is_program_pipeline(void* self) {
+GLboolean__GLuint__Function q_openglfunctions_4_1_corebackend__functions_is_program_pipeline(const void* self) {
     return (GLboolean__GLuint__Function)QOpenGLFunctions_4_1_CoreBackend__Functions_IsProgramPipeline((QOpenGLFunctions_4_1_CoreBackend__Functions*)self);
 }
 
@@ -458,7 +458,7 @@ void q_openglfunctions_4_1_corebackend__functions_delete(void* self) {
     QOpenGLFunctions_4_1_CoreBackend__Functions_Delete((QOpenGLFunctions_4_1_CoreBackend__Functions*)(self));
 }
 
-GLboolean__GLuint__Function q_openglfunctions_4_5_corebackend__functions_unmap_named_buffer(void* self) {
+GLboolean__GLuint__Function q_openglfunctions_4_5_corebackend__functions_unmap_named_buffer(const void* self) {
     return (GLboolean__GLuint__Function)QOpenGLFunctions_4_5_CoreBackend__Functions_UnmapNamedBuffer((QOpenGLFunctions_4_5_CoreBackend__Functions*)self);
 }
 
@@ -470,7 +470,7 @@ void q_openglfunctions_4_5_corebackend__functions_delete(void* self) {
     QOpenGLFunctions_4_5_CoreBackend__Functions_Delete((QOpenGLFunctions_4_5_CoreBackend__Functions*)(self));
 }
 
-GLboolean__GLuint__Function q_openglfunctions_1_0_deprecatedbackend__functions_is_list(void* self) {
+GLboolean__GLuint__Function q_openglfunctions_1_0_deprecatedbackend__functions_is_list(const void* self) {
     return (GLboolean__GLuint__Function)QOpenGLFunctions_1_0_DeprecatedBackend__Functions_IsList((QOpenGLFunctions_1_0_DeprecatedBackend__Functions*)self);
 }
 
@@ -478,7 +478,7 @@ void q_openglfunctions_1_0_deprecatedbackend__functions_set_is_list(void* self, 
     QOpenGLFunctions_1_0_DeprecatedBackend__Functions_SetIsList((QOpenGLFunctions_1_0_DeprecatedBackend__Functions*)self, (intptr_t)IsList);
 }
 
-GLint__GLenum__Function q_openglfunctions_1_0_deprecatedbackend__functions_render_mode(void* self) {
+GLint__GLenum__Function q_openglfunctions_1_0_deprecatedbackend__functions_render_mode(const void* self) {
     return (GLint__GLenum__Function)QOpenGLFunctions_1_0_DeprecatedBackend__Functions_RenderMode((QOpenGLFunctions_1_0_DeprecatedBackend__Functions*)self);
 }
 
@@ -486,7 +486,7 @@ void q_openglfunctions_1_0_deprecatedbackend__functions_set_render_mode(void* se
     QOpenGLFunctions_1_0_DeprecatedBackend__Functions_SetRenderMode((QOpenGLFunctions_1_0_DeprecatedBackend__Functions*)self, (intptr_t)RenderMode);
 }
 
-GLuint__GLsizei__Function q_openglfunctions_1_0_deprecatedbackend__functions_gen_lists(void* self) {
+GLuint__GLsizei__Function q_openglfunctions_1_0_deprecatedbackend__functions_gen_lists(const void* self) {
     return (GLuint__GLsizei__Function)QOpenGLFunctions_1_0_DeprecatedBackend__Functions_GenLists((QOpenGLFunctions_1_0_DeprecatedBackend__Functions*)self);
 }
 

@@ -13,7 +13,7 @@ QRandomGenerator* q_randomgenerator_new3(uint32_t* begin, uint32_t* end) {
     return QRandomGenerator_New3(begin, end);
 }
 
-QRandomGenerator* q_randomgenerator_new4(void* other) {
+QRandomGenerator* q_randomgenerator_new4(const void* other) {
     return QRandomGenerator_New4((QRandomGenerator*)other);
 }
 
@@ -21,7 +21,7 @@ QRandomGenerator* q_randomgenerator_new5(uint32_t seedValue) {
     return QRandomGenerator_New5(seedValue);
 }
 
-void q_randomgenerator_operator_assign(void* self, void* other) {
+void q_randomgenerator_operator_assign(void* self, const void* other) {
     QRandomGenerator_OperatorAssign((QRandomGenerator*)self, (QRandomGenerator*)other);
 }
 
@@ -145,11 +145,11 @@ QRandomGenerator64* q_randomgenerator64_new3(uint32_t* begin, uint32_t* end) {
     return QRandomGenerator64_New3(begin, end);
 }
 
-QRandomGenerator64* q_randomgenerator64_new4(void* other) {
+QRandomGenerator64* q_randomgenerator64_new4(const void* other) {
     return QRandomGenerator64_New4((QRandomGenerator*)other);
 }
 
-QRandomGenerator64* q_randomgenerator64_new5(void* param1) {
+QRandomGenerator64* q_randomgenerator64_new5(const void* param1) {
     return QRandomGenerator64_New5((QRandomGenerator64*)param1);
 }
 
@@ -189,7 +189,7 @@ QRandomGenerator64* q_randomgenerator64_securely_seeded() {
     return QRandomGenerator64_SecurelySeeded();
 }
 
-void q_randomgenerator64_operator_assign(void* self, void* param1) {
+void q_randomgenerator64_operator_assign(void* self, const void* param1) {
     QRandomGenerator64_OperatorAssign((QRandomGenerator64*)self, (QRandomGenerator64*)param1);
 }
 

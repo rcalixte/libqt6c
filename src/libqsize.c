@@ -2,7 +2,7 @@
 #include "libqsize.hpp"
 #include "libqsize.h"
 
-QSize* q_size_new(void* other) {
+QSize* q_size_new(const void* other) {
     return QSize_New((QSize*)other);
 }
 
@@ -18,7 +18,7 @@ QSize* q_size_new4(int w, int h) {
     return QSize_New4(w, h);
 }
 
-QSize* q_size_new5(void* param1) {
+QSize* q_size_new5(const void* param1) {
     return QSize_New5((QSize*)param1);
 }
 
@@ -30,23 +30,23 @@ void q_size_move_assign(void* self, void* other) {
     QSize_MoveAssign((QSize*)self, (QSize*)other);
 }
 
-bool q_size_is_null(void* self) {
+bool q_size_is_null(const void* self) {
     return QSize_IsNull((QSize*)self);
 }
 
-bool q_size_is_empty(void* self) {
+bool q_size_is_empty(const void* self) {
     return QSize_IsEmpty((QSize*)self);
 }
 
-bool q_size_is_valid(void* self) {
+bool q_size_is_valid(const void* self) {
     return QSize_IsValid((QSize*)self);
 }
 
-int32_t q_size_width(void* self) {
+int32_t q_size_width(const void* self) {
     return QSize_Width((QSize*)self);
 }
 
-int32_t q_size_height(void* self) {
+int32_t q_size_height(const void* self) {
     return QSize_Height((QSize*)self);
 }
 
@@ -62,7 +62,7 @@ void q_size_transpose(void* self) {
     QSize_Transpose((QSize*)self);
 }
 
-QSize* q_size_transposed(void* self) {
+QSize* q_size_transposed(const void* self) {
     return QSize_Transposed((QSize*)self);
 }
 
@@ -70,31 +70,31 @@ void q_size_scale(void* self, int w, int h, int32_t mode) {
     QSize_Scale((QSize*)self, w, h, mode);
 }
 
-void q_size_scale2(void* self, void* s, int32_t mode) {
+void q_size_scale2(void* self, const void* s, int32_t mode) {
     QSize_Scale2((QSize*)self, (QSize*)s, mode);
 }
 
-QSize* q_size_scaled(void* self, int w, int h, int32_t mode) {
+QSize* q_size_scaled(const void* self, int w, int h, int32_t mode) {
     return QSize_Scaled((QSize*)self, w, h, mode);
 }
 
-QSize* q_size_scaled2(void* self, void* s, int32_t mode) {
+QSize* q_size_scaled2(const void* self, const void* s, int32_t mode) {
     return QSize_Scaled2((QSize*)self, (QSize*)s, mode);
 }
 
-QSize* q_size_expanded_to(void* self, void* param1) {
+QSize* q_size_expanded_to(const void* self, const void* param1) {
     return QSize_ExpandedTo((QSize*)self, (QSize*)param1);
 }
 
-QSize* q_size_bounded_to(void* self, void* param1) {
+QSize* q_size_bounded_to(const void* self, const void* param1) {
     return QSize_BoundedTo((QSize*)self, (QSize*)param1);
 }
 
-QSize* q_size_grown_by(void* self, void* m) {
+QSize* q_size_grown_by(const void* self, void* m) {
     return QSize_GrownBy((QSize*)self, (QMargins*)m);
 }
 
-QSize* q_size_shrunk_by(void* self, void* m) {
+QSize* q_size_shrunk_by(const void* self, void* m) {
     return QSize_ShrunkBy((QSize*)self, (QMargins*)m);
 }
 
@@ -106,11 +106,11 @@ int* q_size_rheight(void* self) {
     return (int*)QSize_Rheight((QSize*)self);
 }
 
-QSize* q_size_operator_plus_assign(void* self, void* param1) {
+QSize* q_size_operator_plus_assign(void* self, const void* param1) {
     return QSize_OperatorPlusAssign((QSize*)self, (QSize*)param1);
 }
 
-QSize* q_size_operator_minus_assign(void* self, void* param1) {
+QSize* q_size_operator_minus_assign(void* self, const void* param1) {
     return QSize_OperatorMinusAssign((QSize*)self, (QSize*)param1);
 }
 
@@ -122,11 +122,11 @@ QSize* q_size_operator_divide_assign(void* self, double c) {
     return QSize_OperatorDivideAssign((QSize*)self, c);
 }
 
-QSizeF* q_size_to_size_f(void* self) {
+QSizeF* q_size_to_size_f(const void* self) {
     return QSize_ToSizeF((QSize*)self);
 }
 
-void q_size_operator_assign(void* self, void* param1) {
+void q_size_operator_assign(void* self, const void* param1) {
     QSize_OperatorAssign((QSize*)self, (QSize*)param1);
 }
 
@@ -134,11 +134,11 @@ void q_size_delete(void* self) {
     QSize_Delete((QSize*)(self));
 }
 
-size_t q_qsize_q_hash(void* s, size_t seed) {
+size_t q_qsize_q_hash(const void* s, size_t seed) {
     return qsize_QHash((QSize*)s, seed);
 }
 
-QSizeF* q_sizef_new(void* other) {
+QSizeF* q_sizef_new(const void* other) {
     return QSizeF_New((QSizeF*)other);
 }
 
@@ -150,7 +150,7 @@ QSizeF* q_sizef_new3() {
     return QSizeF_New3();
 }
 
-QSizeF* q_sizef_new4(void* sz) {
+QSizeF* q_sizef_new4(const void* sz) {
     return QSizeF_New4((QSize*)sz);
 }
 
@@ -158,7 +158,7 @@ QSizeF* q_sizef_new5(double w, double h) {
     return QSizeF_New5(w, h);
 }
 
-QSizeF* q_sizef_new6(void* param1) {
+QSizeF* q_sizef_new6(const void* param1) {
     return QSizeF_New6((QSizeF*)param1);
 }
 
@@ -170,23 +170,23 @@ void q_sizef_move_assign(void* self, void* other) {
     QSizeF_MoveAssign((QSizeF*)self, (QSizeF*)other);
 }
 
-bool q_sizef_is_null(void* self) {
+bool q_sizef_is_null(const void* self) {
     return QSizeF_IsNull((QSizeF*)self);
 }
 
-bool q_sizef_is_empty(void* self) {
+bool q_sizef_is_empty(const void* self) {
     return QSizeF_IsEmpty((QSizeF*)self);
 }
 
-bool q_sizef_is_valid(void* self) {
+bool q_sizef_is_valid(const void* self) {
     return QSizeF_IsValid((QSizeF*)self);
 }
 
-double q_sizef_width(void* self) {
+double q_sizef_width(const void* self) {
     return QSizeF_Width((QSizeF*)self);
 }
 
-double q_sizef_height(void* self) {
+double q_sizef_height(const void* self) {
     return QSizeF_Height((QSizeF*)self);
 }
 
@@ -202,7 +202,7 @@ void q_sizef_transpose(void* self) {
     QSizeF_Transpose((QSizeF*)self);
 }
 
-QSizeF* q_sizef_transposed(void* self) {
+QSizeF* q_sizef_transposed(const void* self) {
     return QSizeF_Transposed((QSizeF*)self);
 }
 
@@ -210,31 +210,31 @@ void q_sizef_scale(void* self, double w, double h, int32_t mode) {
     QSizeF_Scale((QSizeF*)self, w, h, mode);
 }
 
-void q_sizef_scale2(void* self, void* s, int32_t mode) {
+void q_sizef_scale2(void* self, const void* s, int32_t mode) {
     QSizeF_Scale2((QSizeF*)self, (QSizeF*)s, mode);
 }
 
-QSizeF* q_sizef_scaled(void* self, double w, double h, int32_t mode) {
+QSizeF* q_sizef_scaled(const void* self, double w, double h, int32_t mode) {
     return QSizeF_Scaled((QSizeF*)self, w, h, mode);
 }
 
-QSizeF* q_sizef_scaled2(void* self, void* s, int32_t mode) {
+QSizeF* q_sizef_scaled2(const void* self, const void* s, int32_t mode) {
     return QSizeF_Scaled2((QSizeF*)self, (QSizeF*)s, mode);
 }
 
-QSizeF* q_sizef_expanded_to(void* self, void* param1) {
+QSizeF* q_sizef_expanded_to(const void* self, const void* param1) {
     return QSizeF_ExpandedTo((QSizeF*)self, (QSizeF*)param1);
 }
 
-QSizeF* q_sizef_bounded_to(void* self, void* param1) {
+QSizeF* q_sizef_bounded_to(const void* self, const void* param1) {
     return QSizeF_BoundedTo((QSizeF*)self, (QSizeF*)param1);
 }
 
-QSizeF* q_sizef_grown_by(void* self, void* m) {
+QSizeF* q_sizef_grown_by(const void* self, void* m) {
     return QSizeF_GrownBy((QSizeF*)self, (QMarginsF*)m);
 }
 
-QSizeF* q_sizef_shrunk_by(void* self, void* m) {
+QSizeF* q_sizef_shrunk_by(const void* self, void* m) {
     return QSizeF_ShrunkBy((QSizeF*)self, (QMarginsF*)m);
 }
 
@@ -246,11 +246,11 @@ double* q_sizef_rheight(void* self) {
     return (double*)QSizeF_Rheight((QSizeF*)self);
 }
 
-QSizeF* q_sizef_operator_plus_assign(void* self, void* param1) {
+QSizeF* q_sizef_operator_plus_assign(void* self, const void* param1) {
     return QSizeF_OperatorPlusAssign((QSizeF*)self, (QSizeF*)param1);
 }
 
-QSizeF* q_sizef_operator_minus_assign(void* self, void* param1) {
+QSizeF* q_sizef_operator_minus_assign(void* self, const void* param1) {
     return QSizeF_OperatorMinusAssign((QSizeF*)self, (QSizeF*)param1);
 }
 
@@ -262,11 +262,11 @@ QSizeF* q_sizef_operator_divide_assign(void* self, double c) {
     return QSizeF_OperatorDivideAssign((QSizeF*)self, c);
 }
 
-QSize* q_sizef_to_size(void* self) {
+QSize* q_sizef_to_size(const void* self) {
     return QSizeF_ToSize((QSizeF*)self);
 }
 
-void q_sizef_operator_assign(void* self, void* param1) {
+void q_sizef_operator_assign(void* self, const void* param1) {
     QSizeF_OperatorAssign((QSizeF*)self, (QSizeF*)param1);
 }
 

@@ -28,7 +28,7 @@ QFileInfo* q_fileinfo_new2(const char* file);
 ///
 /// @param file QFileDevice*
 ///
-QFileInfo* q_fileinfo_new3(void* file);
+QFileInfo* q_fileinfo_new3(const void* file);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html)
 
@@ -37,7 +37,7 @@ QFileInfo* q_fileinfo_new3(void* file);
 /// @param dir QDir*
 /// @param file const char*
 ///
-QFileInfo* q_fileinfo_new4(void* dir, const char* file);
+QFileInfo* q_fileinfo_new4(const void* dir, const char* file);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html)
 
@@ -45,14 +45,14 @@ QFileInfo* q_fileinfo_new4(void* dir, const char* file);
 ///
 /// @param fileinfo QFileInfo*
 ///
-QFileInfo* q_fileinfo_new5(void* fileinfo);
+QFileInfo* q_fileinfo_new5(const void* fileinfo);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#operator-eq)
 ///
 /// @param self QFileInfo*
 /// @param fileinfo QFileInfo*
 ///
-void q_fileinfo_operator_assign(void* self, void* fileinfo);
+void q_fileinfo_operator_assign(void* self, const void* fileinfo);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#swap)
 ///
@@ -73,7 +73,7 @@ void q_fileinfo_set_file(void* self, const char* file);
 /// @param self QFileInfo*
 /// @param file QFileDevice*
 ///
-void q_fileinfo_set_file2(void* self, void* file);
+void q_fileinfo_set_file2(void* self, const void* file);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#setFile)
 ///
@@ -81,13 +81,13 @@ void q_fileinfo_set_file2(void* self, void* file);
 /// @param dir QDir*
 /// @param file const char*
 ///
-void q_fileinfo_set_file3(void* self, void* dir, const char* file);
+void q_fileinfo_set_file3(void* self, const void* dir, const char* file);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#exists)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-bool q_fileinfo_exists(void* self);
+bool q_fileinfo_exists(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#exists)
 ///
@@ -105,151 +105,151 @@ void q_fileinfo_refresh(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-const char* q_fileinfo_file_path(void* self);
+const char* q_fileinfo_file_path(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#absoluteFilePath)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-const char* q_fileinfo_absolute_file_path(void* self);
+const char* q_fileinfo_absolute_file_path(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#canonicalFilePath)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-const char* q_fileinfo_canonical_file_path(void* self);
+const char* q_fileinfo_canonical_file_path(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#fileName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-const char* q_fileinfo_file_name(void* self);
+const char* q_fileinfo_file_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#baseName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-const char* q_fileinfo_base_name(void* self);
+const char* q_fileinfo_base_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#completeBaseName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-const char* q_fileinfo_complete_base_name(void* self);
+const char* q_fileinfo_complete_base_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#suffix)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-const char* q_fileinfo_suffix(void* self);
+const char* q_fileinfo_suffix(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#bundleName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-const char* q_fileinfo_bundle_name(void* self);
+const char* q_fileinfo_bundle_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#completeSuffix)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-const char* q_fileinfo_complete_suffix(void* self);
+const char* q_fileinfo_complete_suffix(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#path)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-const char* q_fileinfo_path(void* self);
+const char* q_fileinfo_path(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#absolutePath)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-const char* q_fileinfo_absolute_path(void* self);
+const char* q_fileinfo_absolute_path(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#canonicalPath)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-const char* q_fileinfo_canonical_path(void* self);
+const char* q_fileinfo_canonical_path(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#dir)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-QDir* q_fileinfo_dir(void* self);
+QDir* q_fileinfo_dir(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#absoluteDir)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-QDir* q_fileinfo_absolute_dir(void* self);
+QDir* q_fileinfo_absolute_dir(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#isReadable)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-bool q_fileinfo_is_readable(void* self);
+bool q_fileinfo_is_readable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#isWritable)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-bool q_fileinfo_is_writable(void* self);
+bool q_fileinfo_is_writable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#isExecutable)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-bool q_fileinfo_is_executable(void* self);
+bool q_fileinfo_is_executable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#isHidden)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-bool q_fileinfo_is_hidden(void* self);
+bool q_fileinfo_is_hidden(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#isNativePath)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-bool q_fileinfo_is_native_path(void* self);
+bool q_fileinfo_is_native_path(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#isRelative)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-bool q_fileinfo_is_relative(void* self);
+bool q_fileinfo_is_relative(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#isAbsolute)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-bool q_fileinfo_is_absolute(void* self);
+bool q_fileinfo_is_absolute(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#makeAbsolute)
 ///
@@ -259,203 +259,203 @@ bool q_fileinfo_make_absolute(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#isFile)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-bool q_fileinfo_is_file(void* self);
+bool q_fileinfo_is_file(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#isDir)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-bool q_fileinfo_is_dir(void* self);
+bool q_fileinfo_is_dir(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#isSymLink)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-bool q_fileinfo_is_sym_link(void* self);
+bool q_fileinfo_is_sym_link(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#isSymbolicLink)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-bool q_fileinfo_is_symbolic_link(void* self);
+bool q_fileinfo_is_symbolic_link(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#isShortcut)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-bool q_fileinfo_is_shortcut(void* self);
+bool q_fileinfo_is_shortcut(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#isAlias)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-bool q_fileinfo_is_alias(void* self);
+bool q_fileinfo_is_alias(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#isJunction)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-bool q_fileinfo_is_junction(void* self);
+bool q_fileinfo_is_junction(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#isRoot)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-bool q_fileinfo_is_root(void* self);
+bool q_fileinfo_is_root(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#isBundle)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-bool q_fileinfo_is_bundle(void* self);
+bool q_fileinfo_is_bundle(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#symLinkTarget)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-const char* q_fileinfo_sym_link_target(void* self);
+const char* q_fileinfo_sym_link_target(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#readSymLink)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-const char* q_fileinfo_read_sym_link(void* self);
+const char* q_fileinfo_read_sym_link(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#junctionTarget)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-const char* q_fileinfo_junction_target(void* self);
+const char* q_fileinfo_junction_target(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#owner)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-const char* q_fileinfo_owner(void* self);
+const char* q_fileinfo_owner(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#ownerId)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-uint32_t q_fileinfo_owner_id(void* self);
+uint32_t q_fileinfo_owner_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#group)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-const char* q_fileinfo_group(void* self);
+const char* q_fileinfo_group(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#groupId)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-uint32_t q_fileinfo_group_id(void* self);
+uint32_t q_fileinfo_group_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#permission)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 /// @param permissions flag of enum QFileDevice__Permission
 ///
-bool q_fileinfo_permission(void* self, int32_t permissions);
+bool q_fileinfo_permission(const void* self, int32_t permissions);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#permissions)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
 /// @return flag of enum QFileDevice__Permission
 ///
-int32_t q_fileinfo_permissions(void* self);
+int32_t q_fileinfo_permissions(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#size)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-int64_t q_fileinfo_size(void* self);
+int64_t q_fileinfo_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#birthTime)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-QDateTime* q_fileinfo_birth_time(void* self);
+QDateTime* q_fileinfo_birth_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#metadataChangeTime)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-QDateTime* q_fileinfo_metadata_change_time(void* self);
+QDateTime* q_fileinfo_metadata_change_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#lastModified)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-QDateTime* q_fileinfo_last_modified(void* self);
+QDateTime* q_fileinfo_last_modified(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#lastRead)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-QDateTime* q_fileinfo_last_read(void* self);
+QDateTime* q_fileinfo_last_read(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#fileTime)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 /// @param time enum QFileDevice__FileTime
 ///
-QDateTime* q_fileinfo_file_time(void* self, int32_t time);
+QDateTime* q_fileinfo_file_time(const void* self, int32_t time);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#birthTime)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 /// @param tz QTimeZone*
 ///
-QDateTime* q_fileinfo_birth_time2(void* self, void* tz);
+QDateTime* q_fileinfo_birth_time2(const void* self, const void* tz);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#metadataChangeTime)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 /// @param tz QTimeZone*
 ///
-QDateTime* q_fileinfo_metadata_change_time2(void* self, void* tz);
+QDateTime* q_fileinfo_metadata_change_time2(const void* self, const void* tz);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#lastModified)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 /// @param tz QTimeZone*
 ///
-QDateTime* q_fileinfo_last_modified2(void* self, void* tz);
+QDateTime* q_fileinfo_last_modified2(const void* self, const void* tz);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#lastRead)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 /// @param tz QTimeZone*
 ///
-QDateTime* q_fileinfo_last_read2(void* self, void* tz);
+QDateTime* q_fileinfo_last_read2(const void* self, const void* tz);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#fileTime)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 /// @param time enum QFileDevice__FileTime
 /// @param tz QTimeZone*
 ///
-QDateTime* q_fileinfo_file_time2(void* self, int32_t time, void* tz);
+QDateTime* q_fileinfo_file_time2(const void* self, int32_t time, const void* tz);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#caching)
 ///
-/// @param self QFileInfo*
+/// @param self const QFileInfo*
 ///
-bool q_fileinfo_caching(void* self);
+bool q_fileinfo_caching(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#setCaching)
 ///

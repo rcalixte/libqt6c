@@ -12,11 +12,11 @@
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
 ///
-/// @param self QsciCommand*
+/// @param self const QsciCommand*
 ///
 /// @return enum QsciCommand__Command
 ///
-int32_t q_scicommand_command(void* self);
+int32_t q_scicommand_command(const void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
 ///
@@ -40,15 +40,15 @@ void q_scicommand_set_alternate_key(void* self, int altkey);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
 ///
-/// @param self QsciCommand*
+/// @param self const QsciCommand*
 ///
-int32_t q_scicommand_key(void* self);
+int32_t q_scicommand_key(const void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
 ///
-/// @param self QsciCommand*
+/// @param self const QsciCommand*
 ///
-int32_t q_scicommand_alternate_key(void* self);
+int32_t q_scicommand_alternate_key(const void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
 ///
@@ -60,9 +60,9 @@ bool q_scicommand_valid_key(int key);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QsciCommand*
+/// @param self const QsciCommand*
 ///
-const char* q_scicommand_description(void* self);
+const char* q_scicommand_description(const void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
 ///

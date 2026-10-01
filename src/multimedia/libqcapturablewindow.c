@@ -5,11 +5,11 @@ QCapturableWindow* q_capturablewindow_new() {
     return QCapturableWindow_New();
 }
 
-QCapturableWindow* q_capturablewindow_new2(void* other) {
+QCapturableWindow* q_capturablewindow_new2(const void* other) {
     return QCapturableWindow_New2((QCapturableWindow*)other);
 }
 
-void q_capturablewindow_operator_assign(void* self, void* other) {
+void q_capturablewindow_operator_assign(void* self, const void* other) {
     QCapturableWindow_OperatorAssign((QCapturableWindow*)self, (QCapturableWindow*)other);
 }
 
@@ -17,11 +17,11 @@ void q_capturablewindow_swap(void* self, void* other) {
     QCapturableWindow_Swap((QCapturableWindow*)self, (QCapturableWindow*)other);
 }
 
-bool q_capturablewindow_is_valid(void* self) {
+bool q_capturablewindow_is_valid(const void* self) {
     return QCapturableWindow_IsValid((QCapturableWindow*)self);
 }
 
-const char* q_capturablewindow_description(void* self) {
+const char* q_capturablewindow_description(const void* self) {
     libqt_string _str = QCapturableWindow_Description((QCapturableWindow*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

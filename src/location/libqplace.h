@@ -20,14 +20,14 @@ QPlace* q_place_new();
 ///
 /// @param other QPlace*
 ///
-QPlace* q_place_new2(void* other);
+QPlace* q_place_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#operator-eq)
 ///
 /// @param self QPlace*
 /// @param other QPlace*
 ///
-void q_place_operator_assign(void* self, void* other);
+void q_place_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#swap)
 ///
@@ -38,18 +38,18 @@ void q_place_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#categories)
 ///
-/// @param self QPlace*
+/// @param self const QPlace*
 ///
 /// @return libqt_list of QPlaceCategory*
 ///
-libqt_list q_place_categories(void* self);
+libqt_list q_place_categories(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#setCategory)
 ///
 /// @param self QPlace*
 /// @param category QPlaceCategory*
 ///
-void q_place_set_category(void* self, void* category);
+void q_place_set_category(void* self, const void* category);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#setCategories)
 ///
@@ -60,50 +60,50 @@ void q_place_set_categories(void* self, libqt_list categories);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#location)
 ///
-/// @param self QPlace*
+/// @param self const QPlace*
 ///
-QGeoLocation* q_place_location(void* self);
+QGeoLocation* q_place_location(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#setLocation)
 ///
 /// @param self QPlace*
 /// @param location QGeoLocation*
 ///
-void q_place_set_location(void* self, void* location);
+void q_place_set_location(void* self, const void* location);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#ratings)
 ///
-/// @param self QPlace*
+/// @param self const QPlace*
 ///
-QPlaceRatings* q_place_ratings(void* self);
+QPlaceRatings* q_place_ratings(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#setRatings)
 ///
 /// @param self QPlace*
 /// @param ratings QPlaceRatings*
 ///
-void q_place_set_ratings(void* self, void* ratings);
+void q_place_set_ratings(void* self, const void* ratings);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#supplier)
 ///
-/// @param self QPlace*
+/// @param self const QPlace*
 ///
-QPlaceSupplier* q_place_supplier(void* self);
+QPlaceSupplier* q_place_supplier(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#setSupplier)
 ///
 /// @param self QPlace*
 /// @param supplier QPlaceSupplier*
 ///
-void q_place_set_supplier(void* self, void* supplier);
+void q_place_set_supplier(void* self, const void* supplier);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#attribution)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPlace*
+/// @param self const QPlace*
 ///
-const char* q_place_attribution(void* self);
+const char* q_place_attribution(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#setAttribution)
 ///
@@ -114,16 +114,16 @@ void q_place_set_attribution(void* self, const char* attribution);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#icon)
 ///
-/// @param self QPlace*
+/// @param self const QPlace*
 ///
-QPlaceIcon* q_place_icon(void* self);
+QPlaceIcon* q_place_icon(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#setIcon)
 ///
 /// @param self QPlace*
 /// @param icon QPlaceIcon*
 ///
-void q_place_set_icon(void* self, void* icon);
+void q_place_set_icon(void* self, const void* icon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#content)
 ///
@@ -138,12 +138,12 @@ void q_place_set_icon(void* self, void* icon);
 /// free(map.values);
 /// ```
 ///
-/// @param self QPlace*
+/// @param self const QPlace*
 /// @param type enum QPlaceContent__Type
 ///
 /// @return libqt_map of int to QPlaceContent*
 ///
-libqt_map q_place_content(void* self, int32_t type);
+libqt_map q_place_content(const void* self, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#setContent)
 ///
@@ -163,10 +163,10 @@ void q_place_insert_content(void* self, int32_t type, libqt_map content);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#totalContentCount)
 ///
-/// @param self QPlace*
+/// @param self const QPlace*
 /// @param type enum QPlaceContent__Type
 ///
-int32_t q_place_total_content_count(void* self, int32_t type);
+int32_t q_place_total_content_count(const void* self, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#setTotalContentCount)
 ///
@@ -180,9 +180,9 @@ void q_place_set_total_content_count(void* self, int32_t type, int total);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPlace*
+/// @param self const QPlace*
 ///
-const char* q_place_name(void* self);
+const char* q_place_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#setName)
 ///
@@ -195,9 +195,9 @@ void q_place_set_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPlace*
+/// @param self const QPlace*
 ///
-const char* q_place_place_id(void* self);
+const char* q_place_place_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#setPlaceId)
 ///
@@ -210,37 +210,37 @@ void q_place_set_place_id(void* self, const char* identifier);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPlace*
+/// @param self const QPlace*
 ///
-const char* q_place_primary_phone(void* self);
+const char* q_place_primary_phone(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#primaryFax)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPlace*
+/// @param self const QPlace*
 ///
-const char* q_place_primary_fax(void* self);
+const char* q_place_primary_fax(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#primaryEmail)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPlace*
+/// @param self const QPlace*
 ///
-const char* q_place_primary_email(void* self);
+const char* q_place_primary_email(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#primaryWebsite)
 ///
-/// @param self QPlace*
+/// @param self const QPlace*
 ///
-QUrl* q_place_primary_website(void* self);
+QUrl* q_place_primary_website(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#detailsFetched)
 ///
-/// @param self QPlace*
+/// @param self const QPlace*
 ///
-bool q_place_details_fetched(void* self);
+bool q_place_details_fetched(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#setDetailsFetched)
 ///
@@ -253,16 +253,16 @@ void q_place_set_details_fetched(void* self, bool fetched);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QPlace*
+/// @param self const QPlace*
 ///
-const char** q_place_extended_attribute_types(void* self);
+const char** q_place_extended_attribute_types(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#extendedAttribute)
 ///
-/// @param self QPlace*
+/// @param self const QPlace*
 /// @param attributeType const char*
 ///
-QPlaceAttribute* q_place_extended_attribute(void* self, const char* attributeType);
+QPlaceAttribute* q_place_extended_attribute(const void* self, const char* attributeType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#setExtendedAttribute)
 ///
@@ -270,7 +270,7 @@ QPlaceAttribute* q_place_extended_attribute(void* self, const char* attributeTyp
 /// @param attributeType const char*
 /// @param attribute QPlaceAttribute*
 ///
-void q_place_set_extended_attribute(void* self, const char* attributeType, void* attribute);
+void q_place_set_extended_attribute(void* self, const char* attributeType, const void* attribute);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#removeExtendedAttribute)
 ///
@@ -283,18 +283,18 @@ void q_place_remove_extended_attribute(void* self, const char* attributeType);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QPlace*
+/// @param self const QPlace*
 ///
-const char** q_place_contact_types(void* self);
+const char** q_place_contact_types(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#contactDetails)
 ///
-/// @param self QPlace*
+/// @param self const QPlace*
 /// @param contactType const char*
 ///
 /// @return libqt_list of QPlaceContactDetail*
 ///
-libqt_list q_place_contact_details(void* self, const char* contactType);
+libqt_list q_place_contact_details(const void* self, const char* contactType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#setContactDetails)
 ///
@@ -310,7 +310,7 @@ void q_place_set_contact_details(void* self, const char* contactType, libqt_list
 /// @param contactType const char*
 /// @param detail QPlaceContactDetail*
 ///
-void q_place_append_contact_detail(void* self, const char* contactType, void* detail);
+void q_place_append_contact_detail(void* self, const char* contactType, const void* detail);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#removeContactDetails)
 ///
@@ -321,11 +321,11 @@ void q_place_remove_contact_details(void* self, const char* contactType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#visibility)
 ///
-/// @param self QPlace*
+/// @param self const QPlace*
 ///
 /// @return enum QLocation__Visibility
 ///
-int32_t q_place_visibility(void* self);
+int32_t q_place_visibility(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#setVisibility)
 ///
@@ -336,9 +336,9 @@ void q_place_set_visibility(void* self, int32_t visibility);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#isEmpty)
 ///
-/// @param self QPlace*
+/// @param self const QPlace*
 ///
-bool q_place_is_empty(void* self);
+bool q_place_is_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#dtor.QPlace)
 ///

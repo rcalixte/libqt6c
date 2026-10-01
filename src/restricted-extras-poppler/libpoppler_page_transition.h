@@ -14,62 +14,62 @@
 ///
 /// @param pt Poppler__PageTransition*
 ///
-Poppler__PageTransition* q_poppler__pagetransition_new(void* pt);
+Poppler__PageTransition* q_poppler__pagetransition_new(const void* pt);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PageTransition.html)
 ///
 /// @param self Poppler__PageTransition*
 /// @param other Poppler__PageTransition*
 ///
-void q_poppler__pagetransition_operator_assign(void* self, void* other);
+void q_poppler__pagetransition_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PageTransition.html)
 ///
-/// @param self Poppler__PageTransition*
+/// @param self const Poppler__PageTransition*
 ///
 /// @return enum Poppler__PageTransition__Type
 ///
-int32_t q_poppler__pagetransition_type(void* self);
+int32_t q_poppler__pagetransition_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PageTransition.html)
 ///
-/// @param self Poppler__PageTransition*
+/// @param self const Poppler__PageTransition*
 ///
-double q_poppler__pagetransition_duration_real(void* self);
+double q_poppler__pagetransition_duration_real(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PageTransition.html)
 ///
-/// @param self Poppler__PageTransition*
+/// @param self const Poppler__PageTransition*
 ///
 /// @return enum Poppler__PageTransition__Alignment
 ///
-int32_t q_poppler__pagetransition_alignment(void* self);
+int32_t q_poppler__pagetransition_alignment(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PageTransition.html)
 ///
-/// @param self Poppler__PageTransition*
+/// @param self const Poppler__PageTransition*
 ///
 /// @return enum Poppler__PageTransition__Direction
 ///
-int32_t q_poppler__pagetransition_direction(void* self);
+int32_t q_poppler__pagetransition_direction(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PageTransition.html)
 ///
-/// @param self Poppler__PageTransition*
+/// @param self const Poppler__PageTransition*
 ///
-int32_t q_poppler__pagetransition_angle(void* self);
+int32_t q_poppler__pagetransition_angle(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PageTransition.html)
 ///
-/// @param self Poppler__PageTransition*
+/// @param self const Poppler__PageTransition*
 ///
-double q_poppler__pagetransition_scale(void* self);
+double q_poppler__pagetransition_scale(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PageTransition.html)
 ///
-/// @param self Poppler__PageTransition*
+/// @param self const Poppler__PageTransition*
 ///
-bool q_poppler__pagetransition_is_rectangular(void* self);
+bool q_poppler__pagetransition_is_rectangular(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PageTransition.html)
 ///

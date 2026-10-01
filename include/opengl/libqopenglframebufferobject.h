@@ -14,7 +14,7 @@
 ///
 /// @param size QSize*
 ///
-QOpenGLFramebufferObject* q_openglframebufferobject_new(void* size);
+QOpenGLFramebufferObject* q_openglframebufferobject_new(const void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html)
 
@@ -32,7 +32,7 @@ QOpenGLFramebufferObject* q_openglframebufferobject_new2(int width, int height);
 /// @param size QSize*
 /// @param attachment enum QOpenGLFramebufferObject__Attachment
 ///
-QOpenGLFramebufferObject* q_openglframebufferobject_new3(void* size, int32_t attachment);
+QOpenGLFramebufferObject* q_openglframebufferobject_new3(const void* size, int32_t attachment);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html)
 
@@ -51,7 +51,7 @@ QOpenGLFramebufferObject* q_openglframebufferobject_new4(int width, int height, 
 /// @param size QSize*
 /// @param format QOpenGLFramebufferObjectFormat*
 ///
-QOpenGLFramebufferObject* q_openglframebufferobject_new5(void* size, void* format);
+QOpenGLFramebufferObject* q_openglframebufferobject_new5(const void* size, const void* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html)
 
@@ -61,7 +61,7 @@ QOpenGLFramebufferObject* q_openglframebufferobject_new5(void* size, void* forma
 /// @param height int
 /// @param format QOpenGLFramebufferObjectFormat*
 ///
-QOpenGLFramebufferObject* q_openglframebufferobject_new6(int width, int height, void* format);
+QOpenGLFramebufferObject* q_openglframebufferobject_new6(int width, int height, const void* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html)
 
@@ -70,7 +70,7 @@ QOpenGLFramebufferObject* q_openglframebufferobject_new6(int width, int height, 
 /// @param size QSize*
 /// @param target uint32_t
 ///
-QOpenGLFramebufferObject* q_openglframebufferobject_new7(void* size, uint32_t target);
+QOpenGLFramebufferObject* q_openglframebufferobject_new7(const void* size, uint32_t target);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html)
 
@@ -90,7 +90,7 @@ QOpenGLFramebufferObject* q_openglframebufferobject_new8(int width, int height, 
 /// @param attachment enum QOpenGLFramebufferObject__Attachment
 /// @param target uint32_t
 ///
-QOpenGLFramebufferObject* q_openglframebufferobject_new9(void* size, int32_t attachment, uint32_t target);
+QOpenGLFramebufferObject* q_openglframebufferobject_new9(const void* size, int32_t attachment, uint32_t target);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html)
 
@@ -101,7 +101,7 @@ QOpenGLFramebufferObject* q_openglframebufferobject_new9(void* size, int32_t att
 /// @param target uint32_t
 /// @param internalFormat uint32_t
 ///
-QOpenGLFramebufferObject* q_openglframebufferobject_new10(void* size, int32_t attachment, uint32_t target, uint32_t internalFormat);
+QOpenGLFramebufferObject* q_openglframebufferobject_new10(const void* size, int32_t attachment, uint32_t target, uint32_t internalFormat);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html)
 
@@ -131,7 +131,7 @@ QOpenGLFramebufferObject* q_openglframebufferobject_new12(int width, int height,
 /// @param self QOpenGLFramebufferObject*
 /// @param size QSize*
 ///
-void q_openglframebufferobject_add_color_attachment(void* self, void* size);
+void q_openglframebufferobject_add_color_attachment(void* self, const void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html#addColorAttachment)
 ///
@@ -143,21 +143,21 @@ void q_openglframebufferobject_add_color_attachment2(void* self, int width, int 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html#format)
 ///
-/// @param self QOpenGLFramebufferObject*
+/// @param self const QOpenGLFramebufferObject*
 ///
-QOpenGLFramebufferObjectFormat* q_openglframebufferobject_format(void* self);
+QOpenGLFramebufferObjectFormat* q_openglframebufferobject_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html#isValid)
 ///
-/// @param self QOpenGLFramebufferObject*
+/// @param self const QOpenGLFramebufferObject*
 ///
-bool q_openglframebufferobject_is_valid(void* self);
+bool q_openglframebufferobject_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html#isBound)
 ///
-/// @param self QOpenGLFramebufferObject*
+/// @param self const QOpenGLFramebufferObject*
 ///
-bool q_openglframebufferobject_is_bound(void* self);
+bool q_openglframebufferobject_is_bound(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html#bind)
 ///
@@ -173,29 +173,29 @@ bool q_openglframebufferobject_release(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html#width)
 ///
-/// @param self QOpenGLFramebufferObject*
+/// @param self const QOpenGLFramebufferObject*
 ///
-int32_t q_openglframebufferobject_width(void* self);
+int32_t q_openglframebufferobject_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html#height)
 ///
-/// @param self QOpenGLFramebufferObject*
+/// @param self const QOpenGLFramebufferObject*
 ///
-int32_t q_openglframebufferobject_height(void* self);
+int32_t q_openglframebufferobject_height(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html#texture)
 ///
-/// @param self QOpenGLFramebufferObject*
+/// @param self const QOpenGLFramebufferObject*
 ///
-uint32_t q_openglframebufferobject_texture(void* self);
+uint32_t q_openglframebufferobject_texture(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html#textures)
 ///
-/// @param self QOpenGLFramebufferObject*
+/// @param self const QOpenGLFramebufferObject*
 ///
 /// @return libqt_list of uint32_t
 ///
-libqt_list q_openglframebufferobject_textures(void* self);
+libqt_list q_openglframebufferobject_textures(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html#takeTexture)
 ///
@@ -212,39 +212,39 @@ uint32_t q_openglframebufferobject_take_texture2(void* self, int colorAttachment
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html#size)
 ///
-/// @param self QOpenGLFramebufferObject*
+/// @param self const QOpenGLFramebufferObject*
 ///
-QSize* q_openglframebufferobject_size(void* self);
+QSize* q_openglframebufferobject_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html#sizes)
 ///
-/// @param self QOpenGLFramebufferObject*
+/// @param self const QOpenGLFramebufferObject*
 ///
 /// @return libqt_list of QSize*
 ///
-libqt_list q_openglframebufferobject_sizes(void* self);
+libqt_list q_openglframebufferobject_sizes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html#toImage)
 ///
-/// @param self QOpenGLFramebufferObject*
+/// @param self const QOpenGLFramebufferObject*
 ///
-QImage* q_openglframebufferobject_to_image(void* self);
+QImage* q_openglframebufferobject_to_image(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html#toImage)
 ///
-/// @param self QOpenGLFramebufferObject*
+/// @param self const QOpenGLFramebufferObject*
 /// @param flipped bool
 /// @param colorAttachmentIndex int
 ///
-QImage* q_openglframebufferobject_to_image2(void* self, bool flipped, int colorAttachmentIndex);
+QImage* q_openglframebufferobject_to_image2(const void* self, bool flipped, int colorAttachmentIndex);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html#attachment)
 ///
-/// @param self QOpenGLFramebufferObject*
+/// @param self const QOpenGLFramebufferObject*
 ///
 /// @return enum QOpenGLFramebufferObject__Attachment
 ///
-int32_t q_openglframebufferobject_attachment(void* self);
+int32_t q_openglframebufferobject_attachment(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html#setAttachment)
 ///
@@ -255,9 +255,9 @@ void q_openglframebufferobject_set_attachment(void* self, int32_t attachment);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html#handle)
 ///
-/// @param self QOpenGLFramebufferObject*
+/// @param self const QOpenGLFramebufferObject*
 ///
-uint32_t q_openglframebufferobject_handle(void* self);
+uint32_t q_openglframebufferobject_handle(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html#bindDefault)
 ///
@@ -283,7 +283,7 @@ bool q_openglframebufferobject_has_open_g_l_framebuffer_blit();
 /// @param drawColorAttachmentIndex int
 /// @param restorePolicy enum QOpenGLFramebufferObject__FramebufferRestorePolicy
 ///
-void q_openglframebufferobject_blit_framebuffer(void* target, void* targetRect, void* source, void* sourceRect, uint32_t buffers, uint32_t filter, int readColorAttachmentIndex, int drawColorAttachmentIndex, int32_t restorePolicy);
+void q_openglframebufferobject_blit_framebuffer(void* target, const void* targetRect, void* source, const void* sourceRect, uint32_t buffers, uint32_t filter, int readColorAttachmentIndex, int drawColorAttachmentIndex, int32_t restorePolicy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html#blitFramebuffer)
 ///
@@ -296,7 +296,7 @@ void q_openglframebufferobject_blit_framebuffer(void* target, void* targetRect, 
 /// @param readColorAttachmentIndex int
 /// @param drawColorAttachmentIndex int
 ///
-void q_openglframebufferobject_blit_framebuffer2(void* target, void* targetRect, void* source, void* sourceRect, uint32_t buffers, uint32_t filter, int readColorAttachmentIndex, int drawColorAttachmentIndex);
+void q_openglframebufferobject_blit_framebuffer2(void* target, const void* targetRect, void* source, const void* sourceRect, uint32_t buffers, uint32_t filter, int readColorAttachmentIndex, int drawColorAttachmentIndex);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html#blitFramebuffer)
 ///
@@ -305,7 +305,7 @@ void q_openglframebufferobject_blit_framebuffer2(void* target, void* targetRect,
 /// @param source QOpenGLFramebufferObject*
 /// @param sourceRect QRect*
 ///
-void q_openglframebufferobject_blit_framebuffer3(void* target, void* targetRect, void* source, void* sourceRect);
+void q_openglframebufferobject_blit_framebuffer3(void* target, const void* targetRect, void* source, const void* sourceRect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html#blitFramebuffer)
 ///
@@ -320,7 +320,7 @@ void q_openglframebufferobject_blit_framebuffer4(void* target, void* source);
 /// @param size QSize*
 /// @param internalFormat uint32_t
 ///
-void q_openglframebufferobject_add_color_attachment22(void* self, void* size, uint32_t internalFormat);
+void q_openglframebufferobject_add_color_attachment22(void* self, const void* size, uint32_t internalFormat);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html#addColorAttachment)
 ///
@@ -333,10 +333,10 @@ void q_openglframebufferobject_add_color_attachment3(void* self, int width, int 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html#toImage)
 ///
-/// @param self QOpenGLFramebufferObject*
+/// @param self const QOpenGLFramebufferObject*
 /// @param flipped bool
 ///
-QImage* q_openglframebufferobject_to_image1(void* self, bool flipped);
+QImage* q_openglframebufferobject_to_image1(const void* self, bool flipped);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html#blitFramebuffer)
 ///
@@ -346,7 +346,7 @@ QImage* q_openglframebufferobject_to_image1(void* self, bool flipped);
 /// @param sourceRect QRect*
 /// @param buffers uint32_t
 ///
-void q_openglframebufferobject_blit_framebuffer5(void* target, void* targetRect, void* source, void* sourceRect, uint32_t buffers);
+void q_openglframebufferobject_blit_framebuffer5(void* target, const void* targetRect, void* source, const void* sourceRect, uint32_t buffers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html#blitFramebuffer)
 ///
@@ -357,7 +357,7 @@ void q_openglframebufferobject_blit_framebuffer5(void* target, void* targetRect,
 /// @param buffers uint32_t
 /// @param filter uint32_t
 ///
-void q_openglframebufferobject_blit_framebuffer6(void* target, void* targetRect, void* source, void* sourceRect, uint32_t buffers, uint32_t filter);
+void q_openglframebufferobject_blit_framebuffer6(void* target, const void* targetRect, void* source, const void* sourceRect, uint32_t buffers, uint32_t filter);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html#blitFramebuffer)
 ///
@@ -396,14 +396,14 @@ QOpenGLFramebufferObjectFormat* q_openglframebufferobjectformat_new();
 ///
 /// @param other QOpenGLFramebufferObjectFormat*
 ///
-QOpenGLFramebufferObjectFormat* q_openglframebufferobjectformat_new2(void* other);
+QOpenGLFramebufferObjectFormat* q_openglframebufferobjectformat_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobjectformat.html#operator-eq)
 ///
 /// @param self QOpenGLFramebufferObjectFormat*
 /// @param other QOpenGLFramebufferObjectFormat*
 ///
-void q_openglframebufferobjectformat_operator_assign(void* self, void* other);
+void q_openglframebufferobjectformat_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobjectformat.html#setSamples)
 ///
@@ -414,9 +414,9 @@ void q_openglframebufferobjectformat_set_samples(void* self, int samples);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobjectformat.html#samples)
 ///
-/// @param self QOpenGLFramebufferObjectFormat*
+/// @param self const QOpenGLFramebufferObjectFormat*
 ///
-int32_t q_openglframebufferobjectformat_samples(void* self);
+int32_t q_openglframebufferobjectformat_samples(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobjectformat.html#setMipmap)
 ///
@@ -427,9 +427,9 @@ void q_openglframebufferobjectformat_set_mipmap(void* self, bool enabled);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobjectformat.html#mipmap)
 ///
-/// @param self QOpenGLFramebufferObjectFormat*
+/// @param self const QOpenGLFramebufferObjectFormat*
 ///
-bool q_openglframebufferobjectformat_mipmap(void* self);
+bool q_openglframebufferobjectformat_mipmap(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobjectformat.html#setAttachment)
 ///
@@ -440,11 +440,11 @@ void q_openglframebufferobjectformat_set_attachment(void* self, int32_t attachme
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobjectformat.html#attachment)
 ///
-/// @param self QOpenGLFramebufferObjectFormat*
+/// @param self const QOpenGLFramebufferObjectFormat*
 ///
 /// @return enum QOpenGLFramebufferObject__Attachment
 ///
-int32_t q_openglframebufferobjectformat_attachment(void* self);
+int32_t q_openglframebufferobjectformat_attachment(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobjectformat.html#setTextureTarget)
 ///
@@ -462,17 +462,17 @@ void q_openglframebufferobjectformat_set_internal_texture_format(void* self, uin
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobjectformat.html#operator-eq-eq)
 ///
-/// @param self QOpenGLFramebufferObjectFormat*
+/// @param self const QOpenGLFramebufferObjectFormat*
 /// @param other QOpenGLFramebufferObjectFormat*
 ///
-bool q_openglframebufferobjectformat_operator_equal(void* self, void* other);
+bool q_openglframebufferobjectformat_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobjectformat.html#operator-not-eq)
 ///
-/// @param self QOpenGLFramebufferObjectFormat*
+/// @param self const QOpenGLFramebufferObjectFormat*
 /// @param other QOpenGLFramebufferObjectFormat*
 ///
-bool q_openglframebufferobjectformat_operator_not_equal(void* self, void* other);
+bool q_openglframebufferobjectformat_operator_not_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobjectformat.html#dtor.QOpenGLFramebufferObjectFormat)
 ///

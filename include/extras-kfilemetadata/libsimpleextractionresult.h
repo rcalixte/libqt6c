@@ -22,7 +22,7 @@ KFileMetaData__SimpleExtractionResult* k_filemetadata__simpleextractionresult_ne
 ///
 /// @param rhs KFileMetaData__SimpleExtractionResult*
 ///
-KFileMetaData__SimpleExtractionResult* k_filemetadata__simpleextractionresult_new2(void* rhs);
+KFileMetaData__SimpleExtractionResult* k_filemetadata__simpleextractionresult_new2(const void* rhs);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-simpleextractionresult.html)
 
@@ -48,14 +48,14 @@ KFileMetaData__SimpleExtractionResult* k_filemetadata__simpleextractionresult_ne
 /// @param self KFileMetaData__SimpleExtractionResult*
 /// @param rhs KFileMetaData__SimpleExtractionResult*
 ///
-void k_filemetadata__simpleextractionresult_operator_assign(void* self, void* rhs);
+void k_filemetadata__simpleextractionresult_operator_assign(void* self, const void* rhs);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-simpleextractionresult.html#operator-eq-eq)
 ///
-/// @param self KFileMetaData__SimpleExtractionResult*
+/// @param self const KFileMetaData__SimpleExtractionResult*
 /// @param rhs KFileMetaData__SimpleExtractionResult*
 ///
-bool k_filemetadata__simpleextractionresult_operator_equal(void* self, void* rhs);
+bool k_filemetadata__simpleextractionresult_operator_equal(const void* self, const void* rhs);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-simpleextractionresult.html#add)
 ///
@@ -63,7 +63,7 @@ bool k_filemetadata__simpleextractionresult_operator_equal(void* self, void* rhs
 /// @param property enum KFileMetaData__Property__Property
 /// @param value QVariant*
 ///
-void k_filemetadata__simpleextractionresult_add(void* self, int32_t property, void* value);
+void k_filemetadata__simpleextractionresult_add(void* self, int32_t property, const void* value);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-simpleextractionresult.html#add)
 ///
@@ -72,7 +72,7 @@ void k_filemetadata__simpleextractionresult_add(void* self, int32_t property, vo
 /// @param self KFileMetaData__SimpleExtractionResult*
 /// @param callback void func(KFileMetaData__SimpleExtractionResult* self, enum KFileMetaData__Property__Property property, QVariant* value)
 ///
-void k_filemetadata__simpleextractionresult_on_add(void* self, void (*callback)(void*, int32_t, void*));
+void k_filemetadata__simpleextractionresult_on_add(void* self, void (*callback)(void*, int32_t, const void*));
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-simpleextractionresult.html#add)
 ///
@@ -82,7 +82,7 @@ void k_filemetadata__simpleextractionresult_on_add(void* self, void (*callback)(
 /// @param property enum KFileMetaData__Property__Property
 /// @param value QVariant*
 ///
-void k_filemetadata__simpleextractionresult_super_add(void* self, int32_t property, void* value);
+void k_filemetadata__simpleextractionresult_super_add(void* self, int32_t property, const void* value);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-simpleextractionresult.html#addType)
 ///
@@ -149,27 +149,27 @@ void k_filemetadata__simpleextractionresult_super_append(void* self, const char*
 /// free(map.values);
 /// ```
 ///
-/// @param self KFileMetaData__SimpleExtractionResult*
+/// @param self const KFileMetaData__SimpleExtractionResult*
 ///
 /// @return libqt_map of enum KFileMetaData__Property__Property to QVariant**
 ///
-libqt_map k_filemetadata__simpleextractionresult_properties(void* self);
+libqt_map k_filemetadata__simpleextractionresult_properties(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-simpleextractionresult.html#text)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileMetaData__SimpleExtractionResult*
+/// @param self const KFileMetaData__SimpleExtractionResult*
 ///
-const char* k_filemetadata__simpleextractionresult_text(void* self);
+const char* k_filemetadata__simpleextractionresult_text(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-simpleextractionresult.html#types)
 ///
-/// @param self KFileMetaData__SimpleExtractionResult*
+/// @param self const KFileMetaData__SimpleExtractionResult*
 ///
 /// @return libqt_list of enum KFileMetaData__Type__Type
 ///
-libqt_list k_filemetadata__simpleextractionresult_types(void* self);
+libqt_list k_filemetadata__simpleextractionresult_types(const void* self);
 
 /// Inherited from KFileMetaData::ExtractionResult
 ///
@@ -177,9 +177,9 @@ libqt_list k_filemetadata__simpleextractionresult_types(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileMetaData__SimpleExtractionResult*
+/// @param self const KFileMetaData__SimpleExtractionResult*
 ///
-const char* k_filemetadata__simpleextractionresult_input_url(void* self);
+const char* k_filemetadata__simpleextractionresult_input_url(const void* self);
 
 /// Inherited from KFileMetaData::ExtractionResult
 ///
@@ -187,19 +187,19 @@ const char* k_filemetadata__simpleextractionresult_input_url(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileMetaData__SimpleExtractionResult*
+/// @param self const KFileMetaData__SimpleExtractionResult*
 ///
-const char* k_filemetadata__simpleextractionresult_input_mimetype(void* self);
+const char* k_filemetadata__simpleextractionresult_input_mimetype(const void* self);
 
 /// Inherited from KFileMetaData::ExtractionResult
 ///
 /// [Upstream resources](https://api.kde.org/kfilemetadata-extractionresult.html#inputFlags)
 ///
-/// @param self KFileMetaData__SimpleExtractionResult*
+/// @param self const KFileMetaData__SimpleExtractionResult*
 ///
 /// @return flag of enum KFileMetaData__ExtractionResult__Flag
 ///
-int32_t k_filemetadata__simpleextractionresult_input_flags(void* self);
+int32_t k_filemetadata__simpleextractionresult_input_flags(const void* self);
 
 /// Inherited from KFileMetaData::ExtractionResult
 ///
@@ -216,11 +216,11 @@ int32_t k_filemetadata__simpleextractionresult_input_flags(void* self);
 /// free(map.values);
 /// ```
 ///
-/// @param self KFileMetaData__SimpleExtractionResult*
+/// @param self const KFileMetaData__SimpleExtractionResult*
 ///
 /// @return libqt_map of enum KFileMetaData__EmbeddedImageData__ImageType to char*
 ///
-libqt_map k_filemetadata__simpleextractionresult_image_data(void* self);
+libqt_map k_filemetadata__simpleextractionresult_image_data(const void* self);
 
 /// Delete this object from C++ memory.
 ///

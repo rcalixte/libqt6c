@@ -26,17 +26,11 @@ void q_poppler__baseconverter_set_output_device(void* self, void* device);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1BaseConverter.html)
 ///
-/// @param self Poppler__BaseConverter*
-///
-bool q_poppler__baseconverter_convert(void* self);
-
-/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1BaseConverter.html)
-///
-/// @param self Poppler__BaseConverter*
+/// @param self const Poppler__BaseConverter*
 ///
 /// @return enum Poppler__BaseConverter__Error
 ///
-int32_t q_poppler__baseconverter_last_error(void* self);
+int32_t q_poppler__baseconverter_last_error(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1BaseConverter.html)
 ///
@@ -155,11 +149,11 @@ void q_poppler__psconverter_set_p_s_options(void* self, int32_t options);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PSConverter.html)
 ///
-/// @param self Poppler__PSConverter*
+/// @param self const Poppler__PSConverter*
 ///
 /// @return flag of enum Poppler__PSConverter__PSOption
 ///
-int32_t q_poppler__psconverter_ps_options(void* self);
+int32_t q_poppler__psconverter_ps_options(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PSConverter.html)
 ///
@@ -189,11 +183,11 @@ void q_poppler__psconverter_set_output_device(void* self, void* device);
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PSConverter.html)
 ///
-/// @param self Poppler__PSConverter*
+/// @param self const Poppler__PSConverter*
 ///
 /// @return enum Poppler__BaseConverter__Error
 ///
-int32_t q_poppler__psconverter_last_error(void* self);
+int32_t q_poppler__psconverter_last_error(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PSConverter.html)
 ///
@@ -214,18 +208,18 @@ void q_poppler__pdfconverter_set_p_d_f_options(void* self, int32_t options);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter.html)
 ///
-/// @param self Poppler__PDFConverter*
+/// @param self const Poppler__PDFConverter*
 ///
 /// @return flag of enum Poppler__PDFConverter__PDFOption
 ///
-int32_t q_poppler__pdfconverter_pdf_options(void* self);
+int32_t q_poppler__pdfconverter_pdf_options(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter.html)
 ///
 /// @param self Poppler__PDFConverter*
 /// @param data Poppler__PDFConverter__NewSignatureData*
 ///
-bool q_poppler__pdfconverter_sign(void* self, void* data);
+bool q_poppler__pdfconverter_sign(void* self, const void* data);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter.html)
 ///
@@ -255,11 +249,11 @@ void q_poppler__pdfconverter_set_output_device(void* self, void* device);
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter.html)
 ///
-/// @param self Poppler__PDFConverter*
+/// @param self const Poppler__PDFConverter*
 ///
 /// @return enum Poppler__BaseConverter__Error
 ///
-int32_t q_poppler__pdfconverter_last_error(void* self);
+int32_t q_poppler__pdfconverter_last_error(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter.html)
 ///
@@ -279,9 +273,9 @@ Poppler__PDFConverter__NewSignatureData* q_poppler__pdfconverter__newsignatureda
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__PDFConverter__NewSignatureData*
+/// @param self const Poppler__PDFConverter__NewSignatureData*
 ///
-const char* q_poppler__pdfconverter__newsignaturedata_cert_nickname(void* self);
+const char* q_poppler__pdfconverter__newsignaturedata_cert_nickname(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
@@ -294,9 +288,9 @@ void q_poppler__pdfconverter__newsignaturedata_set_cert_nickname(void* self, con
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__PDFConverter__NewSignatureData*
+/// @param self const Poppler__PDFConverter__NewSignatureData*
 ///
-const char* q_poppler__pdfconverter__newsignaturedata_password(void* self);
+const char* q_poppler__pdfconverter__newsignaturedata_password(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
@@ -307,9 +301,9 @@ void q_poppler__pdfconverter__newsignaturedata_set_password(void* self, const ch
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
-/// @param self Poppler__PDFConverter__NewSignatureData*
+/// @param self const Poppler__PDFConverter__NewSignatureData*
 ///
-int32_t q_poppler__pdfconverter__newsignaturedata_page(void* self);
+int32_t q_poppler__pdfconverter__newsignaturedata_page(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
@@ -320,24 +314,24 @@ void q_poppler__pdfconverter__newsignaturedata_set_page(void* self, int page);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
-/// @param self Poppler__PDFConverter__NewSignatureData*
+/// @param self const Poppler__PDFConverter__NewSignatureData*
 ///
-QRectF* q_poppler__pdfconverter__newsignaturedata_bounding_rectangle(void* self);
+QRectF* q_poppler__pdfconverter__newsignaturedata_bounding_rectangle(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
 /// @param self Poppler__PDFConverter__NewSignatureData*
 /// @param rect QRectF*
 ///
-void q_poppler__pdfconverter__newsignaturedata_set_bounding_rectangle(void* self, void* rect);
+void q_poppler__pdfconverter__newsignaturedata_set_bounding_rectangle(void* self, const void* rect);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__PDFConverter__NewSignatureData*
+/// @param self const Poppler__PDFConverter__NewSignatureData*
 ///
-const char* q_poppler__pdfconverter__newsignaturedata_signature_text(void* self);
+const char* q_poppler__pdfconverter__newsignaturedata_signature_text(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
@@ -350,9 +344,9 @@ void q_poppler__pdfconverter__newsignaturedata_set_signature_text(void* self, co
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__PDFConverter__NewSignatureData*
+/// @param self const Poppler__PDFConverter__NewSignatureData*
 ///
-const char* q_poppler__pdfconverter__newsignaturedata_signature_left_text(void* self);
+const char* q_poppler__pdfconverter__newsignaturedata_signature_left_text(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
@@ -365,9 +359,9 @@ void q_poppler__pdfconverter__newsignaturedata_set_signature_left_text(void* sel
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__PDFConverter__NewSignatureData*
+/// @param self const Poppler__PDFConverter__NewSignatureData*
 ///
-const char* q_poppler__pdfconverter__newsignaturedata_reason(void* self);
+const char* q_poppler__pdfconverter__newsignaturedata_reason(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
@@ -380,9 +374,9 @@ void q_poppler__pdfconverter__newsignaturedata_set_reason(void* self, const char
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__PDFConverter__NewSignatureData*
+/// @param self const Poppler__PDFConverter__NewSignatureData*
 ///
-const char* q_poppler__pdfconverter__newsignaturedata_location(void* self);
+const char* q_poppler__pdfconverter__newsignaturedata_location(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
@@ -393,9 +387,9 @@ void q_poppler__pdfconverter__newsignaturedata_set_location(void* self, const ch
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
-/// @param self Poppler__PDFConverter__NewSignatureData*
+/// @param self const Poppler__PDFConverter__NewSignatureData*
 ///
-double q_poppler__pdfconverter__newsignaturedata_font_size(void* self);
+double q_poppler__pdfconverter__newsignaturedata_font_size(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
@@ -406,9 +400,9 @@ void q_poppler__pdfconverter__newsignaturedata_set_font_size(void* self, double 
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
-/// @param self Poppler__PDFConverter__NewSignatureData*
+/// @param self const Poppler__PDFConverter__NewSignatureData*
 ///
-double q_poppler__pdfconverter__newsignaturedata_left_font_size(void* self);
+double q_poppler__pdfconverter__newsignaturedata_left_font_size(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
@@ -419,35 +413,35 @@ void q_poppler__pdfconverter__newsignaturedata_set_left_font_size(void* self, do
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
-/// @param self Poppler__PDFConverter__NewSignatureData*
+/// @param self const Poppler__PDFConverter__NewSignatureData*
 ///
-QColor* q_poppler__pdfconverter__newsignaturedata_font_color(void* self);
+QColor* q_poppler__pdfconverter__newsignaturedata_font_color(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
 /// @param self Poppler__PDFConverter__NewSignatureData*
 /// @param color QColor*
 ///
-void q_poppler__pdfconverter__newsignaturedata_set_font_color(void* self, void* color);
+void q_poppler__pdfconverter__newsignaturedata_set_font_color(void* self, const void* color);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
-/// @param self Poppler__PDFConverter__NewSignatureData*
+/// @param self const Poppler__PDFConverter__NewSignatureData*
 ///
-QColor* q_poppler__pdfconverter__newsignaturedata_border_color(void* self);
+QColor* q_poppler__pdfconverter__newsignaturedata_border_color(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
 /// @param self Poppler__PDFConverter__NewSignatureData*
 /// @param color QColor*
 ///
-void q_poppler__pdfconverter__newsignaturedata_set_border_color(void* self, void* color);
+void q_poppler__pdfconverter__newsignaturedata_set_border_color(void* self, const void* color);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
-/// @param self Poppler__PDFConverter__NewSignatureData*
+/// @param self const Poppler__PDFConverter__NewSignatureData*
 ///
-double q_poppler__pdfconverter__newsignaturedata_border_width(void* self);
+double q_poppler__pdfconverter__newsignaturedata_border_width(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
@@ -458,24 +452,24 @@ void q_poppler__pdfconverter__newsignaturedata_set_border_width(void* self, doub
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
-/// @param self Poppler__PDFConverter__NewSignatureData*
+/// @param self const Poppler__PDFConverter__NewSignatureData*
 ///
-QColor* q_poppler__pdfconverter__newsignaturedata_background_color(void* self);
+QColor* q_poppler__pdfconverter__newsignaturedata_background_color(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
 /// @param self Poppler__PDFConverter__NewSignatureData*
 /// @param color QColor*
 ///
-void q_poppler__pdfconverter__newsignaturedata_set_background_color(void* self, void* color);
+void q_poppler__pdfconverter__newsignaturedata_set_background_color(void* self, const void* color);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__PDFConverter__NewSignatureData*
+/// @param self const Poppler__PDFConverter__NewSignatureData*
 ///
-const char* q_poppler__pdfconverter__newsignaturedata_field_partial_name(void* self);
+const char* q_poppler__pdfconverter__newsignaturedata_field_partial_name(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
@@ -488,9 +482,9 @@ void q_poppler__pdfconverter__newsignaturedata_set_field_partial_name(void* self
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Poppler__PDFConverter__NewSignatureData*
+/// @param self const Poppler__PDFConverter__NewSignatureData*
 ///
-char* q_poppler__pdfconverter__newsignaturedata_document_owner_password(void* self);
+char* q_poppler__pdfconverter__newsignaturedata_document_owner_password(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
@@ -503,9 +497,9 @@ void q_poppler__pdfconverter__newsignaturedata_set_document_owner_password(void*
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Poppler__PDFConverter__NewSignatureData*
+/// @param self const Poppler__PDFConverter__NewSignatureData*
 ///
-char* q_poppler__pdfconverter__newsignaturedata_document_user_password(void* self);
+char* q_poppler__pdfconverter__newsignaturedata_document_user_password(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
@@ -518,9 +512,9 @@ void q_poppler__pdfconverter__newsignaturedata_set_document_user_password(void* 
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__PDFConverter__NewSignatureData*
+/// @param self const Poppler__PDFConverter__NewSignatureData*
 ///
-const char* q_poppler__pdfconverter__newsignaturedata_image_path(void* self);
+const char* q_poppler__pdfconverter__newsignaturedata_image_path(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///

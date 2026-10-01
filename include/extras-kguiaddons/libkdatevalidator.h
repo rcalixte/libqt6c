@@ -24,26 +24,26 @@ KDateValidator* k_datevalidator_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 ///
-const QMetaObject* k_datevalidator_meta_object(void* self);
+const QMetaObject* k_datevalidator_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KDateValidator*
-/// @param callback const QMetaObject* func()
+/// @param self const KDateValidator*
+/// @param callback const QMetaObject* func(const KDateValidator* self)
 ///
-void k_datevalidator_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_datevalidator_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 ///
-const QMetaObject* k_datevalidator_super_meta_object(void* self);
+const QMetaObject* k_datevalidator_super_meta_object(const void* self);
 
 /// @param self KDateValidator*
 /// @param param1 const char*
@@ -97,69 +97,69 @@ const char* k_datevalidator_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kdatevalidator.html#validate)
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 /// @param text const char*
 /// @param e int*
 ///
 /// @return enum QValidator__State
 ///
-int32_t k_datevalidator_validate(void* self, const char* text, int* e);
+int32_t k_datevalidator_validate(const void* self, const char* text, int* e);
 
 /// [Upstream resources](https://api.kde.org/kdatevalidator.html#validate)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KDateValidator*
-/// @param callback int32_t func(KDateValidator* self, const char* text, int* e)
+/// @param self const KDateValidator*
+/// @param callback int32_t func(const KDateValidator* self, const char* text, int* e)
 ///
-void k_datevalidator_on_validate(void* self, int32_t (*callback)(void*, const char*, int*));
+void k_datevalidator_on_validate(const void* self, int32_t (*callback)(const void*, const char*, int*));
 
 /// [Upstream resources](https://api.kde.org/kdatevalidator.html#validate)
 ///
 /// Base class method implementation
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 /// @param text const char*
 /// @param e int*
 ///
 /// @return enum QValidator__State
 ///
-int32_t k_datevalidator_super_validate(void* self, const char* text, int* e);
+int32_t k_datevalidator_super_validate(const void* self, const char* text, int* e);
 
 /// [Upstream resources](https://api.kde.org/kdatevalidator.html#fixup)
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 /// @param input const char*
 ///
-void k_datevalidator_fixup(void* self, const char* input);
+void k_datevalidator_fixup(const void* self, const char* input);
 
 /// [Upstream resources](https://api.kde.org/kdatevalidator.html#fixup)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KDateValidator*
-/// @param callback void func(KDateValidator* self, const char* input)
+/// @param self const KDateValidator*
+/// @param callback void func(const KDateValidator* self, const char* input)
 ///
-void k_datevalidator_on_fixup(void* self, void (*callback)(void*, const char*));
+void k_datevalidator_on_fixup(const void* self, void (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://api.kde.org/kdatevalidator.html#fixup)
 ///
 /// Base class method implementation
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 /// @param input const char*
 ///
-void k_datevalidator_super_fixup(void* self, const char* input);
+void k_datevalidator_super_fixup(const void* self, const char* input);
 
 /// [Upstream resources](https://api.kde.org/kdatevalidator.html#date)
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 /// @param text const char*
 /// @param date QDate*
 ///
 /// @return enum QValidator__State
 ///
-int32_t k_datevalidator_date(void* self, const char* text, void* date);
+int32_t k_datevalidator_date(const void* self, const char* text, void* date);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -187,15 +187,15 @@ const char* k_datevalidator_tr3(const char* s, const char* c, int n);
 /// @param self KDateValidator*
 /// @param locale QLocale*
 ///
-void k_datevalidator_set_locale(void* self, void* locale);
+void k_datevalidator_set_locale(void* self, const void* locale);
 
 /// Inherited from QValidator
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalidator.html#locale)
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 ///
-QLocale* k_datevalidator_locale(void* self);
+QLocale* k_datevalidator_locale(const void* self);
 
 /// Inherited from QValidator
 ///
@@ -220,9 +220,9 @@ void k_datevalidator_on_changed(void* self, void (*callback)(void*));
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 ///
-const char* k_datevalidator_object_name(void* self);
+const char* k_datevalidator_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -237,33 +237,33 @@ void k_datevalidator_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 ///
-bool k_datevalidator_is_widget_type(void* self);
+bool k_datevalidator_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 ///
-bool k_datevalidator_is_window_type(void* self);
+bool k_datevalidator_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 ///
-bool k_datevalidator_is_quick_item_type(void* self);
+bool k_datevalidator_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 ///
-bool k_datevalidator_signals_blocked(void* self);
+bool k_datevalidator_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -278,9 +278,9 @@ bool k_datevalidator_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 ///
-QThread* k_datevalidator_thread(void* self);
+QThread* k_datevalidator_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -331,11 +331,11 @@ void k_datevalidator_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_datevalidator_children(void* self);
+libqt_list k_datevalidator_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -373,7 +373,7 @@ void k_datevalidator_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_datevalidator_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_datevalidator_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -384,18 +384,18 @@ QMetaObject__Connection* k_datevalidator_connect(void* sender, const char* signa
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_datevalidator_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_datevalidator_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_datevalidator_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_datevalidator_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -406,7 +406,7 @@ QMetaObject__Connection* k_datevalidator_connect3(void* self, void* sender, cons
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_datevalidator_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_datevalidator_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -417,24 +417,24 @@ bool k_datevalidator_disconnect(void* sender, const char* signal, void* receiver
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_datevalidator_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_datevalidator_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 ///
-bool k_datevalidator_disconnect3(void* self);
+bool k_datevalidator_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 /// @param receiver QObject*
 ///
-bool k_datevalidator_disconnect4(void* self, void* receiver);
+bool k_datevalidator_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -442,23 +442,23 @@ bool k_datevalidator_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_datevalidator_disconnect5(void* param1);
+bool k_datevalidator_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 ///
-void k_datevalidator_dump_object_tree(void* self);
+void k_datevalidator_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 ///
-void k_datevalidator_dump_object_info(void* self);
+void k_datevalidator_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -468,16 +468,16 @@ void k_datevalidator_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_datevalidator_set_property(void* self, const char* name, void* value);
+bool k_datevalidator_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 /// @param name const char*
 ///
-QVariant* k_datevalidator_property(void* self, const char* name);
+QVariant* k_datevalidator_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -485,9 +485,9 @@ QVariant* k_datevalidator_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 ///
-const char** k_datevalidator_dynamic_property_names(void* self);
+const char** k_datevalidator_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -501,9 +501,9 @@ QBindingStorage* k_datevalidator_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 ///
-const QBindingStorage* k_datevalidator_binding_storage2(void* self);
+const QBindingStorage* k_datevalidator_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -526,18 +526,18 @@ void k_datevalidator_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 ///
-QObject* k_datevalidator_parent(void* self);
+QObject* k_datevalidator_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 /// @param classname const char*
 ///
-bool k_datevalidator_inherits(void* self, const char* classname);
+bool k_datevalidator_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -577,7 +577,7 @@ int32_t k_datevalidator_start_timer23(void* self, int64_t time, int32_t timerTyp
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_datevalidator_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_datevalidator_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -589,59 +589,59 @@ QMetaObject__Connection* k_datevalidator_connect5(void* sender, const char* sign
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_datevalidator_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_datevalidator_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_datevalidator_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_datevalidator_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 /// @param signal const char*
 ///
-bool k_datevalidator_disconnect1(void* self, const char* signal);
+bool k_datevalidator_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KDateValidator*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_datevalidator_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_datevalidator_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_datevalidator_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_datevalidator_disconnect23(void* self, void* receiver, const char* member);
+bool k_datevalidator_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KDateValidator*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_datevalidator_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -837,7 +837,7 @@ void k_datevalidator_on_custom_event(void* self, void (*callback)(void*, void*))
 /// @param self KDateValidator*
 /// @param signal QMetaMethod*
 ///
-void k_datevalidator_connect_notify(void* self, void* signal);
+void k_datevalidator_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -848,7 +848,7 @@ void k_datevalidator_connect_notify(void* self, void* signal);
 /// @param self KDateValidator*
 /// @param signal QMetaMethod*
 ///
-void k_datevalidator_super_connect_notify(void* self, void* signal);
+void k_datevalidator_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -859,7 +859,7 @@ void k_datevalidator_super_connect_notify(void* self, void* signal);
 /// @param self KDateValidator*
 /// @param callback void func(KDateValidator* self, QMetaMethod* signal)
 ///
-void k_datevalidator_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_datevalidator_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -870,7 +870,7 @@ void k_datevalidator_on_connect_notify(void* self, void (*callback)(void*, void*
 /// @param self KDateValidator*
 /// @param signal QMetaMethod*
 ///
-void k_datevalidator_disconnect_notify(void* self, void* signal);
+void k_datevalidator_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -881,7 +881,7 @@ void k_datevalidator_disconnect_notify(void* self, void* signal);
 /// @param self KDateValidator*
 /// @param signal QMetaMethod*
 ///
-void k_datevalidator_super_disconnect_notify(void* self, void* signal);
+void k_datevalidator_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -892,7 +892,7 @@ void k_datevalidator_super_disconnect_notify(void* self, void* signal);
 /// @param self KDateValidator*
 /// @param callback void func(KDateValidator* self, QMetaMethod* signal)
 ///
-void k_datevalidator_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_datevalidator_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -900,9 +900,9 @@ void k_datevalidator_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 ///
-QObject* k_datevalidator_sender(void* self);
+QObject* k_datevalidator_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -910,9 +910,9 @@ QObject* k_datevalidator_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 ///
-QObject* k_datevalidator_super_sender(void* self);
+QObject* k_datevalidator_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -920,10 +920,10 @@ QObject* k_datevalidator_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KDateValidator*
-/// @param callback QObject* func()
+/// @param self const KDateValidator*
+/// @param callback QObject* func(KDateValidator* self)
 ///
-void k_datevalidator_on_sender(void* self, QObject* (*callback)());
+void k_datevalidator_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -931,9 +931,9 @@ void k_datevalidator_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 ///
-int32_t k_datevalidator_sender_signal_index(void* self);
+int32_t k_datevalidator_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -941,9 +941,9 @@ int32_t k_datevalidator_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 ///
-int32_t k_datevalidator_super_sender_signal_index(void* self);
+int32_t k_datevalidator_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -951,10 +951,10 @@ int32_t k_datevalidator_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KDateValidator*
-/// @param callback int32_t func()
+/// @param self const KDateValidator*
+/// @param callback int32_t func(KDateValidator* self)
 ///
-void k_datevalidator_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_datevalidator_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -962,10 +962,10 @@ void k_datevalidator_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 /// @param signal const char*
 ///
-int32_t k_datevalidator_receivers(void* self, const char* signal);
+int32_t k_datevalidator_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -973,10 +973,10 @@ int32_t k_datevalidator_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 /// @param signal const char*
 ///
-int32_t k_datevalidator_super_receivers(void* self, const char* signal);
+int32_t k_datevalidator_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -984,10 +984,10 @@ int32_t k_datevalidator_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 /// @param callback int32_t func(KDateValidator* self, const char* signal)
 ///
-void k_datevalidator_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_datevalidator_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -995,10 +995,10 @@ void k_datevalidator_on_receivers(void* self, int32_t (*callback)(void*, const c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 /// @param signal QMetaMethod*
 ///
-bool k_datevalidator_is_signal_connected(void* self, void* signal);
+bool k_datevalidator_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1006,10 +1006,10 @@ bool k_datevalidator_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 /// @param signal QMetaMethod*
 ///
-bool k_datevalidator_super_is_signal_connected(void* self, void* signal);
+bool k_datevalidator_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1017,10 +1017,10 @@ bool k_datevalidator_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KDateValidator*
+/// @param self const KDateValidator*
 /// @param callback bool func(KDateValidator* self, QMetaMethod* signal)
 ///
-void k_datevalidator_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_datevalidator_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

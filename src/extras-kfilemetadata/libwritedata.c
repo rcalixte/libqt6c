@@ -6,33 +6,33 @@ KFileMetaData__WriteData* k_filemetadata__writedata_new(const char* url, const c
     return KFileMetaData__WriteData_New(qstring(url), qstring(mimetype));
 }
 
-KFileMetaData__WriteData* k_filemetadata__writedata_new2(void* rhs) {
+KFileMetaData__WriteData* k_filemetadata__writedata_new2(const void* rhs) {
     return KFileMetaData__WriteData_New2((KFileMetaData__WriteData*)rhs);
 }
 
-void k_filemetadata__writedata_operator_assign(void* self, void* rhs) {
+void k_filemetadata__writedata_operator_assign(void* self, const void* rhs) {
     KFileMetaData__WriteData_OperatorAssign((KFileMetaData__WriteData*)self, (KFileMetaData__WriteData*)rhs);
 }
 
-bool k_filemetadata__writedata_operator_equal(void* self, void* rhs) {
+bool k_filemetadata__writedata_operator_equal(const void* self, const void* rhs) {
     return KFileMetaData__WriteData_OperatorEqual((KFileMetaData__WriteData*)self, (KFileMetaData__WriteData*)rhs);
 }
 
-const char* k_filemetadata__writedata_input_url(void* self) {
+const char* k_filemetadata__writedata_input_url(const void* self) {
     libqt_string _str = KFileMetaData__WriteData_InputUrl((KFileMetaData__WriteData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_filemetadata__writedata_input_mimetype(void* self) {
+const char* k_filemetadata__writedata_input_mimetype(const void* self) {
     libqt_string _str = KFileMetaData__WriteData_InputMimetype((KFileMetaData__WriteData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_filemetadata__writedata_add(void* self, int32_t property, void* value) {
+void k_filemetadata__writedata_add(void* self, int32_t property, const void* value) {
     KFileMetaData__WriteData_Add((KFileMetaData__WriteData*)self, property, (QVariant*)value);
 }
 
@@ -64,7 +64,7 @@ void k_filemetadata__writedata_add_image_data(void* self, libqt_map /* of enum K
     free(images_ret.values);
 }
 
-libqt_map /* of enum KFileMetaData__Property__Property to QVariant** */ k_filemetadata__writedata_properties(void* self) {
+libqt_map /* of enum KFileMetaData__Property__Property to QVariant** */ k_filemetadata__writedata_properties(const void* self) {
     // Convert QMultiMap<KFileMetaData::Property::Property,QVariant> to libqt_map
     libqt_map _out = KFileMetaData__WriteData_Properties((KFileMetaData__WriteData*)self);
     libqt_map _ret;
@@ -103,7 +103,7 @@ libqt_map /* of enum KFileMetaData__Property__Property to QVariant** */ k_fileme
     return _ret;
 }
 
-libqt_map /* of enum KFileMetaData__EmbeddedImageData__ImageType to char* */ k_filemetadata__writedata_image_data(void* self) {
+libqt_map /* of enum KFileMetaData__EmbeddedImageData__ImageType to char* */ k_filemetadata__writedata_image_data(const void* self) {
     // Convert QMap<KFileMetaData::EmbeddedImageData::ImageType,QByteArray> to libqt_map
     libqt_map _out = KFileMetaData__WriteData_ImageData((KFileMetaData__WriteData*)self);
     libqt_map _ret;

@@ -33,7 +33,7 @@ int32_t q_qqml_h_qml_register_type_not_available(const char* uri, int versionMaj
 /// @param qmlName const char*
 /// @param reason const char*
 ///
-int32_t q_qqml_h_qml_register_uncreatable_meta_object(void* staticMetaObject, const char* uri, int versionMajor, int versionMinor, const char* qmlName, const char* reason);
+int32_t q_qqml_h_qml_register_uncreatable_meta_object(const void* staticMetaObject, const char* uri, int versionMajor, int versionMinor, const char* qmlName, const char* reason);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqml-h.html#qmlExecuteDeferred)
 ///
@@ -45,13 +45,13 @@ void q_qqml_h_qml_execute_deferred(void* param1);
 ///
 /// @param param1 QObject*
 ///
-QQmlContext* q_qqml_h_qml_context(void* param1);
+QQmlContext* q_qqml_h_qml_context(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqml-h.html#qmlEngine)
 ///
 /// @param param1 QObject*
 ///
-QQmlEngine* q_qqml_h_qml_engine(void* param1);
+QQmlEngine* q_qqml_h_qml_engine(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqml-h.html#qmlAttachedPropertiesFunction)
 ///
@@ -60,7 +60,7 @@ QQmlEngine* q_qqml_h_qml_engine(void* param1);
 ///
 /// @return QObject* (*QQmlAttachedPropertiesFunc)(void* funcparam1)
 ///
-QQmlAttachedPropertiesFunc q_qqml_h_qml_attached_properties_function(void* param1, void* param2);
+QQmlAttachedPropertiesFunc q_qqml_h_qml_attached_properties_function(void* param1, const void* param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqml-h.html#qmlAttachedPropertiesObject)
 ///
@@ -119,7 +119,7 @@ void q_qqml_h_qml_unregister_module_import(const char* uri, int moduleMajor, con
 /// @param versionMinor int
 /// @param qmlName const char*
 ///
-int32_t q_qqml_h_qml_register_singleton_type(void* url, const char* uri, int versionMajor, int versionMinor, const char* qmlName);
+int32_t q_qqml_h_qml_register_singleton_type(const void* url, const char* uri, int versionMajor, int versionMinor, const char* qmlName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqml-h.html#qmlRegisterType)
 ///
@@ -129,7 +129,7 @@ int32_t q_qqml_h_qml_register_singleton_type(void* url, const char* uri, int ver
 /// @param versionMinor int
 /// @param qmlName const char*
 ///
-int32_t q_qqml_h_qml_register_type(void* url, const char* uri, int versionMajor, int versionMinor, const char* qmlName);
+int32_t q_qqml_h_qml_register_type(const void* url, const char* uri, int versionMajor, int versionMinor, const char* qmlName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqml-h.html#qmlRegisterNamespaceAndRevisions)
 ///
@@ -140,7 +140,7 @@ int32_t q_qqml_h_qml_register_type(void* url, const char* uri, int versionMajor,
 /// @param classInfoMetaObject QMetaObject*
 /// @param extensionMetaObject QMetaObject*
 ///
-void q_qqml_h_qml_register_namespace_and_revisions(void* metaObject, const char* uri, int versionMajor, libqt_list qmlTypeIds, void* classInfoMetaObject, void* extensionMetaObject);
+void q_qqml_h_qml_register_namespace_and_revisions(const void* metaObject, const char* uri, int versionMajor, libqt_list qmlTypeIds, const void* classInfoMetaObject, const void* extensionMetaObject);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqml-h.html#qmlRegisterNamespaceAndRevisions)
 ///
@@ -150,7 +150,7 @@ void q_qqml_h_qml_register_namespace_and_revisions(void* metaObject, const char*
 /// @param qmlTypeIds libqt_list of int
 /// @param classInfoMetaObject QMetaObject*
 ///
-void q_qqml_h_qml_register_namespace_and_revisions2(void* metaObject, const char* uri, int versionMajor, libqt_list qmlTypeIds, void* classInfoMetaObject);
+void q_qqml_h_qml_register_namespace_and_revisions2(const void* metaObject, const char* uri, int versionMajor, libqt_list qmlTypeIds, const void* classInfoMetaObject);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqml-h.html#qmlTypeId)
 ///
@@ -169,26 +169,26 @@ QQmlTypeNotAvailable* q_qmltypenotavailable_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 ///
-const QMetaObject* q_qmltypenotavailable_meta_object(void* self);
+const QMetaObject* q_qmltypenotavailable_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QQmlTypeNotAvailable*
-/// @param callback const QMetaObject* func()
+/// @param self const QQmlTypeNotAvailable*
+/// @param callback const QMetaObject* func(const QQmlTypeNotAvailable* self)
 ///
-void q_qmltypenotavailable_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_qmltypenotavailable_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 ///
-const QMetaObject* q_qmltypenotavailable_super_meta_object(void* self);
+const QMetaObject* q_qmltypenotavailable_super_meta_object(const void* self);
 
 /// @param self QQmlTypeNotAvailable*
 /// @param param1 const char*
@@ -265,9 +265,9 @@ const char* q_qmltypenotavailable_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 ///
-const char* q_qmltypenotavailable_object_name(void* self);
+const char* q_qmltypenotavailable_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -282,33 +282,33 @@ void q_qmltypenotavailable_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 ///
-bool q_qmltypenotavailable_is_widget_type(void* self);
+bool q_qmltypenotavailable_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 ///
-bool q_qmltypenotavailable_is_window_type(void* self);
+bool q_qmltypenotavailable_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 ///
-bool q_qmltypenotavailable_is_quick_item_type(void* self);
+bool q_qmltypenotavailable_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 ///
-bool q_qmltypenotavailable_signals_blocked(void* self);
+bool q_qmltypenotavailable_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -323,9 +323,9 @@ bool q_qmltypenotavailable_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 ///
-QThread* q_qmltypenotavailable_thread(void* self);
+QThread* q_qmltypenotavailable_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -376,11 +376,11 @@ void q_qmltypenotavailable_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_qmltypenotavailable_children(void* self);
+libqt_list q_qmltypenotavailable_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -418,7 +418,7 @@ void q_qmltypenotavailable_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_qmltypenotavailable_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_qmltypenotavailable_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -429,18 +429,18 @@ QMetaObject__Connection* q_qmltypenotavailable_connect(void* sender, const char*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_qmltypenotavailable_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_qmltypenotavailable_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_qmltypenotavailable_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_qmltypenotavailable_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -451,7 +451,7 @@ QMetaObject__Connection* q_qmltypenotavailable_connect3(void* self, void* sender
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_qmltypenotavailable_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_qmltypenotavailable_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -462,24 +462,24 @@ bool q_qmltypenotavailable_disconnect(void* sender, const char* signal, void* re
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_qmltypenotavailable_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_qmltypenotavailable_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 ///
-bool q_qmltypenotavailable_disconnect3(void* self);
+bool q_qmltypenotavailable_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 /// @param receiver QObject*
 ///
-bool q_qmltypenotavailable_disconnect4(void* self, void* receiver);
+bool q_qmltypenotavailable_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -487,23 +487,23 @@ bool q_qmltypenotavailable_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_qmltypenotavailable_disconnect5(void* param1);
+bool q_qmltypenotavailable_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 ///
-void q_qmltypenotavailable_dump_object_tree(void* self);
+void q_qmltypenotavailable_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 ///
-void q_qmltypenotavailable_dump_object_info(void* self);
+void q_qmltypenotavailable_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -513,16 +513,16 @@ void q_qmltypenotavailable_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_qmltypenotavailable_set_property(void* self, const char* name, void* value);
+bool q_qmltypenotavailable_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 /// @param name const char*
 ///
-QVariant* q_qmltypenotavailable_property(void* self, const char* name);
+QVariant* q_qmltypenotavailable_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -530,9 +530,9 @@ QVariant* q_qmltypenotavailable_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 ///
-const char** q_qmltypenotavailable_dynamic_property_names(void* self);
+const char** q_qmltypenotavailable_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -546,9 +546,9 @@ QBindingStorage* q_qmltypenotavailable_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 ///
-const QBindingStorage* q_qmltypenotavailable_binding_storage2(void* self);
+const QBindingStorage* q_qmltypenotavailable_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -571,18 +571,18 @@ void q_qmltypenotavailable_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 ///
-QObject* q_qmltypenotavailable_parent(void* self);
+QObject* q_qmltypenotavailable_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 /// @param classname const char*
 ///
-bool q_qmltypenotavailable_inherits(void* self, const char* classname);
+bool q_qmltypenotavailable_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -622,7 +622,7 @@ int32_t q_qmltypenotavailable_start_timer23(void* self, int64_t time, int32_t ti
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_qmltypenotavailable_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_qmltypenotavailable_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -634,59 +634,59 @@ QMetaObject__Connection* q_qmltypenotavailable_connect5(void* sender, const char
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_qmltypenotavailable_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_qmltypenotavailable_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_qmltypenotavailable_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_qmltypenotavailable_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 /// @param signal const char*
 ///
-bool q_qmltypenotavailable_disconnect1(void* self, const char* signal);
+bool q_qmltypenotavailable_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQmlTypeNotAvailable*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_qmltypenotavailable_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_qmltypenotavailable_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_qmltypenotavailable_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_qmltypenotavailable_disconnect23(void* self, void* receiver, const char* member);
+bool q_qmltypenotavailable_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QQmlTypeNotAvailable*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_qmltypenotavailable_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -882,7 +882,7 @@ void q_qmltypenotavailable_on_custom_event(void* self, void (*callback)(void*, v
 /// @param self QQmlTypeNotAvailable*
 /// @param signal QMetaMethod*
 ///
-void q_qmltypenotavailable_connect_notify(void* self, void* signal);
+void q_qmltypenotavailable_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -893,7 +893,7 @@ void q_qmltypenotavailable_connect_notify(void* self, void* signal);
 /// @param self QQmlTypeNotAvailable*
 /// @param signal QMetaMethod*
 ///
-void q_qmltypenotavailable_super_connect_notify(void* self, void* signal);
+void q_qmltypenotavailable_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -904,7 +904,7 @@ void q_qmltypenotavailable_super_connect_notify(void* self, void* signal);
 /// @param self QQmlTypeNotAvailable*
 /// @param callback void func(QQmlTypeNotAvailable* self, QMetaMethod* signal)
 ///
-void q_qmltypenotavailable_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_qmltypenotavailable_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -915,7 +915,7 @@ void q_qmltypenotavailable_on_connect_notify(void* self, void (*callback)(void*,
 /// @param self QQmlTypeNotAvailable*
 /// @param signal QMetaMethod*
 ///
-void q_qmltypenotavailable_disconnect_notify(void* self, void* signal);
+void q_qmltypenotavailable_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -926,7 +926,7 @@ void q_qmltypenotavailable_disconnect_notify(void* self, void* signal);
 /// @param self QQmlTypeNotAvailable*
 /// @param signal QMetaMethod*
 ///
-void q_qmltypenotavailable_super_disconnect_notify(void* self, void* signal);
+void q_qmltypenotavailable_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -937,7 +937,7 @@ void q_qmltypenotavailable_super_disconnect_notify(void* self, void* signal);
 /// @param self QQmlTypeNotAvailable*
 /// @param callback void func(QQmlTypeNotAvailable* self, QMetaMethod* signal)
 ///
-void q_qmltypenotavailable_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_qmltypenotavailable_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -945,9 +945,9 @@ void q_qmltypenotavailable_on_disconnect_notify(void* self, void (*callback)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 ///
-QObject* q_qmltypenotavailable_sender(void* self);
+QObject* q_qmltypenotavailable_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -955,9 +955,9 @@ QObject* q_qmltypenotavailable_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 ///
-QObject* q_qmltypenotavailable_super_sender(void* self);
+QObject* q_qmltypenotavailable_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -965,10 +965,10 @@ QObject* q_qmltypenotavailable_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQmlTypeNotAvailable*
-/// @param callback QObject* func()
+/// @param self const QQmlTypeNotAvailable*
+/// @param callback QObject* func(QQmlTypeNotAvailable* self)
 ///
-void q_qmltypenotavailable_on_sender(void* self, QObject* (*callback)());
+void q_qmltypenotavailable_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -976,9 +976,9 @@ void q_qmltypenotavailable_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 ///
-int32_t q_qmltypenotavailable_sender_signal_index(void* self);
+int32_t q_qmltypenotavailable_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -986,9 +986,9 @@ int32_t q_qmltypenotavailable_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 ///
-int32_t q_qmltypenotavailable_super_sender_signal_index(void* self);
+int32_t q_qmltypenotavailable_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -996,10 +996,10 @@ int32_t q_qmltypenotavailable_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQmlTypeNotAvailable*
-/// @param callback int32_t func()
+/// @param self const QQmlTypeNotAvailable*
+/// @param callback int32_t func(QQmlTypeNotAvailable* self)
 ///
-void q_qmltypenotavailable_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_qmltypenotavailable_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1007,10 +1007,10 @@ void q_qmltypenotavailable_on_sender_signal_index(void* self, int32_t (*callback
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 /// @param signal const char*
 ///
-int32_t q_qmltypenotavailable_receivers(void* self, const char* signal);
+int32_t q_qmltypenotavailable_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1018,10 +1018,10 @@ int32_t q_qmltypenotavailable_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 /// @param signal const char*
 ///
-int32_t q_qmltypenotavailable_super_receivers(void* self, const char* signal);
+int32_t q_qmltypenotavailable_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1029,10 +1029,10 @@ int32_t q_qmltypenotavailable_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 /// @param callback int32_t func(QQmlTypeNotAvailable* self, const char* signal)
 ///
-void q_qmltypenotavailable_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_qmltypenotavailable_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1040,10 +1040,10 @@ void q_qmltypenotavailable_on_receivers(void* self, int32_t (*callback)(void*, c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 /// @param signal QMetaMethod*
 ///
-bool q_qmltypenotavailable_is_signal_connected(void* self, void* signal);
+bool q_qmltypenotavailable_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1051,10 +1051,10 @@ bool q_qmltypenotavailable_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 /// @param signal QMetaMethod*
 ///
-bool q_qmltypenotavailable_super_is_signal_connected(void* self, void* signal);
+bool q_qmltypenotavailable_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1062,10 +1062,10 @@ bool q_qmltypenotavailable_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQmlTypeNotAvailable*
+/// @param self const QQmlTypeNotAvailable*
 /// @param callback bool func(QQmlTypeNotAvailable* self, QMetaMethod* signal)
 ///
-void q_qmltypenotavailable_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_qmltypenotavailable_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

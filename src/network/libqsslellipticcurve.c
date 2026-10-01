@@ -9,7 +9,7 @@ size_t q_qsslellipticcurve_h_q_hash2(void* curve, size_t seed) {
     return qsslellipticcurve_h_QHash2((QSslEllipticCurve*)curve, seed);
 }
 
-QSslEllipticCurve* q_sslellipticcurve_new(void* other) {
+QSslEllipticCurve* q_sslellipticcurve_new(const void* other) {
     return QSslEllipticCurve_New((QSslEllipticCurve*)other);
 }
 
@@ -21,7 +21,7 @@ QSslEllipticCurve* q_sslellipticcurve_new3() {
     return QSslEllipticCurve_New3();
 }
 
-QSslEllipticCurve* q_sslellipticcurve_new4(void* param1) {
+QSslEllipticCurve* q_sslellipticcurve_new4(const void* param1) {
     return QSslEllipticCurve_New4((QSslEllipticCurve*)param1);
 }
 
@@ -41,25 +41,25 @@ QSslEllipticCurve* q_sslellipticcurve_from_long_name(const char* name) {
     return QSslEllipticCurve_FromLongName(qstring(name));
 }
 
-const char* q_sslellipticcurve_short_name(void* self) {
+const char* q_sslellipticcurve_short_name(const void* self) {
     libqt_string _str = QSslEllipticCurve_ShortName((QSslEllipticCurve*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_sslellipticcurve_long_name(void* self) {
+const char* q_sslellipticcurve_long_name(const void* self) {
     libqt_string _str = QSslEllipticCurve_LongName((QSslEllipticCurve*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_sslellipticcurve_is_valid(void* self) {
+bool q_sslellipticcurve_is_valid(const void* self) {
     return QSslEllipticCurve_IsValid((QSslEllipticCurve*)self);
 }
 
-bool q_sslellipticcurve_is_tls_named_curve(void* self) {
+bool q_sslellipticcurve_is_tls_named_curve(const void* self) {
     return QSslEllipticCurve_IsTlsNamedCurve((QSslEllipticCurve*)self);
 }
 

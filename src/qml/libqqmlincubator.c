@@ -21,36 +21,36 @@ void q_qmlincubator_force_completion(void* self) {
     QQmlIncubator_ForceCompletion((QQmlIncubator*)self);
 }
 
-bool q_qmlincubator_is_null(void* self) {
+bool q_qmlincubator_is_null(const void* self) {
     return QQmlIncubator_IsNull((QQmlIncubator*)self);
 }
 
-bool q_qmlincubator_is_ready(void* self) {
+bool q_qmlincubator_is_ready(const void* self) {
     return QQmlIncubator_IsReady((QQmlIncubator*)self);
 }
 
-bool q_qmlincubator_is_error(void* self) {
+bool q_qmlincubator_is_error(const void* self) {
     return QQmlIncubator_IsError((QQmlIncubator*)self);
 }
 
-bool q_qmlincubator_is_loading(void* self) {
+bool q_qmlincubator_is_loading(const void* self) {
     return QQmlIncubator_IsLoading((QQmlIncubator*)self);
 }
 
-libqt_list /* of QQmlError* */ q_qmlincubator_errors(void* self) {
+libqt_list /* of QQmlError* */ q_qmlincubator_errors(const void* self) {
     libqt_list _arr = QQmlIncubator_Errors((QQmlIncubator*)self);
     return _arr;
 }
 
-int32_t q_qmlincubator_incubation_mode(void* self) {
+int32_t q_qmlincubator_incubation_mode(const void* self) {
     return QQmlIncubator_IncubationMode((QQmlIncubator*)self);
 }
 
-int32_t q_qmlincubator_status(void* self) {
+int32_t q_qmlincubator_status(const void* self) {
     return QQmlIncubator_Status((QQmlIncubator*)self);
 }
 
-QObject* q_qmlincubator_object(void* self) {
+QObject* q_qmlincubator_object(const void* self) {
     return QQmlIncubator_Object((QQmlIncubator*)self);
 }
 
@@ -114,11 +114,11 @@ QQmlIncubationController* q_qmlincubationcontroller_new() {
     return QQmlIncubationController_New();
 }
 
-QQmlEngine* q_qmlincubationcontroller_engine(void* self) {
+QQmlEngine* q_qmlincubationcontroller_engine(const void* self) {
     return QQmlIncubationController_Engine((QQmlIncubationController*)self);
 }
 
-int32_t q_qmlincubationcontroller_incubating_object_count(void* self) {
+int32_t q_qmlincubationcontroller_incubating_object_count(const void* self) {
     return QQmlIncubationController_IncubatingObjectCount((QQmlIncubationController*)self);
 }
 

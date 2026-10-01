@@ -27,26 +27,26 @@ KConfigPropertyMap* k_configpropertymap_new2(void* config, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 ///
-const QMetaObject* k_configpropertymap_meta_object(void* self);
+const QMetaObject* k_configpropertymap_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KConfigPropertyMap*
-/// @param callback const QMetaObject* func()
+/// @param self const KConfigPropertyMap*
+/// @param callback const QMetaObject* func(const KConfigPropertyMap* self)
 ///
-void k_configpropertymap_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_configpropertymap_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 ///
-const QMetaObject* k_configpropertymap_super_meta_object(void* self);
+const QMetaObject* k_configpropertymap_super_meta_object(const void* self);
 
 /// @param self KConfigPropertyMap*
 /// @param param1 const char*
@@ -100,9 +100,9 @@ const char* k_configpropertymap_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kconfigpropertymap.html#isNotify)
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 ///
-bool k_configpropertymap_is_notify(void* self);
+bool k_configpropertymap_is_notify(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfigpropertymap.html#setNotify)
 ///
@@ -113,10 +113,10 @@ void k_configpropertymap_set_notify(void* self, bool notify);
 
 /// [Upstream resources](https://api.kde.org/kconfigpropertymap.html#isImmutable)
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 /// @param key const char*
 ///
-bool k_configpropertymap_is_immutable(void* self, const char* key);
+bool k_configpropertymap_is_immutable(const void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kconfigpropertymap.html#writeConfig)
 ///
@@ -130,7 +130,7 @@ void k_configpropertymap_write_config(void* self);
 /// @param key const char*
 /// @param input QVariant*
 ///
-QVariant* k_configpropertymap_update_value(void* self, const char* key, void* input);
+QVariant* k_configpropertymap_update_value(void* self, const char* key, const void* input);
 
 /// [Upstream resources](https://api.kde.org/kconfigpropertymap.html#updateValue)
 ///
@@ -141,7 +141,7 @@ QVariant* k_configpropertymap_update_value(void* self, const char* key, void* in
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_configpropertymap_on_update_value(void* self, QVariant* (*callback)(void*, const char*, void*));
+void k_configpropertymap_on_update_value(void* self, QVariant* (*callback)(void*, const char*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kconfigpropertymap.html#updateValue)
 ///
@@ -151,7 +151,7 @@ void k_configpropertymap_on_update_value(void* self, QVariant* (*callback)(void*
 /// @param key const char*
 /// @param input QVariant*
 ///
-QVariant* k_configpropertymap_super_update_value(void* self, const char* key, void* input);
+QVariant* k_configpropertymap_super_update_value(void* self, const char* key, const void* input);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -176,10 +176,10 @@ const char* k_configpropertymap_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlpropertymap.html#value)
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 /// @param key const char*
 ///
-QVariant* k_configpropertymap_value(void* self, const char* key);
+QVariant* k_configpropertymap_value(const void* self, const char* key);
 
 /// Inherited from QQmlPropertyMap
 ///
@@ -189,7 +189,7 @@ QVariant* k_configpropertymap_value(void* self, const char* key);
 /// @param key const char*
 /// @param value QVariant*
 ///
-void k_configpropertymap_insert(void* self, const char* key, void* value);
+void k_configpropertymap_insert(void* self, const char* key, const void* value);
 
 /// Inherited from QQmlPropertyMap
 ///
@@ -223,42 +223,42 @@ void k_configpropertymap_freeze(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 ///
-const char** k_configpropertymap_keys(void* self);
+const char** k_configpropertymap_keys(const void* self);
 
 /// Inherited from QQmlPropertyMap
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlpropertymap.html#count)
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 ///
-int32_t k_configpropertymap_count(void* self);
+int32_t k_configpropertymap_count(const void* self);
 
 /// Inherited from QQmlPropertyMap
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlpropertymap.html#size)
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 ///
-int32_t k_configpropertymap_size(void* self);
+int32_t k_configpropertymap_size(const void* self);
 
 /// Inherited from QQmlPropertyMap
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlpropertymap.html#isEmpty)
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 ///
-bool k_configpropertymap_is_empty(void* self);
+bool k_configpropertymap_is_empty(const void* self);
 
 /// Inherited from QQmlPropertyMap
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlpropertymap.html#contains)
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 /// @param key const char*
 ///
-bool k_configpropertymap_contains(void* self, const char* key);
+bool k_configpropertymap_contains(const void* self, const char* key);
 
 /// Inherited from QQmlPropertyMap
 ///
@@ -273,10 +273,10 @@ QVariant* k_configpropertymap_operator_subscript(void* self, const char* key);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlpropertymap.html#operator-5b-5d)
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 /// @param key const char*
 ///
-QVariant* k_configpropertymap_operator_subscript2(void* self, const char* key);
+QVariant* k_configpropertymap_operator_subscript2(const void* self, const char* key);
 
 /// Inherited from QQmlPropertyMap
 ///
@@ -286,7 +286,7 @@ QVariant* k_configpropertymap_operator_subscript2(void* self, const char* key);
 /// @param key const char*
 /// @param value QVariant*
 ///
-void k_configpropertymap_value_changed(void* self, const char* key, void* value);
+void k_configpropertymap_value_changed(void* self, const char* key, const void* value);
 
 /// Inherited from QQmlPropertyMap
 ///
@@ -295,7 +295,7 @@ void k_configpropertymap_value_changed(void* self, const char* key, void* value)
 /// @param self KConfigPropertyMap*
 /// @param callback void func(KConfigPropertyMap* self, const char* key, QVariant* value)
 ///
-void k_configpropertymap_on_value_changed(void* self, void (*callback)(void*, const char*, void*));
+void k_configpropertymap_on_value_changed(void* self, void (*callback)(void*, const char*, const void*));
 
 /// Inherited from QObject
 ///
@@ -303,9 +303,9 @@ void k_configpropertymap_on_value_changed(void* self, void (*callback)(void*, co
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 ///
-const char* k_configpropertymap_object_name(void* self);
+const char* k_configpropertymap_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -320,33 +320,33 @@ void k_configpropertymap_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 ///
-bool k_configpropertymap_is_widget_type(void* self);
+bool k_configpropertymap_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 ///
-bool k_configpropertymap_is_window_type(void* self);
+bool k_configpropertymap_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 ///
-bool k_configpropertymap_is_quick_item_type(void* self);
+bool k_configpropertymap_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 ///
-bool k_configpropertymap_signals_blocked(void* self);
+bool k_configpropertymap_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -361,9 +361,9 @@ bool k_configpropertymap_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 ///
-QThread* k_configpropertymap_thread(void* self);
+QThread* k_configpropertymap_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -414,11 +414,11 @@ void k_configpropertymap_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_configpropertymap_children(void* self);
+libqt_list k_configpropertymap_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -456,7 +456,7 @@ void k_configpropertymap_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_configpropertymap_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_configpropertymap_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -467,18 +467,18 @@ QMetaObject__Connection* k_configpropertymap_connect(void* sender, const char* s
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_configpropertymap_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_configpropertymap_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_configpropertymap_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_configpropertymap_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -489,7 +489,7 @@ QMetaObject__Connection* k_configpropertymap_connect3(void* self, void* sender, 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_configpropertymap_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_configpropertymap_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -500,24 +500,24 @@ bool k_configpropertymap_disconnect(void* sender, const char* signal, void* rece
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_configpropertymap_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_configpropertymap_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 ///
-bool k_configpropertymap_disconnect3(void* self);
+bool k_configpropertymap_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 /// @param receiver QObject*
 ///
-bool k_configpropertymap_disconnect4(void* self, void* receiver);
+bool k_configpropertymap_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -525,23 +525,23 @@ bool k_configpropertymap_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_configpropertymap_disconnect5(void* param1);
+bool k_configpropertymap_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 ///
-void k_configpropertymap_dump_object_tree(void* self);
+void k_configpropertymap_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 ///
-void k_configpropertymap_dump_object_info(void* self);
+void k_configpropertymap_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -551,16 +551,16 @@ void k_configpropertymap_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_configpropertymap_set_property(void* self, const char* name, void* value);
+bool k_configpropertymap_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 /// @param name const char*
 ///
-QVariant* k_configpropertymap_property(void* self, const char* name);
+QVariant* k_configpropertymap_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -568,9 +568,9 @@ QVariant* k_configpropertymap_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 ///
-const char** k_configpropertymap_dynamic_property_names(void* self);
+const char** k_configpropertymap_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -584,9 +584,9 @@ QBindingStorage* k_configpropertymap_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 ///
-const QBindingStorage* k_configpropertymap_binding_storage2(void* self);
+const QBindingStorage* k_configpropertymap_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -609,18 +609,18 @@ void k_configpropertymap_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 ///
-QObject* k_configpropertymap_parent(void* self);
+QObject* k_configpropertymap_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 /// @param classname const char*
 ///
-bool k_configpropertymap_inherits(void* self, const char* classname);
+bool k_configpropertymap_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -660,7 +660,7 @@ int32_t k_configpropertymap_start_timer23(void* self, int64_t time, int32_t time
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_configpropertymap_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_configpropertymap_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -672,59 +672,59 @@ QMetaObject__Connection* k_configpropertymap_connect5(void* sender, const char* 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_configpropertymap_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_configpropertymap_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_configpropertymap_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_configpropertymap_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 /// @param signal const char*
 ///
-bool k_configpropertymap_disconnect1(void* self, const char* signal);
+bool k_configpropertymap_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KConfigPropertyMap*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_configpropertymap_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_configpropertymap_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_configpropertymap_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_configpropertymap_disconnect23(void* self, void* receiver, const char* member);
+bool k_configpropertymap_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KConfigPropertyMap*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_configpropertymap_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -920,7 +920,7 @@ void k_configpropertymap_on_custom_event(void* self, void (*callback)(void*, voi
 /// @param self KConfigPropertyMap*
 /// @param signal QMetaMethod*
 ///
-void k_configpropertymap_connect_notify(void* self, void* signal);
+void k_configpropertymap_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -931,7 +931,7 @@ void k_configpropertymap_connect_notify(void* self, void* signal);
 /// @param self KConfigPropertyMap*
 /// @param signal QMetaMethod*
 ///
-void k_configpropertymap_super_connect_notify(void* self, void* signal);
+void k_configpropertymap_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -942,7 +942,7 @@ void k_configpropertymap_super_connect_notify(void* self, void* signal);
 /// @param self KConfigPropertyMap*
 /// @param callback void func(KConfigPropertyMap* self, QMetaMethod* signal)
 ///
-void k_configpropertymap_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_configpropertymap_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -953,7 +953,7 @@ void k_configpropertymap_on_connect_notify(void* self, void (*callback)(void*, v
 /// @param self KConfigPropertyMap*
 /// @param signal QMetaMethod*
 ///
-void k_configpropertymap_disconnect_notify(void* self, void* signal);
+void k_configpropertymap_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -964,7 +964,7 @@ void k_configpropertymap_disconnect_notify(void* self, void* signal);
 /// @param self KConfigPropertyMap*
 /// @param signal QMetaMethod*
 ///
-void k_configpropertymap_super_disconnect_notify(void* self, void* signal);
+void k_configpropertymap_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -975,7 +975,7 @@ void k_configpropertymap_super_disconnect_notify(void* self, void* signal);
 /// @param self KConfigPropertyMap*
 /// @param callback void func(KConfigPropertyMap* self, QMetaMethod* signal)
 ///
-void k_configpropertymap_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_configpropertymap_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -983,9 +983,9 @@ void k_configpropertymap_on_disconnect_notify(void* self, void (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 ///
-QObject* k_configpropertymap_sender(void* self);
+QObject* k_configpropertymap_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -993,9 +993,9 @@ QObject* k_configpropertymap_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 ///
-QObject* k_configpropertymap_super_sender(void* self);
+QObject* k_configpropertymap_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1003,10 +1003,10 @@ QObject* k_configpropertymap_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KConfigPropertyMap*
-/// @param callback QObject* func()
+/// @param self const KConfigPropertyMap*
+/// @param callback QObject* func(KConfigPropertyMap* self)
 ///
-void k_configpropertymap_on_sender(void* self, QObject* (*callback)());
+void k_configpropertymap_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1014,9 +1014,9 @@ void k_configpropertymap_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 ///
-int32_t k_configpropertymap_sender_signal_index(void* self);
+int32_t k_configpropertymap_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1024,9 +1024,9 @@ int32_t k_configpropertymap_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 ///
-int32_t k_configpropertymap_super_sender_signal_index(void* self);
+int32_t k_configpropertymap_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1034,10 +1034,10 @@ int32_t k_configpropertymap_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KConfigPropertyMap*
-/// @param callback int32_t func()
+/// @param self const KConfigPropertyMap*
+/// @param callback int32_t func(KConfigPropertyMap* self)
 ///
-void k_configpropertymap_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_configpropertymap_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1045,10 +1045,10 @@ void k_configpropertymap_on_sender_signal_index(void* self, int32_t (*callback)(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 /// @param signal const char*
 ///
-int32_t k_configpropertymap_receivers(void* self, const char* signal);
+int32_t k_configpropertymap_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1056,10 +1056,10 @@ int32_t k_configpropertymap_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 /// @param signal const char*
 ///
-int32_t k_configpropertymap_super_receivers(void* self, const char* signal);
+int32_t k_configpropertymap_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1067,10 +1067,10 @@ int32_t k_configpropertymap_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 /// @param callback int32_t func(KConfigPropertyMap* self, const char* signal)
 ///
-void k_configpropertymap_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_configpropertymap_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1078,10 +1078,10 @@ void k_configpropertymap_on_receivers(void* self, int32_t (*callback)(void*, con
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 /// @param signal QMetaMethod*
 ///
-bool k_configpropertymap_is_signal_connected(void* self, void* signal);
+bool k_configpropertymap_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1089,10 +1089,10 @@ bool k_configpropertymap_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 /// @param signal QMetaMethod*
 ///
-bool k_configpropertymap_super_is_signal_connected(void* self, void* signal);
+bool k_configpropertymap_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1100,10 +1100,10 @@ bool k_configpropertymap_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KConfigPropertyMap*
+/// @param self const KConfigPropertyMap*
 /// @param callback bool func(KConfigPropertyMap* self, QMetaMethod* signal)
 ///
-void k_configpropertymap_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_configpropertymap_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

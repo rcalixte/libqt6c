@@ -28,5 +28,5 @@ const char* k_io_build_error_string(int errorCode, const char* errorText);
 /// @param reqUrl QUrl*
 /// @param method int
 ///
-char* k_io_raw_error_detail(int errorCode, const char* errorText, void* reqUrl, int method);
+char* k_io_raw_error_detail(int errorCode, const char* errorText, const void* reqUrl, int method);
 #endif

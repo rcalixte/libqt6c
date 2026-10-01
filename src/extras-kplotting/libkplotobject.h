@@ -20,7 +20,7 @@ KPlotObject* k_plotobject_new();
 ///
 /// @param color QColor*
 ///
-KPlotObject* k_plotobject_new2(void* color);
+KPlotObject* k_plotobject_new2(const void* color);
 
 /// [Upstream resources](https://api.kde.org/kplotobject.html)
 
@@ -29,7 +29,7 @@ KPlotObject* k_plotobject_new2(void* color);
 /// @param color QColor*
 /// @param otype enum KPlotObject__PlotType
 ///
-KPlotObject* k_plotobject_new3(void* color, int32_t otype);
+KPlotObject* k_plotobject_new3(const void* color, int32_t otype);
 
 /// [Upstream resources](https://api.kde.org/kplotobject.html)
 
@@ -39,7 +39,7 @@ KPlotObject* k_plotobject_new3(void* color, int32_t otype);
 /// @param otype enum KPlotObject__PlotType
 /// @param size double
 ///
-KPlotObject* k_plotobject_new4(void* color, int32_t otype, double size);
+KPlotObject* k_plotobject_new4(const void* color, int32_t otype, double size);
 
 /// [Upstream resources](https://api.kde.org/kplotobject.html)
 
@@ -50,15 +50,15 @@ KPlotObject* k_plotobject_new4(void* color, int32_t otype, double size);
 /// @param size double
 /// @param ps enum KPlotObject__PointStyle
 ///
-KPlotObject* k_plotobject_new5(void* color, int32_t otype, double size, int32_t ps);
+KPlotObject* k_plotobject_new5(const void* color, int32_t otype, double size, int32_t ps);
 
 /// [Upstream resources](https://api.kde.org/kplotobject.html#plotTypes)
 ///
-/// @param self KPlotObject*
+/// @param self const KPlotObject*
 ///
 /// @return flag of enum KPlotObject__PlotType
 ///
-int32_t k_plotobject_plot_types(void* self);
+int32_t k_plotobject_plot_types(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kplotobject.html#setShowPoints)
 ///
@@ -83,9 +83,9 @@ void k_plotobject_set_show_bars(void* self, bool b);
 
 /// [Upstream resources](https://api.kde.org/kplotobject.html#size)
 ///
-/// @param self KPlotObject*
+/// @param self const KPlotObject*
 ///
-double k_plotobject_size(void* self);
+double k_plotobject_size(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kplotobject.html#setSize)
 ///
@@ -96,11 +96,11 @@ void k_plotobject_set_size(void* self, double s);
 
 /// [Upstream resources](https://api.kde.org/kplotobject.html#pointStyle)
 ///
-/// @param self KPlotObject*
+/// @param self const KPlotObject*
 ///
 /// @return enum KPlotObject__PointStyle
 ///
-int32_t k_plotobject_point_style(void* self);
+int32_t k_plotobject_point_style(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kplotobject.html#setPointStyle)
 ///
@@ -111,96 +111,96 @@ void k_plotobject_set_point_style(void* self, int32_t p);
 
 /// [Upstream resources](https://api.kde.org/kplotobject.html#pen)
 ///
-/// @param self KPlotObject*
+/// @param self const KPlotObject*
 ///
-const QPen* k_plotobject_pen(void* self);
+const QPen* k_plotobject_pen(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kplotobject.html#setPen)
 ///
 /// @param self KPlotObject*
 /// @param p QPen*
 ///
-void k_plotobject_set_pen(void* self, void* p);
+void k_plotobject_set_pen(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kplotobject.html#linePen)
 ///
-/// @param self KPlotObject*
+/// @param self const KPlotObject*
 ///
-const QPen* k_plotobject_line_pen(void* self);
+const QPen* k_plotobject_line_pen(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kplotobject.html#setLinePen)
 ///
 /// @param self KPlotObject*
 /// @param p QPen*
 ///
-void k_plotobject_set_line_pen(void* self, void* p);
+void k_plotobject_set_line_pen(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kplotobject.html#barPen)
 ///
-/// @param self KPlotObject*
+/// @param self const KPlotObject*
 ///
-const QPen* k_plotobject_bar_pen(void* self);
+const QPen* k_plotobject_bar_pen(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kplotobject.html#setBarPen)
 ///
 /// @param self KPlotObject*
 /// @param p QPen*
 ///
-void k_plotobject_set_bar_pen(void* self, void* p);
+void k_plotobject_set_bar_pen(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kplotobject.html#labelPen)
 ///
-/// @param self KPlotObject*
+/// @param self const KPlotObject*
 ///
-const QPen* k_plotobject_label_pen(void* self);
+const QPen* k_plotobject_label_pen(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kplotobject.html#setLabelPen)
 ///
 /// @param self KPlotObject*
 /// @param p QPen*
 ///
-void k_plotobject_set_label_pen(void* self, void* p);
+void k_plotobject_set_label_pen(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kplotobject.html#brush)
 ///
-/// @param self KPlotObject*
+/// @param self const KPlotObject*
 ///
-const QBrush* k_plotobject_brush(void* self);
+const QBrush* k_plotobject_brush(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kplotobject.html#setBrush)
 ///
 /// @param self KPlotObject*
 /// @param b QBrush*
 ///
-void k_plotobject_set_brush(void* self, void* b);
+void k_plotobject_set_brush(void* self, const void* b);
 
 /// [Upstream resources](https://api.kde.org/kplotobject.html#barBrush)
 ///
-/// @param self KPlotObject*
+/// @param self const KPlotObject*
 ///
-const QBrush* k_plotobject_bar_brush(void* self);
+const QBrush* k_plotobject_bar_brush(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kplotobject.html#setBarBrush)
 ///
 /// @param self KPlotObject*
 /// @param b QBrush*
 ///
-void k_plotobject_set_bar_brush(void* self, void* b);
+void k_plotobject_set_bar_brush(void* self, const void* b);
 
 /// [Upstream resources](https://api.kde.org/kplotobject.html#points)
 ///
-/// @param self KPlotObject*
+/// @param self const KPlotObject*
 ///
 /// @return libqt_list of KPlotPoint*
 ///
-libqt_list k_plotobject_points(void* self);
+libqt_list k_plotobject_points(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kplotobject.html#addPoint)
 ///
 /// @param self KPlotObject*
 /// @param p QPointF*
 ///
-void k_plotobject_add_point(void* self, void* p);
+void k_plotobject_add_point(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kplotobject.html#addPoint)
 ///
@@ -244,7 +244,7 @@ void k_plotobject_draw(void* self, void* p, void* pw);
 /// @param p QPointF*
 /// @param label const char*
 ///
-void k_plotobject_add_point22(void* self, void* p, const char* label);
+void k_plotobject_add_point22(void* self, const void* p, const char* label);
 
 /// [Upstream resources](https://api.kde.org/kplotobject.html#addPoint)
 ///
@@ -253,7 +253,7 @@ void k_plotobject_add_point22(void* self, void* p, const char* label);
 /// @param label const char*
 /// @param barWidth double
 ///
-void k_plotobject_add_point32(void* self, void* p, const char* label, double barWidth);
+void k_plotobject_add_point32(void* self, const void* p, const char* label, double barWidth);
 
 /// [Upstream resources](https://api.kde.org/kplotobject.html#addPoint)
 ///

@@ -4,7 +4,7 @@
 #include "libnetwm_def.hpp"
 #include "libnetwm_def.h"
 
-NETPoint* k_netpoint_new(void* other) {
+NETPoint* k_netpoint_new(const void* other) {
     return NETPoint_New((NETPoint*)other);
 }
 
@@ -16,11 +16,11 @@ NETPoint* k_netpoint_new3() {
     return NETPoint_New3();
 }
 
-NETPoint* k_netpoint_new4(void* p) {
+NETPoint* k_netpoint_new4(const void* p) {
     return NETPoint_New4((QPoint*)p);
 }
 
-NETPoint* k_netpoint_new5(void* param1) {
+NETPoint* k_netpoint_new5(const void* param1) {
     return NETPoint_New5((NETPoint*)param1);
 }
 
@@ -32,11 +32,11 @@ void k_netpoint_move_assign(void* self, void* other) {
     NETPoint_MoveAssign((NETPoint*)self, (NETPoint*)other);
 }
 
-QPoint* k_netpoint_to_point(void* self) {
+QPoint* k_netpoint_to_point(const void* self) {
     return NETPoint_ToPoint((NETPoint*)self);
 }
 
-int32_t k_netpoint_x(void* self) {
+int32_t k_netpoint_x(const void* self) {
     return NETPoint_X((NETPoint*)self);
 }
 
@@ -44,7 +44,7 @@ void k_netpoint_set_x(void* self, int x) {
     NETPoint_SetX((NETPoint*)self, x);
 }
 
-int32_t k_netpoint_y(void* self) {
+int32_t k_netpoint_y(const void* self) {
     return NETPoint_Y((NETPoint*)self);
 }
 
@@ -56,7 +56,7 @@ void k_netpoint_delete(void* self) {
     NETPoint_Delete((NETPoint*)(self));
 }
 
-NETSize* k_netsize_new(void* other) {
+NETSize* k_netsize_new(const void* other) {
     return NETSize_New((NETSize*)other);
 }
 
@@ -68,11 +68,11 @@ NETSize* k_netsize_new3() {
     return NETSize_New3();
 }
 
-NETSize* k_netsize_new4(void* size) {
+NETSize* k_netsize_new4(const void* size) {
     return NETSize_New4((QSize*)size);
 }
 
-NETSize* k_netsize_new5(void* param1) {
+NETSize* k_netsize_new5(const void* param1) {
     return NETSize_New5((NETSize*)param1);
 }
 
@@ -84,11 +84,11 @@ void k_netsize_move_assign(void* self, void* other) {
     NETSize_MoveAssign((NETSize*)self, (NETSize*)other);
 }
 
-QSize* k_netsize_to_size(void* self) {
+QSize* k_netsize_to_size(const void* self) {
     return NETSize_ToSize((NETSize*)self);
 }
 
-int32_t k_netsize_width(void* self) {
+int32_t k_netsize_width(const void* self) {
     return NETSize_Width((NETSize*)self);
 }
 
@@ -96,7 +96,7 @@ void k_netsize_set_width(void* self, int width) {
     NETSize_SetWidth((NETSize*)self, width);
 }
 
-int32_t k_netsize_height(void* self) {
+int32_t k_netsize_height(const void* self) {
     return NETSize_Height((NETSize*)self);
 }
 
@@ -108,7 +108,7 @@ void k_netsize_delete(void* self) {
     NETSize_Delete((NETSize*)(self));
 }
 
-NETRect* k_netrect_new(void* other) {
+NETRect* k_netrect_new(const void* other) {
     return NETRect_New((NETRect*)other);
 }
 
@@ -120,7 +120,7 @@ NETRect* k_netrect_new3() {
     return NETRect_New3();
 }
 
-NETRect* k_netrect_new4(void* rect) {
+NETRect* k_netrect_new4(const void* rect) {
     return NETRect_New4((QRect*)rect);
 }
 
@@ -132,11 +132,11 @@ void k_netrect_move_assign(void* self, void* other) {
     NETRect_MoveAssign((NETRect*)self, (NETRect*)other);
 }
 
-QRect* k_netrect_to_rect(void* self) {
+QRect* k_netrect_to_rect(const void* self) {
     return NETRect_ToRect((NETRect*)self);
 }
 
-NETPoint* k_netrect_pos(void* self) {
+NETPoint* k_netrect_pos(const void* self) {
     return NETRect_Pos((NETRect*)self);
 }
 
@@ -144,7 +144,7 @@ void k_netrect_set_pos(void* self, void* pos) {
     NETRect_SetPos((NETRect*)self, (NETPoint*)pos);
 }
 
-NETSize* k_netrect_size(void* self) {
+NETSize* k_netrect_size(const void* self) {
     return NETRect_Size((NETRect*)self);
 }
 
@@ -156,7 +156,7 @@ void k_netrect_delete(void* self) {
     NETRect_Delete((NETRect*)(self));
 }
 
-NETIcon* k_neticon_new(void* other) {
+NETIcon* k_neticon_new(const void* other) {
     return NETIcon_New((NETIcon*)other);
 }
 
@@ -176,7 +176,7 @@ void k_neticon_move_assign(void* self, void* other) {
     NETIcon_MoveAssign((NETIcon*)self, (NETIcon*)other);
 }
 
-NETSize* k_neticon_size(void* self) {
+NETSize* k_neticon_size(const void* self) {
     return NETIcon_Size((NETIcon*)self);
 }
 
@@ -184,7 +184,7 @@ void k_neticon_set_size(void* self, void* size) {
     NETIcon_SetSize((NETIcon*)self, (NETSize*)size);
 }
 
-unsigned char* k_neticon_data(void* self) {
+unsigned char* k_neticon_data(const void* self) {
     return (unsigned char*)NETIcon_Data((NETIcon*)self);
 }
 
@@ -196,7 +196,7 @@ void k_neticon_delete(void* self) {
     NETIcon_Delete((NETIcon*)(self));
 }
 
-NETExtendedStrut* k_netextendedstrut_new(void* other) {
+NETExtendedStrut* k_netextendedstrut_new(const void* other) {
     return NETExtendedStrut_New((NETExtendedStrut*)other);
 }
 
@@ -216,7 +216,7 @@ void k_netextendedstrut_move_assign(void* self, void* other) {
     NETExtendedStrut_MoveAssign((NETExtendedStrut*)self, (NETExtendedStrut*)other);
 }
 
-int32_t k_netextendedstrut_left_width(void* self) {
+int32_t k_netextendedstrut_left_width(const void* self) {
     return NETExtendedStrut_LeftWidth((NETExtendedStrut*)self);
 }
 
@@ -224,7 +224,7 @@ void k_netextendedstrut_set_left_width(void* self, int left_width) {
     NETExtendedStrut_SetLeftWidth((NETExtendedStrut*)self, left_width);
 }
 
-int32_t k_netextendedstrut_left_start(void* self) {
+int32_t k_netextendedstrut_left_start(const void* self) {
     return NETExtendedStrut_LeftStart((NETExtendedStrut*)self);
 }
 
@@ -232,7 +232,7 @@ void k_netextendedstrut_set_left_start(void* self, int left_start) {
     NETExtendedStrut_SetLeftStart((NETExtendedStrut*)self, left_start);
 }
 
-int32_t k_netextendedstrut_left_end(void* self) {
+int32_t k_netextendedstrut_left_end(const void* self) {
     return NETExtendedStrut_LeftEnd((NETExtendedStrut*)self);
 }
 
@@ -240,7 +240,7 @@ void k_netextendedstrut_set_left_end(void* self, int left_end) {
     NETExtendedStrut_SetLeftEnd((NETExtendedStrut*)self, left_end);
 }
 
-int32_t k_netextendedstrut_right_width(void* self) {
+int32_t k_netextendedstrut_right_width(const void* self) {
     return NETExtendedStrut_RightWidth((NETExtendedStrut*)self);
 }
 
@@ -248,7 +248,7 @@ void k_netextendedstrut_set_right_width(void* self, int right_width) {
     NETExtendedStrut_SetRightWidth((NETExtendedStrut*)self, right_width);
 }
 
-int32_t k_netextendedstrut_right_start(void* self) {
+int32_t k_netextendedstrut_right_start(const void* self) {
     return NETExtendedStrut_RightStart((NETExtendedStrut*)self);
 }
 
@@ -256,7 +256,7 @@ void k_netextendedstrut_set_right_start(void* self, int right_start) {
     NETExtendedStrut_SetRightStart((NETExtendedStrut*)self, right_start);
 }
 
-int32_t k_netextendedstrut_right_end(void* self) {
+int32_t k_netextendedstrut_right_end(const void* self) {
     return NETExtendedStrut_RightEnd((NETExtendedStrut*)self);
 }
 
@@ -264,7 +264,7 @@ void k_netextendedstrut_set_right_end(void* self, int right_end) {
     NETExtendedStrut_SetRightEnd((NETExtendedStrut*)self, right_end);
 }
 
-int32_t k_netextendedstrut_top_width(void* self) {
+int32_t k_netextendedstrut_top_width(const void* self) {
     return NETExtendedStrut_TopWidth((NETExtendedStrut*)self);
 }
 
@@ -272,7 +272,7 @@ void k_netextendedstrut_set_top_width(void* self, int top_width) {
     NETExtendedStrut_SetTopWidth((NETExtendedStrut*)self, top_width);
 }
 
-int32_t k_netextendedstrut_top_start(void* self) {
+int32_t k_netextendedstrut_top_start(const void* self) {
     return NETExtendedStrut_TopStart((NETExtendedStrut*)self);
 }
 
@@ -280,7 +280,7 @@ void k_netextendedstrut_set_top_start(void* self, int top_start) {
     NETExtendedStrut_SetTopStart((NETExtendedStrut*)self, top_start);
 }
 
-int32_t k_netextendedstrut_top_end(void* self) {
+int32_t k_netextendedstrut_top_end(const void* self) {
     return NETExtendedStrut_TopEnd((NETExtendedStrut*)self);
 }
 
@@ -288,7 +288,7 @@ void k_netextendedstrut_set_top_end(void* self, int top_end) {
     NETExtendedStrut_SetTopEnd((NETExtendedStrut*)self, top_end);
 }
 
-int32_t k_netextendedstrut_bottom_width(void* self) {
+int32_t k_netextendedstrut_bottom_width(const void* self) {
     return NETExtendedStrut_BottomWidth((NETExtendedStrut*)self);
 }
 
@@ -296,7 +296,7 @@ void k_netextendedstrut_set_bottom_width(void* self, int bottom_width) {
     NETExtendedStrut_SetBottomWidth((NETExtendedStrut*)self, bottom_width);
 }
 
-int32_t k_netextendedstrut_bottom_start(void* self) {
+int32_t k_netextendedstrut_bottom_start(const void* self) {
     return NETExtendedStrut_BottomStart((NETExtendedStrut*)self);
 }
 
@@ -304,7 +304,7 @@ void k_netextendedstrut_set_bottom_start(void* self, int bottom_start) {
     NETExtendedStrut_SetBottomStart((NETExtendedStrut*)self, bottom_start);
 }
 
-int32_t k_netextendedstrut_bottom_end(void* self) {
+int32_t k_netextendedstrut_bottom_end(const void* self) {
     return NETExtendedStrut_BottomEnd((NETExtendedStrut*)self);
 }
 
@@ -316,7 +316,7 @@ void k_netextendedstrut_delete(void* self) {
     NETExtendedStrut_Delete((NETExtendedStrut*)(self));
 }
 
-NETStrut* k_netstrut_new(void* other) {
+NETStrut* k_netstrut_new(const void* other) {
     return NETStrut_New((NETStrut*)other);
 }
 
@@ -336,7 +336,7 @@ void k_netstrut_move_assign(void* self, void* other) {
     NETStrut_MoveAssign((NETStrut*)self, (NETStrut*)other);
 }
 
-int32_t k_netstrut_left(void* self) {
+int32_t k_netstrut_left(const void* self) {
     return NETStrut_Left((NETStrut*)self);
 }
 
@@ -344,7 +344,7 @@ void k_netstrut_set_left(void* self, int left) {
     NETStrut_SetLeft((NETStrut*)self, left);
 }
 
-int32_t k_netstrut_right(void* self) {
+int32_t k_netstrut_right(const void* self) {
     return NETStrut_Right((NETStrut*)self);
 }
 
@@ -352,7 +352,7 @@ void k_netstrut_set_right(void* self, int right) {
     NETStrut_SetRight((NETStrut*)self, right);
 }
 
-int32_t k_netstrut_top(void* self) {
+int32_t k_netstrut_top(const void* self) {
     return NETStrut_Top((NETStrut*)self);
 }
 
@@ -360,7 +360,7 @@ void k_netstrut_set_top(void* self, int top) {
     NETStrut_SetTop((NETStrut*)self, top);
 }
 
-int32_t k_netstrut_bottom(void* self) {
+int32_t k_netstrut_bottom(const void* self) {
     return NETStrut_Bottom((NETStrut*)self);
 }
 
@@ -372,7 +372,7 @@ void k_netstrut_delete(void* self) {
     NETStrut_Delete((NETStrut*)(self));
 }
 
-NETFullscreenMonitors* k_netfullscreenmonitors_new(void* other) {
+NETFullscreenMonitors* k_netfullscreenmonitors_new(const void* other) {
     return NETFullscreenMonitors_New((NETFullscreenMonitors*)other);
 }
 
@@ -392,7 +392,7 @@ void k_netfullscreenmonitors_move_assign(void* self, void* other) {
     NETFullscreenMonitors_MoveAssign((NETFullscreenMonitors*)self, (NETFullscreenMonitors*)other);
 }
 
-int32_t k_netfullscreenmonitors_top(void* self) {
+int32_t k_netfullscreenmonitors_top(const void* self) {
     return NETFullscreenMonitors_Top((NETFullscreenMonitors*)self);
 }
 
@@ -400,7 +400,7 @@ void k_netfullscreenmonitors_set_top(void* self, int top) {
     NETFullscreenMonitors_SetTop((NETFullscreenMonitors*)self, top);
 }
 
-int32_t k_netfullscreenmonitors_bottom(void* self) {
+int32_t k_netfullscreenmonitors_bottom(const void* self) {
     return NETFullscreenMonitors_Bottom((NETFullscreenMonitors*)self);
 }
 
@@ -408,7 +408,7 @@ void k_netfullscreenmonitors_set_bottom(void* self, int bottom) {
     NETFullscreenMonitors_SetBottom((NETFullscreenMonitors*)self, bottom);
 }
 
-int32_t k_netfullscreenmonitors_left(void* self) {
+int32_t k_netfullscreenmonitors_left(const void* self) {
     return NETFullscreenMonitors_Left((NETFullscreenMonitors*)self);
 }
 
@@ -416,7 +416,7 @@ void k_netfullscreenmonitors_set_left(void* self, int left) {
     NETFullscreenMonitors_SetLeft((NETFullscreenMonitors*)self, left);
 }
 
-int32_t k_netfullscreenmonitors_right(void* self) {
+int32_t k_netfullscreenmonitors_right(const void* self) {
     return NETFullscreenMonitors_Right((NETFullscreenMonitors*)self);
 }
 
@@ -424,7 +424,7 @@ void k_netfullscreenmonitors_set_right(void* self, int right) {
     NETFullscreenMonitors_SetRight((NETFullscreenMonitors*)self, right);
 }
 
-bool k_netfullscreenmonitors_is_set(void* self) {
+bool k_netfullscreenmonitors_is_set(const void* self) {
     return NETFullscreenMonitors_IsSet((NETFullscreenMonitors*)self);
 }
 
@@ -432,7 +432,7 @@ void k_netfullscreenmonitors_delete(void* self) {
     NETFullscreenMonitors_Delete((NETFullscreenMonitors*)(self));
 }
 
-NET* k_net_new(void* other) {
+NET* k_net_new(const void* other) {
     return NET_New((NET*)other);
 }
 

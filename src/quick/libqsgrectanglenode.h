@@ -12,10 +12,12 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrectanglenode.html#setRect)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self QSGRectangleNode*
 /// @param rect QRectF*
 ///
-void q_sgrectanglenode_set_rect(void* self, void* rect);
+void q_sgrectanglenode_set_rect(void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrectanglenode.html#setRect)
 ///
@@ -29,22 +31,28 @@ void q_sgrectanglenode_set_rect2(void* self, double x, double y, double w, doubl
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrectanglenode.html#rect)
 ///
-/// @param self QSGRectangleNode*
+/// @warning Use caution when calling this method as it might not be defined.
 ///
-QRectF* q_sgrectanglenode_rect(void* self);
+/// @param self const QSGRectangleNode*
+///
+QRectF* q_sgrectanglenode_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrectanglenode.html#setColor)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self QSGRectangleNode*
 /// @param color QColor*
 ///
-void q_sgrectanglenode_set_color(void* self, void* color);
+void q_sgrectanglenode_set_color(void* self, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrectanglenode.html#color)
 ///
-/// @param self QSGRectangleNode*
+/// @warning Use caution when calling this method as it might not be defined.
 ///
-QColor* q_sgrectanglenode_color(void* self);
+/// @param self const QSGRectangleNode*
+///
+QColor* q_sgrectanglenode_color(const void* self);
 
 /// Inherited from QSGGeometryNode
 ///
@@ -59,9 +67,9 @@ void q_sgrectanglenode_set_material(void* self, void* material);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometrynode.html#material)
 ///
-/// @param self QSGRectangleNode*
+/// @param self const QSGRectangleNode*
 ///
-QSGMaterial* q_sgrectanglenode_material(void* self);
+QSGMaterial* q_sgrectanglenode_material(const void* self);
 
 /// Inherited from QSGGeometryNode
 ///
@@ -76,17 +84,17 @@ void q_sgrectanglenode_set_opaque_material(void* self, void* material);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometrynode.html#opaqueMaterial)
 ///
-/// @param self QSGRectangleNode*
+/// @param self const QSGRectangleNode*
 ///
-QSGMaterial* q_sgrectanglenode_opaque_material(void* self);
+QSGMaterial* q_sgrectanglenode_opaque_material(const void* self);
 
 /// Inherited from QSGGeometryNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometrynode.html#activeMaterial)
 ///
-/// @param self QSGRectangleNode*
+/// @param self const QSGRectangleNode*
 ///
-QSGMaterial* q_sgrectanglenode_active_material(void* self);
+QSGMaterial* q_sgrectanglenode_active_material(const void* self);
 
 /// Inherited from QSGGeometryNode
 ///
@@ -101,9 +109,9 @@ void q_sgrectanglenode_set_render_order(void* self, int order);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometrynode.html#renderOrder)
 ///
-/// @param self QSGRectangleNode*
+/// @param self const QSGRectangleNode*
 ///
-int32_t q_sgrectanglenode_render_order(void* self);
+int32_t q_sgrectanglenode_render_order(const void* self);
 
 /// Inherited from QSGGeometryNode
 ///
@@ -118,9 +126,9 @@ void q_sgrectanglenode_set_inherited_opacity(void* self, double opacity);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometrynode.html#inheritedOpacity)
 ///
-/// @param self QSGRectangleNode*
+/// @param self const QSGRectangleNode*
 ///
-double q_sgrectanglenode_inherited_opacity(void* self);
+double q_sgrectanglenode_inherited_opacity(const void* self);
 
 /// Inherited from QSGBasicGeometryNode
 ///
@@ -135,9 +143,9 @@ void q_sgrectanglenode_set_geometry(void* self, void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgbasicgeometrynode.html#geometry)
 ///
-/// @param self QSGRectangleNode*
+/// @param self const QSGRectangleNode*
 ///
-const QSGGeometry* q_sgrectanglenode_geometry(void* self);
+const QSGGeometry* q_sgrectanglenode_geometry(const void* self);
 
 /// Inherited from QSGBasicGeometryNode
 ///
@@ -151,17 +159,17 @@ QSGGeometry* q_sgrectanglenode_geometry2(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgbasicgeometrynode.html#matrix)
 ///
-/// @param self QSGRectangleNode*
+/// @param self const QSGRectangleNode*
 ///
-const QMatrix4x4* q_sgrectanglenode_matrix(void* self);
+const QMatrix4x4* q_sgrectanglenode_matrix(const void* self);
 
 /// Inherited from QSGBasicGeometryNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgbasicgeometrynode.html#clipList)
 ///
-/// @param self QSGRectangleNode*
+/// @param self const QSGRectangleNode*
 ///
-const QSGClipNode* q_sgrectanglenode_clip_list(void* self);
+const QSGClipNode* q_sgrectanglenode_clip_list(const void* self);
 
 /// Inherited from QSGBasicGeometryNode
 ///
@@ -170,7 +178,7 @@ const QSGClipNode* q_sgrectanglenode_clip_list(void* self);
 /// @param self QSGRectangleNode*
 /// @param m QMatrix4x4*
 ///
-void q_sgrectanglenode_set_renderer_matrix(void* self, void* m);
+void q_sgrectanglenode_set_renderer_matrix(void* self, const void* m);
 
 /// Inherited from QSGBasicGeometryNode
 ///
@@ -179,15 +187,15 @@ void q_sgrectanglenode_set_renderer_matrix(void* self, void* m);
 /// @param self QSGRectangleNode*
 /// @param c QSGClipNode*
 ///
-void q_sgrectanglenode_set_renderer_clip_list(void* self, void* c);
+void q_sgrectanglenode_set_renderer_clip_list(void* self, const void* c);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#parent)
 ///
-/// @param self QSGRectangleNode*
+/// @param self const QSGRectangleNode*
 ///
-QSGNode* q_sgrectanglenode_parent(void* self);
+QSGNode* q_sgrectanglenode_parent(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -257,60 +265,60 @@ void q_sgrectanglenode_reparent_child_nodes_to(void* self, void* newParent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#childCount)
 ///
-/// @param self QSGRectangleNode*
+/// @param self const QSGRectangleNode*
 ///
-int32_t q_sgrectanglenode_child_count(void* self);
+int32_t q_sgrectanglenode_child_count(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#childAtIndex)
 ///
-/// @param self QSGRectangleNode*
+/// @param self const QSGRectangleNode*
 /// @param i int
 ///
-QSGNode* q_sgrectanglenode_child_at_index(void* self, int i);
+QSGNode* q_sgrectanglenode_child_at_index(const void* self, int i);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#firstChild)
 ///
-/// @param self QSGRectangleNode*
+/// @param self const QSGRectangleNode*
 ///
-QSGNode* q_sgrectanglenode_first_child(void* self);
+QSGNode* q_sgrectanglenode_first_child(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#lastChild)
 ///
-/// @param self QSGRectangleNode*
+/// @param self const QSGRectangleNode*
 ///
-QSGNode* q_sgrectanglenode_last_child(void* self);
+QSGNode* q_sgrectanglenode_last_child(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#nextSibling)
 ///
-/// @param self QSGRectangleNode*
+/// @param self const QSGRectangleNode*
 ///
-QSGNode* q_sgrectanglenode_next_sibling(void* self);
+QSGNode* q_sgrectanglenode_next_sibling(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#previousSibling)
 ///
-/// @param self QSGRectangleNode*
+/// @param self const QSGRectangleNode*
 ///
-QSGNode* q_sgrectanglenode_previous_sibling(void* self);
+QSGNode* q_sgrectanglenode_previous_sibling(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#type)
 ///
-/// @param self QSGRectangleNode*
+/// @param self const QSGRectangleNode*
 ///
 /// @return enum QSGNode__NodeType
 ///
-int32_t q_sgrectanglenode_type(void* self);
+int32_t q_sgrectanglenode_type(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -333,29 +341,29 @@ void q_sgrectanglenode_mark_dirty(void* self, int32_t bits);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#dirtyState)
 ///
-/// @param self QSGRectangleNode*
+/// @param self const QSGRectangleNode*
 ///
 /// @return flag of enum QSGNode__DirtyStateBit
 ///
-int32_t q_sgrectanglenode_dirty_state(void* self);
+int32_t q_sgrectanglenode_dirty_state(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#isSubtreeBlocked)
 ///
-/// @param self QSGRectangleNode*
+/// @param self const QSGRectangleNode*
 ///
-bool q_sgrectanglenode_is_subtree_blocked(void* self);
+bool q_sgrectanglenode_is_subtree_blocked(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#flags)
 ///
-/// @param self QSGRectangleNode*
+/// @param self const QSGRectangleNode*
 ///
 /// @return flag of enum QSGNode__Flag
 ///
-int32_t q_sgrectanglenode_flags(void* self);
+int32_t q_sgrectanglenode_flags(const void* self);
 
 /// Inherited from QSGNode
 ///

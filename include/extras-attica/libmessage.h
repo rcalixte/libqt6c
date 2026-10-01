@@ -20,14 +20,14 @@ Attica__Message* k_attica__message_new();
 ///
 /// @param other Attica__Message*
 ///
-Attica__Message* k_attica__message_new2(void* other);
+Attica__Message* k_attica__message_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-message.html#operator-eq)
 ///
 /// @param self Attica__Message*
 /// @param other Attica__Message*
 ///
-void k_attica__message_operator_assign(void* self, void* other);
+void k_attica__message_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-message.html#setId)
 ///
@@ -40,9 +40,9 @@ void k_attica__message_set_id(void* self, const char* id);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Message*
+/// @param self const Attica__Message*
 ///
-const char* k_attica__message_id(void* self);
+const char* k_attica__message_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-message.html#setFrom)
 ///
@@ -55,9 +55,9 @@ void k_attica__message_set_from(void* self, const char* from);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Message*
+/// @param self const Attica__Message*
 ///
-const char* k_attica__message_from(void* self);
+const char* k_attica__message_from(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-message.html#setTo)
 ///
@@ -70,22 +70,22 @@ void k_attica__message_set_to(void* self, const char* to);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Message*
+/// @param self const Attica__Message*
 ///
-const char* k_attica__message_to(void* self);
+const char* k_attica__message_to(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-message.html#setSent)
 ///
 /// @param self Attica__Message*
 /// @param sent QDateTime*
 ///
-void k_attica__message_set_sent(void* self, void* sent);
+void k_attica__message_set_sent(void* self, const void* sent);
 
 /// [Upstream resources](https://api.kde.org/attica-message.html#sent)
 ///
-/// @param self Attica__Message*
+/// @param self const Attica__Message*
 ///
-QDateTime* k_attica__message_sent(void* self);
+QDateTime* k_attica__message_sent(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-message.html#setStatus)
 ///
@@ -96,11 +96,11 @@ void k_attica__message_set_status(void* self, int32_t status);
 
 /// [Upstream resources](https://api.kde.org/attica-message.html#status)
 ///
-/// @param self Attica__Message*
+/// @param self const Attica__Message*
 ///
 /// @return enum Attica__Message__Status
 ///
-int32_t k_attica__message_status(void* self);
+int32_t k_attica__message_status(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-message.html#setSubject)
 ///
@@ -113,9 +113,9 @@ void k_attica__message_set_subject(void* self, const char* subject);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Message*
+/// @param self const Attica__Message*
 ///
-const char* k_attica__message_subject(void* self);
+const char* k_attica__message_subject(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-message.html#setBody)
 ///
@@ -128,15 +128,15 @@ void k_attica__message_set_body(void* self, const char* body);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Message*
+/// @param self const Attica__Message*
 ///
-const char* k_attica__message_body(void* self);
+const char* k_attica__message_body(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-message.html#isValid)
 ///
-/// @param self Attica__Message*
+/// @param self const Attica__Message*
 ///
-bool k_attica__message_is_valid(void* self);
+bool k_attica__message_is_valid(const void* self);
 
 /// Delete this object from C++ memory.
 ///

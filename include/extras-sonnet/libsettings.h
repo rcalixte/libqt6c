@@ -24,26 +24,26 @@ Sonnet__Settings* k_sonnet__settings_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 ///
-const QMetaObject* k_sonnet__settings_meta_object(void* self);
+const QMetaObject* k_sonnet__settings_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self Sonnet__Settings*
-/// @param callback const QMetaObject* func()
+/// @param self const Sonnet__Settings*
+/// @param callback const QMetaObject* func(const Sonnet__Settings* self)
 ///
-void k_sonnet__settings_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_sonnet__settings_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 ///
-const QMetaObject* k_sonnet__settings_super_meta_object(void* self);
+const QMetaObject* k_sonnet__settings_super_meta_object(const void* self);
 
 /// @param self Sonnet__Settings*
 /// @param param1 const char*
@@ -106,9 +106,9 @@ void k_sonnet__settings_set_default_language(void* self, const char* lang);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 ///
-const char* k_sonnet__settings_default_language(void* self);
+const char* k_sonnet__settings_default_language(const void* self);
 
 /// [Upstream resources](https://api.kde.org/sonnet-settings.html#setPreferredLanguages)
 ///
@@ -121,9 +121,9 @@ void k_sonnet__settings_set_preferred_languages(void* self, const char* lang[sta
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 ///
-const char** k_sonnet__settings_preferred_languages(void* self);
+const char** k_sonnet__settings_preferred_languages(const void* self);
 
 /// [Upstream resources](https://api.kde.org/sonnet-settings.html#setDefaultClient)
 ///
@@ -136,9 +136,9 @@ void k_sonnet__settings_set_default_client(void* self, const char* client);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 ///
-const char* k_sonnet__settings_default_client(void* self);
+const char* k_sonnet__settings_default_client(const void* self);
 
 /// [Upstream resources](https://api.kde.org/sonnet-settings.html#setSkipUppercase)
 ///
@@ -149,9 +149,9 @@ void k_sonnet__settings_set_skip_uppercase(void* self, bool skipUppercase);
 
 /// [Upstream resources](https://api.kde.org/sonnet-settings.html#skipUppercase)
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 ///
-bool k_sonnet__settings_skip_uppercase(void* self);
+bool k_sonnet__settings_skip_uppercase(const void* self);
 
 /// [Upstream resources](https://api.kde.org/sonnet-settings.html#setAutodetectLanguage)
 ///
@@ -162,9 +162,9 @@ void k_sonnet__settings_set_autodetect_language(void* self, bool autodetectLangu
 
 /// [Upstream resources](https://api.kde.org/sonnet-settings.html#autodetectLanguage)
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 ///
-bool k_sonnet__settings_autodetect_language(void* self);
+bool k_sonnet__settings_autodetect_language(const void* self);
 
 /// [Upstream resources](https://api.kde.org/sonnet-settings.html#setSkipRunTogether)
 ///
@@ -175,9 +175,9 @@ void k_sonnet__settings_set_skip_run_together(void* self, bool skipRunTogether);
 
 /// [Upstream resources](https://api.kde.org/sonnet-settings.html#skipRunTogether)
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 ///
-bool k_sonnet__settings_skip_run_together(void* self);
+bool k_sonnet__settings_skip_run_together(const void* self);
 
 /// [Upstream resources](https://api.kde.org/sonnet-settings.html#setBackgroundCheckerEnabled)
 ///
@@ -188,9 +188,9 @@ void k_sonnet__settings_set_background_checker_enabled(void* self, bool backgrou
 
 /// [Upstream resources](https://api.kde.org/sonnet-settings.html#backgroundCheckerEnabled)
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 ///
-bool k_sonnet__settings_background_checker_enabled(void* self);
+bool k_sonnet__settings_background_checker_enabled(const void* self);
 
 /// [Upstream resources](https://api.kde.org/sonnet-settings.html#setCheckerEnabledByDefault)
 ///
@@ -201,9 +201,9 @@ void k_sonnet__settings_set_checker_enabled_by_default(void* self, bool checkerE
 
 /// [Upstream resources](https://api.kde.org/sonnet-settings.html#checkerEnabledByDefault)
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 ///
-bool k_sonnet__settings_checker_enabled_by_default(void* self);
+bool k_sonnet__settings_checker_enabled_by_default(const void* self);
 
 /// [Upstream resources](https://api.kde.org/sonnet-settings.html#setCurrentIgnoreList)
 ///
@@ -216,23 +216,23 @@ void k_sonnet__settings_set_current_ignore_list(void* self, const char* ignores[
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 ///
-const char** k_sonnet__settings_current_ignore_list(void* self);
+const char** k_sonnet__settings_current_ignore_list(const void* self);
 
 /// [Upstream resources](https://api.kde.org/sonnet-settings.html#clients)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 ///
-const char** k_sonnet__settings_clients(void* self);
+const char** k_sonnet__settings_clients(const void* self);
 
 /// [Upstream resources](https://api.kde.org/sonnet-settings.html#modified)
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 ///
-bool k_sonnet__settings_modified(void* self);
+bool k_sonnet__settings_modified(const void* self);
 
 /// [Upstream resources](https://api.kde.org/sonnet-settings.html#dictionaryModel)
 ///
@@ -439,9 +439,9 @@ const char* k_sonnet__settings_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 ///
-const char* k_sonnet__settings_object_name(void* self);
+const char* k_sonnet__settings_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -456,33 +456,33 @@ void k_sonnet__settings_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 ///
-bool k_sonnet__settings_is_widget_type(void* self);
+bool k_sonnet__settings_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 ///
-bool k_sonnet__settings_is_window_type(void* self);
+bool k_sonnet__settings_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 ///
-bool k_sonnet__settings_is_quick_item_type(void* self);
+bool k_sonnet__settings_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 ///
-bool k_sonnet__settings_signals_blocked(void* self);
+bool k_sonnet__settings_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -497,9 +497,9 @@ bool k_sonnet__settings_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 ///
-QThread* k_sonnet__settings_thread(void* self);
+QThread* k_sonnet__settings_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -550,11 +550,11 @@ void k_sonnet__settings_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_sonnet__settings_children(void* self);
+libqt_list k_sonnet__settings_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -592,7 +592,7 @@ void k_sonnet__settings_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_sonnet__settings_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_sonnet__settings_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -603,18 +603,18 @@ QMetaObject__Connection* k_sonnet__settings_connect(void* sender, const char* si
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_sonnet__settings_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_sonnet__settings_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_sonnet__settings_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_sonnet__settings_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -625,7 +625,7 @@ QMetaObject__Connection* k_sonnet__settings_connect3(void* self, void* sender, c
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_sonnet__settings_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_sonnet__settings_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -636,24 +636,24 @@ bool k_sonnet__settings_disconnect(void* sender, const char* signal, void* recei
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_sonnet__settings_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_sonnet__settings_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 ///
-bool k_sonnet__settings_disconnect3(void* self);
+bool k_sonnet__settings_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 /// @param receiver QObject*
 ///
-bool k_sonnet__settings_disconnect4(void* self, void* receiver);
+bool k_sonnet__settings_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -661,23 +661,23 @@ bool k_sonnet__settings_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_sonnet__settings_disconnect5(void* param1);
+bool k_sonnet__settings_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 ///
-void k_sonnet__settings_dump_object_tree(void* self);
+void k_sonnet__settings_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 ///
-void k_sonnet__settings_dump_object_info(void* self);
+void k_sonnet__settings_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -687,16 +687,16 @@ void k_sonnet__settings_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_sonnet__settings_set_property(void* self, const char* name, void* value);
+bool k_sonnet__settings_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 /// @param name const char*
 ///
-QVariant* k_sonnet__settings_property(void* self, const char* name);
+QVariant* k_sonnet__settings_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -704,9 +704,9 @@ QVariant* k_sonnet__settings_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 ///
-const char** k_sonnet__settings_dynamic_property_names(void* self);
+const char** k_sonnet__settings_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -720,9 +720,9 @@ QBindingStorage* k_sonnet__settings_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 ///
-const QBindingStorage* k_sonnet__settings_binding_storage2(void* self);
+const QBindingStorage* k_sonnet__settings_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -745,18 +745,18 @@ void k_sonnet__settings_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 ///
-QObject* k_sonnet__settings_parent(void* self);
+QObject* k_sonnet__settings_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 /// @param classname const char*
 ///
-bool k_sonnet__settings_inherits(void* self, const char* classname);
+bool k_sonnet__settings_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -796,7 +796,7 @@ int32_t k_sonnet__settings_start_timer23(void* self, int64_t time, int32_t timer
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_sonnet__settings_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_sonnet__settings_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -808,59 +808,59 @@ QMetaObject__Connection* k_sonnet__settings_connect5(void* sender, const char* s
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_sonnet__settings_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_sonnet__settings_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_sonnet__settings_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_sonnet__settings_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 /// @param signal const char*
 ///
-bool k_sonnet__settings_disconnect1(void* self, const char* signal);
+bool k_sonnet__settings_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Sonnet__Settings*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_sonnet__settings_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_sonnet__settings_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_sonnet__settings_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_sonnet__settings_disconnect23(void* self, void* receiver, const char* member);
+bool k_sonnet__settings_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const Sonnet__Settings*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_sonnet__settings_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1056,7 +1056,7 @@ void k_sonnet__settings_on_custom_event(void* self, void (*callback)(void*, void
 /// @param self Sonnet__Settings*
 /// @param signal QMetaMethod*
 ///
-void k_sonnet__settings_connect_notify(void* self, void* signal);
+void k_sonnet__settings_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1067,7 +1067,7 @@ void k_sonnet__settings_connect_notify(void* self, void* signal);
 /// @param self Sonnet__Settings*
 /// @param signal QMetaMethod*
 ///
-void k_sonnet__settings_super_connect_notify(void* self, void* signal);
+void k_sonnet__settings_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1078,7 +1078,7 @@ void k_sonnet__settings_super_connect_notify(void* self, void* signal);
 /// @param self Sonnet__Settings*
 /// @param callback void func(Sonnet__Settings* self, QMetaMethod* signal)
 ///
-void k_sonnet__settings_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_sonnet__settings_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1089,7 +1089,7 @@ void k_sonnet__settings_on_connect_notify(void* self, void (*callback)(void*, vo
 /// @param self Sonnet__Settings*
 /// @param signal QMetaMethod*
 ///
-void k_sonnet__settings_disconnect_notify(void* self, void* signal);
+void k_sonnet__settings_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1100,7 +1100,7 @@ void k_sonnet__settings_disconnect_notify(void* self, void* signal);
 /// @param self Sonnet__Settings*
 /// @param signal QMetaMethod*
 ///
-void k_sonnet__settings_super_disconnect_notify(void* self, void* signal);
+void k_sonnet__settings_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1111,7 +1111,7 @@ void k_sonnet__settings_super_disconnect_notify(void* self, void* signal);
 /// @param self Sonnet__Settings*
 /// @param callback void func(Sonnet__Settings* self, QMetaMethod* signal)
 ///
-void k_sonnet__settings_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_sonnet__settings_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1119,9 +1119,9 @@ void k_sonnet__settings_on_disconnect_notify(void* self, void (*callback)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 ///
-QObject* k_sonnet__settings_sender(void* self);
+QObject* k_sonnet__settings_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1129,9 +1129,9 @@ QObject* k_sonnet__settings_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 ///
-QObject* k_sonnet__settings_super_sender(void* self);
+QObject* k_sonnet__settings_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1139,10 +1139,10 @@ QObject* k_sonnet__settings_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Sonnet__Settings*
-/// @param callback QObject* func()
+/// @param self const Sonnet__Settings*
+/// @param callback QObject* func(Sonnet__Settings* self)
 ///
-void k_sonnet__settings_on_sender(void* self, QObject* (*callback)());
+void k_sonnet__settings_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1150,9 +1150,9 @@ void k_sonnet__settings_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 ///
-int32_t k_sonnet__settings_sender_signal_index(void* self);
+int32_t k_sonnet__settings_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1160,9 +1160,9 @@ int32_t k_sonnet__settings_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 ///
-int32_t k_sonnet__settings_super_sender_signal_index(void* self);
+int32_t k_sonnet__settings_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1170,10 +1170,10 @@ int32_t k_sonnet__settings_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Sonnet__Settings*
-/// @param callback int32_t func()
+/// @param self const Sonnet__Settings*
+/// @param callback int32_t func(Sonnet__Settings* self)
 ///
-void k_sonnet__settings_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_sonnet__settings_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1181,10 +1181,10 @@ void k_sonnet__settings_on_sender_signal_index(void* self, int32_t (*callback)()
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 /// @param signal const char*
 ///
-int32_t k_sonnet__settings_receivers(void* self, const char* signal);
+int32_t k_sonnet__settings_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1192,10 +1192,10 @@ int32_t k_sonnet__settings_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 /// @param signal const char*
 ///
-int32_t k_sonnet__settings_super_receivers(void* self, const char* signal);
+int32_t k_sonnet__settings_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1203,10 +1203,10 @@ int32_t k_sonnet__settings_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 /// @param callback int32_t func(Sonnet__Settings* self, const char* signal)
 ///
-void k_sonnet__settings_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_sonnet__settings_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1214,10 +1214,10 @@ void k_sonnet__settings_on_receivers(void* self, int32_t (*callback)(void*, cons
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 /// @param signal QMetaMethod*
 ///
-bool k_sonnet__settings_is_signal_connected(void* self, void* signal);
+bool k_sonnet__settings_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1225,10 +1225,10 @@ bool k_sonnet__settings_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 /// @param signal QMetaMethod*
 ///
-bool k_sonnet__settings_super_is_signal_connected(void* self, void* signal);
+bool k_sonnet__settings_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1236,10 +1236,10 @@ bool k_sonnet__settings_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Sonnet__Settings*
+/// @param self const Sonnet__Settings*
 /// @param callback bool func(Sonnet__Settings* self, QMetaMethod* signal)
 ///
-void k_sonnet__settings_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_sonnet__settings_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

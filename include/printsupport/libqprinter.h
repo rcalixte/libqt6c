@@ -20,7 +20,7 @@ QPrinter* q_printer_new();
 ///
 /// @param printer QPrinterInfo*
 ///
-QPrinter* q_printer_new2(void* printer);
+QPrinter* q_printer_new2(const void* printer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html)
 
@@ -37,30 +37,30 @@ QPrinter* q_printer_new3(int32_t mode);
 /// @param printer QPrinterInfo*
 /// @param mode enum QPrinter__PrinterMode
 ///
-QPrinter* q_printer_new4(void* printer, int32_t mode);
+QPrinter* q_printer_new4(const void* printer, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#devType)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-int32_t q_printer_dev_type(void* self);
+int32_t q_printer_dev_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#devType)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QPrinter*
-/// @param callback int32_t func()
+/// @param self const QPrinter*
+/// @param callback int32_t func(const QPrinter* self)
 ///
-void q_printer_on_dev_type(void* self, int32_t (*callback)());
+void q_printer_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#devType)
 ///
 /// Base class method implementation
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-int32_t q_printer_super_dev_type(void* self);
+int32_t q_printer_super_dev_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#setOutputFormat)
 ///
@@ -71,11 +71,11 @@ void q_printer_set_output_format(void* self, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#outputFormat)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
 /// @return enum QPrinter__OutputFormat
 ///
-int32_t q_printer_output_format(void* self);
+int32_t q_printer_output_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#setPdfVersion)
 ///
@@ -86,11 +86,11 @@ void q_printer_set_pdf_version(void* self, int32_t version);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#pdfVersion)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
 /// @return enum QPagedPaintDevice__PdfVersion
 ///
-int32_t q_printer_pdf_version(void* self);
+int32_t q_printer_pdf_version(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#setPrinterName)
 ///
@@ -103,15 +103,15 @@ void q_printer_set_printer_name(void* self, const char* printerName);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-const char* q_printer_printer_name(void* self);
+const char* q_printer_printer_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#isValid)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-bool q_printer_is_valid(void* self);
+bool q_printer_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#setOutputFileName)
 ///
@@ -124,9 +124,9 @@ void q_printer_set_output_file_name(void* self, const char* outputFileName);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-const char* q_printer_output_file_name(void* self);
+const char* q_printer_output_file_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#setPrintProgram)
 ///
@@ -139,9 +139,9 @@ void q_printer_set_print_program(void* self, const char* printProgram);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-const char* q_printer_print_program(void* self);
+const char* q_printer_print_program(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#setDocName)
 ///
@@ -154,9 +154,9 @@ void q_printer_set_doc_name(void* self, const char* docName);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-const char* q_printer_doc_name(void* self);
+const char* q_printer_doc_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#setCreator)
 ///
@@ -169,9 +169,9 @@ void q_printer_set_creator(void* self, const char* creator);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-const char* q_printer_creator(void* self);
+const char* q_printer_creator(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#setPageOrder)
 ///
@@ -182,11 +182,11 @@ void q_printer_set_page_order(void* self, int32_t pageOrder);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#pageOrder)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
 /// @return enum QPrinter__PageOrder
 ///
-int32_t q_printer_page_order(void* self);
+int32_t q_printer_page_order(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#setResolution)
 ///
@@ -197,9 +197,9 @@ void q_printer_set_resolution(void* self, int resolution);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#resolution)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-int32_t q_printer_resolution(void* self);
+int32_t q_printer_resolution(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#setColorMode)
 ///
@@ -210,11 +210,11 @@ void q_printer_set_color_mode(void* self, int32_t colorMode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#colorMode)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
 /// @return enum QPrinter__ColorMode
 ///
-int32_t q_printer_color_mode(void* self);
+int32_t q_printer_color_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#setCollateCopies)
 ///
@@ -225,9 +225,9 @@ void q_printer_set_collate_copies(void* self, bool collate);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#collateCopies)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-bool q_printer_collate_copies(void* self);
+bool q_printer_collate_copies(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#setFullPage)
 ///
@@ -238,9 +238,9 @@ void q_printer_set_full_page(void* self, bool fullPage);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#fullPage)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-bool q_printer_full_page(void* self);
+bool q_printer_full_page(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#setCopyCount)
 ///
@@ -251,15 +251,15 @@ void q_printer_set_copy_count(void* self, int copyCount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#copyCount)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-int32_t q_printer_copy_count(void* self);
+int32_t q_printer_copy_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#supportsMultipleCopies)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-bool q_printer_supports_multiple_copies(void* self);
+bool q_printer_supports_multiple_copies(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#setPaperSource)
 ///
@@ -270,11 +270,11 @@ void q_printer_set_paper_source(void* self, int32_t paperSource);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#paperSource)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
 /// @return enum QPrinter__PaperSource
 ///
-int32_t q_printer_paper_source(void* self);
+int32_t q_printer_paper_source(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#setDuplex)
 ///
@@ -285,19 +285,19 @@ void q_printer_set_duplex(void* self, int32_t duplex);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#duplex)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
 /// @return enum QPrinter__DuplexMode
 ///
-int32_t q_printer_duplex(void* self);
+int32_t q_printer_duplex(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#supportedResolutions)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
 /// @return libqt_list of int
 ///
-libqt_list q_printer_supported_resolutions(void* self);
+libqt_list q_printer_supported_resolutions(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#setFontEmbeddingEnabled)
 ///
@@ -308,31 +308,31 @@ void q_printer_set_font_embedding_enabled(void* self, bool enable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#fontEmbeddingEnabled)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-bool q_printer_font_embedding_enabled(void* self);
+bool q_printer_font_embedding_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#paperRect)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 /// @param param1 enum QPrinter__Unit
 ///
-QRectF* q_printer_paper_rect(void* self, int32_t param1);
+QRectF* q_printer_paper_rect(const void* self, int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#pageRect)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 /// @param param1 enum QPrinter__Unit
 ///
-QRectF* q_printer_page_rect(void* self, int32_t param1);
+QRectF* q_printer_page_rect(const void* self, int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#printerSelectionOption)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-const char* q_printer_printer_selection_option(void* self);
+const char* q_printer_printer_selection_option(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#setPrinterSelectionOption)
 ///
@@ -352,9 +352,9 @@ bool q_printer_new_page(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QPrinter*
-/// @param callback bool func()
+/// @param callback bool func(QPrinter* self)
 ///
-void q_printer_on_new_page(void* self, bool (*callback)());
+void q_printer_on_new_page(void* self, bool (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#newPage)
 ///
@@ -372,40 +372,40 @@ bool q_printer_abort(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#printerState)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
 /// @return enum QPrinter__PrinterState
 ///
-int32_t q_printer_printer_state(void* self);
+int32_t q_printer_printer_state(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#paintEngine)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-QPaintEngine* q_printer_paint_engine(void* self);
+QPaintEngine* q_printer_paint_engine(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#paintEngine)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QPrinter*
-/// @param callback QPaintEngine* func()
+/// @param self const QPrinter*
+/// @param callback QPaintEngine* func(const QPrinter* self)
 ///
-void q_printer_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void q_printer_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#paintEngine)
 ///
 /// Base class method implementation
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-QPaintEngine* q_printer_super_paint_engine(void* self);
+QPaintEngine* q_printer_super_paint_engine(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#printEngine)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-QPrintEngine* q_printer_print_engine(void* self);
+QPrintEngine* q_printer_print_engine(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#setFromTo)
 ///
@@ -417,15 +417,15 @@ void q_printer_set_from_to(void* self, int fromPage, int toPage);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#fromPage)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-int32_t q_printer_from_page(void* self);
+int32_t q_printer_from_page(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#toPage)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-int32_t q_printer_to_page(void* self);
+int32_t q_printer_to_page(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#setPrintRange)
 ///
@@ -436,36 +436,36 @@ void q_printer_set_print_range(void* self, int32_t range);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#printRange)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
 /// @return enum QPrinter__PrintRange
 ///
-int32_t q_printer_print_range(void* self);
+int32_t q_printer_print_range(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#metric)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_printer_metric(void* self, int32_t param1);
+int32_t q_printer_metric(const void* self, int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#metric)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QPrinter*
-/// @param callback int32_t func(QPrinter* self, enum QPaintDevice__PaintDeviceMetric param1)
+/// @param self const QPrinter*
+/// @param callback int32_t func(const QPrinter* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_printer_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void q_printer_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#metric)
 ///
 /// Base class method implementation
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_printer_super_metric(void* self, int32_t param1);
+int32_t q_printer_super_metric(const void* self, int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#setEngines)
 ///
@@ -475,144 +475,125 @@ int32_t q_printer_super_metric(void* self, int32_t param1);
 ///
 void q_printer_set_engines(void* self, void* printEngine, void* paintEngine);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#setEngines)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QPrinter*
-/// @param callback void func(QPrinter* self, QPrintEngine* printEngine, QPaintEngine* paintEngine)
-///
-void q_printer_on_set_engines(void* self, void (*callback)(void*, void*, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#setEngines)
-///
-/// Base class method implementation
-///
-/// @param self QPrinter*
-/// @param printEngine QPrintEngine*
-/// @param paintEngine QPaintEngine*
-///
-void q_printer_super_set_engines(void* self, void* printEngine, void* paintEngine);
-
 /// Inherited from QPagedPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagedpaintdevice.html#pageLayout)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-QPageLayout* q_printer_page_layout(void* self);
+QPageLayout* q_printer_page_layout(const void* self);
 
 /// Inherited from QPagedPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagedpaintdevice.html#pageRanges)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-QPageRanges* q_printer_page_ranges(void* self);
+QPageRanges* q_printer_page_ranges(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-bool q_printer_painting_active(void* self);
+bool q_printer_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#width)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-int32_t q_printer_width(void* self);
+int32_t q_printer_width(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#height)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-int32_t q_printer_height(void* self);
+int32_t q_printer_height(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-int32_t q_printer_width_m_m(void* self);
+int32_t q_printer_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-int32_t q_printer_height_m_m(void* self);
+int32_t q_printer_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-int32_t q_printer_logical_dpi_x(void* self);
+int32_t q_printer_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-int32_t q_printer_logical_dpi_y(void* self);
+int32_t q_printer_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-int32_t q_printer_physical_dpi_x(void* self);
+int32_t q_printer_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-int32_t q_printer_physical_dpi_y(void* self);
+int32_t q_printer_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-double q_printer_device_pixel_ratio(void* self);
+double q_printer_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-double q_printer_device_pixel_ratio_f(void* self);
+double q_printer_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-int32_t q_printer_color_count(void* self);
+int32_t q_printer_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-int32_t q_printer_depth(void* self);
+int32_t q_printer_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -638,7 +619,7 @@ int32_t q_printer_encode_metric_f(int32_t metric, double value);
 /// @param self QPrinter*
 /// @param pageLayout QPageLayout*
 ///
-bool q_printer_set_page_layout(void* self, void* pageLayout);
+bool q_printer_set_page_layout(void* self, const void* pageLayout);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -649,7 +630,7 @@ bool q_printer_set_page_layout(void* self, void* pageLayout);
 /// @param self QPrinter*
 /// @param pageLayout QPageLayout*
 ///
-bool q_printer_super_set_page_layout(void* self, void* pageLayout);
+bool q_printer_super_set_page_layout(void* self, const void* pageLayout);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -660,7 +641,7 @@ bool q_printer_super_set_page_layout(void* self, void* pageLayout);
 /// @param self QPrinter*
 /// @param callback bool func(QPrinter* self, QPageLayout* pageLayout)
 ///
-void q_printer_on_set_page_layout(void* self, bool (*callback)(void*, void*));
+void q_printer_on_set_page_layout(void* self, bool (*callback)(void*, const void*));
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -671,7 +652,7 @@ void q_printer_on_set_page_layout(void* self, bool (*callback)(void*, void*));
 /// @param self QPrinter*
 /// @param pageSize QPageSize*
 ///
-bool q_printer_set_page_size(void* self, void* pageSize);
+bool q_printer_set_page_size(void* self, const void* pageSize);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -682,7 +663,7 @@ bool q_printer_set_page_size(void* self, void* pageSize);
 /// @param self QPrinter*
 /// @param pageSize QPageSize*
 ///
-bool q_printer_super_set_page_size(void* self, void* pageSize);
+bool q_printer_super_set_page_size(void* self, const void* pageSize);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -693,7 +674,7 @@ bool q_printer_super_set_page_size(void* self, void* pageSize);
 /// @param self QPrinter*
 /// @param callback bool func(QPrinter* self, QPageSize* pageSize)
 ///
-void q_printer_on_set_page_size(void* self, bool (*callback)(void*, void*));
+void q_printer_on_set_page_size(void* self, bool (*callback)(void*, const void*));
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -738,7 +719,7 @@ void q_printer_on_set_page_orientation(void* self, bool (*callback)(void*, int32
 /// @param margins QMarginsF*
 /// @param units enum QPageLayout__Unit
 ///
-bool q_printer_set_page_margins(void* self, void* margins, int32_t units);
+bool q_printer_set_page_margins(void* self, const void* margins, int32_t units);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -750,7 +731,7 @@ bool q_printer_set_page_margins(void* self, void* margins, int32_t units);
 /// @param margins QMarginsF*
 /// @param units enum QPageLayout__Unit
 ///
-bool q_printer_super_set_page_margins(void* self, void* margins, int32_t units);
+bool q_printer_super_set_page_margins(void* self, const void* margins, int32_t units);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -761,7 +742,7 @@ bool q_printer_super_set_page_margins(void* self, void* margins, int32_t units);
 /// @param self QPrinter*
 /// @param callback bool func(QPrinter* self, QMarginsF* margins, enum QPageLayout__Unit units)
 ///
-void q_printer_on_set_page_margins(void* self, bool (*callback)(void*, void*, int32_t));
+void q_printer_on_set_page_margins(void* self, bool (*callback)(void*, const void*, int32_t));
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -772,7 +753,7 @@ void q_printer_on_set_page_margins(void* self, bool (*callback)(void*, void*, in
 /// @param self QPrinter*
 /// @param ranges QPageRanges*
 ///
-void q_printer_set_page_ranges(void* self, void* ranges);
+void q_printer_set_page_ranges(void* self, const void* ranges);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -783,7 +764,7 @@ void q_printer_set_page_ranges(void* self, void* ranges);
 /// @param self QPrinter*
 /// @param ranges QPageRanges*
 ///
-void q_printer_super_set_page_ranges(void* self, void* ranges);
+void q_printer_super_set_page_ranges(void* self, const void* ranges);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -794,7 +775,7 @@ void q_printer_super_set_page_ranges(void* self, void* ranges);
 /// @param self QPrinter*
 /// @param callback void func(QPrinter* self, QPageRanges* ranges)
 ///
-void q_printer_on_set_page_ranges(void* self, void (*callback)(void*, void*));
+void q_printer_on_set_page_ranges(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -802,10 +783,10 @@ void q_printer_on_set_page_ranges(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 /// @param painter QPainter*
 ///
-void q_printer_init_painter(void* self, void* painter);
+void q_printer_init_painter(const void* self, void* painter);
 
 /// Inherited from QPaintDevice
 ///
@@ -813,10 +794,10 @@ void q_printer_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 /// @param painter QPainter*
 ///
-void q_printer_super_init_painter(void* self, void* painter);
+void q_printer_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QPaintDevice
 ///
@@ -824,10 +805,10 @@ void q_printer_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 /// @param callback void func(QPrinter* self, QPainter* painter)
 ///
-void q_printer_on_init_painter(void* self, void (*callback)(void*, void*));
+void q_printer_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -835,10 +816,10 @@ void q_printer_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_printer_redirected(void* self, void* offset);
+QPaintDevice* q_printer_redirected(const void* self, void* offset);
 
 /// Inherited from QPaintDevice
 ///
@@ -846,10 +827,10 @@ QPaintDevice* q_printer_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_printer_super_redirected(void* self, void* offset);
+QPaintDevice* q_printer_super_redirected(const void* self, void* offset);
 
 /// Inherited from QPaintDevice
 ///
@@ -857,10 +838,10 @@ QPaintDevice* q_printer_super_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 /// @param callback QPaintDevice* func(QPrinter* self, QPoint* offset)
 ///
-void q_printer_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void q_printer_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -868,9 +849,9 @@ void q_printer_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-QPainter* q_printer_shared_painter(void* self);
+QPainter* q_printer_shared_painter(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -878,9 +859,9 @@ QPainter* q_printer_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 ///
-QPainter* q_printer_super_shared_painter(void* self);
+QPainter* q_printer_super_shared_painter(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -888,10 +869,10 @@ QPainter* q_printer_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPrinter*
-/// @param callback QPainter* func()
+/// @param self const QPrinter*
+/// @param callback QPainter* func(QPrinter* self)
 ///
-void q_printer_on_shared_painter(void* self, QPainter* (*callback)());
+void q_printer_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -899,11 +880,11 @@ void q_printer_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_printer_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_printer_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -911,11 +892,11 @@ double q_printer_get_decoded_metric_f(void* self, int32_t metricA, int32_t metri
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_printer_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_printer_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -923,10 +904,10 @@ double q_printer_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPrinter*
+/// @param self const QPrinter*
 /// @param callback double func(QPrinter* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_printer_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void q_printer_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#dtor.QPrinter)
 ///

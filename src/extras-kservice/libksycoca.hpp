@@ -43,7 +43,7 @@ void KSycoca_EnsureCacheValid(KSycoca* self);
 void KSycoca_SetupTestMenu();
 void KSycoca_DatabaseChanged(KSycoca* self);
 void KSycoca_ConnectNotify(KSycoca* self, const QMetaMethod* signal);
-void KSycoca_OnMetaObject(const KSycoca* self, intptr_t slot);
+void KSycoca_OnMetaObject(KSycoca* self, intptr_t slot);
 QMetaObject* KSycoca_SuperMetaObject(const KSycoca* self);
 void KSycoca_OnMetacast(KSycoca* self, intptr_t slot);
 void* KSycoca_SuperMetacast(KSycoca* self, const char* param1);
@@ -72,17 +72,9 @@ void KSycoca_DisconnectNotify(KSycoca* self, const QMetaMethod* signal);
 void KSycoca_OnDisconnectNotify(KSycoca* self, intptr_t slot);
 void KSycoca_SuperDisconnectNotify(KSycoca* self, const QMetaMethod* signal);
 QObject* KSycoca_Sender(const KSycoca* self);
-void KSycoca_OnSender(const KSycoca* self, intptr_t slot);
-QObject* KSycoca_SuperSender(const KSycoca* self);
 int KSycoca_SenderSignalIndex(const KSycoca* self);
-void KSycoca_OnSenderSignalIndex(const KSycoca* self, intptr_t slot);
-int KSycoca_SuperSenderSignalIndex(const KSycoca* self);
 int KSycoca_Receivers(const KSycoca* self, const char* signal);
-void KSycoca_OnReceivers(const KSycoca* self, intptr_t slot);
-int KSycoca_SuperReceivers(const KSycoca* self, const char* signal);
 bool KSycoca_IsSignalConnected(const KSycoca* self, const QMetaMethod* signal);
-void KSycoca_OnIsSignalConnected(const KSycoca* self, intptr_t slot);
-bool KSycoca_SuperIsSignalConnected(const KSycoca* self, const QMetaMethod* signal);
 void KSycoca_Delete(KSycoca* self);
 
 #ifdef __cplusplus

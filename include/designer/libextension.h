@@ -12,18 +12,20 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractextensionfactory.html#extension)
 ///
-/// @param self QAbstractExtensionFactory*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const QAbstractExtensionFactory*
 /// @param object QObject*
 /// @param iid const char*
 ///
-QObject* q_abstractextensionfactory_extension(void* self, void* object, const char* iid);
+QObject* q_abstractextensionfactory_extension(const void* self, void* object, const char* iid);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractextensionfactory.html#operator-eq)
 ///
 /// @param self QAbstractExtensionFactory*
 /// @param param1 QAbstractExtensionFactory*
 ///
-void q_abstractextensionfactory_operator_assign(void* self, void* param1);
+void q_abstractextensionfactory_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractextensionfactory.html#dtor.QAbstractExtensionFactory)
 ///
@@ -35,36 +37,12 @@ void q_abstractextensionfactory_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractextensionmanager.html)
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstractextensionmanager.html#registerExtensions)
-///
-/// @param self QAbstractExtensionManager*
-/// @param factory QAbstractExtensionFactory*
-/// @param iid const char*
-///
-void q_abstractextensionmanager_register_extensions(void* self, void* factory, const char* iid);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstractextensionmanager.html#unregisterExtensions)
-///
-/// @param self QAbstractExtensionManager*
-/// @param factory QAbstractExtensionFactory*
-/// @param iid const char*
-///
-void q_abstractextensionmanager_unregister_extensions(void* self, void* factory, const char* iid);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstractextensionmanager.html#extension)
-///
-/// @param self QAbstractExtensionManager*
-/// @param object QObject*
-/// @param iid const char*
-///
-QObject* q_abstractextensionmanager_extension(void* self, void* object, const char* iid);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractextensionmanager.html#operator-eq)
 ///
 /// @param self QAbstractExtensionManager*
 /// @param param1 QAbstractExtensionManager*
 ///
-void q_abstractextensionmanager_operator_assign(void* self, void* param1);
+void q_abstractextensionmanager_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractextensionmanager.html#dtor.QAbstractExtensionManager)
 ///

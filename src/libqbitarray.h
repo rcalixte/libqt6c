@@ -28,7 +28,7 @@ QBitArray* q_bitarray_new2(intptr_t size);
 ///
 /// @param other QBitArray*
 ///
-QBitArray* q_bitarray_new3(void* other);
+QBitArray* q_bitarray_new3(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html)
 
@@ -44,7 +44,7 @@ QBitArray* q_bitarray_new4(intptr_t size, bool val);
 /// @param self QBitArray*
 /// @param other QBitArray*
 ///
-void q_bitarray_operator_assign(void* self, void* other);
+void q_bitarray_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#swap)
 ///
@@ -55,34 +55,34 @@ void q_bitarray_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#size)
 ///
-/// @param self QBitArray*
+/// @param self const QBitArray*
 ///
-intptr_t q_bitarray_size(void* self);
+intptr_t q_bitarray_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#count)
 ///
-/// @param self QBitArray*
+/// @param self const QBitArray*
 ///
-intptr_t q_bitarray_count(void* self);
+intptr_t q_bitarray_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#count)
 ///
-/// @param self QBitArray*
+/// @param self const QBitArray*
 /// @param on bool
 ///
-intptr_t q_bitarray_count2(void* self, bool on);
+intptr_t q_bitarray_count2(const void* self, bool on);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#isEmpty)
 ///
-/// @param self QBitArray*
+/// @param self const QBitArray*
 ///
-bool q_bitarray_is_empty(void* self);
+bool q_bitarray_is_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#isNull)
 ///
-/// @param self QBitArray*
+/// @param self const QBitArray*
 ///
-bool q_bitarray_is_null(void* self);
+bool q_bitarray_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#resize)
 ///
@@ -99,9 +99,9 @@ void q_bitarray_detach(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#isDetached)
 ///
-/// @param self QBitArray*
+/// @param self const QBitArray*
 ///
-bool q_bitarray_is_detached(void* self);
+bool q_bitarray_is_detached(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#clear)
 ///
@@ -111,10 +111,10 @@ void q_bitarray_clear(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#testBit)
 ///
-/// @param self QBitArray*
+/// @param self const QBitArray*
 /// @param i intptr_t
 ///
-bool q_bitarray_test_bit(void* self, intptr_t i);
+bool q_bitarray_test_bit(const void* self, intptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#setBit)
 ///
@@ -147,10 +147,10 @@ bool q_bitarray_toggle_bit(void* self, intptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#at)
 ///
-/// @param self QBitArray*
+/// @param self const QBitArray*
 /// @param i intptr_t
 ///
-bool q_bitarray_at(void* self, intptr_t i);
+bool q_bitarray_at(const void* self, intptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#operator-5b-5d)
 ///
@@ -161,31 +161,31 @@ QBitRef* q_bitarray_operator_subscript(void* self, intptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#operator-5b-5d)
 ///
-/// @param self QBitArray*
+/// @param self const QBitArray*
 /// @param i intptr_t
 ///
-bool q_bitarray_operator_subscript2(void* self, intptr_t i);
+bool q_bitarray_operator_subscript2(const void* self, intptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#operator-and-eq)
 ///
 /// @param self QBitArray*
 /// @param param1 QBitArray*
 ///
-void q_bitarray_operator_bitwise_and_assign(void* self, void* param1);
+void q_bitarray_operator_bitwise_and_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#operator-7c-eq)
 ///
 /// @param self QBitArray*
 /// @param param1 QBitArray*
 ///
-void q_bitarray_operator_bitwise_or_assign(void* self, void* param1);
+void q_bitarray_operator_bitwise_or_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#operator-5e-eq)
 ///
 /// @param self QBitArray*
 /// @param param1 QBitArray*
 ///
-void q_bitarray_operator_bitwise_not_assign(void* self, void* param1);
+void q_bitarray_operator_bitwise_not_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#fill)
 ///
@@ -214,9 +214,9 @@ void q_bitarray_truncate(void* self, intptr_t pos);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QBitArray*
+/// @param self const QBitArray*
 ///
-const char* q_bitarray_bits(void* self);
+const char* q_bitarray_bits(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#fromBits)
 ///
@@ -227,10 +227,10 @@ QBitArray* q_bitarray_from_bits(const char* data, intptr_t lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#toUInt32)
 ///
-/// @param self QBitArray*
+/// @param self const QBitArray*
 /// @param endianness enum QSysInfo__Endian
 ///
-uint32_t q_bitarray_to_u_int32(void* self, int32_t endianness);
+uint32_t q_bitarray_to_u_int32(const void* self, int32_t endianness);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#fill)
 ///
@@ -242,11 +242,11 @@ bool q_bitarray_fill22(void* self, bool aval, intptr_t asize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#toUInt32)
 ///
-/// @param self QBitArray*
+/// @param self const QBitArray*
 /// @param endianness enum QSysInfo__Endian
 /// @param ok bool*
 ///
-uint32_t q_bitarray_to_u_int322(void* self, int32_t endianness, bool* ok);
+uint32_t q_bitarray_to_u_int322(const void* self, int32_t endianness, bool* ok);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#dtor.QBitArray)
 ///
@@ -262,7 +262,7 @@ void q_bitarray_delete(void* self);
 ///
 /// @param other QBitRef*
 ///
-QBitRef* q_bitref_new(void* other);
+QBitRef* q_bitref_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitref.html)
 
@@ -270,26 +270,26 @@ QBitRef* q_bitref_new(void* other);
 ///
 /// @param param1 QBitRef*
 ///
-QBitRef* q_bitref_new2(void* param1);
+QBitRef* q_bitref_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitref.html#operator-bool)
 ///
-/// @param self QBitRef*
+/// @param self const QBitRef*
 ///
-bool q_bitref_to_bool(void* self);
+bool q_bitref_to_bool(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitref.html#operator-not)
 ///
-/// @param self QBitRef*
+/// @param self const QBitRef*
 ///
-bool q_bitref_operator_not(void* self);
+bool q_bitref_operator_not(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitref.html#operator-eq)
 ///
 /// @param self QBitRef*
 /// @param val QBitRef*
 ///
-void q_bitref_operator_assign(void* self, void* val);
+void q_bitref_operator_assign(void* self, const void* val);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitref.html#operator-eq)
 ///

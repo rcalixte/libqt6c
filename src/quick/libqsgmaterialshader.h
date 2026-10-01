@@ -109,11 +109,11 @@ bool q_sgmaterialshader_super_update_graphics_pipeline_state(void* self, void* s
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader.html#flags)
 ///
-/// @param self QSGMaterialShader*
+/// @param self const QSGMaterialShader*
 ///
 /// @return flag of enum QSGMaterialShader__Flag
 ///
-int32_t q_sgmaterialshader_flags(void* self);
+int32_t q_sgmaterialshader_flags(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader.html#setFlag)
 ///
@@ -131,10 +131,10 @@ void q_sgmaterialshader_set_flags(void* self, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader.html#combinedImageSamplerCount)
 ///
-/// @param self QSGMaterialShader*
+/// @param self const QSGMaterialShader*
 /// @param binding int
 ///
-int32_t q_sgmaterialshader_combined_image_sampler_count(void* self, int binding);
+int32_t q_sgmaterialshader_combined_image_sampler_count(const void* self, int binding);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader.html#setShaderFileName)
 ///
@@ -146,51 +146,12 @@ void q_sgmaterialshader_set_shader_file_name(void* self, int32_t stage, const ch
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader.html#setShaderFileName)
 ///
-/// Allows for overriding the related default method
-///
-/// @param self QSGMaterialShader*
-/// @param callback void func(QSGMaterialShader* self, enum QSGMaterialShader__Stage stage, const char* filename)
-///
-void q_sgmaterialshader_on_set_shader_file_name(void* self, void (*callback)(void*, int32_t, const char*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader.html#setShaderFileName)
-///
-/// Base class method implementation
-///
-/// @param self QSGMaterialShader*
-/// @param stage enum QSGMaterialShader__Stage
-/// @param filename const char*
-///
-void q_sgmaterialshader_super_set_shader_file_name(void* self, int32_t stage, const char* filename);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader.html#setShaderFileName)
-///
 /// @param self QSGMaterialShader*
 /// @param stage enum QSGMaterialShader__Stage
 /// @param filename const char*
 /// @param viewCount int
 ///
 void q_sgmaterialshader_set_shader_file_name2(void* self, int32_t stage, const char* filename, int viewCount);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader.html#setShaderFileName)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QSGMaterialShader*
-/// @param callback void func(QSGMaterialShader* self, enum QSGMaterialShader__Stage stage, const char* filename, int viewCount)
-///
-void q_sgmaterialshader_on_set_shader_file_name2(void* self, void (*callback)(void*, int32_t, const char*, int));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader.html#setShaderFileName)
-///
-/// Base class method implementation
-///
-/// @param self QSGMaterialShader*
-/// @param stage enum QSGMaterialShader__Stage
-/// @param filename const char*
-/// @param viewCount int
-///
-void q_sgmaterialshader_super_set_shader_file_name2(void* self, int32_t stage, const char* filename, int viewCount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader.html#setFlag)
 ///
@@ -216,91 +177,91 @@ QSGMaterialShader__RenderState* q_sgmaterialshader__renderstate_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-renderstate.html#dirtyStates)
 ///
-/// @param self QSGMaterialShader__RenderState*
+/// @param self const QSGMaterialShader__RenderState*
 ///
 /// @return flag of enum QSGMaterialShader__RenderState__DirtyState
 ///
-int32_t q_sgmaterialshader__renderstate_dirty_states(void* self);
+int32_t q_sgmaterialshader__renderstate_dirty_states(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-renderstate.html#isMatrixDirty)
 ///
-/// @param self QSGMaterialShader__RenderState*
+/// @param self const QSGMaterialShader__RenderState*
 ///
-bool q_sgmaterialshader__renderstate_is_matrix_dirty(void* self);
+bool q_sgmaterialshader__renderstate_is_matrix_dirty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-renderstate.html#isOpacityDirty)
 ///
-/// @param self QSGMaterialShader__RenderState*
+/// @param self const QSGMaterialShader__RenderState*
 ///
-bool q_sgmaterialshader__renderstate_is_opacity_dirty(void* self);
+bool q_sgmaterialshader__renderstate_is_opacity_dirty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-renderstate.html#opacity)
 ///
-/// @param self QSGMaterialShader__RenderState*
+/// @param self const QSGMaterialShader__RenderState*
 ///
-float q_sgmaterialshader__renderstate_opacity(void* self);
+float q_sgmaterialshader__renderstate_opacity(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-renderstate.html#combinedMatrix)
 ///
-/// @param self QSGMaterialShader__RenderState*
+/// @param self const QSGMaterialShader__RenderState*
 ///
-QMatrix4x4* q_sgmaterialshader__renderstate_combined_matrix(void* self);
+QMatrix4x4* q_sgmaterialshader__renderstate_combined_matrix(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-renderstate.html#combinedMatrix)
 ///
-/// @param self QSGMaterialShader__RenderState*
+/// @param self const QSGMaterialShader__RenderState*
 /// @param index intptr_t
 ///
-QMatrix4x4* q_sgmaterialshader__renderstate_combined_matrix2(void* self, intptr_t index);
+QMatrix4x4* q_sgmaterialshader__renderstate_combined_matrix2(const void* self, intptr_t index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-renderstate.html#modelViewMatrix)
 ///
-/// @param self QSGMaterialShader__RenderState*
+/// @param self const QSGMaterialShader__RenderState*
 ///
-QMatrix4x4* q_sgmaterialshader__renderstate_model_view_matrix(void* self);
+QMatrix4x4* q_sgmaterialshader__renderstate_model_view_matrix(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-renderstate.html#projectionMatrix)
 ///
-/// @param self QSGMaterialShader__RenderState*
+/// @param self const QSGMaterialShader__RenderState*
 ///
-QMatrix4x4* q_sgmaterialshader__renderstate_projection_matrix(void* self);
+QMatrix4x4* q_sgmaterialshader__renderstate_projection_matrix(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-renderstate.html#projectionMatrix)
 ///
-/// @param self QSGMaterialShader__RenderState*
+/// @param self const QSGMaterialShader__RenderState*
 /// @param index intptr_t
 ///
-QMatrix4x4* q_sgmaterialshader__renderstate_projection_matrix2(void* self, intptr_t index);
+QMatrix4x4* q_sgmaterialshader__renderstate_projection_matrix2(const void* self, intptr_t index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-renderstate.html#projectionMatrixCount)
 ///
-/// @param self QSGMaterialShader__RenderState*
+/// @param self const QSGMaterialShader__RenderState*
 ///
-intptr_t q_sgmaterialshader__renderstate_projection_matrix_count(void* self);
+intptr_t q_sgmaterialshader__renderstate_projection_matrix_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-renderstate.html#viewportRect)
 ///
-/// @param self QSGMaterialShader__RenderState*
+/// @param self const QSGMaterialShader__RenderState*
 ///
-QRect* q_sgmaterialshader__renderstate_viewport_rect(void* self);
+QRect* q_sgmaterialshader__renderstate_viewport_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-renderstate.html#deviceRect)
 ///
-/// @param self QSGMaterialShader__RenderState*
+/// @param self const QSGMaterialShader__RenderState*
 ///
-QRect* q_sgmaterialshader__renderstate_device_rect(void* self);
+QRect* q_sgmaterialshader__renderstate_device_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-renderstate.html#determinant)
 ///
-/// @param self QSGMaterialShader__RenderState*
+/// @param self const QSGMaterialShader__RenderState*
 ///
-float q_sgmaterialshader__renderstate_determinant(void* self);
+float q_sgmaterialshader__renderstate_determinant(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-renderstate.html#devicePixelRatio)
 ///
-/// @param self QSGMaterialShader__RenderState*
+/// @param self const QSGMaterialShader__RenderState*
 ///
-float q_sgmaterialshader__renderstate_device_pixel_ratio(void* self);
+float q_sgmaterialshader__renderstate_device_pixel_ratio(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-renderstate.html#uniformData)
 ///
@@ -324,9 +285,9 @@ QSGMaterialShader__GraphicsPipelineState* q_sgmaterialshader__graphicspipelinest
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-graphicspipelinestate.html#blendEnable-var)
 ///
-/// @param self QSGMaterialShader__GraphicsPipelineState*
+/// @param self const QSGMaterialShader__GraphicsPipelineState*
 ///
-bool q_sgmaterialshader__graphicspipelinestate_blend_enable(void* self);
+bool q_sgmaterialshader__graphicspipelinestate_blend_enable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-graphicspipelinestate.html#blendEnable-var)
 ///
@@ -337,11 +298,11 @@ void q_sgmaterialshader__graphicspipelinestate_set_blend_enable(void* self, bool
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-graphicspipelinestate.html#srcColor-var)
 ///
-/// @param self QSGMaterialShader__GraphicsPipelineState*
+/// @param self const QSGMaterialShader__GraphicsPipelineState*
 ///
 /// @return enum QSGMaterialShader__GraphicsPipelineState__BlendFactor
 ///
-int32_t q_sgmaterialshader__graphicspipelinestate_src_color(void* self);
+int32_t q_sgmaterialshader__graphicspipelinestate_src_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-graphicspipelinestate.html#srcColor-var)
 ///
@@ -352,11 +313,11 @@ void q_sgmaterialshader__graphicspipelinestate_set_src_color(void* self, int32_t
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-graphicspipelinestate.html#dstColor-var)
 ///
-/// @param self QSGMaterialShader__GraphicsPipelineState*
+/// @param self const QSGMaterialShader__GraphicsPipelineState*
 ///
 /// @return enum QSGMaterialShader__GraphicsPipelineState__BlendFactor
 ///
-int32_t q_sgmaterialshader__graphicspipelinestate_dst_color(void* self);
+int32_t q_sgmaterialshader__graphicspipelinestate_dst_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-graphicspipelinestate.html#dstColor-var)
 ///
@@ -367,11 +328,11 @@ void q_sgmaterialshader__graphicspipelinestate_set_dst_color(void* self, int32_t
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-graphicspipelinestate.html#colorWrite-var)
 ///
-/// @param self QSGMaterialShader__GraphicsPipelineState*
+/// @param self const QSGMaterialShader__GraphicsPipelineState*
 ///
 /// @return flag of enum QSGMaterialShader__GraphicsPipelineState__ColorMaskComponent
 ///
-int32_t q_sgmaterialshader__graphicspipelinestate_color_write(void* self);
+int32_t q_sgmaterialshader__graphicspipelinestate_color_write(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-graphicspipelinestate.html#colorWrite-var)
 ///
@@ -382,9 +343,9 @@ void q_sgmaterialshader__graphicspipelinestate_set_color_write(void* self, int32
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-graphicspipelinestate.html#blendConstant-var)
 ///
-/// @param self QSGMaterialShader__GraphicsPipelineState*
+/// @param self const QSGMaterialShader__GraphicsPipelineState*
 ///
-QColor* q_sgmaterialshader__graphicspipelinestate_blend_constant(void* self);
+QColor* q_sgmaterialshader__graphicspipelinestate_blend_constant(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-graphicspipelinestate.html#blendConstant-var)
 ///
@@ -395,11 +356,11 @@ void q_sgmaterialshader__graphicspipelinestate_set_blend_constant(void* self, vo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-graphicspipelinestate.html#cullMode-var)
 ///
-/// @param self QSGMaterialShader__GraphicsPipelineState*
+/// @param self const QSGMaterialShader__GraphicsPipelineState*
 ///
 /// @return enum QSGMaterialShader__GraphicsPipelineState__CullMode
 ///
-int32_t q_sgmaterialshader__graphicspipelinestate_cull_mode(void* self);
+int32_t q_sgmaterialshader__graphicspipelinestate_cull_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-graphicspipelinestate.html#cullMode-var)
 ///
@@ -410,11 +371,11 @@ void q_sgmaterialshader__graphicspipelinestate_set_cull_mode(void* self, int32_t
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-graphicspipelinestate.html#polygonMode-var)
 ///
-/// @param self QSGMaterialShader__GraphicsPipelineState*
+/// @param self const QSGMaterialShader__GraphicsPipelineState*
 ///
 /// @return enum QSGMaterialShader__GraphicsPipelineState__PolygonMode
 ///
-int32_t q_sgmaterialshader__graphicspipelinestate_polygon_mode(void* self);
+int32_t q_sgmaterialshader__graphicspipelinestate_polygon_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-graphicspipelinestate.html#polygonMode-var)
 ///
@@ -425,9 +386,9 @@ void q_sgmaterialshader__graphicspipelinestate_set_polygon_mode(void* self, int3
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-graphicspipelinestate.html#separateBlendFactors-var)
 ///
-/// @param self QSGMaterialShader__GraphicsPipelineState*
+/// @param self const QSGMaterialShader__GraphicsPipelineState*
 ///
-bool q_sgmaterialshader__graphicspipelinestate_separate_blend_factors(void* self);
+bool q_sgmaterialshader__graphicspipelinestate_separate_blend_factors(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-graphicspipelinestate.html#separateBlendFactors-var)
 ///
@@ -438,11 +399,11 @@ void q_sgmaterialshader__graphicspipelinestate_set_separate_blend_factors(void* 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-graphicspipelinestate.html#srcAlpha-var)
 ///
-/// @param self QSGMaterialShader__GraphicsPipelineState*
+/// @param self const QSGMaterialShader__GraphicsPipelineState*
 ///
 /// @return enum QSGMaterialShader__GraphicsPipelineState__BlendFactor
 ///
-int32_t q_sgmaterialshader__graphicspipelinestate_src_alpha(void* self);
+int32_t q_sgmaterialshader__graphicspipelinestate_src_alpha(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-graphicspipelinestate.html#srcAlpha-var)
 ///
@@ -453,11 +414,11 @@ void q_sgmaterialshader__graphicspipelinestate_set_src_alpha(void* self, int32_t
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-graphicspipelinestate.html#dstAlpha-var)
 ///
-/// @param self QSGMaterialShader__GraphicsPipelineState*
+/// @param self const QSGMaterialShader__GraphicsPipelineState*
 ///
 /// @return enum QSGMaterialShader__GraphicsPipelineState__BlendFactor
 ///
-int32_t q_sgmaterialshader__graphicspipelinestate_dst_alpha(void* self);
+int32_t q_sgmaterialshader__graphicspipelinestate_dst_alpha(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-graphicspipelinestate.html#dstAlpha-var)
 ///
@@ -468,11 +429,11 @@ void q_sgmaterialshader__graphicspipelinestate_set_dst_alpha(void* self, int32_t
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-graphicspipelinestate.html#opColor-var)
 ///
-/// @param self QSGMaterialShader__GraphicsPipelineState*
+/// @param self const QSGMaterialShader__GraphicsPipelineState*
 ///
 /// @return enum QSGMaterialShader__GraphicsPipelineState__BlendOp
 ///
-int32_t q_sgmaterialshader__graphicspipelinestate_op_color(void* self);
+int32_t q_sgmaterialshader__graphicspipelinestate_op_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-graphicspipelinestate.html#opColor-var)
 ///
@@ -483,11 +444,11 @@ void q_sgmaterialshader__graphicspipelinestate_set_op_color(void* self, int32_t 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-graphicspipelinestate.html#opAlpha-var)
 ///
-/// @param self QSGMaterialShader__GraphicsPipelineState*
+/// @param self const QSGMaterialShader__GraphicsPipelineState*
 ///
 /// @return enum QSGMaterialShader__GraphicsPipelineState__BlendOp
 ///
-int32_t q_sgmaterialshader__graphicspipelinestate_op_alpha(void* self);
+int32_t q_sgmaterialshader__graphicspipelinestate_op_alpha(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-graphicspipelinestate.html#opAlpha-var)
 ///

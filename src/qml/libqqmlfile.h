@@ -21,7 +21,7 @@ QQmlFile* q_qmlfile_new();
 /// @param engine QQmlEngine*
 /// @param url QUrl*
 ///
-QQmlFile* q_qmlfile_new2(void* engine, void* url);
+QQmlFile* q_qmlfile_new2(void* engine, const void* url);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlfile.html)
 
@@ -34,71 +34,71 @@ QQmlFile* q_qmlfile_new3(void* engine, const char* url);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlfile.html#isNull)
 ///
-/// @param self QQmlFile*
+/// @param self const QQmlFile*
 ///
-bool q_qmlfile_is_null(void* self);
+bool q_qmlfile_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlfile.html#isReady)
 ///
-/// @param self QQmlFile*
+/// @param self const QQmlFile*
 ///
-bool q_qmlfile_is_ready(void* self);
+bool q_qmlfile_is_ready(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlfile.html#isError)
 ///
-/// @param self QQmlFile*
+/// @param self const QQmlFile*
 ///
-bool q_qmlfile_is_error(void* self);
+bool q_qmlfile_is_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlfile.html#isLoading)
 ///
-/// @param self QQmlFile*
+/// @param self const QQmlFile*
 ///
-bool q_qmlfile_is_loading(void* self);
+bool q_qmlfile_is_loading(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlfile.html#url)
 ///
-/// @param self QQmlFile*
+/// @param self const QQmlFile*
 ///
-QUrl* q_qmlfile_url(void* self);
+QUrl* q_qmlfile_url(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlfile.html#status)
 ///
-/// @param self QQmlFile*
+/// @param self const QQmlFile*
 ///
 /// @return enum QQmlFile__Status
 ///
-int32_t q_qmlfile_status(void* self);
+int32_t q_qmlfile_status(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlfile.html#error)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQmlFile*
+/// @param self const QQmlFile*
 ///
-const char* q_qmlfile_error(void* self);
+const char* q_qmlfile_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlfile.html#size)
 ///
-/// @param self QQmlFile*
+/// @param self const QQmlFile*
 ///
-int64_t q_qmlfile_size(void* self);
+int64_t q_qmlfile_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlfile.html#data)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQmlFile*
+/// @param self const QQmlFile*
 ///
-const char* q_qmlfile_data(void* self);
+const char* q_qmlfile_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlfile.html#dataByteArray)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QQmlFile*
+/// @param self const QQmlFile*
 ///
-char* q_qmlfile_data_byte_array(void* self);
+char* q_qmlfile_data_byte_array(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlfile.html#load)
 ///
@@ -106,7 +106,7 @@ char* q_qmlfile_data_byte_array(void* self);
 /// @param param1 QQmlEngine*
 /// @param param2 QUrl*
 ///
-void q_qmlfile_load(void* self, void* param1, void* param2);
+void q_qmlfile_load(void* self, void* param1, const void* param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlfile.html#load)
 ///
@@ -171,7 +171,7 @@ bool q_qmlfile_is_synchronous(const char* url);
 ///
 /// @param url QUrl*
 ///
-bool q_qmlfile_is_synchronous2(void* url);
+bool q_qmlfile_is_synchronous2(const void* url);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlfile.html#isLocalFile)
 ///
@@ -183,7 +183,7 @@ bool q_qmlfile_is_local_file(const char* url);
 ///
 /// @param url QUrl*
 ///
-bool q_qmlfile_is_local_file2(void* url);
+bool q_qmlfile_is_local_file2(const void* url);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlfile.html#urlToLocalFileOrQrc)
 ///
@@ -199,7 +199,7 @@ const char* q_qmlfile_url_to_local_file_or_qrc(const char* param1);
 ///
 /// @param param1 QUrl*
 ///
-const char* q_qmlfile_url_to_local_file_or_qrc2(void* param1);
+const char* q_qmlfile_url_to_local_file_or_qrc2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlfile.html#dtor.QQmlFile)
 ///

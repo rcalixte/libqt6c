@@ -20,26 +20,26 @@ QWebEngineFindTextResult* q_webenginefindtextresult_new();
 ///
 /// @param other QWebEngineFindTextResult*
 ///
-QWebEngineFindTextResult* q_webenginefindtextresult_new2(void* other);
+QWebEngineFindTextResult* q_webenginefindtextresult_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefindtextresult.html#numberOfMatches)
 ///
-/// @param self QWebEngineFindTextResult*
+/// @param self const QWebEngineFindTextResult*
 ///
-int32_t q_webenginefindtextresult_number_of_matches(void* self);
+int32_t q_webenginefindtextresult_number_of_matches(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefindtextresult.html#activeMatch)
 ///
-/// @param self QWebEngineFindTextResult*
+/// @param self const QWebEngineFindTextResult*
 ///
-int32_t q_webenginefindtextresult_active_match(void* self);
+int32_t q_webenginefindtextresult_active_match(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefindtextresult.html#operator-eq)
 ///
 /// @param self QWebEngineFindTextResult*
 /// @param other QWebEngineFindTextResult*
 ///
-void q_webenginefindtextresult_operator_assign(void* self, void* other);
+void q_webenginefindtextresult_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefindtextresult.html#dtor.QWebEngineFindTextResult)
 ///

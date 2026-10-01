@@ -28,98 +28,98 @@ KCountry* k_country_new();
 ///
 /// @param param1 KCountry*
 ///
-KCountry* k_country_new2(void* param1);
+KCountry* k_country_new2(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kcountry.html#operator-eq)
 ///
 /// @param self KCountry*
 /// @param param1 KCountry*
 ///
-void k_country_operator_assign(void* self, void* param1);
+void k_country_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kcountry.html#operator-eq-eq)
 ///
-/// @param self KCountry*
+/// @param self const KCountry*
 /// @param other KCountry*
 ///
-bool k_country_operator_equal(void* self, void* other);
+bool k_country_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/kcountry.html#operator-not-eq)
 ///
-/// @param self KCountry*
+/// @param self const KCountry*
 /// @param other KCountry*
 ///
-bool k_country_operator_not_equal(void* self, void* other);
+bool k_country_operator_not_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/kcountry.html#isValid)
 ///
-/// @param self KCountry*
+/// @param self const KCountry*
 ///
-bool k_country_is_valid(void* self);
+bool k_country_is_valid(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcountry.html#alpha2)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCountry*
+/// @param self const KCountry*
 ///
-const char* k_country_alpha2(void* self);
+const char* k_country_alpha2(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcountry.html#alpha3)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCountry*
+/// @param self const KCountry*
 ///
-const char* k_country_alpha3(void* self);
+const char* k_country_alpha3(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcountry.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCountry*
+/// @param self const KCountry*
 ///
-const char* k_country_name(void* self);
+const char* k_country_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcountry.html#emojiFlag)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCountry*
+/// @param self const KCountry*
 ///
-const char* k_country_emoji_flag(void* self);
+const char* k_country_emoji_flag(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcountry.html#country)
 ///
-/// @param self KCountry*
+/// @param self const KCountry*
 ///
 /// @return enum QLocale__Country
 ///
-uint16_t k_country_country(void* self);
+uint16_t k_country_country(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcountry.html#timeZoneIds)
 ///
-/// @param self KCountry*
+/// @param self const KCountry*
 ///
 /// @return libqt_list of const char*
 ///
-libqt_list k_country_time_zone_ids(void* self);
+libqt_list k_country_time_zone_ids(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcountry.html#currencyCode)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCountry*
+/// @param self const KCountry*
 ///
-const char* k_country_currency_code(void* self);
+const char* k_country_currency_code(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcountry.html#subdivisions)
 ///
-/// @param self KCountry*
+/// @param self const KCountry*
 ///
 /// @return libqt_list of KCountrySubdivision*
 ///
-libqt_list k_country_subdivisions(void* self);
+libqt_list k_country_subdivisions(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcountry.html#fromAlpha2)
 ///

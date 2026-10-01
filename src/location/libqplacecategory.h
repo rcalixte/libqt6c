@@ -20,14 +20,14 @@ QPlaceCategory* q_placecategory_new();
 ///
 /// @param other QPlaceCategory*
 ///
-QPlaceCategory* q_placecategory_new2(void* other);
+QPlaceCategory* q_placecategory_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecategory.html#operator-eq)
 ///
 /// @param self QPlaceCategory*
 /// @param other QPlaceCategory*
 ///
-void q_placecategory_operator_assign(void* self, void* other);
+void q_placecategory_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecategory.html#swap)
 ///
@@ -40,9 +40,9 @@ void q_placecategory_swap(void* self, void* other);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPlaceCategory*
+/// @param self const QPlaceCategory*
 ///
-const char* q_placecategory_category_id(void* self);
+const char* q_placecategory_category_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecategory.html#setCategoryId)
 ///
@@ -55,9 +55,9 @@ void q_placecategory_set_category_id(void* self, const char* identifier);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPlaceCategory*
+/// @param self const QPlaceCategory*
 ///
-const char* q_placecategory_name(void* self);
+const char* q_placecategory_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecategory.html#setName)
 ///
@@ -68,11 +68,11 @@ void q_placecategory_set_name(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecategory.html#visibility)
 ///
-/// @param self QPlaceCategory*
+/// @param self const QPlaceCategory*
 ///
 /// @return enum QLocation__Visibility
 ///
-int32_t q_placecategory_visibility(void* self);
+int32_t q_placecategory_visibility(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecategory.html#setVisibility)
 ///
@@ -83,22 +83,22 @@ void q_placecategory_set_visibility(void* self, int32_t visibility);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecategory.html#icon)
 ///
-/// @param self QPlaceCategory*
+/// @param self const QPlaceCategory*
 ///
-QPlaceIcon* q_placecategory_icon(void* self);
+QPlaceIcon* q_placecategory_icon(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecategory.html#setIcon)
 ///
 /// @param self QPlaceCategory*
 /// @param icon QPlaceIcon*
 ///
-void q_placecategory_set_icon(void* self, void* icon);
+void q_placecategory_set_icon(void* self, const void* icon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecategory.html#isEmpty)
 ///
-/// @param self QPlaceCategory*
+/// @param self const QPlaceCategory*
 ///
-bool q_placecategory_is_empty(void* self);
+bool q_placecategory_is_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecategory.html#dtor.QPlaceCategory)
 ///

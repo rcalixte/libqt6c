@@ -22,13 +22,13 @@ Kirigami__Platform__TabletModeChangedEvent* k_kirigami__platform__tabletmodechan
 ///
 /// @param param1 Kirigami__Platform__TabletModeChangedEvent*
 ///
-Kirigami__Platform__TabletModeChangedEvent* k_kirigami__platform__tabletmodechangedevent_new2(void* param1);
+Kirigami__Platform__TabletModeChangedEvent* k_kirigami__platform__tabletmodechangedevent_new2(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-tabletmodechangedevent.html#tabletMode-var)
 ///
-/// @param self Kirigami__Platform__TabletModeChangedEvent*
+/// @param self const Kirigami__Platform__TabletModeChangedEvent*
 ///
-bool k_kirigami__platform__tabletmodechangedevent_tablet_mode(void* self);
+bool k_kirigami__platform__tabletmodechangedevent_tablet_mode(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-tabletmodechangedevent.html#tabletMode-var)
 ///
@@ -42,33 +42,33 @@ void k_kirigami__platform__tabletmodechangedevent_set_tablet_mode(void* self, bo
 /// @param self Kirigami__Platform__TabletModeChangedEvent*
 /// @param param1 Kirigami__Platform__TabletModeChangedEvent*
 ///
-void k_kirigami__platform__tabletmodechangedevent_operator_assign(void* self, void* param1);
+void k_kirigami__platform__tabletmodechangedevent_operator_assign(void* self, const void* param1);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// @param self Kirigami__Platform__TabletModeChangedEvent*
+/// @param self const Kirigami__Platform__TabletModeChangedEvent*
 ///
 /// @return enum QEvent__Type
 ///
-int32_t k_kirigami__platform__tabletmodechangedevent_type(void* self);
+int32_t k_kirigami__platform__tabletmodechangedevent_type(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// @param self Kirigami__Platform__TabletModeChangedEvent*
+/// @param self const Kirigami__Platform__TabletModeChangedEvent*
 ///
-bool k_kirigami__platform__tabletmodechangedevent_spontaneous(void* self);
+bool k_kirigami__platform__tabletmodechangedevent_spontaneous(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// @param self Kirigami__Platform__TabletModeChangedEvent*
+/// @param self const Kirigami__Platform__TabletModeChangedEvent*
 ///
-bool k_kirigami__platform__tabletmodechangedevent_is_accepted(void* self);
+bool k_kirigami__platform__tabletmodechangedevent_is_accepted(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -90,25 +90,25 @@ void k_kirigami__platform__tabletmodechangedevent_ignore(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// @param self Kirigami__Platform__TabletModeChangedEvent*
+/// @param self const Kirigami__Platform__TabletModeChangedEvent*
 ///
-bool k_kirigami__platform__tabletmodechangedevent_is_input_event(void* self);
+bool k_kirigami__platform__tabletmodechangedevent_is_input_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// @param self Kirigami__Platform__TabletModeChangedEvent*
+/// @param self const Kirigami__Platform__TabletModeChangedEvent*
 ///
-bool k_kirigami__platform__tabletmodechangedevent_is_pointer_event(void* self);
+bool k_kirigami__platform__tabletmodechangedevent_is_pointer_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// @param self Kirigami__Platform__TabletModeChangedEvent*
+/// @param self const Kirigami__Platform__TabletModeChangedEvent*
 ///
-bool k_kirigami__platform__tabletmodechangedevent_is_single_point_event(void* self);
+bool k_kirigami__platform__tabletmodechangedevent_is_single_point_event(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -163,9 +163,9 @@ void k_kirigami__platform__tabletmodechangedevent_on_set_accepted(void* self, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Kirigami__Platform__TabletModeChangedEvent*
+/// @param self const Kirigami__Platform__TabletModeChangedEvent*
 ///
-QEvent* k_kirigami__platform__tabletmodechangedevent_clone(void* self);
+QEvent* k_kirigami__platform__tabletmodechangedevent_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -173,9 +173,9 @@ QEvent* k_kirigami__platform__tabletmodechangedevent_clone(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Kirigami__Platform__TabletModeChangedEvent*
+/// @param self const Kirigami__Platform__TabletModeChangedEvent*
 ///
-QEvent* k_kirigami__platform__tabletmodechangedevent_super_clone(void* self);
+QEvent* k_kirigami__platform__tabletmodechangedevent_super_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -183,10 +183,10 @@ QEvent* k_kirigami__platform__tabletmodechangedevent_super_clone(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Kirigami__Platform__TabletModeChangedEvent*
-/// @param callback QEvent* func()
+/// @param self const Kirigami__Platform__TabletModeChangedEvent*
+/// @param callback QEvent* func(Kirigami__Platform__TabletModeChangedEvent* self)
 ///
-void k_kirigami__platform__tabletmodechangedevent_on_clone(void* self, QEvent* (*callback)());
+void k_kirigami__platform__tabletmodechangedevent_on_clone(const void* self, QEvent* (*callback)(const void*));
 
 /// Delete this object from C++ memory.
 ///
@@ -198,9 +198,9 @@ void k_kirigami__platform__tabletmodechangedevent_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self Kirigami__Platform__TabletModeWatcher*
+/// @param self const Kirigami__Platform__TabletModeWatcher*
 ///
-const QMetaObject* k_kirigami__platform__tabletmodewatcher_meta_object(void* self);
+const QMetaObject* k_kirigami__platform__tabletmodewatcher_meta_object(const void* self);
 
 /// @param self Kirigami__Platform__TabletModeWatcher*
 /// @param param1 const char*
@@ -228,15 +228,15 @@ Kirigami__Platform__TabletModeWatcher* k_kirigami__platform__tabletmodewatcher_s
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-tabletmodewatcher.html#isTabletModeAvailable)
 ///
-/// @param self Kirigami__Platform__TabletModeWatcher*
+/// @param self const Kirigami__Platform__TabletModeWatcher*
 ///
-bool k_kirigami__platform__tabletmodewatcher_is_tablet_mode_available(void* self);
+bool k_kirigami__platform__tabletmodewatcher_is_tablet_mode_available(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-tabletmodewatcher.html#isTabletMode)
 ///
-/// @param self Kirigami__Platform__TabletModeWatcher*
+/// @param self const Kirigami__Platform__TabletModeWatcher*
 ///
-bool k_kirigami__platform__tabletmodewatcher_is_tablet_mode(void* self);
+bool k_kirigami__platform__tabletmodewatcher_is_tablet_mode(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-tabletmodewatcher.html#addWatcher)
 ///
@@ -324,9 +324,9 @@ bool k_kirigami__platform__tabletmodewatcher_event_filter(void* self, void* watc
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Kirigami__Platform__TabletModeWatcher*
+/// @param self const Kirigami__Platform__TabletModeWatcher*
 ///
-const char* k_kirigami__platform__tabletmodewatcher_object_name(void* self);
+const char* k_kirigami__platform__tabletmodewatcher_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -341,33 +341,33 @@ void k_kirigami__platform__tabletmodewatcher_set_object_name(void* self, const c
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self Kirigami__Platform__TabletModeWatcher*
+/// @param self const Kirigami__Platform__TabletModeWatcher*
 ///
-bool k_kirigami__platform__tabletmodewatcher_is_widget_type(void* self);
+bool k_kirigami__platform__tabletmodewatcher_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self Kirigami__Platform__TabletModeWatcher*
+/// @param self const Kirigami__Platform__TabletModeWatcher*
 ///
-bool k_kirigami__platform__tabletmodewatcher_is_window_type(void* self);
+bool k_kirigami__platform__tabletmodewatcher_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self Kirigami__Platform__TabletModeWatcher*
+/// @param self const Kirigami__Platform__TabletModeWatcher*
 ///
-bool k_kirigami__platform__tabletmodewatcher_is_quick_item_type(void* self);
+bool k_kirigami__platform__tabletmodewatcher_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self Kirigami__Platform__TabletModeWatcher*
+/// @param self const Kirigami__Platform__TabletModeWatcher*
 ///
-bool k_kirigami__platform__tabletmodewatcher_signals_blocked(void* self);
+bool k_kirigami__platform__tabletmodewatcher_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -382,9 +382,9 @@ bool k_kirigami__platform__tabletmodewatcher_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self Kirigami__Platform__TabletModeWatcher*
+/// @param self const Kirigami__Platform__TabletModeWatcher*
 ///
-QThread* k_kirigami__platform__tabletmodewatcher_thread(void* self);
+QThread* k_kirigami__platform__tabletmodewatcher_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -435,11 +435,11 @@ void k_kirigami__platform__tabletmodewatcher_kill_timer2(void* self, int32_t id)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self Kirigami__Platform__TabletModeWatcher*
+/// @param self const Kirigami__Platform__TabletModeWatcher*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_kirigami__platform__tabletmodewatcher_children(void* self);
+libqt_list k_kirigami__platform__tabletmodewatcher_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -477,7 +477,7 @@ void k_kirigami__platform__tabletmodewatcher_remove_event_filter(void* self, voi
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_kirigami__platform__tabletmodewatcher_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_kirigami__platform__tabletmodewatcher_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -488,18 +488,18 @@ QMetaObject__Connection* k_kirigami__platform__tabletmodewatcher_connect(void* s
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_kirigami__platform__tabletmodewatcher_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_kirigami__platform__tabletmodewatcher_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self Kirigami__Platform__TabletModeWatcher*
+/// @param self const Kirigami__Platform__TabletModeWatcher*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_kirigami__platform__tabletmodewatcher_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_kirigami__platform__tabletmodewatcher_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -510,7 +510,7 @@ QMetaObject__Connection* k_kirigami__platform__tabletmodewatcher_connect3(void* 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_kirigami__platform__tabletmodewatcher_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_kirigami__platform__tabletmodewatcher_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -521,24 +521,24 @@ bool k_kirigami__platform__tabletmodewatcher_disconnect(void* sender, const char
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_kirigami__platform__tabletmodewatcher_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_kirigami__platform__tabletmodewatcher_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Kirigami__Platform__TabletModeWatcher*
+/// @param self const Kirigami__Platform__TabletModeWatcher*
 ///
-bool k_kirigami__platform__tabletmodewatcher_disconnect3(void* self);
+bool k_kirigami__platform__tabletmodewatcher_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Kirigami__Platform__TabletModeWatcher*
+/// @param self const Kirigami__Platform__TabletModeWatcher*
 /// @param receiver QObject*
 ///
-bool k_kirigami__platform__tabletmodewatcher_disconnect4(void* self, void* receiver);
+bool k_kirigami__platform__tabletmodewatcher_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -546,23 +546,23 @@ bool k_kirigami__platform__tabletmodewatcher_disconnect4(void* self, void* recei
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_kirigami__platform__tabletmodewatcher_disconnect5(void* param1);
+bool k_kirigami__platform__tabletmodewatcher_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self Kirigami__Platform__TabletModeWatcher*
+/// @param self const Kirigami__Platform__TabletModeWatcher*
 ///
-void k_kirigami__platform__tabletmodewatcher_dump_object_tree(void* self);
+void k_kirigami__platform__tabletmodewatcher_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self Kirigami__Platform__TabletModeWatcher*
+/// @param self const Kirigami__Platform__TabletModeWatcher*
 ///
-void k_kirigami__platform__tabletmodewatcher_dump_object_info(void* self);
+void k_kirigami__platform__tabletmodewatcher_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -572,16 +572,16 @@ void k_kirigami__platform__tabletmodewatcher_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_kirigami__platform__tabletmodewatcher_set_property(void* self, const char* name, void* value);
+bool k_kirigami__platform__tabletmodewatcher_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self Kirigami__Platform__TabletModeWatcher*
+/// @param self const Kirigami__Platform__TabletModeWatcher*
 /// @param name const char*
 ///
-QVariant* k_kirigami__platform__tabletmodewatcher_property(void* self, const char* name);
+QVariant* k_kirigami__platform__tabletmodewatcher_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -589,9 +589,9 @@ QVariant* k_kirigami__platform__tabletmodewatcher_property(void* self, const cha
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Kirigami__Platform__TabletModeWatcher*
+/// @param self const Kirigami__Platform__TabletModeWatcher*
 ///
-const char** k_kirigami__platform__tabletmodewatcher_dynamic_property_names(void* self);
+const char** k_kirigami__platform__tabletmodewatcher_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -605,9 +605,9 @@ QBindingStorage* k_kirigami__platform__tabletmodewatcher_binding_storage(void* s
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self Kirigami__Platform__TabletModeWatcher*
+/// @param self const Kirigami__Platform__TabletModeWatcher*
 ///
-const QBindingStorage* k_kirigami__platform__tabletmodewatcher_binding_storage2(void* self);
+const QBindingStorage* k_kirigami__platform__tabletmodewatcher_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -630,18 +630,18 @@ void k_kirigami__platform__tabletmodewatcher_on_destroyed(void* self, void (*cal
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self Kirigami__Platform__TabletModeWatcher*
+/// @param self const Kirigami__Platform__TabletModeWatcher*
 ///
-QObject* k_kirigami__platform__tabletmodewatcher_parent(void* self);
+QObject* k_kirigami__platform__tabletmodewatcher_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self Kirigami__Platform__TabletModeWatcher*
+/// @param self const Kirigami__Platform__TabletModeWatcher*
 /// @param classname const char*
 ///
-bool k_kirigami__platform__tabletmodewatcher_inherits(void* self, const char* classname);
+bool k_kirigami__platform__tabletmodewatcher_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -681,7 +681,7 @@ int32_t k_kirigami__platform__tabletmodewatcher_start_timer23(void* self, int64_
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_kirigami__platform__tabletmodewatcher_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_kirigami__platform__tabletmodewatcher_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -693,59 +693,59 @@ QMetaObject__Connection* k_kirigami__platform__tabletmodewatcher_connect5(void* 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_kirigami__platform__tabletmodewatcher_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_kirigami__platform__tabletmodewatcher_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self Kirigami__Platform__TabletModeWatcher*
+/// @param self const Kirigami__Platform__TabletModeWatcher*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_kirigami__platform__tabletmodewatcher_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_kirigami__platform__tabletmodewatcher_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Kirigami__Platform__TabletModeWatcher*
+/// @param self const Kirigami__Platform__TabletModeWatcher*
 /// @param signal const char*
 ///
-bool k_kirigami__platform__tabletmodewatcher_disconnect1(void* self, const char* signal);
+bool k_kirigami__platform__tabletmodewatcher_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Kirigami__Platform__TabletModeWatcher*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_kirigami__platform__tabletmodewatcher_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self Kirigami__Platform__TabletModeWatcher*
+/// @param self const Kirigami__Platform__TabletModeWatcher*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_kirigami__platform__tabletmodewatcher_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_kirigami__platform__tabletmodewatcher_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Kirigami__Platform__TabletModeWatcher*
+/// @param self const Kirigami__Platform__TabletModeWatcher*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_kirigami__platform__tabletmodewatcher_disconnect23(void* self, void* receiver, const char* member);
+bool k_kirigami__platform__tabletmodewatcher_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const Kirigami__Platform__TabletModeWatcher*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_kirigami__platform__tabletmodewatcher_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

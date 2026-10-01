@@ -14,220 +14,220 @@
 ///
 /// @param param1 KWindowInfo*
 ///
-KWindowInfo* k_windowinfo_new(void* param1);
+KWindowInfo* k_windowinfo_new(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#valid)
 ///
-/// @param self KWindowInfo*
+/// @param self const KWindowInfo*
 ///
-bool k_windowinfo_valid(void* self);
+bool k_windowinfo_valid(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#win)
 ///
-/// @param self KWindowInfo*
+/// @param self const KWindowInfo*
 ///
-uintptr_t k_windowinfo_win(void* self);
+uintptr_t k_windowinfo_win(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#isMinimized)
 ///
-/// @param self KWindowInfo*
+/// @param self const KWindowInfo*
 ///
-bool k_windowinfo_is_minimized(void* self);
+bool k_windowinfo_is_minimized(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#extendedStrut)
 ///
-/// @param self KWindowInfo*
+/// @param self const KWindowInfo*
 ///
-NETExtendedStrut* k_windowinfo_extended_strut(void* self);
+NETExtendedStrut* k_windowinfo_extended_strut(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#visibleName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KWindowInfo*
+/// @param self const KWindowInfo*
 ///
-const char* k_windowinfo_visible_name(void* self);
+const char* k_windowinfo_visible_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#visibleNameWithState)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KWindowInfo*
+/// @param self const KWindowInfo*
 ///
-const char* k_windowinfo_visible_name_with_state(void* self);
+const char* k_windowinfo_visible_name_with_state(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KWindowInfo*
+/// @param self const KWindowInfo*
 ///
-const char* k_windowinfo_name(void* self);
+const char* k_windowinfo_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#visibleIconName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KWindowInfo*
+/// @param self const KWindowInfo*
 ///
-const char* k_windowinfo_visible_icon_name(void* self);
+const char* k_windowinfo_visible_icon_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#visibleIconNameWithState)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KWindowInfo*
+/// @param self const KWindowInfo*
 ///
-const char* k_windowinfo_visible_icon_name_with_state(void* self);
+const char* k_windowinfo_visible_icon_name_with_state(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#iconName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KWindowInfo*
+/// @param self const KWindowInfo*
 ///
-const char* k_windowinfo_icon_name(void* self);
+const char* k_windowinfo_icon_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#isOnCurrentDesktop)
 ///
-/// @param self KWindowInfo*
+/// @param self const KWindowInfo*
 ///
-bool k_windowinfo_is_on_current_desktop(void* self);
+bool k_windowinfo_is_on_current_desktop(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#isOnDesktop)
 ///
-/// @param self KWindowInfo*
+/// @param self const KWindowInfo*
 /// @param desktop int
 ///
-bool k_windowinfo_is_on_desktop(void* self, int desktop);
+bool k_windowinfo_is_on_desktop(const void* self, int desktop);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#onAllDesktops)
 ///
-/// @param self KWindowInfo*
+/// @param self const KWindowInfo*
 ///
-bool k_windowinfo_on_all_desktops(void* self);
+bool k_windowinfo_on_all_desktops(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#desktop)
 ///
-/// @param self KWindowInfo*
+/// @param self const KWindowInfo*
 ///
-int32_t k_windowinfo_desktop(void* self);
+int32_t k_windowinfo_desktop(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#activities)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KWindowInfo*
+/// @param self const KWindowInfo*
 ///
-const char** k_windowinfo_activities(void* self);
+const char** k_windowinfo_activities(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#geometry)
 ///
-/// @param self KWindowInfo*
+/// @param self const KWindowInfo*
 ///
-QRect* k_windowinfo_geometry(void* self);
+QRect* k_windowinfo_geometry(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#frameGeometry)
 ///
-/// @param self KWindowInfo*
+/// @param self const KWindowInfo*
 ///
-QRect* k_windowinfo_frame_geometry(void* self);
+QRect* k_windowinfo_frame_geometry(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#transientFor)
 ///
-/// @param self KWindowInfo*
+/// @param self const KWindowInfo*
 ///
-uintptr_t k_windowinfo_transient_for(void* self);
+uintptr_t k_windowinfo_transient_for(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#groupLeader)
 ///
-/// @param self KWindowInfo*
+/// @param self const KWindowInfo*
 ///
-uintptr_t k_windowinfo_group_leader(void* self);
+uintptr_t k_windowinfo_group_leader(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#windowClassClass)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KWindowInfo*
+/// @param self const KWindowInfo*
 ///
-char* k_windowinfo_window_class_class(void* self);
+char* k_windowinfo_window_class_class(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#windowClassName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KWindowInfo*
+/// @param self const KWindowInfo*
 ///
-char* k_windowinfo_window_class_name(void* self);
+char* k_windowinfo_window_class_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#windowRole)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KWindowInfo*
+/// @param self const KWindowInfo*
 ///
-char* k_windowinfo_window_role(void* self);
+char* k_windowinfo_window_role(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#clientMachine)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KWindowInfo*
+/// @param self const KWindowInfo*
 ///
-char* k_windowinfo_client_machine(void* self);
+char* k_windowinfo_client_machine(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#desktopFileName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KWindowInfo*
+/// @param self const KWindowInfo*
 ///
-char* k_windowinfo_desktop_file_name(void* self);
+char* k_windowinfo_desktop_file_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#gtkApplicationId)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KWindowInfo*
+/// @param self const KWindowInfo*
 ///
-char* k_windowinfo_gtk_application_id(void* self);
+char* k_windowinfo_gtk_application_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#pid)
 ///
-/// @param self KWindowInfo*
+/// @param self const KWindowInfo*
 ///
-int32_t k_windowinfo_pid(void* self);
+int32_t k_windowinfo_pid(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#applicationMenuServiceName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KWindowInfo*
+/// @param self const KWindowInfo*
 ///
-char* k_windowinfo_application_menu_service_name(void* self);
+char* k_windowinfo_application_menu_service_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#applicationMenuObjectPath)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KWindowInfo*
+/// @param self const KWindowInfo*
 ///
-char* k_windowinfo_application_menu_object_path(void* self);
+char* k_windowinfo_application_menu_object_path(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#operator-eq)
 ///
 /// @param self KWindowInfo*
 /// @param param1 KWindowInfo*
 ///
-void k_windowinfo_operator_assign(void* self, void* param1);
+void k_windowinfo_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#valid)
 ///
-/// @param self KWindowInfo*
+/// @param self const KWindowInfo*
 /// @param withdrawn_is_valid bool
 ///
-bool k_windowinfo_valid1(void* self, bool withdrawn_is_valid);
+bool k_windowinfo_valid1(const void* self, bool withdrawn_is_valid);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#dtor.KWindowInfo)
 ///

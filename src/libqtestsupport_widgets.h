@@ -14,7 +14,7 @@
 ///
 /// @param param1 QTest__QTouchEventWidgetSequence*
 ///
-QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_new(void* param1);
+QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_new(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#press)
 ///
@@ -22,7 +22,7 @@ QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_new(void* pa
 /// @param touchId int
 /// @param pt QPoint*
 ///
-QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_press(void* self, int touchId, void* pt);
+QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_press(void* self, int touchId, const void* pt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#move)
 ///
@@ -30,7 +30,7 @@ QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_press(void* 
 /// @param touchId int
 /// @param pt QPoint*
 ///
-QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_move(void* self, int touchId, void* pt);
+QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_move(void* self, int touchId, const void* pt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#release)
 ///
@@ -38,7 +38,7 @@ QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_move(void* s
 /// @param touchId int
 /// @param pt QPoint*
 ///
-QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_release(void* self, int touchId, void* pt);
+QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_release(void* self, int touchId, const void* pt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#stationary)
 ///
@@ -97,7 +97,7 @@ bool q_test__qtoucheventwidgetsequence_super_commit(void* self, bool processEven
 /// @param self QTest__QTouchEventWidgetSequence*
 /// @param param1 QTest__QTouchEventWidgetSequence*
 ///
-void q_test__qtoucheventwidgetsequence_operator_assign(void* self, void* param1);
+void q_test__qtoucheventwidgetsequence_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#press)
 ///
@@ -106,7 +106,7 @@ void q_test__qtoucheventwidgetsequence_operator_assign(void* self, void* param1)
 /// @param pt QPoint*
 /// @param widget QWidget*
 ///
-QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_press3(void* self, int touchId, void* pt, void* widget);
+QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_press3(void* self, int touchId, const void* pt, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#move)
 ///
@@ -115,7 +115,7 @@ QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_press3(void*
 /// @param pt QPoint*
 /// @param widget QWidget*
 ///
-QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_move3(void* self, int touchId, void* pt, void* widget);
+QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_move3(void* self, int touchId, const void* pt, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#release)
 ///
@@ -124,7 +124,7 @@ QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_move3(void* 
 /// @param pt QPoint*
 /// @param widget QWidget*
 ///
-QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_release3(void* self, int touchId, void* pt, void* widget);
+QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_release3(void* self, int touchId, const void* pt, void* widget);
 
 /// Inherited from QTest::QTouchEventSequence
 ///

@@ -16,6 +16,8 @@ QRunnable* q_runnable_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrunnable.html#run)
 ///
+/// @warning This method must be implemented with `q_runnable_on_run` before it can be called.
+///
 /// @param self QRunnable*
 ///
 void q_runnable_run(void* self);
@@ -25,23 +27,15 @@ void q_runnable_run(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QRunnable*
-/// @param callback void func()
+/// @param callback void func(QRunnable* self)
 ///
-void q_runnable_on_run(void* self, void (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qrunnable.html#run)
-///
-/// Base class method implementation
-///
-/// @param self QRunnable*
-///
-void q_runnable_super_run(void* self);
+void q_runnable_on_run(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrunnable.html#autoDelete)
 ///
-/// @param self QRunnable*
+/// @param self const QRunnable*
 ///
-bool q_runnable_auto_delete(void* self);
+bool q_runnable_auto_delete(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrunnable.html#setAutoDelete)
 ///

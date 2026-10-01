@@ -24,9 +24,9 @@ struct pair_double_double {
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-const QMetaObject* q_xyseries_meta_object(void* self);
+const QMetaObject* q_xyseries_meta_object(const void* self);
 
 /// @param self QXYSeries*
 /// @param param1 const char*
@@ -61,7 +61,7 @@ void q_xyseries_append(void* self, double x, double y);
 /// @param self QXYSeries*
 /// @param point QPointF*
 ///
-void q_xyseries_append2(void* self, void* point);
+void q_xyseries_append2(void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#append)
 ///
@@ -86,7 +86,7 @@ void q_xyseries_replace(void* self, double oldX, double oldY, double newX, doubl
 /// @param oldPoint QPointF*
 /// @param newPoint QPointF*
 ///
-void q_xyseries_replace2(void* self, void* oldPoint, void* newPoint);
+void q_xyseries_replace2(void* self, const void* oldPoint, const void* newPoint);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#replace)
 ///
@@ -103,7 +103,7 @@ void q_xyseries_replace3(void* self, int index, double newX, double newY);
 /// @param index int
 /// @param newPoint QPointF*
 ///
-void q_xyseries_replace4(void* self, int index, void* newPoint);
+void q_xyseries_replace4(void* self, int index, const void* newPoint);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#remove)
 ///
@@ -118,7 +118,7 @@ void q_xyseries_remove(void* self, double x, double y);
 /// @param self QXYSeries*
 /// @param point QPointF*
 ///
-void q_xyseries_remove2(void* self, void* point);
+void q_xyseries_remove2(void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#remove)
 ///
@@ -141,7 +141,7 @@ void q_xyseries_remove_points(void* self, int index, int count);
 /// @param index int
 /// @param point QPointF*
 ///
-void q_xyseries_insert(void* self, int index, void* point);
+void q_xyseries_insert(void* self, int index, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#clear)
 ///
@@ -151,39 +151,39 @@ void q_xyseries_clear(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#count)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-int32_t q_xyseries_count(void* self);
+int32_t q_xyseries_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#points)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
 /// @return libqt_list of QPointF*
 ///
-libqt_list q_xyseries_points(void* self);
+libqt_list q_xyseries_points(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointsVector)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
 /// @return libqt_list of QPointF*
 ///
-libqt_list q_xyseries_points_vector(void* self);
+libqt_list q_xyseries_points_vector(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#at)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 /// @param index int
 ///
-const QPointF* q_xyseries_at(void* self, int index);
+const QPointF* q_xyseries_at(const void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#operator-lt-lt)
 ///
 /// @param self QXYSeries*
 /// @param point QPointF*
 ///
-QXYSeries* q_xyseries_operator_shift_left(void* self, void* point);
+QXYSeries* q_xyseries_operator_shift_left(void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#operator-lt-lt)
 ///
@@ -197,52 +197,52 @@ QXYSeries* q_xyseries_operator_shift_left2(void* self, libqt_list points);
 /// @param self QXYSeries*
 /// @param pen QPen*
 ///
-void q_xyseries_set_pen(void* self, void* pen);
+void q_xyseries_set_pen(void* self, const void* pen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pen)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-QPen* q_xyseries_pen(void* self);
+QPen* q_xyseries_pen(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setBrush)
 ///
 /// @param self QXYSeries*
 /// @param brush QBrush*
 ///
-void q_xyseries_set_brush(void* self, void* brush);
+void q_xyseries_set_brush(void* self, const void* brush);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#brush)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-QBrush* q_xyseries_brush(void* self);
+QBrush* q_xyseries_brush(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setColor)
 ///
 /// @param self QXYSeries*
 /// @param color QColor*
 ///
-void q_xyseries_set_color(void* self, void* color);
+void q_xyseries_set_color(void* self, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#color)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-QColor* q_xyseries_color(void* self);
+QColor* q_xyseries_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setSelectedColor)
 ///
 /// @param self QXYSeries*
 /// @param color QColor*
 ///
-void q_xyseries_set_selected_color(void* self, void* color);
+void q_xyseries_set_selected_color(void* self, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#selectedColor)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-QColor* q_xyseries_selected_color(void* self);
+QColor* q_xyseries_selected_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setPointsVisible)
 ///
@@ -252,9 +252,9 @@ void q_xyseries_set_points_visible(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointsVisible)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-bool q_xyseries_points_visible(void* self);
+bool q_xyseries_points_visible(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setPointLabelsFormat)
 ///
@@ -267,9 +267,9 @@ void q_xyseries_set_point_labels_format(void* self, const char* format);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-const char* q_xyseries_point_labels_format(void* self);
+const char* q_xyseries_point_labels_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setPointLabelsVisible)
 ///
@@ -279,35 +279,35 @@ void q_xyseries_set_point_labels_visible(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsVisible)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-bool q_xyseries_point_labels_visible(void* self);
+bool q_xyseries_point_labels_visible(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setPointLabelsFont)
 ///
 /// @param self QXYSeries*
 /// @param font QFont*
 ///
-void q_xyseries_set_point_labels_font(void* self, void* font);
+void q_xyseries_set_point_labels_font(void* self, const void* font);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsFont)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-QFont* q_xyseries_point_labels_font(void* self);
+QFont* q_xyseries_point_labels_font(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setPointLabelsColor)
 ///
 /// @param self QXYSeries*
 /// @param color QColor*
 ///
-void q_xyseries_set_point_labels_color(void* self, void* color);
+void q_xyseries_set_point_labels_color(void* self, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsColor)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-QColor* q_xyseries_point_labels_color(void* self);
+QColor* q_xyseries_point_labels_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setPointLabelsClipping)
 ///
@@ -317,9 +317,9 @@ void q_xyseries_set_point_labels_clipping(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsClipping)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-bool q_xyseries_point_labels_clipping(void* self);
+bool q_xyseries_point_labels_clipping(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#replace)
 ///
@@ -392,37 +392,37 @@ void q_xyseries_toggle_selection(void* self, libqt_list indexes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#selectedPoints)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
 /// @return libqt_list of int
 ///
-libqt_list q_xyseries_selected_points(void* self);
+libqt_list q_xyseries_selected_points(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setLightMarker)
 ///
 /// @param self QXYSeries*
 /// @param lightMarker QImage*
 ///
-void q_xyseries_set_light_marker(void* self, void* lightMarker);
+void q_xyseries_set_light_marker(void* self, const void* lightMarker);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#lightMarker)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-const QImage* q_xyseries_light_marker(void* self);
+const QImage* q_xyseries_light_marker(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setSelectedLightMarker)
 ///
 /// @param self QXYSeries*
 /// @param selectedLightMarker QImage*
 ///
-void q_xyseries_set_selected_light_marker(void* self, void* selectedLightMarker);
+void q_xyseries_set_selected_light_marker(void* self, const void* selectedLightMarker);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#selectedLightMarker)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-const QImage* q_xyseries_selected_light_marker(void* self);
+const QImage* q_xyseries_selected_light_marker(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setMarkerSize)
 ///
@@ -433,9 +433,9 @@ void q_xyseries_set_marker_size(void* self, double size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#markerSize)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-double q_xyseries_marker_size(void* self);
+double q_xyseries_marker_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setBestFitLineVisible)
 ///
@@ -445,44 +445,44 @@ void q_xyseries_set_best_fit_line_visible(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#bestFitLineVisible)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-bool q_xyseries_best_fit_line_visible(void* self);
+bool q_xyseries_best_fit_line_visible(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#bestFitLineEquation)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 /// @param ok bool*
 ///
 /// @return pair_double_double tuple of double and double
 ///
-pair_double_double q_xyseries_best_fit_line_equation(void* self, bool* ok);
+pair_double_double q_xyseries_best_fit_line_equation(const void* self, bool* ok);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setBestFitLinePen)
 ///
 /// @param self QXYSeries*
 /// @param pen QPen*
 ///
-void q_xyseries_set_best_fit_line_pen(void* self, void* pen);
+void q_xyseries_set_best_fit_line_pen(void* self, const void* pen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#bestFitLinePen)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-QPen* q_xyseries_best_fit_line_pen(void* self);
+QPen* q_xyseries_best_fit_line_pen(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setBestFitLineColor)
 ///
 /// @param self QXYSeries*
 /// @param color QColor*
 ///
-void q_xyseries_set_best_fit_line_color(void* self, void* color);
+void q_xyseries_set_best_fit_line_color(void* self, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#bestFitLineColor)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-QColor* q_xyseries_best_fit_line_color(void* self);
+QColor* q_xyseries_best_fit_line_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#clearPointConfiguration)
 ///
@@ -527,7 +527,7 @@ void q_xyseries_set_point_configuration(void* self, int index, libqt_map configu
 /// @param key enum QXYSeries__PointConfiguration
 /// @param value QVariant*
 ///
-void q_xyseries_set_point_configuration2(void* self, int index, int32_t key, void* value);
+void q_xyseries_set_point_configuration2(void* self, int index, int32_t key, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setPointsConfiguration)
 ///
@@ -549,12 +549,12 @@ void q_xyseries_set_points_configuration(void* self, libqt_map pointsConfigurati
 /// free(map.values);
 /// ```
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 /// @param index int
 ///
 /// @return libqt_map of enum QXYSeries__PointConfiguration to QVariant*
 ///
-libqt_map q_xyseries_point_configuration(void* self, int index);
+libqt_map q_xyseries_point_configuration(const void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointsConfiguration)
 ///
@@ -570,11 +570,11 @@ libqt_map q_xyseries_point_configuration(void* self, int index);
 /// free(map.values);
 /// ```
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
 /// @return libqt_map of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant*
 ///
-libqt_map q_xyseries_points_configuration(void* self);
+libqt_map q_xyseries_points_configuration(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#sizeBy)
 ///
@@ -597,14 +597,14 @@ void q_xyseries_color_by(void* self, libqt_list sourceData);
 /// @param self QXYSeries*
 /// @param point QPointF*
 ///
-void q_xyseries_clicked(void* self, void* point);
+void q_xyseries_clicked(void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#clicked)
 ///
 /// @param self QXYSeries*
 /// @param callback void func(QXYSeries* self, QPointF* point)
 ///
-void q_xyseries_on_clicked(void* self, void (*callback)(void*, void*));
+void q_xyseries_on_clicked(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#hovered)
 ///
@@ -612,56 +612,56 @@ void q_xyseries_on_clicked(void* self, void (*callback)(void*, void*));
 /// @param point QPointF*
 /// @param state bool
 ///
-void q_xyseries_hovered(void* self, void* point, bool state);
+void q_xyseries_hovered(void* self, const void* point, bool state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#hovered)
 ///
 /// @param self QXYSeries*
 /// @param callback void func(QXYSeries* self, QPointF* point, bool state)
 ///
-void q_xyseries_on_hovered(void* self, void (*callback)(void*, void*, bool));
+void q_xyseries_on_hovered(void* self, void (*callback)(void*, const void*, bool));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pressed)
 ///
 /// @param self QXYSeries*
 /// @param point QPointF*
 ///
-void q_xyseries_pressed(void* self, void* point);
+void q_xyseries_pressed(void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pressed)
 ///
 /// @param self QXYSeries*
 /// @param callback void func(QXYSeries* self, QPointF* point)
 ///
-void q_xyseries_on_pressed(void* self, void (*callback)(void*, void*));
+void q_xyseries_on_pressed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#released)
 ///
 /// @param self QXYSeries*
 /// @param point QPointF*
 ///
-void q_xyseries_released(void* self, void* point);
+void q_xyseries_released(void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#released)
 ///
 /// @param self QXYSeries*
 /// @param callback void func(QXYSeries* self, QPointF* point)
 ///
-void q_xyseries_on_released(void* self, void (*callback)(void*, void*));
+void q_xyseries_on_released(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#doubleClicked)
 ///
 /// @param self QXYSeries*
 /// @param point QPointF*
 ///
-void q_xyseries_double_clicked(void* self, void* point);
+void q_xyseries_double_clicked(void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#doubleClicked)
 ///
 /// @param self QXYSeries*
 /// @param callback void func(QXYSeries* self, QPointF* point)
 ///
-void q_xyseries_on_double_clicked(void* self, void (*callback)(void*, void*));
+void q_xyseries_on_double_clicked(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointReplaced)
 ///
@@ -724,14 +724,14 @@ void q_xyseries_on_color_changed(void* self, void (*callback)(void*, void*));
 /// @param self QXYSeries*
 /// @param color QColor*
 ///
-void q_xyseries_selected_color_changed(void* self, void* color);
+void q_xyseries_selected_color_changed(void* self, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#selectedColorChanged)
 ///
 /// @param self QXYSeries*
 /// @param callback void func(QXYSeries* self, QColor* color)
 ///
-void q_xyseries_on_selected_color_changed(void* self, void (*callback)(void*, void*));
+void q_xyseries_on_selected_color_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointsReplaced)
 ///
@@ -779,28 +779,28 @@ void q_xyseries_on_point_labels_visibility_changed(void* self, void (*callback)(
 /// @param self QXYSeries*
 /// @param font QFont*
 ///
-void q_xyseries_point_labels_font_changed(void* self, void* font);
+void q_xyseries_point_labels_font_changed(void* self, const void* font);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsFontChanged)
 ///
 /// @param self QXYSeries*
 /// @param callback void func(QXYSeries* self, QFont* font)
 ///
-void q_xyseries_on_point_labels_font_changed(void* self, void (*callback)(void*, void*));
+void q_xyseries_on_point_labels_font_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsColorChanged)
 ///
 /// @param self QXYSeries*
 /// @param color QColor*
 ///
-void q_xyseries_point_labels_color_changed(void* self, void* color);
+void q_xyseries_point_labels_color_changed(void* self, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsColorChanged)
 ///
 /// @param self QXYSeries*
 /// @param callback void func(QXYSeries* self, QColor* color)
 ///
-void q_xyseries_on_point_labels_color_changed(void* self, void (*callback)(void*, void*));
+void q_xyseries_on_point_labels_color_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsClippingChanged)
 ///
@@ -836,14 +836,14 @@ void q_xyseries_on_points_removed(void* self, void (*callback)(void*, int, int))
 /// @param self QXYSeries*
 /// @param pen QPen*
 ///
-void q_xyseries_pen_changed(void* self, void* pen);
+void q_xyseries_pen_changed(void* self, const void* pen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#penChanged)
 ///
 /// @param self QXYSeries*
 /// @param callback void func(QXYSeries* self, QPen* pen)
 ///
-void q_xyseries_on_pen_changed(void* self, void (*callback)(void*, void*));
+void q_xyseries_on_pen_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#selectedPointsChanged)
 ///
@@ -863,28 +863,28 @@ void q_xyseries_on_selected_points_changed(void* self, void (*callback)(void*));
 /// @param self QXYSeries*
 /// @param lightMarker QImage*
 ///
-void q_xyseries_light_marker_changed(void* self, void* lightMarker);
+void q_xyseries_light_marker_changed(void* self, const void* lightMarker);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#lightMarkerChanged)
 ///
 /// @param self QXYSeries*
 /// @param callback void func(QXYSeries* self, QImage* lightMarker)
 ///
-void q_xyseries_on_light_marker_changed(void* self, void (*callback)(void*, void*));
+void q_xyseries_on_light_marker_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#selectedLightMarkerChanged)
 ///
 /// @param self QXYSeries*
 /// @param selectedLightMarker QImage*
 ///
-void q_xyseries_selected_light_marker_changed(void* self, void* selectedLightMarker);
+void q_xyseries_selected_light_marker_changed(void* self, const void* selectedLightMarker);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#selectedLightMarkerChanged)
 ///
 /// @param self QXYSeries*
 /// @param callback void func(QXYSeries* self, QImage* selectedLightMarker)
 ///
-void q_xyseries_on_selected_light_marker_changed(void* self, void (*callback)(void*, void*));
+void q_xyseries_on_selected_light_marker_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#bestFitLineVisibilityChanged)
 ///
@@ -905,28 +905,28 @@ void q_xyseries_on_best_fit_line_visibility_changed(void* self, void (*callback)
 /// @param self QXYSeries*
 /// @param pen QPen*
 ///
-void q_xyseries_best_fit_line_pen_changed(void* self, void* pen);
+void q_xyseries_best_fit_line_pen_changed(void* self, const void* pen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#bestFitLinePenChanged)
 ///
 /// @param self QXYSeries*
 /// @param callback void func(QXYSeries* self, QPen* pen)
 ///
-void q_xyseries_on_best_fit_line_pen_changed(void* self, void (*callback)(void*, void*));
+void q_xyseries_on_best_fit_line_pen_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#bestFitLineColorChanged)
 ///
 /// @param self QXYSeries*
 /// @param color QColor*
 ///
-void q_xyseries_best_fit_line_color_changed(void* self, void* color);
+void q_xyseries_best_fit_line_color_changed(void* self, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#bestFitLineColorChanged)
 ///
 /// @param self QXYSeries*
 /// @param callback void func(QXYSeries* self, QColor* color)
 ///
-void q_xyseries_on_best_fit_line_color_changed(void* self, void (*callback)(void*, void*));
+void q_xyseries_on_best_fit_line_color_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointsConfigurationChanged)
 ///
@@ -1009,17 +1009,19 @@ void q_xyseries_set_best_fit_line_visible1(void* self, bool visible);
 /// @param sourceData libqt_list of double
 /// @param gradient QLinearGradient*
 ///
-void q_xyseries_color_by2(void* self, libqt_list sourceData, void* gradient);
+void q_xyseries_color_by2(void* self, libqt_list sourceData, const void* gradient);
 
 /// Inherited from QAbstractSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#type)
 ///
-/// @param self QXYSeries*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const QXYSeries*
 ///
 /// @return enum QAbstractSeries__SeriesType
 ///
-int32_t q_xyseries_type(void* self);
+int32_t q_xyseries_type(const void* self);
 
 /// Inherited from QAbstractSeries
 ///
@@ -1036,9 +1038,9 @@ void q_xyseries_set_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-const char* q_xyseries_name(void* self);
+const char* q_xyseries_name(const void* self);
 
 /// Inherited from QAbstractSeries
 ///
@@ -1052,17 +1054,17 @@ void q_xyseries_set_visible(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#isVisible)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-bool q_xyseries_is_visible(void* self);
+bool q_xyseries_is_visible(const void* self);
 
 /// Inherited from QAbstractSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#opacity)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-double q_xyseries_opacity(void* self);
+double q_xyseries_opacity(const void* self);
 
 /// Inherited from QAbstractSeries
 ///
@@ -1085,17 +1087,17 @@ void q_xyseries_set_use_open_g_l(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGL)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-bool q_xyseries_use_open_g_l(void* self);
+bool q_xyseries_use_open_g_l(const void* self);
 
 /// Inherited from QAbstractSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#chart)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-QChart* q_xyseries_chart(void* self);
+QChart* q_xyseries_chart(const void* self);
 
 /// Inherited from QAbstractSeries
 ///
@@ -1252,9 +1254,9 @@ bool q_xyseries_event_filter(void* self, void* watched, void* event);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-const char* q_xyseries_object_name(void* self);
+const char* q_xyseries_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1269,33 +1271,33 @@ void q_xyseries_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-bool q_xyseries_is_widget_type(void* self);
+bool q_xyseries_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-bool q_xyseries_is_window_type(void* self);
+bool q_xyseries_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-bool q_xyseries_is_quick_item_type(void* self);
+bool q_xyseries_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-bool q_xyseries_signals_blocked(void* self);
+bool q_xyseries_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1310,9 +1312,9 @@ bool q_xyseries_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-QThread* q_xyseries_thread(void* self);
+QThread* q_xyseries_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1363,11 +1365,11 @@ void q_xyseries_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_xyseries_children(void* self);
+libqt_list q_xyseries_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1405,7 +1407,7 @@ void q_xyseries_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_xyseries_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_xyseries_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1416,18 +1418,18 @@ QMetaObject__Connection* q_xyseries_connect(void* sender, const char* signal, vo
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_xyseries_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_xyseries_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_xyseries_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_xyseries_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1438,7 +1440,7 @@ QMetaObject__Connection* q_xyseries_connect3(void* self, void* sender, const cha
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_xyseries_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_xyseries_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1449,24 +1451,24 @@ bool q_xyseries_disconnect(void* sender, const char* signal, void* receiver, con
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_xyseries_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_xyseries_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-bool q_xyseries_disconnect3(void* self);
+bool q_xyseries_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 /// @param receiver QObject*
 ///
-bool q_xyseries_disconnect4(void* self, void* receiver);
+bool q_xyseries_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1474,23 +1476,23 @@ bool q_xyseries_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_xyseries_disconnect5(void* param1);
+bool q_xyseries_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-void q_xyseries_dump_object_tree(void* self);
+void q_xyseries_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-void q_xyseries_dump_object_info(void* self);
+void q_xyseries_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1500,16 +1502,16 @@ void q_xyseries_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_xyseries_set_property(void* self, const char* name, void* value);
+bool q_xyseries_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 /// @param name const char*
 ///
-QVariant* q_xyseries_property(void* self, const char* name);
+QVariant* q_xyseries_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1517,9 +1519,9 @@ QVariant* q_xyseries_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-const char** q_xyseries_dynamic_property_names(void* self);
+const char** q_xyseries_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1533,9 +1535,9 @@ QBindingStorage* q_xyseries_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-const QBindingStorage* q_xyseries_binding_storage2(void* self);
+const QBindingStorage* q_xyseries_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1558,18 +1560,18 @@ void q_xyseries_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 ///
-QObject* q_xyseries_parent(void* self);
+QObject* q_xyseries_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 /// @param classname const char*
 ///
-bool q_xyseries_inherits(void* self, const char* classname);
+bool q_xyseries_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1609,7 +1611,7 @@ int32_t q_xyseries_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_xyseries_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_xyseries_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1621,59 +1623,59 @@ QMetaObject__Connection* q_xyseries_connect5(void* sender, const char* signal, v
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_xyseries_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_xyseries_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_xyseries_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_xyseries_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 /// @param signal const char*
 ///
-bool q_xyseries_disconnect1(void* self, const char* signal);
+bool q_xyseries_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QXYSeries*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_xyseries_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_xyseries_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_xyseries_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QXYSeries*
+/// @param self const QXYSeries*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_xyseries_disconnect23(void* self, void* receiver, const char* member);
+bool q_xyseries_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QXYSeries*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_xyseries_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

@@ -3,11 +3,11 @@
 #include "libpaste.hpp"
 #include "libpaste.h"
 
-bool k_io_can_paste_mime_data(void* data) {
+bool k_io_can_paste_mime_data(const void* data) {
     return KIO_CanPasteMimeData((QMimeData*)data);
 }
 
-const char* k_io_paste_action_text(void* mimeData, bool* enable, void* destItem) {
+const char* k_io_paste_action_text(const void* mimeData, bool* enable, const void* destItem) {
     libqt_string _str = KIO_PasteActionText((QMimeData*)mimeData, (bool*)enable, (KFileItem*)destItem);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -18,6 +18,6 @@ void k_io_set_clipboard_data_cut(void* mimeData, bool cut) {
     KIO_SetClipboardDataCut((QMimeData*)mimeData, cut);
 }
 
-bool k_io_is_clipboard_data_cut(void* mimeData) {
+bool k_io_is_clipboard_data_cut(const void* mimeData) {
     return KIO_IsClipboardDataCut((QMimeData*)mimeData);
 }

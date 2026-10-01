@@ -14,7 +14,7 @@
 ///
 /// @param other QMargins*
 ///
-QMargins* q_margins_new(void* other);
+QMargins* q_margins_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmargins.html)
 
@@ -47,7 +47,7 @@ QMargins* q_margins_new4(int left, int top, int right, int bottom);
 ///
 /// @param param1 QMargins*
 ///
-QMargins* q_margins_new5(void* param1);
+QMargins* q_margins_new5(const void* param1);
 
 /// q_margins_copy_assign shallow copies `other` into `self`.
 ///
@@ -65,33 +65,33 @@ void q_margins_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmargins.html#isNull)
 ///
-/// @param self QMargins*
+/// @param self const QMargins*
 ///
-bool q_margins_is_null(void* self);
+bool q_margins_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmargins.html#left)
 ///
-/// @param self QMargins*
+/// @param self const QMargins*
 ///
-int32_t q_margins_left(void* self);
+int32_t q_margins_left(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmargins.html#top)
 ///
-/// @param self QMargins*
+/// @param self const QMargins*
 ///
-int32_t q_margins_top(void* self);
+int32_t q_margins_top(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmargins.html#right)
 ///
-/// @param self QMargins*
+/// @param self const QMargins*
 ///
-int32_t q_margins_right(void* self);
+int32_t q_margins_right(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmargins.html#bottom)
 ///
-/// @param self QMargins*
+/// @param self const QMargins*
 ///
-int32_t q_margins_bottom(void* self);
+int32_t q_margins_bottom(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmargins.html#setLeft)
 ///
@@ -126,14 +126,14 @@ void q_margins_set_bottom(void* self, int bottom);
 /// @param self QMargins*
 /// @param margins QMargins*
 ///
-QMargins* q_margins_operator_plus_assign(void* self, void* margins);
+QMargins* q_margins_operator_plus_assign(void* self, const void* margins);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmargins.html#operator--eq)
 ///
 /// @param self QMargins*
 /// @param margins QMargins*
 ///
-QMargins* q_margins_operator_minus_assign(void* self, void* margins);
+QMargins* q_margins_operator_minus_assign(void* self, const void* margins);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmargins.html#operator-2b-eq)
 ///
@@ -179,16 +179,16 @@ QMargins* q_margins_operator_divide_assign2(void* self, double param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmargins.html#toMarginsF)
 ///
-/// @param self QMargins*
+/// @param self const QMargins*
 ///
-QMarginsF* q_margins_to_margins_f(void* self);
+QMarginsF* q_margins_to_margins_f(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmargins.html#operator-eq)
 ///
 /// @param self QMargins*
 /// @param param1 QMargins*
 ///
-void q_margins_operator_assign(void* self, void* param1);
+void q_margins_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmargins.html#dtor.QMargins)
 ///
@@ -204,7 +204,7 @@ void q_margins_delete(void* self);
 ///
 /// @param other QMarginsF*
 ///
-QMarginsF* q_marginsf_new(void* other);
+QMarginsF* q_marginsf_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmarginsf.html)
 
@@ -237,7 +237,7 @@ QMarginsF* q_marginsf_new4(double left, double top, double right, double bottom)
 ///
 /// @param margins QMargins*
 ///
-QMarginsF* q_marginsf_new5(void* margins);
+QMarginsF* q_marginsf_new5(const void* margins);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmarginsf.html)
 
@@ -245,7 +245,7 @@ QMarginsF* q_marginsf_new5(void* margins);
 ///
 /// @param param1 QMarginsF*
 ///
-QMarginsF* q_marginsf_new6(void* param1);
+QMarginsF* q_marginsf_new6(const void* param1);
 
 /// q_marginsf_copy_assign shallow copies `other` into `self`.
 ///
@@ -263,33 +263,33 @@ void q_marginsf_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmarginsf.html#isNull)
 ///
-/// @param self QMarginsF*
+/// @param self const QMarginsF*
 ///
-bool q_marginsf_is_null(void* self);
+bool q_marginsf_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmarginsf.html#left)
 ///
-/// @param self QMarginsF*
+/// @param self const QMarginsF*
 ///
-double q_marginsf_left(void* self);
+double q_marginsf_left(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmarginsf.html#top)
 ///
-/// @param self QMarginsF*
+/// @param self const QMarginsF*
 ///
-double q_marginsf_top(void* self);
+double q_marginsf_top(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmarginsf.html#right)
 ///
-/// @param self QMarginsF*
+/// @param self const QMarginsF*
 ///
-double q_marginsf_right(void* self);
+double q_marginsf_right(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmarginsf.html#bottom)
 ///
-/// @param self QMarginsF*
+/// @param self const QMarginsF*
 ///
-double q_marginsf_bottom(void* self);
+double q_marginsf_bottom(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmarginsf.html#setLeft)
 ///
@@ -324,14 +324,14 @@ void q_marginsf_set_bottom(void* self, double abottom);
 /// @param self QMarginsF*
 /// @param margins QMarginsF*
 ///
-QMarginsF* q_marginsf_operator_plus_assign(void* self, void* margins);
+QMarginsF* q_marginsf_operator_plus_assign(void* self, const void* margins);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmarginsf.html#operator--eq)
 ///
 /// @param self QMarginsF*
 /// @param margins QMarginsF*
 ///
-QMarginsF* q_marginsf_operator_minus_assign(void* self, void* margins);
+QMarginsF* q_marginsf_operator_minus_assign(void* self, const void* margins);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmarginsf.html#operator-2b-eq)
 ///
@@ -363,16 +363,16 @@ QMarginsF* q_marginsf_operator_divide_assign(void* self, double divisor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmarginsf.html#toMargins)
 ///
-/// @param self QMarginsF*
+/// @param self const QMarginsF*
 ///
-QMargins* q_marginsf_to_margins(void* self);
+QMargins* q_marginsf_to_margins(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmarginsf.html#operator-eq)
 ///
 /// @param self QMarginsF*
 /// @param param1 QMarginsF*
 ///
-void q_marginsf_operator_assign(void* self, void* param1);
+void q_marginsf_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmarginsf.html#dtor.QMarginsF)
 ///

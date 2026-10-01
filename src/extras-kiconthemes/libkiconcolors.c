@@ -7,91 +7,91 @@ KIconColors* k_iconcolors_new() {
     return KIconColors_New();
 }
 
-KIconColors* k_iconcolors_new2(void* color) {
+KIconColors* k_iconcolors_new2(const void* color) {
     return KIconColors_New2((QColor*)color);
 }
 
-KIconColors* k_iconcolors_new3(void* palette) {
+KIconColors* k_iconcolors_new3(const void* palette) {
     return KIconColors_New3((QPalette*)palette);
 }
 
-KIconColors* k_iconcolors_new4(void* other) {
+KIconColors* k_iconcolors_new4(const void* other) {
     return KIconColors_New4((KIconColors*)other);
 }
 
-void k_iconcolors_operator_assign(void* self, void* other) {
+void k_iconcolors_operator_assign(void* self, const void* other) {
     KIconColors_OperatorAssign((KIconColors*)self, (KIconColors*)other);
 }
 
-QColor* k_iconcolors_text(void* self) {
+QColor* k_iconcolors_text(const void* self) {
     return KIconColors_Text((KIconColors*)self);
 }
 
-QColor* k_iconcolors_highlight(void* self) {
+QColor* k_iconcolors_highlight(const void* self) {
     return KIconColors_Highlight((KIconColors*)self);
 }
 
-QColor* k_iconcolors_highlighted_text(void* self) {
+QColor* k_iconcolors_highlighted_text(const void* self) {
     return KIconColors_HighlightedText((KIconColors*)self);
 }
 
-QColor* k_iconcolors_accent(void* self) {
+QColor* k_iconcolors_accent(const void* self) {
     return KIconColors_Accent((KIconColors*)self);
 }
 
-QColor* k_iconcolors_background(void* self) {
+QColor* k_iconcolors_background(const void* self) {
     return KIconColors_Background((KIconColors*)self);
 }
 
-QColor* k_iconcolors_neutral_text(void* self) {
+QColor* k_iconcolors_neutral_text(const void* self) {
     return KIconColors_NeutralText((KIconColors*)self);
 }
 
-QColor* k_iconcolors_positive_text(void* self) {
+QColor* k_iconcolors_positive_text(const void* self) {
     return KIconColors_PositiveText((KIconColors*)self);
 }
 
-QColor* k_iconcolors_negative_text(void* self) {
+QColor* k_iconcolors_negative_text(const void* self) {
     return KIconColors_NegativeText((KIconColors*)self);
 }
 
-QColor* k_iconcolors_active_text(void* self) {
+QColor* k_iconcolors_active_text(const void* self) {
     return KIconColors_ActiveText((KIconColors*)self);
 }
 
-void k_iconcolors_set_text(void* self, void* color) {
+void k_iconcolors_set_text(void* self, const void* color) {
     KIconColors_SetText((KIconColors*)self, (QColor*)color);
 }
 
-void k_iconcolors_set_highlight(void* self, void* color) {
+void k_iconcolors_set_highlight(void* self, const void* color) {
     KIconColors_SetHighlight((KIconColors*)self, (QColor*)color);
 }
 
-void k_iconcolors_set_highlighted_text(void* self, void* color) {
+void k_iconcolors_set_highlighted_text(void* self, const void* color) {
     KIconColors_SetHighlightedText((KIconColors*)self, (QColor*)color);
 }
 
-void k_iconcolors_set_accent(void* self, void* color) {
+void k_iconcolors_set_accent(void* self, const void* color) {
     KIconColors_SetAccent((KIconColors*)self, (QColor*)color);
 }
 
-void k_iconcolors_set_background(void* self, void* color) {
+void k_iconcolors_set_background(void* self, const void* color) {
     KIconColors_SetBackground((KIconColors*)self, (QColor*)color);
 }
 
-void k_iconcolors_set_neutral_text(void* self, void* color) {
+void k_iconcolors_set_neutral_text(void* self, const void* color) {
     KIconColors_SetNeutralText((KIconColors*)self, (QColor*)color);
 }
 
-void k_iconcolors_set_positive_text(void* self, void* color) {
+void k_iconcolors_set_positive_text(void* self, const void* color) {
     KIconColors_SetPositiveText((KIconColors*)self, (QColor*)color);
 }
 
-void k_iconcolors_set_negative_text(void* self, void* color) {
+void k_iconcolors_set_negative_text(void* self, const void* color) {
     KIconColors_SetNegativeText((KIconColors*)self, (QColor*)color);
 }
 
-void k_iconcolors_set_active_text(void* self, void* color) {
+void k_iconcolors_set_active_text(void* self, const void* color) {
     KIconColors_SetActiveText((KIconColors*)self, (QColor*)color);
 }
 

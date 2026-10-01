@@ -22,7 +22,7 @@ bool k_windoweffects_is_effect_available(int32_t effect);
 /// @param enable bool
 /// @param region QRegion*
 ///
-void k_windoweffects_enable_blur_behind(void* window, bool enable, void* region);
+void k_windoweffects_enable_blur_behind(void* window, bool enable, const void* region);
 
 /// [Upstream resources](https://api.kde.org/kwindoweffects.html#enableBackgroundContrast)
 ///
@@ -33,7 +33,7 @@ void k_windoweffects_enable_blur_behind(void* window, bool enable, void* region)
 /// @param saturation double
 /// @param region QRegion*
 ///
-void k_windoweffects_enable_background_contrast(void* window, bool enable, double contrast, double intensity, double saturation, void* region);
+void k_windoweffects_enable_background_contrast(void* window, bool enable, double contrast, double intensity, double saturation, const void* region);
 
 /// [Upstream resources](https://api.kde.org/kwindoweffects.html#slideWindow)
 ///

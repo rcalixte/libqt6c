@@ -16,15 +16,15 @@ KConfigPropertyMap* k_configpropertymap_new2(void* config, void* parent) {
     return KConfigPropertyMap_New2((KCoreConfigSkeleton*)config, (QObject*)parent);
 }
 
-const QMetaObject* k_configpropertymap_meta_object(void* self) {
+const QMetaObject* k_configpropertymap_meta_object(const void* self) {
     return KConfigPropertyMap_MetaObject((KConfigPropertyMap*)self);
 }
 
-void k_configpropertymap_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_configpropertymap_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     KConfigPropertyMap_OnMetaObject((KConfigPropertyMap*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_configpropertymap_super_meta_object(void* self) {
+const QMetaObject* k_configpropertymap_super_meta_object(const void* self) {
     return KConfigPropertyMap_SuperMetaObject((KConfigPropertyMap*)self);
 }
 
@@ -59,7 +59,7 @@ const char* k_configpropertymap_tr(const char* s) {
     return _ret;
 }
 
-bool k_configpropertymap_is_notify(void* self) {
+bool k_configpropertymap_is_notify(const void* self) {
     return KConfigPropertyMap_IsNotify((KConfigPropertyMap*)self);
 }
 
@@ -67,7 +67,7 @@ void k_configpropertymap_set_notify(void* self, bool notify) {
     KConfigPropertyMap_SetNotify((KConfigPropertyMap*)self, notify);
 }
 
-bool k_configpropertymap_is_immutable(void* self, const char* key) {
+bool k_configpropertymap_is_immutable(const void* self, const char* key) {
     return KConfigPropertyMap_IsImmutable((KConfigPropertyMap*)self, qstring(key));
 }
 
@@ -75,15 +75,15 @@ void k_configpropertymap_write_config(void* self) {
     KConfigPropertyMap_WriteConfig((KConfigPropertyMap*)self);
 }
 
-QVariant* k_configpropertymap_update_value(void* self, const char* key, void* input) {
+QVariant* k_configpropertymap_update_value(void* self, const char* key, const void* input) {
     return KConfigPropertyMap_UpdateValue((KConfigPropertyMap*)self, qstring(key), (QVariant*)input);
 }
 
-void k_configpropertymap_on_update_value(void* self, QVariant* (*callback)(void*, const char*, void*)) {
+void k_configpropertymap_on_update_value(void* self, QVariant* (*callback)(void*, const char*, const void*)) {
     KConfigPropertyMap_OnUpdateValue((KConfigPropertyMap*)self, (intptr_t)callback);
 }
 
-QVariant* k_configpropertymap_super_update_value(void* self, const char* key, void* input) {
+QVariant* k_configpropertymap_super_update_value(void* self, const char* key, const void* input) {
     return KConfigPropertyMap_SuperUpdateValue((KConfigPropertyMap*)self, qstring(key), (QVariant*)input);
 }
 
@@ -101,11 +101,11 @@ const char* k_configpropertymap_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QVariant* k_configpropertymap_value(void* self, const char* key) {
+QVariant* k_configpropertymap_value(const void* self, const char* key) {
     return QQmlPropertyMap_Value((QQmlPropertyMap*)self, qstring(key));
 }
 
-void k_configpropertymap_insert(void* self, const char* key, void* value) {
+void k_configpropertymap_insert(void* self, const char* key, const void* value) {
     QQmlPropertyMap_Insert((QQmlPropertyMap*)self, qstring(key), (QVariant*)value);
 }
 
@@ -145,7 +145,7 @@ void k_configpropertymap_freeze(void* self) {
     QQmlPropertyMap_Freeze((QQmlPropertyMap*)self);
 }
 
-const char** k_configpropertymap_keys(void* self) {
+const char** k_configpropertymap_keys(const void* self) {
     libqt_list _arr = QQmlPropertyMap_Keys((QQmlPropertyMap*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -162,19 +162,19 @@ const char** k_configpropertymap_keys(void* self) {
     return _ret;
 }
 
-int32_t k_configpropertymap_count(void* self) {
+int32_t k_configpropertymap_count(const void* self) {
     return QQmlPropertyMap_Count((QQmlPropertyMap*)self);
 }
 
-int32_t k_configpropertymap_size(void* self) {
+int32_t k_configpropertymap_size(const void* self) {
     return QQmlPropertyMap_Size((QQmlPropertyMap*)self);
 }
 
-bool k_configpropertymap_is_empty(void* self) {
+bool k_configpropertymap_is_empty(const void* self) {
     return QQmlPropertyMap_IsEmpty((QQmlPropertyMap*)self);
 }
 
-bool k_configpropertymap_contains(void* self, const char* key) {
+bool k_configpropertymap_contains(const void* self, const char* key) {
     return QQmlPropertyMap_Contains((QQmlPropertyMap*)self, qstring(key));
 }
 
@@ -182,19 +182,19 @@ QVariant* k_configpropertymap_operator_subscript(void* self, const char* key) {
     return QQmlPropertyMap_OperatorSubscript((QQmlPropertyMap*)self, qstring(key));
 }
 
-QVariant* k_configpropertymap_operator_subscript2(void* self, const char* key) {
+QVariant* k_configpropertymap_operator_subscript2(const void* self, const char* key) {
     return QQmlPropertyMap_OperatorSubscript2((QQmlPropertyMap*)self, qstring(key));
 }
 
-void k_configpropertymap_value_changed(void* self, const char* key, void* value) {
+void k_configpropertymap_value_changed(void* self, const char* key, const void* value) {
     QQmlPropertyMap_ValueChanged((QQmlPropertyMap*)self, qstring(key), (QVariant*)value);
 }
 
-void k_configpropertymap_on_value_changed(void* self, void (*callback)(void*, const char*, void*)) {
+void k_configpropertymap_on_value_changed(void* self, void (*callback)(void*, const char*, const void*)) {
     QQmlPropertyMap_Connect_ValueChanged((QQmlPropertyMap*)self, (intptr_t)callback);
 }
 
-const char* k_configpropertymap_object_name(void* self) {
+const char* k_configpropertymap_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -205,19 +205,19 @@ void k_configpropertymap_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_configpropertymap_is_widget_type(void* self) {
+bool k_configpropertymap_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_configpropertymap_is_window_type(void* self) {
+bool k_configpropertymap_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_configpropertymap_is_quick_item_type(void* self) {
+bool k_configpropertymap_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_configpropertymap_signals_blocked(void* self) {
+bool k_configpropertymap_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -225,7 +225,7 @@ bool k_configpropertymap_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_configpropertymap_thread(void* self) {
+QThread* k_configpropertymap_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -249,7 +249,7 @@ void k_configpropertymap_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_configpropertymap_children(void* self) {
+libqt_list /* of QObject* */ k_configpropertymap_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -266,55 +266,55 @@ void k_configpropertymap_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_configpropertymap_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_configpropertymap_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_configpropertymap_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_configpropertymap_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_configpropertymap_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_configpropertymap_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_configpropertymap_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_configpropertymap_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_configpropertymap_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_configpropertymap_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_configpropertymap_disconnect3(void* self) {
+bool k_configpropertymap_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_configpropertymap_disconnect4(void* self, void* receiver) {
+bool k_configpropertymap_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_configpropertymap_disconnect5(void* param1) {
+bool k_configpropertymap_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_configpropertymap_dump_object_tree(void* self) {
+void k_configpropertymap_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_configpropertymap_dump_object_info(void* self) {
+void k_configpropertymap_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_configpropertymap_set_property(void* self, const char* name, void* value) {
+bool k_configpropertymap_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_configpropertymap_property(void* self, const char* name) {
+QVariant* k_configpropertymap_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_configpropertymap_dynamic_property_names(void* self) {
+const char** k_configpropertymap_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -335,7 +335,7 @@ QBindingStorage* k_configpropertymap_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_configpropertymap_binding_storage2(void* self) {
+const QBindingStorage* k_configpropertymap_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -347,11 +347,11 @@ void k_configpropertymap_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_configpropertymap_parent(void* self) {
+QObject* k_configpropertymap_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_configpropertymap_inherits(void* self, const char* classname) {
+bool k_configpropertymap_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -367,31 +367,31 @@ int32_t k_configpropertymap_start_timer23(void* self, int64_t time, int32_t time
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_configpropertymap_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_configpropertymap_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_configpropertymap_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_configpropertymap_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_configpropertymap_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_configpropertymap_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_configpropertymap_disconnect1(void* self, const char* signal) {
+bool k_configpropertymap_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_configpropertymap_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_configpropertymap_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_configpropertymap_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_configpropertymap_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_configpropertymap_disconnect23(void* self, void* receiver, const char* member) {
+bool k_configpropertymap_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -463,76 +463,44 @@ void k_configpropertymap_on_custom_event(void* self, void (*callback)(void*, voi
     KConfigPropertyMap_OnCustomEvent((KConfigPropertyMap*)self, (intptr_t)callback);
 }
 
-void k_configpropertymap_connect_notify(void* self, void* signal) {
+void k_configpropertymap_connect_notify(void* self, const void* signal) {
     KConfigPropertyMap_ConnectNotify((KConfigPropertyMap*)self, (QMetaMethod*)signal);
 }
 
-void k_configpropertymap_super_connect_notify(void* self, void* signal) {
+void k_configpropertymap_super_connect_notify(void* self, const void* signal) {
     KConfigPropertyMap_SuperConnectNotify((KConfigPropertyMap*)self, (QMetaMethod*)signal);
 }
 
-void k_configpropertymap_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_configpropertymap_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     KConfigPropertyMap_OnConnectNotify((KConfigPropertyMap*)self, (intptr_t)callback);
 }
 
-void k_configpropertymap_disconnect_notify(void* self, void* signal) {
+void k_configpropertymap_disconnect_notify(void* self, const void* signal) {
     KConfigPropertyMap_DisconnectNotify((KConfigPropertyMap*)self, (QMetaMethod*)signal);
 }
 
-void k_configpropertymap_super_disconnect_notify(void* self, void* signal) {
+void k_configpropertymap_super_disconnect_notify(void* self, const void* signal) {
     KConfigPropertyMap_SuperDisconnectNotify((KConfigPropertyMap*)self, (QMetaMethod*)signal);
 }
 
-void k_configpropertymap_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_configpropertymap_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     KConfigPropertyMap_OnDisconnectNotify((KConfigPropertyMap*)self, (intptr_t)callback);
 }
 
-QObject* k_configpropertymap_sender(void* self) {
+QObject* k_configpropertymap_sender(const void* self) {
     return KConfigPropertyMap_Sender((KConfigPropertyMap*)self);
 }
 
-QObject* k_configpropertymap_super_sender(void* self) {
-    return KConfigPropertyMap_SuperSender((KConfigPropertyMap*)self);
-}
-
-void k_configpropertymap_on_sender(void* self, QObject* (*callback)()) {
-    KConfigPropertyMap_OnSender((KConfigPropertyMap*)self, (intptr_t)callback);
-}
-
-int32_t k_configpropertymap_sender_signal_index(void* self) {
+int32_t k_configpropertymap_sender_signal_index(const void* self) {
     return KConfigPropertyMap_SenderSignalIndex((KConfigPropertyMap*)self);
 }
 
-int32_t k_configpropertymap_super_sender_signal_index(void* self) {
-    return KConfigPropertyMap_SuperSenderSignalIndex((KConfigPropertyMap*)self);
-}
-
-void k_configpropertymap_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    KConfigPropertyMap_OnSenderSignalIndex((KConfigPropertyMap*)self, (intptr_t)callback);
-}
-
-int32_t k_configpropertymap_receivers(void* self, const char* signal) {
+int32_t k_configpropertymap_receivers(const void* self, const char* signal) {
     return KConfigPropertyMap_Receivers((KConfigPropertyMap*)self, signal);
 }
 
-int32_t k_configpropertymap_super_receivers(void* self, const char* signal) {
-    return KConfigPropertyMap_SuperReceivers((KConfigPropertyMap*)self, signal);
-}
-
-void k_configpropertymap_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    KConfigPropertyMap_OnReceivers((KConfigPropertyMap*)self, (intptr_t)callback);
-}
-
-bool k_configpropertymap_is_signal_connected(void* self, void* signal) {
+bool k_configpropertymap_is_signal_connected(const void* self, const void* signal) {
     return KConfigPropertyMap_IsSignalConnected((KConfigPropertyMap*)self, (QMetaMethod*)signal);
-}
-
-bool k_configpropertymap_super_is_signal_connected(void* self, void* signal) {
-    return KConfigPropertyMap_SuperIsSignalConnected((KConfigPropertyMap*)self, (QMetaMethod*)signal);
-}
-
-void k_configpropertymap_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    KConfigPropertyMap_OnIsSignalConnected((KConfigPropertyMap*)self, (intptr_t)callback);
 }
 
 void k_configpropertymap_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

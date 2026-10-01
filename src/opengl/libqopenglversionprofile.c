@@ -6,19 +6,19 @@ QOpenGLVersionProfile* q_openglversionprofile_new() {
     return QOpenGLVersionProfile_New();
 }
 
-QOpenGLVersionProfile* q_openglversionprofile_new2(void* format) {
+QOpenGLVersionProfile* q_openglversionprofile_new2(const void* format) {
     return QOpenGLVersionProfile_New2((QSurfaceFormat*)format);
 }
 
-QOpenGLVersionProfile* q_openglversionprofile_new3(void* other) {
+QOpenGLVersionProfile* q_openglversionprofile_new3(const void* other) {
     return QOpenGLVersionProfile_New3((QOpenGLVersionProfile*)other);
 }
 
-void q_openglversionprofile_operator_assign(void* self, void* rhs) {
+void q_openglversionprofile_operator_assign(void* self, const void* rhs) {
     QOpenGLVersionProfile_OperatorAssign((QOpenGLVersionProfile*)self, (QOpenGLVersionProfile*)rhs);
 }
 
-pair_int_int /* tuple of int and int */ q_openglversionprofile_version(void* self) {
+pair_int_int /* tuple of int and int */ q_openglversionprofile_version(const void* self) {
     return QOpenGLVersionProfile_Version((QOpenGLVersionProfile*)self);
 }
 
@@ -26,7 +26,7 @@ void q_openglversionprofile_set_version(void* self, int majorVersion, int minorV
     QOpenGLVersionProfile_SetVersion((QOpenGLVersionProfile*)self, majorVersion, minorVersion);
 }
 
-int32_t q_openglversionprofile_profile(void* self) {
+int32_t q_openglversionprofile_profile(const void* self) {
     return QOpenGLVersionProfile_Profile((QOpenGLVersionProfile*)self);
 }
 
@@ -34,15 +34,15 @@ void q_openglversionprofile_set_profile(void* self, int32_t profile) {
     QOpenGLVersionProfile_SetProfile((QOpenGLVersionProfile*)self, profile);
 }
 
-bool q_openglversionprofile_has_profiles(void* self) {
+bool q_openglversionprofile_has_profiles(const void* self) {
     return QOpenGLVersionProfile_HasProfiles((QOpenGLVersionProfile*)self);
 }
 
-bool q_openglversionprofile_is_legacy_version(void* self) {
+bool q_openglversionprofile_is_legacy_version(const void* self) {
     return QOpenGLVersionProfile_IsLegacyVersion((QOpenGLVersionProfile*)self);
 }
 
-bool q_openglversionprofile_is_valid(void* self) {
+bool q_openglversionprofile_is_valid(const void* self) {
     return QOpenGLVersionProfile_IsValid((QOpenGLVersionProfile*)self);
 }
 
@@ -50,6 +50,6 @@ void q_openglversionprofile_delete(void* self) {
     QOpenGLVersionProfile_Delete((QOpenGLVersionProfile*)(self));
 }
 
-size_t q_qopenglversionprofile_h_q_hash(void* v, size_t seed) {
+size_t q_qopenglversionprofile_h_q_hash(const void* v, size_t seed) {
     return qopenglversionprofile_h_QHash((QOpenGLVersionProfile*)v, seed);
 }

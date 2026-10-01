@@ -39,7 +39,7 @@ void KToolBarLabelAction_TextChanged(KToolBarLabelAction* self, const libqt_stri
 void KToolBarLabelAction_Connect_TextChanged(KToolBarLabelAction* self, intptr_t slot);
 bool KToolBarLabelAction_Event(KToolBarLabelAction* self, QEvent* param1);
 bool KToolBarLabelAction_EventFilter(KToolBarLabelAction* self, QObject* watched, QEvent* event);
-void KToolBarLabelAction_OnMetaObject(const KToolBarLabelAction* self, intptr_t slot);
+void KToolBarLabelAction_OnMetaObject(KToolBarLabelAction* self, intptr_t slot);
 QMetaObject* KToolBarLabelAction_SuperMetaObject(const KToolBarLabelAction* self);
 void KToolBarLabelAction_OnMetacast(KToolBarLabelAction* self, intptr_t slot);
 void* KToolBarLabelAction_SuperMetacast(KToolBarLabelAction* self, const char* param1);
@@ -70,20 +70,10 @@ void KToolBarLabelAction_DisconnectNotify(KToolBarLabelAction* self, const QMeta
 void KToolBarLabelAction_OnDisconnectNotify(KToolBarLabelAction* self, intptr_t slot);
 void KToolBarLabelAction_SuperDisconnectNotify(KToolBarLabelAction* self, const QMetaMethod* signal);
 libqt_list /* of QWidget* */ KToolBarLabelAction_CreatedWidgets(const KToolBarLabelAction* self);
-void KToolBarLabelAction_OnCreatedWidgets(const KToolBarLabelAction* self, intptr_t slot);
-libqt_list /* of QWidget* */ KToolBarLabelAction_SuperCreatedWidgets(const KToolBarLabelAction* self);
 QObject* KToolBarLabelAction_Sender(const KToolBarLabelAction* self);
-void KToolBarLabelAction_OnSender(const KToolBarLabelAction* self, intptr_t slot);
-QObject* KToolBarLabelAction_SuperSender(const KToolBarLabelAction* self);
 int KToolBarLabelAction_SenderSignalIndex(const KToolBarLabelAction* self);
-void KToolBarLabelAction_OnSenderSignalIndex(const KToolBarLabelAction* self, intptr_t slot);
-int KToolBarLabelAction_SuperSenderSignalIndex(const KToolBarLabelAction* self);
 int KToolBarLabelAction_Receivers(const KToolBarLabelAction* self, const char* signal);
-void KToolBarLabelAction_OnReceivers(const KToolBarLabelAction* self, intptr_t slot);
-int KToolBarLabelAction_SuperReceivers(const KToolBarLabelAction* self, const char* signal);
 bool KToolBarLabelAction_IsSignalConnected(const KToolBarLabelAction* self, const QMetaMethod* signal);
-void KToolBarLabelAction_OnIsSignalConnected(const KToolBarLabelAction* self, intptr_t slot);
-bool KToolBarLabelAction_SuperIsSignalConnected(const KToolBarLabelAction* self, const QMetaMethod* signal);
 void KToolBarLabelAction_Delete(KToolBarLabelAction* self);
 
 #ifdef __cplusplus

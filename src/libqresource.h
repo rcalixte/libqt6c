@@ -29,7 +29,7 @@ QResource* q_resource_new2(const char* file);
 /// @param file const char*
 /// @param locale QLocale*
 ///
-QResource* q_resource_new3(const char* file, void* locale);
+QResource* q_resource_new3(const char* file, const void* locale);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#setFileName)
 ///
@@ -42,76 +42,76 @@ void q_resource_set_file_name(void* self, const char* file);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QResource*
+/// @param self const QResource*
 ///
-const char* q_resource_file_name(void* self);
+const char* q_resource_file_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#absoluteFilePath)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QResource*
+/// @param self const QResource*
 ///
-const char* q_resource_absolute_file_path(void* self);
+const char* q_resource_absolute_file_path(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#setLocale)
 ///
 /// @param self QResource*
 /// @param locale QLocale*
 ///
-void q_resource_set_locale(void* self, void* locale);
+void q_resource_set_locale(void* self, const void* locale);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#locale)
 ///
-/// @param self QResource*
+/// @param self const QResource*
 ///
-QLocale* q_resource_locale(void* self);
+QLocale* q_resource_locale(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#isValid)
 ///
-/// @param self QResource*
+/// @param self const QResource*
 ///
-bool q_resource_is_valid(void* self);
+bool q_resource_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#compressionAlgorithm)
 ///
-/// @param self QResource*
+/// @param self const QResource*
 ///
 /// @return enum QResource__Compression
 ///
-int32_t q_resource_compression_algorithm(void* self);
+int32_t q_resource_compression_algorithm(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#size)
 ///
-/// @param self QResource*
+/// @param self const QResource*
 ///
-int64_t q_resource_size(void* self);
+int64_t q_resource_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#data)
 ///
-/// @param self QResource*
+/// @param self const QResource*
 ///
-const unsigned char* q_resource_data(void* self);
+const unsigned char* q_resource_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#uncompressedSize)
 ///
-/// @param self QResource*
+/// @param self const QResource*
 ///
-int64_t q_resource_uncompressed_size(void* self);
+int64_t q_resource_uncompressed_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#uncompressedData)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QResource*
+/// @param self const QResource*
 ///
-char* q_resource_uncompressed_data(void* self);
+char* q_resource_uncompressed_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#lastModified)
 ///
-/// @param self QResource*
+/// @param self const QResource*
 ///
-QDateTime* q_resource_last_modified(void* self);
+QDateTime* q_resource_last_modified(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#registerResource)
 ///

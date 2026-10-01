@@ -31,26 +31,26 @@ KFileFilter* k_filefilter_new2(const char* label, const char* filePatterns[stati
     return _out;
 }
 
-KFileFilter* k_filefilter_new3(void* other) {
+KFileFilter* k_filefilter_new3(const void* other) {
     return KFileFilter_New3((KFileFilter*)other);
 }
 
-void k_filefilter_operator_assign(void* self, void* other) {
+void k_filefilter_operator_assign(void* self, const void* other) {
     KFileFilter_OperatorAssign((KFileFilter*)self, (KFileFilter*)other);
 }
 
-bool k_filefilter_operator_equal(void* self, void* other) {
+bool k_filefilter_operator_equal(const void* self, const void* other) {
     return KFileFilter_OperatorEqual((KFileFilter*)self, (KFileFilter*)other);
 }
 
-const char* k_filefilter_label(void* self) {
+const char* k_filefilter_label(const void* self) {
     libqt_string _str = KFileFilter_Label((KFileFilter*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** k_filefilter_file_patterns(void* self) {
+const char** k_filefilter_file_patterns(const void* self) {
     libqt_list _arr = KFileFilter_FilePatterns((KFileFilter*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -67,7 +67,7 @@ const char** k_filefilter_file_patterns(void* self) {
     return _ret;
 }
 
-const char** k_filefilter_mime_patterns(void* self) {
+const char** k_filefilter_mime_patterns(const void* self) {
     libqt_list _arr = KFileFilter_MimePatterns((KFileFilter*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -84,18 +84,18 @@ const char** k_filefilter_mime_patterns(void* self) {
     return _ret;
 }
 
-const char* k_filefilter_to_filter_string(void* self) {
+const char* k_filefilter_to_filter_string(const void* self) {
     libqt_string _str = KFileFilter_ToFilterString((KFileFilter*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_filefilter_is_empty(void* self) {
+bool k_filefilter_is_empty(const void* self) {
     return KFileFilter_IsEmpty((KFileFilter*)self);
 }
 
-bool k_filefilter_is_valid(void* self) {
+bool k_filefilter_is_valid(const void* self) {
     return KFileFilter_IsValid((KFileFilter*)self);
 }
 

@@ -24,26 +24,26 @@ QsciLexerFortran* q_scilexerfortran_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-const QMetaObject* q_scilexerfortran_meta_object(void* self);
+const QMetaObject* q_scilexerfortran_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QsciLexerFortran*
-/// @param callback const QMetaObject* func()
+/// @param self const QsciLexerFortran*
+/// @param callback const QMetaObject* func(const QsciLexerFortran* self)
 ///
-void q_scilexerfortran_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_scilexerfortran_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-const QMetaObject* q_scilexerfortran_super_meta_object(void* self);
+const QMetaObject* q_scilexerfortran_super_meta_object(const void* self);
 
 /// @param self QsciLexerFortran*
 /// @param param1 const char*
@@ -99,26 +99,26 @@ const char* q_scilexerfortran_tr(const char* s);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-const char* q_scilexerfortran_language(void* self);
+const char* q_scilexerfortran_language(const void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-const char* q_scilexerfortran_lexer(void* self);
+const char* q_scilexerfortran_lexer(const void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param set int
 ///
-const char* q_scilexerfortran_keywords(void* self, int set);
+const char* q_scilexerfortran_keywords(const void* self, int set);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -143,44 +143,44 @@ const char* q_scilexerfortran_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param style int
 ///
-QColor* q_scilexerfortran_default_color(void* self, int style);
+QColor* q_scilexerfortran_default_color(const void* self, int style);
 
 /// Inherited from QsciLexerFortran77
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param style int
 ///
-QFont* q_scilexerfortran_default_font(void* self, int style);
+QFont* q_scilexerfortran_default_font(const void* self, int style);
 
 /// Inherited from QsciLexerFortran77
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param style int
 ///
-QColor* q_scilexerfortran_default_paper(void* self, int style);
+QColor* q_scilexerfortran_default_paper(const void* self, int style);
 
 /// Inherited from QsciLexerFortran77
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html)
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-bool q_scilexerfortran_fold_compact(void* self);
+bool q_scilexerfortran_fold_compact(const void* self);
 
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-QsciAbstractAPIs* q_scilexerfortran_apis(void* self);
+QsciAbstractAPIs* q_scilexerfortran_apis(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -194,9 +194,9 @@ int32_t q_scilexerfortran_auto_indent_style(void* self);
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-QsciScintilla* q_scilexerfortran_editor(void* self);
+QsciScintilla* q_scilexerfortran_editor(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -214,7 +214,7 @@ void q_scilexerfortran_set_a_p_is(void* self, void* apis);
 /// @param self QsciLexerFortran*
 /// @param c QColor*
 ///
-void q_scilexerfortran_set_default_color(void* self, void* c);
+void q_scilexerfortran_set_default_color(void* self, const void* c);
 
 /// Inherited from QsciLexer
 ///
@@ -223,7 +223,7 @@ void q_scilexerfortran_set_default_color(void* self, void* c);
 /// @param self QsciLexerFortran*
 /// @param f QFont*
 ///
-void q_scilexerfortran_set_default_font(void* self, void* f);
+void q_scilexerfortran_set_default_font(void* self, const void* f);
 
 /// Inherited from QsciLexer
 ///
@@ -232,7 +232,7 @@ void q_scilexerfortran_set_default_font(void* self, void* f);
 /// @param self QsciLexerFortran*
 /// @param c QColor*
 ///
-void q_scilexerfortran_set_default_paper(void* self, void* c);
+void q_scilexerfortran_set_default_paper(void* self, const void* c);
 
 /// Inherited from QsciLexer
 ///
@@ -247,10 +247,10 @@ bool q_scilexerfortran_read_settings(void* self, void* qs);
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param qs QSettings*
 ///
-bool q_scilexerfortran_write_settings(void* self, void* qs);
+bool q_scilexerfortran_write_settings(const void* self, void* qs);
 
 /// Inherited from QsciLexer
 ///
@@ -260,7 +260,7 @@ bool q_scilexerfortran_write_settings(void* self, void* qs);
 /// @param c QColor*
 /// @param style int
 ///
-void q_scilexerfortran_color_changed(void* self, void* c, int style);
+void q_scilexerfortran_color_changed(void* self, const void* c, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -269,7 +269,7 @@ void q_scilexerfortran_color_changed(void* self, void* c, int style);
 /// @param self QsciLexerFortran*
 /// @param callback void func(QsciLexerFortran* self, QColor* c, int style)
 ///
-void q_scilexerfortran_on_color_changed(void* self, void (*callback)(void*, void*, int));
+void q_scilexerfortran_on_color_changed(void* self, void (*callback)(void*, const void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -298,7 +298,7 @@ void q_scilexerfortran_on_eol_fill_changed(void* self, void (*callback)(void*, b
 /// @param f QFont*
 /// @param style int
 ///
-void q_scilexerfortran_font_changed(void* self, void* f, int style);
+void q_scilexerfortran_font_changed(void* self, const void* f, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -307,7 +307,7 @@ void q_scilexerfortran_font_changed(void* self, void* f, int style);
 /// @param self QsciLexerFortran*
 /// @param callback void func(QsciLexerFortran* self, QFont* f, int style)
 ///
-void q_scilexerfortran_on_font_changed(void* self, void (*callback)(void*, void*, int));
+void q_scilexerfortran_on_font_changed(void* self, void (*callback)(void*, const void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -317,7 +317,7 @@ void q_scilexerfortran_on_font_changed(void* self, void (*callback)(void*, void*
 /// @param c QColor*
 /// @param style int
 ///
-void q_scilexerfortran_paper_changed(void* self, void* c, int style);
+void q_scilexerfortran_paper_changed(void* self, const void* c, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -326,7 +326,7 @@ void q_scilexerfortran_paper_changed(void* self, void* c, int style);
 /// @param self QsciLexerFortran*
 /// @param callback void func(QsciLexerFortran* self, QColor* c, int style)
 ///
-void q_scilexerfortran_on_paper_changed(void* self, void (*callback)(void*, void*, int));
+void q_scilexerfortran_on_paper_changed(void* self, void (*callback)(void*, const void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -361,11 +361,11 @@ bool q_scilexerfortran_read_settings2(void* self, void* qs, const char* prefix);
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param qs QSettings*
 /// @param prefix const char*
 ///
-bool q_scilexerfortran_write_settings2(void* self, void* qs, const char* prefix);
+bool q_scilexerfortran_write_settings2(const void* self, void* qs, const char* prefix);
 
 /// Inherited from QObject
 ///
@@ -373,9 +373,9 @@ bool q_scilexerfortran_write_settings2(void* self, void* qs, const char* prefix)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-const char* q_scilexerfortran_object_name(void* self);
+const char* q_scilexerfortran_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -390,33 +390,33 @@ void q_scilexerfortran_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-bool q_scilexerfortran_is_widget_type(void* self);
+bool q_scilexerfortran_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-bool q_scilexerfortran_is_window_type(void* self);
+bool q_scilexerfortran_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-bool q_scilexerfortran_is_quick_item_type(void* self);
+bool q_scilexerfortran_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-bool q_scilexerfortran_signals_blocked(void* self);
+bool q_scilexerfortran_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -431,9 +431,9 @@ bool q_scilexerfortran_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-QThread* q_scilexerfortran_thread(void* self);
+QThread* q_scilexerfortran_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -484,11 +484,11 @@ void q_scilexerfortran_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_scilexerfortran_children(void* self);
+libqt_list q_scilexerfortran_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -526,7 +526,7 @@ void q_scilexerfortran_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_scilexerfortran_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_scilexerfortran_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -537,18 +537,18 @@ QMetaObject__Connection* q_scilexerfortran_connect(void* sender, const char* sig
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_scilexerfortran_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_scilexerfortran_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_scilexerfortran_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_scilexerfortran_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -559,7 +559,7 @@ QMetaObject__Connection* q_scilexerfortran_connect3(void* self, void* sender, co
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_scilexerfortran_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_scilexerfortran_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -570,24 +570,24 @@ bool q_scilexerfortran_disconnect(void* sender, const char* signal, void* receiv
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_scilexerfortran_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_scilexerfortran_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-bool q_scilexerfortran_disconnect3(void* self);
+bool q_scilexerfortran_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param receiver QObject*
 ///
-bool q_scilexerfortran_disconnect4(void* self, void* receiver);
+bool q_scilexerfortran_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -595,23 +595,23 @@ bool q_scilexerfortran_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_scilexerfortran_disconnect5(void* param1);
+bool q_scilexerfortran_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-void q_scilexerfortran_dump_object_tree(void* self);
+void q_scilexerfortran_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-void q_scilexerfortran_dump_object_info(void* self);
+void q_scilexerfortran_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -621,16 +621,16 @@ void q_scilexerfortran_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_scilexerfortran_set_property(void* self, const char* name, void* value);
+bool q_scilexerfortran_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param name const char*
 ///
-QVariant* q_scilexerfortran_property(void* self, const char* name);
+QVariant* q_scilexerfortran_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -638,9 +638,9 @@ QVariant* q_scilexerfortran_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-const char** q_scilexerfortran_dynamic_property_names(void* self);
+const char** q_scilexerfortran_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -654,9 +654,9 @@ QBindingStorage* q_scilexerfortran_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-const QBindingStorage* q_scilexerfortran_binding_storage2(void* self);
+const QBindingStorage* q_scilexerfortran_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -679,18 +679,18 @@ void q_scilexerfortran_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-QObject* q_scilexerfortran_parent(void* self);
+QObject* q_scilexerfortran_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param classname const char*
 ///
-bool q_scilexerfortran_inherits(void* self, const char* classname);
+bool q_scilexerfortran_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -730,7 +730,7 @@ int32_t q_scilexerfortran_start_timer23(void* self, int64_t time, int32_t timerT
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_scilexerfortran_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_scilexerfortran_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -742,59 +742,59 @@ QMetaObject__Connection* q_scilexerfortran_connect5(void* sender, const char* si
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_scilexerfortran_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_scilexerfortran_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_scilexerfortran_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_scilexerfortran_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param signal const char*
 ///
-bool q_scilexerfortran_disconnect1(void* self, const char* signal);
+bool q_scilexerfortran_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QsciLexerFortran*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_scilexerfortran_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_scilexerfortran_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_scilexerfortran_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_scilexerfortran_disconnect23(void* self, void* receiver, const char* member);
+bool q_scilexerfortran_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QsciLexerFortran*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_scilexerfortran_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -853,9 +853,9 @@ void q_scilexerfortran_on_set_fold_compact(void* self, void (*callback)(void*, b
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-int32_t q_scilexerfortran_lexer_id(void* self);
+int32_t q_scilexerfortran_lexer_id(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -863,9 +863,9 @@ int32_t q_scilexerfortran_lexer_id(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-int32_t q_scilexerfortran_super_lexer_id(void* self);
+int32_t q_scilexerfortran_super_lexer_id(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -873,10 +873,10 @@ int32_t q_scilexerfortran_super_lexer_id(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
-/// @param callback int32_t func()
+/// @param self const QsciLexerFortran*
+/// @param callback int32_t func(QsciLexerFortran* self)
 ///
-void q_scilexerfortran_on_lexer_id(void* self, int32_t (*callback)());
+void q_scilexerfortran_on_lexer_id(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QsciLexer
 ///
@@ -886,9 +886,9 @@ void q_scilexerfortran_on_lexer_id(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-const char* q_scilexerfortran_auto_completion_fillups(void* self);
+const char* q_scilexerfortran_auto_completion_fillups(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -898,9 +898,9 @@ const char* q_scilexerfortran_auto_completion_fillups(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-const char* q_scilexerfortran_super_auto_completion_fillups(void* self);
+const char* q_scilexerfortran_super_auto_completion_fillups(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -908,10 +908,10 @@ const char* q_scilexerfortran_super_auto_completion_fillups(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
-/// @param callback const char* func()
+/// @param self const QsciLexerFortran*
+/// @param callback const char* func(QsciLexerFortran* self)
 ///
-void q_scilexerfortran_on_auto_completion_fillups(void* self, const char* (*callback)());
+void q_scilexerfortran_on_auto_completion_fillups(const void* self, const char* (*callback)(const void*));
 
 /// Inherited from QsciLexer
 ///
@@ -921,9 +921,9 @@ void q_scilexerfortran_on_auto_completion_fillups(void* self, const char* (*call
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-const char** q_scilexerfortran_auto_completion_word_separators(void* self);
+const char** q_scilexerfortran_auto_completion_word_separators(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -933,9 +933,9 @@ const char** q_scilexerfortran_auto_completion_word_separators(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-const char** q_scilexerfortran_super_auto_completion_word_separators(void* self);
+const char** q_scilexerfortran_super_auto_completion_word_separators(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -943,10 +943,10 @@ const char** q_scilexerfortran_super_auto_completion_word_separators(void* self)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
-/// @param callback const char** func()
+/// @param self const QsciLexerFortran*
+/// @param callback const char** func(QsciLexerFortran* self)
 ///
-void q_scilexerfortran_on_auto_completion_word_separators(void* self, const char** (*callback)());
+void q_scilexerfortran_on_auto_completion_word_separators(const void* self, const char** (*callback)(const void*));
 
 /// Inherited from QsciLexer
 ///
@@ -956,10 +956,10 @@ void q_scilexerfortran_on_auto_completion_word_separators(void* self, const char
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param style int*
 ///
-const char* q_scilexerfortran_block_end(void* self, int* style);
+const char* q_scilexerfortran_block_end(const void* self, int* style);
 
 /// Inherited from QsciLexer
 ///
@@ -969,10 +969,10 @@ const char* q_scilexerfortran_block_end(void* self, int* style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param style int*
 ///
-const char* q_scilexerfortran_super_block_end(void* self, int* style);
+const char* q_scilexerfortran_super_block_end(const void* self, int* style);
 
 /// Inherited from QsciLexer
 ///
@@ -980,10 +980,10 @@ const char* q_scilexerfortran_super_block_end(void* self, int* style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param callback const char* func(QsciLexerFortran* self, int* style)
 ///
-void q_scilexerfortran_on_block_end(void* self, const char* (*callback)(void*, int*));
+void q_scilexerfortran_on_block_end(const void* self, const char* (*callback)(const void*, int*));
 
 /// Inherited from QsciLexer
 ///
@@ -991,9 +991,9 @@ void q_scilexerfortran_on_block_end(void* self, const char* (*callback)(void*, i
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-int32_t q_scilexerfortran_block_lookback(void* self);
+int32_t q_scilexerfortran_block_lookback(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1001,9 +1001,9 @@ int32_t q_scilexerfortran_block_lookback(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-int32_t q_scilexerfortran_super_block_lookback(void* self);
+int32_t q_scilexerfortran_super_block_lookback(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1011,10 +1011,10 @@ int32_t q_scilexerfortran_super_block_lookback(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
-/// @param callback int32_t func()
+/// @param self const QsciLexerFortran*
+/// @param callback int32_t func(QsciLexerFortran* self)
 ///
-void q_scilexerfortran_on_block_lookback(void* self, int32_t (*callback)());
+void q_scilexerfortran_on_block_lookback(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QsciLexer
 ///
@@ -1024,10 +1024,10 @@ void q_scilexerfortran_on_block_lookback(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param style int*
 ///
-const char* q_scilexerfortran_block_start(void* self, int* style);
+const char* q_scilexerfortran_block_start(const void* self, int* style);
 
 /// Inherited from QsciLexer
 ///
@@ -1037,10 +1037,10 @@ const char* q_scilexerfortran_block_start(void* self, int* style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param style int*
 ///
-const char* q_scilexerfortran_super_block_start(void* self, int* style);
+const char* q_scilexerfortran_super_block_start(const void* self, int* style);
 
 /// Inherited from QsciLexer
 ///
@@ -1048,10 +1048,10 @@ const char* q_scilexerfortran_super_block_start(void* self, int* style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param callback const char* func(QsciLexerFortran* self, int* style)
 ///
-void q_scilexerfortran_on_block_start(void* self, const char* (*callback)(void*, int*));
+void q_scilexerfortran_on_block_start(const void* self, const char* (*callback)(const void*, int*));
 
 /// Inherited from QsciLexer
 ///
@@ -1061,10 +1061,10 @@ void q_scilexerfortran_on_block_start(void* self, const char* (*callback)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param style int*
 ///
-const char* q_scilexerfortran_block_start_keyword(void* self, int* style);
+const char* q_scilexerfortran_block_start_keyword(const void* self, int* style);
 
 /// Inherited from QsciLexer
 ///
@@ -1074,10 +1074,10 @@ const char* q_scilexerfortran_block_start_keyword(void* self, int* style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param style int*
 ///
-const char* q_scilexerfortran_super_block_start_keyword(void* self, int* style);
+const char* q_scilexerfortran_super_block_start_keyword(const void* self, int* style);
 
 /// Inherited from QsciLexer
 ///
@@ -1085,10 +1085,10 @@ const char* q_scilexerfortran_super_block_start_keyword(void* self, int* style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param callback const char* func(QsciLexerFortran* self, int* style)
 ///
-void q_scilexerfortran_on_block_start_keyword(void* self, const char* (*callback)(void*, int*));
+void q_scilexerfortran_on_block_start_keyword(const void* self, const char* (*callback)(const void*, int*));
 
 /// Inherited from QsciLexer
 ///
@@ -1096,9 +1096,9 @@ void q_scilexerfortran_on_block_start_keyword(void* self, const char* (*callback
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-int32_t q_scilexerfortran_brace_style(void* self);
+int32_t q_scilexerfortran_brace_style(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1106,9 +1106,9 @@ int32_t q_scilexerfortran_brace_style(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-int32_t q_scilexerfortran_super_brace_style(void* self);
+int32_t q_scilexerfortran_super_brace_style(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1116,10 +1116,10 @@ int32_t q_scilexerfortran_super_brace_style(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
-/// @param callback int32_t func()
+/// @param self const QsciLexerFortran*
+/// @param callback int32_t func(QsciLexerFortran* self)
 ///
-void q_scilexerfortran_on_brace_style(void* self, int32_t (*callback)());
+void q_scilexerfortran_on_brace_style(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QsciLexer
 ///
@@ -1127,9 +1127,9 @@ void q_scilexerfortran_on_brace_style(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-bool q_scilexerfortran_case_sensitive(void* self);
+bool q_scilexerfortran_case_sensitive(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1137,9 +1137,9 @@ bool q_scilexerfortran_case_sensitive(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-bool q_scilexerfortran_super_case_sensitive(void* self);
+bool q_scilexerfortran_super_case_sensitive(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1147,10 +1147,10 @@ bool q_scilexerfortran_super_case_sensitive(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
-/// @param callback bool func()
+/// @param self const QsciLexerFortran*
+/// @param callback bool func(QsciLexerFortran* self)
 ///
-void q_scilexerfortran_on_case_sensitive(void* self, bool (*callback)());
+void q_scilexerfortran_on_case_sensitive(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QsciLexer
 ///
@@ -1158,10 +1158,10 @@ void q_scilexerfortran_on_case_sensitive(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param style int
 ///
-QColor* q_scilexerfortran_color(void* self, int style);
+QColor* q_scilexerfortran_color(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1169,10 +1169,10 @@ QColor* q_scilexerfortran_color(void* self, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param style int
 ///
-QColor* q_scilexerfortran_super_color(void* self, int style);
+QColor* q_scilexerfortran_super_color(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1180,12 +1180,12 @@ QColor* q_scilexerfortran_super_color(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param callback QColor* func(QsciLexerFortran* self, int style)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_scilexerfortran_on_color(void* self, QColor* (*callback)(void*, int));
+void q_scilexerfortran_on_color(const void* self, QColor* (*callback)(const void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1193,10 +1193,10 @@ void q_scilexerfortran_on_color(void* self, QColor* (*callback)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param style int
 ///
-bool q_scilexerfortran_eol_fill(void* self, int style);
+bool q_scilexerfortran_eol_fill(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1204,10 +1204,10 @@ bool q_scilexerfortran_eol_fill(void* self, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param style int
 ///
-bool q_scilexerfortran_super_eol_fill(void* self, int style);
+bool q_scilexerfortran_super_eol_fill(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1215,10 +1215,10 @@ bool q_scilexerfortran_super_eol_fill(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param callback bool func(QsciLexerFortran* self, int style)
 ///
-void q_scilexerfortran_on_eol_fill(void* self, bool (*callback)(void*, int));
+void q_scilexerfortran_on_eol_fill(const void* self, bool (*callback)(const void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1226,10 +1226,10 @@ void q_scilexerfortran_on_eol_fill(void* self, bool (*callback)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param style int
 ///
-QFont* q_scilexerfortran_font(void* self, int style);
+QFont* q_scilexerfortran_font(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1237,10 +1237,10 @@ QFont* q_scilexerfortran_font(void* self, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param style int
 ///
-QFont* q_scilexerfortran_super_font(void* self, int style);
+QFont* q_scilexerfortran_super_font(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1248,12 +1248,12 @@ QFont* q_scilexerfortran_super_font(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param callback QFont* func(QsciLexerFortran* self, int style)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_scilexerfortran_on_font(void* self, QFont* (*callback)(void*, int));
+void q_scilexerfortran_on_font(const void* self, QFont* (*callback)(const void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1261,9 +1261,9 @@ void q_scilexerfortran_on_font(void* self, QFont* (*callback)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-int32_t q_scilexerfortran_indentation_guide_view(void* self);
+int32_t q_scilexerfortran_indentation_guide_view(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1271,9 +1271,9 @@ int32_t q_scilexerfortran_indentation_guide_view(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-int32_t q_scilexerfortran_super_indentation_guide_view(void* self);
+int32_t q_scilexerfortran_super_indentation_guide_view(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1281,10 +1281,10 @@ int32_t q_scilexerfortran_super_indentation_guide_view(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
-/// @param callback int32_t func()
+/// @param self const QsciLexerFortran*
+/// @param callback int32_t func(QsciLexerFortran* self)
 ///
-void q_scilexerfortran_on_indentation_guide_view(void* self, int32_t (*callback)());
+void q_scilexerfortran_on_indentation_guide_view(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QsciLexer
 ///
@@ -1292,9 +1292,9 @@ void q_scilexerfortran_on_indentation_guide_view(void* self, int32_t (*callback)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-int32_t q_scilexerfortran_default_style(void* self);
+int32_t q_scilexerfortran_default_style(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1302,9 +1302,9 @@ int32_t q_scilexerfortran_default_style(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-int32_t q_scilexerfortran_super_default_style(void* self);
+int32_t q_scilexerfortran_super_default_style(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1312,10 +1312,10 @@ int32_t q_scilexerfortran_super_default_style(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
-/// @param callback int32_t func()
+/// @param self const QsciLexerFortran*
+/// @param callback int32_t func(QsciLexerFortran* self)
 ///
-void q_scilexerfortran_on_default_style(void* self, int32_t (*callback)());
+void q_scilexerfortran_on_default_style(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QsciLexer
 ///
@@ -1325,23 +1325,12 @@ void q_scilexerfortran_on_default_style(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerFortran*
-/// @param style int
-///
-const char* q_scilexerfortran_description(void* self, int style);
 
-/// Inherited from QsciLexer
-///
-/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self QsciLexerFortran*
+/// @warning This method must be implemented with `q_scilexerfortran_on_description` before it can be called.
+////// @param self const QsciLexerFortran*
 /// @param style int
 ///
-const char* q_scilexerfortran_super_description(void* self, int style);
+const char* q_scilexerfortran_description(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1349,10 +1338,10 @@ const char* q_scilexerfortran_super_description(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param callback const char* func(QsciLexerFortran* self, int style)
 ///
-void q_scilexerfortran_on_description(void* self, const char* (*callback)(void*, int));
+void q_scilexerfortran_on_description(const void* self, const char* (*callback)(const void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1360,10 +1349,10 @@ void q_scilexerfortran_on_description(void* self, const char* (*callback)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param style int
 ///
-QColor* q_scilexerfortran_paper(void* self, int style);
+QColor* q_scilexerfortran_paper(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1371,10 +1360,10 @@ QColor* q_scilexerfortran_paper(void* self, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param style int
 ///
-QColor* q_scilexerfortran_super_paper(void* self, int style);
+QColor* q_scilexerfortran_super_paper(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1382,12 +1371,12 @@ QColor* q_scilexerfortran_super_paper(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param callback QColor* func(QsciLexerFortran* self, int style)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_scilexerfortran_on_paper(void* self, QColor* (*callback)(void*, int));
+void q_scilexerfortran_on_paper(const void* self, QColor* (*callback)(const void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1395,10 +1384,10 @@ void q_scilexerfortran_on_paper(void* self, QColor* (*callback)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param style int
 ///
-QColor* q_scilexerfortran_default_color2(void* self, int style);
+QColor* q_scilexerfortran_default_color2(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1406,10 +1395,10 @@ QColor* q_scilexerfortran_default_color2(void* self, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param style int
 ///
-QColor* q_scilexerfortran_super_default_color2(void* self, int style);
+QColor* q_scilexerfortran_super_default_color2(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1417,12 +1406,12 @@ QColor* q_scilexerfortran_super_default_color2(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param callback QColor* func(QsciLexerFortran* self, int style)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_scilexerfortran_on_default_color2(void* self, QColor* (*callback)(void*, int));
+void q_scilexerfortran_on_default_color2(const void* self, QColor* (*callback)(const void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1430,10 +1419,10 @@ void q_scilexerfortran_on_default_color2(void* self, QColor* (*callback)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param style int
 ///
-bool q_scilexerfortran_default_eol_fill(void* self, int style);
+bool q_scilexerfortran_default_eol_fill(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1441,10 +1430,10 @@ bool q_scilexerfortran_default_eol_fill(void* self, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param style int
 ///
-bool q_scilexerfortran_super_default_eol_fill(void* self, int style);
+bool q_scilexerfortran_super_default_eol_fill(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1452,10 +1441,10 @@ bool q_scilexerfortran_super_default_eol_fill(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param callback bool func(QsciLexerFortran* self, int style)
 ///
-void q_scilexerfortran_on_default_eol_fill(void* self, bool (*callback)(void*, int));
+void q_scilexerfortran_on_default_eol_fill(const void* self, bool (*callback)(const void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1463,10 +1452,10 @@ void q_scilexerfortran_on_default_eol_fill(void* self, bool (*callback)(void*, i
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param style int
 ///
-QFont* q_scilexerfortran_default_font2(void* self, int style);
+QFont* q_scilexerfortran_default_font2(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1474,10 +1463,10 @@ QFont* q_scilexerfortran_default_font2(void* self, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param style int
 ///
-QFont* q_scilexerfortran_super_default_font2(void* self, int style);
+QFont* q_scilexerfortran_super_default_font2(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1485,12 +1474,12 @@ QFont* q_scilexerfortran_super_default_font2(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param callback QFont* func(QsciLexerFortran* self, int style)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_scilexerfortran_on_default_font2(void* self, QFont* (*callback)(void*, int));
+void q_scilexerfortran_on_default_font2(const void* self, QFont* (*callback)(const void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1498,10 +1487,10 @@ void q_scilexerfortran_on_default_font2(void* self, QFont* (*callback)(void*, in
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param style int
 ///
-QColor* q_scilexerfortran_default_paper2(void* self, int style);
+QColor* q_scilexerfortran_default_paper2(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1509,10 +1498,10 @@ QColor* q_scilexerfortran_default_paper2(void* self, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param style int
 ///
-QColor* q_scilexerfortran_super_default_paper2(void* self, int style);
+QColor* q_scilexerfortran_super_default_paper2(const void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1520,12 +1509,12 @@ QColor* q_scilexerfortran_super_default_paper2(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param callback QColor* func(QsciLexerFortran* self, int style)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_scilexerfortran_on_default_paper2(void* self, QColor* (*callback)(void*, int));
+void q_scilexerfortran_on_default_paper2(const void* self, QColor* (*callback)(const void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1587,9 +1576,9 @@ void q_scilexerfortran_super_refresh_properties(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerFortran*
-/// @param callback void func()
+/// @param callback void func(QsciLexerFortran* self)
 ///
-void q_scilexerfortran_on_refresh_properties(void* self, void (*callback)());
+void q_scilexerfortran_on_refresh_properties(void* self, void (*callback)(void*));
 
 /// Inherited from QsciLexer
 ///
@@ -1597,9 +1586,9 @@ void q_scilexerfortran_on_refresh_properties(void* self, void (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-int32_t q_scilexerfortran_style_bits_needed(void* self);
+int32_t q_scilexerfortran_style_bits_needed(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1607,9 +1596,9 @@ int32_t q_scilexerfortran_style_bits_needed(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-int32_t q_scilexerfortran_super_style_bits_needed(void* self);
+int32_t q_scilexerfortran_super_style_bits_needed(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1617,10 +1606,10 @@ int32_t q_scilexerfortran_super_style_bits_needed(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
-/// @param callback int32_t func()
+/// @param self const QsciLexerFortran*
+/// @param callback int32_t func(QsciLexerFortran* self)
 ///
-void q_scilexerfortran_on_style_bits_needed(void* self, int32_t (*callback)());
+void q_scilexerfortran_on_style_bits_needed(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QsciLexer
 ///
@@ -1630,9 +1619,9 @@ void q_scilexerfortran_on_style_bits_needed(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-const char* q_scilexerfortran_word_characters(void* self);
+const char* q_scilexerfortran_word_characters(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1642,9 +1631,9 @@ const char* q_scilexerfortran_word_characters(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-const char* q_scilexerfortran_super_word_characters(void* self);
+const char* q_scilexerfortran_super_word_characters(const void* self);
 
 /// Inherited from QsciLexer
 ///
@@ -1652,10 +1641,10 @@ const char* q_scilexerfortran_super_word_characters(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
-/// @param callback const char* func()
+/// @param self const QsciLexerFortran*
+/// @param callback const char* func(QsciLexerFortran* self)
 ///
-void q_scilexerfortran_on_word_characters(void* self, const char* (*callback)());
+void q_scilexerfortran_on_word_characters(const void* self, const char* (*callback)(const void*));
 
 /// Inherited from QsciLexer
 ///
@@ -1700,7 +1689,7 @@ void q_scilexerfortran_on_set_auto_indent_style(void* self, void (*callback)(voi
 /// @param c QColor*
 /// @param style int
 ///
-void q_scilexerfortran_set_color(void* self, void* c, int style);
+void q_scilexerfortran_set_color(void* self, const void* c, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1712,7 +1701,7 @@ void q_scilexerfortran_set_color(void* self, void* c, int style);
 /// @param c QColor*
 /// @param style int
 ///
-void q_scilexerfortran_super_set_color(void* self, void* c, int style);
+void q_scilexerfortran_super_set_color(void* self, const void* c, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1723,7 +1712,7 @@ void q_scilexerfortran_super_set_color(void* self, void* c, int style);
 /// @param self QsciLexerFortran*
 /// @param callback void func(QsciLexerFortran* self, QColor* c, int style)
 ///
-void q_scilexerfortran_on_set_color(void* self, void (*callback)(void*, void*, int));
+void q_scilexerfortran_on_set_color(void* self, void (*callback)(void*, const void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1770,7 +1759,7 @@ void q_scilexerfortran_on_set_eol_fill(void* self, void (*callback)(void*, bool,
 /// @param f QFont*
 /// @param style int
 ///
-void q_scilexerfortran_set_font(void* self, void* f, int style);
+void q_scilexerfortran_set_font(void* self, const void* f, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1782,7 +1771,7 @@ void q_scilexerfortran_set_font(void* self, void* f, int style);
 /// @param f QFont*
 /// @param style int
 ///
-void q_scilexerfortran_super_set_font(void* self, void* f, int style);
+void q_scilexerfortran_super_set_font(void* self, const void* f, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1793,7 +1782,7 @@ void q_scilexerfortran_super_set_font(void* self, void* f, int style);
 /// @param self QsciLexerFortran*
 /// @param callback void func(QsciLexerFortran* self, QFont* f, int style)
 ///
-void q_scilexerfortran_on_set_font(void* self, void (*callback)(void*, void*, int));
+void q_scilexerfortran_on_set_font(void* self, void (*callback)(void*, const void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1805,7 +1794,7 @@ void q_scilexerfortran_on_set_font(void* self, void (*callback)(void*, void*, in
 /// @param c QColor*
 /// @param style int
 ///
-void q_scilexerfortran_set_paper(void* self, void* c, int style);
+void q_scilexerfortran_set_paper(void* self, const void* c, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1817,7 +1806,7 @@ void q_scilexerfortran_set_paper(void* self, void* c, int style);
 /// @param c QColor*
 /// @param style int
 ///
-void q_scilexerfortran_super_set_paper(void* self, void* c, int style);
+void q_scilexerfortran_super_set_paper(void* self, const void* c, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1828,7 +1817,7 @@ void q_scilexerfortran_super_set_paper(void* self, void* c, int style);
 /// @param self QsciLexerFortran*
 /// @param callback void func(QsciLexerFortran* self, QColor* c, int style)
 ///
-void q_scilexerfortran_on_set_paper(void* self, void (*callback)(void*, void*, int));
+void q_scilexerfortran_on_set_paper(void* self, void (*callback)(void*, const void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1871,11 +1860,11 @@ void q_scilexerfortran_on_read_properties(void* self, bool (*callback)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param qs QSettings*
 /// @param prefix const char*
 ///
-bool q_scilexerfortran_write_properties(void* self, void* qs, const char* prefix);
+bool q_scilexerfortran_write_properties(const void* self, void* qs, const char* prefix);
 
 /// Inherited from QsciLexer
 ///
@@ -1883,11 +1872,11 @@ bool q_scilexerfortran_write_properties(void* self, void* qs, const char* prefix
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param qs QSettings*
 /// @param prefix const char*
 ///
-bool q_scilexerfortran_super_write_properties(void* self, void* qs, const char* prefix);
+bool q_scilexerfortran_super_write_properties(const void* self, void* qs, const char* prefix);
 
 /// Inherited from QsciLexer
 ///
@@ -1895,10 +1884,10 @@ bool q_scilexerfortran_super_write_properties(void* self, void* qs, const char* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param callback bool func(QsciLexerFortran* self, QSettings* qs, const char* prefix)
 ///
-void q_scilexerfortran_on_write_properties(void* self, bool (*callback)(void*, void*, const char*));
+void q_scilexerfortran_on_write_properties(const void* self, bool (*callback)(const void*, void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2076,7 +2065,7 @@ void q_scilexerfortran_on_custom_event(void* self, void (*callback)(void*, void*
 /// @param self QsciLexerFortran*
 /// @param signal QMetaMethod*
 ///
-void q_scilexerfortran_connect_notify(void* self, void* signal);
+void q_scilexerfortran_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2087,7 +2076,7 @@ void q_scilexerfortran_connect_notify(void* self, void* signal);
 /// @param self QsciLexerFortran*
 /// @param signal QMetaMethod*
 ///
-void q_scilexerfortran_super_connect_notify(void* self, void* signal);
+void q_scilexerfortran_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2098,7 +2087,7 @@ void q_scilexerfortran_super_connect_notify(void* self, void* signal);
 /// @param self QsciLexerFortran*
 /// @param callback void func(QsciLexerFortran* self, QMetaMethod* signal)
 ///
-void q_scilexerfortran_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_scilexerfortran_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2109,7 +2098,7 @@ void q_scilexerfortran_on_connect_notify(void* self, void (*callback)(void*, voi
 /// @param self QsciLexerFortran*
 /// @param signal QMetaMethod*
 ///
-void q_scilexerfortran_disconnect_notify(void* self, void* signal);
+void q_scilexerfortran_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2120,7 +2109,7 @@ void q_scilexerfortran_disconnect_notify(void* self, void* signal);
 /// @param self QsciLexerFortran*
 /// @param signal QMetaMethod*
 ///
-void q_scilexerfortran_super_disconnect_notify(void* self, void* signal);
+void q_scilexerfortran_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2131,7 +2120,7 @@ void q_scilexerfortran_super_disconnect_notify(void* self, void* signal);
 /// @param self QsciLexerFortran*
 /// @param callback void func(QsciLexerFortran* self, QMetaMethod* signal)
 ///
-void q_scilexerfortran_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_scilexerfortran_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QsciLexer
 ///
@@ -2141,10 +2130,10 @@ void q_scilexerfortran_on_disconnect_notify(void* self, void (*callback)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param text const char*
 ///
-char* q_scilexerfortran_text_as_bytes(void* self, const char* text);
+char* q_scilexerfortran_text_as_bytes(const void* self, const char* text);
 
 /// Inherited from QsciLexer
 ///
@@ -2154,10 +2143,10 @@ char* q_scilexerfortran_text_as_bytes(void* self, const char* text);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param text const char*
 ///
-char* q_scilexerfortran_super_text_as_bytes(void* self, const char* text);
+char* q_scilexerfortran_super_text_as_bytes(const void* self, const char* text);
 
 /// Inherited from QsciLexer
 ///
@@ -2165,10 +2154,10 @@ char* q_scilexerfortran_super_text_as_bytes(void* self, const char* text);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param callback libqt_string func(QsciLexerFortran* self, const char* text)
 ///
-void q_scilexerfortran_on_text_as_bytes(void* self, libqt_string (*callback)(void*, const char*));
+void q_scilexerfortran_on_text_as_bytes(const void* self, libqt_string (*callback)(const void*, const char*));
 
 /// Inherited from QsciLexer
 ///
@@ -2178,11 +2167,11 @@ void q_scilexerfortran_on_text_as_bytes(void* self, libqt_string (*callback)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param bytes const char*
 /// @param size int
 ///
-const char* q_scilexerfortran_bytes_as_text(void* self, const char* bytes, int size);
+const char* q_scilexerfortran_bytes_as_text(const void* self, const char* bytes, int size);
 
 /// Inherited from QsciLexer
 ///
@@ -2192,11 +2181,11 @@ const char* q_scilexerfortran_bytes_as_text(void* self, const char* bytes, int s
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param bytes const char*
 /// @param size int
 ///
-const char* q_scilexerfortran_super_bytes_as_text(void* self, const char* bytes, int size);
+const char* q_scilexerfortran_super_bytes_as_text(const void* self, const char* bytes, int size);
 
 /// Inherited from QsciLexer
 ///
@@ -2204,10 +2193,10 @@ const char* q_scilexerfortran_super_bytes_as_text(void* self, const char* bytes,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param callback const char* func(QsciLexerFortran* self, const char* bytes, int size)
 ///
-void q_scilexerfortran_on_bytes_as_text(void* self, const char* (*callback)(void*, const char*, int));
+void q_scilexerfortran_on_bytes_as_text(const void* self, const char* (*callback)(const void*, const char*, int));
 
 /// Inherited from QObject
 ///
@@ -2215,9 +2204,9 @@ void q_scilexerfortran_on_bytes_as_text(void* self, const char* (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-QObject* q_scilexerfortran_sender(void* self);
+QObject* q_scilexerfortran_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2225,9 +2214,9 @@ QObject* q_scilexerfortran_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-QObject* q_scilexerfortran_super_sender(void* self);
+QObject* q_scilexerfortran_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2235,10 +2224,10 @@ QObject* q_scilexerfortran_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
-/// @param callback QObject* func()
+/// @param self const QsciLexerFortran*
+/// @param callback QObject* func(QsciLexerFortran* self)
 ///
-void q_scilexerfortran_on_sender(void* self, QObject* (*callback)());
+void q_scilexerfortran_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2246,9 +2235,9 @@ void q_scilexerfortran_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-int32_t q_scilexerfortran_sender_signal_index(void* self);
+int32_t q_scilexerfortran_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2256,9 +2245,9 @@ int32_t q_scilexerfortran_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 ///
-int32_t q_scilexerfortran_super_sender_signal_index(void* self);
+int32_t q_scilexerfortran_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2266,10 +2255,10 @@ int32_t q_scilexerfortran_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
-/// @param callback int32_t func()
+/// @param self const QsciLexerFortran*
+/// @param callback int32_t func(QsciLexerFortran* self)
 ///
-void q_scilexerfortran_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_scilexerfortran_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2277,10 +2266,10 @@ void q_scilexerfortran_on_sender_signal_index(void* self, int32_t (*callback)())
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param signal const char*
 ///
-int32_t q_scilexerfortran_receivers(void* self, const char* signal);
+int32_t q_scilexerfortran_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2288,10 +2277,10 @@ int32_t q_scilexerfortran_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param signal const char*
 ///
-int32_t q_scilexerfortran_super_receivers(void* self, const char* signal);
+int32_t q_scilexerfortran_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2299,10 +2288,10 @@ int32_t q_scilexerfortran_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param callback int32_t func(QsciLexerFortran* self, const char* signal)
 ///
-void q_scilexerfortran_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_scilexerfortran_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2310,10 +2299,10 @@ void q_scilexerfortran_on_receivers(void* self, int32_t (*callback)(void*, const
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param signal QMetaMethod*
 ///
-bool q_scilexerfortran_is_signal_connected(void* self, void* signal);
+bool q_scilexerfortran_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2321,10 +2310,10 @@ bool q_scilexerfortran_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param signal QMetaMethod*
 ///
-bool q_scilexerfortran_super_is_signal_connected(void* self, void* signal);
+bool q_scilexerfortran_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2332,10 +2321,10 @@ bool q_scilexerfortran_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciLexerFortran*
+/// @param self const QsciLexerFortran*
 /// @param callback bool func(QsciLexerFortran* self, QMetaMethod* signal)
 ///
-void q_scilexerfortran_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_scilexerfortran_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

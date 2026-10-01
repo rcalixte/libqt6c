@@ -1,7 +1,7 @@
 #include "libqgeosatelliteinfo.hpp"
 #include "libqgeosatelliteinfo.h"
 
-size_t q_qgeosatelliteinfo_h_q_hash(void* key, size_t seed) {
+size_t q_qgeosatelliteinfo_h_q_hash(const void* key, size_t seed) {
     return qgeosatelliteinfo_h_QHash((QGeoSatelliteInfo*)key, seed);
 }
 
@@ -9,11 +9,11 @@ QGeoSatelliteInfo* q_geosatelliteinfo_new() {
     return QGeoSatelliteInfo_New();
 }
 
-QGeoSatelliteInfo* q_geosatelliteinfo_new2(void* other) {
+QGeoSatelliteInfo* q_geosatelliteinfo_new2(const void* other) {
     return QGeoSatelliteInfo_New2((QGeoSatelliteInfo*)other);
 }
 
-void q_geosatelliteinfo_operator_assign(void* self, void* other) {
+void q_geosatelliteinfo_operator_assign(void* self, const void* other) {
     QGeoSatelliteInfo_OperatorAssign((QGeoSatelliteInfo*)self, (QGeoSatelliteInfo*)other);
 }
 
@@ -25,7 +25,7 @@ void q_geosatelliteinfo_set_satellite_system(void* self, int32_t system) {
     QGeoSatelliteInfo_SetSatelliteSystem((QGeoSatelliteInfo*)self, system);
 }
 
-int32_t q_geosatelliteinfo_satellite_system(void* self) {
+int32_t q_geosatelliteinfo_satellite_system(const void* self) {
     return QGeoSatelliteInfo_SatelliteSystem((QGeoSatelliteInfo*)self);
 }
 
@@ -33,7 +33,7 @@ void q_geosatelliteinfo_set_satellite_identifier(void* self, int satId) {
     QGeoSatelliteInfo_SetSatelliteIdentifier((QGeoSatelliteInfo*)self, satId);
 }
 
-int32_t q_geosatelliteinfo_satellite_identifier(void* self) {
+int32_t q_geosatelliteinfo_satellite_identifier(const void* self) {
     return QGeoSatelliteInfo_SatelliteIdentifier((QGeoSatelliteInfo*)self);
 }
 
@@ -41,7 +41,7 @@ void q_geosatelliteinfo_set_signal_strength(void* self, int signalStrength) {
     QGeoSatelliteInfo_SetSignalStrength((QGeoSatelliteInfo*)self, signalStrength);
 }
 
-int32_t q_geosatelliteinfo_signal_strength(void* self) {
+int32_t q_geosatelliteinfo_signal_strength(const void* self) {
     return QGeoSatelliteInfo_SignalStrength((QGeoSatelliteInfo*)self);
 }
 
@@ -49,7 +49,7 @@ void q_geosatelliteinfo_set_attribute(void* self, int32_t attribute, double valu
     QGeoSatelliteInfo_SetAttribute((QGeoSatelliteInfo*)self, attribute, value);
 }
 
-double q_geosatelliteinfo_attribute(void* self, int32_t attribute) {
+double q_geosatelliteinfo_attribute(const void* self, int32_t attribute) {
     return QGeoSatelliteInfo_Attribute((QGeoSatelliteInfo*)self, attribute);
 }
 
@@ -57,7 +57,7 @@ void q_geosatelliteinfo_remove_attribute(void* self, int32_t attribute) {
     QGeoSatelliteInfo_RemoveAttribute((QGeoSatelliteInfo*)self, attribute);
 }
 
-bool q_geosatelliteinfo_has_attribute(void* self, int32_t attribute) {
+bool q_geosatelliteinfo_has_attribute(const void* self, int32_t attribute) {
     return QGeoSatelliteInfo_HasAttribute((QGeoSatelliteInfo*)self, attribute);
 }
 

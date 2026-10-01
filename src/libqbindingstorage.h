@@ -20,7 +20,7 @@ QBindingStatus* q_bindingstatus_new();
 ///
 /// @param other QBindingStatus*
 ///
-QBindingStatus* q_bindingstatus_new2(void* other);
+QBindingStatus* q_bindingstatus_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbindingstatus.html)
 
@@ -66,16 +66,16 @@ bool q_bindingstorage_is_empty(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbindingstorage.html#isValid)
 ///
-/// @param self QBindingStorage*
+/// @param self const QBindingStorage*
 ///
-bool q_bindingstorage_is_valid(void* self);
+bool q_bindingstorage_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbindingstorage.html#registerDependency)
 ///
-/// @param self QBindingStorage*
+/// @param self const QBindingStorage*
 /// @param data QUntypedPropertyData*
 ///
-void q_bindingstorage_register_dependency(void* self, void* data);
+void q_bindingstorage_register_dependency(const void* self, const void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbindingstorage.html#dtor.QBindingStorage)
 ///

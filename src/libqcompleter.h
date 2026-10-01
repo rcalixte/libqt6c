@@ -58,26 +58,26 @@ QCompleter* q_completer_new6(const char* completions[static 1], void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-const QMetaObject* q_completer_meta_object(void* self);
+const QMetaObject* q_completer_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QCompleter*
-/// @param callback const QMetaObject* func()
+/// @param self const QCompleter*
+/// @param callback const QMetaObject* func(const QCompleter* self)
 ///
-void q_completer_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_completer_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-const QMetaObject* q_completer_super_meta_object(void* self);
+const QMetaObject* q_completer_super_meta_object(const void* self);
 
 /// @param self QCompleter*
 /// @param param1 const char*
@@ -138,9 +138,9 @@ void q_completer_set_widget(void* self, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#widget)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-QWidget* q_completer_widget(void* self);
+QWidget* q_completer_widget(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#setModel)
 ///
@@ -151,9 +151,9 @@ void q_completer_set_model(void* self, void* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#model)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-QAbstractItemModel* q_completer_model(void* self);
+QAbstractItemModel* q_completer_model(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#setCompletionMode)
 ///
@@ -164,11 +164,11 @@ void q_completer_set_completion_mode(void* self, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#completionMode)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
 /// @return enum QCompleter__CompletionMode
 ///
-int32_t q_completer_completion_mode(void* self);
+int32_t q_completer_completion_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#setFilterMode)
 ///
@@ -179,17 +179,17 @@ void q_completer_set_filter_mode(void* self, int32_t filterMode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#filterMode)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
 /// @return flag of enum Qt__MatchFlag
 ///
-int32_t q_completer_filter_mode(void* self);
+int32_t q_completer_filter_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#popup)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-QAbstractItemView* q_completer_popup(void* self);
+QAbstractItemView* q_completer_popup(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#setPopup)
 ///
@@ -207,11 +207,11 @@ void q_completer_set_case_sensitivity(void* self, int32_t caseSensitivity);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#caseSensitivity)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
 /// @return enum Qt__CaseSensitivity
 ///
-int32_t q_completer_case_sensitivity(void* self);
+int32_t q_completer_case_sensitivity(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#setModelSorting)
 ///
@@ -222,11 +222,11 @@ void q_completer_set_model_sorting(void* self, int32_t sorting);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#modelSorting)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
 /// @return enum QCompleter__ModelSorting
 ///
-int32_t q_completer_model_sorting(void* self);
+int32_t q_completer_model_sorting(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#setCompletionColumn)
 ///
@@ -237,9 +237,9 @@ void q_completer_set_completion_column(void* self, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#completionColumn)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-int32_t q_completer_completion_column(void* self);
+int32_t q_completer_completion_column(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#setCompletionRole)
 ///
@@ -250,21 +250,21 @@ void q_completer_set_completion_role(void* self, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#completionRole)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-int32_t q_completer_completion_role(void* self);
+int32_t q_completer_completion_role(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#wrapAround)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-bool q_completer_wrap_around(void* self);
+bool q_completer_wrap_around(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#maxVisibleItems)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-int32_t q_completer_max_visible_items(void* self);
+int32_t q_completer_max_visible_items(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#setMaxVisibleItems)
 ///
@@ -275,9 +275,9 @@ void q_completer_set_max_visible_items(void* self, int maxItems);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#completionCount)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-int32_t q_completer_completion_count(void* self);
+int32_t q_completer_completion_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#setCurrentRow)
 ///
@@ -288,37 +288,37 @@ bool q_completer_set_current_row(void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#currentRow)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-int32_t q_completer_current_row(void* self);
+int32_t q_completer_current_row(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#currentIndex)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-QModelIndex* q_completer_current_index(void* self);
+QModelIndex* q_completer_current_index(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#currentCompletion)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-const char* q_completer_current_completion(void* self);
+const char* q_completer_current_completion(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#completionModel)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-QAbstractItemModel* q_completer_completion_model(void* self);
+QAbstractItemModel* q_completer_completion_model(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#completionPrefix)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-const char* q_completer_completion_prefix(void* self);
+const char* q_completer_completion_prefix(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#setCompletionPrefix)
 ///
@@ -344,55 +344,55 @@ void q_completer_set_wrap_around(void* self, bool wrap);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 /// @param index QModelIndex*
 ///
-const char* q_completer_path_from_index(void* self, void* index);
+const char* q_completer_path_from_index(const void* self, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#pathFromIndex)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QCompleter*
-/// @param callback const char* func(QCompleter* self, QModelIndex* index)
+/// @param self const QCompleter*
+/// @param callback const char* func(const QCompleter* self, QModelIndex* index)
 ///
-void q_completer_on_path_from_index(void* self, const char* (*callback)(void*, void*));
+void q_completer_on_path_from_index(const void* self, const char* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#pathFromIndex)
 ///
 /// Base class method implementation
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 /// @param index QModelIndex*
 ///
-const char* q_completer_super_path_from_index(void* self, void* index);
+const char* q_completer_super_path_from_index(const void* self, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#splitPath)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 /// @param path const char*
 ///
-const char** q_completer_split_path(void* self, const char* path);
+const char** q_completer_split_path(const void* self, const char* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#splitPath)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QCompleter*
-/// @param callback const char** func(QCompleter* self, const char* path)
+/// @param self const QCompleter*
+/// @param callback const char** func(const QCompleter* self, const char* path)
 ///
-void q_completer_on_split_path(void* self, const char** (*callback)(void*, const char*));
+void q_completer_on_split_path(const void* self, const char** (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#splitPath)
 ///
 /// Base class method implementation
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 /// @param path const char*
 ///
-const char** q_completer_super_split_path(void* self, const char* path);
+const char** q_completer_super_split_path(const void* self, const char* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#eventFilter)
 ///
@@ -465,14 +465,14 @@ void q_completer_on_activated(void* self, void (*callback)(void*, const char*));
 /// @param self QCompleter*
 /// @param index QModelIndex*
 ///
-void q_completer_activated2(void* self, void* index);
+void q_completer_activated2(void* self, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#activated)
 ///
 /// @param self QCompleter*
 /// @param callback void func(QCompleter* self, QModelIndex* index)
 ///
-void q_completer_on_activated2(void* self, void (*callback)(void*, void*));
+void q_completer_on_activated2(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#highlighted)
 ///
@@ -493,14 +493,14 @@ void q_completer_on_highlighted(void* self, void (*callback)(void*, const char*)
 /// @param self QCompleter*
 /// @param index QModelIndex*
 ///
-void q_completer_highlighted2(void* self, void* index);
+void q_completer_highlighted2(void* self, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#highlighted)
 ///
 /// @param self QCompleter*
 /// @param callback void func(QCompleter* self, QModelIndex* index)
 ///
-void q_completer_on_highlighted2(void* self, void (*callback)(void*, void*));
+void q_completer_on_highlighted2(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -526,7 +526,7 @@ const char* q_completer_tr3(const char* s, const char* c, int n);
 /// @param self QCompleter*
 /// @param rect QRect*
 ///
-void q_completer_complete1(void* self, void* rect);
+void q_completer_complete1(void* self, const void* rect);
 
 /// Inherited from QObject
 ///
@@ -534,9 +534,9 @@ void q_completer_complete1(void* self, void* rect);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-const char* q_completer_object_name(void* self);
+const char* q_completer_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -551,33 +551,33 @@ void q_completer_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-bool q_completer_is_widget_type(void* self);
+bool q_completer_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-bool q_completer_is_window_type(void* self);
+bool q_completer_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-bool q_completer_is_quick_item_type(void* self);
+bool q_completer_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-bool q_completer_signals_blocked(void* self);
+bool q_completer_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -592,9 +592,9 @@ bool q_completer_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-QThread* q_completer_thread(void* self);
+QThread* q_completer_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -645,11 +645,11 @@ void q_completer_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_completer_children(void* self);
+libqt_list q_completer_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -687,7 +687,7 @@ void q_completer_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_completer_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_completer_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -698,18 +698,18 @@ QMetaObject__Connection* q_completer_connect(void* sender, const char* signal, v
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_completer_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_completer_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_completer_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_completer_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -720,7 +720,7 @@ QMetaObject__Connection* q_completer_connect3(void* self, void* sender, const ch
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_completer_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_completer_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -731,24 +731,24 @@ bool q_completer_disconnect(void* sender, const char* signal, void* receiver, co
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_completer_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_completer_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-bool q_completer_disconnect3(void* self);
+bool q_completer_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 /// @param receiver QObject*
 ///
-bool q_completer_disconnect4(void* self, void* receiver);
+bool q_completer_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -756,23 +756,23 @@ bool q_completer_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_completer_disconnect5(void* param1);
+bool q_completer_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-void q_completer_dump_object_tree(void* self);
+void q_completer_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-void q_completer_dump_object_info(void* self);
+void q_completer_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -782,16 +782,16 @@ void q_completer_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_completer_set_property(void* self, const char* name, void* value);
+bool q_completer_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 /// @param name const char*
 ///
-QVariant* q_completer_property(void* self, const char* name);
+QVariant* q_completer_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -799,9 +799,9 @@ QVariant* q_completer_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-const char** q_completer_dynamic_property_names(void* self);
+const char** q_completer_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -815,9 +815,9 @@ QBindingStorage* q_completer_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-const QBindingStorage* q_completer_binding_storage2(void* self);
+const QBindingStorage* q_completer_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -840,18 +840,18 @@ void q_completer_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-QObject* q_completer_parent(void* self);
+QObject* q_completer_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 /// @param classname const char*
 ///
-bool q_completer_inherits(void* self, const char* classname);
+bool q_completer_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -891,7 +891,7 @@ int32_t q_completer_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_completer_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_completer_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -903,59 +903,59 @@ QMetaObject__Connection* q_completer_connect5(void* sender, const char* signal, 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_completer_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_completer_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_completer_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_completer_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 /// @param signal const char*
 ///
-bool q_completer_disconnect1(void* self, const char* signal);
+bool q_completer_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QCompleter*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_completer_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_completer_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_completer_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_completer_disconnect23(void* self, void* receiver, const char* member);
+bool q_completer_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QCompleter*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_completer_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1083,7 +1083,7 @@ void q_completer_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QCompleter*
 /// @param signal QMetaMethod*
 ///
-void q_completer_connect_notify(void* self, void* signal);
+void q_completer_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1094,7 +1094,7 @@ void q_completer_connect_notify(void* self, void* signal);
 /// @param self QCompleter*
 /// @param signal QMetaMethod*
 ///
-void q_completer_super_connect_notify(void* self, void* signal);
+void q_completer_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1105,7 +1105,7 @@ void q_completer_super_connect_notify(void* self, void* signal);
 /// @param self QCompleter*
 /// @param callback void func(QCompleter* self, QMetaMethod* signal)
 ///
-void q_completer_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_completer_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1116,7 +1116,7 @@ void q_completer_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QCompleter*
 /// @param signal QMetaMethod*
 ///
-void q_completer_disconnect_notify(void* self, void* signal);
+void q_completer_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1127,7 +1127,7 @@ void q_completer_disconnect_notify(void* self, void* signal);
 /// @param self QCompleter*
 /// @param signal QMetaMethod*
 ///
-void q_completer_super_disconnect_notify(void* self, void* signal);
+void q_completer_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1138,7 +1138,7 @@ void q_completer_super_disconnect_notify(void* self, void* signal);
 /// @param self QCompleter*
 /// @param callback void func(QCompleter* self, QMetaMethod* signal)
 ///
-void q_completer_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_completer_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1146,9 +1146,9 @@ void q_completer_on_disconnect_notify(void* self, void (*callback)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-QObject* q_completer_sender(void* self);
+QObject* q_completer_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1156,9 +1156,9 @@ QObject* q_completer_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-QObject* q_completer_super_sender(void* self);
+QObject* q_completer_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1166,10 +1166,10 @@ QObject* q_completer_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QCompleter*
-/// @param callback QObject* func()
+/// @param self const QCompleter*
+/// @param callback QObject* func(QCompleter* self)
 ///
-void q_completer_on_sender(void* self, QObject* (*callback)());
+void q_completer_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1177,9 +1177,9 @@ void q_completer_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-int32_t q_completer_sender_signal_index(void* self);
+int32_t q_completer_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1187,9 +1187,9 @@ int32_t q_completer_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 ///
-int32_t q_completer_super_sender_signal_index(void* self);
+int32_t q_completer_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1197,10 +1197,10 @@ int32_t q_completer_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QCompleter*
-/// @param callback int32_t func()
+/// @param self const QCompleter*
+/// @param callback int32_t func(QCompleter* self)
 ///
-void q_completer_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_completer_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1208,10 +1208,10 @@ void q_completer_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 /// @param signal const char*
 ///
-int32_t q_completer_receivers(void* self, const char* signal);
+int32_t q_completer_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1219,10 +1219,10 @@ int32_t q_completer_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 /// @param signal const char*
 ///
-int32_t q_completer_super_receivers(void* self, const char* signal);
+int32_t q_completer_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1230,10 +1230,10 @@ int32_t q_completer_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 /// @param callback int32_t func(QCompleter* self, const char* signal)
 ///
-void q_completer_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_completer_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1241,10 +1241,10 @@ void q_completer_on_receivers(void* self, int32_t (*callback)(void*, const char*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 /// @param signal QMetaMethod*
 ///
-bool q_completer_is_signal_connected(void* self, void* signal);
+bool q_completer_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1252,10 +1252,10 @@ bool q_completer_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 /// @param signal QMetaMethod*
 ///
-bool q_completer_super_is_signal_connected(void* self, void* signal);
+bool q_completer_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1263,10 +1263,10 @@ bool q_completer_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QCompleter*
+/// @param self const QCompleter*
 /// @param callback bool func(QCompleter* self, QMetaMethod* signal)
 ///
-void q_completer_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_completer_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

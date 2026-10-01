@@ -20,14 +20,14 @@ QWebEnginePermission* q_webenginepermission_new();
 ///
 /// @param other QWebEnginePermission*
 ///
-QWebEnginePermission* q_webenginepermission_new2(void* other);
+QWebEnginePermission* q_webenginepermission_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepermission.html#operator-eq)
 ///
 /// @param self QWebEnginePermission*
 /// @param other QWebEnginePermission*
 ///
-void q_webenginepermission_operator_assign(void* self, void* other);
+void q_webenginepermission_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepermission.html#swap)
 ///
@@ -38,49 +38,49 @@ void q_webenginepermission_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepermission.html#origin)
 ///
-/// @param self QWebEnginePermission*
+/// @param self const QWebEnginePermission*
 ///
-QUrl* q_webenginepermission_origin(void* self);
+QUrl* q_webenginepermission_origin(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepermission.html#permissionType)
 ///
-/// @param self QWebEnginePermission*
+/// @param self const QWebEnginePermission*
 ///
 /// @return enum QWebEnginePermission__PermissionType
 ///
-uint8_t q_webenginepermission_permission_type(void* self);
+uint8_t q_webenginepermission_permission_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepermission.html#state)
 ///
-/// @param self QWebEnginePermission*
+/// @param self const QWebEnginePermission*
 ///
 /// @return enum QWebEnginePermission__State
 ///
-uint8_t q_webenginepermission_state(void* self);
+uint8_t q_webenginepermission_state(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepermission.html#isValid)
 ///
-/// @param self QWebEnginePermission*
+/// @param self const QWebEnginePermission*
 ///
-bool q_webenginepermission_is_valid(void* self);
+bool q_webenginepermission_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepermission.html#grant)
 ///
-/// @param self QWebEnginePermission*
+/// @param self const QWebEnginePermission*
 ///
-void q_webenginepermission_grant(void* self);
+void q_webenginepermission_grant(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepermission.html#deny)
 ///
-/// @param self QWebEnginePermission*
+/// @param self const QWebEnginePermission*
 ///
-void q_webenginepermission_deny(void* self);
+void q_webenginepermission_deny(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepermission.html#reset)
 ///
-/// @param self QWebEnginePermission*
+/// @param self const QWebEnginePermission*
 ///
-void q_webenginepermission_reset(void* self);
+void q_webenginepermission_reset(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepermission.html#isPersistent)
 ///

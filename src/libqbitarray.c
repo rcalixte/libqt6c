@@ -9,7 +9,7 @@ QBitArray* q_bitarray_new2(intptr_t size) {
     return QBitArray_New2(size);
 }
 
-QBitArray* q_bitarray_new3(void* other) {
+QBitArray* q_bitarray_new3(const void* other) {
     return QBitArray_New3((QBitArray*)other);
 }
 
@@ -17,7 +17,7 @@ QBitArray* q_bitarray_new4(intptr_t size, bool val) {
     return QBitArray_New4(size, val);
 }
 
-void q_bitarray_operator_assign(void* self, void* other) {
+void q_bitarray_operator_assign(void* self, const void* other) {
     QBitArray_OperatorAssign((QBitArray*)self, (QBitArray*)other);
 }
 
@@ -25,23 +25,23 @@ void q_bitarray_swap(void* self, void* other) {
     QBitArray_Swap((QBitArray*)self, (QBitArray*)other);
 }
 
-intptr_t q_bitarray_size(void* self) {
+intptr_t q_bitarray_size(const void* self) {
     return QBitArray_Size((QBitArray*)self);
 }
 
-intptr_t q_bitarray_count(void* self) {
+intptr_t q_bitarray_count(const void* self) {
     return QBitArray_Count((QBitArray*)self);
 }
 
-intptr_t q_bitarray_count2(void* self, bool on) {
+intptr_t q_bitarray_count2(const void* self, bool on) {
     return QBitArray_Count2((QBitArray*)self, on);
 }
 
-bool q_bitarray_is_empty(void* self) {
+bool q_bitarray_is_empty(const void* self) {
     return QBitArray_IsEmpty((QBitArray*)self);
 }
 
-bool q_bitarray_is_null(void* self) {
+bool q_bitarray_is_null(const void* self) {
     return QBitArray_IsNull((QBitArray*)self);
 }
 
@@ -53,7 +53,7 @@ void q_bitarray_detach(void* self) {
     QBitArray_Detach((QBitArray*)self);
 }
 
-bool q_bitarray_is_detached(void* self) {
+bool q_bitarray_is_detached(const void* self) {
     return QBitArray_IsDetached((QBitArray*)self);
 }
 
@@ -61,7 +61,7 @@ void q_bitarray_clear(void* self) {
     QBitArray_Clear((QBitArray*)self);
 }
 
-bool q_bitarray_test_bit(void* self, intptr_t i) {
+bool q_bitarray_test_bit(const void* self, intptr_t i) {
     return QBitArray_TestBit((QBitArray*)self, i);
 }
 
@@ -81,7 +81,7 @@ bool q_bitarray_toggle_bit(void* self, intptr_t i) {
     return QBitArray_ToggleBit((QBitArray*)self, i);
 }
 
-bool q_bitarray_at(void* self, intptr_t i) {
+bool q_bitarray_at(const void* self, intptr_t i) {
     return QBitArray_At((QBitArray*)self, i);
 }
 
@@ -89,19 +89,19 @@ QBitRef* q_bitarray_operator_subscript(void* self, intptr_t i) {
     return QBitArray_OperatorSubscript((QBitArray*)self, i);
 }
 
-bool q_bitarray_operator_subscript2(void* self, intptr_t i) {
+bool q_bitarray_operator_subscript2(const void* self, intptr_t i) {
     return QBitArray_OperatorSubscript2((QBitArray*)self, i);
 }
 
-void q_bitarray_operator_bitwise_and_assign(void* self, void* param1) {
+void q_bitarray_operator_bitwise_and_assign(void* self, const void* param1) {
     QBitArray_OperatorBitwiseAndAssign((QBitArray*)self, (QBitArray*)param1);
 }
 
-void q_bitarray_operator_bitwise_or_assign(void* self, void* param1) {
+void q_bitarray_operator_bitwise_or_assign(void* self, const void* param1) {
     QBitArray_OperatorBitwiseOrAssign((QBitArray*)self, (QBitArray*)param1);
 }
 
-void q_bitarray_operator_bitwise_not_assign(void* self, void* param1) {
+void q_bitarray_operator_bitwise_not_assign(void* self, const void* param1) {
     QBitArray_OperatorBitwiseNotAssign((QBitArray*)self, (QBitArray*)param1);
 }
 
@@ -117,7 +117,7 @@ void q_bitarray_truncate(void* self, intptr_t pos) {
     QBitArray_Truncate((QBitArray*)self, pos);
 }
 
-const char* q_bitarray_bits(void* self) {
+const char* q_bitarray_bits(const void* self) {
     return QBitArray_Bits((QBitArray*)self);
 }
 
@@ -125,7 +125,7 @@ QBitArray* q_bitarray_from_bits(const char* data, intptr_t lenVal) {
     return QBitArray_FromBits(data, lenVal);
 }
 
-uint32_t q_bitarray_to_u_int32(void* self, int32_t endianness) {
+uint32_t q_bitarray_to_u_int32(const void* self, int32_t endianness) {
     return QBitArray_ToUInt32((QBitArray*)self, endianness);
 }
 
@@ -133,7 +133,7 @@ bool q_bitarray_fill22(void* self, bool aval, intptr_t asize) {
     return QBitArray_Fill22((QBitArray*)self, aval, asize);
 }
 
-uint32_t q_bitarray_to_u_int322(void* self, int32_t endianness, bool* ok) {
+uint32_t q_bitarray_to_u_int322(const void* self, int32_t endianness, bool* ok) {
     return QBitArray_ToUInt322((QBitArray*)self, endianness, (bool*)ok);
 }
 
@@ -141,23 +141,23 @@ void q_bitarray_delete(void* self) {
     QBitArray_Delete((QBitArray*)(self));
 }
 
-QBitRef* q_bitref_new(void* other) {
+QBitRef* q_bitref_new(const void* other) {
     return QBitRef_New((QBitRef*)other);
 }
 
-QBitRef* q_bitref_new2(void* param1) {
+QBitRef* q_bitref_new2(const void* param1) {
     return QBitRef_New2((QBitRef*)param1);
 }
 
-bool q_bitref_to_bool(void* self) {
+bool q_bitref_to_bool(const void* self) {
     return QBitRef_ToBool((QBitRef*)self);
 }
 
-bool q_bitref_operator_not(void* self) {
+bool q_bitref_operator_not(const void* self) {
     return QBitRef_OperatorNot((QBitRef*)self);
 }
 
-void q_bitref_operator_assign(void* self, void* val) {
+void q_bitref_operator_assign(void* self, const void* val) {
     QBitRef_OperatorAssign((QBitRef*)self, (QBitRef*)val);
 }
 

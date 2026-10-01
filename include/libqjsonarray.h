@@ -20,14 +20,14 @@ QJsonArray* q_jsonarray_new();
 ///
 /// @param other QJsonArray*
 ///
-QJsonArray* q_jsonarray_new2(void* other);
+QJsonArray* q_jsonarray_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#operator-eq)
 ///
 /// @param self QJsonArray*
 /// @param other QJsonArray*
 ///
-void q_jsonarray_operator_assign(void* self, void* other);
+void q_jsonarray_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#fromStringList)
 ///
@@ -43,62 +43,62 @@ QJsonArray* q_jsonarray_from_variant_list(libqt_list list);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#toVariantList)
 ///
-/// @param self QJsonArray*
+/// @param self const QJsonArray*
 ///
 /// @return libqt_list of QVariant*
 ///
-libqt_list q_jsonarray_to_variant_list(void* self);
+libqt_list q_jsonarray_to_variant_list(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#size)
 ///
-/// @param self QJsonArray*
+/// @param self const QJsonArray*
 ///
-intptr_t q_jsonarray_size(void* self);
+intptr_t q_jsonarray_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#count)
 ///
-/// @param self QJsonArray*
+/// @param self const QJsonArray*
 ///
-intptr_t q_jsonarray_count(void* self);
+intptr_t q_jsonarray_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#isEmpty)
 ///
-/// @param self QJsonArray*
+/// @param self const QJsonArray*
 ///
-bool q_jsonarray_is_empty(void* self);
+bool q_jsonarray_is_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#at)
 ///
-/// @param self QJsonArray*
+/// @param self const QJsonArray*
 /// @param i intptr_t
 ///
-QJsonValue* q_jsonarray_at(void* self, intptr_t i);
+QJsonValue* q_jsonarray_at(const void* self, intptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#first)
 ///
-/// @param self QJsonArray*
+/// @param self const QJsonArray*
 ///
-QJsonValue* q_jsonarray_first(void* self);
+QJsonValue* q_jsonarray_first(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#last)
 ///
-/// @param self QJsonArray*
+/// @param self const QJsonArray*
 ///
-QJsonValue* q_jsonarray_last(void* self);
+QJsonValue* q_jsonarray_last(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#prepend)
 ///
 /// @param self QJsonArray*
 /// @param value QJsonValue*
 ///
-void q_jsonarray_prepend(void* self, void* value);
+void q_jsonarray_prepend(void* self, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#append)
 ///
 /// @param self QJsonArray*
 /// @param value QJsonValue*
 ///
-void q_jsonarray_append(void* self, void* value);
+void q_jsonarray_append(void* self, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#removeAt)
 ///
@@ -132,7 +132,7 @@ void q_jsonarray_remove_last(void* self);
 /// @param i intptr_t
 /// @param value QJsonValue*
 ///
-void q_jsonarray_insert(void* self, intptr_t i, void* value);
+void q_jsonarray_insert(void* self, intptr_t i, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#replace)
 ///
@@ -140,14 +140,14 @@ void q_jsonarray_insert(void* self, intptr_t i, void* value);
 /// @param i intptr_t
 /// @param value QJsonValue*
 ///
-void q_jsonarray_replace(void* self, intptr_t i, void* value);
+void q_jsonarray_replace(void* self, intptr_t i, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#contains)
 ///
-/// @param self QJsonArray*
+/// @param self const QJsonArray*
 /// @param element QJsonValue*
 ///
-bool q_jsonarray_contains(void* self, void* element);
+bool q_jsonarray_contains(const void* self, const void* element);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#operator-5b-5d)
 ///
@@ -158,10 +158,10 @@ QJsonValueRef* q_jsonarray_operator_subscript(void* self, intptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#operator-5b-5d)
 ///
-/// @param self QJsonArray*
+/// @param self const QJsonArray*
 /// @param i intptr_t
 ///
-QJsonValue* q_jsonarray_operator_subscript2(void* self, intptr_t i);
+QJsonValue* q_jsonarray_operator_subscript2(const void* self, intptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#swap)
 ///
@@ -178,21 +178,21 @@ QJsonArray__iterator* q_jsonarray_begin(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#begin)
 ///
-/// @param self QJsonArray*
+/// @param self const QJsonArray*
 ///
-QJsonArray__const_iterator* q_jsonarray_begin2(void* self);
+QJsonArray__const_iterator* q_jsonarray_begin2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#constBegin)
 ///
-/// @param self QJsonArray*
+/// @param self const QJsonArray*
 ///
-QJsonArray__const_iterator* q_jsonarray_const_begin(void* self);
+QJsonArray__const_iterator* q_jsonarray_const_begin(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#cbegin)
 ///
-/// @param self QJsonArray*
+/// @param self const QJsonArray*
 ///
-QJsonArray__const_iterator* q_jsonarray_cbegin(void* self);
+QJsonArray__const_iterator* q_jsonarray_cbegin(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#end)
 ///
@@ -202,21 +202,21 @@ QJsonArray__iterator* q_jsonarray_end(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#end)
 ///
-/// @param self QJsonArray*
+/// @param self const QJsonArray*
 ///
-QJsonArray__const_iterator* q_jsonarray_end2(void* self);
+QJsonArray__const_iterator* q_jsonarray_end2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#constEnd)
 ///
-/// @param self QJsonArray*
+/// @param self const QJsonArray*
 ///
-QJsonArray__const_iterator* q_jsonarray_const_end(void* self);
+QJsonArray__const_iterator* q_jsonarray_const_end(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#cend)
 ///
-/// @param self QJsonArray*
+/// @param self const QJsonArray*
 ///
-QJsonArray__const_iterator* q_jsonarray_cend(void* self);
+QJsonArray__const_iterator* q_jsonarray_cend(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#insert)
 ///
@@ -224,7 +224,7 @@ QJsonArray__const_iterator* q_jsonarray_cend(void* self);
 /// @param before QJsonArray__iterator*
 /// @param value QJsonValue*
 ///
-QJsonArray__iterator* q_jsonarray_insert2(void* self, void* before, void* value);
+QJsonArray__iterator* q_jsonarray_insert2(void* self, void* before, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#erase)
 ///
@@ -235,38 +235,38 @@ QJsonArray__iterator* q_jsonarray_erase(void* self, void* it);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#operator-2b)
 ///
-/// @param self QJsonArray*
+/// @param self const QJsonArray*
 /// @param v QJsonValue*
 ///
-QJsonArray* q_jsonarray_operator_plus(void* self, void* v);
+QJsonArray* q_jsonarray_operator_plus(const void* self, const void* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#operator-2b-eq)
 ///
 /// @param self QJsonArray*
 /// @param v QJsonValue*
 ///
-QJsonArray* q_jsonarray_operator_plus_assign(void* self, void* v);
+QJsonArray* q_jsonarray_operator_plus_assign(void* self, const void* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#operator-lt-lt)
 ///
 /// @param self QJsonArray*
 /// @param v QJsonValue*
 ///
-QJsonArray* q_jsonarray_operator_shift_left(void* self, void* v);
+QJsonArray* q_jsonarray_operator_shift_left(void* self, const void* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#push_back)
 ///
 /// @param self QJsonArray*
 /// @param t QJsonValue*
 ///
-void q_jsonarray_push_back(void* self, void* t);
+void q_jsonarray_push_back(void* self, const void* t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#push_front)
 ///
 /// @param self QJsonArray*
 /// @param t QJsonValue*
 ///
-void q_jsonarray_push_front(void* self, void* t);
+void q_jsonarray_push_front(void* self, const void* t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#pop_front)
 ///
@@ -282,9 +282,9 @@ void q_jsonarray_pop_back(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#empty)
 ///
-/// @param self QJsonArray*
+/// @param self const QJsonArray*
 ///
-bool q_jsonarray_empty(void* self);
+bool q_jsonarray_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#dtor.QJsonArray)
 ///
@@ -301,7 +301,7 @@ void q_jsonarray_delete(void* self);
 /// @param array QJsonArray*
 /// @param seed size_t
 ///
-size_t q_qjsonarray_q_hash(void* array, size_t seed);
+size_t q_qjsonarray_q_hash(const void* array, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray-iterator.html)
 
@@ -309,7 +309,7 @@ size_t q_qjsonarray_q_hash(void* array, size_t seed);
 ///
 /// @param other QJsonArray__iterator*
 ///
-QJsonArray__iterator* q_jsonarray__iterator_new(void* other);
+QJsonArray__iterator* q_jsonarray__iterator_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray-iterator.html)
 
@@ -332,26 +332,26 @@ QJsonArray__iterator* q_jsonarray__iterator_new3(void* array, intptr_t index);
 ///
 /// @param other QJsonArray__iterator*
 ///
-QJsonArray__iterator* q_jsonarray__iterator_new4(void* other);
+QJsonArray__iterator* q_jsonarray__iterator_new4(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray-iterator.html#operator-eq)
 ///
 /// @param self QJsonArray__iterator*
 /// @param other QJsonArray__iterator*
 ///
-void q_jsonarray__iterator_operator_assign(void* self, void* other);
+void q_jsonarray__iterator_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray-iterator.html#operator-2a)
 ///
-/// @param self QJsonArray__iterator*
+/// @param self const QJsonArray__iterator*
 ///
-QJsonValueRef* q_jsonarray__iterator_operator_multiply(void* self);
+QJsonValueRef* q_jsonarray__iterator_operator_multiply(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray-iterator.html#operator--gt)
 ///
-/// @param self QJsonArray__iterator*
+/// @param self const QJsonArray__iterator*
 ///
-const QJsonValueConstRef* q_jsonarray__iterator_operator_minus_greater(void* self);
+const QJsonValueConstRef* q_jsonarray__iterator_operator_minus_greater(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray-iterator.html#operator--gt)
 ///
@@ -361,10 +361,10 @@ QJsonValueRef* q_jsonarray__iterator_operator_minus_greater2(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray-iterator.html#operator-5b-5d)
 ///
-/// @param self QJsonArray__iterator*
+/// @param self const QJsonArray__iterator*
 /// @param j intptr_t
 ///
-QJsonValueRef* q_jsonarray__iterator_operator_subscript(void* self, intptr_t j);
+QJsonValueRef* q_jsonarray__iterator_operator_subscript(const void* self, intptr_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray-iterator.html#operator-2b-2b)
 ///
@@ -408,24 +408,24 @@ QJsonArray__iterator* q_jsonarray__iterator_operator_minus_assign(void* self, in
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray-iterator.html#operator-2b)
 ///
-/// @param self QJsonArray__iterator*
+/// @param self const QJsonArray__iterator*
 /// @param j intptr_t
 ///
-QJsonArray__iterator* q_jsonarray__iterator_operator_plus(void* self, intptr_t j);
+QJsonArray__iterator* q_jsonarray__iterator_operator_plus(const void* self, intptr_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray-iterator.html#operator-)
 ///
-/// @param self QJsonArray__iterator*
+/// @param self const QJsonArray__iterator*
 /// @param j intptr_t
 ///
-QJsonArray__iterator* q_jsonarray__iterator_operator_minus(void* self, intptr_t j);
+QJsonArray__iterator* q_jsonarray__iterator_operator_minus(const void* self, intptr_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray-iterator.html#operator-)
 ///
-/// @param self QJsonArray__iterator*
+/// @param self const QJsonArray__iterator*
 /// @param j QJsonArray__iterator*
 ///
-intptr_t q_jsonarray__iterator_operator_minus2(void* self, void* j);
+intptr_t q_jsonarray__iterator_operator_minus2(const void* self, void* j);
 
 /// Delete this object from C++ memory.
 ///
@@ -439,7 +439,7 @@ void q_jsonarray__iterator_delete(void* self);
 ///
 /// @param other QJsonArray__const_iterator*
 ///
-QJsonArray__const_iterator* q_jsonarray__const_iterator_new(void* other);
+QJsonArray__const_iterator* q_jsonarray__const_iterator_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray-const-iterator.html)
 
@@ -454,7 +454,7 @@ QJsonArray__const_iterator* q_jsonarray__const_iterator_new2();
 /// @param array QJsonArray*
 /// @param index intptr_t
 ///
-QJsonArray__const_iterator* q_jsonarray__const_iterator_new3(void* array, intptr_t index);
+QJsonArray__const_iterator* q_jsonarray__const_iterator_new3(const void* array, intptr_t index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray-const-iterator.html)
 
@@ -462,7 +462,7 @@ QJsonArray__const_iterator* q_jsonarray__const_iterator_new3(void* array, intptr
 ///
 /// @param o QJsonArray__iterator*
 ///
-QJsonArray__const_iterator* q_jsonarray__const_iterator_new4(void* o);
+QJsonArray__const_iterator* q_jsonarray__const_iterator_new4(const void* o);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray-const-iterator.html)
 
@@ -470,33 +470,33 @@ QJsonArray__const_iterator* q_jsonarray__const_iterator_new4(void* o);
 ///
 /// @param other QJsonArray__const_iterator*
 ///
-QJsonArray__const_iterator* q_jsonarray__const_iterator_new5(void* other);
+QJsonArray__const_iterator* q_jsonarray__const_iterator_new5(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray-const-iterator.html#operator-eq)
 ///
 /// @param self QJsonArray__const_iterator*
 /// @param other QJsonArray__const_iterator*
 ///
-void q_jsonarray__const_iterator_operator_assign(void* self, void* other);
+void q_jsonarray__const_iterator_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray-const-iterator.html#operator-2a)
 ///
-/// @param self QJsonArray__const_iterator*
+/// @param self const QJsonArray__const_iterator*
 ///
-const QJsonValueConstRef* q_jsonarray__const_iterator_operator_multiply(void* self);
+const QJsonValueConstRef* q_jsonarray__const_iterator_operator_multiply(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray-const-iterator.html#operator--gt)
 ///
-/// @param self QJsonArray__const_iterator*
+/// @param self const QJsonArray__const_iterator*
 ///
-const QJsonValueConstRef* q_jsonarray__const_iterator_operator_minus_greater(void* self);
+const QJsonValueConstRef* q_jsonarray__const_iterator_operator_minus_greater(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray-const-iterator.html#operator-5b-5d)
 ///
-/// @param self QJsonArray__const_iterator*
+/// @param self const QJsonArray__const_iterator*
 /// @param j intptr_t
 ///
-QJsonValueConstRef* q_jsonarray__const_iterator_operator_subscript(void* self, intptr_t j);
+QJsonValueConstRef* q_jsonarray__const_iterator_operator_subscript(const void* self, intptr_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray-const-iterator.html#operator-2b-2b)
 ///
@@ -540,24 +540,24 @@ QJsonArray__const_iterator* q_jsonarray__const_iterator_operator_minus_assign(vo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray-const-iterator.html#operator-2b)
 ///
-/// @param self QJsonArray__const_iterator*
+/// @param self const QJsonArray__const_iterator*
 /// @param j intptr_t
 ///
-QJsonArray__const_iterator* q_jsonarray__const_iterator_operator_plus(void* self, intptr_t j);
+QJsonArray__const_iterator* q_jsonarray__const_iterator_operator_plus(const void* self, intptr_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray-const-iterator.html#operator-)
 ///
-/// @param self QJsonArray__const_iterator*
+/// @param self const QJsonArray__const_iterator*
 /// @param j intptr_t
 ///
-QJsonArray__const_iterator* q_jsonarray__const_iterator_operator_minus(void* self, intptr_t j);
+QJsonArray__const_iterator* q_jsonarray__const_iterator_operator_minus(const void* self, intptr_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray-const-iterator.html#operator-)
 ///
-/// @param self QJsonArray__const_iterator*
+/// @param self const QJsonArray__const_iterator*
 /// @param j QJsonArray__const_iterator*
 ///
-intptr_t q_jsonarray__const_iterator_operator_minus2(void* self, void* j);
+intptr_t q_jsonarray__const_iterator_operator_minus2(const void* self, void* j);
 
 /// Delete this object from C++ memory.
 ///

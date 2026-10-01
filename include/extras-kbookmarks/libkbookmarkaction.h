@@ -16,7 +16,7 @@
 /// @param owner KBookmarkOwner*
 /// @param parent QObject*
 ///
-KBookmarkAction* k_bookmarkaction_new(void* bk, void* owner, void* parent);
+KBookmarkAction* k_bookmarkaction_new(const void* bk, void* owner, void* parent);
 
 /// Upcasts to a KBookmarkActionInterface object
 ///
@@ -32,26 +32,26 @@ KBookmarkAction* k_bookmarkaction_from_k_bookmark_action_interface(void* _kbookm
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-const QMetaObject* k_bookmarkaction_meta_object(void* self);
+const QMetaObject* k_bookmarkaction_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KBookmarkAction*
-/// @param callback const QMetaObject* func()
+/// @param self const KBookmarkAction*
+/// @param callback const QMetaObject* func(const KBookmarkAction* self)
 ///
-void k_bookmarkaction_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_bookmarkaction_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-const QMetaObject* k_bookmarkaction_super_meta_object(void* self);
+const QMetaObject* k_bookmarkaction_super_meta_object(const void* self);
 
 /// @param self KBookmarkAction*
 /// @param param1 const char*
@@ -134,11 +134,11 @@ const char* k_bookmarkaction_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#associatedObjects)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_bookmarkaction_associated_objects(void* self);
+libqt_list k_bookmarkaction_associated_objects(const void* self);
 
 /// Inherited from QAction
 ///
@@ -153,9 +153,9 @@ void k_bookmarkaction_set_action_group(void* self, void* group);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#actionGroup)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-QActionGroup* k_bookmarkaction_action_group(void* self);
+QActionGroup* k_bookmarkaction_action_group(const void* self);
 
 /// Inherited from QAction
 ///
@@ -164,15 +164,15 @@ QActionGroup* k_bookmarkaction_action_group(void* self);
 /// @param self KBookmarkAction*
 /// @param icon QIcon*
 ///
-void k_bookmarkaction_set_icon(void* self, void* icon);
+void k_bookmarkaction_set_icon(void* self, const void* icon);
 
 /// Inherited from QAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#icon)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-QIcon* k_bookmarkaction_icon(void* self);
+QIcon* k_bookmarkaction_icon(const void* self);
 
 /// Inherited from QAction
 ///
@@ -189,9 +189,9 @@ void k_bookmarkaction_set_text(void* self, const char* text);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-const char* k_bookmarkaction_text(void* self);
+const char* k_bookmarkaction_text(const void* self);
 
 /// Inherited from QAction
 ///
@@ -208,9 +208,9 @@ void k_bookmarkaction_set_icon_text(void* self, const char* text);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-const char* k_bookmarkaction_icon_text(void* self);
+const char* k_bookmarkaction_icon_text(const void* self);
 
 /// Inherited from QAction
 ///
@@ -227,9 +227,9 @@ void k_bookmarkaction_set_tool_tip(void* self, const char* tip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-const char* k_bookmarkaction_tool_tip(void* self);
+const char* k_bookmarkaction_tool_tip(const void* self);
 
 /// Inherited from QAction
 ///
@@ -246,9 +246,9 @@ void k_bookmarkaction_set_status_tip(void* self, const char* statusTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-const char* k_bookmarkaction_status_tip(void* self);
+const char* k_bookmarkaction_status_tip(const void* self);
 
 /// Inherited from QAction
 ///
@@ -265,9 +265,9 @@ void k_bookmarkaction_set_whats_this(void* self, const char* what);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-const char* k_bookmarkaction_whats_this(void* self);
+const char* k_bookmarkaction_whats_this(const void* self);
 
 /// Inherited from QAction
 ///
@@ -282,11 +282,11 @@ void k_bookmarkaction_set_priority(void* self, int32_t priority);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#priority)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
 /// @return enum QAction__Priority
 ///
-int32_t k_bookmarkaction_priority(void* self);
+int32_t k_bookmarkaction_priority(const void* self);
 
 /// Inherited from QAction
 ///
@@ -301,9 +301,9 @@ void k_bookmarkaction_set_separator(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isSeparator)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-bool k_bookmarkaction_is_separator(void* self);
+bool k_bookmarkaction_is_separator(const void* self);
 
 /// Inherited from QAction
 ///
@@ -312,15 +312,15 @@ bool k_bookmarkaction_is_separator(void* self);
 /// @param self KBookmarkAction*
 /// @param shortcut QKeySequence*
 ///
-void k_bookmarkaction_set_shortcut(void* self, void* shortcut);
+void k_bookmarkaction_set_shortcut(void* self, const void* shortcut);
 
 /// Inherited from QAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#shortcut)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-QKeySequence* k_bookmarkaction_shortcut(void* self);
+QKeySequence* k_bookmarkaction_shortcut(const void* self);
 
 /// Inherited from QAction
 ///
@@ -344,11 +344,11 @@ void k_bookmarkaction_set_shortcuts2(void* self, int32_t shortcuts);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#shortcuts)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
 /// @return libqt_list of QKeySequence*
 ///
-libqt_list k_bookmarkaction_shortcuts(void* self);
+libqt_list k_bookmarkaction_shortcuts(const void* self);
 
 /// Inherited from QAction
 ///
@@ -363,11 +363,11 @@ void k_bookmarkaction_set_shortcut_context(void* self, int32_t context);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#shortcutContext)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
 /// @return enum Qt__ShortcutContext
 ///
-int32_t k_bookmarkaction_shortcut_context(void* self);
+int32_t k_bookmarkaction_shortcut_context(const void* self);
 
 /// Inherited from QAction
 ///
@@ -382,9 +382,9 @@ void k_bookmarkaction_set_auto_repeat(void* self, bool autoRepeat);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#autoRepeat)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-bool k_bookmarkaction_auto_repeat(void* self);
+bool k_bookmarkaction_auto_repeat(const void* self);
 
 /// Inherited from QAction
 ///
@@ -393,15 +393,15 @@ bool k_bookmarkaction_auto_repeat(void* self);
 /// @param self KBookmarkAction*
 /// @param font QFont*
 ///
-void k_bookmarkaction_set_font(void* self, void* font);
+void k_bookmarkaction_set_font(void* self, const void* font);
 
 /// Inherited from QAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#font)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-QFont* k_bookmarkaction_font(void* self);
+QFont* k_bookmarkaction_font(const void* self);
 
 /// Inherited from QAction
 ///
@@ -416,17 +416,17 @@ void k_bookmarkaction_set_checkable(void* self, bool checkable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isCheckable)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-bool k_bookmarkaction_is_checkable(void* self);
+bool k_bookmarkaction_is_checkable(const void* self);
 
 /// Inherited from QAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#data)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-QVariant* k_bookmarkaction_data(void* self);
+QVariant* k_bookmarkaction_data(const void* self);
 
 /// Inherited from QAction
 ///
@@ -435,31 +435,31 @@ QVariant* k_bookmarkaction_data(void* self);
 /// @param self KBookmarkAction*
 /// @param var QVariant*
 ///
-void k_bookmarkaction_set_data(void* self, void* var);
+void k_bookmarkaction_set_data(void* self, const void* var);
 
 /// Inherited from QAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isChecked)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-bool k_bookmarkaction_is_checked(void* self);
+bool k_bookmarkaction_is_checked(const void* self);
 
 /// Inherited from QAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isEnabled)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-bool k_bookmarkaction_is_enabled(void* self);
+bool k_bookmarkaction_is_enabled(const void* self);
 
 /// Inherited from QAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isVisible)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-bool k_bookmarkaction_is_visible(void* self);
+bool k_bookmarkaction_is_visible(const void* self);
 
 /// Inherited from QAction
 ///
@@ -483,11 +483,11 @@ void k_bookmarkaction_set_menu_role(void* self, int32_t menuRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#menuRole)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
 /// @return enum QAction__MenuRole
 ///
-int32_t k_bookmarkaction_menu_role(void* self);
+int32_t k_bookmarkaction_menu_role(const void* self);
 
 /// Inherited from QAction
 ///
@@ -502,9 +502,9 @@ void k_bookmarkaction_set_icon_visible_in_menu(void* self, bool visible);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isIconVisibleInMenu)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-bool k_bookmarkaction_is_icon_visible_in_menu(void* self);
+bool k_bookmarkaction_is_icon_visible_in_menu(const void* self);
 
 /// Inherited from QAction
 ///
@@ -519,9 +519,9 @@ void k_bookmarkaction_set_shortcut_visible_in_context_menu(void* self, bool show
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isShortcutVisibleInContextMenu)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-bool k_bookmarkaction_is_shortcut_visible_in_context_menu(void* self);
+bool k_bookmarkaction_is_shortcut_visible_in_context_menu(const void* self);
 
 /// Inherited from QAction
 ///
@@ -754,9 +754,9 @@ void k_bookmarkaction_on_triggered1(void* self, void (*callback)(void*, bool));
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-const char* k_bookmarkaction_object_name(void* self);
+const char* k_bookmarkaction_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -771,33 +771,33 @@ void k_bookmarkaction_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-bool k_bookmarkaction_is_widget_type(void* self);
+bool k_bookmarkaction_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-bool k_bookmarkaction_is_window_type(void* self);
+bool k_bookmarkaction_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-bool k_bookmarkaction_is_quick_item_type(void* self);
+bool k_bookmarkaction_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-bool k_bookmarkaction_signals_blocked(void* self);
+bool k_bookmarkaction_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -812,9 +812,9 @@ bool k_bookmarkaction_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-QThread* k_bookmarkaction_thread(void* self);
+QThread* k_bookmarkaction_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -865,11 +865,11 @@ void k_bookmarkaction_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_bookmarkaction_children(void* self);
+libqt_list k_bookmarkaction_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -907,7 +907,7 @@ void k_bookmarkaction_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_bookmarkaction_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_bookmarkaction_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -918,18 +918,18 @@ QMetaObject__Connection* k_bookmarkaction_connect(void* sender, const char* sign
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_bookmarkaction_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_bookmarkaction_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_bookmarkaction_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_bookmarkaction_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -940,7 +940,7 @@ QMetaObject__Connection* k_bookmarkaction_connect3(void* self, void* sender, con
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_bookmarkaction_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_bookmarkaction_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -951,24 +951,24 @@ bool k_bookmarkaction_disconnect(void* sender, const char* signal, void* receive
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_bookmarkaction_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_bookmarkaction_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-bool k_bookmarkaction_disconnect3(void* self);
+bool k_bookmarkaction_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 /// @param receiver QObject*
 ///
-bool k_bookmarkaction_disconnect4(void* self, void* receiver);
+bool k_bookmarkaction_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -976,23 +976,23 @@ bool k_bookmarkaction_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_bookmarkaction_disconnect5(void* param1);
+bool k_bookmarkaction_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-void k_bookmarkaction_dump_object_tree(void* self);
+void k_bookmarkaction_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-void k_bookmarkaction_dump_object_info(void* self);
+void k_bookmarkaction_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1002,16 +1002,16 @@ void k_bookmarkaction_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_bookmarkaction_set_property(void* self, const char* name, void* value);
+bool k_bookmarkaction_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 /// @param name const char*
 ///
-QVariant* k_bookmarkaction_property(void* self, const char* name);
+QVariant* k_bookmarkaction_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1019,9 +1019,9 @@ QVariant* k_bookmarkaction_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-const char** k_bookmarkaction_dynamic_property_names(void* self);
+const char** k_bookmarkaction_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1035,9 +1035,9 @@ QBindingStorage* k_bookmarkaction_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-const QBindingStorage* k_bookmarkaction_binding_storage2(void* self);
+const QBindingStorage* k_bookmarkaction_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1060,18 +1060,18 @@ void k_bookmarkaction_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-QObject* k_bookmarkaction_parent(void* self);
+QObject* k_bookmarkaction_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 /// @param classname const char*
 ///
-bool k_bookmarkaction_inherits(void* self, const char* classname);
+bool k_bookmarkaction_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1111,7 +1111,7 @@ int32_t k_bookmarkaction_start_timer23(void* self, int64_t time, int32_t timerTy
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_bookmarkaction_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_bookmarkaction_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1123,59 +1123,59 @@ QMetaObject__Connection* k_bookmarkaction_connect5(void* sender, const char* sig
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_bookmarkaction_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_bookmarkaction_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_bookmarkaction_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_bookmarkaction_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 /// @param signal const char*
 ///
-bool k_bookmarkaction_disconnect1(void* self, const char* signal);
+bool k_bookmarkaction_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KBookmarkAction*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_bookmarkaction_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_bookmarkaction_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_bookmarkaction_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_bookmarkaction_disconnect23(void* self, void* receiver, const char* member);
+bool k_bookmarkaction_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KBookmarkAction*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_bookmarkaction_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1199,9 +1199,9 @@ void k_bookmarkaction_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://api.kde.org/kbookmarkactioninterface.html#bookmark)
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-const KBookmark* k_bookmarkaction_bookmark(void* self);
+const KBookmark* k_bookmarkaction_bookmark(const void* self);
 
 /// Inherited from QAction
 ///
@@ -1379,7 +1379,7 @@ void k_bookmarkaction_on_custom_event(void* self, void (*callback)(void*, void*)
 /// @param self KBookmarkAction*
 /// @param signal QMetaMethod*
 ///
-void k_bookmarkaction_connect_notify(void* self, void* signal);
+void k_bookmarkaction_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1390,7 +1390,7 @@ void k_bookmarkaction_connect_notify(void* self, void* signal);
 /// @param self KBookmarkAction*
 /// @param signal QMetaMethod*
 ///
-void k_bookmarkaction_super_connect_notify(void* self, void* signal);
+void k_bookmarkaction_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1401,7 +1401,7 @@ void k_bookmarkaction_super_connect_notify(void* self, void* signal);
 /// @param self KBookmarkAction*
 /// @param callback void func(KBookmarkAction* self, QMetaMethod* signal)
 ///
-void k_bookmarkaction_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_bookmarkaction_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1412,7 +1412,7 @@ void k_bookmarkaction_on_connect_notify(void* self, void (*callback)(void*, void
 /// @param self KBookmarkAction*
 /// @param signal QMetaMethod*
 ///
-void k_bookmarkaction_disconnect_notify(void* self, void* signal);
+void k_bookmarkaction_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1423,7 +1423,7 @@ void k_bookmarkaction_disconnect_notify(void* self, void* signal);
 /// @param self KBookmarkAction*
 /// @param signal QMetaMethod*
 ///
-void k_bookmarkaction_super_disconnect_notify(void* self, void* signal);
+void k_bookmarkaction_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1434,7 +1434,7 @@ void k_bookmarkaction_super_disconnect_notify(void* self, void* signal);
 /// @param self KBookmarkAction*
 /// @param callback void func(KBookmarkAction* self, QMetaMethod* signal)
 ///
-void k_bookmarkaction_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_bookmarkaction_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1442,9 +1442,9 @@ void k_bookmarkaction_on_disconnect_notify(void* self, void (*callback)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-QObject* k_bookmarkaction_sender(void* self);
+QObject* k_bookmarkaction_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1452,9 +1452,9 @@ QObject* k_bookmarkaction_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-QObject* k_bookmarkaction_super_sender(void* self);
+QObject* k_bookmarkaction_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1462,10 +1462,10 @@ QObject* k_bookmarkaction_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KBookmarkAction*
-/// @param callback QObject* func()
+/// @param self const KBookmarkAction*
+/// @param callback QObject* func(KBookmarkAction* self)
 ///
-void k_bookmarkaction_on_sender(void* self, QObject* (*callback)());
+void k_bookmarkaction_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1473,9 +1473,9 @@ void k_bookmarkaction_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-int32_t k_bookmarkaction_sender_signal_index(void* self);
+int32_t k_bookmarkaction_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1483,9 +1483,9 @@ int32_t k_bookmarkaction_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-int32_t k_bookmarkaction_super_sender_signal_index(void* self);
+int32_t k_bookmarkaction_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1493,10 +1493,10 @@ int32_t k_bookmarkaction_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KBookmarkAction*
-/// @param callback int32_t func()
+/// @param self const KBookmarkAction*
+/// @param callback int32_t func(KBookmarkAction* self)
 ///
-void k_bookmarkaction_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_bookmarkaction_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1504,10 +1504,10 @@ void k_bookmarkaction_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 /// @param signal const char*
 ///
-int32_t k_bookmarkaction_receivers(void* self, const char* signal);
+int32_t k_bookmarkaction_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1515,10 +1515,10 @@ int32_t k_bookmarkaction_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 /// @param signal const char*
 ///
-int32_t k_bookmarkaction_super_receivers(void* self, const char* signal);
+int32_t k_bookmarkaction_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1526,10 +1526,10 @@ int32_t k_bookmarkaction_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 /// @param callback int32_t func(KBookmarkAction* self, const char* signal)
 ///
-void k_bookmarkaction_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_bookmarkaction_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1537,10 +1537,10 @@ void k_bookmarkaction_on_receivers(void* self, int32_t (*callback)(void*, const 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 /// @param signal QMetaMethod*
 ///
-bool k_bookmarkaction_is_signal_connected(void* self, void* signal);
+bool k_bookmarkaction_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1548,10 +1548,10 @@ bool k_bookmarkaction_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 /// @param signal QMetaMethod*
 ///
-bool k_bookmarkaction_super_is_signal_connected(void* self, void* signal);
+bool k_bookmarkaction_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1559,10 +1559,10 @@ bool k_bookmarkaction_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 /// @param callback bool func(KBookmarkAction* self, QMetaMethod* signal)
 ///
-void k_bookmarkaction_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_bookmarkaction_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

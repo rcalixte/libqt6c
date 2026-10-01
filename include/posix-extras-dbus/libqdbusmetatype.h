@@ -14,7 +14,7 @@
 ///
 /// @param other QDBusMetaType*
 ///
-QDBusMetaType* q_dbusmetatype_new(void* other);
+QDBusMetaType* q_dbusmetatype_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmetatype.html)
 
@@ -44,7 +44,7 @@ void q_dbusmetatype_move_assign(void* self, void* other);
 /// @param param2 void func(QDBusArgument* param1, void* param2)
 /// @param param3 void func(QDBusArgument* param1, void* param2)
 ///
-void q_dbusmetatype_register_marshall_operators(void* typeId, void (*param2)(void* funcparam1, void* funcparam2), void (*param3)(void* funcparam1, void* funcparam2));
+void q_dbusmetatype_register_marshall_operators(void* typeId, void (*param2)(void* funcparam1, void* funcparam2), void (*param3)(const void* funcparam1, void* funcparam2));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmetatype.html#marshall)
 ///
@@ -60,7 +60,7 @@ bool q_dbusmetatype_marshall(void* param1, void* id, void* data);
 /// @param id QMetaType*
 /// @param data void*
 ///
-bool q_dbusmetatype_demarshall(void* param1, void* id, void* data);
+bool q_dbusmetatype_demarshall(const void* param1, void* id, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmetatype.html#registerCustomType)
 ///

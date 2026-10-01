@@ -21,15 +21,15 @@ QPdfDocument* q_pdfdocument_new2(void* parent) {
     return QPdfDocument_New2((QObject*)parent);
 }
 
-const QMetaObject* q_pdfdocument_meta_object(void* self) {
+const QMetaObject* q_pdfdocument_meta_object(const void* self) {
     return QPdfDocument_MetaObject((QPdfDocument*)self);
 }
 
-void q_pdfdocument_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_pdfdocument_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QPdfDocument_OnMetaObject((QPdfDocument*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_pdfdocument_super_meta_object(void* self) {
+const QMetaObject* q_pdfdocument_super_meta_object(const void* self) {
     return QPdfDocument_SuperMetaObject((QPdfDocument*)self);
 }
 
@@ -68,7 +68,7 @@ int32_t q_pdfdocument_load(void* self, const char* fileName) {
     return QPdfDocument_Load((QPdfDocument*)self, qstring(fileName));
 }
 
-int32_t q_pdfdocument_status(void* self) {
+int32_t q_pdfdocument_status(const void* self) {
     return QPdfDocument_Status((QPdfDocument*)self);
 }
 
@@ -80,18 +80,18 @@ void q_pdfdocument_set_password(void* self, const char* password) {
     QPdfDocument_SetPassword((QPdfDocument*)self, qstring(password));
 }
 
-const char* q_pdfdocument_password(void* self) {
+const char* q_pdfdocument_password(const void* self) {
     libqt_string _str = QPdfDocument_Password((QPdfDocument*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QVariant* q_pdfdocument_meta_data(void* self, int32_t field) {
+QVariant* q_pdfdocument_meta_data(const void* self, int32_t field) {
     return QPdfDocument_MetaData((QPdfDocument*)self, field);
 }
 
-int32_t q_pdfdocument_error(void* self) {
+int32_t q_pdfdocument_error(const void* self) {
     return QPdfDocument_Error((QPdfDocument*)self);
 }
 
@@ -99,11 +99,11 @@ void q_pdfdocument_close(void* self) {
     QPdfDocument_Close((QPdfDocument*)self);
 }
 
-int32_t q_pdfdocument_page_count(void* self) {
+int32_t q_pdfdocument_page_count(const void* self) {
     return QPdfDocument_PageCount((QPdfDocument*)self);
 }
 
-QSizeF* q_pdfdocument_page_point_size(void* self, int page) {
+QSizeF* q_pdfdocument_page_point_size(const void* self, int page) {
     return QPdfDocument_PagePointSize((QPdfDocument*)self, page);
 }
 
@@ -196,7 +196,7 @@ QImage* q_pdfdocument_render3(void* self, int page, void* imageSize, void* optio
     return QPdfDocument_Render3((QPdfDocument*)self, page, (QSize*)imageSize, (QPdfDocumentRenderOptions*)options);
 }
 
-const char* q_pdfdocument_object_name(void* self) {
+const char* q_pdfdocument_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -207,19 +207,19 @@ void q_pdfdocument_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_pdfdocument_is_widget_type(void* self) {
+bool q_pdfdocument_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_pdfdocument_is_window_type(void* self) {
+bool q_pdfdocument_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_pdfdocument_is_quick_item_type(void* self) {
+bool q_pdfdocument_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_pdfdocument_signals_blocked(void* self) {
+bool q_pdfdocument_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -227,7 +227,7 @@ bool q_pdfdocument_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_pdfdocument_thread(void* self) {
+QThread* q_pdfdocument_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -251,7 +251,7 @@ void q_pdfdocument_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_pdfdocument_children(void* self) {
+libqt_list /* of QObject* */ q_pdfdocument_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -268,55 +268,55 @@ void q_pdfdocument_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_pdfdocument_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_pdfdocument_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_pdfdocument_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_pdfdocument_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_pdfdocument_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_pdfdocument_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_pdfdocument_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_pdfdocument_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_pdfdocument_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_pdfdocument_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_pdfdocument_disconnect3(void* self) {
+bool q_pdfdocument_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_pdfdocument_disconnect4(void* self, void* receiver) {
+bool q_pdfdocument_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_pdfdocument_disconnect5(void* param1) {
+bool q_pdfdocument_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_pdfdocument_dump_object_tree(void* self) {
+void q_pdfdocument_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_pdfdocument_dump_object_info(void* self) {
+void q_pdfdocument_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_pdfdocument_set_property(void* self, const char* name, void* value) {
+bool q_pdfdocument_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_pdfdocument_property(void* self, const char* name) {
+QVariant* q_pdfdocument_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_pdfdocument_dynamic_property_names(void* self) {
+const char** q_pdfdocument_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -337,7 +337,7 @@ QBindingStorage* q_pdfdocument_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_pdfdocument_binding_storage2(void* self) {
+const QBindingStorage* q_pdfdocument_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -349,11 +349,11 @@ void q_pdfdocument_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_pdfdocument_parent(void* self) {
+QObject* q_pdfdocument_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_pdfdocument_inherits(void* self, const char* classname) {
+bool q_pdfdocument_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -369,31 +369,31 @@ int32_t q_pdfdocument_start_timer23(void* self, int64_t time, int32_t timerType)
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_pdfdocument_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_pdfdocument_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_pdfdocument_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_pdfdocument_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_pdfdocument_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_pdfdocument_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_pdfdocument_disconnect1(void* self, const char* signal) {
+bool q_pdfdocument_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_pdfdocument_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_pdfdocument_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_pdfdocument_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_pdfdocument_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_pdfdocument_disconnect23(void* self, void* receiver, const char* member) {
+bool q_pdfdocument_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -465,76 +465,44 @@ void q_pdfdocument_on_custom_event(void* self, void (*callback)(void*, void*)) {
     QPdfDocument_OnCustomEvent((QPdfDocument*)self, (intptr_t)callback);
 }
 
-void q_pdfdocument_connect_notify(void* self, void* signal) {
+void q_pdfdocument_connect_notify(void* self, const void* signal) {
     QPdfDocument_ConnectNotify((QPdfDocument*)self, (QMetaMethod*)signal);
 }
 
-void q_pdfdocument_super_connect_notify(void* self, void* signal) {
+void q_pdfdocument_super_connect_notify(void* self, const void* signal) {
     QPdfDocument_SuperConnectNotify((QPdfDocument*)self, (QMetaMethod*)signal);
 }
 
-void q_pdfdocument_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_pdfdocument_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QPdfDocument_OnConnectNotify((QPdfDocument*)self, (intptr_t)callback);
 }
 
-void q_pdfdocument_disconnect_notify(void* self, void* signal) {
+void q_pdfdocument_disconnect_notify(void* self, const void* signal) {
     QPdfDocument_DisconnectNotify((QPdfDocument*)self, (QMetaMethod*)signal);
 }
 
-void q_pdfdocument_super_disconnect_notify(void* self, void* signal) {
+void q_pdfdocument_super_disconnect_notify(void* self, const void* signal) {
     QPdfDocument_SuperDisconnectNotify((QPdfDocument*)self, (QMetaMethod*)signal);
 }
 
-void q_pdfdocument_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_pdfdocument_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QPdfDocument_OnDisconnectNotify((QPdfDocument*)self, (intptr_t)callback);
 }
 
-QObject* q_pdfdocument_sender(void* self) {
+QObject* q_pdfdocument_sender(const void* self) {
     return QPdfDocument_Sender((QPdfDocument*)self);
 }
 
-QObject* q_pdfdocument_super_sender(void* self) {
-    return QPdfDocument_SuperSender((QPdfDocument*)self);
-}
-
-void q_pdfdocument_on_sender(void* self, QObject* (*callback)()) {
-    QPdfDocument_OnSender((QPdfDocument*)self, (intptr_t)callback);
-}
-
-int32_t q_pdfdocument_sender_signal_index(void* self) {
+int32_t q_pdfdocument_sender_signal_index(const void* self) {
     return QPdfDocument_SenderSignalIndex((QPdfDocument*)self);
 }
 
-int32_t q_pdfdocument_super_sender_signal_index(void* self) {
-    return QPdfDocument_SuperSenderSignalIndex((QPdfDocument*)self);
-}
-
-void q_pdfdocument_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QPdfDocument_OnSenderSignalIndex((QPdfDocument*)self, (intptr_t)callback);
-}
-
-int32_t q_pdfdocument_receivers(void* self, const char* signal) {
+int32_t q_pdfdocument_receivers(const void* self, const char* signal) {
     return QPdfDocument_Receivers((QPdfDocument*)self, signal);
 }
 
-int32_t q_pdfdocument_super_receivers(void* self, const char* signal) {
-    return QPdfDocument_SuperReceivers((QPdfDocument*)self, signal);
-}
-
-void q_pdfdocument_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QPdfDocument_OnReceivers((QPdfDocument*)self, (intptr_t)callback);
-}
-
-bool q_pdfdocument_is_signal_connected(void* self, void* signal) {
+bool q_pdfdocument_is_signal_connected(const void* self, const void* signal) {
     return QPdfDocument_IsSignalConnected((QPdfDocument*)self, (QMetaMethod*)signal);
-}
-
-bool q_pdfdocument_super_is_signal_connected(void* self, void* signal) {
-    return QPdfDocument_SuperIsSignalConnected((QPdfDocument*)self, (QMetaMethod*)signal);
-}
-
-void q_pdfdocument_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QPdfDocument_OnIsSignalConnected((QPdfDocument*)self, (intptr_t)callback);
 }
 
 void q_pdfdocument_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

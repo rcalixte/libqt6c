@@ -15,7 +15,7 @@
 /// @param url QUrl*
 /// @param seed size_t
 ///
-size_t q_qurl_q_hash(void* url, size_t seed);
+size_t q_qurl_q_hash(const void* url, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html)
 
@@ -29,7 +29,7 @@ QUrl* q_url_new();
 ///
 /// @param copy QUrl*
 ///
-QUrl* q_url_new2(void* copy);
+QUrl* q_url_new2(const void* copy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html)
 
@@ -53,7 +53,7 @@ QUrl* q_url_new4(const char* url, int32_t mode);
 /// @param self QUrl*
 /// @param copy QUrl*
 ///
-void q_url_operator_assign(void* self, void* copy);
+void q_url_operator_assign(void* self, const void* copy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#operator-eq)
 ///
@@ -80,33 +80,33 @@ void q_url_set_url(void* self, const char* url);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 ///
-const char* q_url_url(void* self);
+const char* q_url_url(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 ///
-const char* q_url_to_string(void* self);
+const char* q_url_to_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#toDisplayString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 ///
-const char* q_url_to_display_string(void* self);
+const char* q_url_to_display_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#toEncoded)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 ///
-char* q_url_to_encoded(void* self);
+char* q_url_to_encoded(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#fromEncoded)
 ///
@@ -122,23 +122,23 @@ QUrl* q_url_from_user_input(const char* userInput);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#isValid)
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 ///
-bool q_url_is_valid(void* self);
+bool q_url_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#errorString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 ///
-const char* q_url_error_string(void* self);
+const char* q_url_error_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#isEmpty)
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 ///
-bool q_url_is_empty(void* self);
+bool q_url_is_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#clear)
 ///
@@ -157,9 +157,9 @@ void q_url_set_scheme(void* self, const char* scheme);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 ///
-const char* q_url_scheme(void* self);
+const char* q_url_scheme(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#setAuthority)
 ///
@@ -172,9 +172,9 @@ void q_url_set_authority(void* self, const char* authority);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 ///
-const char* q_url_authority(void* self);
+const char* q_url_authority(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#setUserInfo)
 ///
@@ -187,9 +187,9 @@ void q_url_set_user_info(void* self, const char* userInfo);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 ///
-const char* q_url_user_info(void* self);
+const char* q_url_user_info(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#setUserName)
 ///
@@ -202,9 +202,9 @@ void q_url_set_user_name(void* self, const char* userName);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 ///
-const char* q_url_user_name(void* self);
+const char* q_url_user_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#setPassword)
 ///
@@ -217,9 +217,9 @@ void q_url_set_password(void* self, const char* password);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 ///
-const char* q_url_password(void* self);
+const char* q_url_password(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#setHost)
 ///
@@ -232,9 +232,9 @@ void q_url_set_host(void* self, const char* host);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 ///
-const char* q_url_host(void* self);
+const char* q_url_host(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#setPort)
 ///
@@ -245,9 +245,9 @@ void q_url_set_port(void* self, int port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#port)
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 ///
-int32_t q_url_port(void* self);
+int32_t q_url_port(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#setPath)
 ///
@@ -260,23 +260,23 @@ void q_url_set_path(void* self, const char* path);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 ///
-const char* q_url_path(void* self);
+const char* q_url_path(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#fileName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 ///
-const char* q_url_file_name(void* self);
+const char* q_url_file_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#hasQuery)
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 ///
-bool q_url_has_query(void* self);
+bool q_url_has_query(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#setQuery)
 ///
@@ -290,29 +290,29 @@ void q_url_set_query(void* self, const char* query);
 /// @param self QUrl*
 /// @param query QUrlQuery*
 ///
-void q_url_set_query2(void* self, void* query);
+void q_url_set_query2(void* self, const void* query);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#query)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 ///
-const char* q_url_query(void* self);
+const char* q_url_query(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#hasFragment)
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 ///
-bool q_url_has_fragment(void* self);
+bool q_url_has_fragment(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#fragment)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 ///
-const char* q_url_fragment(void* self);
+const char* q_url_fragment(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#setFragment)
 ///
@@ -323,29 +323,29 @@ void q_url_set_fragment(void* self, const char* fragment);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#resolved)
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 /// @param relative QUrl*
 ///
-QUrl* q_url_resolved(void* self, void* relative);
+QUrl* q_url_resolved(const void* self, const void* relative);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#isRelative)
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 ///
-bool q_url_is_relative(void* self);
+bool q_url_is_relative(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#isParentOf)
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 /// @param url QUrl*
 ///
-bool q_url_is_parent_of(void* self, void* url);
+bool q_url_is_parent_of(const void* self, const void* url);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#isLocalFile)
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 ///
-bool q_url_is_local_file(void* self);
+bool q_url_is_local_file(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#fromLocalFile)
 ///
@@ -357,9 +357,9 @@ QUrl* q_url_from_local_file(const char* localfile);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 ///
-const char* q_url_to_local_file(void* self);
+const char* q_url_to_local_file(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#detach)
 ///
@@ -369,9 +369,9 @@ void q_url_detach(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#isDetached)
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 ///
-bool q_url_is_detached(void* self);
+bool q_url_is_detached(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#fromPercentEncoding)
 ///
@@ -475,10 +475,10 @@ void q_url_set_authority2(void* self, const char* authority, int32_t mode);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 /// @param options flag of enum QUrl__ComponentFormattingOption
 ///
-const char* q_url_authority1(void* self, uint32_t options);
+const char* q_url_authority1(const void* self, uint32_t options);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#setUserInfo)
 ///
@@ -492,10 +492,10 @@ void q_url_set_user_info2(void* self, const char* userInfo, int32_t mode);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 /// @param options flag of enum QUrl__ComponentFormattingOption
 ///
-const char* q_url_user_info1(void* self, uint32_t options);
+const char* q_url_user_info1(const void* self, uint32_t options);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#setUserName)
 ///
@@ -509,10 +509,10 @@ void q_url_set_user_name2(void* self, const char* userName, int32_t mode);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 /// @param options flag of enum QUrl__ComponentFormattingOption
 ///
-const char* q_url_user_name1(void* self, uint32_t options);
+const char* q_url_user_name1(const void* self, uint32_t options);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#setPassword)
 ///
@@ -526,10 +526,10 @@ void q_url_set_password2(void* self, const char* password, int32_t mode);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 /// @param param1 flag of enum QUrl__ComponentFormattingOption
 ///
-const char* q_url_password1(void* self, uint32_t param1);
+const char* q_url_password1(const void* self, uint32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#setHost)
 ///
@@ -543,17 +543,17 @@ void q_url_set_host2(void* self, const char* host, int32_t mode);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 /// @param param1 flag of enum QUrl__ComponentFormattingOption
 ///
-const char* q_url_host1(void* self, uint32_t param1);
+const char* q_url_host1(const void* self, uint32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#port)
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 /// @param defaultPort int
 ///
-int32_t q_url_port1(void* self, int defaultPort);
+int32_t q_url_port1(const void* self, int defaultPort);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#setPath)
 ///
@@ -567,19 +567,19 @@ void q_url_set_path2(void* self, const char* path, int32_t mode);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 /// @param options flag of enum QUrl__ComponentFormattingOption
 ///
-const char* q_url_path1(void* self, uint32_t options);
+const char* q_url_path1(const void* self, uint32_t options);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#fileName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 /// @param options flag of enum QUrl__ComponentFormattingOption
 ///
-const char* q_url_file_name1(void* self, uint32_t options);
+const char* q_url_file_name1(const void* self, uint32_t options);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#setQuery)
 ///
@@ -593,19 +593,19 @@ void q_url_set_query22(void* self, const char* query, int32_t mode);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 /// @param param1 flag of enum QUrl__ComponentFormattingOption
 ///
-const char* q_url_query1(void* self, uint32_t param1);
+const char* q_url_query1(const void* self, uint32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#fragment)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUrl*
+/// @param self const QUrl*
 /// @param options flag of enum QUrl__ComponentFormattingOption
 ///
-const char* q_url_fragment1(void* self, uint32_t options);
+const char* q_url_fragment1(const void* self, uint32_t options);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#setFragment)
 ///

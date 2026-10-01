@@ -30,23 +30,23 @@ KDirOperator* k_diroperator_new() {
     return KDirOperator_New();
 }
 
-KDirOperator* k_diroperator_new2(void* urlName) {
+KDirOperator* k_diroperator_new2(const void* urlName) {
     return KDirOperator_New2((QUrl*)urlName);
 }
 
-KDirOperator* k_diroperator_new3(void* urlName, void* parent) {
+KDirOperator* k_diroperator_new3(const void* urlName, void* parent) {
     return KDirOperator_New3((QUrl*)urlName, (QWidget*)parent);
 }
 
-const QMetaObject* k_diroperator_meta_object(void* self) {
+const QMetaObject* k_diroperator_meta_object(const void* self) {
     return KDirOperator_MetaObject((KDirOperator*)self);
 }
 
-void k_diroperator_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_diroperator_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     KDirOperator_OnMetaObject((KDirOperator*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_diroperator_super_meta_object(void* self) {
+const QMetaObject* k_diroperator_super_meta_object(const void* self) {
     return KDirOperator_SuperMetaObject((KDirOperator*)self);
 }
 
@@ -93,7 +93,7 @@ void k_diroperator_super_set_show_hidden_files(void* self, bool s) {
     KDirOperator_SuperSetShowHiddenFiles((KDirOperator*)self, s);
 }
 
-bool k_diroperator_show_hidden_files(void* self) {
+bool k_diroperator_show_hidden_files(const void* self) {
     return KDirOperator_ShowHiddenFiles((KDirOperator*)self);
 }
 
@@ -105,7 +105,7 @@ void k_diroperator_set_name_filter(void* self, const char* filter) {
     KDirOperator_SetNameFilter((KDirOperator*)self, qstring(filter));
 }
 
-const char* k_diroperator_name_filter(void* self) {
+const char* k_diroperator_name_filter(const void* self) {
     libqt_string _str = KDirOperator_NameFilter((KDirOperator*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -126,7 +126,7 @@ void k_diroperator_set_mime_filter(void* self, const char* mimetypes[static 1]) 
     free(mimetypes_qstr);
 }
 
-const char** k_diroperator_mime_filter(void* self) {
+const char** k_diroperator_mime_filter(const void* self) {
     libqt_list _arr = KDirOperator_MimeFilter((KDirOperator*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -157,7 +157,7 @@ void k_diroperator_set_new_file_menu_supported_mime_types(void* self, const char
     free(mime_qstr);
 }
 
-const char** k_diroperator_new_file_menu_supported_mime_types(void* self) {
+const char** k_diroperator_new_file_menu_supported_mime_types(const void* self) {
     libqt_list _arr = KDirOperator_NewFileMenuSupportedMimeTypes((KDirOperator*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -182,27 +182,27 @@ void k_diroperator_clear_filter(void* self) {
     KDirOperator_ClearFilter((KDirOperator*)self);
 }
 
-QUrl* k_diroperator_url(void* self) {
+QUrl* k_diroperator_url(const void* self) {
     return KDirOperator_Url((KDirOperator*)self);
 }
 
-void k_diroperator_set_url(void* self, void* url, bool clearforward) {
+void k_diroperator_set_url(void* self, const void* url, bool clearforward) {
     KDirOperator_SetUrl((KDirOperator*)self, (QUrl*)url, clearforward);
 }
 
-void k_diroperator_on_set_url(void* self, void (*callback)(void*, void*, bool)) {
+void k_diroperator_on_set_url(void* self, void (*callback)(void*, const void*, bool)) {
     KDirOperator_OnSetUrl((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_super_set_url(void* self, void* url, bool clearforward) {
+void k_diroperator_super_set_url(void* self, const void* url, bool clearforward) {
     KDirOperator_SuperSetUrl((KDirOperator*)self, (QUrl*)url, clearforward);
 }
 
-void k_diroperator_set_current_item(void* self, void* url) {
+void k_diroperator_set_current_item(void* self, const void* url) {
     KDirOperator_SetCurrentItem((KDirOperator*)self, (QUrl*)url);
 }
 
-void k_diroperator_set_current_item2(void* self, void* item) {
+void k_diroperator_set_current_item2(void* self, const void* item) {
     KDirOperator_SetCurrentItem2((KDirOperator*)self, (KFileItem*)item);
 }
 
@@ -210,11 +210,11 @@ void k_diroperator_set_current_items(void* self, libqt_list /* of QUrl* */ urls)
     KDirOperator_SetCurrentItems((KDirOperator*)self, urls);
 }
 
-void k_diroperator_set_current_items2(void* self, void* items) {
+void k_diroperator_set_current_items2(void* self, const void* items) {
     KDirOperator_SetCurrentItems2((KDirOperator*)self, (KFileItemList*)items);
 }
 
-QAbstractItemView* k_diroperator_view(void* self) {
+QAbstractItemView* k_diroperator_view(const void* self) {
     return KDirOperator_View((KDirOperator*)self);
 }
 
@@ -222,7 +222,7 @@ void k_diroperator_set_view_mode(void* self, int32_t viewKind) {
     KDirOperator_SetViewMode((KDirOperator*)self, viewKind);
 }
 
-int32_t k_diroperator_view_mode(void* self) {
+int32_t k_diroperator_view_mode(const void* self) {
     return KDirOperator_ViewMode((KDirOperator*)self);
 }
 
@@ -230,19 +230,19 @@ void k_diroperator_set_sorting(void* self, int32_t sorting) {
     KDirOperator_SetSorting((KDirOperator*)self, sorting);
 }
 
-int32_t k_diroperator_sorting(void* self) {
+int32_t k_diroperator_sorting(const void* self) {
     return KDirOperator_Sorting((KDirOperator*)self);
 }
 
-bool k_diroperator_is_root(void* self) {
+bool k_diroperator_is_root(const void* self) {
     return KDirOperator_IsRoot((KDirOperator*)self);
 }
 
-KDirLister* k_diroperator_dir_lister(void* self) {
+KDirLister* k_diroperator_dir_lister(const void* self) {
     return KDirOperator_DirLister((KDirOperator*)self);
 }
 
-QProgressBar* k_diroperator_progress_bar(void* self) {
+QProgressBar* k_diroperator_progress_bar(const void* self) {
     return KDirOperator_ProgressBar((KDirOperator*)self);
 }
 
@@ -258,7 +258,7 @@ void k_diroperator_super_set_mode(void* self, int32_t m) {
     KDirOperator_SuperSetMode((KDirOperator*)self, m);
 }
 
-int32_t k_diroperator_mode(void* self) {
+int32_t k_diroperator_mode(const void* self) {
     return KDirOperator_Mode((KDirOperator*)self);
 }
 
@@ -274,35 +274,35 @@ void k_diroperator_super_set_preview_widget(void* self, void* w) {
     KDirOperator_SuperSetPreviewWidget((KDirOperator*)self, (KPreviewWidgetBase*)w);
 }
 
-KFileItemList* k_diroperator_selected_items(void* self) {
+KFileItemList* k_diroperator_selected_items(const void* self) {
     return KDirOperator_SelectedItems((KDirOperator*)self);
 }
 
-bool k_diroperator_is_selected(void* self, void* item) {
+bool k_diroperator_is_selected(const void* self, const void* item) {
     return KDirOperator_IsSelected((KDirOperator*)self, (KFileItem*)item);
 }
 
-int32_t k_diroperator_num_dirs(void* self) {
+int32_t k_diroperator_num_dirs(const void* self) {
     return KDirOperator_NumDirs((KDirOperator*)self);
 }
 
-int32_t k_diroperator_num_files(void* self) {
+int32_t k_diroperator_num_files(const void* self) {
     return KDirOperator_NumFiles((KDirOperator*)self);
 }
 
-KCompletion* k_diroperator_completion_object(void* self) {
+KCompletion* k_diroperator_completion_object(const void* self) {
     return KDirOperator_CompletionObject((KDirOperator*)self);
 }
 
-KCompletion* k_diroperator_dir_completion_object(void* self) {
+KCompletion* k_diroperator_dir_completion_object(const void* self) {
     return KDirOperator_DirCompletionObject((KDirOperator*)self);
 }
 
-QAction* k_diroperator_action(void* self, int32_t action) {
+QAction* k_diroperator_action(const void* self, int32_t action) {
     return KDirOperator_Action((KDirOperator*)self, action);
 }
 
-libqt_list /* of QAction* */ k_diroperator_all_actions(void* self) {
+libqt_list /* of QAction* */ k_diroperator_all_actions(const void* self) {
     libqt_list _arr = KDirOperator_AllActions((KDirOperator*)self);
     return _arr;
 }
@@ -319,19 +319,19 @@ void k_diroperator_super_set_view_config(void* self, void* configGroup) {
     KDirOperator_SuperSetViewConfig((KDirOperator*)self, (KConfigGroup*)configGroup);
 }
 
-KConfigGroup* k_diroperator_view_config_group(void* self) {
+KConfigGroup* k_diroperator_view_config_group(const void* self) {
     return KDirOperator_ViewConfigGroup((KDirOperator*)self);
 }
 
-void k_diroperator_read_config(void* self, void* configGroup) {
+void k_diroperator_read_config(void* self, const void* configGroup) {
     KDirOperator_ReadConfig((KDirOperator*)self, (KConfigGroup*)configGroup);
 }
 
-void k_diroperator_on_read_config(void* self, void (*callback)(void*, void*)) {
+void k_diroperator_on_read_config(void* self, void (*callback)(void*, const void*)) {
     KDirOperator_OnReadConfig((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_super_read_config(void* self, void* configGroup) {
+void k_diroperator_super_read_config(void* self, const void* configGroup) {
     KDirOperator_SuperReadConfig((KDirOperator*)self, (KConfigGroup*)configGroup);
 }
 
@@ -351,7 +351,7 @@ void k_diroperator_set_only_double_click_selects_files(void* self, bool enable) 
     KDirOperator_SetOnlyDoubleClickSelectsFiles((KDirOperator*)self, enable);
 }
 
-bool k_diroperator_only_double_click_selects_files(void* self) {
+bool k_diroperator_only_double_click_selects_files(const void* self) {
     return KDirOperator_OnlyDoubleClickSelectsFiles((KDirOperator*)self);
 }
 
@@ -359,7 +359,7 @@ void k_diroperator_set_follow_new_directories(void* self, bool enable) {
     KDirOperator_SetFollowNewDirectories((KDirOperator*)self, enable);
 }
 
-bool k_diroperator_follow_new_directories(void* self) {
+bool k_diroperator_follow_new_directories(const void* self) {
     return KDirOperator_FollowNewDirectories((KDirOperator*)self);
 }
 
@@ -367,19 +367,19 @@ void k_diroperator_set_follow_selected_directories(void* self, bool enable) {
     KDirOperator_SetFollowSelectedDirectories((KDirOperator*)self, enable);
 }
 
-bool k_diroperator_follow_selected_directories(void* self) {
+bool k_diroperator_follow_selected_directories(const void* self) {
     return KDirOperator_FollowSelectedDirectories((KDirOperator*)self);
 }
 
-KIO__DeleteJob* k_diroperator_del(void* self, void* items, void* parent, bool ask, bool showProgress) {
+KIO__DeleteJob* k_diroperator_del(void* self, const void* items, void* parent, bool ask, bool showProgress) {
     return KDirOperator_Del((KDirOperator*)self, (KFileItemList*)items, (QWidget*)parent, ask, showProgress);
 }
 
-void k_diroperator_on_del(void* self, KIO__DeleteJob* (*callback)(void*, void*, void*, bool, bool)) {
+void k_diroperator_on_del(void* self, KIO__DeleteJob* (*callback)(void*, const void*, void*, bool, bool)) {
     KDirOperator_OnDel((KDirOperator*)self, (intptr_t)callback);
 }
 
-KIO__DeleteJob* k_diroperator_super_del(void* self, void* items, void* parent, bool ask, bool showProgress) {
+KIO__DeleteJob* k_diroperator_super_del(void* self, const void* items, void* parent, bool ask, bool showProgress) {
     return KDirOperator_SuperDel((KDirOperator*)self, (KFileItemList*)items, (QWidget*)parent, ask, showProgress);
 }
 
@@ -399,11 +399,11 @@ void k_diroperator_super_set_enable_dir_highlighting(void* self, bool enable) {
     KDirOperator_SuperSetEnableDirHighlighting((KDirOperator*)self, enable);
 }
 
-bool k_diroperator_dir_highlighting(void* self) {
+bool k_diroperator_dir_highlighting(const void* self) {
     return KDirOperator_DirHighlighting((KDirOperator*)self);
 }
 
-bool k_diroperator_dir_only_mode(void* self) {
+bool k_diroperator_dir_only_mode(const void* self) {
     return KDirOperator_DirOnlyMode((KDirOperator*)self);
 }
 
@@ -439,19 +439,19 @@ void k_diroperator_super_set_drop_options(void* self, int options) {
     KDirOperator_SuperSetDropOptions((KDirOperator*)self, options);
 }
 
-KIO__CopyJob* k_diroperator_trash(void* self, void* items, void* parent, bool ask, bool showProgress) {
+KIO__CopyJob* k_diroperator_trash(void* self, const void* items, void* parent, bool ask, bool showProgress) {
     return KDirOperator_Trash((KDirOperator*)self, (KFileItemList*)items, (QWidget*)parent, ask, showProgress);
 }
 
-void k_diroperator_on_trash(void* self, KIO__CopyJob* (*callback)(void*, void*, void*, bool, bool)) {
+void k_diroperator_on_trash(void* self, KIO__CopyJob* (*callback)(void*, const void*, void*, bool, bool)) {
     KDirOperator_OnTrash((KDirOperator*)self, (intptr_t)callback);
 }
 
-KIO__CopyJob* k_diroperator_super_trash(void* self, void* items, void* parent, bool ask, bool showProgress) {
+KIO__CopyJob* k_diroperator_super_trash(void* self, const void* items, void* parent, bool ask, bool showProgress) {
     return KDirOperator_SuperTrash((KDirOperator*)self, (KFileItemList*)items, (QWidget*)parent, ask, showProgress);
 }
 
-KFilePreviewGenerator* k_diroperator_preview_generator(void* self) {
+KFilePreviewGenerator* k_diroperator_preview_generator(const void* self) {
     return KDirOperator_PreviewGenerator((KDirOperator*)self);
 }
 
@@ -459,7 +459,7 @@ void k_diroperator_set_inline_preview_shown(void* self, bool show) {
     KDirOperator_SetInlinePreviewShown((KDirOperator*)self, show);
 }
 
-int32_t k_diroperator_decoration_position(void* self) {
+int32_t k_diroperator_decoration_position(const void* self) {
     return KDirOperator_DecorationPosition((KDirOperator*)self);
 }
 
@@ -467,11 +467,11 @@ void k_diroperator_set_decoration_position(void* self, int32_t position) {
     KDirOperator_SetDecorationPosition((KDirOperator*)self, position);
 }
 
-bool k_diroperator_is_inline_preview_shown(void* self) {
+bool k_diroperator_is_inline_preview_shown(const void* self) {
     return KDirOperator_IsInlinePreviewShown((KDirOperator*)self);
 }
 
-int32_t k_diroperator_icon_size(void* self) {
+int32_t k_diroperator_icon_size(const void* self) {
     return KDirOperator_IconSize((KDirOperator*)self);
 }
 
@@ -479,11 +479,11 @@ void k_diroperator_set_is_saving(void* self, bool isSaving) {
     KDirOperator_SetIsSaving((KDirOperator*)self, isSaving);
 }
 
-bool k_diroperator_is_saving(void* self) {
+bool k_diroperator_is_saving(const void* self) {
     return KDirOperator_IsSaving((KDirOperator*)self);
 }
 
-const char** k_diroperator_supported_schemes(void* self) {
+const char** k_diroperator_supported_schemes(const void* self) {
     libqt_list _arr = KDirOperator_SupportedSchemes((KDirOperator*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -548,83 +548,35 @@ void k_diroperator_setup_actions(void* self) {
     KDirOperator_SetupActions((KDirOperator*)self);
 }
 
-void k_diroperator_on_setup_actions(void* self, void (*callback)()) {
-    KDirOperator_OnSetupActions((KDirOperator*)self, (intptr_t)callback);
-}
-
-void k_diroperator_super_setup_actions(void* self) {
-    KDirOperator_SuperSetupActions((KDirOperator*)self);
-}
-
 void k_diroperator_update_sort_actions(void* self) {
     KDirOperator_UpdateSortActions((KDirOperator*)self);
-}
-
-void k_diroperator_on_update_sort_actions(void* self, void (*callback)()) {
-    KDirOperator_OnUpdateSortActions((KDirOperator*)self, (intptr_t)callback);
-}
-
-void k_diroperator_super_update_sort_actions(void* self) {
-    KDirOperator_SuperUpdateSortActions((KDirOperator*)self);
 }
 
 void k_diroperator_update_view_actions(void* self) {
     KDirOperator_UpdateViewActions((KDirOperator*)self);
 }
 
-void k_diroperator_on_update_view_actions(void* self, void (*callback)()) {
-    KDirOperator_OnUpdateViewActions((KDirOperator*)self, (intptr_t)callback);
-}
-
-void k_diroperator_super_update_view_actions(void* self) {
-    KDirOperator_SuperUpdateViewActions((KDirOperator*)self);
-}
-
 void k_diroperator_setup_menu2(void* self) {
     KDirOperator_SetupMenu2((KDirOperator*)self);
-}
-
-void k_diroperator_on_setup_menu2(void* self, void (*callback)()) {
-    KDirOperator_OnSetupMenu2((KDirOperator*)self, (intptr_t)callback);
-}
-
-void k_diroperator_super_setup_menu2(void* self) {
-    KDirOperator_SuperSetupMenu2((KDirOperator*)self);
 }
 
 void k_diroperator_prepare_completion_objects(void* self) {
     KDirOperator_PrepareCompletionObjects((KDirOperator*)self);
 }
 
-void k_diroperator_on_prepare_completion_objects(void* self, void (*callback)()) {
-    KDirOperator_OnPrepareCompletionObjects((KDirOperator*)self, (intptr_t)callback);
-}
-
-void k_diroperator_super_prepare_completion_objects(void* self) {
-    KDirOperator_SuperPrepareCompletionObjects((KDirOperator*)self);
-}
-
 bool k_diroperator_check_preview_support(void* self) {
     return KDirOperator_CheckPreviewSupport((KDirOperator*)self);
 }
 
-void k_diroperator_on_check_preview_support(void* self, bool (*callback)()) {
-    KDirOperator_OnCheckPreviewSupport((KDirOperator*)self, (intptr_t)callback);
-}
-
-bool k_diroperator_super_check_preview_support(void* self) {
-    return KDirOperator_SuperCheckPreviewSupport((KDirOperator*)self);
-}
-
-void k_diroperator_activated_menu(void* self, void* item, void* pos) {
+void k_diroperator_activated_menu(void* self, const void* item, const void* pos) {
     KDirOperator_ActivatedMenu((KDirOperator*)self, (KFileItem*)item, (QPoint*)pos);
 }
 
-void k_diroperator_on_activated_menu(void* self, void (*callback)(void*, void*, void*)) {
+void k_diroperator_on_activated_menu(void* self, void (*callback)(void*, const void*, const void*)) {
     KDirOperator_OnActivatedMenu((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_super_activated_menu(void* self, void* item, void* pos) {
+void k_diroperator_super_activated_menu(void* self, const void* item, const void* pos) {
     KDirOperator_SuperActivatedMenu((KDirOperator*)self, (KFileItem*)item, (QPoint*)pos);
 }
 
@@ -656,7 +608,7 @@ void k_diroperator_back(void* self) {
     KDirOperator_Back((KDirOperator*)self);
 }
 
-void k_diroperator_on_back(void* self, void (*callback)()) {
+void k_diroperator_on_back(void* self, void (*callback)(void*)) {
     KDirOperator_OnBack((KDirOperator*)self, (intptr_t)callback);
 }
 
@@ -668,7 +620,7 @@ void k_diroperator_forward(void* self) {
     KDirOperator_Forward((KDirOperator*)self);
 }
 
-void k_diroperator_on_forward(void* self, void (*callback)()) {
+void k_diroperator_on_forward(void* self, void (*callback)(void*)) {
     KDirOperator_OnForward((KDirOperator*)self, (intptr_t)callback);
 }
 
@@ -680,7 +632,7 @@ void k_diroperator_home(void* self) {
     KDirOperator_Home((KDirOperator*)self);
 }
 
-void k_diroperator_on_home(void* self, void (*callback)()) {
+void k_diroperator_on_home(void* self, void (*callback)(void*)) {
     KDirOperator_OnHome((KDirOperator*)self, (intptr_t)callback);
 }
 
@@ -692,7 +644,7 @@ void k_diroperator_cd_up(void* self) {
     KDirOperator_CdUp((KDirOperator*)self);
 }
 
-void k_diroperator_on_cd_up(void* self, void (*callback)()) {
+void k_diroperator_on_cd_up(void* self, void (*callback)(void*)) {
     KDirOperator_OnCdUp((KDirOperator*)self, (intptr_t)callback);
 }
 
@@ -708,7 +660,7 @@ void k_diroperator_reread_dir(void* self) {
     KDirOperator_RereadDir((KDirOperator*)self);
 }
 
-void k_diroperator_on_reread_dir(void* self, void (*callback)()) {
+void k_diroperator_on_reread_dir(void* self, void (*callback)(void*)) {
     KDirOperator_OnRereadDir((KDirOperator*)self, (intptr_t)callback);
 }
 
@@ -720,7 +672,7 @@ void k_diroperator_mkdir(void* self) {
     KDirOperator_Mkdir((KDirOperator*)self);
 }
 
-void k_diroperator_on_mkdir(void* self, void (*callback)()) {
+void k_diroperator_on_mkdir(void* self, void (*callback)(void*)) {
     KDirOperator_OnMkdir((KDirOperator*)self, (intptr_t)callback);
 }
 
@@ -732,7 +684,7 @@ void k_diroperator_delete_selected(void* self) {
     KDirOperator_DeleteSelected((KDirOperator*)self);
 }
 
-void k_diroperator_on_delete_selected(void* self, void (*callback)()) {
+void k_diroperator_on_delete_selected(void* self, void (*callback)(void*)) {
     KDirOperator_OnDeleteSelected((KDirOperator*)self, (intptr_t)callback);
 }
 
@@ -766,7 +718,7 @@ void k_diroperator_trash_selected(void* self) {
     KDirOperator_TrashSelected((KDirOperator*)self);
 }
 
-void k_diroperator_on_trash_selected(void* self, void (*callback)()) {
+void k_diroperator_on_trash_selected(void* self, void (*callback)(void*)) {
     KDirOperator_OnTrashSelected((KDirOperator*)self, (intptr_t)callback);
 }
 
@@ -796,163 +748,67 @@ void k_diroperator_reset_cursor(void* self) {
     KDirOperator_ResetCursor((KDirOperator*)self);
 }
 
-void k_diroperator_on_reset_cursor(void* self, void (*callback)()) {
-    KDirOperator_OnResetCursor((KDirOperator*)self, (intptr_t)callback);
-}
-
-void k_diroperator_super_reset_cursor(void* self) {
-    KDirOperator_SuperResetCursor((KDirOperator*)self);
-}
-
 void k_diroperator_path_changed(void* self) {
     KDirOperator_PathChanged((KDirOperator*)self);
 }
 
-void k_diroperator_on_path_changed(void* self, void (*callback)()) {
-    KDirOperator_OnPathChanged((KDirOperator*)self, (intptr_t)callback);
-}
-
-void k_diroperator_super_path_changed(void* self) {
-    KDirOperator_SuperPathChanged((KDirOperator*)self);
-}
-
-void k_diroperator_select_dir(void* self, void* item) {
+void k_diroperator_select_dir(void* self, const void* item) {
     KDirOperator_SelectDir((KDirOperator*)self, (KFileItem*)item);
 }
 
-void k_diroperator_on_select_dir(void* self, void (*callback)(void*, void*)) {
+void k_diroperator_on_select_dir(void* self, void (*callback)(void*, const void*)) {
     KDirOperator_OnSelectDir((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_super_select_dir(void* self, void* item) {
+void k_diroperator_super_select_dir(void* self, const void* item) {
     KDirOperator_SuperSelectDir((KDirOperator*)self, (KFileItem*)item);
 }
 
-void k_diroperator_select_file(void* self, void* item) {
+void k_diroperator_select_file(void* self, const void* item) {
     KDirOperator_SelectFile((KDirOperator*)self, (KFileItem*)item);
 }
 
-void k_diroperator_on_select_file(void* self, void (*callback)(void*, void*)) {
-    KDirOperator_OnSelectFile((KDirOperator*)self, (intptr_t)callback);
-}
-
-void k_diroperator_super_select_file(void* self, void* item) {
-    KDirOperator_SuperSelectFile((KDirOperator*)self, (KFileItem*)item);
-}
-
-void k_diroperator_highlight_file(void* self, void* item) {
+void k_diroperator_highlight_file(void* self, const void* item) {
     KDirOperator_HighlightFile((KDirOperator*)self, (KFileItem*)item);
-}
-
-void k_diroperator_on_highlight_file(void* self, void (*callback)(void*, void*)) {
-    KDirOperator_OnHighlightFile((KDirOperator*)self, (intptr_t)callback);
-}
-
-void k_diroperator_super_highlight_file(void* self, void* item) {
-    KDirOperator_SuperHighlightFile((KDirOperator*)self, (KFileItem*)item);
 }
 
 void k_diroperator_sort_by_name(void* self) {
     KDirOperator_SortByName((KDirOperator*)self);
 }
 
-void k_diroperator_on_sort_by_name(void* self, void (*callback)()) {
-    KDirOperator_OnSortByName((KDirOperator*)self, (intptr_t)callback);
-}
-
-void k_diroperator_super_sort_by_name(void* self) {
-    KDirOperator_SuperSortByName((KDirOperator*)self);
-}
-
 void k_diroperator_sort_by_size(void* self) {
     KDirOperator_SortBySize((KDirOperator*)self);
-}
-
-void k_diroperator_on_sort_by_size(void* self, void (*callback)()) {
-    KDirOperator_OnSortBySize((KDirOperator*)self, (intptr_t)callback);
-}
-
-void k_diroperator_super_sort_by_size(void* self) {
-    KDirOperator_SuperSortBySize((KDirOperator*)self);
 }
 
 void k_diroperator_sort_by_date(void* self) {
     KDirOperator_SortByDate((KDirOperator*)self);
 }
 
-void k_diroperator_on_sort_by_date(void* self, void (*callback)()) {
-    KDirOperator_OnSortByDate((KDirOperator*)self, (intptr_t)callback);
-}
-
-void k_diroperator_super_sort_by_date(void* self) {
-    KDirOperator_SuperSortByDate((KDirOperator*)self);
-}
-
 void k_diroperator_sort_by_type(void* self) {
     KDirOperator_SortByType((KDirOperator*)self);
-}
-
-void k_diroperator_on_sort_by_type(void* self, void (*callback)()) {
-    KDirOperator_OnSortByType((KDirOperator*)self, (intptr_t)callback);
-}
-
-void k_diroperator_super_sort_by_type(void* self) {
-    KDirOperator_SuperSortByType((KDirOperator*)self);
 }
 
 void k_diroperator_sort_reversed(void* self) {
     KDirOperator_SortReversed((KDirOperator*)self);
 }
 
-void k_diroperator_on_sort_reversed(void* self, void (*callback)()) {
-    KDirOperator_OnSortReversed((KDirOperator*)self, (intptr_t)callback);
-}
-
-void k_diroperator_super_sort_reversed(void* self) {
-    KDirOperator_SuperSortReversed((KDirOperator*)self);
-}
-
 void k_diroperator_toggle_dirs_first(void* self) {
     KDirOperator_ToggleDirsFirst((KDirOperator*)self);
-}
-
-void k_diroperator_on_toggle_dirs_first(void* self, void (*callback)()) {
-    KDirOperator_OnToggleDirsFirst((KDirOperator*)self, (intptr_t)callback);
-}
-
-void k_diroperator_super_toggle_dirs_first(void* self) {
-    KDirOperator_SuperToggleDirsFirst((KDirOperator*)self);
 }
 
 void k_diroperator_toggle_ignore_case(void* self) {
     KDirOperator_ToggleIgnoreCase((KDirOperator*)self);
 }
 
-void k_diroperator_on_toggle_ignore_case(void* self, void (*callback)()) {
-    KDirOperator_OnToggleIgnoreCase((KDirOperator*)self, (intptr_t)callback);
-}
-
-void k_diroperator_super_toggle_ignore_case(void* self) {
-    KDirOperator_SuperToggleIgnoreCase((KDirOperator*)self);
-}
-
 void k_diroperator_slot_completion_match(void* self, const char* match) {
     KDirOperator_SlotCompletionMatch((KDirOperator*)self, qstring(match));
 }
 
-void k_diroperator_on_slot_completion_match(void* self, void (*callback)(void*, const char*)) {
-    KDirOperator_OnSlotCompletionMatch((KDirOperator*)self, (intptr_t)callback);
-}
-
-void k_diroperator_super_slot_completion_match(void* self, const char* match) {
-    KDirOperator_SuperSlotCompletionMatch((KDirOperator*)self, qstring(match));
-}
-
-void k_diroperator_url_entered(void* self, void* param1) {
+void k_diroperator_url_entered(void* self, const void* param1) {
     KDirOperator_UrlEntered((KDirOperator*)self, (QUrl*)param1);
 }
 
-void k_diroperator_on_url_entered(void* self, void (*callback)(void*, void*)) {
+void k_diroperator_on_url_entered(void* self, void (*callback)(void*, const void*)) {
     KDirOperator_Connect_UrlEntered((KDirOperator*)self, (intptr_t)callback);
 }
 
@@ -988,43 +844,43 @@ void k_diroperator_on_view_changed(void* self, void (*callback)(void*, void*)) {
     KDirOperator_Connect_ViewChanged((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_file_highlighted(void* self, void* item) {
+void k_diroperator_file_highlighted(void* self, const void* item) {
     KDirOperator_FileHighlighted((KDirOperator*)self, (KFileItem*)item);
 }
 
-void k_diroperator_on_file_highlighted(void* self, void (*callback)(void*, void*)) {
+void k_diroperator_on_file_highlighted(void* self, void (*callback)(void*, const void*)) {
     KDirOperator_Connect_FileHighlighted((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_dir_activated(void* self, void* item) {
+void k_diroperator_dir_activated(void* self, const void* item) {
     KDirOperator_DirActivated((KDirOperator*)self, (KFileItem*)item);
 }
 
-void k_diroperator_on_dir_activated(void* self, void (*callback)(void*, void*)) {
+void k_diroperator_on_dir_activated(void* self, void (*callback)(void*, const void*)) {
     KDirOperator_Connect_DirActivated((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_file_selected(void* self, void* item) {
+void k_diroperator_file_selected(void* self, const void* item) {
     KDirOperator_FileSelected((KDirOperator*)self, (KFileItem*)item);
 }
 
-void k_diroperator_on_file_selected(void* self, void (*callback)(void*, void*)) {
+void k_diroperator_on_file_selected(void* self, void (*callback)(void*, const void*)) {
     KDirOperator_Connect_FileSelected((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_dropped(void* self, void* item, void* event, libqt_list /* of QUrl* */ urls) {
+void k_diroperator_dropped(void* self, const void* item, void* event, libqt_list /* of QUrl* */ urls) {
     KDirOperator_Dropped((KDirOperator*)self, (KFileItem*)item, (QDropEvent*)event, urls);
 }
 
-void k_diroperator_on_dropped(void* self, void (*callback)(void*, void*, void*, libqt_list /* of QUrl* */)) {
+void k_diroperator_on_dropped(void* self, void (*callback)(void*, const void*, void*, libqt_list /* of QUrl* */)) {
     KDirOperator_Connect_Dropped((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_context_menu_about_to_show(void* self, void* item, void* menu) {
+void k_diroperator_context_menu_about_to_show(void* self, const void* item, void* menu) {
     KDirOperator_ContextMenuAboutToShow((KDirOperator*)self, (KFileItem*)item, (QMenu*)menu);
 }
 
-void k_diroperator_on_context_menu_about_to_show(void* self, void (*callback)(void*, void*, void*)) {
+void k_diroperator_on_context_menu_about_to_show(void* self, void (*callback)(void*, const void*, void*)) {
     KDirOperator_Connect_ContextMenuAboutToShow((KDirOperator*)self, (intptr_t)callback);
 }
 
@@ -1074,7 +930,7 @@ KDirOperator* k_diroperator_from_q_paint_device(void* _qpaintdevice) {
     return (KDirOperator*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
-uintptr_t k_diroperator_win_id(void* self) {
+uintptr_t k_diroperator_win_id(const void* self) {
     return QWidget_WinId((QWidget*)self);
 }
 
@@ -1082,15 +938,15 @@ void k_diroperator_create_win_id(void* self) {
     QWidget_CreateWinId((QWidget*)self);
 }
 
-uintptr_t k_diroperator_internal_win_id(void* self) {
+uintptr_t k_diroperator_internal_win_id(const void* self) {
     return QWidget_InternalWinId((QWidget*)self);
 }
 
-uintptr_t k_diroperator_effective_win_id(void* self) {
+uintptr_t k_diroperator_effective_win_id(const void* self) {
     return QWidget_EffectiveWinId((QWidget*)self);
 }
 
-QStyle* k_diroperator_style(void* self) {
+QStyle* k_diroperator_style(const void* self) {
     return QWidget_Style((QWidget*)self);
 }
 
@@ -1098,19 +954,19 @@ void k_diroperator_set_style(void* self, void* style) {
     QWidget_SetStyle((QWidget*)self, (QStyle*)style);
 }
 
-bool k_diroperator_is_top_level(void* self) {
+bool k_diroperator_is_top_level(const void* self) {
     return QWidget_IsTopLevel((QWidget*)self);
 }
 
-bool k_diroperator_is_window(void* self) {
+bool k_diroperator_is_window(const void* self) {
     return QWidget_IsWindow((QWidget*)self);
 }
 
-bool k_diroperator_is_modal(void* self) {
+bool k_diroperator_is_modal(const void* self) {
     return QWidget_IsModal((QWidget*)self);
 }
 
-int32_t k_diroperator_window_modality(void* self) {
+int32_t k_diroperator_window_modality(const void* self) {
     return QWidget_WindowModality((QWidget*)self);
 }
 
@@ -1118,11 +974,11 @@ void k_diroperator_set_window_modality(void* self, int32_t windowModality) {
     QWidget_SetWindowModality((QWidget*)self, windowModality);
 }
 
-bool k_diroperator_is_enabled(void* self) {
+bool k_diroperator_is_enabled(const void* self) {
     return QWidget_IsEnabled((QWidget*)self);
 }
 
-bool k_diroperator_is_enabled_to(void* self, void* param1) {
+bool k_diroperator_is_enabled_to(const void* self, const void* param1) {
     return QWidget_IsEnabledTo((QWidget*)self, (QWidget*)param1);
 }
 
@@ -1138,83 +994,83 @@ void k_diroperator_set_window_modified(void* self, bool windowModified) {
     QWidget_SetWindowModified((QWidget*)self, windowModified);
 }
 
-QRect* k_diroperator_frame_geometry(void* self) {
+QRect* k_diroperator_frame_geometry(const void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-const QRect* k_diroperator_geometry(void* self) {
+const QRect* k_diroperator_geometry(const void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
-QRect* k_diroperator_normal_geometry(void* self) {
+QRect* k_diroperator_normal_geometry(const void* self) {
     return QWidget_NormalGeometry((QWidget*)self);
 }
 
-int32_t k_diroperator_x(void* self) {
+int32_t k_diroperator_x(const void* self) {
     return QWidget_X((QWidget*)self);
 }
 
-int32_t k_diroperator_y(void* self) {
+int32_t k_diroperator_y(const void* self) {
     return QWidget_Y((QWidget*)self);
 }
 
-QPoint* k_diroperator_pos(void* self) {
+QPoint* k_diroperator_pos(const void* self) {
     return QWidget_Pos((QWidget*)self);
 }
 
-QSize* k_diroperator_frame_size(void* self) {
+QSize* k_diroperator_frame_size(const void* self) {
     return QWidget_FrameSize((QWidget*)self);
 }
 
-QSize* k_diroperator_size(void* self) {
+QSize* k_diroperator_size(const void* self) {
     return QWidget_Size((QWidget*)self);
 }
 
-int32_t k_diroperator_width(void* self) {
+int32_t k_diroperator_width(const void* self) {
     return QWidget_Width((QWidget*)self);
 }
 
-int32_t k_diroperator_height(void* self) {
+int32_t k_diroperator_height(const void* self) {
     return QWidget_Height((QWidget*)self);
 }
 
-QRect* k_diroperator_rect(void* self) {
+QRect* k_diroperator_rect(const void* self) {
     return QWidget_Rect((QWidget*)self);
 }
 
-QRect* k_diroperator_children_rect(void* self) {
+QRect* k_diroperator_children_rect(const void* self) {
     return QWidget_ChildrenRect((QWidget*)self);
 }
 
-QRegion* k_diroperator_children_region(void* self) {
+QRegion* k_diroperator_children_region(const void* self) {
     return QWidget_ChildrenRegion((QWidget*)self);
 }
 
-QSize* k_diroperator_minimum_size(void* self) {
+QSize* k_diroperator_minimum_size(const void* self) {
     return QWidget_MinimumSize((QWidget*)self);
 }
 
-QSize* k_diroperator_maximum_size(void* self) {
+QSize* k_diroperator_maximum_size(const void* self) {
     return QWidget_MaximumSize((QWidget*)self);
 }
 
-int32_t k_diroperator_minimum_width(void* self) {
+int32_t k_diroperator_minimum_width(const void* self) {
     return QWidget_MinimumWidth((QWidget*)self);
 }
 
-int32_t k_diroperator_minimum_height(void* self) {
+int32_t k_diroperator_minimum_height(const void* self) {
     return QWidget_MinimumHeight((QWidget*)self);
 }
 
-int32_t k_diroperator_maximum_width(void* self) {
+int32_t k_diroperator_maximum_width(const void* self) {
     return QWidget_MaximumWidth((QWidget*)self);
 }
 
-int32_t k_diroperator_maximum_height(void* self) {
+int32_t k_diroperator_maximum_height(const void* self) {
     return QWidget_MaximumHeight((QWidget*)self);
 }
 
-void k_diroperator_set_minimum_size(void* self, void* minimumSize) {
+void k_diroperator_set_minimum_size(void* self, const void* minimumSize) {
     QWidget_SetMinimumSize((QWidget*)self, (QSize*)minimumSize);
 }
 
@@ -1222,7 +1078,7 @@ void k_diroperator_set_minimum_size2(void* self, int minw, int minh) {
     QWidget_SetMinimumSize2((QWidget*)self, minw, minh);
 }
 
-void k_diroperator_set_maximum_size(void* self, void* maximumSize) {
+void k_diroperator_set_maximum_size(void* self, const void* maximumSize) {
     QWidget_SetMaximumSize((QWidget*)self, (QSize*)maximumSize);
 }
 
@@ -1246,11 +1102,11 @@ void k_diroperator_set_maximum_height(void* self, int maxh) {
     QWidget_SetMaximumHeight((QWidget*)self, maxh);
 }
 
-QSize* k_diroperator_size_increment(void* self) {
+QSize* k_diroperator_size_increment(const void* self) {
     return QWidget_SizeIncrement((QWidget*)self);
 }
 
-void k_diroperator_set_size_increment(void* self, void* sizeIncrement) {
+void k_diroperator_set_size_increment(void* self, const void* sizeIncrement) {
     QWidget_SetSizeIncrement((QWidget*)self, (QSize*)sizeIncrement);
 }
 
@@ -1258,11 +1114,11 @@ void k_diroperator_set_size_increment2(void* self, int w, int h) {
     QWidget_SetSizeIncrement2((QWidget*)self, w, h);
 }
 
-QSize* k_diroperator_base_size(void* self) {
+QSize* k_diroperator_base_size(const void* self) {
     return QWidget_BaseSize((QWidget*)self);
 }
 
-void k_diroperator_set_base_size(void* self, void* baseSize) {
+void k_diroperator_set_base_size(void* self, const void* baseSize) {
     QWidget_SetBaseSize((QWidget*)self, (QSize*)baseSize);
 }
 
@@ -1270,7 +1126,7 @@ void k_diroperator_set_base_size2(void* self, int basew, int baseh) {
     QWidget_SetBaseSize2((QWidget*)self, basew, baseh);
 }
 
-void k_diroperator_set_fixed_size(void* self, void* fixedSize) {
+void k_diroperator_set_fixed_size(void* self, const void* fixedSize) {
     QWidget_SetFixedSize((QWidget*)self, (QSize*)fixedSize);
 }
 
@@ -1286,71 +1142,71 @@ void k_diroperator_set_fixed_height(void* self, int h) {
     QWidget_SetFixedHeight((QWidget*)self, h);
 }
 
-QPointF* k_diroperator_map_to_global(void* self, void* param1) {
+QPointF* k_diroperator_map_to_global(const void* self, const void* param1) {
     return QWidget_MapToGlobal((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* k_diroperator_map_to_global2(void* self, void* param1) {
+QPoint* k_diroperator_map_to_global2(const void* self, const void* param1) {
     return QWidget_MapToGlobal2((QWidget*)self, (QPoint*)param1);
 }
 
-QPointF* k_diroperator_map_from_global(void* self, void* param1) {
+QPointF* k_diroperator_map_from_global(const void* self, const void* param1) {
     return QWidget_MapFromGlobal((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* k_diroperator_map_from_global2(void* self, void* param1) {
+QPoint* k_diroperator_map_from_global2(const void* self, const void* param1) {
     return QWidget_MapFromGlobal2((QWidget*)self, (QPoint*)param1);
 }
 
-QPointF* k_diroperator_map_to_parent(void* self, void* param1) {
+QPointF* k_diroperator_map_to_parent(const void* self, const void* param1) {
     return QWidget_MapToParent((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* k_diroperator_map_to_parent2(void* self, void* param1) {
+QPoint* k_diroperator_map_to_parent2(const void* self, const void* param1) {
     return QWidget_MapToParent2((QWidget*)self, (QPoint*)param1);
 }
 
-QPointF* k_diroperator_map_from_parent(void* self, void* param1) {
+QPointF* k_diroperator_map_from_parent(const void* self, const void* param1) {
     return QWidget_MapFromParent((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* k_diroperator_map_from_parent2(void* self, void* param1) {
+QPoint* k_diroperator_map_from_parent2(const void* self, const void* param1) {
     return QWidget_MapFromParent2((QWidget*)self, (QPoint*)param1);
 }
 
-QPointF* k_diroperator_map_to(void* self, void* param1, void* param2) {
+QPointF* k_diroperator_map_to(const void* self, const void* param1, const void* param2) {
     return QWidget_MapTo((QWidget*)self, (QWidget*)param1, (QPointF*)param2);
 }
 
-QPoint* k_diroperator_map_to2(void* self, void* param1, void* param2) {
+QPoint* k_diroperator_map_to2(const void* self, const void* param1, const void* param2) {
     return QWidget_MapTo2((QWidget*)self, (QWidget*)param1, (QPoint*)param2);
 }
 
-QPointF* k_diroperator_map_from(void* self, void* param1, void* param2) {
+QPointF* k_diroperator_map_from(const void* self, const void* param1, const void* param2) {
     return QWidget_MapFrom((QWidget*)self, (QWidget*)param1, (QPointF*)param2);
 }
 
-QPoint* k_diroperator_map_from2(void* self, void* param1, void* param2) {
+QPoint* k_diroperator_map_from2(const void* self, const void* param1, const void* param2) {
     return QWidget_MapFrom2((QWidget*)self, (QWidget*)param1, (QPoint*)param2);
 }
 
-QWidget* k_diroperator_window(void* self) {
+QWidget* k_diroperator_window(const void* self) {
     return QWidget_Window((QWidget*)self);
 }
 
-QWidget* k_diroperator_native_parent_widget(void* self) {
+QWidget* k_diroperator_native_parent_widget(const void* self) {
     return QWidget_NativeParentWidget((QWidget*)self);
 }
 
-QWidget* k_diroperator_top_level_widget(void* self) {
+QWidget* k_diroperator_top_level_widget(const void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-const QPalette* k_diroperator_palette(void* self) {
+const QPalette* k_diroperator_palette(const void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
-void k_diroperator_set_palette(void* self, void* palette) {
+void k_diroperator_set_palette(void* self, const void* palette) {
     QWidget_SetPalette((QWidget*)self, (QPalette*)palette);
 }
 
@@ -1358,7 +1214,7 @@ void k_diroperator_set_background_role(void* self, int32_t backgroundRole) {
     QWidget_SetBackgroundRole((QWidget*)self, backgroundRole);
 }
 
-int32_t k_diroperator_background_role(void* self) {
+int32_t k_diroperator_background_role(const void* self) {
     return QWidget_BackgroundRole((QWidget*)self);
 }
 
@@ -1366,31 +1222,31 @@ void k_diroperator_set_foreground_role(void* self, int32_t foregroundRole) {
     QWidget_SetForegroundRole((QWidget*)self, foregroundRole);
 }
 
-int32_t k_diroperator_foreground_role(void* self) {
+int32_t k_diroperator_foreground_role(const void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-const QFont* k_diroperator_font(void* self) {
+const QFont* k_diroperator_font(const void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
-void k_diroperator_set_font(void* self, void* font) {
+void k_diroperator_set_font(void* self, const void* font) {
     QWidget_SetFont((QWidget*)self, (QFont*)font);
 }
 
-QFontMetrics* k_diroperator_font_metrics(void* self) {
+QFontMetrics* k_diroperator_font_metrics(const void* self) {
     return QWidget_FontMetrics((QWidget*)self);
 }
 
-QFontInfo* k_diroperator_font_info(void* self) {
+QFontInfo* k_diroperator_font_info(const void* self) {
     return QWidget_FontInfo((QWidget*)self);
 }
 
-QCursor* k_diroperator_cursor(void* self) {
+QCursor* k_diroperator_cursor(const void* self) {
     return QWidget_Cursor((QWidget*)self);
 }
 
-void k_diroperator_set_cursor(void* self, void* cursor) {
+void k_diroperator_set_cursor(void* self, const void* cursor) {
     QWidget_SetCursor((QWidget*)self, (QCursor*)cursor);
 }
 
@@ -1402,11 +1258,11 @@ void k_diroperator_set_mouse_tracking(void* self, bool enable) {
     QWidget_SetMouseTracking((QWidget*)self, enable);
 }
 
-bool k_diroperator_has_mouse_tracking(void* self) {
+bool k_diroperator_has_mouse_tracking(const void* self) {
     return QWidget_HasMouseTracking((QWidget*)self);
 }
 
-bool k_diroperator_under_mouse(void* self) {
+bool k_diroperator_under_mouse(const void* self) {
     return QWidget_UnderMouse((QWidget*)self);
 }
 
@@ -1414,19 +1270,19 @@ void k_diroperator_set_tablet_tracking(void* self, bool enable) {
     QWidget_SetTabletTracking((QWidget*)self, enable);
 }
 
-bool k_diroperator_has_tablet_tracking(void* self) {
+bool k_diroperator_has_tablet_tracking(const void* self) {
     return QWidget_HasTabletTracking((QWidget*)self);
 }
 
-void k_diroperator_set_mask(void* self, void* mask) {
+void k_diroperator_set_mask(void* self, const void* mask) {
     QWidget_SetMask((QWidget*)self, (QBitmap*)mask);
 }
 
-void k_diroperator_set_mask2(void* self, void* mask) {
+void k_diroperator_set_mask2(void* self, const void* mask) {
     QWidget_SetMask2((QWidget*)self, (QRegion*)mask);
 }
 
-QRegion* k_diroperator_mask(void* self) {
+QRegion* k_diroperator_mask(const void* self) {
     return QWidget_Mask((QWidget*)self);
 }
 
@@ -1446,7 +1302,7 @@ QPixmap* k_diroperator_grab(void* self) {
     return QWidget_Grab((QWidget*)self);
 }
 
-QGraphicsEffect* k_diroperator_graphics_effect(void* self) {
+QGraphicsEffect* k_diroperator_graphics_effect(const void* self) {
     return QWidget_GraphicsEffect((QWidget*)self);
 }
 
@@ -1470,25 +1326,25 @@ void k_diroperator_set_style_sheet(void* self, const char* styleSheet) {
     QWidget_SetStyleSheet((QWidget*)self, qstring(styleSheet));
 }
 
-const char* k_diroperator_style_sheet(void* self) {
+const char* k_diroperator_style_sheet(const void* self) {
     libqt_string _str = QWidget_StyleSheet((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_diroperator_window_title(void* self) {
+const char* k_diroperator_window_title(const void* self) {
     libqt_string _str = QWidget_WindowTitle((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_diroperator_set_window_icon(void* self, void* icon) {
+void k_diroperator_set_window_icon(void* self, const void* icon) {
     QWidget_SetWindowIcon((QWidget*)self, (QIcon*)icon);
 }
 
-QIcon* k_diroperator_window_icon(void* self) {
+QIcon* k_diroperator_window_icon(const void* self) {
     return QWidget_WindowIcon((QWidget*)self);
 }
 
@@ -1496,7 +1352,7 @@ void k_diroperator_set_window_icon_text(void* self, const char* windowIconText) 
     QWidget_SetWindowIconText((QWidget*)self, qstring(windowIconText));
 }
 
-const char* k_diroperator_window_icon_text(void* self) {
+const char* k_diroperator_window_icon_text(const void* self) {
     libqt_string _str = QWidget_WindowIconText((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1507,7 +1363,7 @@ void k_diroperator_set_window_role(void* self, const char* windowRole) {
     QWidget_SetWindowRole((QWidget*)self, qstring(windowRole));
 }
 
-const char* k_diroperator_window_role(void* self) {
+const char* k_diroperator_window_role(const void* self) {
     libqt_string _str = QWidget_WindowRole((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1518,7 +1374,7 @@ void k_diroperator_set_window_file_path(void* self, const char* filePath) {
     QWidget_SetWindowFilePath((QWidget*)self, qstring(filePath));
 }
 
-const char* k_diroperator_window_file_path(void* self) {
+const char* k_diroperator_window_file_path(const void* self) {
     libqt_string _str = QWidget_WindowFilePath((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1529,11 +1385,11 @@ void k_diroperator_set_window_opacity(void* self, double level) {
     QWidget_SetWindowOpacity((QWidget*)self, level);
 }
 
-double k_diroperator_window_opacity(void* self) {
+double k_diroperator_window_opacity(const void* self) {
     return QWidget_WindowOpacity((QWidget*)self);
 }
 
-bool k_diroperator_is_window_modified(void* self) {
+bool k_diroperator_is_window_modified(const void* self) {
     return QWidget_IsWindowModified((QWidget*)self);
 }
 
@@ -1541,7 +1397,7 @@ void k_diroperator_set_tool_tip(void* self, const char* toolTip) {
     QWidget_SetToolTip((QWidget*)self, qstring(toolTip));
 }
 
-const char* k_diroperator_tool_tip(void* self) {
+const char* k_diroperator_tool_tip(const void* self) {
     libqt_string _str = QWidget_ToolTip((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1552,7 +1408,7 @@ void k_diroperator_set_tool_tip_duration(void* self, int msec) {
     QWidget_SetToolTipDuration((QWidget*)self, msec);
 }
 
-int32_t k_diroperator_tool_tip_duration(void* self) {
+int32_t k_diroperator_tool_tip_duration(const void* self) {
     return QWidget_ToolTipDuration((QWidget*)self);
 }
 
@@ -1560,7 +1416,7 @@ void k_diroperator_set_status_tip(void* self, const char* statusTip) {
     QWidget_SetStatusTip((QWidget*)self, qstring(statusTip));
 }
 
-const char* k_diroperator_status_tip(void* self) {
+const char* k_diroperator_status_tip(const void* self) {
     libqt_string _str = QWidget_StatusTip((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1571,14 +1427,14 @@ void k_diroperator_set_whats_this(void* self, const char* whatsThis) {
     QWidget_SetWhatsThis((QWidget*)self, qstring(whatsThis));
 }
 
-const char* k_diroperator_whats_this(void* self) {
+const char* k_diroperator_whats_this(const void* self) {
     libqt_string _str = QWidget_WhatsThis((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_diroperator_accessible_name(void* self) {
+const char* k_diroperator_accessible_name(const void* self) {
     libqt_string _str = QWidget_AccessibleName((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1589,7 +1445,7 @@ void k_diroperator_set_accessible_name(void* self, const char* name) {
     QWidget_SetAccessibleName((QWidget*)self, qstring(name));
 }
 
-const char* k_diroperator_accessible_description(void* self) {
+const char* k_diroperator_accessible_description(const void* self) {
     libqt_string _str = QWidget_AccessibleDescription((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1604,7 +1460,7 @@ void k_diroperator_set_layout_direction(void* self, int32_t direction) {
     QWidget_SetLayoutDirection((QWidget*)self, direction);
 }
 
-int32_t k_diroperator_layout_direction(void* self) {
+int32_t k_diroperator_layout_direction(const void* self) {
     return QWidget_LayoutDirection((QWidget*)self);
 }
 
@@ -1612,11 +1468,11 @@ void k_diroperator_unset_layout_direction(void* self) {
     QWidget_UnsetLayoutDirection((QWidget*)self);
 }
 
-void k_diroperator_set_locale(void* self, void* locale) {
+void k_diroperator_set_locale(void* self, const void* locale) {
     QWidget_SetLocale((QWidget*)self, (QLocale*)locale);
 }
 
-QLocale* k_diroperator_locale(void* self) {
+QLocale* k_diroperator_locale(const void* self) {
     return QWidget_Locale((QWidget*)self);
 }
 
@@ -1624,11 +1480,11 @@ void k_diroperator_unset_locale(void* self) {
     QWidget_UnsetLocale((QWidget*)self);
 }
 
-bool k_diroperator_is_right_to_left(void* self) {
+bool k_diroperator_is_right_to_left(const void* self) {
     return QWidget_IsRightToLeft((QWidget*)self);
 }
 
-bool k_diroperator_is_left_to_right(void* self) {
+bool k_diroperator_is_left_to_right(const void* self) {
     return QWidget_IsLeftToRight((QWidget*)self);
 }
 
@@ -1636,7 +1492,7 @@ void k_diroperator_set_focus(void* self) {
     QWidget_SetFocus((QWidget*)self);
 }
 
-bool k_diroperator_is_active_window(void* self) {
+bool k_diroperator_is_active_window(const void* self) {
     return QWidget_IsActiveWindow((QWidget*)self);
 }
 
@@ -1652,7 +1508,7 @@ void k_diroperator_set_focus2(void* self, int32_t reason) {
     QWidget_SetFocus2((QWidget*)self, reason);
 }
 
-int32_t k_diroperator_focus_policy(void* self) {
+int32_t k_diroperator_focus_policy(const void* self) {
     return QWidget_FocusPolicy((QWidget*)self);
 }
 
@@ -1660,7 +1516,7 @@ void k_diroperator_set_focus_policy(void* self, int32_t policy) {
     QWidget_SetFocusPolicy((QWidget*)self, policy);
 }
 
-bool k_diroperator_has_focus(void* self) {
+bool k_diroperator_has_focus(const void* self) {
     return QWidget_HasFocus((QWidget*)self);
 }
 
@@ -1672,11 +1528,11 @@ void k_diroperator_set_focus_proxy(void* self, void* focusProxy) {
     QWidget_SetFocusProxy((QWidget*)self, (QWidget*)focusProxy);
 }
 
-QWidget* k_diroperator_focus_proxy(void* self) {
+QWidget* k_diroperator_focus_proxy(const void* self) {
     return QWidget_FocusProxy((QWidget*)self);
 }
 
-int32_t k_diroperator_context_menu_policy(void* self) {
+int32_t k_diroperator_context_menu_policy(const void* self) {
     return QWidget_ContextMenuPolicy((QWidget*)self);
 }
 
@@ -1688,7 +1544,7 @@ void k_diroperator_grab_mouse(void* self) {
     QWidget_GrabMouse((QWidget*)self);
 }
 
-void k_diroperator_grab_mouse2(void* self, void* param1) {
+void k_diroperator_grab_mouse2(void* self, const void* param1) {
     QWidget_GrabMouse2((QWidget*)self, (QCursor*)param1);
 }
 
@@ -1704,7 +1560,7 @@ void k_diroperator_release_keyboard(void* self) {
     QWidget_ReleaseKeyboard((QWidget*)self);
 }
 
-int32_t k_diroperator_grab_shortcut(void* self, void* key) {
+int32_t k_diroperator_grab_shortcut(void* self, const void* key) {
     return QWidget_GrabShortcut((QWidget*)self, (QKeySequence*)key);
 }
 
@@ -1728,7 +1584,7 @@ QWidget* k_diroperator_keyboard_grabber() {
     return QWidget_KeyboardGrabber();
 }
 
-bool k_diroperator_updates_enabled(void* self) {
+bool k_diroperator_updates_enabled(const void* self) {
     return QWidget_UpdatesEnabled((QWidget*)self);
 }
 
@@ -1736,7 +1592,7 @@ void k_diroperator_set_updates_enabled(void* self, bool enable) {
     QWidget_SetUpdatesEnabled((QWidget*)self, enable);
 }
 
-QGraphicsProxyWidget* k_diroperator_graphics_proxy_widget(void* self) {
+QGraphicsProxyWidget* k_diroperator_graphics_proxy_widget(const void* self) {
     return QWidget_GraphicsProxyWidget((QWidget*)self);
 }
 
@@ -1752,11 +1608,11 @@ void k_diroperator_update2(void* self, int x, int y, int w, int h) {
     QWidget_Update2((QWidget*)self, x, y, w, h);
 }
 
-void k_diroperator_update3(void* self, void* param1) {
+void k_diroperator_update3(void* self, const void* param1) {
     QWidget_Update3((QWidget*)self, (QRect*)param1);
 }
 
-void k_diroperator_update4(void* self, void* param1) {
+void k_diroperator_update4(void* self, const void* param1) {
     QWidget_Update4((QWidget*)self, (QRegion*)param1);
 }
 
@@ -1764,11 +1620,11 @@ void k_diroperator_repaint2(void* self, int x, int y, int w, int h) {
     QWidget_Repaint2((QWidget*)self, x, y, w, h);
 }
 
-void k_diroperator_repaint3(void* self, void* param1) {
+void k_diroperator_repaint3(void* self, const void* param1) {
     QWidget_Repaint3((QWidget*)self, (QRect*)param1);
 }
 
-void k_diroperator_repaint4(void* self, void* param1) {
+void k_diroperator_repaint4(void* self, const void* param1) {
     QWidget_Repaint4((QWidget*)self, (QRegion*)param1);
 }
 
@@ -1816,7 +1672,7 @@ void k_diroperator_move(void* self, int x, int y) {
     QWidget_Move((QWidget*)self, x, y);
 }
 
-void k_diroperator_move2(void* self, void* param1) {
+void k_diroperator_move2(void* self, const void* param1) {
     QWidget_Move2((QWidget*)self, (QPoint*)param1);
 }
 
@@ -1824,7 +1680,7 @@ void k_diroperator_resize(void* self, int w, int h) {
     QWidget_Resize((QWidget*)self, w, h);
 }
 
-void k_diroperator_resize2(void* self, void* param1) {
+void k_diroperator_resize2(void* self, const void* param1) {
     QWidget_Resize2((QWidget*)self, (QSize*)param1);
 }
 
@@ -1832,11 +1688,11 @@ void k_diroperator_set_geometry(void* self, int x, int y, int w, int h) {
     QWidget_SetGeometry((QWidget*)self, x, y, w, h);
 }
 
-void k_diroperator_set_geometry2(void* self, void* geometry) {
+void k_diroperator_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* k_diroperator_save_geometry(void* self) {
+char* k_diroperator_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1851,31 +1707,31 @@ void k_diroperator_adjust_size(void* self) {
     QWidget_AdjustSize((QWidget*)self);
 }
 
-bool k_diroperator_is_visible(void* self) {
+bool k_diroperator_is_visible(const void* self) {
     return QWidget_IsVisible((QWidget*)self);
 }
 
-bool k_diroperator_is_visible_to(void* self, void* param1) {
+bool k_diroperator_is_visible_to(const void* self, const void* param1) {
     return QWidget_IsVisibleTo((QWidget*)self, (QWidget*)param1);
 }
 
-bool k_diroperator_is_hidden(void* self) {
+bool k_diroperator_is_hidden(const void* self) {
     return QWidget_IsHidden((QWidget*)self);
 }
 
-bool k_diroperator_is_minimized(void* self) {
+bool k_diroperator_is_minimized(const void* self) {
     return QWidget_IsMinimized((QWidget*)self);
 }
 
-bool k_diroperator_is_maximized(void* self) {
+bool k_diroperator_is_maximized(const void* self) {
     return QWidget_IsMaximized((QWidget*)self);
 }
 
-bool k_diroperator_is_full_screen(void* self) {
+bool k_diroperator_is_full_screen(const void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int32_t k_diroperator_window_state(void* self) {
+int32_t k_diroperator_window_state(const void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
@@ -1887,7 +1743,7 @@ void k_diroperator_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
-QSizePolicy* k_diroperator_size_policy(void* self) {
+QSizePolicy* k_diroperator_size_policy(const void* self) {
     return QWidget_SizePolicy((QWidget*)self);
 }
 
@@ -1899,7 +1755,7 @@ void k_diroperator_set_size_policy2(void* self, int32_t horizontal, int32_t vert
     QWidget_SetSizePolicy2((QWidget*)self, horizontal, vertical);
 }
 
-QRegion* k_diroperator_visible_region(void* self) {
+QRegion* k_diroperator_visible_region(const void* self) {
     return QWidget_VisibleRegion((QWidget*)self);
 }
 
@@ -1907,19 +1763,19 @@ void k_diroperator_set_contents_margins(void* self, int left, int top, int right
     QWidget_SetContentsMargins((QWidget*)self, left, top, right, bottom);
 }
 
-void k_diroperator_set_contents_margins2(void* self, void* margins) {
+void k_diroperator_set_contents_margins2(void* self, const void* margins) {
     QWidget_SetContentsMargins2((QWidget*)self, (QMargins*)margins);
 }
 
-QMargins* k_diroperator_contents_margins(void* self) {
+QMargins* k_diroperator_contents_margins(const void* self) {
     return QWidget_ContentsMargins((QWidget*)self);
 }
 
-QRect* k_diroperator_contents_rect(void* self) {
+QRect* k_diroperator_contents_rect(const void* self) {
     return QWidget_ContentsRect((QWidget*)self);
 }
 
-QLayout* k_diroperator_layout(void* self) {
+QLayout* k_diroperator_layout(const void* self) {
     return QWidget_Layout((QWidget*)self);
 }
 
@@ -1943,23 +1799,23 @@ void k_diroperator_scroll(void* self, int dx, int dy) {
     QWidget_Scroll((QWidget*)self, dx, dy);
 }
 
-void k_diroperator_scroll2(void* self, int dx, int dy, void* param3) {
+void k_diroperator_scroll2(void* self, int dx, int dy, const void* param3) {
     QWidget_Scroll2((QWidget*)self, dx, dy, (QRect*)param3);
 }
 
-QWidget* k_diroperator_focus_widget(void* self) {
+QWidget* k_diroperator_focus_widget(const void* self) {
     return QWidget_FocusWidget((QWidget*)self);
 }
 
-QWidget* k_diroperator_next_in_focus_chain(void* self) {
+QWidget* k_diroperator_next_in_focus_chain(const void* self) {
     return QWidget_NextInFocusChain((QWidget*)self);
 }
 
-QWidget* k_diroperator_previous_in_focus_chain(void* self) {
+QWidget* k_diroperator_previous_in_focus_chain(const void* self) {
     return QWidget_PreviousInFocusChain((QWidget*)self);
 }
 
-bool k_diroperator_accept_drops(void* self) {
+bool k_diroperator_accept_drops(const void* self) {
     return QWidget_AcceptDrops((QWidget*)self);
 }
 
@@ -1983,7 +1839,7 @@ void k_diroperator_remove_action(void* self, void* action) {
     QWidget_RemoveAction((QWidget*)self, (QAction*)action);
 }
 
-libqt_list /* of QAction* */ k_diroperator_actions(void* self) {
+libqt_list /* of QAction* */ k_diroperator_actions(const void* self) {
     libqt_list _arr = QWidget_Actions((QWidget*)self);
     return _arr;
 }
@@ -1992,19 +1848,19 @@ QAction* k_diroperator_add_action2(void* self, const char* text) {
     return QWidget_AddAction2((QWidget*)self, qstring(text));
 }
 
-QAction* k_diroperator_add_action3(void* self, void* icon, const char* text) {
+QAction* k_diroperator_add_action3(void* self, const void* icon, const char* text) {
     return QWidget_AddAction3((QWidget*)self, (QIcon*)icon, qstring(text));
 }
 
-QAction* k_diroperator_add_action4(void* self, const char* text, void* shortcut) {
+QAction* k_diroperator_add_action4(void* self, const char* text, const void* shortcut) {
     return QWidget_AddAction4((QWidget*)self, qstring(text), (QKeySequence*)shortcut);
 }
 
-QAction* k_diroperator_add_action5(void* self, void* icon, const char* text, void* shortcut) {
+QAction* k_diroperator_add_action5(void* self, const void* icon, const char* text, const void* shortcut) {
     return QWidget_AddAction5((QWidget*)self, (QIcon*)icon, qstring(text), (QKeySequence*)shortcut);
 }
 
-QWidget* k_diroperator_parent_widget(void* self) {
+QWidget* k_diroperator_parent_widget(const void* self) {
     return QWidget_ParentWidget((QWidget*)self);
 }
 
@@ -2012,7 +1868,7 @@ void k_diroperator_set_window_flags(void* self, int32_t type) {
     QWidget_SetWindowFlags((QWidget*)self, type);
 }
 
-int32_t k_diroperator_window_flags(void* self) {
+int32_t k_diroperator_window_flags(const void* self) {
     return QWidget_WindowFlags((QWidget*)self);
 }
 
@@ -2024,7 +1880,7 @@ void k_diroperator_override_window_flags(void* self, int32_t type) {
     QWidget_OverrideWindowFlags((QWidget*)self, type);
 }
 
-int32_t k_diroperator_window_type(void* self) {
+int32_t k_diroperator_window_type(const void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
@@ -2032,15 +1888,15 @@ QWidget* k_diroperator_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 
-QWidget* k_diroperator_child_at(void* self, int x, int y) {
+QWidget* k_diroperator_child_at(const void* self, int x, int y) {
     return QWidget_ChildAt((QWidget*)self, x, y);
 }
 
-QWidget* k_diroperator_child_at2(void* self, void* p) {
+QWidget* k_diroperator_child_at2(const void* self, const void* p) {
     return QWidget_ChildAt2((QWidget*)self, (QPoint*)p);
 }
 
-QWidget* k_diroperator_child_at3(void* self, void* p) {
+QWidget* k_diroperator_child_at3(const void* self, const void* p) {
     return QWidget_ChildAt3((QWidget*)self, (QPointF*)p);
 }
 
@@ -2048,19 +1904,19 @@ void k_diroperator_set_attribute(void* self, int32_t param1) {
     QWidget_SetAttribute((QWidget*)self, param1);
 }
 
-bool k_diroperator_test_attribute(void* self, int32_t param1) {
+bool k_diroperator_test_attribute(const void* self, int32_t param1) {
     return QWidget_TestAttribute((QWidget*)self, param1);
 }
 
-void k_diroperator_ensure_polished(void* self) {
+void k_diroperator_ensure_polished(const void* self) {
     QWidget_EnsurePolished((QWidget*)self);
 }
 
-bool k_diroperator_is_ancestor_of(void* self, void* child) {
+bool k_diroperator_is_ancestor_of(const void* self, const void* child) {
     return QWidget_IsAncestorOf((QWidget*)self, (QWidget*)child);
 }
 
-bool k_diroperator_auto_fill_background(void* self) {
+bool k_diroperator_auto_fill_background(const void* self) {
     return QWidget_AutoFillBackground((QWidget*)self);
 }
 
@@ -2068,15 +1924,15 @@ void k_diroperator_set_auto_fill_background(void* self, bool enabled) {
     QWidget_SetAutoFillBackground((QWidget*)self, enabled);
 }
 
-QBackingStore* k_diroperator_backing_store(void* self) {
+QBackingStore* k_diroperator_backing_store(const void* self) {
     return QWidget_BackingStore((QWidget*)self);
 }
 
-QWindow* k_diroperator_window_handle(void* self) {
+QWindow* k_diroperator_window_handle(const void* self) {
     return QWidget_WindowHandle((QWidget*)self);
 }
 
-QScreen* k_diroperator_screen(void* self) {
+QScreen* k_diroperator_screen(const void* self) {
     return QWidget_Screen((QWidget*)self);
 }
 
@@ -2096,11 +1952,11 @@ void k_diroperator_on_window_title_changed(void* self, void (*callback)(void*, c
     QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
-void k_diroperator_window_icon_changed(void* self, void* icon) {
+void k_diroperator_window_icon_changed(void* self, const void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void k_diroperator_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+void k_diroperator_on_window_icon_changed(void* self, void (*callback)(void*, const void*)) {
     QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
@@ -2112,15 +1968,15 @@ void k_diroperator_on_window_icon_text_changed(void* self, void (*callback)(void
     QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
-void k_diroperator_custom_context_menu_requested(void* self, void* pos) {
+void k_diroperator_custom_context_menu_requested(void* self, const void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void k_diroperator_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+void k_diroperator_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*)) {
     QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
-int32_t k_diroperator_input_method_hints(void* self) {
+int32_t k_diroperator_input_method_hints(const void* self) {
     return QWidget_InputMethodHints((QWidget*)self);
 }
 
@@ -2128,31 +1984,31 @@ void k_diroperator_set_input_method_hints(void* self, int32_t hints) {
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
-void k_diroperator_render22(void* self, void* target, void* targetOffset) {
+void k_diroperator_render22(void* self, void* target, const void* targetOffset) {
     QWidget_Render22((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset);
 }
 
-void k_diroperator_render3(void* self, void* target, void* targetOffset, void* sourceRegion) {
+void k_diroperator_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion) {
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_diroperator_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
+void k_diroperator_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
-void k_diroperator_render23(void* self, void* painter, void* targetOffset) {
+void k_diroperator_render23(void* self, void* painter, const void* targetOffset) {
     QWidget_Render23((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset);
 }
 
-void k_diroperator_render32(void* self, void* painter, void* targetOffset, void* sourceRegion) {
+void k_diroperator_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion) {
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_diroperator_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
+void k_diroperator_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
-QPixmap* k_diroperator_grab1(void* self, void* rectangle) {
+QPixmap* k_diroperator_grab1(void* self, const void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
@@ -2160,7 +2016,7 @@ void k_diroperator_grab_gesture2(void* self, int32_t type, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, type, flags);
 }
 
-int32_t k_diroperator_grab_shortcut2(void* self, void* key, int32_t context) {
+int32_t k_diroperator_grab_shortcut2(void* self, const void* key, int32_t context) {
     return QWidget_GrabShortcut2((QWidget*)self, (QKeySequence*)key, context);
 }
 
@@ -2188,7 +2044,7 @@ QWidget* k_diroperator_create_window_container3(void* window, void* parent, int3
     return QWidget_CreateWindowContainer3((QWindow*)window, (QWidget*)parent, flags);
 }
 
-const char* k_diroperator_object_name(void* self) {
+const char* k_diroperator_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -2199,19 +2055,19 @@ void k_diroperator_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_diroperator_is_widget_type(void* self) {
+bool k_diroperator_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_diroperator_is_window_type(void* self) {
+bool k_diroperator_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_diroperator_is_quick_item_type(void* self) {
+bool k_diroperator_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_diroperator_signals_blocked(void* self) {
+bool k_diroperator_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -2219,7 +2075,7 @@ bool k_diroperator_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_diroperator_thread(void* self) {
+QThread* k_diroperator_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -2243,7 +2099,7 @@ void k_diroperator_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_diroperator_children(void* self) {
+libqt_list /* of QObject* */ k_diroperator_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -2256,55 +2112,55 @@ void k_diroperator_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_diroperator_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_diroperator_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_diroperator_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_diroperator_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_diroperator_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_diroperator_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_diroperator_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_diroperator_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_diroperator_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_diroperator_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_diroperator_disconnect3(void* self) {
+bool k_diroperator_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_diroperator_disconnect4(void* self, void* receiver) {
+bool k_diroperator_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_diroperator_disconnect5(void* param1) {
+bool k_diroperator_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_diroperator_dump_object_tree(void* self) {
+void k_diroperator_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_diroperator_dump_object_info(void* self) {
+void k_diroperator_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_diroperator_set_property(void* self, const char* name, void* value) {
+bool k_diroperator_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_diroperator_property(void* self, const char* name) {
+QVariant* k_diroperator_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_diroperator_dynamic_property_names(void* self) {
+const char** k_diroperator_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -2325,7 +2181,7 @@ QBindingStorage* k_diroperator_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_diroperator_binding_storage2(void* self) {
+const QBindingStorage* k_diroperator_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -2337,11 +2193,11 @@ void k_diroperator_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_diroperator_parent(void* self) {
+QObject* k_diroperator_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_diroperator_inherits(void* self, const char* classname) {
+bool k_diroperator_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -2357,31 +2213,31 @@ int32_t k_diroperator_start_timer23(void* self, int64_t time, int32_t timerType)
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_diroperator_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_diroperator_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_diroperator_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_diroperator_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_diroperator_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_diroperator_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_diroperator_disconnect1(void* self, const char* signal) {
+bool k_diroperator_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_diroperator_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_diroperator_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_diroperator_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_diroperator_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_diroperator_disconnect23(void* self, void* receiver, const char* member) {
+bool k_diroperator_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -2393,47 +2249,47 @@ void k_diroperator_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-bool k_diroperator_painting_active(void* self) {
+bool k_diroperator_painting_active(const void* self) {
     return QPaintDevice_PaintingActive(k_diroperator_as_q_paint_device(self));
 }
 
-int32_t k_diroperator_width_m_m(void* self) {
+int32_t k_diroperator_width_m_m(const void* self) {
     return QPaintDevice_WidthMM(k_diroperator_as_q_paint_device(self));
 }
 
-int32_t k_diroperator_height_m_m(void* self) {
+int32_t k_diroperator_height_m_m(const void* self) {
     return QPaintDevice_HeightMM(k_diroperator_as_q_paint_device(self));
 }
 
-int32_t k_diroperator_logical_dpi_x(void* self) {
+int32_t k_diroperator_logical_dpi_x(const void* self) {
     return QPaintDevice_LogicalDpiX(k_diroperator_as_q_paint_device(self));
 }
 
-int32_t k_diroperator_logical_dpi_y(void* self) {
+int32_t k_diroperator_logical_dpi_y(const void* self) {
     return QPaintDevice_LogicalDpiY(k_diroperator_as_q_paint_device(self));
 }
 
-int32_t k_diroperator_physical_dpi_x(void* self) {
+int32_t k_diroperator_physical_dpi_x(const void* self) {
     return QPaintDevice_PhysicalDpiX(k_diroperator_as_q_paint_device(self));
 }
 
-int32_t k_diroperator_physical_dpi_y(void* self) {
+int32_t k_diroperator_physical_dpi_y(const void* self) {
     return QPaintDevice_PhysicalDpiY(k_diroperator_as_q_paint_device(self));
 }
 
-double k_diroperator_device_pixel_ratio(void* self) {
+double k_diroperator_device_pixel_ratio(const void* self) {
     return QPaintDevice_DevicePixelRatio(k_diroperator_as_q_paint_device(self));
 }
 
-double k_diroperator_device_pixel_ratio_f(void* self) {
+double k_diroperator_device_pixel_ratio_f(const void* self) {
     return QPaintDevice_DevicePixelRatioF(k_diroperator_as_q_paint_device(self));
 }
 
-int32_t k_diroperator_color_count(void* self) {
+int32_t k_diroperator_color_count(const void* self) {
     return QPaintDevice_ColorCount(k_diroperator_as_q_paint_device(self));
 }
 
-int32_t k_diroperator_depth(void* self) {
+int32_t k_diroperator_depth(const void* self) {
     return QPaintDevice_Depth(k_diroperator_as_q_paint_device(self));
 }
 
@@ -2445,16 +2301,16 @@ int32_t k_diroperator_encode_metric_f(int32_t metric, double value) {
     return QPaintDevice_EncodeMetricF(metric, value);
 }
 
-int32_t k_diroperator_dev_type(void* self) {
+int32_t k_diroperator_dev_type(const void* self) {
     return KDirOperator_DevType((KDirOperator*)self);
 }
 
-int32_t k_diroperator_super_dev_type(void* self) {
+int32_t k_diroperator_super_dev_type(const void* self) {
     return KDirOperator_SuperDevType((KDirOperator*)self);
 }
 
-void k_diroperator_on_dev_type(void* self, int32_t (*callback)()) {
-    KDirOperator_OnDevType((KDirOperator*)self, (intptr_t)callback);
+void k_diroperator_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
+    KDirOperator_OnDevType((const KDirOperator*)self, (intptr_t)callback);
 }
 
 void k_diroperator_set_visible(void* self, bool visible) {
@@ -2469,64 +2325,64 @@ void k_diroperator_on_set_visible(void* self, void (*callback)(void*, bool)) {
     KDirOperator_OnSetVisible((KDirOperator*)self, (intptr_t)callback);
 }
 
-QSize* k_diroperator_size_hint(void* self) {
+QSize* k_diroperator_size_hint(const void* self) {
     return KDirOperator_SizeHint((KDirOperator*)self);
 }
 
-QSize* k_diroperator_super_size_hint(void* self) {
+QSize* k_diroperator_super_size_hint(const void* self) {
     return KDirOperator_SuperSizeHint((KDirOperator*)self);
 }
 
-void k_diroperator_on_size_hint(void* self, QSize* (*callback)()) {
-    KDirOperator_OnSizeHint((KDirOperator*)self, (intptr_t)callback);
+void k_diroperator_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+    KDirOperator_OnSizeHint((const KDirOperator*)self, (intptr_t)callback);
 }
 
-QSize* k_diroperator_minimum_size_hint(void* self) {
+QSize* k_diroperator_minimum_size_hint(const void* self) {
     return KDirOperator_MinimumSizeHint((KDirOperator*)self);
 }
 
-QSize* k_diroperator_super_minimum_size_hint(void* self) {
+QSize* k_diroperator_super_minimum_size_hint(const void* self) {
     return KDirOperator_SuperMinimumSizeHint((KDirOperator*)self);
 }
 
-void k_diroperator_on_minimum_size_hint(void* self, QSize* (*callback)()) {
-    KDirOperator_OnMinimumSizeHint((KDirOperator*)self, (intptr_t)callback);
+void k_diroperator_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
+    KDirOperator_OnMinimumSizeHint((const KDirOperator*)self, (intptr_t)callback);
 }
 
-int32_t k_diroperator_height_for_width(void* self, int param1) {
+int32_t k_diroperator_height_for_width(const void* self, int param1) {
     return KDirOperator_HeightForWidth((KDirOperator*)self, param1);
 }
 
-int32_t k_diroperator_super_height_for_width(void* self, int param1) {
+int32_t k_diroperator_super_height_for_width(const void* self, int param1) {
     return KDirOperator_SuperHeightForWidth((KDirOperator*)self, param1);
 }
 
-void k_diroperator_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
-    KDirOperator_OnHeightForWidth((KDirOperator*)self, (intptr_t)callback);
+void k_diroperator_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
+    KDirOperator_OnHeightForWidth((const KDirOperator*)self, (intptr_t)callback);
 }
 
-bool k_diroperator_has_height_for_width(void* self) {
+bool k_diroperator_has_height_for_width(const void* self) {
     return KDirOperator_HasHeightForWidth((KDirOperator*)self);
 }
 
-bool k_diroperator_super_has_height_for_width(void* self) {
+bool k_diroperator_super_has_height_for_width(const void* self) {
     return KDirOperator_SuperHasHeightForWidth((KDirOperator*)self);
 }
 
-void k_diroperator_on_has_height_for_width(void* self, bool (*callback)()) {
-    KDirOperator_OnHasHeightForWidth((KDirOperator*)self, (intptr_t)callback);
+void k_diroperator_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
+    KDirOperator_OnHasHeightForWidth((const KDirOperator*)self, (intptr_t)callback);
 }
 
-QPaintEngine* k_diroperator_paint_engine(void* self) {
+QPaintEngine* k_diroperator_paint_engine(const void* self) {
     return KDirOperator_PaintEngine((KDirOperator*)self);
 }
 
-QPaintEngine* k_diroperator_super_paint_engine(void* self) {
+QPaintEngine* k_diroperator_super_paint_engine(const void* self) {
     return KDirOperator_SuperPaintEngine((KDirOperator*)self);
 }
 
-void k_diroperator_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
-    KDirOperator_OnPaintEngine((KDirOperator*)self, (intptr_t)callback);
+void k_diroperator_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
+    KDirOperator_OnPaintEngine((const KDirOperator*)self, (intptr_t)callback);
 }
 
 bool k_diroperator_event(void* self, void* event) {
@@ -2829,52 +2685,52 @@ void k_diroperator_on_native_event(void* self, bool (*callback)(void*, libqt_str
     KDirOperator_OnNativeEvent((KDirOperator*)self, (intptr_t)callback);
 }
 
-int32_t k_diroperator_metric(void* self, int32_t param1) {
+int32_t k_diroperator_metric(const void* self, int32_t param1) {
     return KDirOperator_Metric((KDirOperator*)self, param1);
 }
 
-int32_t k_diroperator_super_metric(void* self, int32_t param1) {
+int32_t k_diroperator_super_metric(const void* self, int32_t param1) {
     return KDirOperator_SuperMetric((KDirOperator*)self, param1);
 }
 
-void k_diroperator_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
-    KDirOperator_OnMetric((KDirOperator*)self, (intptr_t)callback);
+void k_diroperator_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
+    KDirOperator_OnMetric((const KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_init_painter(void* self, void* painter) {
+void k_diroperator_init_painter(const void* self, void* painter) {
     KDirOperator_InitPainter((KDirOperator*)self, (QPainter*)painter);
 }
 
-void k_diroperator_super_init_painter(void* self, void* painter) {
+void k_diroperator_super_init_painter(const void* self, void* painter) {
     KDirOperator_SuperInitPainter((KDirOperator*)self, (QPainter*)painter);
 }
 
-void k_diroperator_on_init_painter(void* self, void (*callback)(void*, void*)) {
-    KDirOperator_OnInitPainter((KDirOperator*)self, (intptr_t)callback);
+void k_diroperator_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
+    KDirOperator_OnInitPainter((const KDirOperator*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_diroperator_redirected(void* self, void* offset) {
+QPaintDevice* k_diroperator_redirected(const void* self, void* offset) {
     return KDirOperator_Redirected((KDirOperator*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_diroperator_super_redirected(void* self, void* offset) {
+QPaintDevice* k_diroperator_super_redirected(const void* self, void* offset) {
     return KDirOperator_SuperRedirected((KDirOperator*)self, (QPoint*)offset);
 }
 
-void k_diroperator_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
-    KDirOperator_OnRedirected((KDirOperator*)self, (intptr_t)callback);
+void k_diroperator_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KDirOperator_OnRedirected((const KDirOperator*)self, (intptr_t)callback);
 }
 
-QPainter* k_diroperator_shared_painter(void* self) {
+QPainter* k_diroperator_shared_painter(const void* self) {
     return KDirOperator_SharedPainter((KDirOperator*)self);
 }
 
-QPainter* k_diroperator_super_shared_painter(void* self) {
+QPainter* k_diroperator_super_shared_painter(const void* self) {
     return KDirOperator_SuperSharedPainter((KDirOperator*)self);
 }
 
-void k_diroperator_on_shared_painter(void* self, QPainter* (*callback)()) {
-    KDirOperator_OnSharedPainter((KDirOperator*)self, (intptr_t)callback);
+void k_diroperator_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
+    KDirOperator_OnSharedPainter((const KDirOperator*)self, (intptr_t)callback);
 }
 
 void k_diroperator_input_method_event(void* self, void* param1) {
@@ -2889,16 +2745,16 @@ void k_diroperator_on_input_method_event(void* self, void (*callback)(void*, voi
     KDirOperator_OnInputMethodEvent((KDirOperator*)self, (intptr_t)callback);
 }
 
-QVariant* k_diroperator_input_method_query(void* self, int32_t param1) {
+QVariant* k_diroperator_input_method_query(const void* self, int32_t param1) {
     return KDirOperator_InputMethodQuery((KDirOperator*)self, param1);
 }
 
-QVariant* k_diroperator_super_input_method_query(void* self, int32_t param1) {
+QVariant* k_diroperator_super_input_method_query(const void* self, int32_t param1) {
     return KDirOperator_SuperInputMethodQuery((KDirOperator*)self, param1);
 }
 
-void k_diroperator_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
-    KDirOperator_OnInputMethodQuery((KDirOperator*)self, (intptr_t)callback);
+void k_diroperator_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KDirOperator_OnInputMethodQuery((const KDirOperator*)self, (intptr_t)callback);
 }
 
 bool k_diroperator_focus_next_prev_child(void* self, bool next) {
@@ -2949,27 +2805,27 @@ void k_diroperator_on_custom_event(void* self, void (*callback)(void*, void*)) {
     KDirOperator_OnCustomEvent((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_connect_notify(void* self, void* signal) {
+void k_diroperator_connect_notify(void* self, const void* signal) {
     KDirOperator_ConnectNotify((KDirOperator*)self, (QMetaMethod*)signal);
 }
 
-void k_diroperator_super_connect_notify(void* self, void* signal) {
+void k_diroperator_super_connect_notify(void* self, const void* signal) {
     KDirOperator_SuperConnectNotify((KDirOperator*)self, (QMetaMethod*)signal);
 }
 
-void k_diroperator_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_diroperator_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     KDirOperator_OnConnectNotify((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_disconnect_notify(void* self, void* signal) {
+void k_diroperator_disconnect_notify(void* self, const void* signal) {
     KDirOperator_DisconnectNotify((KDirOperator*)self, (QMetaMethod*)signal);
 }
 
-void k_diroperator_super_disconnect_notify(void* self, void* signal) {
+void k_diroperator_super_disconnect_notify(void* self, const void* signal) {
     KDirOperator_SuperDisconnectNotify((KDirOperator*)self, (QMetaMethod*)signal);
 }
 
-void k_diroperator_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_diroperator_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     KDirOperator_OnDisconnectNotify((KDirOperator*)self, (intptr_t)callback);
 }
 
@@ -2977,120 +2833,40 @@ void k_diroperator_update_micro_focus(void* self) {
     KDirOperator_UpdateMicroFocus((KDirOperator*)self);
 }
 
-void k_diroperator_super_update_micro_focus(void* self) {
-    KDirOperator_SuperUpdateMicroFocus((KDirOperator*)self);
-}
-
-void k_diroperator_on_update_micro_focus(void* self, void (*callback)()) {
-    KDirOperator_OnUpdateMicroFocus((KDirOperator*)self, (intptr_t)callback);
-}
-
 void k_diroperator_create(void* self) {
     KDirOperator_Create((KDirOperator*)self);
-}
-
-void k_diroperator_super_create(void* self) {
-    KDirOperator_SuperCreate((KDirOperator*)self);
-}
-
-void k_diroperator_on_create(void* self, void (*callback)()) {
-    KDirOperator_OnCreate((KDirOperator*)self, (intptr_t)callback);
 }
 
 void k_diroperator_destroy(void* self) {
     KDirOperator_Destroy((KDirOperator*)self);
 }
 
-void k_diroperator_super_destroy(void* self) {
-    KDirOperator_SuperDestroy((KDirOperator*)self);
-}
-
-void k_diroperator_on_destroy(void* self, void (*callback)()) {
-    KDirOperator_OnDestroy((KDirOperator*)self, (intptr_t)callback);
-}
-
 bool k_diroperator_focus_next_child(void* self) {
     return KDirOperator_FocusNextChild((KDirOperator*)self);
-}
-
-bool k_diroperator_super_focus_next_child(void* self) {
-    return KDirOperator_SuperFocusNextChild((KDirOperator*)self);
-}
-
-void k_diroperator_on_focus_next_child(void* self, bool (*callback)()) {
-    KDirOperator_OnFocusNextChild((KDirOperator*)self, (intptr_t)callback);
 }
 
 bool k_diroperator_focus_previous_child(void* self) {
     return KDirOperator_FocusPreviousChild((KDirOperator*)self);
 }
 
-bool k_diroperator_super_focus_previous_child(void* self) {
-    return KDirOperator_SuperFocusPreviousChild((KDirOperator*)self);
-}
-
-void k_diroperator_on_focus_previous_child(void* self, bool (*callback)()) {
-    KDirOperator_OnFocusPreviousChild((KDirOperator*)self, (intptr_t)callback);
-}
-
-QObject* k_diroperator_sender(void* self) {
+QObject* k_diroperator_sender(const void* self) {
     return KDirOperator_Sender((KDirOperator*)self);
 }
 
-QObject* k_diroperator_super_sender(void* self) {
-    return KDirOperator_SuperSender((KDirOperator*)self);
-}
-
-void k_diroperator_on_sender(void* self, QObject* (*callback)()) {
-    KDirOperator_OnSender((KDirOperator*)self, (intptr_t)callback);
-}
-
-int32_t k_diroperator_sender_signal_index(void* self) {
+int32_t k_diroperator_sender_signal_index(const void* self) {
     return KDirOperator_SenderSignalIndex((KDirOperator*)self);
 }
 
-int32_t k_diroperator_super_sender_signal_index(void* self) {
-    return KDirOperator_SuperSenderSignalIndex((KDirOperator*)self);
-}
-
-void k_diroperator_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    KDirOperator_OnSenderSignalIndex((KDirOperator*)self, (intptr_t)callback);
-}
-
-int32_t k_diroperator_receivers(void* self, const char* signal) {
+int32_t k_diroperator_receivers(const void* self, const char* signal) {
     return KDirOperator_Receivers((KDirOperator*)self, signal);
 }
 
-int32_t k_diroperator_super_receivers(void* self, const char* signal) {
-    return KDirOperator_SuperReceivers((KDirOperator*)self, signal);
-}
-
-void k_diroperator_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    KDirOperator_OnReceivers((KDirOperator*)self, (intptr_t)callback);
-}
-
-bool k_diroperator_is_signal_connected(void* self, void* signal) {
+bool k_diroperator_is_signal_connected(const void* self, const void* signal) {
     return KDirOperator_IsSignalConnected((KDirOperator*)self, (QMetaMethod*)signal);
 }
 
-bool k_diroperator_super_is_signal_connected(void* self, void* signal) {
-    return KDirOperator_SuperIsSignalConnected((KDirOperator*)self, (QMetaMethod*)signal);
-}
-
-void k_diroperator_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    KDirOperator_OnIsSignalConnected((KDirOperator*)self, (intptr_t)callback);
-}
-
-double k_diroperator_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+double k_diroperator_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB) {
     return KDirOperator_GetDecodedMetricF((KDirOperator*)self, metricA, metricB);
-}
-
-double k_diroperator_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KDirOperator_SuperGetDecodedMetricF((KDirOperator*)self, metricA, metricB);
-}
-
-void k_diroperator_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {
-    KDirOperator_OnGetDecodedMetricF((KDirOperator*)self, (intptr_t)callback);
 }
 
 void k_diroperator_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

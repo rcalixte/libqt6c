@@ -14,15 +14,15 @@ QsciMacro* q_scimacro_new2(const char* asc, void* parent) {
     return QsciMacro_New2(qstring(asc), (QsciScintilla*)parent);
 }
 
-const QMetaObject* q_scimacro_meta_object(void* self) {
+const QMetaObject* q_scimacro_meta_object(const void* self) {
     return QsciMacro_MetaObject((QsciMacro*)self);
 }
 
-void q_scimacro_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_scimacro_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QsciMacro_OnMetaObject((QsciMacro*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_scimacro_super_meta_object(void* self) {
+const QMetaObject* q_scimacro_super_meta_object(const void* self) {
     return QsciMacro_SuperMetaObject((QsciMacro*)self);
 }
 
@@ -65,7 +65,7 @@ bool q_scimacro_load(void* self, const char* asc) {
     return QsciMacro_Load((QsciMacro*)self, qstring(asc));
 }
 
-const char* q_scimacro_save(void* self) {
+const char* q_scimacro_save(const void* self) {
     libqt_string _str = QsciMacro_Save((QsciMacro*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -76,7 +76,7 @@ void q_scimacro_play(void* self) {
     QsciMacro_Play((QsciMacro*)self);
 }
 
-void q_scimacro_on_play(void* self, void (*callback)()) {
+void q_scimacro_on_play(void* self, void (*callback)(void*)) {
     QsciMacro_OnPlay((QsciMacro*)self, (intptr_t)callback);
 }
 
@@ -88,7 +88,7 @@ void q_scimacro_start_recording(void* self) {
     QsciMacro_StartRecording((QsciMacro*)self);
 }
 
-void q_scimacro_on_start_recording(void* self, void (*callback)()) {
+void q_scimacro_on_start_recording(void* self, void (*callback)(void*)) {
     QsciMacro_OnStartRecording((QsciMacro*)self, (intptr_t)callback);
 }
 
@@ -100,7 +100,7 @@ void q_scimacro_end_recording(void* self) {
     QsciMacro_EndRecording((QsciMacro*)self);
 }
 
-void q_scimacro_on_end_recording(void* self, void (*callback)()) {
+void q_scimacro_on_end_recording(void* self, void (*callback)(void*)) {
     QsciMacro_OnEndRecording((QsciMacro*)self, (intptr_t)callback);
 }
 
@@ -122,7 +122,7 @@ const char* q_scimacro_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-const char* q_scimacro_object_name(void* self) {
+const char* q_scimacro_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -133,19 +133,19 @@ void q_scimacro_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_scimacro_is_widget_type(void* self) {
+bool q_scimacro_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_scimacro_is_window_type(void* self) {
+bool q_scimacro_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_scimacro_is_quick_item_type(void* self) {
+bool q_scimacro_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_scimacro_signals_blocked(void* self) {
+bool q_scimacro_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -153,7 +153,7 @@ bool q_scimacro_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_scimacro_thread(void* self) {
+QThread* q_scimacro_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -177,7 +177,7 @@ void q_scimacro_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_scimacro_children(void* self) {
+libqt_list /* of QObject* */ q_scimacro_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -194,55 +194,55 @@ void q_scimacro_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_scimacro_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_scimacro_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_scimacro_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_scimacro_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_scimacro_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_scimacro_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_scimacro_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_scimacro_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_scimacro_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_scimacro_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_scimacro_disconnect3(void* self) {
+bool q_scimacro_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_scimacro_disconnect4(void* self, void* receiver) {
+bool q_scimacro_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_scimacro_disconnect5(void* param1) {
+bool q_scimacro_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_scimacro_dump_object_tree(void* self) {
+void q_scimacro_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_scimacro_dump_object_info(void* self) {
+void q_scimacro_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_scimacro_set_property(void* self, const char* name, void* value) {
+bool q_scimacro_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_scimacro_property(void* self, const char* name) {
+QVariant* q_scimacro_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_scimacro_dynamic_property_names(void* self) {
+const char** q_scimacro_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -263,7 +263,7 @@ QBindingStorage* q_scimacro_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_scimacro_binding_storage2(void* self) {
+const QBindingStorage* q_scimacro_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -275,11 +275,11 @@ void q_scimacro_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_scimacro_parent(void* self) {
+QObject* q_scimacro_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_scimacro_inherits(void* self, const char* classname) {
+bool q_scimacro_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -295,31 +295,31 @@ int32_t q_scimacro_start_timer23(void* self, int64_t time, int32_t timerType) {
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_scimacro_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_scimacro_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_scimacro_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_scimacro_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_scimacro_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_scimacro_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_scimacro_disconnect1(void* self, const char* signal) {
+bool q_scimacro_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_scimacro_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_scimacro_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_scimacro_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_scimacro_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_scimacro_disconnect23(void* self, void* receiver, const char* member) {
+bool q_scimacro_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -391,76 +391,44 @@ void q_scimacro_on_custom_event(void* self, void (*callback)(void*, void*)) {
     QsciMacro_OnCustomEvent((QsciMacro*)self, (intptr_t)callback);
 }
 
-void q_scimacro_connect_notify(void* self, void* signal) {
+void q_scimacro_connect_notify(void* self, const void* signal) {
     QsciMacro_ConnectNotify((QsciMacro*)self, (QMetaMethod*)signal);
 }
 
-void q_scimacro_super_connect_notify(void* self, void* signal) {
+void q_scimacro_super_connect_notify(void* self, const void* signal) {
     QsciMacro_SuperConnectNotify((QsciMacro*)self, (QMetaMethod*)signal);
 }
 
-void q_scimacro_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_scimacro_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QsciMacro_OnConnectNotify((QsciMacro*)self, (intptr_t)callback);
 }
 
-void q_scimacro_disconnect_notify(void* self, void* signal) {
+void q_scimacro_disconnect_notify(void* self, const void* signal) {
     QsciMacro_DisconnectNotify((QsciMacro*)self, (QMetaMethod*)signal);
 }
 
-void q_scimacro_super_disconnect_notify(void* self, void* signal) {
+void q_scimacro_super_disconnect_notify(void* self, const void* signal) {
     QsciMacro_SuperDisconnectNotify((QsciMacro*)self, (QMetaMethod*)signal);
 }
 
-void q_scimacro_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_scimacro_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QsciMacro_OnDisconnectNotify((QsciMacro*)self, (intptr_t)callback);
 }
 
-QObject* q_scimacro_sender(void* self) {
+QObject* q_scimacro_sender(const void* self) {
     return QsciMacro_Sender((QsciMacro*)self);
 }
 
-QObject* q_scimacro_super_sender(void* self) {
-    return QsciMacro_SuperSender((QsciMacro*)self);
-}
-
-void q_scimacro_on_sender(void* self, QObject* (*callback)()) {
-    QsciMacro_OnSender((QsciMacro*)self, (intptr_t)callback);
-}
-
-int32_t q_scimacro_sender_signal_index(void* self) {
+int32_t q_scimacro_sender_signal_index(const void* self) {
     return QsciMacro_SenderSignalIndex((QsciMacro*)self);
 }
 
-int32_t q_scimacro_super_sender_signal_index(void* self) {
-    return QsciMacro_SuperSenderSignalIndex((QsciMacro*)self);
-}
-
-void q_scimacro_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QsciMacro_OnSenderSignalIndex((QsciMacro*)self, (intptr_t)callback);
-}
-
-int32_t q_scimacro_receivers(void* self, const char* signal) {
+int32_t q_scimacro_receivers(const void* self, const char* signal) {
     return QsciMacro_Receivers((QsciMacro*)self, signal);
 }
 
-int32_t q_scimacro_super_receivers(void* self, const char* signal) {
-    return QsciMacro_SuperReceivers((QsciMacro*)self, signal);
-}
-
-void q_scimacro_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QsciMacro_OnReceivers((QsciMacro*)self, (intptr_t)callback);
-}
-
-bool q_scimacro_is_signal_connected(void* self, void* signal) {
+bool q_scimacro_is_signal_connected(const void* self, const void* signal) {
     return QsciMacro_IsSignalConnected((QsciMacro*)self, (QMetaMethod*)signal);
-}
-
-bool q_scimacro_super_is_signal_connected(void* self, void* signal) {
-    return QsciMacro_SuperIsSignalConnected((QsciMacro*)self, (QMetaMethod*)signal);
-}
-
-void q_scimacro_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QsciMacro_OnIsSignalConnected((QsciMacro*)self, (intptr_t)callback);
 }
 
 void q_scimacro_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

@@ -14,13 +14,13 @@
 ///
 /// @param value QJSValue*
 ///
-QJSValueIterator* q_jsvalueiterator_new(void* value);
+QJSValueIterator* q_jsvalueiterator_new(const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalueiterator.html#hasNext)
 ///
-/// @param self QJSValueIterator*
+/// @param self const QJSValueIterator*
 ///
-bool q_jsvalueiterator_has_next(void* self);
+bool q_jsvalueiterator_has_next(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalueiterator.html#next)
 ///
@@ -32,15 +32,15 @@ bool q_jsvalueiterator_next(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QJSValueIterator*
+/// @param self const QJSValueIterator*
 ///
-const char* q_jsvalueiterator_name(void* self);
+const char* q_jsvalueiterator_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalueiterator.html#value)
 ///
-/// @param self QJSValueIterator*
+/// @param self const QJSValueIterator*
 ///
-QJSValue* q_jsvalueiterator_value(void* self);
+QJSValue* q_jsvalueiterator_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalueiterator.html#operator-eq)
 ///

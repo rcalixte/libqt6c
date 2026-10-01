@@ -20,14 +20,14 @@ QGeoManeuver* q_geomaneuver_new();
 ///
 /// @param other QGeoManeuver*
 ///
-QGeoManeuver* q_geomaneuver_new2(void* other);
+QGeoManeuver* q_geomaneuver_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeomaneuver.html#operator-eq)
 ///
 /// @param self QGeoManeuver*
 /// @param other QGeoManeuver*
 ///
-void q_geomaneuver_operator_assign(void* self, void* other);
+void q_geomaneuver_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeomaneuver.html#swap)
 ///
@@ -38,22 +38,22 @@ void q_geomaneuver_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeomaneuver.html#isValid)
 ///
-/// @param self QGeoManeuver*
+/// @param self const QGeoManeuver*
 ///
-bool q_geomaneuver_is_valid(void* self);
+bool q_geomaneuver_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeomaneuver.html#setPosition)
 ///
 /// @param self QGeoManeuver*
 /// @param position QGeoCoordinate*
 ///
-void q_geomaneuver_set_position(void* self, void* position);
+void q_geomaneuver_set_position(void* self, const void* position);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeomaneuver.html#position)
 ///
-/// @param self QGeoManeuver*
+/// @param self const QGeoManeuver*
 ///
-QGeoCoordinate* q_geomaneuver_position(void* self);
+QGeoCoordinate* q_geomaneuver_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeomaneuver.html#setInstructionText)
 ///
@@ -66,9 +66,9 @@ void q_geomaneuver_set_instruction_text(void* self, const char* instructionText)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGeoManeuver*
+/// @param self const QGeoManeuver*
 ///
-const char* q_geomaneuver_instruction_text(void* self);
+const char* q_geomaneuver_instruction_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeomaneuver.html#setDirection)
 ///
@@ -79,11 +79,11 @@ void q_geomaneuver_set_direction(void* self, int32_t direction);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeomaneuver.html#direction)
 ///
-/// @param self QGeoManeuver*
+/// @param self const QGeoManeuver*
 ///
 /// @return enum QGeoManeuver__InstructionDirection
 ///
-int32_t q_geomaneuver_direction(void* self);
+int32_t q_geomaneuver_direction(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeomaneuver.html#setTimeToNextInstruction)
 ///
@@ -94,9 +94,9 @@ void q_geomaneuver_set_time_to_next_instruction(void* self, int secs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeomaneuver.html#timeToNextInstruction)
 ///
-/// @param self QGeoManeuver*
+/// @param self const QGeoManeuver*
 ///
-int32_t q_geomaneuver_time_to_next_instruction(void* self);
+int32_t q_geomaneuver_time_to_next_instruction(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeomaneuver.html#setDistanceToNextInstruction)
 ///
@@ -107,22 +107,22 @@ void q_geomaneuver_set_distance_to_next_instruction(void* self, double distance)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeomaneuver.html#distanceToNextInstruction)
 ///
-/// @param self QGeoManeuver*
+/// @param self const QGeoManeuver*
 ///
-double q_geomaneuver_distance_to_next_instruction(void* self);
+double q_geomaneuver_distance_to_next_instruction(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeomaneuver.html#setWaypoint)
 ///
 /// @param self QGeoManeuver*
 /// @param coordinate QGeoCoordinate*
 ///
-void q_geomaneuver_set_waypoint(void* self, void* coordinate);
+void q_geomaneuver_set_waypoint(void* self, const void* coordinate);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeomaneuver.html#waypoint)
 ///
-/// @param self QGeoManeuver*
+/// @param self const QGeoManeuver*
 ///
-QGeoCoordinate* q_geomaneuver_waypoint(void* self);
+QGeoCoordinate* q_geomaneuver_waypoint(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeomaneuver.html#setExtendedAttributes)
 ///
@@ -145,11 +145,11 @@ void q_geomaneuver_set_extended_attributes(void* self, libqt_map extendedAttribu
 /// free(map.values);
 /// ```
 ///
-/// @param self QGeoManeuver*
+/// @param self const QGeoManeuver*
 ///
 /// @return libqt_map of const char* to QVariant*
 ///
-libqt_map q_geomaneuver_extended_attributes(void* self);
+libqt_map q_geomaneuver_extended_attributes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeomaneuver.html#dtor.QGeoManeuver)
 ///

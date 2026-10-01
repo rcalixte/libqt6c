@@ -15,7 +15,7 @@
 /// @param key QTypeRevision*
 /// @param seed size_t
 ///
-size_t q_qtyperevision_q_hash(void* key, size_t seed);
+size_t q_qtyperevision_q_hash(const void* key, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtyperevision.html)
 
@@ -29,7 +29,7 @@ QTypeRevision* q_typerevision_new();
 ///
 /// @param other QTypeRevision*
 ///
-QTypeRevision* q_typerevision_new2(void* other);
+QTypeRevision* q_typerevision_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtyperevision.html)
 
@@ -45,7 +45,7 @@ QTypeRevision* q_typerevision_new3(void* other);
 ///
 /// @param param1 QTypeRevision*
 ///
-QTypeRevision* q_typerevision_new4(void* param1);
+QTypeRevision* q_typerevision_new4(const void* param1);
 
 /// q_typerevision_copy_assign shallow copies `other` into `self`.
 ///
@@ -67,33 +67,33 @@ QTypeRevision* q_typerevision_zero();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtyperevision.html#hasMajorVersion)
 ///
-/// @param self QTypeRevision*
+/// @param self const QTypeRevision*
 ///
-bool q_typerevision_has_major_version(void* self);
+bool q_typerevision_has_major_version(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtyperevision.html#majorVersion)
 ///
-/// @param self QTypeRevision*
+/// @param self const QTypeRevision*
 ///
-uint8_t q_typerevision_major_version(void* self);
+uint8_t q_typerevision_major_version(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtyperevision.html#hasMinorVersion)
 ///
-/// @param self QTypeRevision*
+/// @param self const QTypeRevision*
 ///
-bool q_typerevision_has_minor_version(void* self);
+bool q_typerevision_has_minor_version(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtyperevision.html#minorVersion)
 ///
-/// @param self QTypeRevision*
+/// @param self const QTypeRevision*
 ///
-uint8_t q_typerevision_minor_version(void* self);
+uint8_t q_typerevision_minor_version(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtyperevision.html#isValid)
 ///
-/// @param self QTypeRevision*
+/// @param self const QTypeRevision*
 ///
-bool q_typerevision_is_valid(void* self);
+bool q_typerevision_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtyperevision.html#dtor.QTypeRevision)
 ///

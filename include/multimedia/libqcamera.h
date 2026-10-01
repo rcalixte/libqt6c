@@ -20,7 +20,7 @@ QCamera* q_camera_new();
 ///
 /// @param cameraDevice QCameraDevice*
 ///
-QCamera* q_camera_new2(void* cameraDevice);
+QCamera* q_camera_new2(const void* cameraDevice);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html)
 
@@ -45,7 +45,7 @@ QCamera* q_camera_new4(void* parent);
 /// @param cameraDevice QCameraDevice*
 /// @param parent QObject*
 ///
-QCamera* q_camera_new5(void* cameraDevice, void* parent);
+QCamera* q_camera_new5(const void* cameraDevice, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html)
 
@@ -58,26 +58,26 @@ QCamera* q_camera_new6(int32_t position, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-const QMetaObject* q_camera_meta_object(void* self);
+const QMetaObject* q_camera_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QCamera*
-/// @param callback const QMetaObject* func()
+/// @param self const QCamera*
+/// @param callback const QMetaObject* func(const QCamera* self)
 ///
-void q_camera_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_camera_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-const QMetaObject* q_camera_super_meta_object(void* self);
+const QMetaObject* q_camera_super_meta_object(const void* self);
 
 /// @param self QCamera*
 /// @param param1 const char*
@@ -131,79 +131,79 @@ const char* q_camera_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#isAvailable)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-bool q_camera_is_available(void* self);
+bool q_camera_is_available(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#isActive)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-bool q_camera_is_active(void* self);
+bool q_camera_is_active(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#captureSession)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-QMediaCaptureSession* q_camera_capture_session(void* self);
+QMediaCaptureSession* q_camera_capture_session(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#cameraDevice)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-QCameraDevice* q_camera_camera_device(void* self);
+QCameraDevice* q_camera_camera_device(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#setCameraDevice)
 ///
 /// @param self QCamera*
 /// @param cameraDevice QCameraDevice*
 ///
-void q_camera_set_camera_device(void* self, void* cameraDevice);
+void q_camera_set_camera_device(void* self, const void* cameraDevice);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#cameraFormat)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-QCameraFormat* q_camera_camera_format(void* self);
+QCameraFormat* q_camera_camera_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#setCameraFormat)
 ///
 /// @param self QCamera*
 /// @param format QCameraFormat*
 ///
-void q_camera_set_camera_format(void* self, void* format);
+void q_camera_set_camera_format(void* self, const void* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#error)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
 /// @return enum QCamera__Error
 ///
-int32_t q_camera_error(void* self);
+int32_t q_camera_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#errorString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-const char* q_camera_error_string(void* self);
+const char* q_camera_error_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#supportedFeatures)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
 /// @return flag of enum QCamera__Feature
 ///
-int32_t q_camera_supported_features(void* self);
+int32_t q_camera_supported_features(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#focusMode)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
 /// @return enum QCamera__FocusMode
 ///
-int32_t q_camera_focus_mode(void* self);
+int32_t q_camera_focus_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#setFocusMode)
 ///
@@ -214,29 +214,29 @@ void q_camera_set_focus_mode(void* self, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#isFocusModeSupported)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 /// @param mode enum QCamera__FocusMode
 ///
-bool q_camera_is_focus_mode_supported(void* self, int32_t mode);
+bool q_camera_is_focus_mode_supported(const void* self, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#focusPoint)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-QPointF* q_camera_focus_point(void* self);
+QPointF* q_camera_focus_point(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#customFocusPoint)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-QPointF* q_camera_custom_focus_point(void* self);
+QPointF* q_camera_custom_focus_point(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#setCustomFocusPoint)
 ///
 /// @param self QCamera*
 /// @param point QPointF*
 ///
-void q_camera_set_custom_focus_point(void* self, void* point);
+void q_camera_set_custom_focus_point(void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#setFocusDistance)
 ///
@@ -247,27 +247,27 @@ void q_camera_set_focus_distance(void* self, float d);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#focusDistance)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-float q_camera_focus_distance(void* self);
+float q_camera_focus_distance(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#minimumZoomFactor)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-float q_camera_minimum_zoom_factor(void* self);
+float q_camera_minimum_zoom_factor(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#maximumZoomFactor)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-float q_camera_maximum_zoom_factor(void* self);
+float q_camera_maximum_zoom_factor(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#zoomFactor)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-float q_camera_zoom_factor(void* self);
+float q_camera_zoom_factor(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#setZoomFactor)
 ///
@@ -278,129 +278,129 @@ void q_camera_set_zoom_factor(void* self, float factor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#flashMode)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
 /// @return enum QCamera__FlashMode
 ///
-int32_t q_camera_flash_mode(void* self);
+int32_t q_camera_flash_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#isFlashModeSupported)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 /// @param mode enum QCamera__FlashMode
 ///
-bool q_camera_is_flash_mode_supported(void* self, int32_t mode);
+bool q_camera_is_flash_mode_supported(const void* self, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#isFlashReady)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-bool q_camera_is_flash_ready(void* self);
+bool q_camera_is_flash_ready(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#torchMode)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
 /// @return enum QCamera__TorchMode
 ///
-int32_t q_camera_torch_mode(void* self);
+int32_t q_camera_torch_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#isTorchModeSupported)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 /// @param mode enum QCamera__TorchMode
 ///
-bool q_camera_is_torch_mode_supported(void* self, int32_t mode);
+bool q_camera_is_torch_mode_supported(const void* self, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#exposureMode)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
 /// @return enum QCamera__ExposureMode
 ///
-int32_t q_camera_exposure_mode(void* self);
+int32_t q_camera_exposure_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#isExposureModeSupported)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 /// @param mode enum QCamera__ExposureMode
 ///
-bool q_camera_is_exposure_mode_supported(void* self, int32_t mode);
+bool q_camera_is_exposure_mode_supported(const void* self, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#exposureCompensation)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-float q_camera_exposure_compensation(void* self);
+float q_camera_exposure_compensation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#isoSensitivity)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-int32_t q_camera_iso_sensitivity(void* self);
+int32_t q_camera_iso_sensitivity(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#manualIsoSensitivity)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-int32_t q_camera_manual_iso_sensitivity(void* self);
+int32_t q_camera_manual_iso_sensitivity(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#exposureTime)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-float q_camera_exposure_time(void* self);
+float q_camera_exposure_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#manualExposureTime)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-float q_camera_manual_exposure_time(void* self);
+float q_camera_manual_exposure_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#minimumIsoSensitivity)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-int32_t q_camera_minimum_iso_sensitivity(void* self);
+int32_t q_camera_minimum_iso_sensitivity(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#maximumIsoSensitivity)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-int32_t q_camera_maximum_iso_sensitivity(void* self);
+int32_t q_camera_maximum_iso_sensitivity(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#minimumExposureTime)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-float q_camera_minimum_exposure_time(void* self);
+float q_camera_minimum_exposure_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#maximumExposureTime)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-float q_camera_maximum_exposure_time(void* self);
+float q_camera_maximum_exposure_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#whiteBalanceMode)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
 /// @return enum QCamera__WhiteBalanceMode
 ///
-int32_t q_camera_white_balance_mode(void* self);
+int32_t q_camera_white_balance_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#isWhiteBalanceModeSupported)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 /// @param mode enum QCamera__WhiteBalanceMode
 ///
-bool q_camera_is_white_balance_mode_supported(void* self, int32_t mode);
+bool q_camera_is_white_balance_mode_supported(const void* self, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#colorTemperature)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-int32_t q_camera_color_temperature(void* self);
+int32_t q_camera_color_temperature(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#setActive)
 ///
@@ -798,29 +798,29 @@ void q_camera_on_exposure_mode_changed(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#whiteBalanceModeChanged)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-void q_camera_white_balance_mode_changed(void* self);
+void q_camera_white_balance_mode_changed(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#whiteBalanceModeChanged)
 ///
-/// @param self QCamera*
-/// @param callback void func(QCamera* self)
+/// @param self const QCamera*
+/// @param callback void func(const QCamera* self)
 ///
-void q_camera_on_white_balance_mode_changed(void* self, void (*callback)(void*));
+void q_camera_on_white_balance_mode_changed(const void* self, void (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#colorTemperatureChanged)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-void q_camera_color_temperature_changed(void* self);
+void q_camera_color_temperature_changed(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#colorTemperatureChanged)
 ///
-/// @param self QCamera*
-/// @param callback void func(QCamera* self)
+/// @param self const QCamera*
+/// @param callback void func(const QCamera* self)
 ///
-void q_camera_on_color_temperature_changed(void* self, void (*callback)(void*));
+void q_camera_on_color_temperature_changed(const void* self, void (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamera.html#brightnessChanged)
 ///
@@ -899,9 +899,9 @@ const char* q_camera_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-const char* q_camera_object_name(void* self);
+const char* q_camera_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -916,33 +916,33 @@ void q_camera_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-bool q_camera_is_widget_type(void* self);
+bool q_camera_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-bool q_camera_is_window_type(void* self);
+bool q_camera_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-bool q_camera_is_quick_item_type(void* self);
+bool q_camera_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-bool q_camera_signals_blocked(void* self);
+bool q_camera_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -957,9 +957,9 @@ bool q_camera_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-QThread* q_camera_thread(void* self);
+QThread* q_camera_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1010,11 +1010,11 @@ void q_camera_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_camera_children(void* self);
+libqt_list q_camera_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1052,7 +1052,7 @@ void q_camera_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_camera_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_camera_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1063,18 +1063,18 @@ QMetaObject__Connection* q_camera_connect(void* sender, const char* signal, void
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_camera_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_camera_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_camera_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_camera_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1085,7 +1085,7 @@ QMetaObject__Connection* q_camera_connect3(void* self, void* sender, const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_camera_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_camera_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1096,24 +1096,24 @@ bool q_camera_disconnect(void* sender, const char* signal, void* receiver, const
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_camera_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_camera_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-bool q_camera_disconnect3(void* self);
+bool q_camera_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 /// @param receiver QObject*
 ///
-bool q_camera_disconnect4(void* self, void* receiver);
+bool q_camera_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1121,23 +1121,23 @@ bool q_camera_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_camera_disconnect5(void* param1);
+bool q_camera_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-void q_camera_dump_object_tree(void* self);
+void q_camera_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-void q_camera_dump_object_info(void* self);
+void q_camera_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1147,16 +1147,16 @@ void q_camera_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_camera_set_property(void* self, const char* name, void* value);
+bool q_camera_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 /// @param name const char*
 ///
-QVariant* q_camera_property(void* self, const char* name);
+QVariant* q_camera_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1164,9 +1164,9 @@ QVariant* q_camera_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-const char** q_camera_dynamic_property_names(void* self);
+const char** q_camera_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1180,9 +1180,9 @@ QBindingStorage* q_camera_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-const QBindingStorage* q_camera_binding_storage2(void* self);
+const QBindingStorage* q_camera_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1205,18 +1205,18 @@ void q_camera_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-QObject* q_camera_parent(void* self);
+QObject* q_camera_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 /// @param classname const char*
 ///
-bool q_camera_inherits(void* self, const char* classname);
+bool q_camera_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1256,7 +1256,7 @@ int32_t q_camera_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_camera_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_camera_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1268,59 +1268,59 @@ QMetaObject__Connection* q_camera_connect5(void* sender, const char* signal, voi
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_camera_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_camera_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_camera_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_camera_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 /// @param signal const char*
 ///
-bool q_camera_disconnect1(void* self, const char* signal);
+bool q_camera_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QCamera*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_camera_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QCamera*
+/// @param self const QCamera*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_camera_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_camera_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_camera_disconnect23(void* self, void* receiver, const char* member);
+bool q_camera_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QCamera*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_camera_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1516,7 +1516,7 @@ void q_camera_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QCamera*
 /// @param signal QMetaMethod*
 ///
-void q_camera_connect_notify(void* self, void* signal);
+void q_camera_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1527,7 +1527,7 @@ void q_camera_connect_notify(void* self, void* signal);
 /// @param self QCamera*
 /// @param signal QMetaMethod*
 ///
-void q_camera_super_connect_notify(void* self, void* signal);
+void q_camera_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1538,7 +1538,7 @@ void q_camera_super_connect_notify(void* self, void* signal);
 /// @param self QCamera*
 /// @param callback void func(QCamera* self, QMetaMethod* signal)
 ///
-void q_camera_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_camera_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1549,7 +1549,7 @@ void q_camera_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QCamera*
 /// @param signal QMetaMethod*
 ///
-void q_camera_disconnect_notify(void* self, void* signal);
+void q_camera_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1560,7 +1560,7 @@ void q_camera_disconnect_notify(void* self, void* signal);
 /// @param self QCamera*
 /// @param signal QMetaMethod*
 ///
-void q_camera_super_disconnect_notify(void* self, void* signal);
+void q_camera_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1571,7 +1571,7 @@ void q_camera_super_disconnect_notify(void* self, void* signal);
 /// @param self QCamera*
 /// @param callback void func(QCamera* self, QMetaMethod* signal)
 ///
-void q_camera_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_camera_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1579,9 +1579,9 @@ void q_camera_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-QObject* q_camera_sender(void* self);
+QObject* q_camera_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1589,9 +1589,9 @@ QObject* q_camera_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-QObject* q_camera_super_sender(void* self);
+QObject* q_camera_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1599,10 +1599,10 @@ QObject* q_camera_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QCamera*
-/// @param callback QObject* func()
+/// @param self const QCamera*
+/// @param callback QObject* func(QCamera* self)
 ///
-void q_camera_on_sender(void* self, QObject* (*callback)());
+void q_camera_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1610,9 +1610,9 @@ void q_camera_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-int32_t q_camera_sender_signal_index(void* self);
+int32_t q_camera_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1620,9 +1620,9 @@ int32_t q_camera_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 ///
-int32_t q_camera_super_sender_signal_index(void* self);
+int32_t q_camera_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1630,10 +1630,10 @@ int32_t q_camera_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QCamera*
-/// @param callback int32_t func()
+/// @param self const QCamera*
+/// @param callback int32_t func(QCamera* self)
 ///
-void q_camera_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_camera_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1641,10 +1641,10 @@ void q_camera_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 /// @param signal const char*
 ///
-int32_t q_camera_receivers(void* self, const char* signal);
+int32_t q_camera_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1652,10 +1652,10 @@ int32_t q_camera_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 /// @param signal const char*
 ///
-int32_t q_camera_super_receivers(void* self, const char* signal);
+int32_t q_camera_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1663,10 +1663,10 @@ int32_t q_camera_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 /// @param callback int32_t func(QCamera* self, const char* signal)
 ///
-void q_camera_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_camera_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1674,10 +1674,10 @@ void q_camera_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 /// @param signal QMetaMethod*
 ///
-bool q_camera_is_signal_connected(void* self, void* signal);
+bool q_camera_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1685,10 +1685,10 @@ bool q_camera_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 /// @param signal QMetaMethod*
 ///
-bool q_camera_super_is_signal_connected(void* self, void* signal);
+bool q_camera_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1696,10 +1696,10 @@ bool q_camera_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QCamera*
+/// @param self const QCamera*
 /// @param callback bool func(QCamera* self, QMetaMethod* signal)
 ///
-void q_camera_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_camera_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

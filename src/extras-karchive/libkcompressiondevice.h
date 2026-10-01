@@ -37,26 +37,26 @@ KCompressionDevice* k_compressiondevice_new3(const char* fileName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-const QMetaObject* k_compressiondevice_meta_object(void* self);
+const QMetaObject* k_compressiondevice_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCompressionDevice*
-/// @param callback const QMetaObject* func()
+/// @param self const KCompressionDevice*
+/// @param callback const QMetaObject* func(const KCompressionDevice* self)
 ///
-void k_compressiondevice_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_compressiondevice_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-const QMetaObject* k_compressiondevice_super_meta_object(void* self);
+const QMetaObject* k_compressiondevice_super_meta_object(const void* self);
 
 /// @param self KCompressionDevice*
 /// @param param1 const char*
@@ -110,11 +110,11 @@ const char* k_compressiondevice_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kcompressiondevice.html#compressionType)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
 /// @return enum KCompressionDevice__CompressionType
 ///
-int32_t k_compressiondevice_compression_type(void* self);
+int32_t k_compressiondevice_compression_type(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompressiondevice.html#open)
 ///
@@ -152,9 +152,9 @@ void k_compressiondevice_close(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KCompressionDevice*
-/// @param callback void func()
+/// @param callback void func(KCompressionDevice* self)
 ///
-void k_compressiondevice_on_close(void* self, void (*callback)());
+void k_compressiondevice_on_close(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kcompressiondevice.html#close)
 ///
@@ -204,26 +204,26 @@ bool k_compressiondevice_super_seek(void* self, int64_t param1);
 
 /// [Upstream resources](https://api.kde.org/kcompressiondevice.html#atEnd)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-bool k_compressiondevice_at_end(void* self);
+bool k_compressiondevice_at_end(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompressiondevice.html#atEnd)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCompressionDevice*
-/// @param callback bool func()
+/// @param self const KCompressionDevice*
+/// @param callback bool func(const KCompressionDevice* self)
 ///
-void k_compressiondevice_on_at_end(void* self, bool (*callback)());
+void k_compressiondevice_on_at_end(const void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcompressiondevice.html#atEnd)
 ///
 /// Base class method implementation
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-bool k_compressiondevice_super_at_end(void* self);
+bool k_compressiondevice_super_at_end(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompressiondevice.html#filterForCompressionType)
 ///
@@ -241,11 +241,11 @@ int32_t k_compressiondevice_compression_type_for_mime_type(const char* mimetype)
 
 /// [Upstream resources](https://api.kde.org/kcompressiondevice.html#error)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
 /// @return enum QFileDevice__FileError
 ///
-int32_t k_compressiondevice_error(void* self);
+int32_t k_compressiondevice_error(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompressiondevice.html#readData)
 ///
@@ -307,23 +307,6 @@ int64_t k_compressiondevice_super_write_data(void* self, const char* data, int64
 ///
 KFilterBase* k_compressiondevice_filter_base(void* self);
 
-/// [Upstream resources](https://api.kde.org/kcompressiondevice.html#filterBase)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KCompressionDevice*
-/// @param callback KFilterBase* func()
-///
-void k_compressiondevice_on_filter_base(void* self, KFilterBase* (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kcompressiondevice.html#filterBase)
-///
-/// Base class method implementation
-///
-/// @param self KCompressionDevice*
-///
-KFilterBase* k_compressiondevice_super_filter_base(void* self);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
@@ -355,11 +338,11 @@ QIODeviceBase* k_compressiondevice_as_q_i_o_device_base(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#openMode)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
 /// @return flag of enum QIODeviceBase__OpenModeFlag
 ///
-int32_t k_compressiondevice_open_mode(void* self);
+int32_t k_compressiondevice_open_mode(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -374,57 +357,57 @@ void k_compressiondevice_set_text_mode_enabled(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isTextModeEnabled)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-bool k_compressiondevice_is_text_mode_enabled(void* self);
+bool k_compressiondevice_is_text_mode_enabled(const void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isOpen)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-bool k_compressiondevice_is_open(void* self);
+bool k_compressiondevice_is_open(const void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isReadable)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-bool k_compressiondevice_is_readable(void* self);
+bool k_compressiondevice_is_readable(const void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isWritable)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-bool k_compressiondevice_is_writable(void* self);
+bool k_compressiondevice_is_writable(const void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readChannelCount)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-int32_t k_compressiondevice_read_channel_count(void* self);
+int32_t k_compressiondevice_read_channel_count(const void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#writeChannelCount)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-int32_t k_compressiondevice_write_channel_count(void* self);
+int32_t k_compressiondevice_write_channel_count(const void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#currentReadChannel)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-int32_t k_compressiondevice_current_read_channel(void* self);
+int32_t k_compressiondevice_current_read_channel(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -439,9 +422,9 @@ void k_compressiondevice_set_current_read_channel(void* self, int channel);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#currentWriteChannel)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-int32_t k_compressiondevice_current_write_channel(void* self);
+int32_t k_compressiondevice_current_write_channel(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -531,9 +514,9 @@ void k_compressiondevice_rollback_transaction(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isTransactionStarted)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-bool k_compressiondevice_is_transaction_started(void* self);
+bool k_compressiondevice_is_transaction_started(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -626,9 +609,9 @@ bool k_compressiondevice_get_char(void* self, char* c);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-const char* k_compressiondevice_error_string(void* self);
+const char* k_compressiondevice_error_string(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -753,9 +736,9 @@ char* k_compressiondevice_read_line1(void* self, int64_t maxlen);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-const char* k_compressiondevice_object_name(void* self);
+const char* k_compressiondevice_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -770,33 +753,33 @@ void k_compressiondevice_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-bool k_compressiondevice_is_widget_type(void* self);
+bool k_compressiondevice_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-bool k_compressiondevice_is_window_type(void* self);
+bool k_compressiondevice_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-bool k_compressiondevice_is_quick_item_type(void* self);
+bool k_compressiondevice_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-bool k_compressiondevice_signals_blocked(void* self);
+bool k_compressiondevice_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -811,9 +794,9 @@ bool k_compressiondevice_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-QThread* k_compressiondevice_thread(void* self);
+QThread* k_compressiondevice_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -864,11 +847,11 @@ void k_compressiondevice_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_compressiondevice_children(void* self);
+libqt_list k_compressiondevice_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -906,7 +889,7 @@ void k_compressiondevice_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_compressiondevice_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_compressiondevice_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -917,18 +900,18 @@ QMetaObject__Connection* k_compressiondevice_connect(void* sender, const char* s
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_compressiondevice_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_compressiondevice_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_compressiondevice_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_compressiondevice_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -939,7 +922,7 @@ QMetaObject__Connection* k_compressiondevice_connect3(void* self, void* sender, 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_compressiondevice_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_compressiondevice_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -950,24 +933,24 @@ bool k_compressiondevice_disconnect(void* sender, const char* signal, void* rece
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_compressiondevice_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_compressiondevice_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-bool k_compressiondevice_disconnect3(void* self);
+bool k_compressiondevice_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 /// @param receiver QObject*
 ///
-bool k_compressiondevice_disconnect4(void* self, void* receiver);
+bool k_compressiondevice_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -975,23 +958,23 @@ bool k_compressiondevice_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_compressiondevice_disconnect5(void* param1);
+bool k_compressiondevice_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-void k_compressiondevice_dump_object_tree(void* self);
+void k_compressiondevice_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-void k_compressiondevice_dump_object_info(void* self);
+void k_compressiondevice_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1001,16 +984,16 @@ void k_compressiondevice_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_compressiondevice_set_property(void* self, const char* name, void* value);
+bool k_compressiondevice_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 /// @param name const char*
 ///
-QVariant* k_compressiondevice_property(void* self, const char* name);
+QVariant* k_compressiondevice_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1018,9 +1001,9 @@ QVariant* k_compressiondevice_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-const char** k_compressiondevice_dynamic_property_names(void* self);
+const char** k_compressiondevice_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1034,9 +1017,9 @@ QBindingStorage* k_compressiondevice_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-const QBindingStorage* k_compressiondevice_binding_storage2(void* self);
+const QBindingStorage* k_compressiondevice_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1059,18 +1042,18 @@ void k_compressiondevice_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-QObject* k_compressiondevice_parent(void* self);
+QObject* k_compressiondevice_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 /// @param classname const char*
 ///
-bool k_compressiondevice_inherits(void* self, const char* classname);
+bool k_compressiondevice_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1110,7 +1093,7 @@ int32_t k_compressiondevice_start_timer23(void* self, int64_t time, int32_t time
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_compressiondevice_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_compressiondevice_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1122,59 +1105,59 @@ QMetaObject__Connection* k_compressiondevice_connect5(void* sender, const char* 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_compressiondevice_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_compressiondevice_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_compressiondevice_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_compressiondevice_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 /// @param signal const char*
 ///
-bool k_compressiondevice_disconnect1(void* self, const char* signal);
+bool k_compressiondevice_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KCompressionDevice*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_compressiondevice_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_compressiondevice_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_compressiondevice_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_compressiondevice_disconnect23(void* self, void* receiver, const char* member);
+bool k_compressiondevice_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KCompressionDevice*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_compressiondevice_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1200,9 +1183,9 @@ void k_compressiondevice_on_destroyed1(void* self, void (*callback)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-bool k_compressiondevice_is_sequential(void* self);
+bool k_compressiondevice_is_sequential(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1210,9 +1193,9 @@ bool k_compressiondevice_is_sequential(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-bool k_compressiondevice_super_is_sequential(void* self);
+bool k_compressiondevice_super_is_sequential(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1220,10 +1203,10 @@ bool k_compressiondevice_super_is_sequential(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompressionDevice*
-/// @param callback bool func()
+/// @param self const KCompressionDevice*
+/// @param callback bool func(KCompressionDevice* self)
 ///
-void k_compressiondevice_on_is_sequential(void* self, bool (*callback)());
+void k_compressiondevice_on_is_sequential(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QIODevice
 ///
@@ -1231,9 +1214,9 @@ void k_compressiondevice_on_is_sequential(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-int64_t k_compressiondevice_pos(void* self);
+int64_t k_compressiondevice_pos(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1241,9 +1224,9 @@ int64_t k_compressiondevice_pos(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-int64_t k_compressiondevice_super_pos(void* self);
+int64_t k_compressiondevice_super_pos(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1251,10 +1234,10 @@ int64_t k_compressiondevice_super_pos(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompressionDevice*
-/// @param callback int64_t func()
+/// @param self const KCompressionDevice*
+/// @param callback int64_t func(KCompressionDevice* self)
 ///
-void k_compressiondevice_on_pos(void* self, int64_t (*callback)());
+void k_compressiondevice_on_pos(const void* self, int64_t (*callback)(const void*));
 
 /// Inherited from QIODevice
 ///
@@ -1262,9 +1245,9 @@ void k_compressiondevice_on_pos(void* self, int64_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-int64_t k_compressiondevice_size(void* self);
+int64_t k_compressiondevice_size(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1272,9 +1255,9 @@ int64_t k_compressiondevice_size(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-int64_t k_compressiondevice_super_size(void* self);
+int64_t k_compressiondevice_super_size(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1282,10 +1265,10 @@ int64_t k_compressiondevice_super_size(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompressionDevice*
-/// @param callback int64_t func()
+/// @param self const KCompressionDevice*
+/// @param callback int64_t func(KCompressionDevice* self)
 ///
-void k_compressiondevice_on_size(void* self, int64_t (*callback)());
+void k_compressiondevice_on_size(const void* self, int64_t (*callback)(const void*));
 
 /// Inherited from QIODevice
 ///
@@ -1314,9 +1297,9 @@ bool k_compressiondevice_super_reset(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompressionDevice*
-/// @param callback bool func()
+/// @param callback bool func(KCompressionDevice* self)
 ///
-void k_compressiondevice_on_reset(void* self, bool (*callback)());
+void k_compressiondevice_on_reset(void* self, bool (*callback)(void*));
 
 /// Inherited from QIODevice
 ///
@@ -1324,9 +1307,9 @@ void k_compressiondevice_on_reset(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-int64_t k_compressiondevice_bytes_available(void* self);
+int64_t k_compressiondevice_bytes_available(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1334,9 +1317,9 @@ int64_t k_compressiondevice_bytes_available(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-int64_t k_compressiondevice_super_bytes_available(void* self);
+int64_t k_compressiondevice_super_bytes_available(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1344,10 +1327,10 @@ int64_t k_compressiondevice_super_bytes_available(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompressionDevice*
-/// @param callback int64_t func()
+/// @param self const KCompressionDevice*
+/// @param callback int64_t func(KCompressionDevice* self)
 ///
-void k_compressiondevice_on_bytes_available(void* self, int64_t (*callback)());
+void k_compressiondevice_on_bytes_available(const void* self, int64_t (*callback)(const void*));
 
 /// Inherited from QIODevice
 ///
@@ -1355,9 +1338,9 @@ void k_compressiondevice_on_bytes_available(void* self, int64_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-int64_t k_compressiondevice_bytes_to_write(void* self);
+int64_t k_compressiondevice_bytes_to_write(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1365,9 +1348,9 @@ int64_t k_compressiondevice_bytes_to_write(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-int64_t k_compressiondevice_super_bytes_to_write(void* self);
+int64_t k_compressiondevice_super_bytes_to_write(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1375,10 +1358,10 @@ int64_t k_compressiondevice_super_bytes_to_write(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompressionDevice*
-/// @param callback int64_t func()
+/// @param self const KCompressionDevice*
+/// @param callback int64_t func(KCompressionDevice* self)
 ///
-void k_compressiondevice_on_bytes_to_write(void* self, int64_t (*callback)());
+void k_compressiondevice_on_bytes_to_write(const void* self, int64_t (*callback)(const void*));
 
 /// Inherited from QIODevice
 ///
@@ -1386,9 +1369,9 @@ void k_compressiondevice_on_bytes_to_write(void* self, int64_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-bool k_compressiondevice_can_read_line(void* self);
+bool k_compressiondevice_can_read_line(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1396,9 +1379,9 @@ bool k_compressiondevice_can_read_line(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-bool k_compressiondevice_super_can_read_line(void* self);
+bool k_compressiondevice_super_can_read_line(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1406,10 +1389,10 @@ bool k_compressiondevice_super_can_read_line(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompressionDevice*
-/// @param callback bool func()
+/// @param self const KCompressionDevice*
+/// @param callback bool func(KCompressionDevice* self)
 ///
-void k_compressiondevice_on_can_read_line(void* self, bool (*callback)());
+void k_compressiondevice_on_can_read_line(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QIODevice
 ///
@@ -1721,7 +1704,7 @@ void k_compressiondevice_on_custom_event(void* self, void (*callback)(void*, voi
 /// @param self KCompressionDevice*
 /// @param signal QMetaMethod*
 ///
-void k_compressiondevice_connect_notify(void* self, void* signal);
+void k_compressiondevice_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1732,7 +1715,7 @@ void k_compressiondevice_connect_notify(void* self, void* signal);
 /// @param self KCompressionDevice*
 /// @param signal QMetaMethod*
 ///
-void k_compressiondevice_super_connect_notify(void* self, void* signal);
+void k_compressiondevice_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1743,7 +1726,7 @@ void k_compressiondevice_super_connect_notify(void* self, void* signal);
 /// @param self KCompressionDevice*
 /// @param callback void func(KCompressionDevice* self, QMetaMethod* signal)
 ///
-void k_compressiondevice_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_compressiondevice_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1754,7 +1737,7 @@ void k_compressiondevice_on_connect_notify(void* self, void (*callback)(void*, v
 /// @param self KCompressionDevice*
 /// @param signal QMetaMethod*
 ///
-void k_compressiondevice_disconnect_notify(void* self, void* signal);
+void k_compressiondevice_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1765,7 +1748,7 @@ void k_compressiondevice_disconnect_notify(void* self, void* signal);
 /// @param self KCompressionDevice*
 /// @param signal QMetaMethod*
 ///
-void k_compressiondevice_super_disconnect_notify(void* self, void* signal);
+void k_compressiondevice_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1776,7 +1759,7 @@ void k_compressiondevice_super_disconnect_notify(void* self, void* signal);
 /// @param self KCompressionDevice*
 /// @param callback void func(KCompressionDevice* self, QMetaMethod* signal)
 ///
-void k_compressiondevice_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_compressiondevice_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QIODevice
 ///
@@ -1850,9 +1833,9 @@ void k_compressiondevice_on_set_error_string(void* self, void (*callback)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-QObject* k_compressiondevice_sender(void* self);
+QObject* k_compressiondevice_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1860,9 +1843,9 @@ QObject* k_compressiondevice_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-QObject* k_compressiondevice_super_sender(void* self);
+QObject* k_compressiondevice_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1870,10 +1853,10 @@ QObject* k_compressiondevice_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompressionDevice*
-/// @param callback QObject* func()
+/// @param self const KCompressionDevice*
+/// @param callback QObject* func(KCompressionDevice* self)
 ///
-void k_compressiondevice_on_sender(void* self, QObject* (*callback)());
+void k_compressiondevice_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1881,9 +1864,9 @@ void k_compressiondevice_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-int32_t k_compressiondevice_sender_signal_index(void* self);
+int32_t k_compressiondevice_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1891,9 +1874,9 @@ int32_t k_compressiondevice_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-int32_t k_compressiondevice_super_sender_signal_index(void* self);
+int32_t k_compressiondevice_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1901,10 +1884,10 @@ int32_t k_compressiondevice_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompressionDevice*
-/// @param callback int32_t func()
+/// @param self const KCompressionDevice*
+/// @param callback int32_t func(KCompressionDevice* self)
 ///
-void k_compressiondevice_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_compressiondevice_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1912,10 +1895,10 @@ void k_compressiondevice_on_sender_signal_index(void* self, int32_t (*callback)(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 /// @param signal const char*
 ///
-int32_t k_compressiondevice_receivers(void* self, const char* signal);
+int32_t k_compressiondevice_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1923,10 +1906,10 @@ int32_t k_compressiondevice_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 /// @param signal const char*
 ///
-int32_t k_compressiondevice_super_receivers(void* self, const char* signal);
+int32_t k_compressiondevice_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1934,10 +1917,10 @@ int32_t k_compressiondevice_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 /// @param callback int32_t func(KCompressionDevice* self, const char* signal)
 ///
-void k_compressiondevice_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_compressiondevice_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1945,10 +1928,10 @@ void k_compressiondevice_on_receivers(void* self, int32_t (*callback)(void*, con
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 /// @param signal QMetaMethod*
 ///
-bool k_compressiondevice_is_signal_connected(void* self, void* signal);
+bool k_compressiondevice_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1956,10 +1939,10 @@ bool k_compressiondevice_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 /// @param signal QMetaMethod*
 ///
-bool k_compressiondevice_super_is_signal_connected(void* self, void* signal);
+bool k_compressiondevice_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1967,10 +1950,10 @@ bool k_compressiondevice_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 /// @param callback bool func(KCompressionDevice* self, QMetaMethod* signal)
 ///
-void k_compressiondevice_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_compressiondevice_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

@@ -23,63 +23,63 @@ KNotifyConfig* k_notifyconfig_new(const char* applicationName, const char* event
 ///
 /// @param other KNotifyConfig*
 ///
-KNotifyConfig* k_notifyconfig_new2(void* other);
+KNotifyConfig* k_notifyconfig_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/knotifyconfig.html#operator-eq)
 ///
 /// @param self KNotifyConfig*
 /// @param other KNotifyConfig*
 ///
-void k_notifyconfig_operator_assign(void* self, void* other);
+void k_notifyconfig_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/knotifyconfig.html#applicationName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNotifyConfig*
+/// @param self const KNotifyConfig*
 ///
-const char* k_notifyconfig_application_name(void* self);
+const char* k_notifyconfig_application_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knotifyconfig.html#eventId)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNotifyConfig*
+/// @param self const KNotifyConfig*
 ///
-const char* k_notifyconfig_event_id(void* self);
+const char* k_notifyconfig_event_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knotifyconfig.html#isValid)
 ///
-/// @param self KNotifyConfig*
+/// @param self const KNotifyConfig*
 ///
-bool k_notifyconfig_is_valid(void* self);
+bool k_notifyconfig_is_valid(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knotifyconfig.html#readGlobalEntry)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNotifyConfig*
+/// @param self const KNotifyConfig*
 /// @param key const char*
 ///
-const char* k_notifyconfig_read_global_entry(void* self, const char* key);
+const char* k_notifyconfig_read_global_entry(const void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/knotifyconfig.html#readEntry)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNotifyConfig*
+/// @param self const KNotifyConfig*
 /// @param key const char*
 ///
-const char* k_notifyconfig_read_entry(void* self, const char* key);
+const char* k_notifyconfig_read_entry(const void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/knotifyconfig.html#readPathEntry)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNotifyConfig*
+/// @param self const KNotifyConfig*
 /// @param key const char*
 ///
-const char* k_notifyconfig_read_path_entry(void* self, const char* key);
+const char* k_notifyconfig_read_path_entry(const void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/knotifyconfig.html#reparseConfiguration)
 ///

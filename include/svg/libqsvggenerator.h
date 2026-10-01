@@ -26,9 +26,9 @@ QSvgGenerator* q_svggenerator_new2(int32_t version);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 ///
-const char* q_svggenerator_title(void* self);
+const char* q_svggenerator_title(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvggenerator.html#setTitle)
 ///
@@ -41,9 +41,9 @@ void q_svggenerator_set_title(void* self, const char* title);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 ///
-const char* q_svggenerator_description(void* self);
+const char* q_svggenerator_description(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvggenerator.html#setDescription)
 ///
@@ -54,50 +54,50 @@ void q_svggenerator_set_description(void* self, const char* description);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvggenerator.html#size)
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 ///
-QSize* q_svggenerator_size(void* self);
+QSize* q_svggenerator_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvggenerator.html#setSize)
 ///
 /// @param self QSvgGenerator*
 /// @param size QSize*
 ///
-void q_svggenerator_set_size(void* self, void* size);
+void q_svggenerator_set_size(void* self, const void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvggenerator.html#viewBox)
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 ///
-QRect* q_svggenerator_view_box(void* self);
+QRect* q_svggenerator_view_box(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvggenerator.html#viewBoxF)
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 ///
-QRectF* q_svggenerator_view_box_f(void* self);
+QRectF* q_svggenerator_view_box_f(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvggenerator.html#setViewBox)
 ///
 /// @param self QSvgGenerator*
 /// @param viewBox QRect*
 ///
-void q_svggenerator_set_view_box(void* self, void* viewBox);
+void q_svggenerator_set_view_box(void* self, const void* viewBox);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvggenerator.html#setViewBox)
 ///
 /// @param self QSvgGenerator*
 /// @param viewBox QRectF*
 ///
-void q_svggenerator_set_view_box2(void* self, void* viewBox);
+void q_svggenerator_set_view_box2(void* self, const void* viewBox);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvggenerator.html#fileName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 ///
-const char* q_svggenerator_file_name(void* self);
+const char* q_svggenerator_file_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvggenerator.html#setFileName)
 ///
@@ -108,9 +108,9 @@ void q_svggenerator_set_file_name(void* self, const char* fileName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvggenerator.html#outputDevice)
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 ///
-QIODevice* q_svggenerator_output_device(void* self);
+QIODevice* q_svggenerator_output_device(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvggenerator.html#setOutputDevice)
 ///
@@ -128,169 +128,169 @@ void q_svggenerator_set_resolution(void* self, int dpi);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvggenerator.html#resolution)
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 ///
-int32_t q_svggenerator_resolution(void* self);
+int32_t q_svggenerator_resolution(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvggenerator.html#svgVersion)
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 ///
 /// @return enum QSvgGenerator__SvgVersion
 ///
-int32_t q_svggenerator_svg_version(void* self);
+int32_t q_svggenerator_svg_version(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvggenerator.html#paintEngine)
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 ///
-QPaintEngine* q_svggenerator_paint_engine(void* self);
+QPaintEngine* q_svggenerator_paint_engine(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvggenerator.html#paintEngine)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSvgGenerator*
-/// @param callback QPaintEngine* func()
+/// @param self const QSvgGenerator*
+/// @param callback QPaintEngine* func(const QSvgGenerator* self)
 ///
-void q_svggenerator_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void q_svggenerator_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvggenerator.html#paintEngine)
 ///
 /// Base class method implementation
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 ///
-QPaintEngine* q_svggenerator_super_paint_engine(void* self);
+QPaintEngine* q_svggenerator_super_paint_engine(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvggenerator.html#metric)
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_svggenerator_metric(void* self, int32_t metric);
+int32_t q_svggenerator_metric(const void* self, int32_t metric);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvggenerator.html#metric)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSvgGenerator*
-/// @param callback int32_t func(QSvgGenerator* self, enum QPaintDevice__PaintDeviceMetric metric)
+/// @param self const QSvgGenerator*
+/// @param callback int32_t func(const QSvgGenerator* self, enum QPaintDevice__PaintDeviceMetric metric)
 ///
-void q_svggenerator_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void q_svggenerator_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvggenerator.html#metric)
 ///
 /// Base class method implementation
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_svggenerator_super_metric(void* self, int32_t metric);
+int32_t q_svggenerator_super_metric(const void* self, int32_t metric);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 ///
-bool q_svggenerator_painting_active(void* self);
+bool q_svggenerator_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#width)
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 ///
-int32_t q_svggenerator_width(void* self);
+int32_t q_svggenerator_width(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#height)
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 ///
-int32_t q_svggenerator_height(void* self);
+int32_t q_svggenerator_height(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 ///
-int32_t q_svggenerator_width_m_m(void* self);
+int32_t q_svggenerator_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 ///
-int32_t q_svggenerator_height_m_m(void* self);
+int32_t q_svggenerator_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 ///
-int32_t q_svggenerator_logical_dpi_x(void* self);
+int32_t q_svggenerator_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 ///
-int32_t q_svggenerator_logical_dpi_y(void* self);
+int32_t q_svggenerator_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 ///
-int32_t q_svggenerator_physical_dpi_x(void* self);
+int32_t q_svggenerator_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 ///
-int32_t q_svggenerator_physical_dpi_y(void* self);
+int32_t q_svggenerator_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 ///
-double q_svggenerator_device_pixel_ratio(void* self);
+double q_svggenerator_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 ///
-double q_svggenerator_device_pixel_ratio_f(void* self);
+double q_svggenerator_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 ///
-int32_t q_svggenerator_color_count(void* self);
+int32_t q_svggenerator_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 ///
-int32_t q_svggenerator_depth(void* self);
+int32_t q_svggenerator_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -313,9 +313,9 @@ int32_t q_svggenerator_encode_metric_f(int32_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 ///
-int32_t q_svggenerator_dev_type(void* self);
+int32_t q_svggenerator_dev_type(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -323,9 +323,9 @@ int32_t q_svggenerator_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 ///
-int32_t q_svggenerator_super_dev_type(void* self);
+int32_t q_svggenerator_super_dev_type(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -333,10 +333,10 @@ int32_t q_svggenerator_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSvgGenerator*
-/// @param callback int32_t func()
+/// @param self const QSvgGenerator*
+/// @param callback int32_t func(QSvgGenerator* self)
 ///
-void q_svggenerator_on_dev_type(void* self, int32_t (*callback)());
+void q_svggenerator_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -344,10 +344,10 @@ void q_svggenerator_on_dev_type(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 /// @param painter QPainter*
 ///
-void q_svggenerator_init_painter(void* self, void* painter);
+void q_svggenerator_init_painter(const void* self, void* painter);
 
 /// Inherited from QPaintDevice
 ///
@@ -355,10 +355,10 @@ void q_svggenerator_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 /// @param painter QPainter*
 ///
-void q_svggenerator_super_init_painter(void* self, void* painter);
+void q_svggenerator_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QPaintDevice
 ///
@@ -366,10 +366,10 @@ void q_svggenerator_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 /// @param callback void func(QSvgGenerator* self, QPainter* painter)
 ///
-void q_svggenerator_on_init_painter(void* self, void (*callback)(void*, void*));
+void q_svggenerator_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -377,10 +377,10 @@ void q_svggenerator_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_svggenerator_redirected(void* self, void* offset);
+QPaintDevice* q_svggenerator_redirected(const void* self, void* offset);
 
 /// Inherited from QPaintDevice
 ///
@@ -388,10 +388,10 @@ QPaintDevice* q_svggenerator_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_svggenerator_super_redirected(void* self, void* offset);
+QPaintDevice* q_svggenerator_super_redirected(const void* self, void* offset);
 
 /// Inherited from QPaintDevice
 ///
@@ -399,10 +399,10 @@ QPaintDevice* q_svggenerator_super_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 /// @param callback QPaintDevice* func(QSvgGenerator* self, QPoint* offset)
 ///
-void q_svggenerator_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void q_svggenerator_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -410,9 +410,9 @@ void q_svggenerator_on_redirected(void* self, QPaintDevice* (*callback)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 ///
-QPainter* q_svggenerator_shared_painter(void* self);
+QPainter* q_svggenerator_shared_painter(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -420,9 +420,9 @@ QPainter* q_svggenerator_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 ///
-QPainter* q_svggenerator_super_shared_painter(void* self);
+QPainter* q_svggenerator_super_shared_painter(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -430,10 +430,10 @@ QPainter* q_svggenerator_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSvgGenerator*
-/// @param callback QPainter* func()
+/// @param self const QSvgGenerator*
+/// @param callback QPainter* func(QSvgGenerator* self)
 ///
-void q_svggenerator_on_shared_painter(void* self, QPainter* (*callback)());
+void q_svggenerator_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -441,11 +441,11 @@ void q_svggenerator_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_svggenerator_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_svggenerator_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -453,11 +453,11 @@ double q_svggenerator_get_decoded_metric_f(void* self, int32_t metricA, int32_t 
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_svggenerator_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_svggenerator_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -465,10 +465,10 @@ double q_svggenerator_super_get_decoded_metric_f(void* self, int32_t metricA, in
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSvgGenerator*
+/// @param self const QSvgGenerator*
 /// @param callback double func(QSvgGenerator* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_svggenerator_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void q_svggenerator_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvggenerator.html#dtor.QSvgGenerator)
 ///

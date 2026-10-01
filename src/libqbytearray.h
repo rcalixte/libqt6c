@@ -250,7 +250,7 @@ char* q_qbytearray_q_uncompress2(char* data);
 /// @param key QByteArray__FromBase64Result*
 /// @param seed size_t
 ///
-size_t q_qbytearray_q_hash(void* key, size_t seed);
+size_t q_qbytearray_q_hash(const void* key, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray-frombase64result.html)
 
@@ -264,15 +264,15 @@ QByteArray__FromBase64Result* q_bytearray__frombase64result_new();
 ///
 /// @param param1 QByteArray__FromBase64Result*
 ///
-QByteArray__FromBase64Result* q_bytearray__frombase64result_new2(void* param1);
+QByteArray__FromBase64Result* q_bytearray__frombase64result_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray-frombase64result.html#decoded-var)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QByteArray__FromBase64Result*
+/// @param self const QByteArray__FromBase64Result*
 ///
-char* q_bytearray__frombase64result_decoded(void* self);
+char* q_bytearray__frombase64result_decoded(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray-frombase64result.html#decoded-var)
 ///
@@ -283,11 +283,11 @@ void q_bytearray__frombase64result_set_decoded(void* self, char* decoded);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray-frombase64result.html#decodingStatus-var)
 ///
-/// @param self QByteArray__FromBase64Result*
+/// @param self const QByteArray__FromBase64Result*
 ///
 /// @return enum QByteArray__Base64DecodingStatus
 ///
-int32_t q_bytearray__frombase64result_decoding_status(void* self);
+int32_t q_bytearray__frombase64result_decoding_status(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray-frombase64result.html#decodingStatus-var)
 ///
@@ -305,9 +305,9 @@ void q_bytearray__frombase64result_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray-frombase64result.html#operator-bool)
 ///
-/// @param self QByteArray__FromBase64Result*
+/// @param self const QByteArray__FromBase64Result*
 ///
-bool q_bytearray__frombase64result_to_bool(void* self);
+bool q_bytearray__frombase64result_to_bool(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray-frombase64result.html#operator-2a)
 ///
@@ -321,16 +321,16 @@ char* q_bytearray__frombase64result_operator_multiply(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QByteArray__FromBase64Result*
+/// @param self const QByteArray__FromBase64Result*
 ///
-const char* q_bytearray__frombase64result_operator_multiply2(void* self);
+const char* q_bytearray__frombase64result_operator_multiply2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray-frombase64result.html#operator-eq)
 ///
 /// @param self QByteArray__FromBase64Result*
 /// @param param1 QByteArray__FromBase64Result*
 ///
-void q_bytearray__frombase64result_operator_assign(void* self, void* param1);
+void q_bytearray__frombase64result_operator_assign(void* self, const void* param1);
 
 /// Delete this object from C++ memory.
 ///

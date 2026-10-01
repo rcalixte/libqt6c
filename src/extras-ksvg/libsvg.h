@@ -24,26 +24,26 @@ KSvg__Svg* k_svg__svg_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 ///
-const QMetaObject* k_svg__svg_meta_object(void* self);
+const QMetaObject* k_svg__svg_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KSvg__Svg*
-/// @param callback const QMetaObject* func()
+/// @param self const KSvg__Svg*
+/// @param callback const QMetaObject* func(const KSvg__Svg* self)
 ///
-void k_svg__svg_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_svg__svg_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 ///
-const QMetaObject* k_svg__svg_super_meta_object(void* self);
+const QMetaObject* k_svg__svg_super_meta_object(const void* self);
 
 /// @param self KSvg__Svg*
 /// @param param1 const char*
@@ -104,9 +104,9 @@ void k_svg__svg_set_device_pixel_ratio(void* self, double factor);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#devicePixelRatio)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 ///
-double k_svg__svg_device_pixel_ratio(void* self);
+double k_svg__svg_device_pixel_ratio(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#pixmap)
 ///
@@ -119,7 +119,7 @@ QPixmap* k_svg__svg_pixmap(void* self);
 /// @param self KSvg__Svg*
 /// @param size QSize*
 ///
-QImage* k_svg__svg_image(void* self, void* size);
+QImage* k_svg__svg_image(void* self, const void* size);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#paint)
 ///
@@ -127,7 +127,7 @@ QImage* k_svg__svg_image(void* self, void* size);
 /// @param painter QPainter*
 /// @param point QPointF*
 ///
-void k_svg__svg_paint(void* self, void* painter, void* point);
+void k_svg__svg_paint(void* self, void* painter, const void* point);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#paint)
 ///
@@ -144,7 +144,7 @@ void k_svg__svg_paint2(void* self, void* painter, int x, int y);
 /// @param painter QPainter*
 /// @param rect QRectF*
 ///
-void k_svg__svg_paint3(void* self, void* painter, void* rect);
+void k_svg__svg_paint3(void* self, void* painter, const void* rect);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#paint)
 ///
@@ -159,9 +159,9 @@ void k_svg__svg_paint4(void* self, void* painter, int x, int y, int width, int h
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#size)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 ///
-QSizeF* k_svg__svg_size(void* self);
+QSizeF* k_svg__svg_size(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#resize)
 ///
@@ -176,7 +176,7 @@ void k_svg__svg_resize(void* self, double width, double height);
 /// @param self KSvg__Svg*
 /// @param size QSizeF*
 ///
-void k_svg__svg_resize2(void* self, void* size);
+void k_svg__svg_resize2(void* self, const void* size);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#resize)
 ///
@@ -186,51 +186,51 @@ void k_svg__svg_resize3(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#elementSize)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 /// @param elementId const char*
 ///
-QSizeF* k_svg__svg_element_size(void* self, const char* elementId);
+QSizeF* k_svg__svg_element_size(const void* self, const char* elementId);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#elementSize)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 /// @param elementId const char*
 ///
-QSizeF* k_svg__svg_element_size2(void* self, const char* elementId);
+QSizeF* k_svg__svg_element_size2(const void* self, const char* elementId);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#elementRect)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 /// @param elementId const char*
 ///
-QRectF* k_svg__svg_element_rect(void* self, const char* elementId);
+QRectF* k_svg__svg_element_rect(const void* self, const char* elementId);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#elementRect)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 /// @param elementId const char*
 ///
-QRectF* k_svg__svg_element_rect2(void* self, const char* elementId);
+QRectF* k_svg__svg_element_rect2(const void* self, const char* elementId);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#hasElement)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 /// @param elementId const char*
 ///
-bool k_svg__svg_has_element(void* self, const char* elementId);
+bool k_svg__svg_has_element(const void* self, const char* elementId);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#hasElement)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 /// @param elementId const char*
 ///
-bool k_svg__svg_has_element2(void* self, const char* elementId);
+bool k_svg__svg_has_element2(const void* self, const char* elementId);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#isValid)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 ///
-bool k_svg__svg_is_valid(void* self);
+bool k_svg__svg_is_valid(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#setContainsMultipleImages)
 ///
@@ -241,9 +241,9 @@ void k_svg__svg_set_contains_multiple_images(void* self, bool multiple);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#containsMultipleImages)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 ///
-bool k_svg__svg_contains_multiple_images(void* self);
+bool k_svg__svg_contains_multiple_images(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#setImagePath)
 ///
@@ -274,9 +274,9 @@ void k_svg__svg_super_set_image_path(void* self, const char* svgFilePath);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 ///
-const char* k_svg__svg_image_path(void* self);
+const char* k_svg__svg_image_path(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#setUsingRenderingCache)
 ///
@@ -287,15 +287,15 @@ void k_svg__svg_set_using_rendering_cache(void* self, bool useCache);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#isUsingRenderingCache)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 ///
-bool k_svg__svg_is_using_rendering_cache(void* self);
+bool k_svg__svg_is_using_rendering_cache(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#fromCurrentImageSet)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 ///
-bool k_svg__svg_from_current_image_set(void* self);
+bool k_svg__svg_from_current_image_set(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#setImageSet)
 ///
@@ -306,9 +306,9 @@ void k_svg__svg_set_image_set(void* self, void* theme);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#imageSet)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 ///
-KSvg__ImageSet* k_svg__svg_image_set(void* self);
+KSvg__ImageSet* k_svg__svg_image_set(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#setStatus)
 ///
@@ -319,11 +319,11 @@ void k_svg__svg_set_status(void* self, int32_t status);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#status)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 ///
 /// @return enum KSvg__Svg__Status
 ///
-int32_t k_svg__svg_status(void* self);
+int32_t k_svg__svg_status(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#setColorSet)
 ///
@@ -334,18 +334,18 @@ void k_svg__svg_set_color_set(void* self, int32_t colorSet);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#colorSet)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 ///
 /// @return enum KSvg__Svg__ColorSet
 ///
-int32_t k_svg__svg_color_set(void* self);
+int32_t k_svg__svg_color_set(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#color)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 /// @param colorName enum KSvg__Svg__StyleSheetColor
 ///
-QColor* k_svg__svg_color(void* self, int32_t colorName);
+QColor* k_svg__svg_color(const void* self, int32_t colorName);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#setColor)
 ///
@@ -353,7 +353,7 @@ QColor* k_svg__svg_color(void* self, int32_t colorName);
 /// @param colorName enum KSvg__Svg__StyleSheetColor
 /// @param color QColor*
 ///
-void k_svg__svg_set_color(void* self, int32_t colorName, void* color);
+void k_svg__svg_set_color(void* self, int32_t colorName, const void* color);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#clearColorOverrides)
 ///
@@ -501,7 +501,7 @@ QPixmap* k_svg__svg_pixmap1(void* self, const char* elementID);
 /// @param size QSize*
 /// @param elementID const char*
 ///
-QImage* k_svg__svg_image2(void* self, void* size, const char* elementID);
+QImage* k_svg__svg_image2(void* self, const void* size, const char* elementID);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#paint)
 ///
@@ -510,7 +510,7 @@ QImage* k_svg__svg_image2(void* self, void* size, const char* elementID);
 /// @param point QPointF*
 /// @param elementID const char*
 ///
-void k_svg__svg_paint32(void* self, void* painter, void* point, const char* elementID);
+void k_svg__svg_paint32(void* self, void* painter, const void* point, const char* elementID);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#paint)
 ///
@@ -529,7 +529,7 @@ void k_svg__svg_paint42(void* self, void* painter, int x, int y, const char* ele
 /// @param rect QRectF*
 /// @param elementID const char*
 ///
-void k_svg__svg_paint33(void* self, void* painter, void* rect, const char* elementID);
+void k_svg__svg_paint33(void* self, void* painter, const void* rect, const char* elementID);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#paint)
 ///
@@ -582,9 +582,9 @@ bool k_svg__svg_super_event_filter(void* self, void* watched, void* event);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 ///
-const char* k_svg__svg_object_name(void* self);
+const char* k_svg__svg_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -599,33 +599,33 @@ void k_svg__svg_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 ///
-bool k_svg__svg_is_widget_type(void* self);
+bool k_svg__svg_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 ///
-bool k_svg__svg_is_window_type(void* self);
+bool k_svg__svg_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 ///
-bool k_svg__svg_is_quick_item_type(void* self);
+bool k_svg__svg_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 ///
-bool k_svg__svg_signals_blocked(void* self);
+bool k_svg__svg_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -640,9 +640,9 @@ bool k_svg__svg_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 ///
-QThread* k_svg__svg_thread(void* self);
+QThread* k_svg__svg_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -693,11 +693,11 @@ void k_svg__svg_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_svg__svg_children(void* self);
+libqt_list k_svg__svg_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -735,7 +735,7 @@ void k_svg__svg_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_svg__svg_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_svg__svg_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -746,18 +746,18 @@ QMetaObject__Connection* k_svg__svg_connect(void* sender, const char* signal, vo
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_svg__svg_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_svg__svg_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_svg__svg_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_svg__svg_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -768,7 +768,7 @@ QMetaObject__Connection* k_svg__svg_connect3(void* self, void* sender, const cha
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_svg__svg_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_svg__svg_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -779,24 +779,24 @@ bool k_svg__svg_disconnect(void* sender, const char* signal, void* receiver, con
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_svg__svg_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_svg__svg_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 ///
-bool k_svg__svg_disconnect3(void* self);
+bool k_svg__svg_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 /// @param receiver QObject*
 ///
-bool k_svg__svg_disconnect4(void* self, void* receiver);
+bool k_svg__svg_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -804,23 +804,23 @@ bool k_svg__svg_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_svg__svg_disconnect5(void* param1);
+bool k_svg__svg_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 ///
-void k_svg__svg_dump_object_tree(void* self);
+void k_svg__svg_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 ///
-void k_svg__svg_dump_object_info(void* self);
+void k_svg__svg_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -830,16 +830,16 @@ void k_svg__svg_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_svg__svg_set_property(void* self, const char* name, void* value);
+bool k_svg__svg_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 /// @param name const char*
 ///
-QVariant* k_svg__svg_property(void* self, const char* name);
+QVariant* k_svg__svg_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -847,9 +847,9 @@ QVariant* k_svg__svg_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 ///
-const char** k_svg__svg_dynamic_property_names(void* self);
+const char** k_svg__svg_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -863,9 +863,9 @@ QBindingStorage* k_svg__svg_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 ///
-const QBindingStorage* k_svg__svg_binding_storage2(void* self);
+const QBindingStorage* k_svg__svg_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -888,18 +888,18 @@ void k_svg__svg_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 ///
-QObject* k_svg__svg_parent(void* self);
+QObject* k_svg__svg_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 /// @param classname const char*
 ///
-bool k_svg__svg_inherits(void* self, const char* classname);
+bool k_svg__svg_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -939,7 +939,7 @@ int32_t k_svg__svg_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_svg__svg_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_svg__svg_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -951,59 +951,59 @@ QMetaObject__Connection* k_svg__svg_connect5(void* sender, const char* signal, v
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_svg__svg_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_svg__svg_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_svg__svg_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_svg__svg_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 /// @param signal const char*
 ///
-bool k_svg__svg_disconnect1(void* self, const char* signal);
+bool k_svg__svg_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KSvg__Svg*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_svg__svg_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_svg__svg_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_svg__svg_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_svg__svg_disconnect23(void* self, void* receiver, const char* member);
+bool k_svg__svg_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KSvg__Svg*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_svg__svg_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1164,7 +1164,7 @@ void k_svg__svg_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self KSvg__Svg*
 /// @param signal QMetaMethod*
 ///
-void k_svg__svg_connect_notify(void* self, void* signal);
+void k_svg__svg_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1175,7 +1175,7 @@ void k_svg__svg_connect_notify(void* self, void* signal);
 /// @param self KSvg__Svg*
 /// @param signal QMetaMethod*
 ///
-void k_svg__svg_super_connect_notify(void* self, void* signal);
+void k_svg__svg_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1186,7 +1186,7 @@ void k_svg__svg_super_connect_notify(void* self, void* signal);
 /// @param self KSvg__Svg*
 /// @param callback void func(KSvg__Svg* self, QMetaMethod* signal)
 ///
-void k_svg__svg_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_svg__svg_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1197,7 +1197,7 @@ void k_svg__svg_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self KSvg__Svg*
 /// @param signal QMetaMethod*
 ///
-void k_svg__svg_disconnect_notify(void* self, void* signal);
+void k_svg__svg_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1208,7 +1208,7 @@ void k_svg__svg_disconnect_notify(void* self, void* signal);
 /// @param self KSvg__Svg*
 /// @param signal QMetaMethod*
 ///
-void k_svg__svg_super_disconnect_notify(void* self, void* signal);
+void k_svg__svg_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1219,7 +1219,7 @@ void k_svg__svg_super_disconnect_notify(void* self, void* signal);
 /// @param self KSvg__Svg*
 /// @param callback void func(KSvg__Svg* self, QMetaMethod* signal)
 ///
-void k_svg__svg_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_svg__svg_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1227,9 +1227,9 @@ void k_svg__svg_on_disconnect_notify(void* self, void (*callback)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 ///
-QObject* k_svg__svg_sender(void* self);
+QObject* k_svg__svg_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1237,9 +1237,9 @@ QObject* k_svg__svg_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 ///
-QObject* k_svg__svg_super_sender(void* self);
+QObject* k_svg__svg_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1247,10 +1247,10 @@ QObject* k_svg__svg_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KSvg__Svg*
-/// @param callback QObject* func()
+/// @param self const KSvg__Svg*
+/// @param callback QObject* func(KSvg__Svg* self)
 ///
-void k_svg__svg_on_sender(void* self, QObject* (*callback)());
+void k_svg__svg_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1258,9 +1258,9 @@ void k_svg__svg_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 ///
-int32_t k_svg__svg_sender_signal_index(void* self);
+int32_t k_svg__svg_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1268,9 +1268,9 @@ int32_t k_svg__svg_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 ///
-int32_t k_svg__svg_super_sender_signal_index(void* self);
+int32_t k_svg__svg_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1278,10 +1278,10 @@ int32_t k_svg__svg_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KSvg__Svg*
-/// @param callback int32_t func()
+/// @param self const KSvg__Svg*
+/// @param callback int32_t func(KSvg__Svg* self)
 ///
-void k_svg__svg_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_svg__svg_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1289,10 +1289,10 @@ void k_svg__svg_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 /// @param signal const char*
 ///
-int32_t k_svg__svg_receivers(void* self, const char* signal);
+int32_t k_svg__svg_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1300,10 +1300,10 @@ int32_t k_svg__svg_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 /// @param signal const char*
 ///
-int32_t k_svg__svg_super_receivers(void* self, const char* signal);
+int32_t k_svg__svg_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1311,10 +1311,10 @@ int32_t k_svg__svg_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 /// @param callback int32_t func(KSvg__Svg* self, const char* signal)
 ///
-void k_svg__svg_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_svg__svg_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1322,10 +1322,10 @@ void k_svg__svg_on_receivers(void* self, int32_t (*callback)(void*, const char*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 /// @param signal QMetaMethod*
 ///
-bool k_svg__svg_is_signal_connected(void* self, void* signal);
+bool k_svg__svg_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1333,10 +1333,10 @@ bool k_svg__svg_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 /// @param signal QMetaMethod*
 ///
-bool k_svg__svg_super_is_signal_connected(void* self, void* signal);
+bool k_svg__svg_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1344,10 +1344,10 @@ bool k_svg__svg_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KSvg__Svg*
+/// @param self const KSvg__Svg*
 /// @param callback bool func(KSvg__Svg* self, QMetaMethod* signal)
 ///
-void k_svg__svg_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_svg__svg_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

@@ -16,12 +16,12 @@ TextEmoticonsCore__UnicodeEmoticonParser* k_textemoticonscore__unicodeemoticonpa
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1UnicodeEmoticonParser.html)
 ///
-/// @param self TextEmoticonsCore__UnicodeEmoticonParser*
+/// @param self const TextEmoticonsCore__UnicodeEmoticonParser*
 /// @param o QJsonObject*
 ///
 /// @return libqt_list of TextEmoticonsCore__UnicodeEmoticon*
 ///
-libqt_list k_textemoticonscore__unicodeemoticonparser_parse(void* self, void* o);
+libqt_list k_textemoticonscore__unicodeemoticonparser_parse(const void* self, const void* o);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1UnicodeEmoticonParser.html)
 ///

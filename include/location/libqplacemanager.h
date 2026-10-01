@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 ///
-const QMetaObject* q_placemanager_meta_object(void* self);
+const QMetaObject* q_placemanager_meta_object(const void* self);
 
 /// @param self QPlaceManager*
 /// @param param1 const char*
@@ -40,50 +40,50 @@ const char* q_placemanager_tr(const char* s);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 ///
-const char* q_placemanager_manager_name(void* self);
+const char* q_placemanager_manager_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanager.html#managerVersion)
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 ///
-int32_t q_placemanager_manager_version(void* self);
+int32_t q_placemanager_manager_version(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanager.html#getPlaceDetails)
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 /// @param placeId const char*
 ///
-QPlaceDetailsReply* q_placemanager_get_place_details(void* self, const char* placeId);
+QPlaceDetailsReply* q_placemanager_get_place_details(const void* self, const char* placeId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanager.html#getPlaceContent)
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 /// @param request QPlaceContentRequest*
 ///
-QPlaceContentReply* q_placemanager_get_place_content(void* self, void* request);
+QPlaceContentReply* q_placemanager_get_place_content(const void* self, const void* request);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanager.html#search)
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 /// @param query QPlaceSearchRequest*
 ///
-QPlaceSearchReply* q_placemanager_search(void* self, void* query);
+QPlaceSearchReply* q_placemanager_search(const void* self, const void* query);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanager.html#searchSuggestions)
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 /// @param request QPlaceSearchRequest*
 ///
-QPlaceSearchSuggestionReply* q_placemanager_search_suggestions(void* self, void* request);
+QPlaceSearchSuggestionReply* q_placemanager_search_suggestions(const void* self, const void* request);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanager.html#savePlace)
 ///
 /// @param self QPlaceManager*
 /// @param place QPlace*
 ///
-QPlaceIdReply* q_placemanager_save_place(void* self, void* place);
+QPlaceIdReply* q_placemanager_save_place(void* self, const void* place);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanager.html#removePlace)
 ///
@@ -97,7 +97,7 @@ QPlaceIdReply* q_placemanager_remove_place(void* self, const char* placeId);
 /// @param self QPlaceManager*
 /// @param category QPlaceCategory*
 ///
-QPlaceIdReply* q_placemanager_save_category(void* self, void* category);
+QPlaceIdReply* q_placemanager_save_category(void* self, const void* category);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanager.html#removeCategory)
 ///
@@ -116,48 +116,48 @@ QPlaceReply* q_placemanager_initialize_categories(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 /// @param categoryId const char*
 ///
-const char* q_placemanager_parent_category_id(void* self, const char* categoryId);
+const char* q_placemanager_parent_category_id(const void* self, const char* categoryId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanager.html#childCategoryIds)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 ///
-const char** q_placemanager_child_category_ids(void* self);
+const char** q_placemanager_child_category_ids(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanager.html#category)
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 /// @param categoryId const char*
 ///
-QPlaceCategory* q_placemanager_category(void* self, const char* categoryId);
+QPlaceCategory* q_placemanager_category(const void* self, const char* categoryId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanager.html#childCategories)
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 ///
 /// @return libqt_list of QPlaceCategory*
 ///
-libqt_list q_placemanager_child_categories(void* self);
+libqt_list q_placemanager_child_categories(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanager.html#locales)
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 ///
 /// @return libqt_list of QLocale*
 ///
-libqt_list q_placemanager_locales(void* self);
+libqt_list q_placemanager_locales(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanager.html#setLocale)
 ///
 /// @param self QPlaceManager*
 /// @param locale QLocale*
 ///
-void q_placemanager_set_locale(void* self, void* locale);
+void q_placemanager_set_locale(void* self, const void* locale);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanager.html#setLocales)
 ///
@@ -168,17 +168,17 @@ void q_placemanager_set_locales(void* self, libqt_list locale);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanager.html#compatiblePlace)
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 /// @param place QPlace*
 ///
-QPlace* q_placemanager_compatible_place(void* self, void* place);
+QPlace* q_placemanager_compatible_place(const void* self, const void* place);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanager.html#matchingPlaces)
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 /// @param request QPlaceMatchRequest*
 ///
-QPlaceMatchReply* q_placemanager_matching_places(void* self, void* request);
+QPlaceMatchReply* q_placemanager_matching_places(const void* self, const void* request);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanager.html#finished)
 ///
@@ -257,14 +257,14 @@ void q_placemanager_on_place_removed(void* self, void (*callback)(void*, const c
 /// @param category QPlaceCategory*
 /// @param parentId const char*
 ///
-void q_placemanager_category_added(void* self, void* category, const char* parentId);
+void q_placemanager_category_added(void* self, const void* category, const char* parentId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanager.html#categoryAdded)
 ///
 /// @param self QPlaceManager*
 /// @param callback void func(QPlaceManager* self, QPlaceCategory* category, const char* parentId)
 ///
-void q_placemanager_on_category_added(void* self, void (*callback)(void*, void*, const char*));
+void q_placemanager_on_category_added(void* self, void (*callback)(void*, const void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanager.html#categoryUpdated)
 ///
@@ -272,14 +272,14 @@ void q_placemanager_on_category_added(void* self, void (*callback)(void*, void*,
 /// @param category QPlaceCategory*
 /// @param parentId const char*
 ///
-void q_placemanager_category_updated(void* self, void* category, const char* parentId);
+void q_placemanager_category_updated(void* self, const void* category, const char* parentId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanager.html#categoryUpdated)
 ///
 /// @param self QPlaceManager*
 /// @param callback void func(QPlaceManager* self, QPlaceCategory* category, const char* parentId)
 ///
-void q_placemanager_on_category_updated(void* self, void (*callback)(void*, void*, const char*));
+void q_placemanager_on_category_updated(void* self, void (*callback)(void*, const void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanager.html#categoryRemoved)
 ///
@@ -334,25 +334,25 @@ const char* q_placemanager_tr3(const char* s, const char* c, int n);
 /// @param category QPlaceCategory*
 /// @param parentId const char*
 ///
-QPlaceIdReply* q_placemanager_save_category2(void* self, void* category, const char* parentId);
+QPlaceIdReply* q_placemanager_save_category2(void* self, const void* category, const char* parentId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanager.html#childCategoryIds)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 /// @param parentId const char*
 ///
-const char** q_placemanager_child_category_ids1(void* self, const char* parentId);
+const char** q_placemanager_child_category_ids1(const void* self, const char* parentId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanager.html#childCategories)
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 /// @param parentId const char*
 ///
 /// @return libqt_list of QPlaceCategory*
 ///
-libqt_list q_placemanager_child_categories1(void* self, const char* parentId);
+libqt_list q_placemanager_child_categories1(const void* self, const char* parentId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanager.html#errorOccurred)
 ///
@@ -395,9 +395,9 @@ bool q_placemanager_event_filter(void* self, void* watched, void* event);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 ///
-const char* q_placemanager_object_name(void* self);
+const char* q_placemanager_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -412,33 +412,33 @@ void q_placemanager_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 ///
-bool q_placemanager_is_widget_type(void* self);
+bool q_placemanager_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 ///
-bool q_placemanager_is_window_type(void* self);
+bool q_placemanager_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 ///
-bool q_placemanager_is_quick_item_type(void* self);
+bool q_placemanager_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 ///
-bool q_placemanager_signals_blocked(void* self);
+bool q_placemanager_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -453,9 +453,9 @@ bool q_placemanager_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 ///
-QThread* q_placemanager_thread(void* self);
+QThread* q_placemanager_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -506,11 +506,11 @@ void q_placemanager_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_placemanager_children(void* self);
+libqt_list q_placemanager_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -548,7 +548,7 @@ void q_placemanager_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_placemanager_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_placemanager_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -559,18 +559,18 @@ QMetaObject__Connection* q_placemanager_connect(void* sender, const char* signal
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_placemanager_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_placemanager_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_placemanager_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_placemanager_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -581,7 +581,7 @@ QMetaObject__Connection* q_placemanager_connect3(void* self, void* sender, const
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_placemanager_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_placemanager_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -592,24 +592,24 @@ bool q_placemanager_disconnect(void* sender, const char* signal, void* receiver,
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_placemanager_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_placemanager_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 ///
-bool q_placemanager_disconnect3(void* self);
+bool q_placemanager_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 /// @param receiver QObject*
 ///
-bool q_placemanager_disconnect4(void* self, void* receiver);
+bool q_placemanager_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -617,23 +617,23 @@ bool q_placemanager_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_placemanager_disconnect5(void* param1);
+bool q_placemanager_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 ///
-void q_placemanager_dump_object_tree(void* self);
+void q_placemanager_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 ///
-void q_placemanager_dump_object_info(void* self);
+void q_placemanager_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -643,16 +643,16 @@ void q_placemanager_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_placemanager_set_property(void* self, const char* name, void* value);
+bool q_placemanager_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 /// @param name const char*
 ///
-QVariant* q_placemanager_property(void* self, const char* name);
+QVariant* q_placemanager_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -660,9 +660,9 @@ QVariant* q_placemanager_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 ///
-const char** q_placemanager_dynamic_property_names(void* self);
+const char** q_placemanager_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -676,9 +676,9 @@ QBindingStorage* q_placemanager_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 ///
-const QBindingStorage* q_placemanager_binding_storage2(void* self);
+const QBindingStorage* q_placemanager_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -701,18 +701,18 @@ void q_placemanager_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 ///
-QObject* q_placemanager_parent(void* self);
+QObject* q_placemanager_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 /// @param classname const char*
 ///
-bool q_placemanager_inherits(void* self, const char* classname);
+bool q_placemanager_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -752,7 +752,7 @@ int32_t q_placemanager_start_timer23(void* self, int64_t time, int32_t timerType
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_placemanager_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_placemanager_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -764,59 +764,59 @@ QMetaObject__Connection* q_placemanager_connect5(void* sender, const char* signa
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_placemanager_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_placemanager_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_placemanager_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_placemanager_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 /// @param signal const char*
 ///
-bool q_placemanager_disconnect1(void* self, const char* signal);
+bool q_placemanager_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPlaceManager*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_placemanager_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_placemanager_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_placemanager_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPlaceManager*
+/// @param self const QPlaceManager*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_placemanager_disconnect23(void* self, void* receiver, const char* member);
+bool q_placemanager_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QPlaceManager*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_placemanager_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

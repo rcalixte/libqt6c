@@ -20,20 +20,20 @@ KIO__AuthInfo* k_io__authinfo_new();
 ///
 /// @param info KIO__AuthInfo*
 ///
-KIO__AuthInfo* k_io__authinfo_new2(void* info);
+KIO__AuthInfo* k_io__authinfo_new2(const void* info);
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#operator-eq)
 ///
 /// @param self KIO__AuthInfo*
 /// @param info KIO__AuthInfo*
 ///
-void k_io__authinfo_operator_assign(void* self, void* info);
+void k_io__authinfo_operator_assign(void* self, const void* info);
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#isModified)
 ///
-/// @param self KIO__AuthInfo*
+/// @param self const KIO__AuthInfo*
 ///
-bool k_io__authinfo_is_modified(void* self);
+bool k_io__authinfo_is_modified(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#setModified)
 ///
@@ -44,9 +44,9 @@ void k_io__authinfo_set_modified(void* self, bool flag);
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#url-var)
 ///
-/// @param self KIO__AuthInfo*
+/// @param self const KIO__AuthInfo*
 ///
-QUrl* k_io__authinfo_url(void* self);
+QUrl* k_io__authinfo_url(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#url-var)
 ///
@@ -59,9 +59,9 @@ void k_io__authinfo_set_url(void* self, void* url);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__AuthInfo*
+/// @param self const KIO__AuthInfo*
 ///
-const char* k_io__authinfo_username(void* self);
+const char* k_io__authinfo_username(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#username-var)
 ///
@@ -74,9 +74,9 @@ void k_io__authinfo_set_username(void* self, const char* username);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__AuthInfo*
+/// @param self const KIO__AuthInfo*
 ///
-const char* k_io__authinfo_password(void* self);
+const char* k_io__authinfo_password(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#password-var)
 ///
@@ -89,9 +89,9 @@ void k_io__authinfo_set_password(void* self, const char* password);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__AuthInfo*
+/// @param self const KIO__AuthInfo*
 ///
-const char* k_io__authinfo_prompt(void* self);
+const char* k_io__authinfo_prompt(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#prompt-var)
 ///
@@ -104,9 +104,9 @@ void k_io__authinfo_set_prompt(void* self, const char* prompt);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__AuthInfo*
+/// @param self const KIO__AuthInfo*
 ///
-const char* k_io__authinfo_caption(void* self);
+const char* k_io__authinfo_caption(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#caption-var)
 ///
@@ -119,9 +119,9 @@ void k_io__authinfo_set_caption(void* self, const char* caption);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__AuthInfo*
+/// @param self const KIO__AuthInfo*
 ///
-const char* k_io__authinfo_comment(void* self);
+const char* k_io__authinfo_comment(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#comment-var)
 ///
@@ -134,9 +134,9 @@ void k_io__authinfo_set_comment(void* self, const char* comment);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__AuthInfo*
+/// @param self const KIO__AuthInfo*
 ///
-const char* k_io__authinfo_comment_label(void* self);
+const char* k_io__authinfo_comment_label(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#commentLabel-var)
 ///
@@ -149,9 +149,9 @@ void k_io__authinfo_set_comment_label(void* self, const char* commentLabel);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__AuthInfo*
+/// @param self const KIO__AuthInfo*
 ///
-const char* k_io__authinfo_realm_value(void* self);
+const char* k_io__authinfo_realm_value(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#realmValue-var)
 ///
@@ -164,9 +164,9 @@ void k_io__authinfo_set_realm_value(void* self, const char* realmValue);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__AuthInfo*
+/// @param self const KIO__AuthInfo*
 ///
-const char* k_io__authinfo_digest_info(void* self);
+const char* k_io__authinfo_digest_info(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#digestInfo-var)
 ///
@@ -177,9 +177,9 @@ void k_io__authinfo_set_digest_info(void* self, const char* digestInfo);
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#verifyPath-var)
 ///
-/// @param self KIO__AuthInfo*
+/// @param self const KIO__AuthInfo*
 ///
-bool k_io__authinfo_verify_path(void* self);
+bool k_io__authinfo_verify_path(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#verifyPath-var)
 ///
@@ -190,9 +190,9 @@ void k_io__authinfo_set_verify_path(void* self, bool verifyPath);
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#readOnly-var)
 ///
-/// @param self KIO__AuthInfo*
+/// @param self const KIO__AuthInfo*
 ///
-bool k_io__authinfo_read_only(void* self);
+bool k_io__authinfo_read_only(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#readOnly-var)
 ///
@@ -203,9 +203,9 @@ void k_io__authinfo_set_read_only(void* self, bool readOnly);
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#keepPassword-var)
 ///
-/// @param self KIO__AuthInfo*
+/// @param self const KIO__AuthInfo*
 ///
-bool k_io__authinfo_keep_password(void* self);
+bool k_io__authinfo_keep_password(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#keepPassword-var)
 ///
@@ -220,7 +220,7 @@ void k_io__authinfo_set_keep_password(void* self, bool keepPassword);
 /// @param fieldName const char*
 /// @param value QVariant*
 ///
-void k_io__authinfo_set_extra_field(void* self, const char* fieldName, void* value);
+void k_io__authinfo_set_extra_field(void* self, const char* fieldName, const void* value);
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#setExtraFieldFlags)
 ///
@@ -232,19 +232,19 @@ void k_io__authinfo_set_extra_field_flags(void* self, const char* fieldName, int
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#getExtraField)
 ///
-/// @param self KIO__AuthInfo*
+/// @param self const KIO__AuthInfo*
 /// @param fieldName const char*
 ///
-QVariant* k_io__authinfo_get_extra_field(void* self, const char* fieldName);
+QVariant* k_io__authinfo_get_extra_field(const void* self, const char* fieldName);
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#getExtraFieldFlags)
 ///
-/// @param self KIO__AuthInfo*
+/// @param self const KIO__AuthInfo*
 /// @param fieldName const char*
 ///
 /// @return enum KIO__AuthInfo__FieldFlags
 ///
-int32_t k_io__authinfo_get_extra_field_flags(void* self, const char* fieldName);
+int32_t k_io__authinfo_get_extra_field_flags(const void* self, const char* fieldName);
 
 /// [Upstream resources](https://api.kde.org/kio-authinfo.html#registerMetaTypes)
 ///

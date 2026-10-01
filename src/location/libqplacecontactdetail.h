@@ -20,14 +20,14 @@ QPlaceContactDetail* q_placecontactdetail_new();
 ///
 /// @param other QPlaceContactDetail*
 ///
-QPlaceContactDetail* q_placecontactdetail_new2(void* other);
+QPlaceContactDetail* q_placecontactdetail_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontactdetail.html#operator-eq)
 ///
 /// @param self QPlaceContactDetail*
 /// @param other QPlaceContactDetail*
 ///
-void q_placecontactdetail_operator_assign(void* self, void* other);
+void q_placecontactdetail_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontactdetail.html#swap)
 ///
@@ -40,9 +40,9 @@ void q_placecontactdetail_swap(void* self, void* other);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPlaceContactDetail*
+/// @param self const QPlaceContactDetail*
 ///
-const char* q_placecontactdetail_label(void* self);
+const char* q_placecontactdetail_label(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontactdetail.html#setLabel)
 ///
@@ -55,9 +55,9 @@ void q_placecontactdetail_set_label(void* self, const char* label);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPlaceContactDetail*
+/// @param self const QPlaceContactDetail*
 ///
-const char* q_placecontactdetail_value(void* self);
+const char* q_placecontactdetail_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontactdetail.html#setValue)
 ///

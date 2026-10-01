@@ -16,53 +16,45 @@ QDesignerTaskMenuExtension* q_designertaskmenuextension_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignertaskmenuextension.html#preferredEditAction)
 ///
-/// @param self QDesignerTaskMenuExtension*
+/// @param self const QDesignerTaskMenuExtension*
 ///
-QAction* q_designertaskmenuextension_preferred_edit_action(void* self);
+QAction* q_designertaskmenuextension_preferred_edit_action(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignertaskmenuextension.html#preferredEditAction)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerTaskMenuExtension*
-/// @param callback QAction* func()
+/// @param self const QDesignerTaskMenuExtension*
+/// @param callback QAction* func(const QDesignerTaskMenuExtension* self)
 ///
-void q_designertaskmenuextension_on_preferred_edit_action(void* self, QAction* (*callback)());
+void q_designertaskmenuextension_on_preferred_edit_action(const void* self, QAction* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignertaskmenuextension.html#preferredEditAction)
 ///
 /// Base class method implementation
 ///
-/// @param self QDesignerTaskMenuExtension*
+/// @param self const QDesignerTaskMenuExtension*
 ///
-QAction* q_designertaskmenuextension_super_preferred_edit_action(void* self);
+QAction* q_designertaskmenuextension_super_preferred_edit_action(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignertaskmenuextension.html#taskActions)
 ///
-/// @param self QDesignerTaskMenuExtension*
+/// @warning This method must be implemented with `q_designertaskmenuextension_on_task_actions` before it can be called.
+///
+/// @param self const QDesignerTaskMenuExtension*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list q_designertaskmenuextension_task_actions(void* self);
+libqt_list q_designertaskmenuextension_task_actions(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignertaskmenuextension.html#taskActions)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerTaskMenuExtension*
-/// @param callback libqt_list of QAction* func()
+/// @param self const QDesignerTaskMenuExtension*
+/// @param callback libqt_list of QAction* func(const QDesignerTaskMenuExtension* self)
 ///
-void q_designertaskmenuextension_on_task_actions(void* self, libqt_list (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignertaskmenuextension.html#taskActions)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerTaskMenuExtension*
-///
-/// @return libqt_list of QAction*
-///
-libqt_list q_designertaskmenuextension_super_task_actions(void* self);
+void q_designertaskmenuextension_on_task_actions(const void* self, libqt_list (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignertaskmenuextension.html#dtor.QDesignerTaskMenuExtension)
 ///

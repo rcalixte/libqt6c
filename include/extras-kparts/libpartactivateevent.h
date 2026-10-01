@@ -20,53 +20,53 @@ KParts__PartActivateEvent* k_parts__partactivateevent_new(bool activated, void* 
 
 /// [Upstream resources](https://api.kde.org/kparts-partactivateevent.html#activated)
 ///
-/// @param self KParts__PartActivateEvent*
+/// @param self const KParts__PartActivateEvent*
 ///
-bool k_parts__partactivateevent_activated(void* self);
+bool k_parts__partactivateevent_activated(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-partactivateevent.html#part)
 ///
-/// @param self KParts__PartActivateEvent*
+/// @param self const KParts__PartActivateEvent*
 ///
-KParts__Part* k_parts__partactivateevent_part(void* self);
+KParts__Part* k_parts__partactivateevent_part(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-partactivateevent.html#widget)
 ///
-/// @param self KParts__PartActivateEvent*
+/// @param self const KParts__PartActivateEvent*
 ///
-QWidget* k_parts__partactivateevent_widget(void* self);
+QWidget* k_parts__partactivateevent_widget(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-partactivateevent.html#test)
 ///
 /// @param event QEvent*
 ///
-bool k_parts__partactivateevent_test(void* event);
+bool k_parts__partactivateevent_test(const void* event);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// @param self KParts__PartActivateEvent*
+/// @param self const KParts__PartActivateEvent*
 ///
 /// @return enum QEvent__Type
 ///
-int32_t k_parts__partactivateevent_type(void* self);
+int32_t k_parts__partactivateevent_type(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// @param self KParts__PartActivateEvent*
+/// @param self const KParts__PartActivateEvent*
 ///
-bool k_parts__partactivateevent_spontaneous(void* self);
+bool k_parts__partactivateevent_spontaneous(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// @param self KParts__PartActivateEvent*
+/// @param self const KParts__PartActivateEvent*
 ///
-bool k_parts__partactivateevent_is_accepted(void* self);
+bool k_parts__partactivateevent_is_accepted(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -88,25 +88,25 @@ void k_parts__partactivateevent_ignore(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// @param self KParts__PartActivateEvent*
+/// @param self const KParts__PartActivateEvent*
 ///
-bool k_parts__partactivateevent_is_input_event(void* self);
+bool k_parts__partactivateevent_is_input_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// @param self KParts__PartActivateEvent*
+/// @param self const KParts__PartActivateEvent*
 ///
-bool k_parts__partactivateevent_is_pointer_event(void* self);
+bool k_parts__partactivateevent_is_pointer_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// @param self KParts__PartActivateEvent*
+/// @param self const KParts__PartActivateEvent*
 ///
-bool k_parts__partactivateevent_is_single_point_event(void* self);
+bool k_parts__partactivateevent_is_single_point_event(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -161,9 +161,9 @@ void k_parts__partactivateevent_on_set_accepted(void* self, void (*callback)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KParts__PartActivateEvent*
+/// @param self const KParts__PartActivateEvent*
 ///
-QEvent* k_parts__partactivateevent_clone(void* self);
+QEvent* k_parts__partactivateevent_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -171,9 +171,9 @@ QEvent* k_parts__partactivateevent_clone(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KParts__PartActivateEvent*
+/// @param self const KParts__PartActivateEvent*
 ///
-QEvent* k_parts__partactivateevent_super_clone(void* self);
+QEvent* k_parts__partactivateevent_super_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -181,10 +181,10 @@ QEvent* k_parts__partactivateevent_super_clone(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KParts__PartActivateEvent*
-/// @param callback QEvent* func()
+/// @param self const KParts__PartActivateEvent*
+/// @param callback QEvent* func(KParts__PartActivateEvent* self)
 ///
-void k_parts__partactivateevent_on_clone(void* self, QEvent* (*callback)());
+void k_parts__partactivateevent_on_clone(const void* self, QEvent* (*callback)(const void*));
 
 /// Delete this object from C++ memory.
 ///

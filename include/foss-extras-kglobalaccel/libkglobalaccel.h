@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KGlobalAccel*
+/// @param self const KGlobalAccel*
 ///
-const QMetaObject* k_globalaccel_meta_object(void* self);
+const QMetaObject* k_globalaccel_meta_object(const void* self);
 
 /// @param self KGlobalAccel*
 /// @param param1 const char*
@@ -44,7 +44,7 @@ KGlobalAccel* k_globalaccel_self();
 ///
 /// @param seq QKeySequence*
 ///
-void k_globalaccel_steal_shortcut_systemwide(void* seq);
+void k_globalaccel_steal_shortcut_systemwide(const void* seq);
 
 /// [Upstream resources](https://api.kde.org/kglobalaccel.html#cleanComponent)
 ///
@@ -64,13 +64,13 @@ bool k_globalaccel_is_component_active(const char* componentName);
 ///
 /// @return libqt_list of KGlobalShortcutInfo*
 ///
-libqt_list k_globalaccel_global_shortcuts_by_key(void* seq);
+libqt_list k_globalaccel_global_shortcuts_by_key(const void* seq);
 
 /// [Upstream resources](https://api.kde.org/kglobalaccel.html#isGlobalShortcutAvailable)
 ///
 /// @param seq QKeySequence*
 ///
-bool k_globalaccel_is_global_shortcut_available(void* seq);
+bool k_globalaccel_is_global_shortcut_available(const void* seq);
 
 /// [Upstream resources](https://api.kde.org/kglobalaccel.html#promptStealShortcutSystemwide)
 ///
@@ -78,7 +78,7 @@ bool k_globalaccel_is_global_shortcut_available(void* seq);
 /// @param shortcuts libqt_list of KGlobalShortcutInfo*
 /// @param seq QKeySequence*
 ///
-bool k_globalaccel_prompt_steal_shortcut_systemwide(void* parent, libqt_list shortcuts, void* seq);
+bool k_globalaccel_prompt_steal_shortcut_systemwide(void* parent, libqt_list shortcuts, const void* seq);
 
 /// [Upstream resources](https://api.kde.org/kglobalaccel.html#setDefaultShortcut)
 ///
@@ -108,35 +108,35 @@ bool k_globalaccel_set_global_shortcut(void* action, libqt_list shortcut);
 /// @param action QAction*
 /// @param shortcut QKeySequence*
 ///
-bool k_globalaccel_set_global_shortcut2(void* action, void* shortcut);
+bool k_globalaccel_set_global_shortcut2(void* action, const void* shortcut);
 
 /// [Upstream resources](https://api.kde.org/kglobalaccel.html#defaultShortcut)
 ///
-/// @param self KGlobalAccel*
+/// @param self const KGlobalAccel*
 /// @param action QAction*
 ///
 /// @return libqt_list of QKeySequence*
 ///
-libqt_list k_globalaccel_default_shortcut(void* self, void* action);
+libqt_list k_globalaccel_default_shortcut(const void* self, const void* action);
 
 /// [Upstream resources](https://api.kde.org/kglobalaccel.html#shortcut)
 ///
-/// @param self KGlobalAccel*
+/// @param self const KGlobalAccel*
 /// @param action QAction*
 ///
 /// @return libqt_list of QKeySequence*
 ///
-libqt_list k_globalaccel_shortcut(void* self, void* action);
+libqt_list k_globalaccel_shortcut(const void* self, const void* action);
 
 /// [Upstream resources](https://api.kde.org/kglobalaccel.html#globalShortcut)
 ///
-/// @param self KGlobalAccel*
+/// @param self const KGlobalAccel*
 /// @param componentName const char*
 /// @param actionId const char*
 ///
 /// @return libqt_list of QKeySequence*
 ///
-libqt_list k_globalaccel_global_shortcut(void* self, const char* componentName, const char* actionId);
+libqt_list k_globalaccel_global_shortcut(const void* self, const char* componentName, const char* actionId);
 
 /// [Upstream resources](https://api.kde.org/kglobalaccel.html#removeAllShortcuts)
 ///
@@ -147,10 +147,10 @@ void k_globalaccel_remove_all_shortcuts(void* self, void* action);
 
 /// [Upstream resources](https://api.kde.org/kglobalaccel.html#hasShortcut)
 ///
-/// @param self KGlobalAccel*
+/// @param self const KGlobalAccel*
 /// @param action QAction*
 ///
-bool k_globalaccel_has_shortcut(void* self, void* action);
+bool k_globalaccel_has_shortcut(const void* self, const void* action);
 
 /// [Upstream resources](https://api.kde.org/kglobalaccel.html#globalShortcutChanged)
 ///
@@ -158,14 +158,14 @@ bool k_globalaccel_has_shortcut(void* self, void* action);
 /// @param action QAction*
 /// @param seq QKeySequence*
 ///
-void k_globalaccel_global_shortcut_changed(void* self, void* action, void* seq);
+void k_globalaccel_global_shortcut_changed(void* self, void* action, const void* seq);
 
 /// [Upstream resources](https://api.kde.org/kglobalaccel.html#globalShortcutChanged)
 ///
 /// @param self KGlobalAccel*
 /// @param callback void func(KGlobalAccel* self, QAction* action, QKeySequence* seq)
 ///
-void k_globalaccel_on_global_shortcut_changed(void* self, void (*callback)(void*, void*, void*));
+void k_globalaccel_on_global_shortcut_changed(void* self, void (*callback)(void*, void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kglobalaccel.html#globalShortcutActiveChanged)
 ///
@@ -208,14 +208,14 @@ const char* k_globalaccel_tr3(const char* s, const char* c, int n);
 ///
 /// @return libqt_list of KGlobalShortcutInfo*
 ///
-libqt_list k_globalaccel_global_shortcuts_by_key2(void* seq, int32_t type);
+libqt_list k_globalaccel_global_shortcuts_by_key2(const void* seq, int32_t type);
 
 /// [Upstream resources](https://api.kde.org/kglobalaccel.html#isGlobalShortcutAvailable)
 ///
 /// @param seq QKeySequence*
 /// @param component const char*
 ///
-bool k_globalaccel_is_global_shortcut_available2(void* seq, const char* component);
+bool k_globalaccel_is_global_shortcut_available2(const void* seq, const char* component);
 
 /// [Upstream resources](https://api.kde.org/kglobalaccel.html#setDefaultShortcut)
 ///
@@ -260,9 +260,9 @@ bool k_globalaccel_event_filter(void* self, void* watched, void* event);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KGlobalAccel*
+/// @param self const KGlobalAccel*
 ///
-const char* k_globalaccel_object_name(void* self);
+const char* k_globalaccel_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -277,33 +277,33 @@ void k_globalaccel_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KGlobalAccel*
+/// @param self const KGlobalAccel*
 ///
-bool k_globalaccel_is_widget_type(void* self);
+bool k_globalaccel_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KGlobalAccel*
+/// @param self const KGlobalAccel*
 ///
-bool k_globalaccel_is_window_type(void* self);
+bool k_globalaccel_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KGlobalAccel*
+/// @param self const KGlobalAccel*
 ///
-bool k_globalaccel_is_quick_item_type(void* self);
+bool k_globalaccel_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KGlobalAccel*
+/// @param self const KGlobalAccel*
 ///
-bool k_globalaccel_signals_blocked(void* self);
+bool k_globalaccel_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -318,9 +318,9 @@ bool k_globalaccel_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KGlobalAccel*
+/// @param self const KGlobalAccel*
 ///
-QThread* k_globalaccel_thread(void* self);
+QThread* k_globalaccel_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -371,11 +371,11 @@ void k_globalaccel_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KGlobalAccel*
+/// @param self const KGlobalAccel*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_globalaccel_children(void* self);
+libqt_list k_globalaccel_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -413,7 +413,7 @@ void k_globalaccel_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_globalaccel_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_globalaccel_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -424,18 +424,18 @@ QMetaObject__Connection* k_globalaccel_connect(void* sender, const char* signal,
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_globalaccel_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_globalaccel_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KGlobalAccel*
+/// @param self const KGlobalAccel*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_globalaccel_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_globalaccel_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -446,7 +446,7 @@ QMetaObject__Connection* k_globalaccel_connect3(void* self, void* sender, const 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_globalaccel_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_globalaccel_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -457,24 +457,24 @@ bool k_globalaccel_disconnect(void* sender, const char* signal, void* receiver, 
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_globalaccel_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_globalaccel_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KGlobalAccel*
+/// @param self const KGlobalAccel*
 ///
-bool k_globalaccel_disconnect3(void* self);
+bool k_globalaccel_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KGlobalAccel*
+/// @param self const KGlobalAccel*
 /// @param receiver QObject*
 ///
-bool k_globalaccel_disconnect4(void* self, void* receiver);
+bool k_globalaccel_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -482,23 +482,23 @@ bool k_globalaccel_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_globalaccel_disconnect5(void* param1);
+bool k_globalaccel_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KGlobalAccel*
+/// @param self const KGlobalAccel*
 ///
-void k_globalaccel_dump_object_tree(void* self);
+void k_globalaccel_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KGlobalAccel*
+/// @param self const KGlobalAccel*
 ///
-void k_globalaccel_dump_object_info(void* self);
+void k_globalaccel_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -508,16 +508,16 @@ void k_globalaccel_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_globalaccel_set_property(void* self, const char* name, void* value);
+bool k_globalaccel_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KGlobalAccel*
+/// @param self const KGlobalAccel*
 /// @param name const char*
 ///
-QVariant* k_globalaccel_property(void* self, const char* name);
+QVariant* k_globalaccel_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -525,9 +525,9 @@ QVariant* k_globalaccel_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KGlobalAccel*
+/// @param self const KGlobalAccel*
 ///
-const char** k_globalaccel_dynamic_property_names(void* self);
+const char** k_globalaccel_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -541,9 +541,9 @@ QBindingStorage* k_globalaccel_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KGlobalAccel*
+/// @param self const KGlobalAccel*
 ///
-const QBindingStorage* k_globalaccel_binding_storage2(void* self);
+const QBindingStorage* k_globalaccel_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -566,18 +566,18 @@ void k_globalaccel_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KGlobalAccel*
+/// @param self const KGlobalAccel*
 ///
-QObject* k_globalaccel_parent(void* self);
+QObject* k_globalaccel_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KGlobalAccel*
+/// @param self const KGlobalAccel*
 /// @param classname const char*
 ///
-bool k_globalaccel_inherits(void* self, const char* classname);
+bool k_globalaccel_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -617,7 +617,7 @@ int32_t k_globalaccel_start_timer23(void* self, int64_t time, int32_t timerType)
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_globalaccel_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_globalaccel_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -629,59 +629,59 @@ QMetaObject__Connection* k_globalaccel_connect5(void* sender, const char* signal
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_globalaccel_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_globalaccel_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KGlobalAccel*
+/// @param self const KGlobalAccel*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_globalaccel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_globalaccel_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KGlobalAccel*
+/// @param self const KGlobalAccel*
 /// @param signal const char*
 ///
-bool k_globalaccel_disconnect1(void* self, const char* signal);
+bool k_globalaccel_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KGlobalAccel*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_globalaccel_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KGlobalAccel*
+/// @param self const KGlobalAccel*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_globalaccel_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_globalaccel_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KGlobalAccel*
+/// @param self const KGlobalAccel*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_globalaccel_disconnect23(void* self, void* receiver, const char* member);
+bool k_globalaccel_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KGlobalAccel*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_globalaccel_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

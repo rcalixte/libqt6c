@@ -3,7 +3,7 @@
 #include "libkrecentdocument.hpp"
 #include "libkrecentdocument.h"
 
-KRecentDocument* k_recentdocument_new(void* other) {
+KRecentDocument* k_recentdocument_new(const void* other) {
     return KRecentDocument_New((KRecentDocument*)other);
 }
 
@@ -24,23 +24,23 @@ libqt_list /* of QUrl* */ k_recentdocument_recent_urls() {
     return _arr;
 }
 
-void k_recentdocument_add(void* url) {
+void k_recentdocument_add(const void* url) {
     KRecentDocument_Add((QUrl*)url);
 }
 
-void k_recentdocument_add2(void* url, libqt_list /* of enum KRecentDocument__RecentDocumentGroup */ groups) {
+void k_recentdocument_add2(const void* url, libqt_list /* of enum KRecentDocument__RecentDocumentGroup */ groups) {
     KRecentDocument_Add2((QUrl*)url, groups);
 }
 
-void k_recentdocument_add3(void* url, const char* desktopEntryName) {
+void k_recentdocument_add3(const void* url, const char* desktopEntryName) {
     KRecentDocument_Add3((QUrl*)url, qstring(desktopEntryName));
 }
 
-void k_recentdocument_add4(void* url, const char* desktopEntryName, libqt_list /* of enum KRecentDocument__RecentDocumentGroup */ groups) {
+void k_recentdocument_add4(const void* url, const char* desktopEntryName, libqt_list /* of enum KRecentDocument__RecentDocumentGroup */ groups) {
     KRecentDocument_Add4((QUrl*)url, qstring(desktopEntryName), groups);
 }
 
-void k_recentdocument_remove_file(void* url) {
+void k_recentdocument_remove_file(const void* url) {
     KRecentDocument_RemoveFile((QUrl*)url);
 }
 
@@ -48,7 +48,7 @@ void k_recentdocument_remove_application(const char* desktopEntryName) {
     KRecentDocument_RemoveApplication(qstring(desktopEntryName));
 }
 
-void k_recentdocument_remove_bookmarks_modified_since(void* since) {
+void k_recentdocument_remove_bookmarks_modified_since(const void* since) {
     KRecentDocument_RemoveBookmarksModifiedSince((QDateTime*)since);
 }
 

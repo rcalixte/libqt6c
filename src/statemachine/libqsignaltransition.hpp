@@ -40,7 +40,7 @@ void QSignalTransition_SetSignal(QSignalTransition* self, const libqt_string sig
 bool QSignalTransition_EventTest(QSignalTransition* self, QEvent* event);
 void QSignalTransition_OnTransition(QSignalTransition* self, QEvent* event);
 bool QSignalTransition_Event(QSignalTransition* self, QEvent* e);
-void QSignalTransition_OnMetaObject(const QSignalTransition* self, intptr_t slot);
+void QSignalTransition_OnMetaObject(QSignalTransition* self, intptr_t slot);
 QMetaObject* QSignalTransition_SuperMetaObject(const QSignalTransition* self);
 void QSignalTransition_OnMetacast(QSignalTransition* self, intptr_t slot);
 void* QSignalTransition_SuperMetacast(QSignalTransition* self, const char* param1);
@@ -71,17 +71,9 @@ void QSignalTransition_DisconnectNotify(QSignalTransition* self, const QMetaMeth
 void QSignalTransition_OnDisconnectNotify(QSignalTransition* self, intptr_t slot);
 void QSignalTransition_SuperDisconnectNotify(QSignalTransition* self, const QMetaMethod* signal);
 QObject* QSignalTransition_Sender(const QSignalTransition* self);
-void QSignalTransition_OnSender(const QSignalTransition* self, intptr_t slot);
-QObject* QSignalTransition_SuperSender(const QSignalTransition* self);
 int QSignalTransition_SenderSignalIndex(const QSignalTransition* self);
-void QSignalTransition_OnSenderSignalIndex(const QSignalTransition* self, intptr_t slot);
-int QSignalTransition_SuperSenderSignalIndex(const QSignalTransition* self);
 int QSignalTransition_Receivers(const QSignalTransition* self, const char* signal);
-void QSignalTransition_OnReceivers(const QSignalTransition* self, intptr_t slot);
-int QSignalTransition_SuperReceivers(const QSignalTransition* self, const char* signal);
 bool QSignalTransition_IsSignalConnected(const QSignalTransition* self, const QMetaMethod* signal);
-void QSignalTransition_OnIsSignalConnected(const QSignalTransition* self, intptr_t slot);
-bool QSignalTransition_SuperIsSignalConnected(const QSignalTransition* self, const QMetaMethod* signal);
 void QSignalTransition_Connect_SenderObjectChanged(QSignalTransition* self, intptr_t slot);
 void QSignalTransition_Connect_SignalChanged(QSignalTransition* self, intptr_t slot);
 void QSignalTransition_Delete(QSignalTransition* self);

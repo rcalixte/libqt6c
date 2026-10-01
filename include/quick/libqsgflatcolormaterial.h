@@ -16,99 +16,99 @@ QSGFlatColorMaterial* q_sgflatcolormaterial_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgflatcolormaterial.html#type)
 ///
-/// @param self QSGFlatColorMaterial*
+/// @param self const QSGFlatColorMaterial*
 ///
-QSGMaterialType* q_sgflatcolormaterial_type(void* self);
+QSGMaterialType* q_sgflatcolormaterial_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgflatcolormaterial.html#type)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSGFlatColorMaterial*
-/// @param callback QSGMaterialType* func()
+/// @param self const QSGFlatColorMaterial*
+/// @param callback QSGMaterialType* func(const QSGFlatColorMaterial* self)
 ///
-void q_sgflatcolormaterial_on_type(void* self, QSGMaterialType* (*callback)());
+void q_sgflatcolormaterial_on_type(const void* self, QSGMaterialType* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgflatcolormaterial.html#type)
 ///
 /// Base class method implementation
 ///
-/// @param self QSGFlatColorMaterial*
+/// @param self const QSGFlatColorMaterial*
 ///
-QSGMaterialType* q_sgflatcolormaterial_super_type(void* self);
+QSGMaterialType* q_sgflatcolormaterial_super_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgflatcolormaterial.html#createShader)
 ///
-/// @param self QSGFlatColorMaterial*
+/// @param self const QSGFlatColorMaterial*
 /// @param renderMode enum QSGRendererInterface__RenderMode
 ///
-QSGMaterialShader* q_sgflatcolormaterial_create_shader(void* self, int32_t renderMode);
+QSGMaterialShader* q_sgflatcolormaterial_create_shader(const void* self, int32_t renderMode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgflatcolormaterial.html#createShader)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSGFlatColorMaterial*
-/// @param callback QSGMaterialShader* func(QSGFlatColorMaterial* self, enum QSGRendererInterface__RenderMode renderMode)
+/// @param self const QSGFlatColorMaterial*
+/// @param callback QSGMaterialShader* func(const QSGFlatColorMaterial* self, enum QSGRendererInterface__RenderMode renderMode)
 ///
-void q_sgflatcolormaterial_on_create_shader(void* self, QSGMaterialShader* (*callback)(void*, int32_t));
+void q_sgflatcolormaterial_on_create_shader(const void* self, QSGMaterialShader* (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgflatcolormaterial.html#createShader)
 ///
 /// Base class method implementation
 ///
-/// @param self QSGFlatColorMaterial*
+/// @param self const QSGFlatColorMaterial*
 /// @param renderMode enum QSGRendererInterface__RenderMode
 ///
-QSGMaterialShader* q_sgflatcolormaterial_super_create_shader(void* self, int32_t renderMode);
+QSGMaterialShader* q_sgflatcolormaterial_super_create_shader(const void* self, int32_t renderMode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgflatcolormaterial.html#setColor)
 ///
 /// @param self QSGFlatColorMaterial*
 /// @param color QColor*
 ///
-void q_sgflatcolormaterial_set_color(void* self, void* color);
+void q_sgflatcolormaterial_set_color(void* self, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgflatcolormaterial.html#color)
 ///
-/// @param self QSGFlatColorMaterial*
+/// @param self const QSGFlatColorMaterial*
 ///
-const QColor* q_sgflatcolormaterial_color(void* self);
+const QColor* q_sgflatcolormaterial_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgflatcolormaterial.html#compare)
 ///
-/// @param self QSGFlatColorMaterial*
+/// @param self const QSGFlatColorMaterial*
 /// @param other QSGMaterial*
 ///
-int32_t q_sgflatcolormaterial_compare(void* self, void* other);
+int32_t q_sgflatcolormaterial_compare(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgflatcolormaterial.html#compare)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSGFlatColorMaterial*
-/// @param callback int32_t func(QSGFlatColorMaterial* self, QSGMaterial* other)
+/// @param self const QSGFlatColorMaterial*
+/// @param callback int32_t func(const QSGFlatColorMaterial* self, QSGMaterial* other)
 ///
-void q_sgflatcolormaterial_on_compare(void* self, int32_t (*callback)(void*, void*));
+void q_sgflatcolormaterial_on_compare(const void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgflatcolormaterial.html#compare)
 ///
 /// Base class method implementation
 ///
-/// @param self QSGFlatColorMaterial*
+/// @param self const QSGFlatColorMaterial*
 /// @param other QSGMaterial*
 ///
-int32_t q_sgflatcolormaterial_super_compare(void* self, void* other);
+int32_t q_sgflatcolormaterial_super_compare(const void* self, const void* other);
 
 /// Inherited from QSGMaterial
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterial.html#flags)
 ///
-/// @param self QSGFlatColorMaterial*
+/// @param self const QSGFlatColorMaterial*
 ///
 /// @return flag of enum QSGMaterial__Flag
 ///
-int32_t q_sgflatcolormaterial_flags(void* self);
+int32_t q_sgflatcolormaterial_flags(const void* self);
 
 /// Inherited from QSGMaterial
 ///
@@ -123,9 +123,9 @@ void q_sgflatcolormaterial_set_flag(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterial.html#viewCount)
 ///
-/// @param self QSGFlatColorMaterial*
+/// @param self const QSGFlatColorMaterial*
 ///
-int32_t q_sgflatcolormaterial_view_count(void* self);
+int32_t q_sgflatcolormaterial_view_count(const void* self);
 
 /// Inherited from QSGMaterial
 ///

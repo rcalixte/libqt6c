@@ -18,7 +18,7 @@ const char* q_qtwebenginecoreglobal_h_q_web_engine_chromium_security_patch_versi
     return qtwebenginecoreglobal_h_QWebEngineChromiumSecurityPatchVersion();
 }
 
-const char* q_qtwebenginecoreglobal_h_q_web_engine_get_domain_and_registry(void* url) {
+const char* q_qtwebenginecoreglobal_h_q_web_engine_get_domain_and_registry(const void* url) {
     libqt_string _str = qtwebenginecoreglobal_h_QWebEngineGetDomainAndRegistry((QUrl*)url);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

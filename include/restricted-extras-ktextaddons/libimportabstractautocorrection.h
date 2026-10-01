@@ -20,9 +20,11 @@ TextAutoCorrectionCore__ImportAbstractAutocorrection* k_textautocorrectioncore__
 ///
 /// @param param1 TextAutoCorrectionCore__ImportAbstractAutocorrection*
 ///
-TextAutoCorrectionCore__ImportAbstractAutocorrection* k_textautocorrectioncore__importabstractautocorrection_new2(void* param1);
+TextAutoCorrectionCore__ImportAbstractAutocorrection* k_textautocorrectioncore__importabstractautocorrection_new2(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportAbstractAutocorrection.html)
+///
+/// @warning This method must be implemented with `k_textautocorrectioncore__importabstractautocorrection_on_import` before it can be called.
 ///
 /// @param self TextAutoCorrectionCore__ImportAbstractAutocorrection*
 /// @param fileName const char*
@@ -42,30 +44,19 @@ void k_textautocorrectioncore__importabstractautocorrection_on_import(void* self
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportAbstractAutocorrection.html)
 ///
-/// Base class method implementation
-///
-/// @param self TextAutoCorrectionCore__ImportAbstractAutocorrection*
-/// @param fileName const char*
-/// @param errorMessage const char*
-/// @param loadAttribute enum TextAutoCorrectionCore__ImportAbstractAutocorrection__LoadAttribute
-///
-bool k_textautocorrectioncore__importabstractautocorrection_super_import(void* self, const char* fileName, const char* errorMessage, int32_t loadAttribute);
-
-/// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportAbstractAutocorrection.html)
-///
-/// @param self TextAutoCorrectionCore__ImportAbstractAutocorrection*
+/// @param self const TextAutoCorrectionCore__ImportAbstractAutocorrection*
 ///
 /// @return libqt_list set of const char*
 ///
-libqt_list k_textautocorrectioncore__importabstractautocorrection_upper_case_exceptions(void* self);
+libqt_list k_textautocorrectioncore__importabstractautocorrection_upper_case_exceptions(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportAbstractAutocorrection.html)
 ///
-/// @param self TextAutoCorrectionCore__ImportAbstractAutocorrection*
+/// @param self const TextAutoCorrectionCore__ImportAbstractAutocorrection*
 ///
 /// @return libqt_list set of const char*
 ///
-libqt_list k_textautocorrectioncore__importabstractautocorrection_two_upper_letter_exceptions(void* self);
+libqt_list k_textautocorrectioncore__importabstractautocorrection_two_upper_letter_exceptions(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportAbstractAutocorrection.html)
 ///
@@ -81,11 +72,11 @@ libqt_list k_textautocorrectioncore__importabstractautocorrection_two_upper_lett
 /// free(map.values);
 /// ```
 ///
-/// @param self TextAutoCorrectionCore__ImportAbstractAutocorrection*
+/// @param self const TextAutoCorrectionCore__ImportAbstractAutocorrection*
 ///
 /// @return libqt_map of const char* to const char*
 ///
-libqt_map k_textautocorrectioncore__importabstractautocorrection_autocorrect_entries(void* self);
+libqt_map k_textautocorrectioncore__importabstractautocorrection_autocorrect_entries(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportAbstractAutocorrection.html)
 ///
@@ -101,42 +92,42 @@ libqt_map k_textautocorrectioncore__importabstractautocorrection_autocorrect_ent
 /// free(map.values);
 /// ```
 ///
-/// @param self TextAutoCorrectionCore__ImportAbstractAutocorrection*
+/// @param self const TextAutoCorrectionCore__ImportAbstractAutocorrection*
 ///
 /// @return libqt_map of const char* to const char*
 ///
-libqt_map k_textautocorrectioncore__importabstractautocorrection_super_script_entries(void* self);
+libqt_map k_textautocorrectioncore__importabstractautocorrection_super_script_entries(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportAbstractAutocorrection.html)
 ///
-/// @param self TextAutoCorrectionCore__ImportAbstractAutocorrection*
+/// @param self const TextAutoCorrectionCore__ImportAbstractAutocorrection*
 ///
-TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrectioncore__importabstractautocorrection_typographic_single_quotes(void* self);
+TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrectioncore__importabstractautocorrection_typographic_single_quotes(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportAbstractAutocorrection.html)
 ///
-/// @param self TextAutoCorrectionCore__ImportAbstractAutocorrection*
+/// @param self const TextAutoCorrectionCore__ImportAbstractAutocorrection*
 ///
-TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrectioncore__importabstractautocorrection_typographic_double_quotes(void* self);
+TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrectioncore__importabstractautocorrection_typographic_double_quotes(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportAbstractAutocorrection.html)
 ///
-/// @param self TextAutoCorrectionCore__ImportAbstractAutocorrection*
+/// @param self const TextAutoCorrectionCore__ImportAbstractAutocorrection*
 ///
-int32_t k_textautocorrectioncore__importabstractautocorrection_max_find_string_lenght(void* self);
+int32_t k_textautocorrectioncore__importabstractautocorrection_max_find_string_lenght(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportAbstractAutocorrection.html)
 ///
-/// @param self TextAutoCorrectionCore__ImportAbstractAutocorrection*
+/// @param self const TextAutoCorrectionCore__ImportAbstractAutocorrection*
 ///
-int32_t k_textautocorrectioncore__importabstractautocorrection_min_find_string_lenght(void* self);
+int32_t k_textautocorrectioncore__importabstractautocorrection_min_find_string_lenght(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportAbstractAutocorrection.html)
 ///
 /// @param self TextAutoCorrectionCore__ImportAbstractAutocorrection*
 /// @param param1 TextAutoCorrectionCore__ImportAbstractAutocorrection*
 ///
-void k_textautocorrectioncore__importabstractautocorrection_operator_assign(void* self, void* param1);
+void k_textautocorrectioncore__importabstractautocorrection_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportAbstractAutocorrection.html)
 ///

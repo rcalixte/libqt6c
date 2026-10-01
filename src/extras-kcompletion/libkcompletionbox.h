@@ -24,26 +24,26 @@ KCompletionBox* k_completionbox_new2();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-const QMetaObject* k_completionbox_meta_object(void* self);
+const QMetaObject* k_completionbox_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCompletionBox*
-/// @param callback const QMetaObject* func()
+/// @param self const KCompletionBox*
+/// @param callback const QMetaObject* func(const KCompletionBox* self)
 ///
-void k_completionbox_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_completionbox_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-const QMetaObject* k_completionbox_super_meta_object(void* self);
+const QMetaObject* k_completionbox_super_meta_object(const void* self);
 
 /// @param self KCompletionBox*
 /// @param param1 const char*
@@ -97,56 +97,56 @@ const char* k_completionbox_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#sizeHint)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QSize* k_completionbox_size_hint(void* self);
+QSize* k_completionbox_size_hint(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCompletionBox*
-/// @param callback QSize* func()
+/// @param self const KCompletionBox*
+/// @param callback QSize* func(const KCompletionBox* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_completionbox_on_size_hint(void* self, QSize* (*callback)());
+void k_completionbox_on_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#sizeHint)
 ///
 /// Base class method implementation
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QSize* k_completionbox_super_size_hint(void* self);
+QSize* k_completionbox_super_size_hint(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#activateOnSelect)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_activate_on_select(void* self);
+bool k_completionbox_activate_on_select(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#items)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-const char** k_completionbox_items(void* self);
+const char** k_completionbox_items(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#isTabHandling)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_is_tab_handling(void* self);
+bool k_completionbox_is_tab_handling(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#cancelledText)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-const char* k_completionbox_cancelled_text(void* self);
+const char* k_completionbox_cancelled_text(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#insertItems)
 ///
@@ -173,9 +173,9 @@ void k_completionbox_popup(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KCompletionBox*
-/// @param callback void func()
+/// @param callback void func(KCompletionBox* self)
 ///
-void k_completionbox_on_popup(void* self, void (*callback)());
+void k_completionbox_on_popup(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#popup)
 ///
@@ -297,51 +297,15 @@ void k_completionbox_on_user_cancelled(void* self, void (*callback)(void*, const
 
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#calculateGeometry)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QRect* k_completionbox_calculate_geometry(void* self);
-
-/// [Upstream resources](https://api.kde.org/kcompletionbox.html#calculateGeometry)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KCompletionBox*
-/// @param callback QRect* func()
-///
-/// @warning Memory for the returned type of the callback is freed by the library.
-///
-void k_completionbox_on_calculate_geometry(void* self, QRect* (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kcompletionbox.html#calculateGeometry)
-///
-/// Base class method implementation
-///
-/// @param self KCompletionBox*
-///
-QRect* k_completionbox_super_calculate_geometry(void* self);
+QRect* k_completionbox_calculate_geometry(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#resizeAndReposition)
 ///
 /// @param self KCompletionBox*
 ///
 void k_completionbox_resize_and_reposition(void* self);
-
-/// [Upstream resources](https://api.kde.org/kcompletionbox.html#resizeAndReposition)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KCompletionBox*
-/// @param callback void func()
-///
-void k_completionbox_on_resize_and_reposition(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kcompletionbox.html#resizeAndReposition)
-///
-/// Base class method implementation
-///
-/// @param self KCompletionBox*
-///
-void k_completionbox_super_resize_and_reposition(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#eventFilter)
 ///
@@ -372,28 +336,28 @@ bool k_completionbox_super_event_filter(void* self, void* param1, void* param2);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#globalPositionHint)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QPoint* k_completionbox_global_position_hint(void* self);
+QPoint* k_completionbox_global_position_hint(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#globalPositionHint)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCompletionBox*
-/// @param callback QPoint* func()
+/// @param self const KCompletionBox*
+/// @param callback QPoint* func(const KCompletionBox* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_completionbox_on_global_position_hint(void* self, QPoint* (*callback)());
+void k_completionbox_on_global_position_hint(const void* self, QPoint* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#globalPositionHint)
 ///
 /// Base class method implementation
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QPoint* k_completionbox_super_global_position_hint(void* self);
+QPoint* k_completionbox_super_global_position_hint(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#slotActivated)
 ///
@@ -451,19 +415,19 @@ void k_completionbox_insert_items2(void* self, const char* items[static 1], int 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#item)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param row int
 ///
-QListWidgetItem* k_completionbox_item(void* self, int row);
+QListWidgetItem* k_completionbox_item(const void* self, int row);
 
 /// Inherited from QListWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#row)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param item QListWidgetItem*
 ///
-int32_t k_completionbox_row(void* self, void* item);
+int32_t k_completionbox_row(const void* self, const void* item);
 
 /// Inherited from QListWidget
 ///
@@ -525,17 +489,17 @@ QListWidgetItem* k_completionbox_take_item(void* self, int row);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#count)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_count(void* self);
+int32_t k_completionbox_count(const void* self);
 
 /// Inherited from QListWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#currentItem)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QListWidgetItem* k_completionbox_current_item(void* self);
+QListWidgetItem* k_completionbox_current_item(const void* self);
 
 /// Inherited from QListWidget
 ///
@@ -560,9 +524,9 @@ void k_completionbox_set_current_item2(void* self, void* item, int32_t command);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#currentRow)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_current_row(void* self);
+int32_t k_completionbox_current_row(const void* self);
 
 /// Inherited from QListWidget
 ///
@@ -587,29 +551,29 @@ void k_completionbox_set_current_row2(void* self, int row, int32_t command);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#itemAt)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param p QPoint*
 ///
-QListWidgetItem* k_completionbox_item_at(void* self, void* p);
+QListWidgetItem* k_completionbox_item_at(const void* self, const void* p);
 
 /// Inherited from QListWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#itemAt)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param x int
 /// @param y int
 ///
-QListWidgetItem* k_completionbox_item_at2(void* self, int x, int y);
+QListWidgetItem* k_completionbox_item_at2(const void* self, int x, int y);
 
 /// Inherited from QListWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#visualItemRect)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param item QListWidgetItem*
 ///
-QRect* k_completionbox_visual_item_rect(void* self, void* item);
+QRect* k_completionbox_visual_item_rect(const void* self, const void* item);
 
 /// Inherited from QListWidget
 ///
@@ -632,9 +596,9 @@ void k_completionbox_set_sorting_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#isSortingEnabled)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_is_sorting_enabled(void* self);
+bool k_completionbox_is_sorting_enabled(const void* self);
 
 /// Inherited from QListWidget
 ///
@@ -667,19 +631,19 @@ void k_completionbox_close_persistent_editor(void* self, void* item);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#isPersistentEditorOpen)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param item QListWidgetItem*
 ///
-bool k_completionbox_is_persistent_editor_open(void* self, void* item);
+bool k_completionbox_is_persistent_editor_open(const void* self, void* item);
 
 /// Inherited from QListWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#itemWidget)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param item QListWidgetItem*
 ///
-QWidget* k_completionbox_item_widget(void* self, void* item);
+QWidget* k_completionbox_item_widget(const void* self, void* item);
 
 /// Inherited from QListWidget
 ///
@@ -704,41 +668,41 @@ void k_completionbox_remove_item_widget(void* self, void* item);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#selectedItems)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return libqt_list of QListWidgetItem*
 ///
-libqt_list k_completionbox_selected_items(void* self);
+libqt_list k_completionbox_selected_items(const void* self);
 
 /// Inherited from QListWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#findItems)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param text const char*
 /// @param flags flag of enum Qt__MatchFlag
 ///
 /// @return libqt_list of QListWidgetItem*
 ///
-libqt_list k_completionbox_find_items(void* self, const char* text, int32_t flags);
+libqt_list k_completionbox_find_items(const void* self, const char* text, int32_t flags);
 
 /// Inherited from QListWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#indexFromItem)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param item QListWidgetItem*
 ///
-QModelIndex* k_completionbox_index_from_item(void* self, void* item);
+QModelIndex* k_completionbox_index_from_item(const void* self, const void* item);
 
 /// Inherited from QListWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#itemFromIndex)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param index QModelIndex*
 ///
-QListWidgetItem* k_completionbox_item_from_index(void* self, void* index);
+QListWidgetItem* k_completionbox_item_from_index(const void* self, const void* index);
 
 /// Inherited from QListWidget
 ///
@@ -747,7 +711,7 @@ QListWidgetItem* k_completionbox_item_from_index(void* self, void* index);
 /// @param self KCompletionBox*
 /// @param item QListWidgetItem*
 ///
-void k_completionbox_scroll_to_item(void* self, void* item);
+void k_completionbox_scroll_to_item(void* self, const void* item);
 
 /// Inherited from QListWidget
 ///
@@ -954,7 +918,7 @@ void k_completionbox_sort_items1(void* self, int32_t order);
 /// @param item QListWidgetItem*
 /// @param hint enum QAbstractItemView__ScrollHint
 ///
-void k_completionbox_scroll_to_item2(void* self, void* item, int32_t hint);
+void k_completionbox_scroll_to_item2(void* self, const void* item, int32_t hint);
 
 /// Inherited from QListView
 ///
@@ -969,11 +933,11 @@ void k_completionbox_set_movement(void* self, int32_t movement);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#movement)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return enum QListView__Movement
 ///
-int32_t k_completionbox_movement(void* self);
+int32_t k_completionbox_movement(const void* self);
 
 /// Inherited from QListView
 ///
@@ -988,11 +952,11 @@ void k_completionbox_set_flow(void* self, int32_t flow);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#flow)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return enum QListView__Flow
 ///
-int32_t k_completionbox_flow(void* self);
+int32_t k_completionbox_flow(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1007,9 +971,9 @@ void k_completionbox_set_wrapping(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#isWrapping)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_is_wrapping(void* self);
+bool k_completionbox_is_wrapping(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1024,11 +988,11 @@ void k_completionbox_set_resize_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#resizeMode)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return enum QListView__ResizeMode
 ///
-int32_t k_completionbox_resize_mode(void* self);
+int32_t k_completionbox_resize_mode(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1043,11 +1007,11 @@ void k_completionbox_set_layout_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#layoutMode)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return enum QListView__LayoutMode
 ///
-int32_t k_completionbox_layout_mode(void* self);
+int32_t k_completionbox_layout_mode(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1062,9 +1026,9 @@ void k_completionbox_set_spacing(void* self, int space);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#spacing)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_spacing(void* self);
+int32_t k_completionbox_spacing(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1079,9 +1043,9 @@ void k_completionbox_set_batch_size(void* self, int batchSize);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#batchSize)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_batch_size(void* self);
+int32_t k_completionbox_batch_size(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1090,15 +1054,15 @@ int32_t k_completionbox_batch_size(void* self);
 /// @param self KCompletionBox*
 /// @param size QSize*
 ///
-void k_completionbox_set_grid_size(void* self, void* size);
+void k_completionbox_set_grid_size(void* self, const void* size);
 
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#gridSize)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QSize* k_completionbox_grid_size(void* self);
+QSize* k_completionbox_grid_size(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1113,11 +1077,11 @@ void k_completionbox_set_view_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#viewMode)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return enum QListView__ViewMode
 ///
-int32_t k_completionbox_view_mode(void* self);
+int32_t k_completionbox_view_mode(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1131,10 +1095,10 @@ void k_completionbox_clear_property_flags(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#isRowHidden)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param row int
 ///
-bool k_completionbox_is_row_hidden(void* self, int row);
+bool k_completionbox_is_row_hidden(const void* self, int row);
 
 /// Inherited from QListView
 ///
@@ -1159,9 +1123,9 @@ void k_completionbox_set_model_column(void* self, int column);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#modelColumn)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_model_column(void* self);
+int32_t k_completionbox_model_column(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1176,9 +1140,9 @@ void k_completionbox_set_uniform_item_sizes(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#uniformItemSizes)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_uniform_item_sizes(void* self);
+bool k_completionbox_uniform_item_sizes(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1193,9 +1157,9 @@ void k_completionbox_set_word_wrap(void* self, bool on);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#wordWrap)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_word_wrap(void* self);
+bool k_completionbox_word_wrap(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1210,9 +1174,9 @@ void k_completionbox_set_selection_rect_visible(void* self, bool show);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#isSelectionRectVisible)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_is_selection_rect_visible(void* self);
+bool k_completionbox_is_selection_rect_visible(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1227,11 +1191,11 @@ void k_completionbox_set_item_alignment(void* self, int32_t alignment);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#itemAlignment)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 ///
-int32_t k_completionbox_item_alignment(void* self);
+int32_t k_completionbox_item_alignment(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1286,17 +1250,17 @@ void k_completionbox_super_set_model(void* self, void* model);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#model)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QAbstractItemModel* k_completionbox_model(void* self);
+QAbstractItemModel* k_completionbox_model(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#selectionModel)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QItemSelectionModel* k_completionbox_selection_model(void* self);
+QItemSelectionModel* k_completionbox_selection_model(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1311,9 +1275,9 @@ void k_completionbox_set_item_delegate(void* self, void* delegate);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegate)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QAbstractItemDelegate* k_completionbox_item_delegate(void* self);
+QAbstractItemDelegate* k_completionbox_item_delegate(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1328,11 +1292,11 @@ void k_completionbox_set_selection_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#selectionMode)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return enum QAbstractItemView__SelectionMode
 ///
-int32_t k_completionbox_selection_mode(void* self);
+int32_t k_completionbox_selection_mode(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1347,27 +1311,27 @@ void k_completionbox_set_selection_behavior(void* self, int32_t behavior);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#selectionBehavior)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return enum QAbstractItemView__SelectionBehavior
 ///
-int32_t k_completionbox_selection_behavior(void* self);
+int32_t k_completionbox_selection_behavior(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#currentIndex)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QModelIndex* k_completionbox_current_index(void* self);
+QModelIndex* k_completionbox_current_index(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#rootIndex)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QModelIndex* k_completionbox_root_index(void* self);
+QModelIndex* k_completionbox_root_index(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1382,11 +1346,11 @@ void k_completionbox_set_edit_triggers(void* self, int32_t triggers);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#editTriggers)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return flag of enum QAbstractItemView__EditTrigger
 ///
-int32_t k_completionbox_edit_triggers(void* self);
+int32_t k_completionbox_edit_triggers(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1401,11 +1365,11 @@ void k_completionbox_set_vertical_scroll_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#verticalScrollMode)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return enum QAbstractItemView__ScrollMode
 ///
-int32_t k_completionbox_vertical_scroll_mode(void* self);
+int32_t k_completionbox_vertical_scroll_mode(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1428,11 +1392,11 @@ void k_completionbox_set_horizontal_scroll_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#horizontalScrollMode)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return enum QAbstractItemView__ScrollMode
 ///
-int32_t k_completionbox_horizontal_scroll_mode(void* self);
+int32_t k_completionbox_horizontal_scroll_mode(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1455,9 +1419,9 @@ void k_completionbox_set_auto_scroll(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#hasAutoScroll)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_has_auto_scroll(void* self);
+bool k_completionbox_has_auto_scroll(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1472,9 +1436,9 @@ void k_completionbox_set_auto_scroll_margin(void* self, int margin);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#autoScrollMargin)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_auto_scroll_margin(void* self);
+int32_t k_completionbox_auto_scroll_margin(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1489,9 +1453,9 @@ void k_completionbox_set_tab_key_navigation(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#tabKeyNavigation)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_tab_key_navigation(void* self);
+bool k_completionbox_tab_key_navigation(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1506,9 +1470,9 @@ void k_completionbox_set_drop_indicator_shown(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#showDropIndicator)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_show_drop_indicator(void* self);
+bool k_completionbox_show_drop_indicator(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1523,9 +1487,9 @@ void k_completionbox_set_drag_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#dragEnabled)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_drag_enabled(void* self);
+bool k_completionbox_drag_enabled(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1540,9 +1504,9 @@ void k_completionbox_set_drag_drop_overwrite_mode(void* self, bool overwrite);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#dragDropOverwriteMode)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_drag_drop_overwrite_mode(void* self);
+bool k_completionbox_drag_drop_overwrite_mode(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1557,11 +1521,11 @@ void k_completionbox_set_drag_drop_mode(void* self, int32_t behavior);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#dragDropMode)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return enum QAbstractItemView__DragDropMode
 ///
-int32_t k_completionbox_drag_drop_mode(void* self);
+int32_t k_completionbox_drag_drop_mode(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1576,11 +1540,11 @@ void k_completionbox_set_default_drop_action(void* self, int32_t dropAction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#defaultDropAction)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return enum Qt__DropAction
 ///
-int32_t k_completionbox_default_drop_action(void* self);
+int32_t k_completionbox_default_drop_action(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1595,9 +1559,9 @@ void k_completionbox_set_alternating_row_colors(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#alternatingRowColors)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_alternating_row_colors(void* self);
+bool k_completionbox_alternating_row_colors(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1606,15 +1570,15 @@ bool k_completionbox_alternating_row_colors(void* self);
 /// @param self KCompletionBox*
 /// @param size QSize*
 ///
-void k_completionbox_set_icon_size(void* self, void* size);
+void k_completionbox_set_icon_size(void* self, const void* size);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#iconSize)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QSize* k_completionbox_icon_size(void* self);
+QSize* k_completionbox_icon_size(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1629,20 +1593,20 @@ void k_completionbox_set_text_elide_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#textElideMode)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return enum Qt__TextElideMode
 ///
-int32_t k_completionbox_text_elide_mode(void* self);
+int32_t k_completionbox_text_elide_mode(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#sizeHintForIndex)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param index QModelIndex*
 ///
-QSize* k_completionbox_size_hint_for_index(void* self, void* index);
+QSize* k_completionbox_size_hint_for_index(const void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1652,16 +1616,16 @@ QSize* k_completionbox_size_hint_for_index(void* self, void* index);
 /// @param index QModelIndex*
 /// @param widget QWidget*
 ///
-void k_completionbox_set_index_widget(void* self, void* index, void* widget);
+void k_completionbox_set_index_widget(void* self, const void* index, void* widget);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#indexWidget)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param index QModelIndex*
 ///
-QWidget* k_completionbox_index_widget(void* self, void* index);
+QWidget* k_completionbox_index_widget(const void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1677,10 +1641,10 @@ void k_completionbox_set_item_delegate_for_row(void* self, int row, void* delega
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegateForRow)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param row int
 ///
-QAbstractItemDelegate* k_completionbox_item_delegate_for_row(void* self, int row);
+QAbstractItemDelegate* k_completionbox_item_delegate_for_row(const void* self, int row);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1696,19 +1660,19 @@ void k_completionbox_set_item_delegate_for_column(void* self, int column, void* 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegateForColumn)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param column int
 ///
-QAbstractItemDelegate* k_completionbox_item_delegate_for_column(void* self, int column);
+QAbstractItemDelegate* k_completionbox_item_delegate_for_column(const void* self, int column);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegate)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param index QModelIndex*
 ///
-QAbstractItemDelegate* k_completionbox_item_delegate2(void* self, void* index);
+QAbstractItemDelegate* k_completionbox_item_delegate2(const void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1717,7 +1681,7 @@ QAbstractItemDelegate* k_completionbox_item_delegate2(void* self, void* index);
 /// @param self KCompletionBox*
 /// @param index QModelIndex*
 ///
-void k_completionbox_edit(void* self, void* index);
+void k_completionbox_edit(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1734,7 +1698,7 @@ void k_completionbox_clear_selection(void* self);
 /// @param self KCompletionBox*
 /// @param index QModelIndex*
 ///
-void k_completionbox_set_current_index(void* self, void* index);
+void k_completionbox_set_current_index(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1759,7 +1723,7 @@ void k_completionbox_scroll_to_bottom(void* self);
 /// @param self KCompletionBox*
 /// @param index QModelIndex*
 ///
-void k_completionbox_update(void* self, void* index);
+void k_completionbox_update(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1768,7 +1732,7 @@ void k_completionbox_update(void* self, void* index);
 /// @param self KCompletionBox*
 /// @param index QModelIndex*
 ///
-void k_completionbox_pressed(void* self, void* index);
+void k_completionbox_pressed(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1777,7 +1741,7 @@ void k_completionbox_pressed(void* self, void* index);
 /// @param self KCompletionBox*
 /// @param callback void func(KCompletionBox* self, QModelIndex* index)
 ///
-void k_completionbox_on_pressed(void* self, void (*callback)(void*, void*));
+void k_completionbox_on_pressed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -1786,7 +1750,7 @@ void k_completionbox_on_pressed(void* self, void (*callback)(void*, void*));
 /// @param self KCompletionBox*
 /// @param index QModelIndex*
 ///
-void k_completionbox_clicked(void* self, void* index);
+void k_completionbox_clicked(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1795,7 +1759,7 @@ void k_completionbox_clicked(void* self, void* index);
 /// @param self KCompletionBox*
 /// @param callback void func(KCompletionBox* self, QModelIndex* index)
 ///
-void k_completionbox_on_clicked(void* self, void (*callback)(void*, void*));
+void k_completionbox_on_clicked(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -1804,7 +1768,7 @@ void k_completionbox_on_clicked(void* self, void (*callback)(void*, void*));
 /// @param self KCompletionBox*
 /// @param index QModelIndex*
 ///
-void k_completionbox_double_clicked(void* self, void* index);
+void k_completionbox_double_clicked(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1813,7 +1777,7 @@ void k_completionbox_double_clicked(void* self, void* index);
 /// @param self KCompletionBox*
 /// @param callback void func(KCompletionBox* self, QModelIndex* index)
 ///
-void k_completionbox_on_double_clicked(void* self, void (*callback)(void*, void*));
+void k_completionbox_on_double_clicked(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -1822,7 +1786,7 @@ void k_completionbox_on_double_clicked(void* self, void (*callback)(void*, void*
 /// @param self KCompletionBox*
 /// @param index QModelIndex*
 ///
-void k_completionbox_activated(void* self, void* index);
+void k_completionbox_activated(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1831,7 +1795,7 @@ void k_completionbox_activated(void* self, void* index);
 /// @param self KCompletionBox*
 /// @param callback void func(KCompletionBox* self, QModelIndex* index)
 ///
-void k_completionbox_on_activated(void* self, void (*callback)(void*, void*));
+void k_completionbox_on_activated(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -1840,7 +1804,7 @@ void k_completionbox_on_activated(void* self, void (*callback)(void*, void*));
 /// @param self KCompletionBox*
 /// @param index QModelIndex*
 ///
-void k_completionbox_entered(void* self, void* index);
+void k_completionbox_entered(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1849,7 +1813,7 @@ void k_completionbox_entered(void* self, void* index);
 /// @param self KCompletionBox*
 /// @param callback void func(KCompletionBox* self, QModelIndex* index)
 ///
-void k_completionbox_on_entered(void* self, void (*callback)(void*, void*));
+void k_completionbox_on_entered(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -1875,7 +1839,7 @@ void k_completionbox_on_viewport_entered(void* self, void (*callback)(void*));
 /// @param self KCompletionBox*
 /// @param size QSize*
 ///
-void k_completionbox_icon_size_changed(void* self, void* size);
+void k_completionbox_icon_size_changed(void* self, const void* size);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1884,17 +1848,17 @@ void k_completionbox_icon_size_changed(void* self, void* size);
 /// @param self KCompletionBox*
 /// @param callback void func(KCompletionBox* self, QSize* size)
 ///
-void k_completionbox_on_icon_size_changed(void* self, void (*callback)(void*, void*));
+void k_completionbox_on_icon_size_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#verticalScrollBarPolicy)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return enum Qt__ScrollBarPolicy
 ///
-int32_t k_completionbox_vertical_scroll_bar_policy(void* self);
+int32_t k_completionbox_vertical_scroll_bar_policy(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1909,9 +1873,9 @@ void k_completionbox_set_vertical_scroll_bar_policy(void* self, int32_t vertical
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#verticalScrollBar)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QScrollBar* k_completionbox_vertical_scroll_bar(void* self);
+QScrollBar* k_completionbox_vertical_scroll_bar(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1926,11 +1890,11 @@ void k_completionbox_set_vertical_scroll_bar(void* self, void* scrollbar);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#horizontalScrollBarPolicy)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return enum Qt__ScrollBarPolicy
 ///
-int32_t k_completionbox_horizontal_scroll_bar_policy(void* self);
+int32_t k_completionbox_horizontal_scroll_bar_policy(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1945,9 +1909,9 @@ void k_completionbox_set_horizontal_scroll_bar_policy(void* self, int32_t horizo
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#horizontalScrollBar)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QScrollBar* k_completionbox_horizontal_scroll_bar(void* self);
+QScrollBar* k_completionbox_horizontal_scroll_bar(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1962,9 +1926,9 @@ void k_completionbox_set_horizontal_scroll_bar(void* self, void* scrollbar);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#cornerWidget)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QWidget* k_completionbox_corner_widget(void* self);
+QWidget* k_completionbox_corner_widget(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2000,9 +1964,9 @@ libqt_list k_completionbox_scroll_bar_widgets(void* self, int32_t alignment);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewport)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QWidget* k_completionbox_viewport(void* self);
+QWidget* k_completionbox_viewport(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2017,19 +1981,19 @@ void k_completionbox_set_viewport(void* self, void* widget);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#maximumViewportSize)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QSize* k_completionbox_maximum_viewport_size(void* self);
+QSize* k_completionbox_maximum_viewport_size(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#sizeAdjustPolicy)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return enum QAbstractScrollArea__SizeAdjustPolicy
 ///
-int32_t k_completionbox_size_adjust_policy(void* self);
+int32_t k_completionbox_size_adjust_policy(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2044,9 +2008,9 @@ void k_completionbox_set_size_adjust_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameStyle)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_frame_style(void* self);
+int32_t k_completionbox_frame_style(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -2061,19 +2025,19 @@ void k_completionbox_set_frame_style(void* self, int frameStyle);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameWidth)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_frame_width(void* self);
+int32_t k_completionbox_frame_width(const void* self);
 
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameShape)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return enum QFrame__Shape
 ///
-int32_t k_completionbox_frame_shape(void* self);
+int32_t k_completionbox_frame_shape(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -2088,11 +2052,11 @@ void k_completionbox_set_frame_shape(void* self, int32_t frameShape);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameShadow)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return enum QFrame__Shadow
 ///
-int32_t k_completionbox_frame_shadow(void* self);
+int32_t k_completionbox_frame_shadow(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -2107,9 +2071,9 @@ void k_completionbox_set_frame_shadow(void* self, int32_t frameShadow);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#lineWidth)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_line_width(void* self);
+int32_t k_completionbox_line_width(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -2124,9 +2088,9 @@ void k_completionbox_set_line_width(void* self, int lineWidth);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#midLineWidth)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_mid_line_width(void* self);
+int32_t k_completionbox_mid_line_width(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -2141,9 +2105,9 @@ void k_completionbox_set_mid_line_width(void* self, int midLineWidth);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameRect)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QRect* k_completionbox_frame_rect(void* self);
+QRect* k_completionbox_frame_rect(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -2152,7 +2116,7 @@ QRect* k_completionbox_frame_rect(void* self);
 /// @param self KCompletionBox*
 /// @param frameRect QRect*
 ///
-void k_completionbox_set_frame_rect(void* self, void* frameRect);
+void k_completionbox_set_frame_rect(void* self, const void* frameRect);
 
 /// Inherited from QWidget
 ///
@@ -2174,9 +2138,9 @@ KCompletionBox* k_completionbox_from_q_paint_device(void* _qpaintdevice);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-uintptr_t k_completionbox_win_id(void* self);
+uintptr_t k_completionbox_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2190,25 +2154,25 @@ void k_completionbox_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-uintptr_t k_completionbox_internal_win_id(void* self);
+uintptr_t k_completionbox_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-uintptr_t k_completionbox_effective_win_id(void* self);
+uintptr_t k_completionbox_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QStyle* k_completionbox_style(void* self);
+QStyle* k_completionbox_style(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2223,35 +2187,35 @@ void k_completionbox_set_style(void* self, void* style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_is_top_level(void* self);
+bool k_completionbox_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_is_window(void* self);
+bool k_completionbox_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_is_modal(void* self);
+bool k_completionbox_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t k_completionbox_window_modality(void* self);
+int32_t k_completionbox_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2266,18 +2230,18 @@ void k_completionbox_set_window_modality(void* self, int32_t windowModality);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_is_enabled(void* self);
+bool k_completionbox_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param param1 QWidget*
 ///
-bool k_completionbox_is_enabled_to(void* self, void* param1);
+bool k_completionbox_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2310,153 +2274,153 @@ void k_completionbox_set_window_modified(void* self, bool windowModified);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QRect* k_completionbox_frame_geometry(void* self);
+QRect* k_completionbox_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-const QRect* k_completionbox_geometry(void* self);
+const QRect* k_completionbox_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QRect* k_completionbox_normal_geometry(void* self);
+QRect* k_completionbox_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_x(void* self);
+int32_t k_completionbox_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_y(void* self);
+int32_t k_completionbox_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QPoint* k_completionbox_pos(void* self);
+QPoint* k_completionbox_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QSize* k_completionbox_frame_size(void* self);
+QSize* k_completionbox_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QSize* k_completionbox_size(void* self);
+QSize* k_completionbox_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_width(void* self);
+int32_t k_completionbox_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_height(void* self);
+int32_t k_completionbox_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QRect* k_completionbox_rect(void* self);
+QRect* k_completionbox_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QRect* k_completionbox_children_rect(void* self);
+QRect* k_completionbox_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QRegion* k_completionbox_children_region(void* self);
+QRegion* k_completionbox_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QSize* k_completionbox_minimum_size(void* self);
+QSize* k_completionbox_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QSize* k_completionbox_maximum_size(void* self);
+QSize* k_completionbox_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_minimum_width(void* self);
+int32_t k_completionbox_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_minimum_height(void* self);
+int32_t k_completionbox_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_maximum_width(void* self);
+int32_t k_completionbox_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_maximum_height(void* self);
+int32_t k_completionbox_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2465,7 +2429,7 @@ int32_t k_completionbox_maximum_height(void* self);
 /// @param self KCompletionBox*
 /// @param minimumSize QSize*
 ///
-void k_completionbox_set_minimum_size(void* self, void* minimumSize);
+void k_completionbox_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -2484,7 +2448,7 @@ void k_completionbox_set_minimum_size2(void* self, int minw, int minh);
 /// @param self KCompletionBox*
 /// @param maximumSize QSize*
 ///
-void k_completionbox_set_maximum_size(void* self, void* maximumSize);
+void k_completionbox_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -2536,9 +2500,9 @@ void k_completionbox_set_maximum_height(void* self, int maxh);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QSize* k_completionbox_size_increment(void* self);
+QSize* k_completionbox_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2547,7 +2511,7 @@ QSize* k_completionbox_size_increment(void* self);
 /// @param self KCompletionBox*
 /// @param sizeIncrement QSize*
 ///
-void k_completionbox_set_size_increment(void* self, void* sizeIncrement);
+void k_completionbox_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -2563,9 +2527,9 @@ void k_completionbox_set_size_increment2(void* self, int w, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QSize* k_completionbox_base_size(void* self);
+QSize* k_completionbox_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2574,7 +2538,7 @@ QSize* k_completionbox_base_size(void* self);
 /// @param self KCompletionBox*
 /// @param baseSize QSize*
 ///
-void k_completionbox_set_base_size(void* self, void* baseSize);
+void k_completionbox_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -2593,7 +2557,7 @@ void k_completionbox_set_base_size2(void* self, int basew, int baseh);
 /// @param self KCompletionBox*
 /// @param fixedSize QSize*
 ///
-void k_completionbox_set_fixed_size(void* self, void* fixedSize);
+void k_completionbox_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -2627,145 +2591,145 @@ void k_completionbox_set_fixed_height(void* self, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param param1 QPointF*
 ///
-QPointF* k_completionbox_map_to_global(void* self, void* param1);
+QPointF* k_completionbox_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param param1 QPoint*
 ///
-QPoint* k_completionbox_map_to_global2(void* self, void* param1);
+QPoint* k_completionbox_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param param1 QPointF*
 ///
-QPointF* k_completionbox_map_from_global(void* self, void* param1);
+QPointF* k_completionbox_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param param1 QPoint*
 ///
-QPoint* k_completionbox_map_from_global2(void* self, void* param1);
+QPoint* k_completionbox_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param param1 QPointF*
 ///
-QPointF* k_completionbox_map_to_parent(void* self, void* param1);
+QPointF* k_completionbox_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param param1 QPoint*
 ///
-QPoint* k_completionbox_map_to_parent2(void* self, void* param1);
+QPoint* k_completionbox_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param param1 QPointF*
 ///
-QPointF* k_completionbox_map_from_parent(void* self, void* param1);
+QPointF* k_completionbox_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param param1 QPoint*
 ///
-QPoint* k_completionbox_map_from_parent2(void* self, void* param1);
+QPoint* k_completionbox_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_completionbox_map_to(void* self, void* param1, void* param2);
+QPointF* k_completionbox_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_completionbox_map_to2(void* self, void* param1, void* param2);
+QPoint* k_completionbox_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_completionbox_map_from(void* self, void* param1, void* param2);
+QPointF* k_completionbox_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_completionbox_map_from2(void* self, void* param1, void* param2);
+QPoint* k_completionbox_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QWidget* k_completionbox_window(void* self);
+QWidget* k_completionbox_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QWidget* k_completionbox_native_parent_widget(void* self);
+QWidget* k_completionbox_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QWidget* k_completionbox_top_level_widget(void* self);
+QWidget* k_completionbox_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-const QPalette* k_completionbox_palette(void* self);
+const QPalette* k_completionbox_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2774,7 +2738,7 @@ const QPalette* k_completionbox_palette(void* self);
 /// @param self KCompletionBox*
 /// @param palette QPalette*
 ///
-void k_completionbox_set_palette(void* self, void* palette);
+void k_completionbox_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -2789,11 +2753,11 @@ void k_completionbox_set_background_role(void* self, int32_t backgroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_completionbox_background_role(void* self);
+int32_t k_completionbox_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2808,19 +2772,19 @@ void k_completionbox_set_foreground_role(void* self, int32_t foregroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_completionbox_foreground_role(void* self);
+int32_t k_completionbox_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-const QFont* k_completionbox_font(void* self);
+const QFont* k_completionbox_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2829,31 +2793,31 @@ const QFont* k_completionbox_font(void* self);
 /// @param self KCompletionBox*
 /// @param font QFont*
 ///
-void k_completionbox_set_font(void* self, void* font);
+void k_completionbox_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QFontMetrics* k_completionbox_font_metrics(void* self);
+QFontMetrics* k_completionbox_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QFontInfo* k_completionbox_font_info(void* self);
+QFontInfo* k_completionbox_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QCursor* k_completionbox_cursor(void* self);
+QCursor* k_completionbox_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2862,7 +2826,7 @@ QCursor* k_completionbox_cursor(void* self);
 /// @param self KCompletionBox*
 /// @param cursor QCursor*
 ///
-void k_completionbox_set_cursor(void* self, void* cursor);
+void k_completionbox_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -2885,17 +2849,17 @@ void k_completionbox_set_mouse_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_has_mouse_tracking(void* self);
+bool k_completionbox_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_under_mouse(void* self);
+bool k_completionbox_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2910,9 +2874,9 @@ void k_completionbox_set_tablet_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_has_tablet_tracking(void* self);
+bool k_completionbox_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2921,7 +2885,7 @@ bool k_completionbox_has_tablet_tracking(void* self);
 /// @param self KCompletionBox*
 /// @param mask QBitmap*
 ///
-void k_completionbox_set_mask(void* self, void* mask);
+void k_completionbox_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -2930,15 +2894,15 @@ void k_completionbox_set_mask(void* self, void* mask);
 /// @param self KCompletionBox*
 /// @param mask QRegion*
 ///
-void k_completionbox_set_mask2(void* self, void* mask);
+void k_completionbox_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QRegion* k_completionbox_mask(void* self);
+QRegion* k_completionbox_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2978,9 +2942,9 @@ QPixmap* k_completionbox_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QGraphicsEffect* k_completionbox_graphics_effect(void* self);
+QGraphicsEffect* k_completionbox_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3033,9 +2997,9 @@ void k_completionbox_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-const char* k_completionbox_style_sheet(void* self);
+const char* k_completionbox_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3043,9 +3007,9 @@ const char* k_completionbox_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-const char* k_completionbox_window_title(void* self);
+const char* k_completionbox_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3054,15 +3018,15 @@ const char* k_completionbox_window_title(void* self);
 /// @param self KCompletionBox*
 /// @param icon QIcon*
 ///
-void k_completionbox_set_window_icon(void* self, void* icon);
+void k_completionbox_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QIcon* k_completionbox_window_icon(void* self);
+QIcon* k_completionbox_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3079,9 +3043,9 @@ void k_completionbox_set_window_icon_text(void* self, const char* windowIconText
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-const char* k_completionbox_window_icon_text(void* self);
+const char* k_completionbox_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3098,9 +3062,9 @@ void k_completionbox_set_window_role(void* self, const char* windowRole);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-const char* k_completionbox_window_role(void* self);
+const char* k_completionbox_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3117,9 +3081,9 @@ void k_completionbox_set_window_file_path(void* self, const char* filePath);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-const char* k_completionbox_window_file_path(void* self);
+const char* k_completionbox_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3134,17 +3098,17 @@ void k_completionbox_set_window_opacity(void* self, double level);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-double k_completionbox_window_opacity(void* self);
+double k_completionbox_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_is_window_modified(void* self);
+bool k_completionbox_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3161,9 +3125,9 @@ void k_completionbox_set_tool_tip(void* self, const char* toolTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-const char* k_completionbox_tool_tip(void* self);
+const char* k_completionbox_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3178,9 +3142,9 @@ void k_completionbox_set_tool_tip_duration(void* self, int msec);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_tool_tip_duration(void* self);
+int32_t k_completionbox_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3197,9 +3161,9 @@ void k_completionbox_set_status_tip(void* self, const char* statusTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-const char* k_completionbox_status_tip(void* self);
+const char* k_completionbox_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3216,9 +3180,9 @@ void k_completionbox_set_whats_this(void* self, const char* whatsThis);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-const char* k_completionbox_whats_this(void* self);
+const char* k_completionbox_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3226,9 +3190,9 @@ const char* k_completionbox_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-const char* k_completionbox_accessible_name(void* self);
+const char* k_completionbox_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3245,9 +3209,9 @@ void k_completionbox_set_accessible_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-const char* k_completionbox_accessible_description(void* self);
+const char* k_completionbox_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3271,11 +3235,11 @@ void k_completionbox_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t k_completionbox_layout_direction(void* self);
+int32_t k_completionbox_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3292,15 +3256,15 @@ void k_completionbox_unset_layout_direction(void* self);
 /// @param self KCompletionBox*
 /// @param locale QLocale*
 ///
-void k_completionbox_set_locale(void* self, void* locale);
+void k_completionbox_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QLocale* k_completionbox_locale(void* self);
+QLocale* k_completionbox_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3314,17 +3278,17 @@ void k_completionbox_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_is_right_to_left(void* self);
+bool k_completionbox_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_is_left_to_right(void* self);
+bool k_completionbox_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3338,9 +3302,9 @@ void k_completionbox_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_is_active_window(void* self);
+bool k_completionbox_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3371,11 +3335,11 @@ void k_completionbox_set_focus2(void* self, int32_t reason);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t k_completionbox_focus_policy(void* self);
+int32_t k_completionbox_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3390,9 +3354,9 @@ void k_completionbox_set_focus_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_has_focus(void* self);
+bool k_completionbox_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3416,19 +3380,19 @@ void k_completionbox_set_focus_proxy(void* self, void* focusProxy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QWidget* k_completionbox_focus_proxy(void* self);
+QWidget* k_completionbox_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t k_completionbox_context_menu_policy(void* self);
+int32_t k_completionbox_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3454,7 +3418,7 @@ void k_completionbox_grab_mouse(void* self);
 /// @param self KCompletionBox*
 /// @param param1 QCursor*
 ///
-void k_completionbox_grab_mouse2(void* self, void* param1);
+void k_completionbox_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3487,7 +3451,7 @@ void k_completionbox_release_keyboard(void* self);
 /// @param self KCompletionBox*
 /// @param key QKeySequence*
 ///
-int32_t k_completionbox_grab_shortcut(void* self, void* key);
+int32_t k_completionbox_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -3532,9 +3496,9 @@ QWidget* k_completionbox_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_updates_enabled(void* self);
+bool k_completionbox_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3549,9 +3513,9 @@ void k_completionbox_set_updates_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QGraphicsProxyWidget* k_completionbox_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* k_completionbox_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3580,7 +3544,7 @@ void k_completionbox_update2(void* self, int x, int y, int w, int h);
 /// @param self KCompletionBox*
 /// @param param1 QRect*
 ///
-void k_completionbox_update3(void* self, void* param1);
+void k_completionbox_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3589,7 +3553,7 @@ void k_completionbox_update3(void* self, void* param1);
 /// @param self KCompletionBox*
 /// @param param1 QRegion*
 ///
-void k_completionbox_update4(void* self, void* param1);
+void k_completionbox_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3610,7 +3574,7 @@ void k_completionbox_repaint2(void* self, int x, int y, int w, int h);
 /// @param self KCompletionBox*
 /// @param param1 QRect*
 ///
-void k_completionbox_repaint3(void* self, void* param1);
+void k_completionbox_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3619,7 +3583,7 @@ void k_completionbox_repaint3(void* self, void* param1);
 /// @param self KCompletionBox*
 /// @param param1 QRegion*
 ///
-void k_completionbox_repaint4(void* self, void* param1);
+void k_completionbox_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3728,7 +3692,7 @@ void k_completionbox_move(void* self, int x, int y);
 /// @param self KCompletionBox*
 /// @param param1 QPoint*
 ///
-void k_completionbox_move2(void* self, void* param1);
+void k_completionbox_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3747,7 +3711,7 @@ void k_completionbox_resize(void* self, int w, int h);
 /// @param self KCompletionBox*
 /// @param param1 QSize*
 ///
-void k_completionbox_resize2(void* self, void* param1);
+void k_completionbox_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3768,7 +3732,7 @@ void k_completionbox_set_geometry(void* self, int x, int y, int w, int h);
 /// @param self KCompletionBox*
 /// @param geometry QRect*
 ///
-void k_completionbox_set_geometry2(void* self, void* geometry);
+void k_completionbox_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -3776,9 +3740,9 @@ void k_completionbox_set_geometry2(void* self, void* geometry);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-char* k_completionbox_save_geometry(void* self);
+char* k_completionbox_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3801,60 +3765,60 @@ void k_completionbox_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_is_visible(void* self);
+bool k_completionbox_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param param1 QWidget*
 ///
-bool k_completionbox_is_visible_to(void* self, void* param1);
+bool k_completionbox_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_is_hidden(void* self);
+bool k_completionbox_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_is_minimized(void* self);
+bool k_completionbox_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_is_maximized(void* self);
+bool k_completionbox_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_is_full_screen(void* self);
+bool k_completionbox_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t k_completionbox_window_state(void* self);
+int32_t k_completionbox_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3878,9 +3842,9 @@ void k_completionbox_override_window_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QSizePolicy* k_completionbox_size_policy(void* self);
+QSizePolicy* k_completionbox_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3905,9 +3869,9 @@ void k_completionbox_set_size_policy2(void* self, int32_t horizontal, int32_t ve
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QRegion* k_completionbox_visible_region(void* self);
+QRegion* k_completionbox_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3928,31 +3892,31 @@ void k_completionbox_set_contents_margins(void* self, int left, int top, int rig
 /// @param self KCompletionBox*
 /// @param margins QMargins*
 ///
-void k_completionbox_set_contents_margins2(void* self, void* margins);
+void k_completionbox_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QMargins* k_completionbox_contents_margins(void* self);
+QMargins* k_completionbox_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QRect* k_completionbox_contents_rect(void* self);
+QRect* k_completionbox_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QLayout* k_completionbox_layout(void* self);
+QLayout* k_completionbox_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4009,39 +3973,39 @@ void k_completionbox_scroll(void* self, int dx, int dy);
 /// @param dy int
 /// @param param3 QRect*
 ///
-void k_completionbox_scroll2(void* self, int dx, int dy, void* param3);
+void k_completionbox_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QWidget* k_completionbox_focus_widget(void* self);
+QWidget* k_completionbox_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QWidget* k_completionbox_next_in_focus_chain(void* self);
+QWidget* k_completionbox_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QWidget* k_completionbox_previous_in_focus_chain(void* self);
+QWidget* k_completionbox_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_accept_drops(void* self);
+bool k_completionbox_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4103,11 +4067,11 @@ void k_completionbox_remove_action(void* self, void* action);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list k_completionbox_actions(void* self);
+libqt_list k_completionbox_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4126,7 +4090,7 @@ QAction* k_completionbox_add_action2(void* self, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* k_completionbox_add_action3(void* self, void* icon, const char* text);
+QAction* k_completionbox_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -4136,7 +4100,7 @@ QAction* k_completionbox_add_action3(void* self, void* icon, const char* text);
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_completionbox_add_action4(void* self, const char* text, void* shortcut);
+QAction* k_completionbox_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -4147,15 +4111,15 @@ QAction* k_completionbox_add_action4(void* self, const char* text, void* shortcu
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_completionbox_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* k_completionbox_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QWidget* k_completionbox_parent_widget(void* self);
+QWidget* k_completionbox_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4170,11 +4134,11 @@ void k_completionbox_set_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t k_completionbox_window_flags(void* self);
+int32_t k_completionbox_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4198,11 +4162,11 @@ void k_completionbox_override_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t k_completionbox_window_type(void* self);
+int32_t k_completionbox_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4216,29 +4180,29 @@ QWidget* k_completionbox_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param x int
 /// @param y int
 ///
-QWidget* k_completionbox_child_at(void* self, int x, int y);
+QWidget* k_completionbox_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param p QPoint*
 ///
-QWidget* k_completionbox_child_at2(void* self, void* p);
+QWidget* k_completionbox_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param p QPointF*
 ///
-QWidget* k_completionbox_child_at3(void* self, void* p);
+QWidget* k_completionbox_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -4253,35 +4217,35 @@ void k_completionbox_set_attribute(void* self, int32_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool k_completionbox_test_attribute(void* self, int32_t param1);
+bool k_completionbox_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-void k_completionbox_ensure_polished(void* self);
+void k_completionbox_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param child QWidget*
 ///
-bool k_completionbox_is_ancestor_of(void* self, void* child);
+bool k_completionbox_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_auto_fill_background(void* self);
+bool k_completionbox_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4296,25 +4260,25 @@ void k_completionbox_set_auto_fill_background(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QBackingStore* k_completionbox_backing_store(void* self);
+QBackingStore* k_completionbox_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QWindow* k_completionbox_window_handle(void* self);
+QWindow* k_completionbox_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QScreen* k_completionbox_screen(void* self);
+QScreen* k_completionbox_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4358,7 +4322,7 @@ void k_completionbox_on_window_title_changed(void* self, void (*callback)(void*,
 /// @param self KCompletionBox*
 /// @param icon QIcon*
 ///
-void k_completionbox_window_icon_changed(void* self, void* icon);
+void k_completionbox_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -4367,7 +4331,7 @@ void k_completionbox_window_icon_changed(void* self, void* icon);
 /// @param self KCompletionBox*
 /// @param callback void func(KCompletionBox* self, QIcon* icon)
 ///
-void k_completionbox_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void k_completionbox_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -4394,7 +4358,7 @@ void k_completionbox_on_window_icon_text_changed(void* self, void (*callback)(vo
 /// @param self KCompletionBox*
 /// @param pos QPoint*
 ///
-void k_completionbox_custom_context_menu_requested(void* self, void* pos);
+void k_completionbox_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -4403,17 +4367,17 @@ void k_completionbox_custom_context_menu_requested(void* self, void* pos);
 /// @param self KCompletionBox*
 /// @param callback void func(KCompletionBox* self, QPoint* pos)
 ///
-void k_completionbox_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void k_completionbox_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t k_completionbox_input_method_hints(void* self);
+int32_t k_completionbox_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4432,7 +4396,7 @@ void k_completionbox_set_input_method_hints(void* self, int32_t hints);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void k_completionbox_render22(void* self, void* target, void* targetOffset);
+void k_completionbox_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -4443,7 +4407,7 @@ void k_completionbox_render22(void* self, void* target, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_completionbox_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void k_completionbox_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -4455,7 +4419,7 @@ void k_completionbox_render3(void* self, void* target, void* targetOffset, void*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_completionbox_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_completionbox_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -4465,7 +4429,7 @@ void k_completionbox_render4(void* self, void* target, void* targetOffset, void*
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void k_completionbox_render23(void* self, void* painter, void* targetOffset);
+void k_completionbox_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -4476,7 +4440,7 @@ void k_completionbox_render23(void* self, void* painter, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_completionbox_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void k_completionbox_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -4488,7 +4452,7 @@ void k_completionbox_render32(void* self, void* painter, void* targetOffset, voi
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_completionbox_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_completionbox_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -4497,7 +4461,7 @@ void k_completionbox_render42(void* self, void* painter, void* targetOffset, voi
 /// @param self KCompletionBox*
 /// @param rectangle QRect*
 ///
-QPixmap* k_completionbox_grab1(void* self, void* rectangle);
+QPixmap* k_completionbox_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -4517,7 +4481,7 @@ void k_completionbox_grab_gesture2(void* self, int32_t type, int32_t flags);
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t k_completionbox_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t k_completionbox_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -4584,9 +4548,9 @@ QWidget* k_completionbox_create_window_container3(void* window, void* parent, in
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-const char* k_completionbox_object_name(void* self);
+const char* k_completionbox_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4601,33 +4565,33 @@ void k_completionbox_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_is_widget_type(void* self);
+bool k_completionbox_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_is_window_type(void* self);
+bool k_completionbox_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_is_quick_item_type(void* self);
+bool k_completionbox_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_signals_blocked(void* self);
+bool k_completionbox_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4642,9 +4606,9 @@ bool k_completionbox_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QThread* k_completionbox_thread(void* self);
+QThread* k_completionbox_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4695,11 +4659,11 @@ void k_completionbox_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_completionbox_children(void* self);
+libqt_list k_completionbox_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4728,7 +4692,7 @@ void k_completionbox_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_completionbox_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_completionbox_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4739,18 +4703,18 @@ QMetaObject__Connection* k_completionbox_connect(void* sender, const char* signa
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_completionbox_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_completionbox_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_completionbox_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_completionbox_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4761,7 +4725,7 @@ QMetaObject__Connection* k_completionbox_connect3(void* self, void* sender, cons
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_completionbox_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_completionbox_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4772,24 +4736,24 @@ bool k_completionbox_disconnect(void* sender, const char* signal, void* receiver
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_completionbox_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_completionbox_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_disconnect3(void* self);
+bool k_completionbox_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param receiver QObject*
 ///
-bool k_completionbox_disconnect4(void* self, void* receiver);
+bool k_completionbox_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -4797,23 +4761,23 @@ bool k_completionbox_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_completionbox_disconnect5(void* param1);
+bool k_completionbox_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-void k_completionbox_dump_object_tree(void* self);
+void k_completionbox_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-void k_completionbox_dump_object_info(void* self);
+void k_completionbox_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4823,16 +4787,16 @@ void k_completionbox_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_completionbox_set_property(void* self, const char* name, void* value);
+bool k_completionbox_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param name const char*
 ///
-QVariant* k_completionbox_property(void* self, const char* name);
+QVariant* k_completionbox_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -4840,9 +4804,9 @@ QVariant* k_completionbox_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-const char** k_completionbox_dynamic_property_names(void* self);
+const char** k_completionbox_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4856,9 +4820,9 @@ QBindingStorage* k_completionbox_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-const QBindingStorage* k_completionbox_binding_storage2(void* self);
+const QBindingStorage* k_completionbox_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4881,18 +4845,18 @@ void k_completionbox_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QObject* k_completionbox_parent(void* self);
+QObject* k_completionbox_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param classname const char*
 ///
-bool k_completionbox_inherits(void* self, const char* classname);
+bool k_completionbox_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -4932,7 +4896,7 @@ int32_t k_completionbox_start_timer23(void* self, int64_t time, int32_t timerTyp
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_completionbox_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_completionbox_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -4944,59 +4908,59 @@ QMetaObject__Connection* k_completionbox_connect5(void* sender, const char* sign
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_completionbox_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_completionbox_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_completionbox_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_completionbox_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param signal const char*
 ///
-bool k_completionbox_disconnect1(void* self, const char* signal);
+bool k_completionbox_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KCompletionBox*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_completionbox_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_completionbox_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_completionbox_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_completionbox_disconnect23(void* self, void* receiver, const char* member);
+bool k_completionbox_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KCompletionBox*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_completionbox_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -5020,89 +4984,89 @@ void k_completionbox_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_painting_active(void* self);
+bool k_completionbox_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_width_m_m(void* self);
+int32_t k_completionbox_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_height_m_m(void* self);
+int32_t k_completionbox_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_logical_dpi_x(void* self);
+int32_t k_completionbox_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_logical_dpi_y(void* self);
+int32_t k_completionbox_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_physical_dpi_x(void* self);
+int32_t k_completionbox_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_physical_dpi_y(void* self);
+int32_t k_completionbox_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-double k_completionbox_device_pixel_ratio(void* self);
+double k_completionbox_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-double k_completionbox_device_pixel_ratio_f(void* self);
+double k_completionbox_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_color_count(void* self);
+int32_t k_completionbox_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_depth(void* self);
+int32_t k_completionbox_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -5226,9 +5190,9 @@ void k_completionbox_on_event(void* self, bool (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-const char** k_completionbox_mime_types(void* self);
+const char** k_completionbox_mime_types(const void* self);
 
 /// Inherited from QListWidget
 ///
@@ -5238,9 +5202,9 @@ const char** k_completionbox_mime_types(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-const char** k_completionbox_super_mime_types(void* self);
+const char** k_completionbox_super_mime_types(const void* self);
 
 /// Inherited from QListWidget
 ///
@@ -5248,10 +5212,10 @@ const char** k_completionbox_super_mime_types(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
-/// @param callback const char** func()
+/// @param self const KCompletionBox*
+/// @param callback const char** func(KCompletionBox* self)
 ///
-void k_completionbox_on_mime_types(void* self, const char** (*callback)());
+void k_completionbox_on_mime_types(const void* self, const char** (*callback)(const void*));
 
 /// Inherited from QListWidget
 ///
@@ -5259,10 +5223,10 @@ void k_completionbox_on_mime_types(void* self, const char** (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param items libqt_list of QListWidgetItem*
 ///
-QMimeData* k_completionbox_mime_data(void* self, libqt_list items);
+QMimeData* k_completionbox_mime_data(const void* self, libqt_list items);
 
 /// Inherited from QListWidget
 ///
@@ -5270,10 +5234,10 @@ QMimeData* k_completionbox_mime_data(void* self, libqt_list items);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param items libqt_list of QListWidgetItem*
 ///
-QMimeData* k_completionbox_super_mime_data(void* self, libqt_list items);
+QMimeData* k_completionbox_super_mime_data(const void* self, libqt_list items);
 
 /// Inherited from QListWidget
 ///
@@ -5281,10 +5245,10 @@ QMimeData* k_completionbox_super_mime_data(void* self, libqt_list items);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param callback QMimeData* func(KCompletionBox* self, libqt_list of QListWidgetItem* items)
 ///
-void k_completionbox_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
+void k_completionbox_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list));
 
 /// Inherited from QListWidget
 ///
@@ -5297,7 +5261,7 @@ void k_completionbox_on_mime_data(void* self, QMimeData* (*callback)(void*, libq
 /// @param data QMimeData*
 /// @param action enum Qt__DropAction
 ///
-bool k_completionbox_drop_mime_data(void* self, int index, void* data, int32_t action);
+bool k_completionbox_drop_mime_data(void* self, int index, const void* data, int32_t action);
 
 /// Inherited from QListWidget
 ///
@@ -5310,7 +5274,7 @@ bool k_completionbox_drop_mime_data(void* self, int index, void* data, int32_t a
 /// @param data QMimeData*
 /// @param action enum Qt__DropAction
 ///
-bool k_completionbox_super_drop_mime_data(void* self, int index, void* data, int32_t action);
+bool k_completionbox_super_drop_mime_data(void* self, int index, const void* data, int32_t action);
 
 /// Inherited from QListWidget
 ///
@@ -5321,7 +5285,7 @@ bool k_completionbox_super_drop_mime_data(void* self, int index, void* data, int
 /// @param self KCompletionBox*
 /// @param callback bool func(KCompletionBox* self, int index, QMimeData* data, enum Qt__DropAction action)
 ///
-void k_completionbox_on_drop_mime_data(void* self, bool (*callback)(void*, int, void*, int32_t));
+void k_completionbox_on_drop_mime_data(void* self, bool (*callback)(void*, int, const void*, int32_t));
 
 /// Inherited from QListWidget
 ///
@@ -5329,11 +5293,11 @@ void k_completionbox_on_drop_mime_data(void* self, bool (*callback)(void*, int, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t k_completionbox_supported_drop_actions(void* self);
+int32_t k_completionbox_supported_drop_actions(const void* self);
 
 /// Inherited from QListWidget
 ///
@@ -5341,11 +5305,11 @@ int32_t k_completionbox_supported_drop_actions(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t k_completionbox_super_supported_drop_actions(void* self);
+int32_t k_completionbox_super_supported_drop_actions(const void* self);
 
 /// Inherited from QListWidget
 ///
@@ -5353,10 +5317,10 @@ int32_t k_completionbox_super_supported_drop_actions(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
-/// @param callback int32_t func()
+/// @param self const KCompletionBox*
+/// @param callback int32_t func(KCompletionBox* self)
 ///
-void k_completionbox_on_supported_drop_actions(void* self, int32_t (*callback)());
+void k_completionbox_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QListView
 ///
@@ -5364,10 +5328,10 @@ void k_completionbox_on_supported_drop_actions(void* self, int32_t (*callback)()
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param index QModelIndex*
 ///
-QRect* k_completionbox_visual_rect(void* self, void* index);
+QRect* k_completionbox_visual_rect(const void* self, const void* index);
 
 /// Inherited from QListView
 ///
@@ -5375,10 +5339,10 @@ QRect* k_completionbox_visual_rect(void* self, void* index);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param index QModelIndex*
 ///
-QRect* k_completionbox_super_visual_rect(void* self, void* index);
+QRect* k_completionbox_super_visual_rect(const void* self, const void* index);
 
 /// Inherited from QListView
 ///
@@ -5386,12 +5350,12 @@ QRect* k_completionbox_super_visual_rect(void* self, void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param callback QRect* func(KCompletionBox* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_completionbox_on_visual_rect(void* self, QRect* (*callback)(void*, void*));
+void k_completionbox_on_visual_rect(const void* self, QRect* (*callback)(const void*, const void*));
 
 /// Inherited from QListView
 ///
@@ -5403,7 +5367,7 @@ void k_completionbox_on_visual_rect(void* self, QRect* (*callback)(void*, void*)
 /// @param index QModelIndex*
 /// @param hint enum QAbstractItemView__ScrollHint
 ///
-void k_completionbox_scroll_to(void* self, void* index, int32_t hint);
+void k_completionbox_scroll_to(void* self, const void* index, int32_t hint);
 
 /// Inherited from QListView
 ///
@@ -5415,7 +5379,7 @@ void k_completionbox_scroll_to(void* self, void* index, int32_t hint);
 /// @param index QModelIndex*
 /// @param hint enum QAbstractItemView__ScrollHint
 ///
-void k_completionbox_super_scroll_to(void* self, void* index, int32_t hint);
+void k_completionbox_super_scroll_to(void* self, const void* index, int32_t hint);
 
 /// Inherited from QListView
 ///
@@ -5426,7 +5390,7 @@ void k_completionbox_super_scroll_to(void* self, void* index, int32_t hint);
 /// @param self KCompletionBox*
 /// @param callback void func(KCompletionBox* self, QModelIndex* index, enum QAbstractItemView__ScrollHint hint)
 ///
-void k_completionbox_on_scroll_to(void* self, void (*callback)(void*, void*, int32_t));
+void k_completionbox_on_scroll_to(void* self, void (*callback)(void*, const void*, int32_t));
 
 /// Inherited from QListView
 ///
@@ -5434,10 +5398,10 @@ void k_completionbox_on_scroll_to(void* self, void (*callback)(void*, void*, int
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param p QPoint*
 ///
-QModelIndex* k_completionbox_index_at(void* self, void* p);
+QModelIndex* k_completionbox_index_at(const void* self, const void* p);
 
 /// Inherited from QListView
 ///
@@ -5445,10 +5409,10 @@ QModelIndex* k_completionbox_index_at(void* self, void* p);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param p QPoint*
 ///
-QModelIndex* k_completionbox_super_index_at(void* self, void* p);
+QModelIndex* k_completionbox_super_index_at(const void* self, const void* p);
 
 /// Inherited from QListView
 ///
@@ -5456,12 +5420,12 @@ QModelIndex* k_completionbox_super_index_at(void* self, void* p);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param callback QModelIndex* func(KCompletionBox* self, QPoint* p)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_completionbox_on_index_at(void* self, QModelIndex* (*callback)(void*, void*));
+void k_completionbox_on_index_at(const void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QListView
 ///
@@ -5490,9 +5454,9 @@ void k_completionbox_super_do_items_layout(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompletionBox*
-/// @param callback void func()
+/// @param callback void func(KCompletionBox* self)
 ///
-void k_completionbox_on_do_items_layout(void* self, void (*callback)());
+void k_completionbox_on_do_items_layout(void* self, void (*callback)(void*));
 
 /// Inherited from QListView
 ///
@@ -5521,9 +5485,9 @@ void k_completionbox_super_reset(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompletionBox*
-/// @param callback void func()
+/// @param callback void func(KCompletionBox* self)
 ///
-void k_completionbox_on_reset(void* self, void (*callback)());
+void k_completionbox_on_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QListView
 ///
@@ -5534,7 +5498,7 @@ void k_completionbox_on_reset(void* self, void (*callback)());
 /// @param self KCompletionBox*
 /// @param index QModelIndex*
 ///
-void k_completionbox_set_root_index(void* self, void* index);
+void k_completionbox_set_root_index(void* self, const void* index);
 
 /// Inherited from QListView
 ///
@@ -5545,7 +5509,7 @@ void k_completionbox_set_root_index(void* self, void* index);
 /// @param self KCompletionBox*
 /// @param index QModelIndex*
 ///
-void k_completionbox_super_set_root_index(void* self, void* index);
+void k_completionbox_super_set_root_index(void* self, const void* index);
 
 /// Inherited from QListView
 ///
@@ -5556,7 +5520,7 @@ void k_completionbox_super_set_root_index(void* self, void* index);
 /// @param self KCompletionBox*
 /// @param callback void func(KCompletionBox* self, QModelIndex* index)
 ///
-void k_completionbox_on_set_root_index(void* self, void (*callback)(void*, void*));
+void k_completionbox_on_set_root_index(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QListView
 ///
@@ -5604,7 +5568,7 @@ void k_completionbox_on_scroll_contents_by(void* self, void (*callback)(void*, i
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void k_completionbox_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
+void k_completionbox_data_changed(void* self, const void* topLeft, const void* bottomRight, libqt_list roles);
 
 /// Inherited from QListView
 ///
@@ -5617,7 +5581,7 @@ void k_completionbox_data_changed(void* self, void* topLeft, void* bottomRight, 
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void k_completionbox_super_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
+void k_completionbox_super_data_changed(void* self, const void* topLeft, const void* bottomRight, libqt_list roles);
 
 /// Inherited from QListView
 ///
@@ -5628,7 +5592,7 @@ void k_completionbox_super_data_changed(void* self, void* topLeft, void* bottomR
 /// @param self KCompletionBox*
 /// @param callback void func(KCompletionBox* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list of int roles)
 ///
-void k_completionbox_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list));
+void k_completionbox_on_data_changed(void* self, void (*callback)(void*, const void*, const void*, libqt_list));
 
 /// Inherited from QListView
 ///
@@ -5641,7 +5605,7 @@ void k_completionbox_on_data_changed(void* self, void (*callback)(void*, void*, 
 /// @param start int
 /// @param end int
 ///
-void k_completionbox_rows_inserted(void* self, void* parent, int start, int end);
+void k_completionbox_rows_inserted(void* self, const void* parent, int start, int end);
 
 /// Inherited from QListView
 ///
@@ -5654,7 +5618,7 @@ void k_completionbox_rows_inserted(void* self, void* parent, int start, int end)
 /// @param start int
 /// @param end int
 ///
-void k_completionbox_super_rows_inserted(void* self, void* parent, int start, int end);
+void k_completionbox_super_rows_inserted(void* self, const void* parent, int start, int end);
 
 /// Inherited from QListView
 ///
@@ -5665,7 +5629,7 @@ void k_completionbox_super_rows_inserted(void* self, void* parent, int start, in
 /// @param self KCompletionBox*
 /// @param callback void func(KCompletionBox* self, QModelIndex* parent, int start, int end)
 ///
-void k_completionbox_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
+void k_completionbox_on_rows_inserted(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QListView
 ///
@@ -5678,7 +5642,7 @@ void k_completionbox_on_rows_inserted(void* self, void (*callback)(void*, void*,
 /// @param start int
 /// @param end int
 ///
-void k_completionbox_rows_about_to_be_removed(void* self, void* parent, int start, int end);
+void k_completionbox_rows_about_to_be_removed(void* self, const void* parent, int start, int end);
 
 /// Inherited from QListView
 ///
@@ -5691,7 +5655,7 @@ void k_completionbox_rows_about_to_be_removed(void* self, void* parent, int star
 /// @param start int
 /// @param end int
 ///
-void k_completionbox_super_rows_about_to_be_removed(void* self, void* parent, int start, int end);
+void k_completionbox_super_rows_about_to_be_removed(void* self, const void* parent, int start, int end);
 
 /// Inherited from QListView
 ///
@@ -5702,7 +5666,7 @@ void k_completionbox_super_rows_about_to_be_removed(void* self, void* parent, in
 /// @param self KCompletionBox*
 /// @param callback void func(KCompletionBox* self, QModelIndex* parent, int start, int end)
 ///
-void k_completionbox_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
+void k_completionbox_on_rows_about_to_be_removed(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QListView
 ///
@@ -5974,10 +5938,10 @@ void k_completionbox_on_start_drag(void* self, void (*callback)(void*, int32_t))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param option QStyleOptionViewItem*
 ///
-void k_completionbox_init_view_item_option(void* self, void* option);
+void k_completionbox_init_view_item_option(const void* self, void* option);
 
 /// Inherited from QListView
 ///
@@ -5985,10 +5949,10 @@ void k_completionbox_init_view_item_option(void* self, void* option);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param option QStyleOptionViewItem*
 ///
-void k_completionbox_super_init_view_item_option(void* self, void* option);
+void k_completionbox_super_init_view_item_option(const void* self, void* option);
 
 /// Inherited from QListView
 ///
@@ -5996,10 +5960,10 @@ void k_completionbox_super_init_view_item_option(void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param callback void func(KCompletionBox* self, QStyleOptionViewItem* option)
 ///
-void k_completionbox_on_init_view_item_option(void* self, void (*callback)(void*, void*));
+void k_completionbox_on_init_view_item_option(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QListView
 ///
@@ -6040,9 +6004,9 @@ void k_completionbox_on_paint_event(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_horizontal_offset(void* self);
+int32_t k_completionbox_horizontal_offset(const void* self);
 
 /// Inherited from QListView
 ///
@@ -6050,9 +6014,9 @@ int32_t k_completionbox_horizontal_offset(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_super_horizontal_offset(void* self);
+int32_t k_completionbox_super_horizontal_offset(const void* self);
 
 /// Inherited from QListView
 ///
@@ -6060,10 +6024,10 @@ int32_t k_completionbox_super_horizontal_offset(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
-/// @param callback int32_t func()
+/// @param self const KCompletionBox*
+/// @param callback int32_t func(KCompletionBox* self)
 ///
-void k_completionbox_on_horizontal_offset(void* self, int32_t (*callback)());
+void k_completionbox_on_horizontal_offset(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QListView
 ///
@@ -6071,9 +6035,9 @@ void k_completionbox_on_horizontal_offset(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_vertical_offset(void* self);
+int32_t k_completionbox_vertical_offset(const void* self);
 
 /// Inherited from QListView
 ///
@@ -6081,9 +6045,9 @@ int32_t k_completionbox_vertical_offset(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_super_vertical_offset(void* self);
+int32_t k_completionbox_super_vertical_offset(const void* self);
 
 /// Inherited from QListView
 ///
@@ -6091,10 +6055,10 @@ int32_t k_completionbox_super_vertical_offset(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
-/// @param callback int32_t func()
+/// @param self const KCompletionBox*
+/// @param callback int32_t func(KCompletionBox* self)
 ///
-void k_completionbox_on_vertical_offset(void* self, int32_t (*callback)());
+void k_completionbox_on_vertical_offset(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QListView
 ///
@@ -6143,7 +6107,7 @@ void k_completionbox_on_move_cursor(void* self, QModelIndex* (*callback)(void*, 
 /// @param rect QRect*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
 ///
-void k_completionbox_set_selection(void* self, void* rect, int32_t command);
+void k_completionbox_set_selection(void* self, const void* rect, int32_t command);
 
 /// Inherited from QListView
 ///
@@ -6155,7 +6119,7 @@ void k_completionbox_set_selection(void* self, void* rect, int32_t command);
 /// @param rect QRect*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
 ///
-void k_completionbox_super_set_selection(void* self, void* rect, int32_t command);
+void k_completionbox_super_set_selection(void* self, const void* rect, int32_t command);
 
 /// Inherited from QListView
 ///
@@ -6166,7 +6130,7 @@ void k_completionbox_super_set_selection(void* self, void* rect, int32_t command
 /// @param self KCompletionBox*
 /// @param callback void func(KCompletionBox* self, QRect* rect, flag of enum QItemSelectionModel__SelectionFlag command)
 ///
-void k_completionbox_on_set_selection(void* self, void (*callback)(void*, void*, int32_t));
+void k_completionbox_on_set_selection(void* self, void (*callback)(void*, const void*, int32_t));
 
 /// Inherited from QListView
 ///
@@ -6174,10 +6138,10 @@ void k_completionbox_on_set_selection(void* self, void (*callback)(void*, void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param selection QItemSelection*
 ///
-QRegion* k_completionbox_visual_region_for_selection(void* self, void* selection);
+QRegion* k_completionbox_visual_region_for_selection(const void* self, const void* selection);
 
 /// Inherited from QListView
 ///
@@ -6185,10 +6149,10 @@ QRegion* k_completionbox_visual_region_for_selection(void* self, void* selection
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param selection QItemSelection*
 ///
-QRegion* k_completionbox_super_visual_region_for_selection(void* self, void* selection);
+QRegion* k_completionbox_super_visual_region_for_selection(const void* self, const void* selection);
 
 /// Inherited from QListView
 ///
@@ -6196,12 +6160,12 @@ QRegion* k_completionbox_super_visual_region_for_selection(void* self, void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param callback QRegion* func(KCompletionBox* self, QItemSelection* selection)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_completionbox_on_visual_region_for_selection(void* self, QRegion* (*callback)(void*, void*));
+void k_completionbox_on_visual_region_for_selection(const void* self, QRegion* (*callback)(const void*, const void*));
 
 /// Inherited from QListView
 ///
@@ -6209,11 +6173,11 @@ void k_completionbox_on_visual_region_for_selection(void* self, QRegion* (*callb
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list k_completionbox_selected_indexes(void* self);
+libqt_list k_completionbox_selected_indexes(const void* self);
 
 /// Inherited from QListView
 ///
@@ -6221,11 +6185,11 @@ libqt_list k_completionbox_selected_indexes(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list k_completionbox_super_selected_indexes(void* self);
+libqt_list k_completionbox_super_selected_indexes(const void* self);
 
 /// Inherited from QListView
 ///
@@ -6233,10 +6197,10 @@ libqt_list k_completionbox_super_selected_indexes(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
-/// @param callback libqt_list of QModelIndex* func()
+/// @param self const KCompletionBox*
+/// @param callback libqt_list of QModelIndex* func(KCompletionBox* self)
 ///
-void k_completionbox_on_selected_indexes(void* self, libqt_list (*callback)());
+void k_completionbox_on_selected_indexes(const void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QListView
 ///
@@ -6265,9 +6229,9 @@ void k_completionbox_super_update_geometries(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompletionBox*
-/// @param callback void func()
+/// @param callback void func(KCompletionBox* self)
 ///
-void k_completionbox_on_update_geometries(void* self, void (*callback)());
+void k_completionbox_on_update_geometries(void* self, void (*callback)(void*));
 
 /// Inherited from QListView
 ///
@@ -6275,10 +6239,10 @@ void k_completionbox_on_update_geometries(void* self, void (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param index QModelIndex*
 ///
-bool k_completionbox_is_index_hidden(void* self, void* index);
+bool k_completionbox_is_index_hidden(const void* self, const void* index);
 
 /// Inherited from QListView
 ///
@@ -6286,10 +6250,10 @@ bool k_completionbox_is_index_hidden(void* self, void* index);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param index QModelIndex*
 ///
-bool k_completionbox_super_is_index_hidden(void* self, void* index);
+bool k_completionbox_super_is_index_hidden(const void* self, const void* index);
 
 /// Inherited from QListView
 ///
@@ -6297,10 +6261,10 @@ bool k_completionbox_super_is_index_hidden(void* self, void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param callback bool func(KCompletionBox* self, QModelIndex* index)
 ///
-void k_completionbox_on_is_index_hidden(void* self, bool (*callback)(void*, void*));
+void k_completionbox_on_is_index_hidden(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QListView
 ///
@@ -6312,7 +6276,7 @@ void k_completionbox_on_is_index_hidden(void* self, bool (*callback)(void*, void
 /// @param selected QItemSelection*
 /// @param deselected QItemSelection*
 ///
-void k_completionbox_selection_changed(void* self, void* selected, void* deselected);
+void k_completionbox_selection_changed(void* self, const void* selected, const void* deselected);
 
 /// Inherited from QListView
 ///
@@ -6324,7 +6288,7 @@ void k_completionbox_selection_changed(void* self, void* selected, void* deselec
 /// @param selected QItemSelection*
 /// @param deselected QItemSelection*
 ///
-void k_completionbox_super_selection_changed(void* self, void* selected, void* deselected);
+void k_completionbox_super_selection_changed(void* self, const void* selected, const void* deselected);
 
 /// Inherited from QListView
 ///
@@ -6335,7 +6299,7 @@ void k_completionbox_super_selection_changed(void* self, void* selected, void* d
 /// @param self KCompletionBox*
 /// @param callback void func(KCompletionBox* self, QItemSelection* selected, QItemSelection* deselected)
 ///
-void k_completionbox_on_selection_changed(void* self, void (*callback)(void*, void*, void*));
+void k_completionbox_on_selection_changed(void* self, void (*callback)(void*, const void*, const void*));
 
 /// Inherited from QListView
 ///
@@ -6347,7 +6311,7 @@ void k_completionbox_on_selection_changed(void* self, void (*callback)(void*, vo
 /// @param current QModelIndex*
 /// @param previous QModelIndex*
 ///
-void k_completionbox_current_changed(void* self, void* current, void* previous);
+void k_completionbox_current_changed(void* self, const void* current, const void* previous);
 
 /// Inherited from QListView
 ///
@@ -6359,7 +6323,7 @@ void k_completionbox_current_changed(void* self, void* current, void* previous);
 /// @param current QModelIndex*
 /// @param previous QModelIndex*
 ///
-void k_completionbox_super_current_changed(void* self, void* current, void* previous);
+void k_completionbox_super_current_changed(void* self, const void* current, const void* previous);
 
 /// Inherited from QListView
 ///
@@ -6370,7 +6334,7 @@ void k_completionbox_super_current_changed(void* self, void* current, void* prev
 /// @param self KCompletionBox*
 /// @param callback void func(KCompletionBox* self, QModelIndex* current, QModelIndex* previous)
 ///
-void k_completionbox_on_current_changed(void* self, void (*callback)(void*, void*, void*));
+void k_completionbox_on_current_changed(void* self, void (*callback)(void*, const void*, const void*));
 
 /// Inherited from QListView
 ///
@@ -6378,9 +6342,9 @@ void k_completionbox_on_current_changed(void* self, void (*callback)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QSize* k_completionbox_viewport_size_hint(void* self);
+QSize* k_completionbox_viewport_size_hint(const void* self);
 
 /// Inherited from QListView
 ///
@@ -6388,9 +6352,9 @@ QSize* k_completionbox_viewport_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QSize* k_completionbox_super_viewport_size_hint(void* self);
+QSize* k_completionbox_super_viewport_size_hint(const void* self);
 
 /// Inherited from QListView
 ///
@@ -6398,12 +6362,12 @@ QSize* k_completionbox_super_viewport_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
-/// @param callback QSize* func()
+/// @param self const KCompletionBox*
+/// @param callback QSize* func(KCompletionBox* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_completionbox_on_viewport_size_hint(void* self, QSize* (*callback)());
+void k_completionbox_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6444,10 +6408,10 @@ void k_completionbox_on_keyboard_search(void* self, void (*callback)(void*, cons
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param row int
 ///
-int32_t k_completionbox_size_hint_for_row(void* self, int row);
+int32_t k_completionbox_size_hint_for_row(const void* self, int row);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6455,10 +6419,10 @@ int32_t k_completionbox_size_hint_for_row(void* self, int row);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param row int
 ///
-int32_t k_completionbox_super_size_hint_for_row(void* self, int row);
+int32_t k_completionbox_super_size_hint_for_row(const void* self, int row);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6466,10 +6430,10 @@ int32_t k_completionbox_super_size_hint_for_row(void* self, int row);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param callback int32_t func(KCompletionBox* self, int row)
 ///
-void k_completionbox_on_size_hint_for_row(void* self, int32_t (*callback)(void*, int));
+void k_completionbox_on_size_hint_for_row(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6477,10 +6441,10 @@ void k_completionbox_on_size_hint_for_row(void* self, int32_t (*callback)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param column int
 ///
-int32_t k_completionbox_size_hint_for_column(void* self, int column);
+int32_t k_completionbox_size_hint_for_column(const void* self, int column);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6488,10 +6452,10 @@ int32_t k_completionbox_size_hint_for_column(void* self, int column);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param column int
 ///
-int32_t k_completionbox_super_size_hint_for_column(void* self, int column);
+int32_t k_completionbox_super_size_hint_for_column(const void* self, int column);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6499,10 +6463,10 @@ int32_t k_completionbox_super_size_hint_for_column(void* self, int column);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param callback int32_t func(KCompletionBox* self, int column)
 ///
-void k_completionbox_on_size_hint_for_column(void* self, int32_t (*callback)(void*, int));
+void k_completionbox_on_size_hint_for_column(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6510,10 +6474,10 @@ void k_completionbox_on_size_hint_for_column(void* self, int32_t (*callback)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param index QModelIndex*
 ///
-QAbstractItemDelegate* k_completionbox_item_delegate_for_index(void* self, void* index);
+QAbstractItemDelegate* k_completionbox_item_delegate_for_index(const void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6521,10 +6485,10 @@ QAbstractItemDelegate* k_completionbox_item_delegate_for_index(void* self, void*
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param index QModelIndex*
 ///
-QAbstractItemDelegate* k_completionbox_super_item_delegate_for_index(void* self, void* index);
+QAbstractItemDelegate* k_completionbox_super_item_delegate_for_index(const void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6532,10 +6496,10 @@ QAbstractItemDelegate* k_completionbox_super_item_delegate_for_index(void* self,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param callback QAbstractItemDelegate* func(KCompletionBox* self, QModelIndex* index)
 ///
-void k_completionbox_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*callback)(void*, void*));
+void k_completionbox_on_item_delegate_for_index(const void* self, QAbstractItemDelegate* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6543,10 +6507,10 @@ void k_completionbox_on_item_delegate_for_index(void* self, QAbstractItemDelegat
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* k_completionbox_input_method_query(void* self, int32_t query);
+QVariant* k_completionbox_input_method_query(const void* self, int32_t query);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6554,10 +6518,10 @@ QVariant* k_completionbox_input_method_query(void* self, int32_t query);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* k_completionbox_super_input_method_query(void* self, int32_t query);
+QVariant* k_completionbox_super_input_method_query(const void* self, int32_t query);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6565,12 +6529,12 @@ QVariant* k_completionbox_super_input_method_query(void* self, int32_t query);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param callback QVariant* func(KCompletionBox* self, enum Qt__InputMethodQuery query)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_completionbox_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void k_completionbox_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6599,9 +6563,9 @@ void k_completionbox_super_select_all(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompletionBox*
-/// @param callback void func()
+/// @param callback void func(KCompletionBox* self)
 ///
-void k_completionbox_on_select_all(void* self, void (*callback)());
+void k_completionbox_on_select_all(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6630,9 +6594,9 @@ void k_completionbox_super_update_editor_data(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompletionBox*
-/// @param callback void func()
+/// @param callback void func(KCompletionBox* self)
 ///
-void k_completionbox_on_update_editor_data(void* self, void (*callback)());
+void k_completionbox_on_update_editor_data(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6661,9 +6625,9 @@ void k_completionbox_super_update_editor_geometries(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompletionBox*
-/// @param callback void func()
+/// @param callback void func(KCompletionBox* self)
 ///
-void k_completionbox_on_update_editor_geometries(void* self, void (*callback)());
+void k_completionbox_on_update_editor_geometries(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6909,7 +6873,7 @@ void k_completionbox_on_editor_destroyed(void* self, void (*callback)(void*, voi
 /// @param trigger enum QAbstractItemView__EditTrigger
 /// @param event QEvent*
 ///
-bool k_completionbox_edit2(void* self, void* index, int32_t trigger, void* event);
+bool k_completionbox_edit2(void* self, const void* index, int32_t trigger, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6922,7 +6886,7 @@ bool k_completionbox_edit2(void* self, void* index, int32_t trigger, void* event
 /// @param trigger enum QAbstractItemView__EditTrigger
 /// @param event QEvent*
 ///
-bool k_completionbox_super_edit2(void* self, void* index, int32_t trigger, void* event);
+bool k_completionbox_super_edit2(void* self, const void* index, int32_t trigger, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6933,7 +6897,7 @@ bool k_completionbox_super_edit2(void* self, void* index, int32_t trigger, void*
 /// @param self KCompletionBox*
 /// @param callback bool func(KCompletionBox* self, QModelIndex* index, enum QAbstractItemView__EditTrigger trigger, QEvent* event)
 ///
-void k_completionbox_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, void*));
+void k_completionbox_on_edit2(void* self, bool (*callback)(void*, const void*, int32_t, void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6941,13 +6905,13 @@ void k_completionbox_on_edit2(void* self, bool (*callback)(void*, void*, int32_t
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param index QModelIndex*
 /// @param event QEvent*
 ///
 /// @return flag of enum QItemSelectionModel__SelectionFlag
 ///
-int32_t k_completionbox_selection_command(void* self, void* index, void* event);
+int32_t k_completionbox_selection_command(const void* self, const void* index, const void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6955,13 +6919,13 @@ int32_t k_completionbox_selection_command(void* self, void* index, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param index QModelIndex*
 /// @param event QEvent*
 ///
 /// @return flag of enum QItemSelectionModel__SelectionFlag
 ///
-int32_t k_completionbox_super_selection_command(void* self, void* index, void* event);
+int32_t k_completionbox_super_selection_command(const void* self, const void* index, const void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6969,10 +6933,10 @@ int32_t k_completionbox_super_selection_command(void* self, void* index, void* e
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param callback int32_t func(KCompletionBox* self, QModelIndex* index, QEvent* event)
 ///
-void k_completionbox_on_selection_command(void* self, int32_t (*callback)(void*, void*, void*));
+void k_completionbox_on_selection_command(const void* self, int32_t (*callback)(const void*, const void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7277,9 +7241,9 @@ void k_completionbox_on_input_method_event(void* self, void (*callback)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QSize* k_completionbox_minimum_size_hint(void* self);
+QSize* k_completionbox_minimum_size_hint(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -7287,9 +7251,9 @@ QSize* k_completionbox_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QSize* k_completionbox_super_minimum_size_hint(void* self);
+QSize* k_completionbox_super_minimum_size_hint(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -7297,12 +7261,12 @@ QSize* k_completionbox_super_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
-/// @param callback QSize* func()
+/// @param self const KCompletionBox*
+/// @param callback QSize* func(KCompletionBox* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_completionbox_on_minimum_size_hint(void* self, QSize* (*callback)());
+void k_completionbox_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -7409,10 +7373,10 @@ void k_completionbox_on_change_event(void* self, void (*callback)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param option QStyleOptionFrame*
 ///
-void k_completionbox_init_style_option(void* self, void* option);
+void k_completionbox_init_style_option(const void* self, void* option);
 
 /// Inherited from QFrame
 ///
@@ -7420,10 +7384,10 @@ void k_completionbox_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param option QStyleOptionFrame*
 ///
-void k_completionbox_super_init_style_option(void* self, void* option);
+void k_completionbox_super_init_style_option(const void* self, void* option);
 
 /// Inherited from QFrame
 ///
@@ -7431,10 +7395,10 @@ void k_completionbox_super_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param callback void func(KCompletionBox* self, QStyleOptionFrame* option)
 ///
-void k_completionbox_on_init_style_option(void* self, void (*callback)(void*, void*));
+void k_completionbox_on_init_style_option(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -7442,9 +7406,9 @@ void k_completionbox_on_init_style_option(void* self, void (*callback)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_dev_type(void* self);
+int32_t k_completionbox_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7452,9 +7416,9 @@ int32_t k_completionbox_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_super_dev_type(void* self);
+int32_t k_completionbox_super_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7462,10 +7426,10 @@ int32_t k_completionbox_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
-/// @param callback int32_t func()
+/// @param self const KCompletionBox*
+/// @param callback int32_t func(KCompletionBox* self)
 ///
-void k_completionbox_on_dev_type(void* self, int32_t (*callback)());
+void k_completionbox_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -7473,10 +7437,10 @@ void k_completionbox_on_dev_type(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param param1 int
 ///
-int32_t k_completionbox_height_for_width(void* self, int param1);
+int32_t k_completionbox_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -7484,10 +7448,10 @@ int32_t k_completionbox_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param param1 int
 ///
-int32_t k_completionbox_super_height_for_width(void* self, int param1);
+int32_t k_completionbox_super_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -7495,10 +7459,10 @@ int32_t k_completionbox_super_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param callback int32_t func(KCompletionBox* self, int param1)
 ///
-void k_completionbox_on_height_for_width(void* self, int32_t (*callback)(void*, int));
+void k_completionbox_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -7506,9 +7470,9 @@ void k_completionbox_on_height_for_width(void* self, int32_t (*callback)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_has_height_for_width(void* self);
+bool k_completionbox_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7516,9 +7480,9 @@ bool k_completionbox_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-bool k_completionbox_super_has_height_for_width(void* self);
+bool k_completionbox_super_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7526,10 +7490,10 @@ bool k_completionbox_super_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
-/// @param callback bool func()
+/// @param self const KCompletionBox*
+/// @param callback bool func(KCompletionBox* self)
 ///
-void k_completionbox_on_has_height_for_width(void* self, bool (*callback)());
+void k_completionbox_on_has_height_for_width(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -7537,9 +7501,9 @@ void k_completionbox_on_has_height_for_width(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QPaintEngine* k_completionbox_paint_engine(void* self);
+QPaintEngine* k_completionbox_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7547,9 +7511,9 @@ QPaintEngine* k_completionbox_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QPaintEngine* k_completionbox_super_paint_engine(void* self);
+QPaintEngine* k_completionbox_super_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7557,10 +7521,10 @@ QPaintEngine* k_completionbox_super_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
-/// @param callback QPaintEngine* func()
+/// @param self const KCompletionBox*
+/// @param callback QPaintEngine* func(KCompletionBox* self)
 ///
-void k_completionbox_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void k_completionbox_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -7902,10 +7866,10 @@ void k_completionbox_on_native_event(void* self, bool (*callback)(void*, libqt_s
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_completionbox_metric(void* self, int32_t param1);
+int32_t k_completionbox_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -7913,10 +7877,10 @@ int32_t k_completionbox_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_completionbox_super_metric(void* self, int32_t param1);
+int32_t k_completionbox_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -7924,10 +7888,10 @@ int32_t k_completionbox_super_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param callback int32_t func(KCompletionBox* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_completionbox_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void k_completionbox_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -7935,10 +7899,10 @@ void k_completionbox_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param painter QPainter*
 ///
-void k_completionbox_init_painter(void* self, void* painter);
+void k_completionbox_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -7946,10 +7910,10 @@ void k_completionbox_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param painter QPainter*
 ///
-void k_completionbox_super_init_painter(void* self, void* painter);
+void k_completionbox_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -7957,10 +7921,10 @@ void k_completionbox_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param callback void func(KCompletionBox* self, QPainter* painter)
 ///
-void k_completionbox_on_init_painter(void* self, void (*callback)(void*, void*));
+void k_completionbox_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -7968,10 +7932,10 @@ void k_completionbox_on_init_painter(void* self, void (*callback)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_completionbox_redirected(void* self, void* offset);
+QPaintDevice* k_completionbox_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -7979,10 +7943,10 @@ QPaintDevice* k_completionbox_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_completionbox_super_redirected(void* self, void* offset);
+QPaintDevice* k_completionbox_super_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -7990,10 +7954,10 @@ QPaintDevice* k_completionbox_super_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param callback QPaintDevice* func(KCompletionBox* self, QPoint* offset)
 ///
-void k_completionbox_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void k_completionbox_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -8001,9 +7965,9 @@ void k_completionbox_on_redirected(void* self, QPaintDevice* (*callback)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QPainter* k_completionbox_shared_painter(void* self);
+QPainter* k_completionbox_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8011,9 +7975,9 @@ QPainter* k_completionbox_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QPainter* k_completionbox_super_shared_painter(void* self);
+QPainter* k_completionbox_super_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8021,10 +7985,10 @@ QPainter* k_completionbox_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
-/// @param callback QPainter* func()
+/// @param self const KCompletionBox*
+/// @param callback QPainter* func(KCompletionBox* self)
 ///
-void k_completionbox_on_shared_painter(void* self, QPainter* (*callback)());
+void k_completionbox_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -8101,7 +8065,7 @@ void k_completionbox_on_custom_event(void* self, void (*callback)(void*, void*))
 /// @param self KCompletionBox*
 /// @param signal QMetaMethod*
 ///
-void k_completionbox_connect_notify(void* self, void* signal);
+void k_completionbox_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -8112,7 +8076,7 @@ void k_completionbox_connect_notify(void* self, void* signal);
 /// @param self KCompletionBox*
 /// @param signal QMetaMethod*
 ///
-void k_completionbox_super_connect_notify(void* self, void* signal);
+void k_completionbox_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -8123,7 +8087,7 @@ void k_completionbox_super_connect_notify(void* self, void* signal);
 /// @param self KCompletionBox*
 /// @param callback void func(KCompletionBox* self, QMetaMethod* signal)
 ///
-void k_completionbox_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_completionbox_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -8134,7 +8098,7 @@ void k_completionbox_on_connect_notify(void* self, void (*callback)(void*, void*
 /// @param self KCompletionBox*
 /// @param signal QMetaMethod*
 ///
-void k_completionbox_disconnect_notify(void* self, void* signal);
+void k_completionbox_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -8145,7 +8109,7 @@ void k_completionbox_disconnect_notify(void* self, void* signal);
 /// @param self KCompletionBox*
 /// @param signal QMetaMethod*
 ///
-void k_completionbox_super_disconnect_notify(void* self, void* signal);
+void k_completionbox_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -8156,7 +8120,7 @@ void k_completionbox_super_disconnect_notify(void* self, void* signal);
 /// @param self KCompletionBox*
 /// @param callback void func(KCompletionBox* self, QMetaMethod* signal)
 ///
-void k_completionbox_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_completionbox_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QListView
 ///
@@ -8199,9 +8163,9 @@ void k_completionbox_on_resize_contents(void* self, void (*callback)(void*, int,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QSize* k_completionbox_contents_size(void* self);
+QSize* k_completionbox_contents_size(const void* self);
 
 /// Inherited from QListView
 ///
@@ -8209,9 +8173,9 @@ QSize* k_completionbox_contents_size(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QSize* k_completionbox_super_contents_size(void* self);
+QSize* k_completionbox_super_contents_size(const void* self);
 
 /// Inherited from QListView
 ///
@@ -8219,12 +8183,12 @@ QSize* k_completionbox_super_contents_size(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
-/// @param callback QSize* func()
+/// @param self const KCompletionBox*
+/// @param callback QSize* func(KCompletionBox* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_completionbox_on_contents_size(void* self, QSize* (*callback)());
+void k_completionbox_on_contents_size(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QListView
 ///
@@ -8232,10 +8196,10 @@ void k_completionbox_on_contents_size(void* self, QSize* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param index QModelIndex*
 ///
-QRect* k_completionbox_rect_for_index(void* self, void* index);
+QRect* k_completionbox_rect_for_index(const void* self, const void* index);
 
 /// Inherited from QListView
 ///
@@ -8243,10 +8207,10 @@ QRect* k_completionbox_rect_for_index(void* self, void* index);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param index QModelIndex*
 ///
-QRect* k_completionbox_super_rect_for_index(void* self, void* index);
+QRect* k_completionbox_super_rect_for_index(const void* self, const void* index);
 
 /// Inherited from QListView
 ///
@@ -8254,12 +8218,12 @@ QRect* k_completionbox_super_rect_for_index(void* self, void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param callback QRect* func(KCompletionBox* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_completionbox_on_rect_for_index(void* self, QRect* (*callback)(void*, void*));
+void k_completionbox_on_rect_for_index(const void* self, QRect* (*callback)(const void*, const void*));
 
 /// Inherited from QListView
 ///
@@ -8271,7 +8235,7 @@ void k_completionbox_on_rect_for_index(void* self, QRect* (*callback)(void*, voi
 /// @param position QPoint*
 /// @param index QModelIndex*
 ///
-void k_completionbox_set_position_for_index(void* self, void* position, void* index);
+void k_completionbox_set_position_for_index(void* self, const void* position, const void* index);
 
 /// Inherited from QListView
 ///
@@ -8283,7 +8247,7 @@ void k_completionbox_set_position_for_index(void* self, void* position, void* in
 /// @param position QPoint*
 /// @param index QModelIndex*
 ///
-void k_completionbox_super_set_position_for_index(void* self, void* position, void* index);
+void k_completionbox_super_set_position_for_index(void* self, const void* position, const void* index);
 
 /// Inherited from QListView
 ///
@@ -8294,7 +8258,7 @@ void k_completionbox_super_set_position_for_index(void* self, void* position, vo
 /// @param self KCompletionBox*
 /// @param callback void func(KCompletionBox* self, QPoint* position, QModelIndex* index)
 ///
-void k_completionbox_on_set_position_for_index(void* self, void (*callback)(void*, void*, void*));
+void k_completionbox_on_set_position_for_index(void* self, void (*callback)(void*, const void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -8302,11 +8266,11 @@ void k_completionbox_on_set_position_for_index(void* self, void (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return enum QAbstractItemView__State
 ///
-int32_t k_completionbox_state(void* self);
+int32_t k_completionbox_state(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -8314,11 +8278,11 @@ int32_t k_completionbox_state(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return enum QAbstractItemView__State
 ///
-int32_t k_completionbox_super_state(void* self);
+int32_t k_completionbox_super_state(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -8326,10 +8290,10 @@ int32_t k_completionbox_super_state(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
-/// @param callback int32_t func()
+/// @param self const KCompletionBox*
+/// @param callback int32_t func(KCompletionBox* self)
 ///
-void k_completionbox_on_state(void* self, int32_t (*callback)());
+void k_completionbox_on_state(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -8391,9 +8355,9 @@ void k_completionbox_super_schedule_delayed_items_layout(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompletionBox*
-/// @param callback void func()
+/// @param callback void func(KCompletionBox* self)
 ///
-void k_completionbox_on_schedule_delayed_items_layout(void* self, void (*callback)());
+void k_completionbox_on_schedule_delayed_items_layout(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -8422,9 +8386,9 @@ void k_completionbox_super_execute_delayed_items_layout(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompletionBox*
-/// @param callback void func()
+/// @param callback void func(KCompletionBox* self)
 ///
-void k_completionbox_on_execute_delayed_items_layout(void* self, void (*callback)());
+void k_completionbox_on_execute_delayed_items_layout(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -8435,7 +8399,7 @@ void k_completionbox_on_execute_delayed_items_layout(void* self, void (*callback
 /// @param self KCompletionBox*
 /// @param region QRegion*
 ///
-void k_completionbox_set_dirty_region(void* self, void* region);
+void k_completionbox_set_dirty_region(void* self, const void* region);
 
 /// Inherited from QAbstractItemView
 ///
@@ -8446,7 +8410,7 @@ void k_completionbox_set_dirty_region(void* self, void* region);
 /// @param self KCompletionBox*
 /// @param region QRegion*
 ///
-void k_completionbox_super_set_dirty_region(void* self, void* region);
+void k_completionbox_super_set_dirty_region(void* self, const void* region);
 
 /// Inherited from QAbstractItemView
 ///
@@ -8457,7 +8421,7 @@ void k_completionbox_super_set_dirty_region(void* self, void* region);
 /// @param self KCompletionBox*
 /// @param callback void func(KCompletionBox* self, QRegion* region)
 ///
-void k_completionbox_on_set_dirty_region(void* self, void (*callback)(void*, void*));
+void k_completionbox_on_set_dirty_region(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -8500,9 +8464,9 @@ void k_completionbox_on_scroll_dirty_region(void* self, void (*callback)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QPoint* k_completionbox_dirty_region_offset(void* self);
+QPoint* k_completionbox_dirty_region_offset(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -8510,9 +8474,9 @@ QPoint* k_completionbox_dirty_region_offset(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QPoint* k_completionbox_super_dirty_region_offset(void* self);
+QPoint* k_completionbox_super_dirty_region_offset(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -8520,12 +8484,12 @@ QPoint* k_completionbox_super_dirty_region_offset(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
-/// @param callback QPoint* func()
+/// @param self const KCompletionBox*
+/// @param callback QPoint* func(KCompletionBox* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_completionbox_on_dirty_region_offset(void* self, QPoint* (*callback)());
+void k_completionbox_on_dirty_region_offset(const void* self, QPoint* (*callback)(const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -8554,9 +8518,9 @@ void k_completionbox_super_start_auto_scroll(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompletionBox*
-/// @param callback void func()
+/// @param callback void func(KCompletionBox* self)
 ///
-void k_completionbox_on_start_auto_scroll(void* self, void (*callback)());
+void k_completionbox_on_start_auto_scroll(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -8585,9 +8549,9 @@ void k_completionbox_super_stop_auto_scroll(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompletionBox*
-/// @param callback void func()
+/// @param callback void func(KCompletionBox* self)
 ///
-void k_completionbox_on_stop_auto_scroll(void* self, void (*callback)());
+void k_completionbox_on_stop_auto_scroll(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -8616,9 +8580,9 @@ void k_completionbox_super_do_auto_scroll(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompletionBox*
-/// @param callback void func()
+/// @param callback void func(KCompletionBox* self)
 ///
-void k_completionbox_on_do_auto_scroll(void* self, void (*callback)());
+void k_completionbox_on_do_auto_scroll(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -8626,11 +8590,11 @@ void k_completionbox_on_do_auto_scroll(void* self, void (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return enum QAbstractItemView__DropIndicatorPosition
 ///
-int32_t k_completionbox_drop_indicator_position(void* self);
+int32_t k_completionbox_drop_indicator_position(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -8638,11 +8602,11 @@ int32_t k_completionbox_drop_indicator_position(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
 /// @return enum QAbstractItemView__DropIndicatorPosition
 ///
-int32_t k_completionbox_super_drop_indicator_position(void* self);
+int32_t k_completionbox_super_drop_indicator_position(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -8650,10 +8614,10 @@ int32_t k_completionbox_super_drop_indicator_position(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
-/// @param callback int32_t func()
+/// @param self const KCompletionBox*
+/// @param callback int32_t func(KCompletionBox* self)
 ///
-void k_completionbox_on_drop_indicator_position(void* self, int32_t (*callback)());
+void k_completionbox_on_drop_indicator_position(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -8700,9 +8664,9 @@ void k_completionbox_on_set_viewport_margins(void* self, void (*callback)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QMargins* k_completionbox_viewport_margins(void* self);
+QMargins* k_completionbox_viewport_margins(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -8710,9 +8674,9 @@ QMargins* k_completionbox_viewport_margins(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QMargins* k_completionbox_super_viewport_margins(void* self);
+QMargins* k_completionbox_super_viewport_margins(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -8720,12 +8684,12 @@ QMargins* k_completionbox_super_viewport_margins(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
-/// @param callback QMargins* func()
+/// @param self const KCompletionBox*
+/// @param callback QMargins* func(KCompletionBox* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_completionbox_on_viewport_margins(void* self, QMargins* (*callback)());
+void k_completionbox_on_viewport_margins(const void* self, QMargins* (*callback)(const void*));
 
 /// Inherited from QFrame
 ///
@@ -8787,9 +8751,9 @@ void k_completionbox_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompletionBox*
-/// @param callback void func()
+/// @param callback void func(KCompletionBox* self)
 ///
-void k_completionbox_on_update_micro_focus(void* self, void (*callback)());
+void k_completionbox_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -8818,9 +8782,9 @@ void k_completionbox_super_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompletionBox*
-/// @param callback void func()
+/// @param callback void func(KCompletionBox* self)
 ///
-void k_completionbox_on_create(void* self, void (*callback)());
+void k_completionbox_on_create(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -8849,9 +8813,9 @@ void k_completionbox_super_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompletionBox*
-/// @param callback void func()
+/// @param callback void func(KCompletionBox* self)
 ///
-void k_completionbox_on_destroy(void* self, void (*callback)());
+void k_completionbox_on_destroy(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -8880,9 +8844,9 @@ bool k_completionbox_super_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompletionBox*
-/// @param callback bool func()
+/// @param callback bool func(KCompletionBox* self)
 ///
-void k_completionbox_on_focus_next_child(void* self, bool (*callback)());
+void k_completionbox_on_focus_next_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -8911,9 +8875,9 @@ bool k_completionbox_super_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompletionBox*
-/// @param callback bool func()
+/// @param callback bool func(KCompletionBox* self)
 ///
-void k_completionbox_on_focus_previous_child(void* self, bool (*callback)());
+void k_completionbox_on_focus_previous_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -8921,9 +8885,9 @@ void k_completionbox_on_focus_previous_child(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QObject* k_completionbox_sender(void* self);
+QObject* k_completionbox_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -8931,9 +8895,9 @@ QObject* k_completionbox_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-QObject* k_completionbox_super_sender(void* self);
+QObject* k_completionbox_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -8941,10 +8905,10 @@ QObject* k_completionbox_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
-/// @param callback QObject* func()
+/// @param self const KCompletionBox*
+/// @param callback QObject* func(KCompletionBox* self)
 ///
-void k_completionbox_on_sender(void* self, QObject* (*callback)());
+void k_completionbox_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -8952,9 +8916,9 @@ void k_completionbox_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_sender_signal_index(void* self);
+int32_t k_completionbox_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -8962,9 +8926,9 @@ int32_t k_completionbox_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 ///
-int32_t k_completionbox_super_sender_signal_index(void* self);
+int32_t k_completionbox_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -8972,10 +8936,10 @@ int32_t k_completionbox_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
-/// @param callback int32_t func()
+/// @param self const KCompletionBox*
+/// @param callback int32_t func(KCompletionBox* self)
 ///
-void k_completionbox_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_completionbox_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -8983,10 +8947,10 @@ void k_completionbox_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param signal const char*
 ///
-int32_t k_completionbox_receivers(void* self, const char* signal);
+int32_t k_completionbox_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -8994,10 +8958,10 @@ int32_t k_completionbox_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param signal const char*
 ///
-int32_t k_completionbox_super_receivers(void* self, const char* signal);
+int32_t k_completionbox_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -9005,10 +8969,10 @@ int32_t k_completionbox_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param callback int32_t func(KCompletionBox* self, const char* signal)
 ///
-void k_completionbox_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_completionbox_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -9016,10 +8980,10 @@ void k_completionbox_on_receivers(void* self, int32_t (*callback)(void*, const c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param signal QMetaMethod*
 ///
-bool k_completionbox_is_signal_connected(void* self, void* signal);
+bool k_completionbox_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -9027,10 +8991,10 @@ bool k_completionbox_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param signal QMetaMethod*
 ///
-bool k_completionbox_super_is_signal_connected(void* self, void* signal);
+bool k_completionbox_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -9038,10 +9002,10 @@ bool k_completionbox_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param callback bool func(KCompletionBox* self, QMetaMethod* signal)
 ///
-void k_completionbox_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_completionbox_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -9049,11 +9013,11 @@ void k_completionbox_on_is_signal_connected(void* self, bool (*callback)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_completionbox_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_completionbox_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -9061,11 +9025,11 @@ double k_completionbox_get_decoded_metric_f(void* self, int32_t metricA, int32_t
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_completionbox_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_completionbox_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -9073,10 +9037,10 @@ double k_completionbox_super_get_decoded_metric_f(void* self, int32_t metricA, i
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCompletionBox*
+/// @param self const KCompletionBox*
 /// @param callback double func(KCompletionBox* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_completionbox_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void k_completionbox_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

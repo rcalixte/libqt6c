@@ -6,39 +6,39 @@ QCameraFormat* q_cameraformat_new() {
     return QCameraFormat_New();
 }
 
-QCameraFormat* q_cameraformat_new2(void* other) {
+QCameraFormat* q_cameraformat_new2(const void* other) {
     return QCameraFormat_New2((QCameraFormat*)other);
 }
 
-void q_cameraformat_operator_assign(void* self, void* other) {
+void q_cameraformat_operator_assign(void* self, const void* other) {
     QCameraFormat_OperatorAssign((QCameraFormat*)self, (QCameraFormat*)other);
 }
 
-int32_t q_cameraformat_pixel_format(void* self) {
+int32_t q_cameraformat_pixel_format(const void* self) {
     return QCameraFormat_PixelFormat((QCameraFormat*)self);
 }
 
-QSize* q_cameraformat_resolution(void* self) {
+QSize* q_cameraformat_resolution(const void* self) {
     return QCameraFormat_Resolution((QCameraFormat*)self);
 }
 
-float q_cameraformat_min_frame_rate(void* self) {
+float q_cameraformat_min_frame_rate(const void* self) {
     return QCameraFormat_MinFrameRate((QCameraFormat*)self);
 }
 
-float q_cameraformat_max_frame_rate(void* self) {
+float q_cameraformat_max_frame_rate(const void* self) {
     return QCameraFormat_MaxFrameRate((QCameraFormat*)self);
 }
 
-bool q_cameraformat_is_null(void* self) {
+bool q_cameraformat_is_null(const void* self) {
     return QCameraFormat_IsNull((QCameraFormat*)self);
 }
 
-bool q_cameraformat_operator_equal(void* self, void* other) {
+bool q_cameraformat_operator_equal(const void* self, const void* other) {
     return QCameraFormat_OperatorEqual((QCameraFormat*)self, (QCameraFormat*)other);
 }
 
-bool q_cameraformat_operator_not_equal(void* self, void* other) {
+bool q_cameraformat_operator_not_equal(const void* self, const void* other) {
     return QCameraFormat_OperatorNotEqual((QCameraFormat*)self, (QCameraFormat*)other);
 }
 
@@ -50,59 +50,59 @@ QCameraDevice* q_cameradevice_new() {
     return QCameraDevice_New();
 }
 
-QCameraDevice* q_cameradevice_new2(void* other) {
+QCameraDevice* q_cameradevice_new2(const void* other) {
     return QCameraDevice_New2((QCameraDevice*)other);
 }
 
-void q_cameradevice_operator_assign(void* self, void* other) {
+void q_cameradevice_operator_assign(void* self, const void* other) {
     QCameraDevice_OperatorAssign((QCameraDevice*)self, (QCameraDevice*)other);
 }
 
-bool q_cameradevice_operator_equal(void* self, void* other) {
+bool q_cameradevice_operator_equal(const void* self, const void* other) {
     return QCameraDevice_OperatorEqual((QCameraDevice*)self, (QCameraDevice*)other);
 }
 
-bool q_cameradevice_operator_not_equal(void* self, void* other) {
+bool q_cameradevice_operator_not_equal(const void* self, const void* other) {
     return QCameraDevice_OperatorNotEqual((QCameraDevice*)self, (QCameraDevice*)other);
 }
 
-bool q_cameradevice_is_null(void* self) {
+bool q_cameradevice_is_null(const void* self) {
     return QCameraDevice_IsNull((QCameraDevice*)self);
 }
 
-char* q_cameradevice_id(void* self) {
+char* q_cameradevice_id(const void* self) {
     libqt_string _str = QCameraDevice_Id((QCameraDevice*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_cameradevice_description(void* self) {
+const char* q_cameradevice_description(const void* self) {
     libqt_string _str = QCameraDevice_Description((QCameraDevice*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_cameradevice_is_default(void* self) {
+bool q_cameradevice_is_default(const void* self) {
     return QCameraDevice_IsDefault((QCameraDevice*)self);
 }
 
-int32_t q_cameradevice_position(void* self) {
+int32_t q_cameradevice_position(const void* self) {
     return QCameraDevice_Position((QCameraDevice*)self);
 }
 
-libqt_list /* of QSize* */ q_cameradevice_photo_resolutions(void* self) {
+libqt_list /* of QSize* */ q_cameradevice_photo_resolutions(const void* self) {
     libqt_list _arr = QCameraDevice_PhotoResolutions((QCameraDevice*)self);
     return _arr;
 }
 
-libqt_list /* of QCameraFormat* */ q_cameradevice_video_formats(void* self) {
+libqt_list /* of QCameraFormat* */ q_cameradevice_video_formats(const void* self) {
     libqt_list _arr = QCameraDevice_VideoFormats((QCameraDevice*)self);
     return _arr;
 }
 
-int32_t q_cameradevice_correction_angle(void* self) {
+int32_t q_cameradevice_correction_angle(const void* self) {
     return QCameraDevice_CorrectionAngle((QCameraDevice*)self);
 }
 

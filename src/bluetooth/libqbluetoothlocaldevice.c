@@ -11,7 +11,7 @@ QBluetoothLocalDevice* q_bluetoothlocaldevice_new() {
     return QBluetoothLocalDevice_New();
 }
 
-QBluetoothLocalDevice* q_bluetoothlocaldevice_new2(void* address) {
+QBluetoothLocalDevice* q_bluetoothlocaldevice_new2(const void* address) {
     return QBluetoothLocalDevice_New2((QBluetoothAddress*)address);
 }
 
@@ -19,19 +19,19 @@ QBluetoothLocalDevice* q_bluetoothlocaldevice_new3(void* parent) {
     return QBluetoothLocalDevice_New3((QObject*)parent);
 }
 
-QBluetoothLocalDevice* q_bluetoothlocaldevice_new4(void* address, void* parent) {
+QBluetoothLocalDevice* q_bluetoothlocaldevice_new4(const void* address, void* parent) {
     return QBluetoothLocalDevice_New4((QBluetoothAddress*)address, (QObject*)parent);
 }
 
-const QMetaObject* q_bluetoothlocaldevice_meta_object(void* self) {
+const QMetaObject* q_bluetoothlocaldevice_meta_object(const void* self) {
     return QBluetoothLocalDevice_MetaObject((QBluetoothLocalDevice*)self);
 }
 
-void q_bluetoothlocaldevice_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_bluetoothlocaldevice_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QBluetoothLocalDevice_OnMetaObject((QBluetoothLocalDevice*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_bluetoothlocaldevice_super_meta_object(void* self) {
+const QMetaObject* q_bluetoothlocaldevice_super_meta_object(const void* self) {
     return QBluetoothLocalDevice_SuperMetaObject((QBluetoothLocalDevice*)self);
 }
 
@@ -66,15 +66,15 @@ const char* q_bluetoothlocaldevice_tr(const char* s) {
     return _ret;
 }
 
-bool q_bluetoothlocaldevice_is_valid(void* self) {
+bool q_bluetoothlocaldevice_is_valid(const void* self) {
     return QBluetoothLocalDevice_IsValid((QBluetoothLocalDevice*)self);
 }
 
-void q_bluetoothlocaldevice_request_pairing(void* self, void* address, int32_t pairing) {
+void q_bluetoothlocaldevice_request_pairing(void* self, const void* address, int32_t pairing) {
     QBluetoothLocalDevice_RequestPairing((QBluetoothLocalDevice*)self, (QBluetoothAddress*)address, pairing);
 }
 
-int32_t q_bluetoothlocaldevice_pairing_status(void* self, void* address) {
+int32_t q_bluetoothlocaldevice_pairing_status(const void* self, const void* address) {
     return QBluetoothLocalDevice_PairingStatus((QBluetoothLocalDevice*)self, (QBluetoothAddress*)address);
 }
 
@@ -82,11 +82,11 @@ void q_bluetoothlocaldevice_set_host_mode(void* self, int32_t mode) {
     QBluetoothLocalDevice_SetHostMode((QBluetoothLocalDevice*)self, mode);
 }
 
-int32_t q_bluetoothlocaldevice_host_mode(void* self) {
+int32_t q_bluetoothlocaldevice_host_mode(const void* self) {
     return QBluetoothLocalDevice_HostMode((QBluetoothLocalDevice*)self);
 }
 
-libqt_list /* of QBluetoothAddress* */ q_bluetoothlocaldevice_connected_devices(void* self) {
+libqt_list /* of QBluetoothAddress* */ q_bluetoothlocaldevice_connected_devices(const void* self) {
     libqt_list _arr = QBluetoothLocalDevice_ConnectedDevices((QBluetoothLocalDevice*)self);
     return _arr;
 }
@@ -95,14 +95,14 @@ void q_bluetoothlocaldevice_power_on(void* self) {
     QBluetoothLocalDevice_PowerOn((QBluetoothLocalDevice*)self);
 }
 
-const char* q_bluetoothlocaldevice_name(void* self) {
+const char* q_bluetoothlocaldevice_name(const void* self) {
     libqt_string _str = QBluetoothLocalDevice_Name((QBluetoothLocalDevice*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QBluetoothAddress* q_bluetoothlocaldevice_address(void* self) {
+QBluetoothAddress* q_bluetoothlocaldevice_address(const void* self) {
     return QBluetoothLocalDevice_Address((QBluetoothLocalDevice*)self);
 }
 
@@ -119,27 +119,27 @@ void q_bluetoothlocaldevice_on_host_mode_state_changed(void* self, void (*callba
     QBluetoothLocalDevice_Connect_HostModeStateChanged((QBluetoothLocalDevice*)self, (intptr_t)callback);
 }
 
-void q_bluetoothlocaldevice_device_connected(void* self, void* address) {
+void q_bluetoothlocaldevice_device_connected(void* self, const void* address) {
     QBluetoothLocalDevice_DeviceConnected((QBluetoothLocalDevice*)self, (QBluetoothAddress*)address);
 }
 
-void q_bluetoothlocaldevice_on_device_connected(void* self, void (*callback)(void*, void*)) {
+void q_bluetoothlocaldevice_on_device_connected(void* self, void (*callback)(void*, const void*)) {
     QBluetoothLocalDevice_Connect_DeviceConnected((QBluetoothLocalDevice*)self, (intptr_t)callback);
 }
 
-void q_bluetoothlocaldevice_device_disconnected(void* self, void* address) {
+void q_bluetoothlocaldevice_device_disconnected(void* self, const void* address) {
     QBluetoothLocalDevice_DeviceDisconnected((QBluetoothLocalDevice*)self, (QBluetoothAddress*)address);
 }
 
-void q_bluetoothlocaldevice_on_device_disconnected(void* self, void (*callback)(void*, void*)) {
+void q_bluetoothlocaldevice_on_device_disconnected(void* self, void (*callback)(void*, const void*)) {
     QBluetoothLocalDevice_Connect_DeviceDisconnected((QBluetoothLocalDevice*)self, (intptr_t)callback);
 }
 
-void q_bluetoothlocaldevice_pairing_finished(void* self, void* address, int32_t pairing) {
+void q_bluetoothlocaldevice_pairing_finished(void* self, const void* address, int32_t pairing) {
     QBluetoothLocalDevice_PairingFinished((QBluetoothLocalDevice*)self, (QBluetoothAddress*)address, pairing);
 }
 
-void q_bluetoothlocaldevice_on_pairing_finished(void* self, void (*callback)(void*, void*, int32_t)) {
+void q_bluetoothlocaldevice_on_pairing_finished(void* self, void (*callback)(void*, const void*, int32_t)) {
     QBluetoothLocalDevice_Connect_PairingFinished((QBluetoothLocalDevice*)self, (intptr_t)callback);
 }
 
@@ -165,7 +165,7 @@ const char* q_bluetoothlocaldevice_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-const char* q_bluetoothlocaldevice_object_name(void* self) {
+const char* q_bluetoothlocaldevice_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -176,19 +176,19 @@ void q_bluetoothlocaldevice_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_bluetoothlocaldevice_is_widget_type(void* self) {
+bool q_bluetoothlocaldevice_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_bluetoothlocaldevice_is_window_type(void* self) {
+bool q_bluetoothlocaldevice_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_bluetoothlocaldevice_is_quick_item_type(void* self) {
+bool q_bluetoothlocaldevice_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_bluetoothlocaldevice_signals_blocked(void* self) {
+bool q_bluetoothlocaldevice_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -196,7 +196,7 @@ bool q_bluetoothlocaldevice_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_bluetoothlocaldevice_thread(void* self) {
+QThread* q_bluetoothlocaldevice_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -220,7 +220,7 @@ void q_bluetoothlocaldevice_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_bluetoothlocaldevice_children(void* self) {
+libqt_list /* of QObject* */ q_bluetoothlocaldevice_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -237,55 +237,55 @@ void q_bluetoothlocaldevice_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_bluetoothlocaldevice_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_bluetoothlocaldevice_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_bluetoothlocaldevice_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_bluetoothlocaldevice_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_bluetoothlocaldevice_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_bluetoothlocaldevice_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_bluetoothlocaldevice_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_bluetoothlocaldevice_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_bluetoothlocaldevice_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_bluetoothlocaldevice_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_bluetoothlocaldevice_disconnect3(void* self) {
+bool q_bluetoothlocaldevice_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_bluetoothlocaldevice_disconnect4(void* self, void* receiver) {
+bool q_bluetoothlocaldevice_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_bluetoothlocaldevice_disconnect5(void* param1) {
+bool q_bluetoothlocaldevice_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_bluetoothlocaldevice_dump_object_tree(void* self) {
+void q_bluetoothlocaldevice_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_bluetoothlocaldevice_dump_object_info(void* self) {
+void q_bluetoothlocaldevice_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_bluetoothlocaldevice_set_property(void* self, const char* name, void* value) {
+bool q_bluetoothlocaldevice_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_bluetoothlocaldevice_property(void* self, const char* name) {
+QVariant* q_bluetoothlocaldevice_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_bluetoothlocaldevice_dynamic_property_names(void* self) {
+const char** q_bluetoothlocaldevice_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -306,7 +306,7 @@ QBindingStorage* q_bluetoothlocaldevice_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_bluetoothlocaldevice_binding_storage2(void* self) {
+const QBindingStorage* q_bluetoothlocaldevice_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -318,11 +318,11 @@ void q_bluetoothlocaldevice_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_bluetoothlocaldevice_parent(void* self) {
+QObject* q_bluetoothlocaldevice_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_bluetoothlocaldevice_inherits(void* self, const char* classname) {
+bool q_bluetoothlocaldevice_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -338,31 +338,31 @@ int32_t q_bluetoothlocaldevice_start_timer23(void* self, int64_t time, int32_t t
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_bluetoothlocaldevice_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_bluetoothlocaldevice_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_bluetoothlocaldevice_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_bluetoothlocaldevice_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_bluetoothlocaldevice_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_bluetoothlocaldevice_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_bluetoothlocaldevice_disconnect1(void* self, const char* signal) {
+bool q_bluetoothlocaldevice_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_bluetoothlocaldevice_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_bluetoothlocaldevice_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_bluetoothlocaldevice_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_bluetoothlocaldevice_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_bluetoothlocaldevice_disconnect23(void* self, void* receiver, const char* member) {
+bool q_bluetoothlocaldevice_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -434,76 +434,44 @@ void q_bluetoothlocaldevice_on_custom_event(void* self, void (*callback)(void*, 
     QBluetoothLocalDevice_OnCustomEvent((QBluetoothLocalDevice*)self, (intptr_t)callback);
 }
 
-void q_bluetoothlocaldevice_connect_notify(void* self, void* signal) {
+void q_bluetoothlocaldevice_connect_notify(void* self, const void* signal) {
     QBluetoothLocalDevice_ConnectNotify((QBluetoothLocalDevice*)self, (QMetaMethod*)signal);
 }
 
-void q_bluetoothlocaldevice_super_connect_notify(void* self, void* signal) {
+void q_bluetoothlocaldevice_super_connect_notify(void* self, const void* signal) {
     QBluetoothLocalDevice_SuperConnectNotify((QBluetoothLocalDevice*)self, (QMetaMethod*)signal);
 }
 
-void q_bluetoothlocaldevice_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_bluetoothlocaldevice_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QBluetoothLocalDevice_OnConnectNotify((QBluetoothLocalDevice*)self, (intptr_t)callback);
 }
 
-void q_bluetoothlocaldevice_disconnect_notify(void* self, void* signal) {
+void q_bluetoothlocaldevice_disconnect_notify(void* self, const void* signal) {
     QBluetoothLocalDevice_DisconnectNotify((QBluetoothLocalDevice*)self, (QMetaMethod*)signal);
 }
 
-void q_bluetoothlocaldevice_super_disconnect_notify(void* self, void* signal) {
+void q_bluetoothlocaldevice_super_disconnect_notify(void* self, const void* signal) {
     QBluetoothLocalDevice_SuperDisconnectNotify((QBluetoothLocalDevice*)self, (QMetaMethod*)signal);
 }
 
-void q_bluetoothlocaldevice_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_bluetoothlocaldevice_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QBluetoothLocalDevice_OnDisconnectNotify((QBluetoothLocalDevice*)self, (intptr_t)callback);
 }
 
-QObject* q_bluetoothlocaldevice_sender(void* self) {
+QObject* q_bluetoothlocaldevice_sender(const void* self) {
     return QBluetoothLocalDevice_Sender((QBluetoothLocalDevice*)self);
 }
 
-QObject* q_bluetoothlocaldevice_super_sender(void* self) {
-    return QBluetoothLocalDevice_SuperSender((QBluetoothLocalDevice*)self);
-}
-
-void q_bluetoothlocaldevice_on_sender(void* self, QObject* (*callback)()) {
-    QBluetoothLocalDevice_OnSender((QBluetoothLocalDevice*)self, (intptr_t)callback);
-}
-
-int32_t q_bluetoothlocaldevice_sender_signal_index(void* self) {
+int32_t q_bluetoothlocaldevice_sender_signal_index(const void* self) {
     return QBluetoothLocalDevice_SenderSignalIndex((QBluetoothLocalDevice*)self);
 }
 
-int32_t q_bluetoothlocaldevice_super_sender_signal_index(void* self) {
-    return QBluetoothLocalDevice_SuperSenderSignalIndex((QBluetoothLocalDevice*)self);
-}
-
-void q_bluetoothlocaldevice_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QBluetoothLocalDevice_OnSenderSignalIndex((QBluetoothLocalDevice*)self, (intptr_t)callback);
-}
-
-int32_t q_bluetoothlocaldevice_receivers(void* self, const char* signal) {
+int32_t q_bluetoothlocaldevice_receivers(const void* self, const char* signal) {
     return QBluetoothLocalDevice_Receivers((QBluetoothLocalDevice*)self, signal);
 }
 
-int32_t q_bluetoothlocaldevice_super_receivers(void* self, const char* signal) {
-    return QBluetoothLocalDevice_SuperReceivers((QBluetoothLocalDevice*)self, signal);
-}
-
-void q_bluetoothlocaldevice_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QBluetoothLocalDevice_OnReceivers((QBluetoothLocalDevice*)self, (intptr_t)callback);
-}
-
-bool q_bluetoothlocaldevice_is_signal_connected(void* self, void* signal) {
+bool q_bluetoothlocaldevice_is_signal_connected(const void* self, const void* signal) {
     return QBluetoothLocalDevice_IsSignalConnected((QBluetoothLocalDevice*)self, (QMetaMethod*)signal);
-}
-
-bool q_bluetoothlocaldevice_super_is_signal_connected(void* self, void* signal) {
-    return QBluetoothLocalDevice_SuperIsSignalConnected((QBluetoothLocalDevice*)self, (QMetaMethod*)signal);
-}
-
-void q_bluetoothlocaldevice_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QBluetoothLocalDevice_OnIsSignalConnected((QBluetoothLocalDevice*)self, (intptr_t)callback);
 }
 
 void q_bluetoothlocaldevice_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

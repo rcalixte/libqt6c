@@ -20,14 +20,14 @@ QPlaceContentRequest* q_placecontentrequest_new();
 ///
 /// @param other QPlaceContentRequest*
 ///
-QPlaceContentRequest* q_placecontentrequest_new2(void* other);
+QPlaceContentRequest* q_placecontentrequest_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontentrequest.html#operator-eq)
 ///
 /// @param self QPlaceContentRequest*
 /// @param other QPlaceContentRequest*
 ///
-void q_placecontentrequest_operator_assign(void* self, void* other);
+void q_placecontentrequest_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontentrequest.html#swap)
 ///
@@ -38,11 +38,11 @@ void q_placecontentrequest_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontentrequest.html#contentType)
 ///
-/// @param self QPlaceContentRequest*
+/// @param self const QPlaceContentRequest*
 ///
 /// @return enum QPlaceContent__Type
 ///
-int32_t q_placecontentrequest_content_type(void* self);
+int32_t q_placecontentrequest_content_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontentrequest.html#setContentType)
 ///
@@ -55,9 +55,9 @@ void q_placecontentrequest_set_content_type(void* self, int32_t type);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPlaceContentRequest*
+/// @param self const QPlaceContentRequest*
 ///
-const char* q_placecontentrequest_place_id(void* self);
+const char* q_placecontentrequest_place_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontentrequest.html#setPlaceId)
 ///
@@ -68,22 +68,22 @@ void q_placecontentrequest_set_place_id(void* self, const char* identifier);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontentrequest.html#contentContext)
 ///
-/// @param self QPlaceContentRequest*
+/// @param self const QPlaceContentRequest*
 ///
-QVariant* q_placecontentrequest_content_context(void* self);
+QVariant* q_placecontentrequest_content_context(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontentrequest.html#setContentContext)
 ///
 /// @param self QPlaceContentRequest*
 /// @param context QVariant*
 ///
-void q_placecontentrequest_set_content_context(void* self, void* context);
+void q_placecontentrequest_set_content_context(void* self, const void* context);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontentrequest.html#limit)
 ///
-/// @param self QPlaceContentRequest*
+/// @param self const QPlaceContentRequest*
 ///
-int32_t q_placecontentrequest_limit(void* self);
+int32_t q_placecontentrequest_limit(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontentrequest.html#setLimit)
 ///

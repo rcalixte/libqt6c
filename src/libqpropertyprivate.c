@@ -1,7 +1,7 @@
 #include "libqpropertyprivate.hpp"
 #include "libqpropertyprivate.h"
 
-QUntypedPropertyData* q_untypedpropertydata_new(void* other) {
+QUntypedPropertyData* q_untypedpropertydata_new(const void* other) {
     return QUntypedPropertyData_New((QUntypedPropertyData*)other);
 }
 

@@ -2,7 +2,7 @@
 #include "libqqmldebug.hpp"
 #include "libqqmldebug.h"
 
-QQmlDebuggingEnabler* q_qmldebuggingenabler_new(void* other) {
+QQmlDebuggingEnabler* q_qmldebuggingenabler_new(const void* other) {
     return QQmlDebuggingEnabler_New((QQmlDebuggingEnabler*)other);
 }
 

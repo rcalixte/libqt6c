@@ -27,26 +27,26 @@ KTextEditor__Command* k_texteditor__command_new2(const char* cmds[static 1], voi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 ///
-const QMetaObject* k_texteditor__command_meta_object(void* self);
+const QMetaObject* k_texteditor__command_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KTextEditor__Command*
-/// @param callback const QMetaObject* func()
+/// @param self const KTextEditor__Command*
+/// @param callback const QMetaObject* func(const KTextEditor__Command* self)
 ///
-void k_texteditor__command_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_texteditor__command_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 ///
-const QMetaObject* k_texteditor__command_super_meta_object(void* self);
+const QMetaObject* k_texteditor__command_super_meta_object(const void* self);
 
 /// @param self KTextEditor__Command*
 /// @param param1 const char*
@@ -102,9 +102,9 @@ const char* k_texteditor__command_tr(const char* s);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 ///
-const char** k_texteditor__command_cmds(void* self);
+const char** k_texteditor__command_cmds(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-command.html#supportsRange)
 ///
@@ -133,13 +133,15 @@ bool k_texteditor__command_super_supports_range(void* self, const char* cmd);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-command.html#exec)
 ///
+/// @warning This method must be implemented with `k_texteditor__command_on_exec` before it can be called.
+///
 /// @param self KTextEditor__Command*
 /// @param view KTextEditor__View*
 /// @param cmd const char*
 /// @param msg const char*
 /// @param range KTextEditor__Range*
 ///
-bool k_texteditor__command_exec(void* self, void* view, const char* cmd, const char* msg, void* range);
+bool k_texteditor__command_exec(void* self, void* view, const char* cmd, const char* msg, const void* range);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-command.html#exec)
 ///
@@ -148,21 +150,11 @@ bool k_texteditor__command_exec(void* self, void* view, const char* cmd, const c
 /// @param self KTextEditor__Command*
 /// @param callback bool func(KTextEditor__Command* self, KTextEditor__View* view, const char* cmd, const char* msg, KTextEditor__Range* range)
 ///
-void k_texteditor__command_on_exec(void* self, bool (*callback)(void*, void*, const char*, const char*, void*));
-
-/// [Upstream resources](https://api.kde.org/ktexteditor-command.html#exec)
-///
-/// Base class method implementation
-///
-/// @param self KTextEditor__Command*
-/// @param view KTextEditor__View*
-/// @param cmd const char*
-/// @param msg const char*
-/// @param range KTextEditor__Range*
-///
-bool k_texteditor__command_super_exec(void* self, void* view, const char* cmd, const char* msg, void* range);
+void k_texteditor__command_on_exec(void* self, bool (*callback)(void*, void*, const char*, const char*, const void*));
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-command.html#help)
+///
+/// @warning This method must be implemented with `k_texteditor__command_on_help` before it can be called.
 ///
 /// @param self KTextEditor__Command*
 /// @param view KTextEditor__View*
@@ -179,17 +171,6 @@ bool k_texteditor__command_help(void* self, void* view, const char* cmd, const c
 /// @param callback bool func(KTextEditor__Command* self, KTextEditor__View* view, const char* cmd, const char* msg)
 ///
 void k_texteditor__command_on_help(void* self, bool (*callback)(void*, void*, const char*, const char*));
-
-/// [Upstream resources](https://api.kde.org/ktexteditor-command.html#help)
-///
-/// Base class method implementation
-///
-/// @param self KTextEditor__Command*
-/// @param view KTextEditor__View*
-/// @param cmd const char*
-/// @param msg const char*
-///
-bool k_texteditor__command_super_help(void* self, void* view, const char* cmd, const char* msg);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-command.html#completionObject)
 ///
@@ -295,9 +276,9 @@ const char* k_texteditor__command_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 ///
-const char* k_texteditor__command_object_name(void* self);
+const char* k_texteditor__command_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -312,33 +293,33 @@ void k_texteditor__command_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 ///
-bool k_texteditor__command_is_widget_type(void* self);
+bool k_texteditor__command_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 ///
-bool k_texteditor__command_is_window_type(void* self);
+bool k_texteditor__command_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 ///
-bool k_texteditor__command_is_quick_item_type(void* self);
+bool k_texteditor__command_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 ///
-bool k_texteditor__command_signals_blocked(void* self);
+bool k_texteditor__command_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -353,9 +334,9 @@ bool k_texteditor__command_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 ///
-QThread* k_texteditor__command_thread(void* self);
+QThread* k_texteditor__command_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -406,11 +387,11 @@ void k_texteditor__command_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_texteditor__command_children(void* self);
+libqt_list k_texteditor__command_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -448,7 +429,7 @@ void k_texteditor__command_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_texteditor__command_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_texteditor__command_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -459,18 +440,18 @@ QMetaObject__Connection* k_texteditor__command_connect(void* sender, const char*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_texteditor__command_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_texteditor__command_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_texteditor__command_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_texteditor__command_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -481,7 +462,7 @@ QMetaObject__Connection* k_texteditor__command_connect3(void* self, void* sender
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_texteditor__command_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_texteditor__command_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -492,24 +473,24 @@ bool k_texteditor__command_disconnect(void* sender, const char* signal, void* re
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_texteditor__command_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_texteditor__command_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 ///
-bool k_texteditor__command_disconnect3(void* self);
+bool k_texteditor__command_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 /// @param receiver QObject*
 ///
-bool k_texteditor__command_disconnect4(void* self, void* receiver);
+bool k_texteditor__command_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -517,23 +498,23 @@ bool k_texteditor__command_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_texteditor__command_disconnect5(void* param1);
+bool k_texteditor__command_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 ///
-void k_texteditor__command_dump_object_tree(void* self);
+void k_texteditor__command_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 ///
-void k_texteditor__command_dump_object_info(void* self);
+void k_texteditor__command_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -543,16 +524,16 @@ void k_texteditor__command_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_texteditor__command_set_property(void* self, const char* name, void* value);
+bool k_texteditor__command_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 /// @param name const char*
 ///
-QVariant* k_texteditor__command_property(void* self, const char* name);
+QVariant* k_texteditor__command_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -560,9 +541,9 @@ QVariant* k_texteditor__command_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 ///
-const char** k_texteditor__command_dynamic_property_names(void* self);
+const char** k_texteditor__command_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -576,9 +557,9 @@ QBindingStorage* k_texteditor__command_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 ///
-const QBindingStorage* k_texteditor__command_binding_storage2(void* self);
+const QBindingStorage* k_texteditor__command_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -601,18 +582,18 @@ void k_texteditor__command_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 ///
-QObject* k_texteditor__command_parent(void* self);
+QObject* k_texteditor__command_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 /// @param classname const char*
 ///
-bool k_texteditor__command_inherits(void* self, const char* classname);
+bool k_texteditor__command_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -652,7 +633,7 @@ int32_t k_texteditor__command_start_timer23(void* self, int64_t time, int32_t ti
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_texteditor__command_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_texteditor__command_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -664,59 +645,59 @@ QMetaObject__Connection* k_texteditor__command_connect5(void* sender, const char
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_texteditor__command_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_texteditor__command_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_texteditor__command_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_texteditor__command_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 /// @param signal const char*
 ///
-bool k_texteditor__command_disconnect1(void* self, const char* signal);
+bool k_texteditor__command_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KTextEditor__Command*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_texteditor__command_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_texteditor__command_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_texteditor__command_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_texteditor__command_disconnect23(void* self, void* receiver, const char* member);
+bool k_texteditor__command_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KTextEditor__Command*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_texteditor__command_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -912,7 +893,7 @@ void k_texteditor__command_on_custom_event(void* self, void (*callback)(void*, v
 /// @param self KTextEditor__Command*
 /// @param signal QMetaMethod*
 ///
-void k_texteditor__command_connect_notify(void* self, void* signal);
+void k_texteditor__command_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -923,7 +904,7 @@ void k_texteditor__command_connect_notify(void* self, void* signal);
 /// @param self KTextEditor__Command*
 /// @param signal QMetaMethod*
 ///
-void k_texteditor__command_super_connect_notify(void* self, void* signal);
+void k_texteditor__command_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -934,7 +915,7 @@ void k_texteditor__command_super_connect_notify(void* self, void* signal);
 /// @param self KTextEditor__Command*
 /// @param callback void func(KTextEditor__Command* self, QMetaMethod* signal)
 ///
-void k_texteditor__command_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_texteditor__command_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -945,7 +926,7 @@ void k_texteditor__command_on_connect_notify(void* self, void (*callback)(void*,
 /// @param self KTextEditor__Command*
 /// @param signal QMetaMethod*
 ///
-void k_texteditor__command_disconnect_notify(void* self, void* signal);
+void k_texteditor__command_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -956,7 +937,7 @@ void k_texteditor__command_disconnect_notify(void* self, void* signal);
 /// @param self KTextEditor__Command*
 /// @param signal QMetaMethod*
 ///
-void k_texteditor__command_super_disconnect_notify(void* self, void* signal);
+void k_texteditor__command_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -967,7 +948,7 @@ void k_texteditor__command_super_disconnect_notify(void* self, void* signal);
 /// @param self KTextEditor__Command*
 /// @param callback void func(KTextEditor__Command* self, QMetaMethod* signal)
 ///
-void k_texteditor__command_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_texteditor__command_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -975,9 +956,9 @@ void k_texteditor__command_on_disconnect_notify(void* self, void (*callback)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 ///
-QObject* k_texteditor__command_sender(void* self);
+QObject* k_texteditor__command_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -985,9 +966,9 @@ QObject* k_texteditor__command_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 ///
-QObject* k_texteditor__command_super_sender(void* self);
+QObject* k_texteditor__command_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -995,10 +976,10 @@ QObject* k_texteditor__command_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KTextEditor__Command*
-/// @param callback QObject* func()
+/// @param self const KTextEditor__Command*
+/// @param callback QObject* func(KTextEditor__Command* self)
 ///
-void k_texteditor__command_on_sender(void* self, QObject* (*callback)());
+void k_texteditor__command_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1006,9 +987,9 @@ void k_texteditor__command_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 ///
-int32_t k_texteditor__command_sender_signal_index(void* self);
+int32_t k_texteditor__command_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1016,9 +997,9 @@ int32_t k_texteditor__command_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 ///
-int32_t k_texteditor__command_super_sender_signal_index(void* self);
+int32_t k_texteditor__command_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1026,10 +1007,10 @@ int32_t k_texteditor__command_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KTextEditor__Command*
-/// @param callback int32_t func()
+/// @param self const KTextEditor__Command*
+/// @param callback int32_t func(KTextEditor__Command* self)
 ///
-void k_texteditor__command_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_texteditor__command_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1037,10 +1018,10 @@ void k_texteditor__command_on_sender_signal_index(void* self, int32_t (*callback
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 /// @param signal const char*
 ///
-int32_t k_texteditor__command_receivers(void* self, const char* signal);
+int32_t k_texteditor__command_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1048,10 +1029,10 @@ int32_t k_texteditor__command_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 /// @param signal const char*
 ///
-int32_t k_texteditor__command_super_receivers(void* self, const char* signal);
+int32_t k_texteditor__command_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1059,10 +1040,10 @@ int32_t k_texteditor__command_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 /// @param callback int32_t func(KTextEditor__Command* self, const char* signal)
 ///
-void k_texteditor__command_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_texteditor__command_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1070,10 +1051,10 @@ void k_texteditor__command_on_receivers(void* self, int32_t (*callback)(void*, c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 /// @param signal QMetaMethod*
 ///
-bool k_texteditor__command_is_signal_connected(void* self, void* signal);
+bool k_texteditor__command_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1081,10 +1062,10 @@ bool k_texteditor__command_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 /// @param signal QMetaMethod*
 ///
-bool k_texteditor__command_super_is_signal_connected(void* self, void* signal);
+bool k_texteditor__command_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1092,10 +1073,10 @@ bool k_texteditor__command_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KTextEditor__Command*
+/// @param self const KTextEditor__Command*
 /// @param callback bool func(KTextEditor__Command* self, QMetaMethod* signal)
 ///
-void k_texteditor__command_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_texteditor__command_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

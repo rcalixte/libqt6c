@@ -14,7 +14,7 @@
 ///
 /// @param other QDate*
 ///
-QDate* q_date_new(void* other);
+QDate* q_date_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html)
 
@@ -57,7 +57,7 @@ QDate* q_date_new5(int y, int m, int d, void* cal);
 ///
 /// @param param1 QDate*
 ///
-QDate* q_date_new6(void* param1);
+QDate* q_date_new6(const void* param1);
 
 /// q_date_copy_assign shallow copies `other` into `self`.
 ///
@@ -75,198 +75,198 @@ void q_date_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#isNull)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 ///
-bool q_date_is_null(void* self);
+bool q_date_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#isValid)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 ///
-bool q_date_is_valid(void* self);
+bool q_date_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#year)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 ///
-int32_t q_date_year(void* self);
+int32_t q_date_year(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#month)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 ///
-int32_t q_date_month(void* self);
+int32_t q_date_month(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#day)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 ///
-int32_t q_date_day(void* self);
+int32_t q_date_day(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#dayOfWeek)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 ///
-int32_t q_date_day_of_week(void* self);
+int32_t q_date_day_of_week(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#dayOfYear)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 ///
-int32_t q_date_day_of_year(void* self);
+int32_t q_date_day_of_year(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#daysInMonth)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 ///
-int32_t q_date_days_in_month(void* self);
+int32_t q_date_days_in_month(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#daysInYear)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 ///
-int32_t q_date_days_in_year(void* self);
+int32_t q_date_days_in_year(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#weekNumber)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 ///
-int32_t q_date_week_number(void* self);
+int32_t q_date_week_number(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#year)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 /// @param cal QCalendar*
 ///
-int32_t q_date_year2(void* self, void* cal);
+int32_t q_date_year2(const void* self, void* cal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#month)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 /// @param cal QCalendar*
 ///
-int32_t q_date_month2(void* self, void* cal);
+int32_t q_date_month2(const void* self, void* cal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#day)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 /// @param cal QCalendar*
 ///
-int32_t q_date_day2(void* self, void* cal);
+int32_t q_date_day2(const void* self, void* cal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#dayOfWeek)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 /// @param cal QCalendar*
 ///
-int32_t q_date_day_of_week2(void* self, void* cal);
+int32_t q_date_day_of_week2(const void* self, void* cal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#dayOfYear)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 /// @param cal QCalendar*
 ///
-int32_t q_date_day_of_year2(void* self, void* cal);
+int32_t q_date_day_of_year2(const void* self, void* cal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#daysInMonth)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 /// @param cal QCalendar*
 ///
-int32_t q_date_days_in_month2(void* self, void* cal);
+int32_t q_date_days_in_month2(const void* self, void* cal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#daysInYear)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 /// @param cal QCalendar*
 ///
-int32_t q_date_days_in_year2(void* self, void* cal);
+int32_t q_date_days_in_year2(const void* self, void* cal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#startOfDay)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 /// @param spec enum Qt__TimeSpec
 ///
-QDateTime* q_date_start_of_day(void* self, int32_t spec);
+QDateTime* q_date_start_of_day(const void* self, int32_t spec);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#endOfDay)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 /// @param spec enum Qt__TimeSpec
 ///
-QDateTime* q_date_end_of_day(void* self, int32_t spec);
+QDateTime* q_date_end_of_day(const void* self, int32_t spec);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#startOfDay)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 /// @param zone QTimeZone*
 ///
-QDateTime* q_date_start_of_day2(void* self, void* zone);
+QDateTime* q_date_start_of_day2(const void* self, const void* zone);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#endOfDay)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 /// @param zone QTimeZone*
 ///
-QDateTime* q_date_end_of_day2(void* self, void* zone);
+QDateTime* q_date_end_of_day2(const void* self, const void* zone);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#startOfDay)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 ///
-QDateTime* q_date_start_of_day3(void* self);
+QDateTime* q_date_start_of_day3(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#endOfDay)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 ///
-QDateTime* q_date_end_of_day3(void* self);
+QDateTime* q_date_end_of_day3(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDate*
+/// @param self const QDate*
 ///
-const char* q_date_to_string(void* self);
+const char* q_date_to_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDate*
+/// @param self const QDate*
 /// @param format const char*
 ///
-const char* q_date_to_string2(void* self, const char* format);
+const char* q_date_to_string2(const void* self, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDate*
-/// @param format const char*
-/// @param cal QCalendar*
-///
-const char* q_date_to_string3(void* self, const char* format, void* cal);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#toString)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self QDate*
-/// @param format const char*
-///
-const char* q_date_to_string4(void* self, const char* format);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#toString)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self QDate*
+/// @param self const QDate*
 /// @param format const char*
 /// @param cal QCalendar*
 ///
-const char* q_date_to_string5(void* self, const char* format, void* cal);
+const char* q_date_to_string3(const void* self, const char* format, void* cal);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#toString)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const QDate*
+/// @param format const char*
+///
+const char* q_date_to_string4(const void* self, const char* format);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#toString)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const QDate*
+/// @param format const char*
+/// @param cal QCalendar*
+///
+const char* q_date_to_string5(const void* self, const char* format, void* cal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#setDate)
 ///
@@ -289,56 +289,56 @@ bool q_date_set_date2(void* self, int year, int month, int day, void* cal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#getDate)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 /// @param year int*
 /// @param month int*
 /// @param day int*
 ///
-void q_date_get_date(void* self, int* year, int* month, int* day);
+void q_date_get_date(const void* self, int* year, int* month, int* day);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#addDays)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 /// @param days int64_t
 ///
-QDate* q_date_add_days(void* self, int64_t days);
+QDate* q_date_add_days(const void* self, int64_t days);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#addMonths)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 /// @param months int
 ///
-QDate* q_date_add_months(void* self, int months);
+QDate* q_date_add_months(const void* self, int months);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#addYears)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 /// @param years int
 ///
-QDate* q_date_add_years(void* self, int years);
+QDate* q_date_add_years(const void* self, int years);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#addMonths)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 /// @param months int
 /// @param cal QCalendar*
 ///
-QDate* q_date_add_months2(void* self, int months, void* cal);
+QDate* q_date_add_months2(const void* self, int months, void* cal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#addYears)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 /// @param years int
 /// @param cal QCalendar*
 ///
-QDate* q_date_add_years2(void* self, int years, void* cal);
+QDate* q_date_add_years2(const void* self, int years, void* cal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#daysTo)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 /// @param d QDate*
 ///
-int64_t q_date_days_to(void* self, void* d);
+int64_t q_date_days_to(const void* self, void* d);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#currentDate)
 ///
@@ -450,41 +450,41 @@ QDate* q_date_from_julian_day(int64_t jd_);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#toJulianDay)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 ///
-int64_t q_date_to_julian_day(void* self);
+int64_t q_date_to_julian_day(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#weekNumber)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 /// @param yearNum int*
 ///
-int32_t q_date_week_number1(void* self, int* yearNum);
+int32_t q_date_week_number1(const void* self, int* yearNum);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#startOfDay)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 /// @param spec enum Qt__TimeSpec
 /// @param offsetSeconds int
 ///
-QDateTime* q_date_start_of_day22(void* self, int32_t spec, int offsetSeconds);
+QDateTime* q_date_start_of_day22(const void* self, int32_t spec, int offsetSeconds);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#endOfDay)
 ///
-/// @param self QDate*
+/// @param self const QDate*
 /// @param spec enum Qt__TimeSpec
 /// @param offsetSeconds int
 ///
-QDateTime* q_date_end_of_day22(void* self, int32_t spec, int offsetSeconds);
+QDateTime* q_date_end_of_day22(const void* self, int32_t spec, int offsetSeconds);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDate*
+/// @param self const QDate*
 /// @param format enum Qt__DateFormat
 ///
-const char* q_date_to_string1(void* self, int32_t format);
+const char* q_date_to_string1(const void* self, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#fromString)
 ///
@@ -538,7 +538,7 @@ void q_date_delete(void* self);
 ///
 /// @param other QTime*
 ///
-QTime* q_time_new(void* other);
+QTime* q_time_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtime.html)
 
@@ -569,7 +569,7 @@ QTime* q_time_new4(int h, int m);
 ///
 /// @param param1 QTime*
 ///
-QTime* q_time_new5(void* param1);
+QTime* q_time_new5(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtime.html)
 
@@ -608,65 +608,65 @@ void q_time_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtime.html#isNull)
 ///
-/// @param self QTime*
+/// @param self const QTime*
 ///
-bool q_time_is_null(void* self);
+bool q_time_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtime.html#isValid)
 ///
-/// @param self QTime*
+/// @param self const QTime*
 ///
-bool q_time_is_valid(void* self);
+bool q_time_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtime.html#hour)
 ///
-/// @param self QTime*
+/// @param self const QTime*
 ///
-int32_t q_time_hour(void* self);
+int32_t q_time_hour(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtime.html#minute)
 ///
-/// @param self QTime*
+/// @param self const QTime*
 ///
-int32_t q_time_minute(void* self);
+int32_t q_time_minute(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtime.html#second)
 ///
-/// @param self QTime*
+/// @param self const QTime*
 ///
-int32_t q_time_second(void* self);
+int32_t q_time_second(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtime.html#msec)
 ///
-/// @param self QTime*
+/// @param self const QTime*
 ///
-int32_t q_time_msec(void* self);
+int32_t q_time_msec(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtime.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTime*
+/// @param self const QTime*
 ///
-const char* q_time_to_string(void* self);
+const char* q_time_to_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtime.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTime*
+/// @param self const QTime*
 /// @param format const char*
 ///
-const char* q_time_to_string2(void* self, const char* format);
+const char* q_time_to_string2(const void* self, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtime.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTime*
+/// @param self const QTime*
 /// @param format const char*
 ///
-const char* q_time_to_string3(void* self, const char* format);
+const char* q_time_to_string3(const void* self, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtime.html#setHMS)
 ///
@@ -679,31 +679,31 @@ bool q_time_set_h_m_s(void* self, int h, int m, int s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtime.html#addSecs)
 ///
-/// @param self QTime*
+/// @param self const QTime*
 /// @param secs int
 ///
-QTime* q_time_add_secs(void* self, int secs);
+QTime* q_time_add_secs(const void* self, int secs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtime.html#secsTo)
 ///
-/// @param self QTime*
+/// @param self const QTime*
 /// @param t QTime*
 ///
-int32_t q_time_secs_to(void* self, void* t);
+int32_t q_time_secs_to(const void* self, void* t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtime.html#addMSecs)
 ///
-/// @param self QTime*
+/// @param self const QTime*
 /// @param ms int
 ///
-QTime* q_time_add_m_secs(void* self, int ms);
+QTime* q_time_add_m_secs(const void* self, int ms);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtime.html#msecsTo)
 ///
-/// @param self QTime*
+/// @param self const QTime*
 /// @param t QTime*
 ///
-int32_t q_time_msecs_to(void* self, void* t);
+int32_t q_time_msecs_to(const void* self, void* t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtime.html#fromMSecsSinceStartOfDay)
 ///
@@ -713,9 +713,9 @@ QTime* q_time_from_m_secs_since_start_of_day(int msecs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtime.html#msecsSinceStartOfDay)
 ///
-/// @param self QTime*
+/// @param self const QTime*
 ///
-int32_t q_time_msecs_since_start_of_day(void* self);
+int32_t q_time_msecs_since_start_of_day(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtime.html#currentTime)
 ///
@@ -766,10 +766,10 @@ bool q_time_is_valid2(int h, int m, int s);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTime*
+/// @param self const QTime*
 /// @param f enum Qt__DateFormat
 ///
-const char* q_time_to_string1(void* self, int32_t f);
+const char* q_time_to_string1(const void* self, int32_t f);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtime.html#setHMS)
 ///
@@ -836,7 +836,7 @@ QDateTime* q_datetime_new2(void* date, void* time, int32_t spec);
 /// @param time QTime*
 /// @param timeZone QTimeZone*
 ///
-QDateTime* q_datetime_new3(void* date, void* time, void* timeZone);
+QDateTime* q_datetime_new3(void* date, void* time, const void* timeZone);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html)
 
@@ -853,7 +853,7 @@ QDateTime* q_datetime_new4(void* date, void* time);
 ///
 /// @param other QDateTime*
 ///
-QDateTime* q_datetime_new5(void* other);
+QDateTime* q_datetime_new5(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html)
 
@@ -875,7 +875,7 @@ QDateTime* q_datetime_new6(void* date, void* time, int32_t spec, int offsetSecon
 /// @param timeZone QTimeZone*
 /// @param resolve enum QDateTime__TransitionResolution
 ///
-QDateTime* q_datetime_new7(void* date, void* time, void* timeZone, int32_t resolve);
+QDateTime* q_datetime_new7(void* date, void* time, const void* timeZone, int32_t resolve);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html)
 
@@ -892,7 +892,7 @@ QDateTime* q_datetime_new8(void* date, void* time, int32_t resolve);
 /// @param self QDateTime*
 /// @param other QDateTime*
 ///
-void q_datetime_operator_assign(void* self, void* other);
+void q_datetime_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#swap)
 ///
@@ -903,79 +903,79 @@ void q_datetime_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#isNull)
 ///
-/// @param self QDateTime*
+/// @param self const QDateTime*
 ///
-bool q_datetime_is_null(void* self);
+bool q_datetime_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#isValid)
 ///
-/// @param self QDateTime*
+/// @param self const QDateTime*
 ///
-bool q_datetime_is_valid(void* self);
+bool q_datetime_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#date)
 ///
-/// @param self QDateTime*
+/// @param self const QDateTime*
 ///
-QDate* q_datetime_date(void* self);
+QDate* q_datetime_date(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#time)
 ///
-/// @param self QDateTime*
+/// @param self const QDateTime*
 ///
-QTime* q_datetime_time(void* self);
+QTime* q_datetime_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#timeSpec)
 ///
-/// @param self QDateTime*
+/// @param self const QDateTime*
 ///
 /// @return enum Qt__TimeSpec
 ///
-int32_t q_datetime_time_spec(void* self);
+int32_t q_datetime_time_spec(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#offsetFromUtc)
 ///
-/// @param self QDateTime*
+/// @param self const QDateTime*
 ///
-int32_t q_datetime_offset_from_utc(void* self);
+int32_t q_datetime_offset_from_utc(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#timeRepresentation)
 ///
-/// @param self QDateTime*
+/// @param self const QDateTime*
 ///
-QTimeZone* q_datetime_time_representation(void* self);
+QTimeZone* q_datetime_time_representation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#timeZone)
 ///
-/// @param self QDateTime*
+/// @param self const QDateTime*
 ///
-QTimeZone* q_datetime_time_zone(void* self);
+QTimeZone* q_datetime_time_zone(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#timeZoneAbbreviation)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateTime*
+/// @param self const QDateTime*
 ///
-const char* q_datetime_time_zone_abbreviation(void* self);
+const char* q_datetime_time_zone_abbreviation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#isDaylightTime)
 ///
-/// @param self QDateTime*
+/// @param self const QDateTime*
 ///
-bool q_datetime_is_daylight_time(void* self);
+bool q_datetime_is_daylight_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#toMSecsSinceEpoch)
 ///
-/// @param self QDateTime*
+/// @param self const QDateTime*
 ///
-int64_t q_datetime_to_m_secs_since_epoch(void* self);
+int64_t q_datetime_to_m_secs_since_epoch(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#toSecsSinceEpoch)
 ///
-/// @param self QDateTime*
+/// @param self const QDateTime*
 ///
-int64_t q_datetime_to_secs_since_epoch(void* self);
+int64_t q_datetime_to_secs_since_epoch(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#setDate)
 ///
@@ -1010,7 +1010,7 @@ void q_datetime_set_offset_from_utc(void* self, int offsetSeconds);
 /// @param self QDateTime*
 /// @param toZone QTimeZone*
 ///
-void q_datetime_set_time_zone(void* self, void* toZone);
+void q_datetime_set_time_zone(void* self, const void* toZone);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#setMSecsSinceEpoch)
 ///
@@ -1030,149 +1030,149 @@ void q_datetime_set_secs_since_epoch(void* self, int64_t secs);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateTime*
+/// @param self const QDateTime*
 ///
-const char* q_datetime_to_string(void* self);
+const char* q_datetime_to_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateTime*
+/// @param self const QDateTime*
 /// @param format const char*
 ///
-const char* q_datetime_to_string2(void* self, const char* format);
+const char* q_datetime_to_string2(const void* self, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateTime*
-/// @param format const char*
-/// @param cal QCalendar*
-///
-const char* q_datetime_to_string3(void* self, const char* format, void* cal);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#toString)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self QDateTime*
-/// @param format const char*
-///
-const char* q_datetime_to_string4(void* self, const char* format);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#toString)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self QDateTime*
+/// @param self const QDateTime*
 /// @param format const char*
 /// @param cal QCalendar*
 ///
-const char* q_datetime_to_string5(void* self, const char* format, void* cal);
+const char* q_datetime_to_string3(const void* self, const char* format, void* cal);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#toString)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const QDateTime*
+/// @param format const char*
+///
+const char* q_datetime_to_string4(const void* self, const char* format);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#toString)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const QDateTime*
+/// @param format const char*
+/// @param cal QCalendar*
+///
+const char* q_datetime_to_string5(const void* self, const char* format, void* cal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#addDays)
 ///
-/// @param self QDateTime*
+/// @param self const QDateTime*
 /// @param days int64_t
 ///
-QDateTime* q_datetime_add_days(void* self, int64_t days);
+QDateTime* q_datetime_add_days(const void* self, int64_t days);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#addMonths)
 ///
-/// @param self QDateTime*
+/// @param self const QDateTime*
 /// @param months int
 ///
-QDateTime* q_datetime_add_months(void* self, int months);
+QDateTime* q_datetime_add_months(const void* self, int months);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#addYears)
 ///
-/// @param self QDateTime*
+/// @param self const QDateTime*
 /// @param years int
 ///
-QDateTime* q_datetime_add_years(void* self, int years);
+QDateTime* q_datetime_add_years(const void* self, int years);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#addSecs)
 ///
-/// @param self QDateTime*
+/// @param self const QDateTime*
 /// @param secs int64_t
 ///
-QDateTime* q_datetime_add_secs(void* self, int64_t secs);
+QDateTime* q_datetime_add_secs(const void* self, int64_t secs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#addMSecs)
 ///
-/// @param self QDateTime*
+/// @param self const QDateTime*
 /// @param msecs int64_t
 ///
-QDateTime* q_datetime_add_m_secs(void* self, int64_t msecs);
+QDateTime* q_datetime_add_m_secs(const void* self, int64_t msecs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#addDuration)
 ///
-/// @param self QDateTime*
+/// @param self const QDateTime*
 /// @param msecs int64_t of milliseconds
 ///
-QDateTime* q_datetime_add_duration(void* self, int64_t msecs);
+QDateTime* q_datetime_add_duration(const void* self, int64_t msecs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#toTimeSpec)
 ///
-/// @param self QDateTime*
+/// @param self const QDateTime*
 /// @param spec enum Qt__TimeSpec
 ///
-QDateTime* q_datetime_to_time_spec(void* self, int32_t spec);
+QDateTime* q_datetime_to_time_spec(const void* self, int32_t spec);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#toLocalTime)
 ///
-/// @param self QDateTime*
+/// @param self const QDateTime*
 ///
-QDateTime* q_datetime_to_local_time(void* self);
+QDateTime* q_datetime_to_local_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#toUTC)
 ///
-/// @param self QDateTime*
+/// @param self const QDateTime*
 ///
-QDateTime* q_datetime_to_u_t_c(void* self);
+QDateTime* q_datetime_to_u_t_c(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#toOffsetFromUtc)
 ///
-/// @param self QDateTime*
+/// @param self const QDateTime*
 /// @param offsetSeconds int
 ///
-QDateTime* q_datetime_to_offset_from_utc(void* self, int offsetSeconds);
+QDateTime* q_datetime_to_offset_from_utc(const void* self, int offsetSeconds);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#toTimeZone)
 ///
-/// @param self QDateTime*
+/// @param self const QDateTime*
 /// @param toZone QTimeZone*
 ///
-QDateTime* q_datetime_to_time_zone(void* self, void* toZone);
+QDateTime* q_datetime_to_time_zone(const void* self, const void* toZone);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#daysTo)
 ///
-/// @param self QDateTime*
+/// @param self const QDateTime*
 /// @param param1 QDateTime*
 ///
-int64_t q_datetime_days_to(void* self, void* param1);
+int64_t q_datetime_days_to(const void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#secsTo)
 ///
-/// @param self QDateTime*
+/// @param self const QDateTime*
 /// @param param1 QDateTime*
 ///
-int64_t q_datetime_secs_to(void* self, void* param1);
+int64_t q_datetime_secs_to(const void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#msecsTo)
 ///
-/// @param self QDateTime*
+/// @param self const QDateTime*
 /// @param param1 QDateTime*
 ///
-int64_t q_datetime_msecs_to(void* self, void* param1);
+int64_t q_datetime_msecs_to(const void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#currentDateTime)
 ///
 /// @param zone QTimeZone*
 ///
-QDateTime* q_datetime_current_date_time(void* zone);
+QDateTime* q_datetime_current_date_time(const void* zone);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#currentDateTime)
 ///
@@ -1285,14 +1285,14 @@ QDateTime* q_datetime_from_secs_since_epoch(int64_t secs, int32_t spec);
 /// @param msecs int64_t
 /// @param timeZone QTimeZone*
 ///
-QDateTime* q_datetime_from_m_secs_since_epoch2(int64_t msecs, void* timeZone);
+QDateTime* q_datetime_from_m_secs_since_epoch2(int64_t msecs, const void* timeZone);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#fromSecsSinceEpoch)
 ///
 /// @param secs int64_t
 /// @param timeZone QTimeZone*
 ///
-QDateTime* q_datetime_from_secs_since_epoch2(int64_t secs, void* timeZone);
+QDateTime* q_datetime_from_secs_since_epoch2(int64_t secs, const void* timeZone);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#fromMSecsSinceEpoch)
 ///
@@ -1350,16 +1350,16 @@ void q_datetime_set_time2(void* self, void* time, int32_t resolve);
 /// @param toZone QTimeZone*
 /// @param resolve enum QDateTime__TransitionResolution
 ///
-void q_datetime_set_time_zone2(void* self, void* toZone, int32_t resolve);
+void q_datetime_set_time_zone2(void* self, const void* toZone, int32_t resolve);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDateTime*
+/// @param self const QDateTime*
 /// @param format enum Qt__DateFormat
 ///
-const char* q_datetime_to_string1(void* self, int32_t format);
+const char* q_datetime_to_string1(const void* self, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#fromString)
 ///
@@ -1430,7 +1430,7 @@ void q_datetime_delete(void* self);
 /// @param key QDateTime*
 /// @param seed size_t
 ///
-size_t q_qdatetime_q_hash(void* key, size_t seed);
+size_t q_qdatetime_q_hash(const void* key, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#qHash)
 ///

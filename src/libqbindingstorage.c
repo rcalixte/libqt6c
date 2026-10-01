@@ -6,7 +6,7 @@ QBindingStatus* q_bindingstatus_new() {
     return QBindingStatus_New();
 }
 
-QBindingStatus* q_bindingstatus_new2(void* other) {
+QBindingStatus* q_bindingstatus_new2(const void* other) {
     return QBindingStatus_New2((QBindingStatus*)other);
 }
 
@@ -34,11 +34,11 @@ bool q_bindingstorage_is_empty(void* self) {
     return QBindingStorage_IsEmpty((QBindingStorage*)self);
 }
 
-bool q_bindingstorage_is_valid(void* self) {
+bool q_bindingstorage_is_valid(const void* self) {
     return QBindingStorage_IsValid((QBindingStorage*)self);
 }
 
-void q_bindingstorage_register_dependency(void* self, void* data) {
+void q_bindingstorage_register_dependency(const void* self, const void* data) {
     QBindingStorage_RegisterDependency((QBindingStorage*)self, (QUntypedPropertyData*)data);
 }
 

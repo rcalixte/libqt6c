@@ -14,7 +14,7 @@
 ///
 /// @param param1 QFont*
 ///
-QFontInfo* q_fontinfo_new(void* param1);
+QFontInfo* q_fontinfo_new(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontinfo.html)
 
@@ -22,14 +22,14 @@ QFontInfo* q_fontinfo_new(void* param1);
 ///
 /// @param param1 QFontInfo*
 ///
-QFontInfo* q_fontinfo_new2(void* param1);
+QFontInfo* q_fontinfo_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontinfo.html#operator-eq)
 ///
 /// @param self QFontInfo*
 /// @param param1 QFontInfo*
 ///
-void q_fontinfo_operator_assign(void* self, void* param1);
+void q_fontinfo_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontinfo.html#swap)
 ///
@@ -42,105 +42,105 @@ void q_fontinfo_swap(void* self, void* other);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QFontInfo*
+/// @param self const QFontInfo*
 ///
-const char* q_fontinfo_family(void* self);
+const char* q_fontinfo_family(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontinfo.html#styleName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QFontInfo*
+/// @param self const QFontInfo*
 ///
-const char* q_fontinfo_style_name(void* self);
+const char* q_fontinfo_style_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontinfo.html#pixelSize)
 ///
-/// @param self QFontInfo*
+/// @param self const QFontInfo*
 ///
-int32_t q_fontinfo_pixel_size(void* self);
+int32_t q_fontinfo_pixel_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontinfo.html#pointSize)
 ///
-/// @param self QFontInfo*
+/// @param self const QFontInfo*
 ///
-int32_t q_fontinfo_point_size(void* self);
+int32_t q_fontinfo_point_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontinfo.html#pointSizeF)
 ///
-/// @param self QFontInfo*
+/// @param self const QFontInfo*
 ///
-double q_fontinfo_point_size_f(void* self);
+double q_fontinfo_point_size_f(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontinfo.html#italic)
 ///
-/// @param self QFontInfo*
+/// @param self const QFontInfo*
 ///
-bool q_fontinfo_italic(void* self);
+bool q_fontinfo_italic(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontinfo.html#style)
 ///
-/// @param self QFontInfo*
+/// @param self const QFontInfo*
 ///
 /// @return enum QFont__Style
 ///
-int32_t q_fontinfo_style(void* self);
+int32_t q_fontinfo_style(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontinfo.html#weight)
 ///
-/// @param self QFontInfo*
+/// @param self const QFontInfo*
 ///
-int32_t q_fontinfo_weight(void* self);
+int32_t q_fontinfo_weight(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontinfo.html#bold)
 ///
-/// @param self QFontInfo*
+/// @param self const QFontInfo*
 ///
-bool q_fontinfo_bold(void* self);
+bool q_fontinfo_bold(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontinfo.html#underline)
 ///
-/// @param self QFontInfo*
+/// @param self const QFontInfo*
 ///
-bool q_fontinfo_underline(void* self);
+bool q_fontinfo_underline(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontinfo.html#overline)
 ///
-/// @param self QFontInfo*
+/// @param self const QFontInfo*
 ///
-bool q_fontinfo_overline(void* self);
+bool q_fontinfo_overline(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontinfo.html#strikeOut)
 ///
-/// @param self QFontInfo*
+/// @param self const QFontInfo*
 ///
-bool q_fontinfo_strike_out(void* self);
+bool q_fontinfo_strike_out(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontinfo.html#fixedPitch)
 ///
-/// @param self QFontInfo*
+/// @param self const QFontInfo*
 ///
-bool q_fontinfo_fixed_pitch(void* self);
+bool q_fontinfo_fixed_pitch(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontinfo.html#styleHint)
 ///
-/// @param self QFontInfo*
+/// @param self const QFontInfo*
 ///
 /// @return enum QFont__StyleHint
 ///
-int32_t q_fontinfo_style_hint(void* self);
+int32_t q_fontinfo_style_hint(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontinfo.html#legacyWeight)
 ///
-/// @param self QFontInfo*
+/// @param self const QFontInfo*
 ///
-int32_t q_fontinfo_legacy_weight(void* self);
+int32_t q_fontinfo_legacy_weight(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontinfo.html#exactMatch)
 ///
-/// @param self QFontInfo*
+/// @param self const QFontInfo*
 ///
-bool q_fontinfo_exact_match(void* self);
+bool q_fontinfo_exact_match(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontinfo.html#dtor.QFontInfo)
 ///

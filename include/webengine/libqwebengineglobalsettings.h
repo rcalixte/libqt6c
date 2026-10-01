@@ -16,11 +16,11 @@ QWebEngineGlobalSettings__DnsMode* q_webengineglobalsettings__dnsmode_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineglobalsettings-dnsmode.html#secureMode-var)
 ///
-/// @param self QWebEngineGlobalSettings__DnsMode*
+/// @param self const QWebEngineGlobalSettings__DnsMode*
 ///
 /// @return enum QWebEngineGlobalSettings__SecureDnsMode
 ///
-uint8_t q_webengineglobalsettings__dnsmode_secure_mode(void* self);
+uint8_t q_webengineglobalsettings__dnsmode_secure_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineglobalsettings-dnsmode.html#secureMode-var)
 ///
@@ -33,9 +33,9 @@ void q_webengineglobalsettings__dnsmode_set_secure_mode(void* self, uint8_t secu
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QWebEngineGlobalSettings__DnsMode*
+/// @param self const QWebEngineGlobalSettings__DnsMode*
 ///
-const char** q_webengineglobalsettings__dnsmode_server_templates(void* self);
+const char** q_webengineglobalsettings__dnsmode_server_templates(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineglobalsettings-dnsmode.html#serverTemplates-var)
 ///

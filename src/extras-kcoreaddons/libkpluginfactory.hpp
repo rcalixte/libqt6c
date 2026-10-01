@@ -34,7 +34,7 @@ int KPluginFactory_Metacall(KPluginFactory* self, int param1, int param2, void**
 KPluginMetaData* KPluginFactory_MetaData(const KPluginFactory* self);
 void KPluginFactory_SetMetaData(KPluginFactory* self, const KPluginMetaData* metaData);
 QObject* KPluginFactory_Create(KPluginFactory* self, const char* iface, QWidget* parentWidget, QObject* parent, const libqt_list /* of QVariant* */ args);
-void KPluginFactory_OnMetaObject(const KPluginFactory* self, intptr_t slot);
+void KPluginFactory_OnMetaObject(KPluginFactory* self, intptr_t slot);
 QMetaObject* KPluginFactory_SuperMetaObject(const KPluginFactory* self);
 void KPluginFactory_OnMetacast(KPluginFactory* self, intptr_t slot);
 void* KPluginFactory_SuperMetacast(KPluginFactory* self, const char* param1);
@@ -64,17 +64,9 @@ void KPluginFactory_DisconnectNotify(KPluginFactory* self, const QMetaMethod* si
 void KPluginFactory_OnDisconnectNotify(KPluginFactory* self, intptr_t slot);
 void KPluginFactory_SuperDisconnectNotify(KPluginFactory* self, const QMetaMethod* signal);
 QObject* KPluginFactory_Sender(const KPluginFactory* self);
-void KPluginFactory_OnSender(const KPluginFactory* self, intptr_t slot);
-QObject* KPluginFactory_SuperSender(const KPluginFactory* self);
 int KPluginFactory_SenderSignalIndex(const KPluginFactory* self);
-void KPluginFactory_OnSenderSignalIndex(const KPluginFactory* self, intptr_t slot);
-int KPluginFactory_SuperSenderSignalIndex(const KPluginFactory* self);
 int KPluginFactory_Receivers(const KPluginFactory* self, const char* signal);
-void KPluginFactory_OnReceivers(const KPluginFactory* self, intptr_t slot);
-int KPluginFactory_SuperReceivers(const KPluginFactory* self, const char* signal);
 bool KPluginFactory_IsSignalConnected(const KPluginFactory* self, const QMetaMethod* signal);
-void KPluginFactory_OnIsSignalConnected(const KPluginFactory* self, intptr_t slot);
-bool KPluginFactory_SuperIsSignalConnected(const KPluginFactory* self, const QMetaMethod* signal);
 void KPluginFactory_Delete(KPluginFactory* self);
 
 #ifdef __cplusplus

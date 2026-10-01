@@ -10,7 +10,7 @@
 #include "libkautosavefile.hpp"
 #include "libkautosavefile.h"
 
-KAutoSaveFile* k_autosavefile_new(void* filename) {
+KAutoSaveFile* k_autosavefile_new(const void* filename) {
     return KAutoSaveFile_New((QUrl*)filename);
 }
 
@@ -18,7 +18,7 @@ KAutoSaveFile* k_autosavefile_new2() {
     return KAutoSaveFile_New2();
 }
 
-KAutoSaveFile* k_autosavefile_new3(void* filename, void* parent) {
+KAutoSaveFile* k_autosavefile_new3(const void* filename, void* parent) {
     return KAutoSaveFile_New3((QUrl*)filename, (QObject*)parent);
 }
 
@@ -26,15 +26,15 @@ KAutoSaveFile* k_autosavefile_new4(void* parent) {
     return KAutoSaveFile_New4((QObject*)parent);
 }
 
-const QMetaObject* k_autosavefile_meta_object(void* self) {
+const QMetaObject* k_autosavefile_meta_object(const void* self) {
     return KAutoSaveFile_MetaObject((KAutoSaveFile*)self);
 }
 
-void k_autosavefile_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_autosavefile_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     KAutoSaveFile_OnMetaObject((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_autosavefile_super_meta_object(void* self) {
+const QMetaObject* k_autosavefile_super_meta_object(const void* self) {
     return KAutoSaveFile_SuperMetaObject((KAutoSaveFile*)self);
 }
 
@@ -69,11 +69,11 @@ const char* k_autosavefile_tr(const char* s) {
     return _ret;
 }
 
-QUrl* k_autosavefile_managed_file(void* self) {
+QUrl* k_autosavefile_managed_file(const void* self) {
     return KAutoSaveFile_ManagedFile((KAutoSaveFile*)self);
 }
 
-void k_autosavefile_set_managed_file(void* self, void* filename) {
+void k_autosavefile_set_managed_file(void* self, const void* filename) {
     KAutoSaveFile_SetManagedFile((KAutoSaveFile*)self, (QUrl*)filename);
 }
 
@@ -81,7 +81,7 @@ void k_autosavefile_release_lock(void* self) {
     KAutoSaveFile_ReleaseLock((KAutoSaveFile*)self);
 }
 
-void k_autosavefile_on_release_lock(void* self, void (*callback)()) {
+void k_autosavefile_on_release_lock(void* self, void (*callback)(void*)) {
     KAutoSaveFile_OnReleaseLock((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
@@ -101,7 +101,7 @@ bool k_autosavefile_super_open(void* self, int32_t openmode) {
     return KAutoSaveFile_SuperOpen((KAutoSaveFile*)self, openmode);
 }
 
-libqt_list /* of KAutoSaveFile* */ k_autosavefile_stale_files(void* url) {
+libqt_list /* of KAutoSaveFile* */ k_autosavefile_stale_files(const void* url) {
     libqt_list _arr = KAutoSaveFile_StaleFiles((QUrl*)url);
     return _arr;
 }
@@ -125,7 +125,7 @@ const char* k_autosavefile_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-libqt_list /* of KAutoSaveFile* */ k_autosavefile_stale_files2(void* url, const char* applicationName) {
+libqt_list /* of KAutoSaveFile* */ k_autosavefile_stale_files2(const void* url, const char* applicationName) {
     libqt_list _arr = KAutoSaveFile_StaleFiles2((QUrl*)url, qstring(applicationName));
     return _arr;
 }
@@ -160,7 +160,7 @@ const char* k_autosavefile_decode_name2(const char* localFileName) {
     return _ret;
 }
 
-bool k_autosavefile_exists(void* self) {
+bool k_autosavefile_exists(const void* self) {
     return QFile_Exists((QFile*)self);
 }
 
@@ -168,7 +168,7 @@ bool k_autosavefile_exists2(const char* fileName) {
     return QFile_Exists2(qstring(fileName));
 }
 
-const char* k_autosavefile_sym_link_target(void* self) {
+const char* k_autosavefile_sym_link_target(const void* self) {
     libqt_string _str = QFile_SymLinkTarget((QFile*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -246,7 +246,7 @@ bool k_autosavefile_open33(void* self, int fd, int32_t ioFlags, int32_t handleFl
     return QFile_Open33((QFile*)self, fd, ioFlags, handleFlags);
 }
 
-int32_t k_autosavefile_error(void* self) {
+int32_t k_autosavefile_error(const void* self) {
     return QFileDevice_Error((QFileDevice*)self);
 }
 
@@ -254,7 +254,7 @@ void k_autosavefile_unset_error(void* self) {
     QFileDevice_UnsetError((QFileDevice*)self);
 }
 
-int32_t k_autosavefile_handle(void* self) {
+int32_t k_autosavefile_handle(const void* self) {
     return QFileDevice_Handle((QFileDevice*)self);
 }
 
@@ -270,11 +270,11 @@ bool k_autosavefile_unmap(void* self, unsigned char* address) {
     return QFileDevice_Unmap((QFileDevice*)self, address);
 }
 
-QDateTime* k_autosavefile_file_time(void* self, int32_t time) {
+QDateTime* k_autosavefile_file_time(const void* self, int32_t time) {
     return QFileDevice_FileTime((QFileDevice*)self, time);
 }
 
-bool k_autosavefile_set_file_time(void* self, void* newDate, int32_t fileTime) {
+bool k_autosavefile_set_file_time(void* self, const void* newDate, int32_t fileTime) {
     return QFileDevice_SetFileTime((QFileDevice*)self, (QDateTime*)newDate, fileTime);
 }
 
@@ -286,7 +286,7 @@ QIODeviceBase* k_autosavefile_as_q_i_o_device_base(void* self) {
     return QIODevice_AsQIODeviceBase((QIODevice*)self);
 }
 
-int32_t k_autosavefile_open_mode(void* self) {
+int32_t k_autosavefile_open_mode(const void* self) {
     return QIODevice_OpenMode((QIODevice*)self);
 }
 
@@ -294,31 +294,31 @@ void k_autosavefile_set_text_mode_enabled(void* self, bool enabled) {
     QIODevice_SetTextModeEnabled((QIODevice*)self, enabled);
 }
 
-bool k_autosavefile_is_text_mode_enabled(void* self) {
+bool k_autosavefile_is_text_mode_enabled(const void* self) {
     return QIODevice_IsTextModeEnabled((QIODevice*)self);
 }
 
-bool k_autosavefile_is_open(void* self) {
+bool k_autosavefile_is_open(const void* self) {
     return QIODevice_IsOpen((QIODevice*)self);
 }
 
-bool k_autosavefile_is_readable(void* self) {
+bool k_autosavefile_is_readable(const void* self) {
     return QIODevice_IsReadable((QIODevice*)self);
 }
 
-bool k_autosavefile_is_writable(void* self) {
+bool k_autosavefile_is_writable(const void* self) {
     return QIODevice_IsWritable((QIODevice*)self);
 }
 
-int32_t k_autosavefile_read_channel_count(void* self) {
+int32_t k_autosavefile_read_channel_count(const void* self) {
     return QIODevice_ReadChannelCount((QIODevice*)self);
 }
 
-int32_t k_autosavefile_write_channel_count(void* self) {
+int32_t k_autosavefile_write_channel_count(const void* self) {
     return QIODevice_WriteChannelCount((QIODevice*)self);
 }
 
-int32_t k_autosavefile_current_read_channel(void* self) {
+int32_t k_autosavefile_current_read_channel(const void* self) {
     return QIODevice_CurrentReadChannel((QIODevice*)self);
 }
 
@@ -326,7 +326,7 @@ void k_autosavefile_set_current_read_channel(void* self, int channel) {
     QIODevice_SetCurrentReadChannel((QIODevice*)self, channel);
 }
 
-int32_t k_autosavefile_current_write_channel(void* self) {
+int32_t k_autosavefile_current_write_channel(const void* self) {
     return QIODevice_CurrentWriteChannel((QIODevice*)self);
 }
 
@@ -375,7 +375,7 @@ void k_autosavefile_rollback_transaction(void* self) {
     QIODevice_RollbackTransaction((QIODevice*)self);
 }
 
-bool k_autosavefile_is_transaction_started(void* self) {
+bool k_autosavefile_is_transaction_started(const void* self) {
     return QIODevice_IsTransactionStarted((QIODevice*)self);
 }
 
@@ -418,7 +418,7 @@ bool k_autosavefile_get_char(void* self, char* c) {
     return QIODevice_GetChar((QIODevice*)self, c);
 }
 
-const char* k_autosavefile_error_string(void* self) {
+const char* k_autosavefile_error_string(const void* self) {
     libqt_string _str = QIODevice_ErrorString((QIODevice*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -480,7 +480,7 @@ char* k_autosavefile_read_line1(void* self, int64_t maxlen) {
     return _ret;
 }
 
-const char* k_autosavefile_object_name(void* self) {
+const char* k_autosavefile_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -491,19 +491,19 @@ void k_autosavefile_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_autosavefile_is_widget_type(void* self) {
+bool k_autosavefile_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_autosavefile_is_window_type(void* self) {
+bool k_autosavefile_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_autosavefile_is_quick_item_type(void* self) {
+bool k_autosavefile_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_autosavefile_signals_blocked(void* self) {
+bool k_autosavefile_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -511,7 +511,7 @@ bool k_autosavefile_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_autosavefile_thread(void* self) {
+QThread* k_autosavefile_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -535,7 +535,7 @@ void k_autosavefile_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_autosavefile_children(void* self) {
+libqt_list /* of QObject* */ k_autosavefile_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -552,55 +552,55 @@ void k_autosavefile_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_autosavefile_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_autosavefile_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_autosavefile_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_autosavefile_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_autosavefile_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_autosavefile_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_autosavefile_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_autosavefile_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_autosavefile_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_autosavefile_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_autosavefile_disconnect3(void* self) {
+bool k_autosavefile_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_autosavefile_disconnect4(void* self, void* receiver) {
+bool k_autosavefile_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_autosavefile_disconnect5(void* param1) {
+bool k_autosavefile_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_autosavefile_dump_object_tree(void* self) {
+void k_autosavefile_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_autosavefile_dump_object_info(void* self) {
+void k_autosavefile_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_autosavefile_set_property(void* self, const char* name, void* value) {
+bool k_autosavefile_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_autosavefile_property(void* self, const char* name) {
+QVariant* k_autosavefile_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_autosavefile_dynamic_property_names(void* self) {
+const char** k_autosavefile_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -621,7 +621,7 @@ QBindingStorage* k_autosavefile_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_autosavefile_binding_storage2(void* self) {
+const QBindingStorage* k_autosavefile_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -633,11 +633,11 @@ void k_autosavefile_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_autosavefile_parent(void* self) {
+QObject* k_autosavefile_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_autosavefile_inherits(void* self, const char* classname) {
+bool k_autosavefile_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -653,31 +653,31 @@ int32_t k_autosavefile_start_timer23(void* self, int64_t time, int32_t timerType
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_autosavefile_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_autosavefile_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_autosavefile_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_autosavefile_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_autosavefile_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_autosavefile_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_autosavefile_disconnect1(void* self, const char* signal) {
+bool k_autosavefile_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_autosavefile_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_autosavefile_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_autosavefile_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_autosavefile_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_autosavefile_disconnect23(void* self, void* receiver, const char* member) {
+bool k_autosavefile_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -689,34 +689,34 @@ void k_autosavefile_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-const char* k_autosavefile_file_name(void* self) {
+const char* k_autosavefile_file_name(const void* self) {
     libqt_string _str = KAutoSaveFile_FileName((KAutoSaveFile*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_autosavefile_super_file_name(void* self) {
+const char* k_autosavefile_super_file_name(const void* self) {
     libqt_string _str = KAutoSaveFile_SuperFileName((KAutoSaveFile*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_autosavefile_on_file_name(void* self, const char* (*callback)()) {
-    KAutoSaveFile_OnFileName((KAutoSaveFile*)self, (intptr_t)callback);
+void k_autosavefile_on_file_name(const void* self, const char* (*callback)(const void*)) {
+    KAutoSaveFile_OnFileName((const KAutoSaveFile*)self, (intptr_t)callback);
 }
 
-int64_t k_autosavefile_size(void* self) {
+int64_t k_autosavefile_size(const void* self) {
     return KAutoSaveFile_Size((KAutoSaveFile*)self);
 }
 
-int64_t k_autosavefile_super_size(void* self) {
+int64_t k_autosavefile_super_size(const void* self) {
     return KAutoSaveFile_SuperSize((KAutoSaveFile*)self);
 }
 
-void k_autosavefile_on_size(void* self, int64_t (*callback)()) {
-    KAutoSaveFile_OnSize((KAutoSaveFile*)self, (intptr_t)callback);
+void k_autosavefile_on_size(const void* self, int64_t (*callback)(const void*)) {
+    KAutoSaveFile_OnSize((const KAutoSaveFile*)self, (intptr_t)callback);
 }
 
 bool k_autosavefile_resize(void* self, int64_t sz) {
@@ -731,16 +731,16 @@ void k_autosavefile_on_resize(void* self, bool (*callback)(void*, int64_t)) {
     KAutoSaveFile_OnResize((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
-int32_t k_autosavefile_permissions(void* self) {
+int32_t k_autosavefile_permissions(const void* self) {
     return KAutoSaveFile_Permissions((KAutoSaveFile*)self);
 }
 
-int32_t k_autosavefile_super_permissions(void* self) {
+int32_t k_autosavefile_super_permissions(const void* self) {
     return KAutoSaveFile_SuperPermissions((KAutoSaveFile*)self);
 }
 
-void k_autosavefile_on_permissions(void* self, int32_t (*callback)()) {
-    KAutoSaveFile_OnPermissions((KAutoSaveFile*)self, (intptr_t)callback);
+void k_autosavefile_on_permissions(const void* self, int32_t (*callback)(const void*)) {
+    KAutoSaveFile_OnPermissions((const KAutoSaveFile*)self, (intptr_t)callback);
 }
 
 bool k_autosavefile_set_permissions(void* self, int32_t permissionSpec) {
@@ -763,32 +763,32 @@ void k_autosavefile_super_close(void* self) {
     KAutoSaveFile_SuperClose((KAutoSaveFile*)self);
 }
 
-void k_autosavefile_on_close(void* self, void (*callback)()) {
+void k_autosavefile_on_close(void* self, void (*callback)(void*)) {
     KAutoSaveFile_OnClose((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
-bool k_autosavefile_is_sequential(void* self) {
+bool k_autosavefile_is_sequential(const void* self) {
     return KAutoSaveFile_IsSequential((KAutoSaveFile*)self);
 }
 
-bool k_autosavefile_super_is_sequential(void* self) {
+bool k_autosavefile_super_is_sequential(const void* self) {
     return KAutoSaveFile_SuperIsSequential((KAutoSaveFile*)self);
 }
 
-void k_autosavefile_on_is_sequential(void* self, bool (*callback)()) {
-    KAutoSaveFile_OnIsSequential((KAutoSaveFile*)self, (intptr_t)callback);
+void k_autosavefile_on_is_sequential(const void* self, bool (*callback)(const void*)) {
+    KAutoSaveFile_OnIsSequential((const KAutoSaveFile*)self, (intptr_t)callback);
 }
 
-int64_t k_autosavefile_pos(void* self) {
+int64_t k_autosavefile_pos(const void* self) {
     return KAutoSaveFile_Pos((KAutoSaveFile*)self);
 }
 
-int64_t k_autosavefile_super_pos(void* self) {
+int64_t k_autosavefile_super_pos(const void* self) {
     return KAutoSaveFile_SuperPos((KAutoSaveFile*)self);
 }
 
-void k_autosavefile_on_pos(void* self, int64_t (*callback)()) {
-    KAutoSaveFile_OnPos((KAutoSaveFile*)self, (intptr_t)callback);
+void k_autosavefile_on_pos(const void* self, int64_t (*callback)(const void*)) {
+    KAutoSaveFile_OnPos((const KAutoSaveFile*)self, (intptr_t)callback);
 }
 
 bool k_autosavefile_seek(void* self, int64_t offset) {
@@ -803,16 +803,16 @@ void k_autosavefile_on_seek(void* self, bool (*callback)(void*, int64_t)) {
     KAutoSaveFile_OnSeek((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
-bool k_autosavefile_at_end(void* self) {
+bool k_autosavefile_at_end(const void* self) {
     return KAutoSaveFile_AtEnd((KAutoSaveFile*)self);
 }
 
-bool k_autosavefile_super_at_end(void* self) {
+bool k_autosavefile_super_at_end(const void* self) {
     return KAutoSaveFile_SuperAtEnd((KAutoSaveFile*)self);
 }
 
-void k_autosavefile_on_at_end(void* self, bool (*callback)()) {
-    KAutoSaveFile_OnAtEnd((KAutoSaveFile*)self, (intptr_t)callback);
+void k_autosavefile_on_at_end(const void* self, bool (*callback)(const void*)) {
+    KAutoSaveFile_OnAtEnd((const KAutoSaveFile*)self, (intptr_t)callback);
 }
 
 int64_t k_autosavefile_read_data(void* self, char* data, int64_t maxlen) {
@@ -859,44 +859,44 @@ bool k_autosavefile_super_reset(void* self) {
     return KAutoSaveFile_SuperReset((KAutoSaveFile*)self);
 }
 
-void k_autosavefile_on_reset(void* self, bool (*callback)()) {
+void k_autosavefile_on_reset(void* self, bool (*callback)(void*)) {
     KAutoSaveFile_OnReset((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
-int64_t k_autosavefile_bytes_available(void* self) {
+int64_t k_autosavefile_bytes_available(const void* self) {
     return KAutoSaveFile_BytesAvailable((KAutoSaveFile*)self);
 }
 
-int64_t k_autosavefile_super_bytes_available(void* self) {
+int64_t k_autosavefile_super_bytes_available(const void* self) {
     return KAutoSaveFile_SuperBytesAvailable((KAutoSaveFile*)self);
 }
 
-void k_autosavefile_on_bytes_available(void* self, int64_t (*callback)()) {
-    KAutoSaveFile_OnBytesAvailable((KAutoSaveFile*)self, (intptr_t)callback);
+void k_autosavefile_on_bytes_available(const void* self, int64_t (*callback)(const void*)) {
+    KAutoSaveFile_OnBytesAvailable((const KAutoSaveFile*)self, (intptr_t)callback);
 }
 
-int64_t k_autosavefile_bytes_to_write(void* self) {
+int64_t k_autosavefile_bytes_to_write(const void* self) {
     return KAutoSaveFile_BytesToWrite((KAutoSaveFile*)self);
 }
 
-int64_t k_autosavefile_super_bytes_to_write(void* self) {
+int64_t k_autosavefile_super_bytes_to_write(const void* self) {
     return KAutoSaveFile_SuperBytesToWrite((KAutoSaveFile*)self);
 }
 
-void k_autosavefile_on_bytes_to_write(void* self, int64_t (*callback)()) {
-    KAutoSaveFile_OnBytesToWrite((KAutoSaveFile*)self, (intptr_t)callback);
+void k_autosavefile_on_bytes_to_write(const void* self, int64_t (*callback)(const void*)) {
+    KAutoSaveFile_OnBytesToWrite((const KAutoSaveFile*)self, (intptr_t)callback);
 }
 
-bool k_autosavefile_can_read_line(void* self) {
+bool k_autosavefile_can_read_line(const void* self) {
     return KAutoSaveFile_CanReadLine((KAutoSaveFile*)self);
 }
 
-bool k_autosavefile_super_can_read_line(void* self) {
+bool k_autosavefile_super_can_read_line(const void* self) {
     return KAutoSaveFile_SuperCanReadLine((KAutoSaveFile*)self);
 }
 
-void k_autosavefile_on_can_read_line(void* self, bool (*callback)()) {
-    KAutoSaveFile_OnCanReadLine((KAutoSaveFile*)self, (intptr_t)callback);
+void k_autosavefile_on_can_read_line(const void* self, bool (*callback)(const void*)) {
+    KAutoSaveFile_OnCanReadLine((const KAutoSaveFile*)self, (intptr_t)callback);
 }
 
 bool k_autosavefile_wait_for_ready_read(void* self, int msecs) {
@@ -995,27 +995,27 @@ void k_autosavefile_on_custom_event(void* self, void (*callback)(void*, void*)) 
     KAutoSaveFile_OnCustomEvent((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
-void k_autosavefile_connect_notify(void* self, void* signal) {
+void k_autosavefile_connect_notify(void* self, const void* signal) {
     KAutoSaveFile_ConnectNotify((KAutoSaveFile*)self, (QMetaMethod*)signal);
 }
 
-void k_autosavefile_super_connect_notify(void* self, void* signal) {
+void k_autosavefile_super_connect_notify(void* self, const void* signal) {
     KAutoSaveFile_SuperConnectNotify((KAutoSaveFile*)self, (QMetaMethod*)signal);
 }
 
-void k_autosavefile_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_autosavefile_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     KAutoSaveFile_OnConnectNotify((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
-void k_autosavefile_disconnect_notify(void* self, void* signal) {
+void k_autosavefile_disconnect_notify(void* self, const void* signal) {
     KAutoSaveFile_DisconnectNotify((KAutoSaveFile*)self, (QMetaMethod*)signal);
 }
 
-void k_autosavefile_super_disconnect_notify(void* self, void* signal) {
+void k_autosavefile_super_disconnect_notify(void* self, const void* signal) {
     KAutoSaveFile_SuperDisconnectNotify((KAutoSaveFile*)self, (QMetaMethod*)signal);
 }
 
-void k_autosavefile_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_autosavefile_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     KAutoSaveFile_OnDisconnectNotify((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
@@ -1023,72 +1023,24 @@ void k_autosavefile_set_open_mode(void* self, int32_t openMode) {
     KAutoSaveFile_SetOpenMode((KAutoSaveFile*)self, openMode);
 }
 
-void k_autosavefile_super_set_open_mode(void* self, int32_t openMode) {
-    KAutoSaveFile_SuperSetOpenMode((KAutoSaveFile*)self, openMode);
-}
-
-void k_autosavefile_on_set_open_mode(void* self, void (*callback)(void*, int32_t)) {
-    KAutoSaveFile_OnSetOpenMode((KAutoSaveFile*)self, (intptr_t)callback);
-}
-
 void k_autosavefile_set_error_string(void* self, const char* errorString) {
     KAutoSaveFile_SetErrorString((KAutoSaveFile*)self, qstring(errorString));
 }
 
-void k_autosavefile_super_set_error_string(void* self, const char* errorString) {
-    KAutoSaveFile_SuperSetErrorString((KAutoSaveFile*)self, qstring(errorString));
-}
-
-void k_autosavefile_on_set_error_string(void* self, void (*callback)(void*, const char*)) {
-    KAutoSaveFile_OnSetErrorString((KAutoSaveFile*)self, (intptr_t)callback);
-}
-
-QObject* k_autosavefile_sender(void* self) {
+QObject* k_autosavefile_sender(const void* self) {
     return KAutoSaveFile_Sender((KAutoSaveFile*)self);
 }
 
-QObject* k_autosavefile_super_sender(void* self) {
-    return KAutoSaveFile_SuperSender((KAutoSaveFile*)self);
-}
-
-void k_autosavefile_on_sender(void* self, QObject* (*callback)()) {
-    KAutoSaveFile_OnSender((KAutoSaveFile*)self, (intptr_t)callback);
-}
-
-int32_t k_autosavefile_sender_signal_index(void* self) {
+int32_t k_autosavefile_sender_signal_index(const void* self) {
     return KAutoSaveFile_SenderSignalIndex((KAutoSaveFile*)self);
 }
 
-int32_t k_autosavefile_super_sender_signal_index(void* self) {
-    return KAutoSaveFile_SuperSenderSignalIndex((KAutoSaveFile*)self);
-}
-
-void k_autosavefile_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    KAutoSaveFile_OnSenderSignalIndex((KAutoSaveFile*)self, (intptr_t)callback);
-}
-
-int32_t k_autosavefile_receivers(void* self, const char* signal) {
+int32_t k_autosavefile_receivers(const void* self, const char* signal) {
     return KAutoSaveFile_Receivers((KAutoSaveFile*)self, signal);
 }
 
-int32_t k_autosavefile_super_receivers(void* self, const char* signal) {
-    return KAutoSaveFile_SuperReceivers((KAutoSaveFile*)self, signal);
-}
-
-void k_autosavefile_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    KAutoSaveFile_OnReceivers((KAutoSaveFile*)self, (intptr_t)callback);
-}
-
-bool k_autosavefile_is_signal_connected(void* self, void* signal) {
+bool k_autosavefile_is_signal_connected(const void* self, const void* signal) {
     return KAutoSaveFile_IsSignalConnected((KAutoSaveFile*)self, (QMetaMethod*)signal);
-}
-
-bool k_autosavefile_super_is_signal_connected(void* self, void* signal) {
-    return KAutoSaveFile_SuperIsSignalConnected((KAutoSaveFile*)self, (QMetaMethod*)signal);
-}
-
-void k_autosavefile_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    KAutoSaveFile_OnIsSignalConnected((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
 void k_autosavefile_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

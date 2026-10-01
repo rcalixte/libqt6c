@@ -24,26 +24,26 @@ TextAutoCorrectionWidgets__AutoCorrectionTextEdit* k_textautocorrectionwidgets__
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionWidgets_1_1AutoCorrectionTextEdit.html)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-const QMetaObject* k_textautocorrectionwidgets__autocorrectiontextedit_meta_object(void* self);
+const QMetaObject* k_textautocorrectionwidgets__autocorrectiontextedit_meta_object(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionWidgets_1_1AutoCorrectionTextEdit.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
-/// @param callback const QMetaObject* func()
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param callback const QMetaObject* func(const TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self)
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionWidgets_1_1AutoCorrectionTextEdit.html)
 ///
 /// Base class method implementation
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-const QMetaObject* k_textautocorrectionwidgets__autocorrectiontextedit_super_meta_object(void* self);
+const QMetaObject* k_textautocorrectionwidgets__autocorrectiontextedit_super_meta_object(const void* self);
 
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param param1 const char*
@@ -97,9 +97,9 @@ const char* k_textautocorrectionwidgets__autocorrectiontextedit_tr(const char* s
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionWidgets_1_1AutoCorrectionTextEdit.html)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-TextAutoCorrectionCore__AutoCorrection* k_textautocorrectionwidgets__autocorrectiontextedit_autocorrection(void* self);
+TextAutoCorrectionCore__AutoCorrection* k_textautocorrectionwidgets__autocorrectiontextedit_autocorrection(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionWidgets_1_1AutoCorrectionTextEdit.html)
 ///
@@ -172,9 +172,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_document(void* self
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#document)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QTextDocument* k_textautocorrectionwidgets__autocorrectiontextedit_document(void* self);
+QTextDocument* k_textautocorrectionwidgets__autocorrectiontextedit_document(const void* self);
 
 /// Inherited from QTextEdit
 ///
@@ -191,9 +191,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_placeholder_text(vo
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_placeholder_text(void* self);
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_placeholder_text(const void* self);
 
 /// Inherited from QTextEdit
 ///
@@ -202,23 +202,23 @@ const char* k_textautocorrectionwidgets__autocorrectiontextedit_placeholder_text
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param cursor QTextCursor*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_text_cursor(void* self, void* cursor);
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_text_cursor(void* self, const void* cursor);
 
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#textCursor)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QTextCursor* k_textautocorrectionwidgets__autocorrectiontextedit_text_cursor(void* self);
+QTextCursor* k_textautocorrectionwidgets__autocorrectiontextedit_text_cursor(const void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#isReadOnly)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_read_only(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_read_only(const void* self);
 
 /// Inherited from QTextEdit
 ///
@@ -242,19 +242,19 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_text_interaction_fl
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#textInteractionFlags)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
 /// @return flag of enum Qt__TextInteractionFlag
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_text_interaction_flags(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_text_interaction_flags(const void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#fontPointSize)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-double k_textautocorrectionwidgets__autocorrectiontextedit_font_point_size(void* self);
+double k_textautocorrectionwidgets__autocorrectiontextedit_font_point_size(const void* self);
 
 /// Inherited from QTextEdit
 ///
@@ -262,67 +262,67 @@ double k_textautocorrectionwidgets__autocorrectiontextedit_font_point_size(void*
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_font_family(void* self);
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_font_family(const void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#fontWeight)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_font_weight(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_font_weight(const void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#fontUnderline)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_font_underline(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_font_underline(const void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#fontItalic)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_font_italic(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_font_italic(const void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#textColor)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QColor* k_textautocorrectionwidgets__autocorrectiontextedit_text_color(void* self);
+QColor* k_textautocorrectionwidgets__autocorrectiontextedit_text_color(const void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#textBackgroundColor)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QColor* k_textautocorrectionwidgets__autocorrectiontextedit_text_background_color(void* self);
+QColor* k_textautocorrectionwidgets__autocorrectiontextedit_text_background_color(const void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#currentFont)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QFont* k_textautocorrectionwidgets__autocorrectiontextedit_current_font(void* self);
+QFont* k_textautocorrectionwidgets__autocorrectiontextedit_current_font(const void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#alignment)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_alignment(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_alignment(const void* self);
 
 /// Inherited from QTextEdit
 ///
@@ -331,7 +331,7 @@ int32_t k_textautocorrectionwidgets__autocorrectiontextedit_alignment(void* self
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param modifier QTextCharFormat*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_merge_current_char_format(void* self, void* modifier);
+void k_textautocorrectionwidgets__autocorrectiontextedit_merge_current_char_format(void* self, const void* modifier);
 
 /// Inherited from QTextEdit
 ///
@@ -340,25 +340,25 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_merge_current_char_form
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param format QTextCharFormat*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_current_char_format(void* self, void* format);
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_current_char_format(void* self, const void* format);
 
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#currentCharFormat)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QTextCharFormat* k_textautocorrectionwidgets__autocorrectiontextedit_current_char_format(void* self);
+QTextCharFormat* k_textautocorrectionwidgets__autocorrectiontextedit_current_char_format(const void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#autoFormatting)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
 /// @return flag of enum QTextEdit__AutoFormattingFlag
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_auto_formatting(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_auto_formatting(const void* self);
 
 /// Inherited from QTextEdit
 ///
@@ -373,9 +373,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_auto_formatting(voi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#tabChangesFocus)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_tab_changes_focus(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_tab_changes_focus(const void* self);
 
 /// Inherited from QTextEdit
 ///
@@ -401,17 +401,17 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_document_title(void
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_document_title(void* self);
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_document_title(const void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#isUndoRedoEnabled)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_undo_redo_enabled(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_undo_redo_enabled(const void* self);
 
 /// Inherited from QTextEdit
 ///
@@ -426,11 +426,11 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_undo_redo_enabled(v
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#lineWrapMode)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
 /// @return enum QTextEdit__LineWrapMode
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_line_wrap_mode(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_line_wrap_mode(const void* self);
 
 /// Inherited from QTextEdit
 ///
@@ -445,9 +445,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_line_wrap_mode(void
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#lineWrapColumnOrWidth)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_line_wrap_column_or_width(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_line_wrap_column_or_width(const void* self);
 
 /// Inherited from QTextEdit
 ///
@@ -462,11 +462,11 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_line_wrap_column_or
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#wordWrapMode)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
 /// @return enum QTextOption__WrapMode
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_word_wrap_mode(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_word_wrap_mode(const void* self);
 
 /// Inherited from QTextEdit
 ///
@@ -493,7 +493,7 @@ bool k_textautocorrectionwidgets__autocorrectiontextedit_find(void* self, const 
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param exp QRegularExpression*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_find2(void* self, void* exp);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_find2(void* self, const void* exp);
 
 /// Inherited from QTextEdit
 ///
@@ -501,9 +501,9 @@ bool k_textautocorrectionwidgets__autocorrectiontextedit_find2(void* self, void*
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_to_plain_text(void* self);
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_to_plain_text(const void* self);
 
 /// Inherited from QTextEdit
 ///
@@ -511,9 +511,9 @@ const char* k_textautocorrectionwidgets__autocorrectiontextedit_to_plain_text(vo
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_to_html(void* self);
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_to_html(const void* self);
 
 /// Inherited from QTextEdit
 ///
@@ -521,9 +521,9 @@ const char* k_textautocorrectionwidgets__autocorrectiontextedit_to_html(void* se
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_to_markdown(void* self);
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_to_markdown(const void* self);
 
 /// Inherited from QTextEdit
 ///
@@ -548,33 +548,33 @@ QMenu* k_textautocorrectionwidgets__autocorrectiontextedit_create_standard_conte
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param position QPoint*
 ///
-QMenu* k_textautocorrectionwidgets__autocorrectiontextedit_create_standard_context_menu2(void* self, void* position);
+QMenu* k_textautocorrectionwidgets__autocorrectiontextedit_create_standard_context_menu2(void* self, const void* position);
 
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#cursorForPosition)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param pos QPoint*
 ///
-QTextCursor* k_textautocorrectionwidgets__autocorrectiontextedit_cursor_for_position(void* self, void* pos);
+QTextCursor* k_textautocorrectionwidgets__autocorrectiontextedit_cursor_for_position(const void* self, const void* pos);
 
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#cursorRect)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param cursor QTextCursor*
 ///
-QRect* k_textautocorrectionwidgets__autocorrectiontextedit_cursor_rect(void* self, void* cursor);
+QRect* k_textautocorrectionwidgets__autocorrectiontextedit_cursor_rect(const void* self, const void* cursor);
 
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#cursorRect)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QRect* k_textautocorrectionwidgets__autocorrectiontextedit_cursor_rect2(void* self);
+QRect* k_textautocorrectionwidgets__autocorrectiontextedit_cursor_rect2(const void* self);
 
 /// Inherited from QTextEdit
 ///
@@ -582,18 +582,18 @@ QRect* k_textautocorrectionwidgets__autocorrectiontextedit_cursor_rect2(void* se
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param pos QPoint*
 ///
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_anchor_at(void* self, void* pos);
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_anchor_at(const void* self, const void* pos);
 
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#overwriteMode)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_overwrite_mode(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_overwrite_mode(const void* self);
 
 /// Inherited from QTextEdit
 ///
@@ -608,9 +608,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_overwrite_mode(void
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#tabStopDistance)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-double k_textautocorrectionwidgets__autocorrectiontextedit_tab_stop_distance(void* self);
+double k_textautocorrectionwidgets__autocorrectiontextedit_tab_stop_distance(const void* self);
 
 /// Inherited from QTextEdit
 ///
@@ -625,9 +625,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_tab_stop_distance(v
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#cursorWidth)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_cursor_width(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_cursor_width(const void* self);
 
 /// Inherited from QTextEdit
 ///
@@ -642,9 +642,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_cursor_width(void* 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#acceptRichText)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_accept_rich_text(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_accept_rich_text(const void* self);
 
 /// Inherited from QTextEdit
 ///
@@ -668,11 +668,11 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_extra_selections(vo
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#extraSelections)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
 /// @return libqt_list of QTextEdit__ExtraSelection*
 ///
-libqt_list k_textautocorrectionwidgets__autocorrectiontextedit_extra_selections(void* self);
+libqt_list k_textautocorrectionwidgets__autocorrectiontextedit_extra_selections(const void* self);
 
 /// Inherited from QTextEdit
 ///
@@ -687,28 +687,28 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_move_cursor(void* self,
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#canPaste)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_can_paste(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_can_paste(const void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#print)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param printer QPagedPaintDevice*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_print(void* self, void* printer);
+void k_textautocorrectionwidgets__autocorrectiontextedit_print(const void* self, void* printer);
 
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#inputMethodQuery)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param query enum Qt__InputMethodQuery
 /// @param argument QVariant*
 ///
-QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_input_method_query2(void* self, int32_t query, void* argument);
+QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_input_method_query2(const void* self, int32_t query, void* argument);
 
 /// Inherited from QTextEdit
 ///
@@ -762,7 +762,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_font_italic(void* s
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param c QColor*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_text_color(void* self, void* c);
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_text_color(void* self, const void* c);
 
 /// Inherited from QTextEdit
 ///
@@ -771,7 +771,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_text_color(void* se
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param c QColor*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_text_background_color(void* self, void* c);
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_text_background_color(void* self, const void* c);
 
 /// Inherited from QTextEdit
 ///
@@ -780,7 +780,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_text_background_col
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param f QFont*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_current_font(void* self, void* f);
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_current_font(void* self, const void* f);
 
 /// Inherited from QTextEdit
 ///
@@ -995,7 +995,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_redo_available(void*
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param format QTextCharFormat*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_current_char_format_changed(void* self, void* format);
+void k_textautocorrectionwidgets__autocorrectiontextedit_current_char_format_changed(void* self, const void* format);
 
 /// Inherited from QTextEdit
 ///
@@ -1004,7 +1004,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_current_char_format_cha
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param callback void func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self, QTextCharFormat* format)
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_current_char_format_changed(void* self, void (*callback)(void*, void*));
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_current_char_format_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QTextEdit
 ///
@@ -1076,7 +1076,7 @@ bool k_textautocorrectionwidgets__autocorrectiontextedit_find22(void* self, cons
 /// @param exp QRegularExpression*
 /// @param options flag of enum QTextDocument__FindFlag
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_find23(void* self, void* exp, int32_t options);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_find23(void* self, const void* exp, int32_t options);
 
 /// Inherited from QTextEdit
 ///
@@ -1084,10 +1084,10 @@ bool k_textautocorrectionwidgets__autocorrectiontextedit_find23(void* self, void
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param features flag of enum QTextDocument__MarkdownFeature
 ///
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_to_markdown1(void* self, int32_t features);
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_to_markdown1(const void* self, int32_t features);
 
 /// Inherited from QTextEdit
 ///
@@ -1121,11 +1121,11 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_zoom_out1(void* self, i
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#verticalScrollBarPolicy)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
 /// @return enum Qt__ScrollBarPolicy
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_vertical_scroll_bar_policy(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_vertical_scroll_bar_policy(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1140,9 +1140,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_vertical_scroll_bar
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#verticalScrollBar)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QScrollBar* k_textautocorrectionwidgets__autocorrectiontextedit_vertical_scroll_bar(void* self);
+QScrollBar* k_textautocorrectionwidgets__autocorrectiontextedit_vertical_scroll_bar(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1157,11 +1157,11 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_vertical_scroll_bar
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#horizontalScrollBarPolicy)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
 /// @return enum Qt__ScrollBarPolicy
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_horizontal_scroll_bar_policy(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_horizontal_scroll_bar_policy(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1176,9 +1176,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_horizontal_scroll_b
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#horizontalScrollBar)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QScrollBar* k_textautocorrectionwidgets__autocorrectiontextedit_horizontal_scroll_bar(void* self);
+QScrollBar* k_textautocorrectionwidgets__autocorrectiontextedit_horizontal_scroll_bar(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1193,9 +1193,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_horizontal_scroll_b
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#cornerWidget)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_corner_widget(void* self);
+QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_corner_widget(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1231,9 +1231,9 @@ libqt_list k_textautocorrectionwidgets__autocorrectiontextedit_scroll_bar_widget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewport)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_viewport(void* self);
+QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_viewport(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1248,19 +1248,19 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_viewport(void* self
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#maximumViewportSize)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QSize* k_textautocorrectionwidgets__autocorrectiontextedit_maximum_viewport_size(void* self);
+QSize* k_textautocorrectionwidgets__autocorrectiontextedit_maximum_viewport_size(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#sizeAdjustPolicy)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
 /// @return enum QAbstractScrollArea__SizeAdjustPolicy
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_size_adjust_policy(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_size_adjust_policy(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1275,9 +1275,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_size_adjust_policy(
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameStyle)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_frame_style(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_frame_style(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -1292,19 +1292,19 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_frame_style(void* s
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameWidth)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_frame_width(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_frame_width(const void* self);
 
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameShape)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
 /// @return enum QFrame__Shape
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_frame_shape(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_frame_shape(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -1319,11 +1319,11 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_frame_shape(void* s
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameShadow)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
 /// @return enum QFrame__Shadow
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_frame_shadow(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_frame_shadow(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -1338,9 +1338,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_frame_shadow(void* 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#lineWidth)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_line_width(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_line_width(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -1355,9 +1355,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_line_width(void* se
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#midLineWidth)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_mid_line_width(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_mid_line_width(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -1372,9 +1372,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_mid_line_width(void
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameRect)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QRect* k_textautocorrectionwidgets__autocorrectiontextedit_frame_rect(void* self);
+QRect* k_textautocorrectionwidgets__autocorrectiontextedit_frame_rect(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -1383,7 +1383,7 @@ QRect* k_textautocorrectionwidgets__autocorrectiontextedit_frame_rect(void* self
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param frameRect QRect*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_frame_rect(void* self, void* frameRect);
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_frame_rect(void* self, const void* frameRect);
 
 /// Inherited from QWidget
 ///
@@ -1405,9 +1405,9 @@ TextAutoCorrectionWidgets__AutoCorrectionTextEdit* k_textautocorrectionwidgets__
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-uintptr_t k_textautocorrectionwidgets__autocorrectiontextedit_win_id(void* self);
+uintptr_t k_textautocorrectionwidgets__autocorrectiontextedit_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1421,25 +1421,25 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_create_win_id(void* sel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-uintptr_t k_textautocorrectionwidgets__autocorrectiontextedit_internal_win_id(void* self);
+uintptr_t k_textautocorrectionwidgets__autocorrectiontextedit_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-uintptr_t k_textautocorrectionwidgets__autocorrectiontextedit_effective_win_id(void* self);
+uintptr_t k_textautocorrectionwidgets__autocorrectiontextedit_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QStyle* k_textautocorrectionwidgets__autocorrectiontextedit_style(void* self);
+QStyle* k_textautocorrectionwidgets__autocorrectiontextedit_style(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1454,35 +1454,35 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_style(void* self, v
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_top_level(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_window(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_modal(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_window_modality(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1497,18 +1497,18 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_window_modality(voi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_enabled(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param param1 QWidget*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_enabled_to(void* self, void* param1);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1541,153 +1541,153 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_window_modified(voi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QRect* k_textautocorrectionwidgets__autocorrectiontextedit_frame_geometry(void* self);
+QRect* k_textautocorrectionwidgets__autocorrectiontextedit_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-const QRect* k_textautocorrectionwidgets__autocorrectiontextedit_geometry(void* self);
+const QRect* k_textautocorrectionwidgets__autocorrectiontextedit_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QRect* k_textautocorrectionwidgets__autocorrectiontextedit_normal_geometry(void* self);
+QRect* k_textautocorrectionwidgets__autocorrectiontextedit_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_x(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_y(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QPoint* k_textautocorrectionwidgets__autocorrectiontextedit_pos(void* self);
+QPoint* k_textautocorrectionwidgets__autocorrectiontextedit_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QSize* k_textautocorrectionwidgets__autocorrectiontextedit_frame_size(void* self);
+QSize* k_textautocorrectionwidgets__autocorrectiontextedit_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QSize* k_textautocorrectionwidgets__autocorrectiontextedit_size(void* self);
+QSize* k_textautocorrectionwidgets__autocorrectiontextedit_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_width(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_height(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QRect* k_textautocorrectionwidgets__autocorrectiontextedit_rect(void* self);
+QRect* k_textautocorrectionwidgets__autocorrectiontextedit_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QRect* k_textautocorrectionwidgets__autocorrectiontextedit_children_rect(void* self);
+QRect* k_textautocorrectionwidgets__autocorrectiontextedit_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QRegion* k_textautocorrectionwidgets__autocorrectiontextedit_children_region(void* self);
+QRegion* k_textautocorrectionwidgets__autocorrectiontextedit_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QSize* k_textautocorrectionwidgets__autocorrectiontextedit_minimum_size(void* self);
+QSize* k_textautocorrectionwidgets__autocorrectiontextedit_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QSize* k_textautocorrectionwidgets__autocorrectiontextedit_maximum_size(void* self);
+QSize* k_textautocorrectionwidgets__autocorrectiontextedit_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_minimum_width(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_minimum_height(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_maximum_width(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_maximum_height(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1696,7 +1696,7 @@ int32_t k_textautocorrectionwidgets__autocorrectiontextedit_maximum_height(void*
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param minimumSize QSize*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_minimum_size(void* self, void* minimumSize);
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -1715,7 +1715,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_minimum_size2(void*
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param maximumSize QSize*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_maximum_size(void* self, void* maximumSize);
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -1767,9 +1767,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_maximum_height(void
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QSize* k_textautocorrectionwidgets__autocorrectiontextedit_size_increment(void* self);
+QSize* k_textautocorrectionwidgets__autocorrectiontextedit_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1778,7 +1778,7 @@ QSize* k_textautocorrectionwidgets__autocorrectiontextedit_size_increment(void* 
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param sizeIncrement QSize*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_size_increment(void* self, void* sizeIncrement);
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -1794,9 +1794,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_size_increment2(voi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QSize* k_textautocorrectionwidgets__autocorrectiontextedit_base_size(void* self);
+QSize* k_textautocorrectionwidgets__autocorrectiontextedit_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1805,7 +1805,7 @@ QSize* k_textautocorrectionwidgets__autocorrectiontextedit_base_size(void* self)
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param baseSize QSize*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_base_size(void* self, void* baseSize);
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -1824,7 +1824,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_base_size2(void* se
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param fixedSize QSize*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_fixed_size(void* self, void* fixedSize);
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -1858,145 +1858,145 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_fixed_height(void* 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param param1 QPointF*
 ///
-QPointF* k_textautocorrectionwidgets__autocorrectiontextedit_map_to_global(void* self, void* param1);
+QPointF* k_textautocorrectionwidgets__autocorrectiontextedit_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param param1 QPoint*
 ///
-QPoint* k_textautocorrectionwidgets__autocorrectiontextedit_map_to_global2(void* self, void* param1);
+QPoint* k_textautocorrectionwidgets__autocorrectiontextedit_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param param1 QPointF*
 ///
-QPointF* k_textautocorrectionwidgets__autocorrectiontextedit_map_from_global(void* self, void* param1);
+QPointF* k_textautocorrectionwidgets__autocorrectiontextedit_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param param1 QPoint*
 ///
-QPoint* k_textautocorrectionwidgets__autocorrectiontextedit_map_from_global2(void* self, void* param1);
+QPoint* k_textautocorrectionwidgets__autocorrectiontextedit_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param param1 QPointF*
 ///
-QPointF* k_textautocorrectionwidgets__autocorrectiontextedit_map_to_parent(void* self, void* param1);
+QPointF* k_textautocorrectionwidgets__autocorrectiontextedit_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param param1 QPoint*
 ///
-QPoint* k_textautocorrectionwidgets__autocorrectiontextedit_map_to_parent2(void* self, void* param1);
+QPoint* k_textautocorrectionwidgets__autocorrectiontextedit_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param param1 QPointF*
 ///
-QPointF* k_textautocorrectionwidgets__autocorrectiontextedit_map_from_parent(void* self, void* param1);
+QPointF* k_textautocorrectionwidgets__autocorrectiontextedit_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param param1 QPoint*
 ///
-QPoint* k_textautocorrectionwidgets__autocorrectiontextedit_map_from_parent2(void* self, void* param1);
+QPoint* k_textautocorrectionwidgets__autocorrectiontextedit_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_textautocorrectionwidgets__autocorrectiontextedit_map_to(void* self, void* param1, void* param2);
+QPointF* k_textautocorrectionwidgets__autocorrectiontextedit_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_textautocorrectionwidgets__autocorrectiontextedit_map_to2(void* self, void* param1, void* param2);
+QPoint* k_textautocorrectionwidgets__autocorrectiontextedit_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_textautocorrectionwidgets__autocorrectiontextedit_map_from(void* self, void* param1, void* param2);
+QPointF* k_textautocorrectionwidgets__autocorrectiontextedit_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_textautocorrectionwidgets__autocorrectiontextedit_map_from2(void* self, void* param1, void* param2);
+QPoint* k_textautocorrectionwidgets__autocorrectiontextedit_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_window(void* self);
+QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_native_parent_widget(void* self);
+QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_top_level_widget(void* self);
+QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-const QPalette* k_textautocorrectionwidgets__autocorrectiontextedit_palette(void* self);
+const QPalette* k_textautocorrectionwidgets__autocorrectiontextedit_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2005,7 +2005,7 @@ const QPalette* k_textautocorrectionwidgets__autocorrectiontextedit_palette(void
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param palette QPalette*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_palette(void* self, void* palette);
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -2020,11 +2020,11 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_background_role(voi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_background_role(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2039,19 +2039,19 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_foreground_role(voi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_foreground_role(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-const QFont* k_textautocorrectionwidgets__autocorrectiontextedit_font(void* self);
+const QFont* k_textautocorrectionwidgets__autocorrectiontextedit_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2060,31 +2060,31 @@ const QFont* k_textautocorrectionwidgets__autocorrectiontextedit_font(void* self
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param font QFont*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_font(void* self, void* font);
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QFontMetrics* k_textautocorrectionwidgets__autocorrectiontextedit_font_metrics(void* self);
+QFontMetrics* k_textautocorrectionwidgets__autocorrectiontextedit_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QFontInfo* k_textautocorrectionwidgets__autocorrectiontextedit_font_info(void* self);
+QFontInfo* k_textautocorrectionwidgets__autocorrectiontextedit_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QCursor* k_textautocorrectionwidgets__autocorrectiontextedit_cursor(void* self);
+QCursor* k_textautocorrectionwidgets__autocorrectiontextedit_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2093,7 +2093,7 @@ QCursor* k_textautocorrectionwidgets__autocorrectiontextedit_cursor(void* self);
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param cursor QCursor*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_cursor(void* self, void* cursor);
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -2116,17 +2116,17 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_mouse_tracking(void
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_has_mouse_tracking(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_under_mouse(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2141,9 +2141,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_tablet_tracking(voi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_has_tablet_tracking(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2152,7 +2152,7 @@ bool k_textautocorrectionwidgets__autocorrectiontextedit_has_tablet_tracking(voi
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param mask QBitmap*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_mask(void* self, void* mask);
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -2161,15 +2161,15 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_mask(void* self, vo
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param mask QRegion*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_mask2(void* self, void* mask);
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QRegion* k_textautocorrectionwidgets__autocorrectiontextedit_mask(void* self);
+QRegion* k_textautocorrectionwidgets__autocorrectiontextedit_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2209,9 +2209,9 @@ QPixmap* k_textautocorrectionwidgets__autocorrectiontextedit_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QGraphicsEffect* k_textautocorrectionwidgets__autocorrectiontextedit_graphics_effect(void* self);
+QGraphicsEffect* k_textautocorrectionwidgets__autocorrectiontextedit_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2264,9 +2264,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_style_sheet(void* s
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_style_sheet(void* self);
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2274,9 +2274,9 @@ const char* k_textautocorrectionwidgets__autocorrectiontextedit_style_sheet(void
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_window_title(void* self);
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2285,15 +2285,15 @@ const char* k_textautocorrectionwidgets__autocorrectiontextedit_window_title(voi
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param icon QIcon*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_window_icon(void* self, void* icon);
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QIcon* k_textautocorrectionwidgets__autocorrectiontextedit_window_icon(void* self);
+QIcon* k_textautocorrectionwidgets__autocorrectiontextedit_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2310,9 +2310,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_window_icon_text(vo
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_window_icon_text(void* self);
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2329,9 +2329,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_window_role(void* s
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_window_role(void* self);
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2348,9 +2348,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_window_file_path(vo
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_window_file_path(void* self);
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2365,17 +2365,17 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_window_opacity(void
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-double k_textautocorrectionwidgets__autocorrectiontextedit_window_opacity(void* self);
+double k_textautocorrectionwidgets__autocorrectiontextedit_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_window_modified(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2392,9 +2392,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_tool_tip(void* self
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_tool_tip(void* self);
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2409,9 +2409,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_tool_tip_duration(v
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_tool_tip_duration(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2428,9 +2428,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_status_tip(void* se
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_status_tip(void* self);
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2447,9 +2447,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_whats_this(void* se
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_whats_this(void* self);
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2457,9 +2457,9 @@ const char* k_textautocorrectionwidgets__autocorrectiontextedit_whats_this(void*
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_accessible_name(void* self);
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2476,9 +2476,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_accessible_name(voi
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_accessible_description(void* self);
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2502,11 +2502,11 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_layout_direction(vo
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_layout_direction(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2523,15 +2523,15 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_unset_layout_direction(
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param locale QLocale*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_locale(void* self, void* locale);
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QLocale* k_textautocorrectionwidgets__autocorrectiontextedit_locale(void* self);
+QLocale* k_textautocorrectionwidgets__autocorrectiontextedit_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2545,17 +2545,17 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_unset_locale(void* self
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_right_to_left(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_left_to_right(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2569,9 +2569,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_active_window(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2602,11 +2602,11 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_focus2(void* self, 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_focus_policy(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2621,9 +2621,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_focus_policy(void* 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_has_focus(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2647,19 +2647,19 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_focus_proxy(void* s
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_focus_proxy(void* self);
+QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_context_menu_policy(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2685,7 +2685,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_grab_mouse(void* self);
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param param1 QCursor*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_grab_mouse2(void* self, void* param1);
+void k_textautocorrectionwidgets__autocorrectiontextedit_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2718,7 +2718,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_release_keyboard(void* 
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param key QKeySequence*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_grab_shortcut(void* self, void* key);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -2763,9 +2763,9 @@ QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_updates_enabled(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2780,9 +2780,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_updates_enabled(voi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QGraphicsProxyWidget* k_textautocorrectionwidgets__autocorrectiontextedit_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* k_textautocorrectionwidgets__autocorrectiontextedit_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2819,7 +2819,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_update2(void* self, int
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param param1 QRect*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_update3(void* self, void* param1);
+void k_textautocorrectionwidgets__autocorrectiontextedit_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2828,7 +2828,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_update3(void* self, voi
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param param1 QRegion*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_update4(void* self, void* param1);
+void k_textautocorrectionwidgets__autocorrectiontextedit_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2849,7 +2849,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_repaint2(void* self, in
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param param1 QRect*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_repaint3(void* self, void* param1);
+void k_textautocorrectionwidgets__autocorrectiontextedit_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2858,7 +2858,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_repaint3(void* self, vo
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param param1 QRegion*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_repaint4(void* self, void* param1);
+void k_textautocorrectionwidgets__autocorrectiontextedit_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2967,7 +2967,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_move(void* self, int x,
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param param1 QPoint*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_move2(void* self, void* param1);
+void k_textautocorrectionwidgets__autocorrectiontextedit_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2986,7 +2986,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_resize(void* self, int 
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param param1 QSize*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_resize2(void* self, void* param1);
+void k_textautocorrectionwidgets__autocorrectiontextedit_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3007,7 +3007,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_geometry(void* self
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param geometry QRect*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_geometry2(void* self, void* geometry);
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -3015,9 +3015,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_geometry2(void* sel
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-char* k_textautocorrectionwidgets__autocorrectiontextedit_save_geometry(void* self);
+char* k_textautocorrectionwidgets__autocorrectiontextedit_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3040,60 +3040,60 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_adjust_size(void* self)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_visible(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param param1 QWidget*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_visible_to(void* self, void* param1);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_hidden(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_minimized(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_maximized(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_full_screen(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_window_state(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3117,9 +3117,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_override_window_state(v
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QSizePolicy* k_textautocorrectionwidgets__autocorrectiontextedit_size_policy(void* self);
+QSizePolicy* k_textautocorrectionwidgets__autocorrectiontextedit_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3144,9 +3144,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_size_policy2(void* 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QRegion* k_textautocorrectionwidgets__autocorrectiontextedit_visible_region(void* self);
+QRegion* k_textautocorrectionwidgets__autocorrectiontextedit_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3167,31 +3167,31 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_contents_margins(vo
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param margins QMargins*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_contents_margins2(void* self, void* margins);
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QMargins* k_textautocorrectionwidgets__autocorrectiontextedit_contents_margins(void* self);
+QMargins* k_textautocorrectionwidgets__autocorrectiontextedit_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QRect* k_textautocorrectionwidgets__autocorrectiontextedit_contents_rect(void* self);
+QRect* k_textautocorrectionwidgets__autocorrectiontextedit_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QLayout* k_textautocorrectionwidgets__autocorrectiontextedit_layout(void* self);
+QLayout* k_textautocorrectionwidgets__autocorrectiontextedit_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3248,39 +3248,39 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_scroll(void* self, int 
 /// @param dy int
 /// @param param3 QRect*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_scroll2(void* self, int dx, int dy, void* param3);
+void k_textautocorrectionwidgets__autocorrectiontextedit_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_focus_widget(void* self);
+QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_next_in_focus_chain(void* self);
+QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_previous_in_focus_chain(void* self);
+QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_accept_drops(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3342,11 +3342,11 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_remove_action(void* sel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list k_textautocorrectionwidgets__autocorrectiontextedit_actions(void* self);
+libqt_list k_textautocorrectionwidgets__autocorrectiontextedit_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3365,7 +3365,7 @@ QAction* k_textautocorrectionwidgets__autocorrectiontextedit_add_action2(void* s
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* k_textautocorrectionwidgets__autocorrectiontextedit_add_action3(void* self, void* icon, const char* text);
+QAction* k_textautocorrectionwidgets__autocorrectiontextedit_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -3375,7 +3375,7 @@ QAction* k_textautocorrectionwidgets__autocorrectiontextedit_add_action3(void* s
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_textautocorrectionwidgets__autocorrectiontextedit_add_action4(void* self, const char* text, void* shortcut);
+QAction* k_textautocorrectionwidgets__autocorrectiontextedit_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -3386,15 +3386,15 @@ QAction* k_textautocorrectionwidgets__autocorrectiontextedit_add_action4(void* s
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_textautocorrectionwidgets__autocorrectiontextedit_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* k_textautocorrectionwidgets__autocorrectiontextedit_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_parent_widget(void* self);
+QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3409,11 +3409,11 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_window_flags(void* 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_window_flags(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3437,39 +3437,39 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_override_window_flags(v
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_window_type(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param x int
 /// @param y int
 ///
-QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_child_at(void* self, int x, int y);
+QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param p QPoint*
 ///
-QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_child_at2(void* self, void* p);
+QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param p QPointF*
 ///
-QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_child_at3(void* self, void* p);
+QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -3484,35 +3484,35 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_attribute(void* sel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_test_attribute(void* self, int32_t param1);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_ensure_polished(void* self);
+void k_textautocorrectionwidgets__autocorrectiontextedit_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param child QWidget*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_ancestor_of(void* self, void* child);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_auto_fill_background(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3527,25 +3527,25 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_auto_fill_backgroun
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QBackingStore* k_textautocorrectionwidgets__autocorrectiontextedit_backing_store(void* self);
+QBackingStore* k_textautocorrectionwidgets__autocorrectiontextedit_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QWindow* k_textautocorrectionwidgets__autocorrectiontextedit_window_handle(void* self);
+QWindow* k_textautocorrectionwidgets__autocorrectiontextedit_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QScreen* k_textautocorrectionwidgets__autocorrectiontextedit_screen(void* self);
+QScreen* k_textautocorrectionwidgets__autocorrectiontextedit_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3589,7 +3589,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_window_title_changed
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param icon QIcon*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_window_icon_changed(void* self, void* icon);
+void k_textautocorrectionwidgets__autocorrectiontextedit_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -3598,7 +3598,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_window_icon_changed(voi
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param callback void func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self, QIcon* icon)
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -3625,7 +3625,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_window_icon_text_cha
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param pos QPoint*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_custom_context_menu_requested(void* self, void* pos);
+void k_textautocorrectionwidgets__autocorrectiontextedit_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -3634,17 +3634,17 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_custom_context_menu_req
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param callback void func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self, QPoint* pos)
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_input_method_hints(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3663,7 +3663,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_input_method_hints(
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_render22(void* self, void* target, void* targetOffset);
+void k_textautocorrectionwidgets__autocorrectiontextedit_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -3674,7 +3674,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_render22(void* self, vo
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void k_textautocorrectionwidgets__autocorrectiontextedit_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -3686,7 +3686,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_render3(void* self, voi
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_textautocorrectionwidgets__autocorrectiontextedit_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3696,7 +3696,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_render4(void* self, voi
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_render23(void* self, void* painter, void* targetOffset);
+void k_textautocorrectionwidgets__autocorrectiontextedit_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -3707,7 +3707,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_render23(void* self, vo
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void k_textautocorrectionwidgets__autocorrectiontextedit_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -3719,7 +3719,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_render32(void* self, vo
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_textautocorrectionwidgets__autocorrectiontextedit_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3728,7 +3728,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_render42(void* self, vo
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param rectangle QRect*
 ///
-QPixmap* k_textautocorrectionwidgets__autocorrectiontextedit_grab1(void* self, void* rectangle);
+QPixmap* k_textautocorrectionwidgets__autocorrectiontextedit_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -3748,7 +3748,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_grab_gesture2(void* sel
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -3815,9 +3815,9 @@ QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_create_window_conta
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_object_name(void* self);
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3832,33 +3832,33 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_object_name(void* s
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_widget_type(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_window_type(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_quick_item_type(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_signals_blocked(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3873,9 +3873,9 @@ bool k_textautocorrectionwidgets__autocorrectiontextedit_block_signals(void* sel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QThread* k_textautocorrectionwidgets__autocorrectiontextedit_thread(void* self);
+QThread* k_textautocorrectionwidgets__autocorrectiontextedit_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3926,11 +3926,11 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_kill_timer2(void* self,
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_textautocorrectionwidgets__autocorrectiontextedit_children(void* self);
+libqt_list k_textautocorrectionwidgets__autocorrectiontextedit_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3959,7 +3959,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_remove_event_filter(voi
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_textautocorrectionwidgets__autocorrectiontextedit_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_textautocorrectionwidgets__autocorrectiontextedit_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3970,18 +3970,18 @@ QMetaObject__Connection* k_textautocorrectionwidgets__autocorrectiontextedit_con
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_textautocorrectionwidgets__autocorrectiontextedit_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_textautocorrectionwidgets__autocorrectiontextedit_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_textautocorrectionwidgets__autocorrectiontextedit_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_textautocorrectionwidgets__autocorrectiontextedit_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3992,7 +3992,7 @@ QMetaObject__Connection* k_textautocorrectionwidgets__autocorrectiontextedit_con
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4003,24 +4003,24 @@ bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect(void* sender
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect3(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param receiver QObject*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect4(void* self, void* receiver);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -4028,23 +4028,23 @@ bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect4(void* self,
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect5(void* param1);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_dump_object_tree(void* self);
+void k_textautocorrectionwidgets__autocorrectiontextedit_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_dump_object_info(void* self);
+void k_textautocorrectionwidgets__autocorrectiontextedit_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4054,16 +4054,16 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_dump_object_info(void* 
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_set_property(void* self, const char* name, void* value);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param name const char*
 ///
-QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_property(void* self, const char* name);
+QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -4071,9 +4071,9 @@ QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_property(void* sel
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-const char** k_textautocorrectionwidgets__autocorrectiontextedit_dynamic_property_names(void* self);
+const char** k_textautocorrectionwidgets__autocorrectiontextedit_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4087,9 +4087,9 @@ QBindingStorage* k_textautocorrectionwidgets__autocorrectiontextedit_binding_sto
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-const QBindingStorage* k_textautocorrectionwidgets__autocorrectiontextedit_binding_storage2(void* self);
+const QBindingStorage* k_textautocorrectionwidgets__autocorrectiontextedit_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4112,18 +4112,18 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_destroyed(void* self
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QObject* k_textautocorrectionwidgets__autocorrectiontextedit_parent(void* self);
+QObject* k_textautocorrectionwidgets__autocorrectiontextedit_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param classname const char*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_inherits(void* self, const char* classname);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -4163,7 +4163,7 @@ int32_t k_textautocorrectionwidgets__autocorrectiontextedit_start_timer23(void* 
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_textautocorrectionwidgets__autocorrectiontextedit_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_textautocorrectionwidgets__autocorrectiontextedit_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -4175,59 +4175,59 @@ QMetaObject__Connection* k_textautocorrectionwidgets__autocorrectiontextedit_con
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_textautocorrectionwidgets__autocorrectiontextedit_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_textautocorrectionwidgets__autocorrectiontextedit_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_textautocorrectionwidgets__autocorrectiontextedit_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_textautocorrectionwidgets__autocorrectiontextedit_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param signal const char*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect1(void* self, const char* signal);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect23(void* self, void* receiver, const char* member);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4251,89 +4251,89 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_destroyed1(void* sel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_painting_active(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_width_m_m(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_height_m_m(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_logical_dpi_x(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_logical_dpi_y(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_physical_dpi_x(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_physical_dpi_y(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-double k_textautocorrectionwidgets__autocorrectiontextedit_device_pixel_ratio(void* self);
+double k_textautocorrectionwidgets__autocorrectiontextedit_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-double k_textautocorrectionwidgets__autocorrectiontextedit_device_pixel_ratio_f(void* self);
+double k_textautocorrectionwidgets__autocorrectiontextedit_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_color_count(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_depth(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -4360,7 +4360,7 @@ int32_t k_textautocorrectionwidgets__autocorrectiontextedit_encode_metric_f(int3
 /// @param type int
 /// @param name QUrl*
 ///
-QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_load_resource(void* self, int type, void* name);
+QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_load_resource(void* self, int type, const void* name);
 
 /// Inherited from QTextEdit
 ///
@@ -4372,7 +4372,7 @@ QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_load_resource(void
 /// @param type int
 /// @param name QUrl*
 ///
-QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_super_load_resource(void* self, int type, void* name);
+QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_super_load_resource(void* self, int type, const void* name);
 
 /// Inherited from QTextEdit
 ///
@@ -4385,7 +4385,7 @@ QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_super_load_resourc
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_load_resource(void* self, QVariant* (*callback)(void*, int, void*));
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_load_resource(void* self, QVariant* (*callback)(void*, int, const void*));
 
 /// Inherited from QTextEdit
 ///
@@ -4393,10 +4393,10 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_load_resource(void* 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param property enum Qt__InputMethodQuery
 ///
-QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_input_method_query(void* self, int32_t property);
+QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_input_method_query(const void* self, int32_t property);
 
 /// Inherited from QTextEdit
 ///
@@ -4404,10 +4404,10 @@ QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_input_method_query
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param property enum Qt__InputMethodQuery
 ///
-QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_super_input_method_query(void* self, int32_t property);
+QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_super_input_method_query(const void* self, int32_t property);
 
 /// Inherited from QTextEdit
 ///
@@ -4415,12 +4415,12 @@ QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_super_input_method
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param callback QVariant* func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self, enum Qt__InputMethodQuery property)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QTextEdit
 ///
@@ -5088,9 +5088,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_wheel_event(void* se
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QMimeData* k_textautocorrectionwidgets__autocorrectiontextedit_create_mime_data_from_selection(void* self);
+QMimeData* k_textautocorrectionwidgets__autocorrectiontextedit_create_mime_data_from_selection(const void* self);
 
 /// Inherited from QTextEdit
 ///
@@ -5098,9 +5098,9 @@ QMimeData* k_textautocorrectionwidgets__autocorrectiontextedit_create_mime_data_
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QMimeData* k_textautocorrectionwidgets__autocorrectiontextedit_super_create_mime_data_from_selection(void* self);
+QMimeData* k_textautocorrectionwidgets__autocorrectiontextedit_super_create_mime_data_from_selection(const void* self);
 
 /// Inherited from QTextEdit
 ///
@@ -5108,10 +5108,10 @@ QMimeData* k_textautocorrectionwidgets__autocorrectiontextedit_super_create_mime
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
-/// @param callback QMimeData* func()
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param callback QMimeData* func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self)
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_create_mime_data_from_selection(void* self, QMimeData* (*callback)());
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_create_mime_data_from_selection(const void* self, QMimeData* (*callback)(const void*));
 
 /// Inherited from QTextEdit
 ///
@@ -5119,10 +5119,10 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_create_mime_data_fro
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param source QMimeData*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_can_insert_from_mime_data(void* self, void* source);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_can_insert_from_mime_data(const void* self, const void* source);
 
 /// Inherited from QTextEdit
 ///
@@ -5130,10 +5130,10 @@ bool k_textautocorrectionwidgets__autocorrectiontextedit_can_insert_from_mime_da
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param source QMimeData*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_super_can_insert_from_mime_data(void* self, void* source);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_super_can_insert_from_mime_data(const void* self, const void* source);
 
 /// Inherited from QTextEdit
 ///
@@ -5141,10 +5141,10 @@ bool k_textautocorrectionwidgets__autocorrectiontextedit_super_can_insert_from_m
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param callback bool func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self, QMimeData* source)
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_can_insert_from_mime_data(void* self, bool (*callback)(void*, void*));
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_can_insert_from_mime_data(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QTextEdit
 ///
@@ -5155,7 +5155,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_can_insert_from_mime
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param source QMimeData*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_insert_from_mime_data(void* self, void* source);
+void k_textautocorrectionwidgets__autocorrectiontextedit_insert_from_mime_data(void* self, const void* source);
 
 /// Inherited from QTextEdit
 ///
@@ -5166,7 +5166,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_insert_from_mime_data(v
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param source QMimeData*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_super_insert_from_mime_data(void* self, void* source);
+void k_textautocorrectionwidgets__autocorrectiontextedit_super_insert_from_mime_data(void* self, const void* source);
 
 /// Inherited from QTextEdit
 ///
@@ -5177,7 +5177,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_super_insert_from_mime_
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param callback void func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self, QMimeData* source)
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_insert_from_mime_data(void* self, void (*callback)(void*, void*));
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_insert_from_mime_data(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QTextEdit
 ///
@@ -5256,7 +5256,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_scroll_contents_by(v
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param cursor QTextCursor*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_do_set_text_cursor(void* self, void* cursor);
+void k_textautocorrectionwidgets__autocorrectiontextedit_do_set_text_cursor(void* self, const void* cursor);
 
 /// Inherited from QTextEdit
 ///
@@ -5267,7 +5267,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_do_set_text_cursor(void
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param cursor QTextCursor*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_super_do_set_text_cursor(void* self, void* cursor);
+void k_textautocorrectionwidgets__autocorrectiontextedit_super_do_set_text_cursor(void* self, const void* cursor);
 
 /// Inherited from QTextEdit
 ///
@@ -5278,7 +5278,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_super_do_set_text_curso
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param callback void func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self, QTextCursor* cursor)
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_do_set_text_cursor(void* self, void (*callback)(void*, void*));
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_do_set_text_cursor(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5286,9 +5286,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_do_set_text_cursor(v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QSize* k_textautocorrectionwidgets__autocorrectiontextedit_minimum_size_hint(void* self);
+QSize* k_textautocorrectionwidgets__autocorrectiontextedit_minimum_size_hint(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5296,9 +5296,9 @@ QSize* k_textautocorrectionwidgets__autocorrectiontextedit_minimum_size_hint(voi
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QSize* k_textautocorrectionwidgets__autocorrectiontextedit_super_minimum_size_hint(void* self);
+QSize* k_textautocorrectionwidgets__autocorrectiontextedit_super_minimum_size_hint(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5306,12 +5306,12 @@ QSize* k_textautocorrectionwidgets__autocorrectiontextedit_super_minimum_size_hi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
-/// @param callback QSize* func()
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param callback QSize* func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_minimum_size_hint(void* self, QSize* (*callback)());
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5319,9 +5319,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_minimum_size_hint(vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QSize* k_textautocorrectionwidgets__autocorrectiontextedit_size_hint(void* self);
+QSize* k_textautocorrectionwidgets__autocorrectiontextedit_size_hint(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5329,9 +5329,9 @@ QSize* k_textautocorrectionwidgets__autocorrectiontextedit_size_hint(void* self)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QSize* k_textautocorrectionwidgets__autocorrectiontextedit_super_size_hint(void* self);
+QSize* k_textautocorrectionwidgets__autocorrectiontextedit_super_size_hint(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5339,12 +5339,12 @@ QSize* k_textautocorrectionwidgets__autocorrectiontextedit_super_size_hint(void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
-/// @param callback QSize* func()
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param callback QSize* func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_size_hint(void* self, QSize* (*callback)());
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5453,9 +5453,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_viewport_event(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QSize* k_textautocorrectionwidgets__autocorrectiontextedit_viewport_size_hint(void* self);
+QSize* k_textautocorrectionwidgets__autocorrectiontextedit_viewport_size_hint(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5463,9 +5463,9 @@ QSize* k_textautocorrectionwidgets__autocorrectiontextedit_viewport_size_hint(vo
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QSize* k_textautocorrectionwidgets__autocorrectiontextedit_super_viewport_size_hint(void* self);
+QSize* k_textautocorrectionwidgets__autocorrectiontextedit_super_viewport_size_hint(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5473,12 +5473,12 @@ QSize* k_textautocorrectionwidgets__autocorrectiontextedit_super_viewport_size_h
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
-/// @param callback QSize* func()
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param callback QSize* func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_viewport_size_hint(void* self, QSize* (*callback)());
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QFrame
 ///
@@ -5486,10 +5486,10 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_viewport_size_hint(v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param option QStyleOptionFrame*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_init_style_option(void* self, void* option);
+void k_textautocorrectionwidgets__autocorrectiontextedit_init_style_option(const void* self, void* option);
 
 /// Inherited from QFrame
 ///
@@ -5497,10 +5497,10 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_init_style_option(void*
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param option QStyleOptionFrame*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_super_init_style_option(void* self, void* option);
+void k_textautocorrectionwidgets__autocorrectiontextedit_super_init_style_option(const void* self, void* option);
 
 /// Inherited from QFrame
 ///
@@ -5508,10 +5508,10 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_super_init_style_option
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param callback void func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self, QStyleOptionFrame* option)
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_init_style_option(void* self, void (*callback)(void*, void*));
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_init_style_option(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5519,9 +5519,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_init_style_option(vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_dev_type(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5529,9 +5529,9 @@ int32_t k_textautocorrectionwidgets__autocorrectiontextedit_dev_type(void* self)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_super_dev_type(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_super_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5539,10 +5539,10 @@ int32_t k_textautocorrectionwidgets__autocorrectiontextedit_super_dev_type(void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
-/// @param callback int32_t func()
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param callback int32_t func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self)
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_dev_type(void* self, int32_t (*callback)());
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5583,10 +5583,10 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_set_visible(void* se
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param param1 int
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_height_for_width(void* self, int param1);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -5594,10 +5594,10 @@ int32_t k_textautocorrectionwidgets__autocorrectiontextedit_height_for_width(voi
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param param1 int
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_super_height_for_width(void* self, int param1);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_super_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -5605,10 +5605,10 @@ int32_t k_textautocorrectionwidgets__autocorrectiontextedit_super_height_for_wid
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param callback int32_t func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self, int param1)
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_height_for_width(void* self, int32_t (*callback)(void*, int));
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -5616,9 +5616,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_height_for_width(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_has_height_for_width(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5626,9 +5626,9 @@ bool k_textautocorrectionwidgets__autocorrectiontextedit_has_height_for_width(vo
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_super_has_height_for_width(void* self);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_super_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5636,10 +5636,10 @@ bool k_textautocorrectionwidgets__autocorrectiontextedit_super_has_height_for_wi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
-/// @param callback bool func()
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param callback bool func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self)
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_has_height_for_width(void* self, bool (*callback)());
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_has_height_for_width(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5647,9 +5647,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_has_height_for_width
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QPaintEngine* k_textautocorrectionwidgets__autocorrectiontextedit_paint_engine(void* self);
+QPaintEngine* k_textautocorrectionwidgets__autocorrectiontextedit_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5657,9 +5657,9 @@ QPaintEngine* k_textautocorrectionwidgets__autocorrectiontextedit_paint_engine(v
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QPaintEngine* k_textautocorrectionwidgets__autocorrectiontextedit_super_paint_engine(void* self);
+QPaintEngine* k_textautocorrectionwidgets__autocorrectiontextedit_super_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5667,10 +5667,10 @@ QPaintEngine* k_textautocorrectionwidgets__autocorrectiontextedit_super_paint_en
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
-/// @param callback QPaintEngine* func()
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param callback QPaintEngine* func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self)
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5946,10 +5946,10 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_native_event(void* s
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_metric(void* self, int32_t param1);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5957,10 +5957,10 @@ int32_t k_textautocorrectionwidgets__autocorrectiontextedit_metric(void* self, i
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_super_metric(void* self, int32_t param1);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5968,10 +5968,10 @@ int32_t k_textautocorrectionwidgets__autocorrectiontextedit_super_metric(void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param callback int32_t func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5979,10 +5979,10 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_metric(void* self, i
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param painter QPainter*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_init_painter(void* self, void* painter);
+void k_textautocorrectionwidgets__autocorrectiontextedit_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -5990,10 +5990,10 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_init_painter(void* self
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param painter QPainter*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_super_init_painter(void* self, void* painter);
+void k_textautocorrectionwidgets__autocorrectiontextedit_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -6001,10 +6001,10 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_super_init_painter(void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param callback void func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self, QPainter* painter)
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_init_painter(void* self, void (*callback)(void*, void*));
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -6012,10 +6012,10 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_init_painter(void* s
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_textautocorrectionwidgets__autocorrectiontextedit_redirected(void* self, void* offset);
+QPaintDevice* k_textautocorrectionwidgets__autocorrectiontextedit_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -6023,10 +6023,10 @@ QPaintDevice* k_textautocorrectionwidgets__autocorrectiontextedit_redirected(voi
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_textautocorrectionwidgets__autocorrectiontextedit_super_redirected(void* self, void* offset);
+QPaintDevice* k_textautocorrectionwidgets__autocorrectiontextedit_super_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -6034,10 +6034,10 @@ QPaintDevice* k_textautocorrectionwidgets__autocorrectiontextedit_super_redirect
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param callback QPaintDevice* func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self, QPoint* offset)
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -6045,9 +6045,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_redirected(void* sel
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QPainter* k_textautocorrectionwidgets__autocorrectiontextedit_shared_painter(void* self);
+QPainter* k_textautocorrectionwidgets__autocorrectiontextedit_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6055,9 +6055,9 @@ QPainter* k_textautocorrectionwidgets__autocorrectiontextedit_shared_painter(voi
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QPainter* k_textautocorrectionwidgets__autocorrectiontextedit_super_shared_painter(void* self);
+QPainter* k_textautocorrectionwidgets__autocorrectiontextedit_super_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6065,10 +6065,10 @@ QPainter* k_textautocorrectionwidgets__autocorrectiontextedit_super_shared_paint
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
-/// @param callback QPainter* func()
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param callback QPainter* func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self)
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_shared_painter(void* self, QPainter* (*callback)());
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6145,7 +6145,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_custom_event(void* s
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param signal QMetaMethod*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_connect_notify(void* self, void* signal);
+void k_textautocorrectionwidgets__autocorrectiontextedit_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6156,7 +6156,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_connect_notify(void* se
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param signal QMetaMethod*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_super_connect_notify(void* self, void* signal);
+void k_textautocorrectionwidgets__autocorrectiontextedit_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6167,7 +6167,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_super_connect_notify(vo
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param callback void func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self, QMetaMethod* signal)
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -6178,7 +6178,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_connect_notify(void*
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param signal QMetaMethod*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_disconnect_notify(void* self, void* signal);
+void k_textautocorrectionwidgets__autocorrectiontextedit_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6189,7 +6189,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_disconnect_notify(void*
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param signal QMetaMethod*
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_super_disconnect_notify(void* self, void* signal);
+void k_textautocorrectionwidgets__autocorrectiontextedit_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6200,7 +6200,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_super_disconnect_notify
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param callback void func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self, QMetaMethod* signal)
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QTextEdit
 ///
@@ -6280,9 +6280,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_set_viewport_margins
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QMargins* k_textautocorrectionwidgets__autocorrectiontextedit_viewport_margins(void* self);
+QMargins* k_textautocorrectionwidgets__autocorrectiontextedit_viewport_margins(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6290,9 +6290,9 @@ QMargins* k_textautocorrectionwidgets__autocorrectiontextedit_viewport_margins(v
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QMargins* k_textautocorrectionwidgets__autocorrectiontextedit_super_viewport_margins(void* self);
+QMargins* k_textautocorrectionwidgets__autocorrectiontextedit_super_viewport_margins(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6300,12 +6300,12 @@ QMargins* k_textautocorrectionwidgets__autocorrectiontextedit_super_viewport_mar
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
-/// @param callback QMargins* func()
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param callback QMargins* func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_viewport_margins(void* self, QMargins* (*callback)());
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_viewport_margins(const void* self, QMargins* (*callback)(const void*));
 
 /// Inherited from QFrame
 ///
@@ -6367,9 +6367,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_super_update_micro_focu
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
-/// @param callback void func()
+/// @param callback void func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self)
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_update_micro_focus(void* self, void (*callback)());
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -6398,9 +6398,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_super_create(void* self
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
-/// @param callback void func()
+/// @param callback void func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self)
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_create(void* self, void (*callback)());
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_create(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -6429,9 +6429,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_super_destroy(void* sel
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
-/// @param callback void func()
+/// @param callback void func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self)
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_destroy(void* self, void (*callback)());
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_destroy(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -6460,9 +6460,9 @@ bool k_textautocorrectionwidgets__autocorrectiontextedit_super_focus_next_child(
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
-/// @param callback bool func()
+/// @param callback bool func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self)
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_focus_next_child(void* self, bool (*callback)());
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_focus_next_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -6491,9 +6491,9 @@ bool k_textautocorrectionwidgets__autocorrectiontextedit_super_focus_previous_ch
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
-/// @param callback bool func()
+/// @param callback bool func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self)
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_focus_previous_child(void* self, bool (*callback)());
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_focus_previous_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -6501,9 +6501,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_focus_previous_child
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QObject* k_textautocorrectionwidgets__autocorrectiontextedit_sender(void* self);
+QObject* k_textautocorrectionwidgets__autocorrectiontextedit_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6511,9 +6511,9 @@ QObject* k_textautocorrectionwidgets__autocorrectiontextedit_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-QObject* k_textautocorrectionwidgets__autocorrectiontextedit_super_sender(void* self);
+QObject* k_textautocorrectionwidgets__autocorrectiontextedit_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6521,10 +6521,10 @@ QObject* k_textautocorrectionwidgets__autocorrectiontextedit_super_sender(void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
-/// @param callback QObject* func()
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param callback QObject* func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self)
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_sender(void* self, QObject* (*callback)());
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6532,9 +6532,9 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_sender(void* self, Q
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_sender_signal_index(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6542,9 +6542,9 @@ int32_t k_textautocorrectionwidgets__autocorrectiontextedit_sender_signal_index(
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_super_sender_signal_index(void* self);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6552,10 +6552,10 @@ int32_t k_textautocorrectionwidgets__autocorrectiontextedit_super_sender_signal_
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
-/// @param callback int32_t func()
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param callback int32_t func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self)
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6563,10 +6563,10 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_sender_signal_index(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param signal const char*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_receivers(void* self, const char* signal);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -6574,10 +6574,10 @@ int32_t k_textautocorrectionwidgets__autocorrectiontextedit_receivers(void* self
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param signal const char*
 ///
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_super_receivers(void* self, const char* signal);
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -6585,10 +6585,10 @@ int32_t k_textautocorrectionwidgets__autocorrectiontextedit_super_receivers(void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param callback int32_t func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self, const char* signal)
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -6596,10 +6596,10 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_receivers(void* self
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param signal QMetaMethod*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_signal_connected(void* self, void* signal);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6607,10 +6607,10 @@ bool k_textautocorrectionwidgets__autocorrectiontextedit_is_signal_connected(voi
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param signal QMetaMethod*
 ///
-bool k_textautocorrectionwidgets__autocorrectiontextedit_super_is_signal_connected(void* self, void* signal);
+bool k_textautocorrectionwidgets__autocorrectiontextedit_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6618,10 +6618,10 @@ bool k_textautocorrectionwidgets__autocorrectiontextedit_super_is_signal_connect
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param callback bool func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self, QMetaMethod* signal)
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -6629,11 +6629,11 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_is_signal_connected(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_textautocorrectionwidgets__autocorrectiontextedit_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_textautocorrectionwidgets__autocorrectiontextedit_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -6641,11 +6641,11 @@ double k_textautocorrectionwidgets__autocorrectiontextedit_get_decoded_metric_f(
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_textautocorrectionwidgets__autocorrectiontextedit_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_textautocorrectionwidgets__autocorrectiontextedit_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -6653,10 +6653,10 @@ double k_textautocorrectionwidgets__autocorrectiontextedit_super_get_decoded_met
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param callback double func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

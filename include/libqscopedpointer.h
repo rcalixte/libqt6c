@@ -14,7 +14,7 @@
 ///
 /// @param other QScopedPointerPodDeleter*
 ///
-QScopedPointerPodDeleter* q_scopedpointerpoddeleter_new(void* other);
+QScopedPointerPodDeleter* q_scopedpointerpoddeleter_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscopedpointerpoddeleter.html)
 
@@ -46,10 +46,10 @@ void q_scopedpointerpoddeleter_cleanup(void* pointer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscopedpointerpoddeleter.html#operator-28-29)
 ///
-/// @param self QScopedPointerPodDeleter*
+/// @param self const QScopedPointerPodDeleter*
 /// @param pointer void*
 ///
-void q_scopedpointerpoddeleter_operator_call(void* self, void* pointer);
+void q_scopedpointerpoddeleter_operator_call(const void* self, void* pointer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscopedpointerpoddeleter.html#dtor.QScopedPointerPodDeleter)
 ///

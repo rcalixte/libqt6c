@@ -12,29 +12,29 @@
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-abstracthighlighter.html#definition)
 ///
-/// @param self KSyntaxHighlighting__AbstractHighlighter*
+/// @param self const KSyntaxHighlighting__AbstractHighlighter*
 ///
-KSyntaxHighlighting__Definition* k_syntaxhighlighting__abstracthighlighter_definition(void* self);
+KSyntaxHighlighting__Definition* k_syntaxhighlighting__abstracthighlighter_definition(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-abstracthighlighter.html#setDefinition)
 ///
 /// @param self KSyntaxHighlighting__AbstractHighlighter*
 /// @param def KSyntaxHighlighting__Definition*
 ///
-void k_syntaxhighlighting__abstracthighlighter_set_definition(void* self, void* def);
+void k_syntaxhighlighting__abstracthighlighter_set_definition(void* self, const void* def);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-abstracthighlighter.html#theme)
 ///
-/// @param self KSyntaxHighlighting__AbstractHighlighter*
+/// @param self const KSyntaxHighlighting__AbstractHighlighter*
 ///
-KSyntaxHighlighting__Theme* k_syntaxhighlighting__abstracthighlighter_theme(void* self);
+KSyntaxHighlighting__Theme* k_syntaxhighlighting__abstracthighlighter_theme(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-abstracthighlighter.html#setTheme)
 ///
 /// @param self KSyntaxHighlighting__AbstractHighlighter*
 /// @param theme KSyntaxHighlighting__Theme*
 ///
-void k_syntaxhighlighting__abstracthighlighter_set_theme(void* self, void* theme);
+void k_syntaxhighlighting__abstracthighlighter_set_theme(void* self, const void* theme);
 
 /// Delete this object from C++ memory.
 ///

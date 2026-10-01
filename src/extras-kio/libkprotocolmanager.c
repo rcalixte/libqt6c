@@ -2,7 +2,7 @@
 #include "libkprotocolmanager.hpp"
 #include "libkprotocolmanager.h"
 
-KProtocolManager* k_protocolmanager_new(void* other) {
+KProtocolManager* k_protocolmanager_new(const void* other) {
     return KProtocolManager_New((KProtocolManager*)other);
 }
 
@@ -46,82 +46,82 @@ int32_t k_protocolmanager_minimum_keep_size() {
     return KProtocolManager_MinimumKeepSize();
 }
 
-bool k_protocolmanager_supports_listing(void* url) {
+bool k_protocolmanager_supports_listing(const void* url) {
     return KProtocolManager_SupportsListing((QUrl*)url);
 }
 
-bool k_protocolmanager_supports_reading(void* url) {
+bool k_protocolmanager_supports_reading(const void* url) {
     return KProtocolManager_SupportsReading((QUrl*)url);
 }
 
-bool k_protocolmanager_supports_writing(void* url) {
+bool k_protocolmanager_supports_writing(const void* url) {
     return KProtocolManager_SupportsWriting((QUrl*)url);
 }
 
-bool k_protocolmanager_supports_make_dir(void* url) {
+bool k_protocolmanager_supports_make_dir(const void* url) {
     return KProtocolManager_SupportsMakeDir((QUrl*)url);
 }
 
-bool k_protocolmanager_supports_deleting(void* url) {
+bool k_protocolmanager_supports_deleting(const void* url) {
     return KProtocolManager_SupportsDeleting((QUrl*)url);
 }
 
-bool k_protocolmanager_supports_linking(void* url) {
+bool k_protocolmanager_supports_linking(const void* url) {
     return KProtocolManager_SupportsLinking((QUrl*)url);
 }
 
-bool k_protocolmanager_supports_moving(void* url) {
+bool k_protocolmanager_supports_moving(const void* url) {
     return KProtocolManager_SupportsMoving((QUrl*)url);
 }
 
-bool k_protocolmanager_supports_opening(void* url) {
+bool k_protocolmanager_supports_opening(const void* url) {
     return KProtocolManager_SupportsOpening((QUrl*)url);
 }
 
-bool k_protocolmanager_supports_truncating(void* url) {
+bool k_protocolmanager_supports_truncating(const void* url) {
     return KProtocolManager_SupportsTruncating((QUrl*)url);
 }
 
-bool k_protocolmanager_can_copy_from_file(void* url) {
+bool k_protocolmanager_can_copy_from_file(const void* url) {
     return KProtocolManager_CanCopyFromFile((QUrl*)url);
 }
 
-bool k_protocolmanager_can_copy_to_file(void* url) {
+bool k_protocolmanager_can_copy_to_file(const void* url) {
     return KProtocolManager_CanCopyToFile((QUrl*)url);
 }
 
-bool k_protocolmanager_can_rename_from_file(void* url) {
+bool k_protocolmanager_can_rename_from_file(const void* url) {
     return KProtocolManager_CanRenameFromFile((QUrl*)url);
 }
 
-bool k_protocolmanager_can_rename_to_file(void* url) {
+bool k_protocolmanager_can_rename_to_file(const void* url) {
     return KProtocolManager_CanRenameToFile((QUrl*)url);
 }
 
-bool k_protocolmanager_can_delete_recursive(void* url) {
+bool k_protocolmanager_can_delete_recursive(const void* url) {
     return KProtocolManager_CanDeleteRecursive((QUrl*)url);
 }
 
-int32_t k_protocolmanager_file_name_used_for_copying(void* url) {
+int32_t k_protocolmanager_file_name_used_for_copying(const void* url) {
     return KProtocolManager_FileNameUsedForCopying((QUrl*)url);
 }
 
-const char* k_protocolmanager_default_mimetype(void* url) {
+const char* k_protocolmanager_default_mimetype(const void* url) {
     libqt_string _str = KProtocolManager_DefaultMimetype((QUrl*)url);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t k_protocolmanager_input_type(void* url) {
+int32_t k_protocolmanager_input_type(const void* url) {
     return KProtocolManager_InputType((QUrl*)url);
 }
 
-int32_t k_protocolmanager_output_type(void* url) {
+int32_t k_protocolmanager_output_type(const void* url) {
     return KProtocolManager_OutputType((QUrl*)url);
 }
 
-const char** k_protocolmanager_listing(void* url) {
+const char** k_protocolmanager_listing(const void* url) {
     libqt_list _arr = KProtocolManager_Listing((QUrl*)url);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -138,7 +138,7 @@ const char** k_protocolmanager_listing(void* url) {
     return _ret;
 }
 
-bool k_protocolmanager_is_source_protocol(void* url) {
+bool k_protocolmanager_is_source_protocol(const void* url) {
     return KProtocolManager_IsSourceProtocol((QUrl*)url);
 }
 
@@ -153,14 +153,14 @@ void k_protocolmanager_reparse_configuration() {
     KProtocolManager_ReparseConfiguration();
 }
 
-const char* k_protocolmanager_charset_for(void* url) {
+const char* k_protocolmanager_charset_for(const void* url) {
     libqt_string _str = KProtocolManager_CharsetFor((QUrl*)url);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_protocolmanager_supports_permissions(void* url) {
+bool k_protocolmanager_supports_permissions(const void* url) {
     return KProtocolManager_SupportsPermissions((QUrl*)url);
 }
 

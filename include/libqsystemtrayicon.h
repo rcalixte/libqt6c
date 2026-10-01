@@ -20,7 +20,7 @@ QSystemTrayIcon* q_systemtrayicon_new();
 ///
 /// @param icon QIcon*
 ///
-QSystemTrayIcon* q_systemtrayicon_new2(void* icon);
+QSystemTrayIcon* q_systemtrayicon_new2(const void* icon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsystemtrayicon.html)
 
@@ -37,30 +37,30 @@ QSystemTrayIcon* q_systemtrayicon_new3(void* parent);
 /// @param icon QIcon*
 /// @param parent QObject*
 ///
-QSystemTrayIcon* q_systemtrayicon_new4(void* icon, void* parent);
+QSystemTrayIcon* q_systemtrayicon_new4(const void* icon, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 ///
-const QMetaObject* q_systemtrayicon_meta_object(void* self);
+const QMetaObject* q_systemtrayicon_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSystemTrayIcon*
-/// @param callback const QMetaObject* func()
+/// @param self const QSystemTrayIcon*
+/// @param callback const QMetaObject* func(const QSystemTrayIcon* self)
 ///
-void q_systemtrayicon_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_systemtrayicon_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 ///
-const QMetaObject* q_systemtrayicon_super_meta_object(void* self);
+const QMetaObject* q_systemtrayicon_super_meta_object(const void* self);
 
 /// @param self QSystemTrayIcon*
 /// @param param1 const char*
@@ -121,30 +121,30 @@ void q_systemtrayicon_set_context_menu(void* self, void* menu);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsystemtrayicon.html#contextMenu)
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 ///
-QMenu* q_systemtrayicon_context_menu(void* self);
+QMenu* q_systemtrayicon_context_menu(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsystemtrayicon.html#icon)
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 ///
-QIcon* q_systemtrayicon_icon(void* self);
+QIcon* q_systemtrayicon_icon(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsystemtrayicon.html#setIcon)
 ///
 /// @param self QSystemTrayIcon*
 /// @param icon QIcon*
 ///
-void q_systemtrayicon_set_icon(void* self, void* icon);
+void q_systemtrayicon_set_icon(void* self, const void* icon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsystemtrayicon.html#toolTip)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 ///
-const char* q_systemtrayicon_tool_tip(void* self);
+const char* q_systemtrayicon_tool_tip(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsystemtrayicon.html#setToolTip)
 ///
@@ -163,15 +163,15 @@ bool q_systemtrayicon_supports_messages();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsystemtrayicon.html#geometry)
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 ///
-QRect* q_systemtrayicon_geometry(void* self);
+QRect* q_systemtrayicon_geometry(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsystemtrayicon.html#isVisible)
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 ///
-bool q_systemtrayicon_is_visible(void* self);
+bool q_systemtrayicon_is_visible(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsystemtrayicon.html#setVisible)
 ///
@@ -199,7 +199,7 @@ void q_systemtrayicon_hide(void* self);
 /// @param msg const char*
 /// @param icon QIcon*
 ///
-void q_systemtrayicon_show_message(void* self, const char* title, const char* msg, void* icon);
+void q_systemtrayicon_show_message(void* self, const char* title, const char* msg, const void* icon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsystemtrayicon.html#showMessage)
 ///
@@ -288,7 +288,7 @@ const char* q_systemtrayicon_tr3(const char* s, const char* c, int n);
 /// @param icon QIcon*
 /// @param msecs int
 ///
-void q_systemtrayicon_show_message4(void* self, const char* title, const char* msg, void* icon, int msecs);
+void q_systemtrayicon_show_message4(void* self, const char* title, const char* msg, const void* icon, int msecs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsystemtrayicon.html#showMessage)
 ///
@@ -315,9 +315,9 @@ void q_systemtrayicon_show_message42(void* self, const char* title, const char* 
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 ///
-const char* q_systemtrayicon_object_name(void* self);
+const char* q_systemtrayicon_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -332,33 +332,33 @@ void q_systemtrayicon_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 ///
-bool q_systemtrayicon_is_widget_type(void* self);
+bool q_systemtrayicon_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 ///
-bool q_systemtrayicon_is_window_type(void* self);
+bool q_systemtrayicon_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 ///
-bool q_systemtrayicon_is_quick_item_type(void* self);
+bool q_systemtrayicon_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 ///
-bool q_systemtrayicon_signals_blocked(void* self);
+bool q_systemtrayicon_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -373,9 +373,9 @@ bool q_systemtrayicon_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 ///
-QThread* q_systemtrayicon_thread(void* self);
+QThread* q_systemtrayicon_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -426,11 +426,11 @@ void q_systemtrayicon_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_systemtrayicon_children(void* self);
+libqt_list q_systemtrayicon_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -468,7 +468,7 @@ void q_systemtrayicon_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_systemtrayicon_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_systemtrayicon_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -479,18 +479,18 @@ QMetaObject__Connection* q_systemtrayicon_connect(void* sender, const char* sign
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_systemtrayicon_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_systemtrayicon_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_systemtrayicon_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_systemtrayicon_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -501,7 +501,7 @@ QMetaObject__Connection* q_systemtrayicon_connect3(void* self, void* sender, con
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_systemtrayicon_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_systemtrayicon_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -512,24 +512,24 @@ bool q_systemtrayicon_disconnect(void* sender, const char* signal, void* receive
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_systemtrayicon_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_systemtrayicon_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 ///
-bool q_systemtrayicon_disconnect3(void* self);
+bool q_systemtrayicon_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 /// @param receiver QObject*
 ///
-bool q_systemtrayicon_disconnect4(void* self, void* receiver);
+bool q_systemtrayicon_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -537,23 +537,23 @@ bool q_systemtrayicon_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_systemtrayicon_disconnect5(void* param1);
+bool q_systemtrayicon_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 ///
-void q_systemtrayicon_dump_object_tree(void* self);
+void q_systemtrayicon_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 ///
-void q_systemtrayicon_dump_object_info(void* self);
+void q_systemtrayicon_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -563,16 +563,16 @@ void q_systemtrayicon_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_systemtrayicon_set_property(void* self, const char* name, void* value);
+bool q_systemtrayicon_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 /// @param name const char*
 ///
-QVariant* q_systemtrayicon_property(void* self, const char* name);
+QVariant* q_systemtrayicon_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -580,9 +580,9 @@ QVariant* q_systemtrayicon_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 ///
-const char** q_systemtrayicon_dynamic_property_names(void* self);
+const char** q_systemtrayicon_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -596,9 +596,9 @@ QBindingStorage* q_systemtrayicon_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 ///
-const QBindingStorage* q_systemtrayicon_binding_storage2(void* self);
+const QBindingStorage* q_systemtrayicon_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -621,18 +621,18 @@ void q_systemtrayicon_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 ///
-QObject* q_systemtrayicon_parent(void* self);
+QObject* q_systemtrayicon_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 /// @param classname const char*
 ///
-bool q_systemtrayicon_inherits(void* self, const char* classname);
+bool q_systemtrayicon_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -672,7 +672,7 @@ int32_t q_systemtrayicon_start_timer23(void* self, int64_t time, int32_t timerTy
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_systemtrayicon_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_systemtrayicon_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -684,59 +684,59 @@ QMetaObject__Connection* q_systemtrayicon_connect5(void* sender, const char* sig
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_systemtrayicon_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_systemtrayicon_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_systemtrayicon_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_systemtrayicon_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 /// @param signal const char*
 ///
-bool q_systemtrayicon_disconnect1(void* self, const char* signal);
+bool q_systemtrayicon_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSystemTrayIcon*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_systemtrayicon_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_systemtrayicon_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_systemtrayicon_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_systemtrayicon_disconnect23(void* self, void* receiver, const char* member);
+bool q_systemtrayicon_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QSystemTrayIcon*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_systemtrayicon_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -899,7 +899,7 @@ void q_systemtrayicon_on_custom_event(void* self, void (*callback)(void*, void*)
 /// @param self QSystemTrayIcon*
 /// @param signal QMetaMethod*
 ///
-void q_systemtrayicon_connect_notify(void* self, void* signal);
+void q_systemtrayicon_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -910,7 +910,7 @@ void q_systemtrayicon_connect_notify(void* self, void* signal);
 /// @param self QSystemTrayIcon*
 /// @param signal QMetaMethod*
 ///
-void q_systemtrayicon_super_connect_notify(void* self, void* signal);
+void q_systemtrayicon_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -921,7 +921,7 @@ void q_systemtrayicon_super_connect_notify(void* self, void* signal);
 /// @param self QSystemTrayIcon*
 /// @param callback void func(QSystemTrayIcon* self, QMetaMethod* signal)
 ///
-void q_systemtrayicon_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_systemtrayicon_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -932,7 +932,7 @@ void q_systemtrayicon_on_connect_notify(void* self, void (*callback)(void*, void
 /// @param self QSystemTrayIcon*
 /// @param signal QMetaMethod*
 ///
-void q_systemtrayicon_disconnect_notify(void* self, void* signal);
+void q_systemtrayicon_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -943,7 +943,7 @@ void q_systemtrayicon_disconnect_notify(void* self, void* signal);
 /// @param self QSystemTrayIcon*
 /// @param signal QMetaMethod*
 ///
-void q_systemtrayicon_super_disconnect_notify(void* self, void* signal);
+void q_systemtrayicon_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -954,7 +954,7 @@ void q_systemtrayicon_super_disconnect_notify(void* self, void* signal);
 /// @param self QSystemTrayIcon*
 /// @param callback void func(QSystemTrayIcon* self, QMetaMethod* signal)
 ///
-void q_systemtrayicon_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_systemtrayicon_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -962,9 +962,9 @@ void q_systemtrayicon_on_disconnect_notify(void* self, void (*callback)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 ///
-QObject* q_systemtrayicon_sender(void* self);
+QObject* q_systemtrayicon_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -972,9 +972,9 @@ QObject* q_systemtrayicon_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 ///
-QObject* q_systemtrayicon_super_sender(void* self);
+QObject* q_systemtrayicon_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -982,10 +982,10 @@ QObject* q_systemtrayicon_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSystemTrayIcon*
-/// @param callback QObject* func()
+/// @param self const QSystemTrayIcon*
+/// @param callback QObject* func(QSystemTrayIcon* self)
 ///
-void q_systemtrayicon_on_sender(void* self, QObject* (*callback)());
+void q_systemtrayicon_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -993,9 +993,9 @@ void q_systemtrayicon_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 ///
-int32_t q_systemtrayicon_sender_signal_index(void* self);
+int32_t q_systemtrayicon_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1003,9 +1003,9 @@ int32_t q_systemtrayicon_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 ///
-int32_t q_systemtrayicon_super_sender_signal_index(void* self);
+int32_t q_systemtrayicon_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1013,10 +1013,10 @@ int32_t q_systemtrayicon_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSystemTrayIcon*
-/// @param callback int32_t func()
+/// @param self const QSystemTrayIcon*
+/// @param callback int32_t func(QSystemTrayIcon* self)
 ///
-void q_systemtrayicon_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_systemtrayicon_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1024,10 +1024,10 @@ void q_systemtrayicon_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 /// @param signal const char*
 ///
-int32_t q_systemtrayicon_receivers(void* self, const char* signal);
+int32_t q_systemtrayicon_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1035,10 +1035,10 @@ int32_t q_systemtrayicon_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 /// @param signal const char*
 ///
-int32_t q_systemtrayicon_super_receivers(void* self, const char* signal);
+int32_t q_systemtrayicon_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1046,10 +1046,10 @@ int32_t q_systemtrayicon_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 /// @param callback int32_t func(QSystemTrayIcon* self, const char* signal)
 ///
-void q_systemtrayicon_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_systemtrayicon_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1057,10 +1057,10 @@ void q_systemtrayicon_on_receivers(void* self, int32_t (*callback)(void*, const 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 /// @param signal QMetaMethod*
 ///
-bool q_systemtrayicon_is_signal_connected(void* self, void* signal);
+bool q_systemtrayicon_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1068,10 +1068,10 @@ bool q_systemtrayicon_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 /// @param signal QMetaMethod*
 ///
-bool q_systemtrayicon_super_is_signal_connected(void* self, void* signal);
+bool q_systemtrayicon_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1079,10 +1079,10 @@ bool q_systemtrayicon_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSystemTrayIcon*
+/// @param self const QSystemTrayIcon*
 /// @param callback bool func(QSystemTrayIcon* self, QMetaMethod* signal)
 ///
-void q_systemtrayicon_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_systemtrayicon_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

@@ -36,7 +36,7 @@ void QSctpServer_SetMaximumChannelCount(QSctpServer* self, int count);
 int QSctpServer_MaximumChannelCount(const QSctpServer* self);
 QSctpSocket* QSctpServer_NextPendingDatagramConnection(QSctpServer* self);
 void QSctpServer_IncomingConnection(QSctpServer* self, intptr_t handle);
-void QSctpServer_OnMetaObject(const QSctpServer* self, intptr_t slot);
+void QSctpServer_OnMetaObject(QSctpServer* self, intptr_t slot);
 QMetaObject* QSctpServer_SuperMetaObject(const QSctpServer* self);
 void QSctpServer_OnMetacast(QSctpServer* self, intptr_t slot);
 void* QSctpServer_SuperMetacast(QSctpServer* self, const char* param1);
@@ -45,7 +45,7 @@ int QSctpServer_SuperMetacall(QSctpServer* self, int param1, int param2, void** 
 void QSctpServer_OnIncomingConnection(QSctpServer* self, intptr_t slot);
 void QSctpServer_SuperIncomingConnection(QSctpServer* self, intptr_t handle);
 bool QSctpServer_HasPendingConnections(const QSctpServer* self);
-void QSctpServer_OnHasPendingConnections(const QSctpServer* self, intptr_t slot);
+void QSctpServer_OnHasPendingConnections(QSctpServer* self, intptr_t slot);
 bool QSctpServer_SuperHasPendingConnections(const QSctpServer* self);
 QTcpSocket* QSctpServer_NextPendingConnection(QSctpServer* self);
 void QSctpServer_OnNextPendingConnection(QSctpServer* self, intptr_t slot);
@@ -72,20 +72,10 @@ void QSctpServer_DisconnectNotify(QSctpServer* self, const QMetaMethod* signal);
 void QSctpServer_OnDisconnectNotify(QSctpServer* self, intptr_t slot);
 void QSctpServer_SuperDisconnectNotify(QSctpServer* self, const QMetaMethod* signal);
 void QSctpServer_AddPendingConnection(QSctpServer* self, QTcpSocket* socket);
-void QSctpServer_OnAddPendingConnection(QSctpServer* self, intptr_t slot);
-void QSctpServer_SuperAddPendingConnection(QSctpServer* self, QTcpSocket* socket);
 QObject* QSctpServer_Sender(const QSctpServer* self);
-void QSctpServer_OnSender(const QSctpServer* self, intptr_t slot);
-QObject* QSctpServer_SuperSender(const QSctpServer* self);
 int QSctpServer_SenderSignalIndex(const QSctpServer* self);
-void QSctpServer_OnSenderSignalIndex(const QSctpServer* self, intptr_t slot);
-int QSctpServer_SuperSenderSignalIndex(const QSctpServer* self);
 int QSctpServer_Receivers(const QSctpServer* self, const char* signal);
-void QSctpServer_OnReceivers(const QSctpServer* self, intptr_t slot);
-int QSctpServer_SuperReceivers(const QSctpServer* self, const char* signal);
 bool QSctpServer_IsSignalConnected(const QSctpServer* self, const QMetaMethod* signal);
-void QSctpServer_OnIsSignalConnected(const QSctpServer* self, intptr_t slot);
-bool QSctpServer_SuperIsSignalConnected(const QSctpServer* self, const QMetaMethod* signal);
 void QSctpServer_Delete(QSctpServer* self);
 
 #ifdef __cplusplus

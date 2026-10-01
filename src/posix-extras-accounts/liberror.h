@@ -20,7 +20,7 @@ Accounts__Error* q_accounts__error_new();
 ///
 /// @param src Accounts__Error*
 ///
-Accounts__Error* q_accounts__error_new2(void* src);
+Accounts__Error* q_accounts__error_new2(const void* src);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Error.html)
 
@@ -44,23 +44,23 @@ Accounts__Error* q_accounts__error_new4(int32_t type, const char* message);
 /// @param self Accounts__Error*
 /// @param src Accounts__Error*
 ///
-void q_accounts__error_operator_assign(void* self, void* src);
+void q_accounts__error_operator_assign(void* self, const void* src);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Error.html)
 ///
-/// @param self Accounts__Error*
+/// @param self const Accounts__Error*
 ///
 /// @return enum Accounts__Error__ErrorType
 ///
-int32_t q_accounts__error_type(void* self);
+int32_t q_accounts__error_type(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Error.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Accounts__Error*
+/// @param self const Accounts__Error*
 ///
-const char* q_accounts__error_message(void* self);
+const char* q_accounts__error_message(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Error.html)
 ///

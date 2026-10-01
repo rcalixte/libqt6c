@@ -47,7 +47,7 @@ KStatefulBrush* k_statefulbrush_new4(int32_t param1, int32_t param2);
 ///
 /// @param param1 QBrush*
 ///
-KStatefulBrush* k_statefulbrush_new5(void* param1);
+KStatefulBrush* k_statefulbrush_new5(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kstatefulbrush.html)
 
@@ -56,7 +56,7 @@ KStatefulBrush* k_statefulbrush_new5(void* param1);
 /// @param param1 QBrush*
 /// @param background QBrush*
 ///
-KStatefulBrush* k_statefulbrush_new6(void* param1, void* background);
+KStatefulBrush* k_statefulbrush_new6(const void* param1, const void* background);
 
 /// [Upstream resources](https://api.kde.org/kstatefulbrush.html)
 
@@ -64,28 +64,28 @@ KStatefulBrush* k_statefulbrush_new6(void* param1, void* background);
 ///
 /// @param param1 KStatefulBrush*
 ///
-KStatefulBrush* k_statefulbrush_new7(void* param1);
+KStatefulBrush* k_statefulbrush_new7(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kstatefulbrush.html#operator-eq)
 ///
 /// @param self KStatefulBrush*
 /// @param param1 KStatefulBrush*
 ///
-void k_statefulbrush_operator_assign(void* self, void* param1);
+void k_statefulbrush_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kstatefulbrush.html#brush)
 ///
-/// @param self KStatefulBrush*
+/// @param self const KStatefulBrush*
 /// @param param1 enum QPalette__ColorGroup
 ///
-QBrush* k_statefulbrush_brush(void* self, int32_t param1);
+QBrush* k_statefulbrush_brush(const void* self, int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kstatefulbrush.html#brush)
 ///
-/// @param self KStatefulBrush*
+/// @param self const KStatefulBrush*
 /// @param param1 QPalette*
 ///
-QBrush* k_statefulbrush_brush2(void* self, void* param1);
+QBrush* k_statefulbrush_brush2(const void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kstatefulbrush.html#dtor.KStatefulBrush)
 ///

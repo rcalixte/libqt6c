@@ -40,7 +40,7 @@ libqt_string KColorSchemeManager_ActiveSchemeId(const KColorSchemeManager* self)
 libqt_string KColorSchemeManager_ActiveSchemeName(const KColorSchemeManager* self);
 KColorSchemeManager* KColorSchemeManager_Instance();
 void KColorSchemeManager_ActivateScheme(KColorSchemeManager* self, const QModelIndex* index);
-void KColorSchemeManager_OnMetaObject(const KColorSchemeManager* self, intptr_t slot);
+void KColorSchemeManager_OnMetaObject(KColorSchemeManager* self, intptr_t slot);
 QMetaObject* KColorSchemeManager_SuperMetaObject(const KColorSchemeManager* self);
 void KColorSchemeManager_OnMetacast(KColorSchemeManager* self, intptr_t slot);
 void* KColorSchemeManager_SuperMetacast(KColorSchemeManager* self, const char* param1);
@@ -68,17 +68,9 @@ void KColorSchemeManager_DisconnectNotify(KColorSchemeManager* self, const QMeta
 void KColorSchemeManager_OnDisconnectNotify(KColorSchemeManager* self, intptr_t slot);
 void KColorSchemeManager_SuperDisconnectNotify(KColorSchemeManager* self, const QMetaMethod* signal);
 QObject* KColorSchemeManager_Sender(const KColorSchemeManager* self);
-void KColorSchemeManager_OnSender(const KColorSchemeManager* self, intptr_t slot);
-QObject* KColorSchemeManager_SuperSender(const KColorSchemeManager* self);
 int KColorSchemeManager_SenderSignalIndex(const KColorSchemeManager* self);
-void KColorSchemeManager_OnSenderSignalIndex(const KColorSchemeManager* self, intptr_t slot);
-int KColorSchemeManager_SuperSenderSignalIndex(const KColorSchemeManager* self);
 int KColorSchemeManager_Receivers(const KColorSchemeManager* self, const char* signal);
-void KColorSchemeManager_OnReceivers(const KColorSchemeManager* self, intptr_t slot);
-int KColorSchemeManager_SuperReceivers(const KColorSchemeManager* self, const char* signal);
 bool KColorSchemeManager_IsSignalConnected(const KColorSchemeManager* self, const QMetaMethod* signal);
-void KColorSchemeManager_OnIsSignalConnected(const KColorSchemeManager* self, intptr_t slot);
-bool KColorSchemeManager_SuperIsSignalConnected(const KColorSchemeManager* self, const QMetaMethod* signal);
 void KColorSchemeManager_Delete(KColorSchemeManager* self);
 
 #ifdef __cplusplus

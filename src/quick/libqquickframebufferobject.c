@@ -23,15 +23,15 @@ QQuickFramebufferObject* q_quickframebufferobject_new2(void* parent) {
     return QQuickFramebufferObject_New2((QQuickItem*)parent);
 }
 
-const QMetaObject* q_quickframebufferobject_meta_object(void* self) {
+const QMetaObject* q_quickframebufferobject_meta_object(const void* self) {
     return QQuickFramebufferObject_MetaObject((QQuickFramebufferObject*)self);
 }
 
-void q_quickframebufferobject_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_quickframebufferobject_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QQuickFramebufferObject_OnMetaObject((QQuickFramebufferObject*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_quickframebufferobject_super_meta_object(void* self) {
+const QMetaObject* q_quickframebufferobject_super_meta_object(const void* self) {
     return QQuickFramebufferObject_SuperMetaObject((QQuickFramebufferObject*)self);
 }
 
@@ -66,7 +66,7 @@ const char* q_quickframebufferobject_tr(const char* s) {
     return _ret;
 }
 
-bool q_quickframebufferobject_texture_follows_item_size(void* self) {
+bool q_quickframebufferobject_texture_follows_item_size(const void* self) {
     return QQuickFramebufferObject_TextureFollowsItemSize((QQuickFramebufferObject*)self);
 }
 
@@ -74,7 +74,7 @@ void q_quickframebufferobject_set_texture_follows_item_size(void* self, bool fol
     QQuickFramebufferObject_SetTextureFollowsItemSize((QQuickFramebufferObject*)self, follows);
 }
 
-bool q_quickframebufferobject_mirror_vertically(void* self) {
+bool q_quickframebufferobject_mirror_vertically(const void* self) {
     return QQuickFramebufferObject_MirrorVertically((QQuickFramebufferObject*)self);
 }
 
@@ -82,39 +82,35 @@ void q_quickframebufferobject_set_mirror_vertically(void* self, bool enable) {
     QQuickFramebufferObject_SetMirrorVertically((QQuickFramebufferObject*)self, enable);
 }
 
-QQuickFramebufferObject__Renderer* q_quickframebufferobject_create_renderer(void* self) {
+QQuickFramebufferObject__Renderer* q_quickframebufferobject_create_renderer(const void* self) {
     return QQuickFramebufferObject_CreateRenderer((QQuickFramebufferObject*)self);
 }
 
-void q_quickframebufferobject_on_create_renderer(void* self, QQuickFramebufferObject__Renderer* (*callback)()) {
+void q_quickframebufferobject_on_create_renderer(const void* self, QQuickFramebufferObject__Renderer* (*callback)(const void*)) {
     QQuickFramebufferObject_OnCreateRenderer((QQuickFramebufferObject*)self, (intptr_t)callback);
 }
 
-QQuickFramebufferObject__Renderer* q_quickframebufferobject_super_create_renderer(void* self) {
-    return QQuickFramebufferObject_SuperCreateRenderer((QQuickFramebufferObject*)self);
-}
-
-bool q_quickframebufferobject_is_texture_provider(void* self) {
+bool q_quickframebufferobject_is_texture_provider(const void* self) {
     return QQuickFramebufferObject_IsTextureProvider((QQuickFramebufferObject*)self);
 }
 
-void q_quickframebufferobject_on_is_texture_provider(void* self, bool (*callback)()) {
+void q_quickframebufferobject_on_is_texture_provider(const void* self, bool (*callback)(const void*)) {
     QQuickFramebufferObject_OnIsTextureProvider((QQuickFramebufferObject*)self, (intptr_t)callback);
 }
 
-bool q_quickframebufferobject_super_is_texture_provider(void* self) {
+bool q_quickframebufferobject_super_is_texture_provider(const void* self) {
     return QQuickFramebufferObject_SuperIsTextureProvider((QQuickFramebufferObject*)self);
 }
 
-QSGTextureProvider* q_quickframebufferobject_texture_provider(void* self) {
+QSGTextureProvider* q_quickframebufferobject_texture_provider(const void* self) {
     return QQuickFramebufferObject_TextureProvider((QQuickFramebufferObject*)self);
 }
 
-void q_quickframebufferobject_on_texture_provider(void* self, QSGTextureProvider* (*callback)()) {
+void q_quickframebufferobject_on_texture_provider(const void* self, QSGTextureProvider* (*callback)(const void*)) {
     QQuickFramebufferObject_OnTextureProvider((QQuickFramebufferObject*)self, (intptr_t)callback);
 }
 
-QSGTextureProvider* q_quickframebufferobject_super_texture_provider(void* self) {
+QSGTextureProvider* q_quickframebufferobject_super_texture_provider(const void* self) {
     return QQuickFramebufferObject_SuperTextureProvider((QQuickFramebufferObject*)self);
 }
 
@@ -122,7 +118,7 @@ void q_quickframebufferobject_release_resources(void* self) {
     QQuickFramebufferObject_ReleaseResources((QQuickFramebufferObject*)self);
 }
 
-void q_quickframebufferobject_on_release_resources(void* self, void (*callback)()) {
+void q_quickframebufferobject_on_release_resources(void* self, void (*callback)(void*)) {
     QQuickFramebufferObject_OnReleaseResources((QQuickFramebufferObject*)self, (intptr_t)callback);
 }
 
@@ -130,15 +126,15 @@ void q_quickframebufferobject_super_release_resources(void* self) {
     QQuickFramebufferObject_SuperReleaseResources((QQuickFramebufferObject*)self);
 }
 
-void q_quickframebufferobject_geometry_change(void* self, void* newGeometry, void* oldGeometry) {
+void q_quickframebufferobject_geometry_change(void* self, const void* newGeometry, const void* oldGeometry) {
     QQuickFramebufferObject_GeometryChange((QQuickFramebufferObject*)self, (QRectF*)newGeometry, (QRectF*)oldGeometry);
 }
 
-void q_quickframebufferobject_on_geometry_change(void* self, void (*callback)(void*, void*, void*)) {
+void q_quickframebufferobject_on_geometry_change(void* self, void (*callback)(void*, const void*, const void*)) {
     QQuickFramebufferObject_OnGeometryChange((QQuickFramebufferObject*)self, (intptr_t)callback);
 }
 
-void q_quickframebufferobject_super_geometry_change(void* self, void* newGeometry, void* oldGeometry) {
+void q_quickframebufferobject_super_geometry_change(void* self, const void* newGeometry, const void* oldGeometry) {
     QQuickFramebufferObject_SuperGeometryChange((QQuickFramebufferObject*)self, (QRectF*)newGeometry, (QRectF*)oldGeometry);
 }
 
@@ -192,11 +188,11 @@ QQuickFramebufferObject* q_quickframebufferobject_from_q_qml_parser_status(void*
     return (QQuickFramebufferObject*)QQuickItem_FromQQmlParserStatus((QQmlParserStatus*)_qqmlparserstatus);
 }
 
-QQuickWindow* q_quickframebufferobject_window(void* self) {
+QQuickWindow* q_quickframebufferobject_window(const void* self) {
     return QQuickItem_Window((QQuickItem*)self);
 }
 
-QQuickItem* q_quickframebufferobject_parent_item(void* self) {
+QQuickItem* q_quickframebufferobject_parent_item(const void* self) {
     return QQuickItem_ParentItem((QQuickItem*)self);
 }
 
@@ -204,11 +200,11 @@ void q_quickframebufferobject_set_parent_item(void* self, void* parent) {
     QQuickItem_SetParentItem((QQuickItem*)self, (QQuickItem*)parent);
 }
 
-void q_quickframebufferobject_stack_before(void* self, void* param1) {
+void q_quickframebufferobject_stack_before(void* self, const void* param1) {
     QQuickItem_StackBefore((QQuickItem*)self, (QQuickItem*)param1);
 }
 
-void q_quickframebufferobject_stack_after(void* self, void* param1) {
+void q_quickframebufferobject_stack_after(void* self, const void* param1) {
     QQuickItem_StackAfter((QQuickItem*)self, (QQuickItem*)param1);
 }
 
@@ -216,12 +212,12 @@ QRectF* q_quickframebufferobject_children_rect(void* self) {
     return QQuickItem_ChildrenRect((QQuickItem*)self);
 }
 
-libqt_list /* of QQuickItem* */ q_quickframebufferobject_child_items(void* self) {
+libqt_list /* of QQuickItem* */ q_quickframebufferobject_child_items(const void* self) {
     libqt_list _arr = QQuickItem_ChildItems((QQuickItem*)self);
     return _arr;
 }
 
-bool q_quickframebufferobject_clip(void* self) {
+bool q_quickframebufferobject_clip(const void* self) {
     return QQuickItem_Clip((QQuickItem*)self);
 }
 
@@ -229,7 +225,7 @@ void q_quickframebufferobject_set_clip(void* self, bool clip) {
     QQuickItem_SetClip((QQuickItem*)self, clip);
 }
 
-const char* q_quickframebufferobject_state(void* self) {
+const char* q_quickframebufferobject_state(const void* self) {
     libqt_string _str = QQuickItem_State((QQuickItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -240,7 +236,7 @@ void q_quickframebufferobject_set_state(void* self, const char* state) {
     QQuickItem_SetState((QQuickItem*)self, qstring(state));
 }
 
-double q_quickframebufferobject_baseline_offset(void* self) {
+double q_quickframebufferobject_baseline_offset(const void* self) {
     return QQuickItem_BaselineOffset((QQuickItem*)self);
 }
 
@@ -248,15 +244,15 @@ void q_quickframebufferobject_set_baseline_offset(void* self, double baselineOff
     QQuickItem_SetBaselineOffset((QQuickItem*)self, baselineOffset);
 }
 
-double q_quickframebufferobject_x(void* self) {
+double q_quickframebufferobject_x(const void* self) {
     return QQuickItem_X((QQuickItem*)self);
 }
 
-double q_quickframebufferobject_y(void* self) {
+double q_quickframebufferobject_y(const void* self) {
     return QQuickItem_Y((QQuickItem*)self);
 }
 
-QPointF* q_quickframebufferobject_position(void* self) {
+QPointF* q_quickframebufferobject_position(const void* self) {
     return QQuickItem_Position((QQuickItem*)self);
 }
 
@@ -268,11 +264,11 @@ void q_quickframebufferobject_set_y(void* self, double y) {
     QQuickItem_SetY((QQuickItem*)self, y);
 }
 
-void q_quickframebufferobject_set_position(void* self, void* position) {
+void q_quickframebufferobject_set_position(void* self, const void* position) {
     QQuickItem_SetPosition((QQuickItem*)self, (QPointF*)position);
 }
 
-double q_quickframebufferobject_width(void* self) {
+double q_quickframebufferobject_width(const void* self) {
     return QQuickItem_Width((QQuickItem*)self);
 }
 
@@ -288,11 +284,11 @@ void q_quickframebufferobject_set_implicit_width(void* self, double implicitWidt
     QQuickItem_SetImplicitWidth((QQuickItem*)self, implicitWidth);
 }
 
-double q_quickframebufferobject_implicit_width(void* self) {
+double q_quickframebufferobject_implicit_width(const void* self) {
     return QQuickItem_ImplicitWidth((QQuickItem*)self);
 }
 
-double q_quickframebufferobject_height(void* self) {
+double q_quickframebufferobject_height(const void* self) {
     return QQuickItem_Height((QQuickItem*)self);
 }
 
@@ -308,19 +304,19 @@ void q_quickframebufferobject_set_implicit_height(void* self, double implicitHei
     QQuickItem_SetImplicitHeight((QQuickItem*)self, implicitHeight);
 }
 
-double q_quickframebufferobject_implicit_height(void* self) {
+double q_quickframebufferobject_implicit_height(const void* self) {
     return QQuickItem_ImplicitHeight((QQuickItem*)self);
 }
 
-QSizeF* q_quickframebufferobject_size(void* self) {
+QSizeF* q_quickframebufferobject_size(const void* self) {
     return QQuickItem_Size((QQuickItem*)self);
 }
 
-void q_quickframebufferobject_set_size(void* self, void* size) {
+void q_quickframebufferobject_set_size(void* self, const void* size) {
     QQuickItem_SetSize((QQuickItem*)self, (QSizeF*)size);
 }
 
-int32_t q_quickframebufferobject_transform_origin(void* self) {
+int32_t q_quickframebufferobject_transform_origin(const void* self) {
     return QQuickItem_TransformOrigin((QQuickItem*)self);
 }
 
@@ -328,15 +324,15 @@ void q_quickframebufferobject_set_transform_origin(void* self, int32_t transform
     QQuickItem_SetTransformOrigin((QQuickItem*)self, transformOrigin);
 }
 
-QPointF* q_quickframebufferobject_transform_origin_point(void* self) {
+QPointF* q_quickframebufferobject_transform_origin_point(const void* self) {
     return QQuickItem_TransformOriginPoint((QQuickItem*)self);
 }
 
-void q_quickframebufferobject_set_transform_origin_point(void* self, void* transformOriginPoint) {
+void q_quickframebufferobject_set_transform_origin_point(void* self, const void* transformOriginPoint) {
     QQuickItem_SetTransformOriginPoint((QQuickItem*)self, (QPointF*)transformOriginPoint);
 }
 
-double q_quickframebufferobject_z(void* self) {
+double q_quickframebufferobject_z(const void* self) {
     return QQuickItem_Z((QQuickItem*)self);
 }
 
@@ -344,7 +340,7 @@ void q_quickframebufferobject_set_z(void* self, double z) {
     QQuickItem_SetZ((QQuickItem*)self, z);
 }
 
-double q_quickframebufferobject_rotation(void* self) {
+double q_quickframebufferobject_rotation(const void* self) {
     return QQuickItem_Rotation((QQuickItem*)self);
 }
 
@@ -352,7 +348,7 @@ void q_quickframebufferobject_set_rotation(void* self, double rotation) {
     QQuickItem_SetRotation((QQuickItem*)self, rotation);
 }
 
-double q_quickframebufferobject_scale(void* self) {
+double q_quickframebufferobject_scale(const void* self) {
     return QQuickItem_Scale((QQuickItem*)self);
 }
 
@@ -360,7 +356,7 @@ void q_quickframebufferobject_set_scale(void* self, double scale) {
     QQuickItem_SetScale((QQuickItem*)self, scale);
 }
 
-double q_quickframebufferobject_opacity(void* self) {
+double q_quickframebufferobject_opacity(const void* self) {
     return QQuickItem_Opacity((QQuickItem*)self);
 }
 
@@ -368,7 +364,7 @@ void q_quickframebufferobject_set_opacity(void* self, double opacity) {
     QQuickItem_SetOpacity((QQuickItem*)self, opacity);
 }
 
-bool q_quickframebufferobject_is_visible(void* self) {
+bool q_quickframebufferobject_is_visible(const void* self) {
     return QQuickItem_IsVisible((QQuickItem*)self);
 }
 
@@ -376,7 +372,7 @@ void q_quickframebufferobject_set_visible(void* self, bool visible) {
     QQuickItem_SetVisible((QQuickItem*)self, visible);
 }
 
-bool q_quickframebufferobject_is_enabled(void* self) {
+bool q_quickframebufferobject_is_enabled(const void* self) {
     return QQuickItem_IsEnabled((QQuickItem*)self);
 }
 
@@ -384,7 +380,7 @@ void q_quickframebufferobject_set_enabled(void* self, bool enabled) {
     QQuickItem_SetEnabled((QQuickItem*)self, enabled);
 }
 
-bool q_quickframebufferobject_smooth(void* self) {
+bool q_quickframebufferobject_smooth(const void* self) {
     return QQuickItem_Smooth((QQuickItem*)self);
 }
 
@@ -392,7 +388,7 @@ void q_quickframebufferobject_set_smooth(void* self, bool smooth) {
     QQuickItem_SetSmooth((QQuickItem*)self, smooth);
 }
 
-bool q_quickframebufferobject_active_focus_on_tab(void* self) {
+bool q_quickframebufferobject_active_focus_on_tab(const void* self) {
     return QQuickItem_ActiveFocusOnTab((QQuickItem*)self);
 }
 
@@ -400,7 +396,7 @@ void q_quickframebufferobject_set_active_focus_on_tab(void* self, bool activeFoc
     QQuickItem_SetActiveFocusOnTab((QQuickItem*)self, activeFocusOnTab);
 }
 
-bool q_quickframebufferobject_antialiasing(void* self) {
+bool q_quickframebufferobject_antialiasing(const void* self) {
     return QQuickItem_Antialiasing((QQuickItem*)self);
 }
 
@@ -412,7 +408,7 @@ void q_quickframebufferobject_reset_antialiasing(void* self) {
     QQuickItem_ResetAntialiasing((QQuickItem*)self);
 }
 
-int32_t q_quickframebufferobject_flags(void* self) {
+int32_t q_quickframebufferobject_flags(const void* self) {
     return QQuickItem_Flags((QQuickItem*)self);
 }
 
@@ -424,15 +420,15 @@ void q_quickframebufferobject_set_flags(void* self, int32_t flags) {
     QQuickItem_SetFlags((QQuickItem*)self, flags);
 }
 
-QQuickItem* q_quickframebufferobject_viewport_item(void* self) {
+QQuickItem* q_quickframebufferobject_viewport_item(const void* self) {
     return QQuickItem_ViewportItem((QQuickItem*)self);
 }
 
-bool q_quickframebufferobject_has_active_focus(void* self) {
+bool q_quickframebufferobject_has_active_focus(const void* self) {
     return QQuickItem_HasActiveFocus((QQuickItem*)self);
 }
 
-bool q_quickframebufferobject_has_focus(void* self) {
+bool q_quickframebufferobject_has_focus(const void* self) {
     return QQuickItem_HasFocus((QQuickItem*)self);
 }
 
@@ -444,15 +440,15 @@ void q_quickframebufferobject_set_focus2(void* self, bool focus, int32_t reason)
     QQuickItem_SetFocus2((QQuickItem*)self, focus, reason);
 }
 
-bool q_quickframebufferobject_is_focus_scope(void* self) {
+bool q_quickframebufferobject_is_focus_scope(const void* self) {
     return QQuickItem_IsFocusScope((QQuickItem*)self);
 }
 
-QQuickItem* q_quickframebufferobject_scoped_focus_item(void* self) {
+QQuickItem* q_quickframebufferobject_scoped_focus_item(const void* self) {
     return QQuickItem_ScopedFocusItem((QQuickItem*)self);
 }
 
-int32_t q_quickframebufferobject_focus_policy(void* self) {
+int32_t q_quickframebufferobject_focus_policy(const void* self) {
     return QQuickItem_FocusPolicy((QQuickItem*)self);
 }
 
@@ -460,11 +456,11 @@ void q_quickframebufferobject_set_focus_policy(void* self, int32_t policy) {
     QQuickItem_SetFocusPolicy((QQuickItem*)self, policy);
 }
 
-bool q_quickframebufferobject_is_ancestor_of(void* self, void* child) {
+bool q_quickframebufferobject_is_ancestor_of(const void* self, const void* child) {
     return QQuickItem_IsAncestorOf((QQuickItem*)self, (QQuickItem*)child);
 }
 
-int32_t q_quickframebufferobject_accepted_mouse_buttons(void* self) {
+int32_t q_quickframebufferobject_accepted_mouse_buttons(const void* self) {
     return QQuickItem_AcceptedMouseButtons((QQuickItem*)self);
 }
 
@@ -472,7 +468,7 @@ void q_quickframebufferobject_set_accepted_mouse_buttons(void* self, int32_t but
     QQuickItem_SetAcceptedMouseButtons((QQuickItem*)self, buttons);
 }
 
-bool q_quickframebufferobject_accept_hover_events(void* self) {
+bool q_quickframebufferobject_accept_hover_events(const void* self) {
     return QQuickItem_AcceptHoverEvents((QQuickItem*)self);
 }
 
@@ -480,7 +476,7 @@ void q_quickframebufferobject_set_accept_hover_events(void* self, bool enabled) 
     QQuickItem_SetAcceptHoverEvents((QQuickItem*)self, enabled);
 }
 
-bool q_quickframebufferobject_accept_touch_events(void* self) {
+bool q_quickframebufferobject_accept_touch_events(const void* self) {
     return QQuickItem_AcceptTouchEvents((QQuickItem*)self);
 }
 
@@ -488,11 +484,11 @@ void q_quickframebufferobject_set_accept_touch_events(void* self, bool accept) {
     QQuickItem_SetAcceptTouchEvents((QQuickItem*)self, accept);
 }
 
-QCursor* q_quickframebufferobject_cursor(void* self) {
+QCursor* q_quickframebufferobject_cursor(const void* self) {
     return QQuickItem_Cursor((QQuickItem*)self);
 }
 
-void q_quickframebufferobject_set_cursor(void* self, void* cursor) {
+void q_quickframebufferobject_set_cursor(void* self, const void* cursor) {
     QQuickItem_SetCursor((QQuickItem*)self, (QCursor*)cursor);
 }
 
@@ -500,7 +496,7 @@ void q_quickframebufferobject_unset_cursor(void* self) {
     QQuickItem_UnsetCursor((QQuickItem*)self);
 }
 
-bool q_quickframebufferobject_is_under_mouse(void* self) {
+bool q_quickframebufferobject_is_under_mouse(const void* self) {
     return QQuickItem_IsUnderMouse((QQuickItem*)self);
 }
 
@@ -512,7 +508,7 @@ void q_quickframebufferobject_ungrab_mouse(void* self) {
     QQuickItem_UngrabMouse((QQuickItem*)self);
 }
 
-bool q_quickframebufferobject_keep_mouse_grab(void* self) {
+bool q_quickframebufferobject_keep_mouse_grab(const void* self) {
     return QQuickItem_KeepMouseGrab((QQuickItem*)self);
 }
 
@@ -520,7 +516,7 @@ void q_quickframebufferobject_set_keep_mouse_grab(void* self, bool keepMouseGrab
     QQuickItem_SetKeepMouseGrab((QQuickItem*)self, keepMouseGrab);
 }
 
-bool q_quickframebufferobject_filters_child_mouse_events(void* self) {
+bool q_quickframebufferobject_filters_child_mouse_events(const void* self) {
     return QQuickItem_FiltersChildMouseEvents((QQuickItem*)self);
 }
 
@@ -536,7 +532,7 @@ void q_quickframebufferobject_ungrab_touch_points(void* self) {
     QQuickItem_UngrabTouchPoints((QQuickItem*)self);
 }
 
-bool q_quickframebufferobject_keep_touch_grab(void* self) {
+bool q_quickframebufferobject_keep_touch_grab(const void* self) {
     return QQuickItem_KeepTouchGrab((QQuickItem*)self);
 }
 
@@ -544,11 +540,11 @@ void q_quickframebufferobject_set_keep_touch_grab(void* self, bool keepTouchGrab
     QQuickItem_SetKeepTouchGrab((QQuickItem*)self, keepTouchGrab);
 }
 
-bool q_quickframebufferobject_grab_to_image(void* self, void* callback) {
+bool q_quickframebufferobject_grab_to_image(void* self, const void* callback) {
     return QQuickItem_GrabToImage((QQuickItem*)self, (QJSValue*)callback);
 }
 
-QObject* q_quickframebufferobject_containment_mask(void* self) {
+QObject* q_quickframebufferobject_containment_mask(const void* self) {
     return QQuickItem_ContainmentMask((QQuickItem*)self);
 }
 
@@ -556,31 +552,31 @@ void q_quickframebufferobject_set_containment_mask(void* self, void* mask) {
     QQuickItem_SetContainmentMask((QQuickItem*)self, (QObject*)mask);
 }
 
-QTransform* q_quickframebufferobject_item_transform(void* self, void* param1, bool* param2) {
+QTransform* q_quickframebufferobject_item_transform(const void* self, void* param1, bool* param2) {
     return QQuickItem_ItemTransform((QQuickItem*)self, (QQuickItem*)param1, (bool*)param2);
 }
 
-QPointF* q_quickframebufferobject_map_to_scene(void* self, void* point) {
+QPointF* q_quickframebufferobject_map_to_scene(const void* self, const void* point) {
     return QQuickItem_MapToScene((QQuickItem*)self, (QPointF*)point);
 }
 
-QRectF* q_quickframebufferobject_map_rect_to_item(void* self, void* item, void* rect) {
+QRectF* q_quickframebufferobject_map_rect_to_item(const void* self, const void* item, const void* rect) {
     return QQuickItem_MapRectToItem((QQuickItem*)self, (QQuickItem*)item, (QRectF*)rect);
 }
 
-QRectF* q_quickframebufferobject_map_rect_to_scene(void* self, void* rect) {
+QRectF* q_quickframebufferobject_map_rect_to_scene(const void* self, const void* rect) {
     return QQuickItem_MapRectToScene((QQuickItem*)self, (QRectF*)rect);
 }
 
-QPointF* q_quickframebufferobject_map_from_scene(void* self, void* point) {
+QPointF* q_quickframebufferobject_map_from_scene(const void* self, const void* point) {
     return QQuickItem_MapFromScene((QQuickItem*)self, (QPointF*)point);
 }
 
-QRectF* q_quickframebufferobject_map_rect_from_item(void* self, void* item, void* rect) {
+QRectF* q_quickframebufferobject_map_rect_from_item(const void* self, const void* item, const void* rect) {
     return QQuickItem_MapRectFromItem((QQuickItem*)self, (QQuickItem*)item, (QRectF*)rect);
 }
 
-QRectF* q_quickframebufferobject_map_rect_from_scene(void* self, void* rect) {
+QRectF* q_quickframebufferobject_map_rect_from_scene(const void* self, const void* rect) {
     return QQuickItem_MapRectFromScene((QQuickItem*)self, (QRectF*)rect);
 }
 
@@ -588,51 +584,51 @@ void q_quickframebufferobject_polish(void* self) {
     QQuickItem_Polish((QQuickItem*)self);
 }
 
-QPointF* q_quickframebufferobject_map_from_item2(void* self, void* item, void* point) {
+QPointF* q_quickframebufferobject_map_from_item2(const void* self, const void* item, const void* point) {
     return QQuickItem_MapFromItem2((QQuickItem*)self, (QQuickItem*)item, (QPointF*)point);
 }
 
-QPointF* q_quickframebufferobject_map_from_item3(void* self, void* item, double x, double y) {
+QPointF* q_quickframebufferobject_map_from_item3(void* self, const void* item, double x, double y) {
     return QQuickItem_MapFromItem3((QQuickItem*)self, (QQuickItem*)item, x, y);
 }
 
-QRectF* q_quickframebufferobject_map_from_item4(void* self, void* item, void* rect) {
+QRectF* q_quickframebufferobject_map_from_item4(const void* self, const void* item, const void* rect) {
     return QQuickItem_MapFromItem4((QQuickItem*)self, (QQuickItem*)item, (QRectF*)rect);
 }
 
-QRectF* q_quickframebufferobject_map_from_item5(void* self, void* item, double x, double y, double width, double height) {
+QRectF* q_quickframebufferobject_map_from_item5(const void* self, const void* item, double x, double y, double width, double height) {
     return QQuickItem_MapFromItem5((QQuickItem*)self, (QQuickItem*)item, x, y, width, height);
 }
 
-QPointF* q_quickframebufferobject_map_to_item2(void* self, void* item, void* point) {
+QPointF* q_quickframebufferobject_map_to_item2(const void* self, const void* item, const void* point) {
     return QQuickItem_MapToItem2((QQuickItem*)self, (QQuickItem*)item, (QPointF*)point);
 }
 
-QPointF* q_quickframebufferobject_map_to_item3(void* self, void* item, double x, double y) {
+QPointF* q_quickframebufferobject_map_to_item3(void* self, const void* item, double x, double y) {
     return QQuickItem_MapToItem3((QQuickItem*)self, (QQuickItem*)item, x, y);
 }
 
-QRectF* q_quickframebufferobject_map_to_item4(void* self, void* item, void* rect) {
+QRectF* q_quickframebufferobject_map_to_item4(const void* self, const void* item, const void* rect) {
     return QQuickItem_MapToItem4((QQuickItem*)self, (QQuickItem*)item, (QRectF*)rect);
 }
 
-QRectF* q_quickframebufferobject_map_to_item5(void* self, void* item, double x, double y, double width, double height) {
+QRectF* q_quickframebufferobject_map_to_item5(const void* self, const void* item, double x, double y, double width, double height) {
     return QQuickItem_MapToItem5((QQuickItem*)self, (QQuickItem*)item, x, y, width, height);
 }
 
-QPointF* q_quickframebufferobject_map_from_global2(void* self, double x, double y) {
+QPointF* q_quickframebufferobject_map_from_global2(const void* self, double x, double y) {
     return QQuickItem_MapFromGlobal2((QQuickItem*)self, x, y);
 }
 
-QPointF* q_quickframebufferobject_map_from_global3(void* self, void* point) {
+QPointF* q_quickframebufferobject_map_from_global3(const void* self, const void* point) {
     return QQuickItem_MapFromGlobal3((QQuickItem*)self, (QPointF*)point);
 }
 
-QPointF* q_quickframebufferobject_map_to_global2(void* self, double x, double y) {
+QPointF* q_quickframebufferobject_map_to_global2(const void* self, double x, double y) {
     return QQuickItem_MapToGlobal2((QQuickItem*)self, x, y);
 }
 
-QPointF* q_quickframebufferobject_map_to_global3(void* self, void* point) {
+QPointF* q_quickframebufferobject_map_to_global3(const void* self, const void* point) {
     return QQuickItem_MapToGlobal3((QQuickItem*)self, (QPointF*)point);
 }
 
@@ -648,7 +644,7 @@ QQuickItem* q_quickframebufferobject_next_item_in_focus_chain(void* self) {
     return QQuickItem_NextItemInFocusChain((QQuickItem*)self);
 }
 
-QQuickItem* q_quickframebufferobject_child_at(void* self, double x, double y) {
+QQuickItem* q_quickframebufferobject_child_at(const void* self, double x, double y) {
     return QQuickItem_ChildAt((QQuickItem*)self, x, y);
 }
 
@@ -656,7 +652,7 @@ void q_quickframebufferobject_ensure_polished(void* self) {
     QQuickItem_EnsurePolished((QQuickItem*)self);
 }
 
-void q_quickframebufferobject_dump_item_tree(void* self) {
+void q_quickframebufferobject_dump_item_tree(const void* self) {
     QQuickItem_DumpItemTree((QQuickItem*)self);
 }
 
@@ -664,11 +660,11 @@ void q_quickframebufferobject_update(void* self) {
     QQuickItem_Update((QQuickItem*)self);
 }
 
-void q_quickframebufferobject_children_rect_changed(void* self, void* param1) {
+void q_quickframebufferobject_children_rect_changed(void* self, const void* param1) {
     QQuickItem_ChildrenRectChanged((QQuickItem*)self, (QRectF*)param1);
 }
 
-void q_quickframebufferobject_on_children_rect_changed(void* self, void (*callback)(void*, void*)) {
+void q_quickframebufferobject_on_children_rect_changed(void* self, void (*callback)(void*, const void*)) {
     QQuickItem_Connect_ChildrenRectChanged((QQuickItem*)self, (intptr_t)callback);
 }
 
@@ -908,7 +904,7 @@ void q_quickframebufferobject_set_flag2(void* self, int32_t flag, bool enabled) 
     QQuickItem_SetFlag2((QQuickItem*)self, flag, enabled);
 }
 
-bool q_quickframebufferobject_grab_to_image22(void* self, void* callback, void* targetSize) {
+bool q_quickframebufferobject_grab_to_image22(void* self, const void* callback, const void* targetSize) {
     return QQuickItem_GrabToImage22((QQuickItem*)self, (QJSValue*)callback, (QSize*)targetSize);
 }
 
@@ -916,7 +912,7 @@ QQuickItem* q_quickframebufferobject_next_item_in_focus_chain1(void* self, bool 
     return QQuickItem_NextItemInFocusChain1((QQuickItem*)self, forward);
 }
 
-const char* q_quickframebufferobject_object_name(void* self) {
+const char* q_quickframebufferobject_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -927,19 +923,19 @@ void q_quickframebufferobject_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_quickframebufferobject_is_widget_type(void* self) {
+bool q_quickframebufferobject_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_quickframebufferobject_is_window_type(void* self) {
+bool q_quickframebufferobject_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_quickframebufferobject_is_quick_item_type(void* self) {
+bool q_quickframebufferobject_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_quickframebufferobject_signals_blocked(void* self) {
+bool q_quickframebufferobject_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -947,7 +943,7 @@ bool q_quickframebufferobject_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_quickframebufferobject_thread(void* self) {
+QThread* q_quickframebufferobject_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -971,7 +967,7 @@ void q_quickframebufferobject_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_quickframebufferobject_children(void* self) {
+libqt_list /* of QObject* */ q_quickframebufferobject_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -988,55 +984,55 @@ void q_quickframebufferobject_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_quickframebufferobject_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_quickframebufferobject_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_quickframebufferobject_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_quickframebufferobject_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_quickframebufferobject_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_quickframebufferobject_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_quickframebufferobject_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_quickframebufferobject_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_quickframebufferobject_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_quickframebufferobject_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_quickframebufferobject_disconnect3(void* self) {
+bool q_quickframebufferobject_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_quickframebufferobject_disconnect4(void* self, void* receiver) {
+bool q_quickframebufferobject_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_quickframebufferobject_disconnect5(void* param1) {
+bool q_quickframebufferobject_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_quickframebufferobject_dump_object_tree(void* self) {
+void q_quickframebufferobject_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_quickframebufferobject_dump_object_info(void* self) {
+void q_quickframebufferobject_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_quickframebufferobject_set_property(void* self, const char* name, void* value) {
+bool q_quickframebufferobject_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_quickframebufferobject_property(void* self, const char* name) {
+QVariant* q_quickframebufferobject_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_quickframebufferobject_dynamic_property_names(void* self) {
+const char** q_quickframebufferobject_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -1057,7 +1053,7 @@ QBindingStorage* q_quickframebufferobject_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_quickframebufferobject_binding_storage2(void* self) {
+const QBindingStorage* q_quickframebufferobject_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -1069,11 +1065,11 @@ void q_quickframebufferobject_on_destroyed(void* self, void (*callback)(void*)) 
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_quickframebufferobject_parent(void* self) {
+QObject* q_quickframebufferobject_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_quickframebufferobject_inherits(void* self, const char* classname) {
+bool q_quickframebufferobject_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -1089,31 +1085,31 @@ int32_t q_quickframebufferobject_start_timer23(void* self, int64_t time, int32_t
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_quickframebufferobject_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_quickframebufferobject_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_quickframebufferobject_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_quickframebufferobject_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_quickframebufferobject_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_quickframebufferobject_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_quickframebufferobject_disconnect1(void* self, const char* signal) {
+bool q_quickframebufferobject_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_quickframebufferobject_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_quickframebufferobject_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_quickframebufferobject_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_quickframebufferobject_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_quickframebufferobject_disconnect23(void* self, void* receiver, const char* member) {
+bool q_quickframebufferobject_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -1125,56 +1121,56 @@ void q_quickframebufferobject_on_destroyed1(void* self, void (*callback)(void*, 
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void q_quickframebufferobject_operator_assign(void* self, void* param1) {
+void q_quickframebufferobject_operator_assign(void* self, const void* param1) {
     QQmlParserStatus_OperatorAssign(q_quickframebufferobject_as_q_qml_parser_status(self), (QQmlParserStatus*)param1);
 }
 
-QRectF* q_quickframebufferobject_bounding_rect(void* self) {
+QRectF* q_quickframebufferobject_bounding_rect(const void* self) {
     return QQuickFramebufferObject_BoundingRect((QQuickFramebufferObject*)self);
 }
 
-QRectF* q_quickframebufferobject_super_bounding_rect(void* self) {
+QRectF* q_quickframebufferobject_super_bounding_rect(const void* self) {
     return QQuickFramebufferObject_SuperBoundingRect((QQuickFramebufferObject*)self);
 }
 
-void q_quickframebufferobject_on_bounding_rect(void* self, QRectF* (*callback)()) {
-    QQuickFramebufferObject_OnBoundingRect((QQuickFramebufferObject*)self, (intptr_t)callback);
+void q_quickframebufferobject_on_bounding_rect(const void* self, QRectF* (*callback)(const void*)) {
+    QQuickFramebufferObject_OnBoundingRect((const QQuickFramebufferObject*)self, (intptr_t)callback);
 }
 
-QRectF* q_quickframebufferobject_clip_rect(void* self) {
+QRectF* q_quickframebufferobject_clip_rect(const void* self) {
     return QQuickFramebufferObject_ClipRect((QQuickFramebufferObject*)self);
 }
 
-QRectF* q_quickframebufferobject_super_clip_rect(void* self) {
+QRectF* q_quickframebufferobject_super_clip_rect(const void* self) {
     return QQuickFramebufferObject_SuperClipRect((QQuickFramebufferObject*)self);
 }
 
-void q_quickframebufferobject_on_clip_rect(void* self, QRectF* (*callback)()) {
-    QQuickFramebufferObject_OnClipRect((QQuickFramebufferObject*)self, (intptr_t)callback);
+void q_quickframebufferobject_on_clip_rect(const void* self, QRectF* (*callback)(const void*)) {
+    QQuickFramebufferObject_OnClipRect((const QQuickFramebufferObject*)self, (intptr_t)callback);
 }
 
-bool q_quickframebufferobject_contains(void* self, void* point) {
+bool q_quickframebufferobject_contains(const void* self, const void* point) {
     return QQuickFramebufferObject_Contains((QQuickFramebufferObject*)self, (QPointF*)point);
 }
 
-bool q_quickframebufferobject_super_contains(void* self, void* point) {
+bool q_quickframebufferobject_super_contains(const void* self, const void* point) {
     return QQuickFramebufferObject_SuperContains((QQuickFramebufferObject*)self, (QPointF*)point);
 }
 
-void q_quickframebufferobject_on_contains(void* self, bool (*callback)(void*, void*)) {
-    QQuickFramebufferObject_OnContains((QQuickFramebufferObject*)self, (intptr_t)callback);
+void q_quickframebufferobject_on_contains(const void* self, bool (*callback)(const void*, const void*)) {
+    QQuickFramebufferObject_OnContains((const QQuickFramebufferObject*)self, (intptr_t)callback);
 }
 
-QVariant* q_quickframebufferobject_input_method_query(void* self, int32_t query) {
+QVariant* q_quickframebufferobject_input_method_query(const void* self, int32_t query) {
     return QQuickFramebufferObject_InputMethodQuery((QQuickFramebufferObject*)self, query);
 }
 
-QVariant* q_quickframebufferobject_super_input_method_query(void* self, int32_t query) {
+QVariant* q_quickframebufferobject_super_input_method_query(const void* self, int32_t query) {
     return QQuickFramebufferObject_SuperInputMethodQuery((QQuickFramebufferObject*)self, query);
 }
 
-void q_quickframebufferobject_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
-    QQuickFramebufferObject_OnInputMethodQuery((QQuickFramebufferObject*)self, (intptr_t)callback);
+void q_quickframebufferobject_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QQuickFramebufferObject_OnInputMethodQuery((const QQuickFramebufferObject*)self, (intptr_t)callback);
 }
 
 bool q_quickframebufferobject_event(void* self, void* param1) {
@@ -1189,15 +1185,15 @@ void q_quickframebufferobject_on_event(void* self, bool (*callback)(void*, void*
     QQuickFramebufferObject_OnEvent((QQuickFramebufferObject*)self, (intptr_t)callback);
 }
 
-void q_quickframebufferobject_item_change(void* self, int32_t param1, void* param2) {
+void q_quickframebufferobject_item_change(void* self, int32_t param1, const void* param2) {
     QQuickFramebufferObject_ItemChange((QQuickFramebufferObject*)self, param1, (QQuickItem__ItemChangeData*)param2);
 }
 
-void q_quickframebufferobject_super_item_change(void* self, int32_t param1, void* param2) {
+void q_quickframebufferobject_super_item_change(void* self, int32_t param1, const void* param2) {
     QQuickFramebufferObject_SuperItemChange((QQuickFramebufferObject*)self, param1, (QQuickItem__ItemChangeData*)param2);
 }
 
-void q_quickframebufferobject_on_item_change(void* self, void (*callback)(void*, int32_t, void*)) {
+void q_quickframebufferobject_on_item_change(void* self, void (*callback)(void*, int32_t, const void*)) {
     QQuickFramebufferObject_OnItemChange((QQuickFramebufferObject*)self, (intptr_t)callback);
 }
 
@@ -1209,7 +1205,7 @@ void q_quickframebufferobject_super_class_begin(void* self) {
     QQuickFramebufferObject_SuperClassBegin((QQuickFramebufferObject*)self);
 }
 
-void q_quickframebufferobject_on_class_begin(void* self, void (*callback)()) {
+void q_quickframebufferobject_on_class_begin(void* self, void (*callback)(void*)) {
     QQuickFramebufferObject_OnClassBegin((QQuickFramebufferObject*)self, (intptr_t)callback);
 }
 
@@ -1221,7 +1217,7 @@ void q_quickframebufferobject_super_component_complete(void* self) {
     QQuickFramebufferObject_SuperComponentComplete((QQuickFramebufferObject*)self);
 }
 
-void q_quickframebufferobject_on_component_complete(void* self, void (*callback)()) {
+void q_quickframebufferobject_on_component_complete(void* self, void (*callback)(void*)) {
     QQuickFramebufferObject_OnComponentComplete((QQuickFramebufferObject*)self, (intptr_t)callback);
 }
 
@@ -1341,7 +1337,7 @@ void q_quickframebufferobject_super_mouse_ungrab_event(void* self) {
     QQuickFramebufferObject_SuperMouseUngrabEvent((QQuickFramebufferObject*)self);
 }
 
-void q_quickframebufferobject_on_mouse_ungrab_event(void* self, void (*callback)()) {
+void q_quickframebufferobject_on_mouse_ungrab_event(void* self, void (*callback)(void*)) {
     QQuickFramebufferObject_OnMouseUngrabEvent((QQuickFramebufferObject*)self, (intptr_t)callback);
 }
 
@@ -1353,7 +1349,7 @@ void q_quickframebufferobject_super_touch_ungrab_event(void* self) {
     QQuickFramebufferObject_SuperTouchUngrabEvent((QQuickFramebufferObject*)self);
 }
 
-void q_quickframebufferobject_on_touch_ungrab_event(void* self, void (*callback)()) {
+void q_quickframebufferobject_on_touch_ungrab_event(void* self, void (*callback)(void*)) {
     QQuickFramebufferObject_OnTouchUngrabEvent((QQuickFramebufferObject*)self, (intptr_t)callback);
 }
 
@@ -1485,7 +1481,7 @@ void q_quickframebufferobject_super_update_polish(void* self) {
     QQuickFramebufferObject_SuperUpdatePolish((QQuickFramebufferObject*)self);
 }
 
-void q_quickframebufferobject_on_update_polish(void* self, void (*callback)()) {
+void q_quickframebufferobject_on_update_polish(void* self, void (*callback)(void*)) {
     QQuickFramebufferObject_OnUpdatePolish((QQuickFramebufferObject*)self, (intptr_t)callback);
 }
 
@@ -1537,136 +1533,64 @@ void q_quickframebufferobject_on_custom_event(void* self, void (*callback)(void*
     QQuickFramebufferObject_OnCustomEvent((QQuickFramebufferObject*)self, (intptr_t)callback);
 }
 
-void q_quickframebufferobject_connect_notify(void* self, void* signal) {
+void q_quickframebufferobject_connect_notify(void* self, const void* signal) {
     QQuickFramebufferObject_ConnectNotify((QQuickFramebufferObject*)self, (QMetaMethod*)signal);
 }
 
-void q_quickframebufferobject_super_connect_notify(void* self, void* signal) {
+void q_quickframebufferobject_super_connect_notify(void* self, const void* signal) {
     QQuickFramebufferObject_SuperConnectNotify((QQuickFramebufferObject*)self, (QMetaMethod*)signal);
 }
 
-void q_quickframebufferobject_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_quickframebufferobject_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QQuickFramebufferObject_OnConnectNotify((QQuickFramebufferObject*)self, (intptr_t)callback);
 }
 
-void q_quickframebufferobject_disconnect_notify(void* self, void* signal) {
+void q_quickframebufferobject_disconnect_notify(void* self, const void* signal) {
     QQuickFramebufferObject_DisconnectNotify((QQuickFramebufferObject*)self, (QMetaMethod*)signal);
 }
 
-void q_quickframebufferobject_super_disconnect_notify(void* self, void* signal) {
+void q_quickframebufferobject_super_disconnect_notify(void* self, const void* signal) {
     QQuickFramebufferObject_SuperDisconnectNotify((QQuickFramebufferObject*)self, (QMetaMethod*)signal);
 }
 
-void q_quickframebufferobject_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_quickframebufferobject_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QQuickFramebufferObject_OnDisconnectNotify((QQuickFramebufferObject*)self, (intptr_t)callback);
 }
 
-bool q_quickframebufferobject_is_component_complete(void* self) {
+bool q_quickframebufferobject_is_component_complete(const void* self) {
     return QQuickFramebufferObject_IsComponentComplete((QQuickFramebufferObject*)self);
-}
-
-bool q_quickframebufferobject_super_is_component_complete(void* self) {
-    return QQuickFramebufferObject_SuperIsComponentComplete((QQuickFramebufferObject*)self);
-}
-
-void q_quickframebufferobject_on_is_component_complete(void* self, bool (*callback)()) {
-    QQuickFramebufferObject_OnIsComponentComplete((QQuickFramebufferObject*)self, (intptr_t)callback);
 }
 
 void q_quickframebufferobject_update_input_method(void* self) {
     QQuickFramebufferObject_UpdateInputMethod((QQuickFramebufferObject*)self);
 }
 
-void q_quickframebufferobject_super_update_input_method(void* self) {
-    QQuickFramebufferObject_SuperUpdateInputMethod((QQuickFramebufferObject*)self);
-}
-
-void q_quickframebufferobject_on_update_input_method(void* self, void (*callback)()) {
-    QQuickFramebufferObject_OnUpdateInputMethod((QQuickFramebufferObject*)self, (intptr_t)callback);
-}
-
-bool q_quickframebufferobject_width_valid(void* self) {
+bool q_quickframebufferobject_width_valid(const void* self) {
     return QQuickFramebufferObject_WidthValid((QQuickFramebufferObject*)self);
 }
 
-bool q_quickframebufferobject_super_width_valid(void* self) {
-    return QQuickFramebufferObject_SuperWidthValid((QQuickFramebufferObject*)self);
-}
-
-void q_quickframebufferobject_on_width_valid(void* self, bool (*callback)()) {
-    QQuickFramebufferObject_OnWidthValid((QQuickFramebufferObject*)self, (intptr_t)callback);
-}
-
-bool q_quickframebufferobject_height_valid(void* self) {
+bool q_quickframebufferobject_height_valid(const void* self) {
     return QQuickFramebufferObject_HeightValid((QQuickFramebufferObject*)self);
-}
-
-bool q_quickframebufferobject_super_height_valid(void* self) {
-    return QQuickFramebufferObject_SuperHeightValid((QQuickFramebufferObject*)self);
-}
-
-void q_quickframebufferobject_on_height_valid(void* self, bool (*callback)()) {
-    QQuickFramebufferObject_OnHeightValid((QQuickFramebufferObject*)self, (intptr_t)callback);
 }
 
 void q_quickframebufferobject_set_implicit_size(void* self, double param1, double param2) {
     QQuickFramebufferObject_SetImplicitSize((QQuickFramebufferObject*)self, param1, param2);
 }
 
-void q_quickframebufferobject_super_set_implicit_size(void* self, double param1, double param2) {
-    QQuickFramebufferObject_SuperSetImplicitSize((QQuickFramebufferObject*)self, param1, param2);
-}
-
-void q_quickframebufferobject_on_set_implicit_size(void* self, void (*callback)(void*, double, double)) {
-    QQuickFramebufferObject_OnSetImplicitSize((QQuickFramebufferObject*)self, (intptr_t)callback);
-}
-
-QObject* q_quickframebufferobject_sender(void* self) {
+QObject* q_quickframebufferobject_sender(const void* self) {
     return QQuickFramebufferObject_Sender((QQuickFramebufferObject*)self);
 }
 
-QObject* q_quickframebufferobject_super_sender(void* self) {
-    return QQuickFramebufferObject_SuperSender((QQuickFramebufferObject*)self);
-}
-
-void q_quickframebufferobject_on_sender(void* self, QObject* (*callback)()) {
-    QQuickFramebufferObject_OnSender((QQuickFramebufferObject*)self, (intptr_t)callback);
-}
-
-int32_t q_quickframebufferobject_sender_signal_index(void* self) {
+int32_t q_quickframebufferobject_sender_signal_index(const void* self) {
     return QQuickFramebufferObject_SenderSignalIndex((QQuickFramebufferObject*)self);
 }
 
-int32_t q_quickframebufferobject_super_sender_signal_index(void* self) {
-    return QQuickFramebufferObject_SuperSenderSignalIndex((QQuickFramebufferObject*)self);
-}
-
-void q_quickframebufferobject_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QQuickFramebufferObject_OnSenderSignalIndex((QQuickFramebufferObject*)self, (intptr_t)callback);
-}
-
-int32_t q_quickframebufferobject_receivers(void* self, const char* signal) {
+int32_t q_quickframebufferobject_receivers(const void* self, const char* signal) {
     return QQuickFramebufferObject_Receivers((QQuickFramebufferObject*)self, signal);
 }
 
-int32_t q_quickframebufferobject_super_receivers(void* self, const char* signal) {
-    return QQuickFramebufferObject_SuperReceivers((QQuickFramebufferObject*)self, signal);
-}
-
-void q_quickframebufferobject_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QQuickFramebufferObject_OnReceivers((QQuickFramebufferObject*)self, (intptr_t)callback);
-}
-
-bool q_quickframebufferobject_is_signal_connected(void* self, void* signal) {
+bool q_quickframebufferobject_is_signal_connected(const void* self, const void* signal) {
     return QQuickFramebufferObject_IsSignalConnected((QQuickFramebufferObject*)self, (QMetaMethod*)signal);
-}
-
-bool q_quickframebufferobject_super_is_signal_connected(void* self, void* signal) {
-    return QQuickFramebufferObject_SuperIsSignalConnected((QQuickFramebufferObject*)self, (QMetaMethod*)signal);
-}
-
-void q_quickframebufferobject_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QQuickFramebufferObject_OnIsSignalConnected((QQuickFramebufferObject*)self, (intptr_t)callback);
 }
 
 void q_quickframebufferobject_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
@@ -1677,6 +1601,6 @@ void q_quickframebufferobject_delete(void* self) {
     QQuickFramebufferObject_Delete((QQuickFramebufferObject*)(self));
 }
 
-void q_quickframebufferobject__renderer_operator_assign(void* self, void* param1) {
+void q_quickframebufferobject__renderer_operator_assign(void* self, const void* param1) {
     QQuickFramebufferObject__Renderer_OperatorAssign((QQuickFramebufferObject__Renderer*)self, (QQuickFramebufferObject__Renderer*)param1);
 }

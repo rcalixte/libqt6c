@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 ///
-const QMetaObject* q_virtualkeyboardselectionlistmodel_meta_object(void* self);
+const QMetaObject* q_virtualkeyboardselectionlistmodel_meta_object(const void* self);
 
 /// @param self QVirtualKeyboardSelectionListModel*
 /// @param param1 const char*
@@ -46,24 +46,24 @@ void q_virtualkeyboardselectionlistmodel_set_data_source(void* self, void* dataS
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvirtualkeyboardselectionlistmodel.html#dataSource)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 ///
-QVirtualKeyboardAbstractInputMethod* q_virtualkeyboardselectionlistmodel_data_source(void* self);
+QVirtualKeyboardAbstractInputMethod* q_virtualkeyboardselectionlistmodel_data_source(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvirtualkeyboardselectionlistmodel.html#rowCount)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 /// @param parent QModelIndex*
 ///
-int32_t q_virtualkeyboardselectionlistmodel_row_count(void* self, void* parent);
+int32_t q_virtualkeyboardselectionlistmodel_row_count(const void* self, const void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvirtualkeyboardselectionlistmodel.html#data)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 /// @param index QModelIndex*
 /// @param role int
 ///
-QVariant* q_virtualkeyboardselectionlistmodel_data(void* self, void* index, int role);
+QVariant* q_virtualkeyboardselectionlistmodel_data(const void* self, const void* index, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvirtualkeyboardselectionlistmodel.html#roleNames)
 ///
@@ -78,17 +78,17 @@ QVariant* q_virtualkeyboardselectionlistmodel_data(void* self, void* index, int 
 /// free(map.values);
 /// ```
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 ///
 /// @return libqt_map of int to char*
 ///
-libqt_map q_virtualkeyboardselectionlistmodel_role_names(void* self);
+libqt_map q_virtualkeyboardselectionlistmodel_role_names(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvirtualkeyboardselectionlistmodel.html#count)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 ///
-int32_t q_virtualkeyboardselectionlistmodel_count(void* self);
+int32_t q_virtualkeyboardselectionlistmodel_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvirtualkeyboardselectionlistmodel.html#selectItem)
 ///
@@ -106,10 +106,10 @@ void q_virtualkeyboardselectionlistmodel_remove_item(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvirtualkeyboardselectionlistmodel.html#dataAt)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 /// @param index int
 ///
-QVariant* q_virtualkeyboardselectionlistmodel_data_at(void* self, int index);
+QVariant* q_virtualkeyboardselectionlistmodel_data_at(const void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvirtualkeyboardselectionlistmodel.html#countChanged)
 ///
@@ -173,33 +173,33 @@ const char* q_virtualkeyboardselectionlistmodel_tr3(const char* s, const char* c
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvirtualkeyboardselectionlistmodel.html#dataAt)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 /// @param index int
 /// @param role enum QVirtualKeyboardSelectionListModel__Role
 ///
-QVariant* q_virtualkeyboardselectionlistmodel_data_at2(void* self, int index, int32_t role);
+QVariant* q_virtualkeyboardselectionlistmodel_data_at2(const void* self, int index, int32_t role);
 
 /// Inherited from QAbstractListModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractlistmodel.html#index)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
 ///
-QModelIndex* q_virtualkeyboardselectionlistmodel_index(void* self, int row, int column, void* parent);
+QModelIndex* q_virtualkeyboardselectionlistmodel_index(const void* self, int row, int column, const void* parent);
 
 /// Inherited from QAbstractListModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractlistmodel.html#sibling)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 /// @param row int
 /// @param column int
 /// @param idx QModelIndex*
 ///
-QModelIndex* q_virtualkeyboardselectionlistmodel_sibling(void* self, int row, int column, void* idx);
+QModelIndex* q_virtualkeyboardselectionlistmodel_sibling(const void* self, int row, int column, const void* idx);
 
 /// Inherited from QAbstractListModel
 ///
@@ -212,55 +212,59 @@ QModelIndex* q_virtualkeyboardselectionlistmodel_sibling(void* self, int row, in
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool q_virtualkeyboardselectionlistmodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
+bool q_virtualkeyboardselectionlistmodel_drop_mime_data(void* self, const void* data, int32_t action, int row, int column, const void* parent);
 
 /// Inherited from QAbstractListModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractlistmodel.html#flags)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
 ///
-int32_t q_virtualkeyboardselectionlistmodel_flags(void* self, void* index);
+int32_t q_virtualkeyboardselectionlistmodel_flags(const void* self, const void* index);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 /// @param row int
 /// @param column int
 ///
-bool q_virtualkeyboardselectionlistmodel_has_index(void* self, int row, int column);
+bool q_virtualkeyboardselectionlistmodel_has_index(const void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#parent)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const QVirtualKeyboardSelectionListModel*
 /// @param child QModelIndex*
 ///
-QModelIndex* q_virtualkeyboardselectionlistmodel_parent(void* self, void* child);
+QModelIndex* q_virtualkeyboardselectionlistmodel_parent(const void* self, const void* child);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnCount)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const QVirtualKeyboardSelectionListModel*
 /// @param parent QModelIndex*
 ///
-int32_t q_virtualkeyboardselectionlistmodel_column_count(void* self, void* parent);
+int32_t q_virtualkeyboardselectionlistmodel_column_count(const void* self, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasChildren)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 /// @param parent QModelIndex*
 ///
-bool q_virtualkeyboardselectionlistmodel_has_children(void* self, void* parent);
+bool q_virtualkeyboardselectionlistmodel_has_children(const void* self, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -271,18 +275,18 @@ bool q_virtualkeyboardselectionlistmodel_has_children(void* self, void* parent);
 /// @param value QVariant*
 /// @param role int
 ///
-bool q_virtualkeyboardselectionlistmodel_set_data(void* self, void* index, void* value, int role);
+bool q_virtualkeyboardselectionlistmodel_set_data(void* self, const void* index, const void* value, int role);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerData)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
 ///
-QVariant* q_virtualkeyboardselectionlistmodel_header_data(void* self, int section, int32_t orientation, int role);
+QVariant* q_virtualkeyboardselectionlistmodel_header_data(const void* self, int section, int32_t orientation, int role);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -294,7 +298,7 @@ QVariant* q_virtualkeyboardselectionlistmodel_header_data(void* self, int sectio
 /// @param value QVariant*
 /// @param role int
 ///
-bool q_virtualkeyboardselectionlistmodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
+bool q_virtualkeyboardselectionlistmodel_set_header_data(void* self, int section, int32_t orientation, const void* value, int role);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -311,12 +315,12 @@ bool q_virtualkeyboardselectionlistmodel_set_header_data(void* self, int section
 /// free(map.values);
 /// ```
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 /// @param index QModelIndex*
 ///
 /// @return libqt_map of int to QVariant*
 ///
-libqt_map q_virtualkeyboardselectionlistmodel_item_data(void* self, void* index);
+libqt_map q_virtualkeyboardselectionlistmodel_item_data(const void* self, const void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -326,7 +330,7 @@ libqt_map q_virtualkeyboardselectionlistmodel_item_data(void* self, void* index)
 /// @param index QModelIndex*
 /// @param roles libqt_map of int to QVariant*
 ///
-bool q_virtualkeyboardselectionlistmodel_set_item_data(void* self, void* index, libqt_map roles);
+bool q_virtualkeyboardselectionlistmodel_set_item_data(void* self, const void* index, libqt_map roles);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -335,7 +339,7 @@ bool q_virtualkeyboardselectionlistmodel_set_item_data(void* self, void* index, 
 /// @param self QVirtualKeyboardSelectionListModel*
 /// @param index QModelIndex*
 ///
-bool q_virtualkeyboardselectionlistmodel_clear_item_data(void* self, void* index);
+bool q_virtualkeyboardselectionlistmodel_clear_item_data(void* self, const void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -343,51 +347,51 @@ bool q_virtualkeyboardselectionlistmodel_clear_item_data(void* self, void* index
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 ///
-const char** q_virtualkeyboardselectionlistmodel_mime_types(void* self);
+const char** q_virtualkeyboardselectionlistmodel_mime_types(const void* self);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeData)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 /// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* q_virtualkeyboardselectionlistmodel_mime_data(void* self, libqt_list indexes);
+QMimeData* q_virtualkeyboardselectionlistmodel_mime_data(const void* self, libqt_list indexes);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#canDropMimeData)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 /// @param data QMimeData*
 /// @param action enum Qt__DropAction
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool q_virtualkeyboardselectionlistmodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
+bool q_virtualkeyboardselectionlistmodel_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDropActions)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t q_virtualkeyboardselectionlistmodel_supported_drop_actions(void* self);
+int32_t q_virtualkeyboardselectionlistmodel_supported_drop_actions(const void* self);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDragActions)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t q_virtualkeyboardselectionlistmodel_supported_drag_actions(void* self);
+int32_t q_virtualkeyboardselectionlistmodel_supported_drag_actions(const void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -398,7 +402,7 @@ int32_t q_virtualkeyboardselectionlistmodel_supported_drag_actions(void* self);
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool q_virtualkeyboardselectionlistmodel_insert_rows(void* self, int row, int count, void* parent);
+bool q_virtualkeyboardselectionlistmodel_insert_rows(void* self, int row, int count, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -409,7 +413,7 @@ bool q_virtualkeyboardselectionlistmodel_insert_rows(void* self, int row, int co
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool q_virtualkeyboardselectionlistmodel_insert_columns(void* self, int column, int count, void* parent);
+bool q_virtualkeyboardselectionlistmodel_insert_columns(void* self, int column, int count, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -420,7 +424,7 @@ bool q_virtualkeyboardselectionlistmodel_insert_columns(void* self, int column, 
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool q_virtualkeyboardselectionlistmodel_remove_rows(void* self, int row, int count, void* parent);
+bool q_virtualkeyboardselectionlistmodel_remove_rows(void* self, int row, int count, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -431,7 +435,7 @@ bool q_virtualkeyboardselectionlistmodel_remove_rows(void* self, int row, int co
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool q_virtualkeyboardselectionlistmodel_remove_columns(void* self, int column, int count, void* parent);
+bool q_virtualkeyboardselectionlistmodel_remove_columns(void* self, int column, int count, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -444,7 +448,7 @@ bool q_virtualkeyboardselectionlistmodel_remove_columns(void* self, int column, 
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool q_virtualkeyboardselectionlistmodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
+bool q_virtualkeyboardselectionlistmodel_move_rows(void* self, const void* sourceParent, int sourceRow, int count, const void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -457,7 +461,7 @@ bool q_virtualkeyboardselectionlistmodel_move_rows(void* self, void* sourceParen
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool q_virtualkeyboardselectionlistmodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
+bool q_virtualkeyboardselectionlistmodel_move_columns(void* self, const void* sourceParent, int sourceColumn, int count, const void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -505,7 +509,7 @@ bool q_virtualkeyboardselectionlistmodel_remove_column(void* self, int column);
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool q_virtualkeyboardselectionlistmodel_move_row(void* self, void* sourceParent, int sourceRow, void* destinationParent, int destinationChild);
+bool q_virtualkeyboardselectionlistmodel_move_row(void* self, const void* sourceParent, int sourceRow, const void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -517,7 +521,7 @@ bool q_virtualkeyboardselectionlistmodel_move_row(void* self, void* sourceParent
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool q_virtualkeyboardselectionlistmodel_move_column(void* self, void* sourceParent, int sourceColumn, void* destinationParent, int destinationChild);
+bool q_virtualkeyboardselectionlistmodel_move_column(void* self, const void* sourceParent, int sourceColumn, const void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -526,16 +530,16 @@ bool q_virtualkeyboardselectionlistmodel_move_column(void* self, void* sourcePar
 /// @param self QVirtualKeyboardSelectionListModel*
 /// @param parent QModelIndex*
 ///
-void q_virtualkeyboardselectionlistmodel_fetch_more(void* self, void* parent);
+void q_virtualkeyboardselectionlistmodel_fetch_more(void* self, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#canFetchMore)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 /// @param parent QModelIndex*
 ///
-bool q_virtualkeyboardselectionlistmodel_can_fetch_more(void* self, void* parent);
+bool q_virtualkeyboardselectionlistmodel_can_fetch_more(const void* self, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -551,16 +555,16 @@ void q_virtualkeyboardselectionlistmodel_sort(void* self, int column, int32_t or
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#buddy)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 /// @param index QModelIndex*
 ///
-QModelIndex* q_virtualkeyboardselectionlistmodel_buddy(void* self, void* index);
+QModelIndex* q_virtualkeyboardselectionlistmodel_buddy(const void* self, const void* index);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#match)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 /// @param start QModelIndex*
 /// @param role int
 /// @param value QVariant*
@@ -569,35 +573,35 @@ QModelIndex* q_virtualkeyboardselectionlistmodel_buddy(void* self, void* index);
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list q_virtualkeyboardselectionlistmodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
+libqt_list q_virtualkeyboardselectionlistmodel_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#span)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 /// @param index QModelIndex*
 ///
-QSize* q_virtualkeyboardselectionlistmodel_span(void* self, void* index);
+QSize* q_virtualkeyboardselectionlistmodel_span(const void* self, const void* index);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 /// @param index QModelIndex*
 ///
-bool q_virtualkeyboardselectionlistmodel_check_index(void* self, void* index);
+bool q_virtualkeyboardselectionlistmodel_check_index(const void* self, const void* index);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 /// @param index QModelIndex*
 /// @param roleDataSpan QModelRoleDataSpan*
 ///
-void q_virtualkeyboardselectionlistmodel_multi_data(void* self, void* index, void* roleDataSpan);
+void q_virtualkeyboardselectionlistmodel_multi_data(const void* self, const void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -607,7 +611,7 @@ void q_virtualkeyboardselectionlistmodel_multi_data(void* self, void* index, voi
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
 ///
-void q_virtualkeyboardselectionlistmodel_data_changed(void* self, void* topLeft, void* bottomRight);
+void q_virtualkeyboardselectionlistmodel_data_changed(void* self, const void* topLeft, const void* bottomRight);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -616,7 +620,7 @@ void q_virtualkeyboardselectionlistmodel_data_changed(void* self, void* topLeft,
 /// @param self QVirtualKeyboardSelectionListModel*
 /// @param callback void func(QVirtualKeyboardSelectionListModel* self, QModelIndex* topLeft, QModelIndex* bottomRight)
 ///
-void q_virtualkeyboardselectionlistmodel_on_data_changed(void* self, void (*callback)(void*, void*, void*));
+void q_virtualkeyboardselectionlistmodel_on_data_changed(void* self, void (*callback)(void*, const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -692,12 +696,12 @@ void q_virtualkeyboardselectionlistmodel_revert(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool q_virtualkeyboardselectionlistmodel_has_index3(void* self, int row, int column, void* parent);
+bool q_virtualkeyboardselectionlistmodel_has_index3(const void* self, int row, int column, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -707,7 +711,7 @@ bool q_virtualkeyboardselectionlistmodel_has_index3(void* self, int row, int col
 /// @param row int
 /// @param parent QModelIndex*
 ///
-bool q_virtualkeyboardselectionlistmodel_insert_row2(void* self, int row, void* parent);
+bool q_virtualkeyboardselectionlistmodel_insert_row2(void* self, int row, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -717,7 +721,7 @@ bool q_virtualkeyboardselectionlistmodel_insert_row2(void* self, int row, void* 
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool q_virtualkeyboardselectionlistmodel_insert_column2(void* self, int column, void* parent);
+bool q_virtualkeyboardselectionlistmodel_insert_column2(void* self, int column, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -727,7 +731,7 @@ bool q_virtualkeyboardselectionlistmodel_insert_column2(void* self, int column, 
 /// @param row int
 /// @param parent QModelIndex*
 ///
-bool q_virtualkeyboardselectionlistmodel_remove_row2(void* self, int row, void* parent);
+bool q_virtualkeyboardselectionlistmodel_remove_row2(void* self, int row, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -737,17 +741,17 @@ bool q_virtualkeyboardselectionlistmodel_remove_row2(void* self, int row, void* 
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool q_virtualkeyboardselectionlistmodel_remove_column2(void* self, int column, void* parent);
+bool q_virtualkeyboardselectionlistmodel_remove_column2(void* self, int column, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 /// @param index QModelIndex*
 /// @param options flag of enum QAbstractItemModel__CheckIndexOption
 ///
-bool q_virtualkeyboardselectionlistmodel_check_index2(void* self, void* index, int32_t options);
+bool q_virtualkeyboardselectionlistmodel_check_index2(const void* self, const void* index, int32_t options);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -758,7 +762,7 @@ bool q_virtualkeyboardselectionlistmodel_check_index2(void* self, void* index, i
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void q_virtualkeyboardselectionlistmodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
+void q_virtualkeyboardselectionlistmodel_data_changed3(void* self, const void* topLeft, const void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -767,7 +771,7 @@ void q_virtualkeyboardselectionlistmodel_data_changed3(void* self, void* topLeft
 /// @param self QVirtualKeyboardSelectionListModel*
 /// @param callback void func(QVirtualKeyboardSelectionListModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list of int roles)
 ///
-void q_virtualkeyboardselectionlistmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list));
+void q_virtualkeyboardselectionlistmodel_on_data_changed3(void* self, void (*callback)(void*, const void*, const void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -868,9 +872,9 @@ bool q_virtualkeyboardselectionlistmodel_event_filter(void* self, void* watched,
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 ///
-const char* q_virtualkeyboardselectionlistmodel_object_name(void* self);
+const char* q_virtualkeyboardselectionlistmodel_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -885,33 +889,33 @@ void q_virtualkeyboardselectionlistmodel_set_object_name(void* self, const char*
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 ///
-bool q_virtualkeyboardselectionlistmodel_is_widget_type(void* self);
+bool q_virtualkeyboardselectionlistmodel_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 ///
-bool q_virtualkeyboardselectionlistmodel_is_window_type(void* self);
+bool q_virtualkeyboardselectionlistmodel_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 ///
-bool q_virtualkeyboardselectionlistmodel_is_quick_item_type(void* self);
+bool q_virtualkeyboardselectionlistmodel_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 ///
-bool q_virtualkeyboardselectionlistmodel_signals_blocked(void* self);
+bool q_virtualkeyboardselectionlistmodel_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -926,9 +930,9 @@ bool q_virtualkeyboardselectionlistmodel_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 ///
-QThread* q_virtualkeyboardselectionlistmodel_thread(void* self);
+QThread* q_virtualkeyboardselectionlistmodel_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -979,11 +983,11 @@ void q_virtualkeyboardselectionlistmodel_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_virtualkeyboardselectionlistmodel_children(void* self);
+libqt_list q_virtualkeyboardselectionlistmodel_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1021,7 +1025,7 @@ void q_virtualkeyboardselectionlistmodel_remove_event_filter(void* self, void* o
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_virtualkeyboardselectionlistmodel_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_virtualkeyboardselectionlistmodel_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1032,18 +1036,18 @@ QMetaObject__Connection* q_virtualkeyboardselectionlistmodel_connect(void* sende
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_virtualkeyboardselectionlistmodel_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_virtualkeyboardselectionlistmodel_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_virtualkeyboardselectionlistmodel_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_virtualkeyboardselectionlistmodel_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1054,7 +1058,7 @@ QMetaObject__Connection* q_virtualkeyboardselectionlistmodel_connect3(void* self
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_virtualkeyboardselectionlistmodel_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_virtualkeyboardselectionlistmodel_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1065,24 +1069,24 @@ bool q_virtualkeyboardselectionlistmodel_disconnect(void* sender, const char* si
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_virtualkeyboardselectionlistmodel_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_virtualkeyboardselectionlistmodel_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 ///
-bool q_virtualkeyboardselectionlistmodel_disconnect3(void* self);
+bool q_virtualkeyboardselectionlistmodel_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 /// @param receiver QObject*
 ///
-bool q_virtualkeyboardselectionlistmodel_disconnect4(void* self, void* receiver);
+bool q_virtualkeyboardselectionlistmodel_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1090,23 +1094,23 @@ bool q_virtualkeyboardselectionlistmodel_disconnect4(void* self, void* receiver)
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_virtualkeyboardselectionlistmodel_disconnect5(void* param1);
+bool q_virtualkeyboardselectionlistmodel_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 ///
-void q_virtualkeyboardselectionlistmodel_dump_object_tree(void* self);
+void q_virtualkeyboardselectionlistmodel_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 ///
-void q_virtualkeyboardselectionlistmodel_dump_object_info(void* self);
+void q_virtualkeyboardselectionlistmodel_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1116,16 +1120,16 @@ void q_virtualkeyboardselectionlistmodel_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_virtualkeyboardselectionlistmodel_set_property(void* self, const char* name, void* value);
+bool q_virtualkeyboardselectionlistmodel_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 /// @param name const char*
 ///
-QVariant* q_virtualkeyboardselectionlistmodel_property(void* self, const char* name);
+QVariant* q_virtualkeyboardselectionlistmodel_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1133,9 +1137,9 @@ QVariant* q_virtualkeyboardselectionlistmodel_property(void* self, const char* n
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 ///
-const char** q_virtualkeyboardselectionlistmodel_dynamic_property_names(void* self);
+const char** q_virtualkeyboardselectionlistmodel_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1149,9 +1153,9 @@ QBindingStorage* q_virtualkeyboardselectionlistmodel_binding_storage(void* self)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 ///
-const QBindingStorage* q_virtualkeyboardselectionlistmodel_binding_storage2(void* self);
+const QBindingStorage* q_virtualkeyboardselectionlistmodel_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1174,10 +1178,10 @@ void q_virtualkeyboardselectionlistmodel_on_destroyed(void* self, void (*callbac
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 /// @param classname const char*
 ///
-bool q_virtualkeyboardselectionlistmodel_inherits(void* self, const char* classname);
+bool q_virtualkeyboardselectionlistmodel_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1217,7 +1221,7 @@ int32_t q_virtualkeyboardselectionlistmodel_start_timer23(void* self, int64_t ti
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_virtualkeyboardselectionlistmodel_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_virtualkeyboardselectionlistmodel_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1229,59 +1233,59 @@ QMetaObject__Connection* q_virtualkeyboardselectionlistmodel_connect5(void* send
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_virtualkeyboardselectionlistmodel_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_virtualkeyboardselectionlistmodel_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_virtualkeyboardselectionlistmodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_virtualkeyboardselectionlistmodel_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 /// @param signal const char*
 ///
-bool q_virtualkeyboardselectionlistmodel_disconnect1(void* self, const char* signal);
+bool q_virtualkeyboardselectionlistmodel_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_virtualkeyboardselectionlistmodel_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_virtualkeyboardselectionlistmodel_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_virtualkeyboardselectionlistmodel_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QVirtualKeyboardSelectionListModel*
+/// @param self const QVirtualKeyboardSelectionListModel*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_virtualkeyboardselectionlistmodel_disconnect23(void* self, void* receiver, const char* member);
+bool q_virtualkeyboardselectionlistmodel_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QVirtualKeyboardSelectionListModel*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_virtualkeyboardselectionlistmodel_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1310,7 +1314,7 @@ void q_virtualkeyboardselectionlistmodel_on_destroyed1(void* self, void (*callba
 /// @param self QVirtualKeyboardSelectionListModel*
 /// @param callback void func(QVirtualKeyboardSelectionListModel* self, QModelIndex* parent, int first, int last)
 ///
-void q_virtualkeyboardselectionlistmodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
+void q_virtualkeyboardselectionlistmodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1321,7 +1325,7 @@ void q_virtualkeyboardselectionlistmodel_on_rows_about_to_be_inserted(void* self
 /// @param self QVirtualKeyboardSelectionListModel*
 /// @param callback void func(QVirtualKeyboardSelectionListModel* self, QModelIndex* parent, int first, int last)
 ///
-void q_virtualkeyboardselectionlistmodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
+void q_virtualkeyboardselectionlistmodel_on_rows_inserted(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1332,7 +1336,7 @@ void q_virtualkeyboardselectionlistmodel_on_rows_inserted(void* self, void (*cal
 /// @param self QVirtualKeyboardSelectionListModel*
 /// @param callback void func(QVirtualKeyboardSelectionListModel* self, QModelIndex* parent, int first, int last)
 ///
-void q_virtualkeyboardselectionlistmodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
+void q_virtualkeyboardselectionlistmodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1343,7 +1347,7 @@ void q_virtualkeyboardselectionlistmodel_on_rows_about_to_be_removed(void* self,
 /// @param self QVirtualKeyboardSelectionListModel*
 /// @param callback void func(QVirtualKeyboardSelectionListModel* self, QModelIndex* parent, int first, int last)
 ///
-void q_virtualkeyboardselectionlistmodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int));
+void q_virtualkeyboardselectionlistmodel_on_rows_removed(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1354,7 +1358,7 @@ void q_virtualkeyboardselectionlistmodel_on_rows_removed(void* self, void (*call
 /// @param self QVirtualKeyboardSelectionListModel*
 /// @param callback void func(QVirtualKeyboardSelectionListModel* self, QModelIndex* parent, int first, int last)
 ///
-void q_virtualkeyboardselectionlistmodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
+void q_virtualkeyboardselectionlistmodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1365,7 +1369,7 @@ void q_virtualkeyboardselectionlistmodel_on_columns_about_to_be_inserted(void* s
 /// @param self QVirtualKeyboardSelectionListModel*
 /// @param callback void func(QVirtualKeyboardSelectionListModel* self, QModelIndex* parent, int first, int last)
 ///
-void q_virtualkeyboardselectionlistmodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int));
+void q_virtualkeyboardselectionlistmodel_on_columns_inserted(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1376,7 +1380,7 @@ void q_virtualkeyboardselectionlistmodel_on_columns_inserted(void* self, void (*
 /// @param self QVirtualKeyboardSelectionListModel*
 /// @param callback void func(QVirtualKeyboardSelectionListModel* self, QModelIndex* parent, int first, int last)
 ///
-void q_virtualkeyboardselectionlistmodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
+void q_virtualkeyboardselectionlistmodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1387,7 +1391,7 @@ void q_virtualkeyboardselectionlistmodel_on_columns_about_to_be_removed(void* se
 /// @param self QVirtualKeyboardSelectionListModel*
 /// @param callback void func(QVirtualKeyboardSelectionListModel* self, QModelIndex* parent, int first, int last)
 ///
-void q_virtualkeyboardselectionlistmodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int));
+void q_virtualkeyboardselectionlistmodel_on_columns_removed(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1420,7 +1424,7 @@ void q_virtualkeyboardselectionlistmodel_on_model_reset(void* self, void (*callb
 /// @param self QVirtualKeyboardSelectionListModel*
 /// @param callback void func(QVirtualKeyboardSelectionListModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
 ///
-void q_virtualkeyboardselectionlistmodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
+void q_virtualkeyboardselectionlistmodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1431,7 +1435,7 @@ void q_virtualkeyboardselectionlistmodel_on_rows_about_to_be_moved(void* self, v
 /// @param self QVirtualKeyboardSelectionListModel*
 /// @param callback void func(QVirtualKeyboardSelectionListModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
 ///
-void q_virtualkeyboardselectionlistmodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
+void q_virtualkeyboardselectionlistmodel_on_rows_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1442,7 +1446,7 @@ void q_virtualkeyboardselectionlistmodel_on_rows_moved(void* self, void (*callba
 /// @param self QVirtualKeyboardSelectionListModel*
 /// @param callback void func(QVirtualKeyboardSelectionListModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
 ///
-void q_virtualkeyboardselectionlistmodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
+void q_virtualkeyboardselectionlistmodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1453,7 +1457,7 @@ void q_virtualkeyboardselectionlistmodel_on_columns_about_to_be_moved(void* self
 /// @param self QVirtualKeyboardSelectionListModel*
 /// @param callback void func(QVirtualKeyboardSelectionListModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
 ///
-void q_virtualkeyboardselectionlistmodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
+void q_virtualkeyboardselectionlistmodel_on_columns_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QObject
 ///

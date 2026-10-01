@@ -17,7 +17,7 @@
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_create(int32_t id, void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_create(int32_t id, const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#_k_createInternal)
 ///
@@ -60,7 +60,7 @@ int32_t k_standardaction_shortcut_for_action_id(int32_t id);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_open_new(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_open_new(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#open)
 ///
@@ -68,7 +68,7 @@ QAction* k_standardaction_open_new(void* recvr, const char* slot, void* parent);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_open(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_open(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#openRecent)
 ///
@@ -76,7 +76,7 @@ QAction* k_standardaction_open(void* recvr, const char* slot, void* parent);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-KRecentFilesAction* k_standardaction_open_recent(void* recvr, const char* slot, void* parent);
+KRecentFilesAction* k_standardaction_open_recent(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#save)
 ///
@@ -84,7 +84,7 @@ KRecentFilesAction* k_standardaction_open_recent(void* recvr, const char* slot, 
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_save(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_save(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#saveAs)
 ///
@@ -92,7 +92,7 @@ QAction* k_standardaction_save(void* recvr, const char* slot, void* parent);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_save_as(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_save_as(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#revert)
 ///
@@ -100,7 +100,7 @@ QAction* k_standardaction_save_as(void* recvr, const char* slot, void* parent);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_revert(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_revert(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#close)
 ///
@@ -108,7 +108,7 @@ QAction* k_standardaction_revert(void* recvr, const char* slot, void* parent);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_close(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_close(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#print)
 ///
@@ -116,7 +116,7 @@ QAction* k_standardaction_close(void* recvr, const char* slot, void* parent);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_print(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_print(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#printPreview)
 ///
@@ -124,7 +124,7 @@ QAction* k_standardaction_print(void* recvr, const char* slot, void* parent);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_print_preview(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_print_preview(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#mail)
 ///
@@ -132,7 +132,7 @@ QAction* k_standardaction_print_preview(void* recvr, const char* slot, void* par
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_mail(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_mail(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#quit)
 ///
@@ -140,7 +140,7 @@ QAction* k_standardaction_mail(void* recvr, const char* slot, void* parent);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_quit(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_quit(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#undo)
 ///
@@ -148,7 +148,7 @@ QAction* k_standardaction_quit(void* recvr, const char* slot, void* parent);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_undo(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_undo(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#redo)
 ///
@@ -156,7 +156,7 @@ QAction* k_standardaction_undo(void* recvr, const char* slot, void* parent);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_redo(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_redo(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#cut)
 ///
@@ -194,7 +194,7 @@ QAction* k_standardaction_select_all(void* parent);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_cut2(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_cut2(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#copy)
 ///
@@ -202,7 +202,7 @@ QAction* k_standardaction_cut2(void* recvr, const char* slot, void* parent);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_copy2(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_copy2(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#paste)
 ///
@@ -210,7 +210,7 @@ QAction* k_standardaction_copy2(void* recvr, const char* slot, void* parent);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_paste2(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_paste2(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#clear)
 ///
@@ -218,7 +218,7 @@ QAction* k_standardaction_paste2(void* recvr, const char* slot, void* parent);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_clear2(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_clear2(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#selectAll)
 ///
@@ -226,7 +226,7 @@ QAction* k_standardaction_clear2(void* recvr, const char* slot, void* parent);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_select_all2(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_select_all2(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#deselect)
 ///
@@ -234,7 +234,7 @@ QAction* k_standardaction_select_all2(void* recvr, const char* slot, void* paren
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_deselect(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_deselect(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#find)
 ///
@@ -242,7 +242,7 @@ QAction* k_standardaction_deselect(void* recvr, const char* slot, void* parent);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_find(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_find(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#findNext)
 ///
@@ -250,7 +250,7 @@ QAction* k_standardaction_find(void* recvr, const char* slot, void* parent);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_find_next(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_find_next(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#findPrev)
 ///
@@ -258,7 +258,7 @@ QAction* k_standardaction_find_next(void* recvr, const char* slot, void* parent)
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_find_prev(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_find_prev(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#replace)
 ///
@@ -266,7 +266,7 @@ QAction* k_standardaction_find_prev(void* recvr, const char* slot, void* parent)
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_replace(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_replace(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#actualSize)
 ///
@@ -274,7 +274,7 @@ QAction* k_standardaction_replace(void* recvr, const char* slot, void* parent);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_actual_size(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_actual_size(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#fitToPage)
 ///
@@ -282,7 +282,7 @@ QAction* k_standardaction_actual_size(void* recvr, const char* slot, void* paren
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_fit_to_page(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_fit_to_page(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#fitToWidth)
 ///
@@ -290,7 +290,7 @@ QAction* k_standardaction_fit_to_page(void* recvr, const char* slot, void* paren
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_fit_to_width(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_fit_to_width(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#fitToHeight)
 ///
@@ -298,7 +298,7 @@ QAction* k_standardaction_fit_to_width(void* recvr, const char* slot, void* pare
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_fit_to_height(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_fit_to_height(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#zoomIn)
 ///
@@ -306,7 +306,7 @@ QAction* k_standardaction_fit_to_height(void* recvr, const char* slot, void* par
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_zoom_in(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_zoom_in(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#zoomOut)
 ///
@@ -314,7 +314,7 @@ QAction* k_standardaction_zoom_in(void* recvr, const char* slot, void* parent);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_zoom_out(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_zoom_out(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#zoom)
 ///
@@ -322,7 +322,7 @@ QAction* k_standardaction_zoom_out(void* recvr, const char* slot, void* parent);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_zoom(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_zoom(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#redisplay)
 ///
@@ -330,7 +330,7 @@ QAction* k_standardaction_zoom(void* recvr, const char* slot, void* parent);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_redisplay(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_redisplay(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#up)
 ///
@@ -338,7 +338,7 @@ QAction* k_standardaction_redisplay(void* recvr, const char* slot, void* parent)
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_up(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_up(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#back)
 ///
@@ -346,7 +346,7 @@ QAction* k_standardaction_up(void* recvr, const char* slot, void* parent);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_back(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_back(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#forward)
 ///
@@ -354,7 +354,7 @@ QAction* k_standardaction_back(void* recvr, const char* slot, void* parent);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_forward(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_forward(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#home)
 ///
@@ -362,7 +362,7 @@ QAction* k_standardaction_forward(void* recvr, const char* slot, void* parent);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_home(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_home(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#prior)
 ///
@@ -370,7 +370,7 @@ QAction* k_standardaction_home(void* recvr, const char* slot, void* parent);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_prior(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_prior(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#next)
 ///
@@ -378,7 +378,7 @@ QAction* k_standardaction_prior(void* recvr, const char* slot, void* parent);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_next(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_next(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#goTo)
 ///
@@ -386,7 +386,7 @@ QAction* k_standardaction_next(void* recvr, const char* slot, void* parent);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_go_to(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_go_to(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#gotoPage)
 ///
@@ -394,7 +394,7 @@ QAction* k_standardaction_go_to(void* recvr, const char* slot, void* parent);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_goto_page(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_goto_page(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#gotoLine)
 ///
@@ -402,7 +402,7 @@ QAction* k_standardaction_goto_page(void* recvr, const char* slot, void* parent)
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_goto_line(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_goto_line(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#firstPage)
 ///
@@ -410,7 +410,7 @@ QAction* k_standardaction_goto_line(void* recvr, const char* slot, void* parent)
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_first_page(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_first_page(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#lastPage)
 ///
@@ -418,7 +418,7 @@ QAction* k_standardaction_first_page(void* recvr, const char* slot, void* parent
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_last_page(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_last_page(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#documentBack)
 ///
@@ -426,7 +426,7 @@ QAction* k_standardaction_last_page(void* recvr, const char* slot, void* parent)
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_document_back(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_document_back(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#documentForward)
 ///
@@ -434,7 +434,7 @@ QAction* k_standardaction_document_back(void* recvr, const char* slot, void* par
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_document_forward(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_document_forward(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#addBookmark)
 ///
@@ -442,7 +442,7 @@ QAction* k_standardaction_document_forward(void* recvr, const char* slot, void* 
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_add_bookmark(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_add_bookmark(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#editBookmarks)
 ///
@@ -450,7 +450,7 @@ QAction* k_standardaction_add_bookmark(void* recvr, const char* slot, void* pare
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_edit_bookmarks(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_edit_bookmarks(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#spelling)
 ///
@@ -458,7 +458,7 @@ QAction* k_standardaction_edit_bookmarks(void* recvr, const char* slot, void* pa
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_spelling(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_spelling(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#showMenubar)
 ///
@@ -466,7 +466,7 @@ QAction* k_standardaction_spelling(void* recvr, const char* slot, void* parent);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-KToggleAction* k_standardaction_show_menubar(void* recvr, const char* slot, void* parent);
+KToggleAction* k_standardaction_show_menubar(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#showStatusbar)
 ///
@@ -474,7 +474,7 @@ KToggleAction* k_standardaction_show_menubar(void* recvr, const char* slot, void
 /// @param slot const char*
 /// @param parent QObject*
 ///
-KToggleAction* k_standardaction_show_statusbar(void* recvr, const char* slot, void* parent);
+KToggleAction* k_standardaction_show_statusbar(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#fullScreen)
 ///
@@ -483,7 +483,7 @@ KToggleAction* k_standardaction_show_statusbar(void* recvr, const char* slot, vo
 /// @param window QWidget*
 /// @param parent QObject*
 ///
-KToggleFullScreenAction* k_standardaction_full_screen(void* recvr, const char* slot, void* window, void* parent);
+KToggleFullScreenAction* k_standardaction_full_screen(const void* recvr, const char* slot, void* window, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#keyBindings)
 ///
@@ -491,7 +491,7 @@ KToggleFullScreenAction* k_standardaction_full_screen(void* recvr, const char* s
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_key_bindings(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_key_bindings(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#preferences)
 ///
@@ -499,7 +499,7 @@ QAction* k_standardaction_key_bindings(void* recvr, const char* slot, void* pare
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_preferences(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_preferences(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#configureToolbars)
 ///
@@ -507,7 +507,7 @@ QAction* k_standardaction_preferences(void* recvr, const char* slot, void* paren
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_configure_toolbars(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_configure_toolbars(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#configureNotifications)
 ///
@@ -515,7 +515,7 @@ QAction* k_standardaction_configure_toolbars(void* recvr, const char* slot, void
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_configure_notifications(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_configure_notifications(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#switchApplicationLanguage)
 ///
@@ -523,7 +523,7 @@ QAction* k_standardaction_configure_notifications(void* recvr, const char* slot,
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_switch_application_language(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_switch_application_language(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#helpContents)
 ///
@@ -531,7 +531,7 @@ QAction* k_standardaction_switch_application_language(void* recvr, const char* s
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_help_contents(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_help_contents(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#whatsThis)
 ///
@@ -539,7 +539,7 @@ QAction* k_standardaction_help_contents(void* recvr, const char* slot, void* par
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_whats_this(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_whats_this(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#reportBug)
 ///
@@ -547,7 +547,7 @@ QAction* k_standardaction_whats_this(void* recvr, const char* slot, void* parent
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_report_bug(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_report_bug(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#aboutApp)
 ///
@@ -555,7 +555,7 @@ QAction* k_standardaction_report_bug(void* recvr, const char* slot, void* parent
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_about_app(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_about_app(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#aboutKDE)
 ///
@@ -563,7 +563,7 @@ QAction* k_standardaction_about_app(void* recvr, const char* slot, void* parent)
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_about_k_d_e(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_about_k_d_e(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#deleteFile)
 ///
@@ -571,7 +571,7 @@ QAction* k_standardaction_about_k_d_e(void* recvr, const char* slot, void* paren
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_delete_file(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_delete_file(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#renameFile)
 ///
@@ -579,7 +579,7 @@ QAction* k_standardaction_delete_file(void* recvr, const char* slot, void* paren
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_rename_file(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_rename_file(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#moveToTrash)
 ///
@@ -587,7 +587,7 @@ QAction* k_standardaction_rename_file(void* recvr, const char* slot, void* paren
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_move_to_trash(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_move_to_trash(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#donate)
 ///
@@ -595,7 +595,7 @@ QAction* k_standardaction_move_to_trash(void* recvr, const char* slot, void* par
 /// @param slot const char*
 /// @param parent QObject*
 ///
-QAction* k_standardaction_donate(void* recvr, const char* slot, void* parent);
+QAction* k_standardaction_donate(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#hamburgerMenu)
 ///
@@ -603,7 +603,7 @@ QAction* k_standardaction_donate(void* recvr, const char* slot, void* parent);
 /// @param slot const char*
 /// @param parent QObject*
 ///
-KHamburgerMenu* k_standardaction_hamburger_menu(void* recvr, const char* slot, void* parent);
+KHamburgerMenu* k_standardaction_hamburger_menu(const void* recvr, const char* slot, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#public-types)
 

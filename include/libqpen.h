@@ -28,7 +28,7 @@ QPen* q_pen_new2(int32_t param1);
 ///
 /// @param color QColor*
 ///
-QPen* q_pen_new3(void* color);
+QPen* q_pen_new3(const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html)
 
@@ -37,7 +37,7 @@ QPen* q_pen_new3(void* color);
 /// @param brush QBrush*
 /// @param width double
 ///
-QPen* q_pen_new4(void* brush, double width);
+QPen* q_pen_new4(const void* brush, double width);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html)
 
@@ -45,7 +45,7 @@ QPen* q_pen_new4(void* brush, double width);
 ///
 /// @param pen QPen*
 ///
-QPen* q_pen_new5(void* pen);
+QPen* q_pen_new5(const void* pen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html)
 
@@ -55,7 +55,7 @@ QPen* q_pen_new5(void* pen);
 /// @param width double
 /// @param s enum Qt__PenStyle
 ///
-QPen* q_pen_new6(void* brush, double width, int32_t s);
+QPen* q_pen_new6(const void* brush, double width, int32_t s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html)
 
@@ -66,7 +66,7 @@ QPen* q_pen_new6(void* brush, double width, int32_t s);
 /// @param s enum Qt__PenStyle
 /// @param c enum Qt__PenCapStyle
 ///
-QPen* q_pen_new7(void* brush, double width, int32_t s, int32_t c);
+QPen* q_pen_new7(const void* brush, double width, int32_t s, int32_t c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html)
 
@@ -78,14 +78,14 @@ QPen* q_pen_new7(void* brush, double width, int32_t s, int32_t c);
 /// @param c enum Qt__PenCapStyle
 /// @param j enum Qt__PenJoinStyle
 ///
-QPen* q_pen_new8(void* brush, double width, int32_t s, int32_t c, int32_t j);
+QPen* q_pen_new8(const void* brush, double width, int32_t s, int32_t c, int32_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#operator-eq)
 ///
 /// @param self QPen*
 /// @param pen QPen*
 ///
-void q_pen_operator_assign(void* self, void* pen);
+void q_pen_operator_assign(void* self, const void* pen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#swap)
 ///
@@ -96,11 +96,11 @@ void q_pen_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#style)
 ///
-/// @param self QPen*
+/// @param self const QPen*
 ///
 /// @return enum Qt__PenStyle
 ///
-int32_t q_pen_style(void* self);
+int32_t q_pen_style(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#setStyle)
 ///
@@ -111,11 +111,11 @@ void q_pen_set_style(void* self, int32_t style);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#dashPattern)
 ///
-/// @param self QPen*
+/// @param self const QPen*
 ///
 /// @return libqt_list of double
 ///
-libqt_list q_pen_dash_pattern(void* self);
+libqt_list q_pen_dash_pattern(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#setDashPattern)
 ///
@@ -126,9 +126,9 @@ void q_pen_set_dash_pattern(void* self, libqt_list pattern);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#dashOffset)
 ///
-/// @param self QPen*
+/// @param self const QPen*
 ///
-double q_pen_dash_offset(void* self);
+double q_pen_dash_offset(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#setDashOffset)
 ///
@@ -139,9 +139,9 @@ void q_pen_set_dash_offset(void* self, double doffset);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#miterLimit)
 ///
-/// @param self QPen*
+/// @param self const QPen*
 ///
-double q_pen_miter_limit(void* self);
+double q_pen_miter_limit(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#setMiterLimit)
 ///
@@ -152,9 +152,9 @@ void q_pen_set_miter_limit(void* self, double limit);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#widthF)
 ///
-/// @param self QPen*
+/// @param self const QPen*
 ///
-double q_pen_width_f(void* self);
+double q_pen_width_f(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#setWidthF)
 ///
@@ -165,9 +165,9 @@ void q_pen_set_width_f(void* self, double width);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#width)
 ///
-/// @param self QPen*
+/// @param self const QPen*
 ///
-int32_t q_pen_width(void* self);
+int32_t q_pen_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#setWidth)
 ///
@@ -178,43 +178,43 @@ void q_pen_set_width(void* self, int width);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#color)
 ///
-/// @param self QPen*
+/// @param self const QPen*
 ///
-QColor* q_pen_color(void* self);
+QColor* q_pen_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#setColor)
 ///
 /// @param self QPen*
 /// @param color QColor*
 ///
-void q_pen_set_color(void* self, void* color);
+void q_pen_set_color(void* self, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#brush)
 ///
-/// @param self QPen*
+/// @param self const QPen*
 ///
-QBrush* q_pen_brush(void* self);
+QBrush* q_pen_brush(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#setBrush)
 ///
 /// @param self QPen*
 /// @param brush QBrush*
 ///
-void q_pen_set_brush(void* self, void* brush);
+void q_pen_set_brush(void* self, const void* brush);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#isSolid)
 ///
-/// @param self QPen*
+/// @param self const QPen*
 ///
-bool q_pen_is_solid(void* self);
+bool q_pen_is_solid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#capStyle)
 ///
-/// @param self QPen*
+/// @param self const QPen*
 ///
 /// @return enum Qt__PenCapStyle
 ///
-int32_t q_pen_cap_style(void* self);
+int32_t q_pen_cap_style(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#setCapStyle)
 ///
@@ -225,11 +225,11 @@ void q_pen_set_cap_style(void* self, int32_t pcs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#joinStyle)
 ///
-/// @param self QPen*
+/// @param self const QPen*
 ///
 /// @return enum Qt__PenJoinStyle
 ///
-int32_t q_pen_join_style(void* self);
+int32_t q_pen_join_style(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#setJoinStyle)
 ///
@@ -240,9 +240,9 @@ void q_pen_set_join_style(void* self, int32_t pcs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#isCosmetic)
 ///
-/// @param self QPen*
+/// @param self const QPen*
 ///
-bool q_pen_is_cosmetic(void* self);
+bool q_pen_is_cosmetic(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#setCosmetic)
 ///
@@ -253,23 +253,23 @@ void q_pen_set_cosmetic(void* self, bool cosmetic);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#operator-eq-eq)
 ///
-/// @param self QPen*
+/// @param self const QPen*
 /// @param p QPen*
 ///
-bool q_pen_operator_equal(void* self, void* p);
+bool q_pen_operator_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#operator-not-eq)
 ///
-/// @param self QPen*
+/// @param self const QPen*
 /// @param p QPen*
 ///
-bool q_pen_operator_not_equal(void* self, void* p);
+bool q_pen_operator_not_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#operator-QVariant)
 ///
-/// @param self QPen*
+/// @param self const QPen*
 ///
-QVariant* q_pen_to_q_variant(void* self);
+QVariant* q_pen_to_q_variant(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#isDetached)
 ///

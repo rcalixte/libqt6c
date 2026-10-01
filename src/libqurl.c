@@ -2,7 +2,7 @@
 #include "libqurl.hpp"
 #include "libqurl.h"
 
-size_t q_qurl_q_hash(void* url, size_t seed) {
+size_t q_qurl_q_hash(const void* url, size_t seed) {
     return qurl_QHash((QUrl*)url, seed);
 }
 
@@ -10,7 +10,7 @@ QUrl* q_url_new() {
     return QUrl_New();
 }
 
-QUrl* q_url_new2(void* copy) {
+QUrl* q_url_new2(const void* copy) {
     return QUrl_New2((QUrl*)copy);
 }
 
@@ -22,7 +22,7 @@ QUrl* q_url_new4(const char* url, int32_t mode) {
     return QUrl_New4(qstring(url), mode);
 }
 
-void q_url_operator_assign(void* self, void* copy) {
+void q_url_operator_assign(void* self, const void* copy) {
     QUrl_OperatorAssign((QUrl*)self, (QUrl*)copy);
 }
 
@@ -38,28 +38,28 @@ void q_url_set_url(void* self, const char* url) {
     QUrl_SetUrl((QUrl*)self, qstring(url));
 }
 
-const char* q_url_url(void* self) {
+const char* q_url_url(const void* self) {
     libqt_string _str = QUrl_Url((QUrl*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_url_to_string(void* self) {
+const char* q_url_to_string(const void* self) {
     libqt_string _str = QUrl_ToString((QUrl*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_url_to_display_string(void* self) {
+const char* q_url_to_display_string(const void* self) {
     libqt_string _str = QUrl_ToDisplayString((QUrl*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_url_to_encoded(void* self) {
+char* q_url_to_encoded(const void* self) {
     libqt_string _str = QUrl_ToEncoded((QUrl*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -74,18 +74,18 @@ QUrl* q_url_from_user_input(const char* userInput) {
     return QUrl_FromUserInput(qstring(userInput));
 }
 
-bool q_url_is_valid(void* self) {
+bool q_url_is_valid(const void* self) {
     return QUrl_IsValid((QUrl*)self);
 }
 
-const char* q_url_error_string(void* self) {
+const char* q_url_error_string(const void* self) {
     libqt_string _str = QUrl_ErrorString((QUrl*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_url_is_empty(void* self) {
+bool q_url_is_empty(const void* self) {
     return QUrl_IsEmpty((QUrl*)self);
 }
 
@@ -97,7 +97,7 @@ void q_url_set_scheme(void* self, const char* scheme) {
     QUrl_SetScheme((QUrl*)self, qstring(scheme));
 }
 
-const char* q_url_scheme(void* self) {
+const char* q_url_scheme(const void* self) {
     libqt_string _str = QUrl_Scheme((QUrl*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -108,7 +108,7 @@ void q_url_set_authority(void* self, const char* authority) {
     QUrl_SetAuthority((QUrl*)self, qstring(authority));
 }
 
-const char* q_url_authority(void* self) {
+const char* q_url_authority(const void* self) {
     libqt_string _str = QUrl_Authority((QUrl*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -119,7 +119,7 @@ void q_url_set_user_info(void* self, const char* userInfo) {
     QUrl_SetUserInfo((QUrl*)self, qstring(userInfo));
 }
 
-const char* q_url_user_info(void* self) {
+const char* q_url_user_info(const void* self) {
     libqt_string _str = QUrl_UserInfo((QUrl*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -130,7 +130,7 @@ void q_url_set_user_name(void* self, const char* userName) {
     QUrl_SetUserName((QUrl*)self, qstring(userName));
 }
 
-const char* q_url_user_name(void* self) {
+const char* q_url_user_name(const void* self) {
     libqt_string _str = QUrl_UserName((QUrl*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -141,7 +141,7 @@ void q_url_set_password(void* self, const char* password) {
     QUrl_SetPassword((QUrl*)self, qstring(password));
 }
 
-const char* q_url_password(void* self) {
+const char* q_url_password(const void* self) {
     libqt_string _str = QUrl_Password((QUrl*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -152,7 +152,7 @@ void q_url_set_host(void* self, const char* host) {
     QUrl_SetHost((QUrl*)self, qstring(host));
 }
 
-const char* q_url_host(void* self) {
+const char* q_url_host(const void* self) {
     libqt_string _str = QUrl_Host((QUrl*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -163,7 +163,7 @@ void q_url_set_port(void* self, int port) {
     QUrl_SetPort((QUrl*)self, port);
 }
 
-int32_t q_url_port(void* self) {
+int32_t q_url_port(const void* self) {
     return QUrl_Port((QUrl*)self);
 }
 
@@ -171,21 +171,21 @@ void q_url_set_path(void* self, const char* path) {
     QUrl_SetPath((QUrl*)self, qstring(path));
 }
 
-const char* q_url_path(void* self) {
+const char* q_url_path(const void* self) {
     libqt_string _str = QUrl_Path((QUrl*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_url_file_name(void* self) {
+const char* q_url_file_name(const void* self) {
     libqt_string _str = QUrl_FileName((QUrl*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_url_has_query(void* self) {
+bool q_url_has_query(const void* self) {
     return QUrl_HasQuery((QUrl*)self);
 }
 
@@ -193,22 +193,22 @@ void q_url_set_query(void* self, const char* query) {
     QUrl_SetQuery((QUrl*)self, qstring(query));
 }
 
-void q_url_set_query2(void* self, void* query) {
+void q_url_set_query2(void* self, const void* query) {
     QUrl_SetQuery2((QUrl*)self, (QUrlQuery*)query);
 }
 
-const char* q_url_query(void* self) {
+const char* q_url_query(const void* self) {
     libqt_string _str = QUrl_Query((QUrl*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_url_has_fragment(void* self) {
+bool q_url_has_fragment(const void* self) {
     return QUrl_HasFragment((QUrl*)self);
 }
 
-const char* q_url_fragment(void* self) {
+const char* q_url_fragment(const void* self) {
     libqt_string _str = QUrl_Fragment((QUrl*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -219,19 +219,19 @@ void q_url_set_fragment(void* self, const char* fragment) {
     QUrl_SetFragment((QUrl*)self, qstring(fragment));
 }
 
-QUrl* q_url_resolved(void* self, void* relative) {
+QUrl* q_url_resolved(const void* self, const void* relative) {
     return QUrl_Resolved((QUrl*)self, (QUrl*)relative);
 }
 
-bool q_url_is_relative(void* self) {
+bool q_url_is_relative(const void* self) {
     return QUrl_IsRelative((QUrl*)self);
 }
 
-bool q_url_is_parent_of(void* self, void* url) {
+bool q_url_is_parent_of(const void* self, const void* url) {
     return QUrl_IsParentOf((QUrl*)self, (QUrl*)url);
 }
 
-bool q_url_is_local_file(void* self) {
+bool q_url_is_local_file(const void* self) {
     return QUrl_IsLocalFile((QUrl*)self);
 }
 
@@ -239,7 +239,7 @@ QUrl* q_url_from_local_file(const char* localfile) {
     return QUrl_FromLocalFile(qstring(localfile));
 }
 
-const char* q_url_to_local_file(void* self) {
+const char* q_url_to_local_file(const void* self) {
     libqt_string _str = QUrl_ToLocalFile((QUrl*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -250,7 +250,7 @@ void q_url_detach(void* self) {
     QUrl_Detach((QUrl*)self);
 }
 
-bool q_url_is_detached(void* self) {
+bool q_url_is_detached(const void* self) {
     return QUrl_IsDetached((QUrl*)self);
 }
 
@@ -365,7 +365,7 @@ void q_url_set_authority2(void* self, const char* authority, int32_t mode) {
     QUrl_SetAuthority2((QUrl*)self, qstring(authority), mode);
 }
 
-const char* q_url_authority1(void* self, uint32_t options) {
+const char* q_url_authority1(const void* self, uint32_t options) {
     libqt_string _str = QUrl_Authority1((QUrl*)self, options);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -376,7 +376,7 @@ void q_url_set_user_info2(void* self, const char* userInfo, int32_t mode) {
     QUrl_SetUserInfo2((QUrl*)self, qstring(userInfo), mode);
 }
 
-const char* q_url_user_info1(void* self, uint32_t options) {
+const char* q_url_user_info1(const void* self, uint32_t options) {
     libqt_string _str = QUrl_UserInfo1((QUrl*)self, options);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -387,7 +387,7 @@ void q_url_set_user_name2(void* self, const char* userName, int32_t mode) {
     QUrl_SetUserName2((QUrl*)self, qstring(userName), mode);
 }
 
-const char* q_url_user_name1(void* self, uint32_t options) {
+const char* q_url_user_name1(const void* self, uint32_t options) {
     libqt_string _str = QUrl_UserName1((QUrl*)self, options);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -398,7 +398,7 @@ void q_url_set_password2(void* self, const char* password, int32_t mode) {
     QUrl_SetPassword2((QUrl*)self, qstring(password), mode);
 }
 
-const char* q_url_password1(void* self, uint32_t param1) {
+const char* q_url_password1(const void* self, uint32_t param1) {
     libqt_string _str = QUrl_Password1((QUrl*)self, param1);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -409,14 +409,14 @@ void q_url_set_host2(void* self, const char* host, int32_t mode) {
     QUrl_SetHost2((QUrl*)self, qstring(host), mode);
 }
 
-const char* q_url_host1(void* self, uint32_t param1) {
+const char* q_url_host1(const void* self, uint32_t param1) {
     libqt_string _str = QUrl_Host1((QUrl*)self, param1);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t q_url_port1(void* self, int defaultPort) {
+int32_t q_url_port1(const void* self, int defaultPort) {
     return QUrl_Port1((QUrl*)self, defaultPort);
 }
 
@@ -424,14 +424,14 @@ void q_url_set_path2(void* self, const char* path, int32_t mode) {
     QUrl_SetPath2((QUrl*)self, qstring(path), mode);
 }
 
-const char* q_url_path1(void* self, uint32_t options) {
+const char* q_url_path1(const void* self, uint32_t options) {
     libqt_string _str = QUrl_Path1((QUrl*)self, options);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_url_file_name1(void* self, uint32_t options) {
+const char* q_url_file_name1(const void* self, uint32_t options) {
     libqt_string _str = QUrl_FileName1((QUrl*)self, options);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -442,14 +442,14 @@ void q_url_set_query22(void* self, const char* query, int32_t mode) {
     QUrl_SetQuery22((QUrl*)self, qstring(query), mode);
 }
 
-const char* q_url_query1(void* self, uint32_t param1) {
+const char* q_url_query1(const void* self, uint32_t param1) {
     libqt_string _str = QUrl_Query1((QUrl*)self, param1);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_url_fragment1(void* self, uint32_t options) {
+const char* q_url_fragment1(const void* self, uint32_t options) {
     libqt_string _str = QUrl_Fragment1((QUrl*)self, options);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

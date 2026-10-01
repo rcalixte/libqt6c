@@ -60,26 +60,26 @@ QLabel* q_label_new6(const char* text, void* parent, int32_t f);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-const QMetaObject* q_label_meta_object(void* self);
+const QMetaObject* q_label_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QLabel*
-/// @param callback const QMetaObject* func()
+/// @param self const QLabel*
+/// @param callback const QMetaObject* func(const QLabel* self)
 ///
-void q_label_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_label_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-const QMetaObject* q_label_super_meta_object(void* self);
+const QMetaObject* q_label_super_meta_object(const void* self);
 
 /// @param self QLabel*
 /// @param param1 const char*
@@ -135,49 +135,49 @@ const char* q_label_tr(const char* s);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-const char* q_label_text(void* self);
+const char* q_label_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#pixmap)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param param1 enum Qt__ReturnByValueConstant
 ///
-QPixmap* q_label_pixmap(void* self, int32_t param1);
+QPixmap* q_label_pixmap(const void* self, int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#pixmap)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QPixmap* q_label_pixmap2(void* self);
+QPixmap* q_label_pixmap2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#picture)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param param1 enum Qt__ReturnByValueConstant
 ///
-QPicture* q_label_picture(void* self, int32_t param1);
+QPicture* q_label_picture(const void* self, int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#picture)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QPicture* q_label_picture2(void* self);
+QPicture* q_label_picture2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#movie)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QMovie* q_label_movie(void* self);
+QMovie* q_label_movie(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#textFormat)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
 /// @return enum Qt__TextFormat
 ///
-int32_t q_label_text_format(void* self);
+int32_t q_label_text_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#setTextFormat)
 ///
@@ -191,15 +191,15 @@ void q_label_set_text_format(void* self, int32_t textFormat);
 /// @param self QLabel*
 /// @param provider QVariant* func(QUrl* param1)
 ///
-void q_label_set_resource_provider(void* self, QVariant* (*provider)(void* funcparam1));
+void q_label_set_resource_provider(void* self, QVariant* (*provider)(const void* funcparam1));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#alignment)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 ///
-int32_t q_label_alignment(void* self);
+int32_t q_label_alignment(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#setAlignment)
 ///
@@ -217,15 +217,15 @@ void q_label_set_word_wrap(void* self, bool on);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#wordWrap)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_word_wrap(void* self);
+bool q_label_word_wrap(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#indent)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-int32_t q_label_indent(void* self);
+int32_t q_label_indent(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#setIndent)
 ///
@@ -236,9 +236,9 @@ void q_label_set_indent(void* self, int indent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#margin)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-int32_t q_label_margin(void* self);
+int32_t q_label_margin(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#setMargin)
 ///
@@ -249,9 +249,9 @@ void q_label_set_margin(void* self, int margin);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#hasScaledContents)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_has_scaled_contents(void* self);
+bool q_label_has_scaled_contents(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#setScaledContents)
 ///
@@ -262,53 +262,53 @@ void q_label_set_scaled_contents(void* self, bool scaledContents);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#sizeHint)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QSize* q_label_size_hint(void* self);
+QSize* q_label_size_hint(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QLabel*
-/// @param callback QSize* func()
+/// @param self const QLabel*
+/// @param callback QSize* func(const QLabel* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_label_on_size_hint(void* self, QSize* (*callback)());
+void q_label_on_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#sizeHint)
 ///
 /// Base class method implementation
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QSize* q_label_super_size_hint(void* self);
+QSize* q_label_super_size_hint(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#minimumSizeHint)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QSize* q_label_minimum_size_hint(void* self);
+QSize* q_label_minimum_size_hint(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#minimumSizeHint)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QLabel*
-/// @param callback QSize* func()
+/// @param self const QLabel*
+/// @param callback QSize* func(const QLabel* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_label_on_minimum_size_hint(void* self, QSize* (*callback)());
+void q_label_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#minimumSizeHint)
 ///
 /// Base class method implementation
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QSize* q_label_super_minimum_size_hint(void* self);
+QSize* q_label_super_minimum_size_hint(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#setBuddy)
 ///
@@ -319,40 +319,40 @@ void q_label_set_buddy(void* self, void* buddy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#buddy)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QWidget* q_label_buddy(void* self);
+QWidget* q_label_buddy(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#heightForWidth)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param param1 int
 ///
-int32_t q_label_height_for_width(void* self, int param1);
+int32_t q_label_height_for_width(const void* self, int param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#heightForWidth)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QLabel*
-/// @param callback int32_t func(QLabel* self, int param1)
+/// @param self const QLabel*
+/// @param callback int32_t func(const QLabel* self, int param1)
 ///
-void q_label_on_height_for_width(void* self, int32_t (*callback)(void*, int));
+void q_label_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#heightForWidth)
 ///
 /// Base class method implementation
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param param1 int
 ///
-int32_t q_label_super_height_for_width(void* self, int param1);
+int32_t q_label_super_height_for_width(const void* self, int param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#openExternalLinks)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_open_external_links(void* self);
+bool q_label_open_external_links(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#setOpenExternalLinks)
 ///
@@ -370,11 +370,11 @@ void q_label_set_text_interaction_flags(void* self, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#textInteractionFlags)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
 /// @return flag of enum Qt__TextInteractionFlag
 ///
-int32_t q_label_text_interaction_flags(void* self);
+int32_t q_label_text_interaction_flags(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#setSelection)
 ///
@@ -386,23 +386,23 @@ void q_label_set_selection(void* self, int param1, int param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#hasSelectedText)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_has_selected_text(void* self);
+bool q_label_has_selected_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#selectedText)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-const char* q_label_selected_text(void* self);
+const char* q_label_selected_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#selectionStart)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-int32_t q_label_selection_start(void* self);
+int32_t q_label_selection_start(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#setText)
 ///
@@ -416,14 +416,14 @@ void q_label_set_text(void* self, const char* text);
 /// @param self QLabel*
 /// @param pixmap QPixmap*
 ///
-void q_label_set_pixmap(void* self, void* pixmap);
+void q_label_set_pixmap(void* self, const void* pixmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#setPicture)
 ///
 /// @param self QLabel*
 /// @param picture QPicture*
 ///
-void q_label_set_picture(void* self, void* picture);
+void q_label_set_picture(void* self, const void* picture);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#setMovie)
 ///
@@ -778,9 +778,9 @@ const char* q_label_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameStyle)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-int32_t q_label_frame_style(void* self);
+int32_t q_label_frame_style(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -795,19 +795,19 @@ void q_label_set_frame_style(void* self, int frameStyle);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameWidth)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-int32_t q_label_frame_width(void* self);
+int32_t q_label_frame_width(const void* self);
 
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameShape)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
 /// @return enum QFrame__Shape
 ///
-int32_t q_label_frame_shape(void* self);
+int32_t q_label_frame_shape(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -822,11 +822,11 @@ void q_label_set_frame_shape(void* self, int32_t frameShape);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameShadow)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
 /// @return enum QFrame__Shadow
 ///
-int32_t q_label_frame_shadow(void* self);
+int32_t q_label_frame_shadow(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -841,9 +841,9 @@ void q_label_set_frame_shadow(void* self, int32_t frameShadow);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#lineWidth)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-int32_t q_label_line_width(void* self);
+int32_t q_label_line_width(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -858,9 +858,9 @@ void q_label_set_line_width(void* self, int lineWidth);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#midLineWidth)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-int32_t q_label_mid_line_width(void* self);
+int32_t q_label_mid_line_width(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -875,9 +875,9 @@ void q_label_set_mid_line_width(void* self, int midLineWidth);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameRect)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QRect* q_label_frame_rect(void* self);
+QRect* q_label_frame_rect(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -886,7 +886,7 @@ QRect* q_label_frame_rect(void* self);
 /// @param self QLabel*
 /// @param frameRect QRect*
 ///
-void q_label_set_frame_rect(void* self, void* frameRect);
+void q_label_set_frame_rect(void* self, const void* frameRect);
 
 /// Inherited from QWidget
 ///
@@ -908,9 +908,9 @@ QLabel* q_label_from_q_paint_device(void* _qpaintdevice);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-uintptr_t q_label_win_id(void* self);
+uintptr_t q_label_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -924,25 +924,25 @@ void q_label_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-uintptr_t q_label_internal_win_id(void* self);
+uintptr_t q_label_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-uintptr_t q_label_effective_win_id(void* self);
+uintptr_t q_label_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QStyle* q_label_style(void* self);
+QStyle* q_label_style(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -957,35 +957,35 @@ void q_label_set_style(void* self, void* style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_is_top_level(void* self);
+bool q_label_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_is_window(void* self);
+bool q_label_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_is_modal(void* self);
+bool q_label_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t q_label_window_modality(void* self);
+int32_t q_label_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1000,18 +1000,18 @@ void q_label_set_window_modality(void* self, int32_t windowModality);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_is_enabled(void* self);
+bool q_label_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param param1 QWidget*
 ///
-bool q_label_is_enabled_to(void* self, void* param1);
+bool q_label_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1044,153 +1044,153 @@ void q_label_set_window_modified(void* self, bool windowModified);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QRect* q_label_frame_geometry(void* self);
+QRect* q_label_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-const QRect* q_label_geometry(void* self);
+const QRect* q_label_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QRect* q_label_normal_geometry(void* self);
+QRect* q_label_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-int32_t q_label_x(void* self);
+int32_t q_label_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-int32_t q_label_y(void* self);
+int32_t q_label_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QPoint* q_label_pos(void* self);
+QPoint* q_label_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QSize* q_label_frame_size(void* self);
+QSize* q_label_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QSize* q_label_size(void* self);
+QSize* q_label_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-int32_t q_label_width(void* self);
+int32_t q_label_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-int32_t q_label_height(void* self);
+int32_t q_label_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QRect* q_label_rect(void* self);
+QRect* q_label_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QRect* q_label_children_rect(void* self);
+QRect* q_label_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QRegion* q_label_children_region(void* self);
+QRegion* q_label_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QSize* q_label_minimum_size(void* self);
+QSize* q_label_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QSize* q_label_maximum_size(void* self);
+QSize* q_label_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-int32_t q_label_minimum_width(void* self);
+int32_t q_label_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-int32_t q_label_minimum_height(void* self);
+int32_t q_label_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-int32_t q_label_maximum_width(void* self);
+int32_t q_label_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-int32_t q_label_maximum_height(void* self);
+int32_t q_label_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1199,7 +1199,7 @@ int32_t q_label_maximum_height(void* self);
 /// @param self QLabel*
 /// @param minimumSize QSize*
 ///
-void q_label_set_minimum_size(void* self, void* minimumSize);
+void q_label_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -1218,7 +1218,7 @@ void q_label_set_minimum_size2(void* self, int minw, int minh);
 /// @param self QLabel*
 /// @param maximumSize QSize*
 ///
-void q_label_set_maximum_size(void* self, void* maximumSize);
+void q_label_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -1270,9 +1270,9 @@ void q_label_set_maximum_height(void* self, int maxh);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QSize* q_label_size_increment(void* self);
+QSize* q_label_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1281,7 +1281,7 @@ QSize* q_label_size_increment(void* self);
 /// @param self QLabel*
 /// @param sizeIncrement QSize*
 ///
-void q_label_set_size_increment(void* self, void* sizeIncrement);
+void q_label_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -1297,9 +1297,9 @@ void q_label_set_size_increment2(void* self, int w, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QSize* q_label_base_size(void* self);
+QSize* q_label_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1308,7 +1308,7 @@ QSize* q_label_base_size(void* self);
 /// @param self QLabel*
 /// @param baseSize QSize*
 ///
-void q_label_set_base_size(void* self, void* baseSize);
+void q_label_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -1327,7 +1327,7 @@ void q_label_set_base_size2(void* self, int basew, int baseh);
 /// @param self QLabel*
 /// @param fixedSize QSize*
 ///
-void q_label_set_fixed_size(void* self, void* fixedSize);
+void q_label_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -1361,145 +1361,145 @@ void q_label_set_fixed_height(void* self, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param param1 QPointF*
 ///
-QPointF* q_label_map_to_global(void* self, void* param1);
+QPointF* q_label_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param param1 QPoint*
 ///
-QPoint* q_label_map_to_global2(void* self, void* param1);
+QPoint* q_label_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param param1 QPointF*
 ///
-QPointF* q_label_map_from_global(void* self, void* param1);
+QPointF* q_label_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param param1 QPoint*
 ///
-QPoint* q_label_map_from_global2(void* self, void* param1);
+QPoint* q_label_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param param1 QPointF*
 ///
-QPointF* q_label_map_to_parent(void* self, void* param1);
+QPointF* q_label_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param param1 QPoint*
 ///
-QPoint* q_label_map_to_parent2(void* self, void* param1);
+QPoint* q_label_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param param1 QPointF*
 ///
-QPointF* q_label_map_from_parent(void* self, void* param1);
+QPointF* q_label_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param param1 QPoint*
 ///
-QPoint* q_label_map_from_parent2(void* self, void* param1);
+QPoint* q_label_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* q_label_map_to(void* self, void* param1, void* param2);
+QPointF* q_label_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* q_label_map_to2(void* self, void* param1, void* param2);
+QPoint* q_label_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* q_label_map_from(void* self, void* param1, void* param2);
+QPointF* q_label_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* q_label_map_from2(void* self, void* param1, void* param2);
+QPoint* q_label_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QWidget* q_label_window(void* self);
+QWidget* q_label_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QWidget* q_label_native_parent_widget(void* self);
+QWidget* q_label_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QWidget* q_label_top_level_widget(void* self);
+QWidget* q_label_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-const QPalette* q_label_palette(void* self);
+const QPalette* q_label_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1508,7 +1508,7 @@ const QPalette* q_label_palette(void* self);
 /// @param self QLabel*
 /// @param palette QPalette*
 ///
-void q_label_set_palette(void* self, void* palette);
+void q_label_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -1523,11 +1523,11 @@ void q_label_set_background_role(void* self, int32_t backgroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t q_label_background_role(void* self);
+int32_t q_label_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1542,19 +1542,19 @@ void q_label_set_foreground_role(void* self, int32_t foregroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t q_label_foreground_role(void* self);
+int32_t q_label_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-const QFont* q_label_font(void* self);
+const QFont* q_label_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1563,31 +1563,31 @@ const QFont* q_label_font(void* self);
 /// @param self QLabel*
 /// @param font QFont*
 ///
-void q_label_set_font(void* self, void* font);
+void q_label_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QFontMetrics* q_label_font_metrics(void* self);
+QFontMetrics* q_label_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QFontInfo* q_label_font_info(void* self);
+QFontInfo* q_label_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QCursor* q_label_cursor(void* self);
+QCursor* q_label_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1596,7 +1596,7 @@ QCursor* q_label_cursor(void* self);
 /// @param self QLabel*
 /// @param cursor QCursor*
 ///
-void q_label_set_cursor(void* self, void* cursor);
+void q_label_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -1619,17 +1619,17 @@ void q_label_set_mouse_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_has_mouse_tracking(void* self);
+bool q_label_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_under_mouse(void* self);
+bool q_label_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1644,9 +1644,9 @@ void q_label_set_tablet_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_has_tablet_tracking(void* self);
+bool q_label_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1655,7 +1655,7 @@ bool q_label_has_tablet_tracking(void* self);
 /// @param self QLabel*
 /// @param mask QBitmap*
 ///
-void q_label_set_mask(void* self, void* mask);
+void q_label_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -1664,15 +1664,15 @@ void q_label_set_mask(void* self, void* mask);
 /// @param self QLabel*
 /// @param mask QRegion*
 ///
-void q_label_set_mask2(void* self, void* mask);
+void q_label_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QRegion* q_label_mask(void* self);
+QRegion* q_label_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1712,9 +1712,9 @@ QPixmap* q_label_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QGraphicsEffect* q_label_graphics_effect(void* self);
+QGraphicsEffect* q_label_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1767,9 +1767,9 @@ void q_label_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-const char* q_label_style_sheet(void* self);
+const char* q_label_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1777,9 +1777,9 @@ const char* q_label_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-const char* q_label_window_title(void* self);
+const char* q_label_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1788,15 +1788,15 @@ const char* q_label_window_title(void* self);
 /// @param self QLabel*
 /// @param icon QIcon*
 ///
-void q_label_set_window_icon(void* self, void* icon);
+void q_label_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QIcon* q_label_window_icon(void* self);
+QIcon* q_label_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1813,9 +1813,9 @@ void q_label_set_window_icon_text(void* self, const char* windowIconText);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-const char* q_label_window_icon_text(void* self);
+const char* q_label_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1832,9 +1832,9 @@ void q_label_set_window_role(void* self, const char* windowRole);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-const char* q_label_window_role(void* self);
+const char* q_label_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1851,9 +1851,9 @@ void q_label_set_window_file_path(void* self, const char* filePath);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-const char* q_label_window_file_path(void* self);
+const char* q_label_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1868,17 +1868,17 @@ void q_label_set_window_opacity(void* self, double level);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-double q_label_window_opacity(void* self);
+double q_label_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_is_window_modified(void* self);
+bool q_label_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1895,9 +1895,9 @@ void q_label_set_tool_tip(void* self, const char* toolTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-const char* q_label_tool_tip(void* self);
+const char* q_label_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1912,9 +1912,9 @@ void q_label_set_tool_tip_duration(void* self, int msec);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-int32_t q_label_tool_tip_duration(void* self);
+int32_t q_label_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1931,9 +1931,9 @@ void q_label_set_status_tip(void* self, const char* statusTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-const char* q_label_status_tip(void* self);
+const char* q_label_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1950,9 +1950,9 @@ void q_label_set_whats_this(void* self, const char* whatsThis);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-const char* q_label_whats_this(void* self);
+const char* q_label_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1960,9 +1960,9 @@ const char* q_label_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-const char* q_label_accessible_name(void* self);
+const char* q_label_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1979,9 +1979,9 @@ void q_label_set_accessible_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-const char* q_label_accessible_description(void* self);
+const char* q_label_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2005,11 +2005,11 @@ void q_label_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_label_layout_direction(void* self);
+int32_t q_label_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2026,15 +2026,15 @@ void q_label_unset_layout_direction(void* self);
 /// @param self QLabel*
 /// @param locale QLocale*
 ///
-void q_label_set_locale(void* self, void* locale);
+void q_label_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QLocale* q_label_locale(void* self);
+QLocale* q_label_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2048,17 +2048,17 @@ void q_label_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_is_right_to_left(void* self);
+bool q_label_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_is_left_to_right(void* self);
+bool q_label_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2072,9 +2072,9 @@ void q_label_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_is_active_window(void* self);
+bool q_label_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2105,11 +2105,11 @@ void q_label_set_focus2(void* self, int32_t reason);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t q_label_focus_policy(void* self);
+int32_t q_label_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2124,9 +2124,9 @@ void q_label_set_focus_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_has_focus(void* self);
+bool q_label_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2150,19 +2150,19 @@ void q_label_set_focus_proxy(void* self, void* focusProxy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QWidget* q_label_focus_proxy(void* self);
+QWidget* q_label_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t q_label_context_menu_policy(void* self);
+int32_t q_label_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2188,7 +2188,7 @@ void q_label_grab_mouse(void* self);
 /// @param self QLabel*
 /// @param param1 QCursor*
 ///
-void q_label_grab_mouse2(void* self, void* param1);
+void q_label_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2221,7 +2221,7 @@ void q_label_release_keyboard(void* self);
 /// @param self QLabel*
 /// @param key QKeySequence*
 ///
-int32_t q_label_grab_shortcut(void* self, void* key);
+int32_t q_label_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -2266,9 +2266,9 @@ QWidget* q_label_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_updates_enabled(void* self);
+bool q_label_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2283,9 +2283,9 @@ void q_label_set_updates_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QGraphicsProxyWidget* q_label_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* q_label_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2322,7 +2322,7 @@ void q_label_update2(void* self, int x, int y, int w, int h);
 /// @param self QLabel*
 /// @param param1 QRect*
 ///
-void q_label_update3(void* self, void* param1);
+void q_label_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2331,7 +2331,7 @@ void q_label_update3(void* self, void* param1);
 /// @param self QLabel*
 /// @param param1 QRegion*
 ///
-void q_label_update4(void* self, void* param1);
+void q_label_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2352,7 +2352,7 @@ void q_label_repaint2(void* self, int x, int y, int w, int h);
 /// @param self QLabel*
 /// @param param1 QRect*
 ///
-void q_label_repaint3(void* self, void* param1);
+void q_label_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2361,7 +2361,7 @@ void q_label_repaint3(void* self, void* param1);
 /// @param self QLabel*
 /// @param param1 QRegion*
 ///
-void q_label_repaint4(void* self, void* param1);
+void q_label_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2470,7 +2470,7 @@ void q_label_move(void* self, int x, int y);
 /// @param self QLabel*
 /// @param param1 QPoint*
 ///
-void q_label_move2(void* self, void* param1);
+void q_label_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2489,7 +2489,7 @@ void q_label_resize(void* self, int w, int h);
 /// @param self QLabel*
 /// @param param1 QSize*
 ///
-void q_label_resize2(void* self, void* param1);
+void q_label_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2510,7 +2510,7 @@ void q_label_set_geometry(void* self, int x, int y, int w, int h);
 /// @param self QLabel*
 /// @param geometry QRect*
 ///
-void q_label_set_geometry2(void* self, void* geometry);
+void q_label_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -2518,9 +2518,9 @@ void q_label_set_geometry2(void* self, void* geometry);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-char* q_label_save_geometry(void* self);
+char* q_label_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2543,60 +2543,60 @@ void q_label_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_is_visible(void* self);
+bool q_label_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param param1 QWidget*
 ///
-bool q_label_is_visible_to(void* self, void* param1);
+bool q_label_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_is_hidden(void* self);
+bool q_label_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_is_minimized(void* self);
+bool q_label_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_is_maximized(void* self);
+bool q_label_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_is_full_screen(void* self);
+bool q_label_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t q_label_window_state(void* self);
+int32_t q_label_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2620,9 +2620,9 @@ void q_label_override_window_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QSizePolicy* q_label_size_policy(void* self);
+QSizePolicy* q_label_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2647,9 +2647,9 @@ void q_label_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QRegion* q_label_visible_region(void* self);
+QRegion* q_label_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2670,31 +2670,31 @@ void q_label_set_contents_margins(void* self, int left, int top, int right, int 
 /// @param self QLabel*
 /// @param margins QMargins*
 ///
-void q_label_set_contents_margins2(void* self, void* margins);
+void q_label_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QMargins* q_label_contents_margins(void* self);
+QMargins* q_label_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QRect* q_label_contents_rect(void* self);
+QRect* q_label_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QLayout* q_label_layout(void* self);
+QLayout* q_label_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2751,39 +2751,39 @@ void q_label_scroll(void* self, int dx, int dy);
 /// @param dy int
 /// @param param3 QRect*
 ///
-void q_label_scroll2(void* self, int dx, int dy, void* param3);
+void q_label_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QWidget* q_label_focus_widget(void* self);
+QWidget* q_label_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QWidget* q_label_next_in_focus_chain(void* self);
+QWidget* q_label_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QWidget* q_label_previous_in_focus_chain(void* self);
+QWidget* q_label_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_accept_drops(void* self);
+bool q_label_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2845,11 +2845,11 @@ void q_label_remove_action(void* self, void* action);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list q_label_actions(void* self);
+libqt_list q_label_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2868,7 +2868,7 @@ QAction* q_label_add_action2(void* self, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* q_label_add_action3(void* self, void* icon, const char* text);
+QAction* q_label_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -2878,7 +2878,7 @@ QAction* q_label_add_action3(void* self, void* icon, const char* text);
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* q_label_add_action4(void* self, const char* text, void* shortcut);
+QAction* q_label_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -2889,15 +2889,15 @@ QAction* q_label_add_action4(void* self, const char* text, void* shortcut);
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* q_label_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* q_label_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QWidget* q_label_parent_widget(void* self);
+QWidget* q_label_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2912,11 +2912,11 @@ void q_label_set_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t q_label_window_flags(void* self);
+int32_t q_label_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2940,11 +2940,11 @@ void q_label_override_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t q_label_window_type(void* self);
+int32_t q_label_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2958,29 +2958,29 @@ QWidget* q_label_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param x int
 /// @param y int
 ///
-QWidget* q_label_child_at(void* self, int x, int y);
+QWidget* q_label_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param p QPoint*
 ///
-QWidget* q_label_child_at2(void* self, void* p);
+QWidget* q_label_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param p QPointF*
 ///
-QWidget* q_label_child_at3(void* self, void* p);
+QWidget* q_label_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -2995,35 +2995,35 @@ void q_label_set_attribute(void* self, int32_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool q_label_test_attribute(void* self, int32_t param1);
+bool q_label_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-void q_label_ensure_polished(void* self);
+void q_label_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param child QWidget*
 ///
-bool q_label_is_ancestor_of(void* self, void* child);
+bool q_label_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_auto_fill_background(void* self);
+bool q_label_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3038,25 +3038,25 @@ void q_label_set_auto_fill_background(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QBackingStore* q_label_backing_store(void* self);
+QBackingStore* q_label_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QWindow* q_label_window_handle(void* self);
+QWindow* q_label_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QScreen* q_label_screen(void* self);
+QScreen* q_label_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3100,7 +3100,7 @@ void q_label_on_window_title_changed(void* self, void (*callback)(void*, const c
 /// @param self QLabel*
 /// @param icon QIcon*
 ///
-void q_label_window_icon_changed(void* self, void* icon);
+void q_label_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -3109,7 +3109,7 @@ void q_label_window_icon_changed(void* self, void* icon);
 /// @param self QLabel*
 /// @param callback void func(QLabel* self, QIcon* icon)
 ///
-void q_label_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void q_label_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -3136,7 +3136,7 @@ void q_label_on_window_icon_text_changed(void* self, void (*callback)(void*, con
 /// @param self QLabel*
 /// @param pos QPoint*
 ///
-void q_label_custom_context_menu_requested(void* self, void* pos);
+void q_label_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -3145,17 +3145,17 @@ void q_label_custom_context_menu_requested(void* self, void* pos);
 /// @param self QLabel*
 /// @param callback void func(QLabel* self, QPoint* pos)
 ///
-void q_label_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void q_label_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t q_label_input_method_hints(void* self);
+int32_t q_label_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3174,7 +3174,7 @@ void q_label_set_input_method_hints(void* self, int32_t hints);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void q_label_render22(void* self, void* target, void* targetOffset);
+void q_label_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -3185,7 +3185,7 @@ void q_label_render22(void* self, void* target, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void q_label_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void q_label_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -3197,7 +3197,7 @@ void q_label_render3(void* self, void* target, void* targetOffset, void* sourceR
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void q_label_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void q_label_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3207,7 +3207,7 @@ void q_label_render4(void* self, void* target, void* targetOffset, void* sourceR
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void q_label_render23(void* self, void* painter, void* targetOffset);
+void q_label_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -3218,7 +3218,7 @@ void q_label_render23(void* self, void* painter, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void q_label_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void q_label_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -3230,7 +3230,7 @@ void q_label_render32(void* self, void* painter, void* targetOffset, void* sourc
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void q_label_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void q_label_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3239,7 +3239,7 @@ void q_label_render42(void* self, void* painter, void* targetOffset, void* sourc
 /// @param self QLabel*
 /// @param rectangle QRect*
 ///
-QPixmap* q_label_grab1(void* self, void* rectangle);
+QPixmap* q_label_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -3259,7 +3259,7 @@ void q_label_grab_gesture2(void* self, int32_t type, int32_t flags);
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t q_label_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t q_label_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -3326,9 +3326,9 @@ QWidget* q_label_create_window_container3(void* window, void* parent, int32_t fl
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-const char* q_label_object_name(void* self);
+const char* q_label_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3343,33 +3343,33 @@ void q_label_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_is_widget_type(void* self);
+bool q_label_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_is_window_type(void* self);
+bool q_label_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_is_quick_item_type(void* self);
+bool q_label_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_signals_blocked(void* self);
+bool q_label_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3384,9 +3384,9 @@ bool q_label_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QThread* q_label_thread(void* self);
+QThread* q_label_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3437,11 +3437,11 @@ void q_label_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_label_children(void* self);
+libqt_list q_label_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3470,7 +3470,7 @@ void q_label_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_label_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_label_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3481,18 +3481,18 @@ QMetaObject__Connection* q_label_connect(void* sender, const char* signal, void*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_label_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_label_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_label_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_label_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3503,7 +3503,7 @@ QMetaObject__Connection* q_label_connect3(void* self, void* sender, const char* 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_label_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_label_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3514,24 +3514,24 @@ bool q_label_disconnect(void* sender, const char* signal, void* receiver, const 
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_label_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_label_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_disconnect3(void* self);
+bool q_label_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param receiver QObject*
 ///
-bool q_label_disconnect4(void* self, void* receiver);
+bool q_label_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -3539,23 +3539,23 @@ bool q_label_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_label_disconnect5(void* param1);
+bool q_label_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-void q_label_dump_object_tree(void* self);
+void q_label_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-void q_label_dump_object_info(void* self);
+void q_label_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3565,16 +3565,16 @@ void q_label_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_label_set_property(void* self, const char* name, void* value);
+bool q_label_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param name const char*
 ///
-QVariant* q_label_property(void* self, const char* name);
+QVariant* q_label_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -3582,9 +3582,9 @@ QVariant* q_label_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-const char** q_label_dynamic_property_names(void* self);
+const char** q_label_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3598,9 +3598,9 @@ QBindingStorage* q_label_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-const QBindingStorage* q_label_binding_storage2(void* self);
+const QBindingStorage* q_label_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3623,18 +3623,18 @@ void q_label_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QObject* q_label_parent(void* self);
+QObject* q_label_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param classname const char*
 ///
-bool q_label_inherits(void* self, const char* classname);
+bool q_label_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -3674,7 +3674,7 @@ int32_t q_label_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_label_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_label_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -3686,59 +3686,59 @@ QMetaObject__Connection* q_label_connect5(void* sender, const char* signal, void
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_label_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_label_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_label_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_label_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param signal const char*
 ///
-bool q_label_disconnect1(void* self, const char* signal);
+bool q_label_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QLabel*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_label_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_label_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_label_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_label_disconnect23(void* self, void* receiver, const char* member);
+bool q_label_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QLabel*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_label_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3762,89 +3762,89 @@ void q_label_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_painting_active(void* self);
+bool q_label_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-int32_t q_label_width_m_m(void* self);
+int32_t q_label_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-int32_t q_label_height_m_m(void* self);
+int32_t q_label_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-int32_t q_label_logical_dpi_x(void* self);
+int32_t q_label_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-int32_t q_label_logical_dpi_y(void* self);
+int32_t q_label_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-int32_t q_label_physical_dpi_x(void* self);
+int32_t q_label_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-int32_t q_label_physical_dpi_y(void* self);
+int32_t q_label_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-double q_label_device_pixel_ratio(void* self);
+double q_label_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-double q_label_device_pixel_ratio_f(void* self);
+double q_label_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-int32_t q_label_color_count(void* self);
+int32_t q_label_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-int32_t q_label_depth(void* self);
+int32_t q_label_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -3867,10 +3867,10 @@ int32_t q_label_encode_metric_f(int32_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param option QStyleOptionFrame*
 ///
-void q_label_init_style_option(void* self, void* option);
+void q_label_init_style_option(const void* self, void* option);
 
 /// Inherited from QFrame
 ///
@@ -3878,10 +3878,10 @@ void q_label_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param option QStyleOptionFrame*
 ///
-void q_label_super_init_style_option(void* self, void* option);
+void q_label_super_init_style_option(const void* self, void* option);
 
 /// Inherited from QFrame
 ///
@@ -3889,10 +3889,10 @@ void q_label_super_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param callback void func(QLabel* self, QStyleOptionFrame* option)
 ///
-void q_label_on_init_style_option(void* self, void (*callback)(void*, void*));
+void q_label_on_init_style_option(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3900,9 +3900,9 @@ void q_label_on_init_style_option(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-int32_t q_label_dev_type(void* self);
+int32_t q_label_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3910,9 +3910,9 @@ int32_t q_label_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-int32_t q_label_super_dev_type(void* self);
+int32_t q_label_super_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3920,10 +3920,10 @@ int32_t q_label_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QLabel*
-/// @param callback int32_t func()
+/// @param self const QLabel*
+/// @param callback int32_t func(QLabel* self)
 ///
-void q_label_on_dev_type(void* self, int32_t (*callback)());
+void q_label_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3964,9 +3964,9 @@ void q_label_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_has_height_for_width(void* self);
+bool q_label_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3974,9 +3974,9 @@ bool q_label_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-bool q_label_super_has_height_for_width(void* self);
+bool q_label_super_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3984,10 +3984,10 @@ bool q_label_super_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QLabel*
-/// @param callback bool func()
+/// @param self const QLabel*
+/// @param callback bool func(QLabel* self)
 ///
-void q_label_on_has_height_for_width(void* self, bool (*callback)());
+void q_label_on_has_height_for_width(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3995,9 +3995,9 @@ void q_label_on_has_height_for_width(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QPaintEngine* q_label_paint_engine(void* self);
+QPaintEngine* q_label_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4005,9 +4005,9 @@ QPaintEngine* q_label_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QPaintEngine* q_label_super_paint_engine(void* self);
+QPaintEngine* q_label_super_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4015,10 +4015,10 @@ QPaintEngine* q_label_super_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QLabel*
-/// @param callback QPaintEngine* func()
+/// @param self const QLabel*
+/// @param callback QPaintEngine* func(QLabel* self)
 ///
-void q_label_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void q_label_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4591,10 +4591,10 @@ void q_label_on_native_event(void* self, bool (*callback)(void*, libqt_string, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_label_metric(void* self, int32_t param1);
+int32_t q_label_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4602,10 +4602,10 @@ int32_t q_label_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_label_super_metric(void* self, int32_t param1);
+int32_t q_label_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4613,10 +4613,10 @@ int32_t q_label_super_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param callback int32_t func(QLabel* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_label_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void q_label_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4624,10 +4624,10 @@ void q_label_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param painter QPainter*
 ///
-void q_label_init_painter(void* self, void* painter);
+void q_label_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4635,10 +4635,10 @@ void q_label_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param painter QPainter*
 ///
-void q_label_super_init_painter(void* self, void* painter);
+void q_label_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4646,10 +4646,10 @@ void q_label_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param callback void func(QLabel* self, QPainter* painter)
 ///
-void q_label_on_init_painter(void* self, void (*callback)(void*, void*));
+void q_label_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4657,10 +4657,10 @@ void q_label_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_label_redirected(void* self, void* offset);
+QPaintDevice* q_label_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4668,10 +4668,10 @@ QPaintDevice* q_label_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_label_super_redirected(void* self, void* offset);
+QPaintDevice* q_label_super_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4679,10 +4679,10 @@ QPaintDevice* q_label_super_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param callback QPaintDevice* func(QLabel* self, QPoint* offset)
 ///
-void q_label_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void q_label_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4690,9 +4690,9 @@ void q_label_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QPainter* q_label_shared_painter(void* self);
+QPainter* q_label_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4700,9 +4700,9 @@ QPainter* q_label_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QPainter* q_label_super_shared_painter(void* self);
+QPainter* q_label_super_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4710,10 +4710,10 @@ QPainter* q_label_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QLabel*
-/// @param callback QPainter* func()
+/// @param self const QLabel*
+/// @param callback QPainter* func(QLabel* self)
 ///
-void q_label_on_shared_painter(void* self, QPainter* (*callback)());
+void q_label_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4754,10 +4754,10 @@ void q_label_on_input_method_event(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_label_input_method_query(void* self, int32_t param1);
+QVariant* q_label_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4765,10 +4765,10 @@ QVariant* q_label_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_label_super_input_method_query(void* self, int32_t param1);
+QVariant* q_label_super_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4776,12 +4776,12 @@ QVariant* q_label_super_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param callback QVariant* func(QLabel* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_label_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void q_label_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QObject
 ///
@@ -4926,7 +4926,7 @@ void q_label_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QLabel*
 /// @param signal QMetaMethod*
 ///
-void q_label_connect_notify(void* self, void* signal);
+void q_label_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4937,7 +4937,7 @@ void q_label_connect_notify(void* self, void* signal);
 /// @param self QLabel*
 /// @param signal QMetaMethod*
 ///
-void q_label_super_connect_notify(void* self, void* signal);
+void q_label_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4948,7 +4948,7 @@ void q_label_super_connect_notify(void* self, void* signal);
 /// @param self QLabel*
 /// @param callback void func(QLabel* self, QMetaMethod* signal)
 ///
-void q_label_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_label_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -4959,7 +4959,7 @@ void q_label_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QLabel*
 /// @param signal QMetaMethod*
 ///
-void q_label_disconnect_notify(void* self, void* signal);
+void q_label_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4970,7 +4970,7 @@ void q_label_disconnect_notify(void* self, void* signal);
 /// @param self QLabel*
 /// @param signal QMetaMethod*
 ///
-void q_label_super_disconnect_notify(void* self, void* signal);
+void q_label_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4981,7 +4981,7 @@ void q_label_super_disconnect_notify(void* self, void* signal);
 /// @param self QLabel*
 /// @param callback void func(QLabel* self, QMetaMethod* signal)
 ///
-void q_label_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_label_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QFrame
 ///
@@ -5043,9 +5043,9 @@ void q_label_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void func()
+/// @param callback void func(QLabel* self)
 ///
-void q_label_on_update_micro_focus(void* self, void (*callback)());
+void q_label_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5074,9 +5074,9 @@ void q_label_super_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void func()
+/// @param callback void func(QLabel* self)
 ///
-void q_label_on_create(void* self, void (*callback)());
+void q_label_on_create(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5105,9 +5105,9 @@ void q_label_super_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void func()
+/// @param callback void func(QLabel* self)
 ///
-void q_label_on_destroy(void* self, void (*callback)());
+void q_label_on_destroy(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5136,9 +5136,9 @@ bool q_label_super_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback bool func()
+/// @param callback bool func(QLabel* self)
 ///
-void q_label_on_focus_next_child(void* self, bool (*callback)());
+void q_label_on_focus_next_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5167,9 +5167,9 @@ bool q_label_super_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback bool func()
+/// @param callback bool func(QLabel* self)
 ///
-void q_label_on_focus_previous_child(void* self, bool (*callback)());
+void q_label_on_focus_previous_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -5177,9 +5177,9 @@ void q_label_on_focus_previous_child(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QObject* q_label_sender(void* self);
+QObject* q_label_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5187,9 +5187,9 @@ QObject* q_label_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-QObject* q_label_super_sender(void* self);
+QObject* q_label_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5197,10 +5197,10 @@ QObject* q_label_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QLabel*
-/// @param callback QObject* func()
+/// @param self const QLabel*
+/// @param callback QObject* func(QLabel* self)
 ///
-void q_label_on_sender(void* self, QObject* (*callback)());
+void q_label_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5208,9 +5208,9 @@ void q_label_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-int32_t q_label_sender_signal_index(void* self);
+int32_t q_label_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5218,9 +5218,9 @@ int32_t q_label_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 ///
-int32_t q_label_super_sender_signal_index(void* self);
+int32_t q_label_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5228,10 +5228,10 @@ int32_t q_label_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QLabel*
-/// @param callback int32_t func()
+/// @param self const QLabel*
+/// @param callback int32_t func(QLabel* self)
 ///
-void q_label_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_label_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5239,10 +5239,10 @@ void q_label_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param signal const char*
 ///
-int32_t q_label_receivers(void* self, const char* signal);
+int32_t q_label_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5250,10 +5250,10 @@ int32_t q_label_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param signal const char*
 ///
-int32_t q_label_super_receivers(void* self, const char* signal);
+int32_t q_label_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5261,10 +5261,10 @@ int32_t q_label_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param callback int32_t func(QLabel* self, const char* signal)
 ///
-void q_label_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_label_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5272,10 +5272,10 @@ void q_label_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param signal QMetaMethod*
 ///
-bool q_label_is_signal_connected(void* self, void* signal);
+bool q_label_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5283,10 +5283,10 @@ bool q_label_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param signal QMetaMethod*
 ///
-bool q_label_super_is_signal_connected(void* self, void* signal);
+bool q_label_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5294,10 +5294,10 @@ bool q_label_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param callback bool func(QLabel* self, QMetaMethod* signal)
 ///
-void q_label_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_label_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5305,11 +5305,11 @@ void q_label_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_label_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_label_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5317,11 +5317,11 @@ double q_label_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_label_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_label_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5329,10 +5329,10 @@ double q_label_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t m
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QLabel*
+/// @param self const QLabel*
 /// @param callback double func(QLabel* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_label_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void q_label_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

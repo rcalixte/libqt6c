@@ -24,26 +24,26 @@ KFileItemDelegate* k_fileitemdelegate_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 ///
-const QMetaObject* k_fileitemdelegate_meta_object(void* self);
+const QMetaObject* k_fileitemdelegate_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KFileItemDelegate*
-/// @param callback const QMetaObject* func()
+/// @param self const KFileItemDelegate*
+/// @param callback const QMetaObject* func(const KFileItemDelegate* self)
 ///
-void k_fileitemdelegate_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_fileitemdelegate_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 ///
-const QMetaObject* k_fileitemdelegate_super_meta_object(void* self);
+const QMetaObject* k_fileitemdelegate_super_meta_object(const void* self);
 
 /// @param self KFileItemDelegate*
 /// @param param1 const char*
@@ -97,90 +97,90 @@ const char* k_fileitemdelegate_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#sizeHint)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 ///
-QSize* k_fileitemdelegate_size_hint(void* self, void* option, void* index);
+QSize* k_fileitemdelegate_size_hint(const void* self, const void* option, const void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KFileItemDelegate*
-/// @param callback QSize* func(KFileItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index)
+/// @param self const KFileItemDelegate*
+/// @param callback QSize* func(const KFileItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_fileitemdelegate_on_size_hint(void* self, QSize* (*callback)(void*, void*, void*));
+void k_fileitemdelegate_on_size_hint(const void* self, QSize* (*callback)(const void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#sizeHint)
 ///
 /// Base class method implementation
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 ///
-QSize* k_fileitemdelegate_super_size_hint(void* self, void* option, void* index);
+QSize* k_fileitemdelegate_super_size_hint(const void* self, const void* option, const void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#paint)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 /// @param painter QPainter*
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 ///
-void k_fileitemdelegate_paint(void* self, void* painter, void* option, void* index);
+void k_fileitemdelegate_paint(const void* self, void* painter, const void* option, const void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#paint)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KFileItemDelegate*
-/// @param callback void func(KFileItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QModelIndex* index)
+/// @param self const KFileItemDelegate*
+/// @param callback void func(const KFileItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QModelIndex* index)
 ///
-void k_fileitemdelegate_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
+void k_fileitemdelegate_on_paint(const void* self, void (*callback)(const void*, void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#paint)
 ///
 /// Base class method implementation
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 /// @param painter QPainter*
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 ///
-void k_fileitemdelegate_super_paint(void* self, void* painter, void* option, void* index);
+void k_fileitemdelegate_super_paint(const void* self, void* painter, const void* option, const void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#createEditor)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 /// @param parent QWidget*
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 ///
-QWidget* k_fileitemdelegate_create_editor(void* self, void* parent, void* option, void* index);
+QWidget* k_fileitemdelegate_create_editor(const void* self, void* parent, const void* option, const void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#createEditor)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KFileItemDelegate*
-/// @param callback QWidget* func(KFileItemDelegate* self, QWidget* parent, QStyleOptionViewItem* option, QModelIndex* index)
+/// @param self const KFileItemDelegate*
+/// @param callback QWidget* func(const KFileItemDelegate* self, QWidget* parent, QStyleOptionViewItem* option, QModelIndex* index)
 ///
-void k_fileitemdelegate_on_create_editor(void* self, QWidget* (*callback)(void*, void*, void*, void*));
+void k_fileitemdelegate_on_create_editor(const void* self, QWidget* (*callback)(const void*, void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#createEditor)
 ///
 /// Base class method implementation
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 /// @param parent QWidget*
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 ///
-QWidget* k_fileitemdelegate_super_create_editor(void* self, void* parent, void* option, void* index);
+QWidget* k_fileitemdelegate_super_create_editor(const void* self, void* parent, const void* option, const void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#editorEvent)
 ///
@@ -190,7 +190,7 @@ QWidget* k_fileitemdelegate_super_create_editor(void* self, void* parent, void* 
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 ///
-bool k_fileitemdelegate_editor_event(void* self, void* event, void* model, void* option, void* index);
+bool k_fileitemdelegate_editor_event(void* self, void* event, void* model, const void* option, const void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#editorEvent)
 ///
@@ -199,7 +199,7 @@ bool k_fileitemdelegate_editor_event(void* self, void* event, void* model, void*
 /// @param self KFileItemDelegate*
 /// @param callback bool func(KFileItemDelegate* self, QEvent* event, QAbstractItemModel* model, QStyleOptionViewItem* option, QModelIndex* index)
 ///
-void k_fileitemdelegate_on_editor_event(void* self, bool (*callback)(void*, void*, void*, void*, void*));
+void k_fileitemdelegate_on_editor_event(void* self, bool (*callback)(void*, void*, void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#editorEvent)
 ///
@@ -211,92 +211,92 @@ void k_fileitemdelegate_on_editor_event(void* self, bool (*callback)(void*, void
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 ///
-bool k_fileitemdelegate_super_editor_event(void* self, void* event, void* model, void* option, void* index);
+bool k_fileitemdelegate_super_editor_event(void* self, void* event, void* model, const void* option, const void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#setEditorData)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 /// @param editor QWidget*
 /// @param index QModelIndex*
 ///
-void k_fileitemdelegate_set_editor_data(void* self, void* editor, void* index);
+void k_fileitemdelegate_set_editor_data(const void* self, void* editor, const void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#setEditorData)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KFileItemDelegate*
-/// @param callback void func(KFileItemDelegate* self, QWidget* editor, QModelIndex* index)
+/// @param self const KFileItemDelegate*
+/// @param callback void func(const KFileItemDelegate* self, QWidget* editor, QModelIndex* index)
 ///
-void k_fileitemdelegate_on_set_editor_data(void* self, void (*callback)(void*, void*, void*));
+void k_fileitemdelegate_on_set_editor_data(const void* self, void (*callback)(const void*, void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#setEditorData)
 ///
 /// Base class method implementation
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 /// @param editor QWidget*
 /// @param index QModelIndex*
 ///
-void k_fileitemdelegate_super_set_editor_data(void* self, void* editor, void* index);
+void k_fileitemdelegate_super_set_editor_data(const void* self, void* editor, const void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#setModelData)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 /// @param editor QWidget*
 /// @param model QAbstractItemModel*
 /// @param index QModelIndex*
 ///
-void k_fileitemdelegate_set_model_data(void* self, void* editor, void* model, void* index);
+void k_fileitemdelegate_set_model_data(const void* self, void* editor, void* model, const void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#setModelData)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KFileItemDelegate*
-/// @param callback void func(KFileItemDelegate* self, QWidget* editor, QAbstractItemModel* model, QModelIndex* index)
+/// @param self const KFileItemDelegate*
+/// @param callback void func(const KFileItemDelegate* self, QWidget* editor, QAbstractItemModel* model, QModelIndex* index)
 ///
-void k_fileitemdelegate_on_set_model_data(void* self, void (*callback)(void*, void*, void*, void*));
+void k_fileitemdelegate_on_set_model_data(const void* self, void (*callback)(const void*, void*, void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#setModelData)
 ///
 /// Base class method implementation
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 /// @param editor QWidget*
 /// @param model QAbstractItemModel*
 /// @param index QModelIndex*
 ///
-void k_fileitemdelegate_super_set_model_data(void* self, void* editor, void* model, void* index);
+void k_fileitemdelegate_super_set_model_data(const void* self, void* editor, void* model, const void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#updateEditorGeometry)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 /// @param editor QWidget*
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 ///
-void k_fileitemdelegate_update_editor_geometry(void* self, void* editor, void* option, void* index);
+void k_fileitemdelegate_update_editor_geometry(const void* self, void* editor, const void* option, const void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#updateEditorGeometry)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KFileItemDelegate*
-/// @param callback void func(KFileItemDelegate* self, QWidget* editor, QStyleOptionViewItem* option, QModelIndex* index)
+/// @param self const KFileItemDelegate*
+/// @param callback void func(const KFileItemDelegate* self, QWidget* editor, QStyleOptionViewItem* option, QModelIndex* index)
 ///
-void k_fileitemdelegate_on_update_editor_geometry(void* self, void (*callback)(void*, void*, void*, void*));
+void k_fileitemdelegate_on_update_editor_geometry(const void* self, void (*callback)(const void*, void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#updateEditorGeometry)
 ///
 /// Base class method implementation
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 /// @param editor QWidget*
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 ///
-void k_fileitemdelegate_super_update_editor_geometry(void* self, void* editor, void* option, void* index);
+void k_fileitemdelegate_super_update_editor_geometry(const void* self, void* editor, const void* option, const void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#setShowInformation)
 ///
@@ -314,37 +314,37 @@ void k_fileitemdelegate_set_show_information2(void* self, int32_t information);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#showInformation)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 ///
 /// @return libqt_list of enum KFileItemDelegate__Information
 ///
-libqt_list k_fileitemdelegate_show_information(void* self);
+libqt_list k_fileitemdelegate_show_information(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#setShadowColor)
 ///
 /// @param self KFileItemDelegate*
 /// @param color QColor*
 ///
-void k_fileitemdelegate_set_shadow_color(void* self, void* color);
+void k_fileitemdelegate_set_shadow_color(void* self, const void* color);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#shadowColor)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 ///
-QColor* k_fileitemdelegate_shadow_color(void* self);
+QColor* k_fileitemdelegate_shadow_color(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#setShadowOffset)
 ///
 /// @param self KFileItemDelegate*
 /// @param offset QPointF*
 ///
-void k_fileitemdelegate_set_shadow_offset(void* self, void* offset);
+void k_fileitemdelegate_set_shadow_offset(void* self, const void* offset);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#shadowOffset)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 ///
-QPointF* k_fileitemdelegate_shadow_offset(void* self);
+QPointF* k_fileitemdelegate_shadow_offset(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#setShadowBlur)
 ///
@@ -355,22 +355,22 @@ void k_fileitemdelegate_set_shadow_blur(void* self, double radius);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#shadowBlur)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 ///
-double k_fileitemdelegate_shadow_blur(void* self);
+double k_fileitemdelegate_shadow_blur(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#setMaximumSize)
 ///
 /// @param self KFileItemDelegate*
 /// @param size QSize*
 ///
-void k_fileitemdelegate_set_maximum_size(void* self, void* size);
+void k_fileitemdelegate_set_maximum_size(void* self, const void* size);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#maximumSize)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 ///
-QSize* k_fileitemdelegate_maximum_size(void* self);
+QSize* k_fileitemdelegate_maximum_size(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#setShowToolTipWhenElided)
 ///
@@ -381,17 +381,17 @@ void k_fileitemdelegate_set_show_tool_tip_when_elided(void* self, bool showToolT
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#showToolTipWhenElided)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 ///
-bool k_fileitemdelegate_show_tool_tip_when_elided(void* self);
+bool k_fileitemdelegate_show_tool_tip_when_elided(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#iconRect)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 ///
-QRect* k_fileitemdelegate_icon_rect(void* self, void* option, void* index);
+QRect* k_fileitemdelegate_icon_rect(const void* self, const void* option, const void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#setWrapMode)
 ///
@@ -402,11 +402,11 @@ void k_fileitemdelegate_set_wrap_mode(void* self, int32_t wrapMode);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#wrapMode)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 ///
 /// @return enum QTextOption__WrapMode
 ///
-int32_t k_fileitemdelegate_wrap_mode(void* self);
+int32_t k_fileitemdelegate_wrap_mode(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#setJobTransfersVisible)
 ///
@@ -417,9 +417,9 @@ void k_fileitemdelegate_set_job_transfers_visible(void* self, bool jobTransfersV
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#jobTransfersVisible)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 ///
-bool k_fileitemdelegate_job_transfers_visible(void* self);
+bool k_fileitemdelegate_job_transfers_visible(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#eventFilter)
 ///
@@ -450,9 +450,9 @@ bool k_fileitemdelegate_super_event_filter(void* self, void* object, void* event
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#selectionEmblemRect)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 ///
-QRect* k_fileitemdelegate_selection_emblem_rect(void* self);
+QRect* k_fileitemdelegate_selection_emblem_rect(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#setSelectionEmblemRect)
 ///
@@ -464,10 +464,10 @@ void k_fileitemdelegate_set_selection_emblem_rect(void* self, void* rect, int ic
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#fileItem)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 /// @param index QModelIndex*
 ///
-KFileItem* k_fileitemdelegate_file_item(void* self, void* index);
+KFileItem* k_fileitemdelegate_file_item(const void* self, const void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#helpEvent)
 ///
@@ -477,7 +477,7 @@ KFileItem* k_fileitemdelegate_file_item(void* self, void* index);
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 ///
-bool k_fileitemdelegate_help_event(void* self, void* event, void* view, void* option, void* index);
+bool k_fileitemdelegate_help_event(void* self, void* event, void* view, const void* option, const void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#helpEvent)
 ///
@@ -486,7 +486,7 @@ bool k_fileitemdelegate_help_event(void* self, void* event, void* view, void* op
 /// @param self KFileItemDelegate*
 /// @param callback bool func(KFileItemDelegate* self, QHelpEvent* event, QAbstractItemView* view, QStyleOptionViewItem* option, QModelIndex* index)
 ///
-void k_fileitemdelegate_on_help_event(void* self, bool (*callback)(void*, void*, void*, void*, void*));
+void k_fileitemdelegate_on_help_event(void* self, bool (*callback)(void*, void*, void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#helpEvent)
 ///
@@ -498,7 +498,7 @@ void k_fileitemdelegate_on_help_event(void* self, bool (*callback)(void*, void*,
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 ///
-bool k_fileitemdelegate_super_help_event(void* self, void* event, void* view, void* option, void* index);
+bool k_fileitemdelegate_super_help_event(void* self, void* event, void* view, const void* option, const void* index);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#shape)
 ///
@@ -506,7 +506,7 @@ bool k_fileitemdelegate_super_help_event(void* self, void* event, void* view, vo
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 ///
-QRegion* k_fileitemdelegate_shape(void* self, void* option, void* index);
+QRegion* k_fileitemdelegate_shape(void* self, const void* option, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -570,7 +570,7 @@ void k_fileitemdelegate_on_close_editor(void* self, void (*callback)(void*, void
 /// @param self KFileItemDelegate*
 /// @param param1 QModelIndex*
 ///
-void k_fileitemdelegate_size_hint_changed(void* self, void* param1);
+void k_fileitemdelegate_size_hint_changed(void* self, const void* param1);
 
 /// Inherited from QAbstractItemDelegate
 ///
@@ -579,7 +579,7 @@ void k_fileitemdelegate_size_hint_changed(void* self, void* param1);
 /// @param self KFileItemDelegate*
 /// @param callback void func(KFileItemDelegate* self, QModelIndex* param1)
 ///
-void k_fileitemdelegate_on_size_hint_changed(void* self, void (*callback)(void*, void*));
+void k_fileitemdelegate_on_size_hint_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractItemDelegate
 ///
@@ -606,9 +606,9 @@ void k_fileitemdelegate_on_close_editor2(void* self, void (*callback)(void*, voi
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 ///
-const char* k_fileitemdelegate_object_name(void* self);
+const char* k_fileitemdelegate_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -623,33 +623,33 @@ void k_fileitemdelegate_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 ///
-bool k_fileitemdelegate_is_widget_type(void* self);
+bool k_fileitemdelegate_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 ///
-bool k_fileitemdelegate_is_window_type(void* self);
+bool k_fileitemdelegate_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 ///
-bool k_fileitemdelegate_is_quick_item_type(void* self);
+bool k_fileitemdelegate_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 ///
-bool k_fileitemdelegate_signals_blocked(void* self);
+bool k_fileitemdelegate_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -664,9 +664,9 @@ bool k_fileitemdelegate_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 ///
-QThread* k_fileitemdelegate_thread(void* self);
+QThread* k_fileitemdelegate_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -717,11 +717,11 @@ void k_fileitemdelegate_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_fileitemdelegate_children(void* self);
+libqt_list k_fileitemdelegate_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -759,7 +759,7 @@ void k_fileitemdelegate_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_fileitemdelegate_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_fileitemdelegate_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -770,18 +770,18 @@ QMetaObject__Connection* k_fileitemdelegate_connect(void* sender, const char* si
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_fileitemdelegate_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_fileitemdelegate_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_fileitemdelegate_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_fileitemdelegate_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -792,7 +792,7 @@ QMetaObject__Connection* k_fileitemdelegate_connect3(void* self, void* sender, c
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_fileitemdelegate_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_fileitemdelegate_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -803,24 +803,24 @@ bool k_fileitemdelegate_disconnect(void* sender, const char* signal, void* recei
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_fileitemdelegate_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_fileitemdelegate_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 ///
-bool k_fileitemdelegate_disconnect3(void* self);
+bool k_fileitemdelegate_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 /// @param receiver QObject*
 ///
-bool k_fileitemdelegate_disconnect4(void* self, void* receiver);
+bool k_fileitemdelegate_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -828,23 +828,23 @@ bool k_fileitemdelegate_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_fileitemdelegate_disconnect5(void* param1);
+bool k_fileitemdelegate_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 ///
-void k_fileitemdelegate_dump_object_tree(void* self);
+void k_fileitemdelegate_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 ///
-void k_fileitemdelegate_dump_object_info(void* self);
+void k_fileitemdelegate_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -854,16 +854,16 @@ void k_fileitemdelegate_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_fileitemdelegate_set_property(void* self, const char* name, void* value);
+bool k_fileitemdelegate_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 /// @param name const char*
 ///
-QVariant* k_fileitemdelegate_property(void* self, const char* name);
+QVariant* k_fileitemdelegate_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -871,9 +871,9 @@ QVariant* k_fileitemdelegate_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 ///
-const char** k_fileitemdelegate_dynamic_property_names(void* self);
+const char** k_fileitemdelegate_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -887,9 +887,9 @@ QBindingStorage* k_fileitemdelegate_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 ///
-const QBindingStorage* k_fileitemdelegate_binding_storage2(void* self);
+const QBindingStorage* k_fileitemdelegate_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -912,18 +912,18 @@ void k_fileitemdelegate_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 ///
-QObject* k_fileitemdelegate_parent(void* self);
+QObject* k_fileitemdelegate_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 /// @param classname const char*
 ///
-bool k_fileitemdelegate_inherits(void* self, const char* classname);
+bool k_fileitemdelegate_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -963,7 +963,7 @@ int32_t k_fileitemdelegate_start_timer23(void* self, int64_t time, int32_t timer
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_fileitemdelegate_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_fileitemdelegate_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -975,59 +975,59 @@ QMetaObject__Connection* k_fileitemdelegate_connect5(void* sender, const char* s
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_fileitemdelegate_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_fileitemdelegate_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_fileitemdelegate_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_fileitemdelegate_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 /// @param signal const char*
 ///
-bool k_fileitemdelegate_disconnect1(void* self, const char* signal);
+bool k_fileitemdelegate_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KFileItemDelegate*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_fileitemdelegate_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_fileitemdelegate_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_fileitemdelegate_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_fileitemdelegate_disconnect23(void* self, void* receiver, const char* member);
+bool k_fileitemdelegate_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KFileItemDelegate*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_fileitemdelegate_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1053,11 +1053,11 @@ void k_fileitemdelegate_on_destroyed1(void* self, void (*callback)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 /// @param editor QWidget*
 /// @param index QModelIndex*
 ///
-void k_fileitemdelegate_destroy_editor(void* self, void* editor, void* index);
+void k_fileitemdelegate_destroy_editor(const void* self, void* editor, const void* index);
 
 /// Inherited from QAbstractItemDelegate
 ///
@@ -1065,11 +1065,11 @@ void k_fileitemdelegate_destroy_editor(void* self, void* editor, void* index);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 /// @param editor QWidget*
 /// @param index QModelIndex*
 ///
-void k_fileitemdelegate_super_destroy_editor(void* self, void* editor, void* index);
+void k_fileitemdelegate_super_destroy_editor(const void* self, void* editor, const void* index);
 
 /// Inherited from QAbstractItemDelegate
 ///
@@ -1077,10 +1077,10 @@ void k_fileitemdelegate_super_destroy_editor(void* self, void* editor, void* ind
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 /// @param callback void func(KFileItemDelegate* self, QWidget* editor, QModelIndex* index)
 ///
-void k_fileitemdelegate_on_destroy_editor(void* self, void (*callback)(void*, void*, void*));
+void k_fileitemdelegate_on_destroy_editor(const void* self, void (*callback)(const void*, void*, const void*));
 
 /// Inherited from QAbstractItemDelegate
 ///
@@ -1088,11 +1088,11 @@ void k_fileitemdelegate_on_destroy_editor(void* self, void (*callback)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 ///
 /// @return libqt_list of int
 ///
-libqt_list k_fileitemdelegate_painting_roles(void* self);
+libqt_list k_fileitemdelegate_painting_roles(const void* self);
 
 /// Inherited from QAbstractItemDelegate
 ///
@@ -1100,11 +1100,11 @@ libqt_list k_fileitemdelegate_painting_roles(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 ///
 /// @return libqt_list of int
 ///
-libqt_list k_fileitemdelegate_super_painting_roles(void* self);
+libqt_list k_fileitemdelegate_super_painting_roles(const void* self);
 
 /// Inherited from QAbstractItemDelegate
 ///
@@ -1112,10 +1112,10 @@ libqt_list k_fileitemdelegate_super_painting_roles(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KFileItemDelegate*
-/// @param callback libqt_list of int func()
+/// @param self const KFileItemDelegate*
+/// @param callback libqt_list of int func(KFileItemDelegate* self)
 ///
-void k_fileitemdelegate_on_painting_roles(void* self, libqt_list (*callback)());
+void k_fileitemdelegate_on_painting_roles(const void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1258,7 +1258,7 @@ void k_fileitemdelegate_on_custom_event(void* self, void (*callback)(void*, void
 /// @param self KFileItemDelegate*
 /// @param signal QMetaMethod*
 ///
-void k_fileitemdelegate_connect_notify(void* self, void* signal);
+void k_fileitemdelegate_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1269,7 +1269,7 @@ void k_fileitemdelegate_connect_notify(void* self, void* signal);
 /// @param self KFileItemDelegate*
 /// @param signal QMetaMethod*
 ///
-void k_fileitemdelegate_super_connect_notify(void* self, void* signal);
+void k_fileitemdelegate_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1280,7 +1280,7 @@ void k_fileitemdelegate_super_connect_notify(void* self, void* signal);
 /// @param self KFileItemDelegate*
 /// @param callback void func(KFileItemDelegate* self, QMetaMethod* signal)
 ///
-void k_fileitemdelegate_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_fileitemdelegate_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1291,7 +1291,7 @@ void k_fileitemdelegate_on_connect_notify(void* self, void (*callback)(void*, vo
 /// @param self KFileItemDelegate*
 /// @param signal QMetaMethod*
 ///
-void k_fileitemdelegate_disconnect_notify(void* self, void* signal);
+void k_fileitemdelegate_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1302,7 +1302,7 @@ void k_fileitemdelegate_disconnect_notify(void* self, void* signal);
 /// @param self KFileItemDelegate*
 /// @param signal QMetaMethod*
 ///
-void k_fileitemdelegate_super_disconnect_notify(void* self, void* signal);
+void k_fileitemdelegate_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1313,7 +1313,7 @@ void k_fileitemdelegate_super_disconnect_notify(void* self, void* signal);
 /// @param self KFileItemDelegate*
 /// @param callback void func(KFileItemDelegate* self, QMetaMethod* signal)
 ///
-void k_fileitemdelegate_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_fileitemdelegate_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1321,9 +1321,9 @@ void k_fileitemdelegate_on_disconnect_notify(void* self, void (*callback)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 ///
-QObject* k_fileitemdelegate_sender(void* self);
+QObject* k_fileitemdelegate_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1331,9 +1331,9 @@ QObject* k_fileitemdelegate_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 ///
-QObject* k_fileitemdelegate_super_sender(void* self);
+QObject* k_fileitemdelegate_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1341,10 +1341,10 @@ QObject* k_fileitemdelegate_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KFileItemDelegate*
-/// @param callback QObject* func()
+/// @param self const KFileItemDelegate*
+/// @param callback QObject* func(KFileItemDelegate* self)
 ///
-void k_fileitemdelegate_on_sender(void* self, QObject* (*callback)());
+void k_fileitemdelegate_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1352,9 +1352,9 @@ void k_fileitemdelegate_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 ///
-int32_t k_fileitemdelegate_sender_signal_index(void* self);
+int32_t k_fileitemdelegate_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1362,9 +1362,9 @@ int32_t k_fileitemdelegate_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 ///
-int32_t k_fileitemdelegate_super_sender_signal_index(void* self);
+int32_t k_fileitemdelegate_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1372,10 +1372,10 @@ int32_t k_fileitemdelegate_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KFileItemDelegate*
-/// @param callback int32_t func()
+/// @param self const KFileItemDelegate*
+/// @param callback int32_t func(KFileItemDelegate* self)
 ///
-void k_fileitemdelegate_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_fileitemdelegate_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1383,10 +1383,10 @@ void k_fileitemdelegate_on_sender_signal_index(void* self, int32_t (*callback)()
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 /// @param signal const char*
 ///
-int32_t k_fileitemdelegate_receivers(void* self, const char* signal);
+int32_t k_fileitemdelegate_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1394,10 +1394,10 @@ int32_t k_fileitemdelegate_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 /// @param signal const char*
 ///
-int32_t k_fileitemdelegate_super_receivers(void* self, const char* signal);
+int32_t k_fileitemdelegate_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1405,10 +1405,10 @@ int32_t k_fileitemdelegate_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 /// @param callback int32_t func(KFileItemDelegate* self, const char* signal)
 ///
-void k_fileitemdelegate_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_fileitemdelegate_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1416,10 +1416,10 @@ void k_fileitemdelegate_on_receivers(void* self, int32_t (*callback)(void*, cons
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 /// @param signal QMetaMethod*
 ///
-bool k_fileitemdelegate_is_signal_connected(void* self, void* signal);
+bool k_fileitemdelegate_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1427,10 +1427,10 @@ bool k_fileitemdelegate_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 /// @param signal QMetaMethod*
 ///
-bool k_fileitemdelegate_super_is_signal_connected(void* self, void* signal);
+bool k_fileitemdelegate_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1438,10 +1438,10 @@ bool k_fileitemdelegate_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KFileItemDelegate*
+/// @param self const KFileItemDelegate*
 /// @param callback bool func(KFileItemDelegate* self, QMetaMethod* signal)
 ///
-void k_fileitemdelegate_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_fileitemdelegate_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

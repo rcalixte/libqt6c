@@ -8,7 +8,7 @@ QNetworkProxyQuery* q_networkproxyquery_new() {
     return QNetworkProxyQuery_New();
 }
 
-QNetworkProxyQuery* q_networkproxyquery_new2(void* requestUrl) {
+QNetworkProxyQuery* q_networkproxyquery_new2(const void* requestUrl) {
     return QNetworkProxyQuery_New2((QUrl*)requestUrl);
 }
 
@@ -20,11 +20,11 @@ QNetworkProxyQuery* q_networkproxyquery_new4(uint16_t bindPort) {
     return QNetworkProxyQuery_New4(bindPort);
 }
 
-QNetworkProxyQuery* q_networkproxyquery_new5(void* other) {
+QNetworkProxyQuery* q_networkproxyquery_new5(const void* other) {
     return QNetworkProxyQuery_New5((QNetworkProxyQuery*)other);
 }
 
-QNetworkProxyQuery* q_networkproxyquery_new6(void* requestUrl, int32_t queryType) {
+QNetworkProxyQuery* q_networkproxyquery_new6(const void* requestUrl, int32_t queryType) {
     return QNetworkProxyQuery_New6((QUrl*)requestUrl, queryType);
 }
 
@@ -44,7 +44,7 @@ QNetworkProxyQuery* q_networkproxyquery_new10(uint16_t bindPort, const char* pro
     return QNetworkProxyQuery_New10(bindPort, qstring(protocolTag), queryType);
 }
 
-void q_networkproxyquery_operator_assign(void* self, void* other) {
+void q_networkproxyquery_operator_assign(void* self, const void* other) {
     QNetworkProxyQuery_OperatorAssign((QNetworkProxyQuery*)self, (QNetworkProxyQuery*)other);
 }
 
@@ -52,15 +52,15 @@ void q_networkproxyquery_swap(void* self, void* other) {
     QNetworkProxyQuery_Swap((QNetworkProxyQuery*)self, (QNetworkProxyQuery*)other);
 }
 
-bool q_networkproxyquery_operator_equal(void* self, void* other) {
+bool q_networkproxyquery_operator_equal(const void* self, const void* other) {
     return QNetworkProxyQuery_OperatorEqual((QNetworkProxyQuery*)self, (QNetworkProxyQuery*)other);
 }
 
-bool q_networkproxyquery_operator_not_equal(void* self, void* other) {
+bool q_networkproxyquery_operator_not_equal(const void* self, const void* other) {
     return QNetworkProxyQuery_OperatorNotEqual((QNetworkProxyQuery*)self, (QNetworkProxyQuery*)other);
 }
 
-int32_t q_networkproxyquery_query_type(void* self) {
+int32_t q_networkproxyquery_query_type(const void* self) {
     return QNetworkProxyQuery_QueryType((QNetworkProxyQuery*)self);
 }
 
@@ -68,7 +68,7 @@ void q_networkproxyquery_set_query_type(void* self, int32_t type) {
     QNetworkProxyQuery_SetQueryType((QNetworkProxyQuery*)self, type);
 }
 
-int32_t q_networkproxyquery_peer_port(void* self) {
+int32_t q_networkproxyquery_peer_port(const void* self) {
     return QNetworkProxyQuery_PeerPort((QNetworkProxyQuery*)self);
 }
 
@@ -76,7 +76,7 @@ void q_networkproxyquery_set_peer_port(void* self, int port) {
     QNetworkProxyQuery_SetPeerPort((QNetworkProxyQuery*)self, port);
 }
 
-const char* q_networkproxyquery_peer_host_name(void* self) {
+const char* q_networkproxyquery_peer_host_name(const void* self) {
     libqt_string _str = QNetworkProxyQuery_PeerHostName((QNetworkProxyQuery*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -87,7 +87,7 @@ void q_networkproxyquery_set_peer_host_name(void* self, const char* hostname) {
     QNetworkProxyQuery_SetPeerHostName((QNetworkProxyQuery*)self, qstring(hostname));
 }
 
-int32_t q_networkproxyquery_local_port(void* self) {
+int32_t q_networkproxyquery_local_port(const void* self) {
     return QNetworkProxyQuery_LocalPort((QNetworkProxyQuery*)self);
 }
 
@@ -95,7 +95,7 @@ void q_networkproxyquery_set_local_port(void* self, int port) {
     QNetworkProxyQuery_SetLocalPort((QNetworkProxyQuery*)self, port);
 }
 
-const char* q_networkproxyquery_protocol_tag(void* self) {
+const char* q_networkproxyquery_protocol_tag(const void* self) {
     libqt_string _str = QNetworkProxyQuery_ProtocolTag((QNetworkProxyQuery*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -106,11 +106,11 @@ void q_networkproxyquery_set_protocol_tag(void* self, const char* protocolTag) {
     QNetworkProxyQuery_SetProtocolTag((QNetworkProxyQuery*)self, qstring(protocolTag));
 }
 
-QUrl* q_networkproxyquery_url(void* self) {
+QUrl* q_networkproxyquery_url(const void* self) {
     return QNetworkProxyQuery_Url((QNetworkProxyQuery*)self);
 }
 
-void q_networkproxyquery_set_url(void* self, void* url) {
+void q_networkproxyquery_set_url(void* self, const void* url) {
     QNetworkProxyQuery_SetUrl((QNetworkProxyQuery*)self, (QUrl*)url);
 }
 
@@ -126,7 +126,7 @@ QNetworkProxy* q_networkproxy_new2(int32_t type) {
     return QNetworkProxy_New2(type);
 }
 
-QNetworkProxy* q_networkproxy_new3(void* other) {
+QNetworkProxy* q_networkproxy_new3(const void* other) {
     return QNetworkProxy_New3((QNetworkProxy*)other);
 }
 
@@ -146,7 +146,7 @@ QNetworkProxy* q_networkproxy_new7(int32_t type, const char* hostName, uint16_t 
     return QNetworkProxy_New7(type, qstring(hostName), port, qstring(user), qstring(password));
 }
 
-void q_networkproxy_operator_assign(void* self, void* other) {
+void q_networkproxy_operator_assign(void* self, const void* other) {
     QNetworkProxy_OperatorAssign((QNetworkProxy*)self, (QNetworkProxy*)other);
 }
 
@@ -154,11 +154,11 @@ void q_networkproxy_swap(void* self, void* other) {
     QNetworkProxy_Swap((QNetworkProxy*)self, (QNetworkProxy*)other);
 }
 
-bool q_networkproxy_operator_equal(void* self, void* other) {
+bool q_networkproxy_operator_equal(const void* self, const void* other) {
     return QNetworkProxy_OperatorEqual((QNetworkProxy*)self, (QNetworkProxy*)other);
 }
 
-bool q_networkproxy_operator_not_equal(void* self, void* other) {
+bool q_networkproxy_operator_not_equal(const void* self, const void* other) {
     return QNetworkProxy_OperatorNotEqual((QNetworkProxy*)self, (QNetworkProxy*)other);
 }
 
@@ -166,7 +166,7 @@ void q_networkproxy_set_type(void* self, int32_t type) {
     QNetworkProxy_SetType((QNetworkProxy*)self, type);
 }
 
-int32_t q_networkproxy_type(void* self) {
+int32_t q_networkproxy_type(const void* self) {
     return QNetworkProxy_Type((QNetworkProxy*)self);
 }
 
@@ -174,15 +174,15 @@ void q_networkproxy_set_capabilities(void* self, int32_t capab) {
     QNetworkProxy_SetCapabilities((QNetworkProxy*)self, capab);
 }
 
-int32_t q_networkproxy_capabilities(void* self) {
+int32_t q_networkproxy_capabilities(const void* self) {
     return QNetworkProxy_Capabilities((QNetworkProxy*)self);
 }
 
-bool q_networkproxy_is_caching_proxy(void* self) {
+bool q_networkproxy_is_caching_proxy(const void* self) {
     return QNetworkProxy_IsCachingProxy((QNetworkProxy*)self);
 }
 
-bool q_networkproxy_is_transparent_proxy(void* self) {
+bool q_networkproxy_is_transparent_proxy(const void* self) {
     return QNetworkProxy_IsTransparentProxy((QNetworkProxy*)self);
 }
 
@@ -190,7 +190,7 @@ void q_networkproxy_set_user(void* self, const char* userName) {
     QNetworkProxy_SetUser((QNetworkProxy*)self, qstring(userName));
 }
 
-const char* q_networkproxy_user(void* self) {
+const char* q_networkproxy_user(const void* self) {
     libqt_string _str = QNetworkProxy_User((QNetworkProxy*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -201,7 +201,7 @@ void q_networkproxy_set_password(void* self, const char* password) {
     QNetworkProxy_SetPassword((QNetworkProxy*)self, qstring(password));
 }
 
-const char* q_networkproxy_password(void* self) {
+const char* q_networkproxy_password(const void* self) {
     libqt_string _str = QNetworkProxy_Password((QNetworkProxy*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -212,7 +212,7 @@ void q_networkproxy_set_host_name(void* self, const char* hostName) {
     QNetworkProxy_SetHostName((QNetworkProxy*)self, qstring(hostName));
 }
 
-const char* q_networkproxy_host_name(void* self) {
+const char* q_networkproxy_host_name(const void* self) {
     libqt_string _str = QNetworkProxy_HostName((QNetworkProxy*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -223,11 +223,11 @@ void q_networkproxy_set_port(void* self, uint16_t port) {
     QNetworkProxy_SetPort((QNetworkProxy*)self, port);
 }
 
-uint16_t q_networkproxy_port(void* self) {
+uint16_t q_networkproxy_port(const void* self) {
     return QNetworkProxy_Port((QNetworkProxy*)self);
 }
 
-void q_networkproxy_set_application_proxy(void* proxy) {
+void q_networkproxy_set_application_proxy(const void* proxy) {
     QNetworkProxy_SetApplicationProxy((QNetworkProxy*)proxy);
 }
 
@@ -235,27 +235,27 @@ QNetworkProxy* q_networkproxy_application_proxy() {
     return QNetworkProxy_ApplicationProxy();
 }
 
-QHttpHeaders* q_networkproxy_headers(void* self) {
+QHttpHeaders* q_networkproxy_headers(const void* self) {
     return QNetworkProxy_Headers((QNetworkProxy*)self);
 }
 
-void q_networkproxy_set_headers(void* self, void* newHeaders) {
+void q_networkproxy_set_headers(void* self, const void* newHeaders) {
     QNetworkProxy_SetHeaders((QNetworkProxy*)self, (QHttpHeaders*)newHeaders);
 }
 
-QVariant* q_networkproxy_header(void* self, int32_t header) {
+QVariant* q_networkproxy_header(const void* self, int32_t header) {
     return QNetworkProxy_Header((QNetworkProxy*)self, header);
 }
 
-void q_networkproxy_set_header(void* self, int32_t header, void* value) {
+void q_networkproxy_set_header(void* self, int32_t header, const void* value) {
     QNetworkProxy_SetHeader((QNetworkProxy*)self, header, (QVariant*)value);
 }
 
-bool q_networkproxy_has_raw_header(void* self, char* headerName) {
+bool q_networkproxy_has_raw_header(const void* self, char* headerName) {
     return QNetworkProxy_HasRawHeader((QNetworkProxy*)self, qstring(headerName));
 }
 
-const char** q_networkproxy_raw_header_list(void* self) {
+const char** q_networkproxy_raw_header_list(const void* self) {
     libqt_list _arr = QNetworkProxy_RawHeaderList((QNetworkProxy*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -272,7 +272,7 @@ const char** q_networkproxy_raw_header_list(void* self) {
     return _ret;
 }
 
-char* q_networkproxy_raw_header(void* self, char* headerName) {
+char* q_networkproxy_raw_header(const void* self, char* headerName) {
     libqt_string _str = QNetworkProxy_RawHeader((QNetworkProxy*)self, qstring(headerName));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -291,18 +291,13 @@ QNetworkProxyFactory* q_networkproxyfactory_new() {
     return QNetworkProxyFactory_New();
 }
 
-libqt_list /* of QNetworkProxy* */ q_networkproxyfactory_query_proxy(void* self, void* query) {
+libqt_list /* of QNetworkProxy* */ q_networkproxyfactory_query_proxy(void* self, const void* query) {
     libqt_list _arr = QNetworkProxyFactory_QueryProxy((QNetworkProxyFactory*)self, (QNetworkProxyQuery*)query);
     return _arr;
 }
 
-void q_networkproxyfactory_on_query_proxy(void* self, libqt_list /* of QNetworkProxy* */ (*callback)(void*, void*)) {
+void q_networkproxyfactory_on_query_proxy(void* self, libqt_list /* of QNetworkProxy* */ (*callback)(void*, const void*)) {
     QNetworkProxyFactory_OnQueryProxy((QNetworkProxyFactory*)self, (intptr_t)callback);
-}
-
-libqt_list /* of QNetworkProxy* */ q_networkproxyfactory_super_query_proxy(void* self, void* query) {
-    libqt_list _arr = QNetworkProxyFactory_SuperQueryProxy((QNetworkProxyFactory*)self, (QNetworkProxyQuery*)query);
-    return _arr;
 }
 
 bool q_networkproxyfactory_uses_system_configuration() {
@@ -317,7 +312,7 @@ void q_networkproxyfactory_set_application_proxy_factory(void* factory) {
     QNetworkProxyFactory_SetApplicationProxyFactory((QNetworkProxyFactory*)factory);
 }
 
-libqt_list /* of QNetworkProxy* */ q_networkproxyfactory_proxy_for_query(void* query) {
+libqt_list /* of QNetworkProxy* */ q_networkproxyfactory_proxy_for_query(const void* query) {
     libqt_list _arr = QNetworkProxyFactory_ProxyForQuery((QNetworkProxyQuery*)query);
     return _arr;
 }
@@ -327,11 +322,11 @@ libqt_list /* of QNetworkProxy* */ q_networkproxyfactory_system_proxy_for_query(
     return _arr;
 }
 
-void q_networkproxyfactory_operator_assign(void* self, void* param1) {
+void q_networkproxyfactory_operator_assign(void* self, const void* param1) {
     QNetworkProxyFactory_OperatorAssign((QNetworkProxyFactory*)self, (QNetworkProxyFactory*)param1);
 }
 
-libqt_list /* of QNetworkProxy* */ q_networkproxyfactory_system_proxy_for_query1(void* query) {
+libqt_list /* of QNetworkProxy* */ q_networkproxyfactory_system_proxy_for_query1(const void* query) {
     libqt_list _arr = QNetworkProxyFactory_SystemProxyForQuery1((QNetworkProxyQuery*)query);
     return _arr;
 }

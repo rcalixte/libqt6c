@@ -120,7 +120,7 @@ void QMediaPlayer_Connect_ErrorChanged(QMediaPlayer* self, intptr_t slot);
 void QMediaPlayer_ErrorOccurred(QMediaPlayer* self, int error, const libqt_string errorString);
 void QMediaPlayer_Connect_ErrorOccurred(QMediaPlayer* self, intptr_t slot);
 void QMediaPlayer_SetSourceDevice2(QMediaPlayer* self, QIODevice* device, const QUrl* sourceUrl);
-void QMediaPlayer_OnMetaObject(const QMediaPlayer* self, intptr_t slot);
+void QMediaPlayer_OnMetaObject(QMediaPlayer* self, intptr_t slot);
 QMetaObject* QMediaPlayer_SuperMetaObject(const QMediaPlayer* self);
 void QMediaPlayer_OnMetacast(QMediaPlayer* self, intptr_t slot);
 void* QMediaPlayer_SuperMetacast(QMediaPlayer* self, const char* param1);
@@ -148,17 +148,9 @@ void QMediaPlayer_DisconnectNotify(QMediaPlayer* self, const QMetaMethod* signal
 void QMediaPlayer_OnDisconnectNotify(QMediaPlayer* self, intptr_t slot);
 void QMediaPlayer_SuperDisconnectNotify(QMediaPlayer* self, const QMetaMethod* signal);
 QObject* QMediaPlayer_Sender(const QMediaPlayer* self);
-void QMediaPlayer_OnSender(const QMediaPlayer* self, intptr_t slot);
-QObject* QMediaPlayer_SuperSender(const QMediaPlayer* self);
 int QMediaPlayer_SenderSignalIndex(const QMediaPlayer* self);
-void QMediaPlayer_OnSenderSignalIndex(const QMediaPlayer* self, intptr_t slot);
-int QMediaPlayer_SuperSenderSignalIndex(const QMediaPlayer* self);
 int QMediaPlayer_Receivers(const QMediaPlayer* self, const char* signal);
-void QMediaPlayer_OnReceivers(const QMediaPlayer* self, intptr_t slot);
-int QMediaPlayer_SuperReceivers(const QMediaPlayer* self, const char* signal);
 bool QMediaPlayer_IsSignalConnected(const QMediaPlayer* self, const QMetaMethod* signal);
-void QMediaPlayer_OnIsSignalConnected(const QMediaPlayer* self, intptr_t slot);
-bool QMediaPlayer_SuperIsSignalConnected(const QMediaPlayer* self, const QMetaMethod* signal);
 void QMediaPlayer_Delete(QMediaPlayer* self);
 
 #ifdef __cplusplus

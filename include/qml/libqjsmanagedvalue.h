@@ -30,7 +30,7 @@ QJSManagedValue* q_jsmanagedvalue_new2(void* value, void* engine);
 /// @param value QJSPrimitiveValue*
 /// @param engine QJSEngine*
 ///
-QJSManagedValue* q_jsmanagedvalue_new3(void* value, void* engine);
+QJSManagedValue* q_jsmanagedvalue_new3(const void* value, void* engine);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html)
 
@@ -39,7 +39,7 @@ QJSManagedValue* q_jsmanagedvalue_new3(void* value, void* engine);
 /// @param variant QVariant*
 /// @param engine QJSEngine*
 ///
-QJSManagedValue* q_jsmanagedvalue_new4(void* variant, void* engine);
+QJSManagedValue* q_jsmanagedvalue_new4(const void* variant, void* engine);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html)
 
@@ -52,247 +52,247 @@ QJSManagedValue* q_jsmanagedvalue_new5(const char* string, void* engine);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#equals)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 /// @param other QJSManagedValue*
 ///
-bool q_jsmanagedvalue_equals(void* self, void* other);
+bool q_jsmanagedvalue_equals(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#strictlyEquals)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 /// @param other QJSManagedValue*
 ///
-bool q_jsmanagedvalue_strictly_equals(void* self, void* other);
+bool q_jsmanagedvalue_strictly_equals(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#engine)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-QJSEngine* q_jsmanagedvalue_engine(void* self);
+QJSEngine* q_jsmanagedvalue_engine(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#prototype)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-QJSManagedValue* q_jsmanagedvalue_prototype(void* self);
+QJSManagedValue* q_jsmanagedvalue_prototype(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#setPrototype)
 ///
 /// @param self QJSManagedValue*
 /// @param prototype QJSManagedValue*
 ///
-void q_jsmanagedvalue_set_prototype(void* self, void* prototype);
+void q_jsmanagedvalue_set_prototype(void* self, const void* prototype);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#type)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
 /// @return enum QJSManagedValue__Type
 ///
-int32_t q_jsmanagedvalue_type(void* self);
+int32_t q_jsmanagedvalue_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#isUndefined)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-bool q_jsmanagedvalue_is_undefined(void* self);
+bool q_jsmanagedvalue_is_undefined(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#isBoolean)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-bool q_jsmanagedvalue_is_boolean(void* self);
+bool q_jsmanagedvalue_is_boolean(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#isNumber)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-bool q_jsmanagedvalue_is_number(void* self);
+bool q_jsmanagedvalue_is_number(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#isString)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-bool q_jsmanagedvalue_is_string(void* self);
+bool q_jsmanagedvalue_is_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#isObject)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-bool q_jsmanagedvalue_is_object(void* self);
+bool q_jsmanagedvalue_is_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#isSymbol)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-bool q_jsmanagedvalue_is_symbol(void* self);
+bool q_jsmanagedvalue_is_symbol(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#isFunction)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-bool q_jsmanagedvalue_is_function(void* self);
+bool q_jsmanagedvalue_is_function(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#isInteger)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-bool q_jsmanagedvalue_is_integer(void* self);
+bool q_jsmanagedvalue_is_integer(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#isNull)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-bool q_jsmanagedvalue_is_null(void* self);
+bool q_jsmanagedvalue_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#isRegularExpression)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-bool q_jsmanagedvalue_is_regular_expression(void* self);
+bool q_jsmanagedvalue_is_regular_expression(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#isArray)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-bool q_jsmanagedvalue_is_array(void* self);
+bool q_jsmanagedvalue_is_array(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#isUrl)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-bool q_jsmanagedvalue_is_url(void* self);
+bool q_jsmanagedvalue_is_url(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#isVariant)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-bool q_jsmanagedvalue_is_variant(void* self);
+bool q_jsmanagedvalue_is_variant(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#isQObject)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-bool q_jsmanagedvalue_is_q_object(void* self);
+bool q_jsmanagedvalue_is_q_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#isQMetaObject)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-bool q_jsmanagedvalue_is_q_meta_object(void* self);
+bool q_jsmanagedvalue_is_q_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#isDate)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-bool q_jsmanagedvalue_is_date(void* self);
+bool q_jsmanagedvalue_is_date(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#isError)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-bool q_jsmanagedvalue_is_error(void* self);
+bool q_jsmanagedvalue_is_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#isJsMetaType)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-bool q_jsmanagedvalue_is_js_meta_type(void* self);
+bool q_jsmanagedvalue_is_js_meta_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-const char* q_jsmanagedvalue_to_string(void* self);
+const char* q_jsmanagedvalue_to_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#toNumber)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-double q_jsmanagedvalue_to_number(void* self);
+double q_jsmanagedvalue_to_number(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#toBoolean)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-bool q_jsmanagedvalue_to_boolean(void* self);
+bool q_jsmanagedvalue_to_boolean(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#toPrimitive)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-QJSPrimitiveValue* q_jsmanagedvalue_to_primitive(void* self);
+QJSPrimitiveValue* q_jsmanagedvalue_to_primitive(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#toJSValue)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-QJSValue* q_jsmanagedvalue_to_j_s_value(void* self);
+QJSValue* q_jsmanagedvalue_to_j_s_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#toVariant)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-QVariant* q_jsmanagedvalue_to_variant(void* self);
+QVariant* q_jsmanagedvalue_to_variant(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#toInteger)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-int32_t q_jsmanagedvalue_to_integer(void* self);
+int32_t q_jsmanagedvalue_to_integer(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#toRegularExpression)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-QRegularExpression* q_jsmanagedvalue_to_regular_expression(void* self);
+QRegularExpression* q_jsmanagedvalue_to_regular_expression(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#toUrl)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-QUrl* q_jsmanagedvalue_to_url(void* self);
+QUrl* q_jsmanagedvalue_to_url(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#toQObject)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-QObject* q_jsmanagedvalue_to_q_object(void* self);
+QObject* q_jsmanagedvalue_to_q_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#toQMetaObject)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-const QMetaObject* q_jsmanagedvalue_to_q_meta_object(void* self);
+const QMetaObject* q_jsmanagedvalue_to_q_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#toDateTime)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-QDateTime* q_jsmanagedvalue_to_date_time(void* self);
+QDateTime* q_jsmanagedvalue_to_date_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#hasProperty)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 /// @param name const char*
 ///
-bool q_jsmanagedvalue_has_property(void* self, const char* name);
+bool q_jsmanagedvalue_has_property(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#hasOwnProperty)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 /// @param name const char*
 ///
-bool q_jsmanagedvalue_has_own_property(void* self, const char* name);
+bool q_jsmanagedvalue_has_own_property(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#property)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 /// @param name const char*
 ///
-QJSValue* q_jsmanagedvalue_property(void* self, const char* name);
+QJSValue* q_jsmanagedvalue_property(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#setProperty)
 ///
@@ -300,7 +300,7 @@ QJSValue* q_jsmanagedvalue_property(void* self, const char* name);
 /// @param name const char*
 /// @param value QJSValue*
 ///
-void q_jsmanagedvalue_set_property(void* self, const char* name, void* value);
+void q_jsmanagedvalue_set_property(void* self, const char* name, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#deleteProperty)
 ///
@@ -311,24 +311,24 @@ bool q_jsmanagedvalue_delete_property(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#hasProperty)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 /// @param arrayIndex uint32_t
 ///
-bool q_jsmanagedvalue_has_property2(void* self, uint32_t arrayIndex);
+bool q_jsmanagedvalue_has_property2(const void* self, uint32_t arrayIndex);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#hasOwnProperty)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 /// @param arrayIndex uint32_t
 ///
-bool q_jsmanagedvalue_has_own_property2(void* self, uint32_t arrayIndex);
+bool q_jsmanagedvalue_has_own_property2(const void* self, uint32_t arrayIndex);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#property)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 /// @param arrayIndex uint32_t
 ///
-QJSValue* q_jsmanagedvalue_property2(void* self, uint32_t arrayIndex);
+QJSValue* q_jsmanagedvalue_property2(const void* self, uint32_t arrayIndex);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#setProperty)
 ///
@@ -336,7 +336,7 @@ QJSValue* q_jsmanagedvalue_property2(void* self, uint32_t arrayIndex);
 /// @param arrayIndex uint32_t
 /// @param value QJSValue*
 ///
-void q_jsmanagedvalue_set_property2(void* self, uint32_t arrayIndex, void* value);
+void q_jsmanagedvalue_set_property2(void* self, uint32_t arrayIndex, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#deleteProperty)
 ///
@@ -347,71 +347,71 @@ bool q_jsmanagedvalue_delete_property2(void* self, uint32_t arrayIndex);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#call)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-QJSValue* q_jsmanagedvalue_call(void* self);
+QJSValue* q_jsmanagedvalue_call(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#callWithInstance)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 /// @param instance QJSValue*
 ///
-QJSValue* q_jsmanagedvalue_call_with_instance(void* self, void* instance);
+QJSValue* q_jsmanagedvalue_call_with_instance(const void* self, const void* instance);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#callAsConstructor)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-QJSValue* q_jsmanagedvalue_call_as_constructor(void* self);
+QJSValue* q_jsmanagedvalue_call_as_constructor(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#jsMetaType)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-QJSManagedValue* q_jsmanagedvalue_js_meta_type(void* self);
+QJSManagedValue* q_jsmanagedvalue_js_meta_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#jsMetaMembers)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-const char** q_jsmanagedvalue_js_meta_members(void* self);
+const char** q_jsmanagedvalue_js_meta_members(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#jsMetaInstantiate)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 ///
-QJSManagedValue* q_jsmanagedvalue_js_meta_instantiate(void* self);
+QJSManagedValue* q_jsmanagedvalue_js_meta_instantiate(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#call)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 /// @param arguments libqt_list of QJSValue*
 ///
-QJSValue* q_jsmanagedvalue_call1(void* self, libqt_list arguments);
+QJSValue* q_jsmanagedvalue_call1(const void* self, libqt_list arguments);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#callWithInstance)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 /// @param instance QJSValue*
 /// @param arguments libqt_list of QJSValue*
 ///
-QJSValue* q_jsmanagedvalue_call_with_instance2(void* self, void* instance, libqt_list arguments);
+QJSValue* q_jsmanagedvalue_call_with_instance2(const void* self, const void* instance, libqt_list arguments);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#callAsConstructor)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 /// @param arguments libqt_list of QJSValue*
 ///
-QJSValue* q_jsmanagedvalue_call_as_constructor1(void* self, libqt_list arguments);
+QJSValue* q_jsmanagedvalue_call_as_constructor1(const void* self, libqt_list arguments);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#jsMetaInstantiate)
 ///
-/// @param self QJSManagedValue*
+/// @param self const QJSManagedValue*
 /// @param values libqt_list of QJSValue*
 ///
-QJSManagedValue* q_jsmanagedvalue_js_meta_instantiate1(void* self, libqt_list values);
+QJSManagedValue* q_jsmanagedvalue_js_meta_instantiate1(const void* self, libqt_list values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsmanagedvalue.html#dtor.QJSManagedValue)
 ///

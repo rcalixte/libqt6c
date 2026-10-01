@@ -30,15 +30,15 @@ TextAutoCorrectionWidgets__AutoCorrectionTextEdit* k_textautocorrectionwidgets__
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_New2();
 }
 
-const QMetaObject* k_textautocorrectionwidgets__autocorrectiontextedit_meta_object(void* self) {
+const QMetaObject* k_textautocorrectionwidgets__autocorrectiontextedit_meta_object(const void* self) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_MetaObject((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnMetaObject((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_textautocorrectionwidgets__autocorrectiontextedit_super_meta_object(void* self) {
+const QMetaObject* k_textautocorrectionwidgets__autocorrectiontextedit_super_meta_object(const void* self) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperMetaObject((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
 }
 
@@ -73,7 +73,7 @@ const char* k_textautocorrectionwidgets__autocorrectiontextedit_tr(const char* s
     return _ret;
 }
 
-TextAutoCorrectionCore__AutoCorrection* k_textautocorrectionwidgets__autocorrectiontextedit_autocorrection(void* self) {
+TextAutoCorrectionCore__AutoCorrection* k_textautocorrectionwidgets__autocorrectiontextedit_autocorrection(const void* self) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_Autocorrection((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
 }
 
@@ -115,7 +115,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_document(void* self
     QTextEdit_SetDocument((QTextEdit*)self, (QTextDocument*)document);
 }
 
-QTextDocument* k_textautocorrectionwidgets__autocorrectiontextedit_document(void* self) {
+QTextDocument* k_textautocorrectionwidgets__autocorrectiontextedit_document(const void* self) {
     return QTextEdit_Document((QTextEdit*)self);
 }
 
@@ -123,22 +123,22 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_placeholder_text(vo
     QTextEdit_SetPlaceholderText((QTextEdit*)self, qstring(placeholderText));
 }
 
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_placeholder_text(void* self) {
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_placeholder_text(const void* self) {
     libqt_string _str = QTextEdit_PlaceholderText((QTextEdit*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_text_cursor(void* self, void* cursor) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_text_cursor(void* self, const void* cursor) {
     QTextEdit_SetTextCursor((QTextEdit*)self, (QTextCursor*)cursor);
 }
 
-QTextCursor* k_textautocorrectionwidgets__autocorrectiontextedit_text_cursor(void* self) {
+QTextCursor* k_textautocorrectionwidgets__autocorrectiontextedit_text_cursor(const void* self) {
     return QTextEdit_TextCursor((QTextEdit*)self);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_read_only(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_read_only(const void* self) {
     return QTextEdit_IsReadOnly((QTextEdit*)self);
 }
 
@@ -150,62 +150,62 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_text_interaction_fl
     QTextEdit_SetTextInteractionFlags((QTextEdit*)self, flags);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_text_interaction_flags(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_text_interaction_flags(const void* self) {
     return QTextEdit_TextInteractionFlags((QTextEdit*)self);
 }
 
-double k_textautocorrectionwidgets__autocorrectiontextedit_font_point_size(void* self) {
+double k_textautocorrectionwidgets__autocorrectiontextedit_font_point_size(const void* self) {
     return QTextEdit_FontPointSize((QTextEdit*)self);
 }
 
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_font_family(void* self) {
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_font_family(const void* self) {
     libqt_string _str = QTextEdit_FontFamily((QTextEdit*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_font_weight(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_font_weight(const void* self) {
     return QTextEdit_FontWeight((QTextEdit*)self);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_font_underline(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_font_underline(const void* self) {
     return QTextEdit_FontUnderline((QTextEdit*)self);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_font_italic(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_font_italic(const void* self) {
     return QTextEdit_FontItalic((QTextEdit*)self);
 }
 
-QColor* k_textautocorrectionwidgets__autocorrectiontextedit_text_color(void* self) {
+QColor* k_textautocorrectionwidgets__autocorrectiontextedit_text_color(const void* self) {
     return QTextEdit_TextColor((QTextEdit*)self);
 }
 
-QColor* k_textautocorrectionwidgets__autocorrectiontextedit_text_background_color(void* self) {
+QColor* k_textautocorrectionwidgets__autocorrectiontextedit_text_background_color(const void* self) {
     return QTextEdit_TextBackgroundColor((QTextEdit*)self);
 }
 
-QFont* k_textautocorrectionwidgets__autocorrectiontextedit_current_font(void* self) {
+QFont* k_textautocorrectionwidgets__autocorrectiontextedit_current_font(const void* self) {
     return QTextEdit_CurrentFont((QTextEdit*)self);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_alignment(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_alignment(const void* self) {
     return QTextEdit_Alignment((QTextEdit*)self);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_merge_current_char_format(void* self, void* modifier) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_merge_current_char_format(void* self, const void* modifier) {
     QTextEdit_MergeCurrentCharFormat((QTextEdit*)self, (QTextCharFormat*)modifier);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_current_char_format(void* self, void* format) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_current_char_format(void* self, const void* format) {
     QTextEdit_SetCurrentCharFormat((QTextEdit*)self, (QTextCharFormat*)format);
 }
 
-QTextCharFormat* k_textautocorrectionwidgets__autocorrectiontextedit_current_char_format(void* self) {
+QTextCharFormat* k_textautocorrectionwidgets__autocorrectiontextedit_current_char_format(const void* self) {
     return QTextEdit_CurrentCharFormat((QTextEdit*)self);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_auto_formatting(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_auto_formatting(const void* self) {
     return QTextEdit_AutoFormatting((QTextEdit*)self);
 }
 
@@ -213,7 +213,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_auto_formatting(voi
     QTextEdit_SetAutoFormatting((QTextEdit*)self, features);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_tab_changes_focus(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_tab_changes_focus(const void* self) {
     return QTextEdit_TabChangesFocus((QTextEdit*)self);
 }
 
@@ -225,14 +225,14 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_document_title(void
     QTextEdit_SetDocumentTitle((QTextEdit*)self, qstring(title));
 }
 
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_document_title(void* self) {
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_document_title(const void* self) {
     libqt_string _str = QTextEdit_DocumentTitle((QTextEdit*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_undo_redo_enabled(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_undo_redo_enabled(const void* self) {
     return QTextEdit_IsUndoRedoEnabled((QTextEdit*)self);
 }
 
@@ -240,7 +240,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_undo_redo_enabled(v
     QTextEdit_SetUndoRedoEnabled((QTextEdit*)self, enable);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_line_wrap_mode(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_line_wrap_mode(const void* self) {
     return QTextEdit_LineWrapMode((QTextEdit*)self);
 }
 
@@ -248,7 +248,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_line_wrap_mode(void
     QTextEdit_SetLineWrapMode((QTextEdit*)self, mode);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_line_wrap_column_or_width(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_line_wrap_column_or_width(const void* self) {
     return QTextEdit_LineWrapColumnOrWidth((QTextEdit*)self);
 }
 
@@ -256,7 +256,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_line_wrap_column_or
     QTextEdit_SetLineWrapColumnOrWidth((QTextEdit*)self, w);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_word_wrap_mode(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_word_wrap_mode(const void* self) {
     return QTextEdit_WordWrapMode((QTextEdit*)self);
 }
 
@@ -268,25 +268,25 @@ bool k_textautocorrectionwidgets__autocorrectiontextedit_find(void* self, const 
     return QTextEdit_Find((QTextEdit*)self, qstring(exp));
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_find2(void* self, void* exp) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_find2(void* self, const void* exp) {
     return QTextEdit_Find2((QTextEdit*)self, (QRegularExpression*)exp);
 }
 
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_to_plain_text(void* self) {
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_to_plain_text(const void* self) {
     libqt_string _str = QTextEdit_ToPlainText((QTextEdit*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_to_html(void* self) {
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_to_html(const void* self) {
     libqt_string _str = QTextEdit_ToHtml((QTextEdit*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_to_markdown(void* self) {
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_to_markdown(const void* self) {
     libqt_string _str = QTextEdit_ToMarkdown((QTextEdit*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -301,30 +301,30 @@ QMenu* k_textautocorrectionwidgets__autocorrectiontextedit_create_standard_conte
     return QTextEdit_CreateStandardContextMenu((QTextEdit*)self);
 }
 
-QMenu* k_textautocorrectionwidgets__autocorrectiontextedit_create_standard_context_menu2(void* self, void* position) {
+QMenu* k_textautocorrectionwidgets__autocorrectiontextedit_create_standard_context_menu2(void* self, const void* position) {
     return QTextEdit_CreateStandardContextMenu2((QTextEdit*)self, (QPoint*)position);
 }
 
-QTextCursor* k_textautocorrectionwidgets__autocorrectiontextedit_cursor_for_position(void* self, void* pos) {
+QTextCursor* k_textautocorrectionwidgets__autocorrectiontextedit_cursor_for_position(const void* self, const void* pos) {
     return QTextEdit_CursorForPosition((QTextEdit*)self, (QPoint*)pos);
 }
 
-QRect* k_textautocorrectionwidgets__autocorrectiontextedit_cursor_rect(void* self, void* cursor) {
+QRect* k_textautocorrectionwidgets__autocorrectiontextedit_cursor_rect(const void* self, const void* cursor) {
     return QTextEdit_CursorRect((QTextEdit*)self, (QTextCursor*)cursor);
 }
 
-QRect* k_textautocorrectionwidgets__autocorrectiontextedit_cursor_rect2(void* self) {
+QRect* k_textautocorrectionwidgets__autocorrectiontextedit_cursor_rect2(const void* self) {
     return QTextEdit_CursorRect2((QTextEdit*)self);
 }
 
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_anchor_at(void* self, void* pos) {
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_anchor_at(const void* self, const void* pos) {
     libqt_string _str = QTextEdit_AnchorAt((QTextEdit*)self, (QPoint*)pos);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_overwrite_mode(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_overwrite_mode(const void* self) {
     return QTextEdit_OverwriteMode((QTextEdit*)self);
 }
 
@@ -332,7 +332,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_overwrite_mode(void
     QTextEdit_SetOverwriteMode((QTextEdit*)self, overwrite);
 }
 
-double k_textautocorrectionwidgets__autocorrectiontextedit_tab_stop_distance(void* self) {
+double k_textautocorrectionwidgets__autocorrectiontextedit_tab_stop_distance(const void* self) {
     return QTextEdit_TabStopDistance((QTextEdit*)self);
 }
 
@@ -340,7 +340,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_tab_stop_distance(v
     QTextEdit_SetTabStopDistance((QTextEdit*)self, distance);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_cursor_width(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_cursor_width(const void* self) {
     return QTextEdit_CursorWidth((QTextEdit*)self);
 }
 
@@ -348,7 +348,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_cursor_width(void* 
     QTextEdit_SetCursorWidth((QTextEdit*)self, width);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_accept_rich_text(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_accept_rich_text(const void* self) {
     return QTextEdit_AcceptRichText((QTextEdit*)self);
 }
 
@@ -360,7 +360,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_extra_selections(vo
     QTextEdit_SetExtraSelections((QTextEdit*)self, selections);
 }
 
-libqt_list /* of QTextEdit__ExtraSelection* */ k_textautocorrectionwidgets__autocorrectiontextedit_extra_selections(void* self) {
+libqt_list /* of QTextEdit__ExtraSelection* */ k_textautocorrectionwidgets__autocorrectiontextedit_extra_selections(const void* self) {
     libqt_list _arr = QTextEdit_ExtraSelections((QTextEdit*)self);
     return _arr;
 }
@@ -369,15 +369,15 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_move_cursor(void* self,
     QTextEdit_MoveCursor((QTextEdit*)self, operation);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_can_paste(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_can_paste(const void* self) {
     return QTextEdit_CanPaste((QTextEdit*)self);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_print(void* self, void* printer) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_print(const void* self, void* printer) {
     QTextEdit_Print((QTextEdit*)self, (QPagedPaintDevice*)printer);
 }
 
-QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_input_method_query2(void* self, int32_t query, void* argument) {
+QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_input_method_query2(const void* self, int32_t query, void* argument) {
     return QTextEdit_InputMethodQuery2((QTextEdit*)self, query, (QVariant*)argument);
 }
 
@@ -401,15 +401,15 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_font_italic(void* s
     QTextEdit_SetFontItalic((QTextEdit*)self, b);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_text_color(void* self, void* c) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_text_color(void* self, const void* c) {
     QTextEdit_SetTextColor((QTextEdit*)self, (QColor*)c);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_text_background_color(void* self, void* c) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_text_background_color(void* self, const void* c) {
     QTextEdit_SetTextBackgroundColor((QTextEdit*)self, (QColor*)c);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_current_font(void* self, void* f) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_current_font(void* self, const void* f) {
     QTextEdit_SetCurrentFont((QTextEdit*)self, (QFont*)f);
 }
 
@@ -509,11 +509,11 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_redo_available(void*
     QTextEdit_Connect_RedoAvailable((QTextEdit*)self, (intptr_t)callback);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_current_char_format_changed(void* self, void* format) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_current_char_format_changed(void* self, const void* format) {
     QTextEdit_CurrentCharFormatChanged((QTextEdit*)self, (QTextCharFormat*)format);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_current_char_format_changed(void* self, void (*callback)(void*, void*)) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_current_char_format_changed(void* self, void (*callback)(void*, const void*)) {
     QTextEdit_Connect_CurrentCharFormatChanged((QTextEdit*)self, (intptr_t)callback);
 }
 
@@ -545,11 +545,11 @@ bool k_textautocorrectionwidgets__autocorrectiontextedit_find22(void* self, cons
     return QTextEdit_Find22((QTextEdit*)self, qstring(exp), options);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_find23(void* self, void* exp, int32_t options) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_find23(void* self, const void* exp, int32_t options) {
     return QTextEdit_Find23((QTextEdit*)self, (QRegularExpression*)exp, options);
 }
 
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_to_markdown1(void* self, int32_t features) {
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_to_markdown1(const void* self, int32_t features) {
     libqt_string _str = QTextEdit_ToMarkdown1((QTextEdit*)self, features);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -568,7 +568,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_zoom_out1(void* self, i
     QTextEdit_ZoomOut1((QTextEdit*)self, range);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_vertical_scroll_bar_policy(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_vertical_scroll_bar_policy(const void* self) {
     return QAbstractScrollArea_VerticalScrollBarPolicy((QAbstractScrollArea*)self);
 }
 
@@ -576,7 +576,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_vertical_scroll_bar
     QAbstractScrollArea_SetVerticalScrollBarPolicy((QAbstractScrollArea*)self, verticalScrollBarPolicy);
 }
 
-QScrollBar* k_textautocorrectionwidgets__autocorrectiontextedit_vertical_scroll_bar(void* self) {
+QScrollBar* k_textautocorrectionwidgets__autocorrectiontextedit_vertical_scroll_bar(const void* self) {
     return QAbstractScrollArea_VerticalScrollBar((QAbstractScrollArea*)self);
 }
 
@@ -584,7 +584,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_vertical_scroll_bar
     QAbstractScrollArea_SetVerticalScrollBar((QAbstractScrollArea*)self, (QScrollBar*)scrollbar);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_horizontal_scroll_bar_policy(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_horizontal_scroll_bar_policy(const void* self) {
     return QAbstractScrollArea_HorizontalScrollBarPolicy((QAbstractScrollArea*)self);
 }
 
@@ -592,7 +592,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_horizontal_scroll_b
     QAbstractScrollArea_SetHorizontalScrollBarPolicy((QAbstractScrollArea*)self, horizontalScrollBarPolicy);
 }
 
-QScrollBar* k_textautocorrectionwidgets__autocorrectiontextedit_horizontal_scroll_bar(void* self) {
+QScrollBar* k_textautocorrectionwidgets__autocorrectiontextedit_horizontal_scroll_bar(const void* self) {
     return QAbstractScrollArea_HorizontalScrollBar((QAbstractScrollArea*)self);
 }
 
@@ -600,7 +600,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_horizontal_scroll_b
     QAbstractScrollArea_SetHorizontalScrollBar((QAbstractScrollArea*)self, (QScrollBar*)scrollbar);
 }
 
-QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_corner_widget(void* self) {
+QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_corner_widget(const void* self) {
     return QAbstractScrollArea_CornerWidget((QAbstractScrollArea*)self);
 }
 
@@ -617,7 +617,7 @@ libqt_list /* of QWidget* */ k_textautocorrectionwidgets__autocorrectiontextedit
     return _arr;
 }
 
-QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_viewport(void* self) {
+QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_viewport(const void* self) {
     return QAbstractScrollArea_Viewport((QAbstractScrollArea*)self);
 }
 
@@ -625,11 +625,11 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_viewport(void* self
     QAbstractScrollArea_SetViewport((QAbstractScrollArea*)self, (QWidget*)widget);
 }
 
-QSize* k_textautocorrectionwidgets__autocorrectiontextedit_maximum_viewport_size(void* self) {
+QSize* k_textautocorrectionwidgets__autocorrectiontextedit_maximum_viewport_size(const void* self) {
     return QAbstractScrollArea_MaximumViewportSize((QAbstractScrollArea*)self);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_size_adjust_policy(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_size_adjust_policy(const void* self) {
     return QAbstractScrollArea_SizeAdjustPolicy((QAbstractScrollArea*)self);
 }
 
@@ -637,7 +637,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_size_adjust_policy(
     QAbstractScrollArea_SetSizeAdjustPolicy((QAbstractScrollArea*)self, policy);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_frame_style(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_frame_style(const void* self) {
     return QFrame_FrameStyle((QFrame*)self);
 }
 
@@ -645,11 +645,11 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_frame_style(void* s
     QFrame_SetFrameStyle((QFrame*)self, frameStyle);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_frame_width(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_frame_width(const void* self) {
     return QFrame_FrameWidth((QFrame*)self);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_frame_shape(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_frame_shape(const void* self) {
     return QFrame_FrameShape((QFrame*)self);
 }
 
@@ -657,7 +657,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_frame_shape(void* s
     QFrame_SetFrameShape((QFrame*)self, frameShape);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_frame_shadow(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_frame_shadow(const void* self) {
     return QFrame_FrameShadow((QFrame*)self);
 }
 
@@ -665,7 +665,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_frame_shadow(void* 
     QFrame_SetFrameShadow((QFrame*)self, frameShadow);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_line_width(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_line_width(const void* self) {
     return QFrame_LineWidth((QFrame*)self);
 }
 
@@ -673,7 +673,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_line_width(void* se
     QFrame_SetLineWidth((QFrame*)self, lineWidth);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_mid_line_width(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_mid_line_width(const void* self) {
     return QFrame_MidLineWidth((QFrame*)self);
 }
 
@@ -681,11 +681,11 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_mid_line_width(void
     QFrame_SetMidLineWidth((QFrame*)self, midLineWidth);
 }
 
-QRect* k_textautocorrectionwidgets__autocorrectiontextedit_frame_rect(void* self) {
+QRect* k_textautocorrectionwidgets__autocorrectiontextedit_frame_rect(const void* self) {
     return QFrame_FrameRect((QFrame*)self);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_frame_rect(void* self, void* frameRect) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_frame_rect(void* self, const void* frameRect) {
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
 }
 
@@ -697,7 +697,7 @@ TextAutoCorrectionWidgets__AutoCorrectionTextEdit* k_textautocorrectionwidgets__
     return (TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
-uintptr_t k_textautocorrectionwidgets__autocorrectiontextedit_win_id(void* self) {
+uintptr_t k_textautocorrectionwidgets__autocorrectiontextedit_win_id(const void* self) {
     return QWidget_WinId((QWidget*)self);
 }
 
@@ -705,15 +705,15 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_create_win_id(void* sel
     QWidget_CreateWinId((QWidget*)self);
 }
 
-uintptr_t k_textautocorrectionwidgets__autocorrectiontextedit_internal_win_id(void* self) {
+uintptr_t k_textautocorrectionwidgets__autocorrectiontextedit_internal_win_id(const void* self) {
     return QWidget_InternalWinId((QWidget*)self);
 }
 
-uintptr_t k_textautocorrectionwidgets__autocorrectiontextedit_effective_win_id(void* self) {
+uintptr_t k_textautocorrectionwidgets__autocorrectiontextedit_effective_win_id(const void* self) {
     return QWidget_EffectiveWinId((QWidget*)self);
 }
 
-QStyle* k_textautocorrectionwidgets__autocorrectiontextedit_style(void* self) {
+QStyle* k_textautocorrectionwidgets__autocorrectiontextedit_style(const void* self) {
     return QWidget_Style((QWidget*)self);
 }
 
@@ -721,19 +721,19 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_style(void* self, v
     QWidget_SetStyle((QWidget*)self, (QStyle*)style);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_top_level(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_top_level(const void* self) {
     return QWidget_IsTopLevel((QWidget*)self);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_window(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_window(const void* self) {
     return QWidget_IsWindow((QWidget*)self);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_modal(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_modal(const void* self) {
     return QWidget_IsModal((QWidget*)self);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_window_modality(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_window_modality(const void* self) {
     return QWidget_WindowModality((QWidget*)self);
 }
 
@@ -741,11 +741,11 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_window_modality(voi
     QWidget_SetWindowModality((QWidget*)self, windowModality);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_enabled(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_enabled(const void* self) {
     return QWidget_IsEnabled((QWidget*)self);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_enabled_to(void* self, void* param1) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_enabled_to(const void* self, const void* param1) {
     return QWidget_IsEnabledTo((QWidget*)self, (QWidget*)param1);
 }
 
@@ -761,83 +761,83 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_window_modified(voi
     QWidget_SetWindowModified((QWidget*)self, windowModified);
 }
 
-QRect* k_textautocorrectionwidgets__autocorrectiontextedit_frame_geometry(void* self) {
+QRect* k_textautocorrectionwidgets__autocorrectiontextedit_frame_geometry(const void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-const QRect* k_textautocorrectionwidgets__autocorrectiontextedit_geometry(void* self) {
+const QRect* k_textautocorrectionwidgets__autocorrectiontextedit_geometry(const void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
-QRect* k_textautocorrectionwidgets__autocorrectiontextedit_normal_geometry(void* self) {
+QRect* k_textautocorrectionwidgets__autocorrectiontextedit_normal_geometry(const void* self) {
     return QWidget_NormalGeometry((QWidget*)self);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_x(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_x(const void* self) {
     return QWidget_X((QWidget*)self);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_y(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_y(const void* self) {
     return QWidget_Y((QWidget*)self);
 }
 
-QPoint* k_textautocorrectionwidgets__autocorrectiontextedit_pos(void* self) {
+QPoint* k_textautocorrectionwidgets__autocorrectiontextedit_pos(const void* self) {
     return QWidget_Pos((QWidget*)self);
 }
 
-QSize* k_textautocorrectionwidgets__autocorrectiontextedit_frame_size(void* self) {
+QSize* k_textautocorrectionwidgets__autocorrectiontextedit_frame_size(const void* self) {
     return QWidget_FrameSize((QWidget*)self);
 }
 
-QSize* k_textautocorrectionwidgets__autocorrectiontextedit_size(void* self) {
+QSize* k_textautocorrectionwidgets__autocorrectiontextedit_size(const void* self) {
     return QWidget_Size((QWidget*)self);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_width(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_width(const void* self) {
     return QWidget_Width((QWidget*)self);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_height(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_height(const void* self) {
     return QWidget_Height((QWidget*)self);
 }
 
-QRect* k_textautocorrectionwidgets__autocorrectiontextedit_rect(void* self) {
+QRect* k_textautocorrectionwidgets__autocorrectiontextedit_rect(const void* self) {
     return QWidget_Rect((QWidget*)self);
 }
 
-QRect* k_textautocorrectionwidgets__autocorrectiontextedit_children_rect(void* self) {
+QRect* k_textautocorrectionwidgets__autocorrectiontextedit_children_rect(const void* self) {
     return QWidget_ChildrenRect((QWidget*)self);
 }
 
-QRegion* k_textautocorrectionwidgets__autocorrectiontextedit_children_region(void* self) {
+QRegion* k_textautocorrectionwidgets__autocorrectiontextedit_children_region(const void* self) {
     return QWidget_ChildrenRegion((QWidget*)self);
 }
 
-QSize* k_textautocorrectionwidgets__autocorrectiontextedit_minimum_size(void* self) {
+QSize* k_textautocorrectionwidgets__autocorrectiontextedit_minimum_size(const void* self) {
     return QWidget_MinimumSize((QWidget*)self);
 }
 
-QSize* k_textautocorrectionwidgets__autocorrectiontextedit_maximum_size(void* self) {
+QSize* k_textautocorrectionwidgets__autocorrectiontextedit_maximum_size(const void* self) {
     return QWidget_MaximumSize((QWidget*)self);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_minimum_width(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_minimum_width(const void* self) {
     return QWidget_MinimumWidth((QWidget*)self);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_minimum_height(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_minimum_height(const void* self) {
     return QWidget_MinimumHeight((QWidget*)self);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_maximum_width(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_maximum_width(const void* self) {
     return QWidget_MaximumWidth((QWidget*)self);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_maximum_height(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_maximum_height(const void* self) {
     return QWidget_MaximumHeight((QWidget*)self);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_minimum_size(void* self, void* minimumSize) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_minimum_size(void* self, const void* minimumSize) {
     QWidget_SetMinimumSize((QWidget*)self, (QSize*)minimumSize);
 }
 
@@ -845,7 +845,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_minimum_size2(void*
     QWidget_SetMinimumSize2((QWidget*)self, minw, minh);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_maximum_size(void* self, void* maximumSize) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_maximum_size(void* self, const void* maximumSize) {
     QWidget_SetMaximumSize((QWidget*)self, (QSize*)maximumSize);
 }
 
@@ -869,11 +869,11 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_maximum_height(void
     QWidget_SetMaximumHeight((QWidget*)self, maxh);
 }
 
-QSize* k_textautocorrectionwidgets__autocorrectiontextedit_size_increment(void* self) {
+QSize* k_textautocorrectionwidgets__autocorrectiontextedit_size_increment(const void* self) {
     return QWidget_SizeIncrement((QWidget*)self);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_size_increment(void* self, void* sizeIncrement) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_size_increment(void* self, const void* sizeIncrement) {
     QWidget_SetSizeIncrement((QWidget*)self, (QSize*)sizeIncrement);
 }
 
@@ -881,11 +881,11 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_size_increment2(voi
     QWidget_SetSizeIncrement2((QWidget*)self, w, h);
 }
 
-QSize* k_textautocorrectionwidgets__autocorrectiontextedit_base_size(void* self) {
+QSize* k_textautocorrectionwidgets__autocorrectiontextedit_base_size(const void* self) {
     return QWidget_BaseSize((QWidget*)self);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_base_size(void* self, void* baseSize) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_base_size(void* self, const void* baseSize) {
     QWidget_SetBaseSize((QWidget*)self, (QSize*)baseSize);
 }
 
@@ -893,7 +893,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_base_size2(void* se
     QWidget_SetBaseSize2((QWidget*)self, basew, baseh);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_fixed_size(void* self, void* fixedSize) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_fixed_size(void* self, const void* fixedSize) {
     QWidget_SetFixedSize((QWidget*)self, (QSize*)fixedSize);
 }
 
@@ -909,71 +909,71 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_fixed_height(void* 
     QWidget_SetFixedHeight((QWidget*)self, h);
 }
 
-QPointF* k_textautocorrectionwidgets__autocorrectiontextedit_map_to_global(void* self, void* param1) {
+QPointF* k_textautocorrectionwidgets__autocorrectiontextedit_map_to_global(const void* self, const void* param1) {
     return QWidget_MapToGlobal((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* k_textautocorrectionwidgets__autocorrectiontextedit_map_to_global2(void* self, void* param1) {
+QPoint* k_textautocorrectionwidgets__autocorrectiontextedit_map_to_global2(const void* self, const void* param1) {
     return QWidget_MapToGlobal2((QWidget*)self, (QPoint*)param1);
 }
 
-QPointF* k_textautocorrectionwidgets__autocorrectiontextedit_map_from_global(void* self, void* param1) {
+QPointF* k_textautocorrectionwidgets__autocorrectiontextedit_map_from_global(const void* self, const void* param1) {
     return QWidget_MapFromGlobal((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* k_textautocorrectionwidgets__autocorrectiontextedit_map_from_global2(void* self, void* param1) {
+QPoint* k_textautocorrectionwidgets__autocorrectiontextedit_map_from_global2(const void* self, const void* param1) {
     return QWidget_MapFromGlobal2((QWidget*)self, (QPoint*)param1);
 }
 
-QPointF* k_textautocorrectionwidgets__autocorrectiontextedit_map_to_parent(void* self, void* param1) {
+QPointF* k_textautocorrectionwidgets__autocorrectiontextedit_map_to_parent(const void* self, const void* param1) {
     return QWidget_MapToParent((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* k_textautocorrectionwidgets__autocorrectiontextedit_map_to_parent2(void* self, void* param1) {
+QPoint* k_textautocorrectionwidgets__autocorrectiontextedit_map_to_parent2(const void* self, const void* param1) {
     return QWidget_MapToParent2((QWidget*)self, (QPoint*)param1);
 }
 
-QPointF* k_textautocorrectionwidgets__autocorrectiontextedit_map_from_parent(void* self, void* param1) {
+QPointF* k_textautocorrectionwidgets__autocorrectiontextedit_map_from_parent(const void* self, const void* param1) {
     return QWidget_MapFromParent((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* k_textautocorrectionwidgets__autocorrectiontextedit_map_from_parent2(void* self, void* param1) {
+QPoint* k_textautocorrectionwidgets__autocorrectiontextedit_map_from_parent2(const void* self, const void* param1) {
     return QWidget_MapFromParent2((QWidget*)self, (QPoint*)param1);
 }
 
-QPointF* k_textautocorrectionwidgets__autocorrectiontextedit_map_to(void* self, void* param1, void* param2) {
+QPointF* k_textautocorrectionwidgets__autocorrectiontextedit_map_to(const void* self, const void* param1, const void* param2) {
     return QWidget_MapTo((QWidget*)self, (QWidget*)param1, (QPointF*)param2);
 }
 
-QPoint* k_textautocorrectionwidgets__autocorrectiontextedit_map_to2(void* self, void* param1, void* param2) {
+QPoint* k_textautocorrectionwidgets__autocorrectiontextedit_map_to2(const void* self, const void* param1, const void* param2) {
     return QWidget_MapTo2((QWidget*)self, (QWidget*)param1, (QPoint*)param2);
 }
 
-QPointF* k_textautocorrectionwidgets__autocorrectiontextedit_map_from(void* self, void* param1, void* param2) {
+QPointF* k_textautocorrectionwidgets__autocorrectiontextedit_map_from(const void* self, const void* param1, const void* param2) {
     return QWidget_MapFrom((QWidget*)self, (QWidget*)param1, (QPointF*)param2);
 }
 
-QPoint* k_textautocorrectionwidgets__autocorrectiontextedit_map_from2(void* self, void* param1, void* param2) {
+QPoint* k_textautocorrectionwidgets__autocorrectiontextedit_map_from2(const void* self, const void* param1, const void* param2) {
     return QWidget_MapFrom2((QWidget*)self, (QWidget*)param1, (QPoint*)param2);
 }
 
-QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_window(void* self) {
+QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_window(const void* self) {
     return QWidget_Window((QWidget*)self);
 }
 
-QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_native_parent_widget(void* self) {
+QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_native_parent_widget(const void* self) {
     return QWidget_NativeParentWidget((QWidget*)self);
 }
 
-QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_top_level_widget(void* self) {
+QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_top_level_widget(const void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-const QPalette* k_textautocorrectionwidgets__autocorrectiontextedit_palette(void* self) {
+const QPalette* k_textautocorrectionwidgets__autocorrectiontextedit_palette(const void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_palette(void* self, void* palette) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_palette(void* self, const void* palette) {
     QWidget_SetPalette((QWidget*)self, (QPalette*)palette);
 }
 
@@ -981,7 +981,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_background_role(voi
     QWidget_SetBackgroundRole((QWidget*)self, backgroundRole);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_background_role(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_background_role(const void* self) {
     return QWidget_BackgroundRole((QWidget*)self);
 }
 
@@ -989,31 +989,31 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_foreground_role(voi
     QWidget_SetForegroundRole((QWidget*)self, foregroundRole);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_foreground_role(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_foreground_role(const void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-const QFont* k_textautocorrectionwidgets__autocorrectiontextedit_font(void* self) {
+const QFont* k_textautocorrectionwidgets__autocorrectiontextedit_font(const void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_font(void* self, void* font) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_font(void* self, const void* font) {
     QWidget_SetFont((QWidget*)self, (QFont*)font);
 }
 
-QFontMetrics* k_textautocorrectionwidgets__autocorrectiontextedit_font_metrics(void* self) {
+QFontMetrics* k_textautocorrectionwidgets__autocorrectiontextedit_font_metrics(const void* self) {
     return QWidget_FontMetrics((QWidget*)self);
 }
 
-QFontInfo* k_textautocorrectionwidgets__autocorrectiontextedit_font_info(void* self) {
+QFontInfo* k_textautocorrectionwidgets__autocorrectiontextedit_font_info(const void* self) {
     return QWidget_FontInfo((QWidget*)self);
 }
 
-QCursor* k_textautocorrectionwidgets__autocorrectiontextedit_cursor(void* self) {
+QCursor* k_textautocorrectionwidgets__autocorrectiontextedit_cursor(const void* self) {
     return QWidget_Cursor((QWidget*)self);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_cursor(void* self, void* cursor) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_cursor(void* self, const void* cursor) {
     QWidget_SetCursor((QWidget*)self, (QCursor*)cursor);
 }
 
@@ -1025,11 +1025,11 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_mouse_tracking(void
     QWidget_SetMouseTracking((QWidget*)self, enable);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_has_mouse_tracking(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_has_mouse_tracking(const void* self) {
     return QWidget_HasMouseTracking((QWidget*)self);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_under_mouse(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_under_mouse(const void* self) {
     return QWidget_UnderMouse((QWidget*)self);
 }
 
@@ -1037,19 +1037,19 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_tablet_tracking(voi
     QWidget_SetTabletTracking((QWidget*)self, enable);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_has_tablet_tracking(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_has_tablet_tracking(const void* self) {
     return QWidget_HasTabletTracking((QWidget*)self);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_mask(void* self, void* mask) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_mask(void* self, const void* mask) {
     QWidget_SetMask((QWidget*)self, (QBitmap*)mask);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_mask2(void* self, void* mask) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_mask2(void* self, const void* mask) {
     QWidget_SetMask2((QWidget*)self, (QRegion*)mask);
 }
 
-QRegion* k_textautocorrectionwidgets__autocorrectiontextedit_mask(void* self) {
+QRegion* k_textautocorrectionwidgets__autocorrectiontextedit_mask(const void* self) {
     return QWidget_Mask((QWidget*)self);
 }
 
@@ -1069,7 +1069,7 @@ QPixmap* k_textautocorrectionwidgets__autocorrectiontextedit_grab(void* self) {
     return QWidget_Grab((QWidget*)self);
 }
 
-QGraphicsEffect* k_textautocorrectionwidgets__autocorrectiontextedit_graphics_effect(void* self) {
+QGraphicsEffect* k_textautocorrectionwidgets__autocorrectiontextedit_graphics_effect(const void* self) {
     return QWidget_GraphicsEffect((QWidget*)self);
 }
 
@@ -1093,25 +1093,25 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_style_sheet(void* s
     QWidget_SetStyleSheet((QWidget*)self, qstring(styleSheet));
 }
 
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_style_sheet(void* self) {
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_style_sheet(const void* self) {
     libqt_string _str = QWidget_StyleSheet((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_window_title(void* self) {
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_window_title(const void* self) {
     libqt_string _str = QWidget_WindowTitle((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_window_icon(void* self, void* icon) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_window_icon(void* self, const void* icon) {
     QWidget_SetWindowIcon((QWidget*)self, (QIcon*)icon);
 }
 
-QIcon* k_textautocorrectionwidgets__autocorrectiontextedit_window_icon(void* self) {
+QIcon* k_textautocorrectionwidgets__autocorrectiontextedit_window_icon(const void* self) {
     return QWidget_WindowIcon((QWidget*)self);
 }
 
@@ -1119,7 +1119,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_window_icon_text(vo
     QWidget_SetWindowIconText((QWidget*)self, qstring(windowIconText));
 }
 
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_window_icon_text(void* self) {
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_window_icon_text(const void* self) {
     libqt_string _str = QWidget_WindowIconText((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1130,7 +1130,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_window_role(void* s
     QWidget_SetWindowRole((QWidget*)self, qstring(windowRole));
 }
 
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_window_role(void* self) {
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_window_role(const void* self) {
     libqt_string _str = QWidget_WindowRole((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1141,7 +1141,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_window_file_path(vo
     QWidget_SetWindowFilePath((QWidget*)self, qstring(filePath));
 }
 
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_window_file_path(void* self) {
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_window_file_path(const void* self) {
     libqt_string _str = QWidget_WindowFilePath((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1152,11 +1152,11 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_window_opacity(void
     QWidget_SetWindowOpacity((QWidget*)self, level);
 }
 
-double k_textautocorrectionwidgets__autocorrectiontextedit_window_opacity(void* self) {
+double k_textautocorrectionwidgets__autocorrectiontextedit_window_opacity(const void* self) {
     return QWidget_WindowOpacity((QWidget*)self);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_window_modified(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_window_modified(const void* self) {
     return QWidget_IsWindowModified((QWidget*)self);
 }
 
@@ -1164,7 +1164,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_tool_tip(void* self
     QWidget_SetToolTip((QWidget*)self, qstring(toolTip));
 }
 
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_tool_tip(void* self) {
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_tool_tip(const void* self) {
     libqt_string _str = QWidget_ToolTip((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1175,7 +1175,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_tool_tip_duration(v
     QWidget_SetToolTipDuration((QWidget*)self, msec);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_tool_tip_duration(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_tool_tip_duration(const void* self) {
     return QWidget_ToolTipDuration((QWidget*)self);
 }
 
@@ -1183,7 +1183,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_status_tip(void* se
     QWidget_SetStatusTip((QWidget*)self, qstring(statusTip));
 }
 
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_status_tip(void* self) {
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_status_tip(const void* self) {
     libqt_string _str = QWidget_StatusTip((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1194,14 +1194,14 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_whats_this(void* se
     QWidget_SetWhatsThis((QWidget*)self, qstring(whatsThis));
 }
 
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_whats_this(void* self) {
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_whats_this(const void* self) {
     libqt_string _str = QWidget_WhatsThis((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_accessible_name(void* self) {
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_accessible_name(const void* self) {
     libqt_string _str = QWidget_AccessibleName((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1212,7 +1212,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_accessible_name(voi
     QWidget_SetAccessibleName((QWidget*)self, qstring(name));
 }
 
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_accessible_description(void* self) {
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_accessible_description(const void* self) {
     libqt_string _str = QWidget_AccessibleDescription((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1227,7 +1227,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_layout_direction(vo
     QWidget_SetLayoutDirection((QWidget*)self, direction);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_layout_direction(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_layout_direction(const void* self) {
     return QWidget_LayoutDirection((QWidget*)self);
 }
 
@@ -1235,11 +1235,11 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_unset_layout_direction(
     QWidget_UnsetLayoutDirection((QWidget*)self);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_locale(void* self, void* locale) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_locale(void* self, const void* locale) {
     QWidget_SetLocale((QWidget*)self, (QLocale*)locale);
 }
 
-QLocale* k_textautocorrectionwidgets__autocorrectiontextedit_locale(void* self) {
+QLocale* k_textautocorrectionwidgets__autocorrectiontextedit_locale(const void* self) {
     return QWidget_Locale((QWidget*)self);
 }
 
@@ -1247,11 +1247,11 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_unset_locale(void* self
     QWidget_UnsetLocale((QWidget*)self);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_right_to_left(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_right_to_left(const void* self) {
     return QWidget_IsRightToLeft((QWidget*)self);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_left_to_right(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_left_to_right(const void* self) {
     return QWidget_IsLeftToRight((QWidget*)self);
 }
 
@@ -1259,7 +1259,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_focus(void* self) {
     QWidget_SetFocus((QWidget*)self);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_active_window(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_active_window(const void* self) {
     return QWidget_IsActiveWindow((QWidget*)self);
 }
 
@@ -1275,7 +1275,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_focus2(void* self, 
     QWidget_SetFocus2((QWidget*)self, reason);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_focus_policy(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_focus_policy(const void* self) {
     return QWidget_FocusPolicy((QWidget*)self);
 }
 
@@ -1283,7 +1283,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_focus_policy(void* 
     QWidget_SetFocusPolicy((QWidget*)self, policy);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_has_focus(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_has_focus(const void* self) {
     return QWidget_HasFocus((QWidget*)self);
 }
 
@@ -1295,11 +1295,11 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_focus_proxy(void* s
     QWidget_SetFocusProxy((QWidget*)self, (QWidget*)focusProxy);
 }
 
-QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_focus_proxy(void* self) {
+QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_focus_proxy(const void* self) {
     return QWidget_FocusProxy((QWidget*)self);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_context_menu_policy(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_context_menu_policy(const void* self) {
     return QWidget_ContextMenuPolicy((QWidget*)self);
 }
 
@@ -1311,7 +1311,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_grab_mouse(void* self) 
     QWidget_GrabMouse((QWidget*)self);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_grab_mouse2(void* self, void* param1) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_grab_mouse2(void* self, const void* param1) {
     QWidget_GrabMouse2((QWidget*)self, (QCursor*)param1);
 }
 
@@ -1327,7 +1327,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_release_keyboard(void* 
     QWidget_ReleaseKeyboard((QWidget*)self);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_grab_shortcut(void* self, void* key) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_grab_shortcut(void* self, const void* key) {
     return QWidget_GrabShortcut((QWidget*)self, (QKeySequence*)key);
 }
 
@@ -1351,7 +1351,7 @@ QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_keyboard_grabber() 
     return QWidget_KeyboardGrabber();
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_updates_enabled(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_updates_enabled(const void* self) {
     return QWidget_UpdatesEnabled((QWidget*)self);
 }
 
@@ -1359,7 +1359,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_updates_enabled(voi
     QWidget_SetUpdatesEnabled((QWidget*)self, enable);
 }
 
-QGraphicsProxyWidget* k_textautocorrectionwidgets__autocorrectiontextedit_graphics_proxy_widget(void* self) {
+QGraphicsProxyWidget* k_textautocorrectionwidgets__autocorrectiontextedit_graphics_proxy_widget(const void* self) {
     return QWidget_GraphicsProxyWidget((QWidget*)self);
 }
 
@@ -1375,11 +1375,11 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_update2(void* self, int
     QWidget_Update2((QWidget*)self, x, y, w, h);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_update3(void* self, void* param1) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_update3(void* self, const void* param1) {
     QWidget_Update3((QWidget*)self, (QRect*)param1);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_update4(void* self, void* param1) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_update4(void* self, const void* param1) {
     QWidget_Update4((QWidget*)self, (QRegion*)param1);
 }
 
@@ -1387,11 +1387,11 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_repaint2(void* self, in
     QWidget_Repaint2((QWidget*)self, x, y, w, h);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_repaint3(void* self, void* param1) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_repaint3(void* self, const void* param1) {
     QWidget_Repaint3((QWidget*)self, (QRect*)param1);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_repaint4(void* self, void* param1) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_repaint4(void* self, const void* param1) {
     QWidget_Repaint4((QWidget*)self, (QRegion*)param1);
 }
 
@@ -1443,7 +1443,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_move(void* self, int x,
     QWidget_Move((QWidget*)self, x, y);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_move2(void* self, void* param1) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_move2(void* self, const void* param1) {
     QWidget_Move2((QWidget*)self, (QPoint*)param1);
 }
 
@@ -1451,7 +1451,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_resize(void* self, int 
     QWidget_Resize((QWidget*)self, w, h);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_resize2(void* self, void* param1) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_resize2(void* self, const void* param1) {
     QWidget_Resize2((QWidget*)self, (QSize*)param1);
 }
 
@@ -1459,11 +1459,11 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_geometry(void* self
     QWidget_SetGeometry((QWidget*)self, x, y, w, h);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_geometry2(void* self, void* geometry) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* k_textautocorrectionwidgets__autocorrectiontextedit_save_geometry(void* self) {
+char* k_textautocorrectionwidgets__autocorrectiontextedit_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1478,31 +1478,31 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_adjust_size(void* self)
     QWidget_AdjustSize((QWidget*)self);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_visible(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_visible(const void* self) {
     return QWidget_IsVisible((QWidget*)self);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_visible_to(void* self, void* param1) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_visible_to(const void* self, const void* param1) {
     return QWidget_IsVisibleTo((QWidget*)self, (QWidget*)param1);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_hidden(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_hidden(const void* self) {
     return QWidget_IsHidden((QWidget*)self);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_minimized(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_minimized(const void* self) {
     return QWidget_IsMinimized((QWidget*)self);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_maximized(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_maximized(const void* self) {
     return QWidget_IsMaximized((QWidget*)self);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_full_screen(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_full_screen(const void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_window_state(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_window_state(const void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
@@ -1514,7 +1514,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_override_window_state(v
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
-QSizePolicy* k_textautocorrectionwidgets__autocorrectiontextedit_size_policy(void* self) {
+QSizePolicy* k_textautocorrectionwidgets__autocorrectiontextedit_size_policy(const void* self) {
     return QWidget_SizePolicy((QWidget*)self);
 }
 
@@ -1526,7 +1526,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_size_policy2(void* 
     QWidget_SetSizePolicy2((QWidget*)self, horizontal, vertical);
 }
 
-QRegion* k_textautocorrectionwidgets__autocorrectiontextedit_visible_region(void* self) {
+QRegion* k_textautocorrectionwidgets__autocorrectiontextedit_visible_region(const void* self) {
     return QWidget_VisibleRegion((QWidget*)self);
 }
 
@@ -1534,19 +1534,19 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_contents_margins(vo
     QWidget_SetContentsMargins((QWidget*)self, left, top, right, bottom);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_set_contents_margins2(void* self, void* margins) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_set_contents_margins2(void* self, const void* margins) {
     QWidget_SetContentsMargins2((QWidget*)self, (QMargins*)margins);
 }
 
-QMargins* k_textautocorrectionwidgets__autocorrectiontextedit_contents_margins(void* self) {
+QMargins* k_textautocorrectionwidgets__autocorrectiontextedit_contents_margins(const void* self) {
     return QWidget_ContentsMargins((QWidget*)self);
 }
 
-QRect* k_textautocorrectionwidgets__autocorrectiontextedit_contents_rect(void* self) {
+QRect* k_textautocorrectionwidgets__autocorrectiontextedit_contents_rect(const void* self) {
     return QWidget_ContentsRect((QWidget*)self);
 }
 
-QLayout* k_textautocorrectionwidgets__autocorrectiontextedit_layout(void* self) {
+QLayout* k_textautocorrectionwidgets__autocorrectiontextedit_layout(const void* self) {
     return QWidget_Layout((QWidget*)self);
 }
 
@@ -1570,23 +1570,23 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_scroll(void* self, int 
     QWidget_Scroll((QWidget*)self, dx, dy);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_scroll2(void* self, int dx, int dy, void* param3) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_scroll2(void* self, int dx, int dy, const void* param3) {
     QWidget_Scroll2((QWidget*)self, dx, dy, (QRect*)param3);
 }
 
-QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_focus_widget(void* self) {
+QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_focus_widget(const void* self) {
     return QWidget_FocusWidget((QWidget*)self);
 }
 
-QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_next_in_focus_chain(void* self) {
+QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_next_in_focus_chain(const void* self) {
     return QWidget_NextInFocusChain((QWidget*)self);
 }
 
-QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_previous_in_focus_chain(void* self) {
+QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_previous_in_focus_chain(const void* self) {
     return QWidget_PreviousInFocusChain((QWidget*)self);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_accept_drops(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_accept_drops(const void* self) {
     return QWidget_AcceptDrops((QWidget*)self);
 }
 
@@ -1614,7 +1614,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_remove_action(void* sel
     QWidget_RemoveAction((QWidget*)self, (QAction*)action);
 }
 
-libqt_list /* of QAction* */ k_textautocorrectionwidgets__autocorrectiontextedit_actions(void* self) {
+libqt_list /* of QAction* */ k_textautocorrectionwidgets__autocorrectiontextedit_actions(const void* self) {
     libqt_list _arr = QWidget_Actions((QWidget*)self);
     return _arr;
 }
@@ -1623,19 +1623,19 @@ QAction* k_textautocorrectionwidgets__autocorrectiontextedit_add_action2(void* s
     return QWidget_AddAction2((QWidget*)self, qstring(text));
 }
 
-QAction* k_textautocorrectionwidgets__autocorrectiontextedit_add_action3(void* self, void* icon, const char* text) {
+QAction* k_textautocorrectionwidgets__autocorrectiontextedit_add_action3(void* self, const void* icon, const char* text) {
     return QWidget_AddAction3((QWidget*)self, (QIcon*)icon, qstring(text));
 }
 
-QAction* k_textautocorrectionwidgets__autocorrectiontextedit_add_action4(void* self, const char* text, void* shortcut) {
+QAction* k_textautocorrectionwidgets__autocorrectiontextedit_add_action4(void* self, const char* text, const void* shortcut) {
     return QWidget_AddAction4((QWidget*)self, qstring(text), (QKeySequence*)shortcut);
 }
 
-QAction* k_textautocorrectionwidgets__autocorrectiontextedit_add_action5(void* self, void* icon, const char* text, void* shortcut) {
+QAction* k_textautocorrectionwidgets__autocorrectiontextedit_add_action5(void* self, const void* icon, const char* text, const void* shortcut) {
     return QWidget_AddAction5((QWidget*)self, (QIcon*)icon, qstring(text), (QKeySequence*)shortcut);
 }
 
-QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_parent_widget(void* self) {
+QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_parent_widget(const void* self) {
     return QWidget_ParentWidget((QWidget*)self);
 }
 
@@ -1643,7 +1643,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_window_flags(void* 
     QWidget_SetWindowFlags((QWidget*)self, type);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_window_flags(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_window_flags(const void* self) {
     return QWidget_WindowFlags((QWidget*)self);
 }
 
@@ -1655,19 +1655,19 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_override_window_flags(v
     QWidget_OverrideWindowFlags((QWidget*)self, type);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_window_type(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_window_type(const void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_child_at(void* self, int x, int y) {
+QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_child_at(const void* self, int x, int y) {
     return QWidget_ChildAt((QWidget*)self, x, y);
 }
 
-QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_child_at2(void* self, void* p) {
+QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_child_at2(const void* self, const void* p) {
     return QWidget_ChildAt2((QWidget*)self, (QPoint*)p);
 }
 
-QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_child_at3(void* self, void* p) {
+QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_child_at3(const void* self, const void* p) {
     return QWidget_ChildAt3((QWidget*)self, (QPointF*)p);
 }
 
@@ -1675,19 +1675,19 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_attribute(void* sel
     QWidget_SetAttribute((QWidget*)self, param1);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_test_attribute(void* self, int32_t param1) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_test_attribute(const void* self, int32_t param1) {
     return QWidget_TestAttribute((QWidget*)self, param1);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_ensure_polished(void* self) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_ensure_polished(const void* self) {
     QWidget_EnsurePolished((QWidget*)self);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_ancestor_of(void* self, void* child) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_ancestor_of(const void* self, const void* child) {
     return QWidget_IsAncestorOf((QWidget*)self, (QWidget*)child);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_auto_fill_background(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_auto_fill_background(const void* self) {
     return QWidget_AutoFillBackground((QWidget*)self);
 }
 
@@ -1695,15 +1695,15 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_auto_fill_backgroun
     QWidget_SetAutoFillBackground((QWidget*)self, enabled);
 }
 
-QBackingStore* k_textautocorrectionwidgets__autocorrectiontextedit_backing_store(void* self) {
+QBackingStore* k_textautocorrectionwidgets__autocorrectiontextedit_backing_store(const void* self) {
     return QWidget_BackingStore((QWidget*)self);
 }
 
-QWindow* k_textautocorrectionwidgets__autocorrectiontextedit_window_handle(void* self) {
+QWindow* k_textautocorrectionwidgets__autocorrectiontextedit_window_handle(const void* self) {
     return QWidget_WindowHandle((QWidget*)self);
 }
 
-QScreen* k_textautocorrectionwidgets__autocorrectiontextedit_screen(void* self) {
+QScreen* k_textautocorrectionwidgets__autocorrectiontextedit_screen(const void* self) {
     return QWidget_Screen((QWidget*)self);
 }
 
@@ -1723,11 +1723,11 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_window_title_changed
     QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_window_icon_changed(void* self, void* icon) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_window_icon_changed(void* self, const void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_window_icon_changed(void* self, void (*callback)(void*, const void*)) {
     QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
@@ -1739,15 +1739,15 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_window_icon_text_cha
     QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_custom_context_menu_requested(void* self, void* pos) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_custom_context_menu_requested(void* self, const void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*)) {
     QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_input_method_hints(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_input_method_hints(const void* self) {
     return QWidget_InputMethodHints((QWidget*)self);
 }
 
@@ -1755,31 +1755,31 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_input_method_hints(
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_render22(void* self, void* target, void* targetOffset) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_render22(void* self, void* target, const void* targetOffset) {
     QWidget_Render22((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_render3(void* self, void* target, void* targetOffset, void* sourceRegion) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion) {
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_render23(void* self, void* painter, void* targetOffset) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_render23(void* self, void* painter, const void* targetOffset) {
     QWidget_Render23((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_render32(void* self, void* painter, void* targetOffset, void* sourceRegion) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion) {
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
-QPixmap* k_textautocorrectionwidgets__autocorrectiontextedit_grab1(void* self, void* rectangle) {
+QPixmap* k_textautocorrectionwidgets__autocorrectiontextedit_grab1(void* self, const void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
@@ -1787,7 +1787,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_grab_gesture2(void* sel
     QWidget_GrabGesture2((QWidget*)self, type, flags);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_grab_shortcut2(void* self, void* key, int32_t context) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_grab_shortcut2(void* self, const void* key, int32_t context) {
     return QWidget_GrabShortcut2((QWidget*)self, (QKeySequence*)key, context);
 }
 
@@ -1815,7 +1815,7 @@ QWidget* k_textautocorrectionwidgets__autocorrectiontextedit_create_window_conta
     return QWidget_CreateWindowContainer3((QWindow*)window, (QWidget*)parent, flags);
 }
 
-const char* k_textautocorrectionwidgets__autocorrectiontextedit_object_name(void* self) {
+const char* k_textautocorrectionwidgets__autocorrectiontextedit_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1826,19 +1826,19 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_object_name(void* s
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_widget_type(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_window_type(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_quick_item_type(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_signals_blocked(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -1846,7 +1846,7 @@ bool k_textautocorrectionwidgets__autocorrectiontextedit_block_signals(void* sel
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_textautocorrectionwidgets__autocorrectiontextedit_thread(void* self) {
+QThread* k_textautocorrectionwidgets__autocorrectiontextedit_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -1870,7 +1870,7 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_kill_timer2(void* self,
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_textautocorrectionwidgets__autocorrectiontextedit_children(void* self) {
+libqt_list /* of QObject* */ k_textautocorrectionwidgets__autocorrectiontextedit_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1883,55 +1883,55 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_remove_event_filter(voi
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_textautocorrectionwidgets__autocorrectiontextedit_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_textautocorrectionwidgets__autocorrectiontextedit_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_textautocorrectionwidgets__autocorrectiontextedit_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_textautocorrectionwidgets__autocorrectiontextedit_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_textautocorrectionwidgets__autocorrectiontextedit_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_textautocorrectionwidgets__autocorrectiontextedit_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect3(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect4(void* self, void* receiver) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect5(void* param1) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_dump_object_tree(void* self) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_dump_object_info(void* self) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_set_property(void* self, const char* name, void* value) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_property(void* self, const char* name) {
+QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_textautocorrectionwidgets__autocorrectiontextedit_dynamic_property_names(void* self) {
+const char** k_textautocorrectionwidgets__autocorrectiontextedit_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -1952,7 +1952,7 @@ QBindingStorage* k_textautocorrectionwidgets__autocorrectiontextedit_binding_sto
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_textautocorrectionwidgets__autocorrectiontextedit_binding_storage2(void* self) {
+const QBindingStorage* k_textautocorrectionwidgets__autocorrectiontextedit_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -1964,11 +1964,11 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_destroyed(void* self
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_textautocorrectionwidgets__autocorrectiontextedit_parent(void* self) {
+QObject* k_textautocorrectionwidgets__autocorrectiontextedit_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_inherits(void* self, const char* classname) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -1984,31 +1984,31 @@ int32_t k_textautocorrectionwidgets__autocorrectiontextedit_start_timer23(void* 
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_textautocorrectionwidgets__autocorrectiontextedit_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_textautocorrectionwidgets__autocorrectiontextedit_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_textautocorrectionwidgets__autocorrectiontextedit_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_textautocorrectionwidgets__autocorrectiontextedit_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_textautocorrectionwidgets__autocorrectiontextedit_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_textautocorrectionwidgets__autocorrectiontextedit_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect1(void* self, const char* signal) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect23(void* self, void* receiver, const char* member) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -2020,47 +2020,47 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_destroyed1(void* sel
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_painting_active(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_painting_active(const void* self) {
     return QPaintDevice_PaintingActive(k_textautocorrectionwidgets__autocorrectiontextedit_as_q_paint_device(self));
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_width_m_m(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_width_m_m(const void* self) {
     return QPaintDevice_WidthMM(k_textautocorrectionwidgets__autocorrectiontextedit_as_q_paint_device(self));
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_height_m_m(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_height_m_m(const void* self) {
     return QPaintDevice_HeightMM(k_textautocorrectionwidgets__autocorrectiontextedit_as_q_paint_device(self));
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_logical_dpi_x(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_logical_dpi_x(const void* self) {
     return QPaintDevice_LogicalDpiX(k_textautocorrectionwidgets__autocorrectiontextedit_as_q_paint_device(self));
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_logical_dpi_y(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_logical_dpi_y(const void* self) {
     return QPaintDevice_LogicalDpiY(k_textautocorrectionwidgets__autocorrectiontextedit_as_q_paint_device(self));
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_physical_dpi_x(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_physical_dpi_x(const void* self) {
     return QPaintDevice_PhysicalDpiX(k_textautocorrectionwidgets__autocorrectiontextedit_as_q_paint_device(self));
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_physical_dpi_y(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_physical_dpi_y(const void* self) {
     return QPaintDevice_PhysicalDpiY(k_textautocorrectionwidgets__autocorrectiontextedit_as_q_paint_device(self));
 }
 
-double k_textautocorrectionwidgets__autocorrectiontextedit_device_pixel_ratio(void* self) {
+double k_textautocorrectionwidgets__autocorrectiontextedit_device_pixel_ratio(const void* self) {
     return QPaintDevice_DevicePixelRatio(k_textautocorrectionwidgets__autocorrectiontextedit_as_q_paint_device(self));
 }
 
-double k_textautocorrectionwidgets__autocorrectiontextedit_device_pixel_ratio_f(void* self) {
+double k_textautocorrectionwidgets__autocorrectiontextedit_device_pixel_ratio_f(const void* self) {
     return QPaintDevice_DevicePixelRatioF(k_textautocorrectionwidgets__autocorrectiontextedit_as_q_paint_device(self));
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_color_count(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_color_count(const void* self) {
     return QPaintDevice_ColorCount(k_textautocorrectionwidgets__autocorrectiontextedit_as_q_paint_device(self));
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_depth(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_depth(const void* self) {
     return QPaintDevice_Depth(k_textautocorrectionwidgets__autocorrectiontextedit_as_q_paint_device(self));
 }
 
@@ -2072,28 +2072,28 @@ int32_t k_textautocorrectionwidgets__autocorrectiontextedit_encode_metric_f(int3
     return QPaintDevice_EncodeMetricF(metric, value);
 }
 
-QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_load_resource(void* self, int type, void* name) {
+QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_load_resource(void* self, int type, const void* name) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_LoadResource((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, type, (QUrl*)name);
 }
 
-QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_super_load_resource(void* self, int type, void* name) {
+QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_super_load_resource(void* self, int type, const void* name) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperLoadResource((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, type, (QUrl*)name);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_load_resource(void* self, QVariant* (*callback)(void*, int, void*)) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_load_resource(void* self, QVariant* (*callback)(void*, int, const void*)) {
     TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnLoadResource((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
-QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_input_method_query(void* self, int32_t property) {
+QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_input_method_query(const void* self, int32_t property) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_InputMethodQuery((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, property);
 }
 
-QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_super_input_method_query(void* self, int32_t property) {
+QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_super_input_method_query(const void* self, int32_t property) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperInputMethodQuery((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, property);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnInputMethodQuery((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
+    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnInputMethodQuery((const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
 bool k_textautocorrectionwidgets__autocorrectiontextedit_event(void* self, void* e) {
@@ -2336,39 +2336,39 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_wheel_event(void* se
     TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnWheelEvent((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
-QMimeData* k_textautocorrectionwidgets__autocorrectiontextedit_create_mime_data_from_selection(void* self) {
+QMimeData* k_textautocorrectionwidgets__autocorrectiontextedit_create_mime_data_from_selection(const void* self) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_CreateMimeDataFromSelection((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
 }
 
-QMimeData* k_textautocorrectionwidgets__autocorrectiontextedit_super_create_mime_data_from_selection(void* self) {
+QMimeData* k_textautocorrectionwidgets__autocorrectiontextedit_super_create_mime_data_from_selection(const void* self) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperCreateMimeDataFromSelection((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_create_mime_data_from_selection(void* self, QMimeData* (*callback)()) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnCreateMimeDataFromSelection((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_create_mime_data_from_selection(const void* self, QMimeData* (*callback)(const void*)) {
+    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnCreateMimeDataFromSelection((const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_can_insert_from_mime_data(void* self, void* source) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_can_insert_from_mime_data(const void* self, const void* source) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_CanInsertFromMimeData((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (QMimeData*)source);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_super_can_insert_from_mime_data(void* self, void* source) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_super_can_insert_from_mime_data(const void* self, const void* source) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperCanInsertFromMimeData((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (QMimeData*)source);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_can_insert_from_mime_data(void* self, bool (*callback)(void*, void*)) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnCanInsertFromMimeData((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_can_insert_from_mime_data(const void* self, bool (*callback)(const void*, const void*)) {
+    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnCanInsertFromMimeData((const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_insert_from_mime_data(void* self, void* source) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_insert_from_mime_data(void* self, const void* source) {
     TextAutoCorrectionWidgets__AutoCorrectionTextEdit_InsertFromMimeData((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (QMimeData*)source);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_super_insert_from_mime_data(void* self, void* source) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_super_insert_from_mime_data(void* self, const void* source) {
     TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperInsertFromMimeData((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (QMimeData*)source);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_insert_from_mime_data(void* self, void (*callback)(void*, void*)) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_insert_from_mime_data(void* self, void (*callback)(void*, const void*)) {
     TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnInsertFromMimeData((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
@@ -2396,40 +2396,40 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_scroll_contents_by(v
     TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnScrollContentsBy((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_do_set_text_cursor(void* self, void* cursor) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_do_set_text_cursor(void* self, const void* cursor) {
     TextAutoCorrectionWidgets__AutoCorrectionTextEdit_DoSetTextCursor((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (QTextCursor*)cursor);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_super_do_set_text_cursor(void* self, void* cursor) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_super_do_set_text_cursor(void* self, const void* cursor) {
     TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperDoSetTextCursor((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (QTextCursor*)cursor);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_do_set_text_cursor(void* self, void (*callback)(void*, void*)) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_do_set_text_cursor(void* self, void (*callback)(void*, const void*)) {
     TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnDoSetTextCursor((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
-QSize* k_textautocorrectionwidgets__autocorrectiontextedit_minimum_size_hint(void* self) {
+QSize* k_textautocorrectionwidgets__autocorrectiontextedit_minimum_size_hint(const void* self) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_MinimumSizeHint((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
 }
 
-QSize* k_textautocorrectionwidgets__autocorrectiontextedit_super_minimum_size_hint(void* self) {
+QSize* k_textautocorrectionwidgets__autocorrectiontextedit_super_minimum_size_hint(const void* self) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperMinimumSizeHint((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_minimum_size_hint(void* self, QSize* (*callback)()) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnMinimumSizeHint((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
+    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnMinimumSizeHint((const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
-QSize* k_textautocorrectionwidgets__autocorrectiontextedit_size_hint(void* self) {
+QSize* k_textautocorrectionwidgets__autocorrectiontextedit_size_hint(const void* self) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SizeHint((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
 }
 
-QSize* k_textautocorrectionwidgets__autocorrectiontextedit_super_size_hint(void* self) {
+QSize* k_textautocorrectionwidgets__autocorrectiontextedit_super_size_hint(const void* self) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperSizeHint((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_size_hint(void* self, QSize* (*callback)()) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnSizeHint((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnSizeHint((const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
 void k_textautocorrectionwidgets__autocorrectiontextedit_setup_viewport(void* self, void* viewport) {
@@ -2468,40 +2468,40 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_viewport_event(void*
     TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnViewportEvent((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
-QSize* k_textautocorrectionwidgets__autocorrectiontextedit_viewport_size_hint(void* self) {
+QSize* k_textautocorrectionwidgets__autocorrectiontextedit_viewport_size_hint(const void* self) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_ViewportSizeHint((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
 }
 
-QSize* k_textautocorrectionwidgets__autocorrectiontextedit_super_viewport_size_hint(void* self) {
+QSize* k_textautocorrectionwidgets__autocorrectiontextedit_super_viewport_size_hint(const void* self) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperViewportSizeHint((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_viewport_size_hint(void* self, QSize* (*callback)()) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnViewportSizeHint((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*)) {
+    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnViewportSizeHint((const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_init_style_option(void* self, void* option) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_init_style_option(const void* self, void* option) {
     TextAutoCorrectionWidgets__AutoCorrectionTextEdit_InitStyleOption((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (QStyleOptionFrame*)option);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_super_init_style_option(void* self, void* option) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_super_init_style_option(const void* self, void* option) {
     TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperInitStyleOption((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (QStyleOptionFrame*)option);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_init_style_option(void* self, void (*callback)(void*, void*)) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnInitStyleOption((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
+    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnInitStyleOption((const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_dev_type(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_dev_type(const void* self) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_DevType((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_super_dev_type(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_super_dev_type(const void* self) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperDevType((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_dev_type(void* self, int32_t (*callback)()) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnDevType((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
+    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnDevType((const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
 void k_textautocorrectionwidgets__autocorrectiontextedit_set_visible(void* self, bool visible) {
@@ -2516,40 +2516,40 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_set_visible(void* se
     TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnSetVisible((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_height_for_width(void* self, int param1) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_height_for_width(const void* self, int param1) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_HeightForWidth((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, param1);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_super_height_for_width(void* self, int param1) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_super_height_for_width(const void* self, int param1) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperHeightForWidth((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, param1);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnHeightForWidth((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
+    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnHeightForWidth((const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_has_height_for_width(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_has_height_for_width(const void* self) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_HasHeightForWidth((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_super_has_height_for_width(void* self) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_super_has_height_for_width(const void* self) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperHasHeightForWidth((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_has_height_for_width(void* self, bool (*callback)()) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnHasHeightForWidth((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
+    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnHasHeightForWidth((const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
-QPaintEngine* k_textautocorrectionwidgets__autocorrectiontextedit_paint_engine(void* self) {
+QPaintEngine* k_textautocorrectionwidgets__autocorrectiontextedit_paint_engine(const void* self) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_PaintEngine((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
 }
 
-QPaintEngine* k_textautocorrectionwidgets__autocorrectiontextedit_super_paint_engine(void* self) {
+QPaintEngine* k_textautocorrectionwidgets__autocorrectiontextedit_super_paint_engine(const void* self) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperPaintEngine((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnPaintEngine((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
+    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnPaintEngine((const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
 void k_textautocorrectionwidgets__autocorrectiontextedit_enter_event(void* self, void* event) {
@@ -2648,52 +2648,52 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_native_event(void* s
     TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnNativeEvent((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_metric(void* self, int32_t param1) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_metric(const void* self, int32_t param1) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_Metric((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, param1);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_super_metric(void* self, int32_t param1) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_super_metric(const void* self, int32_t param1) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperMetric((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, param1);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnMetric((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
+    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnMetric((const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_init_painter(void* self, void* painter) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_init_painter(const void* self, void* painter) {
     TextAutoCorrectionWidgets__AutoCorrectionTextEdit_InitPainter((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (QPainter*)painter);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_super_init_painter(void* self, void* painter) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_super_init_painter(const void* self, void* painter) {
     TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperInitPainter((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (QPainter*)painter);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_init_painter(void* self, void (*callback)(void*, void*)) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnInitPainter((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
+    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnInitPainter((const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_textautocorrectionwidgets__autocorrectiontextedit_redirected(void* self, void* offset) {
+QPaintDevice* k_textautocorrectionwidgets__autocorrectiontextedit_redirected(const void* self, void* offset) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_Redirected((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_textautocorrectionwidgets__autocorrectiontextedit_super_redirected(void* self, void* offset) {
+QPaintDevice* k_textautocorrectionwidgets__autocorrectiontextedit_super_redirected(const void* self, void* offset) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperRedirected((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (QPoint*)offset);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnRedirected((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnRedirected((const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
-QPainter* k_textautocorrectionwidgets__autocorrectiontextedit_shared_painter(void* self) {
+QPainter* k_textautocorrectionwidgets__autocorrectiontextedit_shared_painter(const void* self) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SharedPainter((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
 }
 
-QPainter* k_textautocorrectionwidgets__autocorrectiontextedit_super_shared_painter(void* self) {
+QPainter* k_textautocorrectionwidgets__autocorrectiontextedit_super_shared_painter(const void* self) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperSharedPainter((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_shared_painter(void* self, QPainter* (*callback)()) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnSharedPainter((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
+    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnSharedPainter((const TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
 void k_textautocorrectionwidgets__autocorrectiontextedit_child_event(void* self, void* event) {
@@ -2720,27 +2720,27 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_on_custom_event(void* s
     TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnCustomEvent((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_connect_notify(void* self, void* signal) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_connect_notify(void* self, const void* signal) {
     TextAutoCorrectionWidgets__AutoCorrectionTextEdit_ConnectNotify((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (QMetaMethod*)signal);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_super_connect_notify(void* self, void* signal) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_super_connect_notify(void* self, const void* signal) {
     TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperConnectNotify((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (QMetaMethod*)signal);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnConnectNotify((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_disconnect_notify(void* self, void* signal) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_disconnect_notify(void* self, const void* signal) {
     TextAutoCorrectionWidgets__AutoCorrectionTextEdit_DisconnectNotify((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (QMetaMethod*)signal);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_super_disconnect_notify(void* self, void* signal) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_super_disconnect_notify(void* self, const void* signal) {
     TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperDisconnectNotify((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (QMetaMethod*)signal);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_textautocorrectionwidgets__autocorrectiontextedit_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnDisconnectNotify((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
@@ -2748,168 +2748,56 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_zoom_in_f(void* self, f
     TextAutoCorrectionWidgets__AutoCorrectionTextEdit_ZoomInF((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, range);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_super_zoom_in_f(void* self, float range) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperZoomInF((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, range);
-}
-
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_zoom_in_f(void* self, void (*callback)(void*, float)) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnZoomInF((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
-}
-
 void k_textautocorrectionwidgets__autocorrectiontextedit_set_viewport_margins(void* self, int left, int top, int right, int bottom) {
     TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SetViewportMargins((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, left, top, right, bottom);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_super_set_viewport_margins(void* self, int left, int top, int right, int bottom) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperSetViewportMargins((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, left, top, right, bottom);
-}
-
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_set_viewport_margins(void* self, void (*callback)(void*, int, int, int, int)) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnSetViewportMargins((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
-}
-
-QMargins* k_textautocorrectionwidgets__autocorrectiontextedit_viewport_margins(void* self) {
+QMargins* k_textautocorrectionwidgets__autocorrectiontextedit_viewport_margins(const void* self) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_ViewportMargins((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
-}
-
-QMargins* k_textautocorrectionwidgets__autocorrectiontextedit_super_viewport_margins(void* self) {
-    return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperViewportMargins((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
-}
-
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_viewport_margins(void* self, QMargins* (*callback)()) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnViewportMargins((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
 void k_textautocorrectionwidgets__autocorrectiontextedit_draw_frame(void* self, void* param1) {
     TextAutoCorrectionWidgets__AutoCorrectionTextEdit_DrawFrame((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (QPainter*)param1);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_super_draw_frame(void* self, void* param1) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperDrawFrame((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (QPainter*)param1);
-}
-
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_draw_frame(void* self, void (*callback)(void*, void*)) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnDrawFrame((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
-}
-
 void k_textautocorrectionwidgets__autocorrectiontextedit_update_micro_focus(void* self) {
     TextAutoCorrectionWidgets__AutoCorrectionTextEdit_UpdateMicroFocus((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
-}
-
-void k_textautocorrectionwidgets__autocorrectiontextedit_super_update_micro_focus(void* self) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperUpdateMicroFocus((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
-}
-
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_update_micro_focus(void* self, void (*callback)()) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnUpdateMicroFocus((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
 void k_textautocorrectionwidgets__autocorrectiontextedit_create(void* self) {
     TextAutoCorrectionWidgets__AutoCorrectionTextEdit_Create((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
 }
 
-void k_textautocorrectionwidgets__autocorrectiontextedit_super_create(void* self) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperCreate((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
-}
-
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_create(void* self, void (*callback)()) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnCreate((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
-}
-
 void k_textautocorrectionwidgets__autocorrectiontextedit_destroy(void* self) {
     TextAutoCorrectionWidgets__AutoCorrectionTextEdit_Destroy((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
-}
-
-void k_textautocorrectionwidgets__autocorrectiontextedit_super_destroy(void* self) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperDestroy((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
-}
-
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_destroy(void* self, void (*callback)()) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnDestroy((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
 bool k_textautocorrectionwidgets__autocorrectiontextedit_focus_next_child(void* self) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_FocusNextChild((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_super_focus_next_child(void* self) {
-    return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperFocusNextChild((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
-}
-
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_focus_next_child(void* self, bool (*callback)()) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnFocusNextChild((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
-}
-
 bool k_textautocorrectionwidgets__autocorrectiontextedit_focus_previous_child(void* self) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_FocusPreviousChild((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_super_focus_previous_child(void* self) {
-    return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperFocusPreviousChild((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
-}
-
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_focus_previous_child(void* self, bool (*callback)()) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnFocusPreviousChild((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
-}
-
-QObject* k_textautocorrectionwidgets__autocorrectiontextedit_sender(void* self) {
+QObject* k_textautocorrectionwidgets__autocorrectiontextedit_sender(const void* self) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_Sender((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
 }
 
-QObject* k_textautocorrectionwidgets__autocorrectiontextedit_super_sender(void* self) {
-    return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperSender((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
-}
-
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_sender(void* self, QObject* (*callback)()) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnSender((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
-}
-
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_sender_signal_index(void* self) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_sender_signal_index(const void* self) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SenderSignalIndex((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_super_sender_signal_index(void* self) {
-    return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperSenderSignalIndex((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self);
-}
-
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnSenderSignalIndex((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
-}
-
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_receivers(void* self, const char* signal) {
+int32_t k_textautocorrectionwidgets__autocorrectiontextedit_receivers(const void* self, const char* signal) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_Receivers((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, signal);
 }
 
-int32_t k_textautocorrectionwidgets__autocorrectiontextedit_super_receivers(void* self, const char* signal) {
-    return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperReceivers((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, signal);
-}
-
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnReceivers((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
-}
-
-bool k_textautocorrectionwidgets__autocorrectiontextedit_is_signal_connected(void* self, void* signal) {
+bool k_textautocorrectionwidgets__autocorrectiontextedit_is_signal_connected(const void* self, const void* signal) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_IsSignalConnected((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (QMetaMethod*)signal);
 }
 
-bool k_textautocorrectionwidgets__autocorrectiontextedit_super_is_signal_connected(void* self, void* signal) {
-    return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperIsSignalConnected((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (QMetaMethod*)signal);
-}
-
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnIsSignalConnected((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
-}
-
-double k_textautocorrectionwidgets__autocorrectiontextedit_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+double k_textautocorrectionwidgets__autocorrectiontextedit_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB) {
     return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_GetDecodedMetricF((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, metricA, metricB);
-}
-
-double k_textautocorrectionwidgets__autocorrectiontextedit_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_SuperGetDecodedMetricF((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, metricA, metricB);
-}
-
-void k_textautocorrectionwidgets__autocorrectiontextedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {
-    TextAutoCorrectionWidgets__AutoCorrectionTextEdit_OnGetDecodedMetricF((TextAutoCorrectionWidgets__AutoCorrectionTextEdit*)self, (intptr_t)callback);
 }
 
 void k_textautocorrectionwidgets__autocorrectiontextedit_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

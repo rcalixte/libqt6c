@@ -6,23 +6,23 @@ QWebEngineHttpRequest* q_webenginehttprequest_new() {
     return QWebEngineHttpRequest_New();
 }
 
-QWebEngineHttpRequest* q_webenginehttprequest_new2(void* other) {
+QWebEngineHttpRequest* q_webenginehttprequest_new2(const void* other) {
     return QWebEngineHttpRequest_New2((QWebEngineHttpRequest*)other);
 }
 
-QWebEngineHttpRequest* q_webenginehttprequest_new3(void* url) {
+QWebEngineHttpRequest* q_webenginehttprequest_new3(const void* url) {
     return QWebEngineHttpRequest_New3((QUrl*)url);
 }
 
-QWebEngineHttpRequest* q_webenginehttprequest_new4(void* url, int32_t* method) {
+QWebEngineHttpRequest* q_webenginehttprequest_new4(const void* url, int32_t* method) {
     return QWebEngineHttpRequest_New4((QUrl*)url, method);
 }
 
-void q_webenginehttprequest_operator_assign(void* self, void* other) {
+void q_webenginehttprequest_operator_assign(void* self, const void* other) {
     QWebEngineHttpRequest_OperatorAssign((QWebEngineHttpRequest*)self, (QWebEngineHttpRequest*)other);
 }
 
-QWebEngineHttpRequest* q_webenginehttprequest_post_request(void* url, libqt_map /* of const char* to const char* */ postData) {
+QWebEngineHttpRequest* q_webenginehttprequest_post_request(const void* url, libqt_map /* of const char* to const char* */ postData) {
     // Convert libqt_map to QMap<QString,QString>
     libqt_map postData_ret;
     postData_ret.len = postData.len;
@@ -55,15 +55,15 @@ void q_webenginehttprequest_swap(void* self, void* other) {
     QWebEngineHttpRequest_Swap((QWebEngineHttpRequest*)self, (QWebEngineHttpRequest*)other);
 }
 
-bool q_webenginehttprequest_operator_equal(void* self, void* other) {
+bool q_webenginehttprequest_operator_equal(const void* self, const void* other) {
     return QWebEngineHttpRequest_OperatorEqual((QWebEngineHttpRequest*)self, (QWebEngineHttpRequest*)other);
 }
 
-bool q_webenginehttprequest_operator_not_equal(void* self, void* other) {
+bool q_webenginehttprequest_operator_not_equal(const void* self, const void* other) {
     return QWebEngineHttpRequest_OperatorNotEqual((QWebEngineHttpRequest*)self, (QWebEngineHttpRequest*)other);
 }
 
-int32_t q_webenginehttprequest_method(void* self) {
+int32_t q_webenginehttprequest_method(const void* self) {
     return QWebEngineHttpRequest_Method((QWebEngineHttpRequest*)self);
 }
 
@@ -71,15 +71,15 @@ void q_webenginehttprequest_set_method(void* self, int32_t method) {
     QWebEngineHttpRequest_SetMethod((QWebEngineHttpRequest*)self, method);
 }
 
-QUrl* q_webenginehttprequest_url(void* self) {
+QUrl* q_webenginehttprequest_url(const void* self) {
     return QWebEngineHttpRequest_Url((QWebEngineHttpRequest*)self);
 }
 
-void q_webenginehttprequest_set_url(void* self, void* url) {
+void q_webenginehttprequest_set_url(void* self, const void* url) {
     QWebEngineHttpRequest_SetUrl((QWebEngineHttpRequest*)self, (QUrl*)url);
 }
 
-char* q_webenginehttprequest_post_data(void* self) {
+char* q_webenginehttprequest_post_data(const void* self) {
     libqt_string _str = QWebEngineHttpRequest_PostData((QWebEngineHttpRequest*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -90,11 +90,11 @@ void q_webenginehttprequest_set_post_data(void* self, char* postData) {
     QWebEngineHttpRequest_SetPostData((QWebEngineHttpRequest*)self, qstring(postData));
 }
 
-bool q_webenginehttprequest_has_header(void* self, char* headerName) {
+bool q_webenginehttprequest_has_header(const void* self, char* headerName) {
     return QWebEngineHttpRequest_HasHeader((QWebEngineHttpRequest*)self, qstring(headerName));
 }
 
-const char** q_webenginehttprequest_headers(void* self) {
+const char** q_webenginehttprequest_headers(const void* self) {
     libqt_list _arr = QWebEngineHttpRequest_Headers((QWebEngineHttpRequest*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -111,7 +111,7 @@ const char** q_webenginehttprequest_headers(void* self) {
     return _ret;
 }
 
-char* q_webenginehttprequest_header(void* self, char* headerName) {
+char* q_webenginehttprequest_header(const void* self, char* headerName) {
     libqt_string _str = QWebEngineHttpRequest_Header((QWebEngineHttpRequest*)self, qstring(headerName));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

@@ -34,14 +34,14 @@ bool q_messageauthenticationcode_add_data3(void* self, void* device) {
     return QMessageAuthenticationCode_AddData3((QMessageAuthenticationCode*)self, (QIODevice*)device);
 }
 
-char* q_messageauthenticationcode_result_view(void* self) {
+char* q_messageauthenticationcode_result_view(const void* self) {
     libqt_string _str = QMessageAuthenticationCode_ResultView((QMessageAuthenticationCode*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_messageauthenticationcode_result(void* self) {
+char* q_messageauthenticationcode_result(const void* self) {
     libqt_string _str = QMessageAuthenticationCode_Result((QMessageAuthenticationCode*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

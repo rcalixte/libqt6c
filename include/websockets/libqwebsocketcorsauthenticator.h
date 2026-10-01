@@ -22,7 +22,7 @@ QWebSocketCorsAuthenticator* q_websocketcorsauthenticator_new(const char* origin
 ///
 /// @param other QWebSocketCorsAuthenticator*
 ///
-QWebSocketCorsAuthenticator* q_websocketcorsauthenticator_new2(void* other);
+QWebSocketCorsAuthenticator* q_websocketcorsauthenticator_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocketcorsauthenticator.html#swap)
 ///
@@ -36,15 +36,15 @@ void q_websocketcorsauthenticator_swap(void* self, void* other);
 /// @param self QWebSocketCorsAuthenticator*
 /// @param other QWebSocketCorsAuthenticator*
 ///
-void q_websocketcorsauthenticator_operator_assign(void* self, void* other);
+void q_websocketcorsauthenticator_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocketcorsauthenticator.html#origin)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWebSocketCorsAuthenticator*
+/// @param self const QWebSocketCorsAuthenticator*
 ///
-const char* q_websocketcorsauthenticator_origin(void* self);
+const char* q_websocketcorsauthenticator_origin(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocketcorsauthenticator.html#setAllowed)
 ///
@@ -55,9 +55,9 @@ void q_websocketcorsauthenticator_set_allowed(void* self, bool allowed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocketcorsauthenticator.html#allowed)
 ///
-/// @param self QWebSocketCorsAuthenticator*
+/// @param self const QWebSocketCorsAuthenticator*
 ///
-bool q_websocketcorsauthenticator_allowed(void* self);
+bool q_websocketcorsauthenticator_allowed(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocketcorsauthenticator.html#dtor.QWebSocketCorsAuthenticator)
 ///

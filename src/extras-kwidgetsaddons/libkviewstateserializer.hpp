@@ -59,16 +59,14 @@ void KViewStateSerializer_RestoreExpanded(KViewStateSerializer* self, const libq
 void KViewStateSerializer_RestoreScrollState(KViewStateSerializer* self, int verticalScoll, int horizontalScroll);
 QModelIndex* KViewStateSerializer_IndexFromConfigString(const KViewStateSerializer* self, const QAbstractItemModel* model, const libqt_string key);
 libqt_string KViewStateSerializer_IndexToConfigString(const KViewStateSerializer* self, const QModelIndex* index);
-void KViewStateSerializer_OnMetaObject(const KViewStateSerializer* self, intptr_t slot);
+void KViewStateSerializer_OnMetaObject(KViewStateSerializer* self, intptr_t slot);
 QMetaObject* KViewStateSerializer_SuperMetaObject(const KViewStateSerializer* self);
 void KViewStateSerializer_OnMetacast(KViewStateSerializer* self, intptr_t slot);
 void* KViewStateSerializer_SuperMetacast(KViewStateSerializer* self, const char* param1);
 void KViewStateSerializer_OnMetacall(KViewStateSerializer* self, intptr_t slot);
 int KViewStateSerializer_SuperMetacall(KViewStateSerializer* self, int param1, int param2, void** param3);
-void KViewStateSerializer_OnIndexFromConfigString(const KViewStateSerializer* self, intptr_t slot);
-QModelIndex* KViewStateSerializer_SuperIndexFromConfigString(const KViewStateSerializer* self, const QAbstractItemModel* model, const libqt_string key);
-void KViewStateSerializer_OnIndexToConfigString(const KViewStateSerializer* self, intptr_t slot);
-libqt_string KViewStateSerializer_SuperIndexToConfigString(const KViewStateSerializer* self, const QModelIndex* index);
+void KViewStateSerializer_OnIndexFromConfigString(KViewStateSerializer* self, intptr_t slot);
+void KViewStateSerializer_OnIndexToConfigString(KViewStateSerializer* self, intptr_t slot);
 bool KViewStateSerializer_Event(KViewStateSerializer* self, QEvent* event);
 void KViewStateSerializer_OnEvent(KViewStateSerializer* self, intptr_t slot);
 bool KViewStateSerializer_SuperEvent(KViewStateSerializer* self, QEvent* event);
@@ -91,20 +89,10 @@ void KViewStateSerializer_DisconnectNotify(KViewStateSerializer* self, const QMe
 void KViewStateSerializer_OnDisconnectNotify(KViewStateSerializer* self, intptr_t slot);
 void KViewStateSerializer_SuperDisconnectNotify(KViewStateSerializer* self, const QMetaMethod* signal);
 void KViewStateSerializer_RestoreState(KViewStateSerializer* self);
-void KViewStateSerializer_OnRestoreState(KViewStateSerializer* self, intptr_t slot);
-void KViewStateSerializer_SuperRestoreState(KViewStateSerializer* self);
 QObject* KViewStateSerializer_Sender(const KViewStateSerializer* self);
-void KViewStateSerializer_OnSender(const KViewStateSerializer* self, intptr_t slot);
-QObject* KViewStateSerializer_SuperSender(const KViewStateSerializer* self);
 int KViewStateSerializer_SenderSignalIndex(const KViewStateSerializer* self);
-void KViewStateSerializer_OnSenderSignalIndex(const KViewStateSerializer* self, intptr_t slot);
-int KViewStateSerializer_SuperSenderSignalIndex(const KViewStateSerializer* self);
 int KViewStateSerializer_Receivers(const KViewStateSerializer* self, const char* signal);
-void KViewStateSerializer_OnReceivers(const KViewStateSerializer* self, intptr_t slot);
-int KViewStateSerializer_SuperReceivers(const KViewStateSerializer* self, const char* signal);
 bool KViewStateSerializer_IsSignalConnected(const KViewStateSerializer* self, const QMetaMethod* signal);
-void KViewStateSerializer_OnIsSignalConnected(const KViewStateSerializer* self, intptr_t slot);
-bool KViewStateSerializer_SuperIsSignalConnected(const KViewStateSerializer* self, const QMetaMethod* signal);
 void KViewStateSerializer_Delete(KViewStateSerializer* self);
 
 #ifdef __cplusplus

@@ -41,26 +41,26 @@ QTemporaryFile* q_temporaryfile_new4(const char* templateName, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-const QMetaObject* q_temporaryfile_meta_object(void* self);
+const QMetaObject* q_temporaryfile_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QTemporaryFile*
-/// @param callback const QMetaObject* func()
+/// @param self const QTemporaryFile*
+/// @param callback const QMetaObject* func(const QTemporaryFile* self)
 ///
-void q_temporaryfile_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_temporaryfile_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-const QMetaObject* q_temporaryfile_super_meta_object(void* self);
+const QMetaObject* q_temporaryfile_super_meta_object(const void* self);
 
 /// @param self QTemporaryFile*
 /// @param param1 const char*
@@ -114,9 +114,9 @@ const char* q_temporaryfile_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtemporaryfile.html#autoRemove)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-bool q_temporaryfile_auto_remove(void* self);
+bool q_temporaryfile_auto_remove(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtemporaryfile.html#setAutoRemove)
 ///
@@ -135,34 +135,34 @@ bool q_temporaryfile_open(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-const char* q_temporaryfile_file_name(void* self);
+const char* q_temporaryfile_file_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtemporaryfile.html#fileName)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QTemporaryFile*
-/// @param callback const char* func()
+/// @param self const QTemporaryFile*
+/// @param callback const char* func(const QTemporaryFile* self)
 ///
-void q_temporaryfile_on_file_name(void* self, const char* (*callback)());
+void q_temporaryfile_on_file_name(const void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtemporaryfile.html#fileName)
 ///
 /// Base class method implementation
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-const char* q_temporaryfile_super_file_name(void* self);
+const char* q_temporaryfile_super_file_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtemporaryfile.html#fileTemplate)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-const char* q_temporaryfile_file_template(void* self);
+const char* q_temporaryfile_file_template(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtemporaryfile.html#setFileTemplate)
 ///
@@ -277,9 +277,9 @@ const char* q_temporaryfile_decode_name2(const char* localFileName);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qfile.html#exists)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-bool q_temporaryfile_exists(void* self);
+bool q_temporaryfile_exists(const void* self);
 
 /// Inherited from QFile
 ///
@@ -295,9 +295,9 @@ bool q_temporaryfile_exists2(const char* fileName);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-const char* q_temporaryfile_sym_link_target(void* self);
+const char* q_temporaryfile_sym_link_target(const void* self);
 
 /// Inherited from QFile
 ///
@@ -439,11 +439,11 @@ bool q_temporaryfile_open33(void* self, int fd, int32_t ioFlags, int32_t handleF
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#error)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
 /// @return enum QFileDevice__FileError
 ///
-int32_t q_temporaryfile_error(void* self);
+int32_t q_temporaryfile_error(const void* self);
 
 /// Inherited from QFileDevice
 ///
@@ -457,9 +457,9 @@ void q_temporaryfile_unset_error(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#handle)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-int32_t q_temporaryfile_handle(void* self);
+int32_t q_temporaryfile_handle(const void* self);
 
 /// Inherited from QFileDevice
 ///
@@ -492,10 +492,10 @@ bool q_temporaryfile_unmap(void* self, unsigned char* address);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#fileTime)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 /// @param time enum QFileDevice__FileTime
 ///
-QDateTime* q_temporaryfile_file_time(void* self, int32_t time);
+QDateTime* q_temporaryfile_file_time(const void* self, int32_t time);
 
 /// Inherited from QFileDevice
 ///
@@ -505,7 +505,7 @@ QDateTime* q_temporaryfile_file_time(void* self, int32_t time);
 /// @param newDate QDateTime*
 /// @param fileTime enum QFileDevice__FileTime
 ///
-bool q_temporaryfile_set_file_time(void* self, void* newDate, int32_t fileTime);
+bool q_temporaryfile_set_file_time(void* self, const void* newDate, int32_t fileTime);
 
 /// Inherited from QFileDevice
 ///
@@ -530,11 +530,11 @@ QIODeviceBase* q_temporaryfile_as_q_i_o_device_base(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#openMode)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
 /// @return flag of enum QIODeviceBase__OpenModeFlag
 ///
-int32_t q_temporaryfile_open_mode(void* self);
+int32_t q_temporaryfile_open_mode(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -549,57 +549,57 @@ void q_temporaryfile_set_text_mode_enabled(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isTextModeEnabled)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-bool q_temporaryfile_is_text_mode_enabled(void* self);
+bool q_temporaryfile_is_text_mode_enabled(const void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isOpen)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-bool q_temporaryfile_is_open(void* self);
+bool q_temporaryfile_is_open(const void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isReadable)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-bool q_temporaryfile_is_readable(void* self);
+bool q_temporaryfile_is_readable(const void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isWritable)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-bool q_temporaryfile_is_writable(void* self);
+bool q_temporaryfile_is_writable(const void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readChannelCount)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-int32_t q_temporaryfile_read_channel_count(void* self);
+int32_t q_temporaryfile_read_channel_count(const void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#writeChannelCount)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-int32_t q_temporaryfile_write_channel_count(void* self);
+int32_t q_temporaryfile_write_channel_count(const void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#currentReadChannel)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-int32_t q_temporaryfile_current_read_channel(void* self);
+int32_t q_temporaryfile_current_read_channel(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -614,9 +614,9 @@ void q_temporaryfile_set_current_read_channel(void* self, int channel);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#currentWriteChannel)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-int32_t q_temporaryfile_current_write_channel(void* self);
+int32_t q_temporaryfile_current_write_channel(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -706,9 +706,9 @@ void q_temporaryfile_rollback_transaction(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isTransactionStarted)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-bool q_temporaryfile_is_transaction_started(void* self);
+bool q_temporaryfile_is_transaction_started(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -801,9 +801,9 @@ bool q_temporaryfile_get_char(void* self, char* c);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-const char* q_temporaryfile_error_string(void* self);
+const char* q_temporaryfile_error_string(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -928,9 +928,9 @@ char* q_temporaryfile_read_line1(void* self, int64_t maxlen);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-const char* q_temporaryfile_object_name(void* self);
+const char* q_temporaryfile_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -945,33 +945,33 @@ void q_temporaryfile_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-bool q_temporaryfile_is_widget_type(void* self);
+bool q_temporaryfile_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-bool q_temporaryfile_is_window_type(void* self);
+bool q_temporaryfile_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-bool q_temporaryfile_is_quick_item_type(void* self);
+bool q_temporaryfile_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-bool q_temporaryfile_signals_blocked(void* self);
+bool q_temporaryfile_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -986,9 +986,9 @@ bool q_temporaryfile_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-QThread* q_temporaryfile_thread(void* self);
+QThread* q_temporaryfile_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1039,11 +1039,11 @@ void q_temporaryfile_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_temporaryfile_children(void* self);
+libqt_list q_temporaryfile_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1081,7 +1081,7 @@ void q_temporaryfile_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_temporaryfile_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_temporaryfile_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1092,18 +1092,18 @@ QMetaObject__Connection* q_temporaryfile_connect(void* sender, const char* signa
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_temporaryfile_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_temporaryfile_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_temporaryfile_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_temporaryfile_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1114,7 +1114,7 @@ QMetaObject__Connection* q_temporaryfile_connect3(void* self, void* sender, cons
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_temporaryfile_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_temporaryfile_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1125,24 +1125,24 @@ bool q_temporaryfile_disconnect(void* sender, const char* signal, void* receiver
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_temporaryfile_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_temporaryfile_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-bool q_temporaryfile_disconnect3(void* self);
+bool q_temporaryfile_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 /// @param receiver QObject*
 ///
-bool q_temporaryfile_disconnect4(void* self, void* receiver);
+bool q_temporaryfile_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1150,23 +1150,23 @@ bool q_temporaryfile_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_temporaryfile_disconnect5(void* param1);
+bool q_temporaryfile_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-void q_temporaryfile_dump_object_tree(void* self);
+void q_temporaryfile_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-void q_temporaryfile_dump_object_info(void* self);
+void q_temporaryfile_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1176,16 +1176,16 @@ void q_temporaryfile_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_temporaryfile_set_property(void* self, const char* name, void* value);
+bool q_temporaryfile_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 /// @param name const char*
 ///
-QVariant* q_temporaryfile_property(void* self, const char* name);
+QVariant* q_temporaryfile_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1193,9 +1193,9 @@ QVariant* q_temporaryfile_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-const char** q_temporaryfile_dynamic_property_names(void* self);
+const char** q_temporaryfile_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1209,9 +1209,9 @@ QBindingStorage* q_temporaryfile_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-const QBindingStorage* q_temporaryfile_binding_storage2(void* self);
+const QBindingStorage* q_temporaryfile_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1234,18 +1234,18 @@ void q_temporaryfile_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-QObject* q_temporaryfile_parent(void* self);
+QObject* q_temporaryfile_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 /// @param classname const char*
 ///
-bool q_temporaryfile_inherits(void* self, const char* classname);
+bool q_temporaryfile_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1285,7 +1285,7 @@ int32_t q_temporaryfile_start_timer23(void* self, int64_t time, int32_t timerTyp
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_temporaryfile_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_temporaryfile_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1297,59 +1297,59 @@ QMetaObject__Connection* q_temporaryfile_connect5(void* sender, const char* sign
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_temporaryfile_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_temporaryfile_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_temporaryfile_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_temporaryfile_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 /// @param signal const char*
 ///
-bool q_temporaryfile_disconnect1(void* self, const char* signal);
+bool q_temporaryfile_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTemporaryFile*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_temporaryfile_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_temporaryfile_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_temporaryfile_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_temporaryfile_disconnect23(void* self, void* receiver, const char* member);
+bool q_temporaryfile_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QTemporaryFile*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_temporaryfile_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1375,9 +1375,9 @@ void q_temporaryfile_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-int64_t q_temporaryfile_size(void* self);
+int64_t q_temporaryfile_size(const void* self);
 
 /// Inherited from QFile
 ///
@@ -1385,9 +1385,9 @@ int64_t q_temporaryfile_size(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-int64_t q_temporaryfile_super_size(void* self);
+int64_t q_temporaryfile_super_size(const void* self);
 
 /// Inherited from QFile
 ///
@@ -1395,10 +1395,10 @@ int64_t q_temporaryfile_super_size(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTemporaryFile*
-/// @param callback int64_t func()
+/// @param self const QTemporaryFile*
+/// @param callback int64_t func(QTemporaryFile* self)
 ///
-void q_temporaryfile_on_size(void* self, int64_t (*callback)());
+void q_temporaryfile_on_size(const void* self, int64_t (*callback)(const void*));
 
 /// Inherited from QFile
 ///
@@ -1439,11 +1439,11 @@ void q_temporaryfile_on_resize(void* self, bool (*callback)(void*, int64_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
 /// @return flag of enum QFileDevice__Permission
 ///
-int32_t q_temporaryfile_permissions(void* self);
+int32_t q_temporaryfile_permissions(const void* self);
 
 /// Inherited from QFile
 ///
@@ -1451,11 +1451,11 @@ int32_t q_temporaryfile_permissions(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
 /// @return flag of enum QFileDevice__Permission
 ///
-int32_t q_temporaryfile_super_permissions(void* self);
+int32_t q_temporaryfile_super_permissions(const void* self);
 
 /// Inherited from QFile
 ///
@@ -1463,10 +1463,10 @@ int32_t q_temporaryfile_super_permissions(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTemporaryFile*
-/// @param callback int32_t func()
+/// @param self const QTemporaryFile*
+/// @param callback int32_t func(QTemporaryFile* self)
 ///
-void q_temporaryfile_on_permissions(void* self, int32_t (*callback)());
+void q_temporaryfile_on_permissions(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QFile
 ///
@@ -1528,9 +1528,9 @@ void q_temporaryfile_super_close(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback void func()
+/// @param callback void func(QTemporaryFile* self)
 ///
-void q_temporaryfile_on_close(void* self, void (*callback)());
+void q_temporaryfile_on_close(void* self, void (*callback)(void*));
 
 /// Inherited from QFileDevice
 ///
@@ -1538,9 +1538,9 @@ void q_temporaryfile_on_close(void* self, void (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-bool q_temporaryfile_is_sequential(void* self);
+bool q_temporaryfile_is_sequential(const void* self);
 
 /// Inherited from QFileDevice
 ///
@@ -1548,9 +1548,9 @@ bool q_temporaryfile_is_sequential(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-bool q_temporaryfile_super_is_sequential(void* self);
+bool q_temporaryfile_super_is_sequential(const void* self);
 
 /// Inherited from QFileDevice
 ///
@@ -1558,10 +1558,10 @@ bool q_temporaryfile_super_is_sequential(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTemporaryFile*
-/// @param callback bool func()
+/// @param self const QTemporaryFile*
+/// @param callback bool func(QTemporaryFile* self)
 ///
-void q_temporaryfile_on_is_sequential(void* self, bool (*callback)());
+void q_temporaryfile_on_is_sequential(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QFileDevice
 ///
@@ -1569,9 +1569,9 @@ void q_temporaryfile_on_is_sequential(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-int64_t q_temporaryfile_pos(void* self);
+int64_t q_temporaryfile_pos(const void* self);
 
 /// Inherited from QFileDevice
 ///
@@ -1579,9 +1579,9 @@ int64_t q_temporaryfile_pos(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-int64_t q_temporaryfile_super_pos(void* self);
+int64_t q_temporaryfile_super_pos(const void* self);
 
 /// Inherited from QFileDevice
 ///
@@ -1589,10 +1589,10 @@ int64_t q_temporaryfile_super_pos(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTemporaryFile*
-/// @param callback int64_t func()
+/// @param self const QTemporaryFile*
+/// @param callback int64_t func(QTemporaryFile* self)
 ///
-void q_temporaryfile_on_pos(void* self, int64_t (*callback)());
+void q_temporaryfile_on_pos(const void* self, int64_t (*callback)(const void*));
 
 /// Inherited from QFileDevice
 ///
@@ -1633,9 +1633,9 @@ void q_temporaryfile_on_seek(void* self, bool (*callback)(void*, int64_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-bool q_temporaryfile_at_end(void* self);
+bool q_temporaryfile_at_end(const void* self);
 
 /// Inherited from QFileDevice
 ///
@@ -1643,9 +1643,9 @@ bool q_temporaryfile_at_end(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-bool q_temporaryfile_super_at_end(void* self);
+bool q_temporaryfile_super_at_end(const void* self);
 
 /// Inherited from QFileDevice
 ///
@@ -1653,10 +1653,10 @@ bool q_temporaryfile_super_at_end(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTemporaryFile*
-/// @param callback bool func()
+/// @param self const QTemporaryFile*
+/// @param callback bool func(QTemporaryFile* self)
 ///
-void q_temporaryfile_on_at_end(void* self, bool (*callback)());
+void q_temporaryfile_on_at_end(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QFileDevice
 ///
@@ -1790,9 +1790,9 @@ bool q_temporaryfile_super_reset(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback bool func()
+/// @param callback bool func(QTemporaryFile* self)
 ///
-void q_temporaryfile_on_reset(void* self, bool (*callback)());
+void q_temporaryfile_on_reset(void* self, bool (*callback)(void*));
 
 /// Inherited from QIODevice
 ///
@@ -1800,9 +1800,9 @@ void q_temporaryfile_on_reset(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-int64_t q_temporaryfile_bytes_available(void* self);
+int64_t q_temporaryfile_bytes_available(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1810,9 +1810,9 @@ int64_t q_temporaryfile_bytes_available(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-int64_t q_temporaryfile_super_bytes_available(void* self);
+int64_t q_temporaryfile_super_bytes_available(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1820,10 +1820,10 @@ int64_t q_temporaryfile_super_bytes_available(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTemporaryFile*
-/// @param callback int64_t func()
+/// @param self const QTemporaryFile*
+/// @param callback int64_t func(QTemporaryFile* self)
 ///
-void q_temporaryfile_on_bytes_available(void* self, int64_t (*callback)());
+void q_temporaryfile_on_bytes_available(const void* self, int64_t (*callback)(const void*));
 
 /// Inherited from QIODevice
 ///
@@ -1831,9 +1831,9 @@ void q_temporaryfile_on_bytes_available(void* self, int64_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-int64_t q_temporaryfile_bytes_to_write(void* self);
+int64_t q_temporaryfile_bytes_to_write(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1841,9 +1841,9 @@ int64_t q_temporaryfile_bytes_to_write(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-int64_t q_temporaryfile_super_bytes_to_write(void* self);
+int64_t q_temporaryfile_super_bytes_to_write(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1851,10 +1851,10 @@ int64_t q_temporaryfile_super_bytes_to_write(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTemporaryFile*
-/// @param callback int64_t func()
+/// @param self const QTemporaryFile*
+/// @param callback int64_t func(QTemporaryFile* self)
 ///
-void q_temporaryfile_on_bytes_to_write(void* self, int64_t (*callback)());
+void q_temporaryfile_on_bytes_to_write(const void* self, int64_t (*callback)(const void*));
 
 /// Inherited from QIODevice
 ///
@@ -1862,9 +1862,9 @@ void q_temporaryfile_on_bytes_to_write(void* self, int64_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-bool q_temporaryfile_can_read_line(void* self);
+bool q_temporaryfile_can_read_line(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1872,9 +1872,9 @@ bool q_temporaryfile_can_read_line(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-bool q_temporaryfile_super_can_read_line(void* self);
+bool q_temporaryfile_super_can_read_line(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1882,10 +1882,10 @@ bool q_temporaryfile_super_can_read_line(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTemporaryFile*
-/// @param callback bool func()
+/// @param self const QTemporaryFile*
+/// @param callback bool func(QTemporaryFile* self)
 ///
-void q_temporaryfile_on_can_read_line(void* self, bool (*callback)());
+void q_temporaryfile_on_can_read_line(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QIODevice
 ///
@@ -2162,7 +2162,7 @@ void q_temporaryfile_on_custom_event(void* self, void (*callback)(void*, void*))
 /// @param self QTemporaryFile*
 /// @param signal QMetaMethod*
 ///
-void q_temporaryfile_connect_notify(void* self, void* signal);
+void q_temporaryfile_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2173,7 +2173,7 @@ void q_temporaryfile_connect_notify(void* self, void* signal);
 /// @param self QTemporaryFile*
 /// @param signal QMetaMethod*
 ///
-void q_temporaryfile_super_connect_notify(void* self, void* signal);
+void q_temporaryfile_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2184,7 +2184,7 @@ void q_temporaryfile_super_connect_notify(void* self, void* signal);
 /// @param self QTemporaryFile*
 /// @param callback void func(QTemporaryFile* self, QMetaMethod* signal)
 ///
-void q_temporaryfile_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_temporaryfile_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2195,7 +2195,7 @@ void q_temporaryfile_on_connect_notify(void* self, void (*callback)(void*, void*
 /// @param self QTemporaryFile*
 /// @param signal QMetaMethod*
 ///
-void q_temporaryfile_disconnect_notify(void* self, void* signal);
+void q_temporaryfile_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2206,7 +2206,7 @@ void q_temporaryfile_disconnect_notify(void* self, void* signal);
 /// @param self QTemporaryFile*
 /// @param signal QMetaMethod*
 ///
-void q_temporaryfile_super_disconnect_notify(void* self, void* signal);
+void q_temporaryfile_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2217,7 +2217,7 @@ void q_temporaryfile_super_disconnect_notify(void* self, void* signal);
 /// @param self QTemporaryFile*
 /// @param callback void func(QTemporaryFile* self, QMetaMethod* signal)
 ///
-void q_temporaryfile_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_temporaryfile_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QIODevice
 ///
@@ -2291,9 +2291,9 @@ void q_temporaryfile_on_set_error_string(void* self, void (*callback)(void*, con
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-QObject* q_temporaryfile_sender(void* self);
+QObject* q_temporaryfile_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2301,9 +2301,9 @@ QObject* q_temporaryfile_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-QObject* q_temporaryfile_super_sender(void* self);
+QObject* q_temporaryfile_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2311,10 +2311,10 @@ QObject* q_temporaryfile_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTemporaryFile*
-/// @param callback QObject* func()
+/// @param self const QTemporaryFile*
+/// @param callback QObject* func(QTemporaryFile* self)
 ///
-void q_temporaryfile_on_sender(void* self, QObject* (*callback)());
+void q_temporaryfile_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2322,9 +2322,9 @@ void q_temporaryfile_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-int32_t q_temporaryfile_sender_signal_index(void* self);
+int32_t q_temporaryfile_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2332,9 +2332,9 @@ int32_t q_temporaryfile_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 ///
-int32_t q_temporaryfile_super_sender_signal_index(void* self);
+int32_t q_temporaryfile_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2342,10 +2342,10 @@ int32_t q_temporaryfile_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTemporaryFile*
-/// @param callback int32_t func()
+/// @param self const QTemporaryFile*
+/// @param callback int32_t func(QTemporaryFile* self)
 ///
-void q_temporaryfile_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_temporaryfile_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2353,10 +2353,10 @@ void q_temporaryfile_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 /// @param signal const char*
 ///
-int32_t q_temporaryfile_receivers(void* self, const char* signal);
+int32_t q_temporaryfile_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2364,10 +2364,10 @@ int32_t q_temporaryfile_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 /// @param signal const char*
 ///
-int32_t q_temporaryfile_super_receivers(void* self, const char* signal);
+int32_t q_temporaryfile_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2375,10 +2375,10 @@ int32_t q_temporaryfile_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 /// @param callback int32_t func(QTemporaryFile* self, const char* signal)
 ///
-void q_temporaryfile_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_temporaryfile_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2386,10 +2386,10 @@ void q_temporaryfile_on_receivers(void* self, int32_t (*callback)(void*, const c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 /// @param signal QMetaMethod*
 ///
-bool q_temporaryfile_is_signal_connected(void* self, void* signal);
+bool q_temporaryfile_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2397,10 +2397,10 @@ bool q_temporaryfile_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 /// @param signal QMetaMethod*
 ///
-bool q_temporaryfile_super_is_signal_connected(void* self, void* signal);
+bool q_temporaryfile_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2408,10 +2408,10 @@ bool q_temporaryfile_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTemporaryFile*
+/// @param self const QTemporaryFile*
 /// @param callback bool func(QTemporaryFile* self, QMetaMethod* signal)
 ///
-void q_temporaryfile_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_temporaryfile_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

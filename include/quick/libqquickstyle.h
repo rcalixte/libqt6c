@@ -14,7 +14,7 @@
 ///
 /// @param other QQuickStyle*
 ///
-QQuickStyle* q_quickstyle_new(void* other);
+QQuickStyle* q_quickstyle_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickstyle.html)
 

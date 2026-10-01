@@ -1,7 +1,7 @@
 #include "libqpoint.hpp"
 #include "libqpoint.h"
 
-QPoint* q_point_new(void* other) {
+QPoint* q_point_new(const void* other) {
     return QPoint_New((QPoint*)other);
 }
 
@@ -17,7 +17,7 @@ QPoint* q_point_new4(int xpos, int ypos) {
     return QPoint_New4(xpos, ypos);
 }
 
-QPoint* q_point_new5(void* param1) {
+QPoint* q_point_new5(const void* param1) {
     return QPoint_New5((QPoint*)param1);
 }
 
@@ -29,15 +29,15 @@ void q_point_move_assign(void* self, void* other) {
     QPoint_MoveAssign((QPoint*)self, (QPoint*)other);
 }
 
-bool q_point_is_null(void* self) {
+bool q_point_is_null(const void* self) {
     return QPoint_IsNull((QPoint*)self);
 }
 
-int32_t q_point_x(void* self) {
+int32_t q_point_x(const void* self) {
     return QPoint_X((QPoint*)self);
 }
 
-int32_t q_point_y(void* self) {
+int32_t q_point_y(const void* self) {
     return QPoint_Y((QPoint*)self);
 }
 
@@ -49,11 +49,11 @@ void q_point_set_y(void* self, int y) {
     QPoint_SetY((QPoint*)self, y);
 }
 
-int32_t q_point_manhattan_length(void* self) {
+int32_t q_point_manhattan_length(const void* self) {
     return QPoint_ManhattanLength((QPoint*)self);
 }
 
-QPoint* q_point_transposed(void* self) {
+QPoint* q_point_transposed(const void* self) {
     return QPoint_Transposed((QPoint*)self);
 }
 
@@ -65,11 +65,11 @@ int* q_point_ry(void* self) {
     return (int*)QPoint_Ry((QPoint*)self);
 }
 
-QPoint* q_point_operator_plus_assign(void* self, void* p) {
+QPoint* q_point_operator_plus_assign(void* self, const void* p) {
     return QPoint_OperatorPlusAssign((QPoint*)self, (QPoint*)p);
 }
 
-QPoint* q_point_operator_minus_assign(void* self, void* p) {
+QPoint* q_point_operator_minus_assign(void* self, const void* p) {
     return QPoint_OperatorMinusAssign((QPoint*)self, (QPoint*)p);
 }
 
@@ -89,11 +89,11 @@ QPoint* q_point_operator_divide_assign(void* self, double divisor) {
     return QPoint_OperatorDivideAssign((QPoint*)self, divisor);
 }
 
-int32_t q_point_dot_product(void* p1, void* p2) {
+int32_t q_point_dot_product(const void* p1, const void* p2) {
     return QPoint_DotProduct((QPoint*)p1, (QPoint*)p2);
 }
 
-QPointF* q_point_to_point_f(void* self) {
+QPointF* q_point_to_point_f(const void* self) {
     return QPoint_ToPointF((QPoint*)self);
 }
 
@@ -105,7 +105,7 @@ size_t q_qpoint_q_hash(void* key, size_t seed) {
     return qpoint_QHash((QPoint*)key, seed);
 }
 
-QPointF* q_pointf_new(void* other) {
+QPointF* q_pointf_new(const void* other) {
     return QPointF_New((QPointF*)other);
 }
 
@@ -117,7 +117,7 @@ QPointF* q_pointf_new3() {
     return QPointF_New3();
 }
 
-QPointF* q_pointf_new4(void* p) {
+QPointF* q_pointf_new4(const void* p) {
     return QPointF_New4((QPoint*)p);
 }
 
@@ -125,7 +125,7 @@ QPointF* q_pointf_new5(double xpos, double ypos) {
     return QPointF_New5(xpos, ypos);
 }
 
-QPointF* q_pointf_new6(void* param1) {
+QPointF* q_pointf_new6(const void* param1) {
     return QPointF_New6((QPointF*)param1);
 }
 
@@ -137,19 +137,19 @@ void q_pointf_move_assign(void* self, void* other) {
     QPointF_MoveAssign((QPointF*)self, (QPointF*)other);
 }
 
-double q_pointf_manhattan_length(void* self) {
+double q_pointf_manhattan_length(const void* self) {
     return QPointF_ManhattanLength((QPointF*)self);
 }
 
-bool q_pointf_is_null(void* self) {
+bool q_pointf_is_null(const void* self) {
     return QPointF_IsNull((QPointF*)self);
 }
 
-double q_pointf_x(void* self) {
+double q_pointf_x(const void* self) {
     return QPointF_X((QPointF*)self);
 }
 
-double q_pointf_y(void* self) {
+double q_pointf_y(const void* self) {
     return QPointF_Y((QPointF*)self);
 }
 
@@ -161,7 +161,7 @@ void q_pointf_set_y(void* self, double y) {
     QPointF_SetY((QPointF*)self, y);
 }
 
-QPointF* q_pointf_transposed(void* self) {
+QPointF* q_pointf_transposed(const void* self) {
     return QPointF_Transposed((QPointF*)self);
 }
 
@@ -173,11 +173,11 @@ double* q_pointf_ry(void* self) {
     return (double*)QPointF_Ry((QPointF*)self);
 }
 
-QPointF* q_pointf_operator_plus_assign(void* self, void* p) {
+QPointF* q_pointf_operator_plus_assign(void* self, const void* p) {
     return QPointF_OperatorPlusAssign((QPointF*)self, (QPointF*)p);
 }
 
-QPointF* q_pointf_operator_minus_assign(void* self, void* p) {
+QPointF* q_pointf_operator_minus_assign(void* self, const void* p) {
     return QPointF_OperatorMinusAssign((QPointF*)self, (QPointF*)p);
 }
 
@@ -189,11 +189,11 @@ QPointF* q_pointf_operator_divide_assign(void* self, double c) {
     return QPointF_OperatorDivideAssign((QPointF*)self, c);
 }
 
-double q_pointf_dot_product(void* p1, void* p2) {
+double q_pointf_dot_product(const void* p1, const void* p2) {
     return QPointF_DotProduct((QPointF*)p1, (QPointF*)p2);
 }
 
-QPoint* q_pointf_to_point(void* self) {
+QPoint* q_pointf_to_point(const void* self) {
     return QPointF_ToPoint((QPointF*)self);
 }
 

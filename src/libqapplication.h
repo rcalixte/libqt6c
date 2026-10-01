@@ -29,26 +29,26 @@ QApplication* q_application_new2(int* argc, char** argv, int param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 ///
-const QMetaObject* q_application_meta_object(void* self);
+const QMetaObject* q_application_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QApplication*
-/// @param callback const QMetaObject* func()
+/// @param self const QApplication*
+/// @param callback const QMetaObject* func(const QApplication* self)
 ///
-void q_application_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_application_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 ///
-const QMetaObject* q_application_super_meta_object(void* self);
+const QMetaObject* q_application_super_meta_object(const void* self);
 
 /// @param self QApplication*
 /// @param param1 const char*
@@ -120,7 +120,7 @@ QStyle* q_application_set_style2(const char* style);
 ///
 /// @param param1 QWidget*
 ///
-QPalette* q_application_palette(void* param1);
+QPalette* q_application_palette(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#palette)
 ///
@@ -132,7 +132,7 @@ QPalette* q_application_palette2(const char* className);
 ///
 /// @param param1 QPalette*
 ///
-void q_application_set_palette(void* param1);
+void q_application_set_palette(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#font)
 ///
@@ -142,7 +142,7 @@ QFont* q_application_font();
 ///
 /// @param param1 QWidget*
 ///
-QFont* q_application_font2(void* param1);
+QFont* q_application_font2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#font)
 ///
@@ -154,7 +154,7 @@ QFont* q_application_font3(const char* className);
 ///
 /// @param param1 QFont*
 ///
-void q_application_set_font(void* param1);
+void q_application_set_font(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#fontMetrics)
 ///
@@ -198,7 +198,7 @@ void q_application_set_active_window(void* act);
 ///
 /// @param p QPoint*
 ///
-QWidget* q_application_widget_at(void* p);
+QWidget* q_application_widget_at(const void* p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#widgetAt)
 ///
@@ -211,7 +211,7 @@ QWidget* q_application_widget_at2(int x, int y);
 ///
 /// @param p QPoint*
 ///
-QWidget* q_application_top_level_at(void* p);
+QWidget* q_application_top_level_at(const void* p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#topLevelAt)
 ///
@@ -335,30 +335,11 @@ bool q_application_super_notify(void* self, void* param1, void* param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#resolveInterface)
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 /// @param name const char*
 /// @param revision int
 ///
-void* q_application_resolve_interface(void* self, const char* name, int revision);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#resolveInterface)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QApplication*
-/// @param callback void* func(QApplication* self, const char* name, int revision)
-///
-void q_application_on_resolve_interface(void* self, void* (*callback)(void*, const char*, int));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#resolveInterface)
-///
-/// Base class method implementation
-///
-/// @param self QApplication*
-/// @param name const char*
-/// @param revision int
-///
-void* q_application_super_resolve_interface(void* self, const char* name, int revision);
+void* q_application_resolve_interface(const void* self, const char* name, int revision);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#focusChanged)
 ///
@@ -379,15 +360,15 @@ void q_application_on_focus_changed(void* self, void (*callback)(void*, void*, v
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 ///
-const char* q_application_style_sheet(void* self);
+const char* q_application_style_sheet(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#autoSipEnabled)
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 ///
-bool q_application_auto_sip_enabled(void* self);
+bool q_application_auto_sip_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#setStyleSheet)
 ///
@@ -460,14 +441,14 @@ const char* q_application_tr3(const char* s, const char* c, int n);
 /// @param param1 QPalette*
 /// @param className const char*
 ///
-void q_application_set_palette2(void* param1, const char* className);
+void q_application_set_palette2(const void* param1, const char* className);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#setFont)
 ///
 /// @param param1 QFont*
 /// @param className const char*
 ///
-void q_application_set_font2(void* param1, const char* className);
+void q_application_set_font2(const void* param1, const char* className);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#alert)
 ///
@@ -546,7 +527,7 @@ libqt_list q_application_top_level_windows();
 ///
 /// @param icon QIcon*
 ///
-void q_application_set_window_icon(void* icon);
+void q_application_set_window_icon(const void* icon);
 
 /// Inherited from QGuiApplication
 ///
@@ -600,15 +581,15 @@ libqt_list q_application_screens();
 ///
 /// @param point QPoint*
 ///
-QScreen* q_application_screen_at(void* point);
+QScreen* q_application_screen_at(const void* point);
 
 /// Inherited from QGuiApplication
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#devicePixelRatio)
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 ///
-double q_application_device_pixel_ratio(void* self);
+double q_application_device_pixel_ratio(const void* self);
 
 /// Inherited from QGuiApplication
 ///
@@ -622,7 +603,7 @@ QCursor* q_application_override_cursor();
 ///
 /// @param overrideCursor QCursor*
 ///
-void q_application_set_override_cursor(void* overrideCursor);
+void q_application_set_override_cursor(const void* overrideCursor);
 
 /// Inherited from QGuiApplication
 ///
@@ -630,7 +611,7 @@ void q_application_set_override_cursor(void* overrideCursor);
 ///
 /// @param param1 QCursor*
 ///
-void q_application_change_override_cursor(void* param1);
+void q_application_change_override_cursor(const void* param1);
 
 /// Inherited from QGuiApplication
 ///
@@ -774,9 +755,9 @@ int32_t q_application_high_dpi_scale_factor_rounding_policy();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#isSessionRestored)
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 ///
-bool q_application_is_session_restored(void* self);
+bool q_application_is_session_restored(const void* self);
 
 /// Inherited from QGuiApplication
 ///
@@ -784,9 +765,9 @@ bool q_application_is_session_restored(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 ///
-const char* q_application_session_id(void* self);
+const char* q_application_session_id(const void* self);
 
 /// Inherited from QGuiApplication
 ///
@@ -794,17 +775,17 @@ const char* q_application_session_id(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 ///
-const char* q_application_session_key(void* self);
+const char* q_application_session_key(const void* self);
 
 /// Inherited from QGuiApplication
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#isSavingSession)
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 ///
-bool q_application_is_saving_session(void* self);
+bool q_application_is_saving_session(const void* self);
 
 /// Inherited from QGuiApplication
 ///
@@ -1032,7 +1013,7 @@ void q_application_on_application_display_name_changed(void* self, void (*callba
 /// @param self QApplication*
 /// @param pal QPalette*
 ///
-void q_application_palette_changed(void* self, void* pal);
+void q_application_palette_changed(void* self, const void* pal);
 
 /// Inherited from QGuiApplication
 ///
@@ -1041,7 +1022,7 @@ void q_application_palette_changed(void* self, void* pal);
 /// @param self QApplication*
 /// @param callback void func(QApplication* self, QPalette* pal)
 ///
-void q_application_on_palette_changed(void* self, void (*callback)(void*, void*));
+void q_application_on_palette_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QGuiApplication
 ///
@@ -1050,7 +1031,7 @@ void q_application_on_palette_changed(void* self, void (*callback)(void*, void*)
 /// @param self QApplication*
 /// @param font QFont*
 ///
-void q_application_font_changed(void* self, void* font);
+void q_application_font_changed(void* self, const void* font);
 
 /// Inherited from QGuiApplication
 ///
@@ -1059,7 +1040,7 @@ void q_application_font_changed(void* self, void* font);
 /// @param self QApplication*
 /// @param callback void func(QApplication* self, QFont* font)
 ///
-void q_application_on_font_changed(void* self, void (*callback)(void*, void*));
+void q_application_on_font_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QCoreApplication
 ///
@@ -1282,7 +1263,7 @@ int64_t q_application_application_pid();
 ///
 /// @return enum Qt__PermissionStatus
 ///
-int32_t q_application_check_permission(void* self, void* permission);
+int32_t q_application_check_permission(void* self, const void* permission);
 
 /// Inherited from QCoreApplication
 ///
@@ -1565,9 +1546,9 @@ void q_application_exit1(int retcode);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 ///
-const char* q_application_object_name(void* self);
+const char* q_application_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1582,33 +1563,33 @@ void q_application_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 ///
-bool q_application_is_widget_type(void* self);
+bool q_application_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 ///
-bool q_application_is_window_type(void* self);
+bool q_application_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 ///
-bool q_application_is_quick_item_type(void* self);
+bool q_application_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 ///
-bool q_application_signals_blocked(void* self);
+bool q_application_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1623,9 +1604,9 @@ bool q_application_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 ///
-QThread* q_application_thread(void* self);
+QThread* q_application_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1676,11 +1657,11 @@ void q_application_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_application_children(void* self);
+libqt_list q_application_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1718,7 +1699,7 @@ void q_application_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_application_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_application_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1729,18 +1710,18 @@ QMetaObject__Connection* q_application_connect(void* sender, const char* signal,
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_application_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_application_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_application_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_application_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1751,7 +1732,7 @@ QMetaObject__Connection* q_application_connect3(void* self, void* sender, const 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_application_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_application_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1762,24 +1743,24 @@ bool q_application_disconnect(void* sender, const char* signal, void* receiver, 
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_application_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_application_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 ///
-bool q_application_disconnect3(void* self);
+bool q_application_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 /// @param receiver QObject*
 ///
-bool q_application_disconnect4(void* self, void* receiver);
+bool q_application_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1787,23 +1768,23 @@ bool q_application_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_application_disconnect5(void* param1);
+bool q_application_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 ///
-void q_application_dump_object_tree(void* self);
+void q_application_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 ///
-void q_application_dump_object_info(void* self);
+void q_application_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1813,16 +1794,16 @@ void q_application_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_application_set_property(void* self, const char* name, void* value);
+bool q_application_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 /// @param name const char*
 ///
-QVariant* q_application_property(void* self, const char* name);
+QVariant* q_application_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1830,9 +1811,9 @@ QVariant* q_application_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 ///
-const char** q_application_dynamic_property_names(void* self);
+const char** q_application_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1846,9 +1827,9 @@ QBindingStorage* q_application_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 ///
-const QBindingStorage* q_application_binding_storage2(void* self);
+const QBindingStorage* q_application_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1871,18 +1852,18 @@ void q_application_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 ///
-QObject* q_application_parent(void* self);
+QObject* q_application_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 /// @param classname const char*
 ///
-bool q_application_inherits(void* self, const char* classname);
+bool q_application_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1922,7 +1903,7 @@ int32_t q_application_start_timer23(void* self, int64_t time, int32_t timerType)
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_application_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_application_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1934,59 +1915,59 @@ QMetaObject__Connection* q_application_connect5(void* sender, const char* signal
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_application_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_application_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_application_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_application_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 /// @param signal const char*
 ///
-bool q_application_disconnect1(void* self, const char* signal);
+bool q_application_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QApplication*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_application_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QApplication*
+/// @param self const QApplication*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_application_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_application_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_application_disconnect23(void* self, void* receiver, const char* member);
+bool q_application_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QApplication*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_application_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2149,7 +2130,7 @@ void q_application_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QApplication*
 /// @param signal QMetaMethod*
 ///
-void q_application_connect_notify(void* self, void* signal);
+void q_application_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2160,7 +2141,7 @@ void q_application_connect_notify(void* self, void* signal);
 /// @param self QApplication*
 /// @param signal QMetaMethod*
 ///
-void q_application_super_connect_notify(void* self, void* signal);
+void q_application_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2171,7 +2152,7 @@ void q_application_super_connect_notify(void* self, void* signal);
 /// @param self QApplication*
 /// @param callback void func(QApplication* self, QMetaMethod* signal)
 ///
-void q_application_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_application_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2182,7 +2163,7 @@ void q_application_on_connect_notify(void* self, void (*callback)(void*, void*))
 /// @param self QApplication*
 /// @param signal QMetaMethod*
 ///
-void q_application_disconnect_notify(void* self, void* signal);
+void q_application_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2193,7 +2174,7 @@ void q_application_disconnect_notify(void* self, void* signal);
 /// @param self QApplication*
 /// @param signal QMetaMethod*
 ///
-void q_application_super_disconnect_notify(void* self, void* signal);
+void q_application_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2204,7 +2185,7 @@ void q_application_super_disconnect_notify(void* self, void* signal);
 /// @param self QApplication*
 /// @param callback void func(QApplication* self, QMetaMethod* signal)
 ///
-void q_application_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_application_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2212,9 +2193,9 @@ void q_application_on_disconnect_notify(void* self, void (*callback)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 ///
-QObject* q_application_sender(void* self);
+QObject* q_application_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2222,9 +2203,9 @@ QObject* q_application_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 ///
-QObject* q_application_super_sender(void* self);
+QObject* q_application_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2232,10 +2213,10 @@ QObject* q_application_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QApplication*
-/// @param callback QObject* func()
+/// @param self const QApplication*
+/// @param callback QObject* func(QApplication* self)
 ///
-void q_application_on_sender(void* self, QObject* (*callback)());
+void q_application_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2243,9 +2224,9 @@ void q_application_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 ///
-int32_t q_application_sender_signal_index(void* self);
+int32_t q_application_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2253,9 +2234,9 @@ int32_t q_application_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 ///
-int32_t q_application_super_sender_signal_index(void* self);
+int32_t q_application_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2263,10 +2244,10 @@ int32_t q_application_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QApplication*
-/// @param callback int32_t func()
+/// @param self const QApplication*
+/// @param callback int32_t func(QApplication* self)
 ///
-void q_application_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_application_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2274,10 +2255,10 @@ void q_application_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 /// @param signal const char*
 ///
-int32_t q_application_receivers(void* self, const char* signal);
+int32_t q_application_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2285,10 +2266,10 @@ int32_t q_application_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 /// @param signal const char*
 ///
-int32_t q_application_super_receivers(void* self, const char* signal);
+int32_t q_application_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2296,10 +2277,10 @@ int32_t q_application_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 /// @param callback int32_t func(QApplication* self, const char* signal)
 ///
-void q_application_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_application_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2307,10 +2288,10 @@ void q_application_on_receivers(void* self, int32_t (*callback)(void*, const cha
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 /// @param signal QMetaMethod*
 ///
-bool q_application_is_signal_connected(void* self, void* signal);
+bool q_application_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2318,10 +2299,10 @@ bool q_application_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 /// @param signal QMetaMethod*
 ///
-bool q_application_super_is_signal_connected(void* self, void* signal);
+bool q_application_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2329,10 +2310,10 @@ bool q_application_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QApplication*
+/// @param self const QApplication*
 /// @param callback bool func(QApplication* self, QMetaMethod* signal)
 ///
-void q_application_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_application_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QCoreApplication
 ///

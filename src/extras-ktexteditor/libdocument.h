@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-mark.html#line-var)
 ///
-/// @param self KTextEditor__Mark*
+/// @param self const KTextEditor__Mark*
 ///
-int32_t k_texteditor__mark_line(void* self);
+int32_t k_texteditor__mark_line(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-mark.html#line-var)
 ///
@@ -25,9 +25,9 @@ void k_texteditor__mark_set_line(void* self, int line);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-mark.html#type-var)
 ///
-/// @param self KTextEditor__Mark*
+/// @param self const KTextEditor__Mark*
 ///
-uint32_t k_texteditor__mark_type(void* self);
+uint32_t k_texteditor__mark_type(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-mark.html#type-var)
 ///
@@ -46,9 +46,9 @@ void k_texteditor__mark_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-const QMetaObject* k_texteditor__document_meta_object(void* self);
+const QMetaObject* k_texteditor__document_meta_object(const void* self);
 
 /// @param self KTextEditor__Document*
 /// @param param1 const char*
@@ -72,6 +72,8 @@ const char* k_texteditor__document_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#createView)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self KTextEditor__Document*
 /// @param parent QWidget*
 /// @param mainWindow KTextEditor__MainWindow*
@@ -80,11 +82,13 @@ KTextEditor__View* k_texteditor__document_create_view(void* self, void* parent, 
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#views)
 ///
-/// @param self KTextEditor__Document*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const KTextEditor__Document*
 ///
 /// @return libqt_list of KTextEditor__View*
 ///
-libqt_list k_texteditor__document_views(void* self);
+libqt_list k_texteditor__document_views(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#viewCreated)
 ///
@@ -103,13 +107,17 @@ void k_texteditor__document_on_view_created(void* self, void (*callback)(void*, 
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#documentName)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-const char* k_texteditor__document_document_name(void* self);
+const char* k_texteditor__document_document_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#mimeType)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
@@ -119,11 +127,13 @@ const char* k_texteditor__document_mime_type(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#checksum)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-char* k_texteditor__document_checksum(void* self);
+char* k_texteditor__document_checksum(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#documentNameChanged)
 ///
@@ -183,6 +193,8 @@ void k_texteditor__document_on_read_write_changed(void* self, void (*callback)(v
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#setEncoding)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self KTextEditor__Document*
 /// @param encoding const char*
 ///
@@ -190,13 +202,17 @@ bool k_texteditor__document_set_encoding(void* self, const char* encoding);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#encoding)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-const char* k_texteditor__document_encoding(void* self);
+const char* k_texteditor__document_encoding(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#documentReload)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self KTextEditor__Document*
 ///
@@ -204,11 +220,15 @@ bool k_texteditor__document_document_reload(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#documentSave)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self KTextEditor__Document*
 ///
 bool k_texteditor__document_document_save(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#documentSaveAs)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self KTextEditor__Document*
 ///
@@ -216,9 +236,9 @@ bool k_texteditor__document_document_save_as(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#openingError)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-bool k_texteditor__document_opening_error(void* self);
+bool k_texteditor__document_opening_error(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#documentSavedOrUploaded)
 ///
@@ -293,143 +313,177 @@ void k_texteditor__document_on_about_to_save(void* self, void (*callback)(void*,
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#isEditingTransactionRunning)
 ///
-/// @param self KTextEditor__Document*
+/// @warning Use caution when calling this method as it might not be defined.
 ///
-bool k_texteditor__document_is_editing_transaction_running(void* self);
+/// @param self const KTextEditor__Document*
+///
+bool k_texteditor__document_is_editing_transaction_running(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#text)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-const char* k_texteditor__document_text(void* self);
+const char* k_texteditor__document_text(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#text)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 /// @param range KTextEditor__Range*
 /// @param block bool
 ///
-const char* k_texteditor__document_text2(void* self, void* range, bool block);
+const char* k_texteditor__document_text2(const void* self, void* range, bool block);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#characterAt)
 ///
-/// @param self KTextEditor__Document*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const KTextEditor__Document*
 /// @param position KTextEditor__Cursor*
 ///
-QChar* k_texteditor__document_character_at(void* self, void* position);
+QChar* k_texteditor__document_character_at(const void* self, void* position);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#wordAt)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 /// @param cursor KTextEditor__Cursor*
 ///
-const char* k_texteditor__document_word_at(void* self, void* cursor);
+const char* k_texteditor__document_word_at(const void* self, void* cursor);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#wordRangeAt)
 ///
-/// @param self KTextEditor__Document*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const KTextEditor__Document*
 /// @param cursor KTextEditor__Cursor*
 ///
-KTextEditor__Range* k_texteditor__document_word_range_at(void* self, void* cursor);
+KTextEditor__Range* k_texteditor__document_word_range_at(const void* self, void* cursor);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#isValidTextPosition)
 ///
-/// @param self KTextEditor__Document*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const KTextEditor__Document*
 /// @param cursor KTextEditor__Cursor*
 ///
-bool k_texteditor__document_is_valid_text_position(void* self, void* cursor);
+bool k_texteditor__document_is_valid_text_position(const void* self, void* cursor);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#textLines)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 /// @param range KTextEditor__Range*
 /// @param block bool
 ///
-const char** k_texteditor__document_text_lines(void* self, void* range, bool block);
+const char** k_texteditor__document_text_lines(const void* self, void* range, bool block);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#line)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 /// @param line int
 ///
-const char* k_texteditor__document_line(void* self, int line);
+const char* k_texteditor__document_line(const void* self, int line);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#lines)
 ///
-/// @param self KTextEditor__Document*
+/// @warning Use caution when calling this method as it might not be defined.
 ///
-int32_t k_texteditor__document_lines(void* self);
+/// @param self const KTextEditor__Document*
+///
+int32_t k_texteditor__document_lines(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#isLineModified)
 ///
-/// @param self KTextEditor__Document*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const KTextEditor__Document*
 /// @param line int
 ///
-bool k_texteditor__document_is_line_modified(void* self, int line);
+bool k_texteditor__document_is_line_modified(const void* self, int line);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#isLineSaved)
 ///
-/// @param self KTextEditor__Document*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const KTextEditor__Document*
 /// @param line int
 ///
-bool k_texteditor__document_is_line_saved(void* self, int line);
+bool k_texteditor__document_is_line_saved(const void* self, int line);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#isLineTouched)
 ///
-/// @param self KTextEditor__Document*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const KTextEditor__Document*
 /// @param line int
 ///
-bool k_texteditor__document_is_line_touched(void* self, int line);
+bool k_texteditor__document_is_line_touched(const void* self, int line);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#documentEnd)
 ///
-/// @param self KTextEditor__Document*
+/// @warning Use caution when calling this method as it might not be defined.
 ///
-KTextEditor__Cursor* k_texteditor__document_document_end(void* self);
+/// @param self const KTextEditor__Document*
+///
+KTextEditor__Cursor* k_texteditor__document_document_end(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#documentRange)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-KTextEditor__Range* k_texteditor__document_document_range(void* self);
+KTextEditor__Range* k_texteditor__document_document_range(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#totalCharacters)
 ///
-/// @param self KTextEditor__Document*
+/// @warning Use caution when calling this method as it might not be defined.
 ///
-intptr_t k_texteditor__document_total_characters(void* self);
+/// @param self const KTextEditor__Document*
+///
+intptr_t k_texteditor__document_total_characters(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#isEmpty)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-bool k_texteditor__document_is_empty(void* self);
+bool k_texteditor__document_is_empty(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#lineLength)
 ///
-/// @param self KTextEditor__Document*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const KTextEditor__Document*
 /// @param line int
 ///
-int32_t k_texteditor__document_line_length(void* self, int line);
+int32_t k_texteditor__document_line_length(const void* self, int line);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#endOfLine)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 /// @param line int
 ///
-KTextEditor__Cursor* k_texteditor__document_end_of_line(void* self, int line);
+KTextEditor__Cursor* k_texteditor__document_end_of_line(const void* self, int line);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#setText)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self KTextEditor__Document*
 /// @param text const char*
@@ -438,6 +492,8 @@ bool k_texteditor__document_set_text(void* self, const char* text);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#setText)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self KTextEditor__Document*
 /// @param text const char**
 ///
@@ -445,11 +501,15 @@ bool k_texteditor__document_set_text2(void* self, const char* text[static 1]);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#clear)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self KTextEditor__Document*
 ///
 bool k_texteditor__document_clear(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#insertText)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self KTextEditor__Document*
 /// @param position KTextEditor__Cursor*
@@ -459,6 +519,8 @@ bool k_texteditor__document_clear(void* self);
 bool k_texteditor__document_insert_text(void* self, void* position, const char* text, bool block);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#insertText)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self KTextEditor__Document*
 /// @param position KTextEditor__Cursor*
@@ -487,6 +549,8 @@ bool k_texteditor__document_replace_text2(void* self, void* range, const char* t
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#removeText)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self KTextEditor__Document*
 /// @param range KTextEditor__Range*
 /// @param block bool
@@ -494,6 +558,8 @@ bool k_texteditor__document_replace_text2(void* self, void* range, const char* t
 bool k_texteditor__document_remove_text(void* self, void* range, bool block);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#insertLine)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self KTextEditor__Document*
 /// @param line int
@@ -503,6 +569,8 @@ bool k_texteditor__document_insert_line(void* self, int line, const char* text);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#insertLines)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self KTextEditor__Document*
 /// @param line int
 /// @param text const char**
@@ -511,6 +579,8 @@ bool k_texteditor__document_insert_lines(void* self, int line, const char* text[
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#removeLine)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self KTextEditor__Document*
 /// @param line int
 ///
@@ -518,27 +588,31 @@ bool k_texteditor__document_remove_line(void* self, int line);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#searchText)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 /// @param range KTextEditor__Range*
 /// @param pattern const char*
 ///
 /// @return libqt_list of KTextEditor__Range*
 ///
-libqt_list k_texteditor__document_search_text(void* self, void* range, const char* pattern);
+libqt_list k_texteditor__document_search_text(const void* self, void* range, const char* pattern);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#cursorToOffset)
 ///
-/// @param self KTextEditor__Document*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const KTextEditor__Document*
 /// @param c KTextEditor__Cursor*
 ///
-intptr_t k_texteditor__document_cursor_to_offset(void* self, void* c);
+intptr_t k_texteditor__document_cursor_to_offset(const void* self, void* c);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#offsetToCursor)
 ///
-/// @param self KTextEditor__Document*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const KTextEditor__Document*
 /// @param offset intptr_t
 ///
-KTextEditor__Cursor* k_texteditor__document_offset_to_cursor(void* self, intptr_t offset);
+KTextEditor__Cursor* k_texteditor__document_offset_to_cursor(const void* self, intptr_t offset);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#editingStarted)
 ///
@@ -646,38 +720,48 @@ void k_texteditor__document_on_text_changed(void* self, void (*callback)(void*, 
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#defaultStyleAt)
 ///
-/// @param self KTextEditor__Document*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const KTextEditor__Document*
 /// @param position KTextEditor__Cursor*
 ///
 /// @return enum KSyntaxHighlighting__Theme__TextStyle
 ///
-int32_t k_texteditor__document_default_style_at(void* self, void* position);
+int32_t k_texteditor__document_default_style_at(const void* self, void* position);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#mode)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-const char* k_texteditor__document_mode(void* self);
+const char* k_texteditor__document_mode(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#highlightingMode)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-const char* k_texteditor__document_highlighting_mode(void* self);
+const char* k_texteditor__document_highlighting_mode(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#embeddedHighlightingModes)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-const char** k_texteditor__document_embedded_highlighting_modes(void* self);
+const char** k_texteditor__document_embedded_highlighting_modes(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#highlightingModeAt)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
@@ -688,21 +772,27 @@ const char* k_texteditor__document_highlighting_mode_at(void* self, void* positi
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#modes)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-const char** k_texteditor__document_modes(void* self);
+const char** k_texteditor__document_modes(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#highlightingModes)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-const char** k_texteditor__document_highlighting_modes(void* self);
+const char** k_texteditor__document_highlighting_modes(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#setMode)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self KTextEditor__Document*
 /// @param name const char*
@@ -711,6 +801,8 @@ bool k_texteditor__document_set_mode(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#setHighlightingMode)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self KTextEditor__Document*
 /// @param name const char*
 ///
@@ -718,21 +810,25 @@ bool k_texteditor__document_set_highlighting_mode(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#highlightingModeSection)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 /// @param index int
 ///
-const char* k_texteditor__document_highlighting_mode_section(void* self, int index);
+const char* k_texteditor__document_highlighting_mode_section(const void* self, int index);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#modeSection)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 /// @param index int
 ///
-const char* k_texteditor__document_mode_section(void* self, int index);
+const char* k_texteditor__document_mode_section(const void* self, int index);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#modeChanged)
 ///
@@ -764,17 +860,23 @@ void k_texteditor__document_on_highlighting_mode_changed(void* self, void (*call
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#print)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self KTextEditor__Document*
 ///
 bool k_texteditor__document_print(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#printPreview)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self KTextEditor__Document*
 ///
 void k_texteditor__document_print_preview(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#postMessage)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self KTextEditor__Document*
 /// @param message KTextEditor__Message*
@@ -783,13 +885,17 @@ bool k_texteditor__document_post_message(void* self, void* message);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#readSessionConfig)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self KTextEditor__Document*
 /// @param config KConfigGroup*
 /// @param flags libqt_list /* set of const char* */ flags
 ///
-void k_texteditor__document_read_session_config(void* self, void* config, libqt_list flags);
+void k_texteditor__document_read_session_config(void* self, const void* config, libqt_list flags);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#writeSessionConfig)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self KTextEditor__Document*
 /// @param config KConfigGroup*
@@ -799,17 +905,23 @@ void k_texteditor__document_write_session_config(void* self, void* config, libqt
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#isDataRecoveryAvailable)
 ///
-/// @param self KTextEditor__Document*
+/// @warning Use caution when calling this method as it might not be defined.
 ///
-bool k_texteditor__document_is_data_recovery_available(void* self);
+/// @param self const KTextEditor__Document*
+///
+bool k_texteditor__document_is_data_recovery_available(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#recoverData)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self KTextEditor__Document*
 ///
 void k_texteditor__document_recover_data(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#discardDataRecovery)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self KTextEditor__Document*
 ///
@@ -831,6 +943,8 @@ void k_texteditor__document_on_config_changed(void* self, void (*callback)(void*
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#newMovingCursor)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self KTextEditor__Document*
 /// @param position KTextEditor__Cursor*
 /// @param insertBehavior enum KTextEditor__MovingCursor__InsertBehavior
@@ -838,6 +952,8 @@ void k_texteditor__document_on_config_changed(void* self, void (*callback)(void*
 KTextEditor__MovingCursor* k_texteditor__document_new_moving_cursor(void* self, void* position, int32_t insertBehavior);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#newMovingRange)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self KTextEditor__Document*
 /// @param range KTextEditor__Range*
@@ -848,17 +964,23 @@ KTextEditor__MovingRange* k_texteditor__document_new_moving_range(void* self, vo
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#revision)
 ///
-/// @param self KTextEditor__Document*
+/// @warning Use caution when calling this method as it might not be defined.
 ///
-int64_t k_texteditor__document_revision(void* self);
+/// @param self const KTextEditor__Document*
+///
+int64_t k_texteditor__document_revision(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#lastSavedRevision)
 ///
-/// @param self KTextEditor__Document*
+/// @warning Use caution when calling this method as it might not be defined.
 ///
-int64_t k_texteditor__document_last_saved_revision(void* self);
+/// @param self const KTextEditor__Document*
+///
+int64_t k_texteditor__document_last_saved_revision(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#lockRevision)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self KTextEditor__Document*
 /// @param revision int64_t
@@ -867,12 +989,16 @@ void k_texteditor__document_lock_revision(void* self, int64_t revision);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#unlockRevision)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self KTextEditor__Document*
 /// @param revision int64_t
 ///
 void k_texteditor__document_unlock_revision(void* self, int64_t revision);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#transformCursor)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self KTextEditor__Document*
 /// @param cursor KTextEditor__Cursor*
@@ -884,6 +1010,8 @@ void k_texteditor__document_transform_cursor(void* self, void* cursor, int32_t i
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#transformCursor)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self KTextEditor__Document*
 /// @param line int*
 /// @param column int*
@@ -894,6 +1022,8 @@ void k_texteditor__document_transform_cursor(void* self, void* cursor, int32_t i
 void k_texteditor__document_transform_cursor2(void* self, int* line, int* column, int32_t insertBehavior, int64_t fromRevision, int64_t toRevision);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#transformRange)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self KTextEditor__Document*
 /// @param range KTextEditor__Range*
@@ -934,13 +1064,17 @@ void k_texteditor__document_on_about_to_invalidate_moving_interface_content(void
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#configKeys)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-const char** k_texteditor__document_config_keys(void* self);
+const char** k_texteditor__document_config_keys(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#configValue)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self KTextEditor__Document*
 /// @param key const char*
@@ -949,13 +1083,17 @@ QVariant* k_texteditor__document_config_value(void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#setConfigValue)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self KTextEditor__Document*
 /// @param key const char*
 /// @param value QVariant*
 ///
-void k_texteditor__document_set_config_value(void* self, const char* key, void* value);
+void k_texteditor__document_set_config_value(void* self, const char* key, const void* value);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#setModifiedOnDisk)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self KTextEditor__Document*
 /// @param reason enum KTextEditor__Document__ModifiedOnDiskReason
@@ -963,6 +1101,8 @@ void k_texteditor__document_set_config_value(void* self, const char* key, void* 
 void k_texteditor__document_set_modified_on_disk(void* self, int32_t reason);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#setModifiedOnDiskWarning)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self KTextEditor__Document*
 /// @param on bool
@@ -987,12 +1127,16 @@ void k_texteditor__document_on_modified_on_disk(void* self, void (*callback)(voi
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#mark)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self KTextEditor__Document*
 /// @param line int
 ///
 uint32_t k_texteditor__document_mark(void* self, int line);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#setMark)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self KTextEditor__Document*
 /// @param line int
@@ -1002,12 +1146,16 @@ void k_texteditor__document_set_mark(void* self, int line, uint32_t markType);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#clearMark)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self KTextEditor__Document*
 /// @param line int
 ///
 void k_texteditor__document_clear_mark(void* self, int line);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#addMark)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self KTextEditor__Document*
 /// @param line int
@@ -1017,6 +1165,8 @@ void k_texteditor__document_add_mark(void* self, int line, uint32_t markType);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#removeMark)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self KTextEditor__Document*
 /// @param line int
 /// @param markType uint32_t
@@ -1024,6 +1174,8 @@ void k_texteditor__document_add_mark(void* self, int line, uint32_t markType);
 void k_texteditor__document_remove_mark(void* self, int line, uint32_t markType);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#marks)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
@@ -1044,6 +1196,8 @@ libqt_map k_texteditor__document_marks(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#clearMarks)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self KTextEditor__Document*
 ///
 void k_texteditor__document_clear_marks(void* self);
@@ -1054,6 +1208,8 @@ int32_t k_texteditor__document_reserved_markers_count();
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#setMarkDescription)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self KTextEditor__Document*
 /// @param mark enum KTextEditor__Document__MarkTypes
 /// @param text const char*
@@ -1062,14 +1218,18 @@ void k_texteditor__document_set_mark_description(void* self, int32_t mark, const
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#markDescription)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 /// @param mark enum KTextEditor__Document__MarkTypes
 ///
-const char* k_texteditor__document_mark_description(void* self, int32_t mark);
+const char* k_texteditor__document_mark_description(const void* self, int32_t mark);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#setEditableMarks)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self KTextEditor__Document*
 /// @param markMask uint32_t
@@ -1078,24 +1238,30 @@ void k_texteditor__document_set_editable_marks(void* self, uint32_t markMask);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#editableMarks)
 ///
-/// @param self KTextEditor__Document*
+/// @warning Use caution when calling this method as it might not be defined.
 ///
-uint32_t k_texteditor__document_editable_marks(void* self);
+/// @param self const KTextEditor__Document*
+///
+uint32_t k_texteditor__document_editable_marks(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#setMarkIcon)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self KTextEditor__Document*
 /// @param markType enum KTextEditor__Document__MarkTypes
 /// @param icon QIcon*
 ///
-void k_texteditor__document_set_mark_icon(void* self, int32_t markType, void* icon);
+void k_texteditor__document_set_mark_icon(void* self, int32_t markType, const void* icon);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#markIcon)
 ///
-/// @param self KTextEditor__Document*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const KTextEditor__Document*
 /// @param markType enum KTextEditor__Document__MarkTypes
 ///
-QIcon* k_texteditor__document_mark_icon(void* self, int32_t markType);
+QIcon* k_texteditor__document_mark_icon(const void* self, int32_t markType);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#marksChanged)
 ///
@@ -1179,6 +1345,8 @@ void k_texteditor__document_on_mark_clicked(void* self, void (*callback)(void*, 
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#setAnnotationModel)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self KTextEditor__Document*
 /// @param model KTextEditor__AnnotationModel*
 ///
@@ -1186,9 +1354,11 @@ void k_texteditor__document_set_annotation_model(void* self, void* model);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#annotationModel)
 ///
-/// @param self KTextEditor__Document*
+/// @warning Use caution when calling this method as it might not be defined.
 ///
-KTextEditor__AnnotationModel* k_texteditor__document_annotation_model(void* self);
+/// @param self const KTextEditor__Document*
+///
+KTextEditor__AnnotationModel* k_texteditor__document_annotation_model(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1211,22 +1381,22 @@ const char* k_texteditor__document_tr3(const char* s, const char* c, int n);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#searchText)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 /// @param range KTextEditor__Range*
 /// @param pattern const char*
 /// @param options flag of enum KTextEditor__SearchOption
 ///
 /// @return libqt_list of KTextEditor__Range*
 ///
-libqt_list k_texteditor__document_search_text3(void* self, void* range, const char* pattern, const int32_t options);
+libqt_list k_texteditor__document_search_text3(const void* self, void* range, const char* pattern, const int32_t options);
 
 /// Inherited from KParts::ReadWritePart
 ///
 /// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#isReadWrite)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-bool k_texteditor__document_is_read_write(void* self);
+bool k_texteditor__document_is_read_write(const void* self);
 
 /// Inherited from KParts::ReadWritePart
 ///
@@ -1241,9 +1411,9 @@ void k_texteditor__document_set_read_write(void* self, bool readwrite);
 ///
 /// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#isModified)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-bool k_texteditor__document_is_modified(void* self);
+bool k_texteditor__document_is_modified(const void* self);
 
 /// Inherited from KParts::ReadWritePart
 ///
@@ -1277,7 +1447,7 @@ bool k_texteditor__document_close_url2(void* self, bool promptToSave);
 /// @param self KTextEditor__Document*
 /// @param url QUrl*
 ///
-bool k_texteditor__document_save_as(void* self, void* url);
+bool k_texteditor__document_save_as(void* self, const void* url);
 
 /// Inherited from KParts::ReadWritePart
 ///
@@ -1344,9 +1514,9 @@ void k_texteditor__document_set_progress_info_enabled(void* self, bool show);
 ///
 /// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#isProgressInfoEnabled)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-bool k_texteditor__document_is_progress_info_enabled(void* self);
+bool k_texteditor__document_is_progress_info_enabled(const void* self);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
@@ -1355,23 +1525,23 @@ bool k_texteditor__document_is_progress_info_enabled(void* self);
 /// @param self KTextEditor__Document*
 /// @param url QUrl*
 ///
-bool k_texteditor__document_open_url(void* self, void* url);
+bool k_texteditor__document_open_url(void* self, const void* url);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
 /// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#url)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-QUrl* k_texteditor__document_url(void* self);
+QUrl* k_texteditor__document_url(const void* self);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
 /// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#navigationExtension)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-KParts__NavigationExtension* k_texteditor__document_navigation_extension(void* self);
+KParts__NavigationExtension* k_texteditor__document_navigation_extension(const void* self);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
@@ -1380,15 +1550,15 @@ KParts__NavigationExtension* k_texteditor__document_navigation_extension(void* s
 /// @param self KTextEditor__Document*
 /// @param arguments KParts__OpenUrlArguments*
 ///
-void k_texteditor__document_set_arguments(void* self, void* arguments);
+void k_texteditor__document_set_arguments(void* self, const void* arguments);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
 /// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#arguments)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-KParts__OpenUrlArguments* k_texteditor__document_arguments(void* self);
+KParts__OpenUrlArguments* k_texteditor__document_arguments(const void* self);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
@@ -1398,7 +1568,7 @@ KParts__OpenUrlArguments* k_texteditor__document_arguments(void* self);
 /// @param mimeType const char*
 /// @param url QUrl*
 ///
-bool k_texteditor__document_open_stream(void* self, const char* mimeType, void* url);
+bool k_texteditor__document_open_stream(void* self, const char* mimeType, const void* url);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
@@ -1494,7 +1664,7 @@ void k_texteditor__document_on_canceled(void* self, void (*callback)(void*, cons
 /// @param self KTextEditor__Document*
 /// @param url QUrl*
 ///
-void k_texteditor__document_url_changed(void* self, void* url);
+void k_texteditor__document_url_changed(void* self, const void* url);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
@@ -1503,7 +1673,7 @@ void k_texteditor__document_url_changed(void* self, void* url);
 /// @param self KTextEditor__Document*
 /// @param callback void func(KTextEditor__Document* self, QUrl* url)
 ///
-void k_texteditor__document_on_url_changed(void* self, void (*callback)(void*, void*));
+void k_texteditor__document_on_url_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from KParts::Part
 ///
@@ -1542,9 +1712,9 @@ void k_texteditor__document_set_manager(void* self, void* manager);
 ///
 /// [Upstream resources](https://api.kde.org/kparts-part.html#manager)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-KParts__PartManager* k_texteditor__document_manager(void* self);
+KParts__PartManager* k_texteditor__document_manager(const void* self);
 
 /// Inherited from KParts::Part
 ///
@@ -1572,15 +1742,15 @@ void k_texteditor__document_set_auto_delete_part(void* self, bool autoDeletePart
 /// @param widget QWidget*
 /// @param globalPos QPoint*
 ///
-KParts__Part* k_texteditor__document_hit_test(void* self, void* widget, void* globalPos);
+KParts__Part* k_texteditor__document_hit_test(void* self, void* widget, const void* globalPos);
 
 /// Inherited from KParts::Part
 ///
 /// [Upstream resources](https://api.kde.org/kparts-part.html#metaData)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-KPluginMetaData* k_texteditor__document_meta_data(void* self);
+KPluginMetaData* k_texteditor__document_meta_data(const void* self);
 
 /// Inherited from KParts::Part
 ///
@@ -1643,9 +1813,9 @@ bool k_texteditor__document_event_filter(void* self, void* watched, void* event)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-const char* k_texteditor__document_object_name(void* self);
+const char* k_texteditor__document_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1660,33 +1830,33 @@ void k_texteditor__document_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-bool k_texteditor__document_is_widget_type(void* self);
+bool k_texteditor__document_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-bool k_texteditor__document_is_window_type(void* self);
+bool k_texteditor__document_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-bool k_texteditor__document_is_quick_item_type(void* self);
+bool k_texteditor__document_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-bool k_texteditor__document_signals_blocked(void* self);
+bool k_texteditor__document_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1701,9 +1871,9 @@ bool k_texteditor__document_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-QThread* k_texteditor__document_thread(void* self);
+QThread* k_texteditor__document_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1754,11 +1924,11 @@ void k_texteditor__document_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_texteditor__document_children(void* self);
+libqt_list k_texteditor__document_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1796,7 +1966,7 @@ void k_texteditor__document_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_texteditor__document_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_texteditor__document_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1807,18 +1977,18 @@ QMetaObject__Connection* k_texteditor__document_connect(void* sender, const char
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_texteditor__document_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_texteditor__document_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_texteditor__document_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_texteditor__document_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1829,7 +1999,7 @@ QMetaObject__Connection* k_texteditor__document_connect3(void* self, void* sende
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_texteditor__document_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_texteditor__document_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1840,24 +2010,24 @@ bool k_texteditor__document_disconnect(void* sender, const char* signal, void* r
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_texteditor__document_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_texteditor__document_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-bool k_texteditor__document_disconnect3(void* self);
+bool k_texteditor__document_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 /// @param receiver QObject*
 ///
-bool k_texteditor__document_disconnect4(void* self, void* receiver);
+bool k_texteditor__document_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1865,23 +2035,23 @@ bool k_texteditor__document_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_texteditor__document_disconnect5(void* param1);
+bool k_texteditor__document_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-void k_texteditor__document_dump_object_tree(void* self);
+void k_texteditor__document_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-void k_texteditor__document_dump_object_info(void* self);
+void k_texteditor__document_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1891,16 +2061,16 @@ void k_texteditor__document_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_texteditor__document_set_property(void* self, const char* name, void* value);
+bool k_texteditor__document_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 /// @param name const char*
 ///
-QVariant* k_texteditor__document_property(void* self, const char* name);
+QVariant* k_texteditor__document_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1908,9 +2078,9 @@ QVariant* k_texteditor__document_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-const char** k_texteditor__document_dynamic_property_names(void* self);
+const char** k_texteditor__document_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1924,9 +2094,9 @@ QBindingStorage* k_texteditor__document_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-const QBindingStorage* k_texteditor__document_binding_storage2(void* self);
+const QBindingStorage* k_texteditor__document_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1949,18 +2119,18 @@ void k_texteditor__document_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-QObject* k_texteditor__document_parent(void* self);
+QObject* k_texteditor__document_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 /// @param classname const char*
 ///
-bool k_texteditor__document_inherits(void* self, const char* classname);
+bool k_texteditor__document_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -2000,7 +2170,7 @@ int32_t k_texteditor__document_start_timer23(void* self, int64_t time, int32_t t
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_texteditor__document_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_texteditor__document_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -2012,59 +2182,59 @@ QMetaObject__Connection* k_texteditor__document_connect5(void* sender, const cha
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_texteditor__document_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_texteditor__document_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_texteditor__document_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_texteditor__document_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 /// @param signal const char*
 ///
-bool k_texteditor__document_disconnect1(void* self, const char* signal);
+bool k_texteditor__document_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KTextEditor__Document*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_texteditor__document_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_texteditor__document_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_texteditor__document_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_texteditor__document_disconnect23(void* self, void* receiver, const char* member);
+bool k_texteditor__document_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KTextEditor__Document*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_texteditor__document_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2097,35 +2267,35 @@ void k_texteditor__document_set_part_object(void* self, void* object);
 ///
 /// [Upstream resources](https://api.kde.org/kparts-partbase.html#partObject)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-QObject* k_texteditor__document_part_object(void* self);
+QObject* k_texteditor__document_part_object(const void* self);
 
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#action)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 /// @param name const char*
 ///
-QAction* k_texteditor__document_action(void* self, const char* name);
+QAction* k_texteditor__document_action(const void* self, const char* name);
 
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#action)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 /// @param element QDomElement*
 ///
-QAction* k_texteditor__document_action2(void* self, void* element);
+QAction* k_texteditor__document_action2(const void* self, const void* element);
 
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#actionCollection)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-KActionCollection* k_texteditor__document_action_collection(void* self);
+KActionCollection* k_texteditor__document_action_collection(const void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -2133,17 +2303,17 @@ KActionCollection* k_texteditor__document_action_collection(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-const char* k_texteditor__document_component_name(void* self);
+const char* k_texteditor__document_component_name(const void* self);
 
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#domDocument)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-QDomDocument* k_texteditor__document_dom_document(void* self);
+QDomDocument* k_texteditor__document_dom_document(const void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -2151,9 +2321,9 @@ QDomDocument* k_texteditor__document_dom_document(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-const char* k_texteditor__document_xml_file(void* self);
+const char* k_texteditor__document_xml_file(const void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -2161,9 +2331,9 @@ const char* k_texteditor__document_xml_file(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-const char* k_texteditor__document_local_x_m_l_file(void* self);
+const char* k_texteditor__document_local_x_m_l_file(const void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -2172,15 +2342,15 @@ const char* k_texteditor__document_local_x_m_l_file(void* self);
 /// @param self KTextEditor__Document*
 /// @param doc QDomDocument*
 ///
-void k_texteditor__document_set_x_m_l_g_u_i_build_document(void* self, void* doc);
+void k_texteditor__document_set_x_m_l_g_u_i_build_document(void* self, const void* doc);
 
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#xmlguiBuildDocument)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-QDomDocument* k_texteditor__document_xmlgui_build_document(void* self);
+QDomDocument* k_texteditor__document_xmlgui_build_document(const void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -2195,17 +2365,17 @@ void k_texteditor__document_set_factory(void* self, void* factory);
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#factory)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-KXMLGUIFactory* k_texteditor__document_factory(void* self);
+KXMLGUIFactory* k_texteditor__document_factory(const void* self);
 
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#parentClient)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-KXMLGUIClient* k_texteditor__document_parent_client(void* self);
+KXMLGUIClient* k_texteditor__document_parent_client(const void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -2248,9 +2418,9 @@ void k_texteditor__document_set_client_builder(void* self, void* builder);
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#clientBuilder)
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-KXMLGUIBuilder* k_texteditor__document_client_builder(void* self);
+KXMLGUIBuilder* k_texteditor__document_client_builder(const void* self);
 
 /// Inherited from KXMLGUIClient
 ///

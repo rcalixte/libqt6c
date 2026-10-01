@@ -7,19 +7,19 @@
 #include "libtransaction_1.hpp"
 #include "libtransaction_1.h"
 
-PackageKit__Transaction* q_packagekit__transaction_new(void* tid) {
+PackageKit__Transaction* q_packagekit__transaction_new(const void* tid) {
     return PackageKit__Transaction_New((QDBusObjectPath*)tid);
 }
 
-const QMetaObject* q_packagekit__transaction_meta_object(void* self) {
+const QMetaObject* q_packagekit__transaction_meta_object(const void* self) {
     return PackageKit__Transaction_MetaObject((PackageKit__Transaction*)self);
 }
 
-void q_packagekit__transaction_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_packagekit__transaction_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     PackageKit__Transaction_OnMetaObject((PackageKit__Transaction*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_packagekit__transaction_super_meta_object(void* self) {
+const QMetaObject* q_packagekit__transaction_super_meta_object(const void* self) {
     return PackageKit__Transaction_SuperMetaObject((PackageKit__Transaction*)self);
 }
 
@@ -54,88 +54,88 @@ const char* q_packagekit__transaction_tr(const char* s) {
     return _ret;
 }
 
-QDBusObjectPath* q_packagekit__transaction_tid(void* self) {
+QDBusObjectPath* q_packagekit__transaction_tid(const void* self) {
     return PackageKit__Transaction_Tid((PackageKit__Transaction*)self);
 }
 
-bool q_packagekit__transaction_allow_cancel(void* self) {
+bool q_packagekit__transaction_allow_cancel(const void* self) {
     return PackageKit__Transaction_AllowCancel((PackageKit__Transaction*)self);
 }
 
-bool q_packagekit__transaction_is_caller_active(void* self) {
+bool q_packagekit__transaction_is_caller_active(const void* self) {
     return PackageKit__Transaction_IsCallerActive((PackageKit__Transaction*)self);
 }
 
-const char* q_packagekit__transaction_last_package(void* self) {
+const char* q_packagekit__transaction_last_package(const void* self) {
     libqt_string _str = PackageKit__Transaction_LastPackage((PackageKit__Transaction*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-uint32_t q_packagekit__transaction_percentage(void* self) {
+uint32_t q_packagekit__transaction_percentage(const void* self) {
     return PackageKit__Transaction_Percentage((PackageKit__Transaction*)self);
 }
 
-uint32_t q_packagekit__transaction_elapsed_time(void* self) {
+uint32_t q_packagekit__transaction_elapsed_time(const void* self) {
     return PackageKit__Transaction_ElapsedTime((PackageKit__Transaction*)self);
 }
 
-uint32_t q_packagekit__transaction_remaining_time(void* self) {
+uint32_t q_packagekit__transaction_remaining_time(const void* self) {
     return PackageKit__Transaction_RemainingTime((PackageKit__Transaction*)self);
 }
 
-uint32_t q_packagekit__transaction_speed(void* self) {
+uint32_t q_packagekit__transaction_speed(const void* self) {
     return PackageKit__Transaction_Speed((PackageKit__Transaction*)self);
 }
 
-uintptr_t q_packagekit__transaction_download_size_remaining(void* self) {
+uintptr_t q_packagekit__transaction_download_size_remaining(const void* self) {
     return PackageKit__Transaction_DownloadSizeRemaining((PackageKit__Transaction*)self);
 }
 
-int32_t q_packagekit__transaction_role(void* self) {
+int32_t q_packagekit__transaction_role(const void* self) {
     return PackageKit__Transaction_Role((PackageKit__Transaction*)self);
 }
 
-int32_t q_packagekit__transaction_status(void* self) {
+int32_t q_packagekit__transaction_status(const void* self) {
     return PackageKit__Transaction_Status((PackageKit__Transaction*)self);
 }
 
-int32_t q_packagekit__transaction_transaction_flags(void* self) {
+int32_t q_packagekit__transaction_transaction_flags(const void* self) {
     return PackageKit__Transaction_TransactionFlags((PackageKit__Transaction*)self);
 }
 
-QDateTime* q_packagekit__transaction_timespec(void* self) {
+QDateTime* q_packagekit__transaction_timespec(const void* self) {
     return PackageKit__Transaction_Timespec((PackageKit__Transaction*)self);
 }
 
-bool q_packagekit__transaction_succeeded(void* self) {
+bool q_packagekit__transaction_succeeded(const void* self) {
     return PackageKit__Transaction_Succeeded((PackageKit__Transaction*)self);
 }
 
-uint32_t q_packagekit__transaction_duration(void* self) {
+uint32_t q_packagekit__transaction_duration(const void* self) {
     return PackageKit__Transaction_Duration((PackageKit__Transaction*)self);
 }
 
-const char* q_packagekit__transaction_data(void* self) {
+const char* q_packagekit__transaction_data(const void* self) {
     libqt_string _str = PackageKit__Transaction_Data((PackageKit__Transaction*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-uint32_t q_packagekit__transaction_uid(void* self) {
+uint32_t q_packagekit__transaction_uid(const void* self) {
     return PackageKit__Transaction_Uid((PackageKit__Transaction*)self);
 }
 
-const char* q_packagekit__transaction_sender_name(void* self) {
+const char* q_packagekit__transaction_sender_name(const void* self) {
     libqt_string _str = PackageKit__Transaction_SenderName((PackageKit__Transaction*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_packagekit__transaction_cmdline(void* self) {
+const char* q_packagekit__transaction_cmdline(const void* self) {
     libqt_string _str = PackageKit__Transaction_Cmdline((PackageKit__Transaction*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -356,15 +356,15 @@ void q_packagekit__transaction_on_package(void* self, void (*callback)(void*, in
     PackageKit__Transaction_Connect_Package((PackageKit__Transaction*)self, (intptr_t)callback);
 }
 
-void q_packagekit__transaction_details(void* self, void* values) {
+void q_packagekit__transaction_details(void* self, const void* values) {
     PackageKit__Transaction_Details((PackageKit__Transaction*)self, (PackageKit__Details*)values);
 }
 
-void q_packagekit__transaction_on_details(void* self, void (*callback)(void*, void*)) {
+void q_packagekit__transaction_on_details(void* self, void (*callback)(void*, const void*)) {
     PackageKit__Transaction_Connect_Details((PackageKit__Transaction*)self, (intptr_t)callback);
 }
 
-void q_packagekit__transaction_update_detail(void* self, const char* packageID, const char* updates[static 1], const char* obsoletes[static 1], const char* vendorUrls[static 1], const char* bugzillaUrls[static 1], const char* cveUrls[static 1], int32_t restart, const char* updateText, const char* changelog, int32_t state, void* issued, void* updated) {
+void q_packagekit__transaction_update_detail(void* self, const char* packageID, const char* updates[static 1], const char* obsoletes[static 1], const char* vendorUrls[static 1], const char* bugzillaUrls[static 1], const char* cveUrls[static 1], int32_t restart, const char* updateText, const char* changelog, int32_t state, const void* issued, const void* updated) {
     size_t updates_len = libqt_strv_length(updates);
     libqt_string* updates_qstr = (libqt_string*)malloc(updates_len * sizeof(libqt_string));
     if (updates_qstr == NULL) {
@@ -422,7 +422,7 @@ void q_packagekit__transaction_update_detail(void* self, const char* packageID, 
     free(cveUrls_qstr);
 }
 
-void q_packagekit__transaction_on_update_detail(void* self, void (*callback)(void*, const char*, const char**, const char**, const char**, const char**, const char**, int32_t, const char*, const char*, int32_t, void*, void*)) {
+void q_packagekit__transaction_on_update_detail(void* self, void (*callback)(void*, const char*, const char**, const char**, const char**, const char**, const char**, int32_t, const char*, const char*, int32_t, const void*, const void*)) {
     PackageKit__Transaction_Connect_UpdateDetail((PackageKit__Transaction*)self, (intptr_t)callback);
 }
 
@@ -462,35 +462,27 @@ int32_t q_packagekit__transaction_parse_error(void* self, const char* errorName)
     return PackageKit__Transaction_ParseError((PackageKit__Transaction*)self, qstring(errorName));
 }
 
-void q_packagekit__transaction_on_parse_error(void* self, int32_t (*callback)(void*, const char*)) {
-    PackageKit__Transaction_OnParseError((PackageKit__Transaction*)self, (intptr_t)callback);
-}
-
-int32_t q_packagekit__transaction_super_parse_error(void* self, const char* errorName) {
-    return PackageKit__Transaction_SuperParseError((PackageKit__Transaction*)self, qstring(errorName));
-}
-
-void q_packagekit__transaction_connect_notify(void* self, void* signal) {
+void q_packagekit__transaction_connect_notify(void* self, const void* signal) {
     PackageKit__Transaction_ConnectNotify((PackageKit__Transaction*)self, (QMetaMethod*)signal);
 }
 
-void q_packagekit__transaction_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_packagekit__transaction_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     PackageKit__Transaction_OnConnectNotify((PackageKit__Transaction*)self, (intptr_t)callback);
 }
 
-void q_packagekit__transaction_super_connect_notify(void* self, void* signal) {
+void q_packagekit__transaction_super_connect_notify(void* self, const void* signal) {
     PackageKit__Transaction_SuperConnectNotify((PackageKit__Transaction*)self, (QMetaMethod*)signal);
 }
 
-void q_packagekit__transaction_disconnect_notify(void* self, void* signal) {
+void q_packagekit__transaction_disconnect_notify(void* self, const void* signal) {
     PackageKit__Transaction_DisconnectNotify((PackageKit__Transaction*)self, (QMetaMethod*)signal);
 }
 
-void q_packagekit__transaction_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_packagekit__transaction_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     PackageKit__Transaction_OnDisconnectNotify((PackageKit__Transaction*)self, (intptr_t)callback);
 }
 
-void q_packagekit__transaction_super_disconnect_notify(void* self, void* signal) {
+void q_packagekit__transaction_super_disconnect_notify(void* self, const void* signal) {
     PackageKit__Transaction_SuperDisconnectNotify((PackageKit__Transaction*)self, (QMetaMethod*)signal);
 }
 
@@ -508,7 +500,7 @@ const char* q_packagekit__transaction_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-const char* q_packagekit__transaction_object_name(void* self) {
+const char* q_packagekit__transaction_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -519,19 +511,19 @@ void q_packagekit__transaction_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_packagekit__transaction_is_widget_type(void* self) {
+bool q_packagekit__transaction_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_packagekit__transaction_is_window_type(void* self) {
+bool q_packagekit__transaction_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_packagekit__transaction_is_quick_item_type(void* self) {
+bool q_packagekit__transaction_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_packagekit__transaction_signals_blocked(void* self) {
+bool q_packagekit__transaction_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -539,7 +531,7 @@ bool q_packagekit__transaction_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_packagekit__transaction_thread(void* self) {
+QThread* q_packagekit__transaction_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -563,7 +555,7 @@ void q_packagekit__transaction_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_packagekit__transaction_children(void* self) {
+libqt_list /* of QObject* */ q_packagekit__transaction_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -580,55 +572,55 @@ void q_packagekit__transaction_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_packagekit__transaction_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_packagekit__transaction_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_packagekit__transaction_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_packagekit__transaction_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_packagekit__transaction_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_packagekit__transaction_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_packagekit__transaction_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_packagekit__transaction_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_packagekit__transaction_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_packagekit__transaction_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_packagekit__transaction_disconnect3(void* self) {
+bool q_packagekit__transaction_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_packagekit__transaction_disconnect4(void* self, void* receiver) {
+bool q_packagekit__transaction_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_packagekit__transaction_disconnect5(void* param1) {
+bool q_packagekit__transaction_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_packagekit__transaction_dump_object_tree(void* self) {
+void q_packagekit__transaction_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_packagekit__transaction_dump_object_info(void* self) {
+void q_packagekit__transaction_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_packagekit__transaction_set_property(void* self, const char* name, void* value) {
+bool q_packagekit__transaction_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_packagekit__transaction_property(void* self, const char* name) {
+QVariant* q_packagekit__transaction_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_packagekit__transaction_dynamic_property_names(void* self) {
+const char** q_packagekit__transaction_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -649,7 +641,7 @@ QBindingStorage* q_packagekit__transaction_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_packagekit__transaction_binding_storage2(void* self) {
+const QBindingStorage* q_packagekit__transaction_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -661,11 +653,11 @@ void q_packagekit__transaction_on_destroyed(void* self, void (*callback)(void*))
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_packagekit__transaction_parent(void* self) {
+QObject* q_packagekit__transaction_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_packagekit__transaction_inherits(void* self, const char* classname) {
+bool q_packagekit__transaction_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -681,31 +673,31 @@ int32_t q_packagekit__transaction_start_timer23(void* self, int64_t time, int32_
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_packagekit__transaction_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_packagekit__transaction_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_packagekit__transaction_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_packagekit__transaction_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_packagekit__transaction_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_packagekit__transaction_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_packagekit__transaction_disconnect1(void* self, const char* signal) {
+bool q_packagekit__transaction_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_packagekit__transaction_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_packagekit__transaction_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_packagekit__transaction_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_packagekit__transaction_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_packagekit__transaction_disconnect23(void* self, void* receiver, const char* member) {
+bool q_packagekit__transaction_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -777,52 +769,20 @@ void q_packagekit__transaction_on_custom_event(void* self, void (*callback)(void
     PackageKit__Transaction_OnCustomEvent((PackageKit__Transaction*)self, (intptr_t)callback);
 }
 
-QObject* q_packagekit__transaction_sender(void* self) {
+QObject* q_packagekit__transaction_sender(const void* self) {
     return PackageKit__Transaction_Sender((PackageKit__Transaction*)self);
 }
 
-QObject* q_packagekit__transaction_super_sender(void* self) {
-    return PackageKit__Transaction_SuperSender((PackageKit__Transaction*)self);
-}
-
-void q_packagekit__transaction_on_sender(void* self, QObject* (*callback)()) {
-    PackageKit__Transaction_OnSender((PackageKit__Transaction*)self, (intptr_t)callback);
-}
-
-int32_t q_packagekit__transaction_sender_signal_index(void* self) {
+int32_t q_packagekit__transaction_sender_signal_index(const void* self) {
     return PackageKit__Transaction_SenderSignalIndex((PackageKit__Transaction*)self);
 }
 
-int32_t q_packagekit__transaction_super_sender_signal_index(void* self) {
-    return PackageKit__Transaction_SuperSenderSignalIndex((PackageKit__Transaction*)self);
-}
-
-void q_packagekit__transaction_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    PackageKit__Transaction_OnSenderSignalIndex((PackageKit__Transaction*)self, (intptr_t)callback);
-}
-
-int32_t q_packagekit__transaction_receivers(void* self, const char* signal) {
+int32_t q_packagekit__transaction_receivers(const void* self, const char* signal) {
     return PackageKit__Transaction_Receivers((PackageKit__Transaction*)self, signal);
 }
 
-int32_t q_packagekit__transaction_super_receivers(void* self, const char* signal) {
-    return PackageKit__Transaction_SuperReceivers((PackageKit__Transaction*)self, signal);
-}
-
-void q_packagekit__transaction_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    PackageKit__Transaction_OnReceivers((PackageKit__Transaction*)self, (intptr_t)callback);
-}
-
-bool q_packagekit__transaction_is_signal_connected(void* self, void* signal) {
+bool q_packagekit__transaction_is_signal_connected(const void* self, const void* signal) {
     return PackageKit__Transaction_IsSignalConnected((PackageKit__Transaction*)self, (QMetaMethod*)signal);
-}
-
-bool q_packagekit__transaction_super_is_signal_connected(void* self, void* signal) {
-    return PackageKit__Transaction_SuperIsSignalConnected((PackageKit__Transaction*)self, (QMetaMethod*)signal);
-}
-
-void q_packagekit__transaction_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    PackageKit__Transaction_OnIsSignalConnected((PackageKit__Transaction*)self, (intptr_t)callback);
 }
 
 void q_packagekit__transaction_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

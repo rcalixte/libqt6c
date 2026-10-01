@@ -18,7 +18,7 @@ QSslKey* q_sslkey_new4(void* handle) {
     return QSslKey_New4(handle);
 }
 
-QSslKey* q_sslkey_new5(void* other) {
+QSslKey* q_sslkey_new5(const void* other) {
     return QSslKey_New5((QSslKey*)other);
 }
 
@@ -50,7 +50,7 @@ QSslKey* q_sslkey_new12(void* handle, int32_t type) {
     return QSslKey_New12(handle, type);
 }
 
-void q_sslkey_operator_assign(void* self, void* other) {
+void q_sslkey_operator_assign(void* self, const void* other) {
     QSslKey_OperatorAssign((QSslKey*)self, (QSslKey*)other);
 }
 
@@ -58,7 +58,7 @@ void q_sslkey_swap(void* self, void* other) {
     QSslKey_Swap((QSslKey*)self, (QSslKey*)other);
 }
 
-bool q_sslkey_is_null(void* self) {
+bool q_sslkey_is_null(const void* self) {
     return QSslKey_IsNull((QSslKey*)self);
 }
 
@@ -66,52 +66,52 @@ void q_sslkey_clear(void* self) {
     QSslKey_Clear((QSslKey*)self);
 }
 
-int32_t q_sslkey_length(void* self) {
+int32_t q_sslkey_length(const void* self) {
     return QSslKey_Length((QSslKey*)self);
 }
 
-int32_t q_sslkey_type(void* self) {
+int32_t q_sslkey_type(const void* self) {
     return QSslKey_Type((QSslKey*)self);
 }
 
-int32_t q_sslkey_algorithm(void* self) {
+int32_t q_sslkey_algorithm(const void* self) {
     return QSslKey_Algorithm((QSslKey*)self);
 }
 
-char* q_sslkey_to_pem(void* self) {
+char* q_sslkey_to_pem(const void* self) {
     libqt_string _str = QSslKey_ToPem((QSslKey*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_sslkey_to_der(void* self) {
+char* q_sslkey_to_der(const void* self) {
     libqt_string _str = QSslKey_ToDer((QSslKey*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void* q_sslkey_handle(void* self) {
+void* q_sslkey_handle(const void* self) {
     return QSslKey_Handle((QSslKey*)self);
 }
 
-bool q_sslkey_operator_equal(void* self, void* key) {
+bool q_sslkey_operator_equal(const void* self, const void* key) {
     return QSslKey_OperatorEqual((QSslKey*)self, (QSslKey*)key);
 }
 
-bool q_sslkey_operator_not_equal(void* self, void* key) {
+bool q_sslkey_operator_not_equal(const void* self, const void* key) {
     return QSslKey_OperatorNotEqual((QSslKey*)self, (QSslKey*)key);
 }
 
-char* q_sslkey_to_pem1(void* self, char* passPhrase) {
+char* q_sslkey_to_pem1(const void* self, char* passPhrase) {
     libqt_string _str = QSslKey_ToPem1((QSslKey*)self, qstring(passPhrase));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_sslkey_to_der1(void* self, char* passPhrase) {
+char* q_sslkey_to_der1(const void* self, char* passPhrase) {
     libqt_string _str = QSslKey_ToDer1((QSslKey*)self, qstring(passPhrase));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

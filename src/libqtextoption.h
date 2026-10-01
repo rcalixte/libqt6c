@@ -28,14 +28,14 @@ QTextOption* q_textoption_new2(int32_t alignment);
 ///
 /// @param o QTextOption*
 ///
-QTextOption* q_textoption_new3(void* o);
+QTextOption* q_textoption_new3(const void* o);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption.html#operator-eq)
 ///
 /// @param self QTextOption*
 /// @param o QTextOption*
 ///
-void q_textoption_operator_assign(void* self, void* o);
+void q_textoption_operator_assign(void* self, const void* o);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption.html#setAlignment)
 ///
@@ -46,11 +46,11 @@ void q_textoption_set_alignment(void* self, int32_t alignment);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption.html#alignment)
 ///
-/// @param self QTextOption*
+/// @param self const QTextOption*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 ///
-int32_t q_textoption_alignment(void* self);
+int32_t q_textoption_alignment(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption.html#setTextDirection)
 ///
@@ -61,11 +61,11 @@ void q_textoption_set_text_direction(void* self, int32_t aDirection);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption.html#textDirection)
 ///
-/// @param self QTextOption*
+/// @param self const QTextOption*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_textoption_text_direction(void* self);
+int32_t q_textoption_text_direction(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption.html#setWrapMode)
 ///
@@ -76,11 +76,11 @@ void q_textoption_set_wrap_mode(void* self, int32_t wrap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption.html#wrapMode)
 ///
-/// @param self QTextOption*
+/// @param self const QTextOption*
 ///
 /// @return enum QTextOption__WrapMode
 ///
-int32_t q_textoption_wrap_mode(void* self);
+int32_t q_textoption_wrap_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption.html#setFlags)
 ///
@@ -91,11 +91,11 @@ void q_textoption_set_flags(void* self, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption.html#flags)
 ///
-/// @param self QTextOption*
+/// @param self const QTextOption*
 ///
 /// @return flag of enum QTextOption__Flag
 ///
-int32_t q_textoption_flags(void* self);
+int32_t q_textoption_flags(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption.html#setTabStopDistance)
 ///
@@ -106,9 +106,9 @@ void q_textoption_set_tab_stop_distance(void* self, double tabStopDistance);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption.html#tabStopDistance)
 ///
-/// @param self QTextOption*
+/// @param self const QTextOption*
 ///
-double q_textoption_tab_stop_distance(void* self);
+double q_textoption_tab_stop_distance(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption.html#setTabArray)
 ///
@@ -119,11 +119,11 @@ void q_textoption_set_tab_array(void* self, libqt_list tabStops);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption.html#tabArray)
 ///
-/// @param self QTextOption*
+/// @param self const QTextOption*
 ///
 /// @return libqt_list of double
 ///
-libqt_list q_textoption_tab_array(void* self);
+libqt_list q_textoption_tab_array(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption.html#setTabs)
 ///
@@ -134,11 +134,11 @@ void q_textoption_set_tabs(void* self, libqt_list tabStops);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption.html#tabs)
 ///
-/// @param self QTextOption*
+/// @param self const QTextOption*
 ///
 /// @return libqt_list of QTextOption__Tab*
 ///
-libqt_list q_textoption_tabs(void* self);
+libqt_list q_textoption_tabs(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption.html#setUseDesignMetrics)
 ///
@@ -149,9 +149,9 @@ void q_textoption_set_use_design_metrics(void* self, bool b);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption.html#useDesignMetrics)
 ///
-/// @param self QTextOption*
+/// @param self const QTextOption*
 ///
-bool q_textoption_use_design_metrics(void* self);
+bool q_textoption_use_design_metrics(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption.html#dtor.QTextOption)
 ///
@@ -167,7 +167,7 @@ void q_textoption_delete(void* self);
 ///
 /// @param other QTextOption__Tab*
 ///
-QTextOption__Tab* q_textoption__tab_new(void* other);
+QTextOption__Tab* q_textoption__tab_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption-tab.html)
 
@@ -218,23 +218,23 @@ void q_textoption__tab_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption-tab.html#operator-eq-eq)
 ///
-/// @param self QTextOption__Tab*
+/// @param self const QTextOption__Tab*
 /// @param other QTextOption__Tab*
 ///
-bool q_textoption__tab_operator_equal(void* self, void* other);
+bool q_textoption__tab_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption-tab.html#operator-not-eq)
 ///
-/// @param self QTextOption__Tab*
+/// @param self const QTextOption__Tab*
 /// @param other QTextOption__Tab*
 ///
-bool q_textoption__tab_operator_not_equal(void* self, void* other);
+bool q_textoption__tab_operator_not_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption-tab.html#position-var)
 ///
-/// @param self QTextOption__Tab*
+/// @param self const QTextOption__Tab*
 ///
-double q_textoption__tab_position(void* self);
+double q_textoption__tab_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption-tab.html#position-var)
 ///
@@ -245,11 +245,11 @@ void q_textoption__tab_set_position(void* self, double position);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption-tab.html#type-var)
 ///
-/// @param self QTextOption__Tab*
+/// @param self const QTextOption__Tab*
 ///
 /// @return enum QTextOption__TabType
 ///
-int32_t q_textoption__tab_type(void* self);
+int32_t q_textoption__tab_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption-tab.html#type-var)
 ///
@@ -260,9 +260,9 @@ void q_textoption__tab_set_type(void* self, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption-tab.html#delimiter-var)
 ///
-/// @param self QTextOption__Tab*
+/// @param self const QTextOption__Tab*
 ///
-QChar* q_textoption__tab_delimiter(void* self);
+QChar* q_textoption__tab_delimiter(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption-tab.html#delimiter-var)
 ///

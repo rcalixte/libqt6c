@@ -9,11 +9,11 @@
 #include "libpoppler_form.hpp"
 #include "libpoppler_form.h"
 
-Poppler__FormFieldIcon* q_poppler__formfieldicon_new(void* ffIcon) {
+Poppler__FormFieldIcon* q_poppler__formfieldicon_new(const void* ffIcon) {
     return Poppler__FormFieldIcon_New((Poppler__FormFieldIcon*)ffIcon);
 }
 
-void q_poppler__formfieldicon_operator_assign(void* self, void* ffIcon) {
+void q_poppler__formfieldicon_operator_assign(void* self, const void* ffIcon) {
     Poppler__FormFieldIcon_OperatorAssign((Poppler__FormFieldIcon*)self, (Poppler__FormFieldIcon*)ffIcon);
 }
 
@@ -21,44 +21,40 @@ void q_poppler__formfieldicon_delete(void* self) {
     Poppler__FormFieldIcon_Delete((Poppler__FormFieldIcon*)(self));
 }
 
-int32_t q_poppler__formfield_type(void* self) {
-    return Poppler__FormField_Type((Poppler__FormField*)self);
-}
-
-QRectF* q_poppler__formfield_rect(void* self) {
+QRectF* q_poppler__formfield_rect(const void* self) {
     return Poppler__FormField_Rect((Poppler__FormField*)self);
 }
 
-int32_t q_poppler__formfield_id(void* self) {
+int32_t q_poppler__formfield_id(const void* self) {
     return Poppler__FormField_Id((Poppler__FormField*)self);
 }
 
-const char* q_poppler__formfield_name(void* self) {
+const char* q_poppler__formfield_name(const void* self) {
     libqt_string _str = Poppler__FormField_Name((Poppler__FormField*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_poppler__formfield_set_name(void* self, const char* name) {
+void q_poppler__formfield_set_name(const void* self, const char* name) {
     Poppler__FormField_SetName((Poppler__FormField*)self, qstring(name));
 }
 
-const char* q_poppler__formfield_fully_qualified_name(void* self) {
+const char* q_poppler__formfield_fully_qualified_name(const void* self) {
     libqt_string _str = Poppler__FormField_FullyQualifiedName((Poppler__FormField*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_poppler__formfield_ui_name(void* self) {
+const char* q_poppler__formfield_ui_name(const void* self) {
     libqt_string _str = Poppler__FormField_UiName((Poppler__FormField*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_poppler__formfield_is_read_only(void* self) {
+bool q_poppler__formfield_is_read_only(const void* self) {
     return Poppler__FormField_IsReadOnly((Poppler__FormField*)self);
 }
 
@@ -66,7 +62,7 @@ void q_poppler__formfield_set_read_only(void* self, bool value) {
     Poppler__FormField_SetReadOnly((Poppler__FormField*)self, value);
 }
 
-bool q_poppler__formfield_is_visible(void* self) {
+bool q_poppler__formfield_is_visible(const void* self) {
     return Poppler__FormField_IsVisible((Poppler__FormField*)self);
 }
 
@@ -74,7 +70,7 @@ void q_poppler__formfield_set_visible(void* self, bool value) {
     Poppler__FormField_SetVisible((Poppler__FormField*)self, value);
 }
 
-bool q_poppler__formfield_is_printable(void* self) {
+bool q_poppler__formfield_is_printable(const void* self) {
     return Poppler__FormField_IsPrintable((Poppler__FormField*)self);
 }
 
@@ -82,15 +78,15 @@ void q_poppler__formfield_set_printable(void* self, bool value) {
     Poppler__FormField_SetPrintable((Poppler__FormField*)self, value);
 }
 
-Poppler__Link* q_poppler__formfield_activation_action(void* self) {
+Poppler__Link* q_poppler__formfield_activation_action(const void* self) {
     return Poppler__FormField_ActivationAction((Poppler__FormField*)self);
 }
 
-Poppler__Link* q_poppler__formfield_additional_action(void* self, int32_t type) {
+Poppler__Link* q_poppler__formfield_additional_action(const void* self, int32_t type) {
     return Poppler__FormField_AdditionalAction((Poppler__FormField*)self, type);
 }
 
-Poppler__Link* q_poppler__formfield_additional_action2(void* self, int32_t type) {
+Poppler__Link* q_poppler__formfield_additional_action2(const void* self, int32_t type) {
     return Poppler__FormField_AdditionalAction2((Poppler__FormField*)self, type);
 }
 
@@ -98,30 +94,30 @@ void q_poppler__formfield_delete(void* self) {
     Poppler__FormField_Delete((Poppler__FormField*)(self));
 }
 
-int32_t q_poppler__formfieldbutton_type(void* self) {
+int32_t q_poppler__formfieldbutton_type(const void* self) {
     return Poppler__FormFieldButton_Type((Poppler__FormFieldButton*)self);
 }
 
-int32_t q_poppler__formfieldbutton_button_type(void* self) {
+int32_t q_poppler__formfieldbutton_button_type(const void* self) {
     return Poppler__FormFieldButton_ButtonType((Poppler__FormFieldButton*)self);
 }
 
-const char* q_poppler__formfieldbutton_caption(void* self) {
+const char* q_poppler__formfieldbutton_caption(const void* self) {
     libqt_string _str = Poppler__FormFieldButton_Caption((Poppler__FormFieldButton*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-Poppler__FormFieldIcon* q_poppler__formfieldbutton_icon(void* self) {
+Poppler__FormFieldIcon* q_poppler__formfieldbutton_icon(const void* self) {
     return Poppler__FormFieldButton_Icon((Poppler__FormFieldButton*)self);
 }
 
-void q_poppler__formfieldbutton_set_icon(void* self, void* icon) {
+void q_poppler__formfieldbutton_set_icon(void* self, const void* icon) {
     Poppler__FormFieldButton_SetIcon((Poppler__FormFieldButton*)self, (Poppler__FormFieldIcon*)icon);
 }
 
-bool q_poppler__formfieldbutton_state(void* self) {
+bool q_poppler__formfieldbutton_state(const void* self) {
     return Poppler__FormFieldButton_State((Poppler__FormFieldButton*)self);
 }
 
@@ -129,45 +125,45 @@ void q_poppler__formfieldbutton_set_state(void* self, bool state) {
     Poppler__FormFieldButton_SetState((Poppler__FormFieldButton*)self, state);
 }
 
-libqt_list /* of int */ q_poppler__formfieldbutton_siblings(void* self) {
+libqt_list /* of int */ q_poppler__formfieldbutton_siblings(const void* self) {
     libqt_list _arr = Poppler__FormFieldButton_Siblings((Poppler__FormFieldButton*)self);
     return _arr;
 }
 
-QRectF* q_poppler__formfieldbutton_rect(void* self) {
+QRectF* q_poppler__formfieldbutton_rect(const void* self) {
     return Poppler__FormField_Rect((Poppler__FormField*)self);
 }
 
-int32_t q_poppler__formfieldbutton_id(void* self) {
+int32_t q_poppler__formfieldbutton_id(const void* self) {
     return Poppler__FormField_Id((Poppler__FormField*)self);
 }
 
-const char* q_poppler__formfieldbutton_name(void* self) {
+const char* q_poppler__formfieldbutton_name(const void* self) {
     libqt_string _str = Poppler__FormField_Name((Poppler__FormField*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_poppler__formfieldbutton_set_name(void* self, const char* name) {
+void q_poppler__formfieldbutton_set_name(const void* self, const char* name) {
     Poppler__FormField_SetName((Poppler__FormField*)self, qstring(name));
 }
 
-const char* q_poppler__formfieldbutton_fully_qualified_name(void* self) {
+const char* q_poppler__formfieldbutton_fully_qualified_name(const void* self) {
     libqt_string _str = Poppler__FormField_FullyQualifiedName((Poppler__FormField*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_poppler__formfieldbutton_ui_name(void* self) {
+const char* q_poppler__formfieldbutton_ui_name(const void* self) {
     libqt_string _str = Poppler__FormField_UiName((Poppler__FormField*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_poppler__formfieldbutton_is_read_only(void* self) {
+bool q_poppler__formfieldbutton_is_read_only(const void* self) {
     return Poppler__FormField_IsReadOnly((Poppler__FormField*)self);
 }
 
@@ -175,7 +171,7 @@ void q_poppler__formfieldbutton_set_read_only(void* self, bool value) {
     Poppler__FormField_SetReadOnly((Poppler__FormField*)self, value);
 }
 
-bool q_poppler__formfieldbutton_is_visible(void* self) {
+bool q_poppler__formfieldbutton_is_visible(const void* self) {
     return Poppler__FormField_IsVisible((Poppler__FormField*)self);
 }
 
@@ -183,7 +179,7 @@ void q_poppler__formfieldbutton_set_visible(void* self, bool value) {
     Poppler__FormField_SetVisible((Poppler__FormField*)self, value);
 }
 
-bool q_poppler__formfieldbutton_is_printable(void* self) {
+bool q_poppler__formfieldbutton_is_printable(const void* self) {
     return Poppler__FormField_IsPrintable((Poppler__FormField*)self);
 }
 
@@ -191,15 +187,15 @@ void q_poppler__formfieldbutton_set_printable(void* self, bool value) {
     Poppler__FormField_SetPrintable((Poppler__FormField*)self, value);
 }
 
-Poppler__Link* q_poppler__formfieldbutton_activation_action(void* self) {
+Poppler__Link* q_poppler__formfieldbutton_activation_action(const void* self) {
     return Poppler__FormField_ActivationAction((Poppler__FormField*)self);
 }
 
-Poppler__Link* q_poppler__formfieldbutton_additional_action(void* self, int32_t type) {
+Poppler__Link* q_poppler__formfieldbutton_additional_action(const void* self, int32_t type) {
     return Poppler__FormField_AdditionalAction((Poppler__FormField*)self, type);
 }
 
-Poppler__Link* q_poppler__formfieldbutton_additional_action2(void* self, int32_t type) {
+Poppler__Link* q_poppler__formfieldbutton_additional_action2(const void* self, int32_t type) {
     return Poppler__FormField_AdditionalAction2((Poppler__FormField*)self, type);
 }
 
@@ -207,15 +203,15 @@ void q_poppler__formfieldbutton_delete(void* self) {
     Poppler__FormFieldButton_Delete((Poppler__FormFieldButton*)(self));
 }
 
-int32_t q_poppler__formfieldtext_type(void* self) {
+int32_t q_poppler__formfieldtext_type(const void* self) {
     return Poppler__FormFieldText_Type((Poppler__FormFieldText*)self);
 }
 
-int32_t q_poppler__formfieldtext_text_type(void* self) {
+int32_t q_poppler__formfieldtext_text_type(const void* self) {
     return Poppler__FormFieldText_TextType((Poppler__FormFieldText*)self);
 }
 
-const char* q_poppler__formfieldtext_text(void* self) {
+const char* q_poppler__formfieldtext_text(const void* self) {
     libqt_string _str = Poppler__FormFieldText_Text((Poppler__FormFieldText*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -230,27 +226,27 @@ void q_poppler__formfieldtext_set_appearance_text(void* self, const char* text) 
     Poppler__FormFieldText_SetAppearanceText((Poppler__FormFieldText*)self, qstring(text));
 }
 
-bool q_poppler__formfieldtext_is_password(void* self) {
+bool q_poppler__formfieldtext_is_password(const void* self) {
     return Poppler__FormFieldText_IsPassword((Poppler__FormFieldText*)self);
 }
 
-bool q_poppler__formfieldtext_is_rich_text(void* self) {
+bool q_poppler__formfieldtext_is_rich_text(const void* self) {
     return Poppler__FormFieldText_IsRichText((Poppler__FormFieldText*)self);
 }
 
-int32_t q_poppler__formfieldtext_maximum_length(void* self) {
+int32_t q_poppler__formfieldtext_maximum_length(const void* self) {
     return Poppler__FormFieldText_MaximumLength((Poppler__FormFieldText*)self);
 }
 
-int32_t q_poppler__formfieldtext_text_alignment(void* self) {
+int32_t q_poppler__formfieldtext_text_alignment(const void* self) {
     return Poppler__FormFieldText_TextAlignment((Poppler__FormFieldText*)self);
 }
 
-bool q_poppler__formfieldtext_can_be_spell_checked(void* self) {
+bool q_poppler__formfieldtext_can_be_spell_checked(const void* self) {
     return Poppler__FormFieldText_CanBeSpellChecked((Poppler__FormFieldText*)self);
 }
 
-double q_poppler__formfieldtext_get_font_size(void* self) {
+double q_poppler__formfieldtext_get_font_size(const void* self) {
     return Poppler__FormFieldText_GetFontSize((Poppler__FormFieldText*)self);
 }
 
@@ -258,40 +254,40 @@ void q_poppler__formfieldtext_set_font_size(void* self, int fontSize) {
     Poppler__FormFieldText_SetFontSize((Poppler__FormFieldText*)self, fontSize);
 }
 
-QRectF* q_poppler__formfieldtext_rect(void* self) {
+QRectF* q_poppler__formfieldtext_rect(const void* self) {
     return Poppler__FormField_Rect((Poppler__FormField*)self);
 }
 
-int32_t q_poppler__formfieldtext_id(void* self) {
+int32_t q_poppler__formfieldtext_id(const void* self) {
     return Poppler__FormField_Id((Poppler__FormField*)self);
 }
 
-const char* q_poppler__formfieldtext_name(void* self) {
+const char* q_poppler__formfieldtext_name(const void* self) {
     libqt_string _str = Poppler__FormField_Name((Poppler__FormField*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_poppler__formfieldtext_set_name(void* self, const char* name) {
+void q_poppler__formfieldtext_set_name(const void* self, const char* name) {
     Poppler__FormField_SetName((Poppler__FormField*)self, qstring(name));
 }
 
-const char* q_poppler__formfieldtext_fully_qualified_name(void* self) {
+const char* q_poppler__formfieldtext_fully_qualified_name(const void* self) {
     libqt_string _str = Poppler__FormField_FullyQualifiedName((Poppler__FormField*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_poppler__formfieldtext_ui_name(void* self) {
+const char* q_poppler__formfieldtext_ui_name(const void* self) {
     libqt_string _str = Poppler__FormField_UiName((Poppler__FormField*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_poppler__formfieldtext_is_read_only(void* self) {
+bool q_poppler__formfieldtext_is_read_only(const void* self) {
     return Poppler__FormField_IsReadOnly((Poppler__FormField*)self);
 }
 
@@ -299,7 +295,7 @@ void q_poppler__formfieldtext_set_read_only(void* self, bool value) {
     Poppler__FormField_SetReadOnly((Poppler__FormField*)self, value);
 }
 
-bool q_poppler__formfieldtext_is_visible(void* self) {
+bool q_poppler__formfieldtext_is_visible(const void* self) {
     return Poppler__FormField_IsVisible((Poppler__FormField*)self);
 }
 
@@ -307,7 +303,7 @@ void q_poppler__formfieldtext_set_visible(void* self, bool value) {
     Poppler__FormField_SetVisible((Poppler__FormField*)self, value);
 }
 
-bool q_poppler__formfieldtext_is_printable(void* self) {
+bool q_poppler__formfieldtext_is_printable(const void* self) {
     return Poppler__FormField_IsPrintable((Poppler__FormField*)self);
 }
 
@@ -315,15 +311,15 @@ void q_poppler__formfieldtext_set_printable(void* self, bool value) {
     Poppler__FormField_SetPrintable((Poppler__FormField*)self, value);
 }
 
-Poppler__Link* q_poppler__formfieldtext_activation_action(void* self) {
+Poppler__Link* q_poppler__formfieldtext_activation_action(const void* self) {
     return Poppler__FormField_ActivationAction((Poppler__FormField*)self);
 }
 
-Poppler__Link* q_poppler__formfieldtext_additional_action(void* self, int32_t type) {
+Poppler__Link* q_poppler__formfieldtext_additional_action(const void* self, int32_t type) {
     return Poppler__FormField_AdditionalAction((Poppler__FormField*)self, type);
 }
 
-Poppler__Link* q_poppler__formfieldtext_additional_action2(void* self, int32_t type) {
+Poppler__Link* q_poppler__formfieldtext_additional_action2(const void* self, int32_t type) {
     return Poppler__FormField_AdditionalAction2((Poppler__FormField*)self, type);
 }
 
@@ -331,15 +327,15 @@ void q_poppler__formfieldtext_delete(void* self) {
     Poppler__FormFieldText_Delete((Poppler__FormFieldText*)(self));
 }
 
-int32_t q_poppler__formfieldchoice_type(void* self) {
+int32_t q_poppler__formfieldchoice_type(const void* self) {
     return Poppler__FormFieldChoice_Type((Poppler__FormFieldChoice*)self);
 }
 
-int32_t q_poppler__formfieldchoice_choice_type(void* self) {
+int32_t q_poppler__formfieldchoice_choice_type(const void* self) {
     return Poppler__FormFieldChoice_ChoiceType((Poppler__FormFieldChoice*)self);
 }
 
-const char** q_poppler__formfieldchoice_choices(void* self) {
+const char** q_poppler__formfieldchoice_choices(const void* self) {
     libqt_list _arr = Poppler__FormFieldChoice_Choices((Poppler__FormFieldChoice*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -356,7 +352,7 @@ const char** q_poppler__formfieldchoice_choices(void* self) {
     return _ret;
 }
 
-libqt_list /* of libqt_pair tuple of const char* and const char* */ q_poppler__formfieldchoice_choices_with_export_values(void* self) {
+libqt_list /* of libqt_pair tuple of const char* and const char* */ q_poppler__formfieldchoice_choices_with_export_values(const void* self) {
     libqt_list _arr = Poppler__FormFieldChoice_ChoicesWithExportValues((Poppler__FormFieldChoice*)self);
     libqt_pair* _data = (libqt_pair*)_arr.data.ptr;
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -372,15 +368,15 @@ libqt_list /* of libqt_pair tuple of const char* and const char* */ q_poppler__f
     return _arr;
 }
 
-bool q_poppler__formfieldchoice_is_editable(void* self) {
+bool q_poppler__formfieldchoice_is_editable(const void* self) {
     return Poppler__FormFieldChoice_IsEditable((Poppler__FormFieldChoice*)self);
 }
 
-bool q_poppler__formfieldchoice_multi_select(void* self) {
+bool q_poppler__formfieldchoice_multi_select(const void* self) {
     return Poppler__FormFieldChoice_MultiSelect((Poppler__FormFieldChoice*)self);
 }
 
-libqt_list /* of int */ q_poppler__formfieldchoice_current_choices(void* self) {
+libqt_list /* of int */ q_poppler__formfieldchoice_current_choices(const void* self) {
     libqt_list _arr = Poppler__FormFieldChoice_CurrentChoices((Poppler__FormFieldChoice*)self);
     return _arr;
 }
@@ -389,7 +385,7 @@ void q_poppler__formfieldchoice_set_current_choices(void* self, libqt_list /* of
     Poppler__FormFieldChoice_SetCurrentChoices((Poppler__FormFieldChoice*)self, choice);
 }
 
-const char* q_poppler__formfieldchoice_edit_choice(void* self) {
+const char* q_poppler__formfieldchoice_edit_choice(const void* self) {
     libqt_string _str = Poppler__FormFieldChoice_EditChoice((Poppler__FormFieldChoice*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -400,11 +396,11 @@ void q_poppler__formfieldchoice_set_edit_choice(void* self, const char* text) {
     Poppler__FormFieldChoice_SetEditChoice((Poppler__FormFieldChoice*)self, qstring(text));
 }
 
-int32_t q_poppler__formfieldchoice_text_alignment(void* self) {
+int32_t q_poppler__formfieldchoice_text_alignment(const void* self) {
     return Poppler__FormFieldChoice_TextAlignment((Poppler__FormFieldChoice*)self);
 }
 
-bool q_poppler__formfieldchoice_can_be_spell_checked(void* self) {
+bool q_poppler__formfieldchoice_can_be_spell_checked(const void* self) {
     return Poppler__FormFieldChoice_CanBeSpellChecked((Poppler__FormFieldChoice*)self);
 }
 
@@ -412,40 +408,40 @@ void q_poppler__formfieldchoice_set_appearance_choice_text(void* self, const cha
     Poppler__FormFieldChoice_SetAppearanceChoiceText((Poppler__FormFieldChoice*)self, qstring(text));
 }
 
-QRectF* q_poppler__formfieldchoice_rect(void* self) {
+QRectF* q_poppler__formfieldchoice_rect(const void* self) {
     return Poppler__FormField_Rect((Poppler__FormField*)self);
 }
 
-int32_t q_poppler__formfieldchoice_id(void* self) {
+int32_t q_poppler__formfieldchoice_id(const void* self) {
     return Poppler__FormField_Id((Poppler__FormField*)self);
 }
 
-const char* q_poppler__formfieldchoice_name(void* self) {
+const char* q_poppler__formfieldchoice_name(const void* self) {
     libqt_string _str = Poppler__FormField_Name((Poppler__FormField*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_poppler__formfieldchoice_set_name(void* self, const char* name) {
+void q_poppler__formfieldchoice_set_name(const void* self, const char* name) {
     Poppler__FormField_SetName((Poppler__FormField*)self, qstring(name));
 }
 
-const char* q_poppler__formfieldchoice_fully_qualified_name(void* self) {
+const char* q_poppler__formfieldchoice_fully_qualified_name(const void* self) {
     libqt_string _str = Poppler__FormField_FullyQualifiedName((Poppler__FormField*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_poppler__formfieldchoice_ui_name(void* self) {
+const char* q_poppler__formfieldchoice_ui_name(const void* self) {
     libqt_string _str = Poppler__FormField_UiName((Poppler__FormField*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_poppler__formfieldchoice_is_read_only(void* self) {
+bool q_poppler__formfieldchoice_is_read_only(const void* self) {
     return Poppler__FormField_IsReadOnly((Poppler__FormField*)self);
 }
 
@@ -453,7 +449,7 @@ void q_poppler__formfieldchoice_set_read_only(void* self, bool value) {
     Poppler__FormField_SetReadOnly((Poppler__FormField*)self, value);
 }
 
-bool q_poppler__formfieldchoice_is_visible(void* self) {
+bool q_poppler__formfieldchoice_is_visible(const void* self) {
     return Poppler__FormField_IsVisible((Poppler__FormField*)self);
 }
 
@@ -461,7 +457,7 @@ void q_poppler__formfieldchoice_set_visible(void* self, bool value) {
     Poppler__FormField_SetVisible((Poppler__FormField*)self, value);
 }
 
-bool q_poppler__formfieldchoice_is_printable(void* self) {
+bool q_poppler__formfieldchoice_is_printable(const void* self) {
     return Poppler__FormField_IsPrintable((Poppler__FormField*)self);
 }
 
@@ -469,15 +465,15 @@ void q_poppler__formfieldchoice_set_printable(void* self, bool value) {
     Poppler__FormField_SetPrintable((Poppler__FormField*)self, value);
 }
 
-Poppler__Link* q_poppler__formfieldchoice_activation_action(void* self) {
+Poppler__Link* q_poppler__formfieldchoice_activation_action(const void* self) {
     return Poppler__FormField_ActivationAction((Poppler__FormField*)self);
 }
 
-Poppler__Link* q_poppler__formfieldchoice_additional_action(void* self, int32_t type) {
+Poppler__Link* q_poppler__formfieldchoice_additional_action(const void* self, int32_t type) {
     return Poppler__FormField_AdditionalAction((Poppler__FormField*)self, type);
 }
 
-Poppler__Link* q_poppler__formfieldchoice_additional_action2(void* self, int32_t type) {
+Poppler__Link* q_poppler__formfieldchoice_additional_action2(const void* self, int32_t type) {
     return Poppler__FormField_AdditionalAction2((Poppler__FormField*)self, type);
 }
 
@@ -489,101 +485,101 @@ Poppler__CertificateInfo* q_poppler__certificateinfo_new() {
     return Poppler__CertificateInfo_New();
 }
 
-Poppler__CertificateInfo* q_poppler__certificateinfo_new2(void* other) {
+Poppler__CertificateInfo* q_poppler__certificateinfo_new2(const void* other) {
     return Poppler__CertificateInfo_New2((Poppler__CertificateInfo*)other);
 }
 
-bool q_poppler__certificateinfo_is_null(void* self) {
+bool q_poppler__certificateinfo_is_null(const void* self) {
     return Poppler__CertificateInfo_IsNull((Poppler__CertificateInfo*)self);
 }
 
-int32_t q_poppler__certificateinfo_version(void* self) {
+int32_t q_poppler__certificateinfo_version(const void* self) {
     return Poppler__CertificateInfo_Version((Poppler__CertificateInfo*)self);
 }
 
-char* q_poppler__certificateinfo_serial_number(void* self) {
+char* q_poppler__certificateinfo_serial_number(const void* self) {
     libqt_string _str = Poppler__CertificateInfo_SerialNumber((Poppler__CertificateInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_poppler__certificateinfo_issuer_info(void* self, int32_t key) {
+const char* q_poppler__certificateinfo_issuer_info(const void* self, int32_t key) {
     libqt_string _str = Poppler__CertificateInfo_IssuerInfo((Poppler__CertificateInfo*)self, key);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_poppler__certificateinfo_subject_info(void* self, int32_t key) {
+const char* q_poppler__certificateinfo_subject_info(const void* self, int32_t key) {
     libqt_string _str = Poppler__CertificateInfo_SubjectInfo((Poppler__CertificateInfo*)self, key);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_poppler__certificateinfo_nick_name(void* self) {
+const char* q_poppler__certificateinfo_nick_name(const void* self) {
     libqt_string _str = Poppler__CertificateInfo_NickName((Poppler__CertificateInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QDateTime* q_poppler__certificateinfo_validity_start(void* self) {
+QDateTime* q_poppler__certificateinfo_validity_start(const void* self) {
     return Poppler__CertificateInfo_ValidityStart((Poppler__CertificateInfo*)self);
 }
 
-QDateTime* q_poppler__certificateinfo_validity_end(void* self) {
+QDateTime* q_poppler__certificateinfo_validity_end(const void* self) {
     return Poppler__CertificateInfo_ValidityEnd((Poppler__CertificateInfo*)self);
 }
 
-int32_t q_poppler__certificateinfo_key_usage_extensions(void* self) {
+int32_t q_poppler__certificateinfo_key_usage_extensions(const void* self) {
     return Poppler__CertificateInfo_KeyUsageExtensions((Poppler__CertificateInfo*)self);
 }
 
-char* q_poppler__certificateinfo_public_key(void* self) {
+char* q_poppler__certificateinfo_public_key(const void* self) {
     libqt_string _str = Poppler__CertificateInfo_PublicKey((Poppler__CertificateInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t q_poppler__certificateinfo_public_key_type(void* self) {
+int32_t q_poppler__certificateinfo_public_key_type(const void* self) {
     return Poppler__CertificateInfo_PublicKeyType((Poppler__CertificateInfo*)self);
 }
 
-int32_t q_poppler__certificateinfo_public_key_strength(void* self) {
+int32_t q_poppler__certificateinfo_public_key_strength(const void* self) {
     return Poppler__CertificateInfo_PublicKeyStrength((Poppler__CertificateInfo*)self);
 }
 
-bool q_poppler__certificateinfo_is_self_signed(void* self) {
+bool q_poppler__certificateinfo_is_self_signed(const void* self) {
     return Poppler__CertificateInfo_IsSelfSigned((Poppler__CertificateInfo*)self);
 }
 
-bool q_poppler__certificateinfo_is_qualified(void* self) {
+bool q_poppler__certificateinfo_is_qualified(const void* self) {
     return Poppler__CertificateInfo_IsQualified((Poppler__CertificateInfo*)self);
 }
 
-int32_t q_poppler__certificateinfo_certificate_type(void* self) {
+int32_t q_poppler__certificateinfo_certificate_type(const void* self) {
     return Poppler__CertificateInfo_CertificateType((Poppler__CertificateInfo*)self);
 }
 
-char* q_poppler__certificateinfo_certificate_data(void* self) {
+char* q_poppler__certificateinfo_certificate_data(const void* self) {
     libqt_string _str = Poppler__CertificateInfo_CertificateData((Poppler__CertificateInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_poppler__certificateinfo_check_password(void* self, const char* password) {
+bool q_poppler__certificateinfo_check_password(const void* self, const char* password) {
     return Poppler__CertificateInfo_CheckPassword((Poppler__CertificateInfo*)self, qstring(password));
 }
 
-int32_t q_poppler__certificateinfo_key_location(void* self) {
+int32_t q_poppler__certificateinfo_key_location(const void* self) {
     return Poppler__CertificateInfo_KeyLocation((Poppler__CertificateInfo*)self);
 }
 
-void q_poppler__certificateinfo_operator_assign(void* self, void* other) {
+void q_poppler__certificateinfo_operator_assign(void* self, const void* other) {
     Poppler__CertificateInfo_OperatorAssign((Poppler__CertificateInfo*)self, (Poppler__CertificateInfo*)other);
 }
 
@@ -591,75 +587,75 @@ void q_poppler__certificateinfo_delete(void* self) {
     Poppler__CertificateInfo_Delete((Poppler__CertificateInfo*)(self));
 }
 
-Poppler__SignatureValidationInfo* q_poppler__signaturevalidationinfo_new(void* other) {
+Poppler__SignatureValidationInfo* q_poppler__signaturevalidationinfo_new(const void* other) {
     return Poppler__SignatureValidationInfo_New((Poppler__SignatureValidationInfo*)other);
 }
 
-int32_t q_poppler__signaturevalidationinfo_signature_status(void* self) {
+int32_t q_poppler__signaturevalidationinfo_signature_status(const void* self) {
     return Poppler__SignatureValidationInfo_SignatureStatus((Poppler__SignatureValidationInfo*)self);
 }
 
-int32_t q_poppler__signaturevalidationinfo_certificate_status(void* self) {
+int32_t q_poppler__signaturevalidationinfo_certificate_status(const void* self) {
     return Poppler__SignatureValidationInfo_CertificateStatus((Poppler__SignatureValidationInfo*)self);
 }
 
-const char* q_poppler__signaturevalidationinfo_signer_name(void* self) {
+const char* q_poppler__signaturevalidationinfo_signer_name(const void* self) {
     libqt_string _str = Poppler__SignatureValidationInfo_SignerName((Poppler__SignatureValidationInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_poppler__signaturevalidationinfo_signer_subject_d_n(void* self) {
+const char* q_poppler__signaturevalidationinfo_signer_subject_d_n(const void* self) {
     libqt_string _str = Poppler__SignatureValidationInfo_SignerSubjectDN((Poppler__SignatureValidationInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_poppler__signaturevalidationinfo_location(void* self) {
+const char* q_poppler__signaturevalidationinfo_location(const void* self) {
     libqt_string _str = Poppler__SignatureValidationInfo_Location((Poppler__SignatureValidationInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_poppler__signaturevalidationinfo_reason(void* self) {
+const char* q_poppler__signaturevalidationinfo_reason(const void* self) {
     libqt_string _str = Poppler__SignatureValidationInfo_Reason((Poppler__SignatureValidationInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t q_poppler__signaturevalidationinfo_hash_algorithm(void* self) {
+int32_t q_poppler__signaturevalidationinfo_hash_algorithm(const void* self) {
     return Poppler__SignatureValidationInfo_HashAlgorithm((Poppler__SignatureValidationInfo*)self);
 }
 
-time_t q_poppler__signaturevalidationinfo_signing_time(void* self) {
+time_t q_poppler__signaturevalidationinfo_signing_time(const void* self) {
     return (int)Poppler__SignatureValidationInfo_SigningTime((Poppler__SignatureValidationInfo*)self);
 }
 
-char* q_poppler__signaturevalidationinfo_signature(void* self) {
+char* q_poppler__signaturevalidationinfo_signature(const void* self) {
     libqt_string _str = Poppler__SignatureValidationInfo_Signature((Poppler__SignatureValidationInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-libqt_list /* of long long */ q_poppler__signaturevalidationinfo_signed_range_bounds(void* self) {
+libqt_list /* of long long */ q_poppler__signaturevalidationinfo_signed_range_bounds(const void* self) {
     libqt_list _arr = Poppler__SignatureValidationInfo_SignedRangeBounds((Poppler__SignatureValidationInfo*)self);
     return _arr;
 }
 
-bool q_poppler__signaturevalidationinfo_signs_total_document(void* self) {
+bool q_poppler__signaturevalidationinfo_signs_total_document(const void* self) {
     return Poppler__SignatureValidationInfo_SignsTotalDocument((Poppler__SignatureValidationInfo*)self);
 }
 
-Poppler__CertificateInfo* q_poppler__signaturevalidationinfo_certificate_info(void* self) {
+Poppler__CertificateInfo* q_poppler__signaturevalidationinfo_certificate_info(const void* self) {
     return Poppler__SignatureValidationInfo_CertificateInfo((Poppler__SignatureValidationInfo*)self);
 }
 
-void q_poppler__signaturevalidationinfo_operator_assign(void* self, void* other) {
+void q_poppler__signaturevalidationinfo_operator_assign(void* self, const void* other) {
     Poppler__SignatureValidationInfo_OperatorAssign((Poppler__SignatureValidationInfo*)self, (Poppler__SignatureValidationInfo*)other);
 }
 
@@ -671,15 +667,15 @@ Poppler__AsyncObject* q_poppler__asyncobject_new() {
     return Poppler__AsyncObject_New();
 }
 
-const QMetaObject* q_poppler__asyncobject_meta_object(void* self) {
+const QMetaObject* q_poppler__asyncobject_meta_object(const void* self) {
     return Poppler__AsyncObject_MetaObject((Poppler__AsyncObject*)self);
 }
 
-void q_poppler__asyncobject_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_poppler__asyncobject_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     Poppler__AsyncObject_OnMetaObject((Poppler__AsyncObject*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_poppler__asyncobject_super_meta_object(void* self) {
+const QMetaObject* q_poppler__asyncobject_super_meta_object(const void* self) {
     return Poppler__AsyncObject_SuperMetaObject((Poppler__AsyncObject*)self);
 }
 
@@ -736,7 +732,7 @@ const char* q_poppler__asyncobject_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-const char* q_poppler__asyncobject_object_name(void* self) {
+const char* q_poppler__asyncobject_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -747,19 +743,19 @@ void q_poppler__asyncobject_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_poppler__asyncobject_is_widget_type(void* self) {
+bool q_poppler__asyncobject_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_poppler__asyncobject_is_window_type(void* self) {
+bool q_poppler__asyncobject_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_poppler__asyncobject_is_quick_item_type(void* self) {
+bool q_poppler__asyncobject_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_poppler__asyncobject_signals_blocked(void* self) {
+bool q_poppler__asyncobject_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -767,7 +763,7 @@ bool q_poppler__asyncobject_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_poppler__asyncobject_thread(void* self) {
+QThread* q_poppler__asyncobject_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -791,7 +787,7 @@ void q_poppler__asyncobject_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_poppler__asyncobject_children(void* self) {
+libqt_list /* of QObject* */ q_poppler__asyncobject_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -808,55 +804,55 @@ void q_poppler__asyncobject_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_poppler__asyncobject_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_poppler__asyncobject_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_poppler__asyncobject_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_poppler__asyncobject_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_poppler__asyncobject_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_poppler__asyncobject_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_poppler__asyncobject_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_poppler__asyncobject_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_poppler__asyncobject_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_poppler__asyncobject_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_poppler__asyncobject_disconnect3(void* self) {
+bool q_poppler__asyncobject_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_poppler__asyncobject_disconnect4(void* self, void* receiver) {
+bool q_poppler__asyncobject_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_poppler__asyncobject_disconnect5(void* param1) {
+bool q_poppler__asyncobject_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_poppler__asyncobject_dump_object_tree(void* self) {
+void q_poppler__asyncobject_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_poppler__asyncobject_dump_object_info(void* self) {
+void q_poppler__asyncobject_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_poppler__asyncobject_set_property(void* self, const char* name, void* value) {
+bool q_poppler__asyncobject_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_poppler__asyncobject_property(void* self, const char* name) {
+QVariant* q_poppler__asyncobject_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_poppler__asyncobject_dynamic_property_names(void* self) {
+const char** q_poppler__asyncobject_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -877,7 +873,7 @@ QBindingStorage* q_poppler__asyncobject_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_poppler__asyncobject_binding_storage2(void* self) {
+const QBindingStorage* q_poppler__asyncobject_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -889,11 +885,11 @@ void q_poppler__asyncobject_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_poppler__asyncobject_parent(void* self) {
+QObject* q_poppler__asyncobject_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_poppler__asyncobject_inherits(void* self, const char* classname) {
+bool q_poppler__asyncobject_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -909,31 +905,31 @@ int32_t q_poppler__asyncobject_start_timer23(void* self, int64_t time, int32_t t
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_poppler__asyncobject_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_poppler__asyncobject_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_poppler__asyncobject_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_poppler__asyncobject_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_poppler__asyncobject_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_poppler__asyncobject_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_poppler__asyncobject_disconnect1(void* self, const char* signal) {
+bool q_poppler__asyncobject_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_poppler__asyncobject_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_poppler__asyncobject_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_poppler__asyncobject_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_poppler__asyncobject_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_poppler__asyncobject_disconnect23(void* self, void* receiver, const char* member) {
+bool q_poppler__asyncobject_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -1005,76 +1001,44 @@ void q_poppler__asyncobject_on_custom_event(void* self, void (*callback)(void*, 
     Poppler__AsyncObject_OnCustomEvent((Poppler__AsyncObject*)self, (intptr_t)callback);
 }
 
-void q_poppler__asyncobject_connect_notify(void* self, void* signal) {
+void q_poppler__asyncobject_connect_notify(void* self, const void* signal) {
     Poppler__AsyncObject_ConnectNotify((Poppler__AsyncObject*)self, (QMetaMethod*)signal);
 }
 
-void q_poppler__asyncobject_super_connect_notify(void* self, void* signal) {
+void q_poppler__asyncobject_super_connect_notify(void* self, const void* signal) {
     Poppler__AsyncObject_SuperConnectNotify((Poppler__AsyncObject*)self, (QMetaMethod*)signal);
 }
 
-void q_poppler__asyncobject_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_poppler__asyncobject_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     Poppler__AsyncObject_OnConnectNotify((Poppler__AsyncObject*)self, (intptr_t)callback);
 }
 
-void q_poppler__asyncobject_disconnect_notify(void* self, void* signal) {
+void q_poppler__asyncobject_disconnect_notify(void* self, const void* signal) {
     Poppler__AsyncObject_DisconnectNotify((Poppler__AsyncObject*)self, (QMetaMethod*)signal);
 }
 
-void q_poppler__asyncobject_super_disconnect_notify(void* self, void* signal) {
+void q_poppler__asyncobject_super_disconnect_notify(void* self, const void* signal) {
     Poppler__AsyncObject_SuperDisconnectNotify((Poppler__AsyncObject*)self, (QMetaMethod*)signal);
 }
 
-void q_poppler__asyncobject_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_poppler__asyncobject_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     Poppler__AsyncObject_OnDisconnectNotify((Poppler__AsyncObject*)self, (intptr_t)callback);
 }
 
-QObject* q_poppler__asyncobject_sender(void* self) {
+QObject* q_poppler__asyncobject_sender(const void* self) {
     return Poppler__AsyncObject_Sender((Poppler__AsyncObject*)self);
 }
 
-QObject* q_poppler__asyncobject_super_sender(void* self) {
-    return Poppler__AsyncObject_SuperSender((Poppler__AsyncObject*)self);
-}
-
-void q_poppler__asyncobject_on_sender(void* self, QObject* (*callback)()) {
-    Poppler__AsyncObject_OnSender((Poppler__AsyncObject*)self, (intptr_t)callback);
-}
-
-int32_t q_poppler__asyncobject_sender_signal_index(void* self) {
+int32_t q_poppler__asyncobject_sender_signal_index(const void* self) {
     return Poppler__AsyncObject_SenderSignalIndex((Poppler__AsyncObject*)self);
 }
 
-int32_t q_poppler__asyncobject_super_sender_signal_index(void* self) {
-    return Poppler__AsyncObject_SuperSenderSignalIndex((Poppler__AsyncObject*)self);
-}
-
-void q_poppler__asyncobject_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    Poppler__AsyncObject_OnSenderSignalIndex((Poppler__AsyncObject*)self, (intptr_t)callback);
-}
-
-int32_t q_poppler__asyncobject_receivers(void* self, const char* signal) {
+int32_t q_poppler__asyncobject_receivers(const void* self, const char* signal) {
     return Poppler__AsyncObject_Receivers((Poppler__AsyncObject*)self, signal);
 }
 
-int32_t q_poppler__asyncobject_super_receivers(void* self, const char* signal) {
-    return Poppler__AsyncObject_SuperReceivers((Poppler__AsyncObject*)self, signal);
-}
-
-void q_poppler__asyncobject_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    Poppler__AsyncObject_OnReceivers((Poppler__AsyncObject*)self, (intptr_t)callback);
-}
-
-bool q_poppler__asyncobject_is_signal_connected(void* self, void* signal) {
+bool q_poppler__asyncobject_is_signal_connected(const void* self, const void* signal) {
     return Poppler__AsyncObject_IsSignalConnected((Poppler__AsyncObject*)self, (QMetaMethod*)signal);
-}
-
-bool q_poppler__asyncobject_super_is_signal_connected(void* self, void* signal) {
-    return Poppler__AsyncObject_SuperIsSignalConnected((Poppler__AsyncObject*)self, (QMetaMethod*)signal);
-}
-
-void q_poppler__asyncobject_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    Poppler__AsyncObject_OnIsSignalConnected((Poppler__AsyncObject*)self, (intptr_t)callback);
 }
 
 void q_poppler__asyncobject_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
@@ -1085,64 +1049,64 @@ void q_poppler__asyncobject_delete(void* self) {
     Poppler__AsyncObject_Delete((Poppler__AsyncObject*)(self));
 }
 
-int32_t q_poppler__formfieldsignature_type(void* self) {
+int32_t q_poppler__formfieldsignature_type(const void* self) {
     return Poppler__FormFieldSignature_Type((Poppler__FormFieldSignature*)self);
 }
 
-int32_t q_poppler__formfieldsignature_signature_type(void* self) {
+int32_t q_poppler__formfieldsignature_signature_type(const void* self) {
     return Poppler__FormFieldSignature_SignatureType((Poppler__FormFieldSignature*)self);
 }
 
-Poppler__SignatureValidationInfo* q_poppler__formfieldsignature_validate(void* self, int32_t opt) {
+Poppler__SignatureValidationInfo* q_poppler__formfieldsignature_validate(const void* self, int32_t opt) {
     return Poppler__FormFieldSignature_Validate((Poppler__FormFieldSignature*)self, opt);
 }
 
-Poppler__SignatureValidationInfo* q_poppler__formfieldsignature_validate2(void* self, int opt, void* validationTime) {
+Poppler__SignatureValidationInfo* q_poppler__formfieldsignature_validate2(const void* self, int opt, const void* validationTime) {
     return Poppler__FormFieldSignature_Validate2((Poppler__FormFieldSignature*)self, opt, (QDateTime*)validationTime);
 }
 
-int32_t q_poppler__formfieldsignature_validate_result(void* self) {
+int32_t q_poppler__formfieldsignature_validate_result(const void* self) {
     return Poppler__FormFieldSignature_ValidateResult((Poppler__FormFieldSignature*)self);
 }
 
-int32_t q_poppler__formfieldsignature_sign(void* self, const char* outputFileName, void* data) {
+int32_t q_poppler__formfieldsignature_sign(const void* self, const char* outputFileName, const void* data) {
     return Poppler__FormFieldSignature_Sign((Poppler__FormFieldSignature*)self, qstring(outputFileName), (Poppler__PDFConverter__NewSignatureData*)data);
 }
 
-QRectF* q_poppler__formfieldsignature_rect(void* self) {
+QRectF* q_poppler__formfieldsignature_rect(const void* self) {
     return Poppler__FormField_Rect((Poppler__FormField*)self);
 }
 
-int32_t q_poppler__formfieldsignature_id(void* self) {
+int32_t q_poppler__formfieldsignature_id(const void* self) {
     return Poppler__FormField_Id((Poppler__FormField*)self);
 }
 
-const char* q_poppler__formfieldsignature_name(void* self) {
+const char* q_poppler__formfieldsignature_name(const void* self) {
     libqt_string _str = Poppler__FormField_Name((Poppler__FormField*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_poppler__formfieldsignature_set_name(void* self, const char* name) {
+void q_poppler__formfieldsignature_set_name(const void* self, const char* name) {
     Poppler__FormField_SetName((Poppler__FormField*)self, qstring(name));
 }
 
-const char* q_poppler__formfieldsignature_fully_qualified_name(void* self) {
+const char* q_poppler__formfieldsignature_fully_qualified_name(const void* self) {
     libqt_string _str = Poppler__FormField_FullyQualifiedName((Poppler__FormField*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_poppler__formfieldsignature_ui_name(void* self) {
+const char* q_poppler__formfieldsignature_ui_name(const void* self) {
     libqt_string _str = Poppler__FormField_UiName((Poppler__FormField*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_poppler__formfieldsignature_is_read_only(void* self) {
+bool q_poppler__formfieldsignature_is_read_only(const void* self) {
     return Poppler__FormField_IsReadOnly((Poppler__FormField*)self);
 }
 
@@ -1150,7 +1114,7 @@ void q_poppler__formfieldsignature_set_read_only(void* self, bool value) {
     Poppler__FormField_SetReadOnly((Poppler__FormField*)self, value);
 }
 
-bool q_poppler__formfieldsignature_is_visible(void* self) {
+bool q_poppler__formfieldsignature_is_visible(const void* self) {
     return Poppler__FormField_IsVisible((Poppler__FormField*)self);
 }
 
@@ -1158,7 +1122,7 @@ void q_poppler__formfieldsignature_set_visible(void* self, bool value) {
     Poppler__FormField_SetVisible((Poppler__FormField*)self, value);
 }
 
-bool q_poppler__formfieldsignature_is_printable(void* self) {
+bool q_poppler__formfieldsignature_is_printable(const void* self) {
     return Poppler__FormField_IsPrintable((Poppler__FormField*)self);
 }
 
@@ -1166,15 +1130,15 @@ void q_poppler__formfieldsignature_set_printable(void* self, bool value) {
     Poppler__FormField_SetPrintable((Poppler__FormField*)self, value);
 }
 
-Poppler__Link* q_poppler__formfieldsignature_activation_action(void* self) {
+Poppler__Link* q_poppler__formfieldsignature_activation_action(const void* self) {
     return Poppler__FormField_ActivationAction((Poppler__FormField*)self);
 }
 
-Poppler__Link* q_poppler__formfieldsignature_additional_action(void* self, int32_t type) {
+Poppler__Link* q_poppler__formfieldsignature_additional_action(const void* self, int32_t type) {
     return Poppler__FormField_AdditionalAction((Poppler__FormField*)self, type);
 }
 
-Poppler__Link* q_poppler__formfieldsignature_additional_action2(void* self, int32_t type) {
+Poppler__Link* q_poppler__formfieldsignature_additional_action2(const void* self, int32_t type) {
     return Poppler__FormField_AdditionalAction2((Poppler__FormField*)self, type);
 }
 

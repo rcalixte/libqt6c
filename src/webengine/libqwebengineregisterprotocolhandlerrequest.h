@@ -20,7 +20,7 @@ QWebEngineRegisterProtocolHandlerRequest* q_webengineregisterprotocolhandlerrequ
 ///
 /// @param param1 QWebEngineRegisterProtocolHandlerRequest*
 ///
-QWebEngineRegisterProtocolHandlerRequest* q_webengineregisterprotocolhandlerrequest_new2(void* param1);
+QWebEngineRegisterProtocolHandlerRequest* q_webengineregisterprotocolhandlerrequest_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineregisterprotocolhandlerrequest.html#accept)
 ///
@@ -36,38 +36,38 @@ void q_webengineregisterprotocolhandlerrequest_reject(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineregisterprotocolhandlerrequest.html#origin)
 ///
-/// @param self QWebEngineRegisterProtocolHandlerRequest*
+/// @param self const QWebEngineRegisterProtocolHandlerRequest*
 ///
-QUrl* q_webengineregisterprotocolhandlerrequest_origin(void* self);
+QUrl* q_webengineregisterprotocolhandlerrequest_origin(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineregisterprotocolhandlerrequest.html#scheme)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWebEngineRegisterProtocolHandlerRequest*
+/// @param self const QWebEngineRegisterProtocolHandlerRequest*
 ///
-const char* q_webengineregisterprotocolhandlerrequest_scheme(void* self);
+const char* q_webengineregisterprotocolhandlerrequest_scheme(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineregisterprotocolhandlerrequest.html#operator-eq-eq)
 ///
-/// @param self QWebEngineRegisterProtocolHandlerRequest*
+/// @param self const QWebEngineRegisterProtocolHandlerRequest*
 /// @param that QWebEngineRegisterProtocolHandlerRequest*
 ///
-bool q_webengineregisterprotocolhandlerrequest_operator_equal(void* self, void* that);
+bool q_webengineregisterprotocolhandlerrequest_operator_equal(const void* self, const void* that);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineregisterprotocolhandlerrequest.html#operator-not-eq)
 ///
-/// @param self QWebEngineRegisterProtocolHandlerRequest*
+/// @param self const QWebEngineRegisterProtocolHandlerRequest*
 /// @param that QWebEngineRegisterProtocolHandlerRequest*
 ///
-bool q_webengineregisterprotocolhandlerrequest_operator_not_equal(void* self, void* that);
+bool q_webengineregisterprotocolhandlerrequest_operator_not_equal(const void* self, const void* that);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineregisterprotocolhandlerrequest.html#operator-eq)
 ///
 /// @param self QWebEngineRegisterProtocolHandlerRequest*
 /// @param param1 QWebEngineRegisterProtocolHandlerRequest*
 ///
-void q_webengineregisterprotocolhandlerrequest_operator_assign(void* self, void* param1);
+void q_webengineregisterprotocolhandlerrequest_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineregisterprotocolhandlerrequest.html#dtor.QWebEngineRegisterProtocolHandlerRequest)
 ///

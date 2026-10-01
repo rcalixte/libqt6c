@@ -7,11 +7,11 @@ QColorTransform* q_colortransform_new() {
     return QColorTransform_New();
 }
 
-QColorTransform* q_colortransform_new2(void* colorTransform) {
+QColorTransform* q_colortransform_new2(const void* colorTransform) {
     return QColorTransform_New2((QColorTransform*)colorTransform);
 }
 
-void q_colortransform_operator_assign(void* self, void* other) {
+void q_colortransform_operator_assign(void* self, const void* other) {
     QColorTransform_OperatorAssign((QColorTransform*)self, (QColorTransform*)other);
 }
 
@@ -19,19 +19,19 @@ void q_colortransform_swap(void* self, void* other) {
     QColorTransform_Swap((QColorTransform*)self, (QColorTransform*)other);
 }
 
-bool q_colortransform_is_identity(void* self) {
+bool q_colortransform_is_identity(const void* self) {
     return QColorTransform_IsIdentity((QColorTransform*)self);
 }
 
-uint32_t q_colortransform_map(void* self, uint32_t argb) {
+uint32_t q_colortransform_map(const void* self, uint32_t argb) {
     return QColorTransform_Map((QColorTransform*)self, argb);
 }
 
-QRgba64* q_colortransform_map2(void* self, void* rgba64) {
+QRgba64* q_colortransform_map2(const void* self, void* rgba64) {
     return QColorTransform_Map2((QColorTransform*)self, (QRgba64*)rgba64);
 }
 
-QColor* q_colortransform_map5(void* self, void* color) {
+QColor* q_colortransform_map5(const void* self, const void* color) {
     return QColorTransform_Map5((QColorTransform*)self, (QColor*)color);
 }
 

@@ -10,7 +10,7 @@
 #include "libqopenglcontext.hpp"
 #include "libqopenglcontext.h"
 
-const QMetaObject* q_openglcontextgroup_meta_object(void* self) {
+const QMetaObject* q_openglcontextgroup_meta_object(const void* self) {
     return QOpenGLContextGroup_MetaObject((QOpenGLContextGroup*)self);
 }
 
@@ -29,7 +29,7 @@ const char* q_openglcontextgroup_tr(const char* s) {
     return _ret;
 }
 
-libqt_list /* of QOpenGLContext* */ q_openglcontextgroup_shares(void* self) {
+libqt_list /* of QOpenGLContext* */ q_openglcontextgroup_shares(const void* self) {
     libqt_list _arr = QOpenGLContextGroup_Shares((QOpenGLContextGroup*)self);
     return _arr;
 }
@@ -60,7 +60,7 @@ bool q_openglcontextgroup_event_filter(void* self, void* watched, void* event) {
     return QObject_EventFilter((QObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
-const char* q_openglcontextgroup_object_name(void* self) {
+const char* q_openglcontextgroup_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -71,19 +71,19 @@ void q_openglcontextgroup_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_openglcontextgroup_is_widget_type(void* self) {
+bool q_openglcontextgroup_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_openglcontextgroup_is_window_type(void* self) {
+bool q_openglcontextgroup_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_openglcontextgroup_is_quick_item_type(void* self) {
+bool q_openglcontextgroup_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_openglcontextgroup_signals_blocked(void* self) {
+bool q_openglcontextgroup_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -91,7 +91,7 @@ bool q_openglcontextgroup_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_openglcontextgroup_thread(void* self) {
+QThread* q_openglcontextgroup_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -115,7 +115,7 @@ void q_openglcontextgroup_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_openglcontextgroup_children(void* self) {
+libqt_list /* of QObject* */ q_openglcontextgroup_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -132,55 +132,55 @@ void q_openglcontextgroup_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_openglcontextgroup_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_openglcontextgroup_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_openglcontextgroup_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_openglcontextgroup_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_openglcontextgroup_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_openglcontextgroup_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_openglcontextgroup_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_openglcontextgroup_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_openglcontextgroup_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_openglcontextgroup_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_openglcontextgroup_disconnect3(void* self) {
+bool q_openglcontextgroup_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_openglcontextgroup_disconnect4(void* self, void* receiver) {
+bool q_openglcontextgroup_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_openglcontextgroup_disconnect5(void* param1) {
+bool q_openglcontextgroup_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_openglcontextgroup_dump_object_tree(void* self) {
+void q_openglcontextgroup_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_openglcontextgroup_dump_object_info(void* self) {
+void q_openglcontextgroup_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_openglcontextgroup_set_property(void* self, const char* name, void* value) {
+bool q_openglcontextgroup_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_openglcontextgroup_property(void* self, const char* name) {
+QVariant* q_openglcontextgroup_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_openglcontextgroup_dynamic_property_names(void* self) {
+const char** q_openglcontextgroup_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -201,7 +201,7 @@ QBindingStorage* q_openglcontextgroup_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_openglcontextgroup_binding_storage2(void* self) {
+const QBindingStorage* q_openglcontextgroup_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -213,11 +213,11 @@ void q_openglcontextgroup_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_openglcontextgroup_parent(void* self) {
+QObject* q_openglcontextgroup_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_openglcontextgroup_inherits(void* self, const char* classname) {
+bool q_openglcontextgroup_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -233,31 +233,31 @@ int32_t q_openglcontextgroup_start_timer23(void* self, int64_t time, int32_t tim
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_openglcontextgroup_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_openglcontextgroup_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_openglcontextgroup_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_openglcontextgroup_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_openglcontextgroup_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_openglcontextgroup_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_openglcontextgroup_disconnect1(void* self, const char* signal) {
+bool q_openglcontextgroup_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_openglcontextgroup_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_openglcontextgroup_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_openglcontextgroup_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_openglcontextgroup_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_openglcontextgroup_disconnect23(void* self, void* receiver, const char* member) {
+bool q_openglcontextgroup_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -285,15 +285,15 @@ QOpenGLContext* q_openglcontext_new2(void* parent) {
     return QOpenGLContext_New2((QObject*)parent);
 }
 
-const QMetaObject* q_openglcontext_meta_object(void* self) {
+const QMetaObject* q_openglcontext_meta_object(const void* self) {
     return QOpenGLContext_MetaObject((QOpenGLContext*)self);
 }
 
-void q_openglcontext_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_openglcontext_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QOpenGLContext_OnMetaObject((QOpenGLContext*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_openglcontext_super_meta_object(void* self) {
+const QMetaObject* q_openglcontext_super_meta_object(const void* self) {
     return QOpenGLContext_SuperMetaObject((QOpenGLContext*)self);
 }
 
@@ -328,7 +328,7 @@ const char* q_openglcontext_tr(const char* s) {
     return _ret;
 }
 
-void q_openglcontext_set_format(void* self, void* format) {
+void q_openglcontext_set_format(void* self, const void* format) {
     QOpenGLContext_SetFormat((QOpenGLContext*)self, (QSurfaceFormat*)format);
 }
 
@@ -344,27 +344,27 @@ bool q_openglcontext_create(void* self) {
     return QOpenGLContext_Create((QOpenGLContext*)self);
 }
 
-bool q_openglcontext_is_valid(void* self) {
+bool q_openglcontext_is_valid(const void* self) {
     return QOpenGLContext_IsValid((QOpenGLContext*)self);
 }
 
-QSurfaceFormat* q_openglcontext_format(void* self) {
+QSurfaceFormat* q_openglcontext_format(const void* self) {
     return QOpenGLContext_Format((QOpenGLContext*)self);
 }
 
-QOpenGLContext* q_openglcontext_share_context(void* self) {
+QOpenGLContext* q_openglcontext_share_context(const void* self) {
     return QOpenGLContext_ShareContext((QOpenGLContext*)self);
 }
 
-QOpenGLContextGroup* q_openglcontext_share_group(void* self) {
+QOpenGLContextGroup* q_openglcontext_share_group(const void* self) {
     return QOpenGLContext_ShareGroup((QOpenGLContext*)self);
 }
 
-QScreen* q_openglcontext_screen(void* self) {
+QScreen* q_openglcontext_screen(const void* self) {
     return QOpenGLContext_Screen((QOpenGLContext*)self);
 }
 
-uint32_t q_openglcontext_default_framebuffer_object(void* self) {
+uint32_t q_openglcontext_default_framebuffer_object(const void* self) {
     return QOpenGLContext_DefaultFramebufferObject((QOpenGLContext*)self);
 }
 
@@ -380,15 +380,15 @@ void q_openglcontext_swap_buffers(void* self, void* surface) {
     QOpenGLContext_SwapBuffers((QOpenGLContext*)self, (QSurface*)surface);
 }
 
-QFunctionPointer q_openglcontext_get_proc_address(void* self, char* procName) {
+QFunctionPointer q_openglcontext_get_proc_address(const void* self, char* procName) {
     return (QFunctionPointer)QOpenGLContext_GetProcAddress((QOpenGLContext*)self, qstring(procName));
 }
 
-QFunctionPointer q_openglcontext_get_proc_address2(void* self, const char* procName) {
+QFunctionPointer q_openglcontext_get_proc_address2(const void* self, const char* procName) {
     return (QFunctionPointer)QOpenGLContext_GetProcAddress2((QOpenGLContext*)self, procName);
 }
 
-QSurface* q_openglcontext_surface(void* self) {
+QSurface* q_openglcontext_surface(const void* self) {
     return QOpenGLContext_Surface((QOpenGLContext*)self);
 }
 
@@ -400,19 +400,19 @@ bool q_openglcontext_are_sharing(void* first, void* second) {
     return QOpenGLContext_AreSharing((QOpenGLContext*)first, (QOpenGLContext*)second);
 }
 
-QOpenGLFunctions* q_openglcontext_functions(void* self) {
+QOpenGLFunctions* q_openglcontext_functions(const void* self) {
     return QOpenGLContext_Functions((QOpenGLContext*)self);
 }
 
-QOpenGLExtraFunctions* q_openglcontext_extra_functions(void* self) {
+QOpenGLExtraFunctions* q_openglcontext_extra_functions(const void* self) {
     return QOpenGLContext_ExtraFunctions((QOpenGLContext*)self);
 }
 
-libqt_list /* set of char* */ q_openglcontext_extensions(void* self) {
+libqt_list /* set of char* */ q_openglcontext_extensions(const void* self) {
     return QOpenGLContext_Extensions((QOpenGLContext*)self);
 }
 
-bool q_openglcontext_has_extension(void* self, char* extension) {
+bool q_openglcontext_has_extension(const void* self, char* extension) {
     return QOpenGLContext_HasExtension((QOpenGLContext*)self, qstring(extension));
 }
 
@@ -420,7 +420,7 @@ int32_t q_openglcontext_open_g_l_module_type() {
     return QOpenGLContext_OpenGLModuleType();
 }
 
-bool q_openglcontext_is_open_g_l_e_s(void* self) {
+bool q_openglcontext_is_open_g_l_e_s(const void* self) {
     return QOpenGLContext_IsOpenGLES((QOpenGLContext*)self);
 }
 
@@ -432,16 +432,8 @@ QOpenGLContext* q_openglcontext_global_share_context() {
     return QOpenGLContext_GlobalShareContext();
 }
 
-void* q_openglcontext_resolve_interface(void* self, const char* name, int revision) {
+void* q_openglcontext_resolve_interface(const void* self, const char* name, int revision) {
     return QOpenGLContext_ResolveInterface((QOpenGLContext*)self, name, revision);
-}
-
-void q_openglcontext_on_resolve_interface(void* self, void* (*callback)(void*, const char*, int)) {
-    QOpenGLContext_OnResolveInterface((QOpenGLContext*)self, (intptr_t)callback);
-}
-
-void* q_openglcontext_super_resolve_interface(void* self, const char* name, int revision) {
-    return QOpenGLContext_SuperResolveInterface((QOpenGLContext*)self, name, revision);
 }
 
 void q_openglcontext_about_to_be_destroyed(void* self) {
@@ -466,7 +458,7 @@ const char* q_openglcontext_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-const char* q_openglcontext_object_name(void* self) {
+const char* q_openglcontext_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -477,19 +469,19 @@ void q_openglcontext_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_openglcontext_is_widget_type(void* self) {
+bool q_openglcontext_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_openglcontext_is_window_type(void* self) {
+bool q_openglcontext_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_openglcontext_is_quick_item_type(void* self) {
+bool q_openglcontext_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_openglcontext_signals_blocked(void* self) {
+bool q_openglcontext_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -497,7 +489,7 @@ bool q_openglcontext_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_openglcontext_thread(void* self) {
+QThread* q_openglcontext_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -521,7 +513,7 @@ void q_openglcontext_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_openglcontext_children(void* self) {
+libqt_list /* of QObject* */ q_openglcontext_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -538,55 +530,55 @@ void q_openglcontext_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_openglcontext_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_openglcontext_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_openglcontext_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_openglcontext_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_openglcontext_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_openglcontext_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_openglcontext_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_openglcontext_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_openglcontext_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_openglcontext_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_openglcontext_disconnect3(void* self) {
+bool q_openglcontext_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_openglcontext_disconnect4(void* self, void* receiver) {
+bool q_openglcontext_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_openglcontext_disconnect5(void* param1) {
+bool q_openglcontext_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_openglcontext_dump_object_tree(void* self) {
+void q_openglcontext_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_openglcontext_dump_object_info(void* self) {
+void q_openglcontext_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_openglcontext_set_property(void* self, const char* name, void* value) {
+bool q_openglcontext_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_openglcontext_property(void* self, const char* name) {
+QVariant* q_openglcontext_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_openglcontext_dynamic_property_names(void* self) {
+const char** q_openglcontext_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -607,7 +599,7 @@ QBindingStorage* q_openglcontext_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_openglcontext_binding_storage2(void* self) {
+const QBindingStorage* q_openglcontext_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -619,11 +611,11 @@ void q_openglcontext_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_openglcontext_parent(void* self) {
+QObject* q_openglcontext_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_openglcontext_inherits(void* self, const char* classname) {
+bool q_openglcontext_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -639,31 +631,31 @@ int32_t q_openglcontext_start_timer23(void* self, int64_t time, int32_t timerTyp
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_openglcontext_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_openglcontext_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_openglcontext_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_openglcontext_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_openglcontext_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_openglcontext_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_openglcontext_disconnect1(void* self, const char* signal) {
+bool q_openglcontext_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_openglcontext_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_openglcontext_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_openglcontext_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_openglcontext_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_openglcontext_disconnect23(void* self, void* receiver, const char* member) {
+bool q_openglcontext_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -735,76 +727,44 @@ void q_openglcontext_on_custom_event(void* self, void (*callback)(void*, void*))
     QOpenGLContext_OnCustomEvent((QOpenGLContext*)self, (intptr_t)callback);
 }
 
-void q_openglcontext_connect_notify(void* self, void* signal) {
+void q_openglcontext_connect_notify(void* self, const void* signal) {
     QOpenGLContext_ConnectNotify((QOpenGLContext*)self, (QMetaMethod*)signal);
 }
 
-void q_openglcontext_super_connect_notify(void* self, void* signal) {
+void q_openglcontext_super_connect_notify(void* self, const void* signal) {
     QOpenGLContext_SuperConnectNotify((QOpenGLContext*)self, (QMetaMethod*)signal);
 }
 
-void q_openglcontext_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_openglcontext_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QOpenGLContext_OnConnectNotify((QOpenGLContext*)self, (intptr_t)callback);
 }
 
-void q_openglcontext_disconnect_notify(void* self, void* signal) {
+void q_openglcontext_disconnect_notify(void* self, const void* signal) {
     QOpenGLContext_DisconnectNotify((QOpenGLContext*)self, (QMetaMethod*)signal);
 }
 
-void q_openglcontext_super_disconnect_notify(void* self, void* signal) {
+void q_openglcontext_super_disconnect_notify(void* self, const void* signal) {
     QOpenGLContext_SuperDisconnectNotify((QOpenGLContext*)self, (QMetaMethod*)signal);
 }
 
-void q_openglcontext_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_openglcontext_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QOpenGLContext_OnDisconnectNotify((QOpenGLContext*)self, (intptr_t)callback);
 }
 
-QObject* q_openglcontext_sender(void* self) {
+QObject* q_openglcontext_sender(const void* self) {
     return QOpenGLContext_Sender((QOpenGLContext*)self);
 }
 
-QObject* q_openglcontext_super_sender(void* self) {
-    return QOpenGLContext_SuperSender((QOpenGLContext*)self);
-}
-
-void q_openglcontext_on_sender(void* self, QObject* (*callback)()) {
-    QOpenGLContext_OnSender((QOpenGLContext*)self, (intptr_t)callback);
-}
-
-int32_t q_openglcontext_sender_signal_index(void* self) {
+int32_t q_openglcontext_sender_signal_index(const void* self) {
     return QOpenGLContext_SenderSignalIndex((QOpenGLContext*)self);
 }
 
-int32_t q_openglcontext_super_sender_signal_index(void* self) {
-    return QOpenGLContext_SuperSenderSignalIndex((QOpenGLContext*)self);
-}
-
-void q_openglcontext_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QOpenGLContext_OnSenderSignalIndex((QOpenGLContext*)self, (intptr_t)callback);
-}
-
-int32_t q_openglcontext_receivers(void* self, const char* signal) {
+int32_t q_openglcontext_receivers(const void* self, const char* signal) {
     return QOpenGLContext_Receivers((QOpenGLContext*)self, signal);
 }
 
-int32_t q_openglcontext_super_receivers(void* self, const char* signal) {
-    return QOpenGLContext_SuperReceivers((QOpenGLContext*)self, signal);
-}
-
-void q_openglcontext_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QOpenGLContext_OnReceivers((QOpenGLContext*)self, (intptr_t)callback);
-}
-
-bool q_openglcontext_is_signal_connected(void* self, void* signal) {
+bool q_openglcontext_is_signal_connected(const void* self, const void* signal) {
     return QOpenGLContext_IsSignalConnected((QOpenGLContext*)self, (QMetaMethod*)signal);
-}
-
-bool q_openglcontext_super_is_signal_connected(void* self, void* signal) {
-    return QOpenGLContext_SuperIsSignalConnected((QOpenGLContext*)self, (QMetaMethod*)signal);
-}
-
-void q_openglcontext_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QOpenGLContext_OnIsSignalConnected((QOpenGLContext*)self, (intptr_t)callback);
 }
 
 void q_openglcontext_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

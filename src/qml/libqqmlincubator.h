@@ -36,57 +36,57 @@ void q_qmlincubator_force_completion(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlincubator.html#isNull)
 ///
-/// @param self QQmlIncubator*
+/// @param self const QQmlIncubator*
 ///
-bool q_qmlincubator_is_null(void* self);
+bool q_qmlincubator_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlincubator.html#isReady)
 ///
-/// @param self QQmlIncubator*
+/// @param self const QQmlIncubator*
 ///
-bool q_qmlincubator_is_ready(void* self);
+bool q_qmlincubator_is_ready(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlincubator.html#isError)
 ///
-/// @param self QQmlIncubator*
+/// @param self const QQmlIncubator*
 ///
-bool q_qmlincubator_is_error(void* self);
+bool q_qmlincubator_is_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlincubator.html#isLoading)
 ///
-/// @param self QQmlIncubator*
+/// @param self const QQmlIncubator*
 ///
-bool q_qmlincubator_is_loading(void* self);
+bool q_qmlincubator_is_loading(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlincubator.html#errors)
 ///
-/// @param self QQmlIncubator*
+/// @param self const QQmlIncubator*
 ///
 /// @return libqt_list of QQmlError*
 ///
-libqt_list q_qmlincubator_errors(void* self);
+libqt_list q_qmlincubator_errors(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlincubator.html#incubationMode)
 ///
-/// @param self QQmlIncubator*
+/// @param self const QQmlIncubator*
 ///
 /// @return enum QQmlIncubator__IncubationMode
 ///
-int32_t q_qmlincubator_incubation_mode(void* self);
+int32_t q_qmlincubator_incubation_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlincubator.html#status)
 ///
-/// @param self QQmlIncubator*
+/// @param self const QQmlIncubator*
 ///
 /// @return enum QQmlIncubator__Status
 ///
-int32_t q_qmlincubator_status(void* self);
+int32_t q_qmlincubator_status(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlincubator.html#object)
 ///
-/// @param self QQmlIncubator*
+/// @param self const QQmlIncubator*
 ///
-QObject* q_qmlincubator_object(void* self);
+QObject* q_qmlincubator_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlincubator.html#setInitialProperties)
 ///
@@ -161,15 +161,15 @@ QQmlIncubationController* q_qmlincubationcontroller_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlincubationcontroller.html#engine)
 ///
-/// @param self QQmlIncubationController*
+/// @param self const QQmlIncubationController*
 ///
-QQmlEngine* q_qmlincubationcontroller_engine(void* self);
+QQmlEngine* q_qmlincubationcontroller_engine(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlincubationcontroller.html#incubatingObjectCount)
 ///
-/// @param self QQmlIncubationController*
+/// @param self const QQmlIncubationController*
 ///
-int32_t q_qmlincubationcontroller_incubating_object_count(void* self);
+int32_t q_qmlincubationcontroller_incubating_object_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlincubationcontroller.html#incubateFor)
 ///

@@ -23,15 +23,15 @@ QMediaCaptureSession* q_mediacapturesession_new2(void* parent) {
     return QMediaCaptureSession_New2((QObject*)parent);
 }
 
-const QMetaObject* q_mediacapturesession_meta_object(void* self) {
+const QMetaObject* q_mediacapturesession_meta_object(const void* self) {
     return QMediaCaptureSession_MetaObject((QMediaCaptureSession*)self);
 }
 
-void q_mediacapturesession_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_mediacapturesession_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QMediaCaptureSession_OnMetaObject((QMediaCaptureSession*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_mediacapturesession_super_meta_object(void* self) {
+const QMetaObject* q_mediacapturesession_super_meta_object(const void* self) {
     return QMediaCaptureSession_SuperMetaObject((QMediaCaptureSession*)self);
 }
 
@@ -66,7 +66,7 @@ const char* q_mediacapturesession_tr(const char* s) {
     return _ret;
 }
 
-QAudioInput* q_mediacapturesession_audio_input(void* self) {
+QAudioInput* q_mediacapturesession_audio_input(const void* self) {
     return QMediaCaptureSession_AudioInput((QMediaCaptureSession*)self);
 }
 
@@ -74,7 +74,7 @@ void q_mediacapturesession_set_audio_input(void* self, void* input) {
     QMediaCaptureSession_SetAudioInput((QMediaCaptureSession*)self, (QAudioInput*)input);
 }
 
-QAudioBufferInput* q_mediacapturesession_audio_buffer_input(void* self) {
+QAudioBufferInput* q_mediacapturesession_audio_buffer_input(const void* self) {
     return QMediaCaptureSession_AudioBufferInput((QMediaCaptureSession*)self);
 }
 
@@ -82,7 +82,7 @@ void q_mediacapturesession_set_audio_buffer_input(void* self, void* input) {
     QMediaCaptureSession_SetAudioBufferInput((QMediaCaptureSession*)self, (QAudioBufferInput*)input);
 }
 
-QCamera* q_mediacapturesession_camera(void* self) {
+QCamera* q_mediacapturesession_camera(const void* self) {
     return QMediaCaptureSession_Camera((QMediaCaptureSession*)self);
 }
 
@@ -114,7 +114,7 @@ void q_mediacapturesession_set_window_capture(void* self, void* windowCapture) {
     QMediaCaptureSession_SetWindowCapture((QMediaCaptureSession*)self, (QWindowCapture*)windowCapture);
 }
 
-QVideoFrameInput* q_mediacapturesession_video_frame_input(void* self) {
+QVideoFrameInput* q_mediacapturesession_video_frame_input(const void* self) {
     return QMediaCaptureSession_VideoFrameInput((QMediaCaptureSession*)self);
 }
 
@@ -134,7 +134,7 @@ void q_mediacapturesession_set_video_output(void* self, void* output) {
     QMediaCaptureSession_SetVideoOutput((QMediaCaptureSession*)self, (QObject*)output);
 }
 
-QObject* q_mediacapturesession_video_output(void* self) {
+QObject* q_mediacapturesession_video_output(const void* self) {
     return QMediaCaptureSession_VideoOutput((QMediaCaptureSession*)self);
 }
 
@@ -142,7 +142,7 @@ void q_mediacapturesession_set_video_sink(void* self, void* sink) {
     QMediaCaptureSession_SetVideoSink((QMediaCaptureSession*)self, (QVideoSink*)sink);
 }
 
-QVideoSink* q_mediacapturesession_video_sink(void* self) {
+QVideoSink* q_mediacapturesession_video_sink(const void* self) {
     return QMediaCaptureSession_VideoSink((QMediaCaptureSession*)self);
 }
 
@@ -150,7 +150,7 @@ void q_mediacapturesession_set_audio_output(void* self, void* output) {
     QMediaCaptureSession_SetAudioOutput((QMediaCaptureSession*)self, (QAudioOutput*)output);
 }
 
-QAudioOutput* q_mediacapturesession_audio_output(void* self) {
+QAudioOutput* q_mediacapturesession_audio_output(const void* self) {
     return QMediaCaptureSession_AudioOutput((QMediaCaptureSession*)self);
 }
 
@@ -248,7 +248,7 @@ const char* q_mediacapturesession_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-const char* q_mediacapturesession_object_name(void* self) {
+const char* q_mediacapturesession_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -259,19 +259,19 @@ void q_mediacapturesession_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_mediacapturesession_is_widget_type(void* self) {
+bool q_mediacapturesession_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_mediacapturesession_is_window_type(void* self) {
+bool q_mediacapturesession_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_mediacapturesession_is_quick_item_type(void* self) {
+bool q_mediacapturesession_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_mediacapturesession_signals_blocked(void* self) {
+bool q_mediacapturesession_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -279,7 +279,7 @@ bool q_mediacapturesession_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_mediacapturesession_thread(void* self) {
+QThread* q_mediacapturesession_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -303,7 +303,7 @@ void q_mediacapturesession_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_mediacapturesession_children(void* self) {
+libqt_list /* of QObject* */ q_mediacapturesession_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -320,55 +320,55 @@ void q_mediacapturesession_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_mediacapturesession_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_mediacapturesession_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_mediacapturesession_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_mediacapturesession_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_mediacapturesession_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_mediacapturesession_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_mediacapturesession_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_mediacapturesession_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_mediacapturesession_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_mediacapturesession_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_mediacapturesession_disconnect3(void* self) {
+bool q_mediacapturesession_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_mediacapturesession_disconnect4(void* self, void* receiver) {
+bool q_mediacapturesession_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_mediacapturesession_disconnect5(void* param1) {
+bool q_mediacapturesession_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_mediacapturesession_dump_object_tree(void* self) {
+void q_mediacapturesession_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_mediacapturesession_dump_object_info(void* self) {
+void q_mediacapturesession_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_mediacapturesession_set_property(void* self, const char* name, void* value) {
+bool q_mediacapturesession_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_mediacapturesession_property(void* self, const char* name) {
+QVariant* q_mediacapturesession_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_mediacapturesession_dynamic_property_names(void* self) {
+const char** q_mediacapturesession_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -389,7 +389,7 @@ QBindingStorage* q_mediacapturesession_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_mediacapturesession_binding_storage2(void* self) {
+const QBindingStorage* q_mediacapturesession_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -401,11 +401,11 @@ void q_mediacapturesession_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_mediacapturesession_parent(void* self) {
+QObject* q_mediacapturesession_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_mediacapturesession_inherits(void* self, const char* classname) {
+bool q_mediacapturesession_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -421,31 +421,31 @@ int32_t q_mediacapturesession_start_timer23(void* self, int64_t time, int32_t ti
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_mediacapturesession_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_mediacapturesession_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_mediacapturesession_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_mediacapturesession_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_mediacapturesession_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_mediacapturesession_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_mediacapturesession_disconnect1(void* self, const char* signal) {
+bool q_mediacapturesession_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_mediacapturesession_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_mediacapturesession_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_mediacapturesession_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_mediacapturesession_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_mediacapturesession_disconnect23(void* self, void* receiver, const char* member) {
+bool q_mediacapturesession_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -517,76 +517,44 @@ void q_mediacapturesession_on_custom_event(void* self, void (*callback)(void*, v
     QMediaCaptureSession_OnCustomEvent((QMediaCaptureSession*)self, (intptr_t)callback);
 }
 
-void q_mediacapturesession_connect_notify(void* self, void* signal) {
+void q_mediacapturesession_connect_notify(void* self, const void* signal) {
     QMediaCaptureSession_ConnectNotify((QMediaCaptureSession*)self, (QMetaMethod*)signal);
 }
 
-void q_mediacapturesession_super_connect_notify(void* self, void* signal) {
+void q_mediacapturesession_super_connect_notify(void* self, const void* signal) {
     QMediaCaptureSession_SuperConnectNotify((QMediaCaptureSession*)self, (QMetaMethod*)signal);
 }
 
-void q_mediacapturesession_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_mediacapturesession_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QMediaCaptureSession_OnConnectNotify((QMediaCaptureSession*)self, (intptr_t)callback);
 }
 
-void q_mediacapturesession_disconnect_notify(void* self, void* signal) {
+void q_mediacapturesession_disconnect_notify(void* self, const void* signal) {
     QMediaCaptureSession_DisconnectNotify((QMediaCaptureSession*)self, (QMetaMethod*)signal);
 }
 
-void q_mediacapturesession_super_disconnect_notify(void* self, void* signal) {
+void q_mediacapturesession_super_disconnect_notify(void* self, const void* signal) {
     QMediaCaptureSession_SuperDisconnectNotify((QMediaCaptureSession*)self, (QMetaMethod*)signal);
 }
 
-void q_mediacapturesession_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_mediacapturesession_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QMediaCaptureSession_OnDisconnectNotify((QMediaCaptureSession*)self, (intptr_t)callback);
 }
 
-QObject* q_mediacapturesession_sender(void* self) {
+QObject* q_mediacapturesession_sender(const void* self) {
     return QMediaCaptureSession_Sender((QMediaCaptureSession*)self);
 }
 
-QObject* q_mediacapturesession_super_sender(void* self) {
-    return QMediaCaptureSession_SuperSender((QMediaCaptureSession*)self);
-}
-
-void q_mediacapturesession_on_sender(void* self, QObject* (*callback)()) {
-    QMediaCaptureSession_OnSender((QMediaCaptureSession*)self, (intptr_t)callback);
-}
-
-int32_t q_mediacapturesession_sender_signal_index(void* self) {
+int32_t q_mediacapturesession_sender_signal_index(const void* self) {
     return QMediaCaptureSession_SenderSignalIndex((QMediaCaptureSession*)self);
 }
 
-int32_t q_mediacapturesession_super_sender_signal_index(void* self) {
-    return QMediaCaptureSession_SuperSenderSignalIndex((QMediaCaptureSession*)self);
-}
-
-void q_mediacapturesession_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QMediaCaptureSession_OnSenderSignalIndex((QMediaCaptureSession*)self, (intptr_t)callback);
-}
-
-int32_t q_mediacapturesession_receivers(void* self, const char* signal) {
+int32_t q_mediacapturesession_receivers(const void* self, const char* signal) {
     return QMediaCaptureSession_Receivers((QMediaCaptureSession*)self, signal);
 }
 
-int32_t q_mediacapturesession_super_receivers(void* self, const char* signal) {
-    return QMediaCaptureSession_SuperReceivers((QMediaCaptureSession*)self, signal);
-}
-
-void q_mediacapturesession_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QMediaCaptureSession_OnReceivers((QMediaCaptureSession*)self, (intptr_t)callback);
-}
-
-bool q_mediacapturesession_is_signal_connected(void* self, void* signal) {
+bool q_mediacapturesession_is_signal_connected(const void* self, const void* signal) {
     return QMediaCaptureSession_IsSignalConnected((QMediaCaptureSession*)self, (QMetaMethod*)signal);
-}
-
-bool q_mediacapturesession_super_is_signal_connected(void* self, void* signal) {
-    return QMediaCaptureSession_SuperIsSignalConnected((QMediaCaptureSession*)self, (QMetaMethod*)signal);
-}
-
-void q_mediacapturesession_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QMediaCaptureSession_OnIsSignalConnected((QMediaCaptureSession*)self, (intptr_t)callback);
 }
 
 void q_mediacapturesession_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

@@ -6,23 +6,23 @@ KParts__GUIActivateEvent* k_parts__guiactivateevent_new(bool activated) {
     return KParts__GUIActivateEvent_New(activated);
 }
 
-bool k_parts__guiactivateevent_activated(void* self) {
+bool k_parts__guiactivateevent_activated(const void* self) {
     return KParts__GUIActivateEvent_Activated((KParts__GUIActivateEvent*)self);
 }
 
-bool k_parts__guiactivateevent_test(void* event) {
+bool k_parts__guiactivateevent_test(const void* event) {
     return KParts__GUIActivateEvent_Test((QEvent*)event);
 }
 
-int32_t k_parts__guiactivateevent_type(void* self) {
+int32_t k_parts__guiactivateevent_type(const void* self) {
     return QEvent_Type((QEvent*)self);
 }
 
-bool k_parts__guiactivateevent_spontaneous(void* self) {
+bool k_parts__guiactivateevent_spontaneous(const void* self) {
     return QEvent_Spontaneous((QEvent*)self);
 }
 
-bool k_parts__guiactivateevent_is_accepted(void* self) {
+bool k_parts__guiactivateevent_is_accepted(const void* self) {
     return QEvent_IsAccepted((QEvent*)self);
 }
 
@@ -34,15 +34,15 @@ void k_parts__guiactivateevent_ignore(void* self) {
     QEvent_Ignore((QEvent*)self);
 }
 
-bool k_parts__guiactivateevent_is_input_event(void* self) {
+bool k_parts__guiactivateevent_is_input_event(const void* self) {
     return QEvent_IsInputEvent((QEvent*)self);
 }
 
-bool k_parts__guiactivateevent_is_pointer_event(void* self) {
+bool k_parts__guiactivateevent_is_pointer_event(const void* self) {
     return QEvent_IsPointerEvent((QEvent*)self);
 }
 
-bool k_parts__guiactivateevent_is_single_point_event(void* self) {
+bool k_parts__guiactivateevent_is_single_point_event(const void* self) {
     return QEvent_IsSinglePointEvent((QEvent*)self);
 }
 
@@ -66,16 +66,16 @@ void k_parts__guiactivateevent_on_set_accepted(void* self, void (*callback)(void
     KParts__GUIActivateEvent_OnSetAccepted((KParts__GUIActivateEvent*)self, (intptr_t)callback);
 }
 
-QEvent* k_parts__guiactivateevent_clone(void* self) {
+QEvent* k_parts__guiactivateevent_clone(const void* self) {
     return KParts__GUIActivateEvent_Clone((KParts__GUIActivateEvent*)self);
 }
 
-QEvent* k_parts__guiactivateevent_super_clone(void* self) {
+QEvent* k_parts__guiactivateevent_super_clone(const void* self) {
     return KParts__GUIActivateEvent_SuperClone((KParts__GUIActivateEvent*)self);
 }
 
-void k_parts__guiactivateevent_on_clone(void* self, QEvent* (*callback)()) {
-    KParts__GUIActivateEvent_OnClone((KParts__GUIActivateEvent*)self, (intptr_t)callback);
+void k_parts__guiactivateevent_on_clone(const void* self, QEvent* (*callback)(const void*)) {
+    KParts__GUIActivateEvent_OnClone((const KParts__GUIActivateEvent*)self, (intptr_t)callback);
 }
 
 void k_parts__guiactivateevent_delete(void* self) {

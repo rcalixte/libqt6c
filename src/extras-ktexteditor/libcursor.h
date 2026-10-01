@@ -20,7 +20,7 @@ KTextEditor__Cursor* k_texteditor__cursor_new();
 ///
 /// @param other KTextEditor__Cursor*
 ///
-KTextEditor__Cursor* k_texteditor__cursor_new2(void* other);
+KTextEditor__Cursor* k_texteditor__cursor_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-cursor.html)
 
@@ -45,7 +45,7 @@ KTextEditor__Cursor* k_texteditor__cursor_new4(int line, int column);
 ///
 /// @param param1 KTextEditor__Cursor*
 ///
-KTextEditor__Cursor* k_texteditor__cursor_new5(void* param1);
+KTextEditor__Cursor* k_texteditor__cursor_new5(const void* param1);
 
 /// k_texteditor__cursor_copy_assign shallow copies `other` into `self`.
 ///
@@ -63,9 +63,9 @@ void k_texteditor__cursor_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-cursor.html#isValid)
 ///
-/// @param self KTextEditor__Cursor*
+/// @param self const KTextEditor__Cursor*
 ///
-bool k_texteditor__cursor_is_valid(void* self);
+bool k_texteditor__cursor_is_valid(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-cursor.html#invalid)
 ///
@@ -79,9 +79,9 @@ KTextEditor__Cursor* k_texteditor__cursor_start();
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KTextEditor__Cursor*
+/// @param self const KTextEditor__Cursor*
 ///
-const char* k_texteditor__cursor_to_string(void* self);
+const char* k_texteditor__cursor_to_string(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-cursor.html#fromString)
 ///
@@ -106,9 +106,9 @@ void k_texteditor__cursor_set_position2(void* self, int line, int column);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-cursor.html#line)
 ///
-/// @param self KTextEditor__Cursor*
+/// @param self const KTextEditor__Cursor*
 ///
-int32_t k_texteditor__cursor_line(void* self);
+int32_t k_texteditor__cursor_line(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-cursor.html#setLine)
 ///
@@ -119,9 +119,9 @@ void k_texteditor__cursor_set_line(void* self, int line);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-cursor.html#column)
 ///
-/// @param self KTextEditor__Cursor*
+/// @param self const KTextEditor__Cursor*
 ///
-int32_t k_texteditor__cursor_column(void* self);
+int32_t k_texteditor__cursor_column(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-cursor.html#setColumn)
 ///
@@ -132,23 +132,23 @@ void k_texteditor__cursor_set_column(void* self, int column);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-cursor.html#atStartOfLine)
 ///
-/// @param self KTextEditor__Cursor*
+/// @param self const KTextEditor__Cursor*
 ///
-bool k_texteditor__cursor_at_start_of_line(void* self);
+bool k_texteditor__cursor_at_start_of_line(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-cursor.html#atStartOfDocument)
 ///
-/// @param self KTextEditor__Cursor*
+/// @param self const KTextEditor__Cursor*
 ///
-bool k_texteditor__cursor_at_start_of_document(void* self);
+bool k_texteditor__cursor_at_start_of_document(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-cursor.html#position)
 ///
-/// @param self KTextEditor__Cursor*
+/// @param self const KTextEditor__Cursor*
 /// @param line int*
 /// @param column int*
 ///
-void k_texteditor__cursor_position(void* self, int* line, int* column);
+void k_texteditor__cursor_position(const void* self, int* line, int* column);
 
 /// Delete this object from C++ memory.
 ///

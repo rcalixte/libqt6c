@@ -20,7 +20,7 @@ KFileItemListProperties* k_fileitemlistproperties_new();
 ///
 /// @param items KFileItemList*
 ///
-KFileItemListProperties* k_fileitemlistproperties_new2(void* items);
+KFileItemListProperties* k_fileitemlistproperties_new2(const void* items);
 
 /// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html)
 
@@ -28,87 +28,87 @@ KFileItemListProperties* k_fileitemlistproperties_new2(void* items);
 ///
 /// @param param1 KFileItemListProperties*
 ///
-KFileItemListProperties* k_fileitemlistproperties_new3(void* param1);
+KFileItemListProperties* k_fileitemlistproperties_new3(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#operator-eq)
 ///
 /// @param self KFileItemListProperties*
 /// @param other KFileItemListProperties*
 ///
-void k_fileitemlistproperties_operator_assign(void* self, void* other);
+void k_fileitemlistproperties_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#setItems)
 ///
 /// @param self KFileItemListProperties*
 /// @param items KFileItemList*
 ///
-void k_fileitemlistproperties_set_items(void* self, void* items);
+void k_fileitemlistproperties_set_items(void* self, const void* items);
 
 /// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#supportsReading)
 ///
-/// @param self KFileItemListProperties*
+/// @param self const KFileItemListProperties*
 ///
-bool k_fileitemlistproperties_supports_reading(void* self);
+bool k_fileitemlistproperties_supports_reading(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#supportsDeleting)
 ///
-/// @param self KFileItemListProperties*
+/// @param self const KFileItemListProperties*
 ///
-bool k_fileitemlistproperties_supports_deleting(void* self);
+bool k_fileitemlistproperties_supports_deleting(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#supportsWriting)
 ///
-/// @param self KFileItemListProperties*
+/// @param self const KFileItemListProperties*
 ///
-bool k_fileitemlistproperties_supports_writing(void* self);
+bool k_fileitemlistproperties_supports_writing(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#supportsMoving)
 ///
-/// @param self KFileItemListProperties*
+/// @param self const KFileItemListProperties*
 ///
-bool k_fileitemlistproperties_supports_moving(void* self);
+bool k_fileitemlistproperties_supports_moving(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#isLocal)
 ///
-/// @param self KFileItemListProperties*
+/// @param self const KFileItemListProperties*
 ///
-bool k_fileitemlistproperties_is_local(void* self);
+bool k_fileitemlistproperties_is_local(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#urlList)
 ///
-/// @param self KFileItemListProperties*
+/// @param self const KFileItemListProperties*
 ///
 /// @return libqt_list of QUrl*
 ///
-libqt_list k_fileitemlistproperties_url_list(void* self);
+libqt_list k_fileitemlistproperties_url_list(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#isDirectory)
 ///
-/// @param self KFileItemListProperties*
+/// @param self const KFileItemListProperties*
 ///
-bool k_fileitemlistproperties_is_directory(void* self);
+bool k_fileitemlistproperties_is_directory(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#isFile)
 ///
-/// @param self KFileItemListProperties*
+/// @param self const KFileItemListProperties*
 ///
-bool k_fileitemlistproperties_is_file(void* self);
+bool k_fileitemlistproperties_is_file(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#mimeType)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileItemListProperties*
+/// @param self const KFileItemListProperties*
 ///
-const char* k_fileitemlistproperties_mime_type(void* self);
+const char* k_fileitemlistproperties_mime_type(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#mimeGroup)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileItemListProperties*
+/// @param self const KFileItemListProperties*
 ///
-const char* k_fileitemlistproperties_mime_group(void* self);
+const char* k_fileitemlistproperties_mime_group(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#dtor.KFileItemListProperties)
 ///

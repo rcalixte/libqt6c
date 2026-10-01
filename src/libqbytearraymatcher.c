@@ -17,7 +17,7 @@ QByteArrayMatcher* q_bytearraymatcher_new4(const char* pattern) {
     return QByteArrayMatcher_New4(pattern);
 }
 
-QByteArrayMatcher* q_bytearraymatcher_new5(void* other) {
+QByteArrayMatcher* q_bytearraymatcher_new5(const void* other) {
     return QByteArrayMatcher_New5((QByteArrayMatcher*)other);
 }
 
@@ -25,7 +25,7 @@ QByteArrayMatcher* q_bytearraymatcher_new6(const char* pattern, intptr_t length)
     return QByteArrayMatcher_New6(pattern, length);
 }
 
-void q_bytearraymatcher_operator_assign(void* self, void* other) {
+void q_bytearraymatcher_operator_assign(void* self, const void* other) {
     QByteArrayMatcher_OperatorAssign((QByteArrayMatcher*)self, (QByteArrayMatcher*)other);
 }
 
@@ -33,26 +33,26 @@ void q_bytearraymatcher_set_pattern(void* self, char* pattern) {
     QByteArrayMatcher_SetPattern((QByteArrayMatcher*)self, qstring(pattern));
 }
 
-intptr_t q_bytearraymatcher_index_in(void* self, const char* str, intptr_t lenVal) {
+intptr_t q_bytearraymatcher_index_in(const void* self, const char* str, intptr_t lenVal) {
     return QByteArrayMatcher_IndexIn((QByteArrayMatcher*)self, str, lenVal);
 }
 
-intptr_t q_bytearraymatcher_index_in2(void* self, char* data) {
+intptr_t q_bytearraymatcher_index_in2(const void* self, char* data) {
     return QByteArrayMatcher_IndexIn2((QByteArrayMatcher*)self, qstring(data));
 }
 
-char* q_bytearraymatcher_pattern(void* self) {
+char* q_bytearraymatcher_pattern(const void* self) {
     libqt_string _str = QByteArrayMatcher_Pattern((QByteArrayMatcher*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-intptr_t q_bytearraymatcher_index_in3(void* self, const char* str, intptr_t lenVal, intptr_t from) {
+intptr_t q_bytearraymatcher_index_in3(const void* self, const char* str, intptr_t lenVal, intptr_t from) {
     return QByteArrayMatcher_IndexIn3((QByteArrayMatcher*)self, str, lenVal, from);
 }
 
-intptr_t q_bytearraymatcher_index_in22(void* self, char* data, intptr_t from) {
+intptr_t q_bytearraymatcher_index_in22(const void* self, char* data, intptr_t from) {
     return QByteArrayMatcher_IndexIn22((QByteArrayMatcher*)self, qstring(data), from);
 }
 
@@ -60,7 +60,7 @@ void q_bytearraymatcher_delete(void* self) {
     QByteArrayMatcher_Delete((QByteArrayMatcher*)(self));
 }
 
-QStaticByteArrayMatcherBase* q_staticbytearraymatcherbase_new(void* other) {
+QStaticByteArrayMatcherBase* q_staticbytearraymatcherbase_new(const void* other) {
     return QStaticByteArrayMatcherBase_New((QStaticByteArrayMatcherBase*)other);
 }
 

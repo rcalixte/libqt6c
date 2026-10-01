@@ -16,30 +16,30 @@ QSGRenderNode* q_sgrendernode_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode.html#changedStates)
 ///
-/// @param self QSGRenderNode*
+/// @param self const QSGRenderNode*
 ///
 /// @return flag of enum QSGRenderNode__StateFlag
 ///
-int32_t q_sgrendernode_changed_states(void* self);
+int32_t q_sgrendernode_changed_states(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode.html#changedStates)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSGRenderNode*
-/// @param callback int32_t func()
+/// @param self const QSGRenderNode*
+/// @param callback int32_t func(const QSGRenderNode* self)
 ///
-void q_sgrendernode_on_changed_states(void* self, int32_t (*callback)());
+void q_sgrendernode_on_changed_states(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode.html#changedStates)
 ///
 /// Base class method implementation
 ///
-/// @param self QSGRenderNode*
+/// @param self const QSGRenderNode*
 ///
 /// @return flag of enum QSGRenderNode__StateFlag
 ///
-int32_t q_sgrendernode_super_changed_states(void* self);
+int32_t q_sgrendernode_super_changed_states(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode.html#prepare)
 ///
@@ -52,9 +52,9 @@ void q_sgrendernode_prepare(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSGRenderNode*
-/// @param callback void func()
+/// @param callback void func(QSGRenderNode* self)
 ///
-void q_sgrendernode_on_prepare(void* self, void (*callback)());
+void q_sgrendernode_on_prepare(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode.html#prepare)
 ///
@@ -66,10 +66,12 @@ void q_sgrendernode_super_prepare(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode.html#render)
 ///
+/// @warning This method must be implemented with `q_sgrendernode_on_render` before it can be called.
+///
 /// @param self QSGRenderNode*
 /// @param state QSGRenderNode__RenderState*
 ///
-void q_sgrendernode_render(void* self, void* state);
+void q_sgrendernode_render(void* self, const void* state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode.html#render)
 ///
@@ -78,16 +80,7 @@ void q_sgrendernode_render(void* self, void* state);
 /// @param self QSGRenderNode*
 /// @param callback void func(QSGRenderNode* self, QSGRenderNode__RenderState* state)
 ///
-void q_sgrendernode_on_render(void* self, void (*callback)(void*, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode.html#render)
-///
-/// Base class method implementation
-///
-/// @param self QSGRenderNode*
-/// @param state QSGRenderNode__RenderState*
-///
-void q_sgrendernode_super_render(void* self, void* state);
+void q_sgrendernode_on_render(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode.html#releaseResources)
 ///
@@ -100,9 +93,9 @@ void q_sgrendernode_release_resources(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSGRenderNode*
-/// @param callback void func()
+/// @param callback void func(QSGRenderNode* self)
 ///
-void q_sgrendernode_on_release_resources(void* self, void (*callback)());
+void q_sgrendernode_on_release_resources(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode.html#releaseResources)
 ///
@@ -114,94 +107,94 @@ void q_sgrendernode_super_release_resources(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode.html#flags)
 ///
-/// @param self QSGRenderNode*
+/// @param self const QSGRenderNode*
 ///
 /// @return flag of enum QSGRenderNode__RenderingFlag
 ///
-int32_t q_sgrendernode_flags(void* self);
+int32_t q_sgrendernode_flags(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode.html#flags)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSGRenderNode*
-/// @param callback int32_t func()
+/// @param self const QSGRenderNode*
+/// @param callback int32_t func(const QSGRenderNode* self)
 ///
-void q_sgrendernode_on_flags(void* self, int32_t (*callback)());
+void q_sgrendernode_on_flags(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode.html#flags)
 ///
 /// Base class method implementation
 ///
-/// @param self QSGRenderNode*
+/// @param self const QSGRenderNode*
 ///
 /// @return flag of enum QSGRenderNode__RenderingFlag
 ///
-int32_t q_sgrendernode_super_flags(void* self);
+int32_t q_sgrendernode_super_flags(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode.html#rect)
 ///
-/// @param self QSGRenderNode*
+/// @param self const QSGRenderNode*
 ///
-QRectF* q_sgrendernode_rect(void* self);
+QRectF* q_sgrendernode_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode.html#rect)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSGRenderNode*
-/// @param callback QRectF* func()
+/// @param self const QSGRenderNode*
+/// @param callback QRectF* func(const QSGRenderNode* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sgrendernode_on_rect(void* self, QRectF* (*callback)());
+void q_sgrendernode_on_rect(const void* self, QRectF* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode.html#rect)
 ///
 /// Base class method implementation
 ///
-/// @param self QSGRenderNode*
+/// @param self const QSGRenderNode*
 ///
-QRectF* q_sgrendernode_super_rect(void* self);
+QRectF* q_sgrendernode_super_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode.html#projectionMatrix)
 ///
-/// @param self QSGRenderNode*
+/// @param self const QSGRenderNode*
 ///
-const QMatrix4x4* q_sgrendernode_projection_matrix(void* self);
+const QMatrix4x4* q_sgrendernode_projection_matrix(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode.html#projectionMatrix)
 ///
-/// @param self QSGRenderNode*
+/// @param self const QSGRenderNode*
 /// @param index intptr_t
 ///
-const QMatrix4x4* q_sgrendernode_projection_matrix2(void* self, intptr_t index);
+const QMatrix4x4* q_sgrendernode_projection_matrix2(const void* self, intptr_t index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode.html#matrix)
 ///
-/// @param self QSGRenderNode*
+/// @param self const QSGRenderNode*
 ///
-const QMatrix4x4* q_sgrendernode_matrix(void* self);
+const QMatrix4x4* q_sgrendernode_matrix(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode.html#clipList)
 ///
-/// @param self QSGRenderNode*
+/// @param self const QSGRenderNode*
 ///
-const QSGClipNode* q_sgrendernode_clip_list(void* self);
+const QSGClipNode* q_sgrendernode_clip_list(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode.html#inheritedOpacity)
 ///
-/// @param self QSGRenderNode*
+/// @param self const QSGRenderNode*
 ///
-double q_sgrendernode_inherited_opacity(void* self);
+double q_sgrendernode_inherited_opacity(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#parent)
 ///
-/// @param self QSGRenderNode*
+/// @param self const QSGRenderNode*
 ///
-QSGNode* q_sgrendernode_parent(void* self);
+QSGNode* q_sgrendernode_parent(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -271,60 +264,60 @@ void q_sgrendernode_reparent_child_nodes_to(void* self, void* newParent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#childCount)
 ///
-/// @param self QSGRenderNode*
+/// @param self const QSGRenderNode*
 ///
-int32_t q_sgrendernode_child_count(void* self);
+int32_t q_sgrendernode_child_count(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#childAtIndex)
 ///
-/// @param self QSGRenderNode*
+/// @param self const QSGRenderNode*
 /// @param i int
 ///
-QSGNode* q_sgrendernode_child_at_index(void* self, int i);
+QSGNode* q_sgrendernode_child_at_index(const void* self, int i);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#firstChild)
 ///
-/// @param self QSGRenderNode*
+/// @param self const QSGRenderNode*
 ///
-QSGNode* q_sgrendernode_first_child(void* self);
+QSGNode* q_sgrendernode_first_child(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#lastChild)
 ///
-/// @param self QSGRenderNode*
+/// @param self const QSGRenderNode*
 ///
-QSGNode* q_sgrendernode_last_child(void* self);
+QSGNode* q_sgrendernode_last_child(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#nextSibling)
 ///
-/// @param self QSGRenderNode*
+/// @param self const QSGRenderNode*
 ///
-QSGNode* q_sgrendernode_next_sibling(void* self);
+QSGNode* q_sgrendernode_next_sibling(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#previousSibling)
 ///
-/// @param self QSGRenderNode*
+/// @param self const QSGRenderNode*
 ///
-QSGNode* q_sgrendernode_previous_sibling(void* self);
+QSGNode* q_sgrendernode_previous_sibling(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#type)
 ///
-/// @param self QSGRenderNode*
+/// @param self const QSGRenderNode*
 ///
 /// @return enum QSGNode__NodeType
 ///
-int32_t q_sgrendernode_type(void* self);
+int32_t q_sgrendernode_type(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -347,11 +340,11 @@ void q_sgrendernode_mark_dirty(void* self, int32_t bits);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#dirtyState)
 ///
-/// @param self QSGRenderNode*
+/// @param self const QSGRenderNode*
 ///
 /// @return flag of enum QSGNode__DirtyStateBit
 ///
-int32_t q_sgrendernode_dirty_state(void* self);
+int32_t q_sgrendernode_dirty_state(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -397,9 +390,9 @@ void q_sgrendernode_set_flags2(void* self, int32_t param1, bool param2);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSGRenderNode*
+/// @param self const QSGRenderNode*
 ///
-bool q_sgrendernode_is_subtree_blocked(void* self);
+bool q_sgrendernode_is_subtree_blocked(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -407,9 +400,9 @@ bool q_sgrendernode_is_subtree_blocked(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSGRenderNode*
+/// @param self const QSGRenderNode*
 ///
-bool q_sgrendernode_super_is_subtree_blocked(void* self);
+bool q_sgrendernode_super_is_subtree_blocked(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -417,10 +410,10 @@ bool q_sgrendernode_super_is_subtree_blocked(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSGRenderNode*
-/// @param callback bool func()
+/// @param self const QSGRenderNode*
+/// @param callback bool func(QSGRenderNode* self)
 ///
-void q_sgrendernode_on_is_subtree_blocked(void* self, bool (*callback)());
+void q_sgrendernode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QSGNode
 ///
@@ -449,9 +442,9 @@ void q_sgrendernode_super_preprocess(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSGRenderNode*
-/// @param callback void func()
+/// @param callback void func(QSGRenderNode* self)
 ///
-void q_sgrendernode_on_preprocess(void* self, void (*callback)());
+void q_sgrendernode_on_preprocess(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode.html#dtor.QSGRenderNode)
 ///
@@ -463,55 +456,19 @@ void q_sgrendernode_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode-renderstate.html)
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode-renderstate.html#projectionMatrix)
-///
-/// @param self QSGRenderNode__RenderState*
-///
-const QMatrix4x4* q_sgrendernode__renderstate_projection_matrix(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode-renderstate.html#scissorRect)
-///
-/// @param self QSGRenderNode__RenderState*
-///
-QRect* q_sgrendernode__renderstate_scissor_rect(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode-renderstate.html#scissorEnabled)
-///
-/// @param self QSGRenderNode__RenderState*
-///
-bool q_sgrendernode__renderstate_scissor_enabled(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode-renderstate.html#stencilValue)
-///
-/// @param self QSGRenderNode__RenderState*
-///
-int32_t q_sgrendernode__renderstate_stencil_value(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode-renderstate.html#stencilEnabled)
-///
-/// @param self QSGRenderNode__RenderState*
-///
-bool q_sgrendernode__renderstate_stencil_enabled(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode-renderstate.html#clipRegion)
-///
-/// @param self QSGRenderNode__RenderState*
-///
-const QRegion* q_sgrendernode__renderstate_clip_region(void* self);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode-renderstate.html#get)
 ///
-/// @param self QSGRenderNode__RenderState*
+/// @param self const QSGRenderNode__RenderState*
 /// @param state const char*
 ///
-void* q_sgrendernode__renderstate_get(void* self, const char* state);
+void* q_sgrendernode__renderstate_get(const void* self, const char* state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode-renderstate.html#operator-eq)
 ///
 /// @param self QSGRenderNode__RenderState*
 /// @param param1 QSGRenderNode__RenderState*
 ///
-void q_sgrendernode__renderstate_operator_assign(void* self, void* param1);
+void q_sgrendernode__renderstate_operator_assign(void* self, const void* param1);
 
 /// Delete this object from C++ memory.
 ///

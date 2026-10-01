@@ -9,11 +9,11 @@ QGeoLocation* q_geolocation_new() {
     return QGeoLocation_New();
 }
 
-QGeoLocation* q_geolocation_new2(void* other) {
+QGeoLocation* q_geolocation_new2(const void* other) {
     return QGeoLocation_New2((QGeoLocation*)other);
 }
 
-void q_geolocation_operator_assign(void* self, void* other) {
+void q_geolocation_operator_assign(void* self, const void* other) {
     QGeoLocation_OperatorAssign((QGeoLocation*)self, (QGeoLocation*)other);
 }
 
@@ -21,31 +21,31 @@ void q_geolocation_swap(void* self, void* other) {
     QGeoLocation_Swap((QGeoLocation*)self, (QGeoLocation*)other);
 }
 
-QGeoAddress* q_geolocation_address(void* self) {
+QGeoAddress* q_geolocation_address(const void* self) {
     return QGeoLocation_Address((QGeoLocation*)self);
 }
 
-void q_geolocation_set_address(void* self, void* address) {
+void q_geolocation_set_address(void* self, const void* address) {
     QGeoLocation_SetAddress((QGeoLocation*)self, (QGeoAddress*)address);
 }
 
-QGeoCoordinate* q_geolocation_coordinate(void* self) {
+QGeoCoordinate* q_geolocation_coordinate(const void* self) {
     return QGeoLocation_Coordinate((QGeoLocation*)self);
 }
 
-void q_geolocation_set_coordinate(void* self, void* position) {
+void q_geolocation_set_coordinate(void* self, const void* position) {
     QGeoLocation_SetCoordinate((QGeoLocation*)self, (QGeoCoordinate*)position);
 }
 
-QGeoShape* q_geolocation_bounding_shape(void* self) {
+QGeoShape* q_geolocation_bounding_shape(const void* self) {
     return QGeoLocation_BoundingShape((QGeoLocation*)self);
 }
 
-void q_geolocation_set_bounding_shape(void* self, void* shape) {
+void q_geolocation_set_bounding_shape(void* self, const void* shape) {
     QGeoLocation_SetBoundingShape((QGeoLocation*)self, (QGeoShape*)shape);
 }
 
-libqt_map /* of const char* to QVariant* */ q_geolocation_extended_attributes(void* self) {
+libqt_map /* of const char* to QVariant* */ q_geolocation_extended_attributes(const void* self) {
     // Convert QMap<QString,QVariant> to libqt_map
     libqt_map _out = QGeoLocation_ExtendedAttributes((QGeoLocation*)self);
     libqt_map _ret;
@@ -106,7 +106,7 @@ void q_geolocation_set_extended_attributes(void* self, libqt_map /* of const cha
     free(data_ret.values);
 }
 
-bool q_geolocation_is_empty(void* self) {
+bool q_geolocation_is_empty(const void* self) {
     return QGeoLocation_IsEmpty((QGeoLocation*)self);
 }
 
@@ -114,6 +114,6 @@ void q_geolocation_delete(void* self) {
     QGeoLocation_Delete((QGeoLocation*)(self));
 }
 
-size_t q_qgeolocation_h_q_hash(void* location, size_t seed) {
+size_t q_qgeolocation_h_q_hash(const void* location, size_t seed) {
     return qgeolocation_h_QHash((QGeoLocation*)location, seed);
 }

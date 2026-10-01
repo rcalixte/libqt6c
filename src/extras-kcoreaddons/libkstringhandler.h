@@ -81,7 +81,7 @@ const char** k_stringhandler_perl_split2(const char* sep, const char* s, int max
 /// @param s const char*
 /// @param max int
 ///
-const char** k_stringhandler_perl_split3(void* sep, const char* s, int max);
+const char** k_stringhandler_perl_split3(const void* sep, const char* s, int max);
 
 /// [Upstream resources](https://api.kde.org/kstringhandler.html#perlSplit)
 ///
@@ -91,7 +91,7 @@ const char** k_stringhandler_perl_split3(void* sep, const char* s, int max);
 /// @param s const char*
 /// @param max int
 ///
-const char** k_stringhandler_perl_split4(void* sep, const char* s, int max);
+const char** k_stringhandler_perl_split4(const void* sep, const char* s, int max);
 
 /// [Upstream resources](https://api.kde.org/kstringhandler.html#tagUrls)
 ///

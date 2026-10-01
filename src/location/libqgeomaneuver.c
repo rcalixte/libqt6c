@@ -6,11 +6,11 @@ QGeoManeuver* q_geomaneuver_new() {
     return QGeoManeuver_New();
 }
 
-QGeoManeuver* q_geomaneuver_new2(void* other) {
+QGeoManeuver* q_geomaneuver_new2(const void* other) {
     return QGeoManeuver_New2((QGeoManeuver*)other);
 }
 
-void q_geomaneuver_operator_assign(void* self, void* other) {
+void q_geomaneuver_operator_assign(void* self, const void* other) {
     QGeoManeuver_OperatorAssign((QGeoManeuver*)self, (QGeoManeuver*)other);
 }
 
@@ -18,15 +18,15 @@ void q_geomaneuver_swap(void* self, void* other) {
     QGeoManeuver_Swap((QGeoManeuver*)self, (QGeoManeuver*)other);
 }
 
-bool q_geomaneuver_is_valid(void* self) {
+bool q_geomaneuver_is_valid(const void* self) {
     return QGeoManeuver_IsValid((QGeoManeuver*)self);
 }
 
-void q_geomaneuver_set_position(void* self, void* position) {
+void q_geomaneuver_set_position(void* self, const void* position) {
     QGeoManeuver_SetPosition((QGeoManeuver*)self, (QGeoCoordinate*)position);
 }
 
-QGeoCoordinate* q_geomaneuver_position(void* self) {
+QGeoCoordinate* q_geomaneuver_position(const void* self) {
     return QGeoManeuver_Position((QGeoManeuver*)self);
 }
 
@@ -34,7 +34,7 @@ void q_geomaneuver_set_instruction_text(void* self, const char* instructionText)
     QGeoManeuver_SetInstructionText((QGeoManeuver*)self, qstring(instructionText));
 }
 
-const char* q_geomaneuver_instruction_text(void* self) {
+const char* q_geomaneuver_instruction_text(const void* self) {
     libqt_string _str = QGeoManeuver_InstructionText((QGeoManeuver*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -45,7 +45,7 @@ void q_geomaneuver_set_direction(void* self, int32_t direction) {
     QGeoManeuver_SetDirection((QGeoManeuver*)self, direction);
 }
 
-int32_t q_geomaneuver_direction(void* self) {
+int32_t q_geomaneuver_direction(const void* self) {
     return QGeoManeuver_Direction((QGeoManeuver*)self);
 }
 
@@ -53,7 +53,7 @@ void q_geomaneuver_set_time_to_next_instruction(void* self, int secs) {
     QGeoManeuver_SetTimeToNextInstruction((QGeoManeuver*)self, secs);
 }
 
-int32_t q_geomaneuver_time_to_next_instruction(void* self) {
+int32_t q_geomaneuver_time_to_next_instruction(const void* self) {
     return QGeoManeuver_TimeToNextInstruction((QGeoManeuver*)self);
 }
 
@@ -61,15 +61,15 @@ void q_geomaneuver_set_distance_to_next_instruction(void* self, double distance)
     QGeoManeuver_SetDistanceToNextInstruction((QGeoManeuver*)self, distance);
 }
 
-double q_geomaneuver_distance_to_next_instruction(void* self) {
+double q_geomaneuver_distance_to_next_instruction(const void* self) {
     return QGeoManeuver_DistanceToNextInstruction((QGeoManeuver*)self);
 }
 
-void q_geomaneuver_set_waypoint(void* self, void* coordinate) {
+void q_geomaneuver_set_waypoint(void* self, const void* coordinate) {
     QGeoManeuver_SetWaypoint((QGeoManeuver*)self, (QGeoCoordinate*)coordinate);
 }
 
-QGeoCoordinate* q_geomaneuver_waypoint(void* self) {
+QGeoCoordinate* q_geomaneuver_waypoint(const void* self) {
     return QGeoManeuver_Waypoint((QGeoManeuver*)self);
 }
 
@@ -101,7 +101,7 @@ void q_geomaneuver_set_extended_attributes(void* self, libqt_map /* of const cha
     free(extendedAttributes_ret.values);
 }
 
-libqt_map /* of const char* to QVariant* */ q_geomaneuver_extended_attributes(void* self) {
+libqt_map /* of const char* to QVariant* */ q_geomaneuver_extended_attributes(const void* self) {
     // Convert QMap<QString,QVariant> to libqt_map
     libqt_map _out = QGeoManeuver_ExtendedAttributes((QGeoManeuver*)self);
     libqt_map _ret;

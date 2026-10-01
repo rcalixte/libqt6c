@@ -11,15 +11,15 @@ QNetworkRequestFactory* q_networkrequestfactory_new() {
     return QNetworkRequestFactory_New();
 }
 
-QNetworkRequestFactory* q_networkrequestfactory_new2(void* baseUrl) {
+QNetworkRequestFactory* q_networkrequestfactory_new2(const void* baseUrl) {
     return QNetworkRequestFactory_New2((QUrl*)baseUrl);
 }
 
-QNetworkRequestFactory* q_networkrequestfactory_new3(void* other) {
+QNetworkRequestFactory* q_networkrequestfactory_new3(const void* other) {
     return QNetworkRequestFactory_New3((QNetworkRequestFactory*)other);
 }
 
-void q_networkrequestfactory_operator_assign(void* self, void* other) {
+void q_networkrequestfactory_operator_assign(void* self, const void* other) {
     QNetworkRequestFactory_OperatorAssign((QNetworkRequestFactory*)self, (QNetworkRequestFactory*)other);
 }
 
@@ -27,43 +27,43 @@ void q_networkrequestfactory_swap(void* self, void* other) {
     QNetworkRequestFactory_Swap((QNetworkRequestFactory*)self, (QNetworkRequestFactory*)other);
 }
 
-QUrl* q_networkrequestfactory_base_url(void* self) {
+QUrl* q_networkrequestfactory_base_url(const void* self) {
     return QNetworkRequestFactory_BaseUrl((QNetworkRequestFactory*)self);
 }
 
-void q_networkrequestfactory_set_base_url(void* self, void* url) {
+void q_networkrequestfactory_set_base_url(void* self, const void* url) {
     QNetworkRequestFactory_SetBaseUrl((QNetworkRequestFactory*)self, (QUrl*)url);
 }
 
-QSslConfiguration* q_networkrequestfactory_ssl_configuration(void* self) {
+QSslConfiguration* q_networkrequestfactory_ssl_configuration(const void* self) {
     return QNetworkRequestFactory_SslConfiguration((QNetworkRequestFactory*)self);
 }
 
-void q_networkrequestfactory_set_ssl_configuration(void* self, void* configuration) {
+void q_networkrequestfactory_set_ssl_configuration(void* self, const void* configuration) {
     QNetworkRequestFactory_SetSslConfiguration((QNetworkRequestFactory*)self, (QSslConfiguration*)configuration);
 }
 
-QNetworkRequest* q_networkrequestfactory_create_request(void* self) {
+QNetworkRequest* q_networkrequestfactory_create_request(const void* self) {
     return QNetworkRequestFactory_CreateRequest((QNetworkRequestFactory*)self);
 }
 
-QNetworkRequest* q_networkrequestfactory_create_request2(void* self, void* query) {
+QNetworkRequest* q_networkrequestfactory_create_request2(const void* self, const void* query) {
     return QNetworkRequestFactory_CreateRequest2((QNetworkRequestFactory*)self, (QUrlQuery*)query);
 }
 
-QNetworkRequest* q_networkrequestfactory_create_request3(void* self, const char* path) {
+QNetworkRequest* q_networkrequestfactory_create_request3(const void* self, const char* path) {
     return QNetworkRequestFactory_CreateRequest3((QNetworkRequestFactory*)self, qstring(path));
 }
 
-QNetworkRequest* q_networkrequestfactory_create_request4(void* self, const char* path, void* query) {
+QNetworkRequest* q_networkrequestfactory_create_request4(const void* self, const char* path, const void* query) {
     return QNetworkRequestFactory_CreateRequest4((QNetworkRequestFactory*)self, qstring(path), (QUrlQuery*)query);
 }
 
-void q_networkrequestfactory_set_common_headers(void* self, void* headers) {
+void q_networkrequestfactory_set_common_headers(void* self, const void* headers) {
     QNetworkRequestFactory_SetCommonHeaders((QNetworkRequestFactory*)self, (QHttpHeaders*)headers);
 }
 
-QHttpHeaders* q_networkrequestfactory_common_headers(void* self) {
+QHttpHeaders* q_networkrequestfactory_common_headers(const void* self) {
     return QNetworkRequestFactory_CommonHeaders((QNetworkRequestFactory*)self);
 }
 
@@ -71,7 +71,7 @@ void q_networkrequestfactory_clear_common_headers(void* self) {
     QNetworkRequestFactory_ClearCommonHeaders((QNetworkRequestFactory*)self);
 }
 
-char* q_networkrequestfactory_bearer_token(void* self) {
+char* q_networkrequestfactory_bearer_token(const void* self) {
     libqt_string _str = QNetworkRequestFactory_BearerToken((QNetworkRequestFactory*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -86,7 +86,7 @@ void q_networkrequestfactory_clear_bearer_token(void* self) {
     QNetworkRequestFactory_ClearBearerToken((QNetworkRequestFactory*)self);
 }
 
-const char* q_networkrequestfactory_user_name(void* self) {
+const char* q_networkrequestfactory_user_name(const void* self) {
     libqt_string _str = QNetworkRequestFactory_UserName((QNetworkRequestFactory*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -101,7 +101,7 @@ void q_networkrequestfactory_clear_user_name(void* self) {
     QNetworkRequestFactory_ClearUserName((QNetworkRequestFactory*)self);
 }
 
-const char* q_networkrequestfactory_password(void* self) {
+const char* q_networkrequestfactory_password(const void* self) {
     libqt_string _str = QNetworkRequestFactory_Password((QNetworkRequestFactory*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -120,15 +120,15 @@ void q_networkrequestfactory_set_transfer_timeout(void* self, int64_t timeout) {
     QNetworkRequestFactory_SetTransferTimeout((QNetworkRequestFactory*)self, timeout);
 }
 
-int64_t q_networkrequestfactory_transfer_timeout(void* self) {
+int64_t q_networkrequestfactory_transfer_timeout(const void* self) {
     return QNetworkRequestFactory_TransferTimeout((QNetworkRequestFactory*)self);
 }
 
-QUrlQuery* q_networkrequestfactory_query_parameters(void* self) {
+QUrlQuery* q_networkrequestfactory_query_parameters(const void* self) {
     return QNetworkRequestFactory_QueryParameters((QNetworkRequestFactory*)self);
 }
 
-void q_networkrequestfactory_set_query_parameters(void* self, void* query) {
+void q_networkrequestfactory_set_query_parameters(void* self, const void* query) {
     QNetworkRequestFactory_SetQueryParameters((QNetworkRequestFactory*)self, (QUrlQuery*)query);
 }
 
@@ -140,19 +140,19 @@ void q_networkrequestfactory_set_priority(void* self, int32_t priority) {
     QNetworkRequestFactory_SetPriority((QNetworkRequestFactory*)self, priority);
 }
 
-int32_t q_networkrequestfactory_priority(void* self) {
+int32_t q_networkrequestfactory_priority(const void* self) {
     return QNetworkRequestFactory_Priority((QNetworkRequestFactory*)self);
 }
 
-QVariant* q_networkrequestfactory_attribute(void* self, int32_t attribute) {
+QVariant* q_networkrequestfactory_attribute(const void* self, int32_t attribute) {
     return QNetworkRequestFactory_Attribute((QNetworkRequestFactory*)self, attribute);
 }
 
-QVariant* q_networkrequestfactory_attribute2(void* self, int32_t attribute, void* defaultValue) {
+QVariant* q_networkrequestfactory_attribute2(const void* self, int32_t attribute, const void* defaultValue) {
     return QNetworkRequestFactory_Attribute2((QNetworkRequestFactory*)self, attribute, (QVariant*)defaultValue);
 }
 
-void q_networkrequestfactory_set_attribute(void* self, int32_t attribute, void* value) {
+void q_networkrequestfactory_set_attribute(void* self, int32_t attribute, const void* value) {
     QNetworkRequestFactory_SetAttribute((QNetworkRequestFactory*)self, attribute, (QVariant*)value);
 }
 

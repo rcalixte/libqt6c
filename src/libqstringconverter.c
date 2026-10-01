@@ -23,7 +23,7 @@ QStringEncoder* q_stringencoder_new5(const char* name, int32_t flags) {
     return QStringEncoder_New5(name, flags);
 }
 
-intptr_t q_stringencoder_required_space(void* self, intptr_t inputLength) {
+intptr_t q_stringencoder_required_space(const void* self, intptr_t inputLength) {
     return QStringEncoder_RequiredSpace((QStringEncoder*)self, inputLength);
 }
 
@@ -31,7 +31,7 @@ char* q_stringencoder_append_to_buffer(void* self, char* out, const char* in) {
     return QStringEncoder_AppendToBuffer((QStringEncoder*)self, out, qstring(in));
 }
 
-bool q_stringencoder_is_valid(void* self) {
+bool q_stringencoder_is_valid(const void* self) {
     return QStringConverter_IsValid((QStringConverter*)self);
 }
 
@@ -39,11 +39,11 @@ void q_stringencoder_reset_state(void* self) {
     QStringConverter_ResetState((QStringConverter*)self);
 }
 
-bool q_stringencoder_has_error(void* self) {
+bool q_stringencoder_has_error(const void* self) {
     return QStringConverter_HasError((QStringConverter*)self);
 }
 
-const char* q_stringencoder_name(void* self) {
+const char* q_stringencoder_name(const void* self) {
     return QStringConverter_Name((QStringConverter*)self);
 }
 
@@ -104,7 +104,7 @@ QStringDecoder* q_stringdecoder_new5(const char* name, int32_t f) {
     return QStringDecoder_New5(name, f);
 }
 
-intptr_t q_stringdecoder_required_space(void* self, intptr_t inputLength) {
+intptr_t q_stringdecoder_required_space(const void* self, intptr_t inputLength) {
     return QStringDecoder_RequiredSpace((QStringDecoder*)self, inputLength);
 }
 
@@ -116,7 +116,7 @@ QStringDecoder* q_stringdecoder_decoder_for_html(char* data) {
     return QStringDecoder_DecoderForHtml(qstring(data));
 }
 
-bool q_stringdecoder_is_valid(void* self) {
+bool q_stringdecoder_is_valid(const void* self) {
     return QStringConverter_IsValid((QStringConverter*)self);
 }
 
@@ -124,11 +124,11 @@ void q_stringdecoder_reset_state(void* self) {
     QStringConverter_ResetState((QStringConverter*)self);
 }
 
-bool q_stringdecoder_has_error(void* self) {
+bool q_stringdecoder_has_error(const void* self) {
     return QStringConverter_HasError((QStringConverter*)self);
 }
 
-const char* q_stringdecoder_name(void* self) {
+const char* q_stringdecoder_name(const void* self) {
     return QStringConverter_Name((QStringConverter*)self);
 }
 

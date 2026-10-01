@@ -22,92 +22,92 @@ Poppler__LinkDestination* q_poppler__linkdestination_new(const char* description
 ///
 /// @param other Poppler__LinkDestination*
 ///
-Poppler__LinkDestination* q_poppler__linkdestination_new2(void* other);
+Poppler__LinkDestination* q_poppler__linkdestination_new2(const void* other);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkDestination.html)
 ///
-/// @param self Poppler__LinkDestination*
+/// @param self const Poppler__LinkDestination*
 ///
 /// @return enum Poppler__LinkDestination__Kind
 ///
-int32_t q_poppler__linkdestination_kind(void* self);
+int32_t q_poppler__linkdestination_kind(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkDestination.html)
 ///
-/// @param self Poppler__LinkDestination*
+/// @param self const Poppler__LinkDestination*
 ///
-int32_t q_poppler__linkdestination_page_number(void* self);
+int32_t q_poppler__linkdestination_page_number(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkDestination.html)
 ///
-/// @param self Poppler__LinkDestination*
+/// @param self const Poppler__LinkDestination*
 ///
-double q_poppler__linkdestination_left(void* self);
+double q_poppler__linkdestination_left(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkDestination.html)
 ///
-/// @param self Poppler__LinkDestination*
+/// @param self const Poppler__LinkDestination*
 ///
-double q_poppler__linkdestination_bottom(void* self);
+double q_poppler__linkdestination_bottom(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkDestination.html)
 ///
-/// @param self Poppler__LinkDestination*
+/// @param self const Poppler__LinkDestination*
 ///
-double q_poppler__linkdestination_right(void* self);
+double q_poppler__linkdestination_right(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkDestination.html)
 ///
-/// @param self Poppler__LinkDestination*
+/// @param self const Poppler__LinkDestination*
 ///
-double q_poppler__linkdestination_top(void* self);
+double q_poppler__linkdestination_top(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkDestination.html)
 ///
-/// @param self Poppler__LinkDestination*
+/// @param self const Poppler__LinkDestination*
 ///
-double q_poppler__linkdestination_zoom(void* self);
+double q_poppler__linkdestination_zoom(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkDestination.html)
 ///
-/// @param self Poppler__LinkDestination*
+/// @param self const Poppler__LinkDestination*
 ///
-bool q_poppler__linkdestination_is_change_left(void* self);
+bool q_poppler__linkdestination_is_change_left(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkDestination.html)
 ///
-/// @param self Poppler__LinkDestination*
+/// @param self const Poppler__LinkDestination*
 ///
-bool q_poppler__linkdestination_is_change_top(void* self);
+bool q_poppler__linkdestination_is_change_top(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkDestination.html)
 ///
-/// @param self Poppler__LinkDestination*
+/// @param self const Poppler__LinkDestination*
 ///
-bool q_poppler__linkdestination_is_change_zoom(void* self);
-
-/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkDestination.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self Poppler__LinkDestination*
-///
-const char* q_poppler__linkdestination_to_string(void* self);
+bool q_poppler__linkdestination_is_change_zoom(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkDestination.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__LinkDestination*
+/// @param self const Poppler__LinkDestination*
 ///
-const char* q_poppler__linkdestination_destination_name(void* self);
+const char* q_poppler__linkdestination_to_string(const void* self);
+
+/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkDestination.html)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const Poppler__LinkDestination*
+///
+const char* q_poppler__linkdestination_destination_name(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkDestination.html)
 ///
 /// @param self Poppler__LinkDestination*
 /// @param other Poppler__LinkDestination*
 ///
-void q_poppler__linkdestination_operator_assign(void* self, void* other);
+void q_poppler__linkdestination_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkDestination.html)
 ///
@@ -123,48 +123,48 @@ void q_poppler__linkdestination_delete(void* self);
 ///
 /// @param linkArea QRectF*
 ///
-Poppler__Link* q_poppler__link_new(void* linkArea);
+Poppler__Link* q_poppler__link_new(const void* linkArea);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Link.html)
 ///
-/// @param self Poppler__Link*
+/// @param self const Poppler__Link*
 ///
 /// @return enum Poppler__Link__LinkType
 ///
-int32_t q_poppler__link_link_type(void* self);
+int32_t q_poppler__link_link_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Link.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self Poppler__Link*
-/// @param callback int32_t func()
+/// @param self const Poppler__Link*
+/// @param callback int32_t func(const Poppler__Link* self)
 ///
-void q_poppler__link_on_link_type(void* self, int32_t (*callback)());
+void q_poppler__link_on_link_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Link.html)
 ///
 /// Base class method implementation
 ///
-/// @param self Poppler__Link*
+/// @param self const Poppler__Link*
 ///
 /// @return enum Poppler__Link__LinkType
 ///
-int32_t q_poppler__link_super_link_type(void* self);
+int32_t q_poppler__link_super_link_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Link.html)
 ///
-/// @param self Poppler__Link*
+/// @param self const Poppler__Link*
 ///
-QRectF* q_poppler__link_link_area(void* self);
+QRectF* q_poppler__link_link_area(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Link.html)
 ///
-/// @param self Poppler__Link*
+/// @param self const Poppler__Link*
 ///
 /// @return libqt_list of Poppler__Link*
 ///
-libqt_list q_poppler__link_next_links(void* self);
+libqt_list q_poppler__link_next_links(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Link.html)
 ///
@@ -182,72 +182,72 @@ void q_poppler__link_delete(void* self);
 /// @param extFileName const char*
 /// @param destination Poppler__LinkDestination*
 ///
-Poppler__LinkGoto* q_poppler__linkgoto_new(void* linkArea, const char* extFileName, void* destination);
+Poppler__LinkGoto* q_poppler__linkgoto_new(const void* linkArea, const char* extFileName, const void* destination);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkGoto.html)
 ///
-/// @param self Poppler__LinkGoto*
+/// @param self const Poppler__LinkGoto*
 ///
-bool q_poppler__linkgoto_is_external(void* self);
+bool q_poppler__linkgoto_is_external(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkGoto.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__LinkGoto*
+/// @param self const Poppler__LinkGoto*
 ///
-const char* q_poppler__linkgoto_file_name(void* self);
+const char* q_poppler__linkgoto_file_name(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkGoto.html)
 ///
-/// @param self Poppler__LinkGoto*
+/// @param self const Poppler__LinkGoto*
 ///
-Poppler__LinkDestination* q_poppler__linkgoto_destination(void* self);
+Poppler__LinkDestination* q_poppler__linkgoto_destination(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkGoto.html)
 ///
-/// @param self Poppler__LinkGoto*
+/// @param self const Poppler__LinkGoto*
 ///
 /// @return enum Poppler__Link__LinkType
 ///
-int32_t q_poppler__linkgoto_link_type(void* self);
+int32_t q_poppler__linkgoto_link_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkGoto.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self Poppler__LinkGoto*
-/// @param callback int32_t func()
+/// @param self const Poppler__LinkGoto*
+/// @param callback int32_t func(const Poppler__LinkGoto* self)
 ///
-void q_poppler__linkgoto_on_link_type(void* self, int32_t (*callback)());
+void q_poppler__linkgoto_on_link_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkGoto.html)
 ///
 /// Base class method implementation
 ///
-/// @param self Poppler__LinkGoto*
+/// @param self const Poppler__LinkGoto*
 ///
 /// @return enum Poppler__Link__LinkType
 ///
-int32_t q_poppler__linkgoto_super_link_type(void* self);
+int32_t q_poppler__linkgoto_super_link_type(const void* self);
 
 /// Inherited from Poppler::Link
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkGoto.html)
 ///
-/// @param self Poppler__LinkGoto*
+/// @param self const Poppler__LinkGoto*
 ///
-QRectF* q_poppler__linkgoto_link_area(void* self);
+QRectF* q_poppler__linkgoto_link_area(const void* self);
 
 /// Inherited from Poppler::Link
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkGoto.html)
 ///
-/// @param self Poppler__LinkGoto*
+/// @param self const Poppler__LinkGoto*
 ///
 /// @return libqt_list of Poppler__Link*
 ///
-libqt_list q_poppler__linkgoto_next_links(void* self);
+libqt_list q_poppler__linkgoto_next_links(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkGoto.html)
 ///
@@ -265,68 +265,68 @@ void q_poppler__linkgoto_delete(void* self);
 /// @param file const char*
 /// @param params const char*
 ///
-Poppler__LinkExecute* q_poppler__linkexecute_new(void* linkArea, const char* file, const char* params);
+Poppler__LinkExecute* q_poppler__linkexecute_new(const void* linkArea, const char* file, const char* params);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkExecute.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__LinkExecute*
+/// @param self const Poppler__LinkExecute*
 ///
-const char* q_poppler__linkexecute_file_name(void* self);
+const char* q_poppler__linkexecute_file_name(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkExecute.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__LinkExecute*
+/// @param self const Poppler__LinkExecute*
 ///
-const char* q_poppler__linkexecute_parameters(void* self);
+const char* q_poppler__linkexecute_parameters(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkExecute.html)
 ///
-/// @param self Poppler__LinkExecute*
+/// @param self const Poppler__LinkExecute*
 ///
 /// @return enum Poppler__Link__LinkType
 ///
-int32_t q_poppler__linkexecute_link_type(void* self);
+int32_t q_poppler__linkexecute_link_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkExecute.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self Poppler__LinkExecute*
-/// @param callback int32_t func()
+/// @param self const Poppler__LinkExecute*
+/// @param callback int32_t func(const Poppler__LinkExecute* self)
 ///
-void q_poppler__linkexecute_on_link_type(void* self, int32_t (*callback)());
+void q_poppler__linkexecute_on_link_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkExecute.html)
 ///
 /// Base class method implementation
 ///
-/// @param self Poppler__LinkExecute*
+/// @param self const Poppler__LinkExecute*
 ///
 /// @return enum Poppler__Link__LinkType
 ///
-int32_t q_poppler__linkexecute_super_link_type(void* self);
+int32_t q_poppler__linkexecute_super_link_type(const void* self);
 
 /// Inherited from Poppler::Link
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkExecute.html)
 ///
-/// @param self Poppler__LinkExecute*
+/// @param self const Poppler__LinkExecute*
 ///
-QRectF* q_poppler__linkexecute_link_area(void* self);
+QRectF* q_poppler__linkexecute_link_area(const void* self);
 
 /// Inherited from Poppler::Link
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkExecute.html)
 ///
-/// @param self Poppler__LinkExecute*
+/// @param self const Poppler__LinkExecute*
 ///
 /// @return libqt_list of Poppler__Link*
 ///
-libqt_list q_poppler__linkexecute_next_links(void* self);
+libqt_list q_poppler__linkexecute_next_links(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkExecute.html)
 ///
@@ -343,60 +343,60 @@ void q_poppler__linkexecute_delete(void* self);
 /// @param linkArea QRectF*
 /// @param url const char*
 ///
-Poppler__LinkBrowse* q_poppler__linkbrowse_new(void* linkArea, const char* url);
+Poppler__LinkBrowse* q_poppler__linkbrowse_new(const void* linkArea, const char* url);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkBrowse.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__LinkBrowse*
+/// @param self const Poppler__LinkBrowse*
 ///
-const char* q_poppler__linkbrowse_url(void* self);
+const char* q_poppler__linkbrowse_url(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkBrowse.html)
 ///
-/// @param self Poppler__LinkBrowse*
+/// @param self const Poppler__LinkBrowse*
 ///
 /// @return enum Poppler__Link__LinkType
 ///
-int32_t q_poppler__linkbrowse_link_type(void* self);
+int32_t q_poppler__linkbrowse_link_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkBrowse.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self Poppler__LinkBrowse*
-/// @param callback int32_t func()
+/// @param self const Poppler__LinkBrowse*
+/// @param callback int32_t func(const Poppler__LinkBrowse* self)
 ///
-void q_poppler__linkbrowse_on_link_type(void* self, int32_t (*callback)());
+void q_poppler__linkbrowse_on_link_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkBrowse.html)
 ///
 /// Base class method implementation
 ///
-/// @param self Poppler__LinkBrowse*
+/// @param self const Poppler__LinkBrowse*
 ///
 /// @return enum Poppler__Link__LinkType
 ///
-int32_t q_poppler__linkbrowse_super_link_type(void* self);
+int32_t q_poppler__linkbrowse_super_link_type(const void* self);
 
 /// Inherited from Poppler::Link
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkBrowse.html)
 ///
-/// @param self Poppler__LinkBrowse*
+/// @param self const Poppler__LinkBrowse*
 ///
-QRectF* q_poppler__linkbrowse_link_area(void* self);
+QRectF* q_poppler__linkbrowse_link_area(const void* self);
 
 /// Inherited from Poppler::Link
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkBrowse.html)
 ///
-/// @param self Poppler__LinkBrowse*
+/// @param self const Poppler__LinkBrowse*
 ///
 /// @return libqt_list of Poppler__Link*
 ///
-libqt_list q_poppler__linkbrowse_next_links(void* self);
+libqt_list q_poppler__linkbrowse_next_links(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkBrowse.html)
 ///
@@ -413,60 +413,60 @@ void q_poppler__linkbrowse_delete(void* self);
 /// @param linkArea QRectF*
 /// @param actionType enum Poppler__LinkAction__ActionType
 ///
-Poppler__LinkAction* q_poppler__linkaction_new(void* linkArea, int32_t actionType);
+Poppler__LinkAction* q_poppler__linkaction_new(const void* linkArea, int32_t actionType);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkAction.html)
 ///
-/// @param self Poppler__LinkAction*
+/// @param self const Poppler__LinkAction*
 ///
 /// @return enum Poppler__LinkAction__ActionType
 ///
-int32_t q_poppler__linkaction_action_type(void* self);
+int32_t q_poppler__linkaction_action_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkAction.html)
 ///
-/// @param self Poppler__LinkAction*
+/// @param self const Poppler__LinkAction*
 ///
 /// @return enum Poppler__Link__LinkType
 ///
-int32_t q_poppler__linkaction_link_type(void* self);
+int32_t q_poppler__linkaction_link_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkAction.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self Poppler__LinkAction*
-/// @param callback int32_t func()
+/// @param self const Poppler__LinkAction*
+/// @param callback int32_t func(const Poppler__LinkAction* self)
 ///
-void q_poppler__linkaction_on_link_type(void* self, int32_t (*callback)());
+void q_poppler__linkaction_on_link_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkAction.html)
 ///
 /// Base class method implementation
 ///
-/// @param self Poppler__LinkAction*
+/// @param self const Poppler__LinkAction*
 ///
 /// @return enum Poppler__Link__LinkType
 ///
-int32_t q_poppler__linkaction_super_link_type(void* self);
+int32_t q_poppler__linkaction_super_link_type(const void* self);
 
 /// Inherited from Poppler::Link
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkAction.html)
 ///
-/// @param self Poppler__LinkAction*
+/// @param self const Poppler__LinkAction*
 ///
-QRectF* q_poppler__linkaction_link_area(void* self);
+QRectF* q_poppler__linkaction_link_area(const void* self);
 
 /// Inherited from Poppler::Link
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkAction.html)
 ///
-/// @param self Poppler__LinkAction*
+/// @param self const Poppler__LinkAction*
 ///
 /// @return libqt_list of Poppler__Link*
 ///
-libqt_list q_poppler__linkaction_next_links(void* self);
+libqt_list q_poppler__linkaction_next_links(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkAction.html)
 ///
@@ -487,82 +487,82 @@ void q_poppler__linkaction_delete(void* self);
 /// @param mix bool
 /// @param sound Poppler__SoundObject*
 ///
-Poppler__LinkSound* q_poppler__linksound_new(void* linkArea, double volume, bool sync, bool repeat, bool mix, void* sound);
+Poppler__LinkSound* q_poppler__linksound_new(const void* linkArea, double volume, bool sync, bool repeat, bool mix, void* sound);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkSound.html)
 ///
-/// @param self Poppler__LinkSound*
+/// @param self const Poppler__LinkSound*
 ///
 /// @return enum Poppler__Link__LinkType
 ///
-int32_t q_poppler__linksound_link_type(void* self);
+int32_t q_poppler__linksound_link_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkSound.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self Poppler__LinkSound*
-/// @param callback int32_t func()
+/// @param self const Poppler__LinkSound*
+/// @param callback int32_t func(const Poppler__LinkSound* self)
 ///
-void q_poppler__linksound_on_link_type(void* self, int32_t (*callback)());
+void q_poppler__linksound_on_link_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkSound.html)
 ///
 /// Base class method implementation
 ///
-/// @param self Poppler__LinkSound*
+/// @param self const Poppler__LinkSound*
 ///
 /// @return enum Poppler__Link__LinkType
 ///
-int32_t q_poppler__linksound_super_link_type(void* self);
+int32_t q_poppler__linksound_super_link_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkSound.html)
 ///
-/// @param self Poppler__LinkSound*
+/// @param self const Poppler__LinkSound*
 ///
-double q_poppler__linksound_volume(void* self);
+double q_poppler__linksound_volume(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkSound.html)
 ///
-/// @param self Poppler__LinkSound*
+/// @param self const Poppler__LinkSound*
 ///
-bool q_poppler__linksound_synchronous(void* self);
+bool q_poppler__linksound_synchronous(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkSound.html)
 ///
-/// @param self Poppler__LinkSound*
+/// @param self const Poppler__LinkSound*
 ///
-bool q_poppler__linksound_repeat(void* self);
+bool q_poppler__linksound_repeat(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkSound.html)
 ///
-/// @param self Poppler__LinkSound*
+/// @param self const Poppler__LinkSound*
 ///
-bool q_poppler__linksound_mix(void* self);
+bool q_poppler__linksound_mix(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkSound.html)
 ///
-/// @param self Poppler__LinkSound*
+/// @param self const Poppler__LinkSound*
 ///
-Poppler__SoundObject* q_poppler__linksound_sound(void* self);
-
-/// Inherited from Poppler::Link
-///
-/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkSound.html)
-///
-/// @param self Poppler__LinkSound*
-///
-QRectF* q_poppler__linksound_link_area(void* self);
+Poppler__SoundObject* q_poppler__linksound_sound(const void* self);
 
 /// Inherited from Poppler::Link
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkSound.html)
 ///
-/// @param self Poppler__LinkSound*
+/// @param self const Poppler__LinkSound*
+///
+QRectF* q_poppler__linksound_link_area(const void* self);
+
+/// Inherited from Poppler::Link
+///
+/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkSound.html)
+///
+/// @param self const Poppler__LinkSound*
 ///
 /// @return libqt_list of Poppler__Link*
 ///
-libqt_list q_poppler__linksound_next_links(void* self);
+libqt_list q_poppler__linksound_next_links(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkSound.html)
 ///
@@ -576,58 +576,58 @@ void q_poppler__linksound_delete(void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkRendition.html)
 ///
-/// @param self Poppler__LinkRendition*
+/// @param self const Poppler__LinkRendition*
 ///
 /// @return enum Poppler__Link__LinkType
 ///
-int32_t q_poppler__linkrendition_link_type(void* self);
+int32_t q_poppler__linkrendition_link_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkRendition.html)
 ///
-/// @param self Poppler__LinkRendition*
+/// @param self const Poppler__LinkRendition*
 ///
-Poppler__MediaRendition* q_poppler__linkrendition_rendition(void* self);
+Poppler__MediaRendition* q_poppler__linkrendition_rendition(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkRendition.html)
 ///
-/// @param self Poppler__LinkRendition*
+/// @param self const Poppler__LinkRendition*
 ///
 /// @return enum Poppler__LinkRendition__RenditionAction
 ///
-int32_t q_poppler__linkrendition_action(void* self);
+int32_t q_poppler__linkrendition_action(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkRendition.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__LinkRendition*
+/// @param self const Poppler__LinkRendition*
 ///
-const char* q_poppler__linkrendition_script(void* self);
+const char* q_poppler__linkrendition_script(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkRendition.html)
 ///
-/// @param self Poppler__LinkRendition*
+/// @param self const Poppler__LinkRendition*
 /// @param annotation Poppler__ScreenAnnotation*
 ///
-bool q_poppler__linkrendition_is_referenced_annotation(void* self, void* annotation);
+bool q_poppler__linkrendition_is_referenced_annotation(const void* self, const void* annotation);
 
 /// Inherited from Poppler::Link
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkRendition.html)
 ///
-/// @param self Poppler__LinkRendition*
+/// @param self const Poppler__LinkRendition*
 ///
-QRectF* q_poppler__linkrendition_link_area(void* self);
+QRectF* q_poppler__linkrendition_link_area(const void* self);
 
 /// Inherited from Poppler::Link
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkRendition.html)
 ///
-/// @param self Poppler__LinkRendition*
+/// @param self const Poppler__LinkRendition*
 ///
 /// @return libqt_list of Poppler__Link*
 ///
-libqt_list q_poppler__linkrendition_next_links(void* self);
+libqt_list q_poppler__linkrendition_next_links(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkRendition.html)
 ///
@@ -644,60 +644,60 @@ void q_poppler__linkrendition_delete(void* self);
 /// @param linkArea QRectF*
 /// @param js const char*
 ///
-Poppler__LinkJavaScript* q_poppler__linkjavascript_new(void* linkArea, const char* js);
+Poppler__LinkJavaScript* q_poppler__linkjavascript_new(const void* linkArea, const char* js);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkJavaScript.html)
 ///
-/// @param self Poppler__LinkJavaScript*
+/// @param self const Poppler__LinkJavaScript*
 ///
 /// @return enum Poppler__Link__LinkType
 ///
-int32_t q_poppler__linkjavascript_link_type(void* self);
+int32_t q_poppler__linkjavascript_link_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkJavaScript.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self Poppler__LinkJavaScript*
-/// @param callback int32_t func()
+/// @param self const Poppler__LinkJavaScript*
+/// @param callback int32_t func(const Poppler__LinkJavaScript* self)
 ///
-void q_poppler__linkjavascript_on_link_type(void* self, int32_t (*callback)());
+void q_poppler__linkjavascript_on_link_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkJavaScript.html)
 ///
 /// Base class method implementation
 ///
-/// @param self Poppler__LinkJavaScript*
+/// @param self const Poppler__LinkJavaScript*
 ///
 /// @return enum Poppler__Link__LinkType
 ///
-int32_t q_poppler__linkjavascript_super_link_type(void* self);
+int32_t q_poppler__linkjavascript_super_link_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkJavaScript.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__LinkJavaScript*
+/// @param self const Poppler__LinkJavaScript*
 ///
-const char* q_poppler__linkjavascript_script(void* self);
+const char* q_poppler__linkjavascript_script(const void* self);
 
 /// Inherited from Poppler::Link
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkJavaScript.html)
 ///
-/// @param self Poppler__LinkJavaScript*
+/// @param self const Poppler__LinkJavaScript*
 ///
-QRectF* q_poppler__linkjavascript_link_area(void* self);
+QRectF* q_poppler__linkjavascript_link_area(const void* self);
 
 /// Inherited from Poppler::Link
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkJavaScript.html)
 ///
-/// @param self Poppler__LinkJavaScript*
+/// @param self const Poppler__LinkJavaScript*
 ///
 /// @return libqt_list of Poppler__Link*
 ///
-libqt_list q_poppler__linkjavascript_next_links(void* self);
+libqt_list q_poppler__linkjavascript_next_links(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkJavaScript.html)
 ///
@@ -711,44 +711,44 @@ void q_poppler__linkjavascript_delete(void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkMovie.html)
 ///
-/// @param self Poppler__LinkMovie*
+/// @param self const Poppler__LinkMovie*
 ///
 /// @return enum Poppler__Link__LinkType
 ///
-int32_t q_poppler__linkmovie_link_type(void* self);
+int32_t q_poppler__linkmovie_link_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkMovie.html)
 ///
-/// @param self Poppler__LinkMovie*
+/// @param self const Poppler__LinkMovie*
 ///
 /// @return enum Poppler__LinkMovie__Operation
 ///
-int32_t q_poppler__linkmovie_operation(void* self);
+int32_t q_poppler__linkmovie_operation(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkMovie.html)
 ///
-/// @param self Poppler__LinkMovie*
+/// @param self const Poppler__LinkMovie*
 /// @param annotation Poppler__MovieAnnotation*
 ///
-bool q_poppler__linkmovie_is_referenced_annotation(void* self, void* annotation);
+bool q_poppler__linkmovie_is_referenced_annotation(const void* self, const void* annotation);
 
 /// Inherited from Poppler::Link
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkMovie.html)
 ///
-/// @param self Poppler__LinkMovie*
+/// @param self const Poppler__LinkMovie*
 ///
-QRectF* q_poppler__linkmovie_link_area(void* self);
+QRectF* q_poppler__linkmovie_link_area(const void* self);
 
 /// Inherited from Poppler::Link
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkMovie.html)
 ///
-/// @param self Poppler__LinkMovie*
+/// @param self const Poppler__LinkMovie*
 ///
 /// @return libqt_list of Poppler__Link*
 ///
-libqt_list q_poppler__linkmovie_next_links(void* self);
+libqt_list q_poppler__linkmovie_next_links(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkMovie.html)
 ///
@@ -762,29 +762,29 @@ void q_poppler__linkmovie_delete(void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkOCGState.html)
 ///
-/// @param self Poppler__LinkOCGState*
+/// @param self const Poppler__LinkOCGState*
 ///
 /// @return enum Poppler__Link__LinkType
 ///
-int32_t q_poppler__linkocgstate_link_type(void* self);
+int32_t q_poppler__linkocgstate_link_type(const void* self);
 
 /// Inherited from Poppler::Link
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkOCGState.html)
 ///
-/// @param self Poppler__LinkOCGState*
+/// @param self const Poppler__LinkOCGState*
 ///
-QRectF* q_poppler__linkocgstate_link_area(void* self);
+QRectF* q_poppler__linkocgstate_link_area(const void* self);
 
 /// Inherited from Poppler::Link
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkOCGState.html)
 ///
-/// @param self Poppler__LinkOCGState*
+/// @param self const Poppler__LinkOCGState*
 ///
 /// @return libqt_list of Poppler__Link*
 ///
-libqt_list q_poppler__linkocgstate_next_links(void* self);
+libqt_list q_poppler__linkocgstate_next_links(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkOCGState.html)
 ///
@@ -798,43 +798,43 @@ void q_poppler__linkocgstate_delete(void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkHide.html)
 ///
-/// @param self Poppler__LinkHide*
+/// @param self const Poppler__LinkHide*
 ///
 /// @return enum Poppler__Link__LinkType
 ///
-int32_t q_poppler__linkhide_link_type(void* self);
+int32_t q_poppler__linkhide_link_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkHide.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Poppler__LinkHide*
+/// @param self const Poppler__LinkHide*
 ///
-const char** q_poppler__linkhide_targets(void* self);
+const char** q_poppler__linkhide_targets(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkHide.html)
 ///
-/// @param self Poppler__LinkHide*
+/// @param self const Poppler__LinkHide*
 ///
-bool q_poppler__linkhide_is_show_action(void* self);
-
-/// Inherited from Poppler::Link
-///
-/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkHide.html)
-///
-/// @param self Poppler__LinkHide*
-///
-QRectF* q_poppler__linkhide_link_area(void* self);
+bool q_poppler__linkhide_is_show_action(const void* self);
 
 /// Inherited from Poppler::Link
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkHide.html)
 ///
-/// @param self Poppler__LinkHide*
+/// @param self const Poppler__LinkHide*
+///
+QRectF* q_poppler__linkhide_link_area(const void* self);
+
+/// Inherited from Poppler::Link
+///
+/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkHide.html)
+///
+/// @param self const Poppler__LinkHide*
 ///
 /// @return libqt_list of Poppler__Link*
 ///
-libqt_list q_poppler__linkhide_next_links(void* self);
+libqt_list q_poppler__linkhide_next_links(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkHide.html)
 ///
@@ -848,29 +848,29 @@ void q_poppler__linkhide_delete(void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkResetForm.html)
 ///
-/// @param self Poppler__LinkResetForm*
+/// @param self const Poppler__LinkResetForm*
 ///
 /// @return enum Poppler__Link__LinkType
 ///
-int32_t q_poppler__linkresetform_link_type(void* self);
+int32_t q_poppler__linkresetform_link_type(const void* self);
 
 /// Inherited from Poppler::Link
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkResetForm.html)
 ///
-/// @param self Poppler__LinkResetForm*
+/// @param self const Poppler__LinkResetForm*
 ///
-QRectF* q_poppler__linkresetform_link_area(void* self);
+QRectF* q_poppler__linkresetform_link_area(const void* self);
 
 /// Inherited from Poppler::Link
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkResetForm.html)
 ///
-/// @param self Poppler__LinkResetForm*
+/// @param self const Poppler__LinkResetForm*
 ///
 /// @return libqt_list of Poppler__Link*
 ///
-libqt_list q_poppler__linkresetform_next_links(void* self);
+libqt_list q_poppler__linkresetform_next_links(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkResetForm.html)
 ///
@@ -884,53 +884,53 @@ void q_poppler__linkresetform_delete(void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkSubmitForm.html)
 ///
-/// @param self Poppler__LinkSubmitForm*
+/// @param self const Poppler__LinkSubmitForm*
 ///
 /// @return enum Poppler__Link__LinkType
 ///
-int32_t q_poppler__linksubmitform_link_type(void* self);
+int32_t q_poppler__linksubmitform_link_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkSubmitForm.html)
 ///
-/// @param self Poppler__LinkSubmitForm*
+/// @param self const Poppler__LinkSubmitForm*
 ///
 /// @return libqt_list of int
 ///
-libqt_list q_poppler__linksubmitform_get_field_ids(void* self);
+libqt_list q_poppler__linksubmitform_get_field_ids(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkSubmitForm.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__LinkSubmitForm*
+/// @param self const Poppler__LinkSubmitForm*
 ///
-const char* q_poppler__linksubmitform_get_url(void* self);
+const char* q_poppler__linksubmitform_get_url(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkSubmitForm.html)
 ///
-/// @param self Poppler__LinkSubmitForm*
+/// @param self const Poppler__LinkSubmitForm*
 ///
 /// @return flag of enum Poppler__LinkSubmitForm__SubmitFormFlag
 ///
-int32_t q_poppler__linksubmitform_get_flags(void* self);
+int32_t q_poppler__linksubmitform_get_flags(const void* self);
 
 /// Inherited from Poppler::Link
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkSubmitForm.html)
 ///
-/// @param self Poppler__LinkSubmitForm*
+/// @param self const Poppler__LinkSubmitForm*
 ///
-QRectF* q_poppler__linksubmitform_link_area(void* self);
+QRectF* q_poppler__linksubmitform_link_area(const void* self);
 
 /// Inherited from Poppler::Link
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkSubmitForm.html)
 ///
-/// @param self Poppler__LinkSubmitForm*
+/// @param self const Poppler__LinkSubmitForm*
 ///
 /// @return libqt_list of Poppler__Link*
 ///
-libqt_list q_poppler__linksubmitform_next_links(void* self);
+libqt_list q_poppler__linksubmitform_next_links(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkSubmitForm.html)
 ///

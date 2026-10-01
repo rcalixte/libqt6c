@@ -14,55 +14,55 @@
 ///
 /// @param param1 QWebEngineFrame*
 ///
-QWebEngineFrame* q_webengineframe_new(void* param1);
+QWebEngineFrame* q_webengineframe_new(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#isValid)
 ///
-/// @param self QWebEngineFrame*
+/// @param self const QWebEngineFrame*
 ///
-bool q_webengineframe_is_valid(void* self);
+bool q_webengineframe_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWebEngineFrame*
+/// @param self const QWebEngineFrame*
 ///
-const char* q_webengineframe_name(void* self);
+const char* q_webengineframe_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#htmlName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWebEngineFrame*
+/// @param self const QWebEngineFrame*
 ///
-const char* q_webengineframe_html_name(void* self);
+const char* q_webengineframe_html_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#children)
 ///
-/// @param self QWebEngineFrame*
+/// @param self const QWebEngineFrame*
 ///
 /// @return libqt_list of QWebEngineFrame*
 ///
-libqt_list q_webengineframe_children(void* self);
+libqt_list q_webengineframe_children(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#url)
 ///
-/// @param self QWebEngineFrame*
+/// @param self const QWebEngineFrame*
 ///
-QUrl* q_webengineframe_url(void* self);
+QUrl* q_webengineframe_url(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#size)
 ///
-/// @param self QWebEngineFrame*
+/// @param self const QWebEngineFrame*
 ///
-QSizeF* q_webengineframe_size(void* self);
+QSizeF* q_webengineframe_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#isMainFrame)
 ///
-/// @param self QWebEngineFrame*
+/// @param self const QWebEngineFrame*
 ///
-bool q_webengineframe_is_main_frame(void* self);
+bool q_webengineframe_is_main_frame(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#runJavaScript)
 ///
@@ -70,7 +70,7 @@ bool q_webengineframe_is_main_frame(void* self);
 /// @param script const char*
 /// @param callback void func(QVariant* param1)
 ///
-void q_webengineframe_run_java_script(void* self, const char* script, void (*callback)(void* funcparam1));
+void q_webengineframe_run_java_script(void* self, const char* script, void (*callback)(const void* funcparam1));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#runJavaScript)
 ///
@@ -79,7 +79,7 @@ void q_webengineframe_run_java_script(void* self, const char* script, void (*cal
 /// @param worldId uint32_t
 /// @param callback void func(QVariant* param1)
 ///
-void q_webengineframe_run_java_script2(void* self, const char* script, uint32_t worldId, void (*callback)(void* funcparam1));
+void q_webengineframe_run_java_script2(void* self, const char* script, uint32_t worldId, void (*callback)(const void* funcparam1));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#runJavaScript)
 ///
@@ -94,7 +94,7 @@ void q_webengineframe_run_java_script3(void* self, const char* script);
 /// @param script const char*
 /// @param callback QJSValue*
 ///
-void q_webengineframe_run_java_script4(void* self, const char* script, void* callback);
+void q_webengineframe_run_java_script4(void* self, const char* script, const void* callback);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#runJavaScript)
 ///
@@ -103,7 +103,7 @@ void q_webengineframe_run_java_script4(void* self, const char* script, void* cal
 /// @param worldId uint32_t
 /// @param callback QJSValue*
 ///
-void q_webengineframe_run_java_script5(void* self, const char* script, uint32_t worldId, void* callback);
+void q_webengineframe_run_java_script5(void* self, const char* script, uint32_t worldId, const void* callback);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#printToPdf)
 ///
@@ -124,14 +124,14 @@ void q_webengineframe_print_to_pdf2(void* self, void (*callback)(char* funcparam
 /// @param self QWebEngineFrame*
 /// @param callback QJSValue*
 ///
-void q_webengineframe_print_to_pdf3(void* self, void* callback);
+void q_webengineframe_print_to_pdf3(void* self, const void* callback);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#operator-eq)
 ///
 /// @param self QWebEngineFrame*
 /// @param param1 QWebEngineFrame*
 ///
-void q_webengineframe_operator_assign(void* self, void* param1);
+void q_webengineframe_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#runJavaScript)
 ///

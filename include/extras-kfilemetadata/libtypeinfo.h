@@ -28,45 +28,45 @@ KFileMetaData__TypeInfo* k_filemetadata__typeinfo_new2(int32_t type);
 ///
 /// @param ti KFileMetaData__TypeInfo*
 ///
-KFileMetaData__TypeInfo* k_filemetadata__typeinfo_new3(void* ti);
+KFileMetaData__TypeInfo* k_filemetadata__typeinfo_new3(const void* ti);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-typeinfo.html#operator-eq)
 ///
 /// @param self KFileMetaData__TypeInfo*
 /// @param rhs KFileMetaData__TypeInfo*
 ///
-void k_filemetadata__typeinfo_operator_assign(void* self, void* rhs);
+void k_filemetadata__typeinfo_operator_assign(void* self, const void* rhs);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-typeinfo.html#operator-eq-eq)
 ///
-/// @param self KFileMetaData__TypeInfo*
+/// @param self const KFileMetaData__TypeInfo*
 /// @param rhs KFileMetaData__TypeInfo*
 ///
-bool k_filemetadata__typeinfo_operator_equal(void* self, void* rhs);
+bool k_filemetadata__typeinfo_operator_equal(const void* self, const void* rhs);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-typeinfo.html#type)
 ///
-/// @param self KFileMetaData__TypeInfo*
+/// @param self const KFileMetaData__TypeInfo*
 ///
 /// @return enum KFileMetaData__Type__Type
 ///
-int32_t k_filemetadata__typeinfo_type(void* self);
+int32_t k_filemetadata__typeinfo_type(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-typeinfo.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileMetaData__TypeInfo*
+/// @param self const KFileMetaData__TypeInfo*
 ///
-const char* k_filemetadata__typeinfo_name(void* self);
+const char* k_filemetadata__typeinfo_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-typeinfo.html#displayName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileMetaData__TypeInfo*
+/// @param self const KFileMetaData__TypeInfo*
 ///
-const char* k_filemetadata__typeinfo_display_name(void* self);
+const char* k_filemetadata__typeinfo_display_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-typeinfo.html#fromName)
 ///

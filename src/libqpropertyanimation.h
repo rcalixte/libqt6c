@@ -43,26 +43,26 @@ QPropertyAnimation* q_propertyanimation_new4(void* target, char* propertyName, v
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-const QMetaObject* q_propertyanimation_meta_object(void* self);
+const QMetaObject* q_propertyanimation_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QPropertyAnimation*
-/// @param callback const QMetaObject* func()
+/// @param self const QPropertyAnimation*
+/// @param callback const QMetaObject* func(const QPropertyAnimation* self)
 ///
-void q_propertyanimation_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_propertyanimation_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-const QMetaObject* q_propertyanimation_super_meta_object(void* self);
+const QMetaObject* q_propertyanimation_super_meta_object(const void* self);
 
 /// @param self QPropertyAnimation*
 /// @param param1 const char*
@@ -116,9 +116,9 @@ const char* q_propertyanimation_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertyanimation.html#targetObject)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-QObject* q_propertyanimation_target_object(void* self);
+QObject* q_propertyanimation_target_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertyanimation.html#setTargetObject)
 ///
@@ -131,9 +131,9 @@ void q_propertyanimation_set_target_object(void* self, void* target);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-char* q_propertyanimation_property_name(void* self);
+char* q_propertyanimation_property_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertyanimation.html#setPropertyName)
 ///
@@ -172,7 +172,7 @@ bool q_propertyanimation_super_event(void* self, void* event);
 /// @param self QPropertyAnimation*
 /// @param value QVariant*
 ///
-void q_propertyanimation_update_current_value(void* self, void* value);
+void q_propertyanimation_update_current_value(void* self, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertyanimation.html#updateCurrentValue)
 ///
@@ -181,7 +181,7 @@ void q_propertyanimation_update_current_value(void* self, void* value);
 /// @param self QPropertyAnimation*
 /// @param callback void func(QPropertyAnimation* self, QVariant* value)
 ///
-void q_propertyanimation_on_update_current_value(void* self, void (*callback)(void*, void*));
+void q_propertyanimation_on_update_current_value(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertyanimation.html#updateCurrentValue)
 ///
@@ -190,7 +190,7 @@ void q_propertyanimation_on_update_current_value(void* self, void (*callback)(vo
 /// @param self QPropertyAnimation*
 /// @param value QVariant*
 ///
-void q_propertyanimation_super_update_current_value(void* self, void* value);
+void q_propertyanimation_super_update_current_value(void* self, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertyanimation.html#updateState)
 ///
@@ -242,9 +242,9 @@ const char* q_propertyanimation_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariantanimation.html#startValue)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-QVariant* q_propertyanimation_start_value(void* self);
+QVariant* q_propertyanimation_start_value(const void* self);
 
 /// Inherited from QVariantAnimation
 ///
@@ -253,15 +253,15 @@ QVariant* q_propertyanimation_start_value(void* self);
 /// @param self QPropertyAnimation*
 /// @param value QVariant*
 ///
-void q_propertyanimation_set_start_value(void* self, void* value);
+void q_propertyanimation_set_start_value(void* self, const void* value);
 
 /// Inherited from QVariantAnimation
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariantanimation.html#endValue)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-QVariant* q_propertyanimation_end_value(void* self);
+QVariant* q_propertyanimation_end_value(const void* self);
 
 /// Inherited from QVariantAnimation
 ///
@@ -270,16 +270,16 @@ QVariant* q_propertyanimation_end_value(void* self);
 /// @param self QPropertyAnimation*
 /// @param value QVariant*
 ///
-void q_propertyanimation_set_end_value(void* self, void* value);
+void q_propertyanimation_set_end_value(void* self, const void* value);
 
 /// Inherited from QVariantAnimation
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariantanimation.html#keyValueAt)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 /// @param step double
 ///
-QVariant* q_propertyanimation_key_value_at(void* self, double step);
+QVariant* q_propertyanimation_key_value_at(const void* self, double step);
 
 /// Inherited from QVariantAnimation
 ///
@@ -289,17 +289,17 @@ QVariant* q_propertyanimation_key_value_at(void* self, double step);
 /// @param step double
 /// @param value QVariant*
 ///
-void q_propertyanimation_set_key_value_at(void* self, double step, void* value);
+void q_propertyanimation_set_key_value_at(void* self, double step, const void* value);
 
 /// Inherited from QVariantAnimation
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariantanimation.html#keyValues)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
 /// @return libqt_list of pair_double_qvariant tuple of double and QVariant*
 ///
-libqt_list q_propertyanimation_key_values(void* self);
+libqt_list q_propertyanimation_key_values(const void* self);
 
 /// Inherited from QVariantAnimation
 ///
@@ -314,9 +314,9 @@ void q_propertyanimation_set_key_values(void* self, libqt_list values);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariantanimation.html#currentValue)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-QVariant* q_propertyanimation_current_value(void* self);
+QVariant* q_propertyanimation_current_value(const void* self);
 
 /// Inherited from QVariantAnimation
 ///
@@ -331,9 +331,9 @@ void q_propertyanimation_set_duration(void* self, int msecs);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariantanimation.html#easingCurve)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-QEasingCurve* q_propertyanimation_easing_curve(void* self);
+QEasingCurve* q_propertyanimation_easing_curve(const void* self);
 
 /// Inherited from QVariantAnimation
 ///
@@ -342,7 +342,7 @@ QEasingCurve* q_propertyanimation_easing_curve(void* self);
 /// @param self QPropertyAnimation*
 /// @param easing QEasingCurve*
 ///
-void q_propertyanimation_set_easing_curve(void* self, void* easing);
+void q_propertyanimation_set_easing_curve(void* self, const void* easing);
 
 /// Inherited from QVariantAnimation
 ///
@@ -351,7 +351,7 @@ void q_propertyanimation_set_easing_curve(void* self, void* easing);
 /// @param self QPropertyAnimation*
 /// @param value QVariant*
 ///
-void q_propertyanimation_value_changed(void* self, void* value);
+void q_propertyanimation_value_changed(void* self, const void* value);
 
 /// Inherited from QVariantAnimation
 ///
@@ -360,35 +360,35 @@ void q_propertyanimation_value_changed(void* self, void* value);
 /// @param self QPropertyAnimation*
 /// @param callback void func(QPropertyAnimation* self, QVariant* value)
 ///
-void q_propertyanimation_on_value_changed(void* self, void (*callback)(void*, void*));
+void q_propertyanimation_on_value_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractanimation.html#state)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
 /// @return enum QAbstractAnimation__State
 ///
-int32_t q_propertyanimation_state(void* self);
+int32_t q_propertyanimation_state(const void* self);
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractanimation.html#group)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-QAnimationGroup* q_propertyanimation_group(void* self);
+QAnimationGroup* q_propertyanimation_group(const void* self);
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractanimation.html#direction)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
 /// @return enum QAbstractAnimation__Direction
 ///
-int32_t q_propertyanimation_direction(void* self);
+int32_t q_propertyanimation_direction(const void* self);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -403,25 +403,25 @@ void q_propertyanimation_set_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractanimation.html#currentTime)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-int32_t q_propertyanimation_current_time(void* self);
+int32_t q_propertyanimation_current_time(const void* self);
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractanimation.html#currentLoopTime)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-int32_t q_propertyanimation_current_loop_time(void* self);
+int32_t q_propertyanimation_current_loop_time(const void* self);
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractanimation.html#loopCount)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-int32_t q_propertyanimation_loop_count(void* self);
+int32_t q_propertyanimation_loop_count(const void* self);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -436,17 +436,17 @@ void q_propertyanimation_set_loop_count(void* self, int loopCount);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractanimation.html#currentLoop)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-int32_t q_propertyanimation_current_loop(void* self);
+int32_t q_propertyanimation_current_loop(const void* self);
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractanimation.html#totalDuration)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-int32_t q_propertyanimation_total_duration(void* self);
+int32_t q_propertyanimation_total_duration(const void* self);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -585,9 +585,9 @@ void q_propertyanimation_start1(void* self, int32_t policy);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-const char* q_propertyanimation_object_name(void* self);
+const char* q_propertyanimation_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -602,33 +602,33 @@ void q_propertyanimation_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-bool q_propertyanimation_is_widget_type(void* self);
+bool q_propertyanimation_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-bool q_propertyanimation_is_window_type(void* self);
+bool q_propertyanimation_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-bool q_propertyanimation_is_quick_item_type(void* self);
+bool q_propertyanimation_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-bool q_propertyanimation_signals_blocked(void* self);
+bool q_propertyanimation_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -643,9 +643,9 @@ bool q_propertyanimation_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-QThread* q_propertyanimation_thread(void* self);
+QThread* q_propertyanimation_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -696,11 +696,11 @@ void q_propertyanimation_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_propertyanimation_children(void* self);
+libqt_list q_propertyanimation_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -738,7 +738,7 @@ void q_propertyanimation_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_propertyanimation_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_propertyanimation_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -749,18 +749,18 @@ QMetaObject__Connection* q_propertyanimation_connect(void* sender, const char* s
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_propertyanimation_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_propertyanimation_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_propertyanimation_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_propertyanimation_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -771,7 +771,7 @@ QMetaObject__Connection* q_propertyanimation_connect3(void* self, void* sender, 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_propertyanimation_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_propertyanimation_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -782,24 +782,24 @@ bool q_propertyanimation_disconnect(void* sender, const char* signal, void* rece
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_propertyanimation_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_propertyanimation_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-bool q_propertyanimation_disconnect3(void* self);
+bool q_propertyanimation_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 /// @param receiver QObject*
 ///
-bool q_propertyanimation_disconnect4(void* self, void* receiver);
+bool q_propertyanimation_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -807,23 +807,23 @@ bool q_propertyanimation_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_propertyanimation_disconnect5(void* param1);
+bool q_propertyanimation_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-void q_propertyanimation_dump_object_tree(void* self);
+void q_propertyanimation_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-void q_propertyanimation_dump_object_info(void* self);
+void q_propertyanimation_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -833,16 +833,16 @@ void q_propertyanimation_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_propertyanimation_set_property(void* self, const char* name, void* value);
+bool q_propertyanimation_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 /// @param name const char*
 ///
-QVariant* q_propertyanimation_property(void* self, const char* name);
+QVariant* q_propertyanimation_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -850,9 +850,9 @@ QVariant* q_propertyanimation_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-const char** q_propertyanimation_dynamic_property_names(void* self);
+const char** q_propertyanimation_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -866,9 +866,9 @@ QBindingStorage* q_propertyanimation_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-const QBindingStorage* q_propertyanimation_binding_storage2(void* self);
+const QBindingStorage* q_propertyanimation_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -891,18 +891,18 @@ void q_propertyanimation_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-QObject* q_propertyanimation_parent(void* self);
+QObject* q_propertyanimation_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 /// @param classname const char*
 ///
-bool q_propertyanimation_inherits(void* self, const char* classname);
+bool q_propertyanimation_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -942,7 +942,7 @@ int32_t q_propertyanimation_start_timer23(void* self, int64_t time, int32_t time
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_propertyanimation_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_propertyanimation_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -954,59 +954,59 @@ QMetaObject__Connection* q_propertyanimation_connect5(void* sender, const char* 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_propertyanimation_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_propertyanimation_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_propertyanimation_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_propertyanimation_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 /// @param signal const char*
 ///
-bool q_propertyanimation_disconnect1(void* self, const char* signal);
+bool q_propertyanimation_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPropertyAnimation*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_propertyanimation_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_propertyanimation_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_propertyanimation_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_propertyanimation_disconnect23(void* self, void* receiver, const char* member);
+bool q_propertyanimation_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QPropertyAnimation*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_propertyanimation_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1032,9 +1032,9 @@ void q_propertyanimation_on_destroyed1(void* self, void (*callback)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-int32_t q_propertyanimation_duration(void* self);
+int32_t q_propertyanimation_duration(const void* self);
 
 /// Inherited from QVariantAnimation
 ///
@@ -1042,9 +1042,9 @@ int32_t q_propertyanimation_duration(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-int32_t q_propertyanimation_super_duration(void* self);
+int32_t q_propertyanimation_super_duration(const void* self);
 
 /// Inherited from QVariantAnimation
 ///
@@ -1052,10 +1052,10 @@ int32_t q_propertyanimation_super_duration(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPropertyAnimation*
-/// @param callback int32_t func()
+/// @param self const QPropertyAnimation*
+/// @param callback int32_t func(QPropertyAnimation* self)
 ///
-void q_propertyanimation_on_duration(void* self, int32_t (*callback)());
+void q_propertyanimation_on_duration(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QVariantAnimation
 ///
@@ -1096,12 +1096,12 @@ void q_propertyanimation_on_update_current_time(void* self, void (*callback)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 /// @param from QVariant*
 /// @param to QVariant*
 /// @param progress double
 ///
-QVariant* q_propertyanimation_interpolated(void* self, void* from, void* to, double progress);
+QVariant* q_propertyanimation_interpolated(const void* self, const void* from, const void* to, double progress);
 
 /// Inherited from QVariantAnimation
 ///
@@ -1109,12 +1109,12 @@ QVariant* q_propertyanimation_interpolated(void* self, void* from, void* to, dou
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 /// @param from QVariant*
 /// @param to QVariant*
 /// @param progress double
 ///
-QVariant* q_propertyanimation_super_interpolated(void* self, void* from, void* to, double progress);
+QVariant* q_propertyanimation_super_interpolated(const void* self, const void* from, const void* to, double progress);
 
 /// Inherited from QVariantAnimation
 ///
@@ -1122,12 +1122,12 @@ QVariant* q_propertyanimation_super_interpolated(void* self, void* from, void* t
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 /// @param callback QVariant* func(QPropertyAnimation* self, QVariant* from, QVariant* to, double progress)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_propertyanimation_on_interpolated(void* self, QVariant* (*callback)(void*, void*, void*, double));
+void q_propertyanimation_on_interpolated(const void* self, QVariant* (*callback)(const void*, const void*, const void*, double));
 
 /// Inherited from QAbstractAnimation
 ///
@@ -1305,7 +1305,7 @@ void q_propertyanimation_on_custom_event(void* self, void (*callback)(void*, voi
 /// @param self QPropertyAnimation*
 /// @param signal QMetaMethod*
 ///
-void q_propertyanimation_connect_notify(void* self, void* signal);
+void q_propertyanimation_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1316,7 +1316,7 @@ void q_propertyanimation_connect_notify(void* self, void* signal);
 /// @param self QPropertyAnimation*
 /// @param signal QMetaMethod*
 ///
-void q_propertyanimation_super_connect_notify(void* self, void* signal);
+void q_propertyanimation_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1327,7 +1327,7 @@ void q_propertyanimation_super_connect_notify(void* self, void* signal);
 /// @param self QPropertyAnimation*
 /// @param callback void func(QPropertyAnimation* self, QMetaMethod* signal)
 ///
-void q_propertyanimation_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_propertyanimation_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1338,7 +1338,7 @@ void q_propertyanimation_on_connect_notify(void* self, void (*callback)(void*, v
 /// @param self QPropertyAnimation*
 /// @param signal QMetaMethod*
 ///
-void q_propertyanimation_disconnect_notify(void* self, void* signal);
+void q_propertyanimation_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1349,7 +1349,7 @@ void q_propertyanimation_disconnect_notify(void* self, void* signal);
 /// @param self QPropertyAnimation*
 /// @param signal QMetaMethod*
 ///
-void q_propertyanimation_super_disconnect_notify(void* self, void* signal);
+void q_propertyanimation_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1360,7 +1360,7 @@ void q_propertyanimation_super_disconnect_notify(void* self, void* signal);
 /// @param self QPropertyAnimation*
 /// @param callback void func(QPropertyAnimation* self, QMetaMethod* signal)
 ///
-void q_propertyanimation_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_propertyanimation_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1368,9 +1368,9 @@ void q_propertyanimation_on_disconnect_notify(void* self, void (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-QObject* q_propertyanimation_sender(void* self);
+QObject* q_propertyanimation_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1378,9 +1378,9 @@ QObject* q_propertyanimation_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-QObject* q_propertyanimation_super_sender(void* self);
+QObject* q_propertyanimation_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1388,10 +1388,10 @@ QObject* q_propertyanimation_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPropertyAnimation*
-/// @param callback QObject* func()
+/// @param self const QPropertyAnimation*
+/// @param callback QObject* func(QPropertyAnimation* self)
 ///
-void q_propertyanimation_on_sender(void* self, QObject* (*callback)());
+void q_propertyanimation_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1399,9 +1399,9 @@ void q_propertyanimation_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-int32_t q_propertyanimation_sender_signal_index(void* self);
+int32_t q_propertyanimation_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1409,9 +1409,9 @@ int32_t q_propertyanimation_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 ///
-int32_t q_propertyanimation_super_sender_signal_index(void* self);
+int32_t q_propertyanimation_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1419,10 +1419,10 @@ int32_t q_propertyanimation_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPropertyAnimation*
-/// @param callback int32_t func()
+/// @param self const QPropertyAnimation*
+/// @param callback int32_t func(QPropertyAnimation* self)
 ///
-void q_propertyanimation_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_propertyanimation_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1430,10 +1430,10 @@ void q_propertyanimation_on_sender_signal_index(void* self, int32_t (*callback)(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 /// @param signal const char*
 ///
-int32_t q_propertyanimation_receivers(void* self, const char* signal);
+int32_t q_propertyanimation_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1441,10 +1441,10 @@ int32_t q_propertyanimation_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 /// @param signal const char*
 ///
-int32_t q_propertyanimation_super_receivers(void* self, const char* signal);
+int32_t q_propertyanimation_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1452,10 +1452,10 @@ int32_t q_propertyanimation_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 /// @param callback int32_t func(QPropertyAnimation* self, const char* signal)
 ///
-void q_propertyanimation_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_propertyanimation_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1463,10 +1463,10 @@ void q_propertyanimation_on_receivers(void* self, int32_t (*callback)(void*, con
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 /// @param signal QMetaMethod*
 ///
-bool q_propertyanimation_is_signal_connected(void* self, void* signal);
+bool q_propertyanimation_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1474,10 +1474,10 @@ bool q_propertyanimation_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 /// @param signal QMetaMethod*
 ///
-bool q_propertyanimation_super_is_signal_connected(void* self, void* signal);
+bool q_propertyanimation_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1485,10 +1485,10 @@ bool q_propertyanimation_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPropertyAnimation*
+/// @param self const QPropertyAnimation*
 /// @param callback bool func(QPropertyAnimation* self, QMetaMethod* signal)
 ///
-void q_propertyanimation_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_propertyanimation_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

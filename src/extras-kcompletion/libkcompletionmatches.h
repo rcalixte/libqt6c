@@ -22,14 +22,14 @@ KCompletionMatches* k_completionmatches_new(bool sort);
 ///
 /// @param param1 KCompletionMatches*
 ///
-KCompletionMatches* k_completionmatches_new2(void* param1);
+KCompletionMatches* k_completionmatches_new2(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kcompletionmatches.html#operator-eq)
 ///
 /// @param self KCompletionMatches*
 /// @param param1 KCompletionMatches*
 ///
-void k_completionmatches_operator_assign(void* self, void* param1);
+void k_completionmatches_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kcompletionmatches.html#removeDuplicates)
 ///
@@ -41,24 +41,24 @@ void k_completionmatches_remove_duplicates(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KCompletionMatches*
+/// @param self const KCompletionMatches*
 ///
-const char** k_completionmatches_list(void* self);
+const char** k_completionmatches_list(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionmatches.html#sorting)
 ///
-/// @param self KCompletionMatches*
+/// @param self const KCompletionMatches*
 ///
-bool k_completionmatches_sorting(void* self);
+bool k_completionmatches_sorting(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionmatches.html#list)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KCompletionMatches*
+/// @param self const KCompletionMatches*
 /// @param sort bool
 ///
-const char** k_completionmatches_list1(void* self, bool sort);
+const char** k_completionmatches_list1(const void* self, bool sort);
 
 /// [Upstream resources](https://api.kde.org/kcompletionmatches.html#dtor.KCompletionMatches)
 ///

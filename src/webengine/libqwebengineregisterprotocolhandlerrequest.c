@@ -6,7 +6,7 @@ QWebEngineRegisterProtocolHandlerRequest* q_webengineregisterprotocolhandlerrequ
     return QWebEngineRegisterProtocolHandlerRequest_New();
 }
 
-QWebEngineRegisterProtocolHandlerRequest* q_webengineregisterprotocolhandlerrequest_new2(void* param1) {
+QWebEngineRegisterProtocolHandlerRequest* q_webengineregisterprotocolhandlerrequest_new2(const void* param1) {
     return QWebEngineRegisterProtocolHandlerRequest_New2((QWebEngineRegisterProtocolHandlerRequest*)param1);
 }
 
@@ -18,26 +18,26 @@ void q_webengineregisterprotocolhandlerrequest_reject(void* self) {
     QWebEngineRegisterProtocolHandlerRequest_Reject((QWebEngineRegisterProtocolHandlerRequest*)self);
 }
 
-QUrl* q_webengineregisterprotocolhandlerrequest_origin(void* self) {
+QUrl* q_webengineregisterprotocolhandlerrequest_origin(const void* self) {
     return QWebEngineRegisterProtocolHandlerRequest_Origin((QWebEngineRegisterProtocolHandlerRequest*)self);
 }
 
-const char* q_webengineregisterprotocolhandlerrequest_scheme(void* self) {
+const char* q_webengineregisterprotocolhandlerrequest_scheme(const void* self) {
     libqt_string _str = QWebEngineRegisterProtocolHandlerRequest_Scheme((QWebEngineRegisterProtocolHandlerRequest*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_webengineregisterprotocolhandlerrequest_operator_equal(void* self, void* that) {
+bool q_webengineregisterprotocolhandlerrequest_operator_equal(const void* self, const void* that) {
     return QWebEngineRegisterProtocolHandlerRequest_OperatorEqual((QWebEngineRegisterProtocolHandlerRequest*)self, (QWebEngineRegisterProtocolHandlerRequest*)that);
 }
 
-bool q_webengineregisterprotocolhandlerrequest_operator_not_equal(void* self, void* that) {
+bool q_webengineregisterprotocolhandlerrequest_operator_not_equal(const void* self, const void* that) {
     return QWebEngineRegisterProtocolHandlerRequest_OperatorNotEqual((QWebEngineRegisterProtocolHandlerRequest*)self, (QWebEngineRegisterProtocolHandlerRequest*)that);
 }
 
-void q_webengineregisterprotocolhandlerrequest_operator_assign(void* self, void* param1) {
+void q_webengineregisterprotocolhandlerrequest_operator_assign(void* self, const void* param1) {
     QWebEngineRegisterProtocolHandlerRequest_OperatorAssign((QWebEngineRegisterProtocolHandlerRequest*)self, (QWebEngineRegisterProtocolHandlerRequest*)param1);
 }
 

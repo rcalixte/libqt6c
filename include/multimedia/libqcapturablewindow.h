@@ -20,14 +20,14 @@ QCapturableWindow* q_capturablewindow_new();
 ///
 /// @param other QCapturableWindow*
 ///
-QCapturableWindow* q_capturablewindow_new2(void* other);
+QCapturableWindow* q_capturablewindow_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcapturablewindow.html#operator-eq)
 ///
 /// @param self QCapturableWindow*
 /// @param other QCapturableWindow*
 ///
-void q_capturablewindow_operator_assign(void* self, void* other);
+void q_capturablewindow_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcapturablewindow.html#swap)
 ///
@@ -38,17 +38,17 @@ void q_capturablewindow_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcapturablewindow.html#isValid)
 ///
-/// @param self QCapturableWindow*
+/// @param self const QCapturableWindow*
 ///
-bool q_capturablewindow_is_valid(void* self);
+bool q_capturablewindow_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcapturablewindow.html#description)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QCapturableWindow*
+/// @param self const QCapturableWindow*
 ///
-const char* q_capturablewindow_description(void* self);
+const char* q_capturablewindow_description(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcapturablewindow.html#dtor.QCapturableWindow)
 ///

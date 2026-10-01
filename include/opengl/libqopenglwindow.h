@@ -60,26 +60,26 @@ QOpenGLWindow* q_openglwindow_new6(void* shareContext, int32_t updateBehavior, v
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-const QMetaObject* q_openglwindow_meta_object(void* self);
+const QMetaObject* q_openglwindow_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QOpenGLWindow*
-/// @param callback const QMetaObject* func()
+/// @param self const QOpenGLWindow*
+/// @param callback const QMetaObject* func(const QOpenGLWindow* self)
 ///
-void q_openglwindow_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_openglwindow_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-const QMetaObject* q_openglwindow_super_meta_object(void* self);
+const QMetaObject* q_openglwindow_super_meta_object(const void* self);
 
 /// @param self QOpenGLWindow*
 /// @param param1 const char*
@@ -133,17 +133,17 @@ const char* q_openglwindow_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglwindow.html#updateBehavior)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
 /// @return enum QOpenGLWindow__UpdateBehavior
 ///
-int32_t q_openglwindow_update_behavior(void* self);
+int32_t q_openglwindow_update_behavior(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglwindow.html#isValid)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-bool q_openglwindow_is_valid(void* self);
+bool q_openglwindow_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglwindow.html#makeCurrent)
 ///
@@ -159,21 +159,21 @@ void q_openglwindow_done_current(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglwindow.html#context)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QOpenGLContext* q_openglwindow_context(void* self);
+QOpenGLContext* q_openglwindow_context(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglwindow.html#shareContext)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QOpenGLContext* q_openglwindow_share_context(void* self);
+QOpenGLContext* q_openglwindow_share_context(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglwindow.html#defaultFramebufferObject)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-uint32_t q_openglwindow_default_framebuffer_object(void* self);
+uint32_t q_openglwindow_default_framebuffer_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglwindow.html#grabFramebuffer)
 ///
@@ -205,9 +205,9 @@ void q_openglwindow_initialize_g_l(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QOpenGLWindow*
-/// @param callback void func()
+/// @param callback void func(QOpenGLWindow* self)
 ///
-void q_openglwindow_on_initialize_g_l(void* self, void (*callback)());
+void q_openglwindow_on_initialize_g_l(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglwindow.html#initializeGL)
 ///
@@ -255,9 +255,9 @@ void q_openglwindow_paint_g_l(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QOpenGLWindow*
-/// @param callback void func()
+/// @param callback void func(QOpenGLWindow* self)
 ///
-void q_openglwindow_on_paint_g_l(void* self, void (*callback)());
+void q_openglwindow_on_paint_g_l(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglwindow.html#paintGL)
 ///
@@ -278,9 +278,9 @@ void q_openglwindow_paint_under_g_l(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QOpenGLWindow*
-/// @param callback void func()
+/// @param callback void func(QOpenGLWindow* self)
 ///
-void q_openglwindow_on_paint_under_g_l(void* self, void (*callback)());
+void q_openglwindow_on_paint_under_g_l(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglwindow.html#paintUnderGL)
 ///
@@ -301,9 +301,9 @@ void q_openglwindow_paint_over_g_l(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QOpenGLWindow*
-/// @param callback void func()
+/// @param callback void func(QOpenGLWindow* self)
 ///
-void q_openglwindow_on_paint_over_g_l(void* self, void (*callback)());
+void q_openglwindow_on_paint_over_g_l(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglwindow.html#paintOverGL)
 ///
@@ -365,53 +365,53 @@ void q_openglwindow_super_resize_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglwindow.html#metric)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_openglwindow_metric(void* self, int32_t metric);
+int32_t q_openglwindow_metric(const void* self, int32_t metric);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglwindow.html#metric)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QOpenGLWindow*
-/// @param callback int32_t func(QOpenGLWindow* self, enum QPaintDevice__PaintDeviceMetric metric)
+/// @param self const QOpenGLWindow*
+/// @param callback int32_t func(const QOpenGLWindow* self, enum QPaintDevice__PaintDeviceMetric metric)
 ///
-void q_openglwindow_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void q_openglwindow_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglwindow.html#metric)
 ///
 /// Base class method implementation
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_openglwindow_super_metric(void* self, int32_t metric);
+int32_t q_openglwindow_super_metric(const void* self, int32_t metric);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglwindow.html#redirected)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param param1 QPoint*
 ///
-QPaintDevice* q_openglwindow_redirected(void* self, void* param1);
+QPaintDevice* q_openglwindow_redirected(const void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglwindow.html#redirected)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QOpenGLWindow*
-/// @param callback QPaintDevice* func(QOpenGLWindow* self, QPoint* param1)
+/// @param self const QOpenGLWindow*
+/// @param callback QPaintDevice* func(const QOpenGLWindow* self, QPoint* param1)
 ///
-void q_openglwindow_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void q_openglwindow_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglwindow.html#redirected)
 ///
 /// Base class method implementation
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param param1 QPoint*
 ///
-QPaintDevice* q_openglwindow_super_redirected(void* self, void* param1);
+QPaintDevice* q_openglwindow_super_redirected(const void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -455,7 +455,7 @@ QOpenGLWindow* q_openglwindow_from_q_paint_device(void* _qpaintdevice);
 /// @param self QOpenGLWindow*
 /// @param rect QRect*
 ///
-void q_openglwindow_update(void* self, void* rect);
+void q_openglwindow_update(void* self, const void* rect);
 
 /// Inherited from QPaintDeviceWindow
 ///
@@ -464,7 +464,7 @@ void q_openglwindow_update(void* self, void* rect);
 /// @param self QOpenGLWindow*
 /// @param region QRegion*
 ///
-void q_openglwindow_update2(void* self, void* region);
+void q_openglwindow_update2(void* self, const void* region);
 
 /// Inherited from QPaintDeviceWindow
 ///
@@ -503,19 +503,19 @@ void q_openglwindow_set_surface_type(void* self, int32_t surfaceType);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#isVisible)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-bool q_openglwindow_is_visible(void* self);
+bool q_openglwindow_is_visible(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#visibility)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
 /// @return enum QWindow__Visibility
 ///
-int32_t q_openglwindow_visibility(void* self);
+int32_t q_openglwindow_visibility(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -538,17 +538,17 @@ void q_openglwindow_create(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#winId)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-uintptr_t q_openglwindow_win_id(void* self);
+uintptr_t q_openglwindow_win_id(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#parent)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QWindow* q_openglwindow_parent(void* self);
+QWindow* q_openglwindow_parent(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -563,27 +563,27 @@ void q_openglwindow_set_parent(void* self, void* parent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#isTopLevel)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-bool q_openglwindow_is_top_level(void* self);
+bool q_openglwindow_is_top_level(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#isModal)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-bool q_openglwindow_is_modal(void* self);
+bool q_openglwindow_is_modal(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#modality)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t q_openglwindow_modality(void* self);
+int32_t q_openglwindow_modality(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -601,15 +601,15 @@ void q_openglwindow_set_modality(void* self, int32_t modality);
 /// @param self QOpenGLWindow*
 /// @param format QSurfaceFormat*
 ///
-void q_openglwindow_set_format(void* self, void* format);
+void q_openglwindow_set_format(void* self, const void* format);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#requestedFormat)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QSurfaceFormat* q_openglwindow_requested_format(void* self);
+QSurfaceFormat* q_openglwindow_requested_format(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -624,11 +624,11 @@ void q_openglwindow_set_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#flags)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t q_openglwindow_flags(void* self);
+int32_t q_openglwindow_flags(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -643,11 +643,11 @@ void q_openglwindow_set_flag(void* self, int32_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#type)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t q_openglwindow_type(void* self);
+int32_t q_openglwindow_type(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -655,9 +655,9 @@ int32_t q_openglwindow_type(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-const char* q_openglwindow_title(void* self);
+const char* q_openglwindow_title(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -672,9 +672,9 @@ void q_openglwindow_set_opacity(void* self, double level);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#opacity)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-double q_openglwindow_opacity(void* self);
+double q_openglwindow_opacity(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -683,23 +683,23 @@ double q_openglwindow_opacity(void* self);
 /// @param self QOpenGLWindow*
 /// @param region QRegion*
 ///
-void q_openglwindow_set_mask(void* self, void* region);
+void q_openglwindow_set_mask(void* self, const void* region);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mask)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QRegion* q_openglwindow_mask(void* self);
+QRegion* q_openglwindow_mask(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#isActive)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-bool q_openglwindow_is_active(void* self);
+bool q_openglwindow_is_active(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -714,39 +714,39 @@ void q_openglwindow_report_content_orientation_change(void* self, int32_t orient
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#contentOrientation)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
 /// @return enum Qt__ScreenOrientation
 ///
-int32_t q_openglwindow_content_orientation(void* self);
+int32_t q_openglwindow_content_orientation(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#devicePixelRatio)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-double q_openglwindow_device_pixel_ratio(void* self);
+double q_openglwindow_device_pixel_ratio(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#windowState)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
 /// @return enum Qt__WindowState
 ///
-int32_t q_openglwindow_window_state(void* self);
+int32_t q_openglwindow_window_state(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#windowStates)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t q_openglwindow_window_states(void* self);
+int32_t q_openglwindow_window_states(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -779,90 +779,90 @@ void q_openglwindow_set_transient_parent(void* self, void* parent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#transientParent)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QWindow* q_openglwindow_transient_parent(void* self);
+QWindow* q_openglwindow_transient_parent(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#isAncestorOf)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param child QWindow*
 ///
-bool q_openglwindow_is_ancestor_of(void* self, void* child);
+bool q_openglwindow_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#isExposed)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-bool q_openglwindow_is_exposed(void* self);
+bool q_openglwindow_is_exposed(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#minimumWidth)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-int32_t q_openglwindow_minimum_width(void* self);
+int32_t q_openglwindow_minimum_width(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#minimumHeight)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-int32_t q_openglwindow_minimum_height(void* self);
+int32_t q_openglwindow_minimum_height(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#maximumWidth)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-int32_t q_openglwindow_maximum_width(void* self);
+int32_t q_openglwindow_maximum_width(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#maximumHeight)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-int32_t q_openglwindow_maximum_height(void* self);
+int32_t q_openglwindow_maximum_height(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#minimumSize)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QSize* q_openglwindow_minimum_size(void* self);
+QSize* q_openglwindow_minimum_size(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#maximumSize)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QSize* q_openglwindow_maximum_size(void* self);
+QSize* q_openglwindow_maximum_size(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#baseSize)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QSize* q_openglwindow_base_size(void* self);
+QSize* q_openglwindow_base_size(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#sizeIncrement)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QSize* q_openglwindow_size_increment(void* self);
+QSize* q_openglwindow_size_increment(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -871,7 +871,7 @@ QSize* q_openglwindow_size_increment(void* self);
 /// @param self QOpenGLWindow*
 /// @param size QSize*
 ///
-void q_openglwindow_set_minimum_size(void* self, void* size);
+void q_openglwindow_set_minimum_size(void* self, const void* size);
 
 /// Inherited from QWindow
 ///
@@ -880,7 +880,7 @@ void q_openglwindow_set_minimum_size(void* self, void* size);
 /// @param self QOpenGLWindow*
 /// @param size QSize*
 ///
-void q_openglwindow_set_maximum_size(void* self, void* size);
+void q_openglwindow_set_maximum_size(void* self, const void* size);
 
 /// Inherited from QWindow
 ///
@@ -889,7 +889,7 @@ void q_openglwindow_set_maximum_size(void* self, void* size);
 /// @param self QOpenGLWindow*
 /// @param size QSize*
 ///
-void q_openglwindow_set_base_size(void* self, void* size);
+void q_openglwindow_set_base_size(void* self, const void* size);
 
 /// Inherited from QWindow
 ///
@@ -898,39 +898,39 @@ void q_openglwindow_set_base_size(void* self, void* size);
 /// @param self QOpenGLWindow*
 /// @param size QSize*
 ///
-void q_openglwindow_set_size_increment(void* self, void* size);
+void q_openglwindow_set_size_increment(void* self, const void* size);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#geometry)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QRect* q_openglwindow_geometry(void* self);
+QRect* q_openglwindow_geometry(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#frameMargins)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QMargins* q_openglwindow_frame_margins(void* self);
+QMargins* q_openglwindow_frame_margins(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#frameGeometry)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QRect* q_openglwindow_frame_geometry(void* self);
+QRect* q_openglwindow_frame_geometry(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#framePosition)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QPoint* q_openglwindow_frame_position(void* self);
+QPoint* q_openglwindow_frame_position(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -939,47 +939,47 @@ QPoint* q_openglwindow_frame_position(void* self);
 /// @param self QOpenGLWindow*
 /// @param point QPoint*
 ///
-void q_openglwindow_set_frame_position(void* self, void* point);
+void q_openglwindow_set_frame_position(void* self, const void* point);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#width)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-int32_t q_openglwindow_width(void* self);
+int32_t q_openglwindow_width(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#height)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-int32_t q_openglwindow_height(void* self);
+int32_t q_openglwindow_height(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#x)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-int32_t q_openglwindow_x(void* self);
+int32_t q_openglwindow_x(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#y)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-int32_t q_openglwindow_y(void* self);
+int32_t q_openglwindow_y(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#position)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QPoint* q_openglwindow_position(void* self);
+QPoint* q_openglwindow_position(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -988,7 +988,7 @@ QPoint* q_openglwindow_position(void* self);
 /// @param self QOpenGLWindow*
 /// @param pt QPoint*
 ///
-void q_openglwindow_set_position(void* self, void* pt);
+void q_openglwindow_set_position(void* self, const void* pt);
 
 /// Inherited from QWindow
 ///
@@ -1007,7 +1007,7 @@ void q_openglwindow_set_position2(void* self, int posx, int posy);
 /// @param self QOpenGLWindow*
 /// @param newSize QSize*
 ///
-void q_openglwindow_resize(void* self, void* newSize);
+void q_openglwindow_resize(void* self, const void* newSize);
 
 /// Inherited from QWindow
 ///
@@ -1034,9 +1034,9 @@ void q_openglwindow_set_file_path(void* self, const char* filePath);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-const char* q_openglwindow_file_path(void* self);
+const char* q_openglwindow_file_path(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -1045,15 +1045,15 @@ const char* q_openglwindow_file_path(void* self);
 /// @param self QOpenGLWindow*
 /// @param icon QIcon*
 ///
-void q_openglwindow_set_icon(void* self, void* icon);
+void q_openglwindow_set_icon(void* self, const void* icon);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#icon)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QIcon* q_openglwindow_icon(void* self);
+QIcon* q_openglwindow_icon(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -1085,9 +1085,9 @@ bool q_openglwindow_set_mouse_grab_enabled(void* self, bool grab);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#screen)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QScreen* q_openglwindow_screen(void* self);
+QScreen* q_openglwindow_screen(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -1102,45 +1102,45 @@ void q_openglwindow_set_screen(void* self, void* screen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mapToGlobal)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param pos QPointF*
 ///
-QPointF* q_openglwindow_map_to_global(void* self, void* pos);
+QPointF* q_openglwindow_map_to_global(const void* self, const void* pos);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mapFromGlobal)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param pos QPointF*
 ///
-QPointF* q_openglwindow_map_from_global(void* self, void* pos);
+QPointF* q_openglwindow_map_from_global(const void* self, const void* pos);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mapToGlobal)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param pos QPoint*
 ///
-QPoint* q_openglwindow_map_to_global2(void* self, void* pos);
+QPoint* q_openglwindow_map_to_global2(const void* self, const void* pos);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mapFromGlobal)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param pos QPoint*
 ///
-QPoint* q_openglwindow_map_from_global2(void* self, void* pos);
+QPoint* q_openglwindow_map_from_global2(const void* self, const void* pos);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#cursor)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QCursor* q_openglwindow_cursor(void* self);
+QCursor* q_openglwindow_cursor(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -1149,7 +1149,7 @@ QCursor* q_openglwindow_cursor(void* self);
 /// @param self QOpenGLWindow*
 /// @param cursor QCursor*
 ///
-void q_openglwindow_set_cursor(void* self, void* cursor);
+void q_openglwindow_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWindow
 ///
@@ -1337,7 +1337,7 @@ void q_openglwindow_set_geometry(void* self, int posx, int posy, int w, int h);
 /// @param self QOpenGLWindow*
 /// @param rect QRect*
 ///
-void q_openglwindow_set_geometry2(void* self, void* rect);
+void q_openglwindow_set_geometry2(void* self, const void* rect);
 
 /// Inherited from QWindow
 ///
@@ -1737,10 +1737,10 @@ void q_openglwindow_on_transient_parent_changed(void* self, void (*callback)(voi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#parent)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param mode enum QWindow__AncestorMode
 ///
-QWindow* q_openglwindow_parent1(void* self, int32_t mode);
+QWindow* q_openglwindow_parent1(const void* self, int32_t mode);
 
 /// Inherited from QWindow
 ///
@@ -1756,11 +1756,11 @@ void q_openglwindow_set_flag2(void* self, int32_t param1, bool on);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#isAncestorOf)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param child QWindow*
 /// @param mode enum QWindow__AncestorMode
 ///
-bool q_openglwindow_is_ancestor_of2(void* self, void* child, int32_t mode);
+bool q_openglwindow_is_ancestor_of2(const void* self, const void* child, int32_t mode);
 
 /// Inherited from QObject
 ///
@@ -1768,9 +1768,9 @@ bool q_openglwindow_is_ancestor_of2(void* self, void* child, int32_t mode);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-const char* q_openglwindow_object_name(void* self);
+const char* q_openglwindow_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1785,33 +1785,33 @@ void q_openglwindow_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-bool q_openglwindow_is_widget_type(void* self);
+bool q_openglwindow_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-bool q_openglwindow_is_window_type(void* self);
+bool q_openglwindow_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-bool q_openglwindow_is_quick_item_type(void* self);
+bool q_openglwindow_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-bool q_openglwindow_signals_blocked(void* self);
+bool q_openglwindow_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1826,9 +1826,9 @@ bool q_openglwindow_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QThread* q_openglwindow_thread(void* self);
+QThread* q_openglwindow_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1879,11 +1879,11 @@ void q_openglwindow_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_openglwindow_children(void* self);
+libqt_list q_openglwindow_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1912,7 +1912,7 @@ void q_openglwindow_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_openglwindow_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_openglwindow_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1923,18 +1923,18 @@ QMetaObject__Connection* q_openglwindow_connect(void* sender, const char* signal
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_openglwindow_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_openglwindow_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_openglwindow_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_openglwindow_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1945,7 +1945,7 @@ QMetaObject__Connection* q_openglwindow_connect3(void* self, void* sender, const
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_openglwindow_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_openglwindow_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1956,24 +1956,24 @@ bool q_openglwindow_disconnect(void* sender, const char* signal, void* receiver,
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_openglwindow_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_openglwindow_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-bool q_openglwindow_disconnect3(void* self);
+bool q_openglwindow_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param receiver QObject*
 ///
-bool q_openglwindow_disconnect4(void* self, void* receiver);
+bool q_openglwindow_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1981,23 +1981,23 @@ bool q_openglwindow_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_openglwindow_disconnect5(void* param1);
+bool q_openglwindow_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-void q_openglwindow_dump_object_tree(void* self);
+void q_openglwindow_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-void q_openglwindow_dump_object_info(void* self);
+void q_openglwindow_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2007,16 +2007,16 @@ void q_openglwindow_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_openglwindow_set_property(void* self, const char* name, void* value);
+bool q_openglwindow_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param name const char*
 ///
-QVariant* q_openglwindow_property(void* self, const char* name);
+QVariant* q_openglwindow_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -2024,9 +2024,9 @@ QVariant* q_openglwindow_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-const char** q_openglwindow_dynamic_property_names(void* self);
+const char** q_openglwindow_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2040,9 +2040,9 @@ QBindingStorage* q_openglwindow_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-const QBindingStorage* q_openglwindow_binding_storage2(void* self);
+const QBindingStorage* q_openglwindow_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2065,10 +2065,10 @@ void q_openglwindow_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param classname const char*
 ///
-bool q_openglwindow_inherits(void* self, const char* classname);
+bool q_openglwindow_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -2108,7 +2108,7 @@ int32_t q_openglwindow_start_timer23(void* self, int64_t time, int32_t timerType
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_openglwindow_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_openglwindow_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -2120,59 +2120,59 @@ QMetaObject__Connection* q_openglwindow_connect5(void* sender, const char* signa
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_openglwindow_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_openglwindow_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_openglwindow_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_openglwindow_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param signal const char*
 ///
-bool q_openglwindow_disconnect1(void* self, const char* signal);
+bool q_openglwindow_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLWindow*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_openglwindow_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_openglwindow_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_openglwindow_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_openglwindow_disconnect23(void* self, void* receiver, const char* member);
+bool q_openglwindow_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QOpenGLWindow*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_openglwindow_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2196,19 +2196,19 @@ void q_openglwindow_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurface.html#surfaceClass)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
 /// @return enum QSurface__SurfaceClass
 ///
-int32_t q_openglwindow_surface_class(void* self);
+int32_t q_openglwindow_surface_class(const void* self);
 
 /// Inherited from QSurface
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurface.html#supportsOpenGL)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-bool q_openglwindow_supports_open_g_l(void* self);
+bool q_openglwindow_supports_open_g_l(const void* self);
 
 /// Inherited from QSurface
 ///
@@ -2217,95 +2217,97 @@ bool q_openglwindow_supports_open_g_l(void* self);
 /// @param self QOpenGLWindow*
 /// @param param1 QSurface*
 ///
-void q_openglwindow_operator_assign(void* self, void* param1);
+void q_openglwindow_operator_assign(void* self, const void* param1);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-bool q_openglwindow_painting_active(void* self);
+bool q_openglwindow_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintEngine)
 ///
-/// @param self QOpenGLWindow*
+/// @warning This method must be implemented with `q_openglwindow_on_paint_engine` before it can be called.
 ///
-QPaintEngine* q_openglwindow_paint_engine(void* self);
+/// @param self const QOpenGLWindow*
+///
+QPaintEngine* q_openglwindow_paint_engine(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-int32_t q_openglwindow_width_m_m(void* self);
+int32_t q_openglwindow_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-int32_t q_openglwindow_height_m_m(void* self);
+int32_t q_openglwindow_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-int32_t q_openglwindow_logical_dpi_x(void* self);
+int32_t q_openglwindow_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-int32_t q_openglwindow_logical_dpi_y(void* self);
+int32_t q_openglwindow_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-int32_t q_openglwindow_physical_dpi_x(void* self);
+int32_t q_openglwindow_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-int32_t q_openglwindow_physical_dpi_y(void* self);
+int32_t q_openglwindow_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-double q_openglwindow_device_pixel_ratio_f(void* self);
+double q_openglwindow_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-int32_t q_openglwindow_color_count(void* self);
+int32_t q_openglwindow_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-int32_t q_openglwindow_depth(void* self);
+int32_t q_openglwindow_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -2394,11 +2396,11 @@ void q_openglwindow_on_event(void* self, bool (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
 /// @return enum QSurface__SurfaceType
 ///
-int32_t q_openglwindow_surface_type(void* self);
+int32_t q_openglwindow_surface_type(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -2406,11 +2408,11 @@ int32_t q_openglwindow_surface_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
 /// @return enum QSurface__SurfaceType
 ///
-int32_t q_openglwindow_super_surface_type(void* self);
+int32_t q_openglwindow_super_surface_type(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -2418,10 +2420,10 @@ int32_t q_openglwindow_super_surface_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLWindow*
-/// @param callback int32_t func()
+/// @param self const QOpenGLWindow*
+/// @param callback int32_t func(QOpenGLWindow* self)
 ///
-void q_openglwindow_on_surface_type(void* self, int32_t (*callback)());
+void q_openglwindow_on_surface_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWindow
 ///
@@ -2429,9 +2431,9 @@ void q_openglwindow_on_surface_type(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QSurfaceFormat* q_openglwindow_format(void* self);
+QSurfaceFormat* q_openglwindow_format(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -2439,9 +2441,9 @@ QSurfaceFormat* q_openglwindow_format(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QSurfaceFormat* q_openglwindow_super_format(void* self);
+QSurfaceFormat* q_openglwindow_super_format(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -2449,12 +2451,12 @@ QSurfaceFormat* q_openglwindow_super_format(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLWindow*
-/// @param callback QSurfaceFormat* func()
+/// @param self const QOpenGLWindow*
+/// @param callback QSurfaceFormat* func(QOpenGLWindow* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_openglwindow_on_format(void* self, QSurfaceFormat* (*callback)());
+void q_openglwindow_on_format(const void* self, QSurfaceFormat* (*callback)(const void*));
 
 /// Inherited from QWindow
 ///
@@ -2462,9 +2464,9 @@ void q_openglwindow_on_format(void* self, QSurfaceFormat* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QSize* q_openglwindow_size(void* self);
+QSize* q_openglwindow_size(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -2472,9 +2474,9 @@ QSize* q_openglwindow_size(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QSize* q_openglwindow_super_size(void* self);
+QSize* q_openglwindow_super_size(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -2482,12 +2484,12 @@ QSize* q_openglwindow_super_size(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLWindow*
-/// @param callback QSize* func()
+/// @param self const QOpenGLWindow*
+/// @param callback QSize* func(QOpenGLWindow* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_openglwindow_on_size(void* self, QSize* (*callback)());
+void q_openglwindow_on_size(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWindow
 ///
@@ -2495,9 +2497,9 @@ void q_openglwindow_on_size(void* self, QSize* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QAccessibleInterface* q_openglwindow_accessible_root(void* self);
+QAccessibleInterface* q_openglwindow_accessible_root(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -2505,9 +2507,9 @@ QAccessibleInterface* q_openglwindow_accessible_root(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QAccessibleInterface* q_openglwindow_super_accessible_root(void* self);
+QAccessibleInterface* q_openglwindow_super_accessible_root(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -2515,10 +2517,10 @@ QAccessibleInterface* q_openglwindow_super_accessible_root(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLWindow*
-/// @param callback QAccessibleInterface* func()
+/// @param self const QOpenGLWindow*
+/// @param callback QAccessibleInterface* func(QOpenGLWindow* self)
 ///
-void q_openglwindow_on_accessible_root(void* self, QAccessibleInterface* (*callback)());
+void q_openglwindow_on_accessible_root(const void* self, QAccessibleInterface* (*callback)(const void*));
 
 /// Inherited from QWindow
 ///
@@ -2526,9 +2528,9 @@ void q_openglwindow_on_accessible_root(void* self, QAccessibleInterface* (*callb
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QObject* q_openglwindow_focus_object(void* self);
+QObject* q_openglwindow_focus_object(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -2536,9 +2538,9 @@ QObject* q_openglwindow_focus_object(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QObject* q_openglwindow_super_focus_object(void* self);
+QObject* q_openglwindow_super_focus_object(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -2546,10 +2548,10 @@ QObject* q_openglwindow_super_focus_object(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLWindow*
-/// @param callback QObject* func()
+/// @param self const QOpenGLWindow*
+/// @param callback QObject* func(QOpenGLWindow* self)
 ///
-void q_openglwindow_on_focus_object(void* self, QObject* (*callback)());
+void q_openglwindow_on_focus_object(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QWindow
 ///
@@ -3226,7 +3228,7 @@ void q_openglwindow_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QOpenGLWindow*
 /// @param signal QMetaMethod*
 ///
-void q_openglwindow_connect_notify(void* self, void* signal);
+void q_openglwindow_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3237,7 +3239,7 @@ void q_openglwindow_connect_notify(void* self, void* signal);
 /// @param self QOpenGLWindow*
 /// @param signal QMetaMethod*
 ///
-void q_openglwindow_super_connect_notify(void* self, void* signal);
+void q_openglwindow_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3248,7 +3250,7 @@ void q_openglwindow_super_connect_notify(void* self, void* signal);
 /// @param self QOpenGLWindow*
 /// @param callback void func(QOpenGLWindow* self, QMetaMethod* signal)
 ///
-void q_openglwindow_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_openglwindow_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -3259,7 +3261,7 @@ void q_openglwindow_on_connect_notify(void* self, void (*callback)(void*, void*)
 /// @param self QOpenGLWindow*
 /// @param signal QMetaMethod*
 ///
-void q_openglwindow_disconnect_notify(void* self, void* signal);
+void q_openglwindow_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3270,7 +3272,7 @@ void q_openglwindow_disconnect_notify(void* self, void* signal);
 /// @param self QOpenGLWindow*
 /// @param signal QMetaMethod*
 ///
-void q_openglwindow_super_disconnect_notify(void* self, void* signal);
+void q_openglwindow_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3281,7 +3283,7 @@ void q_openglwindow_super_disconnect_notify(void* self, void* signal);
 /// @param self QOpenGLWindow*
 /// @param callback void func(QOpenGLWindow* self, QMetaMethod* signal)
 ///
-void q_openglwindow_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_openglwindow_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -3289,9 +3291,9 @@ void q_openglwindow_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-int32_t q_openglwindow_dev_type(void* self);
+int32_t q_openglwindow_dev_type(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -3299,9 +3301,9 @@ int32_t q_openglwindow_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-int32_t q_openglwindow_super_dev_type(void* self);
+int32_t q_openglwindow_super_dev_type(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -3309,10 +3311,10 @@ int32_t q_openglwindow_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLWindow*
-/// @param callback int32_t func()
+/// @param self const QOpenGLWindow*
+/// @param callback int32_t func(QOpenGLWindow* self)
 ///
-void q_openglwindow_on_dev_type(void* self, int32_t (*callback)());
+void q_openglwindow_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -3320,10 +3322,10 @@ void q_openglwindow_on_dev_type(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param painter QPainter*
 ///
-void q_openglwindow_init_painter(void* self, void* painter);
+void q_openglwindow_init_painter(const void* self, void* painter);
 
 /// Inherited from QPaintDevice
 ///
@@ -3331,10 +3333,10 @@ void q_openglwindow_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param painter QPainter*
 ///
-void q_openglwindow_super_init_painter(void* self, void* painter);
+void q_openglwindow_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QPaintDevice
 ///
@@ -3342,10 +3344,10 @@ void q_openglwindow_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param callback void func(QOpenGLWindow* self, QPainter* painter)
 ///
-void q_openglwindow_on_init_painter(void* self, void (*callback)(void*, void*));
+void q_openglwindow_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -3353,9 +3355,9 @@ void q_openglwindow_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QPainter* q_openglwindow_shared_painter(void* self);
+QPainter* q_openglwindow_shared_painter(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -3363,9 +3365,9 @@ QPainter* q_openglwindow_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QPainter* q_openglwindow_super_shared_painter(void* self);
+QPainter* q_openglwindow_super_shared_painter(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -3373,10 +3375,10 @@ QPainter* q_openglwindow_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLWindow*
-/// @param callback QPainter* func()
+/// @param self const QOpenGLWindow*
+/// @param callback QPainter* func(QOpenGLWindow* self)
 ///
-void q_openglwindow_on_shared_painter(void* self, QPainter* (*callback)());
+void q_openglwindow_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWindow
 ///
@@ -3384,11 +3386,11 @@ void q_openglwindow_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param name const char*
 /// @param revision int
 ///
-void* q_openglwindow_resolve_interface(void* self, const char* name, int revision);
+void* q_openglwindow_resolve_interface(const void* self, const char* name, int revision);
 
 /// Inherited from QWindow
 ///
@@ -3396,11 +3398,11 @@ void* q_openglwindow_resolve_interface(void* self, const char* name, int revisio
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param name const char*
 /// @param revision int
 ///
-void* q_openglwindow_super_resolve_interface(void* self, const char* name, int revision);
+void* q_openglwindow_super_resolve_interface(const void* self, const char* name, int revision);
 
 /// Inherited from QWindow
 ///
@@ -3408,10 +3410,10 @@ void* q_openglwindow_super_resolve_interface(void* self, const char* name, int r
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param callback void* func(QOpenGLWindow* self, const char* name, int revision)
 ///
-void q_openglwindow_on_resolve_interface(void* self, void* (*callback)(void*, const char*, int));
+void q_openglwindow_on_resolve_interface(const void* self, void* (*callback)(const void*, const char*, int));
 
 /// Inherited from QObject
 ///
@@ -3419,9 +3421,9 @@ void q_openglwindow_on_resolve_interface(void* self, void* (*callback)(void*, co
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QObject* q_openglwindow_sender(void* self);
+QObject* q_openglwindow_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3429,9 +3431,9 @@ QObject* q_openglwindow_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-QObject* q_openglwindow_super_sender(void* self);
+QObject* q_openglwindow_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3439,10 +3441,10 @@ QObject* q_openglwindow_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLWindow*
-/// @param callback QObject* func()
+/// @param self const QOpenGLWindow*
+/// @param callback QObject* func(QOpenGLWindow* self)
 ///
-void q_openglwindow_on_sender(void* self, QObject* (*callback)());
+void q_openglwindow_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3450,9 +3452,9 @@ void q_openglwindow_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-int32_t q_openglwindow_sender_signal_index(void* self);
+int32_t q_openglwindow_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3460,9 +3462,9 @@ int32_t q_openglwindow_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 ///
-int32_t q_openglwindow_super_sender_signal_index(void* self);
+int32_t q_openglwindow_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3470,10 +3472,10 @@ int32_t q_openglwindow_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLWindow*
-/// @param callback int32_t func()
+/// @param self const QOpenGLWindow*
+/// @param callback int32_t func(QOpenGLWindow* self)
 ///
-void q_openglwindow_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_openglwindow_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3481,10 +3483,10 @@ void q_openglwindow_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param signal const char*
 ///
-int32_t q_openglwindow_receivers(void* self, const char* signal);
+int32_t q_openglwindow_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -3492,10 +3494,10 @@ int32_t q_openglwindow_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param signal const char*
 ///
-int32_t q_openglwindow_super_receivers(void* self, const char* signal);
+int32_t q_openglwindow_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -3503,10 +3505,10 @@ int32_t q_openglwindow_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param callback int32_t func(QOpenGLWindow* self, const char* signal)
 ///
-void q_openglwindow_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_openglwindow_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3514,10 +3516,10 @@ void q_openglwindow_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param signal QMetaMethod*
 ///
-bool q_openglwindow_is_signal_connected(void* self, void* signal);
+bool q_openglwindow_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3525,10 +3527,10 @@ bool q_openglwindow_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param signal QMetaMethod*
 ///
-bool q_openglwindow_super_is_signal_connected(void* self, void* signal);
+bool q_openglwindow_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3536,10 +3538,10 @@ bool q_openglwindow_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param callback bool func(QOpenGLWindow* self, QMetaMethod* signal)
 ///
-void q_openglwindow_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_openglwindow_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -3547,11 +3549,11 @@ void q_openglwindow_on_is_signal_connected(void* self, bool (*callback)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_openglwindow_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_openglwindow_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -3559,11 +3561,11 @@ double q_openglwindow_get_decoded_metric_f(void* self, int32_t metricA, int32_t 
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_openglwindow_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_openglwindow_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -3571,10 +3573,10 @@ double q_openglwindow_super_get_decoded_metric_f(void* self, int32_t metricA, in
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLWindow*
+/// @param self const QOpenGLWindow*
 /// @param callback double func(QOpenGLWindow* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_openglwindow_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void q_openglwindow_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

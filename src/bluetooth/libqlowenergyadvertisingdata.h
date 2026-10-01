@@ -20,14 +20,14 @@ QLowEnergyAdvertisingData* q_lowenergyadvertisingdata_new();
 ///
 /// @param other QLowEnergyAdvertisingData*
 ///
-QLowEnergyAdvertisingData* q_lowenergyadvertisingdata_new2(void* other);
+QLowEnergyAdvertisingData* q_lowenergyadvertisingdata_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingdata.html#operator-eq)
 ///
 /// @param self QLowEnergyAdvertisingData*
 /// @param other QLowEnergyAdvertisingData*
 ///
-void q_lowenergyadvertisingdata_operator_assign(void* self, void* other);
+void q_lowenergyadvertisingdata_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingdata.html#setLocalName)
 ///
@@ -40,9 +40,9 @@ void q_lowenergyadvertisingdata_set_local_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QLowEnergyAdvertisingData*
+/// @param self const QLowEnergyAdvertisingData*
 ///
-const char* q_lowenergyadvertisingdata_local_name(void* self);
+const char* q_lowenergyadvertisingdata_local_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingdata.html#invalidManufacturerId)
 ///
@@ -58,17 +58,17 @@ void q_lowenergyadvertisingdata_set_manufacturer_data(void* self, uint16_t id, c
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingdata.html#manufacturerId)
 ///
-/// @param self QLowEnergyAdvertisingData*
+/// @param self const QLowEnergyAdvertisingData*
 ///
-uint16_t q_lowenergyadvertisingdata_manufacturer_id(void* self);
+uint16_t q_lowenergyadvertisingdata_manufacturer_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingdata.html#manufacturerData)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QLowEnergyAdvertisingData*
+/// @param self const QLowEnergyAdvertisingData*
 ///
-char* q_lowenergyadvertisingdata_manufacturer_data(void* self);
+char* q_lowenergyadvertisingdata_manufacturer_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingdata.html#setIncludePowerLevel)
 ///
@@ -79,9 +79,9 @@ void q_lowenergyadvertisingdata_set_include_power_level(void* self, bool doInclu
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingdata.html#includePowerLevel)
 ///
-/// @param self QLowEnergyAdvertisingData*
+/// @param self const QLowEnergyAdvertisingData*
 ///
-bool q_lowenergyadvertisingdata_include_power_level(void* self);
+bool q_lowenergyadvertisingdata_include_power_level(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingdata.html#setDiscoverability)
 ///
@@ -92,11 +92,11 @@ void q_lowenergyadvertisingdata_set_discoverability(void* self, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingdata.html#discoverability)
 ///
-/// @param self QLowEnergyAdvertisingData*
+/// @param self const QLowEnergyAdvertisingData*
 ///
 /// @return enum QLowEnergyAdvertisingData__Discoverability
 ///
-int32_t q_lowenergyadvertisingdata_discoverability(void* self);
+int32_t q_lowenergyadvertisingdata_discoverability(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingdata.html#setServices)
 ///
@@ -107,11 +107,11 @@ void q_lowenergyadvertisingdata_set_services(void* self, libqt_list services);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingdata.html#services)
 ///
-/// @param self QLowEnergyAdvertisingData*
+/// @param self const QLowEnergyAdvertisingData*
 ///
 /// @return libqt_list of QBluetoothUuid*
 ///
-libqt_list q_lowenergyadvertisingdata_services(void* self);
+libqt_list q_lowenergyadvertisingdata_services(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingdata.html#setRawData)
 ///
@@ -124,9 +124,9 @@ void q_lowenergyadvertisingdata_set_raw_data(void* self, char* data);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QLowEnergyAdvertisingData*
+/// @param self const QLowEnergyAdvertisingData*
 ///
-char* q_lowenergyadvertisingdata_raw_data(void* self);
+char* q_lowenergyadvertisingdata_raw_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingdata.html#swap)
 ///

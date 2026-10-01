@@ -15,11 +15,11 @@ KTextEditor__DocumentCursor* k_texteditor__documentcursor_new3(void* document, i
     return KTextEditor__DocumentCursor_New3((KTextEditor__Document*)document, line, column);
 }
 
-KTextEditor__DocumentCursor* k_texteditor__documentcursor_new4(void* other) {
+KTextEditor__DocumentCursor* k_texteditor__documentcursor_new4(const void* other) {
     return KTextEditor__DocumentCursor_New4((KTextEditor__DocumentCursor*)other);
 }
 
-KTextEditor__Document* k_texteditor__documentcursor_document(void* self) {
+KTextEditor__Document* k_texteditor__documentcursor_document(const void* self) {
     return KTextEditor__DocumentCursor_Document((KTextEditor__DocumentCursor*)self);
 }
 
@@ -27,19 +27,19 @@ void k_texteditor__documentcursor_set_position(void* self, void* position) {
     KTextEditor__DocumentCursor_SetPosition((KTextEditor__DocumentCursor*)self, (KTextEditor__Cursor*)position);
 }
 
-int32_t k_texteditor__documentcursor_line(void* self) {
+int32_t k_texteditor__documentcursor_line(const void* self) {
     return KTextEditor__DocumentCursor_Line((KTextEditor__DocumentCursor*)self);
 }
 
-int32_t k_texteditor__documentcursor_column(void* self) {
+int32_t k_texteditor__documentcursor_column(const void* self) {
     return KTextEditor__DocumentCursor_Column((KTextEditor__DocumentCursor*)self);
 }
 
-bool k_texteditor__documentcursor_is_valid(void* self) {
+bool k_texteditor__documentcursor_is_valid(const void* self) {
     return KTextEditor__DocumentCursor_IsValid((KTextEditor__DocumentCursor*)self);
 }
 
-bool k_texteditor__documentcursor_is_valid_text_position(void* self) {
+bool k_texteditor__documentcursor_is_valid_text_position(const void* self) {
     return KTextEditor__DocumentCursor_IsValidTextPosition((KTextEditor__DocumentCursor*)self);
 }
 
@@ -59,19 +59,19 @@ void k_texteditor__documentcursor_set_column(void* self, int column) {
     KTextEditor__DocumentCursor_SetColumn((KTextEditor__DocumentCursor*)self, column);
 }
 
-bool k_texteditor__documentcursor_at_start_of_line(void* self) {
+bool k_texteditor__documentcursor_at_start_of_line(const void* self) {
     return KTextEditor__DocumentCursor_AtStartOfLine((KTextEditor__DocumentCursor*)self);
 }
 
-bool k_texteditor__documentcursor_at_end_of_line(void* self) {
+bool k_texteditor__documentcursor_at_end_of_line(const void* self) {
     return KTextEditor__DocumentCursor_AtEndOfLine((KTextEditor__DocumentCursor*)self);
 }
 
-bool k_texteditor__documentcursor_at_start_of_document(void* self) {
+bool k_texteditor__documentcursor_at_start_of_document(const void* self) {
     return KTextEditor__DocumentCursor_AtStartOfDocument((KTextEditor__DocumentCursor*)self);
 }
 
-bool k_texteditor__documentcursor_at_end_of_document(void* self) {
+bool k_texteditor__documentcursor_at_end_of_document(const void* self) {
     return KTextEditor__DocumentCursor_AtEndOfDocument((KTextEditor__DocumentCursor*)self);
 }
 
@@ -87,15 +87,15 @@ bool k_texteditor__documentcursor_move(void* self, int chars) {
     return KTextEditor__DocumentCursor_Move((KTextEditor__DocumentCursor*)self, chars);
 }
 
-KTextEditor__Cursor* k_texteditor__documentcursor_to_cursor(void* self) {
+KTextEditor__Cursor* k_texteditor__documentcursor_to_cursor(const void* self) {
     return KTextEditor__DocumentCursor_ToCursor((KTextEditor__DocumentCursor*)self);
 }
 
-KTextEditor__Cursor* k_texteditor__documentcursor_to_cursor2(void* self) {
+KTextEditor__Cursor* k_texteditor__documentcursor_to_cursor2(const void* self) {
     return KTextEditor__DocumentCursor_ToCursor2((KTextEditor__DocumentCursor*)self);
 }
 
-void k_texteditor__documentcursor_operator_assign(void* self, void* other) {
+void k_texteditor__documentcursor_operator_assign(void* self, const void* other) {
     KTextEditor__DocumentCursor_OperatorAssign((KTextEditor__DocumentCursor*)self, (KTextEditor__DocumentCursor*)other);
 }
 

@@ -67,9 +67,9 @@ void q_imagereader_set_format(void* self, char* format);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QImageReader*
+/// @param self const QImageReader*
 ///
-char* q_imagereader_format(void* self);
+char* q_imagereader_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#setAutoDetectImageFormat)
 ///
@@ -80,9 +80,9 @@ void q_imagereader_set_auto_detect_image_format(void* self, bool enabled);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#autoDetectImageFormat)
 ///
-/// @param self QImageReader*
+/// @param self const QImageReader*
 ///
-bool q_imagereader_auto_detect_image_format(void* self);
+bool q_imagereader_auto_detect_image_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#setDecideFormatFromContent)
 ///
@@ -93,9 +93,9 @@ void q_imagereader_set_decide_format_from_content(void* self, bool ignored);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#decideFormatFromContent)
 ///
-/// @param self QImageReader*
+/// @param self const QImageReader*
 ///
-bool q_imagereader_decide_format_from_content(void* self);
+bool q_imagereader_decide_format_from_content(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#setDevice)
 ///
@@ -106,9 +106,9 @@ void q_imagereader_set_device(void* self, void* device);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#device)
 ///
-/// @param self QImageReader*
+/// @param self const QImageReader*
 ///
-QIODevice* q_imagereader_device(void* self);
+QIODevice* q_imagereader_device(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#setFileName)
 ///
@@ -121,66 +121,66 @@ void q_imagereader_set_file_name(void* self, const char* fileName);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QImageReader*
+/// @param self const QImageReader*
 ///
-const char* q_imagereader_file_name(void* self);
+const char* q_imagereader_file_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#size)
 ///
-/// @param self QImageReader*
+/// @param self const QImageReader*
 ///
-QSize* q_imagereader_size(void* self);
+QSize* q_imagereader_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#imageFormat)
 ///
-/// @param self QImageReader*
+/// @param self const QImageReader*
 ///
 /// @return enum QImage__Format
 ///
-int32_t q_imagereader_image_format(void* self);
+int32_t q_imagereader_image_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#textKeys)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QImageReader*
+/// @param self const QImageReader*
 ///
-const char** q_imagereader_text_keys(void* self);
+const char** q_imagereader_text_keys(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#text)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QImageReader*
+/// @param self const QImageReader*
 /// @param key const char*
 ///
-const char* q_imagereader_text(void* self, const char* key);
+const char* q_imagereader_text(const void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#setClipRect)
 ///
 /// @param self QImageReader*
 /// @param rect QRect*
 ///
-void q_imagereader_set_clip_rect(void* self, void* rect);
+void q_imagereader_set_clip_rect(void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#clipRect)
 ///
-/// @param self QImageReader*
+/// @param self const QImageReader*
 ///
-QRect* q_imagereader_clip_rect(void* self);
+QRect* q_imagereader_clip_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#setScaledSize)
 ///
 /// @param self QImageReader*
 /// @param size QSize*
 ///
-void q_imagereader_set_scaled_size(void* self, void* size);
+void q_imagereader_set_scaled_size(void* self, const void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#scaledSize)
 ///
-/// @param self QImageReader*
+/// @param self const QImageReader*
 ///
-QSize* q_imagereader_scaled_size(void* self);
+QSize* q_imagereader_scaled_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#setQuality)
 ///
@@ -191,49 +191,49 @@ void q_imagereader_set_quality(void* self, int quality);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#quality)
 ///
-/// @param self QImageReader*
+/// @param self const QImageReader*
 ///
-int32_t q_imagereader_quality(void* self);
+int32_t q_imagereader_quality(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#setScaledClipRect)
 ///
 /// @param self QImageReader*
 /// @param rect QRect*
 ///
-void q_imagereader_set_scaled_clip_rect(void* self, void* rect);
+void q_imagereader_set_scaled_clip_rect(void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#scaledClipRect)
 ///
-/// @param self QImageReader*
+/// @param self const QImageReader*
 ///
-QRect* q_imagereader_scaled_clip_rect(void* self);
+QRect* q_imagereader_scaled_clip_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#setBackgroundColor)
 ///
 /// @param self QImageReader*
 /// @param color QColor*
 ///
-void q_imagereader_set_background_color(void* self, void* color);
+void q_imagereader_set_background_color(void* self, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#backgroundColor)
 ///
-/// @param self QImageReader*
+/// @param self const QImageReader*
 ///
-QColor* q_imagereader_background_color(void* self);
+QColor* q_imagereader_background_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#supportsAnimation)
 ///
-/// @param self QImageReader*
+/// @param self const QImageReader*
 ///
-bool q_imagereader_supports_animation(void* self);
+bool q_imagereader_supports_animation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#transformation)
 ///
-/// @param self QImageReader*
+/// @param self const QImageReader*
 ///
 /// @return flag of enum QImageIOHandler__Transformation
 ///
-int32_t q_imagereader_transformation(void* self);
+int32_t q_imagereader_transformation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#setAutoTransform)
 ///
@@ -244,31 +244,31 @@ void q_imagereader_set_auto_transform(void* self, bool enabled);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#autoTransform)
 ///
-/// @param self QImageReader*
+/// @param self const QImageReader*
 ///
-bool q_imagereader_auto_transform(void* self);
+bool q_imagereader_auto_transform(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#subType)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QImageReader*
+/// @param self const QImageReader*
 ///
-char* q_imagereader_sub_type(void* self);
+char* q_imagereader_sub_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#supportedSubTypes)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QImageReader*
+/// @param self const QImageReader*
 ///
-const char** q_imagereader_supported_sub_types(void* self);
+const char** q_imagereader_supported_sub_types(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#canRead)
 ///
-/// @param self QImageReader*
+/// @param self const QImageReader*
 ///
-bool q_imagereader_can_read(void* self);
+bool q_imagereader_can_read(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#read)
 ///
@@ -298,56 +298,56 @@ bool q_imagereader_jump_to_image(void* self, int imageNumber);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#loopCount)
 ///
-/// @param self QImageReader*
+/// @param self const QImageReader*
 ///
-int32_t q_imagereader_loop_count(void* self);
+int32_t q_imagereader_loop_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#imageCount)
 ///
-/// @param self QImageReader*
+/// @param self const QImageReader*
 ///
-int32_t q_imagereader_image_count(void* self);
+int32_t q_imagereader_image_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#nextImageDelay)
 ///
-/// @param self QImageReader*
+/// @param self const QImageReader*
 ///
-int32_t q_imagereader_next_image_delay(void* self);
+int32_t q_imagereader_next_image_delay(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#currentImageNumber)
 ///
-/// @param self QImageReader*
+/// @param self const QImageReader*
 ///
-int32_t q_imagereader_current_image_number(void* self);
+int32_t q_imagereader_current_image_number(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#currentImageRect)
 ///
-/// @param self QImageReader*
+/// @param self const QImageReader*
 ///
-QRect* q_imagereader_current_image_rect(void* self);
+QRect* q_imagereader_current_image_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#error)
 ///
-/// @param self QImageReader*
+/// @param self const QImageReader*
 ///
 /// @return enum QImageReader__ImageReaderError
 ///
-int32_t q_imagereader_error(void* self);
+int32_t q_imagereader_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#errorString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QImageReader*
+/// @param self const QImageReader*
 ///
-const char* q_imagereader_error_string(void* self);
+const char* q_imagereader_error_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#supportsOption)
 ///
-/// @param self QImageReader*
+/// @param self const QImageReader*
 /// @param option enum QImageIOHandler__ImageOption
 ///
-bool q_imagereader_supports_option(void* self, int32_t option);
+bool q_imagereader_supports_option(const void* self, int32_t option);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#imageFormat)
 ///

@@ -29,7 +29,7 @@ QQuickView* q_quickview_new2(void* engine, void* parent);
 ///
 /// @param source QUrl*
 ///
-QQuickView* q_quickview_new3(void* source);
+QQuickView* q_quickview_new3(const void* source);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickview.html)
 
@@ -47,7 +47,7 @@ QQuickView* q_quickview_new4(const char* uri, const char* typeName);
 /// @param source QUrl*
 /// @param renderControl QQuickRenderControl*
 ///
-QQuickView* q_quickview_new5(void* source, void* renderControl);
+QQuickView* q_quickview_new5(const void* source, void* renderControl);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickview.html)
 
@@ -64,7 +64,7 @@ QQuickView* q_quickview_new6(void* parent);
 /// @param source QUrl*
 /// @param parent QWindow*
 ///
-QQuickView* q_quickview_new7(void* source, void* parent);
+QQuickView* q_quickview_new7(const void* source, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickview.html)
 
@@ -78,26 +78,26 @@ QQuickView* q_quickview_new8(const char* uri, const char* typeName, void* parent
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-const QMetaObject* q_quickview_meta_object(void* self);
+const QMetaObject* q_quickview_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QQuickView*
-/// @param callback const QMetaObject* func()
+/// @param self const QQuickView*
+/// @param callback const QMetaObject* func(const QQuickView* self)
 ///
-void q_quickview_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_quickview_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-const QMetaObject* q_quickview_super_meta_object(void* self);
+const QMetaObject* q_quickview_super_meta_object(const void* self);
 
 /// @param self QQuickView*
 /// @param param1 const char*
@@ -151,35 +151,35 @@ const char* q_quickview_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickview.html#source)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QUrl* q_quickview_source(void* self);
+QUrl* q_quickview_source(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickview.html#engine)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QQmlEngine* q_quickview_engine(void* self);
+QQmlEngine* q_quickview_engine(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickview.html#rootContext)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QQmlContext* q_quickview_root_context(void* self);
+QQmlContext* q_quickview_root_context(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickview.html#rootObject)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QQuickItem* q_quickview_root_object(void* self);
+QQuickItem* q_quickview_root_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickview.html#resizeMode)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
 /// @return enum QQuickView__ResizeMode
 ///
-int32_t q_quickview_resize_mode(void* self);
+int32_t q_quickview_resize_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickview.html#setResizeMode)
 ///
@@ -190,38 +190,38 @@ void q_quickview_set_resize_mode(void* self, int32_t resizeMode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickview.html#status)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
 /// @return enum QQuickView__Status
 ///
-int32_t q_quickview_status(void* self);
+int32_t q_quickview_status(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickview.html#errors)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
 /// @return libqt_list of QQmlError*
 ///
-libqt_list q_quickview_errors(void* self);
+libqt_list q_quickview_errors(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickview.html#sizeHint)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QSize* q_quickview_size_hint(void* self);
+QSize* q_quickview_size_hint(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickview.html#initialSize)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QSize* q_quickview_initial_size(void* self);
+QSize* q_quickview_initial_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickview.html#setSource)
 ///
 /// @param self QQuickView*
 /// @param source QUrl*
 ///
-void q_quickview_set_source(void* self, void* source);
+void q_quickview_set_source(void* self, const void* source);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickview.html#loadFromModule)
 ///
@@ -245,7 +245,7 @@ void q_quickview_set_initial_properties(void* self, libqt_map initialProperties)
 /// @param component QQmlComponent*
 /// @param item QObject*
 ///
-void q_quickview_set_content(void* self, void* url, void* component, void* item);
+void q_quickview_set_content(void* self, const void* url, void* component, void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickview.html#statusChanged)
 ///
@@ -459,25 +459,25 @@ const char* q_quickview_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickwindow.html#contentItem)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QQuickItem* q_quickview_content_item(void* self);
+QQuickItem* q_quickview_content_item(const void* self);
 
 /// Inherited from QQuickWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickwindow.html#activeFocusItem)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QQuickItem* q_quickview_active_focus_item(void* self);
+QQuickItem* q_quickview_active_focus_item(const void* self);
 
 /// Inherited from QQuickWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickwindow.html#mouseGrabberItem)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QQuickItem* q_quickview_mouse_grabber_item(void* self);
+QQuickItem* q_quickview_mouse_grabber_item(const void* self);
 
 /// Inherited from QQuickWindow
 ///
@@ -494,15 +494,15 @@ QImage* q_quickview_grab_window(void* self);
 /// @param self QQuickView*
 /// @param target QQuickRenderTarget*
 ///
-void q_quickview_set_render_target(void* self, void* target);
+void q_quickview_set_render_target(void* self, const void* target);
 
 /// Inherited from QQuickWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickwindow.html#renderTarget)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QQuickRenderTarget* q_quickview_render_target(void* self);
+QQuickRenderTarget* q_quickview_render_target(const void* self);
 
 /// Inherited from QQuickWindow
 ///
@@ -532,28 +532,28 @@ void q_quickview_end_external_commands(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickwindow.html#incubationController)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QQmlIncubationController* q_quickview_incubation_controller(void* self);
+QQmlIncubationController* q_quickview_incubation_controller(const void* self);
 
 /// Inherited from QQuickWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickwindow.html#createTextureFromImage)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 /// @param image QImage*
 ///
-QSGTexture* q_quickview_create_texture_from_image(void* self, void* image);
+QSGTexture* q_quickview_create_texture_from_image(const void* self, const void* image);
 
 /// Inherited from QQuickWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickwindow.html#createTextureFromImage)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 /// @param image QImage*
 /// @param options flag of enum QQuickWindow__CreateTextureOption
 ///
-QSGTexture* q_quickview_create_texture_from_image2(void* self, void* image, int32_t options);
+QSGTexture* q_quickview_create_texture_from_image2(const void* self, const void* image, int32_t options);
 
 /// Inherited from QQuickWindow
 ///
@@ -562,15 +562,15 @@ QSGTexture* q_quickview_create_texture_from_image2(void* self, void* image, int3
 /// @param self QQuickView*
 /// @param color QColor*
 ///
-void q_quickview_set_color(void* self, void* color);
+void q_quickview_set_color(void* self, const void* color);
 
 /// Inherited from QQuickWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickwindow.html#color)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QColor* q_quickview_color(void* self);
+QColor* q_quickview_color(const void* self);
 
 /// Inherited from QQuickWindow
 ///
@@ -599,9 +599,9 @@ void q_quickview_set_persistent_graphics(void* self, bool persistent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickwindow.html#isPersistentGraphics)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-bool q_quickview_is_persistent_graphics(void* self);
+bool q_quickview_is_persistent_graphics(const void* self);
 
 /// Inherited from QQuickWindow
 ///
@@ -616,17 +616,17 @@ void q_quickview_set_persistent_scene_graph(void* self, bool persistent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickwindow.html#isPersistentSceneGraph)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-bool q_quickview_is_persistent_scene_graph(void* self);
+bool q_quickview_is_persistent_scene_graph(const void* self);
 
 /// Inherited from QQuickWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickwindow.html#isSceneGraphInitialized)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-bool q_quickview_is_scene_graph_initialized(void* self);
+bool q_quickview_is_scene_graph_initialized(const void* self);
 
 /// Inherited from QQuickWindow
 ///
@@ -642,17 +642,17 @@ void q_quickview_schedule_render_job(void* self, void* job, int32_t schedule);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickwindow.html#effectiveDevicePixelRatio)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-double q_quickview_effective_device_pixel_ratio(void* self);
+double q_quickview_effective_device_pixel_ratio(const void* self);
 
 /// Inherited from QQuickWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickwindow.html#rendererInterface)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QSGRendererInterface* q_quickview_renderer_interface(void* self);
+QSGRendererInterface* q_quickview_renderer_interface(const void* self);
 
 /// Inherited from QQuickWindow
 ///
@@ -693,15 +693,15 @@ const char* q_quickview_scene_graph_backend();
 /// @param self QQuickView*
 /// @param device QQuickGraphicsDevice*
 ///
-void q_quickview_set_graphics_device(void* self, void* device);
+void q_quickview_set_graphics_device(void* self, const void* device);
 
 /// Inherited from QQuickWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickwindow.html#graphicsDevice)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QQuickGraphicsDevice* q_quickview_graphics_device(void* self);
+QQuickGraphicsDevice* q_quickview_graphics_device(const void* self);
 
 /// Inherited from QQuickWindow
 ///
@@ -710,47 +710,47 @@ QQuickGraphicsDevice* q_quickview_graphics_device(void* self);
 /// @param self QQuickView*
 /// @param config QQuickGraphicsConfiguration*
 ///
-void q_quickview_set_graphics_configuration(void* self, void* config);
+void q_quickview_set_graphics_configuration(void* self, const void* config);
 
 /// Inherited from QQuickWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickwindow.html#graphicsConfiguration)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QQuickGraphicsConfiguration* q_quickview_graphics_configuration(void* self);
+QQuickGraphicsConfiguration* q_quickview_graphics_configuration(const void* self);
 
 /// Inherited from QQuickWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickwindow.html#createRectangleNode)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QSGRectangleNode* q_quickview_create_rectangle_node(void* self);
+QSGRectangleNode* q_quickview_create_rectangle_node(const void* self);
 
 /// Inherited from QQuickWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickwindow.html#createImageNode)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QSGImageNode* q_quickview_create_image_node(void* self);
+QSGImageNode* q_quickview_create_image_node(const void* self);
 
 /// Inherited from QQuickWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickwindow.html#createNinePatchNode)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QSGNinePatchNode* q_quickview_create_nine_patch_node(void* self);
+QSGNinePatchNode* q_quickview_create_nine_patch_node(const void* self);
 
 /// Inherited from QQuickWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickwindow.html#createTextNode)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QSGTextNode* q_quickview_create_text_node(void* self);
+QSGTextNode* q_quickview_create_text_node(const void* self);
 
 /// Inherited from QQuickWindow
 ///
@@ -928,7 +928,7 @@ void q_quickview_on_scene_graph_about_to_stop(void* self, void (*callback)(void*
 /// @param self QQuickView*
 /// @param param1 QColor*
 ///
-void q_quickview_color_changed(void* self, void* param1);
+void q_quickview_color_changed(void* self, const void* param1);
 
 /// Inherited from QQuickWindow
 ///
@@ -937,7 +937,7 @@ void q_quickview_color_changed(void* self, void* param1);
 /// @param self QQuickView*
 /// @param callback void func(QQuickView* self, QColor* param1)
 ///
-void q_quickview_on_color_changed(void* self, void (*callback)(void*, void*));
+void q_quickview_on_color_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QQuickWindow
 ///
@@ -1122,19 +1122,19 @@ void q_quickview_set_surface_type(void* self, int32_t surfaceType);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#isVisible)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-bool q_quickview_is_visible(void* self);
+bool q_quickview_is_visible(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#visibility)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
 /// @return enum QWindow__Visibility
 ///
-int32_t q_quickview_visibility(void* self);
+int32_t q_quickview_visibility(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -1157,17 +1157,17 @@ void q_quickview_create(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#winId)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-uintptr_t q_quickview_win_id(void* self);
+uintptr_t q_quickview_win_id(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#parent)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QWindow* q_quickview_parent(void* self);
+QWindow* q_quickview_parent(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -1182,27 +1182,27 @@ void q_quickview_set_parent(void* self, void* parent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#isTopLevel)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-bool q_quickview_is_top_level(void* self);
+bool q_quickview_is_top_level(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#isModal)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-bool q_quickview_is_modal(void* self);
+bool q_quickview_is_modal(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#modality)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t q_quickview_modality(void* self);
+int32_t q_quickview_modality(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -1220,15 +1220,15 @@ void q_quickview_set_modality(void* self, int32_t modality);
 /// @param self QQuickView*
 /// @param format QSurfaceFormat*
 ///
-void q_quickview_set_format(void* self, void* format);
+void q_quickview_set_format(void* self, const void* format);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#requestedFormat)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QSurfaceFormat* q_quickview_requested_format(void* self);
+QSurfaceFormat* q_quickview_requested_format(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -1243,11 +1243,11 @@ void q_quickview_set_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#flags)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t q_quickview_flags(void* self);
+int32_t q_quickview_flags(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -1262,11 +1262,11 @@ void q_quickview_set_flag(void* self, int32_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#type)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t q_quickview_type(void* self);
+int32_t q_quickview_type(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -1274,9 +1274,9 @@ int32_t q_quickview_type(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-const char* q_quickview_title(void* self);
+const char* q_quickview_title(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -1291,9 +1291,9 @@ void q_quickview_set_opacity(void* self, double level);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#opacity)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-double q_quickview_opacity(void* self);
+double q_quickview_opacity(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -1302,23 +1302,23 @@ double q_quickview_opacity(void* self);
 /// @param self QQuickView*
 /// @param region QRegion*
 ///
-void q_quickview_set_mask(void* self, void* region);
+void q_quickview_set_mask(void* self, const void* region);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mask)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QRegion* q_quickview_mask(void* self);
+QRegion* q_quickview_mask(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#isActive)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-bool q_quickview_is_active(void* self);
+bool q_quickview_is_active(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -1333,39 +1333,39 @@ void q_quickview_report_content_orientation_change(void* self, int32_t orientati
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#contentOrientation)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
 /// @return enum Qt__ScreenOrientation
 ///
-int32_t q_quickview_content_orientation(void* self);
+int32_t q_quickview_content_orientation(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#devicePixelRatio)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-double q_quickview_device_pixel_ratio(void* self);
+double q_quickview_device_pixel_ratio(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#windowState)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
 /// @return enum Qt__WindowState
 ///
-int32_t q_quickview_window_state(void* self);
+int32_t q_quickview_window_state(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#windowStates)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t q_quickview_window_states(void* self);
+int32_t q_quickview_window_states(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -1398,90 +1398,90 @@ void q_quickview_set_transient_parent(void* self, void* parent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#transientParent)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QWindow* q_quickview_transient_parent(void* self);
+QWindow* q_quickview_transient_parent(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#isAncestorOf)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 /// @param child QWindow*
 ///
-bool q_quickview_is_ancestor_of(void* self, void* child);
+bool q_quickview_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#isExposed)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-bool q_quickview_is_exposed(void* self);
+bool q_quickview_is_exposed(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#minimumWidth)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-int32_t q_quickview_minimum_width(void* self);
+int32_t q_quickview_minimum_width(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#minimumHeight)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-int32_t q_quickview_minimum_height(void* self);
+int32_t q_quickview_minimum_height(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#maximumWidth)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-int32_t q_quickview_maximum_width(void* self);
+int32_t q_quickview_maximum_width(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#maximumHeight)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-int32_t q_quickview_maximum_height(void* self);
+int32_t q_quickview_maximum_height(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#minimumSize)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QSize* q_quickview_minimum_size(void* self);
+QSize* q_quickview_minimum_size(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#maximumSize)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QSize* q_quickview_maximum_size(void* self);
+QSize* q_quickview_maximum_size(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#baseSize)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QSize* q_quickview_base_size(void* self);
+QSize* q_quickview_base_size(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#sizeIncrement)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QSize* q_quickview_size_increment(void* self);
+QSize* q_quickview_size_increment(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -1490,7 +1490,7 @@ QSize* q_quickview_size_increment(void* self);
 /// @param self QQuickView*
 /// @param size QSize*
 ///
-void q_quickview_set_minimum_size(void* self, void* size);
+void q_quickview_set_minimum_size(void* self, const void* size);
 
 /// Inherited from QWindow
 ///
@@ -1499,7 +1499,7 @@ void q_quickview_set_minimum_size(void* self, void* size);
 /// @param self QQuickView*
 /// @param size QSize*
 ///
-void q_quickview_set_maximum_size(void* self, void* size);
+void q_quickview_set_maximum_size(void* self, const void* size);
 
 /// Inherited from QWindow
 ///
@@ -1508,7 +1508,7 @@ void q_quickview_set_maximum_size(void* self, void* size);
 /// @param self QQuickView*
 /// @param size QSize*
 ///
-void q_quickview_set_base_size(void* self, void* size);
+void q_quickview_set_base_size(void* self, const void* size);
 
 /// Inherited from QWindow
 ///
@@ -1517,39 +1517,39 @@ void q_quickview_set_base_size(void* self, void* size);
 /// @param self QQuickView*
 /// @param size QSize*
 ///
-void q_quickview_set_size_increment(void* self, void* size);
+void q_quickview_set_size_increment(void* self, const void* size);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#geometry)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QRect* q_quickview_geometry(void* self);
+QRect* q_quickview_geometry(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#frameMargins)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QMargins* q_quickview_frame_margins(void* self);
+QMargins* q_quickview_frame_margins(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#frameGeometry)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QRect* q_quickview_frame_geometry(void* self);
+QRect* q_quickview_frame_geometry(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#framePosition)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QPoint* q_quickview_frame_position(void* self);
+QPoint* q_quickview_frame_position(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -1558,47 +1558,47 @@ QPoint* q_quickview_frame_position(void* self);
 /// @param self QQuickView*
 /// @param point QPoint*
 ///
-void q_quickview_set_frame_position(void* self, void* point);
+void q_quickview_set_frame_position(void* self, const void* point);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#width)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-int32_t q_quickview_width(void* self);
+int32_t q_quickview_width(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#height)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-int32_t q_quickview_height(void* self);
+int32_t q_quickview_height(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#x)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-int32_t q_quickview_x(void* self);
+int32_t q_quickview_x(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#y)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-int32_t q_quickview_y(void* self);
+int32_t q_quickview_y(const void* self);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#position)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QPoint* q_quickview_position(void* self);
+QPoint* q_quickview_position(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -1607,7 +1607,7 @@ QPoint* q_quickview_position(void* self);
 /// @param self QQuickView*
 /// @param pt QPoint*
 ///
-void q_quickview_set_position(void* self, void* pt);
+void q_quickview_set_position(void* self, const void* pt);
 
 /// Inherited from QWindow
 ///
@@ -1626,7 +1626,7 @@ void q_quickview_set_position2(void* self, int posx, int posy);
 /// @param self QQuickView*
 /// @param newSize QSize*
 ///
-void q_quickview_resize(void* self, void* newSize);
+void q_quickview_resize(void* self, const void* newSize);
 
 /// Inherited from QWindow
 ///
@@ -1653,9 +1653,9 @@ void q_quickview_set_file_path(void* self, const char* filePath);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-const char* q_quickview_file_path(void* self);
+const char* q_quickview_file_path(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -1664,15 +1664,15 @@ const char* q_quickview_file_path(void* self);
 /// @param self QQuickView*
 /// @param icon QIcon*
 ///
-void q_quickview_set_icon(void* self, void* icon);
+void q_quickview_set_icon(void* self, const void* icon);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#icon)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QIcon* q_quickview_icon(void* self);
+QIcon* q_quickview_icon(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -1704,9 +1704,9 @@ bool q_quickview_set_mouse_grab_enabled(void* self, bool grab);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#screen)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QScreen* q_quickview_screen(void* self);
+QScreen* q_quickview_screen(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -1721,45 +1721,45 @@ void q_quickview_set_screen(void* self, void* screen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mapToGlobal)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 /// @param pos QPointF*
 ///
-QPointF* q_quickview_map_to_global(void* self, void* pos);
+QPointF* q_quickview_map_to_global(const void* self, const void* pos);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mapFromGlobal)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 /// @param pos QPointF*
 ///
-QPointF* q_quickview_map_from_global(void* self, void* pos);
+QPointF* q_quickview_map_from_global(const void* self, const void* pos);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mapToGlobal)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 /// @param pos QPoint*
 ///
-QPoint* q_quickview_map_to_global2(void* self, void* pos);
+QPoint* q_quickview_map_to_global2(const void* self, const void* pos);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mapFromGlobal)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 /// @param pos QPoint*
 ///
-QPoint* q_quickview_map_from_global2(void* self, void* pos);
+QPoint* q_quickview_map_from_global2(const void* self, const void* pos);
 
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#cursor)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QCursor* q_quickview_cursor(void* self);
+QCursor* q_quickview_cursor(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -1768,7 +1768,7 @@ QCursor* q_quickview_cursor(void* self);
 /// @param self QQuickView*
 /// @param cursor QCursor*
 ///
-void q_quickview_set_cursor(void* self, void* cursor);
+void q_quickview_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWindow
 ///
@@ -1956,7 +1956,7 @@ void q_quickview_set_geometry(void* self, int posx, int posy, int w, int h);
 /// @param self QQuickView*
 /// @param rect QRect*
 ///
-void q_quickview_set_geometry2(void* self, void* rect);
+void q_quickview_set_geometry2(void* self, const void* rect);
 
 /// Inherited from QWindow
 ///
@@ -2356,10 +2356,10 @@ void q_quickview_on_transient_parent_changed(void* self, void (*callback)(void*,
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#parent)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 /// @param mode enum QWindow__AncestorMode
 ///
-QWindow* q_quickview_parent1(void* self, int32_t mode);
+QWindow* q_quickview_parent1(const void* self, int32_t mode);
 
 /// Inherited from QWindow
 ///
@@ -2375,11 +2375,11 @@ void q_quickview_set_flag2(void* self, int32_t param1, bool on);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#isAncestorOf)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 /// @param child QWindow*
 /// @param mode enum QWindow__AncestorMode
 ///
-bool q_quickview_is_ancestor_of2(void* self, void* child, int32_t mode);
+bool q_quickview_is_ancestor_of2(const void* self, const void* child, int32_t mode);
 
 /// Inherited from QObject
 ///
@@ -2387,9 +2387,9 @@ bool q_quickview_is_ancestor_of2(void* self, void* child, int32_t mode);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-const char* q_quickview_object_name(void* self);
+const char* q_quickview_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2404,33 +2404,33 @@ void q_quickview_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-bool q_quickview_is_widget_type(void* self);
+bool q_quickview_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-bool q_quickview_is_window_type(void* self);
+bool q_quickview_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-bool q_quickview_is_quick_item_type(void* self);
+bool q_quickview_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-bool q_quickview_signals_blocked(void* self);
+bool q_quickview_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2445,9 +2445,9 @@ bool q_quickview_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QThread* q_quickview_thread(void* self);
+QThread* q_quickview_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2498,11 +2498,11 @@ void q_quickview_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_quickview_children(void* self);
+libqt_list q_quickview_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2531,7 +2531,7 @@ void q_quickview_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_quickview_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_quickview_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2542,18 +2542,18 @@ QMetaObject__Connection* q_quickview_connect(void* sender, const char* signal, v
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_quickview_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_quickview_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_quickview_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_quickview_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2564,7 +2564,7 @@ QMetaObject__Connection* q_quickview_connect3(void* self, void* sender, const ch
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_quickview_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_quickview_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2575,24 +2575,24 @@ bool q_quickview_disconnect(void* sender, const char* signal, void* receiver, co
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_quickview_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_quickview_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-bool q_quickview_disconnect3(void* self);
+bool q_quickview_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 /// @param receiver QObject*
 ///
-bool q_quickview_disconnect4(void* self, void* receiver);
+bool q_quickview_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -2600,23 +2600,23 @@ bool q_quickview_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_quickview_disconnect5(void* param1);
+bool q_quickview_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-void q_quickview_dump_object_tree(void* self);
+void q_quickview_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-void q_quickview_dump_object_info(void* self);
+void q_quickview_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2626,16 +2626,16 @@ void q_quickview_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_quickview_set_property(void* self, const char* name, void* value);
+bool q_quickview_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 /// @param name const char*
 ///
-QVariant* q_quickview_property(void* self, const char* name);
+QVariant* q_quickview_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -2643,9 +2643,9 @@ QVariant* q_quickview_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-const char** q_quickview_dynamic_property_names(void* self);
+const char** q_quickview_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2659,9 +2659,9 @@ QBindingStorage* q_quickview_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-const QBindingStorage* q_quickview_binding_storage2(void* self);
+const QBindingStorage* q_quickview_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2684,10 +2684,10 @@ void q_quickview_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 /// @param classname const char*
 ///
-bool q_quickview_inherits(void* self, const char* classname);
+bool q_quickview_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -2727,7 +2727,7 @@ int32_t q_quickview_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_quickview_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_quickview_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -2739,59 +2739,59 @@ QMetaObject__Connection* q_quickview_connect5(void* sender, const char* signal, 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_quickview_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_quickview_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_quickview_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_quickview_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 /// @param signal const char*
 ///
-bool q_quickview_disconnect1(void* self, const char* signal);
+bool q_quickview_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickView*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_quickview_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_quickview_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_quickview_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_quickview_disconnect23(void* self, void* receiver, const char* member);
+bool q_quickview_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QQuickView*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_quickview_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2815,19 +2815,19 @@ void q_quickview_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurface.html#surfaceClass)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
 /// @return enum QSurface__SurfaceClass
 ///
-int32_t q_quickview_surface_class(void* self);
+int32_t q_quickview_surface_class(const void* self);
 
 /// Inherited from QSurface
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurface.html#supportsOpenGL)
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-bool q_quickview_supports_open_g_l(void* self);
+bool q_quickview_supports_open_g_l(const void* self);
 
 /// Inherited from QSurface
 ///
@@ -2836,7 +2836,7 @@ bool q_quickview_supports_open_g_l(void* self);
 /// @param self QQuickView*
 /// @param param1 QSurface*
 ///
-void q_quickview_operator_assign(void* self, void* param1);
+void q_quickview_operator_assign(void* self, const void* param1);
 
 /// Inherited from QQuickWindow
 ///
@@ -2844,9 +2844,9 @@ void q_quickview_operator_assign(void* self, void* param1);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QObject* q_quickview_focus_object(void* self);
+QObject* q_quickview_focus_object(const void* self);
 
 /// Inherited from QQuickWindow
 ///
@@ -2854,9 +2854,9 @@ QObject* q_quickview_focus_object(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QObject* q_quickview_super_focus_object(void* self);
+QObject* q_quickview_super_focus_object(const void* self);
 
 /// Inherited from QQuickWindow
 ///
@@ -2864,10 +2864,10 @@ QObject* q_quickview_super_focus_object(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickView*
-/// @param callback QObject* func()
+/// @param self const QQuickView*
+/// @param callback QObject* func(QQuickView* self)
 ///
-void q_quickview_on_focus_object(void* self, QObject* (*callback)());
+void q_quickview_on_focus_object(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QQuickWindow
 ///
@@ -2875,9 +2875,9 @@ void q_quickview_on_focus_object(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QAccessibleInterface* q_quickview_accessible_root(void* self);
+QAccessibleInterface* q_quickview_accessible_root(const void* self);
 
 /// Inherited from QQuickWindow
 ///
@@ -2885,9 +2885,9 @@ QAccessibleInterface* q_quickview_accessible_root(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QAccessibleInterface* q_quickview_super_accessible_root(void* self);
+QAccessibleInterface* q_quickview_super_accessible_root(const void* self);
 
 /// Inherited from QQuickWindow
 ///
@@ -2895,10 +2895,10 @@ QAccessibleInterface* q_quickview_super_accessible_root(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickView*
-/// @param callback QAccessibleInterface* func()
+/// @param self const QQuickView*
+/// @param callback QAccessibleInterface* func(QQuickView* self)
 ///
-void q_quickview_on_accessible_root(void* self, QAccessibleInterface* (*callback)());
+void q_quickview_on_accessible_root(const void* self, QAccessibleInterface* (*callback)(const void*));
 
 /// Inherited from QQuickWindow
 ///
@@ -3236,11 +3236,11 @@ void q_quickview_on_tablet_event(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
 /// @return enum QSurface__SurfaceType
 ///
-int32_t q_quickview_surface_type(void* self);
+int32_t q_quickview_surface_type(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -3248,11 +3248,11 @@ int32_t q_quickview_surface_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
 /// @return enum QSurface__SurfaceType
 ///
-int32_t q_quickview_super_surface_type(void* self);
+int32_t q_quickview_super_surface_type(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -3260,10 +3260,10 @@ int32_t q_quickview_super_surface_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickView*
-/// @param callback int32_t func()
+/// @param self const QQuickView*
+/// @param callback int32_t func(QQuickView* self)
 ///
-void q_quickview_on_surface_type(void* self, int32_t (*callback)());
+void q_quickview_on_surface_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWindow
 ///
@@ -3271,9 +3271,9 @@ void q_quickview_on_surface_type(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QSurfaceFormat* q_quickview_format(void* self);
+QSurfaceFormat* q_quickview_format(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -3281,9 +3281,9 @@ QSurfaceFormat* q_quickview_format(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QSurfaceFormat* q_quickview_super_format(void* self);
+QSurfaceFormat* q_quickview_super_format(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -3291,12 +3291,12 @@ QSurfaceFormat* q_quickview_super_format(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickView*
-/// @param callback QSurfaceFormat* func()
+/// @param self const QQuickView*
+/// @param callback QSurfaceFormat* func(QQuickView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_quickview_on_format(void* self, QSurfaceFormat* (*callback)());
+void q_quickview_on_format(const void* self, QSurfaceFormat* (*callback)(const void*));
 
 /// Inherited from QWindow
 ///
@@ -3304,9 +3304,9 @@ void q_quickview_on_format(void* self, QSurfaceFormat* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QSize* q_quickview_size(void* self);
+QSize* q_quickview_size(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -3314,9 +3314,9 @@ QSize* q_quickview_size(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QSize* q_quickview_super_size(void* self);
+QSize* q_quickview_super_size(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -3324,12 +3324,12 @@ QSize* q_quickview_super_size(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickView*
-/// @param callback QSize* func()
+/// @param self const QQuickView*
+/// @param callback QSize* func(QQuickView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_quickview_on_size(void* self, QSize* (*callback)());
+void q_quickview_on_size(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWindow
 ///
@@ -3577,7 +3577,7 @@ void q_quickview_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QQuickView*
 /// @param signal QMetaMethod*
 ///
-void q_quickview_connect_notify(void* self, void* signal);
+void q_quickview_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3588,7 +3588,7 @@ void q_quickview_connect_notify(void* self, void* signal);
 /// @param self QQuickView*
 /// @param signal QMetaMethod*
 ///
-void q_quickview_super_connect_notify(void* self, void* signal);
+void q_quickview_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3599,7 +3599,7 @@ void q_quickview_super_connect_notify(void* self, void* signal);
 /// @param self QQuickView*
 /// @param callback void func(QQuickView* self, QMetaMethod* signal)
 ///
-void q_quickview_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_quickview_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -3610,7 +3610,7 @@ void q_quickview_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QQuickView*
 /// @param signal QMetaMethod*
 ///
-void q_quickview_disconnect_notify(void* self, void* signal);
+void q_quickview_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3621,7 +3621,7 @@ void q_quickview_disconnect_notify(void* self, void* signal);
 /// @param self QQuickView*
 /// @param signal QMetaMethod*
 ///
-void q_quickview_super_disconnect_notify(void* self, void* signal);
+void q_quickview_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3632,7 +3632,7 @@ void q_quickview_super_disconnect_notify(void* self, void* signal);
 /// @param self QQuickView*
 /// @param callback void func(QQuickView* self, QMetaMethod* signal)
 ///
-void q_quickview_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_quickview_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWindow
 ///
@@ -3640,11 +3640,11 @@ void q_quickview_on_disconnect_notify(void* self, void (*callback)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 /// @param name const char*
 /// @param revision int
 ///
-void* q_quickview_resolve_interface(void* self, const char* name, int revision);
+void* q_quickview_resolve_interface(const void* self, const char* name, int revision);
 
 /// Inherited from QWindow
 ///
@@ -3652,11 +3652,11 @@ void* q_quickview_resolve_interface(void* self, const char* name, int revision);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 /// @param name const char*
 /// @param revision int
 ///
-void* q_quickview_super_resolve_interface(void* self, const char* name, int revision);
+void* q_quickview_super_resolve_interface(const void* self, const char* name, int revision);
 
 /// Inherited from QWindow
 ///
@@ -3664,10 +3664,10 @@ void* q_quickview_super_resolve_interface(void* self, const char* name, int revi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 /// @param callback void* func(QQuickView* self, const char* name, int revision)
 ///
-void q_quickview_on_resolve_interface(void* self, void* (*callback)(void*, const char*, int));
+void q_quickview_on_resolve_interface(const void* self, void* (*callback)(const void*, const char*, int));
 
 /// Inherited from QObject
 ///
@@ -3675,9 +3675,9 @@ void q_quickview_on_resolve_interface(void* self, void* (*callback)(void*, const
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QObject* q_quickview_sender(void* self);
+QObject* q_quickview_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3685,9 +3685,9 @@ QObject* q_quickview_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QObject* q_quickview_super_sender(void* self);
+QObject* q_quickview_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3695,10 +3695,10 @@ QObject* q_quickview_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickView*
-/// @param callback QObject* func()
+/// @param self const QQuickView*
+/// @param callback QObject* func(QQuickView* self)
 ///
-void q_quickview_on_sender(void* self, QObject* (*callback)());
+void q_quickview_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3706,9 +3706,9 @@ void q_quickview_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-int32_t q_quickview_sender_signal_index(void* self);
+int32_t q_quickview_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3716,9 +3716,9 @@ int32_t q_quickview_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-int32_t q_quickview_super_sender_signal_index(void* self);
+int32_t q_quickview_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3726,10 +3726,10 @@ int32_t q_quickview_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickView*
-/// @param callback int32_t func()
+/// @param self const QQuickView*
+/// @param callback int32_t func(QQuickView* self)
 ///
-void q_quickview_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_quickview_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3737,10 +3737,10 @@ void q_quickview_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 /// @param signal const char*
 ///
-int32_t q_quickview_receivers(void* self, const char* signal);
+int32_t q_quickview_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -3748,10 +3748,10 @@ int32_t q_quickview_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 /// @param signal const char*
 ///
-int32_t q_quickview_super_receivers(void* self, const char* signal);
+int32_t q_quickview_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -3759,10 +3759,10 @@ int32_t q_quickview_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 /// @param callback int32_t func(QQuickView* self, const char* signal)
 ///
-void q_quickview_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_quickview_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3770,10 +3770,10 @@ void q_quickview_on_receivers(void* self, int32_t (*callback)(void*, const char*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 /// @param signal QMetaMethod*
 ///
-bool q_quickview_is_signal_connected(void* self, void* signal);
+bool q_quickview_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3781,10 +3781,10 @@ bool q_quickview_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 /// @param signal QMetaMethod*
 ///
-bool q_quickview_super_is_signal_connected(void* self, void* signal);
+bool q_quickview_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3792,10 +3792,10 @@ bool q_quickview_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 /// @param callback bool func(QQuickView* self, QMetaMethod* signal)
 ///
-void q_quickview_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_quickview_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

@@ -14,7 +14,7 @@ bool k_sandbox_is_snap() {
     return KSandbox_IsSnap();
 }
 
-KSandbox__ProcessContext* k_sandbox_make_host_context(void* process) {
+KSandbox__ProcessContext* k_sandbox_make_host_context(const void* process) {
     return KSandbox_MakeHostContext((QProcess*)process);
 }
 
@@ -26,7 +26,7 @@ KSandbox__ProcessContext* k_sandbox__processcontext_new() {
     return KSandbox__ProcessContext_New();
 }
 
-KSandbox__ProcessContext* k_sandbox__processcontext_new2(void* param1) {
+KSandbox__ProcessContext* k_sandbox__processcontext_new2(const void* param1) {
     return KSandbox__ProcessContext_New2((KSandbox__ProcessContext*)param1);
 }
 

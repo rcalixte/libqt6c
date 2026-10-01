@@ -28,7 +28,7 @@ QNetworkDatagram* q_networkdatagram_new2(char* data);
 ///
 /// @param other QNetworkDatagram*
 ///
-QNetworkDatagram* q_networkdatagram_new3(void* other);
+QNetworkDatagram* q_networkdatagram_new3(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdatagram.html)
 
@@ -37,7 +37,7 @@ QNetworkDatagram* q_networkdatagram_new3(void* other);
 /// @param data char*
 /// @param destinationAddress QHostAddress*
 ///
-QNetworkDatagram* q_networkdatagram_new4(char* data, void* destinationAddress);
+QNetworkDatagram* q_networkdatagram_new4(char* data, const void* destinationAddress);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdatagram.html)
 
@@ -47,14 +47,14 @@ QNetworkDatagram* q_networkdatagram_new4(char* data, void* destinationAddress);
 /// @param destinationAddress QHostAddress*
 /// @param port uint16_t
 ///
-QNetworkDatagram* q_networkdatagram_new5(char* data, void* destinationAddress, uint16_t port);
+QNetworkDatagram* q_networkdatagram_new5(char* data, const void* destinationAddress, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdatagram.html#operator-eq)
 ///
 /// @param self QNetworkDatagram*
 /// @param other QNetworkDatagram*
 ///
-void q_networkdatagram_operator_assign(void* self, void* other);
+void q_networkdatagram_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdatagram.html#swap)
 ///
@@ -71,21 +71,21 @@ void q_networkdatagram_clear(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdatagram.html#isValid)
 ///
-/// @param self QNetworkDatagram*
+/// @param self const QNetworkDatagram*
 ///
-bool q_networkdatagram_is_valid(void* self);
+bool q_networkdatagram_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdatagram.html#isNull)
 ///
-/// @param self QNetworkDatagram*
+/// @param self const QNetworkDatagram*
 ///
-bool q_networkdatagram_is_null(void* self);
+bool q_networkdatagram_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdatagram.html#interfaceIndex)
 ///
-/// @param self QNetworkDatagram*
+/// @param self const QNetworkDatagram*
 ///
-uint32_t q_networkdatagram_interface_index(void* self);
+uint32_t q_networkdatagram_interface_index(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdatagram.html#setInterfaceIndex)
 ///
@@ -96,34 +96,34 @@ void q_networkdatagram_set_interface_index(void* self, uint32_t index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdatagram.html#senderAddress)
 ///
-/// @param self QNetworkDatagram*
+/// @param self const QNetworkDatagram*
 ///
-QHostAddress* q_networkdatagram_sender_address(void* self);
+QHostAddress* q_networkdatagram_sender_address(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdatagram.html#destinationAddress)
 ///
-/// @param self QNetworkDatagram*
+/// @param self const QNetworkDatagram*
 ///
-QHostAddress* q_networkdatagram_destination_address(void* self);
+QHostAddress* q_networkdatagram_destination_address(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdatagram.html#senderPort)
 ///
-/// @param self QNetworkDatagram*
+/// @param self const QNetworkDatagram*
 ///
-int32_t q_networkdatagram_sender_port(void* self);
+int32_t q_networkdatagram_sender_port(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdatagram.html#destinationPort)
 ///
-/// @param self QNetworkDatagram*
+/// @param self const QNetworkDatagram*
 ///
-int32_t q_networkdatagram_destination_port(void* self);
+int32_t q_networkdatagram_destination_port(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdatagram.html#setSender)
 ///
 /// @param self QNetworkDatagram*
 /// @param address QHostAddress*
 ///
-void q_networkdatagram_set_sender(void* self, void* address);
+void q_networkdatagram_set_sender(void* self, const void* address);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdatagram.html#setDestination)
 ///
@@ -131,13 +131,13 @@ void q_networkdatagram_set_sender(void* self, void* address);
 /// @param address QHostAddress*
 /// @param port uint16_t
 ///
-void q_networkdatagram_set_destination(void* self, void* address, uint16_t port);
+void q_networkdatagram_set_destination(void* self, const void* address, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdatagram.html#hopLimit)
 ///
-/// @param self QNetworkDatagram*
+/// @param self const QNetworkDatagram*
 ///
-int32_t q_networkdatagram_hop_limit(void* self);
+int32_t q_networkdatagram_hop_limit(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdatagram.html#setHopLimit)
 ///
@@ -150,9 +150,9 @@ void q_networkdatagram_set_hop_limit(void* self, int count);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QNetworkDatagram*
+/// @param self const QNetworkDatagram*
 ///
-char* q_networkdatagram_data(void* self);
+char* q_networkdatagram_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdatagram.html#setData)
 ///
@@ -163,10 +163,10 @@ void q_networkdatagram_set_data(void* self, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdatagram.html#makeReply)
 ///
-/// @param self QNetworkDatagram*
+/// @param self const QNetworkDatagram*
 /// @param payload char*
 ///
-QNetworkDatagram* q_networkdatagram_make_reply(void* self, char* payload);
+QNetworkDatagram* q_networkdatagram_make_reply(const void* self, char* payload);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdatagram.html#setSender)
 ///
@@ -174,7 +174,7 @@ QNetworkDatagram* q_networkdatagram_make_reply(void* self, char* payload);
 /// @param address QHostAddress*
 /// @param port uint16_t
 ///
-void q_networkdatagram_set_sender2(void* self, void* address, uint16_t port);
+void q_networkdatagram_set_sender2(void* self, const void* address, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdatagram.html#dtor.QNetworkDatagram)
 ///

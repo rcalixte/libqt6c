@@ -15,7 +15,7 @@
 /// @param key QGeoAreaMonitorInfo*
 /// @param seed size_t
 ///
-size_t q_qgeoareamonitorinfo_h_q_hash(void* key, size_t seed);
+size_t q_qgeoareamonitorinfo_h_q_hash(const void* key, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorinfo.html)
 
@@ -29,7 +29,7 @@ QGeoAreaMonitorInfo* q_geoareamonitorinfo_new();
 ///
 /// @param other QGeoAreaMonitorInfo*
 ///
-QGeoAreaMonitorInfo* q_geoareamonitorinfo_new2(void* other);
+QGeoAreaMonitorInfo* q_geoareamonitorinfo_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorinfo.html)
 
@@ -44,7 +44,7 @@ QGeoAreaMonitorInfo* q_geoareamonitorinfo_new3(const char* name);
 /// @param self QGeoAreaMonitorInfo*
 /// @param other QGeoAreaMonitorInfo*
 ///
-void q_geoareamonitorinfo_operator_assign(void* self, void* other);
+void q_geoareamonitorinfo_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorinfo.html#swap)
 ///
@@ -57,9 +57,9 @@ void q_geoareamonitorinfo_swap(void* self, void* other);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGeoAreaMonitorInfo*
+/// @param self const QGeoAreaMonitorInfo*
 ///
-const char* q_geoareamonitorinfo_name(void* self);
+const char* q_geoareamonitorinfo_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorinfo.html#setName)
 ///
@@ -72,47 +72,47 @@ void q_geoareamonitorinfo_set_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGeoAreaMonitorInfo*
+/// @param self const QGeoAreaMonitorInfo*
 ///
-const char* q_geoareamonitorinfo_identifier(void* self);
+const char* q_geoareamonitorinfo_identifier(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorinfo.html#isValid)
 ///
-/// @param self QGeoAreaMonitorInfo*
+/// @param self const QGeoAreaMonitorInfo*
 ///
-bool q_geoareamonitorinfo_is_valid(void* self);
+bool q_geoareamonitorinfo_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorinfo.html#area)
 ///
-/// @param self QGeoAreaMonitorInfo*
+/// @param self const QGeoAreaMonitorInfo*
 ///
-QGeoShape* q_geoareamonitorinfo_area(void* self);
+QGeoShape* q_geoareamonitorinfo_area(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorinfo.html#setArea)
 ///
 /// @param self QGeoAreaMonitorInfo*
 /// @param newShape QGeoShape*
 ///
-void q_geoareamonitorinfo_set_area(void* self, void* newShape);
+void q_geoareamonitorinfo_set_area(void* self, const void* newShape);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorinfo.html#expiration)
 ///
-/// @param self QGeoAreaMonitorInfo*
+/// @param self const QGeoAreaMonitorInfo*
 ///
-QDateTime* q_geoareamonitorinfo_expiration(void* self);
+QDateTime* q_geoareamonitorinfo_expiration(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorinfo.html#setExpiration)
 ///
 /// @param self QGeoAreaMonitorInfo*
 /// @param expiry QDateTime*
 ///
-void q_geoareamonitorinfo_set_expiration(void* self, void* expiry);
+void q_geoareamonitorinfo_set_expiration(void* self, const void* expiry);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorinfo.html#isPersistent)
 ///
-/// @param self QGeoAreaMonitorInfo*
+/// @param self const QGeoAreaMonitorInfo*
 ///
-bool q_geoareamonitorinfo_is_persistent(void* self);
+bool q_geoareamonitorinfo_is_persistent(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorinfo.html#setPersistent)
 ///
@@ -135,11 +135,11 @@ void q_geoareamonitorinfo_set_persistent(void* self, bool isPersistent);
 /// free(map.values);
 /// ```
 ///
-/// @param self QGeoAreaMonitorInfo*
+/// @param self const QGeoAreaMonitorInfo*
 ///
 /// @return libqt_map of const char* to QVariant*
 ///
-libqt_map q_geoareamonitorinfo_notification_parameters(void* self);
+libqt_map q_geoareamonitorinfo_notification_parameters(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorinfo.html#setNotificationParameters)
 ///

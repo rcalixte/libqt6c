@@ -24,26 +24,26 @@ KCategorizedView* k_categorizedview_new2();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-const QMetaObject* k_categorizedview_meta_object(void* self);
+const QMetaObject* k_categorizedview_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCategorizedView*
-/// @param callback const QMetaObject* func()
+/// @param self const KCategorizedView*
+/// @param callback const QMetaObject* func(const KCategorizedView* self)
 ///
-void k_categorizedview_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_categorizedview_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-const QMetaObject* k_categorizedview_super_meta_object(void* self);
+const QMetaObject* k_categorizedview_super_meta_object(const void* self);
 
 /// @param self KCategorizedView*
 /// @param param1 const char*
@@ -125,47 +125,47 @@ void k_categorizedview_super_set_model(void* self, void* model);
 /// @param self KCategorizedView*
 /// @param size QSize*
 ///
-void k_categorizedview_set_grid_size(void* self, void* size);
+void k_categorizedview_set_grid_size(void* self, const void* size);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#setGridSizeOwn)
 ///
 /// @param self KCategorizedView*
 /// @param size QSize*
 ///
-void k_categorizedview_set_grid_size_own(void* self, void* size);
+void k_categorizedview_set_grid_size_own(void* self, const void* size);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#visualRect)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param index QModelIndex*
 ///
-QRect* k_categorizedview_visual_rect(void* self, void* index);
+QRect* k_categorizedview_visual_rect(const void* self, const void* index);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#visualRect)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCategorizedView*
-/// @param callback QRect* func(KCategorizedView* self, QModelIndex* index)
+/// @param self const KCategorizedView*
+/// @param callback QRect* func(const KCategorizedView* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_categorizedview_on_visual_rect(void* self, QRect* (*callback)(void*, void*));
+void k_categorizedview_on_visual_rect(const void* self, QRect* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#visualRect)
 ///
 /// Base class method implementation
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param index QModelIndex*
 ///
-QRect* k_categorizedview_super_visual_rect(void* self, void* index);
+QRect* k_categorizedview_super_visual_rect(const void* self, const void* index);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#categoryDrawer)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-KCategoryDrawer* k_categorizedview_category_drawer(void* self);
+KCategoryDrawer* k_categorizedview_category_drawer(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#setCategoryDrawer)
 ///
@@ -176,9 +176,9 @@ void k_categorizedview_set_category_drawer(void* self, void* categoryDrawer);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#categorySpacing)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_category_spacing(void* self);
+int32_t k_categorizedview_category_spacing(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#setCategorySpacing)
 ///
@@ -189,9 +189,9 @@ void k_categorizedview_set_category_spacing(void* self, int categorySpacing);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#alternatingBlockColors)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_alternating_block_colors(void* self);
+bool k_categorizedview_alternating_block_colors(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#setAlternatingBlockColors)
 ///
@@ -202,9 +202,9 @@ void k_categorizedview_set_alternating_block_colors(void* self, bool enable);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#collapsibleBlocks)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_collapsible_blocks(void* self);
+bool k_categorizedview_collapsible_blocks(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#setCollapsibleBlocks)
 ///
@@ -229,34 +229,34 @@ libqt_list k_categorizedview_block(void* self, const char* category);
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list k_categorizedview_block2(void* self, void* representative);
+libqt_list k_categorizedview_block2(void* self, const void* representative);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#indexAt)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param point QPoint*
 ///
-QModelIndex* k_categorizedview_index_at(void* self, void* point);
+QModelIndex* k_categorizedview_index_at(const void* self, const void* point);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#indexAt)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCategorizedView*
-/// @param callback QModelIndex* func(KCategorizedView* self, QPoint* point)
+/// @param self const KCategorizedView*
+/// @param callback QModelIndex* func(const KCategorizedView* self, QPoint* point)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_categorizedview_on_index_at(void* self, QModelIndex* (*callback)(void*, void*));
+void k_categorizedview_on_index_at(const void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#indexAt)
 ///
 /// Base class method implementation
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param point QPoint*
 ///
-QModelIndex* k_categorizedview_super_index_at(void* self, void* point);
+QModelIndex* k_categorizedview_super_index_at(const void* self, const void* point);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#reset)
 ///
@@ -269,9 +269,9 @@ void k_categorizedview_reset(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedView*
-/// @param callback void func()
+/// @param callback void func(KCategorizedView* self)
 ///
-void k_categorizedview_on_reset(void* self, void (*callback)());
+void k_categorizedview_on_reset(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#reset)
 ///
@@ -379,7 +379,7 @@ void k_categorizedview_super_resize_event(void* self, void* event);
 /// @param rect QRect*
 /// @param flags flag of enum QItemSelectionModel__SelectionFlag
 ///
-void k_categorizedview_set_selection(void* self, void* rect, int32_t flags);
+void k_categorizedview_set_selection(void* self, const void* rect, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#setSelection)
 ///
@@ -388,7 +388,7 @@ void k_categorizedview_set_selection(void* self, void* rect, int32_t flags);
 /// @param self KCategorizedView*
 /// @param callback void func(KCategorizedView* self, QRect* rect, flag of enum QItemSelectionModel__SelectionFlag flags)
 ///
-void k_categorizedview_on_set_selection(void* self, void (*callback)(void*, void*, int32_t));
+void k_categorizedview_on_set_selection(void* self, void (*callback)(void*, const void*, int32_t));
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#setSelection)
 ///
@@ -398,7 +398,7 @@ void k_categorizedview_on_set_selection(void* self, void (*callback)(void*, void
 /// @param rect QRect*
 /// @param flags flag of enum QItemSelectionModel__SelectionFlag
 ///
-void k_categorizedview_super_set_selection(void* self, void* rect, int32_t flags);
+void k_categorizedview_super_set_selection(void* self, const void* rect, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#mouseMoveEvent)
 ///
@@ -661,7 +661,7 @@ QModelIndex* k_categorizedview_super_move_cursor(void* self, int32_t cursorActio
 /// @param start int
 /// @param end int
 ///
-void k_categorizedview_rows_about_to_be_removed(void* self, void* parent, int start, int end);
+void k_categorizedview_rows_about_to_be_removed(void* self, const void* parent, int start, int end);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#rowsAboutToBeRemoved)
 ///
@@ -670,7 +670,7 @@ void k_categorizedview_rows_about_to_be_removed(void* self, void* parent, int st
 /// @param self KCategorizedView*
 /// @param callback void func(KCategorizedView* self, QModelIndex* parent, int start, int end)
 ///
-void k_categorizedview_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
+void k_categorizedview_on_rows_about_to_be_removed(void* self, void (*callback)(void*, const void*, int, int));
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#rowsAboutToBeRemoved)
 ///
@@ -681,7 +681,7 @@ void k_categorizedview_on_rows_about_to_be_removed(void* self, void (*callback)(
 /// @param start int
 /// @param end int
 ///
-void k_categorizedview_super_rows_about_to_be_removed(void* self, void* parent, int start, int end);
+void k_categorizedview_super_rows_about_to_be_removed(void* self, const void* parent, int start, int end);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#updateGeometries)
 ///
@@ -694,9 +694,9 @@ void k_categorizedview_update_geometries(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedView*
-/// @param callback void func()
+/// @param callback void func(KCategorizedView* self)
 ///
-void k_categorizedview_on_update_geometries(void* self, void (*callback)());
+void k_categorizedview_on_update_geometries(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#updateGeometries)
 ///
@@ -712,7 +712,7 @@ void k_categorizedview_super_update_geometries(void* self);
 /// @param current QModelIndex*
 /// @param previous QModelIndex*
 ///
-void k_categorizedview_current_changed(void* self, void* current, void* previous);
+void k_categorizedview_current_changed(void* self, const void* current, const void* previous);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#currentChanged)
 ///
@@ -721,7 +721,7 @@ void k_categorizedview_current_changed(void* self, void* current, void* previous
 /// @param self KCategorizedView*
 /// @param callback void func(KCategorizedView* self, QModelIndex* current, QModelIndex* previous)
 ///
-void k_categorizedview_on_current_changed(void* self, void (*callback)(void*, void*, void*));
+void k_categorizedview_on_current_changed(void* self, void (*callback)(void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#currentChanged)
 ///
@@ -731,7 +731,7 @@ void k_categorizedview_on_current_changed(void* self, void (*callback)(void*, vo
 /// @param current QModelIndex*
 /// @param previous QModelIndex*
 ///
-void k_categorizedview_super_current_changed(void* self, void* current, void* previous);
+void k_categorizedview_super_current_changed(void* self, const void* current, const void* previous);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#dataChanged)
 ///
@@ -740,7 +740,7 @@ void k_categorizedview_super_current_changed(void* self, void* current, void* pr
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void k_categorizedview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
+void k_categorizedview_data_changed(void* self, const void* topLeft, const void* bottomRight, libqt_list roles);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#dataChanged)
 ///
@@ -749,7 +749,7 @@ void k_categorizedview_data_changed(void* self, void* topLeft, void* bottomRight
 /// @param self KCategorizedView*
 /// @param callback void func(KCategorizedView* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list of int roles)
 ///
-void k_categorizedview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list));
+void k_categorizedview_on_data_changed(void* self, void (*callback)(void*, const void*, const void*, libqt_list));
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#dataChanged)
 ///
@@ -760,7 +760,7 @@ void k_categorizedview_on_data_changed(void* self, void (*callback)(void*, void*
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void k_categorizedview_super_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
+void k_categorizedview_super_data_changed(void* self, const void* topLeft, const void* bottomRight, libqt_list roles);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#rowsInserted)
 ///
@@ -769,7 +769,7 @@ void k_categorizedview_super_data_changed(void* self, void* topLeft, void* botto
 /// @param start int
 /// @param end int
 ///
-void k_categorizedview_rows_inserted(void* self, void* parent, int start, int end);
+void k_categorizedview_rows_inserted(void* self, const void* parent, int start, int end);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#rowsInserted)
 ///
@@ -778,7 +778,7 @@ void k_categorizedview_rows_inserted(void* self, void* parent, int start, int en
 /// @param self KCategorizedView*
 /// @param callback void func(KCategorizedView* self, QModelIndex* parent, int start, int end)
 ///
-void k_categorizedview_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
+void k_categorizedview_on_rows_inserted(void* self, void (*callback)(void*, const void*, int, int));
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#rowsInserted)
 ///
@@ -789,7 +789,7 @@ void k_categorizedview_on_rows_inserted(void* self, void (*callback)(void*, void
 /// @param start int
 /// @param end int
 ///
-void k_categorizedview_super_rows_inserted(void* self, void* parent, int start, int end);
+void k_categorizedview_super_rows_inserted(void* self, const void* parent, int start, int end);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#slotLayoutChanged)
 ///
@@ -802,9 +802,9 @@ void k_categorizedview_slot_layout_changed(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedView*
-/// @param callback void func()
+/// @param callback void func(KCategorizedView* self)
 ///
-void k_categorizedview_on_slot_layout_changed(void* self, void (*callback)());
+void k_categorizedview_on_slot_layout_changed(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#slotLayoutChanged)
 ///
@@ -846,11 +846,11 @@ void k_categorizedview_set_movement(void* self, int32_t movement);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#movement)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return enum QListView__Movement
 ///
-int32_t k_categorizedview_movement(void* self);
+int32_t k_categorizedview_movement(const void* self);
 
 /// Inherited from QListView
 ///
@@ -865,11 +865,11 @@ void k_categorizedview_set_flow(void* self, int32_t flow);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#flow)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return enum QListView__Flow
 ///
-int32_t k_categorizedview_flow(void* self);
+int32_t k_categorizedview_flow(const void* self);
 
 /// Inherited from QListView
 ///
@@ -884,9 +884,9 @@ void k_categorizedview_set_wrapping(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#isWrapping)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_is_wrapping(void* self);
+bool k_categorizedview_is_wrapping(const void* self);
 
 /// Inherited from QListView
 ///
@@ -901,11 +901,11 @@ void k_categorizedview_set_resize_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#resizeMode)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return enum QListView__ResizeMode
 ///
-int32_t k_categorizedview_resize_mode(void* self);
+int32_t k_categorizedview_resize_mode(const void* self);
 
 /// Inherited from QListView
 ///
@@ -920,11 +920,11 @@ void k_categorizedview_set_layout_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#layoutMode)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return enum QListView__LayoutMode
 ///
-int32_t k_categorizedview_layout_mode(void* self);
+int32_t k_categorizedview_layout_mode(const void* self);
 
 /// Inherited from QListView
 ///
@@ -939,9 +939,9 @@ void k_categorizedview_set_spacing(void* self, int space);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#spacing)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_spacing(void* self);
+int32_t k_categorizedview_spacing(const void* self);
 
 /// Inherited from QListView
 ///
@@ -956,17 +956,17 @@ void k_categorizedview_set_batch_size(void* self, int batchSize);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#batchSize)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_batch_size(void* self);
+int32_t k_categorizedview_batch_size(const void* self);
 
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#gridSize)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QSize* k_categorizedview_grid_size(void* self);
+QSize* k_categorizedview_grid_size(const void* self);
 
 /// Inherited from QListView
 ///
@@ -981,11 +981,11 @@ void k_categorizedview_set_view_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#viewMode)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return enum QListView__ViewMode
 ///
-int32_t k_categorizedview_view_mode(void* self);
+int32_t k_categorizedview_view_mode(const void* self);
 
 /// Inherited from QListView
 ///
@@ -999,10 +999,10 @@ void k_categorizedview_clear_property_flags(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#isRowHidden)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param row int
 ///
-bool k_categorizedview_is_row_hidden(void* self, int row);
+bool k_categorizedview_is_row_hidden(const void* self, int row);
 
 /// Inherited from QListView
 ///
@@ -1027,9 +1027,9 @@ void k_categorizedview_set_model_column(void* self, int column);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#modelColumn)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_model_column(void* self);
+int32_t k_categorizedview_model_column(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1044,9 +1044,9 @@ void k_categorizedview_set_uniform_item_sizes(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#uniformItemSizes)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_uniform_item_sizes(void* self);
+bool k_categorizedview_uniform_item_sizes(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1061,9 +1061,9 @@ void k_categorizedview_set_word_wrap(void* self, bool on);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#wordWrap)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_word_wrap(void* self);
+bool k_categorizedview_word_wrap(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1078,9 +1078,9 @@ void k_categorizedview_set_selection_rect_visible(void* self, bool show);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#isSelectionRectVisible)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_is_selection_rect_visible(void* self);
+bool k_categorizedview_is_selection_rect_visible(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1095,11 +1095,11 @@ void k_categorizedview_set_item_alignment(void* self, int32_t alignment);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#itemAlignment)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 ///
-int32_t k_categorizedview_item_alignment(void* self);
+int32_t k_categorizedview_item_alignment(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1123,17 +1123,17 @@ void k_categorizedview_on_indexes_moved(void* self, void (*callback)(void*, libq
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#model)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QAbstractItemModel* k_categorizedview_model(void* self);
+QAbstractItemModel* k_categorizedview_model(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#selectionModel)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QItemSelectionModel* k_categorizedview_selection_model(void* self);
+QItemSelectionModel* k_categorizedview_selection_model(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1148,9 +1148,9 @@ void k_categorizedview_set_item_delegate(void* self, void* delegate);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegate)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QAbstractItemDelegate* k_categorizedview_item_delegate(void* self);
+QAbstractItemDelegate* k_categorizedview_item_delegate(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1165,11 +1165,11 @@ void k_categorizedview_set_selection_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#selectionMode)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return enum QAbstractItemView__SelectionMode
 ///
-int32_t k_categorizedview_selection_mode(void* self);
+int32_t k_categorizedview_selection_mode(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1184,27 +1184,27 @@ void k_categorizedview_set_selection_behavior(void* self, int32_t behavior);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#selectionBehavior)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return enum QAbstractItemView__SelectionBehavior
 ///
-int32_t k_categorizedview_selection_behavior(void* self);
+int32_t k_categorizedview_selection_behavior(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#currentIndex)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QModelIndex* k_categorizedview_current_index(void* self);
+QModelIndex* k_categorizedview_current_index(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#rootIndex)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QModelIndex* k_categorizedview_root_index(void* self);
+QModelIndex* k_categorizedview_root_index(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1219,11 +1219,11 @@ void k_categorizedview_set_edit_triggers(void* self, int32_t triggers);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#editTriggers)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return flag of enum QAbstractItemView__EditTrigger
 ///
-int32_t k_categorizedview_edit_triggers(void* self);
+int32_t k_categorizedview_edit_triggers(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1238,11 +1238,11 @@ void k_categorizedview_set_vertical_scroll_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#verticalScrollMode)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return enum QAbstractItemView__ScrollMode
 ///
-int32_t k_categorizedview_vertical_scroll_mode(void* self);
+int32_t k_categorizedview_vertical_scroll_mode(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1265,11 +1265,11 @@ void k_categorizedview_set_horizontal_scroll_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#horizontalScrollMode)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return enum QAbstractItemView__ScrollMode
 ///
-int32_t k_categorizedview_horizontal_scroll_mode(void* self);
+int32_t k_categorizedview_horizontal_scroll_mode(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1292,9 +1292,9 @@ void k_categorizedview_set_auto_scroll(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#hasAutoScroll)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_has_auto_scroll(void* self);
+bool k_categorizedview_has_auto_scroll(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1309,9 +1309,9 @@ void k_categorizedview_set_auto_scroll_margin(void* self, int margin);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#autoScrollMargin)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_auto_scroll_margin(void* self);
+int32_t k_categorizedview_auto_scroll_margin(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1326,9 +1326,9 @@ void k_categorizedview_set_tab_key_navigation(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#tabKeyNavigation)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_tab_key_navigation(void* self);
+bool k_categorizedview_tab_key_navigation(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1343,9 +1343,9 @@ void k_categorizedview_set_drop_indicator_shown(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#showDropIndicator)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_show_drop_indicator(void* self);
+bool k_categorizedview_show_drop_indicator(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1360,9 +1360,9 @@ void k_categorizedview_set_drag_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#dragEnabled)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_drag_enabled(void* self);
+bool k_categorizedview_drag_enabled(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1377,9 +1377,9 @@ void k_categorizedview_set_drag_drop_overwrite_mode(void* self, bool overwrite);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#dragDropOverwriteMode)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_drag_drop_overwrite_mode(void* self);
+bool k_categorizedview_drag_drop_overwrite_mode(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1394,11 +1394,11 @@ void k_categorizedview_set_drag_drop_mode(void* self, int32_t behavior);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#dragDropMode)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return enum QAbstractItemView__DragDropMode
 ///
-int32_t k_categorizedview_drag_drop_mode(void* self);
+int32_t k_categorizedview_drag_drop_mode(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1413,11 +1413,11 @@ void k_categorizedview_set_default_drop_action(void* self, int32_t dropAction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#defaultDropAction)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return enum Qt__DropAction
 ///
-int32_t k_categorizedview_default_drop_action(void* self);
+int32_t k_categorizedview_default_drop_action(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1432,9 +1432,9 @@ void k_categorizedview_set_alternating_row_colors(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#alternatingRowColors)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_alternating_row_colors(void* self);
+bool k_categorizedview_alternating_row_colors(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1443,15 +1443,15 @@ bool k_categorizedview_alternating_row_colors(void* self);
 /// @param self KCategorizedView*
 /// @param size QSize*
 ///
-void k_categorizedview_set_icon_size(void* self, void* size);
+void k_categorizedview_set_icon_size(void* self, const void* size);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#iconSize)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QSize* k_categorizedview_icon_size(void* self);
+QSize* k_categorizedview_icon_size(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1466,20 +1466,20 @@ void k_categorizedview_set_text_elide_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#textElideMode)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return enum Qt__TextElideMode
 ///
-int32_t k_categorizedview_text_elide_mode(void* self);
+int32_t k_categorizedview_text_elide_mode(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#sizeHintForIndex)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param index QModelIndex*
 ///
-QSize* k_categorizedview_size_hint_for_index(void* self, void* index);
+QSize* k_categorizedview_size_hint_for_index(const void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1488,7 +1488,7 @@ QSize* k_categorizedview_size_hint_for_index(void* self, void* index);
 /// @param self KCategorizedView*
 /// @param index QModelIndex*
 ///
-void k_categorizedview_open_persistent_editor(void* self, void* index);
+void k_categorizedview_open_persistent_editor(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1497,16 +1497,16 @@ void k_categorizedview_open_persistent_editor(void* self, void* index);
 /// @param self KCategorizedView*
 /// @param index QModelIndex*
 ///
-void k_categorizedview_close_persistent_editor(void* self, void* index);
+void k_categorizedview_close_persistent_editor(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#isPersistentEditorOpen)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param index QModelIndex*
 ///
-bool k_categorizedview_is_persistent_editor_open(void* self, void* index);
+bool k_categorizedview_is_persistent_editor_open(const void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1516,16 +1516,16 @@ bool k_categorizedview_is_persistent_editor_open(void* self, void* index);
 /// @param index QModelIndex*
 /// @param widget QWidget*
 ///
-void k_categorizedview_set_index_widget(void* self, void* index, void* widget);
+void k_categorizedview_set_index_widget(void* self, const void* index, void* widget);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#indexWidget)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param index QModelIndex*
 ///
-QWidget* k_categorizedview_index_widget(void* self, void* index);
+QWidget* k_categorizedview_index_widget(const void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1541,10 +1541,10 @@ void k_categorizedview_set_item_delegate_for_row(void* self, int row, void* dele
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegateForRow)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param row int
 ///
-QAbstractItemDelegate* k_categorizedview_item_delegate_for_row(void* self, int row);
+QAbstractItemDelegate* k_categorizedview_item_delegate_for_row(const void* self, int row);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1560,19 +1560,19 @@ void k_categorizedview_set_item_delegate_for_column(void* self, int column, void
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegateForColumn)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param column int
 ///
-QAbstractItemDelegate* k_categorizedview_item_delegate_for_column(void* self, int column);
+QAbstractItemDelegate* k_categorizedview_item_delegate_for_column(const void* self, int column);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegate)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param index QModelIndex*
 ///
-QAbstractItemDelegate* k_categorizedview_item_delegate2(void* self, void* index);
+QAbstractItemDelegate* k_categorizedview_item_delegate2(const void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1581,7 +1581,7 @@ QAbstractItemDelegate* k_categorizedview_item_delegate2(void* self, void* index)
 /// @param self KCategorizedView*
 /// @param index QModelIndex*
 ///
-void k_categorizedview_edit(void* self, void* index);
+void k_categorizedview_edit(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1598,7 +1598,7 @@ void k_categorizedview_clear_selection(void* self);
 /// @param self KCategorizedView*
 /// @param index QModelIndex*
 ///
-void k_categorizedview_set_current_index(void* self, void* index);
+void k_categorizedview_set_current_index(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1623,7 +1623,7 @@ void k_categorizedview_scroll_to_bottom(void* self);
 /// @param self KCategorizedView*
 /// @param index QModelIndex*
 ///
-void k_categorizedview_update(void* self, void* index);
+void k_categorizedview_update(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1632,7 +1632,7 @@ void k_categorizedview_update(void* self, void* index);
 /// @param self KCategorizedView*
 /// @param index QModelIndex*
 ///
-void k_categorizedview_pressed(void* self, void* index);
+void k_categorizedview_pressed(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1641,7 +1641,7 @@ void k_categorizedview_pressed(void* self, void* index);
 /// @param self KCategorizedView*
 /// @param callback void func(KCategorizedView* self, QModelIndex* index)
 ///
-void k_categorizedview_on_pressed(void* self, void (*callback)(void*, void*));
+void k_categorizedview_on_pressed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -1650,7 +1650,7 @@ void k_categorizedview_on_pressed(void* self, void (*callback)(void*, void*));
 /// @param self KCategorizedView*
 /// @param index QModelIndex*
 ///
-void k_categorizedview_clicked(void* self, void* index);
+void k_categorizedview_clicked(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1659,7 +1659,7 @@ void k_categorizedview_clicked(void* self, void* index);
 /// @param self KCategorizedView*
 /// @param callback void func(KCategorizedView* self, QModelIndex* index)
 ///
-void k_categorizedview_on_clicked(void* self, void (*callback)(void*, void*));
+void k_categorizedview_on_clicked(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -1668,7 +1668,7 @@ void k_categorizedview_on_clicked(void* self, void (*callback)(void*, void*));
 /// @param self KCategorizedView*
 /// @param index QModelIndex*
 ///
-void k_categorizedview_double_clicked(void* self, void* index);
+void k_categorizedview_double_clicked(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1677,7 +1677,7 @@ void k_categorizedview_double_clicked(void* self, void* index);
 /// @param self KCategorizedView*
 /// @param callback void func(KCategorizedView* self, QModelIndex* index)
 ///
-void k_categorizedview_on_double_clicked(void* self, void (*callback)(void*, void*));
+void k_categorizedview_on_double_clicked(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -1686,7 +1686,7 @@ void k_categorizedview_on_double_clicked(void* self, void (*callback)(void*, voi
 /// @param self KCategorizedView*
 /// @param index QModelIndex*
 ///
-void k_categorizedview_activated(void* self, void* index);
+void k_categorizedview_activated(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1695,7 +1695,7 @@ void k_categorizedview_activated(void* self, void* index);
 /// @param self KCategorizedView*
 /// @param callback void func(KCategorizedView* self, QModelIndex* index)
 ///
-void k_categorizedview_on_activated(void* self, void (*callback)(void*, void*));
+void k_categorizedview_on_activated(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -1704,7 +1704,7 @@ void k_categorizedview_on_activated(void* self, void (*callback)(void*, void*));
 /// @param self KCategorizedView*
 /// @param index QModelIndex*
 ///
-void k_categorizedview_entered(void* self, void* index);
+void k_categorizedview_entered(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1713,7 +1713,7 @@ void k_categorizedview_entered(void* self, void* index);
 /// @param self KCategorizedView*
 /// @param callback void func(KCategorizedView* self, QModelIndex* index)
 ///
-void k_categorizedview_on_entered(void* self, void (*callback)(void*, void*));
+void k_categorizedview_on_entered(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -1739,7 +1739,7 @@ void k_categorizedview_on_viewport_entered(void* self, void (*callback)(void*));
 /// @param self KCategorizedView*
 /// @param size QSize*
 ///
-void k_categorizedview_icon_size_changed(void* self, void* size);
+void k_categorizedview_icon_size_changed(void* self, const void* size);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1748,17 +1748,17 @@ void k_categorizedview_icon_size_changed(void* self, void* size);
 /// @param self KCategorizedView*
 /// @param callback void func(KCategorizedView* self, QSize* size)
 ///
-void k_categorizedview_on_icon_size_changed(void* self, void (*callback)(void*, void*));
+void k_categorizedview_on_icon_size_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#verticalScrollBarPolicy)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return enum Qt__ScrollBarPolicy
 ///
-int32_t k_categorizedview_vertical_scroll_bar_policy(void* self);
+int32_t k_categorizedview_vertical_scroll_bar_policy(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1773,9 +1773,9 @@ void k_categorizedview_set_vertical_scroll_bar_policy(void* self, int32_t vertic
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#verticalScrollBar)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QScrollBar* k_categorizedview_vertical_scroll_bar(void* self);
+QScrollBar* k_categorizedview_vertical_scroll_bar(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1790,11 +1790,11 @@ void k_categorizedview_set_vertical_scroll_bar(void* self, void* scrollbar);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#horizontalScrollBarPolicy)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return enum Qt__ScrollBarPolicy
 ///
-int32_t k_categorizedview_horizontal_scroll_bar_policy(void* self);
+int32_t k_categorizedview_horizontal_scroll_bar_policy(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1809,9 +1809,9 @@ void k_categorizedview_set_horizontal_scroll_bar_policy(void* self, int32_t hori
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#horizontalScrollBar)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QScrollBar* k_categorizedview_horizontal_scroll_bar(void* self);
+QScrollBar* k_categorizedview_horizontal_scroll_bar(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1826,9 +1826,9 @@ void k_categorizedview_set_horizontal_scroll_bar(void* self, void* scrollbar);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#cornerWidget)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QWidget* k_categorizedview_corner_widget(void* self);
+QWidget* k_categorizedview_corner_widget(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1864,9 +1864,9 @@ libqt_list k_categorizedview_scroll_bar_widgets(void* self, int32_t alignment);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewport)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QWidget* k_categorizedview_viewport(void* self);
+QWidget* k_categorizedview_viewport(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1881,19 +1881,19 @@ void k_categorizedview_set_viewport(void* self, void* widget);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#maximumViewportSize)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QSize* k_categorizedview_maximum_viewport_size(void* self);
+QSize* k_categorizedview_maximum_viewport_size(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#sizeAdjustPolicy)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return enum QAbstractScrollArea__SizeAdjustPolicy
 ///
-int32_t k_categorizedview_size_adjust_policy(void* self);
+int32_t k_categorizedview_size_adjust_policy(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1908,9 +1908,9 @@ void k_categorizedview_set_size_adjust_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameStyle)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_frame_style(void* self);
+int32_t k_categorizedview_frame_style(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -1925,19 +1925,19 @@ void k_categorizedview_set_frame_style(void* self, int frameStyle);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameWidth)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_frame_width(void* self);
+int32_t k_categorizedview_frame_width(const void* self);
 
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameShape)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return enum QFrame__Shape
 ///
-int32_t k_categorizedview_frame_shape(void* self);
+int32_t k_categorizedview_frame_shape(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -1952,11 +1952,11 @@ void k_categorizedview_set_frame_shape(void* self, int32_t frameShape);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameShadow)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return enum QFrame__Shadow
 ///
-int32_t k_categorizedview_frame_shadow(void* self);
+int32_t k_categorizedview_frame_shadow(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -1971,9 +1971,9 @@ void k_categorizedview_set_frame_shadow(void* self, int32_t frameShadow);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#lineWidth)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_line_width(void* self);
+int32_t k_categorizedview_line_width(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -1988,9 +1988,9 @@ void k_categorizedview_set_line_width(void* self, int lineWidth);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#midLineWidth)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_mid_line_width(void* self);
+int32_t k_categorizedview_mid_line_width(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -2005,9 +2005,9 @@ void k_categorizedview_set_mid_line_width(void* self, int midLineWidth);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameRect)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QRect* k_categorizedview_frame_rect(void* self);
+QRect* k_categorizedview_frame_rect(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -2016,7 +2016,7 @@ QRect* k_categorizedview_frame_rect(void* self);
 /// @param self KCategorizedView*
 /// @param frameRect QRect*
 ///
-void k_categorizedview_set_frame_rect(void* self, void* frameRect);
+void k_categorizedview_set_frame_rect(void* self, const void* frameRect);
 
 /// Inherited from QWidget
 ///
@@ -2038,9 +2038,9 @@ KCategorizedView* k_categorizedview_from_q_paint_device(void* _qpaintdevice);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-uintptr_t k_categorizedview_win_id(void* self);
+uintptr_t k_categorizedview_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2054,25 +2054,25 @@ void k_categorizedview_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-uintptr_t k_categorizedview_internal_win_id(void* self);
+uintptr_t k_categorizedview_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-uintptr_t k_categorizedview_effective_win_id(void* self);
+uintptr_t k_categorizedview_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QStyle* k_categorizedview_style(void* self);
+QStyle* k_categorizedview_style(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2087,35 +2087,35 @@ void k_categorizedview_set_style(void* self, void* style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_is_top_level(void* self);
+bool k_categorizedview_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_is_window(void* self);
+bool k_categorizedview_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_is_modal(void* self);
+bool k_categorizedview_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t k_categorizedview_window_modality(void* self);
+int32_t k_categorizedview_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2130,18 +2130,18 @@ void k_categorizedview_set_window_modality(void* self, int32_t windowModality);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_is_enabled(void* self);
+bool k_categorizedview_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param param1 QWidget*
 ///
-bool k_categorizedview_is_enabled_to(void* self, void* param1);
+bool k_categorizedview_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2174,153 +2174,153 @@ void k_categorizedview_set_window_modified(void* self, bool windowModified);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QRect* k_categorizedview_frame_geometry(void* self);
+QRect* k_categorizedview_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-const QRect* k_categorizedview_geometry(void* self);
+const QRect* k_categorizedview_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QRect* k_categorizedview_normal_geometry(void* self);
+QRect* k_categorizedview_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_x(void* self);
+int32_t k_categorizedview_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_y(void* self);
+int32_t k_categorizedview_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QPoint* k_categorizedview_pos(void* self);
+QPoint* k_categorizedview_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QSize* k_categorizedview_frame_size(void* self);
+QSize* k_categorizedview_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QSize* k_categorizedview_size(void* self);
+QSize* k_categorizedview_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_width(void* self);
+int32_t k_categorizedview_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_height(void* self);
+int32_t k_categorizedview_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QRect* k_categorizedview_rect(void* self);
+QRect* k_categorizedview_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QRect* k_categorizedview_children_rect(void* self);
+QRect* k_categorizedview_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QRegion* k_categorizedview_children_region(void* self);
+QRegion* k_categorizedview_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QSize* k_categorizedview_minimum_size(void* self);
+QSize* k_categorizedview_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QSize* k_categorizedview_maximum_size(void* self);
+QSize* k_categorizedview_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_minimum_width(void* self);
+int32_t k_categorizedview_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_minimum_height(void* self);
+int32_t k_categorizedview_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_maximum_width(void* self);
+int32_t k_categorizedview_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_maximum_height(void* self);
+int32_t k_categorizedview_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2329,7 +2329,7 @@ int32_t k_categorizedview_maximum_height(void* self);
 /// @param self KCategorizedView*
 /// @param minimumSize QSize*
 ///
-void k_categorizedview_set_minimum_size(void* self, void* minimumSize);
+void k_categorizedview_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -2348,7 +2348,7 @@ void k_categorizedview_set_minimum_size2(void* self, int minw, int minh);
 /// @param self KCategorizedView*
 /// @param maximumSize QSize*
 ///
-void k_categorizedview_set_maximum_size(void* self, void* maximumSize);
+void k_categorizedview_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -2400,9 +2400,9 @@ void k_categorizedview_set_maximum_height(void* self, int maxh);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QSize* k_categorizedview_size_increment(void* self);
+QSize* k_categorizedview_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2411,7 +2411,7 @@ QSize* k_categorizedview_size_increment(void* self);
 /// @param self KCategorizedView*
 /// @param sizeIncrement QSize*
 ///
-void k_categorizedview_set_size_increment(void* self, void* sizeIncrement);
+void k_categorizedview_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -2427,9 +2427,9 @@ void k_categorizedview_set_size_increment2(void* self, int w, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QSize* k_categorizedview_base_size(void* self);
+QSize* k_categorizedview_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2438,7 +2438,7 @@ QSize* k_categorizedview_base_size(void* self);
 /// @param self KCategorizedView*
 /// @param baseSize QSize*
 ///
-void k_categorizedview_set_base_size(void* self, void* baseSize);
+void k_categorizedview_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -2457,7 +2457,7 @@ void k_categorizedview_set_base_size2(void* self, int basew, int baseh);
 /// @param self KCategorizedView*
 /// @param fixedSize QSize*
 ///
-void k_categorizedview_set_fixed_size(void* self, void* fixedSize);
+void k_categorizedview_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -2491,145 +2491,145 @@ void k_categorizedview_set_fixed_height(void* self, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param param1 QPointF*
 ///
-QPointF* k_categorizedview_map_to_global(void* self, void* param1);
+QPointF* k_categorizedview_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param param1 QPoint*
 ///
-QPoint* k_categorizedview_map_to_global2(void* self, void* param1);
+QPoint* k_categorizedview_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param param1 QPointF*
 ///
-QPointF* k_categorizedview_map_from_global(void* self, void* param1);
+QPointF* k_categorizedview_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param param1 QPoint*
 ///
-QPoint* k_categorizedview_map_from_global2(void* self, void* param1);
+QPoint* k_categorizedview_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param param1 QPointF*
 ///
-QPointF* k_categorizedview_map_to_parent(void* self, void* param1);
+QPointF* k_categorizedview_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param param1 QPoint*
 ///
-QPoint* k_categorizedview_map_to_parent2(void* self, void* param1);
+QPoint* k_categorizedview_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param param1 QPointF*
 ///
-QPointF* k_categorizedview_map_from_parent(void* self, void* param1);
+QPointF* k_categorizedview_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param param1 QPoint*
 ///
-QPoint* k_categorizedview_map_from_parent2(void* self, void* param1);
+QPoint* k_categorizedview_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_categorizedview_map_to(void* self, void* param1, void* param2);
+QPointF* k_categorizedview_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_categorizedview_map_to2(void* self, void* param1, void* param2);
+QPoint* k_categorizedview_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_categorizedview_map_from(void* self, void* param1, void* param2);
+QPointF* k_categorizedview_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_categorizedview_map_from2(void* self, void* param1, void* param2);
+QPoint* k_categorizedview_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QWidget* k_categorizedview_window(void* self);
+QWidget* k_categorizedview_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QWidget* k_categorizedview_native_parent_widget(void* self);
+QWidget* k_categorizedview_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QWidget* k_categorizedview_top_level_widget(void* self);
+QWidget* k_categorizedview_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-const QPalette* k_categorizedview_palette(void* self);
+const QPalette* k_categorizedview_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2638,7 +2638,7 @@ const QPalette* k_categorizedview_palette(void* self);
 /// @param self KCategorizedView*
 /// @param palette QPalette*
 ///
-void k_categorizedview_set_palette(void* self, void* palette);
+void k_categorizedview_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -2653,11 +2653,11 @@ void k_categorizedview_set_background_role(void* self, int32_t backgroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_categorizedview_background_role(void* self);
+int32_t k_categorizedview_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2672,19 +2672,19 @@ void k_categorizedview_set_foreground_role(void* self, int32_t foregroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_categorizedview_foreground_role(void* self);
+int32_t k_categorizedview_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-const QFont* k_categorizedview_font(void* self);
+const QFont* k_categorizedview_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2693,31 +2693,31 @@ const QFont* k_categorizedview_font(void* self);
 /// @param self KCategorizedView*
 /// @param font QFont*
 ///
-void k_categorizedview_set_font(void* self, void* font);
+void k_categorizedview_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QFontMetrics* k_categorizedview_font_metrics(void* self);
+QFontMetrics* k_categorizedview_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QFontInfo* k_categorizedview_font_info(void* self);
+QFontInfo* k_categorizedview_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QCursor* k_categorizedview_cursor(void* self);
+QCursor* k_categorizedview_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2726,7 +2726,7 @@ QCursor* k_categorizedview_cursor(void* self);
 /// @param self KCategorizedView*
 /// @param cursor QCursor*
 ///
-void k_categorizedview_set_cursor(void* self, void* cursor);
+void k_categorizedview_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -2749,17 +2749,17 @@ void k_categorizedview_set_mouse_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_has_mouse_tracking(void* self);
+bool k_categorizedview_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_under_mouse(void* self);
+bool k_categorizedview_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2774,9 +2774,9 @@ void k_categorizedview_set_tablet_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_has_tablet_tracking(void* self);
+bool k_categorizedview_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2785,7 +2785,7 @@ bool k_categorizedview_has_tablet_tracking(void* self);
 /// @param self KCategorizedView*
 /// @param mask QBitmap*
 ///
-void k_categorizedview_set_mask(void* self, void* mask);
+void k_categorizedview_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -2794,15 +2794,15 @@ void k_categorizedview_set_mask(void* self, void* mask);
 /// @param self KCategorizedView*
 /// @param mask QRegion*
 ///
-void k_categorizedview_set_mask2(void* self, void* mask);
+void k_categorizedview_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QRegion* k_categorizedview_mask(void* self);
+QRegion* k_categorizedview_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2842,9 +2842,9 @@ QPixmap* k_categorizedview_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QGraphicsEffect* k_categorizedview_graphics_effect(void* self);
+QGraphicsEffect* k_categorizedview_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2897,9 +2897,9 @@ void k_categorizedview_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-const char* k_categorizedview_style_sheet(void* self);
+const char* k_categorizedview_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2907,9 +2907,9 @@ const char* k_categorizedview_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-const char* k_categorizedview_window_title(void* self);
+const char* k_categorizedview_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2918,15 +2918,15 @@ const char* k_categorizedview_window_title(void* self);
 /// @param self KCategorizedView*
 /// @param icon QIcon*
 ///
-void k_categorizedview_set_window_icon(void* self, void* icon);
+void k_categorizedview_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QIcon* k_categorizedview_window_icon(void* self);
+QIcon* k_categorizedview_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2943,9 +2943,9 @@ void k_categorizedview_set_window_icon_text(void* self, const char* windowIconTe
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-const char* k_categorizedview_window_icon_text(void* self);
+const char* k_categorizedview_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2962,9 +2962,9 @@ void k_categorizedview_set_window_role(void* self, const char* windowRole);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-const char* k_categorizedview_window_role(void* self);
+const char* k_categorizedview_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2981,9 +2981,9 @@ void k_categorizedview_set_window_file_path(void* self, const char* filePath);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-const char* k_categorizedview_window_file_path(void* self);
+const char* k_categorizedview_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2998,17 +2998,17 @@ void k_categorizedview_set_window_opacity(void* self, double level);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-double k_categorizedview_window_opacity(void* self);
+double k_categorizedview_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_is_window_modified(void* self);
+bool k_categorizedview_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3025,9 +3025,9 @@ void k_categorizedview_set_tool_tip(void* self, const char* toolTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-const char* k_categorizedview_tool_tip(void* self);
+const char* k_categorizedview_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3042,9 +3042,9 @@ void k_categorizedview_set_tool_tip_duration(void* self, int msec);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_tool_tip_duration(void* self);
+int32_t k_categorizedview_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3061,9 +3061,9 @@ void k_categorizedview_set_status_tip(void* self, const char* statusTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-const char* k_categorizedview_status_tip(void* self);
+const char* k_categorizedview_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3080,9 +3080,9 @@ void k_categorizedview_set_whats_this(void* self, const char* whatsThis);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-const char* k_categorizedview_whats_this(void* self);
+const char* k_categorizedview_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3090,9 +3090,9 @@ const char* k_categorizedview_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-const char* k_categorizedview_accessible_name(void* self);
+const char* k_categorizedview_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3109,9 +3109,9 @@ void k_categorizedview_set_accessible_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-const char* k_categorizedview_accessible_description(void* self);
+const char* k_categorizedview_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3135,11 +3135,11 @@ void k_categorizedview_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t k_categorizedview_layout_direction(void* self);
+int32_t k_categorizedview_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3156,15 +3156,15 @@ void k_categorizedview_unset_layout_direction(void* self);
 /// @param self KCategorizedView*
 /// @param locale QLocale*
 ///
-void k_categorizedview_set_locale(void* self, void* locale);
+void k_categorizedview_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QLocale* k_categorizedview_locale(void* self);
+QLocale* k_categorizedview_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3178,17 +3178,17 @@ void k_categorizedview_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_is_right_to_left(void* self);
+bool k_categorizedview_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_is_left_to_right(void* self);
+bool k_categorizedview_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3202,9 +3202,9 @@ void k_categorizedview_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_is_active_window(void* self);
+bool k_categorizedview_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3235,11 +3235,11 @@ void k_categorizedview_set_focus2(void* self, int32_t reason);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t k_categorizedview_focus_policy(void* self);
+int32_t k_categorizedview_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3254,9 +3254,9 @@ void k_categorizedview_set_focus_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_has_focus(void* self);
+bool k_categorizedview_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3280,19 +3280,19 @@ void k_categorizedview_set_focus_proxy(void* self, void* focusProxy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QWidget* k_categorizedview_focus_proxy(void* self);
+QWidget* k_categorizedview_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t k_categorizedview_context_menu_policy(void* self);
+int32_t k_categorizedview_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3318,7 +3318,7 @@ void k_categorizedview_grab_mouse(void* self);
 /// @param self KCategorizedView*
 /// @param param1 QCursor*
 ///
-void k_categorizedview_grab_mouse2(void* self, void* param1);
+void k_categorizedview_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3351,7 +3351,7 @@ void k_categorizedview_release_keyboard(void* self);
 /// @param self KCategorizedView*
 /// @param key QKeySequence*
 ///
-int32_t k_categorizedview_grab_shortcut(void* self, void* key);
+int32_t k_categorizedview_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -3396,9 +3396,9 @@ QWidget* k_categorizedview_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_updates_enabled(void* self);
+bool k_categorizedview_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3413,9 +3413,9 @@ void k_categorizedview_set_updates_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QGraphicsProxyWidget* k_categorizedview_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* k_categorizedview_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3444,7 +3444,7 @@ void k_categorizedview_update2(void* self, int x, int y, int w, int h);
 /// @param self KCategorizedView*
 /// @param param1 QRect*
 ///
-void k_categorizedview_update3(void* self, void* param1);
+void k_categorizedview_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3453,7 +3453,7 @@ void k_categorizedview_update3(void* self, void* param1);
 /// @param self KCategorizedView*
 /// @param param1 QRegion*
 ///
-void k_categorizedview_update4(void* self, void* param1);
+void k_categorizedview_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3474,7 +3474,7 @@ void k_categorizedview_repaint2(void* self, int x, int y, int w, int h);
 /// @param self KCategorizedView*
 /// @param param1 QRect*
 ///
-void k_categorizedview_repaint3(void* self, void* param1);
+void k_categorizedview_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3483,7 +3483,7 @@ void k_categorizedview_repaint3(void* self, void* param1);
 /// @param self KCategorizedView*
 /// @param param1 QRegion*
 ///
-void k_categorizedview_repaint4(void* self, void* param1);
+void k_categorizedview_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3592,7 +3592,7 @@ void k_categorizedview_move(void* self, int x, int y);
 /// @param self KCategorizedView*
 /// @param param1 QPoint*
 ///
-void k_categorizedview_move2(void* self, void* param1);
+void k_categorizedview_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3611,7 +3611,7 @@ void k_categorizedview_resize(void* self, int w, int h);
 /// @param self KCategorizedView*
 /// @param param1 QSize*
 ///
-void k_categorizedview_resize2(void* self, void* param1);
+void k_categorizedview_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3632,7 +3632,7 @@ void k_categorizedview_set_geometry(void* self, int x, int y, int w, int h);
 /// @param self KCategorizedView*
 /// @param geometry QRect*
 ///
-void k_categorizedview_set_geometry2(void* self, void* geometry);
+void k_categorizedview_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -3640,9 +3640,9 @@ void k_categorizedview_set_geometry2(void* self, void* geometry);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-char* k_categorizedview_save_geometry(void* self);
+char* k_categorizedview_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3665,60 +3665,60 @@ void k_categorizedview_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_is_visible(void* self);
+bool k_categorizedview_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param param1 QWidget*
 ///
-bool k_categorizedview_is_visible_to(void* self, void* param1);
+bool k_categorizedview_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_is_hidden(void* self);
+bool k_categorizedview_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_is_minimized(void* self);
+bool k_categorizedview_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_is_maximized(void* self);
+bool k_categorizedview_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_is_full_screen(void* self);
+bool k_categorizedview_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t k_categorizedview_window_state(void* self);
+int32_t k_categorizedview_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3742,9 +3742,9 @@ void k_categorizedview_override_window_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QSizePolicy* k_categorizedview_size_policy(void* self);
+QSizePolicy* k_categorizedview_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3769,9 +3769,9 @@ void k_categorizedview_set_size_policy2(void* self, int32_t horizontal, int32_t 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QRegion* k_categorizedview_visible_region(void* self);
+QRegion* k_categorizedview_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3792,31 +3792,31 @@ void k_categorizedview_set_contents_margins(void* self, int left, int top, int r
 /// @param self KCategorizedView*
 /// @param margins QMargins*
 ///
-void k_categorizedview_set_contents_margins2(void* self, void* margins);
+void k_categorizedview_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QMargins* k_categorizedview_contents_margins(void* self);
+QMargins* k_categorizedview_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QRect* k_categorizedview_contents_rect(void* self);
+QRect* k_categorizedview_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QLayout* k_categorizedview_layout(void* self);
+QLayout* k_categorizedview_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3873,39 +3873,39 @@ void k_categorizedview_scroll(void* self, int dx, int dy);
 /// @param dy int
 /// @param param3 QRect*
 ///
-void k_categorizedview_scroll2(void* self, int dx, int dy, void* param3);
+void k_categorizedview_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QWidget* k_categorizedview_focus_widget(void* self);
+QWidget* k_categorizedview_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QWidget* k_categorizedview_next_in_focus_chain(void* self);
+QWidget* k_categorizedview_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QWidget* k_categorizedview_previous_in_focus_chain(void* self);
+QWidget* k_categorizedview_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_accept_drops(void* self);
+bool k_categorizedview_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3967,11 +3967,11 @@ void k_categorizedview_remove_action(void* self, void* action);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list k_categorizedview_actions(void* self);
+libqt_list k_categorizedview_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3990,7 +3990,7 @@ QAction* k_categorizedview_add_action2(void* self, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* k_categorizedview_add_action3(void* self, void* icon, const char* text);
+QAction* k_categorizedview_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -4000,7 +4000,7 @@ QAction* k_categorizedview_add_action3(void* self, void* icon, const char* text)
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_categorizedview_add_action4(void* self, const char* text, void* shortcut);
+QAction* k_categorizedview_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -4011,15 +4011,15 @@ QAction* k_categorizedview_add_action4(void* self, const char* text, void* short
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_categorizedview_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* k_categorizedview_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QWidget* k_categorizedview_parent_widget(void* self);
+QWidget* k_categorizedview_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4034,11 +4034,11 @@ void k_categorizedview_set_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t k_categorizedview_window_flags(void* self);
+int32_t k_categorizedview_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4062,11 +4062,11 @@ void k_categorizedview_override_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t k_categorizedview_window_type(void* self);
+int32_t k_categorizedview_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4080,29 +4080,29 @@ QWidget* k_categorizedview_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param x int
 /// @param y int
 ///
-QWidget* k_categorizedview_child_at(void* self, int x, int y);
+QWidget* k_categorizedview_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param p QPoint*
 ///
-QWidget* k_categorizedview_child_at2(void* self, void* p);
+QWidget* k_categorizedview_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param p QPointF*
 ///
-QWidget* k_categorizedview_child_at3(void* self, void* p);
+QWidget* k_categorizedview_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -4117,35 +4117,35 @@ void k_categorizedview_set_attribute(void* self, int32_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool k_categorizedview_test_attribute(void* self, int32_t param1);
+bool k_categorizedview_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-void k_categorizedview_ensure_polished(void* self);
+void k_categorizedview_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param child QWidget*
 ///
-bool k_categorizedview_is_ancestor_of(void* self, void* child);
+bool k_categorizedview_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_auto_fill_background(void* self);
+bool k_categorizedview_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4160,25 +4160,25 @@ void k_categorizedview_set_auto_fill_background(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QBackingStore* k_categorizedview_backing_store(void* self);
+QBackingStore* k_categorizedview_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QWindow* k_categorizedview_window_handle(void* self);
+QWindow* k_categorizedview_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QScreen* k_categorizedview_screen(void* self);
+QScreen* k_categorizedview_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4222,7 +4222,7 @@ void k_categorizedview_on_window_title_changed(void* self, void (*callback)(void
 /// @param self KCategorizedView*
 /// @param icon QIcon*
 ///
-void k_categorizedview_window_icon_changed(void* self, void* icon);
+void k_categorizedview_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -4231,7 +4231,7 @@ void k_categorizedview_window_icon_changed(void* self, void* icon);
 /// @param self KCategorizedView*
 /// @param callback void func(KCategorizedView* self, QIcon* icon)
 ///
-void k_categorizedview_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void k_categorizedview_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -4258,7 +4258,7 @@ void k_categorizedview_on_window_icon_text_changed(void* self, void (*callback)(
 /// @param self KCategorizedView*
 /// @param pos QPoint*
 ///
-void k_categorizedview_custom_context_menu_requested(void* self, void* pos);
+void k_categorizedview_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -4267,17 +4267,17 @@ void k_categorizedview_custom_context_menu_requested(void* self, void* pos);
 /// @param self KCategorizedView*
 /// @param callback void func(KCategorizedView* self, QPoint* pos)
 ///
-void k_categorizedview_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void k_categorizedview_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t k_categorizedview_input_method_hints(void* self);
+int32_t k_categorizedview_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4296,7 +4296,7 @@ void k_categorizedview_set_input_method_hints(void* self, int32_t hints);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void k_categorizedview_render22(void* self, void* target, void* targetOffset);
+void k_categorizedview_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -4307,7 +4307,7 @@ void k_categorizedview_render22(void* self, void* target, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_categorizedview_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void k_categorizedview_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -4319,7 +4319,7 @@ void k_categorizedview_render3(void* self, void* target, void* targetOffset, voi
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_categorizedview_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_categorizedview_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -4329,7 +4329,7 @@ void k_categorizedview_render4(void* self, void* target, void* targetOffset, voi
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void k_categorizedview_render23(void* self, void* painter, void* targetOffset);
+void k_categorizedview_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -4340,7 +4340,7 @@ void k_categorizedview_render23(void* self, void* painter, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_categorizedview_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void k_categorizedview_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -4352,7 +4352,7 @@ void k_categorizedview_render32(void* self, void* painter, void* targetOffset, v
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_categorizedview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_categorizedview_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -4361,7 +4361,7 @@ void k_categorizedview_render42(void* self, void* painter, void* targetOffset, v
 /// @param self KCategorizedView*
 /// @param rectangle QRect*
 ///
-QPixmap* k_categorizedview_grab1(void* self, void* rectangle);
+QPixmap* k_categorizedview_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -4381,7 +4381,7 @@ void k_categorizedview_grab_gesture2(void* self, int32_t type, int32_t flags);
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t k_categorizedview_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t k_categorizedview_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -4448,9 +4448,9 @@ QWidget* k_categorizedview_create_window_container3(void* window, void* parent, 
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-const char* k_categorizedview_object_name(void* self);
+const char* k_categorizedview_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4465,33 +4465,33 @@ void k_categorizedview_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_is_widget_type(void* self);
+bool k_categorizedview_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_is_window_type(void* self);
+bool k_categorizedview_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_is_quick_item_type(void* self);
+bool k_categorizedview_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_signals_blocked(void* self);
+bool k_categorizedview_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4506,9 +4506,9 @@ bool k_categorizedview_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QThread* k_categorizedview_thread(void* self);
+QThread* k_categorizedview_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4559,11 +4559,11 @@ void k_categorizedview_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_categorizedview_children(void* self);
+libqt_list k_categorizedview_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4592,7 +4592,7 @@ void k_categorizedview_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_categorizedview_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_categorizedview_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4603,18 +4603,18 @@ QMetaObject__Connection* k_categorizedview_connect(void* sender, const char* sig
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_categorizedview_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_categorizedview_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_categorizedview_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_categorizedview_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4625,7 +4625,7 @@ QMetaObject__Connection* k_categorizedview_connect3(void* self, void* sender, co
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_categorizedview_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_categorizedview_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4636,24 +4636,24 @@ bool k_categorizedview_disconnect(void* sender, const char* signal, void* receiv
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_categorizedview_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_categorizedview_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_disconnect3(void* self);
+bool k_categorizedview_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param receiver QObject*
 ///
-bool k_categorizedview_disconnect4(void* self, void* receiver);
+bool k_categorizedview_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -4661,23 +4661,23 @@ bool k_categorizedview_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_categorizedview_disconnect5(void* param1);
+bool k_categorizedview_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-void k_categorizedview_dump_object_tree(void* self);
+void k_categorizedview_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-void k_categorizedview_dump_object_info(void* self);
+void k_categorizedview_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4687,16 +4687,16 @@ void k_categorizedview_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_categorizedview_set_property(void* self, const char* name, void* value);
+bool k_categorizedview_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param name const char*
 ///
-QVariant* k_categorizedview_property(void* self, const char* name);
+QVariant* k_categorizedview_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -4704,9 +4704,9 @@ QVariant* k_categorizedview_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-const char** k_categorizedview_dynamic_property_names(void* self);
+const char** k_categorizedview_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4720,9 +4720,9 @@ QBindingStorage* k_categorizedview_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-const QBindingStorage* k_categorizedview_binding_storage2(void* self);
+const QBindingStorage* k_categorizedview_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4745,18 +4745,18 @@ void k_categorizedview_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QObject* k_categorizedview_parent(void* self);
+QObject* k_categorizedview_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param classname const char*
 ///
-bool k_categorizedview_inherits(void* self, const char* classname);
+bool k_categorizedview_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -4796,7 +4796,7 @@ int32_t k_categorizedview_start_timer23(void* self, int64_t time, int32_t timerT
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_categorizedview_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_categorizedview_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -4808,59 +4808,59 @@ QMetaObject__Connection* k_categorizedview_connect5(void* sender, const char* si
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_categorizedview_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_categorizedview_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_categorizedview_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_categorizedview_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param signal const char*
 ///
-bool k_categorizedview_disconnect1(void* self, const char* signal);
+bool k_categorizedview_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KCategorizedView*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_categorizedview_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_categorizedview_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_categorizedview_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_categorizedview_disconnect23(void* self, void* receiver, const char* member);
+bool k_categorizedview_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KCategorizedView*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_categorizedview_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4884,89 +4884,89 @@ void k_categorizedview_on_destroyed1(void* self, void (*callback)(void*, void*))
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_painting_active(void* self);
+bool k_categorizedview_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_width_m_m(void* self);
+int32_t k_categorizedview_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_height_m_m(void* self);
+int32_t k_categorizedview_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_logical_dpi_x(void* self);
+int32_t k_categorizedview_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_logical_dpi_y(void* self);
+int32_t k_categorizedview_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_physical_dpi_x(void* self);
+int32_t k_categorizedview_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_physical_dpi_y(void* self);
+int32_t k_categorizedview_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-double k_categorizedview_device_pixel_ratio(void* self);
+double k_categorizedview_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-double k_categorizedview_device_pixel_ratio_f(void* self);
+double k_categorizedview_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_color_count(void* self);
+int32_t k_categorizedview_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_depth(void* self);
+int32_t k_categorizedview_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -4993,7 +4993,7 @@ int32_t k_categorizedview_encode_metric_f(int32_t metric, double value);
 /// @param index QModelIndex*
 /// @param hint enum QAbstractItemView__ScrollHint
 ///
-void k_categorizedview_scroll_to(void* self, void* index, int32_t hint);
+void k_categorizedview_scroll_to(void* self, const void* index, int32_t hint);
 
 /// Inherited from QListView
 ///
@@ -5005,7 +5005,7 @@ void k_categorizedview_scroll_to(void* self, void* index, int32_t hint);
 /// @param index QModelIndex*
 /// @param hint enum QAbstractItemView__ScrollHint
 ///
-void k_categorizedview_super_scroll_to(void* self, void* index, int32_t hint);
+void k_categorizedview_super_scroll_to(void* self, const void* index, int32_t hint);
 
 /// Inherited from QListView
 ///
@@ -5016,7 +5016,7 @@ void k_categorizedview_super_scroll_to(void* self, void* index, int32_t hint);
 /// @param self KCategorizedView*
 /// @param callback void func(KCategorizedView* self, QModelIndex* index, enum QAbstractItemView__ScrollHint hint)
 ///
-void k_categorizedview_on_scroll_to(void* self, void (*callback)(void*, void*, int32_t));
+void k_categorizedview_on_scroll_to(void* self, void (*callback)(void*, const void*, int32_t));
 
 /// Inherited from QListView
 ///
@@ -5045,9 +5045,9 @@ void k_categorizedview_super_do_items_layout(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void func()
+/// @param callback void func(KCategorizedView* self)
 ///
-void k_categorizedview_on_do_items_layout(void* self, void (*callback)());
+void k_categorizedview_on_do_items_layout(void* self, void (*callback)(void*));
 
 /// Inherited from QListView
 ///
@@ -5058,7 +5058,7 @@ void k_categorizedview_on_do_items_layout(void* self, void (*callback)());
 /// @param self KCategorizedView*
 /// @param index QModelIndex*
 ///
-void k_categorizedview_set_root_index(void* self, void* index);
+void k_categorizedview_set_root_index(void* self, const void* index);
 
 /// Inherited from QListView
 ///
@@ -5069,7 +5069,7 @@ void k_categorizedview_set_root_index(void* self, void* index);
 /// @param self KCategorizedView*
 /// @param index QModelIndex*
 ///
-void k_categorizedview_super_set_root_index(void* self, void* index);
+void k_categorizedview_super_set_root_index(void* self, const void* index);
 
 /// Inherited from QListView
 ///
@@ -5080,7 +5080,7 @@ void k_categorizedview_super_set_root_index(void* self, void* index);
 /// @param self KCategorizedView*
 /// @param callback void func(KCategorizedView* self, QModelIndex* index)
 ///
-void k_categorizedview_on_set_root_index(void* self, void (*callback)(void*, void*));
+void k_categorizedview_on_set_root_index(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QListView
 ///
@@ -5222,10 +5222,10 @@ void k_categorizedview_on_timer_event(void* self, void (*callback)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param option QStyleOptionViewItem*
 ///
-void k_categorizedview_init_view_item_option(void* self, void* option);
+void k_categorizedview_init_view_item_option(const void* self, void* option);
 
 /// Inherited from QListView
 ///
@@ -5233,10 +5233,10 @@ void k_categorizedview_init_view_item_option(void* self, void* option);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param option QStyleOptionViewItem*
 ///
-void k_categorizedview_super_init_view_item_option(void* self, void* option);
+void k_categorizedview_super_init_view_item_option(const void* self, void* option);
 
 /// Inherited from QListView
 ///
@@ -5244,10 +5244,10 @@ void k_categorizedview_super_init_view_item_option(void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param callback void func(KCategorizedView* self, QStyleOptionViewItem* option)
 ///
-void k_categorizedview_on_init_view_item_option(void* self, void (*callback)(void*, void*));
+void k_categorizedview_on_init_view_item_option(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QListView
 ///
@@ -5255,9 +5255,9 @@ void k_categorizedview_on_init_view_item_option(void* self, void (*callback)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_horizontal_offset(void* self);
+int32_t k_categorizedview_horizontal_offset(const void* self);
 
 /// Inherited from QListView
 ///
@@ -5265,9 +5265,9 @@ int32_t k_categorizedview_horizontal_offset(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_super_horizontal_offset(void* self);
+int32_t k_categorizedview_super_horizontal_offset(const void* self);
 
 /// Inherited from QListView
 ///
@@ -5275,10 +5275,10 @@ int32_t k_categorizedview_super_horizontal_offset(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
-/// @param callback int32_t func()
+/// @param self const KCategorizedView*
+/// @param callback int32_t func(KCategorizedView* self)
 ///
-void k_categorizedview_on_horizontal_offset(void* self, int32_t (*callback)());
+void k_categorizedview_on_horizontal_offset(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QListView
 ///
@@ -5286,9 +5286,9 @@ void k_categorizedview_on_horizontal_offset(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_vertical_offset(void* self);
+int32_t k_categorizedview_vertical_offset(const void* self);
 
 /// Inherited from QListView
 ///
@@ -5296,9 +5296,9 @@ int32_t k_categorizedview_vertical_offset(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_super_vertical_offset(void* self);
+int32_t k_categorizedview_super_vertical_offset(const void* self);
 
 /// Inherited from QListView
 ///
@@ -5306,10 +5306,10 @@ int32_t k_categorizedview_super_vertical_offset(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
-/// @param callback int32_t func()
+/// @param self const KCategorizedView*
+/// @param callback int32_t func(KCategorizedView* self)
 ///
-void k_categorizedview_on_vertical_offset(void* self, int32_t (*callback)());
+void k_categorizedview_on_vertical_offset(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QListView
 ///
@@ -5317,10 +5317,10 @@ void k_categorizedview_on_vertical_offset(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param selection QItemSelection*
 ///
-QRegion* k_categorizedview_visual_region_for_selection(void* self, void* selection);
+QRegion* k_categorizedview_visual_region_for_selection(const void* self, const void* selection);
 
 /// Inherited from QListView
 ///
@@ -5328,10 +5328,10 @@ QRegion* k_categorizedview_visual_region_for_selection(void* self, void* selecti
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param selection QItemSelection*
 ///
-QRegion* k_categorizedview_super_visual_region_for_selection(void* self, void* selection);
+QRegion* k_categorizedview_super_visual_region_for_selection(const void* self, const void* selection);
 
 /// Inherited from QListView
 ///
@@ -5339,12 +5339,12 @@ QRegion* k_categorizedview_super_visual_region_for_selection(void* self, void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param callback QRegion* func(KCategorizedView* self, QItemSelection* selection)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_categorizedview_on_visual_region_for_selection(void* self, QRegion* (*callback)(void*, void*));
+void k_categorizedview_on_visual_region_for_selection(const void* self, QRegion* (*callback)(const void*, const void*));
 
 /// Inherited from QListView
 ///
@@ -5352,11 +5352,11 @@ void k_categorizedview_on_visual_region_for_selection(void* self, QRegion* (*cal
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list k_categorizedview_selected_indexes(void* self);
+libqt_list k_categorizedview_selected_indexes(const void* self);
 
 /// Inherited from QListView
 ///
@@ -5364,11 +5364,11 @@ libqt_list k_categorizedview_selected_indexes(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list k_categorizedview_super_selected_indexes(void* self);
+libqt_list k_categorizedview_super_selected_indexes(const void* self);
 
 /// Inherited from QListView
 ///
@@ -5376,10 +5376,10 @@ libqt_list k_categorizedview_super_selected_indexes(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
-/// @param callback libqt_list of QModelIndex* func()
+/// @param self const KCategorizedView*
+/// @param callback libqt_list of QModelIndex* func(KCategorizedView* self)
 ///
-void k_categorizedview_on_selected_indexes(void* self, libqt_list (*callback)());
+void k_categorizedview_on_selected_indexes(const void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QListView
 ///
@@ -5387,10 +5387,10 @@ void k_categorizedview_on_selected_indexes(void* self, libqt_list (*callback)())
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param index QModelIndex*
 ///
-bool k_categorizedview_is_index_hidden(void* self, void* index);
+bool k_categorizedview_is_index_hidden(const void* self, const void* index);
 
 /// Inherited from QListView
 ///
@@ -5398,10 +5398,10 @@ bool k_categorizedview_is_index_hidden(void* self, void* index);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param index QModelIndex*
 ///
-bool k_categorizedview_super_is_index_hidden(void* self, void* index);
+bool k_categorizedview_super_is_index_hidden(const void* self, const void* index);
 
 /// Inherited from QListView
 ///
@@ -5409,10 +5409,10 @@ bool k_categorizedview_super_is_index_hidden(void* self, void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param callback bool func(KCategorizedView* self, QModelIndex* index)
 ///
-void k_categorizedview_on_is_index_hidden(void* self, bool (*callback)(void*, void*));
+void k_categorizedview_on_is_index_hidden(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QListView
 ///
@@ -5424,7 +5424,7 @@ void k_categorizedview_on_is_index_hidden(void* self, bool (*callback)(void*, vo
 /// @param selected QItemSelection*
 /// @param deselected QItemSelection*
 ///
-void k_categorizedview_selection_changed(void* self, void* selected, void* deselected);
+void k_categorizedview_selection_changed(void* self, const void* selected, const void* deselected);
 
 /// Inherited from QListView
 ///
@@ -5436,7 +5436,7 @@ void k_categorizedview_selection_changed(void* self, void* selected, void* desel
 /// @param selected QItemSelection*
 /// @param deselected QItemSelection*
 ///
-void k_categorizedview_super_selection_changed(void* self, void* selected, void* deselected);
+void k_categorizedview_super_selection_changed(void* self, const void* selected, const void* deselected);
 
 /// Inherited from QListView
 ///
@@ -5447,7 +5447,7 @@ void k_categorizedview_super_selection_changed(void* self, void* selected, void*
 /// @param self KCategorizedView*
 /// @param callback void func(KCategorizedView* self, QItemSelection* selected, QItemSelection* deselected)
 ///
-void k_categorizedview_on_selection_changed(void* self, void (*callback)(void*, void*, void*));
+void k_categorizedview_on_selection_changed(void* self, void (*callback)(void*, const void*, const void*));
 
 /// Inherited from QListView
 ///
@@ -5455,9 +5455,9 @@ void k_categorizedview_on_selection_changed(void* self, void (*callback)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QSize* k_categorizedview_viewport_size_hint(void* self);
+QSize* k_categorizedview_viewport_size_hint(const void* self);
 
 /// Inherited from QListView
 ///
@@ -5465,9 +5465,9 @@ QSize* k_categorizedview_viewport_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QSize* k_categorizedview_super_viewport_size_hint(void* self);
+QSize* k_categorizedview_super_viewport_size_hint(const void* self);
 
 /// Inherited from QListView
 ///
@@ -5475,12 +5475,12 @@ QSize* k_categorizedview_super_viewport_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
-/// @param callback QSize* func()
+/// @param self const KCategorizedView*
+/// @param callback QSize* func(KCategorizedView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_categorizedview_on_viewport_size_hint(void* self, QSize* (*callback)());
+void k_categorizedview_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5554,10 +5554,10 @@ void k_categorizedview_on_keyboard_search(void* self, void (*callback)(void*, co
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param row int
 ///
-int32_t k_categorizedview_size_hint_for_row(void* self, int row);
+int32_t k_categorizedview_size_hint_for_row(const void* self, int row);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5565,10 +5565,10 @@ int32_t k_categorizedview_size_hint_for_row(void* self, int row);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param row int
 ///
-int32_t k_categorizedview_super_size_hint_for_row(void* self, int row);
+int32_t k_categorizedview_super_size_hint_for_row(const void* self, int row);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5576,10 +5576,10 @@ int32_t k_categorizedview_super_size_hint_for_row(void* self, int row);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param callback int32_t func(KCategorizedView* self, int row)
 ///
-void k_categorizedview_on_size_hint_for_row(void* self, int32_t (*callback)(void*, int));
+void k_categorizedview_on_size_hint_for_row(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5587,10 +5587,10 @@ void k_categorizedview_on_size_hint_for_row(void* self, int32_t (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param column int
 ///
-int32_t k_categorizedview_size_hint_for_column(void* self, int column);
+int32_t k_categorizedview_size_hint_for_column(const void* self, int column);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5598,10 +5598,10 @@ int32_t k_categorizedview_size_hint_for_column(void* self, int column);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param column int
 ///
-int32_t k_categorizedview_super_size_hint_for_column(void* self, int column);
+int32_t k_categorizedview_super_size_hint_for_column(const void* self, int column);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5609,10 +5609,10 @@ int32_t k_categorizedview_super_size_hint_for_column(void* self, int column);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param callback int32_t func(KCategorizedView* self, int column)
 ///
-void k_categorizedview_on_size_hint_for_column(void* self, int32_t (*callback)(void*, int));
+void k_categorizedview_on_size_hint_for_column(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5620,10 +5620,10 @@ void k_categorizedview_on_size_hint_for_column(void* self, int32_t (*callback)(v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param index QModelIndex*
 ///
-QAbstractItemDelegate* k_categorizedview_item_delegate_for_index(void* self, void* index);
+QAbstractItemDelegate* k_categorizedview_item_delegate_for_index(const void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5631,10 +5631,10 @@ QAbstractItemDelegate* k_categorizedview_item_delegate_for_index(void* self, voi
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param index QModelIndex*
 ///
-QAbstractItemDelegate* k_categorizedview_super_item_delegate_for_index(void* self, void* index);
+QAbstractItemDelegate* k_categorizedview_super_item_delegate_for_index(const void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5642,10 +5642,10 @@ QAbstractItemDelegate* k_categorizedview_super_item_delegate_for_index(void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param callback QAbstractItemDelegate* func(KCategorizedView* self, QModelIndex* index)
 ///
-void k_categorizedview_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*callback)(void*, void*));
+void k_categorizedview_on_item_delegate_for_index(const void* self, QAbstractItemDelegate* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5653,10 +5653,10 @@ void k_categorizedview_on_item_delegate_for_index(void* self, QAbstractItemDeleg
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* k_categorizedview_input_method_query(void* self, int32_t query);
+QVariant* k_categorizedview_input_method_query(const void* self, int32_t query);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5664,10 +5664,10 @@ QVariant* k_categorizedview_input_method_query(void* self, int32_t query);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* k_categorizedview_super_input_method_query(void* self, int32_t query);
+QVariant* k_categorizedview_super_input_method_query(const void* self, int32_t query);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5675,12 +5675,12 @@ QVariant* k_categorizedview_super_input_method_query(void* self, int32_t query);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param callback QVariant* func(KCategorizedView* self, enum Qt__InputMethodQuery query)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_categorizedview_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void k_categorizedview_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5709,9 +5709,9 @@ void k_categorizedview_super_select_all(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void func()
+/// @param callback void func(KCategorizedView* self)
 ///
-void k_categorizedview_on_select_all(void* self, void (*callback)());
+void k_categorizedview_on_select_all(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5740,9 +5740,9 @@ void k_categorizedview_super_update_editor_data(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void func()
+/// @param callback void func(KCategorizedView* self)
 ///
-void k_categorizedview_on_update_editor_data(void* self, void (*callback)());
+void k_categorizedview_on_update_editor_data(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5771,9 +5771,9 @@ void k_categorizedview_super_update_editor_geometries(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void func()
+/// @param callback void func(KCategorizedView* self)
 ///
-void k_categorizedview_on_update_editor_geometries(void* self, void (*callback)());
+void k_categorizedview_on_update_editor_geometries(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6019,7 +6019,7 @@ void k_categorizedview_on_editor_destroyed(void* self, void (*callback)(void*, v
 /// @param trigger enum QAbstractItemView__EditTrigger
 /// @param event QEvent*
 ///
-bool k_categorizedview_edit2(void* self, void* index, int32_t trigger, void* event);
+bool k_categorizedview_edit2(void* self, const void* index, int32_t trigger, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6032,7 +6032,7 @@ bool k_categorizedview_edit2(void* self, void* index, int32_t trigger, void* eve
 /// @param trigger enum QAbstractItemView__EditTrigger
 /// @param event QEvent*
 ///
-bool k_categorizedview_super_edit2(void* self, void* index, int32_t trigger, void* event);
+bool k_categorizedview_super_edit2(void* self, const void* index, int32_t trigger, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6043,7 +6043,7 @@ bool k_categorizedview_super_edit2(void* self, void* index, int32_t trigger, voi
 /// @param self KCategorizedView*
 /// @param callback bool func(KCategorizedView* self, QModelIndex* index, enum QAbstractItemView__EditTrigger trigger, QEvent* event)
 ///
-void k_categorizedview_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, void*));
+void k_categorizedview_on_edit2(void* self, bool (*callback)(void*, const void*, int32_t, void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6051,13 +6051,13 @@ void k_categorizedview_on_edit2(void* self, bool (*callback)(void*, void*, int32
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param index QModelIndex*
 /// @param event QEvent*
 ///
 /// @return flag of enum QItemSelectionModel__SelectionFlag
 ///
-int32_t k_categorizedview_selection_command(void* self, void* index, void* event);
+int32_t k_categorizedview_selection_command(const void* self, const void* index, const void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6065,13 +6065,13 @@ int32_t k_categorizedview_selection_command(void* self, void* index, void* event
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param index QModelIndex*
 /// @param event QEvent*
 ///
 /// @return flag of enum QItemSelectionModel__SelectionFlag
 ///
-int32_t k_categorizedview_super_selection_command(void* self, void* index, void* event);
+int32_t k_categorizedview_super_selection_command(const void* self, const void* index, const void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6079,10 +6079,10 @@ int32_t k_categorizedview_super_selection_command(void* self, void* index, void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param callback int32_t func(KCategorizedView* self, QModelIndex* index, QEvent* event)
 ///
-void k_categorizedview_on_selection_command(void* self, int32_t (*callback)(void*, void*, void*));
+void k_categorizedview_on_selection_command(const void* self, int32_t (*callback)(const void*, const void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6356,9 +6356,9 @@ void k_categorizedview_on_event_filter(void* self, bool (*callback)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QSize* k_categorizedview_minimum_size_hint(void* self);
+QSize* k_categorizedview_minimum_size_hint(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6366,9 +6366,9 @@ QSize* k_categorizedview_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QSize* k_categorizedview_super_minimum_size_hint(void* self);
+QSize* k_categorizedview_super_minimum_size_hint(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6376,12 +6376,12 @@ QSize* k_categorizedview_super_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
-/// @param callback QSize* func()
+/// @param self const KCategorizedView*
+/// @param callback QSize* func(KCategorizedView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_categorizedview_on_minimum_size_hint(void* self, QSize* (*callback)());
+void k_categorizedview_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6389,9 +6389,9 @@ void k_categorizedview_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QSize* k_categorizedview_size_hint(void* self);
+QSize* k_categorizedview_size_hint(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6399,9 +6399,9 @@ QSize* k_categorizedview_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QSize* k_categorizedview_super_size_hint(void* self);
+QSize* k_categorizedview_super_size_hint(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6409,12 +6409,12 @@ QSize* k_categorizedview_super_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
-/// @param callback QSize* func()
+/// @param self const KCategorizedView*
+/// @param callback QSize* func(KCategorizedView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_categorizedview_on_size_hint(void* self, QSize* (*callback)());
+void k_categorizedview_on_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6521,10 +6521,10 @@ void k_categorizedview_on_change_event(void* self, void (*callback)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param option QStyleOptionFrame*
 ///
-void k_categorizedview_init_style_option(void* self, void* option);
+void k_categorizedview_init_style_option(const void* self, void* option);
 
 /// Inherited from QFrame
 ///
@@ -6532,10 +6532,10 @@ void k_categorizedview_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param option QStyleOptionFrame*
 ///
-void k_categorizedview_super_init_style_option(void* self, void* option);
+void k_categorizedview_super_init_style_option(const void* self, void* option);
 
 /// Inherited from QFrame
 ///
@@ -6543,10 +6543,10 @@ void k_categorizedview_super_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param callback void func(KCategorizedView* self, QStyleOptionFrame* option)
 ///
-void k_categorizedview_on_init_style_option(void* self, void (*callback)(void*, void*));
+void k_categorizedview_on_init_style_option(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -6554,9 +6554,9 @@ void k_categorizedview_on_init_style_option(void* self, void (*callback)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_dev_type(void* self);
+int32_t k_categorizedview_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6564,9 +6564,9 @@ int32_t k_categorizedview_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_super_dev_type(void* self);
+int32_t k_categorizedview_super_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6574,10 +6574,10 @@ int32_t k_categorizedview_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
-/// @param callback int32_t func()
+/// @param self const KCategorizedView*
+/// @param callback int32_t func(KCategorizedView* self)
 ///
-void k_categorizedview_on_dev_type(void* self, int32_t (*callback)());
+void k_categorizedview_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -6618,10 +6618,10 @@ void k_categorizedview_on_set_visible(void* self, void (*callback)(void*, bool))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param param1 int
 ///
-int32_t k_categorizedview_height_for_width(void* self, int param1);
+int32_t k_categorizedview_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -6629,10 +6629,10 @@ int32_t k_categorizedview_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param param1 int
 ///
-int32_t k_categorizedview_super_height_for_width(void* self, int param1);
+int32_t k_categorizedview_super_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -6640,10 +6640,10 @@ int32_t k_categorizedview_super_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param callback int32_t func(KCategorizedView* self, int param1)
 ///
-void k_categorizedview_on_height_for_width(void* self, int32_t (*callback)(void*, int));
+void k_categorizedview_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -6651,9 +6651,9 @@ void k_categorizedview_on_height_for_width(void* self, int32_t (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_has_height_for_width(void* self);
+bool k_categorizedview_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6661,9 +6661,9 @@ bool k_categorizedview_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-bool k_categorizedview_super_has_height_for_width(void* self);
+bool k_categorizedview_super_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6671,10 +6671,10 @@ bool k_categorizedview_super_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
-/// @param callback bool func()
+/// @param self const KCategorizedView*
+/// @param callback bool func(KCategorizedView* self)
 ///
-void k_categorizedview_on_has_height_for_width(void* self, bool (*callback)());
+void k_categorizedview_on_has_height_for_width(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -6682,9 +6682,9 @@ void k_categorizedview_on_has_height_for_width(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QPaintEngine* k_categorizedview_paint_engine(void* self);
+QPaintEngine* k_categorizedview_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6692,9 +6692,9 @@ QPaintEngine* k_categorizedview_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QPaintEngine* k_categorizedview_super_paint_engine(void* self);
+QPaintEngine* k_categorizedview_super_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6702,10 +6702,10 @@ QPaintEngine* k_categorizedview_super_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
-/// @param callback QPaintEngine* func()
+/// @param self const KCategorizedView*
+/// @param callback QPaintEngine* func(KCategorizedView* self)
 ///
-void k_categorizedview_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void k_categorizedview_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -7014,10 +7014,10 @@ void k_categorizedview_on_native_event(void* self, bool (*callback)(void*, libqt
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_categorizedview_metric(void* self, int32_t param1);
+int32_t k_categorizedview_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -7025,10 +7025,10 @@ int32_t k_categorizedview_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_categorizedview_super_metric(void* self, int32_t param1);
+int32_t k_categorizedview_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -7036,10 +7036,10 @@ int32_t k_categorizedview_super_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param callback int32_t func(KCategorizedView* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_categorizedview_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void k_categorizedview_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -7047,10 +7047,10 @@ void k_categorizedview_on_metric(void* self, int32_t (*callback)(void*, int32_t)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param painter QPainter*
 ///
-void k_categorizedview_init_painter(void* self, void* painter);
+void k_categorizedview_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -7058,10 +7058,10 @@ void k_categorizedview_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param painter QPainter*
 ///
-void k_categorizedview_super_init_painter(void* self, void* painter);
+void k_categorizedview_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -7069,10 +7069,10 @@ void k_categorizedview_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param callback void func(KCategorizedView* self, QPainter* painter)
 ///
-void k_categorizedview_on_init_painter(void* self, void (*callback)(void*, void*));
+void k_categorizedview_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -7080,10 +7080,10 @@ void k_categorizedview_on_init_painter(void* self, void (*callback)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_categorizedview_redirected(void* self, void* offset);
+QPaintDevice* k_categorizedview_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -7091,10 +7091,10 @@ QPaintDevice* k_categorizedview_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_categorizedview_super_redirected(void* self, void* offset);
+QPaintDevice* k_categorizedview_super_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -7102,10 +7102,10 @@ QPaintDevice* k_categorizedview_super_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param callback QPaintDevice* func(KCategorizedView* self, QPoint* offset)
 ///
-void k_categorizedview_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void k_categorizedview_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -7113,9 +7113,9 @@ void k_categorizedview_on_redirected(void* self, QPaintDevice* (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QPainter* k_categorizedview_shared_painter(void* self);
+QPainter* k_categorizedview_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7123,9 +7123,9 @@ QPainter* k_categorizedview_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QPainter* k_categorizedview_super_shared_painter(void* self);
+QPainter* k_categorizedview_super_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7133,10 +7133,10 @@ QPainter* k_categorizedview_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
-/// @param callback QPainter* func()
+/// @param self const KCategorizedView*
+/// @param callback QPainter* func(KCategorizedView* self)
 ///
-void k_categorizedview_on_shared_painter(void* self, QPainter* (*callback)());
+void k_categorizedview_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -7213,7 +7213,7 @@ void k_categorizedview_on_custom_event(void* self, void (*callback)(void*, void*
 /// @param self KCategorizedView*
 /// @param signal QMetaMethod*
 ///
-void k_categorizedview_connect_notify(void* self, void* signal);
+void k_categorizedview_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -7224,7 +7224,7 @@ void k_categorizedview_connect_notify(void* self, void* signal);
 /// @param self KCategorizedView*
 /// @param signal QMetaMethod*
 ///
-void k_categorizedview_super_connect_notify(void* self, void* signal);
+void k_categorizedview_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -7235,7 +7235,7 @@ void k_categorizedview_super_connect_notify(void* self, void* signal);
 /// @param self KCategorizedView*
 /// @param callback void func(KCategorizedView* self, QMetaMethod* signal)
 ///
-void k_categorizedview_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_categorizedview_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -7246,7 +7246,7 @@ void k_categorizedview_on_connect_notify(void* self, void (*callback)(void*, voi
 /// @param self KCategorizedView*
 /// @param signal QMetaMethod*
 ///
-void k_categorizedview_disconnect_notify(void* self, void* signal);
+void k_categorizedview_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -7257,7 +7257,7 @@ void k_categorizedview_disconnect_notify(void* self, void* signal);
 /// @param self KCategorizedView*
 /// @param signal QMetaMethod*
 ///
-void k_categorizedview_super_disconnect_notify(void* self, void* signal);
+void k_categorizedview_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -7268,7 +7268,7 @@ void k_categorizedview_super_disconnect_notify(void* self, void* signal);
 /// @param self KCategorizedView*
 /// @param callback void func(KCategorizedView* self, QMetaMethod* signal)
 ///
-void k_categorizedview_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_categorizedview_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QListView
 ///
@@ -7311,9 +7311,9 @@ void k_categorizedview_on_resize_contents(void* self, void (*callback)(void*, in
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QSize* k_categorizedview_contents_size(void* self);
+QSize* k_categorizedview_contents_size(const void* self);
 
 /// Inherited from QListView
 ///
@@ -7321,9 +7321,9 @@ QSize* k_categorizedview_contents_size(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QSize* k_categorizedview_super_contents_size(void* self);
+QSize* k_categorizedview_super_contents_size(const void* self);
 
 /// Inherited from QListView
 ///
@@ -7331,12 +7331,12 @@ QSize* k_categorizedview_super_contents_size(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
-/// @param callback QSize* func()
+/// @param self const KCategorizedView*
+/// @param callback QSize* func(KCategorizedView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_categorizedview_on_contents_size(void* self, QSize* (*callback)());
+void k_categorizedview_on_contents_size(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QListView
 ///
@@ -7344,10 +7344,10 @@ void k_categorizedview_on_contents_size(void* self, QSize* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param index QModelIndex*
 ///
-QRect* k_categorizedview_rect_for_index(void* self, void* index);
+QRect* k_categorizedview_rect_for_index(const void* self, const void* index);
 
 /// Inherited from QListView
 ///
@@ -7355,10 +7355,10 @@ QRect* k_categorizedview_rect_for_index(void* self, void* index);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param index QModelIndex*
 ///
-QRect* k_categorizedview_super_rect_for_index(void* self, void* index);
+QRect* k_categorizedview_super_rect_for_index(const void* self, const void* index);
 
 /// Inherited from QListView
 ///
@@ -7366,12 +7366,12 @@ QRect* k_categorizedview_super_rect_for_index(void* self, void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param callback QRect* func(KCategorizedView* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_categorizedview_on_rect_for_index(void* self, QRect* (*callback)(void*, void*));
+void k_categorizedview_on_rect_for_index(const void* self, QRect* (*callback)(const void*, const void*));
 
 /// Inherited from QListView
 ///
@@ -7383,7 +7383,7 @@ void k_categorizedview_on_rect_for_index(void* self, QRect* (*callback)(void*, v
 /// @param position QPoint*
 /// @param index QModelIndex*
 ///
-void k_categorizedview_set_position_for_index(void* self, void* position, void* index);
+void k_categorizedview_set_position_for_index(void* self, const void* position, const void* index);
 
 /// Inherited from QListView
 ///
@@ -7395,7 +7395,7 @@ void k_categorizedview_set_position_for_index(void* self, void* position, void* 
 /// @param position QPoint*
 /// @param index QModelIndex*
 ///
-void k_categorizedview_super_set_position_for_index(void* self, void* position, void* index);
+void k_categorizedview_super_set_position_for_index(void* self, const void* position, const void* index);
 
 /// Inherited from QListView
 ///
@@ -7406,7 +7406,7 @@ void k_categorizedview_super_set_position_for_index(void* self, void* position, 
 /// @param self KCategorizedView*
 /// @param callback void func(KCategorizedView* self, QPoint* position, QModelIndex* index)
 ///
-void k_categorizedview_on_set_position_for_index(void* self, void (*callback)(void*, void*, void*));
+void k_categorizedview_on_set_position_for_index(void* self, void (*callback)(void*, const void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7414,11 +7414,11 @@ void k_categorizedview_on_set_position_for_index(void* self, void (*callback)(vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return enum QAbstractItemView__State
 ///
-int32_t k_categorizedview_state(void* self);
+int32_t k_categorizedview_state(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7426,11 +7426,11 @@ int32_t k_categorizedview_state(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return enum QAbstractItemView__State
 ///
-int32_t k_categorizedview_super_state(void* self);
+int32_t k_categorizedview_super_state(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7438,10 +7438,10 @@ int32_t k_categorizedview_super_state(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
-/// @param callback int32_t func()
+/// @param self const KCategorizedView*
+/// @param callback int32_t func(KCategorizedView* self)
 ///
-void k_categorizedview_on_state(void* self, int32_t (*callback)());
+void k_categorizedview_on_state(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7503,9 +7503,9 @@ void k_categorizedview_super_schedule_delayed_items_layout(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void func()
+/// @param callback void func(KCategorizedView* self)
 ///
-void k_categorizedview_on_schedule_delayed_items_layout(void* self, void (*callback)());
+void k_categorizedview_on_schedule_delayed_items_layout(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7534,9 +7534,9 @@ void k_categorizedview_super_execute_delayed_items_layout(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void func()
+/// @param callback void func(KCategorizedView* self)
 ///
-void k_categorizedview_on_execute_delayed_items_layout(void* self, void (*callback)());
+void k_categorizedview_on_execute_delayed_items_layout(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7547,7 +7547,7 @@ void k_categorizedview_on_execute_delayed_items_layout(void* self, void (*callba
 /// @param self KCategorizedView*
 /// @param region QRegion*
 ///
-void k_categorizedview_set_dirty_region(void* self, void* region);
+void k_categorizedview_set_dirty_region(void* self, const void* region);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7558,7 +7558,7 @@ void k_categorizedview_set_dirty_region(void* self, void* region);
 /// @param self KCategorizedView*
 /// @param region QRegion*
 ///
-void k_categorizedview_super_set_dirty_region(void* self, void* region);
+void k_categorizedview_super_set_dirty_region(void* self, const void* region);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7569,7 +7569,7 @@ void k_categorizedview_super_set_dirty_region(void* self, void* region);
 /// @param self KCategorizedView*
 /// @param callback void func(KCategorizedView* self, QRegion* region)
 ///
-void k_categorizedview_on_set_dirty_region(void* self, void (*callback)(void*, void*));
+void k_categorizedview_on_set_dirty_region(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7612,9 +7612,9 @@ void k_categorizedview_on_scroll_dirty_region(void* self, void (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QPoint* k_categorizedview_dirty_region_offset(void* self);
+QPoint* k_categorizedview_dirty_region_offset(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7622,9 +7622,9 @@ QPoint* k_categorizedview_dirty_region_offset(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QPoint* k_categorizedview_super_dirty_region_offset(void* self);
+QPoint* k_categorizedview_super_dirty_region_offset(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7632,12 +7632,12 @@ QPoint* k_categorizedview_super_dirty_region_offset(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
-/// @param callback QPoint* func()
+/// @param self const KCategorizedView*
+/// @param callback QPoint* func(KCategorizedView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_categorizedview_on_dirty_region_offset(void* self, QPoint* (*callback)());
+void k_categorizedview_on_dirty_region_offset(const void* self, QPoint* (*callback)(const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7666,9 +7666,9 @@ void k_categorizedview_super_start_auto_scroll(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void func()
+/// @param callback void func(KCategorizedView* self)
 ///
-void k_categorizedview_on_start_auto_scroll(void* self, void (*callback)());
+void k_categorizedview_on_start_auto_scroll(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7697,9 +7697,9 @@ void k_categorizedview_super_stop_auto_scroll(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void func()
+/// @param callback void func(KCategorizedView* self)
 ///
-void k_categorizedview_on_stop_auto_scroll(void* self, void (*callback)());
+void k_categorizedview_on_stop_auto_scroll(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7728,9 +7728,9 @@ void k_categorizedview_super_do_auto_scroll(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void func()
+/// @param callback void func(KCategorizedView* self)
 ///
-void k_categorizedview_on_do_auto_scroll(void* self, void (*callback)());
+void k_categorizedview_on_do_auto_scroll(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7738,11 +7738,11 @@ void k_categorizedview_on_do_auto_scroll(void* self, void (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return enum QAbstractItemView__DropIndicatorPosition
 ///
-int32_t k_categorizedview_drop_indicator_position(void* self);
+int32_t k_categorizedview_drop_indicator_position(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7750,11 +7750,11 @@ int32_t k_categorizedview_drop_indicator_position(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
 /// @return enum QAbstractItemView__DropIndicatorPosition
 ///
-int32_t k_categorizedview_super_drop_indicator_position(void* self);
+int32_t k_categorizedview_super_drop_indicator_position(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7762,10 +7762,10 @@ int32_t k_categorizedview_super_drop_indicator_position(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
-/// @param callback int32_t func()
+/// @param self const KCategorizedView*
+/// @param callback int32_t func(KCategorizedView* self)
 ///
-void k_categorizedview_on_drop_indicator_position(void* self, int32_t (*callback)());
+void k_categorizedview_on_drop_indicator_position(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -7812,9 +7812,9 @@ void k_categorizedview_on_set_viewport_margins(void* self, void (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QMargins* k_categorizedview_viewport_margins(void* self);
+QMargins* k_categorizedview_viewport_margins(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -7822,9 +7822,9 @@ QMargins* k_categorizedview_viewport_margins(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QMargins* k_categorizedview_super_viewport_margins(void* self);
+QMargins* k_categorizedview_super_viewport_margins(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -7832,12 +7832,12 @@ QMargins* k_categorizedview_super_viewport_margins(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
-/// @param callback QMargins* func()
+/// @param self const KCategorizedView*
+/// @param callback QMargins* func(KCategorizedView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_categorizedview_on_viewport_margins(void* self, QMargins* (*callback)());
+void k_categorizedview_on_viewport_margins(const void* self, QMargins* (*callback)(const void*));
 
 /// Inherited from QFrame
 ///
@@ -7899,9 +7899,9 @@ void k_categorizedview_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void func()
+/// @param callback void func(KCategorizedView* self)
 ///
-void k_categorizedview_on_update_micro_focus(void* self, void (*callback)());
+void k_categorizedview_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -7930,9 +7930,9 @@ void k_categorizedview_super_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void func()
+/// @param callback void func(KCategorizedView* self)
 ///
-void k_categorizedview_on_create(void* self, void (*callback)());
+void k_categorizedview_on_create(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -7961,9 +7961,9 @@ void k_categorizedview_super_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void func()
+/// @param callback void func(KCategorizedView* self)
 ///
-void k_categorizedview_on_destroy(void* self, void (*callback)());
+void k_categorizedview_on_destroy(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -7992,9 +7992,9 @@ bool k_categorizedview_super_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback bool func()
+/// @param callback bool func(KCategorizedView* self)
 ///
-void k_categorizedview_on_focus_next_child(void* self, bool (*callback)());
+void k_categorizedview_on_focus_next_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -8023,9 +8023,9 @@ bool k_categorizedview_super_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback bool func()
+/// @param callback bool func(KCategorizedView* self)
 ///
-void k_categorizedview_on_focus_previous_child(void* self, bool (*callback)());
+void k_categorizedview_on_focus_previous_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -8033,9 +8033,9 @@ void k_categorizedview_on_focus_previous_child(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QObject* k_categorizedview_sender(void* self);
+QObject* k_categorizedview_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -8043,9 +8043,9 @@ QObject* k_categorizedview_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-QObject* k_categorizedview_super_sender(void* self);
+QObject* k_categorizedview_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -8053,10 +8053,10 @@ QObject* k_categorizedview_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
-/// @param callback QObject* func()
+/// @param self const KCategorizedView*
+/// @param callback QObject* func(KCategorizedView* self)
 ///
-void k_categorizedview_on_sender(void* self, QObject* (*callback)());
+void k_categorizedview_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -8064,9 +8064,9 @@ void k_categorizedview_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_sender_signal_index(void* self);
+int32_t k_categorizedview_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -8074,9 +8074,9 @@ int32_t k_categorizedview_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 ///
-int32_t k_categorizedview_super_sender_signal_index(void* self);
+int32_t k_categorizedview_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -8084,10 +8084,10 @@ int32_t k_categorizedview_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
-/// @param callback int32_t func()
+/// @param self const KCategorizedView*
+/// @param callback int32_t func(KCategorizedView* self)
 ///
-void k_categorizedview_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_categorizedview_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -8095,10 +8095,10 @@ void k_categorizedview_on_sender_signal_index(void* self, int32_t (*callback)())
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param signal const char*
 ///
-int32_t k_categorizedview_receivers(void* self, const char* signal);
+int32_t k_categorizedview_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -8106,10 +8106,10 @@ int32_t k_categorizedview_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param signal const char*
 ///
-int32_t k_categorizedview_super_receivers(void* self, const char* signal);
+int32_t k_categorizedview_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -8117,10 +8117,10 @@ int32_t k_categorizedview_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param callback int32_t func(KCategorizedView* self, const char* signal)
 ///
-void k_categorizedview_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_categorizedview_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -8128,10 +8128,10 @@ void k_categorizedview_on_receivers(void* self, int32_t (*callback)(void*, const
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param signal QMetaMethod*
 ///
-bool k_categorizedview_is_signal_connected(void* self, void* signal);
+bool k_categorizedview_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -8139,10 +8139,10 @@ bool k_categorizedview_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param signal QMetaMethod*
 ///
-bool k_categorizedview_super_is_signal_connected(void* self, void* signal);
+bool k_categorizedview_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -8150,10 +8150,10 @@ bool k_categorizedview_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param callback bool func(KCategorizedView* self, QMetaMethod* signal)
 ///
-void k_categorizedview_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_categorizedview_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -8161,11 +8161,11 @@ void k_categorizedview_on_is_signal_connected(void* self, bool (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_categorizedview_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_categorizedview_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -8173,11 +8173,11 @@ double k_categorizedview_get_decoded_metric_f(void* self, int32_t metricA, int32
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_categorizedview_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_categorizedview_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -8185,10 +8185,10 @@ double k_categorizedview_super_get_decoded_metric_f(void* self, int32_t metricA,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCategorizedView*
+/// @param self const KCategorizedView*
 /// @param callback double func(KCategorizedView* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_categorizedview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void k_categorizedview_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

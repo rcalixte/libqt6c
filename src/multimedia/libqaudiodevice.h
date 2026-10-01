@@ -20,7 +20,7 @@ QAudioDevice* q_audiodevice_new();
 ///
 /// @param other QAudioDevice*
 ///
-QAudioDevice* q_audiodevice_new2(void* other);
+QAudioDevice* q_audiodevice_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodevice.html#swap)
 ///
@@ -34,110 +34,110 @@ void q_audiodevice_swap(void* self, void* other);
 /// @param self QAudioDevice*
 /// @param other QAudioDevice*
 ///
-void q_audiodevice_operator_assign(void* self, void* other);
+void q_audiodevice_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodevice.html#operator-eq-eq)
 ///
-/// @param self QAudioDevice*
+/// @param self const QAudioDevice*
 /// @param other QAudioDevice*
 ///
-bool q_audiodevice_operator_equal(void* self, void* other);
+bool q_audiodevice_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodevice.html#operator-not-eq)
 ///
-/// @param self QAudioDevice*
+/// @param self const QAudioDevice*
 /// @param other QAudioDevice*
 ///
-bool q_audiodevice_operator_not_equal(void* self, void* other);
+bool q_audiodevice_operator_not_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodevice.html#isNull)
 ///
-/// @param self QAudioDevice*
+/// @param self const QAudioDevice*
 ///
-bool q_audiodevice_is_null(void* self);
+bool q_audiodevice_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodevice.html#id)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QAudioDevice*
+/// @param self const QAudioDevice*
 ///
-char* q_audiodevice_id(void* self);
+char* q_audiodevice_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodevice.html#description)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QAudioDevice*
+/// @param self const QAudioDevice*
 ///
-const char* q_audiodevice_description(void* self);
+const char* q_audiodevice_description(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodevice.html#isDefault)
 ///
-/// @param self QAudioDevice*
+/// @param self const QAudioDevice*
 ///
-bool q_audiodevice_is_default(void* self);
+bool q_audiodevice_is_default(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodevice.html#mode)
 ///
-/// @param self QAudioDevice*
+/// @param self const QAudioDevice*
 ///
 /// @return enum QAudioDevice__Mode
 ///
-int32_t q_audiodevice_mode(void* self);
+int32_t q_audiodevice_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodevice.html#isFormatSupported)
 ///
-/// @param self QAudioDevice*
+/// @param self const QAudioDevice*
 /// @param format QAudioFormat*
 ///
-bool q_audiodevice_is_format_supported(void* self, void* format);
+bool q_audiodevice_is_format_supported(const void* self, const void* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodevice.html#preferredFormat)
 ///
-/// @param self QAudioDevice*
+/// @param self const QAudioDevice*
 ///
-QAudioFormat* q_audiodevice_preferred_format(void* self);
+QAudioFormat* q_audiodevice_preferred_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodevice.html#minimumSampleRate)
 ///
-/// @param self QAudioDevice*
+/// @param self const QAudioDevice*
 ///
-int32_t q_audiodevice_minimum_sample_rate(void* self);
+int32_t q_audiodevice_minimum_sample_rate(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodevice.html#maximumSampleRate)
 ///
-/// @param self QAudioDevice*
+/// @param self const QAudioDevice*
 ///
-int32_t q_audiodevice_maximum_sample_rate(void* self);
+int32_t q_audiodevice_maximum_sample_rate(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodevice.html#minimumChannelCount)
 ///
-/// @param self QAudioDevice*
+/// @param self const QAudioDevice*
 ///
-int32_t q_audiodevice_minimum_channel_count(void* self);
+int32_t q_audiodevice_minimum_channel_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodevice.html#maximumChannelCount)
 ///
-/// @param self QAudioDevice*
+/// @param self const QAudioDevice*
 ///
-int32_t q_audiodevice_maximum_channel_count(void* self);
+int32_t q_audiodevice_maximum_channel_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodevice.html#supportedSampleFormats)
 ///
-/// @param self QAudioDevice*
+/// @param self const QAudioDevice*
 ///
 /// @return libqt_list of enum QAudioFormat__SampleFormat
 ///
-libqt_list q_audiodevice_supported_sample_formats(void* self);
+libqt_list q_audiodevice_supported_sample_formats(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodevice.html#channelConfiguration)
 ///
-/// @param self QAudioDevice*
+/// @param self const QAudioDevice*
 ///
 /// @return enum QAudioFormat__ChannelConfig
 ///
-uint32_t q_audiodevice_channel_configuration(void* self);
+uint32_t q_audiodevice_channel_configuration(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodevice.html#dtor.QAudioDevice)
 ///

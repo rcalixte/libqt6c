@@ -2,7 +2,7 @@
 #include "libqquick3d.hpp"
 #include "libqquick3d.h"
 
-QQuick3D* q_quick3d_new(void* other) {
+QQuick3D* q_quick3d_new(const void* other) {
     return QQuick3D_New((QQuick3D*)other);
 }
 

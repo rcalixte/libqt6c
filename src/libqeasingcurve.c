@@ -6,7 +6,7 @@ QEasingCurve* q_easingcurve_new() {
     return QEasingCurve_New();
 }
 
-QEasingCurve* q_easingcurve_new2(void* other) {
+QEasingCurve* q_easingcurve_new2(const void* other) {
     return QEasingCurve_New2((QEasingCurve*)other);
 }
 
@@ -14,7 +14,7 @@ QEasingCurve* q_easingcurve_new3(int32_t type) {
     return QEasingCurve_New3(type);
 }
 
-void q_easingcurve_operator_assign(void* self, void* other) {
+void q_easingcurve_operator_assign(void* self, const void* other) {
     QEasingCurve_OperatorAssign((QEasingCurve*)self, (QEasingCurve*)other);
 }
 
@@ -22,7 +22,7 @@ void q_easingcurve_swap(void* self, void* other) {
     QEasingCurve_Swap((QEasingCurve*)self, (QEasingCurve*)other);
 }
 
-double q_easingcurve_amplitude(void* self) {
+double q_easingcurve_amplitude(const void* self) {
     return QEasingCurve_Amplitude((QEasingCurve*)self);
 }
 
@@ -30,7 +30,7 @@ void q_easingcurve_set_amplitude(void* self, double amplitude) {
     QEasingCurve_SetAmplitude((QEasingCurve*)self, amplitude);
 }
 
-double q_easingcurve_period(void* self) {
+double q_easingcurve_period(const void* self) {
     return QEasingCurve_Period((QEasingCurve*)self);
 }
 
@@ -38,7 +38,7 @@ void q_easingcurve_set_period(void* self, double period) {
     QEasingCurve_SetPeriod((QEasingCurve*)self, period);
 }
 
-double q_easingcurve_overshoot(void* self) {
+double q_easingcurve_overshoot(const void* self) {
     return QEasingCurve_Overshoot((QEasingCurve*)self);
 }
 
@@ -46,20 +46,20 @@ void q_easingcurve_set_overshoot(void* self, double overshoot) {
     QEasingCurve_SetOvershoot((QEasingCurve*)self, overshoot);
 }
 
-void q_easingcurve_add_cubic_bezier_segment(void* self, void* c1, void* c2, void* endPoint) {
+void q_easingcurve_add_cubic_bezier_segment(void* self, const void* c1, const void* c2, const void* endPoint) {
     QEasingCurve_AddCubicBezierSegment((QEasingCurve*)self, (QPointF*)c1, (QPointF*)c2, (QPointF*)endPoint);
 }
 
-void q_easingcurve_add_t_c_b_segment(void* self, void* nextPoint, double t, double c, double b) {
+void q_easingcurve_add_t_c_b_segment(void* self, const void* nextPoint, double t, double c, double b) {
     QEasingCurve_AddTCBSegment((QEasingCurve*)self, (QPointF*)nextPoint, t, c, b);
 }
 
-libqt_list /* of QPointF* */ q_easingcurve_to_cubic_spline(void* self) {
+libqt_list /* of QPointF* */ q_easingcurve_to_cubic_spline(const void* self) {
     libqt_list _arr = QEasingCurve_ToCubicSpline((QEasingCurve*)self);
     return _arr;
 }
 
-int32_t q_easingcurve_type(void* self) {
+int32_t q_easingcurve_type(const void* self) {
     return QEasingCurve_Type((QEasingCurve*)self);
 }
 
@@ -71,11 +71,11 @@ void q_easingcurve_set_custom_type(void* self, double (*func)(double funcparam1)
     QEasingCurve_SetCustomType((QEasingCurve*)self, (intptr_t)func);
 }
 
-QEasingCurve__EasingFunction q_easingcurve_custom_type(void* self) {
+QEasingCurve__EasingFunction q_easingcurve_custom_type(const void* self) {
     return (QEasingCurve__EasingFunction)QEasingCurve_CustomType((QEasingCurve*)self);
 }
 
-double q_easingcurve_value_for_progress(void* self, double progress) {
+double q_easingcurve_value_for_progress(const void* self, double progress) {
     return QEasingCurve_ValueForProgress((QEasingCurve*)self, progress);
 }
 

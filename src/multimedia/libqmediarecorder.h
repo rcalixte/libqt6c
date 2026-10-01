@@ -24,26 +24,26 @@ QMediaRecorder* q_mediarecorder_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-const QMetaObject* q_mediarecorder_meta_object(void* self);
+const QMetaObject* q_mediarecorder_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QMediaRecorder*
-/// @param callback const QMetaObject* func()
+/// @param self const QMediaRecorder*
+/// @param callback const QMetaObject* func(const QMediaRecorder* self)
 ///
-void q_mediarecorder_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_mediarecorder_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-const QMetaObject* q_mediarecorder_super_meta_object(void* self);
+const QMetaObject* q_mediarecorder_super_meta_object(const void* self);
 
 /// @param self QMediaRecorder*
 /// @param param1 const char*
@@ -97,22 +97,22 @@ const char* q_mediarecorder_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#isAvailable)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-bool q_mediarecorder_is_available(void* self);
+bool q_mediarecorder_is_available(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#outputLocation)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-QUrl* q_mediarecorder_output_location(void* self);
+QUrl* q_mediarecorder_output_location(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#setOutputLocation)
 ///
 /// @param self QMediaRecorder*
 /// @param location QUrl*
 ///
-void q_mediarecorder_set_output_location(void* self, void* location);
+void q_mediarecorder_set_output_location(void* self, const void* location);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#setOutputDevice)
 ///
@@ -123,66 +123,66 @@ void q_mediarecorder_set_output_device(void* self, void* device);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#outputDevice)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-QIODevice* q_mediarecorder_output_device(void* self);
+QIODevice* q_mediarecorder_output_device(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#actualLocation)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-QUrl* q_mediarecorder_actual_location(void* self);
+QUrl* q_mediarecorder_actual_location(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#recorderState)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
 /// @return enum QMediaRecorder__RecorderState
 ///
-int32_t q_mediarecorder_recorder_state(void* self);
+int32_t q_mediarecorder_recorder_state(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#error)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
 /// @return enum QMediaRecorder__Error
 ///
-int32_t q_mediarecorder_error(void* self);
+int32_t q_mediarecorder_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#errorString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-const char* q_mediarecorder_error_string(void* self);
+const char* q_mediarecorder_error_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#duration)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-int64_t q_mediarecorder_duration(void* self);
+int64_t q_mediarecorder_duration(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#mediaFormat)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-QMediaFormat* q_mediarecorder_media_format(void* self);
+QMediaFormat* q_mediarecorder_media_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#setMediaFormat)
 ///
 /// @param self QMediaRecorder*
 /// @param format QMediaFormat*
 ///
-void q_mediarecorder_set_media_format(void* self, void* format);
+void q_mediarecorder_set_media_format(void* self, const void* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#encodingMode)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
 /// @return enum QMediaRecorder__EncodingMode
 ///
-int32_t q_mediarecorder_encoding_mode(void* self);
+int32_t q_mediarecorder_encoding_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#setEncodingMode)
 ///
@@ -193,11 +193,11 @@ void q_mediarecorder_set_encoding_mode(void* self, int32_t encodingMode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#quality)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
 /// @return enum QMediaRecorder__Quality
 ///
-int32_t q_mediarecorder_quality(void* self);
+int32_t q_mediarecorder_quality(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#setQuality)
 ///
@@ -208,16 +208,16 @@ void q_mediarecorder_set_quality(void* self, int32_t quality);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#videoResolution)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-QSize* q_mediarecorder_video_resolution(void* self);
+QSize* q_mediarecorder_video_resolution(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#setVideoResolution)
 ///
 /// @param self QMediaRecorder*
 /// @param videoResolution QSize*
 ///
-void q_mediarecorder_set_video_resolution(void* self, void* videoResolution);
+void q_mediarecorder_set_video_resolution(void* self, const void* videoResolution);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#setVideoResolution)
 ///
@@ -229,9 +229,9 @@ void q_mediarecorder_set_video_resolution2(void* self, int width, int height);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#videoFrameRate)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-double q_mediarecorder_video_frame_rate(void* self);
+double q_mediarecorder_video_frame_rate(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#setVideoFrameRate)
 ///
@@ -242,9 +242,9 @@ void q_mediarecorder_set_video_frame_rate(void* self, double frameRate);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#videoBitRate)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-int32_t q_mediarecorder_video_bit_rate(void* self);
+int32_t q_mediarecorder_video_bit_rate(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#setVideoBitRate)
 ///
@@ -255,9 +255,9 @@ void q_mediarecorder_set_video_bit_rate(void* self, int bitRate);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#audioBitRate)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-int32_t q_mediarecorder_audio_bit_rate(void* self);
+int32_t q_mediarecorder_audio_bit_rate(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#setAudioBitRate)
 ///
@@ -268,9 +268,9 @@ void q_mediarecorder_set_audio_bit_rate(void* self, int bitRate);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#audioChannelCount)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-int32_t q_mediarecorder_audio_channel_count(void* self);
+int32_t q_mediarecorder_audio_channel_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#setAudioChannelCount)
 ///
@@ -281,9 +281,9 @@ void q_mediarecorder_set_audio_channel_count(void* self, int channels);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#audioSampleRate)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-int32_t q_mediarecorder_audio_sample_rate(void* self);
+int32_t q_mediarecorder_audio_sample_rate(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#setAudioSampleRate)
 ///
@@ -294,29 +294,29 @@ void q_mediarecorder_set_audio_sample_rate(void* self, int sampleRate);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#metaData)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-QMediaMetaData* q_mediarecorder_meta_data(void* self);
+QMediaMetaData* q_mediarecorder_meta_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#setMetaData)
 ///
 /// @param self QMediaRecorder*
 /// @param metaData QMediaMetaData*
 ///
-void q_mediarecorder_set_meta_data(void* self, void* metaData);
+void q_mediarecorder_set_meta_data(void* self, const void* metaData);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#addMetaData)
 ///
 /// @param self QMediaRecorder*
 /// @param metaData QMediaMetaData*
 ///
-void q_mediarecorder_add_meta_data(void* self, void* metaData);
+void q_mediarecorder_add_meta_data(void* self, const void* metaData);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#autoStop)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-bool q_mediarecorder_auto_stop(void* self);
+bool q_mediarecorder_auto_stop(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#setAutoStop)
 ///
@@ -327,9 +327,9 @@ void q_mediarecorder_set_auto_stop(void* self, bool autoStop);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#captureSession)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-QMediaCaptureSession* q_mediarecorder_capture_session(void* self);
+QMediaCaptureSession* q_mediarecorder_capture_session(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#record)
 ///
@@ -382,14 +382,14 @@ void q_mediarecorder_on_duration_changed(void* self, void (*callback)(void*, int
 /// @param self QMediaRecorder*
 /// @param location QUrl*
 ///
-void q_mediarecorder_actual_location_changed(void* self, void* location);
+void q_mediarecorder_actual_location_changed(void* self, const void* location);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#actualLocationChanged)
 ///
 /// @param self QMediaRecorder*
 /// @param callback void func(QMediaRecorder* self, QUrl* location)
 ///
-void q_mediarecorder_on_actual_location_changed(void* self, void (*callback)(void*, void*));
+void q_mediarecorder_on_actual_location_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#encoderSettingsChanged)
 ///
@@ -600,9 +600,9 @@ const char* q_mediarecorder_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-const char* q_mediarecorder_object_name(void* self);
+const char* q_mediarecorder_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -617,33 +617,33 @@ void q_mediarecorder_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-bool q_mediarecorder_is_widget_type(void* self);
+bool q_mediarecorder_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-bool q_mediarecorder_is_window_type(void* self);
+bool q_mediarecorder_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-bool q_mediarecorder_is_quick_item_type(void* self);
+bool q_mediarecorder_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-bool q_mediarecorder_signals_blocked(void* self);
+bool q_mediarecorder_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -658,9 +658,9 @@ bool q_mediarecorder_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-QThread* q_mediarecorder_thread(void* self);
+QThread* q_mediarecorder_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -711,11 +711,11 @@ void q_mediarecorder_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_mediarecorder_children(void* self);
+libqt_list q_mediarecorder_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -753,7 +753,7 @@ void q_mediarecorder_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_mediarecorder_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_mediarecorder_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -764,18 +764,18 @@ QMetaObject__Connection* q_mediarecorder_connect(void* sender, const char* signa
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_mediarecorder_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_mediarecorder_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_mediarecorder_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_mediarecorder_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -786,7 +786,7 @@ QMetaObject__Connection* q_mediarecorder_connect3(void* self, void* sender, cons
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_mediarecorder_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_mediarecorder_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -797,24 +797,24 @@ bool q_mediarecorder_disconnect(void* sender, const char* signal, void* receiver
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_mediarecorder_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_mediarecorder_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-bool q_mediarecorder_disconnect3(void* self);
+bool q_mediarecorder_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 /// @param receiver QObject*
 ///
-bool q_mediarecorder_disconnect4(void* self, void* receiver);
+bool q_mediarecorder_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -822,23 +822,23 @@ bool q_mediarecorder_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_mediarecorder_disconnect5(void* param1);
+bool q_mediarecorder_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-void q_mediarecorder_dump_object_tree(void* self);
+void q_mediarecorder_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-void q_mediarecorder_dump_object_info(void* self);
+void q_mediarecorder_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -848,16 +848,16 @@ void q_mediarecorder_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_mediarecorder_set_property(void* self, const char* name, void* value);
+bool q_mediarecorder_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 /// @param name const char*
 ///
-QVariant* q_mediarecorder_property(void* self, const char* name);
+QVariant* q_mediarecorder_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -865,9 +865,9 @@ QVariant* q_mediarecorder_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-const char** q_mediarecorder_dynamic_property_names(void* self);
+const char** q_mediarecorder_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -881,9 +881,9 @@ QBindingStorage* q_mediarecorder_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-const QBindingStorage* q_mediarecorder_binding_storage2(void* self);
+const QBindingStorage* q_mediarecorder_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -906,18 +906,18 @@ void q_mediarecorder_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-QObject* q_mediarecorder_parent(void* self);
+QObject* q_mediarecorder_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 /// @param classname const char*
 ///
-bool q_mediarecorder_inherits(void* self, const char* classname);
+bool q_mediarecorder_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -957,7 +957,7 @@ int32_t q_mediarecorder_start_timer23(void* self, int64_t time, int32_t timerTyp
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_mediarecorder_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_mediarecorder_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -969,59 +969,59 @@ QMetaObject__Connection* q_mediarecorder_connect5(void* sender, const char* sign
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_mediarecorder_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_mediarecorder_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_mediarecorder_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_mediarecorder_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 /// @param signal const char*
 ///
-bool q_mediarecorder_disconnect1(void* self, const char* signal);
+bool q_mediarecorder_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QMediaRecorder*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_mediarecorder_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_mediarecorder_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_mediarecorder_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_mediarecorder_disconnect23(void* self, void* receiver, const char* member);
+bool q_mediarecorder_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QMediaRecorder*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_mediarecorder_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1217,7 +1217,7 @@ void q_mediarecorder_on_custom_event(void* self, void (*callback)(void*, void*))
 /// @param self QMediaRecorder*
 /// @param signal QMetaMethod*
 ///
-void q_mediarecorder_connect_notify(void* self, void* signal);
+void q_mediarecorder_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1228,7 +1228,7 @@ void q_mediarecorder_connect_notify(void* self, void* signal);
 /// @param self QMediaRecorder*
 /// @param signal QMetaMethod*
 ///
-void q_mediarecorder_super_connect_notify(void* self, void* signal);
+void q_mediarecorder_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1239,7 +1239,7 @@ void q_mediarecorder_super_connect_notify(void* self, void* signal);
 /// @param self QMediaRecorder*
 /// @param callback void func(QMediaRecorder* self, QMetaMethod* signal)
 ///
-void q_mediarecorder_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_mediarecorder_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1250,7 +1250,7 @@ void q_mediarecorder_on_connect_notify(void* self, void (*callback)(void*, void*
 /// @param self QMediaRecorder*
 /// @param signal QMetaMethod*
 ///
-void q_mediarecorder_disconnect_notify(void* self, void* signal);
+void q_mediarecorder_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1261,7 +1261,7 @@ void q_mediarecorder_disconnect_notify(void* self, void* signal);
 /// @param self QMediaRecorder*
 /// @param signal QMetaMethod*
 ///
-void q_mediarecorder_super_disconnect_notify(void* self, void* signal);
+void q_mediarecorder_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1272,7 +1272,7 @@ void q_mediarecorder_super_disconnect_notify(void* self, void* signal);
 /// @param self QMediaRecorder*
 /// @param callback void func(QMediaRecorder* self, QMetaMethod* signal)
 ///
-void q_mediarecorder_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_mediarecorder_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1280,9 +1280,9 @@ void q_mediarecorder_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-QObject* q_mediarecorder_sender(void* self);
+QObject* q_mediarecorder_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1290,9 +1290,9 @@ QObject* q_mediarecorder_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-QObject* q_mediarecorder_super_sender(void* self);
+QObject* q_mediarecorder_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1300,10 +1300,10 @@ QObject* q_mediarecorder_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QMediaRecorder*
-/// @param callback QObject* func()
+/// @param self const QMediaRecorder*
+/// @param callback QObject* func(QMediaRecorder* self)
 ///
-void q_mediarecorder_on_sender(void* self, QObject* (*callback)());
+void q_mediarecorder_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1311,9 +1311,9 @@ void q_mediarecorder_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-int32_t q_mediarecorder_sender_signal_index(void* self);
+int32_t q_mediarecorder_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1321,9 +1321,9 @@ int32_t q_mediarecorder_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 ///
-int32_t q_mediarecorder_super_sender_signal_index(void* self);
+int32_t q_mediarecorder_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1331,10 +1331,10 @@ int32_t q_mediarecorder_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QMediaRecorder*
-/// @param callback int32_t func()
+/// @param self const QMediaRecorder*
+/// @param callback int32_t func(QMediaRecorder* self)
 ///
-void q_mediarecorder_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_mediarecorder_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1342,10 +1342,10 @@ void q_mediarecorder_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 /// @param signal const char*
 ///
-int32_t q_mediarecorder_receivers(void* self, const char* signal);
+int32_t q_mediarecorder_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1353,10 +1353,10 @@ int32_t q_mediarecorder_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 /// @param signal const char*
 ///
-int32_t q_mediarecorder_super_receivers(void* self, const char* signal);
+int32_t q_mediarecorder_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1364,10 +1364,10 @@ int32_t q_mediarecorder_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 /// @param callback int32_t func(QMediaRecorder* self, const char* signal)
 ///
-void q_mediarecorder_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_mediarecorder_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1375,10 +1375,10 @@ void q_mediarecorder_on_receivers(void* self, int32_t (*callback)(void*, const c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 /// @param signal QMetaMethod*
 ///
-bool q_mediarecorder_is_signal_connected(void* self, void* signal);
+bool q_mediarecorder_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1386,10 +1386,10 @@ bool q_mediarecorder_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 /// @param signal QMetaMethod*
 ///
-bool q_mediarecorder_super_is_signal_connected(void* self, void* signal);
+bool q_mediarecorder_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1397,10 +1397,10 @@ bool q_mediarecorder_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QMediaRecorder*
+/// @param self const QMediaRecorder*
 /// @param callback bool func(QMediaRecorder* self, QMetaMethod* signal)
 ///
-void q_mediarecorder_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_mediarecorder_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

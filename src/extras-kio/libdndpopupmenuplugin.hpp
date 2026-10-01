@@ -35,14 +35,13 @@ QMetaObject* KIO__DndPopupMenuPlugin_MetaObject(const KIO__DndPopupMenuPlugin* s
 void* KIO__DndPopupMenuPlugin_Metacast(KIO__DndPopupMenuPlugin* self, const char* param1);
 int KIO__DndPopupMenuPlugin_Metacall(KIO__DndPopupMenuPlugin* self, int param1, int param2, void** param3);
 libqt_list /* of QAction* */ KIO__DndPopupMenuPlugin_Setup(KIO__DndPopupMenuPlugin* self, const KFileItemListProperties* popupMenuInfo, const QUrl* destination);
-void KIO__DndPopupMenuPlugin_OnMetaObject(const KIO__DndPopupMenuPlugin* self, intptr_t slot);
+void KIO__DndPopupMenuPlugin_OnMetaObject(KIO__DndPopupMenuPlugin* self, intptr_t slot);
 QMetaObject* KIO__DndPopupMenuPlugin_SuperMetaObject(const KIO__DndPopupMenuPlugin* self);
 void KIO__DndPopupMenuPlugin_OnMetacast(KIO__DndPopupMenuPlugin* self, intptr_t slot);
 void* KIO__DndPopupMenuPlugin_SuperMetacast(KIO__DndPopupMenuPlugin* self, const char* param1);
 void KIO__DndPopupMenuPlugin_OnMetacall(KIO__DndPopupMenuPlugin* self, intptr_t slot);
 int KIO__DndPopupMenuPlugin_SuperMetacall(KIO__DndPopupMenuPlugin* self, int param1, int param2, void** param3);
 void KIO__DndPopupMenuPlugin_OnSetup(KIO__DndPopupMenuPlugin* self, intptr_t slot);
-libqt_list /* of QAction* */ KIO__DndPopupMenuPlugin_SuperSetup(KIO__DndPopupMenuPlugin* self, const KFileItemListProperties* popupMenuInfo, const QUrl* destination);
 bool KIO__DndPopupMenuPlugin_Event(KIO__DndPopupMenuPlugin* self, QEvent* event);
 void KIO__DndPopupMenuPlugin_OnEvent(KIO__DndPopupMenuPlugin* self, intptr_t slot);
 bool KIO__DndPopupMenuPlugin_SuperEvent(KIO__DndPopupMenuPlugin* self, QEvent* event);
@@ -65,17 +64,9 @@ void KIO__DndPopupMenuPlugin_DisconnectNotify(KIO__DndPopupMenuPlugin* self, con
 void KIO__DndPopupMenuPlugin_OnDisconnectNotify(KIO__DndPopupMenuPlugin* self, intptr_t slot);
 void KIO__DndPopupMenuPlugin_SuperDisconnectNotify(KIO__DndPopupMenuPlugin* self, const QMetaMethod* signal);
 QObject* KIO__DndPopupMenuPlugin_Sender(const KIO__DndPopupMenuPlugin* self);
-void KIO__DndPopupMenuPlugin_OnSender(const KIO__DndPopupMenuPlugin* self, intptr_t slot);
-QObject* KIO__DndPopupMenuPlugin_SuperSender(const KIO__DndPopupMenuPlugin* self);
 int KIO__DndPopupMenuPlugin_SenderSignalIndex(const KIO__DndPopupMenuPlugin* self);
-void KIO__DndPopupMenuPlugin_OnSenderSignalIndex(const KIO__DndPopupMenuPlugin* self, intptr_t slot);
-int KIO__DndPopupMenuPlugin_SuperSenderSignalIndex(const KIO__DndPopupMenuPlugin* self);
 int KIO__DndPopupMenuPlugin_Receivers(const KIO__DndPopupMenuPlugin* self, const char* signal);
-void KIO__DndPopupMenuPlugin_OnReceivers(const KIO__DndPopupMenuPlugin* self, intptr_t slot);
-int KIO__DndPopupMenuPlugin_SuperReceivers(const KIO__DndPopupMenuPlugin* self, const char* signal);
 bool KIO__DndPopupMenuPlugin_IsSignalConnected(const KIO__DndPopupMenuPlugin* self, const QMetaMethod* signal);
-void KIO__DndPopupMenuPlugin_OnIsSignalConnected(const KIO__DndPopupMenuPlugin* self, intptr_t slot);
-bool KIO__DndPopupMenuPlugin_SuperIsSignalConnected(const KIO__DndPopupMenuPlugin* self, const QMetaMethod* signal);
 void KIO__DndPopupMenuPlugin_Delete(KIO__DndPopupMenuPlugin* self);
 
 #ifdef __cplusplus

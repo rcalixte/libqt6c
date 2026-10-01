@@ -32,7 +32,7 @@ QIPv6Address* q_ipv6address_new();
 ///
 /// @param param1 QIPv6Address*
 ///
-QIPv6Address* q_ipv6address_new2(void* param1);
+QIPv6Address* q_ipv6address_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qipv6address.html#operator-5b-5d)
 ///
@@ -43,10 +43,10 @@ unsigned char* q_ipv6address_operator_subscript(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qipv6address.html#operator-5b-5d)
 ///
-/// @param self QIPv6Address*
+/// @param self const QIPv6Address*
 /// @param index int
 ///
-uint8_t q_ipv6address_operator_subscript2(void* self, int index);
+uint8_t q_ipv6address_operator_subscript2(const void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qipv6address.html#dtor.QIPv6Address)
 ///
@@ -63,7 +63,7 @@ void q_ipv6address_delete(void* self);
 /// @param key QHostAddress*
 /// @param seed size_t
 ///
-size_t q_qhostaddress_h_q_hash(void* key, size_t seed);
+size_t q_qhostaddress_h_q_hash(const void* key, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html)
 
@@ -93,7 +93,7 @@ QHostAddress* q_hostaddress_new3(unsigned char* ip6Addr);
 ///
 /// @param ip6Addr QIPv6Address*
 ///
-QHostAddress* q_hostaddress_new4(void* ip6Addr);
+QHostAddress* q_hostaddress_new4(const void* ip6Addr);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html)
 
@@ -109,7 +109,7 @@ QHostAddress* q_hostaddress_new5(const char* address);
 ///
 /// @param copy QHostAddress*
 ///
-QHostAddress* q_hostaddress_new6(void* copy);
+QHostAddress* q_hostaddress_new6(const void* copy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html)
 
@@ -124,7 +124,7 @@ QHostAddress* q_hostaddress_new7(int32_t address);
 /// @param self QHostAddress*
 /// @param other QHostAddress*
 ///
-void q_hostaddress_operator_assign(void* self, void* other);
+void q_hostaddress_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#operator-eq)
 ///
@@ -159,7 +159,7 @@ void q_hostaddress_set_address2(void* self, unsigned char* ip6Addr);
 /// @param self QHostAddress*
 /// @param ip6Addr QIPv6Address*
 ///
-void q_hostaddress_set_address3(void* self, void* ip6Addr);
+void q_hostaddress_set_address3(void* self, const void* ip6Addr);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#setAddress)
 ///
@@ -177,39 +177,39 @@ void q_hostaddress_set_address6(void* self, int32_t address);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#protocol)
 ///
-/// @param self QHostAddress*
+/// @param self const QHostAddress*
 ///
 /// @return enum QAbstractSocket__NetworkLayerProtocol
 ///
-int32_t q_hostaddress_protocol(void* self);
+int32_t q_hostaddress_protocol(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#toIPv4Address)
 ///
-/// @param self QHostAddress*
+/// @param self const QHostAddress*
 ///
-uint32_t q_hostaddress_to_i_pv4_address(void* self);
+uint32_t q_hostaddress_to_i_pv4_address(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#toIPv6Address)
 ///
-/// @param self QHostAddress*
+/// @param self const QHostAddress*
 ///
-QIPv6Address* q_hostaddress_to_i_pv6_address(void* self);
+QIPv6Address* q_hostaddress_to_i_pv6_address(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QHostAddress*
+/// @param self const QHostAddress*
 ///
-const char* q_hostaddress_to_string(void* self);
+const char* q_hostaddress_to_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#scopeId)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QHostAddress*
+/// @param self const QHostAddress*
 ///
-const char* q_hostaddress_scope_id(void* self);
+const char* q_hostaddress_scope_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#setScopeId)
 ///
@@ -220,44 +220,44 @@ void q_hostaddress_set_scope_id(void* self, const char* id);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#isEqual)
 ///
-/// @param self QHostAddress*
+/// @param self const QHostAddress*
 /// @param address QHostAddress*
 ///
-bool q_hostaddress_is_equal(void* self, void* address);
+bool q_hostaddress_is_equal(const void* self, const void* address);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#operator-eq-eq)
 ///
-/// @param self QHostAddress*
+/// @param self const QHostAddress*
 /// @param address QHostAddress*
 ///
-bool q_hostaddress_operator_equal(void* self, void* address);
+bool q_hostaddress_operator_equal(const void* self, const void* address);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#operator-eq-eq)
 ///
-/// @param self QHostAddress*
+/// @param self const QHostAddress*
 /// @param address enum QHostAddress__SpecialAddress
 ///
-bool q_hostaddress_operator_equal2(void* self, int32_t address);
+bool q_hostaddress_operator_equal2(const void* self, int32_t address);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#operator-not-eq)
 ///
-/// @param self QHostAddress*
+/// @param self const QHostAddress*
 /// @param address QHostAddress*
 ///
-bool q_hostaddress_operator_not_equal(void* self, void* address);
+bool q_hostaddress_operator_not_equal(const void* self, const void* address);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#operator-not-eq)
 ///
-/// @param self QHostAddress*
+/// @param self const QHostAddress*
 /// @param address enum QHostAddress__SpecialAddress
 ///
-bool q_hostaddress_operator_not_equal2(void* self, int32_t address);
+bool q_hostaddress_operator_not_equal2(const void* self, int32_t address);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#isNull)
 ///
-/// @param self QHostAddress*
+/// @param self const QHostAddress*
 ///
-bool q_hostaddress_is_null(void* self);
+bool q_hostaddress_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#clear)
 ///
@@ -267,59 +267,59 @@ void q_hostaddress_clear(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#isInSubnet)
 ///
-/// @param self QHostAddress*
+/// @param self const QHostAddress*
 /// @param subnet QHostAddress*
 /// @param netmask int
 ///
-bool q_hostaddress_is_in_subnet(void* self, void* subnet, int netmask);
+bool q_hostaddress_is_in_subnet(const void* self, const void* subnet, int netmask);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#isLoopback)
 ///
-/// @param self QHostAddress*
+/// @param self const QHostAddress*
 ///
-bool q_hostaddress_is_loopback(void* self);
+bool q_hostaddress_is_loopback(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#isGlobal)
 ///
-/// @param self QHostAddress*
+/// @param self const QHostAddress*
 ///
-bool q_hostaddress_is_global(void* self);
+bool q_hostaddress_is_global(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#isLinkLocal)
 ///
-/// @param self QHostAddress*
+/// @param self const QHostAddress*
 ///
-bool q_hostaddress_is_link_local(void* self);
+bool q_hostaddress_is_link_local(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#isSiteLocal)
 ///
-/// @param self QHostAddress*
+/// @param self const QHostAddress*
 ///
-bool q_hostaddress_is_site_local(void* self);
+bool q_hostaddress_is_site_local(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#isUniqueLocalUnicast)
 ///
-/// @param self QHostAddress*
+/// @param self const QHostAddress*
 ///
-bool q_hostaddress_is_unique_local_unicast(void* self);
+bool q_hostaddress_is_unique_local_unicast(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#isMulticast)
 ///
-/// @param self QHostAddress*
+/// @param self const QHostAddress*
 ///
-bool q_hostaddress_is_multicast(void* self);
+bool q_hostaddress_is_multicast(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#isBroadcast)
 ///
-/// @param self QHostAddress*
+/// @param self const QHostAddress*
 ///
-bool q_hostaddress_is_broadcast(void* self);
+bool q_hostaddress_is_broadcast(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#isPrivateUse)
 ///
-/// @param self QHostAddress*
+/// @param self const QHostAddress*
 ///
-bool q_hostaddress_is_private_use(void* self);
+bool q_hostaddress_is_private_use(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#parseSubnet)
 ///
@@ -331,18 +331,18 @@ pair_qhostaddress_int q_hostaddress_parse_subnet(const char* subnet);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#toIPv4Address)
 ///
-/// @param self QHostAddress*
+/// @param self const QHostAddress*
 /// @param ok bool*
 ///
-uint32_t q_hostaddress_to_i_pv4_address1(void* self, bool* ok);
+uint32_t q_hostaddress_to_i_pv4_address1(const void* self, bool* ok);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#isEqual)
 ///
-/// @param self QHostAddress*
+/// @param self const QHostAddress*
 /// @param address QHostAddress*
 /// @param mode flag of enum QHostAddress__ConversionModeFlag
 ///
-bool q_hostaddress_is_equal2(void* self, void* address, int32_t mode);
+bool q_hostaddress_is_equal2(const void* self, const void* address, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#dtor.QHostAddress)
 ///

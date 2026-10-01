@@ -5,7 +5,7 @@ QLockFile* q_lockfile_new(const char* fileName) {
     return QLockFile_New(qstring(fileName));
 }
 
-const char* q_lockfile_file_name(void* self) {
+const char* q_lockfile_file_name(const void* self) {
     libqt_string _str = QLockFile_FileName((QLockFile*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -28,7 +28,7 @@ void q_lockfile_set_stale_lock_time(void* self, int staleLockTime) {
     QLockFile_SetStaleLockTime((QLockFile*)self, staleLockTime);
 }
 
-int32_t q_lockfile_stale_lock_time(void* self) {
+int32_t q_lockfile_stale_lock_time(const void* self) {
     return QLockFile_StaleLockTime((QLockFile*)self);
 }
 
@@ -40,11 +40,11 @@ void q_lockfile_set_stale_lock_time2(void* self, int64_t value) {
     QLockFile_SetStaleLockTime2((QLockFile*)self, value);
 }
 
-int64_t q_lockfile_stale_lock_time_as_duration(void* self) {
+int64_t q_lockfile_stale_lock_time_as_duration(const void* self) {
     return QLockFile_StaleLockTimeAsDuration((QLockFile*)self);
 }
 
-bool q_lockfile_is_locked(void* self) {
+bool q_lockfile_is_locked(const void* self) {
     return QLockFile_IsLocked((QLockFile*)self);
 }
 
@@ -52,7 +52,7 @@ bool q_lockfile_remove_stale_lock_file(void* self) {
     return QLockFile_RemoveStaleLockFile((QLockFile*)self);
 }
 
-int32_t q_lockfile_error(void* self) {
+int32_t q_lockfile_error(const void* self) {
     return QLockFile_Error((QLockFile*)self);
 }
 

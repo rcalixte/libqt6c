@@ -14,9 +14,9 @@
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__Annotation*
+/// @param self const Poppler__Annotation*
 ///
-const char* q_poppler__annotation_author(void* self);
+const char* q_poppler__annotation_author(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation.html)
 ///
@@ -29,9 +29,9 @@ void q_poppler__annotation_set_author(void* self, const char* author);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__Annotation*
+/// @param self const Poppler__Annotation*
 ///
-const char* q_poppler__annotation_contents(void* self);
+const char* q_poppler__annotation_contents(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation.html)
 ///
@@ -44,9 +44,9 @@ void q_poppler__annotation_set_contents(void* self, const char* contents);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__Annotation*
+/// @param self const Poppler__Annotation*
 ///
-const char* q_poppler__annotation_unique_name(void* self);
+const char* q_poppler__annotation_unique_name(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation.html)
 ///
@@ -57,37 +57,37 @@ void q_poppler__annotation_set_unique_name(void* self, const char* uniqueName);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation.html)
 ///
-/// @param self Poppler__Annotation*
+/// @param self const Poppler__Annotation*
 ///
-QDateTime* q_poppler__annotation_modification_date(void* self);
+QDateTime* q_poppler__annotation_modification_date(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation.html)
 ///
 /// @param self Poppler__Annotation*
 /// @param date QDateTime*
 ///
-void q_poppler__annotation_set_modification_date(void* self, void* date);
+void q_poppler__annotation_set_modification_date(void* self, const void* date);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation.html)
 ///
-/// @param self Poppler__Annotation*
+/// @param self const Poppler__Annotation*
 ///
-QDateTime* q_poppler__annotation_creation_date(void* self);
+QDateTime* q_poppler__annotation_creation_date(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation.html)
 ///
 /// @param self Poppler__Annotation*
 /// @param date QDateTime*
 ///
-void q_poppler__annotation_set_creation_date(void* self, void* date);
+void q_poppler__annotation_set_creation_date(void* self, const void* date);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation.html)
 ///
-/// @param self Poppler__Annotation*
+/// @param self const Poppler__Annotation*
 ///
 /// @return flag of enum Poppler__Annotation__Flag
 ///
-int32_t q_poppler__annotation_flags(void* self);
+int32_t q_poppler__annotation_flags(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation.html)
 ///
@@ -98,87 +98,79 @@ void q_poppler__annotation_set_flags(void* self, int32_t flags);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation.html)
 ///
-/// @param self Poppler__Annotation*
+/// @param self const Poppler__Annotation*
 ///
-QRectF* q_poppler__annotation_boundary(void* self);
+QRectF* q_poppler__annotation_boundary(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation.html)
 ///
 /// @param self Poppler__Annotation*
 /// @param boundary QRectF*
 ///
-void q_poppler__annotation_set_boundary(void* self, void* boundary);
+void q_poppler__annotation_set_boundary(void* self, const void* boundary);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation.html)
 ///
-/// @param self Poppler__Annotation*
+/// @param self const Poppler__Annotation*
 ///
-Poppler__Annotation__Style* q_poppler__annotation_style(void* self);
+Poppler__Annotation__Style* q_poppler__annotation_style(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation.html)
 ///
 /// @param self Poppler__Annotation*
 /// @param style Poppler__Annotation__Style*
 ///
-void q_poppler__annotation_set_style(void* self, void* style);
+void q_poppler__annotation_set_style(void* self, const void* style);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation.html)
 ///
-/// @param self Poppler__Annotation*
+/// @param self const Poppler__Annotation*
 ///
-Poppler__Annotation__Popup* q_poppler__annotation_popup(void* self);
+Poppler__Annotation__Popup* q_poppler__annotation_popup(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation.html)
 ///
 /// @param self Poppler__Annotation*
 /// @param popup Poppler__Annotation__Popup*
 ///
-void q_poppler__annotation_set_popup(void* self, void* popup);
+void q_poppler__annotation_set_popup(void* self, const void* popup);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation.html)
 ///
-/// @param self Poppler__Annotation*
+/// @param self const Poppler__Annotation*
 ///
 /// @return enum Poppler__Annotation__RevScope
 ///
-int32_t q_poppler__annotation_revision_scope(void* self);
+int32_t q_poppler__annotation_revision_scope(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation.html)
 ///
-/// @param self Poppler__Annotation*
+/// @param self const Poppler__Annotation*
 ///
 /// @return enum Poppler__Annotation__RevType
 ///
-int32_t q_poppler__annotation_revision_type(void* self);
+int32_t q_poppler__annotation_revision_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation.html)
 ///
-/// @param self Poppler__Annotation*
+/// @param self const Poppler__Annotation*
 ///
 /// @return libqt_list of Poppler__Annotation*
 ///
-libqt_list q_poppler__annotation_revisions(void* self);
+libqt_list q_poppler__annotation_revisions(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation.html)
 ///
-/// @param self Poppler__Annotation*
+/// @param self const Poppler__Annotation*
 ///
-/// @return enum Poppler__Annotation__SubType
-///
-int32_t q_poppler__annotation_sub_type(void* self);
-
-/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation.html)
-///
-/// @param self Poppler__Annotation*
-///
-Poppler__AnnotationAppearance* q_poppler__annotation_annotation_appearance(void* self);
+Poppler__AnnotationAppearance* q_poppler__annotation_annotation_appearance(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation.html)
 ///
 /// @param self Poppler__Annotation*
 /// @param annotationAppearance Poppler__AnnotationAppearance*
 ///
-void q_poppler__annotation_set_annotation_appearance(void* self, void* annotationAppearance);
+void q_poppler__annotation_set_annotation_appearance(void* self, const void* annotationAppearance);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation.html)
 ///
@@ -198,46 +190,46 @@ Poppler__TextAnnotation* q_poppler__textannotation_new(int32_t type);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextAnnotation.html)
 ///
-/// @param self Poppler__TextAnnotation*
+/// @param self const Poppler__TextAnnotation*
 ///
 /// @return enum Poppler__Annotation__SubType
 ///
-int32_t q_poppler__textannotation_sub_type(void* self);
+int32_t q_poppler__textannotation_sub_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextAnnotation.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self Poppler__TextAnnotation*
-/// @param callback int32_t func()
+/// @param self const Poppler__TextAnnotation*
+/// @param callback int32_t func(const Poppler__TextAnnotation* self)
 ///
-void q_poppler__textannotation_on_sub_type(void* self, int32_t (*callback)());
+void q_poppler__textannotation_on_sub_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextAnnotation.html)
 ///
 /// Base class method implementation
 ///
-/// @param self Poppler__TextAnnotation*
+/// @param self const Poppler__TextAnnotation*
 ///
 /// @return enum Poppler__Annotation__SubType
 ///
-int32_t q_poppler__textannotation_super_sub_type(void* self);
+int32_t q_poppler__textannotation_super_sub_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextAnnotation.html)
 ///
-/// @param self Poppler__TextAnnotation*
+/// @param self const Poppler__TextAnnotation*
 ///
 /// @return enum Poppler__TextAnnotation__TextType
 ///
-int32_t q_poppler__textannotation_text_type(void* self);
+int32_t q_poppler__textannotation_text_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextAnnotation.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__TextAnnotation*
+/// @param self const Poppler__TextAnnotation*
 ///
-const char* q_poppler__textannotation_text_icon(void* self);
+const char* q_poppler__textannotation_text_icon(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextAnnotation.html)
 ///
@@ -248,37 +240,37 @@ void q_poppler__textannotation_set_text_icon(void* self, const char* icon);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextAnnotation.html)
 ///
-/// @param self Poppler__TextAnnotation*
+/// @param self const Poppler__TextAnnotation*
 ///
-QFont* q_poppler__textannotation_text_font(void* self);
+QFont* q_poppler__textannotation_text_font(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextAnnotation.html)
 ///
 /// @param self Poppler__TextAnnotation*
 /// @param font QFont*
 ///
-void q_poppler__textannotation_set_text_font(void* self, void* font);
+void q_poppler__textannotation_set_text_font(void* self, const void* font);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextAnnotation.html)
 ///
-/// @param self Poppler__TextAnnotation*
+/// @param self const Poppler__TextAnnotation*
 ///
-QColor* q_poppler__textannotation_text_color(void* self);
+QColor* q_poppler__textannotation_text_color(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextAnnotation.html)
 ///
 /// @param self Poppler__TextAnnotation*
 /// @param color QColor*
 ///
-void q_poppler__textannotation_set_text_color(void* self, void* color);
+void q_poppler__textannotation_set_text_color(void* self, const void* color);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextAnnotation.html)
 ///
-/// @param self Poppler__TextAnnotation*
+/// @param self const Poppler__TextAnnotation*
 ///
 /// @return enum Poppler__TextAnnotation__InplaceAlignPosition
 ///
-int32_t q_poppler__textannotation_inplace_align(void* self);
+int32_t q_poppler__textannotation_inplace_align(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextAnnotation.html)
 ///
@@ -289,18 +281,18 @@ void q_poppler__textannotation_set_inplace_align(void* self, int32_t align);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextAnnotation.html)
 ///
-/// @param self Poppler__TextAnnotation*
+/// @param self const Poppler__TextAnnotation*
 /// @param id int
 ///
-QPointF* q_poppler__textannotation_callout_point(void* self, int id);
+QPointF* q_poppler__textannotation_callout_point(const void* self, int id);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextAnnotation.html)
 ///
-/// @param self Poppler__TextAnnotation*
+/// @param self const Poppler__TextAnnotation*
 ///
 /// @return libqt_list of QPointF*
 ///
-libqt_list q_poppler__textannotation_callout_points(void* self);
+libqt_list q_poppler__textannotation_callout_points(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextAnnotation.html)
 ///
@@ -311,11 +303,11 @@ void q_poppler__textannotation_set_callout_points(void* self, libqt_list points)
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextAnnotation.html)
 ///
-/// @param self Poppler__TextAnnotation*
+/// @param self const Poppler__TextAnnotation*
 ///
 /// @return enum Poppler__TextAnnotation__InplaceIntent
 ///
-int32_t q_poppler__textannotation_inplace_intent(void* self);
+int32_t q_poppler__textannotation_inplace_intent(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextAnnotation.html)
 ///
@@ -330,9 +322,9 @@ void q_poppler__textannotation_set_inplace_intent(void* self, int32_t intent);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__TextAnnotation*
+/// @param self const Poppler__TextAnnotation*
 ///
-const char* q_poppler__textannotation_author(void* self);
+const char* q_poppler__textannotation_author(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -349,9 +341,9 @@ void q_poppler__textannotation_set_author(void* self, const char* author);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__TextAnnotation*
+/// @param self const Poppler__TextAnnotation*
 ///
-const char* q_poppler__textannotation_contents(void* self);
+const char* q_poppler__textannotation_contents(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -368,9 +360,9 @@ void q_poppler__textannotation_set_contents(void* self, const char* contents);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__TextAnnotation*
+/// @param self const Poppler__TextAnnotation*
 ///
-const char* q_poppler__textannotation_unique_name(void* self);
+const char* q_poppler__textannotation_unique_name(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -385,9 +377,9 @@ void q_poppler__textannotation_set_unique_name(void* self, const char* uniqueNam
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextAnnotation.html)
 ///
-/// @param self Poppler__TextAnnotation*
+/// @param self const Poppler__TextAnnotation*
 ///
-QDateTime* q_poppler__textannotation_modification_date(void* self);
+QDateTime* q_poppler__textannotation_modification_date(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -396,15 +388,15 @@ QDateTime* q_poppler__textannotation_modification_date(void* self);
 /// @param self Poppler__TextAnnotation*
 /// @param date QDateTime*
 ///
-void q_poppler__textannotation_set_modification_date(void* self, void* date);
+void q_poppler__textannotation_set_modification_date(void* self, const void* date);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextAnnotation.html)
 ///
-/// @param self Poppler__TextAnnotation*
+/// @param self const Poppler__TextAnnotation*
 ///
-QDateTime* q_poppler__textannotation_creation_date(void* self);
+QDateTime* q_poppler__textannotation_creation_date(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -413,17 +405,17 @@ QDateTime* q_poppler__textannotation_creation_date(void* self);
 /// @param self Poppler__TextAnnotation*
 /// @param date QDateTime*
 ///
-void q_poppler__textannotation_set_creation_date(void* self, void* date);
+void q_poppler__textannotation_set_creation_date(void* self, const void* date);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextAnnotation.html)
 ///
-/// @param self Poppler__TextAnnotation*
+/// @param self const Poppler__TextAnnotation*
 ///
 /// @return flag of enum Poppler__Annotation__Flag
 ///
-int32_t q_poppler__textannotation_flags(void* self);
+int32_t q_poppler__textannotation_flags(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -438,9 +430,9 @@ void q_poppler__textannotation_set_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextAnnotation.html)
 ///
-/// @param self Poppler__TextAnnotation*
+/// @param self const Poppler__TextAnnotation*
 ///
-QRectF* q_poppler__textannotation_boundary(void* self);
+QRectF* q_poppler__textannotation_boundary(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -449,15 +441,15 @@ QRectF* q_poppler__textannotation_boundary(void* self);
 /// @param self Poppler__TextAnnotation*
 /// @param boundary QRectF*
 ///
-void q_poppler__textannotation_set_boundary(void* self, void* boundary);
+void q_poppler__textannotation_set_boundary(void* self, const void* boundary);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextAnnotation.html)
 ///
-/// @param self Poppler__TextAnnotation*
+/// @param self const Poppler__TextAnnotation*
 ///
-Poppler__Annotation__Style* q_poppler__textannotation_style(void* self);
+Poppler__Annotation__Style* q_poppler__textannotation_style(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -466,15 +458,15 @@ Poppler__Annotation__Style* q_poppler__textannotation_style(void* self);
 /// @param self Poppler__TextAnnotation*
 /// @param style Poppler__Annotation__Style*
 ///
-void q_poppler__textannotation_set_style(void* self, void* style);
+void q_poppler__textannotation_set_style(void* self, const void* style);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextAnnotation.html)
 ///
-/// @param self Poppler__TextAnnotation*
+/// @param self const Poppler__TextAnnotation*
 ///
-Poppler__Annotation__Popup* q_poppler__textannotation_popup(void* self);
+Poppler__Annotation__Popup* q_poppler__textannotation_popup(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -483,45 +475,45 @@ Poppler__Annotation__Popup* q_poppler__textannotation_popup(void* self);
 /// @param self Poppler__TextAnnotation*
 /// @param popup Poppler__Annotation__Popup*
 ///
-void q_poppler__textannotation_set_popup(void* self, void* popup);
+void q_poppler__textannotation_set_popup(void* self, const void* popup);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextAnnotation.html)
 ///
-/// @param self Poppler__TextAnnotation*
+/// @param self const Poppler__TextAnnotation*
 ///
 /// @return enum Poppler__Annotation__RevScope
 ///
-int32_t q_poppler__textannotation_revision_scope(void* self);
+int32_t q_poppler__textannotation_revision_scope(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextAnnotation.html)
 ///
-/// @param self Poppler__TextAnnotation*
+/// @param self const Poppler__TextAnnotation*
 ///
 /// @return enum Poppler__Annotation__RevType
 ///
-int32_t q_poppler__textannotation_revision_type(void* self);
+int32_t q_poppler__textannotation_revision_type(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextAnnotation.html)
 ///
-/// @param self Poppler__TextAnnotation*
+/// @param self const Poppler__TextAnnotation*
 ///
 /// @return libqt_list of Poppler__Annotation*
 ///
-libqt_list q_poppler__textannotation_revisions(void* self);
+libqt_list q_poppler__textannotation_revisions(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextAnnotation.html)
 ///
-/// @param self Poppler__TextAnnotation*
+/// @param self const Poppler__TextAnnotation*
 ///
-Poppler__AnnotationAppearance* q_poppler__textannotation_annotation_appearance(void* self);
+Poppler__AnnotationAppearance* q_poppler__textannotation_annotation_appearance(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -530,7 +522,7 @@ Poppler__AnnotationAppearance* q_poppler__textannotation_annotation_appearance(v
 /// @param self Poppler__TextAnnotation*
 /// @param annotationAppearance Poppler__AnnotationAppearance*
 ///
-void q_poppler__textannotation_set_annotation_appearance(void* self, void* annotationAppearance);
+void q_poppler__textannotation_set_annotation_appearance(void* self, const void* annotationAppearance);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextAnnotation.html)
 ///
@@ -550,46 +542,46 @@ Poppler__LineAnnotation* q_poppler__lineannotation_new(int32_t type);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
-/// @param self Poppler__LineAnnotation*
+/// @param self const Poppler__LineAnnotation*
 ///
 /// @return enum Poppler__Annotation__SubType
 ///
-int32_t q_poppler__lineannotation_sub_type(void* self);
+int32_t q_poppler__lineannotation_sub_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self Poppler__LineAnnotation*
-/// @param callback int32_t func()
+/// @param self const Poppler__LineAnnotation*
+/// @param callback int32_t func(const Poppler__LineAnnotation* self)
 ///
-void q_poppler__lineannotation_on_sub_type(void* self, int32_t (*callback)());
+void q_poppler__lineannotation_on_sub_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
 /// Base class method implementation
 ///
-/// @param self Poppler__LineAnnotation*
+/// @param self const Poppler__LineAnnotation*
 ///
 /// @return enum Poppler__Annotation__SubType
 ///
-int32_t q_poppler__lineannotation_super_sub_type(void* self);
+int32_t q_poppler__lineannotation_super_sub_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
-/// @param self Poppler__LineAnnotation*
+/// @param self const Poppler__LineAnnotation*
 ///
 /// @return enum Poppler__LineAnnotation__LineType
 ///
-int32_t q_poppler__lineannotation_line_type(void* self);
+int32_t q_poppler__lineannotation_line_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
-/// @param self Poppler__LineAnnotation*
+/// @param self const Poppler__LineAnnotation*
 ///
 /// @return libqt_list of QPointF*
 ///
-libqt_list q_poppler__lineannotation_line_points(void* self);
+libqt_list q_poppler__lineannotation_line_points(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
@@ -600,11 +592,11 @@ void q_poppler__lineannotation_set_line_points(void* self, libqt_list points);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
-/// @param self Poppler__LineAnnotation*
+/// @param self const Poppler__LineAnnotation*
 ///
 /// @return enum Poppler__LineAnnotation__TermStyle
 ///
-int32_t q_poppler__lineannotation_line_start_style(void* self);
+int32_t q_poppler__lineannotation_line_start_style(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
@@ -615,11 +607,11 @@ void q_poppler__lineannotation_set_line_start_style(void* self, int32_t style);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
-/// @param self Poppler__LineAnnotation*
+/// @param self const Poppler__LineAnnotation*
 ///
 /// @return enum Poppler__LineAnnotation__TermStyle
 ///
-int32_t q_poppler__lineannotation_line_end_style(void* self);
+int32_t q_poppler__lineannotation_line_end_style(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
@@ -630,9 +622,9 @@ void q_poppler__lineannotation_set_line_end_style(void* self, int32_t style);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
-/// @param self Poppler__LineAnnotation*
+/// @param self const Poppler__LineAnnotation*
 ///
-bool q_poppler__lineannotation_is_line_closed(void* self);
+bool q_poppler__lineannotation_is_line_closed(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
@@ -643,22 +635,22 @@ void q_poppler__lineannotation_set_line_closed(void* self, bool closed);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
-/// @param self Poppler__LineAnnotation*
+/// @param self const Poppler__LineAnnotation*
 ///
-QColor* q_poppler__lineannotation_line_inner_color(void* self);
+QColor* q_poppler__lineannotation_line_inner_color(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
 /// @param self Poppler__LineAnnotation*
 /// @param color QColor*
 ///
-void q_poppler__lineannotation_set_line_inner_color(void* self, void* color);
+void q_poppler__lineannotation_set_line_inner_color(void* self, const void* color);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
-/// @param self Poppler__LineAnnotation*
+/// @param self const Poppler__LineAnnotation*
 ///
-double q_poppler__lineannotation_line_leading_forward_point(void* self);
+double q_poppler__lineannotation_line_leading_forward_point(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
@@ -669,9 +661,9 @@ void q_poppler__lineannotation_set_line_leading_forward_point(void* self, double
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
-/// @param self Poppler__LineAnnotation*
+/// @param self const Poppler__LineAnnotation*
 ///
-double q_poppler__lineannotation_line_leading_back_point(void* self);
+double q_poppler__lineannotation_line_leading_back_point(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
@@ -682,9 +674,9 @@ void q_poppler__lineannotation_set_line_leading_back_point(void* self, double po
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
-/// @param self Poppler__LineAnnotation*
+/// @param self const Poppler__LineAnnotation*
 ///
-bool q_poppler__lineannotation_line_show_caption(void* self);
+bool q_poppler__lineannotation_line_show_caption(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
@@ -695,11 +687,11 @@ void q_poppler__lineannotation_set_line_show_caption(void* self, bool show);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
-/// @param self Poppler__LineAnnotation*
+/// @param self const Poppler__LineAnnotation*
 ///
 /// @return enum Poppler__LineAnnotation__LineIntent
 ///
-int32_t q_poppler__lineannotation_line_intent(void* self);
+int32_t q_poppler__lineannotation_line_intent(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
@@ -714,9 +706,9 @@ void q_poppler__lineannotation_set_line_intent(void* self, int32_t intent);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__LineAnnotation*
+/// @param self const Poppler__LineAnnotation*
 ///
-const char* q_poppler__lineannotation_author(void* self);
+const char* q_poppler__lineannotation_author(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -733,9 +725,9 @@ void q_poppler__lineannotation_set_author(void* self, const char* author);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__LineAnnotation*
+/// @param self const Poppler__LineAnnotation*
 ///
-const char* q_poppler__lineannotation_contents(void* self);
+const char* q_poppler__lineannotation_contents(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -752,9 +744,9 @@ void q_poppler__lineannotation_set_contents(void* self, const char* contents);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__LineAnnotation*
+/// @param self const Poppler__LineAnnotation*
 ///
-const char* q_poppler__lineannotation_unique_name(void* self);
+const char* q_poppler__lineannotation_unique_name(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -769,9 +761,9 @@ void q_poppler__lineannotation_set_unique_name(void* self, const char* uniqueNam
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
-/// @param self Poppler__LineAnnotation*
+/// @param self const Poppler__LineAnnotation*
 ///
-QDateTime* q_poppler__lineannotation_modification_date(void* self);
+QDateTime* q_poppler__lineannotation_modification_date(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -780,15 +772,15 @@ QDateTime* q_poppler__lineannotation_modification_date(void* self);
 /// @param self Poppler__LineAnnotation*
 /// @param date QDateTime*
 ///
-void q_poppler__lineannotation_set_modification_date(void* self, void* date);
+void q_poppler__lineannotation_set_modification_date(void* self, const void* date);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
-/// @param self Poppler__LineAnnotation*
+/// @param self const Poppler__LineAnnotation*
 ///
-QDateTime* q_poppler__lineannotation_creation_date(void* self);
+QDateTime* q_poppler__lineannotation_creation_date(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -797,17 +789,17 @@ QDateTime* q_poppler__lineannotation_creation_date(void* self);
 /// @param self Poppler__LineAnnotation*
 /// @param date QDateTime*
 ///
-void q_poppler__lineannotation_set_creation_date(void* self, void* date);
+void q_poppler__lineannotation_set_creation_date(void* self, const void* date);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
-/// @param self Poppler__LineAnnotation*
+/// @param self const Poppler__LineAnnotation*
 ///
 /// @return flag of enum Poppler__Annotation__Flag
 ///
-int32_t q_poppler__lineannotation_flags(void* self);
+int32_t q_poppler__lineannotation_flags(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -822,9 +814,9 @@ void q_poppler__lineannotation_set_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
-/// @param self Poppler__LineAnnotation*
+/// @param self const Poppler__LineAnnotation*
 ///
-QRectF* q_poppler__lineannotation_boundary(void* self);
+QRectF* q_poppler__lineannotation_boundary(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -833,15 +825,15 @@ QRectF* q_poppler__lineannotation_boundary(void* self);
 /// @param self Poppler__LineAnnotation*
 /// @param boundary QRectF*
 ///
-void q_poppler__lineannotation_set_boundary(void* self, void* boundary);
+void q_poppler__lineannotation_set_boundary(void* self, const void* boundary);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
-/// @param self Poppler__LineAnnotation*
+/// @param self const Poppler__LineAnnotation*
 ///
-Poppler__Annotation__Style* q_poppler__lineannotation_style(void* self);
+Poppler__Annotation__Style* q_poppler__lineannotation_style(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -850,15 +842,15 @@ Poppler__Annotation__Style* q_poppler__lineannotation_style(void* self);
 /// @param self Poppler__LineAnnotation*
 /// @param style Poppler__Annotation__Style*
 ///
-void q_poppler__lineannotation_set_style(void* self, void* style);
+void q_poppler__lineannotation_set_style(void* self, const void* style);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
-/// @param self Poppler__LineAnnotation*
+/// @param self const Poppler__LineAnnotation*
 ///
-Poppler__Annotation__Popup* q_poppler__lineannotation_popup(void* self);
+Poppler__Annotation__Popup* q_poppler__lineannotation_popup(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -867,45 +859,45 @@ Poppler__Annotation__Popup* q_poppler__lineannotation_popup(void* self);
 /// @param self Poppler__LineAnnotation*
 /// @param popup Poppler__Annotation__Popup*
 ///
-void q_poppler__lineannotation_set_popup(void* self, void* popup);
+void q_poppler__lineannotation_set_popup(void* self, const void* popup);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
-/// @param self Poppler__LineAnnotation*
+/// @param self const Poppler__LineAnnotation*
 ///
 /// @return enum Poppler__Annotation__RevScope
 ///
-int32_t q_poppler__lineannotation_revision_scope(void* self);
+int32_t q_poppler__lineannotation_revision_scope(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
-/// @param self Poppler__LineAnnotation*
+/// @param self const Poppler__LineAnnotation*
 ///
 /// @return enum Poppler__Annotation__RevType
 ///
-int32_t q_poppler__lineannotation_revision_type(void* self);
+int32_t q_poppler__lineannotation_revision_type(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
-/// @param self Poppler__LineAnnotation*
+/// @param self const Poppler__LineAnnotation*
 ///
 /// @return libqt_list of Poppler__Annotation*
 ///
-libqt_list q_poppler__lineannotation_revisions(void* self);
+libqt_list q_poppler__lineannotation_revisions(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
-/// @param self Poppler__LineAnnotation*
+/// @param self const Poppler__LineAnnotation*
 ///
-Poppler__AnnotationAppearance* q_poppler__lineannotation_annotation_appearance(void* self);
+Poppler__AnnotationAppearance* q_poppler__lineannotation_annotation_appearance(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -914,7 +906,7 @@ Poppler__AnnotationAppearance* q_poppler__lineannotation_annotation_appearance(v
 /// @param self Poppler__LineAnnotation*
 /// @param annotationAppearance Poppler__AnnotationAppearance*
 ///
-void q_poppler__lineannotation_set_annotation_appearance(void* self, void* annotationAppearance);
+void q_poppler__lineannotation_set_annotation_appearance(void* self, const void* annotationAppearance);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
@@ -932,38 +924,38 @@ Poppler__GeomAnnotation* q_poppler__geomannotation_new();
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1GeomAnnotation.html)
 ///
-/// @param self Poppler__GeomAnnotation*
+/// @param self const Poppler__GeomAnnotation*
 ///
 /// @return enum Poppler__Annotation__SubType
 ///
-int32_t q_poppler__geomannotation_sub_type(void* self);
+int32_t q_poppler__geomannotation_sub_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1GeomAnnotation.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self Poppler__GeomAnnotation*
-/// @param callback int32_t func()
+/// @param self const Poppler__GeomAnnotation*
+/// @param callback int32_t func(const Poppler__GeomAnnotation* self)
 ///
-void q_poppler__geomannotation_on_sub_type(void* self, int32_t (*callback)());
+void q_poppler__geomannotation_on_sub_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1GeomAnnotation.html)
 ///
 /// Base class method implementation
 ///
-/// @param self Poppler__GeomAnnotation*
+/// @param self const Poppler__GeomAnnotation*
 ///
 /// @return enum Poppler__Annotation__SubType
 ///
-int32_t q_poppler__geomannotation_super_sub_type(void* self);
+int32_t q_poppler__geomannotation_super_sub_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1GeomAnnotation.html)
 ///
-/// @param self Poppler__GeomAnnotation*
+/// @param self const Poppler__GeomAnnotation*
 ///
 /// @return enum Poppler__GeomAnnotation__GeomType
 ///
-int32_t q_poppler__geomannotation_geom_type(void* self);
+int32_t q_poppler__geomannotation_geom_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1GeomAnnotation.html)
 ///
@@ -974,16 +966,16 @@ void q_poppler__geomannotation_set_geom_type(void* self, int32_t type);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1GeomAnnotation.html)
 ///
-/// @param self Poppler__GeomAnnotation*
+/// @param self const Poppler__GeomAnnotation*
 ///
-QColor* q_poppler__geomannotation_geom_inner_color(void* self);
+QColor* q_poppler__geomannotation_geom_inner_color(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1GeomAnnotation.html)
 ///
 /// @param self Poppler__GeomAnnotation*
 /// @param color QColor*
 ///
-void q_poppler__geomannotation_set_geom_inner_color(void* self, void* color);
+void q_poppler__geomannotation_set_geom_inner_color(void* self, const void* color);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -991,9 +983,9 @@ void q_poppler__geomannotation_set_geom_inner_color(void* self, void* color);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__GeomAnnotation*
+/// @param self const Poppler__GeomAnnotation*
 ///
-const char* q_poppler__geomannotation_author(void* self);
+const char* q_poppler__geomannotation_author(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1010,9 +1002,9 @@ void q_poppler__geomannotation_set_author(void* self, const char* author);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__GeomAnnotation*
+/// @param self const Poppler__GeomAnnotation*
 ///
-const char* q_poppler__geomannotation_contents(void* self);
+const char* q_poppler__geomannotation_contents(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1029,9 +1021,9 @@ void q_poppler__geomannotation_set_contents(void* self, const char* contents);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__GeomAnnotation*
+/// @param self const Poppler__GeomAnnotation*
 ///
-const char* q_poppler__geomannotation_unique_name(void* self);
+const char* q_poppler__geomannotation_unique_name(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1046,9 +1038,9 @@ void q_poppler__geomannotation_set_unique_name(void* self, const char* uniqueNam
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1GeomAnnotation.html)
 ///
-/// @param self Poppler__GeomAnnotation*
+/// @param self const Poppler__GeomAnnotation*
 ///
-QDateTime* q_poppler__geomannotation_modification_date(void* self);
+QDateTime* q_poppler__geomannotation_modification_date(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1057,15 +1049,15 @@ QDateTime* q_poppler__geomannotation_modification_date(void* self);
 /// @param self Poppler__GeomAnnotation*
 /// @param date QDateTime*
 ///
-void q_poppler__geomannotation_set_modification_date(void* self, void* date);
+void q_poppler__geomannotation_set_modification_date(void* self, const void* date);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1GeomAnnotation.html)
 ///
-/// @param self Poppler__GeomAnnotation*
+/// @param self const Poppler__GeomAnnotation*
 ///
-QDateTime* q_poppler__geomannotation_creation_date(void* self);
+QDateTime* q_poppler__geomannotation_creation_date(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1074,17 +1066,17 @@ QDateTime* q_poppler__geomannotation_creation_date(void* self);
 /// @param self Poppler__GeomAnnotation*
 /// @param date QDateTime*
 ///
-void q_poppler__geomannotation_set_creation_date(void* self, void* date);
+void q_poppler__geomannotation_set_creation_date(void* self, const void* date);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1GeomAnnotation.html)
 ///
-/// @param self Poppler__GeomAnnotation*
+/// @param self const Poppler__GeomAnnotation*
 ///
 /// @return flag of enum Poppler__Annotation__Flag
 ///
-int32_t q_poppler__geomannotation_flags(void* self);
+int32_t q_poppler__geomannotation_flags(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1099,9 +1091,9 @@ void q_poppler__geomannotation_set_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1GeomAnnotation.html)
 ///
-/// @param self Poppler__GeomAnnotation*
+/// @param self const Poppler__GeomAnnotation*
 ///
-QRectF* q_poppler__geomannotation_boundary(void* self);
+QRectF* q_poppler__geomannotation_boundary(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1110,15 +1102,15 @@ QRectF* q_poppler__geomannotation_boundary(void* self);
 /// @param self Poppler__GeomAnnotation*
 /// @param boundary QRectF*
 ///
-void q_poppler__geomannotation_set_boundary(void* self, void* boundary);
+void q_poppler__geomannotation_set_boundary(void* self, const void* boundary);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1GeomAnnotation.html)
 ///
-/// @param self Poppler__GeomAnnotation*
+/// @param self const Poppler__GeomAnnotation*
 ///
-Poppler__Annotation__Style* q_poppler__geomannotation_style(void* self);
+Poppler__Annotation__Style* q_poppler__geomannotation_style(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1127,15 +1119,15 @@ Poppler__Annotation__Style* q_poppler__geomannotation_style(void* self);
 /// @param self Poppler__GeomAnnotation*
 /// @param style Poppler__Annotation__Style*
 ///
-void q_poppler__geomannotation_set_style(void* self, void* style);
+void q_poppler__geomannotation_set_style(void* self, const void* style);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1GeomAnnotation.html)
 ///
-/// @param self Poppler__GeomAnnotation*
+/// @param self const Poppler__GeomAnnotation*
 ///
-Poppler__Annotation__Popup* q_poppler__geomannotation_popup(void* self);
+Poppler__Annotation__Popup* q_poppler__geomannotation_popup(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1144,45 +1136,45 @@ Poppler__Annotation__Popup* q_poppler__geomannotation_popup(void* self);
 /// @param self Poppler__GeomAnnotation*
 /// @param popup Poppler__Annotation__Popup*
 ///
-void q_poppler__geomannotation_set_popup(void* self, void* popup);
+void q_poppler__geomannotation_set_popup(void* self, const void* popup);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1GeomAnnotation.html)
 ///
-/// @param self Poppler__GeomAnnotation*
+/// @param self const Poppler__GeomAnnotation*
 ///
 /// @return enum Poppler__Annotation__RevScope
 ///
-int32_t q_poppler__geomannotation_revision_scope(void* self);
+int32_t q_poppler__geomannotation_revision_scope(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1GeomAnnotation.html)
 ///
-/// @param self Poppler__GeomAnnotation*
+/// @param self const Poppler__GeomAnnotation*
 ///
 /// @return enum Poppler__Annotation__RevType
 ///
-int32_t q_poppler__geomannotation_revision_type(void* self);
+int32_t q_poppler__geomannotation_revision_type(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1GeomAnnotation.html)
 ///
-/// @param self Poppler__GeomAnnotation*
+/// @param self const Poppler__GeomAnnotation*
 ///
 /// @return libqt_list of Poppler__Annotation*
 ///
-libqt_list q_poppler__geomannotation_revisions(void* self);
+libqt_list q_poppler__geomannotation_revisions(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1GeomAnnotation.html)
 ///
-/// @param self Poppler__GeomAnnotation*
+/// @param self const Poppler__GeomAnnotation*
 ///
-Poppler__AnnotationAppearance* q_poppler__geomannotation_annotation_appearance(void* self);
+Poppler__AnnotationAppearance* q_poppler__geomannotation_annotation_appearance(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1191,7 +1183,7 @@ Poppler__AnnotationAppearance* q_poppler__geomannotation_annotation_appearance(v
 /// @param self Poppler__GeomAnnotation*
 /// @param annotationAppearance Poppler__AnnotationAppearance*
 ///
-void q_poppler__geomannotation_set_annotation_appearance(void* self, void* annotationAppearance);
+void q_poppler__geomannotation_set_annotation_appearance(void* self, const void* annotationAppearance);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1GeomAnnotation.html)
 ///
@@ -1209,38 +1201,38 @@ Poppler__HighlightAnnotation* q_poppler__highlightannotation_new();
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1HighlightAnnotation.html)
 ///
-/// @param self Poppler__HighlightAnnotation*
+/// @param self const Poppler__HighlightAnnotation*
 ///
 /// @return enum Poppler__Annotation__SubType
 ///
-int32_t q_poppler__highlightannotation_sub_type(void* self);
+int32_t q_poppler__highlightannotation_sub_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1HighlightAnnotation.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self Poppler__HighlightAnnotation*
-/// @param callback int32_t func()
+/// @param self const Poppler__HighlightAnnotation*
+/// @param callback int32_t func(const Poppler__HighlightAnnotation* self)
 ///
-void q_poppler__highlightannotation_on_sub_type(void* self, int32_t (*callback)());
+void q_poppler__highlightannotation_on_sub_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1HighlightAnnotation.html)
 ///
 /// Base class method implementation
 ///
-/// @param self Poppler__HighlightAnnotation*
+/// @param self const Poppler__HighlightAnnotation*
 ///
 /// @return enum Poppler__Annotation__SubType
 ///
-int32_t q_poppler__highlightannotation_super_sub_type(void* self);
+int32_t q_poppler__highlightannotation_super_sub_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1HighlightAnnotation.html)
 ///
-/// @param self Poppler__HighlightAnnotation*
+/// @param self const Poppler__HighlightAnnotation*
 ///
 /// @return enum Poppler__HighlightAnnotation__HighlightType
 ///
-int32_t q_poppler__highlightannotation_highlight_type(void* self);
+int32_t q_poppler__highlightannotation_highlight_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1HighlightAnnotation.html)
 ///
@@ -1251,11 +1243,11 @@ void q_poppler__highlightannotation_set_highlight_type(void* self, int32_t type)
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1HighlightAnnotation.html)
 ///
-/// @param self Poppler__HighlightAnnotation*
+/// @param self const Poppler__HighlightAnnotation*
 ///
 /// @return libqt_list of Poppler__HighlightAnnotation__Quad*
 ///
-libqt_list q_poppler__highlightannotation_highlight_quads(void* self);
+libqt_list q_poppler__highlightannotation_highlight_quads(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1HighlightAnnotation.html)
 ///
@@ -1270,9 +1262,9 @@ void q_poppler__highlightannotation_set_highlight_quads(void* self, libqt_list q
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__HighlightAnnotation*
+/// @param self const Poppler__HighlightAnnotation*
 ///
-const char* q_poppler__highlightannotation_author(void* self);
+const char* q_poppler__highlightannotation_author(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1289,9 +1281,9 @@ void q_poppler__highlightannotation_set_author(void* self, const char* author);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__HighlightAnnotation*
+/// @param self const Poppler__HighlightAnnotation*
 ///
-const char* q_poppler__highlightannotation_contents(void* self);
+const char* q_poppler__highlightannotation_contents(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1308,9 +1300,9 @@ void q_poppler__highlightannotation_set_contents(void* self, const char* content
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__HighlightAnnotation*
+/// @param self const Poppler__HighlightAnnotation*
 ///
-const char* q_poppler__highlightannotation_unique_name(void* self);
+const char* q_poppler__highlightannotation_unique_name(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1325,9 +1317,9 @@ void q_poppler__highlightannotation_set_unique_name(void* self, const char* uniq
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1HighlightAnnotation.html)
 ///
-/// @param self Poppler__HighlightAnnotation*
+/// @param self const Poppler__HighlightAnnotation*
 ///
-QDateTime* q_poppler__highlightannotation_modification_date(void* self);
+QDateTime* q_poppler__highlightannotation_modification_date(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1336,15 +1328,15 @@ QDateTime* q_poppler__highlightannotation_modification_date(void* self);
 /// @param self Poppler__HighlightAnnotation*
 /// @param date QDateTime*
 ///
-void q_poppler__highlightannotation_set_modification_date(void* self, void* date);
+void q_poppler__highlightannotation_set_modification_date(void* self, const void* date);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1HighlightAnnotation.html)
 ///
-/// @param self Poppler__HighlightAnnotation*
+/// @param self const Poppler__HighlightAnnotation*
 ///
-QDateTime* q_poppler__highlightannotation_creation_date(void* self);
+QDateTime* q_poppler__highlightannotation_creation_date(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1353,17 +1345,17 @@ QDateTime* q_poppler__highlightannotation_creation_date(void* self);
 /// @param self Poppler__HighlightAnnotation*
 /// @param date QDateTime*
 ///
-void q_poppler__highlightannotation_set_creation_date(void* self, void* date);
+void q_poppler__highlightannotation_set_creation_date(void* self, const void* date);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1HighlightAnnotation.html)
 ///
-/// @param self Poppler__HighlightAnnotation*
+/// @param self const Poppler__HighlightAnnotation*
 ///
 /// @return flag of enum Poppler__Annotation__Flag
 ///
-int32_t q_poppler__highlightannotation_flags(void* self);
+int32_t q_poppler__highlightannotation_flags(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1378,9 +1370,9 @@ void q_poppler__highlightannotation_set_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1HighlightAnnotation.html)
 ///
-/// @param self Poppler__HighlightAnnotation*
+/// @param self const Poppler__HighlightAnnotation*
 ///
-QRectF* q_poppler__highlightannotation_boundary(void* self);
+QRectF* q_poppler__highlightannotation_boundary(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1389,15 +1381,15 @@ QRectF* q_poppler__highlightannotation_boundary(void* self);
 /// @param self Poppler__HighlightAnnotation*
 /// @param boundary QRectF*
 ///
-void q_poppler__highlightannotation_set_boundary(void* self, void* boundary);
+void q_poppler__highlightannotation_set_boundary(void* self, const void* boundary);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1HighlightAnnotation.html)
 ///
-/// @param self Poppler__HighlightAnnotation*
+/// @param self const Poppler__HighlightAnnotation*
 ///
-Poppler__Annotation__Style* q_poppler__highlightannotation_style(void* self);
+Poppler__Annotation__Style* q_poppler__highlightannotation_style(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1406,15 +1398,15 @@ Poppler__Annotation__Style* q_poppler__highlightannotation_style(void* self);
 /// @param self Poppler__HighlightAnnotation*
 /// @param style Poppler__Annotation__Style*
 ///
-void q_poppler__highlightannotation_set_style(void* self, void* style);
+void q_poppler__highlightannotation_set_style(void* self, const void* style);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1HighlightAnnotation.html)
 ///
-/// @param self Poppler__HighlightAnnotation*
+/// @param self const Poppler__HighlightAnnotation*
 ///
-Poppler__Annotation__Popup* q_poppler__highlightannotation_popup(void* self);
+Poppler__Annotation__Popup* q_poppler__highlightannotation_popup(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1423,45 +1415,45 @@ Poppler__Annotation__Popup* q_poppler__highlightannotation_popup(void* self);
 /// @param self Poppler__HighlightAnnotation*
 /// @param popup Poppler__Annotation__Popup*
 ///
-void q_poppler__highlightannotation_set_popup(void* self, void* popup);
+void q_poppler__highlightannotation_set_popup(void* self, const void* popup);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1HighlightAnnotation.html)
 ///
-/// @param self Poppler__HighlightAnnotation*
+/// @param self const Poppler__HighlightAnnotation*
 ///
 /// @return enum Poppler__Annotation__RevScope
 ///
-int32_t q_poppler__highlightannotation_revision_scope(void* self);
+int32_t q_poppler__highlightannotation_revision_scope(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1HighlightAnnotation.html)
 ///
-/// @param self Poppler__HighlightAnnotation*
+/// @param self const Poppler__HighlightAnnotation*
 ///
 /// @return enum Poppler__Annotation__RevType
 ///
-int32_t q_poppler__highlightannotation_revision_type(void* self);
+int32_t q_poppler__highlightannotation_revision_type(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1HighlightAnnotation.html)
 ///
-/// @param self Poppler__HighlightAnnotation*
+/// @param self const Poppler__HighlightAnnotation*
 ///
 /// @return libqt_list of Poppler__Annotation*
 ///
-libqt_list q_poppler__highlightannotation_revisions(void* self);
+libqt_list q_poppler__highlightannotation_revisions(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1HighlightAnnotation.html)
 ///
-/// @param self Poppler__HighlightAnnotation*
+/// @param self const Poppler__HighlightAnnotation*
 ///
-Poppler__AnnotationAppearance* q_poppler__highlightannotation_annotation_appearance(void* self);
+Poppler__AnnotationAppearance* q_poppler__highlightannotation_annotation_appearance(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1470,7 +1462,7 @@ Poppler__AnnotationAppearance* q_poppler__highlightannotation_annotation_appeara
 /// @param self Poppler__HighlightAnnotation*
 /// @param annotationAppearance Poppler__AnnotationAppearance*
 ///
-void q_poppler__highlightannotation_set_annotation_appearance(void* self, void* annotationAppearance);
+void q_poppler__highlightannotation_set_annotation_appearance(void* self, const void* annotationAppearance);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1HighlightAnnotation.html)
 ///
@@ -1488,38 +1480,38 @@ Poppler__StampAnnotation* q_poppler__stampannotation_new();
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1StampAnnotation.html)
 ///
-/// @param self Poppler__StampAnnotation*
+/// @param self const Poppler__StampAnnotation*
 ///
 /// @return enum Poppler__Annotation__SubType
 ///
-int32_t q_poppler__stampannotation_sub_type(void* self);
+int32_t q_poppler__stampannotation_sub_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1StampAnnotation.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self Poppler__StampAnnotation*
-/// @param callback int32_t func()
+/// @param self const Poppler__StampAnnotation*
+/// @param callback int32_t func(const Poppler__StampAnnotation* self)
 ///
-void q_poppler__stampannotation_on_sub_type(void* self, int32_t (*callback)());
+void q_poppler__stampannotation_on_sub_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1StampAnnotation.html)
 ///
 /// Base class method implementation
 ///
-/// @param self Poppler__StampAnnotation*
+/// @param self const Poppler__StampAnnotation*
 ///
 /// @return enum Poppler__Annotation__SubType
 ///
-int32_t q_poppler__stampannotation_super_sub_type(void* self);
+int32_t q_poppler__stampannotation_super_sub_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1StampAnnotation.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__StampAnnotation*
+/// @param self const Poppler__StampAnnotation*
 ///
-const char* q_poppler__stampannotation_stamp_icon_name(void* self);
+const char* q_poppler__stampannotation_stamp_icon_name(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1StampAnnotation.html)
 ///
@@ -1533,7 +1525,7 @@ void q_poppler__stampannotation_set_stamp_icon_name(void* self, const char* name
 /// @param self Poppler__StampAnnotation*
 /// @param image QImage*
 ///
-void q_poppler__stampannotation_set_stamp_custom_image(void* self, void* image);
+void q_poppler__stampannotation_set_stamp_custom_image(void* self, const void* image);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1541,9 +1533,9 @@ void q_poppler__stampannotation_set_stamp_custom_image(void* self, void* image);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__StampAnnotation*
+/// @param self const Poppler__StampAnnotation*
 ///
-const char* q_poppler__stampannotation_author(void* self);
+const char* q_poppler__stampannotation_author(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1560,9 +1552,9 @@ void q_poppler__stampannotation_set_author(void* self, const char* author);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__StampAnnotation*
+/// @param self const Poppler__StampAnnotation*
 ///
-const char* q_poppler__stampannotation_contents(void* self);
+const char* q_poppler__stampannotation_contents(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1579,9 +1571,9 @@ void q_poppler__stampannotation_set_contents(void* self, const char* contents);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__StampAnnotation*
+/// @param self const Poppler__StampAnnotation*
 ///
-const char* q_poppler__stampannotation_unique_name(void* self);
+const char* q_poppler__stampannotation_unique_name(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1596,9 +1588,9 @@ void q_poppler__stampannotation_set_unique_name(void* self, const char* uniqueNa
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1StampAnnotation.html)
 ///
-/// @param self Poppler__StampAnnotation*
+/// @param self const Poppler__StampAnnotation*
 ///
-QDateTime* q_poppler__stampannotation_modification_date(void* self);
+QDateTime* q_poppler__stampannotation_modification_date(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1607,15 +1599,15 @@ QDateTime* q_poppler__stampannotation_modification_date(void* self);
 /// @param self Poppler__StampAnnotation*
 /// @param date QDateTime*
 ///
-void q_poppler__stampannotation_set_modification_date(void* self, void* date);
+void q_poppler__stampannotation_set_modification_date(void* self, const void* date);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1StampAnnotation.html)
 ///
-/// @param self Poppler__StampAnnotation*
+/// @param self const Poppler__StampAnnotation*
 ///
-QDateTime* q_poppler__stampannotation_creation_date(void* self);
+QDateTime* q_poppler__stampannotation_creation_date(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1624,17 +1616,17 @@ QDateTime* q_poppler__stampannotation_creation_date(void* self);
 /// @param self Poppler__StampAnnotation*
 /// @param date QDateTime*
 ///
-void q_poppler__stampannotation_set_creation_date(void* self, void* date);
+void q_poppler__stampannotation_set_creation_date(void* self, const void* date);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1StampAnnotation.html)
 ///
-/// @param self Poppler__StampAnnotation*
+/// @param self const Poppler__StampAnnotation*
 ///
 /// @return flag of enum Poppler__Annotation__Flag
 ///
-int32_t q_poppler__stampannotation_flags(void* self);
+int32_t q_poppler__stampannotation_flags(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1649,9 +1641,9 @@ void q_poppler__stampannotation_set_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1StampAnnotation.html)
 ///
-/// @param self Poppler__StampAnnotation*
+/// @param self const Poppler__StampAnnotation*
 ///
-QRectF* q_poppler__stampannotation_boundary(void* self);
+QRectF* q_poppler__stampannotation_boundary(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1660,15 +1652,15 @@ QRectF* q_poppler__stampannotation_boundary(void* self);
 /// @param self Poppler__StampAnnotation*
 /// @param boundary QRectF*
 ///
-void q_poppler__stampannotation_set_boundary(void* self, void* boundary);
+void q_poppler__stampannotation_set_boundary(void* self, const void* boundary);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1StampAnnotation.html)
 ///
-/// @param self Poppler__StampAnnotation*
+/// @param self const Poppler__StampAnnotation*
 ///
-Poppler__Annotation__Style* q_poppler__stampannotation_style(void* self);
+Poppler__Annotation__Style* q_poppler__stampannotation_style(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1677,15 +1669,15 @@ Poppler__Annotation__Style* q_poppler__stampannotation_style(void* self);
 /// @param self Poppler__StampAnnotation*
 /// @param style Poppler__Annotation__Style*
 ///
-void q_poppler__stampannotation_set_style(void* self, void* style);
+void q_poppler__stampannotation_set_style(void* self, const void* style);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1StampAnnotation.html)
 ///
-/// @param self Poppler__StampAnnotation*
+/// @param self const Poppler__StampAnnotation*
 ///
-Poppler__Annotation__Popup* q_poppler__stampannotation_popup(void* self);
+Poppler__Annotation__Popup* q_poppler__stampannotation_popup(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1694,45 +1686,45 @@ Poppler__Annotation__Popup* q_poppler__stampannotation_popup(void* self);
 /// @param self Poppler__StampAnnotation*
 /// @param popup Poppler__Annotation__Popup*
 ///
-void q_poppler__stampannotation_set_popup(void* self, void* popup);
+void q_poppler__stampannotation_set_popup(void* self, const void* popup);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1StampAnnotation.html)
 ///
-/// @param self Poppler__StampAnnotation*
+/// @param self const Poppler__StampAnnotation*
 ///
 /// @return enum Poppler__Annotation__RevScope
 ///
-int32_t q_poppler__stampannotation_revision_scope(void* self);
+int32_t q_poppler__stampannotation_revision_scope(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1StampAnnotation.html)
 ///
-/// @param self Poppler__StampAnnotation*
+/// @param self const Poppler__StampAnnotation*
 ///
 /// @return enum Poppler__Annotation__RevType
 ///
-int32_t q_poppler__stampannotation_revision_type(void* self);
+int32_t q_poppler__stampannotation_revision_type(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1StampAnnotation.html)
 ///
-/// @param self Poppler__StampAnnotation*
+/// @param self const Poppler__StampAnnotation*
 ///
 /// @return libqt_list of Poppler__Annotation*
 ///
-libqt_list q_poppler__stampannotation_revisions(void* self);
+libqt_list q_poppler__stampannotation_revisions(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1StampAnnotation.html)
 ///
-/// @param self Poppler__StampAnnotation*
+/// @param self const Poppler__StampAnnotation*
 ///
-Poppler__AnnotationAppearance* q_poppler__stampannotation_annotation_appearance(void* self);
+Poppler__AnnotationAppearance* q_poppler__stampannotation_annotation_appearance(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1741,7 +1733,7 @@ Poppler__AnnotationAppearance* q_poppler__stampannotation_annotation_appearance(
 /// @param self Poppler__StampAnnotation*
 /// @param annotationAppearance Poppler__AnnotationAppearance*
 ///
-void q_poppler__stampannotation_set_annotation_appearance(void* self, void* annotationAppearance);
+void q_poppler__stampannotation_set_annotation_appearance(void* self, const void* annotationAppearance);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1StampAnnotation.html)
 ///
@@ -1759,30 +1751,30 @@ Poppler__SignatureAnnotation* q_poppler__signatureannotation_new();
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
-/// @param self Poppler__SignatureAnnotation*
+/// @param self const Poppler__SignatureAnnotation*
 ///
 /// @return enum Poppler__Annotation__SubType
 ///
-int32_t q_poppler__signatureannotation_sub_type(void* self);
+int32_t q_poppler__signatureannotation_sub_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self Poppler__SignatureAnnotation*
-/// @param callback int32_t func()
+/// @param self const Poppler__SignatureAnnotation*
+/// @param callback int32_t func(const Poppler__SignatureAnnotation* self)
 ///
-void q_poppler__signatureannotation_on_sub_type(void* self, int32_t (*callback)());
+void q_poppler__signatureannotation_on_sub_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
 /// Base class method implementation
 ///
-/// @param self Poppler__SignatureAnnotation*
+/// @param self const Poppler__SignatureAnnotation*
 ///
 /// @return enum Poppler__Annotation__SubType
 ///
-int32_t q_poppler__signatureannotation_super_sub_type(void* self);
+int32_t q_poppler__signatureannotation_super_sub_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
@@ -1800,9 +1792,9 @@ void q_poppler__signatureannotation_set_left_text(void* self, const char* text);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
-/// @param self Poppler__SignatureAnnotation*
+/// @param self const Poppler__SignatureAnnotation*
 ///
-double q_poppler__signatureannotation_font_size(void* self);
+double q_poppler__signatureannotation_font_size(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
@@ -1813,9 +1805,9 @@ void q_poppler__signatureannotation_set_font_size(void* self, double fontSize);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
-/// @param self Poppler__SignatureAnnotation*
+/// @param self const Poppler__SignatureAnnotation*
 ///
-double q_poppler__signatureannotation_left_font_size(void* self);
+double q_poppler__signatureannotation_left_font_size(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
@@ -1826,35 +1818,35 @@ void q_poppler__signatureannotation_set_left_font_size(void* self, double fontSi
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
-/// @param self Poppler__SignatureAnnotation*
+/// @param self const Poppler__SignatureAnnotation*
 ///
-QColor* q_poppler__signatureannotation_font_color(void* self);
+QColor* q_poppler__signatureannotation_font_color(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
 /// @param self Poppler__SignatureAnnotation*
 /// @param color QColor*
 ///
-void q_poppler__signatureannotation_set_font_color(void* self, void* color);
+void q_poppler__signatureannotation_set_font_color(void* self, const void* color);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
-/// @param self Poppler__SignatureAnnotation*
+/// @param self const Poppler__SignatureAnnotation*
 ///
-QColor* q_poppler__signatureannotation_border_color(void* self);
+QColor* q_poppler__signatureannotation_border_color(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
 /// @param self Poppler__SignatureAnnotation*
 /// @param color QColor*
 ///
-void q_poppler__signatureannotation_set_border_color(void* self, void* color);
+void q_poppler__signatureannotation_set_border_color(void* self, const void* color);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
-/// @param self Poppler__SignatureAnnotation*
+/// @param self const Poppler__SignatureAnnotation*
 ///
-double q_poppler__signatureannotation_border_width(void* self);
+double q_poppler__signatureannotation_border_width(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
@@ -1865,24 +1857,24 @@ void q_poppler__signatureannotation_set_border_width(void* self, double width);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
-/// @param self Poppler__SignatureAnnotation*
+/// @param self const Poppler__SignatureAnnotation*
 ///
-QColor* q_poppler__signatureannotation_background_color(void* self);
+QColor* q_poppler__signatureannotation_background_color(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
 /// @param self Poppler__SignatureAnnotation*
 /// @param color QColor*
 ///
-void q_poppler__signatureannotation_set_background_color(void* self, void* color);
+void q_poppler__signatureannotation_set_background_color(void* self, const void* color);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__SignatureAnnotation*
+/// @param self const Poppler__SignatureAnnotation*
 ///
-const char* q_poppler__signatureannotation_image_path(void* self);
+const char* q_poppler__signatureannotation_image_path(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
@@ -1895,9 +1887,9 @@ void q_poppler__signatureannotation_set_image_path(void* self, const char* image
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__SignatureAnnotation*
+/// @param self const Poppler__SignatureAnnotation*
 ///
-const char* q_poppler__signatureannotation_field_partial_name(void* self);
+const char* q_poppler__signatureannotation_field_partial_name(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
@@ -1914,7 +1906,7 @@ void q_poppler__signatureannotation_set_field_partial_name(void* self, const cha
 ///
 /// @return enum Poppler__SignatureAnnotation__SigningResult
 ///
-int32_t q_poppler__signatureannotation_sign(void* self, const char* outputFileName, void* data);
+int32_t q_poppler__signatureannotation_sign(void* self, const char* outputFileName, const void* data);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1922,9 +1914,9 @@ int32_t q_poppler__signatureannotation_sign(void* self, const char* outputFileNa
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__SignatureAnnotation*
+/// @param self const Poppler__SignatureAnnotation*
 ///
-const char* q_poppler__signatureannotation_author(void* self);
+const char* q_poppler__signatureannotation_author(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1941,9 +1933,9 @@ void q_poppler__signatureannotation_set_author(void* self, const char* author);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__SignatureAnnotation*
+/// @param self const Poppler__SignatureAnnotation*
 ///
-const char* q_poppler__signatureannotation_contents(void* self);
+const char* q_poppler__signatureannotation_contents(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1960,9 +1952,9 @@ void q_poppler__signatureannotation_set_contents(void* self, const char* content
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__SignatureAnnotation*
+/// @param self const Poppler__SignatureAnnotation*
 ///
-const char* q_poppler__signatureannotation_unique_name(void* self);
+const char* q_poppler__signatureannotation_unique_name(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1977,9 +1969,9 @@ void q_poppler__signatureannotation_set_unique_name(void* self, const char* uniq
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
-/// @param self Poppler__SignatureAnnotation*
+/// @param self const Poppler__SignatureAnnotation*
 ///
-QDateTime* q_poppler__signatureannotation_modification_date(void* self);
+QDateTime* q_poppler__signatureannotation_modification_date(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -1988,15 +1980,15 @@ QDateTime* q_poppler__signatureannotation_modification_date(void* self);
 /// @param self Poppler__SignatureAnnotation*
 /// @param date QDateTime*
 ///
-void q_poppler__signatureannotation_set_modification_date(void* self, void* date);
+void q_poppler__signatureannotation_set_modification_date(void* self, const void* date);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
-/// @param self Poppler__SignatureAnnotation*
+/// @param self const Poppler__SignatureAnnotation*
 ///
-QDateTime* q_poppler__signatureannotation_creation_date(void* self);
+QDateTime* q_poppler__signatureannotation_creation_date(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2005,17 +1997,17 @@ QDateTime* q_poppler__signatureannotation_creation_date(void* self);
 /// @param self Poppler__SignatureAnnotation*
 /// @param date QDateTime*
 ///
-void q_poppler__signatureannotation_set_creation_date(void* self, void* date);
+void q_poppler__signatureannotation_set_creation_date(void* self, const void* date);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
-/// @param self Poppler__SignatureAnnotation*
+/// @param self const Poppler__SignatureAnnotation*
 ///
 /// @return flag of enum Poppler__Annotation__Flag
 ///
-int32_t q_poppler__signatureannotation_flags(void* self);
+int32_t q_poppler__signatureannotation_flags(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2030,9 +2022,9 @@ void q_poppler__signatureannotation_set_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
-/// @param self Poppler__SignatureAnnotation*
+/// @param self const Poppler__SignatureAnnotation*
 ///
-QRectF* q_poppler__signatureannotation_boundary(void* self);
+QRectF* q_poppler__signatureannotation_boundary(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2041,15 +2033,15 @@ QRectF* q_poppler__signatureannotation_boundary(void* self);
 /// @param self Poppler__SignatureAnnotation*
 /// @param boundary QRectF*
 ///
-void q_poppler__signatureannotation_set_boundary(void* self, void* boundary);
+void q_poppler__signatureannotation_set_boundary(void* self, const void* boundary);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
-/// @param self Poppler__SignatureAnnotation*
+/// @param self const Poppler__SignatureAnnotation*
 ///
-Poppler__Annotation__Style* q_poppler__signatureannotation_style(void* self);
+Poppler__Annotation__Style* q_poppler__signatureannotation_style(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2058,15 +2050,15 @@ Poppler__Annotation__Style* q_poppler__signatureannotation_style(void* self);
 /// @param self Poppler__SignatureAnnotation*
 /// @param style Poppler__Annotation__Style*
 ///
-void q_poppler__signatureannotation_set_style(void* self, void* style);
+void q_poppler__signatureannotation_set_style(void* self, const void* style);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
-/// @param self Poppler__SignatureAnnotation*
+/// @param self const Poppler__SignatureAnnotation*
 ///
-Poppler__Annotation__Popup* q_poppler__signatureannotation_popup(void* self);
+Poppler__Annotation__Popup* q_poppler__signatureannotation_popup(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2075,45 +2067,45 @@ Poppler__Annotation__Popup* q_poppler__signatureannotation_popup(void* self);
 /// @param self Poppler__SignatureAnnotation*
 /// @param popup Poppler__Annotation__Popup*
 ///
-void q_poppler__signatureannotation_set_popup(void* self, void* popup);
+void q_poppler__signatureannotation_set_popup(void* self, const void* popup);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
-/// @param self Poppler__SignatureAnnotation*
+/// @param self const Poppler__SignatureAnnotation*
 ///
 /// @return enum Poppler__Annotation__RevScope
 ///
-int32_t q_poppler__signatureannotation_revision_scope(void* self);
+int32_t q_poppler__signatureannotation_revision_scope(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
-/// @param self Poppler__SignatureAnnotation*
+/// @param self const Poppler__SignatureAnnotation*
 ///
 /// @return enum Poppler__Annotation__RevType
 ///
-int32_t q_poppler__signatureannotation_revision_type(void* self);
+int32_t q_poppler__signatureannotation_revision_type(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
-/// @param self Poppler__SignatureAnnotation*
+/// @param self const Poppler__SignatureAnnotation*
 ///
 /// @return libqt_list of Poppler__Annotation*
 ///
-libqt_list q_poppler__signatureannotation_revisions(void* self);
+libqt_list q_poppler__signatureannotation_revisions(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
-/// @param self Poppler__SignatureAnnotation*
+/// @param self const Poppler__SignatureAnnotation*
 ///
-Poppler__AnnotationAppearance* q_poppler__signatureannotation_annotation_appearance(void* self);
+Poppler__AnnotationAppearance* q_poppler__signatureannotation_annotation_appearance(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2122,7 +2114,7 @@ Poppler__AnnotationAppearance* q_poppler__signatureannotation_annotation_appeara
 /// @param self Poppler__SignatureAnnotation*
 /// @param annotationAppearance Poppler__AnnotationAppearance*
 ///
-void q_poppler__signatureannotation_set_annotation_appearance(void* self, void* annotationAppearance);
+void q_poppler__signatureannotation_set_annotation_appearance(void* self, const void* annotationAppearance);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
@@ -2140,38 +2132,38 @@ Poppler__InkAnnotation* q_poppler__inkannotation_new();
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1InkAnnotation.html)
 ///
-/// @param self Poppler__InkAnnotation*
+/// @param self const Poppler__InkAnnotation*
 ///
 /// @return enum Poppler__Annotation__SubType
 ///
-int32_t q_poppler__inkannotation_sub_type(void* self);
+int32_t q_poppler__inkannotation_sub_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1InkAnnotation.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self Poppler__InkAnnotation*
-/// @param callback int32_t func()
+/// @param self const Poppler__InkAnnotation*
+/// @param callback int32_t func(const Poppler__InkAnnotation* self)
 ///
-void q_poppler__inkannotation_on_sub_type(void* self, int32_t (*callback)());
+void q_poppler__inkannotation_on_sub_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1InkAnnotation.html)
 ///
 /// Base class method implementation
 ///
-/// @param self Poppler__InkAnnotation*
+/// @param self const Poppler__InkAnnotation*
 ///
 /// @return enum Poppler__Annotation__SubType
 ///
-int32_t q_poppler__inkannotation_super_sub_type(void* self);
+int32_t q_poppler__inkannotation_super_sub_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1InkAnnotation.html)
 ///
-/// @param self Poppler__InkAnnotation*
+/// @param self const Poppler__InkAnnotation*
 ///
 /// @return libqt_list of libqt_list of QPointF*
 ///
-libqt_list q_poppler__inkannotation_ink_paths(void* self);
+libqt_list q_poppler__inkannotation_ink_paths(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1InkAnnotation.html)
 ///
@@ -2186,9 +2178,9 @@ void q_poppler__inkannotation_set_ink_paths(void* self, libqt_list paths);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__InkAnnotation*
+/// @param self const Poppler__InkAnnotation*
 ///
-const char* q_poppler__inkannotation_author(void* self);
+const char* q_poppler__inkannotation_author(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2205,9 +2197,9 @@ void q_poppler__inkannotation_set_author(void* self, const char* author);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__InkAnnotation*
+/// @param self const Poppler__InkAnnotation*
 ///
-const char* q_poppler__inkannotation_contents(void* self);
+const char* q_poppler__inkannotation_contents(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2224,9 +2216,9 @@ void q_poppler__inkannotation_set_contents(void* self, const char* contents);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__InkAnnotation*
+/// @param self const Poppler__InkAnnotation*
 ///
-const char* q_poppler__inkannotation_unique_name(void* self);
+const char* q_poppler__inkannotation_unique_name(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2241,9 +2233,9 @@ void q_poppler__inkannotation_set_unique_name(void* self, const char* uniqueName
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1InkAnnotation.html)
 ///
-/// @param self Poppler__InkAnnotation*
+/// @param self const Poppler__InkAnnotation*
 ///
-QDateTime* q_poppler__inkannotation_modification_date(void* self);
+QDateTime* q_poppler__inkannotation_modification_date(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2252,15 +2244,15 @@ QDateTime* q_poppler__inkannotation_modification_date(void* self);
 /// @param self Poppler__InkAnnotation*
 /// @param date QDateTime*
 ///
-void q_poppler__inkannotation_set_modification_date(void* self, void* date);
+void q_poppler__inkannotation_set_modification_date(void* self, const void* date);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1InkAnnotation.html)
 ///
-/// @param self Poppler__InkAnnotation*
+/// @param self const Poppler__InkAnnotation*
 ///
-QDateTime* q_poppler__inkannotation_creation_date(void* self);
+QDateTime* q_poppler__inkannotation_creation_date(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2269,17 +2261,17 @@ QDateTime* q_poppler__inkannotation_creation_date(void* self);
 /// @param self Poppler__InkAnnotation*
 /// @param date QDateTime*
 ///
-void q_poppler__inkannotation_set_creation_date(void* self, void* date);
+void q_poppler__inkannotation_set_creation_date(void* self, const void* date);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1InkAnnotation.html)
 ///
-/// @param self Poppler__InkAnnotation*
+/// @param self const Poppler__InkAnnotation*
 ///
 /// @return flag of enum Poppler__Annotation__Flag
 ///
-int32_t q_poppler__inkannotation_flags(void* self);
+int32_t q_poppler__inkannotation_flags(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2294,9 +2286,9 @@ void q_poppler__inkannotation_set_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1InkAnnotation.html)
 ///
-/// @param self Poppler__InkAnnotation*
+/// @param self const Poppler__InkAnnotation*
 ///
-QRectF* q_poppler__inkannotation_boundary(void* self);
+QRectF* q_poppler__inkannotation_boundary(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2305,15 +2297,15 @@ QRectF* q_poppler__inkannotation_boundary(void* self);
 /// @param self Poppler__InkAnnotation*
 /// @param boundary QRectF*
 ///
-void q_poppler__inkannotation_set_boundary(void* self, void* boundary);
+void q_poppler__inkannotation_set_boundary(void* self, const void* boundary);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1InkAnnotation.html)
 ///
-/// @param self Poppler__InkAnnotation*
+/// @param self const Poppler__InkAnnotation*
 ///
-Poppler__Annotation__Style* q_poppler__inkannotation_style(void* self);
+Poppler__Annotation__Style* q_poppler__inkannotation_style(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2322,15 +2314,15 @@ Poppler__Annotation__Style* q_poppler__inkannotation_style(void* self);
 /// @param self Poppler__InkAnnotation*
 /// @param style Poppler__Annotation__Style*
 ///
-void q_poppler__inkannotation_set_style(void* self, void* style);
+void q_poppler__inkannotation_set_style(void* self, const void* style);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1InkAnnotation.html)
 ///
-/// @param self Poppler__InkAnnotation*
+/// @param self const Poppler__InkAnnotation*
 ///
-Poppler__Annotation__Popup* q_poppler__inkannotation_popup(void* self);
+Poppler__Annotation__Popup* q_poppler__inkannotation_popup(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2339,45 +2331,45 @@ Poppler__Annotation__Popup* q_poppler__inkannotation_popup(void* self);
 /// @param self Poppler__InkAnnotation*
 /// @param popup Poppler__Annotation__Popup*
 ///
-void q_poppler__inkannotation_set_popup(void* self, void* popup);
+void q_poppler__inkannotation_set_popup(void* self, const void* popup);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1InkAnnotation.html)
 ///
-/// @param self Poppler__InkAnnotation*
+/// @param self const Poppler__InkAnnotation*
 ///
 /// @return enum Poppler__Annotation__RevScope
 ///
-int32_t q_poppler__inkannotation_revision_scope(void* self);
+int32_t q_poppler__inkannotation_revision_scope(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1InkAnnotation.html)
 ///
-/// @param self Poppler__InkAnnotation*
+/// @param self const Poppler__InkAnnotation*
 ///
 /// @return enum Poppler__Annotation__RevType
 ///
-int32_t q_poppler__inkannotation_revision_type(void* self);
+int32_t q_poppler__inkannotation_revision_type(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1InkAnnotation.html)
 ///
-/// @param self Poppler__InkAnnotation*
+/// @param self const Poppler__InkAnnotation*
 ///
 /// @return libqt_list of Poppler__Annotation*
 ///
-libqt_list q_poppler__inkannotation_revisions(void* self);
+libqt_list q_poppler__inkannotation_revisions(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1InkAnnotation.html)
 ///
-/// @param self Poppler__InkAnnotation*
+/// @param self const Poppler__InkAnnotation*
 ///
-Poppler__AnnotationAppearance* q_poppler__inkannotation_annotation_appearance(void* self);
+Poppler__AnnotationAppearance* q_poppler__inkannotation_annotation_appearance(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2386,7 +2378,7 @@ Poppler__AnnotationAppearance* q_poppler__inkannotation_annotation_appearance(vo
 /// @param self Poppler__InkAnnotation*
 /// @param annotationAppearance Poppler__AnnotationAppearance*
 ///
-void q_poppler__inkannotation_set_annotation_appearance(void* self, void* annotationAppearance);
+void q_poppler__inkannotation_set_annotation_appearance(void* self, const void* annotationAppearance);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1InkAnnotation.html)
 ///
@@ -2400,25 +2392,25 @@ void q_poppler__inkannotation_delete(void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkAnnotation.html)
 ///
-/// @param self Poppler__LinkAnnotation*
+/// @param self const Poppler__LinkAnnotation*
 ///
 /// @return enum Poppler__Annotation__SubType
 ///
-int32_t q_poppler__linkannotation_sub_type(void* self);
+int32_t q_poppler__linkannotation_sub_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkAnnotation.html)
 ///
-/// @param self Poppler__LinkAnnotation*
+/// @param self const Poppler__LinkAnnotation*
 ///
-Poppler__Link* q_poppler__linkannotation_link_destination(void* self);
+Poppler__Link* q_poppler__linkannotation_link_destination(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkAnnotation.html)
 ///
-/// @param self Poppler__LinkAnnotation*
+/// @param self const Poppler__LinkAnnotation*
 ///
 /// @return enum Poppler__LinkAnnotation__HighlightMode
 ///
-int32_t q_poppler__linkannotation_link_highlight_mode(void* self);
+int32_t q_poppler__linkannotation_link_highlight_mode(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkAnnotation.html)
 ///
@@ -2429,10 +2421,10 @@ void q_poppler__linkannotation_set_link_highlight_mode(void* self, int32_t mode)
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkAnnotation.html)
 ///
-/// @param self Poppler__LinkAnnotation*
+/// @param self const Poppler__LinkAnnotation*
 /// @param id int
 ///
-QPointF* q_poppler__linkannotation_link_region_point(void* self, int id);
+QPointF* q_poppler__linkannotation_link_region_point(const void* self, int id);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkAnnotation.html)
 ///
@@ -2440,7 +2432,7 @@ QPointF* q_poppler__linkannotation_link_region_point(void* self, int id);
 /// @param id int
 /// @param point QPointF*
 ///
-void q_poppler__linkannotation_set_link_region_point(void* self, int id, void* point);
+void q_poppler__linkannotation_set_link_region_point(void* self, int id, const void* point);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2448,9 +2440,9 @@ void q_poppler__linkannotation_set_link_region_point(void* self, int id, void* p
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__LinkAnnotation*
+/// @param self const Poppler__LinkAnnotation*
 ///
-const char* q_poppler__linkannotation_author(void* self);
+const char* q_poppler__linkannotation_author(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2467,9 +2459,9 @@ void q_poppler__linkannotation_set_author(void* self, const char* author);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__LinkAnnotation*
+/// @param self const Poppler__LinkAnnotation*
 ///
-const char* q_poppler__linkannotation_contents(void* self);
+const char* q_poppler__linkannotation_contents(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2486,9 +2478,9 @@ void q_poppler__linkannotation_set_contents(void* self, const char* contents);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__LinkAnnotation*
+/// @param self const Poppler__LinkAnnotation*
 ///
-const char* q_poppler__linkannotation_unique_name(void* self);
+const char* q_poppler__linkannotation_unique_name(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2503,9 +2495,9 @@ void q_poppler__linkannotation_set_unique_name(void* self, const char* uniqueNam
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkAnnotation.html)
 ///
-/// @param self Poppler__LinkAnnotation*
+/// @param self const Poppler__LinkAnnotation*
 ///
-QDateTime* q_poppler__linkannotation_modification_date(void* self);
+QDateTime* q_poppler__linkannotation_modification_date(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2514,15 +2506,15 @@ QDateTime* q_poppler__linkannotation_modification_date(void* self);
 /// @param self Poppler__LinkAnnotation*
 /// @param date QDateTime*
 ///
-void q_poppler__linkannotation_set_modification_date(void* self, void* date);
+void q_poppler__linkannotation_set_modification_date(void* self, const void* date);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkAnnotation.html)
 ///
-/// @param self Poppler__LinkAnnotation*
+/// @param self const Poppler__LinkAnnotation*
 ///
-QDateTime* q_poppler__linkannotation_creation_date(void* self);
+QDateTime* q_poppler__linkannotation_creation_date(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2531,17 +2523,17 @@ QDateTime* q_poppler__linkannotation_creation_date(void* self);
 /// @param self Poppler__LinkAnnotation*
 /// @param date QDateTime*
 ///
-void q_poppler__linkannotation_set_creation_date(void* self, void* date);
+void q_poppler__linkannotation_set_creation_date(void* self, const void* date);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkAnnotation.html)
 ///
-/// @param self Poppler__LinkAnnotation*
+/// @param self const Poppler__LinkAnnotation*
 ///
 /// @return flag of enum Poppler__Annotation__Flag
 ///
-int32_t q_poppler__linkannotation_flags(void* self);
+int32_t q_poppler__linkannotation_flags(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2556,9 +2548,9 @@ void q_poppler__linkannotation_set_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkAnnotation.html)
 ///
-/// @param self Poppler__LinkAnnotation*
+/// @param self const Poppler__LinkAnnotation*
 ///
-QRectF* q_poppler__linkannotation_boundary(void* self);
+QRectF* q_poppler__linkannotation_boundary(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2567,15 +2559,15 @@ QRectF* q_poppler__linkannotation_boundary(void* self);
 /// @param self Poppler__LinkAnnotation*
 /// @param boundary QRectF*
 ///
-void q_poppler__linkannotation_set_boundary(void* self, void* boundary);
+void q_poppler__linkannotation_set_boundary(void* self, const void* boundary);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkAnnotation.html)
 ///
-/// @param self Poppler__LinkAnnotation*
+/// @param self const Poppler__LinkAnnotation*
 ///
-Poppler__Annotation__Style* q_poppler__linkannotation_style(void* self);
+Poppler__Annotation__Style* q_poppler__linkannotation_style(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2584,15 +2576,15 @@ Poppler__Annotation__Style* q_poppler__linkannotation_style(void* self);
 /// @param self Poppler__LinkAnnotation*
 /// @param style Poppler__Annotation__Style*
 ///
-void q_poppler__linkannotation_set_style(void* self, void* style);
+void q_poppler__linkannotation_set_style(void* self, const void* style);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkAnnotation.html)
 ///
-/// @param self Poppler__LinkAnnotation*
+/// @param self const Poppler__LinkAnnotation*
 ///
-Poppler__Annotation__Popup* q_poppler__linkannotation_popup(void* self);
+Poppler__Annotation__Popup* q_poppler__linkannotation_popup(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2601,45 +2593,45 @@ Poppler__Annotation__Popup* q_poppler__linkannotation_popup(void* self);
 /// @param self Poppler__LinkAnnotation*
 /// @param popup Poppler__Annotation__Popup*
 ///
-void q_poppler__linkannotation_set_popup(void* self, void* popup);
+void q_poppler__linkannotation_set_popup(void* self, const void* popup);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkAnnotation.html)
 ///
-/// @param self Poppler__LinkAnnotation*
+/// @param self const Poppler__LinkAnnotation*
 ///
 /// @return enum Poppler__Annotation__RevScope
 ///
-int32_t q_poppler__linkannotation_revision_scope(void* self);
+int32_t q_poppler__linkannotation_revision_scope(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkAnnotation.html)
 ///
-/// @param self Poppler__LinkAnnotation*
+/// @param self const Poppler__LinkAnnotation*
 ///
 /// @return enum Poppler__Annotation__RevType
 ///
-int32_t q_poppler__linkannotation_revision_type(void* self);
+int32_t q_poppler__linkannotation_revision_type(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkAnnotation.html)
 ///
-/// @param self Poppler__LinkAnnotation*
+/// @param self const Poppler__LinkAnnotation*
 ///
 /// @return libqt_list of Poppler__Annotation*
 ///
-libqt_list q_poppler__linkannotation_revisions(void* self);
+libqt_list q_poppler__linkannotation_revisions(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkAnnotation.html)
 ///
-/// @param self Poppler__LinkAnnotation*
+/// @param self const Poppler__LinkAnnotation*
 ///
-Poppler__AnnotationAppearance* q_poppler__linkannotation_annotation_appearance(void* self);
+Poppler__AnnotationAppearance* q_poppler__linkannotation_annotation_appearance(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2648,7 +2640,7 @@ Poppler__AnnotationAppearance* q_poppler__linkannotation_annotation_appearance(v
 /// @param self Poppler__LinkAnnotation*
 /// @param annotationAppearance Poppler__AnnotationAppearance*
 ///
-void q_poppler__linkannotation_set_annotation_appearance(void* self, void* annotationAppearance);
+void q_poppler__linkannotation_set_annotation_appearance(void* self, const void* annotationAppearance);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkAnnotation.html)
 ///
@@ -2666,38 +2658,38 @@ Poppler__CaretAnnotation* q_poppler__caretannotation_new();
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CaretAnnotation.html)
 ///
-/// @param self Poppler__CaretAnnotation*
+/// @param self const Poppler__CaretAnnotation*
 ///
 /// @return enum Poppler__Annotation__SubType
 ///
-int32_t q_poppler__caretannotation_sub_type(void* self);
+int32_t q_poppler__caretannotation_sub_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CaretAnnotation.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self Poppler__CaretAnnotation*
-/// @param callback int32_t func()
+/// @param self const Poppler__CaretAnnotation*
+/// @param callback int32_t func(const Poppler__CaretAnnotation* self)
 ///
-void q_poppler__caretannotation_on_sub_type(void* self, int32_t (*callback)());
+void q_poppler__caretannotation_on_sub_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CaretAnnotation.html)
 ///
 /// Base class method implementation
 ///
-/// @param self Poppler__CaretAnnotation*
+/// @param self const Poppler__CaretAnnotation*
 ///
 /// @return enum Poppler__Annotation__SubType
 ///
-int32_t q_poppler__caretannotation_super_sub_type(void* self);
+int32_t q_poppler__caretannotation_super_sub_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CaretAnnotation.html)
 ///
-/// @param self Poppler__CaretAnnotation*
+/// @param self const Poppler__CaretAnnotation*
 ///
 /// @return enum Poppler__CaretAnnotation__CaretSymbol
 ///
-int32_t q_poppler__caretannotation_caret_symbol(void* self);
+int32_t q_poppler__caretannotation_caret_symbol(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CaretAnnotation.html)
 ///
@@ -2712,9 +2704,9 @@ void q_poppler__caretannotation_set_caret_symbol(void* self, int32_t symbol);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__CaretAnnotation*
+/// @param self const Poppler__CaretAnnotation*
 ///
-const char* q_poppler__caretannotation_author(void* self);
+const char* q_poppler__caretannotation_author(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2731,9 +2723,9 @@ void q_poppler__caretannotation_set_author(void* self, const char* author);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__CaretAnnotation*
+/// @param self const Poppler__CaretAnnotation*
 ///
-const char* q_poppler__caretannotation_contents(void* self);
+const char* q_poppler__caretannotation_contents(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2750,9 +2742,9 @@ void q_poppler__caretannotation_set_contents(void* self, const char* contents);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__CaretAnnotation*
+/// @param self const Poppler__CaretAnnotation*
 ///
-const char* q_poppler__caretannotation_unique_name(void* self);
+const char* q_poppler__caretannotation_unique_name(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2767,9 +2759,9 @@ void q_poppler__caretannotation_set_unique_name(void* self, const char* uniqueNa
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CaretAnnotation.html)
 ///
-/// @param self Poppler__CaretAnnotation*
+/// @param self const Poppler__CaretAnnotation*
 ///
-QDateTime* q_poppler__caretannotation_modification_date(void* self);
+QDateTime* q_poppler__caretannotation_modification_date(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2778,15 +2770,15 @@ QDateTime* q_poppler__caretannotation_modification_date(void* self);
 /// @param self Poppler__CaretAnnotation*
 /// @param date QDateTime*
 ///
-void q_poppler__caretannotation_set_modification_date(void* self, void* date);
+void q_poppler__caretannotation_set_modification_date(void* self, const void* date);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CaretAnnotation.html)
 ///
-/// @param self Poppler__CaretAnnotation*
+/// @param self const Poppler__CaretAnnotation*
 ///
-QDateTime* q_poppler__caretannotation_creation_date(void* self);
+QDateTime* q_poppler__caretannotation_creation_date(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2795,17 +2787,17 @@ QDateTime* q_poppler__caretannotation_creation_date(void* self);
 /// @param self Poppler__CaretAnnotation*
 /// @param date QDateTime*
 ///
-void q_poppler__caretannotation_set_creation_date(void* self, void* date);
+void q_poppler__caretannotation_set_creation_date(void* self, const void* date);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CaretAnnotation.html)
 ///
-/// @param self Poppler__CaretAnnotation*
+/// @param self const Poppler__CaretAnnotation*
 ///
 /// @return flag of enum Poppler__Annotation__Flag
 ///
-int32_t q_poppler__caretannotation_flags(void* self);
+int32_t q_poppler__caretannotation_flags(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2820,9 +2812,9 @@ void q_poppler__caretannotation_set_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CaretAnnotation.html)
 ///
-/// @param self Poppler__CaretAnnotation*
+/// @param self const Poppler__CaretAnnotation*
 ///
-QRectF* q_poppler__caretannotation_boundary(void* self);
+QRectF* q_poppler__caretannotation_boundary(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2831,15 +2823,15 @@ QRectF* q_poppler__caretannotation_boundary(void* self);
 /// @param self Poppler__CaretAnnotation*
 /// @param boundary QRectF*
 ///
-void q_poppler__caretannotation_set_boundary(void* self, void* boundary);
+void q_poppler__caretannotation_set_boundary(void* self, const void* boundary);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CaretAnnotation.html)
 ///
-/// @param self Poppler__CaretAnnotation*
+/// @param self const Poppler__CaretAnnotation*
 ///
-Poppler__Annotation__Style* q_poppler__caretannotation_style(void* self);
+Poppler__Annotation__Style* q_poppler__caretannotation_style(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2848,15 +2840,15 @@ Poppler__Annotation__Style* q_poppler__caretannotation_style(void* self);
 /// @param self Poppler__CaretAnnotation*
 /// @param style Poppler__Annotation__Style*
 ///
-void q_poppler__caretannotation_set_style(void* self, void* style);
+void q_poppler__caretannotation_set_style(void* self, const void* style);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CaretAnnotation.html)
 ///
-/// @param self Poppler__CaretAnnotation*
+/// @param self const Poppler__CaretAnnotation*
 ///
-Poppler__Annotation__Popup* q_poppler__caretannotation_popup(void* self);
+Poppler__Annotation__Popup* q_poppler__caretannotation_popup(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2865,45 +2857,45 @@ Poppler__Annotation__Popup* q_poppler__caretannotation_popup(void* self);
 /// @param self Poppler__CaretAnnotation*
 /// @param popup Poppler__Annotation__Popup*
 ///
-void q_poppler__caretannotation_set_popup(void* self, void* popup);
+void q_poppler__caretannotation_set_popup(void* self, const void* popup);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CaretAnnotation.html)
 ///
-/// @param self Poppler__CaretAnnotation*
+/// @param self const Poppler__CaretAnnotation*
 ///
 /// @return enum Poppler__Annotation__RevScope
 ///
-int32_t q_poppler__caretannotation_revision_scope(void* self);
+int32_t q_poppler__caretannotation_revision_scope(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CaretAnnotation.html)
 ///
-/// @param self Poppler__CaretAnnotation*
+/// @param self const Poppler__CaretAnnotation*
 ///
 /// @return enum Poppler__Annotation__RevType
 ///
-int32_t q_poppler__caretannotation_revision_type(void* self);
+int32_t q_poppler__caretannotation_revision_type(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CaretAnnotation.html)
 ///
-/// @param self Poppler__CaretAnnotation*
+/// @param self const Poppler__CaretAnnotation*
 ///
 /// @return libqt_list of Poppler__Annotation*
 ///
-libqt_list q_poppler__caretannotation_revisions(void* self);
+libqt_list q_poppler__caretannotation_revisions(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CaretAnnotation.html)
 ///
-/// @param self Poppler__CaretAnnotation*
+/// @param self const Poppler__CaretAnnotation*
 ///
-Poppler__AnnotationAppearance* q_poppler__caretannotation_annotation_appearance(void* self);
+Poppler__AnnotationAppearance* q_poppler__caretannotation_annotation_appearance(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2912,7 +2904,7 @@ Poppler__AnnotationAppearance* q_poppler__caretannotation_annotation_appearance(
 /// @param self Poppler__CaretAnnotation*
 /// @param annotationAppearance Poppler__AnnotationAppearance*
 ///
-void q_poppler__caretannotation_set_annotation_appearance(void* self, void* annotationAppearance);
+void q_poppler__caretannotation_set_annotation_appearance(void* self, const void* annotationAppearance);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CaretAnnotation.html)
 ///
@@ -2926,19 +2918,19 @@ void q_poppler__caretannotation_delete(void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FileAttachmentAnnotation.html)
 ///
-/// @param self Poppler__FileAttachmentAnnotation*
+/// @param self const Poppler__FileAttachmentAnnotation*
 ///
 /// @return enum Poppler__Annotation__SubType
 ///
-int32_t q_poppler__fileattachmentannotation_sub_type(void* self);
+int32_t q_poppler__fileattachmentannotation_sub_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FileAttachmentAnnotation.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__FileAttachmentAnnotation*
+/// @param self const Poppler__FileAttachmentAnnotation*
 ///
-const char* q_poppler__fileattachmentannotation_file_icon_name(void* self);
+const char* q_poppler__fileattachmentannotation_file_icon_name(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FileAttachmentAnnotation.html)
 ///
@@ -2949,9 +2941,9 @@ void q_poppler__fileattachmentannotation_set_file_icon_name(void* self, const ch
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FileAttachmentAnnotation.html)
 ///
-/// @param self Poppler__FileAttachmentAnnotation*
+/// @param self const Poppler__FileAttachmentAnnotation*
 ///
-Poppler__EmbeddedFile* q_poppler__fileattachmentannotation_embedded_file(void* self);
+Poppler__EmbeddedFile* q_poppler__fileattachmentannotation_embedded_file(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FileAttachmentAnnotation.html)
 ///
@@ -2966,9 +2958,9 @@ void q_poppler__fileattachmentannotation_set_embedded_file(void* self, void* ef)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__FileAttachmentAnnotation*
+/// @param self const Poppler__FileAttachmentAnnotation*
 ///
-const char* q_poppler__fileattachmentannotation_author(void* self);
+const char* q_poppler__fileattachmentannotation_author(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -2985,9 +2977,9 @@ void q_poppler__fileattachmentannotation_set_author(void* self, const char* auth
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__FileAttachmentAnnotation*
+/// @param self const Poppler__FileAttachmentAnnotation*
 ///
-const char* q_poppler__fileattachmentannotation_contents(void* self);
+const char* q_poppler__fileattachmentannotation_contents(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3004,9 +2996,9 @@ void q_poppler__fileattachmentannotation_set_contents(void* self, const char* co
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__FileAttachmentAnnotation*
+/// @param self const Poppler__FileAttachmentAnnotation*
 ///
-const char* q_poppler__fileattachmentannotation_unique_name(void* self);
+const char* q_poppler__fileattachmentannotation_unique_name(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3021,9 +3013,9 @@ void q_poppler__fileattachmentannotation_set_unique_name(void* self, const char*
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FileAttachmentAnnotation.html)
 ///
-/// @param self Poppler__FileAttachmentAnnotation*
+/// @param self const Poppler__FileAttachmentAnnotation*
 ///
-QDateTime* q_poppler__fileattachmentannotation_modification_date(void* self);
+QDateTime* q_poppler__fileattachmentannotation_modification_date(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3032,15 +3024,15 @@ QDateTime* q_poppler__fileattachmentannotation_modification_date(void* self);
 /// @param self Poppler__FileAttachmentAnnotation*
 /// @param date QDateTime*
 ///
-void q_poppler__fileattachmentannotation_set_modification_date(void* self, void* date);
+void q_poppler__fileattachmentannotation_set_modification_date(void* self, const void* date);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FileAttachmentAnnotation.html)
 ///
-/// @param self Poppler__FileAttachmentAnnotation*
+/// @param self const Poppler__FileAttachmentAnnotation*
 ///
-QDateTime* q_poppler__fileattachmentannotation_creation_date(void* self);
+QDateTime* q_poppler__fileattachmentannotation_creation_date(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3049,17 +3041,17 @@ QDateTime* q_poppler__fileattachmentannotation_creation_date(void* self);
 /// @param self Poppler__FileAttachmentAnnotation*
 /// @param date QDateTime*
 ///
-void q_poppler__fileattachmentannotation_set_creation_date(void* self, void* date);
+void q_poppler__fileattachmentannotation_set_creation_date(void* self, const void* date);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FileAttachmentAnnotation.html)
 ///
-/// @param self Poppler__FileAttachmentAnnotation*
+/// @param self const Poppler__FileAttachmentAnnotation*
 ///
 /// @return flag of enum Poppler__Annotation__Flag
 ///
-int32_t q_poppler__fileattachmentannotation_flags(void* self);
+int32_t q_poppler__fileattachmentannotation_flags(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3074,9 +3066,9 @@ void q_poppler__fileattachmentannotation_set_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FileAttachmentAnnotation.html)
 ///
-/// @param self Poppler__FileAttachmentAnnotation*
+/// @param self const Poppler__FileAttachmentAnnotation*
 ///
-QRectF* q_poppler__fileattachmentannotation_boundary(void* self);
+QRectF* q_poppler__fileattachmentannotation_boundary(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3085,15 +3077,15 @@ QRectF* q_poppler__fileattachmentannotation_boundary(void* self);
 /// @param self Poppler__FileAttachmentAnnotation*
 /// @param boundary QRectF*
 ///
-void q_poppler__fileattachmentannotation_set_boundary(void* self, void* boundary);
+void q_poppler__fileattachmentannotation_set_boundary(void* self, const void* boundary);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FileAttachmentAnnotation.html)
 ///
-/// @param self Poppler__FileAttachmentAnnotation*
+/// @param self const Poppler__FileAttachmentAnnotation*
 ///
-Poppler__Annotation__Style* q_poppler__fileattachmentannotation_style(void* self);
+Poppler__Annotation__Style* q_poppler__fileattachmentannotation_style(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3102,15 +3094,15 @@ Poppler__Annotation__Style* q_poppler__fileattachmentannotation_style(void* self
 /// @param self Poppler__FileAttachmentAnnotation*
 /// @param style Poppler__Annotation__Style*
 ///
-void q_poppler__fileattachmentannotation_set_style(void* self, void* style);
+void q_poppler__fileattachmentannotation_set_style(void* self, const void* style);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FileAttachmentAnnotation.html)
 ///
-/// @param self Poppler__FileAttachmentAnnotation*
+/// @param self const Poppler__FileAttachmentAnnotation*
 ///
-Poppler__Annotation__Popup* q_poppler__fileattachmentannotation_popup(void* self);
+Poppler__Annotation__Popup* q_poppler__fileattachmentannotation_popup(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3119,45 +3111,45 @@ Poppler__Annotation__Popup* q_poppler__fileattachmentannotation_popup(void* self
 /// @param self Poppler__FileAttachmentAnnotation*
 /// @param popup Poppler__Annotation__Popup*
 ///
-void q_poppler__fileattachmentannotation_set_popup(void* self, void* popup);
+void q_poppler__fileattachmentannotation_set_popup(void* self, const void* popup);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FileAttachmentAnnotation.html)
 ///
-/// @param self Poppler__FileAttachmentAnnotation*
+/// @param self const Poppler__FileAttachmentAnnotation*
 ///
 /// @return enum Poppler__Annotation__RevScope
 ///
-int32_t q_poppler__fileattachmentannotation_revision_scope(void* self);
+int32_t q_poppler__fileattachmentannotation_revision_scope(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FileAttachmentAnnotation.html)
 ///
-/// @param self Poppler__FileAttachmentAnnotation*
+/// @param self const Poppler__FileAttachmentAnnotation*
 ///
 /// @return enum Poppler__Annotation__RevType
 ///
-int32_t q_poppler__fileattachmentannotation_revision_type(void* self);
+int32_t q_poppler__fileattachmentannotation_revision_type(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FileAttachmentAnnotation.html)
 ///
-/// @param self Poppler__FileAttachmentAnnotation*
+/// @param self const Poppler__FileAttachmentAnnotation*
 ///
 /// @return libqt_list of Poppler__Annotation*
 ///
-libqt_list q_poppler__fileattachmentannotation_revisions(void* self);
+libqt_list q_poppler__fileattachmentannotation_revisions(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FileAttachmentAnnotation.html)
 ///
-/// @param self Poppler__FileAttachmentAnnotation*
+/// @param self const Poppler__FileAttachmentAnnotation*
 ///
-Poppler__AnnotationAppearance* q_poppler__fileattachmentannotation_annotation_appearance(void* self);
+Poppler__AnnotationAppearance* q_poppler__fileattachmentannotation_annotation_appearance(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3166,7 +3158,7 @@ Poppler__AnnotationAppearance* q_poppler__fileattachmentannotation_annotation_ap
 /// @param self Poppler__FileAttachmentAnnotation*
 /// @param annotationAppearance Poppler__AnnotationAppearance*
 ///
-void q_poppler__fileattachmentannotation_set_annotation_appearance(void* self, void* annotationAppearance);
+void q_poppler__fileattachmentannotation_set_annotation_appearance(void* self, const void* annotationAppearance);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FileAttachmentAnnotation.html)
 ///
@@ -3180,19 +3172,19 @@ void q_poppler__fileattachmentannotation_delete(void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SoundAnnotation.html)
 ///
-/// @param self Poppler__SoundAnnotation*
+/// @param self const Poppler__SoundAnnotation*
 ///
 /// @return enum Poppler__Annotation__SubType
 ///
-int32_t q_poppler__soundannotation_sub_type(void* self);
+int32_t q_poppler__soundannotation_sub_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SoundAnnotation.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__SoundAnnotation*
+/// @param self const Poppler__SoundAnnotation*
 ///
-const char* q_poppler__soundannotation_sound_icon_name(void* self);
+const char* q_poppler__soundannotation_sound_icon_name(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SoundAnnotation.html)
 ///
@@ -3203,9 +3195,9 @@ void q_poppler__soundannotation_set_sound_icon_name(void* self, const char* icon
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SoundAnnotation.html)
 ///
-/// @param self Poppler__SoundAnnotation*
+/// @param self const Poppler__SoundAnnotation*
 ///
-Poppler__SoundObject* q_poppler__soundannotation_sound(void* self);
+Poppler__SoundObject* q_poppler__soundannotation_sound(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SoundAnnotation.html)
 ///
@@ -3220,9 +3212,9 @@ void q_poppler__soundannotation_set_sound(void* self, void* s);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__SoundAnnotation*
+/// @param self const Poppler__SoundAnnotation*
 ///
-const char* q_poppler__soundannotation_author(void* self);
+const char* q_poppler__soundannotation_author(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3239,9 +3231,9 @@ void q_poppler__soundannotation_set_author(void* self, const char* author);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__SoundAnnotation*
+/// @param self const Poppler__SoundAnnotation*
 ///
-const char* q_poppler__soundannotation_contents(void* self);
+const char* q_poppler__soundannotation_contents(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3258,9 +3250,9 @@ void q_poppler__soundannotation_set_contents(void* self, const char* contents);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__SoundAnnotation*
+/// @param self const Poppler__SoundAnnotation*
 ///
-const char* q_poppler__soundannotation_unique_name(void* self);
+const char* q_poppler__soundannotation_unique_name(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3275,9 +3267,9 @@ void q_poppler__soundannotation_set_unique_name(void* self, const char* uniqueNa
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SoundAnnotation.html)
 ///
-/// @param self Poppler__SoundAnnotation*
+/// @param self const Poppler__SoundAnnotation*
 ///
-QDateTime* q_poppler__soundannotation_modification_date(void* self);
+QDateTime* q_poppler__soundannotation_modification_date(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3286,15 +3278,15 @@ QDateTime* q_poppler__soundannotation_modification_date(void* self);
 /// @param self Poppler__SoundAnnotation*
 /// @param date QDateTime*
 ///
-void q_poppler__soundannotation_set_modification_date(void* self, void* date);
+void q_poppler__soundannotation_set_modification_date(void* self, const void* date);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SoundAnnotation.html)
 ///
-/// @param self Poppler__SoundAnnotation*
+/// @param self const Poppler__SoundAnnotation*
 ///
-QDateTime* q_poppler__soundannotation_creation_date(void* self);
+QDateTime* q_poppler__soundannotation_creation_date(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3303,17 +3295,17 @@ QDateTime* q_poppler__soundannotation_creation_date(void* self);
 /// @param self Poppler__SoundAnnotation*
 /// @param date QDateTime*
 ///
-void q_poppler__soundannotation_set_creation_date(void* self, void* date);
+void q_poppler__soundannotation_set_creation_date(void* self, const void* date);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SoundAnnotation.html)
 ///
-/// @param self Poppler__SoundAnnotation*
+/// @param self const Poppler__SoundAnnotation*
 ///
 /// @return flag of enum Poppler__Annotation__Flag
 ///
-int32_t q_poppler__soundannotation_flags(void* self);
+int32_t q_poppler__soundannotation_flags(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3328,9 +3320,9 @@ void q_poppler__soundannotation_set_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SoundAnnotation.html)
 ///
-/// @param self Poppler__SoundAnnotation*
+/// @param self const Poppler__SoundAnnotation*
 ///
-QRectF* q_poppler__soundannotation_boundary(void* self);
+QRectF* q_poppler__soundannotation_boundary(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3339,15 +3331,15 @@ QRectF* q_poppler__soundannotation_boundary(void* self);
 /// @param self Poppler__SoundAnnotation*
 /// @param boundary QRectF*
 ///
-void q_poppler__soundannotation_set_boundary(void* self, void* boundary);
+void q_poppler__soundannotation_set_boundary(void* self, const void* boundary);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SoundAnnotation.html)
 ///
-/// @param self Poppler__SoundAnnotation*
+/// @param self const Poppler__SoundAnnotation*
 ///
-Poppler__Annotation__Style* q_poppler__soundannotation_style(void* self);
+Poppler__Annotation__Style* q_poppler__soundannotation_style(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3356,15 +3348,15 @@ Poppler__Annotation__Style* q_poppler__soundannotation_style(void* self);
 /// @param self Poppler__SoundAnnotation*
 /// @param style Poppler__Annotation__Style*
 ///
-void q_poppler__soundannotation_set_style(void* self, void* style);
+void q_poppler__soundannotation_set_style(void* self, const void* style);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SoundAnnotation.html)
 ///
-/// @param self Poppler__SoundAnnotation*
+/// @param self const Poppler__SoundAnnotation*
 ///
-Poppler__Annotation__Popup* q_poppler__soundannotation_popup(void* self);
+Poppler__Annotation__Popup* q_poppler__soundannotation_popup(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3373,45 +3365,45 @@ Poppler__Annotation__Popup* q_poppler__soundannotation_popup(void* self);
 /// @param self Poppler__SoundAnnotation*
 /// @param popup Poppler__Annotation__Popup*
 ///
-void q_poppler__soundannotation_set_popup(void* self, void* popup);
+void q_poppler__soundannotation_set_popup(void* self, const void* popup);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SoundAnnotation.html)
 ///
-/// @param self Poppler__SoundAnnotation*
+/// @param self const Poppler__SoundAnnotation*
 ///
 /// @return enum Poppler__Annotation__RevScope
 ///
-int32_t q_poppler__soundannotation_revision_scope(void* self);
+int32_t q_poppler__soundannotation_revision_scope(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SoundAnnotation.html)
 ///
-/// @param self Poppler__SoundAnnotation*
+/// @param self const Poppler__SoundAnnotation*
 ///
 /// @return enum Poppler__Annotation__RevType
 ///
-int32_t q_poppler__soundannotation_revision_type(void* self);
+int32_t q_poppler__soundannotation_revision_type(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SoundAnnotation.html)
 ///
-/// @param self Poppler__SoundAnnotation*
+/// @param self const Poppler__SoundAnnotation*
 ///
 /// @return libqt_list of Poppler__Annotation*
 ///
-libqt_list q_poppler__soundannotation_revisions(void* self);
+libqt_list q_poppler__soundannotation_revisions(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SoundAnnotation.html)
 ///
-/// @param self Poppler__SoundAnnotation*
+/// @param self const Poppler__SoundAnnotation*
 ///
-Poppler__AnnotationAppearance* q_poppler__soundannotation_annotation_appearance(void* self);
+Poppler__AnnotationAppearance* q_poppler__soundannotation_annotation_appearance(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3420,7 +3412,7 @@ Poppler__AnnotationAppearance* q_poppler__soundannotation_annotation_appearance(
 /// @param self Poppler__SoundAnnotation*
 /// @param annotationAppearance Poppler__AnnotationAppearance*
 ///
-void q_poppler__soundannotation_set_annotation_appearance(void* self, void* annotationAppearance);
+void q_poppler__soundannotation_set_annotation_appearance(void* self, const void* annotationAppearance);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SoundAnnotation.html)
 ///
@@ -3434,17 +3426,17 @@ void q_poppler__soundannotation_delete(void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1MovieAnnotation.html)
 ///
-/// @param self Poppler__MovieAnnotation*
+/// @param self const Poppler__MovieAnnotation*
 ///
 /// @return enum Poppler__Annotation__SubType
 ///
-int32_t q_poppler__movieannotation_sub_type(void* self);
+int32_t q_poppler__movieannotation_sub_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1MovieAnnotation.html)
 ///
-/// @param self Poppler__MovieAnnotation*
+/// @param self const Poppler__MovieAnnotation*
 ///
-Poppler__MovieObject* q_poppler__movieannotation_movie(void* self);
+Poppler__MovieObject* q_poppler__movieannotation_movie(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1MovieAnnotation.html)
 ///
@@ -3457,9 +3449,9 @@ void q_poppler__movieannotation_set_movie(void* self, void* movie);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__MovieAnnotation*
+/// @param self const Poppler__MovieAnnotation*
 ///
-const char* q_poppler__movieannotation_movie_title(void* self);
+const char* q_poppler__movieannotation_movie_title(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1MovieAnnotation.html)
 ///
@@ -3474,9 +3466,9 @@ void q_poppler__movieannotation_set_movie_title(void* self, const char* title);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__MovieAnnotation*
+/// @param self const Poppler__MovieAnnotation*
 ///
-const char* q_poppler__movieannotation_author(void* self);
+const char* q_poppler__movieannotation_author(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3493,9 +3485,9 @@ void q_poppler__movieannotation_set_author(void* self, const char* author);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__MovieAnnotation*
+/// @param self const Poppler__MovieAnnotation*
 ///
-const char* q_poppler__movieannotation_contents(void* self);
+const char* q_poppler__movieannotation_contents(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3512,9 +3504,9 @@ void q_poppler__movieannotation_set_contents(void* self, const char* contents);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__MovieAnnotation*
+/// @param self const Poppler__MovieAnnotation*
 ///
-const char* q_poppler__movieannotation_unique_name(void* self);
+const char* q_poppler__movieannotation_unique_name(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3529,9 +3521,9 @@ void q_poppler__movieannotation_set_unique_name(void* self, const char* uniqueNa
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1MovieAnnotation.html)
 ///
-/// @param self Poppler__MovieAnnotation*
+/// @param self const Poppler__MovieAnnotation*
 ///
-QDateTime* q_poppler__movieannotation_modification_date(void* self);
+QDateTime* q_poppler__movieannotation_modification_date(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3540,15 +3532,15 @@ QDateTime* q_poppler__movieannotation_modification_date(void* self);
 /// @param self Poppler__MovieAnnotation*
 /// @param date QDateTime*
 ///
-void q_poppler__movieannotation_set_modification_date(void* self, void* date);
+void q_poppler__movieannotation_set_modification_date(void* self, const void* date);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1MovieAnnotation.html)
 ///
-/// @param self Poppler__MovieAnnotation*
+/// @param self const Poppler__MovieAnnotation*
 ///
-QDateTime* q_poppler__movieannotation_creation_date(void* self);
+QDateTime* q_poppler__movieannotation_creation_date(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3557,17 +3549,17 @@ QDateTime* q_poppler__movieannotation_creation_date(void* self);
 /// @param self Poppler__MovieAnnotation*
 /// @param date QDateTime*
 ///
-void q_poppler__movieannotation_set_creation_date(void* self, void* date);
+void q_poppler__movieannotation_set_creation_date(void* self, const void* date);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1MovieAnnotation.html)
 ///
-/// @param self Poppler__MovieAnnotation*
+/// @param self const Poppler__MovieAnnotation*
 ///
 /// @return flag of enum Poppler__Annotation__Flag
 ///
-int32_t q_poppler__movieannotation_flags(void* self);
+int32_t q_poppler__movieannotation_flags(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3582,9 +3574,9 @@ void q_poppler__movieannotation_set_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1MovieAnnotation.html)
 ///
-/// @param self Poppler__MovieAnnotation*
+/// @param self const Poppler__MovieAnnotation*
 ///
-QRectF* q_poppler__movieannotation_boundary(void* self);
+QRectF* q_poppler__movieannotation_boundary(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3593,15 +3585,15 @@ QRectF* q_poppler__movieannotation_boundary(void* self);
 /// @param self Poppler__MovieAnnotation*
 /// @param boundary QRectF*
 ///
-void q_poppler__movieannotation_set_boundary(void* self, void* boundary);
+void q_poppler__movieannotation_set_boundary(void* self, const void* boundary);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1MovieAnnotation.html)
 ///
-/// @param self Poppler__MovieAnnotation*
+/// @param self const Poppler__MovieAnnotation*
 ///
-Poppler__Annotation__Style* q_poppler__movieannotation_style(void* self);
+Poppler__Annotation__Style* q_poppler__movieannotation_style(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3610,15 +3602,15 @@ Poppler__Annotation__Style* q_poppler__movieannotation_style(void* self);
 /// @param self Poppler__MovieAnnotation*
 /// @param style Poppler__Annotation__Style*
 ///
-void q_poppler__movieannotation_set_style(void* self, void* style);
+void q_poppler__movieannotation_set_style(void* self, const void* style);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1MovieAnnotation.html)
 ///
-/// @param self Poppler__MovieAnnotation*
+/// @param self const Poppler__MovieAnnotation*
 ///
-Poppler__Annotation__Popup* q_poppler__movieannotation_popup(void* self);
+Poppler__Annotation__Popup* q_poppler__movieannotation_popup(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3627,45 +3619,45 @@ Poppler__Annotation__Popup* q_poppler__movieannotation_popup(void* self);
 /// @param self Poppler__MovieAnnotation*
 /// @param popup Poppler__Annotation__Popup*
 ///
-void q_poppler__movieannotation_set_popup(void* self, void* popup);
+void q_poppler__movieannotation_set_popup(void* self, const void* popup);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1MovieAnnotation.html)
 ///
-/// @param self Poppler__MovieAnnotation*
+/// @param self const Poppler__MovieAnnotation*
 ///
 /// @return enum Poppler__Annotation__RevScope
 ///
-int32_t q_poppler__movieannotation_revision_scope(void* self);
+int32_t q_poppler__movieannotation_revision_scope(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1MovieAnnotation.html)
 ///
-/// @param self Poppler__MovieAnnotation*
+/// @param self const Poppler__MovieAnnotation*
 ///
 /// @return enum Poppler__Annotation__RevType
 ///
-int32_t q_poppler__movieannotation_revision_type(void* self);
+int32_t q_poppler__movieannotation_revision_type(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1MovieAnnotation.html)
 ///
-/// @param self Poppler__MovieAnnotation*
+/// @param self const Poppler__MovieAnnotation*
 ///
 /// @return libqt_list of Poppler__Annotation*
 ///
-libqt_list q_poppler__movieannotation_revisions(void* self);
+libqt_list q_poppler__movieannotation_revisions(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1MovieAnnotation.html)
 ///
-/// @param self Poppler__MovieAnnotation*
+/// @param self const Poppler__MovieAnnotation*
 ///
-Poppler__AnnotationAppearance* q_poppler__movieannotation_annotation_appearance(void* self);
+Poppler__AnnotationAppearance* q_poppler__movieannotation_annotation_appearance(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3674,7 +3666,7 @@ Poppler__AnnotationAppearance* q_poppler__movieannotation_annotation_appearance(
 /// @param self Poppler__MovieAnnotation*
 /// @param annotationAppearance Poppler__AnnotationAppearance*
 ///
-void q_poppler__movieannotation_set_annotation_appearance(void* self, void* annotationAppearance);
+void q_poppler__movieannotation_set_annotation_appearance(void* self, const void* annotationAppearance);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1MovieAnnotation.html)
 ///
@@ -3688,17 +3680,17 @@ void q_poppler__movieannotation_delete(void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1ScreenAnnotation.html)
 ///
-/// @param self Poppler__ScreenAnnotation*
+/// @param self const Poppler__ScreenAnnotation*
 ///
 /// @return enum Poppler__Annotation__SubType
 ///
-int32_t q_poppler__screenannotation_sub_type(void* self);
+int32_t q_poppler__screenannotation_sub_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1ScreenAnnotation.html)
 ///
-/// @param self Poppler__ScreenAnnotation*
+/// @param self const Poppler__ScreenAnnotation*
 ///
-Poppler__LinkRendition* q_poppler__screenannotation_action(void* self);
+Poppler__LinkRendition* q_poppler__screenannotation_action(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1ScreenAnnotation.html)
 ///
@@ -3711,9 +3703,9 @@ void q_poppler__screenannotation_set_action(void* self, void* action);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__ScreenAnnotation*
+/// @param self const Poppler__ScreenAnnotation*
 ///
-const char* q_poppler__screenannotation_screen_title(void* self);
+const char* q_poppler__screenannotation_screen_title(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1ScreenAnnotation.html)
 ///
@@ -3724,10 +3716,10 @@ void q_poppler__screenannotation_set_screen_title(void* self, const char* title)
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1ScreenAnnotation.html)
 ///
-/// @param self Poppler__ScreenAnnotation*
+/// @param self const Poppler__ScreenAnnotation*
 /// @param type enum Poppler__Annotation__AdditionalActionType
 ///
-Poppler__Link* q_poppler__screenannotation_additional_action(void* self, int32_t type);
+Poppler__Link* q_poppler__screenannotation_additional_action(const void* self, int32_t type);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3735,9 +3727,9 @@ Poppler__Link* q_poppler__screenannotation_additional_action(void* self, int32_t
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__ScreenAnnotation*
+/// @param self const Poppler__ScreenAnnotation*
 ///
-const char* q_poppler__screenannotation_author(void* self);
+const char* q_poppler__screenannotation_author(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3754,9 +3746,9 @@ void q_poppler__screenannotation_set_author(void* self, const char* author);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__ScreenAnnotation*
+/// @param self const Poppler__ScreenAnnotation*
 ///
-const char* q_poppler__screenannotation_contents(void* self);
+const char* q_poppler__screenannotation_contents(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3773,9 +3765,9 @@ void q_poppler__screenannotation_set_contents(void* self, const char* contents);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__ScreenAnnotation*
+/// @param self const Poppler__ScreenAnnotation*
 ///
-const char* q_poppler__screenannotation_unique_name(void* self);
+const char* q_poppler__screenannotation_unique_name(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3790,9 +3782,9 @@ void q_poppler__screenannotation_set_unique_name(void* self, const char* uniqueN
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1ScreenAnnotation.html)
 ///
-/// @param self Poppler__ScreenAnnotation*
+/// @param self const Poppler__ScreenAnnotation*
 ///
-QDateTime* q_poppler__screenannotation_modification_date(void* self);
+QDateTime* q_poppler__screenannotation_modification_date(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3801,15 +3793,15 @@ QDateTime* q_poppler__screenannotation_modification_date(void* self);
 /// @param self Poppler__ScreenAnnotation*
 /// @param date QDateTime*
 ///
-void q_poppler__screenannotation_set_modification_date(void* self, void* date);
+void q_poppler__screenannotation_set_modification_date(void* self, const void* date);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1ScreenAnnotation.html)
 ///
-/// @param self Poppler__ScreenAnnotation*
+/// @param self const Poppler__ScreenAnnotation*
 ///
-QDateTime* q_poppler__screenannotation_creation_date(void* self);
+QDateTime* q_poppler__screenannotation_creation_date(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3818,17 +3810,17 @@ QDateTime* q_poppler__screenannotation_creation_date(void* self);
 /// @param self Poppler__ScreenAnnotation*
 /// @param date QDateTime*
 ///
-void q_poppler__screenannotation_set_creation_date(void* self, void* date);
+void q_poppler__screenannotation_set_creation_date(void* self, const void* date);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1ScreenAnnotation.html)
 ///
-/// @param self Poppler__ScreenAnnotation*
+/// @param self const Poppler__ScreenAnnotation*
 ///
 /// @return flag of enum Poppler__Annotation__Flag
 ///
-int32_t q_poppler__screenannotation_flags(void* self);
+int32_t q_poppler__screenannotation_flags(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3843,9 +3835,9 @@ void q_poppler__screenannotation_set_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1ScreenAnnotation.html)
 ///
-/// @param self Poppler__ScreenAnnotation*
+/// @param self const Poppler__ScreenAnnotation*
 ///
-QRectF* q_poppler__screenannotation_boundary(void* self);
+QRectF* q_poppler__screenannotation_boundary(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3854,15 +3846,15 @@ QRectF* q_poppler__screenannotation_boundary(void* self);
 /// @param self Poppler__ScreenAnnotation*
 /// @param boundary QRectF*
 ///
-void q_poppler__screenannotation_set_boundary(void* self, void* boundary);
+void q_poppler__screenannotation_set_boundary(void* self, const void* boundary);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1ScreenAnnotation.html)
 ///
-/// @param self Poppler__ScreenAnnotation*
+/// @param self const Poppler__ScreenAnnotation*
 ///
-Poppler__Annotation__Style* q_poppler__screenannotation_style(void* self);
+Poppler__Annotation__Style* q_poppler__screenannotation_style(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3871,15 +3863,15 @@ Poppler__Annotation__Style* q_poppler__screenannotation_style(void* self);
 /// @param self Poppler__ScreenAnnotation*
 /// @param style Poppler__Annotation__Style*
 ///
-void q_poppler__screenannotation_set_style(void* self, void* style);
+void q_poppler__screenannotation_set_style(void* self, const void* style);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1ScreenAnnotation.html)
 ///
-/// @param self Poppler__ScreenAnnotation*
+/// @param self const Poppler__ScreenAnnotation*
 ///
-Poppler__Annotation__Popup* q_poppler__screenannotation_popup(void* self);
+Poppler__Annotation__Popup* q_poppler__screenannotation_popup(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3888,45 +3880,45 @@ Poppler__Annotation__Popup* q_poppler__screenannotation_popup(void* self);
 /// @param self Poppler__ScreenAnnotation*
 /// @param popup Poppler__Annotation__Popup*
 ///
-void q_poppler__screenannotation_set_popup(void* self, void* popup);
+void q_poppler__screenannotation_set_popup(void* self, const void* popup);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1ScreenAnnotation.html)
 ///
-/// @param self Poppler__ScreenAnnotation*
+/// @param self const Poppler__ScreenAnnotation*
 ///
 /// @return enum Poppler__Annotation__RevScope
 ///
-int32_t q_poppler__screenannotation_revision_scope(void* self);
+int32_t q_poppler__screenannotation_revision_scope(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1ScreenAnnotation.html)
 ///
-/// @param self Poppler__ScreenAnnotation*
+/// @param self const Poppler__ScreenAnnotation*
 ///
 /// @return enum Poppler__Annotation__RevType
 ///
-int32_t q_poppler__screenannotation_revision_type(void* self);
+int32_t q_poppler__screenannotation_revision_type(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1ScreenAnnotation.html)
 ///
-/// @param self Poppler__ScreenAnnotation*
+/// @param self const Poppler__ScreenAnnotation*
 ///
 /// @return libqt_list of Poppler__Annotation*
 ///
-libqt_list q_poppler__screenannotation_revisions(void* self);
+libqt_list q_poppler__screenannotation_revisions(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1ScreenAnnotation.html)
 ///
-/// @param self Poppler__ScreenAnnotation*
+/// @param self const Poppler__ScreenAnnotation*
 ///
-Poppler__AnnotationAppearance* q_poppler__screenannotation_annotation_appearance(void* self);
+Poppler__AnnotationAppearance* q_poppler__screenannotation_annotation_appearance(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3935,7 +3927,7 @@ Poppler__AnnotationAppearance* q_poppler__screenannotation_annotation_appearance
 /// @param self Poppler__ScreenAnnotation*
 /// @param annotationAppearance Poppler__AnnotationAppearance*
 ///
-void q_poppler__screenannotation_set_annotation_appearance(void* self, void* annotationAppearance);
+void q_poppler__screenannotation_set_annotation_appearance(void* self, const void* annotationAppearance);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1ScreenAnnotation.html)
 ///
@@ -3949,18 +3941,18 @@ void q_poppler__screenannotation_delete(void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1WidgetAnnotation.html)
 ///
-/// @param self Poppler__WidgetAnnotation*
+/// @param self const Poppler__WidgetAnnotation*
 ///
 /// @return enum Poppler__Annotation__SubType
 ///
-int32_t q_poppler__widgetannotation_sub_type(void* self);
+int32_t q_poppler__widgetannotation_sub_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1WidgetAnnotation.html)
 ///
-/// @param self Poppler__WidgetAnnotation*
+/// @param self const Poppler__WidgetAnnotation*
 /// @param type enum Poppler__Annotation__AdditionalActionType
 ///
-Poppler__Link* q_poppler__widgetannotation_additional_action(void* self, int32_t type);
+Poppler__Link* q_poppler__widgetannotation_additional_action(const void* self, int32_t type);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3968,9 +3960,9 @@ Poppler__Link* q_poppler__widgetannotation_additional_action(void* self, int32_t
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__WidgetAnnotation*
+/// @param self const Poppler__WidgetAnnotation*
 ///
-const char* q_poppler__widgetannotation_author(void* self);
+const char* q_poppler__widgetannotation_author(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -3987,9 +3979,9 @@ void q_poppler__widgetannotation_set_author(void* self, const char* author);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__WidgetAnnotation*
+/// @param self const Poppler__WidgetAnnotation*
 ///
-const char* q_poppler__widgetannotation_contents(void* self);
+const char* q_poppler__widgetannotation_contents(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -4006,9 +3998,9 @@ void q_poppler__widgetannotation_set_contents(void* self, const char* contents);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__WidgetAnnotation*
+/// @param self const Poppler__WidgetAnnotation*
 ///
-const char* q_poppler__widgetannotation_unique_name(void* self);
+const char* q_poppler__widgetannotation_unique_name(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -4023,9 +4015,9 @@ void q_poppler__widgetannotation_set_unique_name(void* self, const char* uniqueN
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1WidgetAnnotation.html)
 ///
-/// @param self Poppler__WidgetAnnotation*
+/// @param self const Poppler__WidgetAnnotation*
 ///
-QDateTime* q_poppler__widgetannotation_modification_date(void* self);
+QDateTime* q_poppler__widgetannotation_modification_date(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -4034,15 +4026,15 @@ QDateTime* q_poppler__widgetannotation_modification_date(void* self);
 /// @param self Poppler__WidgetAnnotation*
 /// @param date QDateTime*
 ///
-void q_poppler__widgetannotation_set_modification_date(void* self, void* date);
+void q_poppler__widgetannotation_set_modification_date(void* self, const void* date);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1WidgetAnnotation.html)
 ///
-/// @param self Poppler__WidgetAnnotation*
+/// @param self const Poppler__WidgetAnnotation*
 ///
-QDateTime* q_poppler__widgetannotation_creation_date(void* self);
+QDateTime* q_poppler__widgetannotation_creation_date(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -4051,17 +4043,17 @@ QDateTime* q_poppler__widgetannotation_creation_date(void* self);
 /// @param self Poppler__WidgetAnnotation*
 /// @param date QDateTime*
 ///
-void q_poppler__widgetannotation_set_creation_date(void* self, void* date);
+void q_poppler__widgetannotation_set_creation_date(void* self, const void* date);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1WidgetAnnotation.html)
 ///
-/// @param self Poppler__WidgetAnnotation*
+/// @param self const Poppler__WidgetAnnotation*
 ///
 /// @return flag of enum Poppler__Annotation__Flag
 ///
-int32_t q_poppler__widgetannotation_flags(void* self);
+int32_t q_poppler__widgetannotation_flags(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -4076,9 +4068,9 @@ void q_poppler__widgetannotation_set_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1WidgetAnnotation.html)
 ///
-/// @param self Poppler__WidgetAnnotation*
+/// @param self const Poppler__WidgetAnnotation*
 ///
-QRectF* q_poppler__widgetannotation_boundary(void* self);
+QRectF* q_poppler__widgetannotation_boundary(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -4087,15 +4079,15 @@ QRectF* q_poppler__widgetannotation_boundary(void* self);
 /// @param self Poppler__WidgetAnnotation*
 /// @param boundary QRectF*
 ///
-void q_poppler__widgetannotation_set_boundary(void* self, void* boundary);
+void q_poppler__widgetannotation_set_boundary(void* self, const void* boundary);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1WidgetAnnotation.html)
 ///
-/// @param self Poppler__WidgetAnnotation*
+/// @param self const Poppler__WidgetAnnotation*
 ///
-Poppler__Annotation__Style* q_poppler__widgetannotation_style(void* self);
+Poppler__Annotation__Style* q_poppler__widgetannotation_style(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -4104,15 +4096,15 @@ Poppler__Annotation__Style* q_poppler__widgetannotation_style(void* self);
 /// @param self Poppler__WidgetAnnotation*
 /// @param style Poppler__Annotation__Style*
 ///
-void q_poppler__widgetannotation_set_style(void* self, void* style);
+void q_poppler__widgetannotation_set_style(void* self, const void* style);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1WidgetAnnotation.html)
 ///
-/// @param self Poppler__WidgetAnnotation*
+/// @param self const Poppler__WidgetAnnotation*
 ///
-Poppler__Annotation__Popup* q_poppler__widgetannotation_popup(void* self);
+Poppler__Annotation__Popup* q_poppler__widgetannotation_popup(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -4121,45 +4113,45 @@ Poppler__Annotation__Popup* q_poppler__widgetannotation_popup(void* self);
 /// @param self Poppler__WidgetAnnotation*
 /// @param popup Poppler__Annotation__Popup*
 ///
-void q_poppler__widgetannotation_set_popup(void* self, void* popup);
+void q_poppler__widgetannotation_set_popup(void* self, const void* popup);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1WidgetAnnotation.html)
 ///
-/// @param self Poppler__WidgetAnnotation*
+/// @param self const Poppler__WidgetAnnotation*
 ///
 /// @return enum Poppler__Annotation__RevScope
 ///
-int32_t q_poppler__widgetannotation_revision_scope(void* self);
+int32_t q_poppler__widgetannotation_revision_scope(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1WidgetAnnotation.html)
 ///
-/// @param self Poppler__WidgetAnnotation*
+/// @param self const Poppler__WidgetAnnotation*
 ///
 /// @return enum Poppler__Annotation__RevType
 ///
-int32_t q_poppler__widgetannotation_revision_type(void* self);
+int32_t q_poppler__widgetannotation_revision_type(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1WidgetAnnotation.html)
 ///
-/// @param self Poppler__WidgetAnnotation*
+/// @param self const Poppler__WidgetAnnotation*
 ///
 /// @return libqt_list of Poppler__Annotation*
 ///
-libqt_list q_poppler__widgetannotation_revisions(void* self);
+libqt_list q_poppler__widgetannotation_revisions(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1WidgetAnnotation.html)
 ///
-/// @param self Poppler__WidgetAnnotation*
+/// @param self const Poppler__WidgetAnnotation*
 ///
-Poppler__AnnotationAppearance* q_poppler__widgetannotation_annotation_appearance(void* self);
+Poppler__AnnotationAppearance* q_poppler__widgetannotation_annotation_appearance(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -4168,7 +4160,7 @@ Poppler__AnnotationAppearance* q_poppler__widgetannotation_annotation_appearance
 /// @param self Poppler__WidgetAnnotation*
 /// @param annotationAppearance Poppler__AnnotationAppearance*
 ///
-void q_poppler__widgetannotation_set_annotation_appearance(void* self, void* annotationAppearance);
+void q_poppler__widgetannotation_set_annotation_appearance(void* self, const void* annotationAppearance);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1WidgetAnnotation.html)
 ///
@@ -4182,23 +4174,23 @@ void q_poppler__widgetannotation_delete(void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation.html)
 ///
-/// @param self Poppler__RichMediaAnnotation*
+/// @param self const Poppler__RichMediaAnnotation*
 ///
 /// @return enum Poppler__Annotation__SubType
 ///
-int32_t q_poppler__richmediaannotation_sub_type(void* self);
+int32_t q_poppler__richmediaannotation_sub_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation.html)
 ///
-/// @param self Poppler__RichMediaAnnotation*
+/// @param self const Poppler__RichMediaAnnotation*
 ///
-Poppler__RichMediaAnnotation__Settings* q_poppler__richmediaannotation_settings(void* self);
+Poppler__RichMediaAnnotation__Settings* q_poppler__richmediaannotation_settings(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation.html)
 ///
-/// @param self Poppler__RichMediaAnnotation*
+/// @param self const Poppler__RichMediaAnnotation*
 ///
-Poppler__RichMediaAnnotation__Content* q_poppler__richmediaannotation_content(void* self);
+Poppler__RichMediaAnnotation__Content* q_poppler__richmediaannotation_content(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -4206,9 +4198,9 @@ Poppler__RichMediaAnnotation__Content* q_poppler__richmediaannotation_content(vo
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__RichMediaAnnotation*
+/// @param self const Poppler__RichMediaAnnotation*
 ///
-const char* q_poppler__richmediaannotation_author(void* self);
+const char* q_poppler__richmediaannotation_author(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -4225,9 +4217,9 @@ void q_poppler__richmediaannotation_set_author(void* self, const char* author);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__RichMediaAnnotation*
+/// @param self const Poppler__RichMediaAnnotation*
 ///
-const char* q_poppler__richmediaannotation_contents(void* self);
+const char* q_poppler__richmediaannotation_contents(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -4244,9 +4236,9 @@ void q_poppler__richmediaannotation_set_contents(void* self, const char* content
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__RichMediaAnnotation*
+/// @param self const Poppler__RichMediaAnnotation*
 ///
-const char* q_poppler__richmediaannotation_unique_name(void* self);
+const char* q_poppler__richmediaannotation_unique_name(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -4261,9 +4253,9 @@ void q_poppler__richmediaannotation_set_unique_name(void* self, const char* uniq
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation.html)
 ///
-/// @param self Poppler__RichMediaAnnotation*
+/// @param self const Poppler__RichMediaAnnotation*
 ///
-QDateTime* q_poppler__richmediaannotation_modification_date(void* self);
+QDateTime* q_poppler__richmediaannotation_modification_date(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -4272,15 +4264,15 @@ QDateTime* q_poppler__richmediaannotation_modification_date(void* self);
 /// @param self Poppler__RichMediaAnnotation*
 /// @param date QDateTime*
 ///
-void q_poppler__richmediaannotation_set_modification_date(void* self, void* date);
+void q_poppler__richmediaannotation_set_modification_date(void* self, const void* date);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation.html)
 ///
-/// @param self Poppler__RichMediaAnnotation*
+/// @param self const Poppler__RichMediaAnnotation*
 ///
-QDateTime* q_poppler__richmediaannotation_creation_date(void* self);
+QDateTime* q_poppler__richmediaannotation_creation_date(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -4289,17 +4281,17 @@ QDateTime* q_poppler__richmediaannotation_creation_date(void* self);
 /// @param self Poppler__RichMediaAnnotation*
 /// @param date QDateTime*
 ///
-void q_poppler__richmediaannotation_set_creation_date(void* self, void* date);
+void q_poppler__richmediaannotation_set_creation_date(void* self, const void* date);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation.html)
 ///
-/// @param self Poppler__RichMediaAnnotation*
+/// @param self const Poppler__RichMediaAnnotation*
 ///
 /// @return flag of enum Poppler__Annotation__Flag
 ///
-int32_t q_poppler__richmediaannotation_flags(void* self);
+int32_t q_poppler__richmediaannotation_flags(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -4314,9 +4306,9 @@ void q_poppler__richmediaannotation_set_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation.html)
 ///
-/// @param self Poppler__RichMediaAnnotation*
+/// @param self const Poppler__RichMediaAnnotation*
 ///
-QRectF* q_poppler__richmediaannotation_boundary(void* self);
+QRectF* q_poppler__richmediaannotation_boundary(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -4325,15 +4317,15 @@ QRectF* q_poppler__richmediaannotation_boundary(void* self);
 /// @param self Poppler__RichMediaAnnotation*
 /// @param boundary QRectF*
 ///
-void q_poppler__richmediaannotation_set_boundary(void* self, void* boundary);
+void q_poppler__richmediaannotation_set_boundary(void* self, const void* boundary);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation.html)
 ///
-/// @param self Poppler__RichMediaAnnotation*
+/// @param self const Poppler__RichMediaAnnotation*
 ///
-Poppler__Annotation__Style* q_poppler__richmediaannotation_style(void* self);
+Poppler__Annotation__Style* q_poppler__richmediaannotation_style(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -4342,15 +4334,15 @@ Poppler__Annotation__Style* q_poppler__richmediaannotation_style(void* self);
 /// @param self Poppler__RichMediaAnnotation*
 /// @param style Poppler__Annotation__Style*
 ///
-void q_poppler__richmediaannotation_set_style(void* self, void* style);
+void q_poppler__richmediaannotation_set_style(void* self, const void* style);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation.html)
 ///
-/// @param self Poppler__RichMediaAnnotation*
+/// @param self const Poppler__RichMediaAnnotation*
 ///
-Poppler__Annotation__Popup* q_poppler__richmediaannotation_popup(void* self);
+Poppler__Annotation__Popup* q_poppler__richmediaannotation_popup(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -4359,45 +4351,45 @@ Poppler__Annotation__Popup* q_poppler__richmediaannotation_popup(void* self);
 /// @param self Poppler__RichMediaAnnotation*
 /// @param popup Poppler__Annotation__Popup*
 ///
-void q_poppler__richmediaannotation_set_popup(void* self, void* popup);
+void q_poppler__richmediaannotation_set_popup(void* self, const void* popup);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation.html)
 ///
-/// @param self Poppler__RichMediaAnnotation*
+/// @param self const Poppler__RichMediaAnnotation*
 ///
 /// @return enum Poppler__Annotation__RevScope
 ///
-int32_t q_poppler__richmediaannotation_revision_scope(void* self);
+int32_t q_poppler__richmediaannotation_revision_scope(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation.html)
 ///
-/// @param self Poppler__RichMediaAnnotation*
+/// @param self const Poppler__RichMediaAnnotation*
 ///
 /// @return enum Poppler__Annotation__RevType
 ///
-int32_t q_poppler__richmediaannotation_revision_type(void* self);
+int32_t q_poppler__richmediaannotation_revision_type(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation.html)
 ///
-/// @param self Poppler__RichMediaAnnotation*
+/// @param self const Poppler__RichMediaAnnotation*
 ///
 /// @return libqt_list of Poppler__Annotation*
 ///
-libqt_list q_poppler__richmediaannotation_revisions(void* self);
+libqt_list q_poppler__richmediaannotation_revisions(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation.html)
 ///
-/// @param self Poppler__RichMediaAnnotation*
+/// @param self const Poppler__RichMediaAnnotation*
 ///
-Poppler__AnnotationAppearance* q_poppler__richmediaannotation_annotation_appearance(void* self);
+Poppler__AnnotationAppearance* q_poppler__richmediaannotation_annotation_appearance(const void* self);
 
 /// Inherited from Poppler::Annotation
 ///
@@ -4406,7 +4398,7 @@ Poppler__AnnotationAppearance* q_poppler__richmediaannotation_annotation_appeara
 /// @param self Poppler__RichMediaAnnotation*
 /// @param annotationAppearance Poppler__AnnotationAppearance*
 ///
-void q_poppler__richmediaannotation_set_annotation_appearance(void* self, void* annotationAppearance);
+void q_poppler__richmediaannotation_set_annotation_appearance(void* self, const void* annotationAppearance);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation.html)
 ///
@@ -4428,33 +4420,33 @@ Poppler__Annotation__Style* q_poppler__annotation__style_new();
 ///
 /// @param other Poppler__Annotation__Style*
 ///
-Poppler__Annotation__Style* q_poppler__annotation__style_new2(void* other);
+Poppler__Annotation__Style* q_poppler__annotation__style_new2(const void* other);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation_1_1Style.html)
 ///
 /// @param self Poppler__Annotation__Style*
 /// @param other Poppler__Annotation__Style*
 ///
-void q_poppler__annotation__style_operator_assign(void* self, void* other);
+void q_poppler__annotation__style_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation_1_1Style.html)
 ///
-/// @param self Poppler__Annotation__Style*
+/// @param self const Poppler__Annotation__Style*
 ///
-QColor* q_poppler__annotation__style_color(void* self);
+QColor* q_poppler__annotation__style_color(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation_1_1Style.html)
 ///
 /// @param self Poppler__Annotation__Style*
 /// @param color QColor*
 ///
-void q_poppler__annotation__style_set_color(void* self, void* color);
+void q_poppler__annotation__style_set_color(void* self, const void* color);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation_1_1Style.html)
 ///
-/// @param self Poppler__Annotation__Style*
+/// @param self const Poppler__Annotation__Style*
 ///
-double q_poppler__annotation__style_opacity(void* self);
+double q_poppler__annotation__style_opacity(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation_1_1Style.html)
 ///
@@ -4465,9 +4457,9 @@ void q_poppler__annotation__style_set_opacity(void* self, double opacity);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation_1_1Style.html)
 ///
-/// @param self Poppler__Annotation__Style*
+/// @param self const Poppler__Annotation__Style*
 ///
-double q_poppler__annotation__style_width(void* self);
+double q_poppler__annotation__style_width(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation_1_1Style.html)
 ///
@@ -4478,11 +4470,11 @@ void q_poppler__annotation__style_set_width(void* self, double width);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation_1_1Style.html)
 ///
-/// @param self Poppler__Annotation__Style*
+/// @param self const Poppler__Annotation__Style*
 ///
 /// @return enum Poppler__Annotation__LineStyle
 ///
-int32_t q_poppler__annotation__style_line_style(void* self);
+int32_t q_poppler__annotation__style_line_style(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation_1_1Style.html)
 ///
@@ -4493,9 +4485,9 @@ void q_poppler__annotation__style_set_line_style(void* self, int32_t style);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation_1_1Style.html)
 ///
-/// @param self Poppler__Annotation__Style*
+/// @param self const Poppler__Annotation__Style*
 ///
-double q_poppler__annotation__style_x_corners(void* self);
+double q_poppler__annotation__style_x_corners(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation_1_1Style.html)
 ///
@@ -4506,9 +4498,9 @@ void q_poppler__annotation__style_set_x_corners(void* self, double radius);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation_1_1Style.html)
 ///
-/// @param self Poppler__Annotation__Style*
+/// @param self const Poppler__Annotation__Style*
 ///
-double q_poppler__annotation__style_y_corners(void* self);
+double q_poppler__annotation__style_y_corners(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation_1_1Style.html)
 ///
@@ -4519,11 +4511,11 @@ void q_poppler__annotation__style_set_y_corners(void* self, double radius);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation_1_1Style.html)
 ///
-/// @param self Poppler__Annotation__Style*
+/// @param self const Poppler__Annotation__Style*
 ///
 /// @return libqt_list of double
 ///
-libqt_list q_poppler__annotation__style_dash_array(void* self);
+libqt_list q_poppler__annotation__style_dash_array(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation_1_1Style.html)
 ///
@@ -4534,11 +4526,11 @@ void q_poppler__annotation__style_set_dash_array(void* self, libqt_list array);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation_1_1Style.html)
 ///
-/// @param self Poppler__Annotation__Style*
+/// @param self const Poppler__Annotation__Style*
 ///
 /// @return enum Poppler__Annotation__LineEffect
 ///
-int32_t q_poppler__annotation__style_line_effect(void* self);
+int32_t q_poppler__annotation__style_line_effect(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation_1_1Style.html)
 ///
@@ -4549,9 +4541,9 @@ void q_poppler__annotation__style_set_line_effect(void* self, int32_t effect);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation_1_1Style.html)
 ///
-/// @param self Poppler__Annotation__Style*
+/// @param self const Poppler__Annotation__Style*
 ///
-double q_poppler__annotation__style_effect_intensity(void* self);
+double q_poppler__annotation__style_effect_intensity(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation_1_1Style.html)
 ///
@@ -4580,20 +4572,20 @@ Poppler__Annotation__Popup* q_poppler__annotation__popup_new();
 ///
 /// @param other Poppler__Annotation__Popup*
 ///
-Poppler__Annotation__Popup* q_poppler__annotation__popup_new2(void* other);
+Poppler__Annotation__Popup* q_poppler__annotation__popup_new2(const void* other);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation_1_1Popup.html)
 ///
 /// @param self Poppler__Annotation__Popup*
 /// @param other Poppler__Annotation__Popup*
 ///
-void q_poppler__annotation__popup_operator_assign(void* self, void* other);
+void q_poppler__annotation__popup_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation_1_1Popup.html)
 ///
-/// @param self Poppler__Annotation__Popup*
+/// @param self const Poppler__Annotation__Popup*
 ///
-int32_t q_poppler__annotation__popup_flags(void* self);
+int32_t q_poppler__annotation__popup_flags(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation_1_1Popup.html)
 ///
@@ -4604,24 +4596,24 @@ void q_poppler__annotation__popup_set_flags(void* self, int flags);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation_1_1Popup.html)
 ///
-/// @param self Poppler__Annotation__Popup*
+/// @param self const Poppler__Annotation__Popup*
 ///
-QRectF* q_poppler__annotation__popup_geometry(void* self);
+QRectF* q_poppler__annotation__popup_geometry(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation_1_1Popup.html)
 ///
 /// @param self Poppler__Annotation__Popup*
 /// @param geom QRectF*
 ///
-void q_poppler__annotation__popup_set_geometry(void* self, void* geom);
+void q_poppler__annotation__popup_set_geometry(void* self, const void* geom);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation_1_1Popup.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__Annotation__Popup*
+/// @param self const Poppler__Annotation__Popup*
 ///
-const char* q_poppler__annotation__popup_title(void* self);
+const char* q_poppler__annotation__popup_title(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation_1_1Popup.html)
 ///
@@ -4634,9 +4626,9 @@ void q_poppler__annotation__popup_set_title(void* self, const char* title);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__Annotation__Popup*
+/// @param self const Poppler__Annotation__Popup*
 ///
-const char* q_poppler__annotation__popup_summary(void* self);
+const char* q_poppler__annotation__popup_summary(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation_1_1Popup.html)
 ///
@@ -4649,9 +4641,9 @@ void q_poppler__annotation__popup_set_summary(void* self, const char* summary);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__Annotation__Popup*
+/// @param self const Poppler__Annotation__Popup*
 ///
-const char* q_poppler__annotation__popup_text(void* self);
+const char* q_poppler__annotation__popup_text(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Annotation_1_1Popup.html)
 ///
@@ -4676,9 +4668,9 @@ Poppler__HighlightAnnotation__Quad* q_poppler__highlightannotation__quad_new();
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/structPoppler_1_1HighlightAnnotation_1_1Quad.html)
 ///
-/// @param self Poppler__HighlightAnnotation__Quad*
+/// @param self const Poppler__HighlightAnnotation__Quad*
 ///
-bool q_poppler__highlightannotation__quad_cap_start(void* self);
+bool q_poppler__highlightannotation__quad_cap_start(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/structPoppler_1_1HighlightAnnotation_1_1Quad.html)
 ///
@@ -4689,9 +4681,9 @@ void q_poppler__highlightannotation__quad_set_cap_start(void* self, bool capStar
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/structPoppler_1_1HighlightAnnotation_1_1Quad.html)
 ///
-/// @param self Poppler__HighlightAnnotation__Quad*
+/// @param self const Poppler__HighlightAnnotation__Quad*
 ///
-bool q_poppler__highlightannotation__quad_cap_end(void* self);
+bool q_poppler__highlightannotation__quad_cap_end(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/structPoppler_1_1HighlightAnnotation_1_1Quad.html)
 ///
@@ -4702,9 +4694,9 @@ void q_poppler__highlightannotation__quad_set_cap_end(void* self, bool capEnd);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/structPoppler_1_1HighlightAnnotation_1_1Quad.html)
 ///
-/// @param self Poppler__HighlightAnnotation__Quad*
+/// @param self const Poppler__HighlightAnnotation__Quad*
 ///
-double q_poppler__highlightannotation__quad_feather(void* self);
+double q_poppler__highlightannotation__quad_feather(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/structPoppler_1_1HighlightAnnotation_1_1Quad.html)
 ///
@@ -4731,9 +4723,9 @@ Poppler__RichMediaAnnotation__Params* q_poppler__richmediaannotation__params_new
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__RichMediaAnnotation__Params*
+/// @param self const Poppler__RichMediaAnnotation__Params*
 ///
-const char* q_poppler__richmediaannotation__params_flash_vars(void* self);
+const char* q_poppler__richmediaannotation__params_flash_vars(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation_1_1Params.html)
 ///
@@ -4751,17 +4743,17 @@ Poppler__RichMediaAnnotation__Instance* q_poppler__richmediaannotation__instance
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation_1_1Instance.html)
 ///
-/// @param self Poppler__RichMediaAnnotation__Instance*
+/// @param self const Poppler__RichMediaAnnotation__Instance*
 ///
 /// @return enum Poppler__RichMediaAnnotation__Instance__Type
 ///
-int32_t q_poppler__richmediaannotation__instance_type(void* self);
+int32_t q_poppler__richmediaannotation__instance_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation_1_1Instance.html)
 ///
-/// @param self Poppler__RichMediaAnnotation__Instance*
+/// @param self const Poppler__RichMediaAnnotation__Instance*
 ///
-Poppler__RichMediaAnnotation__Params* q_poppler__richmediaannotation__instance_params(void* self);
+Poppler__RichMediaAnnotation__Params* q_poppler__richmediaannotation__instance_params(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation_1_1Instance.html)
 ///
@@ -4779,27 +4771,27 @@ Poppler__RichMediaAnnotation__Configuration* q_poppler__richmediaannotation__con
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation_1_1Configuration.html)
 ///
-/// @param self Poppler__RichMediaAnnotation__Configuration*
+/// @param self const Poppler__RichMediaAnnotation__Configuration*
 ///
 /// @return enum Poppler__RichMediaAnnotation__Configuration__Type
 ///
-int32_t q_poppler__richmediaannotation__configuration_type(void* self);
+int32_t q_poppler__richmediaannotation__configuration_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation_1_1Configuration.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__RichMediaAnnotation__Configuration*
+/// @param self const Poppler__RichMediaAnnotation__Configuration*
 ///
-const char* q_poppler__richmediaannotation__configuration_name(void* self);
+const char* q_poppler__richmediaannotation__configuration_name(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation_1_1Configuration.html)
 ///
-/// @param self Poppler__RichMediaAnnotation__Configuration*
+/// @param self const Poppler__RichMediaAnnotation__Configuration*
 ///
 /// @return libqt_list of Poppler__RichMediaAnnotation__Instance*
 ///
-libqt_list q_poppler__richmediaannotation__configuration_instances(void* self);
+libqt_list q_poppler__richmediaannotation__configuration_instances(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation_1_1Configuration.html)
 ///
@@ -4819,15 +4811,15 @@ Poppler__RichMediaAnnotation__Asset* q_poppler__richmediaannotation__asset_new()
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__RichMediaAnnotation__Asset*
+/// @param self const Poppler__RichMediaAnnotation__Asset*
 ///
-const char* q_poppler__richmediaannotation__asset_name(void* self);
+const char* q_poppler__richmediaannotation__asset_name(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation_1_1Asset.html)
 ///
-/// @param self Poppler__RichMediaAnnotation__Asset*
+/// @param self const Poppler__RichMediaAnnotation__Asset*
 ///
-Poppler__EmbeddedFile* q_poppler__richmediaannotation__asset_embedded_file(void* self);
+Poppler__EmbeddedFile* q_poppler__richmediaannotation__asset_embedded_file(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation_1_1Asset.html)
 ///
@@ -4845,19 +4837,19 @@ Poppler__RichMediaAnnotation__Content* q_poppler__richmediaannotation__content_n
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation_1_1Content.html)
 ///
-/// @param self Poppler__RichMediaAnnotation__Content*
+/// @param self const Poppler__RichMediaAnnotation__Content*
 ///
 /// @return libqt_list of Poppler__RichMediaAnnotation__Configuration*
 ///
-libqt_list q_poppler__richmediaannotation__content_configurations(void* self);
+libqt_list q_poppler__richmediaannotation__content_configurations(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation_1_1Content.html)
 ///
-/// @param self Poppler__RichMediaAnnotation__Content*
+/// @param self const Poppler__RichMediaAnnotation__Content*
 ///
 /// @return libqt_list of Poppler__RichMediaAnnotation__Asset*
 ///
-libqt_list q_poppler__richmediaannotation__content_assets(void* self);
+libqt_list q_poppler__richmediaannotation__content_assets(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation_1_1Content.html)
 ///
@@ -4875,11 +4867,11 @@ Poppler__RichMediaAnnotation__Activation* q_poppler__richmediaannotation__activa
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation_1_1Activation.html)
 ///
-/// @param self Poppler__RichMediaAnnotation__Activation*
+/// @param self const Poppler__RichMediaAnnotation__Activation*
 ///
 /// @return enum Poppler__RichMediaAnnotation__Activation__Condition
 ///
-int32_t q_poppler__richmediaannotation__activation_condition(void* self);
+int32_t q_poppler__richmediaannotation__activation_condition(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation_1_1Activation.html)
 ///
@@ -4897,11 +4889,11 @@ Poppler__RichMediaAnnotation__Deactivation* q_poppler__richmediaannotation__deac
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation_1_1Deactivation.html)
 ///
-/// @param self Poppler__RichMediaAnnotation__Deactivation*
+/// @param self const Poppler__RichMediaAnnotation__Deactivation*
 ///
 /// @return enum Poppler__RichMediaAnnotation__Deactivation__Condition
 ///
-int32_t q_poppler__richmediaannotation__deactivation_condition(void* self);
+int32_t q_poppler__richmediaannotation__deactivation_condition(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation_1_1Deactivation.html)
 ///
@@ -4919,15 +4911,15 @@ Poppler__RichMediaAnnotation__Settings* q_poppler__richmediaannotation__settings
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation_1_1Settings.html)
 ///
-/// @param self Poppler__RichMediaAnnotation__Settings*
+/// @param self const Poppler__RichMediaAnnotation__Settings*
 ///
-Poppler__RichMediaAnnotation__Activation* q_poppler__richmediaannotation__settings_activation(void* self);
+Poppler__RichMediaAnnotation__Activation* q_poppler__richmediaannotation__settings_activation(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation_1_1Settings.html)
 ///
-/// @param self Poppler__RichMediaAnnotation__Settings*
+/// @param self const Poppler__RichMediaAnnotation__Settings*
 ///
-Poppler__RichMediaAnnotation__Deactivation* q_poppler__richmediaannotation__settings_deactivation(void* self);
+Poppler__RichMediaAnnotation__Deactivation* q_poppler__richmediaannotation__settings_deactivation(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1RichMediaAnnotation_1_1Settings.html)
 ///

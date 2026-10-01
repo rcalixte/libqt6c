@@ -1,5 +1,4 @@
 #include "libkconfigbase.hpp"
-#include "libkconfiggroup.hpp"
 #include "libkconfig.hpp"
 #include "libkconfig.h"
 
@@ -27,18 +26,18 @@ KConfig* k_config_new6(const char* file, const char* backend, int32_t type) {
     return KConfig_New6(qstring(file), qstring(backend), type);
 }
 
-int32_t k_config_location_type(void* self) {
+int32_t k_config_location_type(const void* self) {
     return KConfig_LocationType((KConfig*)self);
 }
 
-const char* k_config_name(void* self) {
+const char* k_config_name(const void* self) {
     libqt_string _str = KConfig_Name((KConfig*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t k_config_open_flags(void* self) {
+int32_t k_config_open_flags(const void* self) {
     return KConfig_OpenFlags((KConfig*)self);
 }
 
@@ -46,7 +45,7 @@ bool k_config_sync(void* self) {
     return KConfig_Sync((KConfig*)self);
 }
 
-void k_config_on_sync(void* self, bool (*callback)()) {
+void k_config_on_sync(void* self, bool (*callback)(void*)) {
     KConfig_OnSync((KConfig*)self, (intptr_t)callback);
 }
 
@@ -54,7 +53,7 @@ bool k_config_super_sync(void* self) {
     return KConfig_SuperSync((KConfig*)self);
 }
 
-bool k_config_is_dirty(void* self) {
+bool k_config_is_dirty(const void* self) {
     return KConfig_IsDirty((KConfig*)self);
 }
 
@@ -62,7 +61,7 @@ void k_config_mark_as_clean(void* self) {
     KConfig_MarkAsClean((KConfig*)self);
 }
 
-void k_config_on_mark_as_clean(void* self, void (*callback)()) {
+void k_config_on_mark_as_clean(void* self, void (*callback)(void*)) {
     KConfig_OnMarkAsClean((KConfig*)self, (intptr_t)callback);
 }
 
@@ -70,15 +69,15 @@ void k_config_super_mark_as_clean(void* self) {
     KConfig_SuperMarkAsClean((KConfig*)self);
 }
 
-int32_t k_config_access_mode(void* self) {
+int32_t k_config_access_mode(const void* self) {
     return KConfig_AccessMode((KConfig*)self);
 }
 
-void k_config_on_access_mode(void* self, int32_t (*callback)()) {
+void k_config_on_access_mode(const void* self, int32_t (*callback)(const void*)) {
     KConfig_OnAccessMode((KConfig*)self, (intptr_t)callback);
 }
 
-int32_t k_config_super_access_mode(void* self) {
+int32_t k_config_super_access_mode(const void* self) {
     return KConfig_SuperAccessMode((KConfig*)self);
 }
 
@@ -86,7 +85,7 @@ bool k_config_is_config_writable(void* self, bool warnUser) {
     return KConfig_IsConfigWritable((KConfig*)self, warnUser);
 }
 
-KConfig* k_config_copy_to(void* self, const char* file) {
+KConfig* k_config_copy_to(const void* self, const char* file) {
     return KConfig_CopyTo((KConfig*)self, qstring(file));
 }
 
@@ -112,7 +111,7 @@ void k_config_add_config_sources(void* self, const char* sources[static 1]) {
     free(sources_qstr);
 }
 
-const char** k_config_additional_config_sources(void* self) {
+const char** k_config_additional_config_sources(const void* self) {
     libqt_list _arr = KConfig_AdditionalConfigSources((KConfig*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -129,7 +128,7 @@ const char** k_config_additional_config_sources(void* self) {
     return _ret;
 }
 
-const char* k_config_locale(void* self) {
+const char* k_config_locale(const void* self) {
     libqt_string _str = KConfig_Locale((KConfig*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -144,23 +143,23 @@ void k_config_set_read_defaults(void* self, bool b) {
     KConfig_SetReadDefaults((KConfig*)self, b);
 }
 
-bool k_config_read_defaults(void* self) {
+bool k_config_read_defaults(const void* self) {
     return KConfig_ReadDefaults((KConfig*)self);
 }
 
-bool k_config_is_immutable(void* self) {
+bool k_config_is_immutable(const void* self) {
     return KConfig_IsImmutable((KConfig*)self);
 }
 
-void k_config_on_is_immutable(void* self, bool (*callback)()) {
+void k_config_on_is_immutable(const void* self, bool (*callback)(const void*)) {
     KConfig_OnIsImmutable((KConfig*)self, (intptr_t)callback);
 }
 
-bool k_config_super_is_immutable(void* self) {
+bool k_config_super_is_immutable(const void* self) {
     return KConfig_SuperIsImmutable((KConfig*)self);
 }
 
-const char** k_config_group_list(void* self) {
+const char** k_config_group_list(const void* self) {
     libqt_list _arr = KConfig_GroupList((KConfig*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -177,11 +176,11 @@ const char** k_config_group_list(void* self) {
     return _ret;
 }
 
-void k_config_on_group_list(void* self, const char** (*callback)()) {
+void k_config_on_group_list(const void* self, const char** (*callback)(const void*)) {
     KConfig_OnGroupList((KConfig*)self, (intptr_t)callback);
 }
 
-const char** k_config_super_group_list(void* self) {
+const char** k_config_super_group_list(const void* self) {
     libqt_list _arr = KConfig_SuperGroupList((KConfig*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -198,7 +197,7 @@ const char** k_config_super_group_list(void* self) {
     return _ret;
 }
 
-libqt_map /* of const char* to const char* */ k_config_entry_map(void* self) {
+libqt_map /* of const char* to const char* */ k_config_entry_map(const void* self) {
     // Convert QMap<QString,QString> to libqt_map
     libqt_map _out = KConfig_EntryMap((KConfig*)self);
     libqt_map _ret;
@@ -264,40 +263,16 @@ const char* k_config_main_config_name() {
     return _ret;
 }
 
-bool k_config_has_group_impl(void* self, const char* groupName) {
+bool k_config_has_group_impl(const void* self, const char* groupName) {
     return KConfig_HasGroupImpl((KConfig*)self, qstring(groupName));
 }
 
-void k_config_on_has_group_impl(void* self, bool (*callback)(void*, const char*)) {
+void k_config_on_has_group_impl(const void* self, bool (*callback)(const void*, const char*)) {
     KConfig_OnHasGroupImpl((KConfig*)self, (intptr_t)callback);
 }
 
-bool k_config_super_has_group_impl(void* self, const char* groupName) {
+bool k_config_super_has_group_impl(const void* self, const char* groupName) {
     return KConfig_SuperHasGroupImpl((KConfig*)self, qstring(groupName));
-}
-
-KConfigGroup* k_config_group_impl(void* self, const char* groupName) {
-    return KConfig_GroupImpl((KConfig*)self, qstring(groupName));
-}
-
-void k_config_on_group_impl(void* self, KConfigGroup* (*callback)(void*, const char*)) {
-    KConfig_OnGroupImpl((KConfig*)self, (intptr_t)callback);
-}
-
-KConfigGroup* k_config_super_group_impl(void* self, const char* groupName) {
-    return KConfig_SuperGroupImpl((KConfig*)self, qstring(groupName));
-}
-
-const KConfigGroup* k_config_group_impl2(void* self, const char* groupName) {
-    return KConfig_GroupImpl2((KConfig*)self, qstring(groupName));
-}
-
-void k_config_on_group_impl2(void* self, const KConfigGroup* (*callback)(void*, const char*)) {
-    KConfig_OnGroupImpl2((KConfig*)self, (intptr_t)callback);
-}
-
-const KConfigGroup* k_config_super_group_impl2(void* self, const char* groupName) {
-    return KConfig_SuperGroupImpl2((KConfig*)self, qstring(groupName));
 }
 
 void k_config_delete_group_impl(void* self, const char* groupName, int32_t flags) {
@@ -312,15 +287,15 @@ void k_config_super_delete_group_impl(void* self, const char* groupName, int32_t
     KConfig_SuperDeleteGroupImpl((KConfig*)self, qstring(groupName), flags);
 }
 
-bool k_config_is_group_immutable_impl(void* self, const char* groupName) {
+bool k_config_is_group_immutable_impl(const void* self, const char* groupName) {
     return KConfig_IsGroupImmutableImpl((KConfig*)self, qstring(groupName));
 }
 
-void k_config_on_is_group_immutable_impl(void* self, bool (*callback)(void*, const char*)) {
+void k_config_on_is_group_immutable_impl(const void* self, bool (*callback)(const void*, const char*)) {
     KConfig_OnIsGroupImmutableImpl((KConfig*)self, (intptr_t)callback);
 }
 
-bool k_config_super_is_group_immutable_impl(void* self, const char* groupName) {
+bool k_config_super_is_group_immutable_impl(const void* self, const char* groupName) {
     return KConfig_SuperIsGroupImmutableImpl((KConfig*)self, qstring(groupName));
 }
 
@@ -336,11 +311,11 @@ void k_config_super_virtual_hook(void* self, int id, void* data) {
     KConfig_SuperVirtualHook((KConfig*)self, id, data);
 }
 
-KConfig* k_config_copy_to2(void* self, const char* file, void* config) {
+KConfig* k_config_copy_to2(const void* self, const char* file, void* config) {
     return KConfig_CopyTo2((KConfig*)self, qstring(file), (KConfig*)config);
 }
 
-libqt_map /* of const char* to const char* */ k_config_entry_map1(void* self, const char* aGroup) {
+libqt_map /* of const char* to const char* */ k_config_entry_map1(const void* self, const char* aGroup) {
     // Convert QMap<QString,QString> to libqt_map
     libqt_map _out = KConfig_EntryMap1((KConfig*)self, qstring(aGroup));
     libqt_map _ret;
@@ -395,7 +370,7 @@ libqt_map /* of const char* to const char* */ k_config_entry_map1(void* self, co
     return _ret;
 }
 
-bool k_config_has_group(void* self, const char* group) {
+bool k_config_has_group(const void* self, const char* group) {
     return KConfigBase_HasGroup((KConfigBase*)self, qstring(group));
 }
 
@@ -403,7 +378,7 @@ KConfigGroup* k_config_group(void* self, const char* group) {
     return KConfigBase_Group((KConfigBase*)self, qstring(group));
 }
 
-const KConfigGroup* k_config_group2(void* self, const char* group) {
+const KConfigGroup* k_config_group2(const void* self, const char* group) {
     return KConfigBase_Group2((KConfigBase*)self, qstring(group));
 }
 
@@ -411,11 +386,11 @@ void k_config_delete_group(void* self, const char* group) {
     KConfigBase_DeleteGroup((KConfigBase*)self, qstring(group));
 }
 
-bool k_config_is_group_immutable(void* self, const char* group) {
+bool k_config_is_group_immutable(const void* self, const char* group) {
     return KConfigBase_IsGroupImmutable((KConfigBase*)self, qstring(group));
 }
 
-void k_config_operator_assign(void* self, void* param1) {
+void k_config_operator_assign(void* self, const void* param1) {
     KConfigBase_OperatorAssign((KConfigBase*)self, (KConfigBase*)param1);
 }
 

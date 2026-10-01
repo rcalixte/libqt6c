@@ -20,35 +20,35 @@ QBluetoothHostInfo* q_bluetoothhostinfo_new();
 ///
 /// @param other QBluetoothHostInfo*
 ///
-QBluetoothHostInfo* q_bluetoothhostinfo_new2(void* other);
+QBluetoothHostInfo* q_bluetoothhostinfo_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothhostinfo.html#operator-eq)
 ///
 /// @param self QBluetoothHostInfo*
 /// @param other QBluetoothHostInfo*
 ///
-void q_bluetoothhostinfo_operator_assign(void* self, void* other);
+void q_bluetoothhostinfo_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothhostinfo.html#address)
 ///
-/// @param self QBluetoothHostInfo*
+/// @param self const QBluetoothHostInfo*
 ///
-QBluetoothAddress* q_bluetoothhostinfo_address(void* self);
+QBluetoothAddress* q_bluetoothhostinfo_address(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothhostinfo.html#setAddress)
 ///
 /// @param self QBluetoothHostInfo*
 /// @param address QBluetoothAddress*
 ///
-void q_bluetoothhostinfo_set_address(void* self, void* address);
+void q_bluetoothhostinfo_set_address(void* self, const void* address);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothhostinfo.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QBluetoothHostInfo*
+/// @param self const QBluetoothHostInfo*
 ///
-const char* q_bluetoothhostinfo_name(void* self);
+const char* q_bluetoothhostinfo_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothhostinfo.html#setName)
 ///

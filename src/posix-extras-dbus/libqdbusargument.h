@@ -20,14 +20,14 @@ QDBusArgument* q_dbusargument_new();
 ///
 /// @param other QDBusArgument*
 ///
-QDBusArgument* q_dbusargument_new2(void* other);
+QDBusArgument* q_dbusargument_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#operator-eq)
 ///
 /// @param self QDBusArgument*
 /// @param other QDBusArgument*
 ///
-void q_dbusargument_operator_assign(void* self, void* other);
+void q_dbusargument_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#swap)
 ///
@@ -111,28 +111,28 @@ QDBusArgument* q_dbusargument_operator_shift_left10(void* self, const char* arg)
 /// @param self QDBusArgument*
 /// @param arg QDBusVariant*
 ///
-QDBusArgument* q_dbusargument_operator_shift_left11(void* self, void* arg);
+QDBusArgument* q_dbusargument_operator_shift_left11(void* self, const void* arg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#operator-lt-lt)
 ///
 /// @param self QDBusArgument*
 /// @param arg QDBusObjectPath*
 ///
-QDBusArgument* q_dbusargument_operator_shift_left12(void* self, void* arg);
+QDBusArgument* q_dbusargument_operator_shift_left12(void* self, const void* arg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#operator-lt-lt)
 ///
 /// @param self QDBusArgument*
 /// @param arg QDBusSignature*
 ///
-QDBusArgument* q_dbusargument_operator_shift_left13(void* self, void* arg);
+QDBusArgument* q_dbusargument_operator_shift_left13(void* self, const void* arg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#operator-lt-lt)
 ///
 /// @param self QDBusArgument*
 /// @param arg QDBusUnixFileDescriptor*
 ///
-QDBusArgument* q_dbusargument_operator_shift_left14(void* self, void* arg);
+QDBusArgument* q_dbusargument_operator_shift_left14(void* self, const void* arg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#operator-lt-lt)
 ///
@@ -219,195 +219,195 @@ void q_dbusargument_end_map_entry(void* self);
 /// @param self QDBusArgument*
 /// @param v QVariant*
 ///
-void q_dbusargument_append_variant(void* self, void* v);
+void q_dbusargument_append_variant(void* self, const void* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#currentSignature)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDBusArgument*
+/// @param self const QDBusArgument*
 ///
-const char* q_dbusargument_current_signature(void* self);
+const char* q_dbusargument_current_signature(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#currentType)
 ///
-/// @param self QDBusArgument*
+/// @param self const QDBusArgument*
 ///
 /// @return enum QDBusArgument__ElementType
 ///
-int32_t q_dbusargument_current_type(void* self);
+int32_t q_dbusargument_current_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#operator-gt-gt)
 ///
-/// @param self QDBusArgument*
+/// @param self const QDBusArgument*
 /// @param arg unsigned char*
 ///
-const QDBusArgument* q_dbusargument_operator_shift_right(void* self, unsigned char* arg);
+const QDBusArgument* q_dbusargument_operator_shift_right(const void* self, unsigned char* arg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#operator-gt-gt)
 ///
-/// @param self QDBusArgument*
+/// @param self const QDBusArgument*
 /// @param arg bool*
 ///
-const QDBusArgument* q_dbusargument_operator_shift_right2(void* self, bool* arg);
+const QDBusArgument* q_dbusargument_operator_shift_right2(const void* self, bool* arg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#operator-gt-gt)
 ///
-/// @param self QDBusArgument*
+/// @param self const QDBusArgument*
 /// @param arg short*
 ///
-const QDBusArgument* q_dbusargument_operator_shift_right3(void* self, short* arg);
+const QDBusArgument* q_dbusargument_operator_shift_right3(const void* self, short* arg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#operator-gt-gt)
 ///
-/// @param self QDBusArgument*
+/// @param self const QDBusArgument*
 /// @param arg uint16_t*
 ///
-const QDBusArgument* q_dbusargument_operator_shift_right4(void* self, uint16_t* arg);
+const QDBusArgument* q_dbusargument_operator_shift_right4(const void* self, uint16_t* arg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#operator-gt-gt)
 ///
-/// @param self QDBusArgument*
+/// @param self const QDBusArgument*
 /// @param arg int*
 ///
-const QDBusArgument* q_dbusargument_operator_shift_right5(void* self, int* arg);
+const QDBusArgument* q_dbusargument_operator_shift_right5(const void* self, int* arg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#operator-gt-gt)
 ///
-/// @param self QDBusArgument*
+/// @param self const QDBusArgument*
 /// @param arg uint32_t*
 ///
-const QDBusArgument* q_dbusargument_operator_shift_right6(void* self, uint32_t* arg);
+const QDBusArgument* q_dbusargument_operator_shift_right6(const void* self, uint32_t* arg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#operator-gt-gt)
 ///
-/// @param self QDBusArgument*
+/// @param self const QDBusArgument*
 /// @param arg long long*
 ///
-const QDBusArgument* q_dbusargument_operator_shift_right7(void* self, long long* arg);
+const QDBusArgument* q_dbusargument_operator_shift_right7(const void* self, long long* arg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#operator-gt-gt)
 ///
-/// @param self QDBusArgument*
+/// @param self const QDBusArgument*
 /// @param arg uintptr_t*
 ///
-const QDBusArgument* q_dbusargument_operator_shift_right8(void* self, uintptr_t* arg);
+const QDBusArgument* q_dbusargument_operator_shift_right8(const void* self, uintptr_t* arg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#operator-gt-gt)
 ///
-/// @param self QDBusArgument*
+/// @param self const QDBusArgument*
 /// @param arg double*
 ///
-const QDBusArgument* q_dbusargument_operator_shift_right9(void* self, double* arg);
+const QDBusArgument* q_dbusargument_operator_shift_right9(const void* self, double* arg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#operator-gt-gt)
 ///
-/// @param self QDBusArgument*
+/// @param self const QDBusArgument*
 /// @param arg const char*
 ///
-const QDBusArgument* q_dbusargument_operator_shift_right10(void* self, const char* arg);
+const QDBusArgument* q_dbusargument_operator_shift_right10(const void* self, const char* arg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#operator-gt-gt)
 ///
-/// @param self QDBusArgument*
+/// @param self const QDBusArgument*
 /// @param arg QDBusVariant*
 ///
-const QDBusArgument* q_dbusargument_operator_shift_right11(void* self, void* arg);
+const QDBusArgument* q_dbusargument_operator_shift_right11(const void* self, void* arg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#operator-gt-gt)
 ///
-/// @param self QDBusArgument*
+/// @param self const QDBusArgument*
 /// @param arg QDBusObjectPath*
 ///
-const QDBusArgument* q_dbusargument_operator_shift_right12(void* self, void* arg);
+const QDBusArgument* q_dbusargument_operator_shift_right12(const void* self, void* arg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#operator-gt-gt)
 ///
-/// @param self QDBusArgument*
+/// @param self const QDBusArgument*
 /// @param arg QDBusSignature*
 ///
-const QDBusArgument* q_dbusargument_operator_shift_right13(void* self, void* arg);
+const QDBusArgument* q_dbusargument_operator_shift_right13(const void* self, void* arg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#operator-gt-gt)
 ///
-/// @param self QDBusArgument*
+/// @param self const QDBusArgument*
 /// @param arg QDBusUnixFileDescriptor*
 ///
-const QDBusArgument* q_dbusargument_operator_shift_right14(void* self, void* arg);
+const QDBusArgument* q_dbusargument_operator_shift_right14(const void* self, void* arg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#operator-gt-gt)
 ///
-/// @param self QDBusArgument*
+/// @param self const QDBusArgument*
 /// @param arg const char**
 ///
-const QDBusArgument* q_dbusargument_operator_shift_right15(void* self, const char* arg[static 1]);
+const QDBusArgument* q_dbusargument_operator_shift_right15(const void* self, const char* arg[static 1]);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#operator-gt-gt)
 ///
-/// @param self QDBusArgument*
+/// @param self const QDBusArgument*
 /// @param arg char*
 ///
-const QDBusArgument* q_dbusargument_operator_shift_right16(void* self, char* arg);
+const QDBusArgument* q_dbusargument_operator_shift_right16(const void* self, char* arg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#beginStructure)
 ///
-/// @param self QDBusArgument*
+/// @param self const QDBusArgument*
 ///
-void q_dbusargument_begin_structure2(void* self);
+void q_dbusargument_begin_structure2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#endStructure)
 ///
-/// @param self QDBusArgument*
+/// @param self const QDBusArgument*
 ///
-void q_dbusargument_end_structure2(void* self);
+void q_dbusargument_end_structure2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#beginArray)
 ///
-/// @param self QDBusArgument*
+/// @param self const QDBusArgument*
 ///
-void q_dbusargument_begin_array3(void* self);
+void q_dbusargument_begin_array3(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#endArray)
 ///
-/// @param self QDBusArgument*
+/// @param self const QDBusArgument*
 ///
-void q_dbusargument_end_array2(void* self);
+void q_dbusargument_end_array2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#beginMap)
 ///
-/// @param self QDBusArgument*
+/// @param self const QDBusArgument*
 ///
-void q_dbusargument_begin_map3(void* self);
+void q_dbusargument_begin_map3(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#endMap)
 ///
-/// @param self QDBusArgument*
+/// @param self const QDBusArgument*
 ///
-void q_dbusargument_end_map2(void* self);
+void q_dbusargument_end_map2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#beginMapEntry)
 ///
-/// @param self QDBusArgument*
+/// @param self const QDBusArgument*
 ///
-void q_dbusargument_begin_map_entry2(void* self);
+void q_dbusargument_begin_map_entry2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#endMapEntry)
 ///
-/// @param self QDBusArgument*
+/// @param self const QDBusArgument*
 ///
-void q_dbusargument_end_map_entry2(void* self);
+void q_dbusargument_end_map_entry2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#atEnd)
 ///
-/// @param self QDBusArgument*
+/// @param self const QDBusArgument*
 ///
-bool q_dbusargument_at_end(void* self);
+bool q_dbusargument_at_end(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#asVariant)
 ///
-/// @param self QDBusArgument*
+/// @param self const QDBusArgument*
 ///
-QVariant* q_dbusargument_as_variant(void* self);
+QVariant* q_dbusargument_as_variant(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#dtor.QDBusArgument)
 ///

@@ -4,7 +4,7 @@
 #include "libqgeoareamonitorinfo.hpp"
 #include "libqgeoareamonitorinfo.h"
 
-size_t q_qgeoareamonitorinfo_h_q_hash(void* key, size_t seed) {
+size_t q_qgeoareamonitorinfo_h_q_hash(const void* key, size_t seed) {
     return qgeoareamonitorinfo_h_QHash((QGeoAreaMonitorInfo*)key, seed);
 }
 
@@ -12,7 +12,7 @@ QGeoAreaMonitorInfo* q_geoareamonitorinfo_new() {
     return QGeoAreaMonitorInfo_New();
 }
 
-QGeoAreaMonitorInfo* q_geoareamonitorinfo_new2(void* other) {
+QGeoAreaMonitorInfo* q_geoareamonitorinfo_new2(const void* other) {
     return QGeoAreaMonitorInfo_New2((QGeoAreaMonitorInfo*)other);
 }
 
@@ -20,7 +20,7 @@ QGeoAreaMonitorInfo* q_geoareamonitorinfo_new3(const char* name) {
     return QGeoAreaMonitorInfo_New3(qstring(name));
 }
 
-void q_geoareamonitorinfo_operator_assign(void* self, void* other) {
+void q_geoareamonitorinfo_operator_assign(void* self, const void* other) {
     QGeoAreaMonitorInfo_OperatorAssign((QGeoAreaMonitorInfo*)self, (QGeoAreaMonitorInfo*)other);
 }
 
@@ -28,7 +28,7 @@ void q_geoareamonitorinfo_swap(void* self, void* other) {
     QGeoAreaMonitorInfo_Swap((QGeoAreaMonitorInfo*)self, (QGeoAreaMonitorInfo*)other);
 }
 
-const char* q_geoareamonitorinfo_name(void* self) {
+const char* q_geoareamonitorinfo_name(const void* self) {
     libqt_string _str = QGeoAreaMonitorInfo_Name((QGeoAreaMonitorInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -39,34 +39,34 @@ void q_geoareamonitorinfo_set_name(void* self, const char* name) {
     QGeoAreaMonitorInfo_SetName((QGeoAreaMonitorInfo*)self, qstring(name));
 }
 
-const char* q_geoareamonitorinfo_identifier(void* self) {
+const char* q_geoareamonitorinfo_identifier(const void* self) {
     libqt_string _str = QGeoAreaMonitorInfo_Identifier((QGeoAreaMonitorInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_geoareamonitorinfo_is_valid(void* self) {
+bool q_geoareamonitorinfo_is_valid(const void* self) {
     return QGeoAreaMonitorInfo_IsValid((QGeoAreaMonitorInfo*)self);
 }
 
-QGeoShape* q_geoareamonitorinfo_area(void* self) {
+QGeoShape* q_geoareamonitorinfo_area(const void* self) {
     return QGeoAreaMonitorInfo_Area((QGeoAreaMonitorInfo*)self);
 }
 
-void q_geoareamonitorinfo_set_area(void* self, void* newShape) {
+void q_geoareamonitorinfo_set_area(void* self, const void* newShape) {
     QGeoAreaMonitorInfo_SetArea((QGeoAreaMonitorInfo*)self, (QGeoShape*)newShape);
 }
 
-QDateTime* q_geoareamonitorinfo_expiration(void* self) {
+QDateTime* q_geoareamonitorinfo_expiration(const void* self) {
     return QGeoAreaMonitorInfo_Expiration((QGeoAreaMonitorInfo*)self);
 }
 
-void q_geoareamonitorinfo_set_expiration(void* self, void* expiry) {
+void q_geoareamonitorinfo_set_expiration(void* self, const void* expiry) {
     QGeoAreaMonitorInfo_SetExpiration((QGeoAreaMonitorInfo*)self, (QDateTime*)expiry);
 }
 
-bool q_geoareamonitorinfo_is_persistent(void* self) {
+bool q_geoareamonitorinfo_is_persistent(const void* self) {
     return QGeoAreaMonitorInfo_IsPersistent((QGeoAreaMonitorInfo*)self);
 }
 
@@ -74,7 +74,7 @@ void q_geoareamonitorinfo_set_persistent(void* self, bool isPersistent) {
     QGeoAreaMonitorInfo_SetPersistent((QGeoAreaMonitorInfo*)self, isPersistent);
 }
 
-libqt_map /* of const char* to QVariant* */ q_geoareamonitorinfo_notification_parameters(void* self) {
+libqt_map /* of const char* to QVariant* */ q_geoareamonitorinfo_notification_parameters(const void* self) {
     // Convert QMap<QString,QVariant> to libqt_map
     libqt_map _out = QGeoAreaMonitorInfo_NotificationParameters((QGeoAreaMonitorInfo*)self);
     libqt_map _ret;

@@ -14,7 +14,7 @@
 ///
 /// @param bk KBookmark*
 ///
-KBookmarkActionInterface* k_bookmarkactioninterface_new(void* bk);
+KBookmarkActionInterface* k_bookmarkactioninterface_new(const void* bk);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkactioninterface.html)
 
@@ -22,13 +22,13 @@ KBookmarkActionInterface* k_bookmarkactioninterface_new(void* bk);
 ///
 /// @param param1 KBookmarkActionInterface*
 ///
-KBookmarkActionInterface* k_bookmarkactioninterface_new2(void* param1);
+KBookmarkActionInterface* k_bookmarkactioninterface_new2(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkactioninterface.html#bookmark)
 ///
-/// @param self KBookmarkActionInterface*
+/// @param self const KBookmarkActionInterface*
 ///
-const KBookmark* k_bookmarkactioninterface_bookmark(void* self);
+const KBookmark* k_bookmarkactioninterface_bookmark(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkactioninterface.html#dtor.KBookmarkActionInterface)
 ///

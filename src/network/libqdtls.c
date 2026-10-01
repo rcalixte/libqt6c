@@ -19,15 +19,15 @@ QDtlsClientVerifier* q_dtlsclientverifier_new2(void* parent) {
     return QDtlsClientVerifier_New2((QObject*)parent);
 }
 
-const QMetaObject* q_dtlsclientverifier_meta_object(void* self) {
+const QMetaObject* q_dtlsclientverifier_meta_object(const void* self) {
     return QDtlsClientVerifier_MetaObject((QDtlsClientVerifier*)self);
 }
 
-void q_dtlsclientverifier_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_dtlsclientverifier_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QDtlsClientVerifier_OnMetaObject((QDtlsClientVerifier*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_dtlsclientverifier_super_meta_object(void* self) {
+const QMetaObject* q_dtlsclientverifier_super_meta_object(const void* self) {
     return QDtlsClientVerifier_SuperMetaObject((QDtlsClientVerifier*)self);
 }
 
@@ -62,30 +62,30 @@ const char* q_dtlsclientverifier_tr(const char* s) {
     return _ret;
 }
 
-bool q_dtlsclientverifier_set_cookie_generator_parameters(void* self, void* params) {
+bool q_dtlsclientverifier_set_cookie_generator_parameters(void* self, const void* params) {
     return QDtlsClientVerifier_SetCookieGeneratorParameters((QDtlsClientVerifier*)self, (QDtlsClientVerifier__GeneratorParameters*)params);
 }
 
-QDtlsClientVerifier__GeneratorParameters* q_dtlsclientverifier_cookie_generator_parameters(void* self) {
+QDtlsClientVerifier__GeneratorParameters* q_dtlsclientverifier_cookie_generator_parameters(const void* self) {
     return QDtlsClientVerifier_CookieGeneratorParameters((QDtlsClientVerifier*)self);
 }
 
-bool q_dtlsclientverifier_verify_client(void* self, void* socket, char* dgram, void* address, uint16_t port) {
+bool q_dtlsclientverifier_verify_client(void* self, void* socket, char* dgram, const void* address, uint16_t port) {
     return QDtlsClientVerifier_VerifyClient((QDtlsClientVerifier*)self, (QUdpSocket*)socket, qstring(dgram), (QHostAddress*)address, port);
 }
 
-char* q_dtlsclientverifier_verified_hello(void* self) {
+char* q_dtlsclientverifier_verified_hello(const void* self) {
     libqt_string _str = QDtlsClientVerifier_VerifiedHello((QDtlsClientVerifier*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-uint8_t q_dtlsclientverifier_dtls_error(void* self) {
+uint8_t q_dtlsclientverifier_dtls_error(const void* self) {
     return QDtlsClientVerifier_DtlsError((QDtlsClientVerifier*)self);
 }
 
-const char* q_dtlsclientverifier_dtls_error_string(void* self) {
+const char* q_dtlsclientverifier_dtls_error_string(const void* self) {
     libqt_string _str = QDtlsClientVerifier_DtlsErrorString((QDtlsClientVerifier*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -106,7 +106,7 @@ const char* q_dtlsclientverifier_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-const char* q_dtlsclientverifier_object_name(void* self) {
+const char* q_dtlsclientverifier_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -117,19 +117,19 @@ void q_dtlsclientverifier_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_dtlsclientverifier_is_widget_type(void* self) {
+bool q_dtlsclientverifier_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_dtlsclientverifier_is_window_type(void* self) {
+bool q_dtlsclientverifier_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_dtlsclientverifier_is_quick_item_type(void* self) {
+bool q_dtlsclientverifier_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_dtlsclientverifier_signals_blocked(void* self) {
+bool q_dtlsclientverifier_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -137,7 +137,7 @@ bool q_dtlsclientverifier_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_dtlsclientverifier_thread(void* self) {
+QThread* q_dtlsclientverifier_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -161,7 +161,7 @@ void q_dtlsclientverifier_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_dtlsclientverifier_children(void* self) {
+libqt_list /* of QObject* */ q_dtlsclientverifier_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -178,55 +178,55 @@ void q_dtlsclientverifier_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_dtlsclientverifier_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_dtlsclientverifier_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_dtlsclientverifier_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_dtlsclientverifier_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_dtlsclientverifier_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_dtlsclientverifier_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_dtlsclientverifier_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_dtlsclientverifier_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_dtlsclientverifier_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_dtlsclientverifier_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_dtlsclientverifier_disconnect3(void* self) {
+bool q_dtlsclientverifier_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_dtlsclientverifier_disconnect4(void* self, void* receiver) {
+bool q_dtlsclientverifier_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_dtlsclientverifier_disconnect5(void* param1) {
+bool q_dtlsclientverifier_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_dtlsclientverifier_dump_object_tree(void* self) {
+void q_dtlsclientverifier_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_dtlsclientverifier_dump_object_info(void* self) {
+void q_dtlsclientverifier_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_dtlsclientverifier_set_property(void* self, const char* name, void* value) {
+bool q_dtlsclientverifier_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_dtlsclientverifier_property(void* self, const char* name) {
+QVariant* q_dtlsclientverifier_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_dtlsclientverifier_dynamic_property_names(void* self) {
+const char** q_dtlsclientverifier_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -247,7 +247,7 @@ QBindingStorage* q_dtlsclientverifier_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_dtlsclientverifier_binding_storage2(void* self) {
+const QBindingStorage* q_dtlsclientverifier_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -259,11 +259,11 @@ void q_dtlsclientverifier_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_dtlsclientverifier_parent(void* self) {
+QObject* q_dtlsclientverifier_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_dtlsclientverifier_inherits(void* self, const char* classname) {
+bool q_dtlsclientverifier_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -279,31 +279,31 @@ int32_t q_dtlsclientverifier_start_timer23(void* self, int64_t time, int32_t tim
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_dtlsclientverifier_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_dtlsclientverifier_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_dtlsclientverifier_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_dtlsclientverifier_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_dtlsclientverifier_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_dtlsclientverifier_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_dtlsclientverifier_disconnect1(void* self, const char* signal) {
+bool q_dtlsclientverifier_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_dtlsclientverifier_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_dtlsclientverifier_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_dtlsclientverifier_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_dtlsclientverifier_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_dtlsclientverifier_disconnect23(void* self, void* receiver, const char* member) {
+bool q_dtlsclientverifier_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -375,76 +375,44 @@ void q_dtlsclientverifier_on_custom_event(void* self, void (*callback)(void*, vo
     QDtlsClientVerifier_OnCustomEvent((QDtlsClientVerifier*)self, (intptr_t)callback);
 }
 
-void q_dtlsclientverifier_connect_notify(void* self, void* signal) {
+void q_dtlsclientverifier_connect_notify(void* self, const void* signal) {
     QDtlsClientVerifier_ConnectNotify((QDtlsClientVerifier*)self, (QMetaMethod*)signal);
 }
 
-void q_dtlsclientverifier_super_connect_notify(void* self, void* signal) {
+void q_dtlsclientverifier_super_connect_notify(void* self, const void* signal) {
     QDtlsClientVerifier_SuperConnectNotify((QDtlsClientVerifier*)self, (QMetaMethod*)signal);
 }
 
-void q_dtlsclientverifier_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_dtlsclientverifier_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QDtlsClientVerifier_OnConnectNotify((QDtlsClientVerifier*)self, (intptr_t)callback);
 }
 
-void q_dtlsclientverifier_disconnect_notify(void* self, void* signal) {
+void q_dtlsclientverifier_disconnect_notify(void* self, const void* signal) {
     QDtlsClientVerifier_DisconnectNotify((QDtlsClientVerifier*)self, (QMetaMethod*)signal);
 }
 
-void q_dtlsclientverifier_super_disconnect_notify(void* self, void* signal) {
+void q_dtlsclientverifier_super_disconnect_notify(void* self, const void* signal) {
     QDtlsClientVerifier_SuperDisconnectNotify((QDtlsClientVerifier*)self, (QMetaMethod*)signal);
 }
 
-void q_dtlsclientverifier_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_dtlsclientverifier_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QDtlsClientVerifier_OnDisconnectNotify((QDtlsClientVerifier*)self, (intptr_t)callback);
 }
 
-QObject* q_dtlsclientverifier_sender(void* self) {
+QObject* q_dtlsclientverifier_sender(const void* self) {
     return QDtlsClientVerifier_Sender((QDtlsClientVerifier*)self);
 }
 
-QObject* q_dtlsclientverifier_super_sender(void* self) {
-    return QDtlsClientVerifier_SuperSender((QDtlsClientVerifier*)self);
-}
-
-void q_dtlsclientverifier_on_sender(void* self, QObject* (*callback)()) {
-    QDtlsClientVerifier_OnSender((QDtlsClientVerifier*)self, (intptr_t)callback);
-}
-
-int32_t q_dtlsclientverifier_sender_signal_index(void* self) {
+int32_t q_dtlsclientverifier_sender_signal_index(const void* self) {
     return QDtlsClientVerifier_SenderSignalIndex((QDtlsClientVerifier*)self);
 }
 
-int32_t q_dtlsclientverifier_super_sender_signal_index(void* self) {
-    return QDtlsClientVerifier_SuperSenderSignalIndex((QDtlsClientVerifier*)self);
-}
-
-void q_dtlsclientverifier_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QDtlsClientVerifier_OnSenderSignalIndex((QDtlsClientVerifier*)self, (intptr_t)callback);
-}
-
-int32_t q_dtlsclientverifier_receivers(void* self, const char* signal) {
+int32_t q_dtlsclientverifier_receivers(const void* self, const char* signal) {
     return QDtlsClientVerifier_Receivers((QDtlsClientVerifier*)self, signal);
 }
 
-int32_t q_dtlsclientverifier_super_receivers(void* self, const char* signal) {
-    return QDtlsClientVerifier_SuperReceivers((QDtlsClientVerifier*)self, signal);
-}
-
-void q_dtlsclientverifier_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QDtlsClientVerifier_OnReceivers((QDtlsClientVerifier*)self, (intptr_t)callback);
-}
-
-bool q_dtlsclientverifier_is_signal_connected(void* self, void* signal) {
+bool q_dtlsclientverifier_is_signal_connected(const void* self, const void* signal) {
     return QDtlsClientVerifier_IsSignalConnected((QDtlsClientVerifier*)self, (QMetaMethod*)signal);
-}
-
-bool q_dtlsclientverifier_super_is_signal_connected(void* self, void* signal) {
-    return QDtlsClientVerifier_SuperIsSignalConnected((QDtlsClientVerifier*)self, (QMetaMethod*)signal);
-}
-
-void q_dtlsclientverifier_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QDtlsClientVerifier_OnIsSignalConnected((QDtlsClientVerifier*)self, (intptr_t)callback);
 }
 
 void q_dtlsclientverifier_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
@@ -463,15 +431,15 @@ QDtls* q_dtls_new2(int32_t mode, void* parent) {
     return QDtls_New2(mode, (QObject*)parent);
 }
 
-const QMetaObject* q_dtls_meta_object(void* self) {
+const QMetaObject* q_dtls_meta_object(const void* self) {
     return QDtls_MetaObject((QDtls*)self);
 }
 
-void q_dtls_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_dtls_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QDtls_OnMetaObject((QDtls*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_dtls_super_meta_object(void* self) {
+const QMetaObject* q_dtls_super_meta_object(const void* self) {
     return QDtls_SuperMetaObject((QDtls*)self);
 }
 
@@ -506,7 +474,7 @@ const char* q_dtls_tr(const char* s) {
     return _ret;
 }
 
-bool q_dtls_set_peer(void* self, void* address, uint16_t port) {
+bool q_dtls_set_peer(void* self, const void* address, uint16_t port) {
     return QDtls_SetPeer((QDtls*)self, (QHostAddress*)address, port);
 }
 
@@ -514,22 +482,22 @@ bool q_dtls_set_peer_verification_name(void* self, const char* name) {
     return QDtls_SetPeerVerificationName((QDtls*)self, qstring(name));
 }
 
-QHostAddress* q_dtls_peer_address(void* self) {
+QHostAddress* q_dtls_peer_address(const void* self) {
     return QDtls_PeerAddress((QDtls*)self);
 }
 
-uint16_t q_dtls_peer_port(void* self) {
+uint16_t q_dtls_peer_port(const void* self) {
     return QDtls_PeerPort((QDtls*)self);
 }
 
-const char* q_dtls_peer_verification_name(void* self) {
+const char* q_dtls_peer_verification_name(const void* self) {
     libqt_string _str = QDtls_PeerVerificationName((QDtls*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t q_dtls_ssl_mode(void* self) {
+int32_t q_dtls_ssl_mode(const void* self) {
     return QDtls_SslMode((QDtls*)self);
 }
 
@@ -537,27 +505,27 @@ void q_dtls_set_mtu_hint(void* self, uint16_t mtuHint) {
     QDtls_SetMtuHint((QDtls*)self, mtuHint);
 }
 
-uint16_t q_dtls_mtu_hint(void* self) {
+uint16_t q_dtls_mtu_hint(const void* self) {
     return QDtls_MtuHint((QDtls*)self);
 }
 
-bool q_dtls_set_cookie_generator_parameters(void* self, void* params) {
+bool q_dtls_set_cookie_generator_parameters(void* self, const void* params) {
     return QDtls_SetCookieGeneratorParameters((QDtls*)self, (QDtlsClientVerifier__GeneratorParameters*)params);
 }
 
-QDtlsClientVerifier__GeneratorParameters* q_dtls_cookie_generator_parameters(void* self) {
+QDtlsClientVerifier__GeneratorParameters* q_dtls_cookie_generator_parameters(const void* self) {
     return QDtls_CookieGeneratorParameters((QDtls*)self);
 }
 
-bool q_dtls_set_dtls_configuration(void* self, void* configuration) {
+bool q_dtls_set_dtls_configuration(void* self, const void* configuration) {
     return QDtls_SetDtlsConfiguration((QDtls*)self, (QSslConfiguration*)configuration);
 }
 
-QSslConfiguration* q_dtls_dtls_configuration(void* self) {
+QSslConfiguration* q_dtls_dtls_configuration(const void* self) {
     return QDtls_DtlsConfiguration((QDtls*)self);
 }
 
-int32_t q_dtls_handshake_state(void* self) {
+int32_t q_dtls_handshake_state(const void* self) {
     return QDtls_HandshakeState((QDtls*)self);
 }
 
@@ -581,15 +549,15 @@ bool q_dtls_shutdown(void* self, void* socket) {
     return QDtls_Shutdown((QDtls*)self, (QUdpSocket*)socket);
 }
 
-bool q_dtls_is_connection_encrypted(void* self) {
+bool q_dtls_is_connection_encrypted(const void* self) {
     return QDtls_IsConnectionEncrypted((QDtls*)self);
 }
 
-QSslCipher* q_dtls_session_cipher(void* self) {
+QSslCipher* q_dtls_session_cipher(const void* self) {
     return QDtls_SessionCipher((QDtls*)self);
 }
 
-int32_t q_dtls_session_protocol(void* self) {
+int32_t q_dtls_session_protocol(const void* self) {
     return QDtls_SessionProtocol((QDtls*)self);
 }
 
@@ -604,18 +572,18 @@ char* q_dtls_decrypt_datagram(void* self, void* socket, char* dgram) {
     return _ret;
 }
 
-uint8_t q_dtls_dtls_error(void* self) {
+uint8_t q_dtls_dtls_error(const void* self) {
     return QDtls_DtlsError((QDtls*)self);
 }
 
-const char* q_dtls_dtls_error_string(void* self) {
+const char* q_dtls_dtls_error_string(const void* self) {
     libqt_string _str = QDtls_DtlsErrorString((QDtls*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-libqt_list /* of QSslError* */ q_dtls_peer_verification_errors(void* self) {
+libqt_list /* of QSslError* */ q_dtls_peer_verification_errors(const void* self) {
     libqt_list _arr = QDtls_PeerVerificationErrors((QDtls*)self);
     return _arr;
 }
@@ -654,7 +622,7 @@ const char* q_dtls_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-bool q_dtls_set_peer3(void* self, void* address, uint16_t port, const char* verificationName) {
+bool q_dtls_set_peer3(void* self, const void* address, uint16_t port, const char* verificationName) {
     return QDtls_SetPeer3((QDtls*)self, (QHostAddress*)address, port, qstring(verificationName));
 }
 
@@ -662,7 +630,7 @@ bool q_dtls_do_handshake2(void* self, void* socket, char* dgram) {
     return QDtls_DoHandshake2((QDtls*)self, (QUdpSocket*)socket, qstring(dgram));
 }
 
-const char* q_dtls_object_name(void* self) {
+const char* q_dtls_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -673,19 +641,19 @@ void q_dtls_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_dtls_is_widget_type(void* self) {
+bool q_dtls_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_dtls_is_window_type(void* self) {
+bool q_dtls_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_dtls_is_quick_item_type(void* self) {
+bool q_dtls_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_dtls_signals_blocked(void* self) {
+bool q_dtls_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -693,7 +661,7 @@ bool q_dtls_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_dtls_thread(void* self) {
+QThread* q_dtls_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -717,7 +685,7 @@ void q_dtls_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_dtls_children(void* self) {
+libqt_list /* of QObject* */ q_dtls_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -734,55 +702,55 @@ void q_dtls_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_dtls_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_dtls_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_dtls_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_dtls_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_dtls_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_dtls_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_dtls_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_dtls_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_dtls_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_dtls_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_dtls_disconnect3(void* self) {
+bool q_dtls_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_dtls_disconnect4(void* self, void* receiver) {
+bool q_dtls_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_dtls_disconnect5(void* param1) {
+bool q_dtls_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_dtls_dump_object_tree(void* self) {
+void q_dtls_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_dtls_dump_object_info(void* self) {
+void q_dtls_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_dtls_set_property(void* self, const char* name, void* value) {
+bool q_dtls_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_dtls_property(void* self, const char* name) {
+QVariant* q_dtls_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_dtls_dynamic_property_names(void* self) {
+const char** q_dtls_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -803,7 +771,7 @@ QBindingStorage* q_dtls_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_dtls_binding_storage2(void* self) {
+const QBindingStorage* q_dtls_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -815,11 +783,11 @@ void q_dtls_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_dtls_parent(void* self) {
+QObject* q_dtls_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_dtls_inherits(void* self, const char* classname) {
+bool q_dtls_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -835,31 +803,31 @@ int32_t q_dtls_start_timer23(void* self, int64_t time, int32_t timerType) {
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_dtls_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_dtls_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_dtls_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_dtls_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_dtls_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_dtls_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_dtls_disconnect1(void* self, const char* signal) {
+bool q_dtls_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_dtls_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_dtls_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_dtls_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_dtls_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_dtls_disconnect23(void* self, void* receiver, const char* member) {
+bool q_dtls_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -931,76 +899,44 @@ void q_dtls_on_custom_event(void* self, void (*callback)(void*, void*)) {
     QDtls_OnCustomEvent((QDtls*)self, (intptr_t)callback);
 }
 
-void q_dtls_connect_notify(void* self, void* signal) {
+void q_dtls_connect_notify(void* self, const void* signal) {
     QDtls_ConnectNotify((QDtls*)self, (QMetaMethod*)signal);
 }
 
-void q_dtls_super_connect_notify(void* self, void* signal) {
+void q_dtls_super_connect_notify(void* self, const void* signal) {
     QDtls_SuperConnectNotify((QDtls*)self, (QMetaMethod*)signal);
 }
 
-void q_dtls_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_dtls_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QDtls_OnConnectNotify((QDtls*)self, (intptr_t)callback);
 }
 
-void q_dtls_disconnect_notify(void* self, void* signal) {
+void q_dtls_disconnect_notify(void* self, const void* signal) {
     QDtls_DisconnectNotify((QDtls*)self, (QMetaMethod*)signal);
 }
 
-void q_dtls_super_disconnect_notify(void* self, void* signal) {
+void q_dtls_super_disconnect_notify(void* self, const void* signal) {
     QDtls_SuperDisconnectNotify((QDtls*)self, (QMetaMethod*)signal);
 }
 
-void q_dtls_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_dtls_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QDtls_OnDisconnectNotify((QDtls*)self, (intptr_t)callback);
 }
 
-QObject* q_dtls_sender(void* self) {
+QObject* q_dtls_sender(const void* self) {
     return QDtls_Sender((QDtls*)self);
 }
 
-QObject* q_dtls_super_sender(void* self) {
-    return QDtls_SuperSender((QDtls*)self);
-}
-
-void q_dtls_on_sender(void* self, QObject* (*callback)()) {
-    QDtls_OnSender((QDtls*)self, (intptr_t)callback);
-}
-
-int32_t q_dtls_sender_signal_index(void* self) {
+int32_t q_dtls_sender_signal_index(const void* self) {
     return QDtls_SenderSignalIndex((QDtls*)self);
 }
 
-int32_t q_dtls_super_sender_signal_index(void* self) {
-    return QDtls_SuperSenderSignalIndex((QDtls*)self);
-}
-
-void q_dtls_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QDtls_OnSenderSignalIndex((QDtls*)self, (intptr_t)callback);
-}
-
-int32_t q_dtls_receivers(void* self, const char* signal) {
+int32_t q_dtls_receivers(const void* self, const char* signal) {
     return QDtls_Receivers((QDtls*)self, signal);
 }
 
-int32_t q_dtls_super_receivers(void* self, const char* signal) {
-    return QDtls_SuperReceivers((QDtls*)self, signal);
-}
-
-void q_dtls_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QDtls_OnReceivers((QDtls*)self, (intptr_t)callback);
-}
-
-bool q_dtls_is_signal_connected(void* self, void* signal) {
+bool q_dtls_is_signal_connected(const void* self, const void* signal) {
     return QDtls_IsSignalConnected((QDtls*)self, (QMetaMethod*)signal);
-}
-
-bool q_dtls_super_is_signal_connected(void* self, void* signal) {
-    return QDtls_SuperIsSignalConnected((QDtls*)self, (QMetaMethod*)signal);
-}
-
-void q_dtls_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QDtls_OnIsSignalConnected((QDtls*)self, (intptr_t)callback);
 }
 
 void q_dtls_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
@@ -1019,11 +955,11 @@ QDtlsClientVerifier__GeneratorParameters* q_dtlsclientverifier__generatorparamet
     return QDtlsClientVerifier__GeneratorParameters_New2(a, qstring(s));
 }
 
-QDtlsClientVerifier__GeneratorParameters* q_dtlsclientverifier__generatorparameters_new3(void* param1) {
+QDtlsClientVerifier__GeneratorParameters* q_dtlsclientverifier__generatorparameters_new3(const void* param1) {
     return QDtlsClientVerifier__GeneratorParameters_New3((QDtlsClientVerifier__GeneratorParameters*)param1);
 }
 
-int32_t q_dtlsclientverifier__generatorparameters_hash(void* self) {
+int32_t q_dtlsclientverifier__generatorparameters_hash(const void* self) {
     return QDtlsClientVerifier__GeneratorParameters_Hash((QDtlsClientVerifier__GeneratorParameters*)self);
 }
 
@@ -1031,7 +967,7 @@ void q_dtlsclientverifier__generatorparameters_set_hash(void* self, int32_t hash
     QDtlsClientVerifier__GeneratorParameters_SetHash((QDtlsClientVerifier__GeneratorParameters*)self, hash);
 }
 
-char* q_dtlsclientverifier__generatorparameters_secret(void* self) {
+char* q_dtlsclientverifier__generatorparameters_secret(const void* self) {
     libqt_string secret_str = QDtlsClientVerifier__GeneratorParameters_Secret((QDtlsClientVerifier__GeneratorParameters*)self);
     char* secret_ret = qstring_to_char(secret_str);
     libqt_string_free(&secret_str);
@@ -1042,7 +978,7 @@ void q_dtlsclientverifier__generatorparameters_set_secret(void* self, char* secr
     QDtlsClientVerifier__GeneratorParameters_SetSecret((QDtlsClientVerifier__GeneratorParameters*)self, qstring(secret));
 }
 
-void q_dtlsclientverifier__generatorparameters_operator_assign(void* self, void* param1) {
+void q_dtlsclientverifier__generatorparameters_operator_assign(void* self, const void* param1) {
     QDtlsClientVerifier__GeneratorParameters_OperatorAssign((QDtlsClientVerifier__GeneratorParameters*)self, (QDtlsClientVerifier__GeneratorParameters*)param1);
 }
 

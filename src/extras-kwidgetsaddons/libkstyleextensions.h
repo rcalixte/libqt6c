@@ -17,7 +17,7 @@
 ///
 /// @return enum QStyle__ControlElement
 ///
-int32_t k_styleextensions_custom_control_element(const char* element, void* widget);
+int32_t k_styleextensions_custom_control_element(const char* element, const void* widget);
 
 /// [Upstream resources](https://api.kde.org/kstyleextensions.html#customStyleHint)
 ///
@@ -26,7 +26,7 @@ int32_t k_styleextensions_custom_control_element(const char* element, void* widg
 ///
 /// @return enum QStyle__StyleHint
 ///
-int32_t k_styleextensions_custom_style_hint(const char* element, void* widget);
+int32_t k_styleextensions_custom_style_hint(const char* element, const void* widget);
 
 /// [Upstream resources](https://api.kde.org/kstyleextensions.html#customSubElement)
 ///
@@ -35,5 +35,5 @@ int32_t k_styleextensions_custom_style_hint(const char* element, void* widget);
 ///
 /// @return enum QStyle__SubElement
 ///
-int32_t k_styleextensions_custom_sub_element(const char* element, void* widget);
+int32_t k_styleextensions_custom_sub_element(const char* element, const void* widget);
 #endif

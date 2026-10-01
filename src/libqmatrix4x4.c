@@ -7,7 +7,7 @@
 #include "libqmatrix4x4.hpp"
 #include "libqmatrix4x4.h"
 
-QMatrix4x4* q_matrix4x4_new(void* other) {
+QMatrix4x4* q_matrix4x4_new(const void* other) {
     return QMatrix4x4_New((QMatrix4x4*)other);
 }
 
@@ -35,11 +35,11 @@ QMatrix4x4* q_matrix4x4_new7(float* values, int cols, int rows) {
     return QMatrix4x4_New7(values, cols, rows);
 }
 
-QMatrix4x4* q_matrix4x4_new8(void* transform) {
+QMatrix4x4* q_matrix4x4_new8(const void* transform) {
     return QMatrix4x4_New8((QTransform*)transform);
 }
 
-QMatrix4x4* q_matrix4x4_new9(void* param1) {
+QMatrix4x4* q_matrix4x4_new9(const void* param1) {
     return QMatrix4x4_New9((QMatrix4x4*)param1);
 }
 
@@ -51,7 +51,7 @@ void q_matrix4x4_move_assign(void* self, void* other) {
     QMatrix4x4_MoveAssign((QMatrix4x4*)self, (QMatrix4x4*)other);
 }
 
-const float* q_matrix4x4_operator_call(void* self, int row, int column) {
+const float* q_matrix4x4_operator_call(const void* self, int row, int column) {
     return (float*)QMatrix4x4_OperatorCall((QMatrix4x4*)self, row, column);
 }
 
@@ -59,27 +59,27 @@ float* q_matrix4x4_operator_call2(void* self, int row, int column) {
     return (float*)QMatrix4x4_OperatorCall2((QMatrix4x4*)self, row, column);
 }
 
-QVector4D* q_matrix4x4_column(void* self, int index) {
+QVector4D* q_matrix4x4_column(const void* self, int index) {
     return QMatrix4x4_Column((QMatrix4x4*)self, index);
 }
 
-void q_matrix4x4_set_column(void* self, int index, void* value) {
+void q_matrix4x4_set_column(void* self, int index, const void* value) {
     QMatrix4x4_SetColumn((QMatrix4x4*)self, index, (QVector4D*)value);
 }
 
-QVector4D* q_matrix4x4_row(void* self, int index) {
+QVector4D* q_matrix4x4_row(const void* self, int index) {
     return QMatrix4x4_Row((QMatrix4x4*)self, index);
 }
 
-void q_matrix4x4_set_row(void* self, int index, void* value) {
+void q_matrix4x4_set_row(void* self, int index, const void* value) {
     QMatrix4x4_SetRow((QMatrix4x4*)self, index, (QVector4D*)value);
 }
 
-bool q_matrix4x4_is_affine(void* self) {
+bool q_matrix4x4_is_affine(const void* self) {
     return QMatrix4x4_IsAffine((QMatrix4x4*)self);
 }
 
-bool q_matrix4x4_is_identity(void* self) {
+bool q_matrix4x4_is_identity(const void* self) {
     return QMatrix4x4_IsIdentity((QMatrix4x4*)self);
 }
 
@@ -91,27 +91,27 @@ void q_matrix4x4_fill(void* self, float value) {
     QMatrix4x4_Fill((QMatrix4x4*)self, value);
 }
 
-double q_matrix4x4_determinant(void* self) {
+double q_matrix4x4_determinant(const void* self) {
     return QMatrix4x4_Determinant((QMatrix4x4*)self);
 }
 
-QMatrix4x4* q_matrix4x4_inverted(void* self) {
+QMatrix4x4* q_matrix4x4_inverted(const void* self) {
     return QMatrix4x4_Inverted((QMatrix4x4*)self);
 }
 
-QMatrix4x4* q_matrix4x4_transposed(void* self) {
+QMatrix4x4* q_matrix4x4_transposed(const void* self) {
     return QMatrix4x4_Transposed((QMatrix4x4*)self);
 }
 
-QMatrix4x4* q_matrix4x4_operator_plus_assign(void* self, void* other) {
+QMatrix4x4* q_matrix4x4_operator_plus_assign(void* self, const void* other) {
     return QMatrix4x4_OperatorPlusAssign((QMatrix4x4*)self, (QMatrix4x4*)other);
 }
 
-QMatrix4x4* q_matrix4x4_operator_minus_assign(void* self, void* other) {
+QMatrix4x4* q_matrix4x4_operator_minus_assign(void* self, const void* other) {
     return QMatrix4x4_OperatorMinusAssign((QMatrix4x4*)self, (QMatrix4x4*)other);
 }
 
-QMatrix4x4* q_matrix4x4_operator_multiply_assign(void* self, void* other) {
+QMatrix4x4* q_matrix4x4_operator_multiply_assign(void* self, const void* other) {
     return QMatrix4x4_OperatorMultiplyAssign((QMatrix4x4*)self, (QMatrix4x4*)other);
 }
 
@@ -123,23 +123,23 @@ QMatrix4x4* q_matrix4x4_operator_divide_assign(void* self, float divisor) {
     return QMatrix4x4_OperatorDivideAssign((QMatrix4x4*)self, divisor);
 }
 
-bool q_matrix4x4_operator_equal(void* self, void* other) {
+bool q_matrix4x4_operator_equal(const void* self, const void* other) {
     return QMatrix4x4_OperatorEqual((QMatrix4x4*)self, (QMatrix4x4*)other);
 }
 
-bool q_matrix4x4_operator_not_equal(void* self, void* other) {
+bool q_matrix4x4_operator_not_equal(const void* self, const void* other) {
     return QMatrix4x4_OperatorNotEqual((QMatrix4x4*)self, (QMatrix4x4*)other);
 }
 
-void q_matrix4x4_scale(void* self, void* vector) {
+void q_matrix4x4_scale(void* self, const void* vector) {
     QMatrix4x4_Scale((QMatrix4x4*)self, (QVector3D*)vector);
 }
 
-void q_matrix4x4_translate(void* self, void* vector) {
+void q_matrix4x4_translate(void* self, const void* vector) {
     QMatrix4x4_Translate((QMatrix4x4*)self, (QVector3D*)vector);
 }
 
-void q_matrix4x4_rotate(void* self, float angle, void* vector) {
+void q_matrix4x4_rotate(void* self, float angle, const void* vector) {
     QMatrix4x4_Rotate((QMatrix4x4*)self, angle, (QVector3D*)vector);
 }
 
@@ -167,15 +167,15 @@ void q_matrix4x4_rotate2(void* self, float angle, float x, float y) {
     QMatrix4x4_Rotate2((QMatrix4x4*)self, angle, x, y);
 }
 
-void q_matrix4x4_rotate3(void* self, void* quaternion) {
+void q_matrix4x4_rotate3(void* self, const void* quaternion) {
     QMatrix4x4_Rotate3((QMatrix4x4*)self, (QQuaternion*)quaternion);
 }
 
-void q_matrix4x4_ortho(void* self, void* rect) {
+void q_matrix4x4_ortho(void* self, const void* rect) {
     QMatrix4x4_Ortho((QMatrix4x4*)self, (QRect*)rect);
 }
 
-void q_matrix4x4_ortho2(void* self, void* rect) {
+void q_matrix4x4_ortho2(void* self, const void* rect) {
     QMatrix4x4_Ortho2((QMatrix4x4*)self, (QRectF*)rect);
 }
 
@@ -191,11 +191,11 @@ void q_matrix4x4_perspective(void* self, float verticalAngle, float aspectRatio,
     QMatrix4x4_Perspective((QMatrix4x4*)self, verticalAngle, aspectRatio, nearPlane, farPlane);
 }
 
-void q_matrix4x4_look_at(void* self, void* eye, void* center, void* up) {
+void q_matrix4x4_look_at(void* self, const void* eye, const void* center, const void* up) {
     QMatrix4x4_LookAt((QMatrix4x4*)self, (QVector3D*)eye, (QVector3D*)center, (QVector3D*)up);
 }
 
-void q_matrix4x4_viewport(void* self, void* rect) {
+void q_matrix4x4_viewport(void* self, const void* rect) {
     QMatrix4x4_Viewport((QMatrix4x4*)self, (QRectF*)rect);
 }
 
@@ -207,43 +207,43 @@ void q_matrix4x4_flip_coordinates(void* self) {
     QMatrix4x4_FlipCoordinates((QMatrix4x4*)self);
 }
 
-void q_matrix4x4_copy_data_to(void* self, float* values) {
+void q_matrix4x4_copy_data_to(const void* self, float* values) {
     QMatrix4x4_CopyDataTo((QMatrix4x4*)self, values);
 }
 
-QTransform* q_matrix4x4_to_transform(void* self) {
+QTransform* q_matrix4x4_to_transform(const void* self) {
     return QMatrix4x4_ToTransform((QMatrix4x4*)self);
 }
 
-QTransform* q_matrix4x4_to_transform2(void* self, float distanceToPlane) {
+QTransform* q_matrix4x4_to_transform2(const void* self, float distanceToPlane) {
     return QMatrix4x4_ToTransform2((QMatrix4x4*)self, distanceToPlane);
 }
 
-QPoint* q_matrix4x4_map(void* self, void* point) {
+QPoint* q_matrix4x4_map(const void* self, const void* point) {
     return QMatrix4x4_Map((QMatrix4x4*)self, (QPoint*)point);
 }
 
-QPointF* q_matrix4x4_map2(void* self, void* point) {
+QPointF* q_matrix4x4_map2(const void* self, const void* point) {
     return QMatrix4x4_Map2((QMatrix4x4*)self, (QPointF*)point);
 }
 
-QVector3D* q_matrix4x4_map3(void* self, void* point) {
+QVector3D* q_matrix4x4_map3(const void* self, const void* point) {
     return QMatrix4x4_Map3((QMatrix4x4*)self, (QVector3D*)point);
 }
 
-QVector3D* q_matrix4x4_map_vector(void* self, void* vector) {
+QVector3D* q_matrix4x4_map_vector(const void* self, const void* vector) {
     return QMatrix4x4_MapVector((QMatrix4x4*)self, (QVector3D*)vector);
 }
 
-QVector4D* q_matrix4x4_map4(void* self, void* point) {
+QVector4D* q_matrix4x4_map4(const void* self, const void* point) {
     return QMatrix4x4_Map4((QMatrix4x4*)self, (QVector4D*)point);
 }
 
-QRect* q_matrix4x4_map_rect(void* self, void* rect) {
+QRect* q_matrix4x4_map_rect(const void* self, const void* rect) {
     return QMatrix4x4_MapRect((QMatrix4x4*)self, (QRect*)rect);
 }
 
-QRectF* q_matrix4x4_map_rect2(void* self, void* rect) {
+QRectF* q_matrix4x4_map_rect2(const void* self, const void* rect) {
     return QMatrix4x4_MapRect2((QMatrix4x4*)self, (QRectF*)rect);
 }
 
@@ -251,11 +251,11 @@ float* q_matrix4x4_data(void* self) {
     return (float*)QMatrix4x4_Data((QMatrix4x4*)self);
 }
 
-const float* q_matrix4x4_data2(void* self) {
+const float* q_matrix4x4_data2(const void* self) {
     return (float*)QMatrix4x4_Data2((QMatrix4x4*)self);
 }
 
-const float* q_matrix4x4_const_data(void* self) {
+const float* q_matrix4x4_const_data(const void* self) {
     return (float*)QMatrix4x4_ConstData((QMatrix4x4*)self);
 }
 
@@ -263,7 +263,7 @@ void q_matrix4x4_optimize(void* self) {
     QMatrix4x4_Optimize((QMatrix4x4*)self);
 }
 
-QVariant* q_matrix4x4_to_q_variant(void* self) {
+QVariant* q_matrix4x4_to_q_variant(const void* self) {
     return QMatrix4x4_ToQVariant((QMatrix4x4*)self);
 }
 
@@ -275,11 +275,11 @@ void q_matrix4x4_projected_rotate2(void* self, float angle, float x, float y, fl
     QMatrix4x4_ProjectedRotate2((QMatrix4x4*)self, angle, x, y, z);
 }
 
-int32_t q_matrix4x4_flags(void* self) {
+int32_t q_matrix4x4_flags(const void* self) {
     return QMatrix4x4_Flags((QMatrix4x4*)self);
 }
 
-QMatrix4x4* q_matrix4x4_inverted1(void* self, bool* invertible) {
+QMatrix4x4* q_matrix4x4_inverted1(const void* self, bool* invertible) {
     return QMatrix4x4_Inverted1((QMatrix4x4*)self, (bool*)invertible);
 }
 

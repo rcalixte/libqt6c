@@ -20,11 +20,11 @@ QSharedData* k_sharedconfig_as_q_shared_data(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kconfig.html#locationType)
 ///
-/// @param self KSharedConfig*
+/// @param self const KSharedConfig*
 ///
 /// @return enum QStandardPaths__StandardLocation
 ///
-int32_t k_sharedconfig_location_type(void* self);
+int32_t k_sharedconfig_location_type(const void* self);
 
 /// Inherited from KConfig
 ///
@@ -32,19 +32,19 @@ int32_t k_sharedconfig_location_type(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KSharedConfig*
+/// @param self const KSharedConfig*
 ///
-const char* k_sharedconfig_name(void* self);
+const char* k_sharedconfig_name(const void* self);
 
 /// Inherited from KConfig
 ///
 /// [Upstream resources](https://api.kde.org/kconfig.html#openFlags)
 ///
-/// @param self KSharedConfig*
+/// @param self const KSharedConfig*
 ///
 /// @return flag of enum KConfig__OpenFlag
 ///
-int32_t k_sharedconfig_open_flags(void* self);
+int32_t k_sharedconfig_open_flags(const void* self);
 
 /// Inherited from KConfig
 ///
@@ -58,9 +58,9 @@ bool k_sharedconfig_sync(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kconfig.html#isDirty)
 ///
-/// @param self KSharedConfig*
+/// @param self const KSharedConfig*
 ///
-bool k_sharedconfig_is_dirty(void* self);
+bool k_sharedconfig_is_dirty(const void* self);
 
 /// Inherited from KConfig
 ///
@@ -74,11 +74,11 @@ void k_sharedconfig_mark_as_clean(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kconfig.html#accessMode)
 ///
-/// @param self KSharedConfig*
+/// @param self const KSharedConfig*
 ///
 /// @return enum KConfigBase__AccessMode
 ///
-int32_t k_sharedconfig_access_mode(void* self);
+int32_t k_sharedconfig_access_mode(const void* self);
 
 /// Inherited from KConfig
 ///
@@ -93,10 +93,10 @@ bool k_sharedconfig_is_config_writable(void* self, bool warnUser);
 ///
 /// [Upstream resources](https://api.kde.org/kconfig.html#copyTo)
 ///
-/// @param self KSharedConfig*
+/// @param self const KSharedConfig*
 /// @param file const char*
 ///
-KConfig* k_sharedconfig_copy_to(void* self, const char* file);
+KConfig* k_sharedconfig_copy_to(const void* self, const char* file);
 
 /// Inherited from KConfig
 ///
@@ -131,9 +131,9 @@ void k_sharedconfig_add_config_sources(void* self, const char* sources[static 1]
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KSharedConfig*
+/// @param self const KSharedConfig*
 ///
-const char** k_sharedconfig_additional_config_sources(void* self);
+const char** k_sharedconfig_additional_config_sources(const void* self);
 
 /// Inherited from KConfig
 ///
@@ -141,9 +141,9 @@ const char** k_sharedconfig_additional_config_sources(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KSharedConfig*
+/// @param self const KSharedConfig*
 ///
-const char* k_sharedconfig_locale(void* self);
+const char* k_sharedconfig_locale(const void* self);
 
 /// Inherited from KConfig
 ///
@@ -167,17 +167,17 @@ void k_sharedconfig_set_read_defaults(void* self, bool b);
 ///
 /// [Upstream resources](https://api.kde.org/kconfig.html#readDefaults)
 ///
-/// @param self KSharedConfig*
+/// @param self const KSharedConfig*
 ///
-bool k_sharedconfig_read_defaults(void* self);
+bool k_sharedconfig_read_defaults(const void* self);
 
 /// Inherited from KConfig
 ///
 /// [Upstream resources](https://api.kde.org/kconfig.html#isImmutable)
 ///
-/// @param self KSharedConfig*
+/// @param self const KSharedConfig*
 ///
-bool k_sharedconfig_is_immutable(void* self);
+bool k_sharedconfig_is_immutable(const void* self);
 
 /// Inherited from KConfig
 ///
@@ -185,9 +185,9 @@ bool k_sharedconfig_is_immutable(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KSharedConfig*
+/// @param self const KSharedConfig*
 ///
-const char** k_sharedconfig_group_list(void* self);
+const char** k_sharedconfig_group_list(const void* self);
 
 /// Inherited from KConfig
 ///
@@ -205,11 +205,11 @@ const char** k_sharedconfig_group_list(void* self);
 /// free(map.values);
 /// ```
 ///
-/// @param self KSharedConfig*
+/// @param self const KSharedConfig*
 ///
 /// @return libqt_map of const char* to const char*
 ///
-libqt_map k_sharedconfig_entry_map(void* self);
+libqt_map k_sharedconfig_entry_map(const void* self);
 
 /// Inherited from KConfig
 ///
@@ -231,11 +231,11 @@ const char* k_sharedconfig_main_config_name();
 ///
 /// [Upstream resources](https://api.kde.org/kconfig.html#copyTo)
 ///
-/// @param self KSharedConfig*
+/// @param self const KSharedConfig*
 /// @param file const char*
 /// @param config KConfig*
 ///
-KConfig* k_sharedconfig_copy_to2(void* self, const char* file, void* config);
+KConfig* k_sharedconfig_copy_to2(const void* self, const char* file, void* config);
 
 /// Inherited from KConfig
 ///
@@ -253,21 +253,21 @@ KConfig* k_sharedconfig_copy_to2(void* self, const char* file, void* config);
 /// free(map.values);
 /// ```
 ///
-/// @param self KSharedConfig*
+/// @param self const KSharedConfig*
 /// @param aGroup const char*
 ///
 /// @return libqt_map of const char* to const char*
 ///
-libqt_map k_sharedconfig_entry_map1(void* self, const char* aGroup);
+libqt_map k_sharedconfig_entry_map1(const void* self, const char* aGroup);
 
 /// Inherited from KConfigBase
 ///
 /// [Upstream resources](https://api.kde.org/kconfigbase.html#hasGroup)
 ///
-/// @param self KSharedConfig*
+/// @param self const KSharedConfig*
 /// @param group const char*
 ///
-bool k_sharedconfig_has_group(void* self, const char* group);
+bool k_sharedconfig_has_group(const void* self, const char* group);
 
 /// Inherited from KConfigBase
 ///
@@ -282,10 +282,10 @@ KConfigGroup* k_sharedconfig_group(void* self, const char* group);
 ///
 /// [Upstream resources](https://api.kde.org/kconfigbase.html#group)
 ///
-/// @param self KSharedConfig*
+/// @param self const KSharedConfig*
 /// @param group const char*
 ///
-const KConfigGroup* k_sharedconfig_group2(void* self, const char* group);
+const KConfigGroup* k_sharedconfig_group2(const void* self, const char* group);
 
 /// Inherited from KConfigBase
 ///
@@ -300,10 +300,10 @@ void k_sharedconfig_delete_group(void* self, const char* group);
 ///
 /// [Upstream resources](https://api.kde.org/kconfigbase.html#isGroupImmutable)
 ///
-/// @param self KSharedConfig*
+/// @param self const KSharedConfig*
 /// @param group const char*
 ///
-bool k_sharedconfig_is_group_immutable(void* self, const char* group);
+bool k_sharedconfig_is_group_immutable(const void* self, const char* group);
 
 /// Inherited from KConfigBase
 ///
@@ -312,7 +312,7 @@ bool k_sharedconfig_is_group_immutable(void* self, const char* group);
 /// @param self KSharedConfig*
 /// @param param1 KConfigBase*
 ///
-void k_sharedconfig_operator_assign(void* self, void* param1);
+void k_sharedconfig_operator_assign(void* self, const void* param1);
 
 /// Inherited from KConfigBase
 ///

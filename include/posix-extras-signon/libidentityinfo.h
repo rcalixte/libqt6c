@@ -20,7 +20,7 @@ SignOn__IdentityInfo* q_signon__identityinfo_new();
 ///
 /// @param other SignOn__IdentityInfo*
 ///
-SignOn__IdentityInfo* q_signon__identityinfo_new2(void* other);
+SignOn__IdentityInfo* q_signon__identityinfo_new2(const void* other);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1IdentityInfo.html)
 
@@ -37,7 +37,7 @@ SignOn__IdentityInfo* q_signon__identityinfo_new3(const char* caption, const cha
 /// @param self SignOn__IdentityInfo*
 /// @param other SignOn__IdentityInfo*
 ///
-void q_signon__identityinfo_operator_assign(void* self, void* other);
+void q_signon__identityinfo_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1IdentityInfo.html)
 ///
@@ -48,9 +48,9 @@ void q_signon__identityinfo_set_id(void* self, uint32_t id);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1IdentityInfo.html)
 ///
-/// @param self SignOn__IdentityInfo*
+/// @param self const SignOn__IdentityInfo*
 ///
-uint32_t q_signon__identityinfo_id(void* self);
+uint32_t q_signon__identityinfo_id(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1IdentityInfo.html)
 ///
@@ -63,15 +63,15 @@ void q_signon__identityinfo_set_secret(void* self, const char* secret);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self SignOn__IdentityInfo*
+/// @param self const SignOn__IdentityInfo*
 ///
-const char* q_signon__identityinfo_secret(void* self);
+const char* q_signon__identityinfo_secret(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1IdentityInfo.html)
 ///
-/// @param self SignOn__IdentityInfo*
+/// @param self const SignOn__IdentityInfo*
 ///
-bool q_signon__identityinfo_is_storing_secret(void* self);
+bool q_signon__identityinfo_is_storing_secret(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1IdentityInfo.html)
 ///
@@ -91,9 +91,9 @@ void q_signon__identityinfo_set_user_name(void* self, const char* userName);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self SignOn__IdentityInfo*
+/// @param self const SignOn__IdentityInfo*
 ///
-const char* q_signon__identityinfo_user_name(void* self);
+const char* q_signon__identityinfo_user_name(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1IdentityInfo.html)
 ///
@@ -106,9 +106,9 @@ void q_signon__identityinfo_set_caption(void* self, const char* caption);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self SignOn__IdentityInfo*
+/// @param self const SignOn__IdentityInfo*
 ///
-const char* q_signon__identityinfo_caption(void* self);
+const char* q_signon__identityinfo_caption(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1IdentityInfo.html)
 ///
@@ -121,9 +121,9 @@ void q_signon__identityinfo_set_realms(void* self, const char* realms[static 1])
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self SignOn__IdentityInfo*
+/// @param self const SignOn__IdentityInfo*
 ///
-const char** q_signon__identityinfo_realms(void* self);
+const char** q_signon__identityinfo_realms(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1IdentityInfo.html)
 ///
@@ -136,9 +136,9 @@ void q_signon__identityinfo_set_owner(void* self, const char* ownerToken);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self SignOn__IdentityInfo*
+/// @param self const SignOn__IdentityInfo*
 ///
-const char* q_signon__identityinfo_owner(void* self);
+const char* q_signon__identityinfo_owner(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1IdentityInfo.html)
 ///
@@ -158,17 +158,17 @@ void q_signon__identityinfo_set_access_control_list2(void* self, libqt_list acce
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self SignOn__IdentityInfo*
+/// @param self const SignOn__IdentityInfo*
 ///
-const char** q_signon__identityinfo_access_control_list(void* self);
+const char** q_signon__identityinfo_access_control_list(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1IdentityInfo.html)
 ///
-/// @param self SignOn__IdentityInfo*
+/// @param self const SignOn__IdentityInfo*
 ///
 /// @return libqt_list of SignOn__SecurityContext*
 ///
-libqt_list q_signon__identityinfo_access_control_list_full(void* self);
+libqt_list q_signon__identityinfo_access_control_list_full(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1IdentityInfo.html)
 ///
@@ -194,28 +194,28 @@ void q_signon__identityinfo_set_type(void* self, int32_t type);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1IdentityInfo.html)
 ///
-/// @param self SignOn__IdentityInfo*
+/// @param self const SignOn__IdentityInfo*
 ///
 /// @return enum SignOn__IdentityInfo__CredentialsType
 ///
-int32_t q_signon__identityinfo_type(void* self);
+int32_t q_signon__identityinfo_type(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1IdentityInfo.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self SignOn__IdentityInfo*
+/// @param self const SignOn__IdentityInfo*
 ///
-const char** q_signon__identityinfo_methods(void* self);
+const char** q_signon__identityinfo_methods(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1IdentityInfo.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self SignOn__IdentityInfo*
+/// @param self const SignOn__IdentityInfo*
 /// @param method const char*
 ///
-const char** q_signon__identityinfo_mechanisms(void* self, const char* method);
+const char** q_signon__identityinfo_mechanisms(const void* self, const char* method);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1IdentityInfo.html)
 ///
@@ -226,9 +226,9 @@ void q_signon__identityinfo_set_ref_count(void* self, int32_t refCount);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1IdentityInfo.html)
 ///
-/// @param self SignOn__IdentityInfo*
+/// @param self const SignOn__IdentityInfo*
 ///
-int32_t q_signon__identityinfo_ref_count(void* self);
+int32_t q_signon__identityinfo_ref_count(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1IdentityInfo.html)
 ///

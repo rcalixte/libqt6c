@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KSystemClipboard*
+/// @param self const KSystemClipboard*
 ///
-const QMetaObject* k_systemclipboard_meta_object(void* self);
+const QMetaObject* k_systemclipboard_meta_object(const void* self);
 
 /// @param self KSystemClipboard*
 /// @param param1 const char*
@@ -42,6 +42,8 @@ KSystemClipboard* k_systemclipboard_instance();
 
 /// [Upstream resources](https://api.kde.org/ksystemclipboard.html#setMimeData)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self KSystemClipboard*
 /// @param mime QMimeData*
 /// @param mode enum QClipboard__Mode
@@ -50,6 +52,8 @@ void k_systemclipboard_set_mime_data(void* self, void* mime, int32_t mode);
 
 /// [Upstream resources](https://api.kde.org/ksystemclipboard.html#clear)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self KSystemClipboard*
 /// @param mode enum QClipboard__Mode
 ///
@@ -57,10 +61,12 @@ void k_systemclipboard_clear(void* self, int32_t mode);
 
 /// [Upstream resources](https://api.kde.org/ksystemclipboard.html#mimeData)
 ///
-/// @param self KSystemClipboard*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const KSystemClipboard*
 /// @param mode enum QClipboard__Mode
 ///
-const QMimeData* k_systemclipboard_mime_data(void* self, int32_t mode);
+const QMimeData* k_systemclipboard_mime_data(const void* self, int32_t mode);
 
 /// [Upstream resources](https://api.kde.org/ksystemclipboard.html#text)
 ///
@@ -129,9 +135,9 @@ bool k_systemclipboard_event_filter(void* self, void* watched, void* event);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KSystemClipboard*
+/// @param self const KSystemClipboard*
 ///
-const char* k_systemclipboard_object_name(void* self);
+const char* k_systemclipboard_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -146,33 +152,33 @@ void k_systemclipboard_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KSystemClipboard*
+/// @param self const KSystemClipboard*
 ///
-bool k_systemclipboard_is_widget_type(void* self);
+bool k_systemclipboard_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KSystemClipboard*
+/// @param self const KSystemClipboard*
 ///
-bool k_systemclipboard_is_window_type(void* self);
+bool k_systemclipboard_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KSystemClipboard*
+/// @param self const KSystemClipboard*
 ///
-bool k_systemclipboard_is_quick_item_type(void* self);
+bool k_systemclipboard_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KSystemClipboard*
+/// @param self const KSystemClipboard*
 ///
-bool k_systemclipboard_signals_blocked(void* self);
+bool k_systemclipboard_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -187,9 +193,9 @@ bool k_systemclipboard_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KSystemClipboard*
+/// @param self const KSystemClipboard*
 ///
-QThread* k_systemclipboard_thread(void* self);
+QThread* k_systemclipboard_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -240,11 +246,11 @@ void k_systemclipboard_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KSystemClipboard*
+/// @param self const KSystemClipboard*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_systemclipboard_children(void* self);
+libqt_list k_systemclipboard_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -282,7 +288,7 @@ void k_systemclipboard_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_systemclipboard_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_systemclipboard_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -293,18 +299,18 @@ QMetaObject__Connection* k_systemclipboard_connect(void* sender, const char* sig
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_systemclipboard_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_systemclipboard_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KSystemClipboard*
+/// @param self const KSystemClipboard*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_systemclipboard_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_systemclipboard_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -315,7 +321,7 @@ QMetaObject__Connection* k_systemclipboard_connect3(void* self, void* sender, co
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_systemclipboard_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_systemclipboard_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -326,24 +332,24 @@ bool k_systemclipboard_disconnect(void* sender, const char* signal, void* receiv
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_systemclipboard_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_systemclipboard_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KSystemClipboard*
+/// @param self const KSystemClipboard*
 ///
-bool k_systemclipboard_disconnect3(void* self);
+bool k_systemclipboard_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KSystemClipboard*
+/// @param self const KSystemClipboard*
 /// @param receiver QObject*
 ///
-bool k_systemclipboard_disconnect4(void* self, void* receiver);
+bool k_systemclipboard_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -351,23 +357,23 @@ bool k_systemclipboard_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_systemclipboard_disconnect5(void* param1);
+bool k_systemclipboard_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KSystemClipboard*
+/// @param self const KSystemClipboard*
 ///
-void k_systemclipboard_dump_object_tree(void* self);
+void k_systemclipboard_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KSystemClipboard*
+/// @param self const KSystemClipboard*
 ///
-void k_systemclipboard_dump_object_info(void* self);
+void k_systemclipboard_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -377,16 +383,16 @@ void k_systemclipboard_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_systemclipboard_set_property(void* self, const char* name, void* value);
+bool k_systemclipboard_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KSystemClipboard*
+/// @param self const KSystemClipboard*
 /// @param name const char*
 ///
-QVariant* k_systemclipboard_property(void* self, const char* name);
+QVariant* k_systemclipboard_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -394,9 +400,9 @@ QVariant* k_systemclipboard_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KSystemClipboard*
+/// @param self const KSystemClipboard*
 ///
-const char** k_systemclipboard_dynamic_property_names(void* self);
+const char** k_systemclipboard_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -410,9 +416,9 @@ QBindingStorage* k_systemclipboard_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KSystemClipboard*
+/// @param self const KSystemClipboard*
 ///
-const QBindingStorage* k_systemclipboard_binding_storage2(void* self);
+const QBindingStorage* k_systemclipboard_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -435,18 +441,18 @@ void k_systemclipboard_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KSystemClipboard*
+/// @param self const KSystemClipboard*
 ///
-QObject* k_systemclipboard_parent(void* self);
+QObject* k_systemclipboard_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KSystemClipboard*
+/// @param self const KSystemClipboard*
 /// @param classname const char*
 ///
-bool k_systemclipboard_inherits(void* self, const char* classname);
+bool k_systemclipboard_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -486,7 +492,7 @@ int32_t k_systemclipboard_start_timer23(void* self, int64_t time, int32_t timerT
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_systemclipboard_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_systemclipboard_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -498,59 +504,59 @@ QMetaObject__Connection* k_systemclipboard_connect5(void* sender, const char* si
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_systemclipboard_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_systemclipboard_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KSystemClipboard*
+/// @param self const KSystemClipboard*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_systemclipboard_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_systemclipboard_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KSystemClipboard*
+/// @param self const KSystemClipboard*
 /// @param signal const char*
 ///
-bool k_systemclipboard_disconnect1(void* self, const char* signal);
+bool k_systemclipboard_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KSystemClipboard*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_systemclipboard_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KSystemClipboard*
+/// @param self const KSystemClipboard*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_systemclipboard_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_systemclipboard_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KSystemClipboard*
+/// @param self const KSystemClipboard*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_systemclipboard_disconnect23(void* self, void* receiver, const char* member);
+bool k_systemclipboard_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KSystemClipboard*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_systemclipboard_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

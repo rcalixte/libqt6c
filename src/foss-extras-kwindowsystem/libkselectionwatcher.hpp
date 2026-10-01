@@ -61,7 +61,7 @@ void KSelectionWatcher_NewOwner(KSelectionWatcher* self, xcb_window_t owner);
 void KSelectionWatcher_Connect_NewOwner(KSelectionWatcher* self, intptr_t slot);
 void KSelectionWatcher_LostOwner(KSelectionWatcher* self);
 void KSelectionWatcher_Connect_LostOwner(KSelectionWatcher* self, intptr_t slot);
-void KSelectionWatcher_OnMetaObject(const KSelectionWatcher* self, intptr_t slot);
+void KSelectionWatcher_OnMetaObject(KSelectionWatcher* self, intptr_t slot);
 QMetaObject* KSelectionWatcher_SuperMetaObject(const KSelectionWatcher* self);
 void KSelectionWatcher_OnMetacast(KSelectionWatcher* self, intptr_t slot);
 void* KSelectionWatcher_SuperMetacast(KSelectionWatcher* self, const char* param1);
@@ -89,17 +89,9 @@ void KSelectionWatcher_DisconnectNotify(KSelectionWatcher* self, const QMetaMeth
 void KSelectionWatcher_OnDisconnectNotify(KSelectionWatcher* self, intptr_t slot);
 void KSelectionWatcher_SuperDisconnectNotify(KSelectionWatcher* self, const QMetaMethod* signal);
 QObject* KSelectionWatcher_Sender(const KSelectionWatcher* self);
-void KSelectionWatcher_OnSender(const KSelectionWatcher* self, intptr_t slot);
-QObject* KSelectionWatcher_SuperSender(const KSelectionWatcher* self);
 int KSelectionWatcher_SenderSignalIndex(const KSelectionWatcher* self);
-void KSelectionWatcher_OnSenderSignalIndex(const KSelectionWatcher* self, intptr_t slot);
-int KSelectionWatcher_SuperSenderSignalIndex(const KSelectionWatcher* self);
 int KSelectionWatcher_Receivers(const KSelectionWatcher* self, const char* signal);
-void KSelectionWatcher_OnReceivers(const KSelectionWatcher* self, intptr_t slot);
-int KSelectionWatcher_SuperReceivers(const KSelectionWatcher* self, const char* signal);
 bool KSelectionWatcher_IsSignalConnected(const KSelectionWatcher* self, const QMetaMethod* signal);
-void KSelectionWatcher_OnIsSignalConnected(const KSelectionWatcher* self, intptr_t slot);
-bool KSelectionWatcher_SuperIsSignalConnected(const KSelectionWatcher* self, const QMetaMethod* signal);
 void KSelectionWatcher_Delete(KSelectionWatcher* self);
 
 #ifdef __cplusplus

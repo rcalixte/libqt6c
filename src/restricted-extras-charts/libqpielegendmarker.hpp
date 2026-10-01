@@ -36,7 +36,7 @@ int QPieLegendMarker_Metacall(QPieLegendMarker* self, int param1, int param2, vo
 int QPieLegendMarker_Type(QPieLegendMarker* self);
 QPieSeries* QPieLegendMarker_Series(QPieLegendMarker* self);
 QPieSlice* QPieLegendMarker_Slice(QPieLegendMarker* self);
-void QPieLegendMarker_OnMetaObject(const QPieLegendMarker* self, intptr_t slot);
+void QPieLegendMarker_OnMetaObject(QPieLegendMarker* self, intptr_t slot);
 QMetaObject* QPieLegendMarker_SuperMetaObject(const QPieLegendMarker* self);
 void QPieLegendMarker_OnMetacast(QPieLegendMarker* self, intptr_t slot);
 void* QPieLegendMarker_SuperMetacast(QPieLegendMarker* self, const char* param1);
@@ -68,17 +68,9 @@ void QPieLegendMarker_DisconnectNotify(QPieLegendMarker* self, const QMetaMethod
 void QPieLegendMarker_OnDisconnectNotify(QPieLegendMarker* self, intptr_t slot);
 void QPieLegendMarker_SuperDisconnectNotify(QPieLegendMarker* self, const QMetaMethod* signal);
 QObject* QPieLegendMarker_Sender(const QPieLegendMarker* self);
-void QPieLegendMarker_OnSender(const QPieLegendMarker* self, intptr_t slot);
-QObject* QPieLegendMarker_SuperSender(const QPieLegendMarker* self);
 int QPieLegendMarker_SenderSignalIndex(const QPieLegendMarker* self);
-void QPieLegendMarker_OnSenderSignalIndex(const QPieLegendMarker* self, intptr_t slot);
-int QPieLegendMarker_SuperSenderSignalIndex(const QPieLegendMarker* self);
 int QPieLegendMarker_Receivers(const QPieLegendMarker* self, const char* signal);
-void QPieLegendMarker_OnReceivers(const QPieLegendMarker* self, intptr_t slot);
-int QPieLegendMarker_SuperReceivers(const QPieLegendMarker* self, const char* signal);
 bool QPieLegendMarker_IsSignalConnected(const QPieLegendMarker* self, const QMetaMethod* signal);
-void QPieLegendMarker_OnIsSignalConnected(const QPieLegendMarker* self, intptr_t slot);
-bool QPieLegendMarker_SuperIsSignalConnected(const QPieLegendMarker* self, const QMetaMethod* signal);
 void QPieLegendMarker_Delete(QPieLegendMarker* self);
 
 #ifdef __cplusplus

@@ -16,15 +16,15 @@ KViewStateSerializer* k_viewstateserializer_new2(void* parent) {
     return KViewStateSerializer_New2((QObject*)parent);
 }
 
-const QMetaObject* k_viewstateserializer_meta_object(void* self) {
+const QMetaObject* k_viewstateserializer_meta_object(const void* self) {
     return KViewStateSerializer_MetaObject((KViewStateSerializer*)self);
 }
 
-void k_viewstateserializer_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_viewstateserializer_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     KViewStateSerializer_OnMetaObject((KViewStateSerializer*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_viewstateserializer_super_meta_object(void* self) {
+const QMetaObject* k_viewstateserializer_super_meta_object(const void* self) {
     return KViewStateSerializer_SuperMetaObject((KViewStateSerializer*)self);
 }
 
@@ -59,7 +59,7 @@ const char* k_viewstateserializer_tr(const char* s) {
     return _ret;
 }
 
-QAbstractItemView* k_viewstateserializer_view(void* self) {
+QAbstractItemView* k_viewstateserializer_view(const void* self) {
     return KViewStateSerializer_View((KViewStateSerializer*)self);
 }
 
@@ -67,7 +67,7 @@ void k_viewstateserializer_set_view(void* self, void* view) {
     KViewStateSerializer_SetView((KViewStateSerializer*)self, (QAbstractItemView*)view);
 }
 
-QItemSelectionModel* k_viewstateserializer_selection_model(void* self) {
+QItemSelectionModel* k_viewstateserializer_selection_model(const void* self) {
     return KViewStateSerializer_SelectionModel((KViewStateSerializer*)self);
 }
 
@@ -75,7 +75,7 @@ void k_viewstateserializer_set_selection_model(void* self, void* selectionModel)
     KViewStateSerializer_SetSelectionModel((KViewStateSerializer*)self, (QItemSelectionModel*)selectionModel);
 }
 
-const char** k_viewstateserializer_selection_keys(void* self) {
+const char** k_viewstateserializer_selection_keys(const void* self) {
     libqt_list _arr = KViewStateSerializer_SelectionKeys((KViewStateSerializer*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -92,7 +92,7 @@ const char** k_viewstateserializer_selection_keys(void* self) {
     return _ret;
 }
 
-const char** k_viewstateserializer_expansion_keys(void* self) {
+const char** k_viewstateserializer_expansion_keys(const void* self) {
     libqt_list _arr = KViewStateSerializer_ExpansionKeys((KViewStateSerializer*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -109,14 +109,14 @@ const char** k_viewstateserializer_expansion_keys(void* self) {
     return _ret;
 }
 
-const char* k_viewstateserializer_current_index_key(void* self) {
+const char* k_viewstateserializer_current_index_key(const void* self) {
     libqt_string _str = KViewStateSerializer_CurrentIndexKey((KViewStateSerializer*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-pair_int_int /* tuple of int and int */ k_viewstateserializer_scroll_state(void* self) {
+pair_int_int /* tuple of int and int */ k_viewstateserializer_scroll_state(const void* self) {
     return KViewStateSerializer_ScrollState((KViewStateSerializer*)self);
 }
 
@@ -156,46 +156,27 @@ void k_viewstateserializer_restore_scroll_state(void* self, int verticalScoll, i
     KViewStateSerializer_RestoreScrollState((KViewStateSerializer*)self, verticalScoll, horizontalScroll);
 }
 
-QModelIndex* k_viewstateserializer_index_from_config_string(void* self, void* model, const char* key) {
+QModelIndex* k_viewstateserializer_index_from_config_string(const void* self, const void* model, const char* key) {
     return KViewStateSerializer_IndexFromConfigString((KViewStateSerializer*)self, (QAbstractItemModel*)model, qstring(key));
 }
 
-void k_viewstateserializer_on_index_from_config_string(void* self, QModelIndex* (*callback)(void*, void*, const char*)) {
+void k_viewstateserializer_on_index_from_config_string(const void* self, QModelIndex* (*callback)(const void*, const void*, const char*)) {
     KViewStateSerializer_OnIndexFromConfigString((KViewStateSerializer*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_viewstateserializer_super_index_from_config_string(void* self, void* model, const char* key) {
-    return KViewStateSerializer_SuperIndexFromConfigString((KViewStateSerializer*)self, (QAbstractItemModel*)model, qstring(key));
-}
-
-const char* k_viewstateserializer_index_to_config_string(void* self, void* index) {
+const char* k_viewstateserializer_index_to_config_string(const void* self, const void* index) {
     libqt_string _str = KViewStateSerializer_IndexToConfigString((KViewStateSerializer*)self, (QModelIndex*)index);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_viewstateserializer_on_index_to_config_string(void* self, const char* (*callback)(void*, void*)) {
+void k_viewstateserializer_on_index_to_config_string(const void* self, const char* (*callback)(const void*, const void*)) {
     KViewStateSerializer_OnIndexToConfigString((KViewStateSerializer*)self, (intptr_t)callback);
-}
-
-const char* k_viewstateserializer_super_index_to_config_string(void* self, void* index) {
-    libqt_string _str = KViewStateSerializer_SuperIndexToConfigString((KViewStateSerializer*)self, (QModelIndex*)index);
-    char* _ret = qstring_to_char(_str);
-    libqt_string_free(&_str);
-    return _ret;
 }
 
 void k_viewstateserializer_restore_state(void* self) {
     KViewStateSerializer_RestoreState((KViewStateSerializer*)self);
-}
-
-void k_viewstateserializer_on_restore_state(void* self, void (*callback)()) {
-    KViewStateSerializer_OnRestoreState((KViewStateSerializer*)self, (intptr_t)callback);
-}
-
-void k_viewstateserializer_super_restore_state(void* self) {
-    KViewStateSerializer_SuperRestoreState((KViewStateSerializer*)self);
 }
 
 const char* k_viewstateserializer_tr2(const char* s, const char* c) {
@@ -212,7 +193,7 @@ const char* k_viewstateserializer_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-const char* k_viewstateserializer_object_name(void* self) {
+const char* k_viewstateserializer_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -223,19 +204,19 @@ void k_viewstateserializer_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_viewstateserializer_is_widget_type(void* self) {
+bool k_viewstateserializer_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_viewstateserializer_is_window_type(void* self) {
+bool k_viewstateserializer_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_viewstateserializer_is_quick_item_type(void* self) {
+bool k_viewstateserializer_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_viewstateserializer_signals_blocked(void* self) {
+bool k_viewstateserializer_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -243,7 +224,7 @@ bool k_viewstateserializer_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_viewstateserializer_thread(void* self) {
+QThread* k_viewstateserializer_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -267,7 +248,7 @@ void k_viewstateserializer_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_viewstateserializer_children(void* self) {
+libqt_list /* of QObject* */ k_viewstateserializer_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -284,55 +265,55 @@ void k_viewstateserializer_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_viewstateserializer_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_viewstateserializer_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_viewstateserializer_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_viewstateserializer_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_viewstateserializer_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_viewstateserializer_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_viewstateserializer_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_viewstateserializer_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_viewstateserializer_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_viewstateserializer_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_viewstateserializer_disconnect3(void* self) {
+bool k_viewstateserializer_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_viewstateserializer_disconnect4(void* self, void* receiver) {
+bool k_viewstateserializer_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_viewstateserializer_disconnect5(void* param1) {
+bool k_viewstateserializer_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_viewstateserializer_dump_object_tree(void* self) {
+void k_viewstateserializer_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_viewstateserializer_dump_object_info(void* self) {
+void k_viewstateserializer_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_viewstateserializer_set_property(void* self, const char* name, void* value) {
+bool k_viewstateserializer_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_viewstateserializer_property(void* self, const char* name) {
+QVariant* k_viewstateserializer_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_viewstateserializer_dynamic_property_names(void* self) {
+const char** k_viewstateserializer_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -353,7 +334,7 @@ QBindingStorage* k_viewstateserializer_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_viewstateserializer_binding_storage2(void* self) {
+const QBindingStorage* k_viewstateserializer_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -365,11 +346,11 @@ void k_viewstateserializer_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_viewstateserializer_parent(void* self) {
+QObject* k_viewstateserializer_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_viewstateserializer_inherits(void* self, const char* classname) {
+bool k_viewstateserializer_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -385,31 +366,31 @@ int32_t k_viewstateserializer_start_timer23(void* self, int64_t time, int32_t ti
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_viewstateserializer_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_viewstateserializer_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_viewstateserializer_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_viewstateserializer_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_viewstateserializer_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_viewstateserializer_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_viewstateserializer_disconnect1(void* self, const char* signal) {
+bool k_viewstateserializer_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_viewstateserializer_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_viewstateserializer_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_viewstateserializer_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_viewstateserializer_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_viewstateserializer_disconnect23(void* self, void* receiver, const char* member) {
+bool k_viewstateserializer_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -481,76 +462,44 @@ void k_viewstateserializer_on_custom_event(void* self, void (*callback)(void*, v
     KViewStateSerializer_OnCustomEvent((KViewStateSerializer*)self, (intptr_t)callback);
 }
 
-void k_viewstateserializer_connect_notify(void* self, void* signal) {
+void k_viewstateserializer_connect_notify(void* self, const void* signal) {
     KViewStateSerializer_ConnectNotify((KViewStateSerializer*)self, (QMetaMethod*)signal);
 }
 
-void k_viewstateserializer_super_connect_notify(void* self, void* signal) {
+void k_viewstateserializer_super_connect_notify(void* self, const void* signal) {
     KViewStateSerializer_SuperConnectNotify((KViewStateSerializer*)self, (QMetaMethod*)signal);
 }
 
-void k_viewstateserializer_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_viewstateserializer_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     KViewStateSerializer_OnConnectNotify((KViewStateSerializer*)self, (intptr_t)callback);
 }
 
-void k_viewstateserializer_disconnect_notify(void* self, void* signal) {
+void k_viewstateserializer_disconnect_notify(void* self, const void* signal) {
     KViewStateSerializer_DisconnectNotify((KViewStateSerializer*)self, (QMetaMethod*)signal);
 }
 
-void k_viewstateserializer_super_disconnect_notify(void* self, void* signal) {
+void k_viewstateserializer_super_disconnect_notify(void* self, const void* signal) {
     KViewStateSerializer_SuperDisconnectNotify((KViewStateSerializer*)self, (QMetaMethod*)signal);
 }
 
-void k_viewstateserializer_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_viewstateserializer_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     KViewStateSerializer_OnDisconnectNotify((KViewStateSerializer*)self, (intptr_t)callback);
 }
 
-QObject* k_viewstateserializer_sender(void* self) {
+QObject* k_viewstateserializer_sender(const void* self) {
     return KViewStateSerializer_Sender((KViewStateSerializer*)self);
 }
 
-QObject* k_viewstateserializer_super_sender(void* self) {
-    return KViewStateSerializer_SuperSender((KViewStateSerializer*)self);
-}
-
-void k_viewstateserializer_on_sender(void* self, QObject* (*callback)()) {
-    KViewStateSerializer_OnSender((KViewStateSerializer*)self, (intptr_t)callback);
-}
-
-int32_t k_viewstateserializer_sender_signal_index(void* self) {
+int32_t k_viewstateserializer_sender_signal_index(const void* self) {
     return KViewStateSerializer_SenderSignalIndex((KViewStateSerializer*)self);
 }
 
-int32_t k_viewstateserializer_super_sender_signal_index(void* self) {
-    return KViewStateSerializer_SuperSenderSignalIndex((KViewStateSerializer*)self);
-}
-
-void k_viewstateserializer_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    KViewStateSerializer_OnSenderSignalIndex((KViewStateSerializer*)self, (intptr_t)callback);
-}
-
-int32_t k_viewstateserializer_receivers(void* self, const char* signal) {
+int32_t k_viewstateserializer_receivers(const void* self, const char* signal) {
     return KViewStateSerializer_Receivers((KViewStateSerializer*)self, signal);
 }
 
-int32_t k_viewstateserializer_super_receivers(void* self, const char* signal) {
-    return KViewStateSerializer_SuperReceivers((KViewStateSerializer*)self, signal);
-}
-
-void k_viewstateserializer_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    KViewStateSerializer_OnReceivers((KViewStateSerializer*)self, (intptr_t)callback);
-}
-
-bool k_viewstateserializer_is_signal_connected(void* self, void* signal) {
+bool k_viewstateserializer_is_signal_connected(const void* self, const void* signal) {
     return KViewStateSerializer_IsSignalConnected((KViewStateSerializer*)self, (QMetaMethod*)signal);
-}
-
-bool k_viewstateserializer_super_is_signal_connected(void* self, void* signal) {
-    return KViewStateSerializer_SuperIsSignalConnected((KViewStateSerializer*)self, (QMetaMethod*)signal);
-}
-
-void k_viewstateserializer_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    KViewStateSerializer_OnIsSignalConnected((KViewStateSerializer*)self, (intptr_t)callback);
 }
 
 void k_viewstateserializer_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

@@ -53,26 +53,26 @@ KLineEdit* k_lineedit_from_k_completion_base(void* _kcompletionbase);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-const QMetaObject* k_lineedit_meta_object(void* self);
+const QMetaObject* k_lineedit_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KLineEdit*
-/// @param callback const QMetaObject* func()
+/// @param self const KLineEdit*
+/// @param callback const QMetaObject* func(const KLineEdit* self)
 ///
-void k_lineedit_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_lineedit_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-const QMetaObject* k_lineedit_super_meta_object(void* self);
+const QMetaObject* k_lineedit_super_meta_object(const void* self);
 
 /// @param self KLineEdit*
 /// @param param1 const char*
@@ -129,7 +129,7 @@ const char* k_lineedit_tr(const char* s);
 /// @param self KLineEdit*
 /// @param url QUrl*
 ///
-void k_lineedit_set_url(void* self, void* url);
+void k_lineedit_set_url(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/klineedit.html#setCompletionMode)
 ///
@@ -165,9 +165,9 @@ void k_lineedit_set_completion_mode_disabled(void* self, int32_t mode);
 
 /// [Upstream resources](https://api.kde.org/klineedit.html#urlDropsEnabled)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_url_drops_enabled(void* self);
+bool k_lineedit_url_drops_enabled(const void* self);
 
 /// [Upstream resources](https://api.kde.org/klineedit.html#setTrapReturnKey)
 ///
@@ -178,9 +178,9 @@ void k_lineedit_set_trap_return_key(void* self, bool trap);
 
 /// [Upstream resources](https://api.kde.org/klineedit.html#trapReturnKey)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_trap_return_key(void* self);
+bool k_lineedit_trap_return_key(const void* self);
 
 /// [Upstream resources](https://api.kde.org/klineedit.html#completionBox)
 ///
@@ -236,26 +236,26 @@ void k_lineedit_super_set_completion_object(void* self, void* param1, bool handl
 
 /// [Upstream resources](https://api.kde.org/klineedit.html#copy)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-void k_lineedit_copy(void* self);
+void k_lineedit_copy(const void* self);
 
 /// [Upstream resources](https://api.kde.org/klineedit.html#copy)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KLineEdit*
-/// @param callback void func()
+/// @param self const KLineEdit*
+/// @param callback void func(const KLineEdit* self)
 ///
-void k_lineedit_on_copy(void* self, void (*callback)());
+void k_lineedit_on_copy(const void* self, void (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/klineedit.html#copy)
 ///
 /// Base class method implementation
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-void k_lineedit_super_copy(void* self);
+void k_lineedit_super_copy(const void* self);
 
 /// [Upstream resources](https://api.kde.org/klineedit.html#setSqueezedTextEnabled)
 ///
@@ -266,25 +266,25 @@ void k_lineedit_set_squeezed_text_enabled(void* self, bool enable);
 
 /// [Upstream resources](https://api.kde.org/klineedit.html#isSqueezedTextEnabled)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_is_squeezed_text_enabled(void* self);
+bool k_lineedit_is_squeezed_text_enabled(const void* self);
 
 /// [Upstream resources](https://api.kde.org/klineedit.html#originalText)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-const char* k_lineedit_original_text(void* self);
+const char* k_lineedit_original_text(const void* self);
 
 /// [Upstream resources](https://api.kde.org/klineedit.html#userText)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-const char* k_lineedit_user_text(void* self);
+const char* k_lineedit_user_text(const void* self);
 
 /// [Upstream resources](https://api.kde.org/klineedit.html#setCompletionBox)
 ///
@@ -295,9 +295,9 @@ void k_lineedit_set_completion_box(void* self, void* box);
 
 /// [Upstream resources](https://api.kde.org/klineedit.html#clearButtonUsedSize)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QSize* k_lineedit_clear_button_used_size(void* self);
+QSize* k_lineedit_clear_button_used_size(const void* self);
 
 /// [Upstream resources](https://api.kde.org/klineedit.html#doCompletion)
 ///
@@ -565,24 +565,6 @@ void k_lineedit_super_make_completion(void* self, const char* param1);
 ///
 void k_lineedit_user_cancelled(void* self, const char* cancelText);
 
-/// [Upstream resources](https://api.kde.org/klineedit.html#userCancelled)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KLineEdit*
-/// @param callback void func(KLineEdit* self, const char* cancelText)
-///
-void k_lineedit_on_user_cancelled(void* self, void (*callback)(void*, const char*));
-
-/// [Upstream resources](https://api.kde.org/klineedit.html#userCancelled)
-///
-/// Base class method implementation
-///
-/// @param self KLineEdit*
-/// @param cancelText const char*
-///
-void k_lineedit_super_user_cancelled(void* self, const char* cancelText);
-
 /// [Upstream resources](https://api.kde.org/klineedit.html#event)
 ///
 /// @param self KLineEdit*
@@ -764,23 +746,6 @@ void k_lineedit_super_context_menu_event(void* self, void* param1);
 ///
 QMenu* k_lineedit_create_standard_context_menu(void* self);
 
-/// [Upstream resources](https://api.kde.org/klineedit.html#createStandardContextMenu)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KLineEdit*
-/// @param callback QMenu* func()
-///
-void k_lineedit_on_create_standard_context_menu(void* self, QMenu* (*callback)());
-
-/// [Upstream resources](https://api.kde.org/klineedit.html#createStandardContextMenu)
-///
-/// Base class method implementation
-///
-/// @param self KLineEdit*
-///
-QMenu* k_lineedit_super_create_standard_context_menu(void* self);
-
 /// [Upstream resources](https://api.kde.org/klineedit.html#setCompletedText)
 ///
 /// @param self KLineEdit*
@@ -815,46 +780,11 @@ void k_lineedit_super_set_completed_text2(void* self, const char* param1, bool p
 ///
 void k_lineedit_set_user_selection(void* self, bool userSelection);
 
-/// [Upstream resources](https://api.kde.org/klineedit.html#setUserSelection)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KLineEdit*
-/// @param callback void func(KLineEdit* self, bool userSelection)
-///
-void k_lineedit_on_set_user_selection(void* self, void (*callback)(void*, bool));
-
-/// [Upstream resources](https://api.kde.org/klineedit.html#setUserSelection)
-///
-/// Base class method implementation
-///
-/// @param self KLineEdit*
-/// @param userSelection bool
-///
-void k_lineedit_super_set_user_selection(void* self, bool userSelection);
-
 /// [Upstream resources](https://api.kde.org/klineedit.html#autoSuggest)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_auto_suggest(void* self);
-
-/// [Upstream resources](https://api.kde.org/klineedit.html#autoSuggest)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KLineEdit*
-/// @param callback bool func()
-///
-void k_lineedit_on_auto_suggest(void* self, bool (*callback)());
-
-/// [Upstream resources](https://api.kde.org/klineedit.html#autoSuggest)
-///
-/// Base class method implementation
-///
-/// @param self KLineEdit*
-///
-bool k_lineedit_super_auto_suggest(void* self);
+bool k_lineedit_auto_suggest(const void* self);
 
 /// [Upstream resources](https://api.kde.org/klineedit.html#paintEvent)
 ///
@@ -914,9 +844,9 @@ void k_lineedit_set_completion_mode_disabled2(void* self, int32_t mode, bool dis
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-const char* k_lineedit_text(void* self);
+const char* k_lineedit_text(const void* self);
 
 /// Inherited from QLineEdit
 ///
@@ -924,9 +854,9 @@ const char* k_lineedit_text(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-const char* k_lineedit_display_text(void* self);
+const char* k_lineedit_display_text(const void* self);
 
 /// Inherited from QLineEdit
 ///
@@ -934,9 +864,9 @@ const char* k_lineedit_display_text(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-const char* k_lineedit_placeholder_text(void* self);
+const char* k_lineedit_placeholder_text(const void* self);
 
 /// Inherited from QLineEdit
 ///
@@ -951,9 +881,9 @@ void k_lineedit_set_placeholder_text(void* self, const char* placeholderText);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlineedit.html#maxLength)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-int32_t k_lineedit_max_length(void* self);
+int32_t k_lineedit_max_length(const void* self);
 
 /// Inherited from QLineEdit
 ///
@@ -977,9 +907,9 @@ void k_lineedit_set_frame(void* self, bool frame);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlineedit.html#hasFrame)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_has_frame(void* self);
+bool k_lineedit_has_frame(const void* self);
 
 /// Inherited from QLineEdit
 ///
@@ -994,19 +924,19 @@ void k_lineedit_set_clear_button_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlineedit.html#isClearButtonEnabled)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_is_clear_button_enabled(void* self);
+bool k_lineedit_is_clear_button_enabled(const void* self);
 
 /// Inherited from QLineEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlineedit.html#echoMode)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
 /// @return enum QLineEdit__EchoMode
 ///
-int32_t k_lineedit_echo_mode(void* self);
+int32_t k_lineedit_echo_mode(const void* self);
 
 /// Inherited from QLineEdit
 ///
@@ -1021,9 +951,9 @@ void k_lineedit_set_echo_mode(void* self, int32_t echoMode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlineedit.html#isReadOnly)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_is_read_only(void* self);
+bool k_lineedit_is_read_only(const void* self);
 
 /// Inherited from QLineEdit
 ///
@@ -1032,15 +962,15 @@ bool k_lineedit_is_read_only(void* self);
 /// @param self KLineEdit*
 /// @param validator QValidator*
 ///
-void k_lineedit_set_validator(void* self, void* validator);
+void k_lineedit_set_validator(void* self, const void* validator);
 
 /// Inherited from QLineEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlineedit.html#validator)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-const QValidator* k_lineedit_validator(void* self);
+const QValidator* k_lineedit_validator(const void* self);
 
 /// Inherited from QLineEdit
 ///
@@ -1055,17 +985,17 @@ void k_lineedit_set_completer(void* self, void* completer);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlineedit.html#completer)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QCompleter* k_lineedit_completer(void* self);
+QCompleter* k_lineedit_completer(const void* self);
 
 /// Inherited from QLineEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlineedit.html#cursorPosition)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-int32_t k_lineedit_cursor_position(void* self);
+int32_t k_lineedit_cursor_position(const void* self);
 
 /// Inherited from QLineEdit
 ///
@@ -1083,7 +1013,7 @@ void k_lineedit_set_cursor_position(void* self, int cursorPosition);
 /// @param self KLineEdit*
 /// @param pos QPoint*
 ///
-int32_t k_lineedit_cursor_position_at(void* self, void* pos);
+int32_t k_lineedit_cursor_position_at(void* self, const void* pos);
 
 /// Inherited from QLineEdit
 ///
@@ -1098,11 +1028,11 @@ void k_lineedit_set_alignment(void* self, int32_t flag);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlineedit.html#alignment)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 ///
-int32_t k_lineedit_alignment(void* self);
+int32_t k_lineedit_alignment(const void* self);
 
 /// Inherited from QLineEdit
 ///
@@ -1178,9 +1108,9 @@ void k_lineedit_end(void* self, bool mark);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlineedit.html#isModified)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_is_modified(void* self);
+bool k_lineedit_is_modified(const void* self);
 
 /// Inherited from QLineEdit
 ///
@@ -1205,9 +1135,9 @@ void k_lineedit_set_selection(void* self, int param1, int param2);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlineedit.html#hasSelectedText)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_has_selected_text(void* self);
+bool k_lineedit_has_selected_text(const void* self);
 
 /// Inherited from QLineEdit
 ///
@@ -1215,49 +1145,49 @@ bool k_lineedit_has_selected_text(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-const char* k_lineedit_selected_text(void* self);
+const char* k_lineedit_selected_text(const void* self);
 
 /// Inherited from QLineEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlineedit.html#selectionStart)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-int32_t k_lineedit_selection_start(void* self);
+int32_t k_lineedit_selection_start(const void* self);
 
 /// Inherited from QLineEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlineedit.html#selectionEnd)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-int32_t k_lineedit_selection_end(void* self);
+int32_t k_lineedit_selection_end(const void* self);
 
 /// Inherited from QLineEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlineedit.html#selectionLength)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-int32_t k_lineedit_selection_length(void* self);
+int32_t k_lineedit_selection_length(const void* self);
 
 /// Inherited from QLineEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlineedit.html#isUndoAvailable)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_is_undo_available(void* self);
+bool k_lineedit_is_undo_available(const void* self);
 
 /// Inherited from QLineEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlineedit.html#isRedoAvailable)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_is_redo_available(void* self);
+bool k_lineedit_is_redo_available(const void* self);
 
 /// Inherited from QLineEdit
 ///
@@ -1272,9 +1202,9 @@ void k_lineedit_set_drag_enabled(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlineedit.html#dragEnabled)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_drag_enabled(void* self);
+bool k_lineedit_drag_enabled(const void* self);
 
 /// Inherited from QLineEdit
 ///
@@ -1289,11 +1219,11 @@ void k_lineedit_set_cursor_move_style(void* self, int32_t style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlineedit.html#cursorMoveStyle)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
 /// @return enum Qt__CursorMoveStyle
 ///
-int32_t k_lineedit_cursor_move_style(void* self);
+int32_t k_lineedit_cursor_move_style(const void* self);
 
 /// Inherited from QLineEdit
 ///
@@ -1301,9 +1231,9 @@ int32_t k_lineedit_cursor_move_style(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-const char* k_lineedit_input_mask(void* self);
+const char* k_lineedit_input_mask(const void* self);
 
 /// Inherited from QLineEdit
 ///
@@ -1318,9 +1248,9 @@ void k_lineedit_set_input_mask(void* self, const char* inputMask);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlineedit.html#hasAcceptableInput)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_has_acceptable_input(void* self);
+bool k_lineedit_has_acceptable_input(const void* self);
 
 /// Inherited from QLineEdit
 ///
@@ -1341,15 +1271,15 @@ void k_lineedit_set_text_margins(void* self, int left, int top, int right, int b
 /// @param self KLineEdit*
 /// @param margins QMargins*
 ///
-void k_lineedit_set_text_margins2(void* self, void* margins);
+void k_lineedit_set_text_margins2(void* self, const void* margins);
 
 /// Inherited from QLineEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlineedit.html#textMargins)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QMargins* k_lineedit_text_margins(void* self);
+QMargins* k_lineedit_text_margins(const void* self);
 
 /// Inherited from QLineEdit
 ///
@@ -1369,7 +1299,7 @@ void k_lineedit_add_action(void* self, void* action, int32_t position);
 /// @param icon QIcon*
 /// @param position enum QLineEdit__ActionPosition
 ///
-QAction* k_lineedit_add_action2(void* self, void* icon, int32_t position);
+QAction* k_lineedit_add_action2(void* self, const void* icon, int32_t position);
 
 /// Inherited from QLineEdit
 ///
@@ -1563,11 +1493,11 @@ void k_lineedit_on_input_rejected(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlineedit.html#inputMethodQuery)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param property enum Qt__InputMethodQuery
 /// @param argument QVariant*
 ///
-QVariant* k_lineedit_input_method_query2(void* self, int32_t property, void* argument);
+QVariant* k_lineedit_input_method_query2(const void* self, int32_t property, void* argument);
 
 /// Inherited from QLineEdit
 ///
@@ -1609,9 +1539,9 @@ KLineEdit* k_lineedit_from_q_paint_device(void* _qpaintdevice);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-uintptr_t k_lineedit_win_id(void* self);
+uintptr_t k_lineedit_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1625,25 +1555,25 @@ void k_lineedit_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-uintptr_t k_lineedit_internal_win_id(void* self);
+uintptr_t k_lineedit_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-uintptr_t k_lineedit_effective_win_id(void* self);
+uintptr_t k_lineedit_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QStyle* k_lineedit_style(void* self);
+QStyle* k_lineedit_style(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1658,35 +1588,35 @@ void k_lineedit_set_style(void* self, void* style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_is_top_level(void* self);
+bool k_lineedit_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_is_window(void* self);
+bool k_lineedit_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_is_modal(void* self);
+bool k_lineedit_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t k_lineedit_window_modality(void* self);
+int32_t k_lineedit_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1701,18 +1631,18 @@ void k_lineedit_set_window_modality(void* self, int32_t windowModality);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_is_enabled(void* self);
+bool k_lineedit_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param param1 QWidget*
 ///
-bool k_lineedit_is_enabled_to(void* self, void* param1);
+bool k_lineedit_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1745,153 +1675,153 @@ void k_lineedit_set_window_modified(void* self, bool windowModified);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QRect* k_lineedit_frame_geometry(void* self);
+QRect* k_lineedit_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-const QRect* k_lineedit_geometry(void* self);
+const QRect* k_lineedit_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QRect* k_lineedit_normal_geometry(void* self);
+QRect* k_lineedit_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-int32_t k_lineedit_x(void* self);
+int32_t k_lineedit_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-int32_t k_lineedit_y(void* self);
+int32_t k_lineedit_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QPoint* k_lineedit_pos(void* self);
+QPoint* k_lineedit_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QSize* k_lineedit_frame_size(void* self);
+QSize* k_lineedit_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QSize* k_lineedit_size(void* self);
+QSize* k_lineedit_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-int32_t k_lineedit_width(void* self);
+int32_t k_lineedit_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-int32_t k_lineedit_height(void* self);
+int32_t k_lineedit_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QRect* k_lineedit_rect(void* self);
+QRect* k_lineedit_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QRect* k_lineedit_children_rect(void* self);
+QRect* k_lineedit_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QRegion* k_lineedit_children_region(void* self);
+QRegion* k_lineedit_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QSize* k_lineedit_minimum_size(void* self);
+QSize* k_lineedit_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QSize* k_lineedit_maximum_size(void* self);
+QSize* k_lineedit_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-int32_t k_lineedit_minimum_width(void* self);
+int32_t k_lineedit_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-int32_t k_lineedit_minimum_height(void* self);
+int32_t k_lineedit_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-int32_t k_lineedit_maximum_width(void* self);
+int32_t k_lineedit_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-int32_t k_lineedit_maximum_height(void* self);
+int32_t k_lineedit_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1900,7 +1830,7 @@ int32_t k_lineedit_maximum_height(void* self);
 /// @param self KLineEdit*
 /// @param minimumSize QSize*
 ///
-void k_lineedit_set_minimum_size(void* self, void* minimumSize);
+void k_lineedit_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -1919,7 +1849,7 @@ void k_lineedit_set_minimum_size2(void* self, int minw, int minh);
 /// @param self KLineEdit*
 /// @param maximumSize QSize*
 ///
-void k_lineedit_set_maximum_size(void* self, void* maximumSize);
+void k_lineedit_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -1971,9 +1901,9 @@ void k_lineedit_set_maximum_height(void* self, int maxh);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QSize* k_lineedit_size_increment(void* self);
+QSize* k_lineedit_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1982,7 +1912,7 @@ QSize* k_lineedit_size_increment(void* self);
 /// @param self KLineEdit*
 /// @param sizeIncrement QSize*
 ///
-void k_lineedit_set_size_increment(void* self, void* sizeIncrement);
+void k_lineedit_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -1998,9 +1928,9 @@ void k_lineedit_set_size_increment2(void* self, int w, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QSize* k_lineedit_base_size(void* self);
+QSize* k_lineedit_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2009,7 +1939,7 @@ QSize* k_lineedit_base_size(void* self);
 /// @param self KLineEdit*
 /// @param baseSize QSize*
 ///
-void k_lineedit_set_base_size(void* self, void* baseSize);
+void k_lineedit_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -2028,7 +1958,7 @@ void k_lineedit_set_base_size2(void* self, int basew, int baseh);
 /// @param self KLineEdit*
 /// @param fixedSize QSize*
 ///
-void k_lineedit_set_fixed_size(void* self, void* fixedSize);
+void k_lineedit_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -2062,145 +1992,145 @@ void k_lineedit_set_fixed_height(void* self, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param param1 QPointF*
 ///
-QPointF* k_lineedit_map_to_global(void* self, void* param1);
+QPointF* k_lineedit_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param param1 QPoint*
 ///
-QPoint* k_lineedit_map_to_global2(void* self, void* param1);
+QPoint* k_lineedit_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param param1 QPointF*
 ///
-QPointF* k_lineedit_map_from_global(void* self, void* param1);
+QPointF* k_lineedit_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param param1 QPoint*
 ///
-QPoint* k_lineedit_map_from_global2(void* self, void* param1);
+QPoint* k_lineedit_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param param1 QPointF*
 ///
-QPointF* k_lineedit_map_to_parent(void* self, void* param1);
+QPointF* k_lineedit_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param param1 QPoint*
 ///
-QPoint* k_lineedit_map_to_parent2(void* self, void* param1);
+QPoint* k_lineedit_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param param1 QPointF*
 ///
-QPointF* k_lineedit_map_from_parent(void* self, void* param1);
+QPointF* k_lineedit_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param param1 QPoint*
 ///
-QPoint* k_lineedit_map_from_parent2(void* self, void* param1);
+QPoint* k_lineedit_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_lineedit_map_to(void* self, void* param1, void* param2);
+QPointF* k_lineedit_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_lineedit_map_to2(void* self, void* param1, void* param2);
+QPoint* k_lineedit_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_lineedit_map_from(void* self, void* param1, void* param2);
+QPointF* k_lineedit_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_lineedit_map_from2(void* self, void* param1, void* param2);
+QPoint* k_lineedit_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QWidget* k_lineedit_window(void* self);
+QWidget* k_lineedit_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QWidget* k_lineedit_native_parent_widget(void* self);
+QWidget* k_lineedit_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QWidget* k_lineedit_top_level_widget(void* self);
+QWidget* k_lineedit_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-const QPalette* k_lineedit_palette(void* self);
+const QPalette* k_lineedit_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2209,7 +2139,7 @@ const QPalette* k_lineedit_palette(void* self);
 /// @param self KLineEdit*
 /// @param palette QPalette*
 ///
-void k_lineedit_set_palette(void* self, void* palette);
+void k_lineedit_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -2224,11 +2154,11 @@ void k_lineedit_set_background_role(void* self, int32_t backgroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_lineedit_background_role(void* self);
+int32_t k_lineedit_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2243,19 +2173,19 @@ void k_lineedit_set_foreground_role(void* self, int32_t foregroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_lineedit_foreground_role(void* self);
+int32_t k_lineedit_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-const QFont* k_lineedit_font(void* self);
+const QFont* k_lineedit_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2264,31 +2194,31 @@ const QFont* k_lineedit_font(void* self);
 /// @param self KLineEdit*
 /// @param font QFont*
 ///
-void k_lineedit_set_font(void* self, void* font);
+void k_lineedit_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QFontMetrics* k_lineedit_font_metrics(void* self);
+QFontMetrics* k_lineedit_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QFontInfo* k_lineedit_font_info(void* self);
+QFontInfo* k_lineedit_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QCursor* k_lineedit_cursor(void* self);
+QCursor* k_lineedit_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2297,7 +2227,7 @@ QCursor* k_lineedit_cursor(void* self);
 /// @param self KLineEdit*
 /// @param cursor QCursor*
 ///
-void k_lineedit_set_cursor(void* self, void* cursor);
+void k_lineedit_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -2320,17 +2250,17 @@ void k_lineedit_set_mouse_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_has_mouse_tracking(void* self);
+bool k_lineedit_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_under_mouse(void* self);
+bool k_lineedit_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2345,9 +2275,9 @@ void k_lineedit_set_tablet_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_has_tablet_tracking(void* self);
+bool k_lineedit_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2356,7 +2286,7 @@ bool k_lineedit_has_tablet_tracking(void* self);
 /// @param self KLineEdit*
 /// @param mask QBitmap*
 ///
-void k_lineedit_set_mask(void* self, void* mask);
+void k_lineedit_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -2365,15 +2295,15 @@ void k_lineedit_set_mask(void* self, void* mask);
 /// @param self KLineEdit*
 /// @param mask QRegion*
 ///
-void k_lineedit_set_mask2(void* self, void* mask);
+void k_lineedit_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QRegion* k_lineedit_mask(void* self);
+QRegion* k_lineedit_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2413,9 +2343,9 @@ QPixmap* k_lineedit_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QGraphicsEffect* k_lineedit_graphics_effect(void* self);
+QGraphicsEffect* k_lineedit_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2468,9 +2398,9 @@ void k_lineedit_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-const char* k_lineedit_style_sheet(void* self);
+const char* k_lineedit_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2478,9 +2408,9 @@ const char* k_lineedit_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-const char* k_lineedit_window_title(void* self);
+const char* k_lineedit_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2489,15 +2419,15 @@ const char* k_lineedit_window_title(void* self);
 /// @param self KLineEdit*
 /// @param icon QIcon*
 ///
-void k_lineedit_set_window_icon(void* self, void* icon);
+void k_lineedit_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QIcon* k_lineedit_window_icon(void* self);
+QIcon* k_lineedit_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2514,9 +2444,9 @@ void k_lineedit_set_window_icon_text(void* self, const char* windowIconText);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-const char* k_lineedit_window_icon_text(void* self);
+const char* k_lineedit_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2533,9 +2463,9 @@ void k_lineedit_set_window_role(void* self, const char* windowRole);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-const char* k_lineedit_window_role(void* self);
+const char* k_lineedit_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2552,9 +2482,9 @@ void k_lineedit_set_window_file_path(void* self, const char* filePath);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-const char* k_lineedit_window_file_path(void* self);
+const char* k_lineedit_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2569,17 +2499,17 @@ void k_lineedit_set_window_opacity(void* self, double level);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-double k_lineedit_window_opacity(void* self);
+double k_lineedit_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_is_window_modified(void* self);
+bool k_lineedit_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2596,9 +2526,9 @@ void k_lineedit_set_tool_tip(void* self, const char* toolTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-const char* k_lineedit_tool_tip(void* self);
+const char* k_lineedit_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2613,9 +2543,9 @@ void k_lineedit_set_tool_tip_duration(void* self, int msec);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-int32_t k_lineedit_tool_tip_duration(void* self);
+int32_t k_lineedit_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2632,9 +2562,9 @@ void k_lineedit_set_status_tip(void* self, const char* statusTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-const char* k_lineedit_status_tip(void* self);
+const char* k_lineedit_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2651,9 +2581,9 @@ void k_lineedit_set_whats_this(void* self, const char* whatsThis);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-const char* k_lineedit_whats_this(void* self);
+const char* k_lineedit_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2661,9 +2591,9 @@ const char* k_lineedit_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-const char* k_lineedit_accessible_name(void* self);
+const char* k_lineedit_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2680,9 +2610,9 @@ void k_lineedit_set_accessible_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-const char* k_lineedit_accessible_description(void* self);
+const char* k_lineedit_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2706,11 +2636,11 @@ void k_lineedit_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t k_lineedit_layout_direction(void* self);
+int32_t k_lineedit_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2727,15 +2657,15 @@ void k_lineedit_unset_layout_direction(void* self);
 /// @param self KLineEdit*
 /// @param locale QLocale*
 ///
-void k_lineedit_set_locale(void* self, void* locale);
+void k_lineedit_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QLocale* k_lineedit_locale(void* self);
+QLocale* k_lineedit_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2749,17 +2679,17 @@ void k_lineedit_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_is_right_to_left(void* self);
+bool k_lineedit_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_is_left_to_right(void* self);
+bool k_lineedit_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2773,9 +2703,9 @@ void k_lineedit_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_is_active_window(void* self);
+bool k_lineedit_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2806,11 +2736,11 @@ void k_lineedit_set_focus2(void* self, int32_t reason);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t k_lineedit_focus_policy(void* self);
+int32_t k_lineedit_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2825,9 +2755,9 @@ void k_lineedit_set_focus_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_has_focus(void* self);
+bool k_lineedit_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2851,19 +2781,19 @@ void k_lineedit_set_focus_proxy(void* self, void* focusProxy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QWidget* k_lineedit_focus_proxy(void* self);
+QWidget* k_lineedit_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t k_lineedit_context_menu_policy(void* self);
+int32_t k_lineedit_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2889,7 +2819,7 @@ void k_lineedit_grab_mouse(void* self);
 /// @param self KLineEdit*
 /// @param param1 QCursor*
 ///
-void k_lineedit_grab_mouse2(void* self, void* param1);
+void k_lineedit_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2922,7 +2852,7 @@ void k_lineedit_release_keyboard(void* self);
 /// @param self KLineEdit*
 /// @param key QKeySequence*
 ///
-int32_t k_lineedit_grab_shortcut(void* self, void* key);
+int32_t k_lineedit_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -2967,9 +2897,9 @@ QWidget* k_lineedit_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_updates_enabled(void* self);
+bool k_lineedit_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2984,9 +2914,9 @@ void k_lineedit_set_updates_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QGraphicsProxyWidget* k_lineedit_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* k_lineedit_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3023,7 +2953,7 @@ void k_lineedit_update2(void* self, int x, int y, int w, int h);
 /// @param self KLineEdit*
 /// @param param1 QRect*
 ///
-void k_lineedit_update3(void* self, void* param1);
+void k_lineedit_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3032,7 +2962,7 @@ void k_lineedit_update3(void* self, void* param1);
 /// @param self KLineEdit*
 /// @param param1 QRegion*
 ///
-void k_lineedit_update4(void* self, void* param1);
+void k_lineedit_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3053,7 +2983,7 @@ void k_lineedit_repaint2(void* self, int x, int y, int w, int h);
 /// @param self KLineEdit*
 /// @param param1 QRect*
 ///
-void k_lineedit_repaint3(void* self, void* param1);
+void k_lineedit_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3062,7 +2992,7 @@ void k_lineedit_repaint3(void* self, void* param1);
 /// @param self KLineEdit*
 /// @param param1 QRegion*
 ///
-void k_lineedit_repaint4(void* self, void* param1);
+void k_lineedit_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3171,7 +3101,7 @@ void k_lineedit_move(void* self, int x, int y);
 /// @param self KLineEdit*
 /// @param param1 QPoint*
 ///
-void k_lineedit_move2(void* self, void* param1);
+void k_lineedit_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3190,7 +3120,7 @@ void k_lineedit_resize(void* self, int w, int h);
 /// @param self KLineEdit*
 /// @param param1 QSize*
 ///
-void k_lineedit_resize2(void* self, void* param1);
+void k_lineedit_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3211,7 +3141,7 @@ void k_lineedit_set_geometry(void* self, int x, int y, int w, int h);
 /// @param self KLineEdit*
 /// @param geometry QRect*
 ///
-void k_lineedit_set_geometry2(void* self, void* geometry);
+void k_lineedit_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -3219,9 +3149,9 @@ void k_lineedit_set_geometry2(void* self, void* geometry);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-char* k_lineedit_save_geometry(void* self);
+char* k_lineedit_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3244,60 +3174,60 @@ void k_lineedit_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_is_visible(void* self);
+bool k_lineedit_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param param1 QWidget*
 ///
-bool k_lineedit_is_visible_to(void* self, void* param1);
+bool k_lineedit_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_is_hidden(void* self);
+bool k_lineedit_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_is_minimized(void* self);
+bool k_lineedit_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_is_maximized(void* self);
+bool k_lineedit_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_is_full_screen(void* self);
+bool k_lineedit_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t k_lineedit_window_state(void* self);
+int32_t k_lineedit_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3321,9 +3251,9 @@ void k_lineedit_override_window_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QSizePolicy* k_lineedit_size_policy(void* self);
+QSizePolicy* k_lineedit_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3348,9 +3278,9 @@ void k_lineedit_set_size_policy2(void* self, int32_t horizontal, int32_t vertica
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QRegion* k_lineedit_visible_region(void* self);
+QRegion* k_lineedit_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3371,31 +3301,31 @@ void k_lineedit_set_contents_margins(void* self, int left, int top, int right, i
 /// @param self KLineEdit*
 /// @param margins QMargins*
 ///
-void k_lineedit_set_contents_margins2(void* self, void* margins);
+void k_lineedit_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QMargins* k_lineedit_contents_margins(void* self);
+QMargins* k_lineedit_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QRect* k_lineedit_contents_rect(void* self);
+QRect* k_lineedit_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QLayout* k_lineedit_layout(void* self);
+QLayout* k_lineedit_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3452,39 +3382,39 @@ void k_lineedit_scroll(void* self, int dx, int dy);
 /// @param dy int
 /// @param param3 QRect*
 ///
-void k_lineedit_scroll2(void* self, int dx, int dy, void* param3);
+void k_lineedit_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QWidget* k_lineedit_focus_widget(void* self);
+QWidget* k_lineedit_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QWidget* k_lineedit_next_in_focus_chain(void* self);
+QWidget* k_lineedit_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QWidget* k_lineedit_previous_in_focus_chain(void* self);
+QWidget* k_lineedit_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_accept_drops(void* self);
+bool k_lineedit_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3537,11 +3467,11 @@ void k_lineedit_remove_action(void* self, void* action);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list k_lineedit_actions(void* self);
+libqt_list k_lineedit_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3551,7 +3481,7 @@ libqt_list k_lineedit_actions(void* self);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* k_lineedit_add_action3(void* self, void* icon, const char* text);
+QAction* k_lineedit_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -3561,7 +3491,7 @@ QAction* k_lineedit_add_action3(void* self, void* icon, const char* text);
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_lineedit_add_action4(void* self, const char* text, void* shortcut);
+QAction* k_lineedit_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -3572,15 +3502,15 @@ QAction* k_lineedit_add_action4(void* self, const char* text, void* shortcut);
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_lineedit_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* k_lineedit_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QWidget* k_lineedit_parent_widget(void* self);
+QWidget* k_lineedit_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3595,11 +3525,11 @@ void k_lineedit_set_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t k_lineedit_window_flags(void* self);
+int32_t k_lineedit_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3623,11 +3553,11 @@ void k_lineedit_override_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t k_lineedit_window_type(void* self);
+int32_t k_lineedit_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3641,29 +3571,29 @@ QWidget* k_lineedit_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param x int
 /// @param y int
 ///
-QWidget* k_lineedit_child_at(void* self, int x, int y);
+QWidget* k_lineedit_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param p QPoint*
 ///
-QWidget* k_lineedit_child_at2(void* self, void* p);
+QWidget* k_lineedit_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param p QPointF*
 ///
-QWidget* k_lineedit_child_at3(void* self, void* p);
+QWidget* k_lineedit_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -3678,35 +3608,35 @@ void k_lineedit_set_attribute(void* self, int32_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool k_lineedit_test_attribute(void* self, int32_t param1);
+bool k_lineedit_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-void k_lineedit_ensure_polished(void* self);
+void k_lineedit_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param child QWidget*
 ///
-bool k_lineedit_is_ancestor_of(void* self, void* child);
+bool k_lineedit_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_auto_fill_background(void* self);
+bool k_lineedit_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3721,25 +3651,25 @@ void k_lineedit_set_auto_fill_background(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QBackingStore* k_lineedit_backing_store(void* self);
+QBackingStore* k_lineedit_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QWindow* k_lineedit_window_handle(void* self);
+QWindow* k_lineedit_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QScreen* k_lineedit_screen(void* self);
+QScreen* k_lineedit_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3783,7 +3713,7 @@ void k_lineedit_on_window_title_changed(void* self, void (*callback)(void*, cons
 /// @param self KLineEdit*
 /// @param icon QIcon*
 ///
-void k_lineedit_window_icon_changed(void* self, void* icon);
+void k_lineedit_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -3792,7 +3722,7 @@ void k_lineedit_window_icon_changed(void* self, void* icon);
 /// @param self KLineEdit*
 /// @param callback void func(KLineEdit* self, QIcon* icon)
 ///
-void k_lineedit_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void k_lineedit_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -3819,7 +3749,7 @@ void k_lineedit_on_window_icon_text_changed(void* self, void (*callback)(void*, 
 /// @param self KLineEdit*
 /// @param pos QPoint*
 ///
-void k_lineedit_custom_context_menu_requested(void* self, void* pos);
+void k_lineedit_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -3828,17 +3758,17 @@ void k_lineedit_custom_context_menu_requested(void* self, void* pos);
 /// @param self KLineEdit*
 /// @param callback void func(KLineEdit* self, QPoint* pos)
 ///
-void k_lineedit_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void k_lineedit_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t k_lineedit_input_method_hints(void* self);
+int32_t k_lineedit_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3857,7 +3787,7 @@ void k_lineedit_set_input_method_hints(void* self, int32_t hints);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void k_lineedit_render22(void* self, void* target, void* targetOffset);
+void k_lineedit_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -3868,7 +3798,7 @@ void k_lineedit_render22(void* self, void* target, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_lineedit_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void k_lineedit_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -3880,7 +3810,7 @@ void k_lineedit_render3(void* self, void* target, void* targetOffset, void* sour
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_lineedit_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_lineedit_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3890,7 +3820,7 @@ void k_lineedit_render4(void* self, void* target, void* targetOffset, void* sour
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void k_lineedit_render23(void* self, void* painter, void* targetOffset);
+void k_lineedit_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -3901,7 +3831,7 @@ void k_lineedit_render23(void* self, void* painter, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_lineedit_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void k_lineedit_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -3913,7 +3843,7 @@ void k_lineedit_render32(void* self, void* painter, void* targetOffset, void* so
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_lineedit_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_lineedit_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3922,7 +3852,7 @@ void k_lineedit_render42(void* self, void* painter, void* targetOffset, void* so
 /// @param self KLineEdit*
 /// @param rectangle QRect*
 ///
-QPixmap* k_lineedit_grab1(void* self, void* rectangle);
+QPixmap* k_lineedit_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -3942,7 +3872,7 @@ void k_lineedit_grab_gesture2(void* self, int32_t type, int32_t flags);
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t k_lineedit_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t k_lineedit_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -4009,9 +3939,9 @@ QWidget* k_lineedit_create_window_container3(void* window, void* parent, int32_t
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-const char* k_lineedit_object_name(void* self);
+const char* k_lineedit_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4026,33 +3956,33 @@ void k_lineedit_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_is_widget_type(void* self);
+bool k_lineedit_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_is_window_type(void* self);
+bool k_lineedit_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_is_quick_item_type(void* self);
+bool k_lineedit_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_signals_blocked(void* self);
+bool k_lineedit_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4067,9 +3997,9 @@ bool k_lineedit_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QThread* k_lineedit_thread(void* self);
+QThread* k_lineedit_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4120,11 +4050,11 @@ void k_lineedit_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_lineedit_children(void* self);
+libqt_list k_lineedit_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4153,7 +4083,7 @@ void k_lineedit_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_lineedit_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_lineedit_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4164,18 +4094,18 @@ QMetaObject__Connection* k_lineedit_connect(void* sender, const char* signal, vo
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_lineedit_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_lineedit_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_lineedit_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_lineedit_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4186,7 +4116,7 @@ QMetaObject__Connection* k_lineedit_connect3(void* self, void* sender, const cha
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_lineedit_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_lineedit_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4197,24 +4127,24 @@ bool k_lineedit_disconnect(void* sender, const char* signal, void* receiver, con
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_lineedit_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_lineedit_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_disconnect3(void* self);
+bool k_lineedit_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param receiver QObject*
 ///
-bool k_lineedit_disconnect4(void* self, void* receiver);
+bool k_lineedit_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -4222,23 +4152,23 @@ bool k_lineedit_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_lineedit_disconnect5(void* param1);
+bool k_lineedit_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-void k_lineedit_dump_object_tree(void* self);
+void k_lineedit_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-void k_lineedit_dump_object_info(void* self);
+void k_lineedit_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4248,16 +4178,16 @@ void k_lineedit_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_lineedit_set_property(void* self, const char* name, void* value);
+bool k_lineedit_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param name const char*
 ///
-QVariant* k_lineedit_property(void* self, const char* name);
+QVariant* k_lineedit_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -4265,9 +4195,9 @@ QVariant* k_lineedit_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-const char** k_lineedit_dynamic_property_names(void* self);
+const char** k_lineedit_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4281,9 +4211,9 @@ QBindingStorage* k_lineedit_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-const QBindingStorage* k_lineedit_binding_storage2(void* self);
+const QBindingStorage* k_lineedit_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4306,18 +4236,18 @@ void k_lineedit_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QObject* k_lineedit_parent(void* self);
+QObject* k_lineedit_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param classname const char*
 ///
-bool k_lineedit_inherits(void* self, const char* classname);
+bool k_lineedit_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -4357,7 +4287,7 @@ int32_t k_lineedit_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_lineedit_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_lineedit_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -4369,59 +4299,59 @@ QMetaObject__Connection* k_lineedit_connect5(void* sender, const char* signal, v
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_lineedit_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_lineedit_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_lineedit_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_lineedit_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param signal const char*
 ///
-bool k_lineedit_disconnect1(void* self, const char* signal);
+bool k_lineedit_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KLineEdit*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_lineedit_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_lineedit_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_lineedit_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_lineedit_disconnect23(void* self, void* receiver, const char* member);
+bool k_lineedit_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KLineEdit*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_lineedit_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4445,89 +4375,89 @@ void k_lineedit_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_painting_active(void* self);
+bool k_lineedit_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-int32_t k_lineedit_width_m_m(void* self);
+int32_t k_lineedit_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-int32_t k_lineedit_height_m_m(void* self);
+int32_t k_lineedit_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-int32_t k_lineedit_logical_dpi_x(void* self);
+int32_t k_lineedit_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-int32_t k_lineedit_logical_dpi_y(void* self);
+int32_t k_lineedit_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-int32_t k_lineedit_physical_dpi_x(void* self);
+int32_t k_lineedit_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-int32_t k_lineedit_physical_dpi_y(void* self);
+int32_t k_lineedit_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-double k_lineedit_device_pixel_ratio(void* self);
+double k_lineedit_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-double k_lineedit_device_pixel_ratio_f(void* self);
+double k_lineedit_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-int32_t k_lineedit_color_count(void* self);
+int32_t k_lineedit_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-int32_t k_lineedit_depth(void* self);
+int32_t k_lineedit_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -4556,9 +4486,9 @@ KCompletion* k_lineedit_completion_object(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#isCompletionObjectAutoDeleted)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_is_completion_object_auto_deleted(void* self);
+bool k_lineedit_is_completion_object_auto_deleted(const void* self);
 
 /// Inherited from KCompletionBase
 ///
@@ -4582,17 +4512,17 @@ void k_lineedit_set_enable_signals(void* self, bool enable);
 ///
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#handleSignals)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_handle_signals(void* self);
+bool k_lineedit_handle_signals(const void* self);
 
 /// Inherited from KCompletionBase
 ///
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#emitSignals)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_emit_signals(void* self);
+bool k_lineedit_emit_signals(const void* self);
 
 /// Inherited from KCompletionBase
 ///
@@ -4607,11 +4537,11 @@ void k_lineedit_set_emit_signals(void* self, bool emitRotationSignals);
 ///
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#completionMode)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
 /// @return enum KCompletion__CompletionMode
 ///
-int32_t k_lineedit_completion_mode(void* self);
+int32_t k_lineedit_completion_mode(const void* self);
 
 /// Inherited from KCompletionBase
 ///
@@ -4627,12 +4557,12 @@ bool k_lineedit_set_key_binding(void* self, int32_t item, libqt_list key);
 ///
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#keyBinding)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param item enum KCompletionBase__KeyBindingType
 ///
 /// @return libqt_list of QKeySequence*
 ///
-libqt_list k_lineedit_key_binding(void* self, int32_t item);
+libqt_list k_lineedit_key_binding(const void* self, int32_t item);
 
 /// Inherited from KCompletionBase
 ///
@@ -4646,9 +4576,9 @@ void k_lineedit_use_global_key_bindings(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#compObj)
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-KCompletion* k_lineedit_comp_obj(void* self);
+KCompletion* k_lineedit_comp_obj(const void* self);
 
 /// Inherited from KCompletionBase
 ///
@@ -4665,9 +4595,9 @@ KCompletion* k_lineedit_completion_object1(void* self, bool handleSignals);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QSize* k_lineedit_size_hint(void* self);
+QSize* k_lineedit_size_hint(const void* self);
 
 /// Inherited from QLineEdit
 ///
@@ -4675,9 +4605,9 @@ QSize* k_lineedit_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QSize* k_lineedit_super_size_hint(void* self);
+QSize* k_lineedit_super_size_hint(const void* self);
 
 /// Inherited from QLineEdit
 ///
@@ -4685,12 +4615,12 @@ QSize* k_lineedit_super_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KLineEdit*
-/// @param callback QSize* func()
+/// @param self const KLineEdit*
+/// @param callback QSize* func(KLineEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_lineedit_on_size_hint(void* self, QSize* (*callback)());
+void k_lineedit_on_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QLineEdit
 ///
@@ -4698,9 +4628,9 @@ void k_lineedit_on_size_hint(void* self, QSize* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QSize* k_lineedit_minimum_size_hint(void* self);
+QSize* k_lineedit_minimum_size_hint(const void* self);
 
 /// Inherited from QLineEdit
 ///
@@ -4708,9 +4638,9 @@ QSize* k_lineedit_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QSize* k_lineedit_super_minimum_size_hint(void* self);
+QSize* k_lineedit_super_minimum_size_hint(const void* self);
 
 /// Inherited from QLineEdit
 ///
@@ -4718,12 +4648,12 @@ QSize* k_lineedit_super_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KLineEdit*
-/// @param callback QSize* func()
+/// @param self const KLineEdit*
+/// @param callback QSize* func(KLineEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_lineedit_on_minimum_size_hint(void* self, QSize* (*callback)());
+void k_lineedit_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QLineEdit
 ///
@@ -5061,10 +4991,10 @@ void k_lineedit_on_input_method_event(void* self, void (*callback)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param option QStyleOptionFrame*
 ///
-void k_lineedit_init_style_option(void* self, void* option);
+void k_lineedit_init_style_option(const void* self, void* option);
 
 /// Inherited from QLineEdit
 ///
@@ -5072,10 +5002,10 @@ void k_lineedit_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param option QStyleOptionFrame*
 ///
-void k_lineedit_super_init_style_option(void* self, void* option);
+void k_lineedit_super_init_style_option(const void* self, void* option);
 
 /// Inherited from QLineEdit
 ///
@@ -5083,10 +5013,10 @@ void k_lineedit_super_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param callback void func(KLineEdit* self, QStyleOptionFrame* option)
 ///
-void k_lineedit_on_init_style_option(void* self, void (*callback)(void*, void*));
+void k_lineedit_on_init_style_option(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QLineEdit
 ///
@@ -5094,10 +5024,10 @@ void k_lineedit_on_init_style_option(void* self, void (*callback)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_lineedit_input_method_query(void* self, int32_t param1);
+QVariant* k_lineedit_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QLineEdit
 ///
@@ -5105,10 +5035,10 @@ QVariant* k_lineedit_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_lineedit_super_input_method_query(void* self, int32_t param1);
+QVariant* k_lineedit_super_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QLineEdit
 ///
@@ -5116,12 +5046,12 @@ QVariant* k_lineedit_super_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param callback QVariant* func(KLineEdit* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_lineedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void k_lineedit_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QLineEdit
 ///
@@ -5162,9 +5092,9 @@ void k_lineedit_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-int32_t k_lineedit_dev_type(void* self);
+int32_t k_lineedit_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5172,9 +5102,9 @@ int32_t k_lineedit_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-int32_t k_lineedit_super_dev_type(void* self);
+int32_t k_lineedit_super_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5182,10 +5112,10 @@ int32_t k_lineedit_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KLineEdit*
-/// @param callback int32_t func()
+/// @param self const KLineEdit*
+/// @param callback int32_t func(KLineEdit* self)
 ///
-void k_lineedit_on_dev_type(void* self, int32_t (*callback)());
+void k_lineedit_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5226,10 +5156,10 @@ void k_lineedit_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param param1 int
 ///
-int32_t k_lineedit_height_for_width(void* self, int param1);
+int32_t k_lineedit_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -5237,10 +5167,10 @@ int32_t k_lineedit_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param param1 int
 ///
-int32_t k_lineedit_super_height_for_width(void* self, int param1);
+int32_t k_lineedit_super_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -5248,10 +5178,10 @@ int32_t k_lineedit_super_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param callback int32_t func(KLineEdit* self, int param1)
 ///
-void k_lineedit_on_height_for_width(void* self, int32_t (*callback)(void*, int));
+void k_lineedit_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -5259,9 +5189,9 @@ void k_lineedit_on_height_for_width(void* self, int32_t (*callback)(void*, int))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_has_height_for_width(void* self);
+bool k_lineedit_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5269,9 +5199,9 @@ bool k_lineedit_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-bool k_lineedit_super_has_height_for_width(void* self);
+bool k_lineedit_super_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5279,10 +5209,10 @@ bool k_lineedit_super_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KLineEdit*
-/// @param callback bool func()
+/// @param self const KLineEdit*
+/// @param callback bool func(KLineEdit* self)
 ///
-void k_lineedit_on_has_height_for_width(void* self, bool (*callback)());
+void k_lineedit_on_has_height_for_width(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5290,9 +5220,9 @@ void k_lineedit_on_has_height_for_width(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QPaintEngine* k_lineedit_paint_engine(void* self);
+QPaintEngine* k_lineedit_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5300,9 +5230,9 @@ QPaintEngine* k_lineedit_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QPaintEngine* k_lineedit_super_paint_engine(void* self);
+QPaintEngine* k_lineedit_super_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5310,10 +5240,10 @@ QPaintEngine* k_lineedit_super_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KLineEdit*
-/// @param callback QPaintEngine* func()
+/// @param self const KLineEdit*
+/// @param callback QPaintEngine* func(KLineEdit* self)
 ///
-void k_lineedit_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void k_lineedit_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5655,10 +5585,10 @@ void k_lineedit_on_native_event(void* self, bool (*callback)(void*, libqt_string
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_lineedit_metric(void* self, int32_t param1);
+int32_t k_lineedit_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5666,10 +5596,10 @@ int32_t k_lineedit_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_lineedit_super_metric(void* self, int32_t param1);
+int32_t k_lineedit_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5677,10 +5607,10 @@ int32_t k_lineedit_super_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param callback int32_t func(KLineEdit* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_lineedit_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void k_lineedit_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5688,10 +5618,10 @@ void k_lineedit_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param painter QPainter*
 ///
-void k_lineedit_init_painter(void* self, void* painter);
+void k_lineedit_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -5699,10 +5629,10 @@ void k_lineedit_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param painter QPainter*
 ///
-void k_lineedit_super_init_painter(void* self, void* painter);
+void k_lineedit_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -5710,10 +5640,10 @@ void k_lineedit_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param callback void func(KLineEdit* self, QPainter* painter)
 ///
-void k_lineedit_on_init_painter(void* self, void (*callback)(void*, void*));
+void k_lineedit_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5721,10 +5651,10 @@ void k_lineedit_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_lineedit_redirected(void* self, void* offset);
+QPaintDevice* k_lineedit_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -5732,10 +5662,10 @@ QPaintDevice* k_lineedit_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_lineedit_super_redirected(void* self, void* offset);
+QPaintDevice* k_lineedit_super_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -5743,10 +5673,10 @@ QPaintDevice* k_lineedit_super_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param callback QPaintDevice* func(KLineEdit* self, QPoint* offset)
 ///
-void k_lineedit_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void k_lineedit_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5754,9 +5684,9 @@ void k_lineedit_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QPainter* k_lineedit_shared_painter(void* self);
+QPainter* k_lineedit_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5764,9 +5694,9 @@ QPainter* k_lineedit_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QPainter* k_lineedit_super_shared_painter(void* self);
+QPainter* k_lineedit_super_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5774,10 +5704,10 @@ QPainter* k_lineedit_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KLineEdit*
-/// @param callback QPainter* func()
+/// @param self const KLineEdit*
+/// @param callback QPainter* func(KLineEdit* self)
 ///
-void k_lineedit_on_shared_painter(void* self, QPainter* (*callback)());
+void k_lineedit_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5922,7 +5852,7 @@ void k_lineedit_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self KLineEdit*
 /// @param signal QMetaMethod*
 ///
-void k_lineedit_connect_notify(void* self, void* signal);
+void k_lineedit_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5933,7 +5863,7 @@ void k_lineedit_connect_notify(void* self, void* signal);
 /// @param self KLineEdit*
 /// @param signal QMetaMethod*
 ///
-void k_lineedit_super_connect_notify(void* self, void* signal);
+void k_lineedit_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5944,7 +5874,7 @@ void k_lineedit_super_connect_notify(void* self, void* signal);
 /// @param self KLineEdit*
 /// @param callback void func(KLineEdit* self, QMetaMethod* signal)
 ///
-void k_lineedit_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_lineedit_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -5955,7 +5885,7 @@ void k_lineedit_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self KLineEdit*
 /// @param signal QMetaMethod*
 ///
-void k_lineedit_disconnect_notify(void* self, void* signal);
+void k_lineedit_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5966,7 +5896,7 @@ void k_lineedit_disconnect_notify(void* self, void* signal);
 /// @param self KLineEdit*
 /// @param signal QMetaMethod*
 ///
-void k_lineedit_super_disconnect_notify(void* self, void* signal);
+void k_lineedit_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5977,7 +5907,7 @@ void k_lineedit_super_disconnect_notify(void* self, void* signal);
 /// @param self KLineEdit*
 /// @param callback void func(KLineEdit* self, QMetaMethod* signal)
 ///
-void k_lineedit_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_lineedit_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from KCompletionBase
 ///
@@ -6053,9 +5983,9 @@ void k_lineedit_on_virtual_hook(void* self, void (*callback)(void*, int, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QRect* k_lineedit_cursor_rect(void* self);
+QRect* k_lineedit_cursor_rect(const void* self);
 
 /// Inherited from QLineEdit
 ///
@@ -6063,9 +5993,9 @@ QRect* k_lineedit_cursor_rect(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QRect* k_lineedit_super_cursor_rect(void* self);
+QRect* k_lineedit_super_cursor_rect(const void* self);
 
 /// Inherited from QLineEdit
 ///
@@ -6073,12 +6003,12 @@ QRect* k_lineedit_super_cursor_rect(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KLineEdit*
-/// @param callback QRect* func()
+/// @param self const KLineEdit*
+/// @param callback QRect* func(KLineEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_lineedit_on_cursor_rect(void* self, QRect* (*callback)());
+void k_lineedit_on_cursor_rect(const void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -6107,9 +6037,9 @@ void k_lineedit_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLineEdit*
-/// @param callback void func()
+/// @param callback void func(KLineEdit* self)
 ///
-void k_lineedit_on_update_micro_focus(void* self, void (*callback)());
+void k_lineedit_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -6138,9 +6068,9 @@ void k_lineedit_super_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLineEdit*
-/// @param callback void func()
+/// @param callback void func(KLineEdit* self)
 ///
-void k_lineedit_on_create(void* self, void (*callback)());
+void k_lineedit_on_create(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -6169,9 +6099,9 @@ void k_lineedit_super_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLineEdit*
-/// @param callback void func()
+/// @param callback void func(KLineEdit* self)
 ///
-void k_lineedit_on_destroy(void* self, void (*callback)());
+void k_lineedit_on_destroy(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -6200,9 +6130,9 @@ bool k_lineedit_super_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLineEdit*
-/// @param callback bool func()
+/// @param callback bool func(KLineEdit* self)
 ///
-void k_lineedit_on_focus_next_child(void* self, bool (*callback)());
+void k_lineedit_on_focus_next_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -6231,9 +6161,9 @@ bool k_lineedit_super_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLineEdit*
-/// @param callback bool func()
+/// @param callback bool func(KLineEdit* self)
 ///
-void k_lineedit_on_focus_previous_child(void* self, bool (*callback)());
+void k_lineedit_on_focus_previous_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -6241,9 +6171,9 @@ void k_lineedit_on_focus_previous_child(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QObject* k_lineedit_sender(void* self);
+QObject* k_lineedit_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6251,9 +6181,9 @@ QObject* k_lineedit_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-QObject* k_lineedit_super_sender(void* self);
+QObject* k_lineedit_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6261,10 +6191,10 @@ QObject* k_lineedit_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KLineEdit*
-/// @param callback QObject* func()
+/// @param self const KLineEdit*
+/// @param callback QObject* func(KLineEdit* self)
 ///
-void k_lineedit_on_sender(void* self, QObject* (*callback)());
+void k_lineedit_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6272,9 +6202,9 @@ void k_lineedit_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-int32_t k_lineedit_sender_signal_index(void* self);
+int32_t k_lineedit_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6282,9 +6212,9 @@ int32_t k_lineedit_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-int32_t k_lineedit_super_sender_signal_index(void* self);
+int32_t k_lineedit_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6292,10 +6222,10 @@ int32_t k_lineedit_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KLineEdit*
-/// @param callback int32_t func()
+/// @param self const KLineEdit*
+/// @param callback int32_t func(KLineEdit* self)
 ///
-void k_lineedit_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_lineedit_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6303,10 +6233,10 @@ void k_lineedit_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param signal const char*
 ///
-int32_t k_lineedit_receivers(void* self, const char* signal);
+int32_t k_lineedit_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -6314,10 +6244,10 @@ int32_t k_lineedit_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param signal const char*
 ///
-int32_t k_lineedit_super_receivers(void* self, const char* signal);
+int32_t k_lineedit_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -6325,10 +6255,10 @@ int32_t k_lineedit_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param callback int32_t func(KLineEdit* self, const char* signal)
 ///
-void k_lineedit_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_lineedit_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -6336,10 +6266,10 @@ void k_lineedit_on_receivers(void* self, int32_t (*callback)(void*, const char*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param signal QMetaMethod*
 ///
-bool k_lineedit_is_signal_connected(void* self, void* signal);
+bool k_lineedit_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6347,10 +6277,10 @@ bool k_lineedit_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param signal QMetaMethod*
 ///
-bool k_lineedit_super_is_signal_connected(void* self, void* signal);
+bool k_lineedit_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6358,10 +6288,10 @@ bool k_lineedit_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param callback bool func(KLineEdit* self, QMetaMethod* signal)
 ///
-void k_lineedit_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_lineedit_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -6369,11 +6299,11 @@ void k_lineedit_on_is_signal_connected(void* self, bool (*callback)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_lineedit_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_lineedit_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -6381,11 +6311,11 @@ double k_lineedit_get_decoded_metric_f(void* self, int32_t metricA, int32_t metr
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_lineedit_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_lineedit_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -6393,10 +6323,10 @@ double k_lineedit_super_get_decoded_metric_f(void* self, int32_t metricA, int32_
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 /// @param callback double func(KLineEdit* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_lineedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void k_lineedit_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from KCompletionBase
 ///
@@ -6417,11 +6347,11 @@ void k_lineedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, in
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
 /// @return libqt_map of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence*
 ///
-libqt_map k_lineedit_key_binding_map(void* self);
+libqt_map k_lineedit_key_binding_map(const void* self);
 
 /// Inherited from KCompletionBase
 ///
@@ -6442,11 +6372,11 @@ libqt_map k_lineedit_key_binding_map(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
 /// @return libqt_map of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence*
 ///
-libqt_map k_lineedit_super_key_binding_map(void* self);
+libqt_map k_lineedit_super_key_binding_map(const void* self);
 
 /// Inherited from KCompletionBase
 ///
@@ -6454,10 +6384,10 @@ libqt_map k_lineedit_super_key_binding_map(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KLineEdit*
-/// @param callback libqt_map of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* func()
+/// @param self const KLineEdit*
+/// @param callback libqt_map of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* func(KLineEdit* self)
 ///
-void k_lineedit_on_key_binding_map(void* self, libqt_map (*callback)());
+void k_lineedit_on_key_binding_map(const void* self, libqt_map (*callback)(const void*));
 
 /// Inherited from KCompletionBase
 ///
@@ -6531,9 +6461,9 @@ void k_lineedit_on_set_delegate(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-KCompletionBase* k_lineedit_delegate(void* self);
+KCompletionBase* k_lineedit_delegate(const void* self);
 
 /// Inherited from KCompletionBase
 ///
@@ -6541,9 +6471,9 @@ KCompletionBase* k_lineedit_delegate(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KLineEdit*
+/// @param self const KLineEdit*
 ///
-KCompletionBase* k_lineedit_super_delegate(void* self);
+KCompletionBase* k_lineedit_super_delegate(const void* self);
 
 /// Inherited from KCompletionBase
 ///
@@ -6551,10 +6481,10 @@ KCompletionBase* k_lineedit_super_delegate(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KLineEdit*
-/// @param callback KCompletionBase* func()
+/// @param self const KLineEdit*
+/// @param callback KCompletionBase* func(KLineEdit* self)
 ///
-void k_lineedit_on_delegate(void* self, KCompletionBase* (*callback)());
+void k_lineedit_on_delegate(const void* self, KCompletionBase* (*callback)(const void*));
 
 /// Inherited from QObject
 ///

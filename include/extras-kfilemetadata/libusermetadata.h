@@ -22,28 +22,28 @@ KFileMetaData__UserMetaData* k_filemetadata__usermetadata_new(const char* filePa
 ///
 /// @param rhs KFileMetaData__UserMetaData*
 ///
-KFileMetaData__UserMetaData* k_filemetadata__usermetadata_new2(void* rhs);
+KFileMetaData__UserMetaData* k_filemetadata__usermetadata_new2(const void* rhs);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-usermetadata.html#operator-eq)
 ///
 /// @param self KFileMetaData__UserMetaData*
 /// @param rhs KFileMetaData__UserMetaData*
 ///
-void k_filemetadata__usermetadata_operator_assign(void* self, void* rhs);
+void k_filemetadata__usermetadata_operator_assign(void* self, const void* rhs);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-usermetadata.html#filePath)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileMetaData__UserMetaData*
+/// @param self const KFileMetaData__UserMetaData*
 ///
-const char* k_filemetadata__usermetadata_file_path(void* self);
+const char* k_filemetadata__usermetadata_file_path(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-usermetadata.html#isSupported)
 ///
-/// @param self KFileMetaData__UserMetaData*
+/// @param self const KFileMetaData__UserMetaData*
 ///
-bool k_filemetadata__usermetadata_is_supported(void* self);
+bool k_filemetadata__usermetadata_is_supported(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-usermetadata.html#setTags)
 ///
@@ -58,15 +58,15 @@ int32_t k_filemetadata__usermetadata_set_tags(void* self, const char* tags[stati
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KFileMetaData__UserMetaData*
+/// @param self const KFileMetaData__UserMetaData*
 ///
-const char** k_filemetadata__usermetadata_tags(void* self);
+const char** k_filemetadata__usermetadata_tags(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-usermetadata.html#rating)
 ///
-/// @param self KFileMetaData__UserMetaData*
+/// @param self const KFileMetaData__UserMetaData*
 ///
-int32_t k_filemetadata__usermetadata_rating(void* self);
+int32_t k_filemetadata__usermetadata_rating(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-usermetadata.html#setRating)
 ///
@@ -81,9 +81,9 @@ int32_t k_filemetadata__usermetadata_set_rating(void* self, int rating);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileMetaData__UserMetaData*
+/// @param self const KFileMetaData__UserMetaData*
 ///
-const char* k_filemetadata__usermetadata_user_comment(void* self);
+const char* k_filemetadata__usermetadata_user_comment(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-usermetadata.html#setUserComment)
 ///
@@ -96,9 +96,9 @@ int32_t k_filemetadata__usermetadata_set_user_comment(void* self, const char* us
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-usermetadata.html#originUrl)
 ///
-/// @param self KFileMetaData__UserMetaData*
+/// @param self const KFileMetaData__UserMetaData*
 ///
-QUrl* k_filemetadata__usermetadata_origin_url(void* self);
+QUrl* k_filemetadata__usermetadata_origin_url(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-usermetadata.html#setOriginUrl)
 ///
@@ -107,15 +107,15 @@ QUrl* k_filemetadata__usermetadata_origin_url(void* self);
 ///
 /// @return enum KFileMetaData__UserMetaData__Error
 ///
-int32_t k_filemetadata__usermetadata_set_origin_url(void* self, void* originUrl);
+int32_t k_filemetadata__usermetadata_set_origin_url(void* self, const void* originUrl);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-usermetadata.html#originEmailSubject)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileMetaData__UserMetaData*
+/// @param self const KFileMetaData__UserMetaData*
 ///
-const char* k_filemetadata__usermetadata_origin_email_subject(void* self);
+const char* k_filemetadata__usermetadata_origin_email_subject(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-usermetadata.html#setOriginEmailSubject)
 ///
@@ -130,9 +130,9 @@ int32_t k_filemetadata__usermetadata_set_origin_email_subject(void* self, const 
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileMetaData__UserMetaData*
+/// @param self const KFileMetaData__UserMetaData*
 ///
-const char* k_filemetadata__usermetadata_origin_email_sender(void* self);
+const char* k_filemetadata__usermetadata_origin_email_sender(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-usermetadata.html#setOriginEmailSender)
 ///
@@ -147,9 +147,9 @@ int32_t k_filemetadata__usermetadata_set_origin_email_sender(void* self, const c
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileMetaData__UserMetaData*
+/// @param self const KFileMetaData__UserMetaData*
 ///
-const char* k_filemetadata__usermetadata_origin_email_message_id(void* self);
+const char* k_filemetadata__usermetadata_origin_email_message_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-usermetadata.html#setOriginEmailMessageId)
 ///
@@ -173,10 +173,10 @@ const char* k_filemetadata__usermetadata_attribute(void* self, const char* name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileMetaData__UserMetaData*
+/// @param self const KFileMetaData__UserMetaData*
 /// @param name const char*
 ///
-const char* k_filemetadata__usermetadata_attribute2(void* self, const char* name);
+const char* k_filemetadata__usermetadata_attribute2(const void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-usermetadata.html#setAttribute)
 ///
@@ -197,27 +197,27 @@ bool k_filemetadata__usermetadata_has_attribute(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-usermetadata.html#hasAttribute)
 ///
-/// @param self KFileMetaData__UserMetaData*
+/// @param self const KFileMetaData__UserMetaData*
 /// @param name const char*
 ///
-bool k_filemetadata__usermetadata_has_attribute2(void* self, const char* name);
+bool k_filemetadata__usermetadata_has_attribute2(const void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-usermetadata.html#queryAttributes)
 ///
-/// @param self KFileMetaData__UserMetaData*
+/// @param self const KFileMetaData__UserMetaData*
 ///
 /// @return flag of enum KFileMetaData__UserMetaData__Attribute
 ///
-uint32_t k_filemetadata__usermetadata_query_attributes(void* self);
+uint32_t k_filemetadata__usermetadata_query_attributes(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-usermetadata.html#queryAttributes)
 ///
-/// @param self KFileMetaData__UserMetaData*
+/// @param self const KFileMetaData__UserMetaData*
 /// @param attributes flag of enum KFileMetaData__UserMetaData__Attribute
 ///
 /// @return flag of enum KFileMetaData__UserMetaData__Attribute
 ///
-uint32_t k_filemetadata__usermetadata_query_attributes1(void* self, uint32_t attributes);
+uint32_t k_filemetadata__usermetadata_query_attributes1(const void* self, uint32_t attributes);
 
 /// Delete this object from C++ memory.
 ///

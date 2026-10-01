@@ -7,7 +7,7 @@ QNetworkAccessManager* q_qmlnetworkaccessmanagerfactory_create(void* self, void*
     return QQmlNetworkAccessManagerFactory_Create((QQmlNetworkAccessManagerFactory*)self, (QObject*)parent);
 }
 
-void q_qmlnetworkaccessmanagerfactory_operator_assign(void* self, void* param1) {
+void q_qmlnetworkaccessmanagerfactory_operator_assign(void* self, const void* param1) {
     QQmlNetworkAccessManagerFactory_OperatorAssign((QQmlNetworkAccessManagerFactory*)self, (QQmlNetworkAccessManagerFactory*)param1);
 }
 

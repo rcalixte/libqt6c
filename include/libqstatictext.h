@@ -28,14 +28,14 @@ QStaticText* q_statictext_new2(const char* text);
 ///
 /// @param other QStaticText*
 ///
-QStaticText* q_statictext_new3(void* other);
+QStaticText* q_statictext_new3(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatictext.html#operator-eq)
 ///
 /// @param self QStaticText*
 /// @param param1 QStaticText*
 ///
-void q_statictext_operator_assign(void* self, void* param1);
+void q_statictext_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatictext.html#swap)
 ///
@@ -55,9 +55,9 @@ void q_statictext_set_text(void* self, const char* text);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QStaticText*
+/// @param self const QStaticText*
 ///
-const char* q_statictext_text(void* self);
+const char* q_statictext_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatictext.html#setTextFormat)
 ///
@@ -68,11 +68,11 @@ void q_statictext_set_text_format(void* self, int32_t textFormat);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatictext.html#textFormat)
 ///
-/// @param self QStaticText*
+/// @param self const QStaticText*
 ///
 /// @return enum Qt__TextFormat
 ///
-int32_t q_statictext_text_format(void* self);
+int32_t q_statictext_text_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatictext.html#setTextWidth)
 ///
@@ -83,28 +83,28 @@ void q_statictext_set_text_width(void* self, double textWidth);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatictext.html#textWidth)
 ///
-/// @param self QStaticText*
+/// @param self const QStaticText*
 ///
-double q_statictext_text_width(void* self);
+double q_statictext_text_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatictext.html#setTextOption)
 ///
 /// @param self QStaticText*
 /// @param textOption QTextOption*
 ///
-void q_statictext_set_text_option(void* self, void* textOption);
+void q_statictext_set_text_option(void* self, const void* textOption);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatictext.html#textOption)
 ///
-/// @param self QStaticText*
+/// @param self const QStaticText*
 ///
-QTextOption* q_statictext_text_option(void* self);
+QTextOption* q_statictext_text_option(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatictext.html#size)
 ///
-/// @param self QStaticText*
+/// @param self const QStaticText*
 ///
-QSizeF* q_statictext_size(void* self);
+QSizeF* q_statictext_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatictext.html#prepare)
 ///
@@ -121,32 +121,32 @@ void q_statictext_set_performance_hint(void* self, int32_t performanceHint);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatictext.html#performanceHint)
 ///
-/// @param self QStaticText*
+/// @param self const QStaticText*
 ///
 /// @return enum QStaticText__PerformanceHint
 ///
-int32_t q_statictext_performance_hint(void* self);
+int32_t q_statictext_performance_hint(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatictext.html#operator-eq-eq)
 ///
-/// @param self QStaticText*
+/// @param self const QStaticText*
 /// @param param1 QStaticText*
 ///
-bool q_statictext_operator_equal(void* self, void* param1);
+bool q_statictext_operator_equal(const void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatictext.html#operator-not-eq)
 ///
-/// @param self QStaticText*
+/// @param self const QStaticText*
 /// @param param1 QStaticText*
 ///
-bool q_statictext_operator_not_equal(void* self, void* param1);
+bool q_statictext_operator_not_equal(const void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatictext.html#prepare)
 ///
 /// @param self QStaticText*
 /// @param matrix QTransform*
 ///
-void q_statictext_prepare1(void* self, void* matrix);
+void q_statictext_prepare1(void* self, const void* matrix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatictext.html#prepare)
 ///
@@ -154,7 +154,7 @@ void q_statictext_prepare1(void* self, void* matrix);
 /// @param matrix QTransform*
 /// @param font QFont*
 ///
-void q_statictext_prepare2(void* self, void* matrix, void* font);
+void q_statictext_prepare2(void* self, const void* matrix, const void* font);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatictext.html#dtor.QStaticText)
 ///

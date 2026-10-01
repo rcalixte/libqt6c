@@ -20,14 +20,14 @@ QQmlError* q_qmlerror_new();
 ///
 /// @param param1 QQmlError*
 ///
-QQmlError* q_qmlerror_new2(void* param1);
+QQmlError* q_qmlerror_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlerror.html#operator-eq)
 ///
 /// @param self QQmlError*
 /// @param param1 QQmlError*
 ///
-void q_qmlerror_operator_assign(void* self, void* param1);
+void q_qmlerror_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlerror.html#swap)
 ///
@@ -38,30 +38,30 @@ void q_qmlerror_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlerror.html#isValid)
 ///
-/// @param self QQmlError*
+/// @param self const QQmlError*
 ///
-bool q_qmlerror_is_valid(void* self);
+bool q_qmlerror_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlerror.html#url)
 ///
-/// @param self QQmlError*
+/// @param self const QQmlError*
 ///
-QUrl* q_qmlerror_url(void* self);
+QUrl* q_qmlerror_url(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlerror.html#setUrl)
 ///
 /// @param self QQmlError*
 /// @param url QUrl*
 ///
-void q_qmlerror_set_url(void* self, void* url);
+void q_qmlerror_set_url(void* self, const void* url);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlerror.html#description)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQmlError*
+/// @param self const QQmlError*
 ///
-const char* q_qmlerror_description(void* self);
+const char* q_qmlerror_description(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlerror.html#setDescription)
 ///
@@ -72,9 +72,9 @@ void q_qmlerror_set_description(void* self, const char* description);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlerror.html#line)
 ///
-/// @param self QQmlError*
+/// @param self const QQmlError*
 ///
-int32_t q_qmlerror_line(void* self);
+int32_t q_qmlerror_line(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlerror.html#setLine)
 ///
@@ -85,9 +85,9 @@ void q_qmlerror_set_line(void* self, int line);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlerror.html#column)
 ///
-/// @param self QQmlError*
+/// @param self const QQmlError*
 ///
-int32_t q_qmlerror_column(void* self);
+int32_t q_qmlerror_column(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlerror.html#setColumn)
 ///
@@ -98,9 +98,9 @@ void q_qmlerror_set_column(void* self, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlerror.html#object)
 ///
-/// @param self QQmlError*
+/// @param self const QQmlError*
 ///
-QObject* q_qmlerror_object(void* self);
+QObject* q_qmlerror_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlerror.html#setObject)
 ///
@@ -113,9 +113,9 @@ void q_qmlerror_set_object(void* self, void* object);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQmlError*
+/// @param self const QQmlError*
 ///
-const char* q_qmlerror_to_string(void* self);
+const char* q_qmlerror_to_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlerror.html#dtor.QQmlError)
 ///

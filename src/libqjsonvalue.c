@@ -36,15 +36,15 @@ QJsonValue* q_jsonvalue_new8(const char* s) {
     return QJsonValue_New8(s);
 }
 
-QJsonValue* q_jsonvalue_new9(void* a) {
+QJsonValue* q_jsonvalue_new9(const void* a) {
     return QJsonValue_New9((QJsonArray*)a);
 }
 
-QJsonValue* q_jsonvalue_new10(void* o) {
+QJsonValue* q_jsonvalue_new10(const void* o) {
     return QJsonValue_New10((QJsonObject*)o);
 }
 
-QJsonValue* q_jsonvalue_new11(void* other) {
+QJsonValue* q_jsonvalue_new11(const void* other) {
     return QJsonValue_New11((QJsonValue*)other);
 }
 
@@ -52,7 +52,7 @@ QJsonValue* q_jsonvalue_new12(int32_t param1) {
     return QJsonValue_New12(param1);
 }
 
-void q_jsonvalue_operator_assign(void* self, void* other) {
+void q_jsonvalue_operator_assign(void* self, const void* other) {
     QJsonValue_OperatorAssign((QJsonValue*)self, (QJsonValue*)other);
 }
 
@@ -60,121 +60,121 @@ void q_jsonvalue_swap(void* self, void* other) {
     QJsonValue_Swap((QJsonValue*)self, (QJsonValue*)other);
 }
 
-QJsonValue* q_jsonvalue_from_variant(void* variant) {
+QJsonValue* q_jsonvalue_from_variant(const void* variant) {
     return QJsonValue_FromVariant((QVariant*)variant);
 }
 
-QVariant* q_jsonvalue_to_variant(void* self) {
+QVariant* q_jsonvalue_to_variant(const void* self) {
     return QJsonValue_ToVariant((QJsonValue*)self);
 }
 
-int32_t q_jsonvalue_type(void* self) {
+int32_t q_jsonvalue_type(const void* self) {
     return QJsonValue_Type((QJsonValue*)self);
 }
 
-bool q_jsonvalue_is_null(void* self) {
+bool q_jsonvalue_is_null(const void* self) {
     return QJsonValue_IsNull((QJsonValue*)self);
 }
 
-bool q_jsonvalue_is_bool(void* self) {
+bool q_jsonvalue_is_bool(const void* self) {
     return QJsonValue_IsBool((QJsonValue*)self);
 }
 
-bool q_jsonvalue_is_double(void* self) {
+bool q_jsonvalue_is_double(const void* self) {
     return QJsonValue_IsDouble((QJsonValue*)self);
 }
 
-bool q_jsonvalue_is_string(void* self) {
+bool q_jsonvalue_is_string(const void* self) {
     return QJsonValue_IsString((QJsonValue*)self);
 }
 
-bool q_jsonvalue_is_array(void* self) {
+bool q_jsonvalue_is_array(const void* self) {
     return QJsonValue_IsArray((QJsonValue*)self);
 }
 
-bool q_jsonvalue_is_object(void* self) {
+bool q_jsonvalue_is_object(const void* self) {
     return QJsonValue_IsObject((QJsonValue*)self);
 }
 
-bool q_jsonvalue_is_undefined(void* self) {
+bool q_jsonvalue_is_undefined(const void* self) {
     return QJsonValue_IsUndefined((QJsonValue*)self);
 }
 
-bool q_jsonvalue_to_bool(void* self) {
+bool q_jsonvalue_to_bool(const void* self) {
     return QJsonValue_ToBool((QJsonValue*)self);
 }
 
-int32_t q_jsonvalue_to_int(void* self) {
+int32_t q_jsonvalue_to_int(const void* self) {
     return QJsonValue_ToInt((QJsonValue*)self);
 }
 
-int64_t q_jsonvalue_to_integer(void* self) {
+int64_t q_jsonvalue_to_integer(const void* self) {
     return QJsonValue_ToInteger((QJsonValue*)self);
 }
 
-double q_jsonvalue_to_double(void* self) {
+double q_jsonvalue_to_double(const void* self) {
     return QJsonValue_ToDouble((QJsonValue*)self);
 }
 
-const char* q_jsonvalue_to_string(void* self) {
+const char* q_jsonvalue_to_string(const void* self) {
     libqt_string _str = QJsonValue_ToString((QJsonValue*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_jsonvalue_to_string2(void* self, const char* defaultValue) {
+const char* q_jsonvalue_to_string2(const void* self, const char* defaultValue) {
     libqt_string _str = QJsonValue_ToString2((QJsonValue*)self, qstring(defaultValue));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QJsonArray* q_jsonvalue_to_array(void* self) {
+QJsonArray* q_jsonvalue_to_array(const void* self) {
     return QJsonValue_ToArray((QJsonValue*)self);
 }
 
-QJsonArray* q_jsonvalue_to_array2(void* self, void* defaultValue) {
+QJsonArray* q_jsonvalue_to_array2(const void* self, const void* defaultValue) {
     return QJsonValue_ToArray2((QJsonValue*)self, (QJsonArray*)defaultValue);
 }
 
-QJsonObject* q_jsonvalue_to_object(void* self) {
+QJsonObject* q_jsonvalue_to_object(const void* self) {
     return QJsonValue_ToObject((QJsonValue*)self);
 }
 
-QJsonObject* q_jsonvalue_to_object2(void* self, void* defaultValue) {
+QJsonObject* q_jsonvalue_to_object2(const void* self, const void* defaultValue) {
     return QJsonValue_ToObject2((QJsonValue*)self, (QJsonObject*)defaultValue);
 }
 
-const QJsonValue* q_jsonvalue_operator_subscript(void* self, const char* key) {
+const QJsonValue* q_jsonvalue_operator_subscript(const void* self, const char* key) {
     return QJsonValue_OperatorSubscript((QJsonValue*)self, qstring(key));
 }
 
-const QJsonValue* q_jsonvalue_operator_subscript2(void* self, const char* key) {
+const QJsonValue* q_jsonvalue_operator_subscript2(const void* self, const char* key) {
     return QJsonValue_OperatorSubscript2((QJsonValue*)self, qstring(key));
 }
 
-const QJsonValue* q_jsonvalue_operator_subscript3(void* self, char* key) {
+const QJsonValue* q_jsonvalue_operator_subscript3(const void* self, char* key) {
     return QJsonValue_OperatorSubscript3((QJsonValue*)self, qstring(key));
 }
 
-const QJsonValue* q_jsonvalue_operator_subscript4(void* self, intptr_t i) {
+const QJsonValue* q_jsonvalue_operator_subscript4(const void* self, intptr_t i) {
     return QJsonValue_OperatorSubscript4((QJsonValue*)self, i);
 }
 
-bool q_jsonvalue_to_bool1(void* self, bool defaultValue) {
+bool q_jsonvalue_to_bool1(const void* self, bool defaultValue) {
     return QJsonValue_ToBool1((QJsonValue*)self, defaultValue);
 }
 
-int32_t q_jsonvalue_to_int1(void* self, int defaultValue) {
+int32_t q_jsonvalue_to_int1(const void* self, int defaultValue) {
     return QJsonValue_ToInt1((QJsonValue*)self, defaultValue);
 }
 
-int64_t q_jsonvalue_to_integer1(void* self, int64_t defaultValue) {
+int64_t q_jsonvalue_to_integer1(const void* self, int64_t defaultValue) {
     return QJsonValue_ToInteger1((QJsonValue*)self, defaultValue);
 }
 
-double q_jsonvalue_to_double1(void* self, double defaultValue) {
+double q_jsonvalue_to_double1(const void* self, double defaultValue) {
     return QJsonValue_ToDouble1((QJsonValue*)self, defaultValue);
 }
 
@@ -182,114 +182,114 @@ void q_jsonvalue_delete(void* self) {
     QJsonValue_Delete((QJsonValue*)(self));
 }
 
-QJsonValueConstRef* q_jsonvalueconstref_new(void* other) {
+QJsonValueConstRef* q_jsonvalueconstref_new(const void* other) {
     return QJsonValueConstRef_New((QJsonValueConstRef*)other);
 }
 
-QJsonValueConstRef* q_jsonvalueconstref_new2(void* param1) {
+QJsonValueConstRef* q_jsonvalueconstref_new2(const void* param1) {
     return QJsonValueConstRef_New2((QJsonValueConstRef*)param1);
 }
 
-QJsonValue* q_jsonvalueconstref_to_q_json_value(void* self) {
+QJsonValue* q_jsonvalueconstref_to_q_json_value(const void* self) {
     return QJsonValueConstRef_ToQJsonValue((QJsonValueConstRef*)self);
 }
 
-QVariant* q_jsonvalueconstref_to_variant(void* self) {
+QVariant* q_jsonvalueconstref_to_variant(const void* self) {
     return QJsonValueConstRef_ToVariant((QJsonValueConstRef*)self);
 }
 
-int32_t q_jsonvalueconstref_type(void* self) {
+int32_t q_jsonvalueconstref_type(const void* self) {
     return QJsonValueConstRef_Type((QJsonValueConstRef*)self);
 }
 
-bool q_jsonvalueconstref_is_null(void* self) {
+bool q_jsonvalueconstref_is_null(const void* self) {
     return QJsonValueConstRef_IsNull((QJsonValueConstRef*)self);
 }
 
-bool q_jsonvalueconstref_is_bool(void* self) {
+bool q_jsonvalueconstref_is_bool(const void* self) {
     return QJsonValueConstRef_IsBool((QJsonValueConstRef*)self);
 }
 
-bool q_jsonvalueconstref_is_double(void* self) {
+bool q_jsonvalueconstref_is_double(const void* self) {
     return QJsonValueConstRef_IsDouble((QJsonValueConstRef*)self);
 }
 
-bool q_jsonvalueconstref_is_string(void* self) {
+bool q_jsonvalueconstref_is_string(const void* self) {
     return QJsonValueConstRef_IsString((QJsonValueConstRef*)self);
 }
 
-bool q_jsonvalueconstref_is_array(void* self) {
+bool q_jsonvalueconstref_is_array(const void* self) {
     return QJsonValueConstRef_IsArray((QJsonValueConstRef*)self);
 }
 
-bool q_jsonvalueconstref_is_object(void* self) {
+bool q_jsonvalueconstref_is_object(const void* self) {
     return QJsonValueConstRef_IsObject((QJsonValueConstRef*)self);
 }
 
-bool q_jsonvalueconstref_is_undefined(void* self) {
+bool q_jsonvalueconstref_is_undefined(const void* self) {
     return QJsonValueConstRef_IsUndefined((QJsonValueConstRef*)self);
 }
 
-bool q_jsonvalueconstref_to_bool(void* self) {
+bool q_jsonvalueconstref_to_bool(const void* self) {
     return QJsonValueConstRef_ToBool((QJsonValueConstRef*)self);
 }
 
-int32_t q_jsonvalueconstref_to_int(void* self) {
+int32_t q_jsonvalueconstref_to_int(const void* self) {
     return QJsonValueConstRef_ToInt((QJsonValueConstRef*)self);
 }
 
-int64_t q_jsonvalueconstref_to_integer(void* self) {
+int64_t q_jsonvalueconstref_to_integer(const void* self) {
     return QJsonValueConstRef_ToInteger((QJsonValueConstRef*)self);
 }
 
-double q_jsonvalueconstref_to_double(void* self) {
+double q_jsonvalueconstref_to_double(const void* self) {
     return QJsonValueConstRef_ToDouble((QJsonValueConstRef*)self);
 }
 
-const char* q_jsonvalueconstref_to_string(void* self) {
+const char* q_jsonvalueconstref_to_string(const void* self) {
     libqt_string _str = QJsonValueConstRef_ToString((QJsonValueConstRef*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QJsonArray* q_jsonvalueconstref_to_array(void* self) {
+QJsonArray* q_jsonvalueconstref_to_array(const void* self) {
     return QJsonValueConstRef_ToArray((QJsonValueConstRef*)self);
 }
 
-QJsonObject* q_jsonvalueconstref_to_object(void* self) {
+QJsonObject* q_jsonvalueconstref_to_object(const void* self) {
     return QJsonValueConstRef_ToObject((QJsonValueConstRef*)self);
 }
 
-const QJsonValue* q_jsonvalueconstref_operator_subscript(void* self, const char* key) {
+const QJsonValue* q_jsonvalueconstref_operator_subscript(const void* self, const char* key) {
     return QJsonValueConstRef_OperatorSubscript((QJsonValueConstRef*)self, qstring(key));
 }
 
-const QJsonValue* q_jsonvalueconstref_operator_subscript2(void* self, char* key) {
+const QJsonValue* q_jsonvalueconstref_operator_subscript2(const void* self, char* key) {
     return QJsonValueConstRef_OperatorSubscript2((QJsonValueConstRef*)self, qstring(key));
 }
 
-const QJsonValue* q_jsonvalueconstref_operator_subscript3(void* self, intptr_t i) {
+const QJsonValue* q_jsonvalueconstref_operator_subscript3(const void* self, intptr_t i) {
     return QJsonValueConstRef_OperatorSubscript3((QJsonValueConstRef*)self, i);
 }
 
-bool q_jsonvalueconstref_to_bool1(void* self, bool defaultValue) {
+bool q_jsonvalueconstref_to_bool1(const void* self, bool defaultValue) {
     return QJsonValueConstRef_ToBool1((QJsonValueConstRef*)self, defaultValue);
 }
 
-int32_t q_jsonvalueconstref_to_int1(void* self, int defaultValue) {
+int32_t q_jsonvalueconstref_to_int1(const void* self, int defaultValue) {
     return QJsonValueConstRef_ToInt1((QJsonValueConstRef*)self, defaultValue);
 }
 
-int64_t q_jsonvalueconstref_to_integer1(void* self, int64_t defaultValue) {
+int64_t q_jsonvalueconstref_to_integer1(const void* self, int64_t defaultValue) {
     return QJsonValueConstRef_ToInteger1((QJsonValueConstRef*)self, defaultValue);
 }
 
-double q_jsonvalueconstref_to_double1(void* self, double defaultValue) {
+double q_jsonvalueconstref_to_double1(const void* self, double defaultValue) {
     return QJsonValueConstRef_ToDouble1((QJsonValueConstRef*)self, defaultValue);
 }
 
-const char* q_jsonvalueconstref_to_string1(void* self, const char* defaultValue) {
+const char* q_jsonvalueconstref_to_string1(const void* self, const char* defaultValue) {
     libqt_string _str = QJsonValueConstRef_ToString1((QJsonValueConstRef*)self, qstring(defaultValue));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -300,11 +300,11 @@ void q_jsonvalueconstref_delete(void* self) {
     QJsonValueConstRef_Delete((QJsonValueConstRef*)(self));
 }
 
-QJsonValueRef* q_jsonvalueref_new(void* other) {
+QJsonValueRef* q_jsonvalueref_new(const void* other) {
     return QJsonValueRef_New((QJsonValueRef*)other);
 }
 
-QJsonValueRef* q_jsonvalueref_new2(void* param1) {
+QJsonValueRef* q_jsonvalueref_new2(const void* param1) {
     return QJsonValueRef_New2((QJsonValueRef*)param1);
 }
 
@@ -316,114 +316,114 @@ QJsonValueRef* q_jsonvalueref_new4(void* object, intptr_t idx) {
     return QJsonValueRef_New4((QJsonObject*)object, idx);
 }
 
-void q_jsonvalueref_operator_assign(void* self, void* val) {
+void q_jsonvalueref_operator_assign(void* self, const void* val) {
     QJsonValueRef_OperatorAssign((QJsonValueRef*)self, (QJsonValue*)val);
 }
 
-void q_jsonvalueref_operator_assign2(void* self, void* val) {
+void q_jsonvalueref_operator_assign2(void* self, const void* val) {
     QJsonValueRef_OperatorAssign2((QJsonValueRef*)self, (QJsonValueRef*)val);
 }
 
-QJsonValue* q_jsonvalueref_to_q_json_value(void* self) {
+QJsonValue* q_jsonvalueref_to_q_json_value(const void* self) {
     return QJsonValueRef_ToQJsonValue((QJsonValueRef*)self);
 }
 
-QVariant* q_jsonvalueref_to_variant(void* self) {
+QVariant* q_jsonvalueref_to_variant(const void* self) {
     return QJsonValueRef_ToVariant((QJsonValueRef*)self);
 }
 
-int32_t q_jsonvalueref_type(void* self) {
+int32_t q_jsonvalueref_type(const void* self) {
     return QJsonValueRef_Type((QJsonValueRef*)self);
 }
 
-bool q_jsonvalueref_is_null(void* self) {
+bool q_jsonvalueref_is_null(const void* self) {
     return QJsonValueRef_IsNull((QJsonValueRef*)self);
 }
 
-bool q_jsonvalueref_is_bool(void* self) {
+bool q_jsonvalueref_is_bool(const void* self) {
     return QJsonValueRef_IsBool((QJsonValueRef*)self);
 }
 
-bool q_jsonvalueref_is_double(void* self) {
+bool q_jsonvalueref_is_double(const void* self) {
     return QJsonValueRef_IsDouble((QJsonValueRef*)self);
 }
 
-bool q_jsonvalueref_is_string(void* self) {
+bool q_jsonvalueref_is_string(const void* self) {
     return QJsonValueRef_IsString((QJsonValueRef*)self);
 }
 
-bool q_jsonvalueref_is_array(void* self) {
+bool q_jsonvalueref_is_array(const void* self) {
     return QJsonValueRef_IsArray((QJsonValueRef*)self);
 }
 
-bool q_jsonvalueref_is_object(void* self) {
+bool q_jsonvalueref_is_object(const void* self) {
     return QJsonValueRef_IsObject((QJsonValueRef*)self);
 }
 
-bool q_jsonvalueref_is_undefined(void* self) {
+bool q_jsonvalueref_is_undefined(const void* self) {
     return QJsonValueRef_IsUndefined((QJsonValueRef*)self);
 }
 
-bool q_jsonvalueref_to_bool(void* self) {
+bool q_jsonvalueref_to_bool(const void* self) {
     return QJsonValueRef_ToBool((QJsonValueRef*)self);
 }
 
-int32_t q_jsonvalueref_to_int(void* self) {
+int32_t q_jsonvalueref_to_int(const void* self) {
     return QJsonValueRef_ToInt((QJsonValueRef*)self);
 }
 
-int64_t q_jsonvalueref_to_integer(void* self) {
+int64_t q_jsonvalueref_to_integer(const void* self) {
     return QJsonValueRef_ToInteger((QJsonValueRef*)self);
 }
 
-double q_jsonvalueref_to_double(void* self) {
+double q_jsonvalueref_to_double(const void* self) {
     return QJsonValueRef_ToDouble((QJsonValueRef*)self);
 }
 
-const char* q_jsonvalueref_to_string(void* self) {
+const char* q_jsonvalueref_to_string(const void* self) {
     libqt_string _str = QJsonValueRef_ToString((QJsonValueRef*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QJsonArray* q_jsonvalueref_to_array(void* self) {
+QJsonArray* q_jsonvalueref_to_array(const void* self) {
     return QJsonValueRef_ToArray((QJsonValueRef*)self);
 }
 
-QJsonObject* q_jsonvalueref_to_object(void* self) {
+QJsonObject* q_jsonvalueref_to_object(const void* self) {
     return QJsonValueRef_ToObject((QJsonValueRef*)self);
 }
 
-const QJsonValue* q_jsonvalueref_operator_subscript(void* self, const char* key) {
+const QJsonValue* q_jsonvalueref_operator_subscript(const void* self, const char* key) {
     return QJsonValueRef_OperatorSubscript((QJsonValueRef*)self, qstring(key));
 }
 
-const QJsonValue* q_jsonvalueref_operator_subscript2(void* self, char* key) {
+const QJsonValue* q_jsonvalueref_operator_subscript2(const void* self, char* key) {
     return QJsonValueRef_OperatorSubscript2((QJsonValueRef*)self, qstring(key));
 }
 
-const QJsonValue* q_jsonvalueref_operator_subscript3(void* self, intptr_t i) {
+const QJsonValue* q_jsonvalueref_operator_subscript3(const void* self, intptr_t i) {
     return QJsonValueRef_OperatorSubscript3((QJsonValueRef*)self, i);
 }
 
-bool q_jsonvalueref_to_bool1(void* self, bool defaultValue) {
+bool q_jsonvalueref_to_bool1(const void* self, bool defaultValue) {
     return QJsonValueRef_ToBool1((QJsonValueRef*)self, defaultValue);
 }
 
-int32_t q_jsonvalueref_to_int1(void* self, int defaultValue) {
+int32_t q_jsonvalueref_to_int1(const void* self, int defaultValue) {
     return QJsonValueRef_ToInt1((QJsonValueRef*)self, defaultValue);
 }
 
-int64_t q_jsonvalueref_to_integer1(void* self, int64_t defaultValue) {
+int64_t q_jsonvalueref_to_integer1(const void* self, int64_t defaultValue) {
     return QJsonValueRef_ToInteger1((QJsonValueRef*)self, defaultValue);
 }
 
-double q_jsonvalueref_to_double1(void* self, double defaultValue) {
+double q_jsonvalueref_to_double1(const void* self, double defaultValue) {
     return QJsonValueRef_ToDouble1((QJsonValueRef*)self, defaultValue);
 }
 
-const char* q_jsonvalueref_to_string1(void* self, const char* defaultValue) {
+const char* q_jsonvalueref_to_string1(const void* self, const char* defaultValue) {
     libqt_string _str = QJsonValueRef_ToString1((QJsonValueRef*)self, qstring(defaultValue));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -434,6 +434,6 @@ void q_jsonvalueref_delete(void* self) {
     QJsonValueRef_Delete((QJsonValueRef*)(self));
 }
 
-size_t q_qjsonvalue_q_hash(void* value, size_t seed) {
+size_t q_qjsonvalue_q_hash(const void* value, size_t seed) {
     return qjsonvalue_QHash((QJsonValue*)value, seed);
 }

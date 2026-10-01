@@ -35,18 +35,16 @@ void* KConfigViewStateSaver_Metacast(KConfigViewStateSaver* self, const char* pa
 int KConfigViewStateSaver_Metacall(KConfigViewStateSaver* self, int param1, int param2, void** param3);
 void KConfigViewStateSaver_SaveState(KConfigViewStateSaver* self, KConfigGroup* configGroup);
 void KConfigViewStateSaver_RestoreState(KConfigViewStateSaver* self, const KConfigGroup* configGroup);
-void KConfigViewStateSaver_OnMetaObject(const KConfigViewStateSaver* self, intptr_t slot);
+void KConfigViewStateSaver_OnMetaObject(KConfigViewStateSaver* self, intptr_t slot);
 QMetaObject* KConfigViewStateSaver_SuperMetaObject(const KConfigViewStateSaver* self);
 void KConfigViewStateSaver_OnMetacast(KConfigViewStateSaver* self, intptr_t slot);
 void* KConfigViewStateSaver_SuperMetacast(KConfigViewStateSaver* self, const char* param1);
 void KConfigViewStateSaver_OnMetacall(KConfigViewStateSaver* self, intptr_t slot);
 int KConfigViewStateSaver_SuperMetacall(KConfigViewStateSaver* self, int param1, int param2, void** param3);
 QModelIndex* KConfigViewStateSaver_IndexFromConfigString(const KConfigViewStateSaver* self, const QAbstractItemModel* model, const libqt_string key);
-void KConfigViewStateSaver_OnIndexFromConfigString(const KConfigViewStateSaver* self, intptr_t slot);
-QModelIndex* KConfigViewStateSaver_SuperIndexFromConfigString(const KConfigViewStateSaver* self, const QAbstractItemModel* model, const libqt_string key);
+void KConfigViewStateSaver_OnIndexFromConfigString(KConfigViewStateSaver* self, intptr_t slot);
 libqt_string KConfigViewStateSaver_IndexToConfigString(const KConfigViewStateSaver* self, const QModelIndex* index);
-void KConfigViewStateSaver_OnIndexToConfigString(const KConfigViewStateSaver* self, intptr_t slot);
-libqt_string KConfigViewStateSaver_SuperIndexToConfigString(const KConfigViewStateSaver* self, const QModelIndex* index);
+void KConfigViewStateSaver_OnIndexToConfigString(KConfigViewStateSaver* self, intptr_t slot);
 bool KConfigViewStateSaver_Event(KConfigViewStateSaver* self, QEvent* event);
 void KConfigViewStateSaver_OnEvent(KConfigViewStateSaver* self, intptr_t slot);
 bool KConfigViewStateSaver_SuperEvent(KConfigViewStateSaver* self, QEvent* event);
@@ -69,17 +67,9 @@ void KConfigViewStateSaver_DisconnectNotify(KConfigViewStateSaver* self, const Q
 void KConfigViewStateSaver_OnDisconnectNotify(KConfigViewStateSaver* self, intptr_t slot);
 void KConfigViewStateSaver_SuperDisconnectNotify(KConfigViewStateSaver* self, const QMetaMethod* signal);
 QObject* KConfigViewStateSaver_Sender(const KConfigViewStateSaver* self);
-void KConfigViewStateSaver_OnSender(const KConfigViewStateSaver* self, intptr_t slot);
-QObject* KConfigViewStateSaver_SuperSender(const KConfigViewStateSaver* self);
 int KConfigViewStateSaver_SenderSignalIndex(const KConfigViewStateSaver* self);
-void KConfigViewStateSaver_OnSenderSignalIndex(const KConfigViewStateSaver* self, intptr_t slot);
-int KConfigViewStateSaver_SuperSenderSignalIndex(const KConfigViewStateSaver* self);
 int KConfigViewStateSaver_Receivers(const KConfigViewStateSaver* self, const char* signal);
-void KConfigViewStateSaver_OnReceivers(const KConfigViewStateSaver* self, intptr_t slot);
-int KConfigViewStateSaver_SuperReceivers(const KConfigViewStateSaver* self, const char* signal);
 bool KConfigViewStateSaver_IsSignalConnected(const KConfigViewStateSaver* self, const QMetaMethod* signal);
-void KConfigViewStateSaver_OnIsSignalConnected(const KConfigViewStateSaver* self, intptr_t slot);
-bool KConfigViewStateSaver_SuperIsSignalConnected(const KConfigViewStateSaver* self, const QMetaMethod* signal);
 void KConfigViewStateSaver_Delete(KConfigViewStateSaver* self);
 
 #ifdef __cplusplus

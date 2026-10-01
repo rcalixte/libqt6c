@@ -22,15 +22,15 @@ QStackedLayout* q_stackedlayout_new3(void* parentLayout) {
     return QStackedLayout_New3((QLayout*)parentLayout);
 }
 
-const QMetaObject* q_stackedlayout_meta_object(void* self) {
+const QMetaObject* q_stackedlayout_meta_object(const void* self) {
     return QStackedLayout_MetaObject((QStackedLayout*)self);
 }
 
-void q_stackedlayout_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_stackedlayout_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QStackedLayout_OnMetaObject((QStackedLayout*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_stackedlayout_super_meta_object(void* self) {
+const QMetaObject* q_stackedlayout_super_meta_object(const void* self) {
     return QStackedLayout_SuperMetaObject((QStackedLayout*)self);
 }
 
@@ -73,31 +73,31 @@ int32_t q_stackedlayout_insert_widget(void* self, int index, void* w) {
     return QStackedLayout_InsertWidget((QStackedLayout*)self, index, (QWidget*)w);
 }
 
-QWidget* q_stackedlayout_current_widget(void* self) {
+QWidget* q_stackedlayout_current_widget(const void* self) {
     return QStackedLayout_CurrentWidget((QStackedLayout*)self);
 }
 
-int32_t q_stackedlayout_current_index(void* self) {
+int32_t q_stackedlayout_current_index(const void* self) {
     return QStackedLayout_CurrentIndex((QStackedLayout*)self);
 }
 
-QWidget* q_stackedlayout_widget(void* self, int param1) {
+QWidget* q_stackedlayout_widget(const void* self, int param1) {
     return QStackedLayout_Widget((QStackedLayout*)self, param1);
 }
 
-int32_t q_stackedlayout_count(void* self) {
+int32_t q_stackedlayout_count(const void* self) {
     return QStackedLayout_Count((QStackedLayout*)self);
 }
 
-void q_stackedlayout_on_count(void* self, int32_t (*callback)()) {
+void q_stackedlayout_on_count(const void* self, int32_t (*callback)(const void*)) {
     QStackedLayout_OnCount((QStackedLayout*)self, (intptr_t)callback);
 }
 
-int32_t q_stackedlayout_super_count(void* self) {
+int32_t q_stackedlayout_super_count(const void* self) {
     return QStackedLayout_SuperCount((QStackedLayout*)self);
 }
 
-int32_t q_stackedlayout_stacking_mode(void* self) {
+int32_t q_stackedlayout_stacking_mode(const void* self) {
     return QStackedLayout_StackingMode((QStackedLayout*)self);
 }
 
@@ -117,39 +117,39 @@ void q_stackedlayout_super_add_item(void* self, void* item) {
     QStackedLayout_SuperAddItem((QStackedLayout*)self, (QLayoutItem*)item);
 }
 
-QSize* q_stackedlayout_size_hint(void* self) {
+QSize* q_stackedlayout_size_hint(const void* self) {
     return QStackedLayout_SizeHint((QStackedLayout*)self);
 }
 
-void q_stackedlayout_on_size_hint(void* self, QSize* (*callback)()) {
+void q_stackedlayout_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
     QStackedLayout_OnSizeHint((QStackedLayout*)self, (intptr_t)callback);
 }
 
-QSize* q_stackedlayout_super_size_hint(void* self) {
+QSize* q_stackedlayout_super_size_hint(const void* self) {
     return QStackedLayout_SuperSizeHint((QStackedLayout*)self);
 }
 
-QSize* q_stackedlayout_minimum_size(void* self) {
+QSize* q_stackedlayout_minimum_size(const void* self) {
     return QStackedLayout_MinimumSize((QStackedLayout*)self);
 }
 
-void q_stackedlayout_on_minimum_size(void* self, QSize* (*callback)()) {
+void q_stackedlayout_on_minimum_size(const void* self, QSize* (*callback)(const void*)) {
     QStackedLayout_OnMinimumSize((QStackedLayout*)self, (intptr_t)callback);
 }
 
-QSize* q_stackedlayout_super_minimum_size(void* self) {
+QSize* q_stackedlayout_super_minimum_size(const void* self) {
     return QStackedLayout_SuperMinimumSize((QStackedLayout*)self);
 }
 
-QLayoutItem* q_stackedlayout_item_at(void* self, int param1) {
+QLayoutItem* q_stackedlayout_item_at(const void* self, int param1) {
     return QStackedLayout_ItemAt((QStackedLayout*)self, param1);
 }
 
-void q_stackedlayout_on_item_at(void* self, QLayoutItem* (*callback)(void*, int)) {
+void q_stackedlayout_on_item_at(const void* self, QLayoutItem* (*callback)(const void*, int)) {
     QStackedLayout_OnItemAt((QStackedLayout*)self, (intptr_t)callback);
 }
 
-QLayoutItem* q_stackedlayout_super_item_at(void* self, int param1) {
+QLayoutItem* q_stackedlayout_super_item_at(const void* self, int param1) {
     return QStackedLayout_SuperItemAt((QStackedLayout*)self, param1);
 }
 
@@ -165,39 +165,39 @@ QLayoutItem* q_stackedlayout_super_take_at(void* self, int param1) {
     return QStackedLayout_SuperTakeAt((QStackedLayout*)self, param1);
 }
 
-void q_stackedlayout_set_geometry(void* self, void* rect) {
+void q_stackedlayout_set_geometry(void* self, const void* rect) {
     QStackedLayout_SetGeometry((QStackedLayout*)self, (QRect*)rect);
 }
 
-void q_stackedlayout_on_set_geometry(void* self, void (*callback)(void*, void*)) {
+void q_stackedlayout_on_set_geometry(void* self, void (*callback)(void*, const void*)) {
     QStackedLayout_OnSetGeometry((QStackedLayout*)self, (intptr_t)callback);
 }
 
-void q_stackedlayout_super_set_geometry(void* self, void* rect) {
+void q_stackedlayout_super_set_geometry(void* self, const void* rect) {
     QStackedLayout_SuperSetGeometry((QStackedLayout*)self, (QRect*)rect);
 }
 
-bool q_stackedlayout_has_height_for_width(void* self) {
+bool q_stackedlayout_has_height_for_width(const void* self) {
     return QStackedLayout_HasHeightForWidth((QStackedLayout*)self);
 }
 
-void q_stackedlayout_on_has_height_for_width(void* self, bool (*callback)()) {
+void q_stackedlayout_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
     QStackedLayout_OnHasHeightForWidth((QStackedLayout*)self, (intptr_t)callback);
 }
 
-bool q_stackedlayout_super_has_height_for_width(void* self) {
+bool q_stackedlayout_super_has_height_for_width(const void* self) {
     return QStackedLayout_SuperHasHeightForWidth((QStackedLayout*)self);
 }
 
-int32_t q_stackedlayout_height_for_width(void* self, int width) {
+int32_t q_stackedlayout_height_for_width(const void* self, int width) {
     return QStackedLayout_HeightForWidth((QStackedLayout*)self, width);
 }
 
-void q_stackedlayout_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+void q_stackedlayout_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
     QStackedLayout_OnHeightForWidth((QStackedLayout*)self, (intptr_t)callback);
 }
 
-int32_t q_stackedlayout_super_height_for_width(void* self, int width) {
+int32_t q_stackedlayout_super_height_for_width(const void* self, int width) {
     return QStackedLayout_SuperHeightForWidth((QStackedLayout*)self, width);
 }
 
@@ -251,7 +251,7 @@ void q_stackedlayout_set_contents_margins(void* self, int left, int top, int rig
     QLayout_SetContentsMargins((QLayout*)self, left, top, right, bottom);
 }
 
-void q_stackedlayout_set_contents_margins2(void* self, void* margins) {
+void q_stackedlayout_set_contents_margins2(void* self, const void* margins) {
     QLayout_SetContentsMargins2((QLayout*)self, (QMargins*)margins);
 }
 
@@ -259,15 +259,15 @@ void q_stackedlayout_unset_contents_margins(void* self) {
     QLayout_UnsetContentsMargins((QLayout*)self);
 }
 
-void q_stackedlayout_get_contents_margins(void* self, int* left, int* top, int* right, int* bottom) {
+void q_stackedlayout_get_contents_margins(const void* self, int* left, int* top, int* right, int* bottom) {
     QLayout_GetContentsMargins((QLayout*)self, left, top, right, bottom);
 }
 
-QMargins* q_stackedlayout_contents_margins(void* self) {
+QMargins* q_stackedlayout_contents_margins(const void* self) {
     return QLayout_ContentsMargins((QLayout*)self);
 }
 
-QRect* q_stackedlayout_contents_rect(void* self) {
+QRect* q_stackedlayout_contents_rect(const void* self) {
     return QLayout_ContentsRect((QLayout*)self);
 }
 
@@ -283,7 +283,7 @@ void q_stackedlayout_set_size_constraint(void* self, int32_t sizeConstraint) {
     QLayout_SetSizeConstraint((QLayout*)self, sizeConstraint);
 }
 
-int32_t q_stackedlayout_size_constraint(void* self) {
+int32_t q_stackedlayout_size_constraint(const void* self) {
     return QLayout_SizeConstraint((QLayout*)self);
 }
 
@@ -291,11 +291,11 @@ void q_stackedlayout_set_menu_bar(void* self, void* w) {
     QLayout_SetMenuBar((QLayout*)self, (QWidget*)w);
 }
 
-QWidget* q_stackedlayout_menu_bar(void* self) {
+QWidget* q_stackedlayout_menu_bar(const void* self) {
     return QLayout_MenuBar((QLayout*)self);
 }
 
-QWidget* q_stackedlayout_parent_widget(void* self) {
+QWidget* q_stackedlayout_parent_widget(const void* self) {
     return QLayout_ParentWidget((QLayout*)self);
 }
 
@@ -315,35 +315,35 @@ void q_stackedlayout_remove_item(void* self, void* param1) {
     QLayout_RemoveItem((QLayout*)self, (QLayoutItem*)param1);
 }
 
-int32_t q_stackedlayout_index_of2(void* self, void* param1) {
+int32_t q_stackedlayout_index_of2(const void* self, const void* param1) {
     return QLayout_IndexOf2((QLayout*)self, (QLayoutItem*)param1);
 }
 
-void q_stackedlayout_on_index_of2(void* self, int32_t (*callback)(void*, void*)) {
+void q_stackedlayout_on_index_of2(const void* self, int32_t (*callback)(const void*, const void*)) {
     QLayout_OnIndexOf2((QLayout*)self, (intptr_t)callback);
 }
 
-int32_t q_stackedlayout_super_index_of2(void* self, void* param1) {
+int32_t q_stackedlayout_super_index_of2(const void* self, const void* param1) {
     return QLayout_SuperIndexOf2((QLayout*)self, (QLayoutItem*)param1);
 }
 
-int32_t q_stackedlayout_total_minimum_height_for_width(void* self, int w) {
+int32_t q_stackedlayout_total_minimum_height_for_width(const void* self, int w) {
     return QLayout_TotalMinimumHeightForWidth((QLayout*)self, w);
 }
 
-int32_t q_stackedlayout_total_height_for_width(void* self, int w) {
+int32_t q_stackedlayout_total_height_for_width(const void* self, int w) {
     return QLayout_TotalHeightForWidth((QLayout*)self, w);
 }
 
-QSize* q_stackedlayout_total_minimum_size(void* self) {
+QSize* q_stackedlayout_total_minimum_size(const void* self) {
     return QLayout_TotalMinimumSize((QLayout*)self);
 }
 
-QSize* q_stackedlayout_total_maximum_size(void* self) {
+QSize* q_stackedlayout_total_maximum_size(const void* self) {
     return QLayout_TotalMaximumSize((QLayout*)self);
 }
 
-QSize* q_stackedlayout_total_size_hint(void* self) {
+QSize* q_stackedlayout_total_size_hint(const void* self) {
     return QLayout_TotalSizeHint((QLayout*)self);
 }
 
@@ -351,15 +351,15 @@ void q_stackedlayout_set_enabled(void* self, bool enabled) {
     QLayout_SetEnabled((QLayout*)self, enabled);
 }
 
-bool q_stackedlayout_is_enabled(void* self) {
+bool q_stackedlayout_is_enabled(const void* self) {
     return QLayout_IsEnabled((QLayout*)self);
 }
 
-QSize* q_stackedlayout_closest_acceptable_size(void* w, void* s) {
+QSize* q_stackedlayout_closest_acceptable_size(const void* w, const void* s) {
     return QLayout_ClosestAcceptableSize((QWidget*)w, (QSize*)s);
 }
 
-const char* q_stackedlayout_object_name(void* self) {
+const char* q_stackedlayout_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -370,19 +370,19 @@ void q_stackedlayout_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_stackedlayout_is_widget_type(void* self) {
+bool q_stackedlayout_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_stackedlayout_is_window_type(void* self) {
+bool q_stackedlayout_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_stackedlayout_is_quick_item_type(void* self) {
+bool q_stackedlayout_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_stackedlayout_signals_blocked(void* self) {
+bool q_stackedlayout_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -390,7 +390,7 @@ bool q_stackedlayout_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_stackedlayout_thread(void* self) {
+QThread* q_stackedlayout_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -414,7 +414,7 @@ void q_stackedlayout_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_stackedlayout_children(void* self) {
+libqt_list /* of QObject* */ q_stackedlayout_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -431,55 +431,55 @@ void q_stackedlayout_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_stackedlayout_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_stackedlayout_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_stackedlayout_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_stackedlayout_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_stackedlayout_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_stackedlayout_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_stackedlayout_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_stackedlayout_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_stackedlayout_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_stackedlayout_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_stackedlayout_disconnect3(void* self) {
+bool q_stackedlayout_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_stackedlayout_disconnect4(void* self, void* receiver) {
+bool q_stackedlayout_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_stackedlayout_disconnect5(void* param1) {
+bool q_stackedlayout_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_stackedlayout_dump_object_tree(void* self) {
+void q_stackedlayout_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_stackedlayout_dump_object_info(void* self) {
+void q_stackedlayout_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_stackedlayout_set_property(void* self, const char* name, void* value) {
+bool q_stackedlayout_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_stackedlayout_property(void* self, const char* name) {
+QVariant* q_stackedlayout_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_stackedlayout_dynamic_property_names(void* self) {
+const char** q_stackedlayout_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -500,7 +500,7 @@ QBindingStorage* q_stackedlayout_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_stackedlayout_binding_storage2(void* self) {
+const QBindingStorage* q_stackedlayout_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -512,11 +512,11 @@ void q_stackedlayout_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_stackedlayout_parent(void* self) {
+QObject* q_stackedlayout_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_stackedlayout_inherits(void* self, const char* classname) {
+bool q_stackedlayout_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -532,31 +532,31 @@ int32_t q_stackedlayout_start_timer23(void* self, int64_t time, int32_t timerTyp
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_stackedlayout_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_stackedlayout_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_stackedlayout_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_stackedlayout_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_stackedlayout_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_stackedlayout_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_stackedlayout_disconnect1(void* self, const char* signal) {
+bool q_stackedlayout_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_stackedlayout_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_stackedlayout_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_stackedlayout_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_stackedlayout_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_stackedlayout_disconnect23(void* self, void* receiver, const char* member) {
+bool q_stackedlayout_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -568,24 +568,24 @@ void q_stackedlayout_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-int32_t q_stackedlayout_alignment(void* self) {
+int32_t q_stackedlayout_alignment(const void* self) {
     return QLayoutItem_Alignment(q_stackedlayout_as_q_layout_item(self));
 }
 
-void q_stackedlayout_operator_assign(void* self, void* param1) {
+void q_stackedlayout_operator_assign(void* self, const void* param1) {
     QLayoutItem_OperatorAssign(q_stackedlayout_as_q_layout_item(self), (QLayoutItem*)param1);
 }
 
-int32_t q_stackedlayout_spacing(void* self) {
+int32_t q_stackedlayout_spacing(const void* self) {
     return QStackedLayout_Spacing((QStackedLayout*)self);
 }
 
-int32_t q_stackedlayout_super_spacing(void* self) {
+int32_t q_stackedlayout_super_spacing(const void* self) {
     return QStackedLayout_SuperSpacing((QStackedLayout*)self);
 }
 
-void q_stackedlayout_on_spacing(void* self, int32_t (*callback)()) {
-    QStackedLayout_OnSpacing((QStackedLayout*)self, (intptr_t)callback);
+void q_stackedlayout_on_spacing(const void* self, int32_t (*callback)(const void*)) {
+    QStackedLayout_OnSpacing((const QStackedLayout*)self, (intptr_t)callback);
 }
 
 void q_stackedlayout_set_spacing(void* self, int spacing) {
@@ -608,80 +608,80 @@ void q_stackedlayout_super_invalidate(void* self) {
     QStackedLayout_SuperInvalidate((QStackedLayout*)self);
 }
 
-void q_stackedlayout_on_invalidate(void* self, void (*callback)()) {
+void q_stackedlayout_on_invalidate(void* self, void (*callback)(void*)) {
     QStackedLayout_OnInvalidate((QStackedLayout*)self, (intptr_t)callback);
 }
 
-QRect* q_stackedlayout_geometry(void* self) {
+QRect* q_stackedlayout_geometry(const void* self) {
     return QStackedLayout_Geometry((QStackedLayout*)self);
 }
 
-QRect* q_stackedlayout_super_geometry(void* self) {
+QRect* q_stackedlayout_super_geometry(const void* self) {
     return QStackedLayout_SuperGeometry((QStackedLayout*)self);
 }
 
-void q_stackedlayout_on_geometry(void* self, QRect* (*callback)()) {
-    QStackedLayout_OnGeometry((QStackedLayout*)self, (intptr_t)callback);
+void q_stackedlayout_on_geometry(const void* self, QRect* (*callback)(const void*)) {
+    QStackedLayout_OnGeometry((const QStackedLayout*)self, (intptr_t)callback);
 }
 
-int32_t q_stackedlayout_expanding_directions(void* self) {
+int32_t q_stackedlayout_expanding_directions(const void* self) {
     return QStackedLayout_ExpandingDirections((QStackedLayout*)self);
 }
 
-int32_t q_stackedlayout_super_expanding_directions(void* self) {
+int32_t q_stackedlayout_super_expanding_directions(const void* self) {
     return QStackedLayout_SuperExpandingDirections((QStackedLayout*)self);
 }
 
-void q_stackedlayout_on_expanding_directions(void* self, int32_t (*callback)()) {
-    QStackedLayout_OnExpandingDirections((QStackedLayout*)self, (intptr_t)callback);
+void q_stackedlayout_on_expanding_directions(const void* self, int32_t (*callback)(const void*)) {
+    QStackedLayout_OnExpandingDirections((const QStackedLayout*)self, (intptr_t)callback);
 }
 
-QSize* q_stackedlayout_maximum_size(void* self) {
+QSize* q_stackedlayout_maximum_size(const void* self) {
     return QStackedLayout_MaximumSize((QStackedLayout*)self);
 }
 
-QSize* q_stackedlayout_super_maximum_size(void* self) {
+QSize* q_stackedlayout_super_maximum_size(const void* self) {
     return QStackedLayout_SuperMaximumSize((QStackedLayout*)self);
 }
 
-void q_stackedlayout_on_maximum_size(void* self, QSize* (*callback)()) {
-    QStackedLayout_OnMaximumSize((QStackedLayout*)self, (intptr_t)callback);
+void q_stackedlayout_on_maximum_size(const void* self, QSize* (*callback)(const void*)) {
+    QStackedLayout_OnMaximumSize((const QStackedLayout*)self, (intptr_t)callback);
 }
 
-int32_t q_stackedlayout_index_of(void* self, void* param1) {
+int32_t q_stackedlayout_index_of(const void* self, const void* param1) {
     return QStackedLayout_IndexOf((QStackedLayout*)self, (QWidget*)param1);
 }
 
-int32_t q_stackedlayout_super_index_of(void* self, void* param1) {
+int32_t q_stackedlayout_super_index_of(const void* self, const void* param1) {
     return QStackedLayout_SuperIndexOf((QStackedLayout*)self, (QWidget*)param1);
 }
 
-void q_stackedlayout_on_index_of(void* self, int32_t (*callback)(void*, void*)) {
-    QStackedLayout_OnIndexOf((QStackedLayout*)self, (intptr_t)callback);
+void q_stackedlayout_on_index_of(const void* self, int32_t (*callback)(const void*, const void*)) {
+    QStackedLayout_OnIndexOf((const QStackedLayout*)self, (intptr_t)callback);
 }
 
-bool q_stackedlayout_is_empty(void* self) {
+bool q_stackedlayout_is_empty(const void* self) {
     return QStackedLayout_IsEmpty((QStackedLayout*)self);
 }
 
-bool q_stackedlayout_super_is_empty(void* self) {
+bool q_stackedlayout_super_is_empty(const void* self) {
     return QStackedLayout_SuperIsEmpty((QStackedLayout*)self);
 }
 
-void q_stackedlayout_on_is_empty(void* self, bool (*callback)()) {
-    QStackedLayout_OnIsEmpty((QStackedLayout*)self, (intptr_t)callback);
+void q_stackedlayout_on_is_empty(const void* self, bool (*callback)(const void*)) {
+    QStackedLayout_OnIsEmpty((const QStackedLayout*)self, (intptr_t)callback);
 }
 
-int32_t q_stackedlayout_control_types(void* self) {
+int32_t q_stackedlayout_control_types(const void* self) {
     return QStackedLayout_ControlTypes((QStackedLayout*)self);
 }
 
-int32_t q_stackedlayout_super_control_types(void* self) {
+int32_t q_stackedlayout_super_control_types(const void* self) {
     return QStackedLayout_SuperControlTypes((QStackedLayout*)self);
 }
 
-void q_stackedlayout_on_control_types(void* self, int32_t (*callback)()) {
-    QStackedLayout_OnControlTypes((QStackedLayout*)self, (intptr_t)callback);
+void q_stackedlayout_on_control_types(const void* self, int32_t (*callback)(const void*)) {
+    QStackedLayout_OnControlTypes((const QStackedLayout*)self, (intptr_t)callback);
 }
 
 QLayoutItem* q_stackedlayout_replace_widget(void* self, void* from, void* to, int32_t options) {
@@ -704,7 +704,7 @@ QLayout* q_stackedlayout_super_layout(void* self) {
     return QStackedLayout_SuperLayout((QStackedLayout*)self);
 }
 
-void q_stackedlayout_on_layout(void* self, QLayout* (*callback)()) {
+void q_stackedlayout_on_layout(void* self, QLayout* (*callback)(void*)) {
     QStackedLayout_OnLayout((QStackedLayout*)self, (intptr_t)callback);
 }
 
@@ -768,40 +768,40 @@ void q_stackedlayout_on_custom_event(void* self, void (*callback)(void*, void*))
     QStackedLayout_OnCustomEvent((QStackedLayout*)self, (intptr_t)callback);
 }
 
-void q_stackedlayout_connect_notify(void* self, void* signal) {
+void q_stackedlayout_connect_notify(void* self, const void* signal) {
     QStackedLayout_ConnectNotify((QStackedLayout*)self, (QMetaMethod*)signal);
 }
 
-void q_stackedlayout_super_connect_notify(void* self, void* signal) {
+void q_stackedlayout_super_connect_notify(void* self, const void* signal) {
     QStackedLayout_SuperConnectNotify((QStackedLayout*)self, (QMetaMethod*)signal);
 }
 
-void q_stackedlayout_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_stackedlayout_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QStackedLayout_OnConnectNotify((QStackedLayout*)self, (intptr_t)callback);
 }
 
-void q_stackedlayout_disconnect_notify(void* self, void* signal) {
+void q_stackedlayout_disconnect_notify(void* self, const void* signal) {
     QStackedLayout_DisconnectNotify((QStackedLayout*)self, (QMetaMethod*)signal);
 }
 
-void q_stackedlayout_super_disconnect_notify(void* self, void* signal) {
+void q_stackedlayout_super_disconnect_notify(void* self, const void* signal) {
     QStackedLayout_SuperDisconnectNotify((QStackedLayout*)self, (QMetaMethod*)signal);
 }
 
-void q_stackedlayout_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_stackedlayout_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QStackedLayout_OnDisconnectNotify((QStackedLayout*)self, (intptr_t)callback);
 }
 
-int32_t q_stackedlayout_minimum_height_for_width(void* self, int param1) {
+int32_t q_stackedlayout_minimum_height_for_width(const void* self, int param1) {
     return QStackedLayout_MinimumHeightForWidth((QStackedLayout*)self, param1);
 }
 
-int32_t q_stackedlayout_super_minimum_height_for_width(void* self, int param1) {
+int32_t q_stackedlayout_super_minimum_height_for_width(const void* self, int param1) {
     return QStackedLayout_SuperMinimumHeightForWidth((QStackedLayout*)self, param1);
 }
 
-void q_stackedlayout_on_minimum_height_for_width(void* self, int32_t (*callback)(void*, int)) {
-    QStackedLayout_OnMinimumHeightForWidth((QStackedLayout*)self, (intptr_t)callback);
+void q_stackedlayout_on_minimum_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
+    QStackedLayout_OnMinimumHeightForWidth((const QStackedLayout*)self, (intptr_t)callback);
 }
 
 QSpacerItem* q_stackedlayout_spacer_item(void* self) {
@@ -812,7 +812,7 @@ QSpacerItem* q_stackedlayout_super_spacer_item(void* self) {
     return QStackedLayout_SuperSpacerItem((QStackedLayout*)self);
 }
 
-void q_stackedlayout_on_spacer_item(void* self, QSpacerItem* (*callback)()) {
+void q_stackedlayout_on_spacer_item(void* self, QSpacerItem* (*callback)(void*)) {
     QStackedLayout_OnSpacerItem((QStackedLayout*)self, (intptr_t)callback);
 }
 
@@ -820,108 +820,36 @@ void q_stackedlayout_widget_event(void* self, void* param1) {
     QStackedLayout_WidgetEvent((QStackedLayout*)self, (QEvent*)param1);
 }
 
-void q_stackedlayout_super_widget_event(void* self, void* param1) {
-    QStackedLayout_SuperWidgetEvent((QStackedLayout*)self, (QEvent*)param1);
-}
-
-void q_stackedlayout_on_widget_event(void* self, void (*callback)(void*, void*)) {
-    QStackedLayout_OnWidgetEvent((QStackedLayout*)self, (intptr_t)callback);
-}
-
 void q_stackedlayout_add_child_layout(void* self, void* l) {
     QStackedLayout_AddChildLayout((QStackedLayout*)self, (QLayout*)l);
-}
-
-void q_stackedlayout_super_add_child_layout(void* self, void* l) {
-    QStackedLayout_SuperAddChildLayout((QStackedLayout*)self, (QLayout*)l);
-}
-
-void q_stackedlayout_on_add_child_layout(void* self, void (*callback)(void*, void*)) {
-    QStackedLayout_OnAddChildLayout((QStackedLayout*)self, (intptr_t)callback);
 }
 
 void q_stackedlayout_add_child_widget(void* self, void* w) {
     QStackedLayout_AddChildWidget((QStackedLayout*)self, (QWidget*)w);
 }
 
-void q_stackedlayout_super_add_child_widget(void* self, void* w) {
-    QStackedLayout_SuperAddChildWidget((QStackedLayout*)self, (QWidget*)w);
-}
-
-void q_stackedlayout_on_add_child_widget(void* self, void (*callback)(void*, void*)) {
-    QStackedLayout_OnAddChildWidget((QStackedLayout*)self, (intptr_t)callback);
-}
-
 bool q_stackedlayout_adopt_layout(void* self, void* layout) {
     return QStackedLayout_AdoptLayout((QStackedLayout*)self, (QLayout*)layout);
 }
 
-bool q_stackedlayout_super_adopt_layout(void* self, void* layout) {
-    return QStackedLayout_SuperAdoptLayout((QStackedLayout*)self, (QLayout*)layout);
-}
-
-void q_stackedlayout_on_adopt_layout(void* self, bool (*callback)(void*, void*)) {
-    QStackedLayout_OnAdoptLayout((QStackedLayout*)self, (intptr_t)callback);
-}
-
-QRect* q_stackedlayout_alignment_rect(void* self, void* param1) {
+QRect* q_stackedlayout_alignment_rect(const void* self, const void* param1) {
     return QStackedLayout_AlignmentRect((QStackedLayout*)self, (QRect*)param1);
 }
 
-QRect* q_stackedlayout_super_alignment_rect(void* self, void* param1) {
-    return QStackedLayout_SuperAlignmentRect((QStackedLayout*)self, (QRect*)param1);
-}
-
-void q_stackedlayout_on_alignment_rect(void* self, QRect* (*callback)(void*, void*)) {
-    QStackedLayout_OnAlignmentRect((QStackedLayout*)self, (intptr_t)callback);
-}
-
-QObject* q_stackedlayout_sender(void* self) {
+QObject* q_stackedlayout_sender(const void* self) {
     return QStackedLayout_Sender((QStackedLayout*)self);
 }
 
-QObject* q_stackedlayout_super_sender(void* self) {
-    return QStackedLayout_SuperSender((QStackedLayout*)self);
-}
-
-void q_stackedlayout_on_sender(void* self, QObject* (*callback)()) {
-    QStackedLayout_OnSender((QStackedLayout*)self, (intptr_t)callback);
-}
-
-int32_t q_stackedlayout_sender_signal_index(void* self) {
+int32_t q_stackedlayout_sender_signal_index(const void* self) {
     return QStackedLayout_SenderSignalIndex((QStackedLayout*)self);
 }
 
-int32_t q_stackedlayout_super_sender_signal_index(void* self) {
-    return QStackedLayout_SuperSenderSignalIndex((QStackedLayout*)self);
-}
-
-void q_stackedlayout_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QStackedLayout_OnSenderSignalIndex((QStackedLayout*)self, (intptr_t)callback);
-}
-
-int32_t q_stackedlayout_receivers(void* self, const char* signal) {
+int32_t q_stackedlayout_receivers(const void* self, const char* signal) {
     return QStackedLayout_Receivers((QStackedLayout*)self, signal);
 }
 
-int32_t q_stackedlayout_super_receivers(void* self, const char* signal) {
-    return QStackedLayout_SuperReceivers((QStackedLayout*)self, signal);
-}
-
-void q_stackedlayout_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QStackedLayout_OnReceivers((QStackedLayout*)self, (intptr_t)callback);
-}
-
-bool q_stackedlayout_is_signal_connected(void* self, void* signal) {
+bool q_stackedlayout_is_signal_connected(const void* self, const void* signal) {
     return QStackedLayout_IsSignalConnected((QStackedLayout*)self, (QMetaMethod*)signal);
-}
-
-bool q_stackedlayout_super_is_signal_connected(void* self, void* signal) {
-    return QStackedLayout_SuperIsSignalConnected((QStackedLayout*)self, (QMetaMethod*)signal);
-}
-
-void q_stackedlayout_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QStackedLayout_OnIsSignalConnected((QStackedLayout*)self, (intptr_t)callback);
 }
 
 void q_stackedlayout_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

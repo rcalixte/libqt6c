@@ -15,7 +15,7 @@
 /// @param uiData KSslErrorUiData*
 /// @param storedRules enum KIO__SslUi__RulesStorage
 ///
-bool k_io__sslui_ask_ignore_ssl_errors(void* uiData, int32_t storedRules);
+bool k_io__sslui_ask_ignore_ssl_errors(const void* uiData, int32_t storedRules);
 
 /// [Upstream resources](https://api.kde.org/kio-sslui.html#public-types)
 

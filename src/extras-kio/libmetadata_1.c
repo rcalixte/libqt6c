@@ -66,7 +66,7 @@ KIO__MetaData* k_io__metadata_new3(libqt_map /* of const char* to QVariant* */ p
     return _out;
 }
 
-KIO__MetaData* k_io__metadata_new4(void* param1) {
+KIO__MetaData* k_io__metadata_new4(const void* param1) {
     return KIO__MetaData_New4((KIO__MetaData*)param1);
 }
 
@@ -156,11 +156,11 @@ void k_io__metadata_operator_assign(void* self, libqt_map /* of const char* to Q
     free(metaData_ret.values);
 }
 
-QVariant* k_io__metadata_to_variant(void* self) {
+QVariant* k_io__metadata_to_variant(const void* self) {
     return KIO__MetaData_ToVariant((KIO__MetaData*)self);
 }
 
-void k_io__metadata_operator_assign2(void* self, void* param1) {
+void k_io__metadata_operator_assign2(void* self, const void* param1) {
     KIO__MetaData_OperatorAssign2((KIO__MetaData*)self, (KIO__MetaData*)param1);
 }
 

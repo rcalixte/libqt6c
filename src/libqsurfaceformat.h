@@ -40,14 +40,14 @@ QSurfaceFormat* q_surfaceformat_new2(int32_t options);
 ///
 /// @param other QSurfaceFormat*
 ///
-QSurfaceFormat* q_surfaceformat_new3(void* other);
+QSurfaceFormat* q_surfaceformat_new3(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#operator-eq)
 ///
 /// @param self QSurfaceFormat*
 /// @param other QSurfaceFormat*
 ///
-void q_surfaceformat_operator_assign(void* self, void* other);
+void q_surfaceformat_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#setDepthBufferSize)
 ///
@@ -58,9 +58,9 @@ void q_surfaceformat_set_depth_buffer_size(void* self, int size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#depthBufferSize)
 ///
-/// @param self QSurfaceFormat*
+/// @param self const QSurfaceFormat*
 ///
-int32_t q_surfaceformat_depth_buffer_size(void* self);
+int32_t q_surfaceformat_depth_buffer_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#setStencilBufferSize)
 ///
@@ -71,9 +71,9 @@ void q_surfaceformat_set_stencil_buffer_size(void* self, int size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#stencilBufferSize)
 ///
-/// @param self QSurfaceFormat*
+/// @param self const QSurfaceFormat*
 ///
-int32_t q_surfaceformat_stencil_buffer_size(void* self);
+int32_t q_surfaceformat_stencil_buffer_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#setRedBufferSize)
 ///
@@ -84,9 +84,9 @@ void q_surfaceformat_set_red_buffer_size(void* self, int size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#redBufferSize)
 ///
-/// @param self QSurfaceFormat*
+/// @param self const QSurfaceFormat*
 ///
-int32_t q_surfaceformat_red_buffer_size(void* self);
+int32_t q_surfaceformat_red_buffer_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#setGreenBufferSize)
 ///
@@ -97,9 +97,9 @@ void q_surfaceformat_set_green_buffer_size(void* self, int size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#greenBufferSize)
 ///
-/// @param self QSurfaceFormat*
+/// @param self const QSurfaceFormat*
 ///
-int32_t q_surfaceformat_green_buffer_size(void* self);
+int32_t q_surfaceformat_green_buffer_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#setBlueBufferSize)
 ///
@@ -110,9 +110,9 @@ void q_surfaceformat_set_blue_buffer_size(void* self, int size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#blueBufferSize)
 ///
-/// @param self QSurfaceFormat*
+/// @param self const QSurfaceFormat*
 ///
-int32_t q_surfaceformat_blue_buffer_size(void* self);
+int32_t q_surfaceformat_blue_buffer_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#setAlphaBufferSize)
 ///
@@ -123,9 +123,9 @@ void q_surfaceformat_set_alpha_buffer_size(void* self, int size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#alphaBufferSize)
 ///
-/// @param self QSurfaceFormat*
+/// @param self const QSurfaceFormat*
 ///
-int32_t q_surfaceformat_alpha_buffer_size(void* self);
+int32_t q_surfaceformat_alpha_buffer_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#setSamples)
 ///
@@ -136,9 +136,9 @@ void q_surfaceformat_set_samples(void* self, int numSamples);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#samples)
 ///
-/// @param self QSurfaceFormat*
+/// @param self const QSurfaceFormat*
 ///
-int32_t q_surfaceformat_samples(void* self);
+int32_t q_surfaceformat_samples(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#setSwapBehavior)
 ///
@@ -149,17 +149,17 @@ void q_surfaceformat_set_swap_behavior(void* self, int32_t behavior);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#swapBehavior)
 ///
-/// @param self QSurfaceFormat*
+/// @param self const QSurfaceFormat*
 ///
 /// @return enum QSurfaceFormat__SwapBehavior
 ///
-int32_t q_surfaceformat_swap_behavior(void* self);
+int32_t q_surfaceformat_swap_behavior(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#hasAlpha)
 ///
-/// @param self QSurfaceFormat*
+/// @param self const QSurfaceFormat*
 ///
-bool q_surfaceformat_has_alpha(void* self);
+bool q_surfaceformat_has_alpha(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#setProfile)
 ///
@@ -170,11 +170,11 @@ void q_surfaceformat_set_profile(void* self, int32_t profile);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#profile)
 ///
-/// @param self QSurfaceFormat*
+/// @param self const QSurfaceFormat*
 ///
 /// @return enum QSurfaceFormat__OpenGLContextProfile
 ///
-int32_t q_surfaceformat_profile(void* self);
+int32_t q_surfaceformat_profile(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#setRenderableType)
 ///
@@ -185,11 +185,11 @@ void q_surfaceformat_set_renderable_type(void* self, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#renderableType)
 ///
-/// @param self QSurfaceFormat*
+/// @param self const QSurfaceFormat*
 ///
 /// @return enum QSurfaceFormat__RenderableType
 ///
-int32_t q_surfaceformat_renderable_type(void* self);
+int32_t q_surfaceformat_renderable_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#setMajorVersion)
 ///
@@ -200,9 +200,9 @@ void q_surfaceformat_set_major_version(void* self, int majorVersion);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#majorVersion)
 ///
-/// @param self QSurfaceFormat*
+/// @param self const QSurfaceFormat*
 ///
-int32_t q_surfaceformat_major_version(void* self);
+int32_t q_surfaceformat_major_version(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#setMinorVersion)
 ///
@@ -213,17 +213,17 @@ void q_surfaceformat_set_minor_version(void* self, int minorVersion);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#minorVersion)
 ///
-/// @param self QSurfaceFormat*
+/// @param self const QSurfaceFormat*
 ///
-int32_t q_surfaceformat_minor_version(void* self);
+int32_t q_surfaceformat_minor_version(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#version)
 ///
-/// @param self QSurfaceFormat*
+/// @param self const QSurfaceFormat*
 ///
 /// @return pair_int_int tuple of int and int
 ///
-pair_int_int q_surfaceformat_version(void* self);
+pair_int_int q_surfaceformat_version(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#setVersion)
 ///
@@ -235,9 +235,9 @@ void q_surfaceformat_set_version(void* self, int major, int minor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#stereo)
 ///
-/// @param self QSurfaceFormat*
+/// @param self const QSurfaceFormat*
 ///
-bool q_surfaceformat_stereo(void* self);
+bool q_surfaceformat_stereo(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#setStereo)
 ///
@@ -262,24 +262,24 @@ void q_surfaceformat_set_option(void* self, int32_t option);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#testOption)
 ///
-/// @param self QSurfaceFormat*
+/// @param self const QSurfaceFormat*
 /// @param option enum QSurfaceFormat__FormatOption
 ///
-bool q_surfaceformat_test_option(void* self, int32_t option);
+bool q_surfaceformat_test_option(const void* self, int32_t option);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#options)
 ///
-/// @param self QSurfaceFormat*
+/// @param self const QSurfaceFormat*
 ///
 /// @return flag of enum QSurfaceFormat__FormatOption
 ///
-int32_t q_surfaceformat_options(void* self);
+int32_t q_surfaceformat_options(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#swapInterval)
 ///
-/// @param self QSurfaceFormat*
+/// @param self const QSurfaceFormat*
 ///
-int32_t q_surfaceformat_swap_interval(void* self);
+int32_t q_surfaceformat_swap_interval(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#setSwapInterval)
 ///
@@ -290,16 +290,16 @@ void q_surfaceformat_set_swap_interval(void* self, int interval);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#colorSpace)
 ///
-/// @param self QSurfaceFormat*
+/// @param self const QSurfaceFormat*
 ///
-const QColorSpace* q_surfaceformat_color_space(void* self);
+const QColorSpace* q_surfaceformat_color_space(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#setColorSpace)
 ///
 /// @param self QSurfaceFormat*
 /// @param colorSpace QColorSpace*
 ///
-void q_surfaceformat_set_color_space(void* self, void* colorSpace);
+void q_surfaceformat_set_color_space(void* self, const void* colorSpace);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#setColorSpace)
 ///
@@ -312,7 +312,7 @@ void q_surfaceformat_set_color_space2(void* self, int32_t colorSpace);
 ///
 /// @param format QSurfaceFormat*
 ///
-void q_surfaceformat_set_default_format(void* format);
+void q_surfaceformat_set_default_format(const void* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#defaultFormat)
 ///

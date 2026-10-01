@@ -188,7 +188,7 @@ char* q_qbytearray_q_uncompress2(char* data) {
     return _ret;
 }
 
-size_t q_qbytearray_q_hash(void* key, size_t seed) {
+size_t q_qbytearray_q_hash(const void* key, size_t seed) {
     return qbytearray_QHash((QByteArray__FromBase64Result*)key, seed);
 }
 
@@ -196,11 +196,11 @@ QByteArray__FromBase64Result* q_bytearray__frombase64result_new() {
     return QByteArray__FromBase64Result_New();
 }
 
-QByteArray__FromBase64Result* q_bytearray__frombase64result_new2(void* param1) {
+QByteArray__FromBase64Result* q_bytearray__frombase64result_new2(const void* param1) {
     return QByteArray__FromBase64Result_New2((QByteArray__FromBase64Result*)param1);
 }
 
-char* q_bytearray__frombase64result_decoded(void* self) {
+char* q_bytearray__frombase64result_decoded(const void* self) {
     libqt_string decoded_str = QByteArray__FromBase64Result_Decoded((QByteArray__FromBase64Result*)self);
     char* decoded_ret = qstring_to_char(decoded_str);
     libqt_string_free(&decoded_str);
@@ -211,7 +211,7 @@ void q_bytearray__frombase64result_set_decoded(void* self, char* decoded) {
     QByteArray__FromBase64Result_SetDecoded((QByteArray__FromBase64Result*)self, qstring(decoded));
 }
 
-int32_t q_bytearray__frombase64result_decoding_status(void* self) {
+int32_t q_bytearray__frombase64result_decoding_status(const void* self) {
     return QByteArray__FromBase64Result_DecodingStatus((QByteArray__FromBase64Result*)self);
 }
 
@@ -223,7 +223,7 @@ void q_bytearray__frombase64result_swap(void* self, void* other) {
     QByteArray__FromBase64Result_Swap((QByteArray__FromBase64Result*)self, (QByteArray__FromBase64Result*)other);
 }
 
-bool q_bytearray__frombase64result_to_bool(void* self) {
+bool q_bytearray__frombase64result_to_bool(const void* self) {
     return QByteArray__FromBase64Result_ToBool((QByteArray__FromBase64Result*)self);
 }
 
@@ -234,14 +234,14 @@ char* q_bytearray__frombase64result_operator_multiply(void* self) {
     return _ret;
 }
 
-const char* q_bytearray__frombase64result_operator_multiply2(void* self) {
+const char* q_bytearray__frombase64result_operator_multiply2(const void* self) {
     libqt_string _str = QByteArray__FromBase64Result_OperatorMultiply2((QByteArray__FromBase64Result*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_bytearray__frombase64result_operator_assign(void* self, void* param1) {
+void q_bytearray__frombase64result_operator_assign(void* self, const void* param1) {
     QByteArray__FromBase64Result_OperatorAssign((QByteArray__FromBase64Result*)self, (QByteArray__FromBase64Result*)param1);
 }
 

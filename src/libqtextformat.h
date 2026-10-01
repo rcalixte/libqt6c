@@ -14,7 +14,7 @@
 ///
 /// @param other QTextLength*
 ///
-QTextLength* q_textlength_new(void* other);
+QTextLength* q_textlength_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlength.html)
 
@@ -45,7 +45,7 @@ QTextLength* q_textlength_new4(int32_t type, double value);
 ///
 /// @param param1 QTextLength*
 ///
-QTextLength* q_textlength_new5(void* param1);
+QTextLength* q_textlength_new5(const void* param1);
 
 /// q_textlength_copy_assign shallow copies `other` into `self`.
 ///
@@ -63,44 +63,44 @@ void q_textlength_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlength.html#type)
 ///
-/// @param self QTextLength*
+/// @param self const QTextLength*
 ///
 /// @return enum QTextLength__Type
 ///
-int32_t q_textlength_type(void* self);
+int32_t q_textlength_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlength.html#value)
 ///
-/// @param self QTextLength*
+/// @param self const QTextLength*
 /// @param maximumLength double
 ///
-double q_textlength_value(void* self, double maximumLength);
+double q_textlength_value(const void* self, double maximumLength);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlength.html#rawValue)
 ///
-/// @param self QTextLength*
+/// @param self const QTextLength*
 ///
-double q_textlength_raw_value(void* self);
+double q_textlength_raw_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlength.html#operator-eq-eq)
 ///
-/// @param self QTextLength*
+/// @param self const QTextLength*
 /// @param other QTextLength*
 ///
-bool q_textlength_operator_equal(void* self, void* other);
+bool q_textlength_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlength.html#operator-not-eq)
 ///
-/// @param self QTextLength*
+/// @param self const QTextLength*
 /// @param other QTextLength*
 ///
-bool q_textlength_operator_not_equal(void* self, void* other);
+bool q_textlength_operator_not_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlength.html#operator-QVariant)
 ///
-/// @param self QTextLength*
+/// @param self const QTextLength*
 ///
-QVariant* q_textlength_to_q_variant(void* self);
+QVariant* q_textlength_to_q_variant(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlength.html#dtor.QTextLength)
 ///
@@ -130,14 +130,14 @@ QTextFormat* q_textformat_new2(int type);
 ///
 /// @param rhs QTextFormat*
 ///
-QTextFormat* q_textformat_new3(void* rhs);
+QTextFormat* q_textformat_new3(const void* rhs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-eq)
 ///
 /// @param self QTextFormat*
 /// @param rhs QTextFormat*
 ///
-void q_textformat_operator_assign(void* self, void* rhs);
+void q_textformat_operator_assign(void* self, const void* rhs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#swap)
 ///
@@ -151,31 +151,31 @@ void q_textformat_swap(void* self, void* other);
 /// @param self QTextFormat*
 /// @param other QTextFormat*
 ///
-void q_textformat_merge(void* self, void* other);
+void q_textformat_merge(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isValid)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 ///
-bool q_textformat_is_valid(void* self);
+bool q_textformat_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isEmpty)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 ///
-bool q_textformat_is_empty(void* self);
+bool q_textformat_is_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#type)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 ///
-int32_t q_textformat_type(void* self);
+int32_t q_textformat_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#objectIndex)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 ///
-int32_t q_textformat_object_index(void* self);
+int32_t q_textformat_object_index(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#setObjectIndex)
 ///
@@ -186,10 +186,10 @@ void q_textformat_set_object_index(void* self, int object);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#property)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 /// @param propertyId int
 ///
-QVariant* q_textformat_property(void* self, int propertyId);
+QVariant* q_textformat_property(const void* self, int propertyId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#setProperty)
 ///
@@ -197,7 +197,7 @@ QVariant* q_textformat_property(void* self, int propertyId);
 /// @param propertyId int
 /// @param value QVariant*
 ///
-void q_textformat_set_property(void* self, int propertyId, void* value);
+void q_textformat_set_property(void* self, int propertyId, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#clearProperty)
 ///
@@ -208,77 +208,77 @@ void q_textformat_clear_property(void* self, int propertyId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#hasProperty)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 /// @param propertyId int
 ///
-bool q_textformat_has_property(void* self, int propertyId);
+bool q_textformat_has_property(const void* self, int propertyId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#boolProperty)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 /// @param propertyId int
 ///
-bool q_textformat_bool_property(void* self, int propertyId);
+bool q_textformat_bool_property(const void* self, int propertyId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#intProperty)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 /// @param propertyId int
 ///
-int32_t q_textformat_int_property(void* self, int propertyId);
+int32_t q_textformat_int_property(const void* self, int propertyId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#doubleProperty)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 /// @param propertyId int
 ///
-double q_textformat_double_property(void* self, int propertyId);
+double q_textformat_double_property(const void* self, int propertyId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#stringProperty)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 /// @param propertyId int
 ///
-const char* q_textformat_string_property(void* self, int propertyId);
+const char* q_textformat_string_property(const void* self, int propertyId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#colorProperty)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 /// @param propertyId int
 ///
-QColor* q_textformat_color_property(void* self, int propertyId);
+QColor* q_textformat_color_property(const void* self, int propertyId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#penProperty)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 /// @param propertyId int
 ///
-QPen* q_textformat_pen_property(void* self, int propertyId);
+QPen* q_textformat_pen_property(const void* self, int propertyId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#brushProperty)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 /// @param propertyId int
 ///
-QBrush* q_textformat_brush_property(void* self, int propertyId);
+QBrush* q_textformat_brush_property(const void* self, int propertyId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#lengthProperty)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 /// @param propertyId int
 ///
-QTextLength* q_textformat_length_property(void* self, int propertyId);
+QTextLength* q_textformat_length_property(const void* self, int propertyId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#lengthVectorProperty)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 /// @param propertyId int
 ///
 /// @return libqt_list of QTextLength*
 ///
-libqt_list q_textformat_length_vector_property(void* self, int propertyId);
+libqt_list q_textformat_length_vector_property(const void* self, int propertyId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#setProperty)
 ///
@@ -301,17 +301,17 @@ void q_textformat_set_property2(void* self, int propertyId, libqt_list lengths);
 /// free(map.values);
 /// ```
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 ///
 /// @return libqt_map of int to QVariant*
 ///
-libqt_map q_textformat_properties(void* self);
+libqt_map q_textformat_properties(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#propertyCount)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 ///
-int32_t q_textformat_property_count(void* self);
+int32_t q_textformat_property_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#setObjectType)
 ///
@@ -322,113 +322,113 @@ void q_textformat_set_object_type(void* self, int type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#objectType)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 ///
-int32_t q_textformat_object_type(void* self);
+int32_t q_textformat_object_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isCharFormat)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 ///
-bool q_textformat_is_char_format(void* self);
+bool q_textformat_is_char_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isBlockFormat)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 ///
-bool q_textformat_is_block_format(void* self);
+bool q_textformat_is_block_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isListFormat)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 ///
-bool q_textformat_is_list_format(void* self);
+bool q_textformat_is_list_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isFrameFormat)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 ///
-bool q_textformat_is_frame_format(void* self);
+bool q_textformat_is_frame_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isImageFormat)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 ///
-bool q_textformat_is_image_format(void* self);
+bool q_textformat_is_image_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isTableFormat)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 ///
-bool q_textformat_is_table_format(void* self);
+bool q_textformat_is_table_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isTableCellFormat)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 ///
-bool q_textformat_is_table_cell_format(void* self);
+bool q_textformat_is_table_cell_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toBlockFormat)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 ///
-QTextBlockFormat* q_textformat_to_block_format(void* self);
+QTextBlockFormat* q_textformat_to_block_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toCharFormat)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 ///
-QTextCharFormat* q_textformat_to_char_format(void* self);
+QTextCharFormat* q_textformat_to_char_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toListFormat)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 ///
-QTextListFormat* q_textformat_to_list_format(void* self);
+QTextListFormat* q_textformat_to_list_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toTableFormat)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 ///
-QTextTableFormat* q_textformat_to_table_format(void* self);
+QTextTableFormat* q_textformat_to_table_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toFrameFormat)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 ///
-QTextFrameFormat* q_textformat_to_frame_format(void* self);
+QTextFrameFormat* q_textformat_to_frame_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toImageFormat)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 ///
-QTextImageFormat* q_textformat_to_image_format(void* self);
+QTextImageFormat* q_textformat_to_image_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toTableCellFormat)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 ///
-QTextTableCellFormat* q_textformat_to_table_cell_format(void* self);
+QTextTableCellFormat* q_textformat_to_table_cell_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-eq-eq)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 /// @param rhs QTextFormat*
 ///
-bool q_textformat_operator_equal(void* self, void* rhs);
+bool q_textformat_operator_equal(const void* self, const void* rhs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-not-eq)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 /// @param rhs QTextFormat*
 ///
-bool q_textformat_operator_not_equal(void* self, void* rhs);
+bool q_textformat_operator_not_equal(const void* self, const void* rhs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-QVariant)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 ///
-QVariant* q_textformat_to_q_variant(void* self);
+QVariant* q_textformat_to_q_variant(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#setLayoutDirection)
 ///
@@ -439,24 +439,24 @@ void q_textformat_set_layout_direction(void* self, int32_t direction);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#layoutDirection)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_textformat_layout_direction(void* self);
+int32_t q_textformat_layout_direction(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#setBackground)
 ///
 /// @param self QTextFormat*
 /// @param brush QBrush*
 ///
-void q_textformat_set_background(void* self, void* brush);
+void q_textformat_set_background(void* self, const void* brush);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#background)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 ///
-QBrush* q_textformat_background(void* self);
+QBrush* q_textformat_background(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#clearBackground)
 ///
@@ -469,13 +469,13 @@ void q_textformat_clear_background(void* self);
 /// @param self QTextFormat*
 /// @param brush QBrush*
 ///
-void q_textformat_set_foreground(void* self, void* brush);
+void q_textformat_set_foreground(void* self, const void* brush);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#foreground)
 ///
-/// @param self QTextFormat*
+/// @param self const QTextFormat*
 ///
-QBrush* q_textformat_foreground(void* self);
+QBrush* q_textformat_foreground(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#clearForeground)
 ///
@@ -503,26 +503,26 @@ QTextCharFormat* q_textcharformat_new();
 ///
 /// @param param1 QTextCharFormat*
 ///
-QTextCharFormat* q_textcharformat_new2(void* param1);
+QTextCharFormat* q_textcharformat_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#isValid)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-bool q_textcharformat_is_valid(void* self);
+bool q_textcharformat_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setFont)
 ///
 /// @param self QTextCharFormat*
 /// @param font QFont*
 ///
-void q_textcharformat_set_font(void* self, void* font);
+void q_textcharformat_set_font(void* self, const void* font);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#font)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-QFont* q_textcharformat_font(void* self);
+QFont* q_textcharformat_font(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setFontFamily)
 ///
@@ -535,9 +535,9 @@ void q_textcharformat_set_font_family(void* self, const char* family);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-const char* q_textcharformat_font_family(void* self);
+const char* q_textcharformat_font_family(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setFontFamilies)
 ///
@@ -548,9 +548,9 @@ void q_textcharformat_set_font_families(void* self, const char* families[static 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontFamilies)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-QVariant* q_textcharformat_font_families(void* self);
+QVariant* q_textcharformat_font_families(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setFontStyleName)
 ///
@@ -561,9 +561,9 @@ void q_textcharformat_set_font_style_name(void* self, const char* styleName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontStyleName)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-QVariant* q_textcharformat_font_style_name(void* self);
+QVariant* q_textcharformat_font_style_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setFontPointSize)
 ///
@@ -574,9 +574,9 @@ void q_textcharformat_set_font_point_size(void* self, double size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontPointSize)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-double q_textcharformat_font_point_size(void* self);
+double q_textcharformat_font_point_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setFontWeight)
 ///
@@ -587,9 +587,9 @@ void q_textcharformat_set_font_weight(void* self, int weight);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontWeight)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-int32_t q_textcharformat_font_weight(void* self);
+int32_t q_textcharformat_font_weight(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setFontItalic)
 ///
@@ -600,9 +600,9 @@ void q_textcharformat_set_font_italic(void* self, bool italic);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontItalic)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-bool q_textcharformat_font_italic(void* self);
+bool q_textcharformat_font_italic(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setFontCapitalization)
 ///
@@ -613,11 +613,11 @@ void q_textcharformat_set_font_capitalization(void* self, int32_t capitalization
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontCapitalization)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
 /// @return enum QFont__Capitalization
 ///
-int32_t q_textcharformat_font_capitalization(void* self);
+int32_t q_textcharformat_font_capitalization(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setFontLetterSpacingType)
 ///
@@ -628,11 +628,11 @@ void q_textcharformat_set_font_letter_spacing_type(void* self, int32_t letterSpa
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontLetterSpacingType)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
 /// @return enum QFont__SpacingType
 ///
-int32_t q_textcharformat_font_letter_spacing_type(void* self);
+int32_t q_textcharformat_font_letter_spacing_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setFontLetterSpacing)
 ///
@@ -643,9 +643,9 @@ void q_textcharformat_set_font_letter_spacing(void* self, double spacing);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontLetterSpacing)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-double q_textcharformat_font_letter_spacing(void* self);
+double q_textcharformat_font_letter_spacing(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setFontWordSpacing)
 ///
@@ -656,9 +656,9 @@ void q_textcharformat_set_font_word_spacing(void* self, double spacing);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontWordSpacing)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-double q_textcharformat_font_word_spacing(void* self);
+double q_textcharformat_font_word_spacing(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setFontUnderline)
 ///
@@ -669,9 +669,9 @@ void q_textcharformat_set_font_underline(void* self, bool underline);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontUnderline)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-bool q_textcharformat_font_underline(void* self);
+bool q_textcharformat_font_underline(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setFontOverline)
 ///
@@ -682,9 +682,9 @@ void q_textcharformat_set_font_overline(void* self, bool overline);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontOverline)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-bool q_textcharformat_font_overline(void* self);
+bool q_textcharformat_font_overline(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setFontStrikeOut)
 ///
@@ -695,22 +695,22 @@ void q_textcharformat_set_font_strike_out(void* self, bool strikeOut);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontStrikeOut)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-bool q_textcharformat_font_strike_out(void* self);
+bool q_textcharformat_font_strike_out(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setUnderlineColor)
 ///
 /// @param self QTextCharFormat*
 /// @param color QColor*
 ///
-void q_textcharformat_set_underline_color(void* self, void* color);
+void q_textcharformat_set_underline_color(void* self, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#underlineColor)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-QColor* q_textcharformat_underline_color(void* self);
+QColor* q_textcharformat_underline_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setFontFixedPitch)
 ///
@@ -721,9 +721,9 @@ void q_textcharformat_set_font_fixed_pitch(void* self, bool fixedPitch);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontFixedPitch)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-bool q_textcharformat_font_fixed_pitch(void* self);
+bool q_textcharformat_font_fixed_pitch(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setFontStretch)
 ///
@@ -734,9 +734,9 @@ void q_textcharformat_set_font_stretch(void* self, int factor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontStretch)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-int32_t q_textcharformat_font_stretch(void* self);
+int32_t q_textcharformat_font_stretch(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setFontStyleHint)
 ///
@@ -754,19 +754,19 @@ void q_textcharformat_set_font_style_strategy(void* self, int32_t strategy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontStyleHint)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
 /// @return enum QFont__StyleHint
 ///
-int32_t q_textcharformat_font_style_hint(void* self);
+int32_t q_textcharformat_font_style_hint(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontStyleStrategy)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
 /// @return enum QFont__StyleStrategy
 ///
-int32_t q_textcharformat_font_style_strategy(void* self);
+int32_t q_textcharformat_font_style_strategy(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setFontHintingPreference)
 ///
@@ -777,11 +777,11 @@ void q_textcharformat_set_font_hinting_preference(void* self, int32_t hintingPre
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontHintingPreference)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
 /// @return enum QFont__HintingPreference
 ///
-int32_t q_textcharformat_font_hinting_preference(void* self);
+int32_t q_textcharformat_font_hinting_preference(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setFontKerning)
 ///
@@ -792,9 +792,9 @@ void q_textcharformat_set_font_kerning(void* self, bool enable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontKerning)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-bool q_textcharformat_font_kerning(void* self);
+bool q_textcharformat_font_kerning(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setUnderlineStyle)
 ///
@@ -805,11 +805,11 @@ void q_textcharformat_set_underline_style(void* self, int32_t style);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#underlineStyle)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
 /// @return enum QTextCharFormat__UnderlineStyle
 ///
-int32_t q_textcharformat_underline_style(void* self);
+int32_t q_textcharformat_underline_style(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setVerticalAlignment)
 ///
@@ -820,24 +820,24 @@ void q_textcharformat_set_vertical_alignment(void* self, int32_t alignment);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#verticalAlignment)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
 /// @return enum QTextCharFormat__VerticalAlignment
 ///
-int32_t q_textcharformat_vertical_alignment(void* self);
+int32_t q_textcharformat_vertical_alignment(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setTextOutline)
 ///
 /// @param self QTextCharFormat*
 /// @param pen QPen*
 ///
-void q_textcharformat_set_text_outline(void* self, void* pen);
+void q_textcharformat_set_text_outline(void* self, const void* pen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#textOutline)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-QPen* q_textcharformat_text_outline(void* self);
+QPen* q_textcharformat_text_outline(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setToolTip)
 ///
@@ -850,9 +850,9 @@ void q_textcharformat_set_tool_tip(void* self, const char* tip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-const char* q_textcharformat_tool_tip(void* self);
+const char* q_textcharformat_tool_tip(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setSuperScriptBaseline)
 ///
@@ -863,9 +863,9 @@ void q_textcharformat_set_super_script_baseline(void* self, double baseline);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#superScriptBaseline)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-double q_textcharformat_super_script_baseline(void* self);
+double q_textcharformat_super_script_baseline(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setSubScriptBaseline)
 ///
@@ -876,9 +876,9 @@ void q_textcharformat_set_sub_script_baseline(void* self, double baseline);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#subScriptBaseline)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-double q_textcharformat_sub_script_baseline(void* self);
+double q_textcharformat_sub_script_baseline(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setBaselineOffset)
 ///
@@ -889,9 +889,9 @@ void q_textcharformat_set_baseline_offset(void* self, double baseline);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#baselineOffset)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-double q_textcharformat_baseline_offset(void* self);
+double q_textcharformat_baseline_offset(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setAnchor)
 ///
@@ -902,9 +902,9 @@ void q_textcharformat_set_anchor(void* self, bool anchor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#isAnchor)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-bool q_textcharformat_is_anchor(void* self);
+bool q_textcharformat_is_anchor(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setAnchorHref)
 ///
@@ -917,9 +917,9 @@ void q_textcharformat_set_anchor_href(void* self, const char* value);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-const char* q_textcharformat_anchor_href(void* self);
+const char* q_textcharformat_anchor_href(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setAnchorNames)
 ///
@@ -932,9 +932,9 @@ void q_textcharformat_set_anchor_names(void* self, const char* names[static 1]);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-const char** q_textcharformat_anchor_names(void* self);
+const char** q_textcharformat_anchor_names(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setTableCellRowSpan)
 ///
@@ -945,9 +945,9 @@ void q_textcharformat_set_table_cell_row_span(void* self, int tableCellRowSpan);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#tableCellRowSpan)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-int32_t q_textcharformat_table_cell_row_span(void* self);
+int32_t q_textcharformat_table_cell_row_span(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setTableCellColumnSpan)
 ///
@@ -958,16 +958,16 @@ void q_textcharformat_set_table_cell_column_span(void* self, int tableCellColumn
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#tableCellColumnSpan)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-int32_t q_textcharformat_table_cell_column_span(void* self);
+int32_t q_textcharformat_table_cell_column_span(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#operator-eq)
 ///
 /// @param self QTextCharFormat*
 /// @param param1 QTextCharFormat*
 ///
-void q_textcharformat_operator_assign(void* self, void* param1);
+void q_textcharformat_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setFont)
 ///
@@ -975,7 +975,7 @@ void q_textcharformat_operator_assign(void* self, void* param1);
 /// @param font QFont*
 /// @param behavior enum QTextCharFormat__FontPropertiesInheritanceBehavior
 ///
-void q_textcharformat_set_font2(void* self, void* font, int32_t behavior);
+void q_textcharformat_set_font2(void* self, const void* font, int32_t behavior);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#setFontStyleHint)
 ///
@@ -1001,31 +1001,31 @@ void q_textcharformat_swap(void* self, void* other);
 /// @param self QTextCharFormat*
 /// @param other QTextFormat*
 ///
-void q_textcharformat_merge(void* self, void* other);
+void q_textcharformat_merge(void* self, const void* other);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isEmpty)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-bool q_textcharformat_is_empty(void* self);
+bool q_textcharformat_is_empty(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#type)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-int32_t q_textcharformat_type(void* self);
+int32_t q_textcharformat_type(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#objectIndex)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-int32_t q_textcharformat_object_index(void* self);
+int32_t q_textcharformat_object_index(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -1040,10 +1040,10 @@ void q_textcharformat_set_object_index(void* self, int object);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#property)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 /// @param propertyId int
 ///
-QVariant* q_textcharformat_property(void* self, int propertyId);
+QVariant* q_textcharformat_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
@@ -1053,7 +1053,7 @@ QVariant* q_textcharformat_property(void* self, int propertyId);
 /// @param propertyId int
 /// @param value QVariant*
 ///
-void q_textcharformat_set_property(void* self, int propertyId, void* value);
+void q_textcharformat_set_property(void* self, int propertyId, const void* value);
 
 /// Inherited from QTextFormat
 ///
@@ -1068,37 +1068,37 @@ void q_textcharformat_clear_property(void* self, int propertyId);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#hasProperty)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 /// @param propertyId int
 ///
-bool q_textcharformat_has_property(void* self, int propertyId);
+bool q_textcharformat_has_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#boolProperty)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 /// @param propertyId int
 ///
-bool q_textcharformat_bool_property(void* self, int propertyId);
+bool q_textcharformat_bool_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#intProperty)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 /// @param propertyId int
 ///
-int32_t q_textcharformat_int_property(void* self, int propertyId);
+int32_t q_textcharformat_int_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#doubleProperty)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 /// @param propertyId int
 ///
-double q_textcharformat_double_property(void* self, int propertyId);
+double q_textcharformat_double_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
@@ -1106,57 +1106,57 @@ double q_textcharformat_double_property(void* self, int propertyId);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 /// @param propertyId int
 ///
-const char* q_textcharformat_string_property(void* self, int propertyId);
+const char* q_textcharformat_string_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#colorProperty)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 /// @param propertyId int
 ///
-QColor* q_textcharformat_color_property(void* self, int propertyId);
+QColor* q_textcharformat_color_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#penProperty)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 /// @param propertyId int
 ///
-QPen* q_textcharformat_pen_property(void* self, int propertyId);
+QPen* q_textcharformat_pen_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#brushProperty)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 /// @param propertyId int
 ///
-QBrush* q_textcharformat_brush_property(void* self, int propertyId);
+QBrush* q_textcharformat_brush_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#lengthProperty)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 /// @param propertyId int
 ///
-QTextLength* q_textcharformat_length_property(void* self, int propertyId);
+QTextLength* q_textcharformat_length_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#lengthVectorProperty)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 /// @param propertyId int
 ///
 /// @return libqt_list of QTextLength*
 ///
-libqt_list q_textcharformat_length_vector_property(void* self, int propertyId);
+libqt_list q_textcharformat_length_vector_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
@@ -1183,19 +1183,19 @@ void q_textcharformat_set_property2(void* self, int propertyId, libqt_list lengt
 /// free(map.values);
 /// ```
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
 /// @return libqt_map of int to QVariant*
 ///
-libqt_map q_textcharformat_properties(void* self);
+libqt_map q_textcharformat_properties(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#propertyCount)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-int32_t q_textcharformat_property_count(void* self);
+int32_t q_textcharformat_property_count(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -1210,147 +1210,147 @@ void q_textcharformat_set_object_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#objectType)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-int32_t q_textcharformat_object_type(void* self);
+int32_t q_textcharformat_object_type(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isCharFormat)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-bool q_textcharformat_is_char_format(void* self);
+bool q_textcharformat_is_char_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isBlockFormat)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-bool q_textcharformat_is_block_format(void* self);
+bool q_textcharformat_is_block_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isListFormat)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-bool q_textcharformat_is_list_format(void* self);
+bool q_textcharformat_is_list_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isFrameFormat)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-bool q_textcharformat_is_frame_format(void* self);
+bool q_textcharformat_is_frame_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isImageFormat)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-bool q_textcharformat_is_image_format(void* self);
+bool q_textcharformat_is_image_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isTableFormat)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-bool q_textcharformat_is_table_format(void* self);
+bool q_textcharformat_is_table_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isTableCellFormat)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-bool q_textcharformat_is_table_cell_format(void* self);
+bool q_textcharformat_is_table_cell_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toBlockFormat)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-QTextBlockFormat* q_textcharformat_to_block_format(void* self);
+QTextBlockFormat* q_textcharformat_to_block_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toCharFormat)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-QTextCharFormat* q_textcharformat_to_char_format(void* self);
+QTextCharFormat* q_textcharformat_to_char_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toListFormat)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-QTextListFormat* q_textcharformat_to_list_format(void* self);
+QTextListFormat* q_textcharformat_to_list_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toTableFormat)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-QTextTableFormat* q_textcharformat_to_table_format(void* self);
+QTextTableFormat* q_textcharformat_to_table_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toFrameFormat)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-QTextFrameFormat* q_textcharformat_to_frame_format(void* self);
+QTextFrameFormat* q_textcharformat_to_frame_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toImageFormat)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-QTextImageFormat* q_textcharformat_to_image_format(void* self);
+QTextImageFormat* q_textcharformat_to_image_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toTableCellFormat)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-QTextTableCellFormat* q_textcharformat_to_table_cell_format(void* self);
+QTextTableCellFormat* q_textcharformat_to_table_cell_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-eq-eq)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 /// @param rhs QTextFormat*
 ///
-bool q_textcharformat_operator_equal(void* self, void* rhs);
+bool q_textcharformat_operator_equal(const void* self, const void* rhs);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-not-eq)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 /// @param rhs QTextFormat*
 ///
-bool q_textcharformat_operator_not_equal(void* self, void* rhs);
+bool q_textcharformat_operator_not_equal(const void* self, const void* rhs);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-QVariant)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-QVariant* q_textcharformat_to_q_variant(void* self);
+QVariant* q_textcharformat_to_q_variant(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -1365,11 +1365,11 @@ void q_textcharformat_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#layoutDirection)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_textcharformat_layout_direction(void* self);
+int32_t q_textcharformat_layout_direction(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -1378,15 +1378,15 @@ int32_t q_textcharformat_layout_direction(void* self);
 /// @param self QTextCharFormat*
 /// @param brush QBrush*
 ///
-void q_textcharformat_set_background(void* self, void* brush);
+void q_textcharformat_set_background(void* self, const void* brush);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#background)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-QBrush* q_textcharformat_background(void* self);
+QBrush* q_textcharformat_background(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -1403,15 +1403,15 @@ void q_textcharformat_clear_background(void* self);
 /// @param self QTextCharFormat*
 /// @param brush QBrush*
 ///
-void q_textcharformat_set_foreground(void* self, void* brush);
+void q_textcharformat_set_foreground(void* self, const void* brush);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#foreground)
 ///
-/// @param self QTextCharFormat*
+/// @param self const QTextCharFormat*
 ///
-QBrush* q_textcharformat_foreground(void* self);
+QBrush* q_textcharformat_foreground(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -1441,13 +1441,13 @@ QTextBlockFormat* q_textblockformat_new();
 ///
 /// @param param1 QTextBlockFormat*
 ///
-QTextBlockFormat* q_textblockformat_new2(void* param1);
+QTextBlockFormat* q_textblockformat_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#isValid)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-bool q_textblockformat_is_valid(void* self);
+bool q_textblockformat_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#setAlignment)
 ///
@@ -1458,11 +1458,11 @@ void q_textblockformat_set_alignment(void* self, int32_t alignment);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#alignment)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 ///
-int32_t q_textblockformat_alignment(void* self);
+int32_t q_textblockformat_alignment(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#setTopMargin)
 ///
@@ -1473,9 +1473,9 @@ void q_textblockformat_set_top_margin(void* self, double margin);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#topMargin)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-double q_textblockformat_top_margin(void* self);
+double q_textblockformat_top_margin(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#setBottomMargin)
 ///
@@ -1486,9 +1486,9 @@ void q_textblockformat_set_bottom_margin(void* self, double margin);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#bottomMargin)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-double q_textblockformat_bottom_margin(void* self);
+double q_textblockformat_bottom_margin(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#setLeftMargin)
 ///
@@ -1499,9 +1499,9 @@ void q_textblockformat_set_left_margin(void* self, double margin);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#leftMargin)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-double q_textblockformat_left_margin(void* self);
+double q_textblockformat_left_margin(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#setRightMargin)
 ///
@@ -1512,9 +1512,9 @@ void q_textblockformat_set_right_margin(void* self, double margin);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#rightMargin)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-double q_textblockformat_right_margin(void* self);
+double q_textblockformat_right_margin(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#setTextIndent)
 ///
@@ -1525,9 +1525,9 @@ void q_textblockformat_set_text_indent(void* self, double aindent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#textIndent)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-double q_textblockformat_text_indent(void* self);
+double q_textblockformat_text_indent(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#setIndent)
 ///
@@ -1538,9 +1538,9 @@ void q_textblockformat_set_indent(void* self, int indent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#indent)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-int32_t q_textblockformat_indent(void* self);
+int32_t q_textblockformat_indent(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#setHeadingLevel)
 ///
@@ -1551,9 +1551,9 @@ void q_textblockformat_set_heading_level(void* self, int alevel);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#headingLevel)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-int32_t q_textblockformat_heading_level(void* self);
+int32_t q_textblockformat_heading_level(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#setLineHeight)
 ///
@@ -1565,23 +1565,23 @@ void q_textblockformat_set_line_height(void* self, double height, int heightType
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#lineHeight)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 /// @param scriptLineHeight double
 /// @param scaling double
 ///
-double q_textblockformat_line_height(void* self, double scriptLineHeight, double scaling);
+double q_textblockformat_line_height(const void* self, double scriptLineHeight, double scaling);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#lineHeight)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-double q_textblockformat_line_height2(void* self);
+double q_textblockformat_line_height2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#lineHeightType)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-int32_t q_textblockformat_line_height_type(void* self);
+int32_t q_textblockformat_line_height_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#setNonBreakableLines)
 ///
@@ -1592,9 +1592,9 @@ void q_textblockformat_set_non_breakable_lines(void* self, bool b);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#nonBreakableLines)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-bool q_textblockformat_non_breakable_lines(void* self);
+bool q_textblockformat_non_breakable_lines(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#setPageBreakPolicy)
 ///
@@ -1605,11 +1605,11 @@ void q_textblockformat_set_page_break_policy(void* self, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#pageBreakPolicy)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
 /// @return flag of enum QTextFormat__PageBreakFlag
 ///
-int32_t q_textblockformat_page_break_policy(void* self);
+int32_t q_textblockformat_page_break_policy(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#setTabPositions)
 ///
@@ -1620,11 +1620,11 @@ void q_textblockformat_set_tab_positions(void* self, libqt_list tabs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#tabPositions)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
 /// @return libqt_list of QTextOption__Tab*
 ///
-libqt_list q_textblockformat_tab_positions(void* self);
+libqt_list q_textblockformat_tab_positions(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#setMarker)
 ///
@@ -1635,18 +1635,18 @@ void q_textblockformat_set_marker(void* self, int32_t marker);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#marker)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
 /// @return enum QTextBlockFormat__MarkerType
 ///
-int32_t q_textblockformat_marker(void* self);
+int32_t q_textblockformat_marker(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#operator-eq)
 ///
 /// @param self QTextBlockFormat*
 /// @param param1 QTextBlockFormat*
 ///
-void q_textblockformat_operator_assign(void* self, void* param1);
+void q_textblockformat_operator_assign(void* self, const void* param1);
 
 /// Inherited from QTextFormat
 ///
@@ -1664,31 +1664,31 @@ void q_textblockformat_swap(void* self, void* other);
 /// @param self QTextBlockFormat*
 /// @param other QTextFormat*
 ///
-void q_textblockformat_merge(void* self, void* other);
+void q_textblockformat_merge(void* self, const void* other);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isEmpty)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-bool q_textblockformat_is_empty(void* self);
+bool q_textblockformat_is_empty(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#type)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-int32_t q_textblockformat_type(void* self);
+int32_t q_textblockformat_type(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#objectIndex)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-int32_t q_textblockformat_object_index(void* self);
+int32_t q_textblockformat_object_index(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -1703,10 +1703,10 @@ void q_textblockformat_set_object_index(void* self, int object);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#property)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 /// @param propertyId int
 ///
-QVariant* q_textblockformat_property(void* self, int propertyId);
+QVariant* q_textblockformat_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
@@ -1716,7 +1716,7 @@ QVariant* q_textblockformat_property(void* self, int propertyId);
 /// @param propertyId int
 /// @param value QVariant*
 ///
-void q_textblockformat_set_property(void* self, int propertyId, void* value);
+void q_textblockformat_set_property(void* self, int propertyId, const void* value);
 
 /// Inherited from QTextFormat
 ///
@@ -1731,37 +1731,37 @@ void q_textblockformat_clear_property(void* self, int propertyId);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#hasProperty)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 /// @param propertyId int
 ///
-bool q_textblockformat_has_property(void* self, int propertyId);
+bool q_textblockformat_has_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#boolProperty)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 /// @param propertyId int
 ///
-bool q_textblockformat_bool_property(void* self, int propertyId);
+bool q_textblockformat_bool_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#intProperty)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 /// @param propertyId int
 ///
-int32_t q_textblockformat_int_property(void* self, int propertyId);
+int32_t q_textblockformat_int_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#doubleProperty)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 /// @param propertyId int
 ///
-double q_textblockformat_double_property(void* self, int propertyId);
+double q_textblockformat_double_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
@@ -1769,57 +1769,57 @@ double q_textblockformat_double_property(void* self, int propertyId);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 /// @param propertyId int
 ///
-const char* q_textblockformat_string_property(void* self, int propertyId);
+const char* q_textblockformat_string_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#colorProperty)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 /// @param propertyId int
 ///
-QColor* q_textblockformat_color_property(void* self, int propertyId);
+QColor* q_textblockformat_color_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#penProperty)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 /// @param propertyId int
 ///
-QPen* q_textblockformat_pen_property(void* self, int propertyId);
+QPen* q_textblockformat_pen_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#brushProperty)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 /// @param propertyId int
 ///
-QBrush* q_textblockformat_brush_property(void* self, int propertyId);
+QBrush* q_textblockformat_brush_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#lengthProperty)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 /// @param propertyId int
 ///
-QTextLength* q_textblockformat_length_property(void* self, int propertyId);
+QTextLength* q_textblockformat_length_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#lengthVectorProperty)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 /// @param propertyId int
 ///
 /// @return libqt_list of QTextLength*
 ///
-libqt_list q_textblockformat_length_vector_property(void* self, int propertyId);
+libqt_list q_textblockformat_length_vector_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
@@ -1846,19 +1846,19 @@ void q_textblockformat_set_property2(void* self, int propertyId, libqt_list leng
 /// free(map.values);
 /// ```
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
 /// @return libqt_map of int to QVariant*
 ///
-libqt_map q_textblockformat_properties(void* self);
+libqt_map q_textblockformat_properties(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#propertyCount)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-int32_t q_textblockformat_property_count(void* self);
+int32_t q_textblockformat_property_count(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -1873,147 +1873,147 @@ void q_textblockformat_set_object_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#objectType)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-int32_t q_textblockformat_object_type(void* self);
+int32_t q_textblockformat_object_type(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isCharFormat)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-bool q_textblockformat_is_char_format(void* self);
+bool q_textblockformat_is_char_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isBlockFormat)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-bool q_textblockformat_is_block_format(void* self);
+bool q_textblockformat_is_block_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isListFormat)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-bool q_textblockformat_is_list_format(void* self);
+bool q_textblockformat_is_list_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isFrameFormat)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-bool q_textblockformat_is_frame_format(void* self);
+bool q_textblockformat_is_frame_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isImageFormat)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-bool q_textblockformat_is_image_format(void* self);
+bool q_textblockformat_is_image_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isTableFormat)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-bool q_textblockformat_is_table_format(void* self);
+bool q_textblockformat_is_table_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isTableCellFormat)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-bool q_textblockformat_is_table_cell_format(void* self);
+bool q_textblockformat_is_table_cell_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toBlockFormat)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-QTextBlockFormat* q_textblockformat_to_block_format(void* self);
+QTextBlockFormat* q_textblockformat_to_block_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toCharFormat)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-QTextCharFormat* q_textblockformat_to_char_format(void* self);
+QTextCharFormat* q_textblockformat_to_char_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toListFormat)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-QTextListFormat* q_textblockformat_to_list_format(void* self);
+QTextListFormat* q_textblockformat_to_list_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toTableFormat)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-QTextTableFormat* q_textblockformat_to_table_format(void* self);
+QTextTableFormat* q_textblockformat_to_table_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toFrameFormat)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-QTextFrameFormat* q_textblockformat_to_frame_format(void* self);
+QTextFrameFormat* q_textblockformat_to_frame_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toImageFormat)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-QTextImageFormat* q_textblockformat_to_image_format(void* self);
+QTextImageFormat* q_textblockformat_to_image_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toTableCellFormat)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-QTextTableCellFormat* q_textblockformat_to_table_cell_format(void* self);
+QTextTableCellFormat* q_textblockformat_to_table_cell_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-eq-eq)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 /// @param rhs QTextFormat*
 ///
-bool q_textblockformat_operator_equal(void* self, void* rhs);
+bool q_textblockformat_operator_equal(const void* self, const void* rhs);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-not-eq)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 /// @param rhs QTextFormat*
 ///
-bool q_textblockformat_operator_not_equal(void* self, void* rhs);
+bool q_textblockformat_operator_not_equal(const void* self, const void* rhs);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-QVariant)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-QVariant* q_textblockformat_to_q_variant(void* self);
+QVariant* q_textblockformat_to_q_variant(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -2028,11 +2028,11 @@ void q_textblockformat_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#layoutDirection)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_textblockformat_layout_direction(void* self);
+int32_t q_textblockformat_layout_direction(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -2041,15 +2041,15 @@ int32_t q_textblockformat_layout_direction(void* self);
 /// @param self QTextBlockFormat*
 /// @param brush QBrush*
 ///
-void q_textblockformat_set_background(void* self, void* brush);
+void q_textblockformat_set_background(void* self, const void* brush);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#background)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-QBrush* q_textblockformat_background(void* self);
+QBrush* q_textblockformat_background(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -2066,15 +2066,15 @@ void q_textblockformat_clear_background(void* self);
 /// @param self QTextBlockFormat*
 /// @param brush QBrush*
 ///
-void q_textblockformat_set_foreground(void* self, void* brush);
+void q_textblockformat_set_foreground(void* self, const void* brush);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#foreground)
 ///
-/// @param self QTextBlockFormat*
+/// @param self const QTextBlockFormat*
 ///
-QBrush* q_textblockformat_foreground(void* self);
+QBrush* q_textblockformat_foreground(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -2104,13 +2104,13 @@ QTextListFormat* q_textlistformat_new();
 ///
 /// @param param1 QTextListFormat*
 ///
-QTextListFormat* q_textlistformat_new2(void* param1);
+QTextListFormat* q_textlistformat_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlistformat.html#isValid)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 ///
-bool q_textlistformat_is_valid(void* self);
+bool q_textlistformat_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlistformat.html#setStyle)
 ///
@@ -2121,11 +2121,11 @@ void q_textlistformat_set_style(void* self, int32_t style);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlistformat.html#style)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 ///
 /// @return enum QTextListFormat__Style
 ///
-int32_t q_textlistformat_style(void* self);
+int32_t q_textlistformat_style(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlistformat.html#setIndent)
 ///
@@ -2136,9 +2136,9 @@ void q_textlistformat_set_indent(void* self, int indent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlistformat.html#indent)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 ///
-int32_t q_textlistformat_indent(void* self);
+int32_t q_textlistformat_indent(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlistformat.html#setNumberPrefix)
 ///
@@ -2151,9 +2151,9 @@ void q_textlistformat_set_number_prefix(void* self, const char* numberPrefix);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 ///
-const char* q_textlistformat_number_prefix(void* self);
+const char* q_textlistformat_number_prefix(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlistformat.html#setNumberSuffix)
 ///
@@ -2166,9 +2166,9 @@ void q_textlistformat_set_number_suffix(void* self, const char* numberSuffix);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 ///
-const char* q_textlistformat_number_suffix(void* self);
+const char* q_textlistformat_number_suffix(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlistformat.html#setStart)
 ///
@@ -2179,16 +2179,16 @@ void q_textlistformat_set_start(void* self, int indent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlistformat.html#start)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 ///
-int32_t q_textlistformat_start(void* self);
+int32_t q_textlistformat_start(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlistformat.html#operator-eq)
 ///
 /// @param self QTextListFormat*
 /// @param param1 QTextListFormat*
 ///
-void q_textlistformat_operator_assign(void* self, void* param1);
+void q_textlistformat_operator_assign(void* self, const void* param1);
 
 /// Inherited from QTextFormat
 ///
@@ -2206,31 +2206,31 @@ void q_textlistformat_swap(void* self, void* other);
 /// @param self QTextListFormat*
 /// @param other QTextFormat*
 ///
-void q_textlistformat_merge(void* self, void* other);
+void q_textlistformat_merge(void* self, const void* other);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isEmpty)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 ///
-bool q_textlistformat_is_empty(void* self);
+bool q_textlistformat_is_empty(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#type)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 ///
-int32_t q_textlistformat_type(void* self);
+int32_t q_textlistformat_type(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#objectIndex)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 ///
-int32_t q_textlistformat_object_index(void* self);
+int32_t q_textlistformat_object_index(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -2245,10 +2245,10 @@ void q_textlistformat_set_object_index(void* self, int object);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#property)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 /// @param propertyId int
 ///
-QVariant* q_textlistformat_property(void* self, int propertyId);
+QVariant* q_textlistformat_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
@@ -2258,7 +2258,7 @@ QVariant* q_textlistformat_property(void* self, int propertyId);
 /// @param propertyId int
 /// @param value QVariant*
 ///
-void q_textlistformat_set_property(void* self, int propertyId, void* value);
+void q_textlistformat_set_property(void* self, int propertyId, const void* value);
 
 /// Inherited from QTextFormat
 ///
@@ -2273,37 +2273,37 @@ void q_textlistformat_clear_property(void* self, int propertyId);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#hasProperty)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 /// @param propertyId int
 ///
-bool q_textlistformat_has_property(void* self, int propertyId);
+bool q_textlistformat_has_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#boolProperty)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 /// @param propertyId int
 ///
-bool q_textlistformat_bool_property(void* self, int propertyId);
+bool q_textlistformat_bool_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#intProperty)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 /// @param propertyId int
 ///
-int32_t q_textlistformat_int_property(void* self, int propertyId);
+int32_t q_textlistformat_int_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#doubleProperty)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 /// @param propertyId int
 ///
-double q_textlistformat_double_property(void* self, int propertyId);
+double q_textlistformat_double_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
@@ -2311,57 +2311,57 @@ double q_textlistformat_double_property(void* self, int propertyId);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 /// @param propertyId int
 ///
-const char* q_textlistformat_string_property(void* self, int propertyId);
+const char* q_textlistformat_string_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#colorProperty)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 /// @param propertyId int
 ///
-QColor* q_textlistformat_color_property(void* self, int propertyId);
+QColor* q_textlistformat_color_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#penProperty)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 /// @param propertyId int
 ///
-QPen* q_textlistformat_pen_property(void* self, int propertyId);
+QPen* q_textlistformat_pen_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#brushProperty)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 /// @param propertyId int
 ///
-QBrush* q_textlistformat_brush_property(void* self, int propertyId);
+QBrush* q_textlistformat_brush_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#lengthProperty)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 /// @param propertyId int
 ///
-QTextLength* q_textlistformat_length_property(void* self, int propertyId);
+QTextLength* q_textlistformat_length_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#lengthVectorProperty)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 /// @param propertyId int
 ///
 /// @return libqt_list of QTextLength*
 ///
-libqt_list q_textlistformat_length_vector_property(void* self, int propertyId);
+libqt_list q_textlistformat_length_vector_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
@@ -2388,19 +2388,19 @@ void q_textlistformat_set_property2(void* self, int propertyId, libqt_list lengt
 /// free(map.values);
 /// ```
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 ///
 /// @return libqt_map of int to QVariant*
 ///
-libqt_map q_textlistformat_properties(void* self);
+libqt_map q_textlistformat_properties(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#propertyCount)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 ///
-int32_t q_textlistformat_property_count(void* self);
+int32_t q_textlistformat_property_count(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -2415,147 +2415,147 @@ void q_textlistformat_set_object_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#objectType)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 ///
-int32_t q_textlistformat_object_type(void* self);
+int32_t q_textlistformat_object_type(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isCharFormat)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 ///
-bool q_textlistformat_is_char_format(void* self);
+bool q_textlistformat_is_char_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isBlockFormat)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 ///
-bool q_textlistformat_is_block_format(void* self);
+bool q_textlistformat_is_block_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isListFormat)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 ///
-bool q_textlistformat_is_list_format(void* self);
+bool q_textlistformat_is_list_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isFrameFormat)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 ///
-bool q_textlistformat_is_frame_format(void* self);
+bool q_textlistformat_is_frame_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isImageFormat)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 ///
-bool q_textlistformat_is_image_format(void* self);
+bool q_textlistformat_is_image_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isTableFormat)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 ///
-bool q_textlistformat_is_table_format(void* self);
+bool q_textlistformat_is_table_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isTableCellFormat)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 ///
-bool q_textlistformat_is_table_cell_format(void* self);
+bool q_textlistformat_is_table_cell_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toBlockFormat)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 ///
-QTextBlockFormat* q_textlistformat_to_block_format(void* self);
+QTextBlockFormat* q_textlistformat_to_block_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toCharFormat)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 ///
-QTextCharFormat* q_textlistformat_to_char_format(void* self);
+QTextCharFormat* q_textlistformat_to_char_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toListFormat)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 ///
-QTextListFormat* q_textlistformat_to_list_format(void* self);
+QTextListFormat* q_textlistformat_to_list_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toTableFormat)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 ///
-QTextTableFormat* q_textlistformat_to_table_format(void* self);
+QTextTableFormat* q_textlistformat_to_table_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toFrameFormat)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 ///
-QTextFrameFormat* q_textlistformat_to_frame_format(void* self);
+QTextFrameFormat* q_textlistformat_to_frame_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toImageFormat)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 ///
-QTextImageFormat* q_textlistformat_to_image_format(void* self);
+QTextImageFormat* q_textlistformat_to_image_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toTableCellFormat)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 ///
-QTextTableCellFormat* q_textlistformat_to_table_cell_format(void* self);
+QTextTableCellFormat* q_textlistformat_to_table_cell_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-eq-eq)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 /// @param rhs QTextFormat*
 ///
-bool q_textlistformat_operator_equal(void* self, void* rhs);
+bool q_textlistformat_operator_equal(const void* self, const void* rhs);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-not-eq)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 /// @param rhs QTextFormat*
 ///
-bool q_textlistformat_operator_not_equal(void* self, void* rhs);
+bool q_textlistformat_operator_not_equal(const void* self, const void* rhs);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-QVariant)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 ///
-QVariant* q_textlistformat_to_q_variant(void* self);
+QVariant* q_textlistformat_to_q_variant(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -2570,11 +2570,11 @@ void q_textlistformat_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#layoutDirection)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_textlistformat_layout_direction(void* self);
+int32_t q_textlistformat_layout_direction(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -2583,15 +2583,15 @@ int32_t q_textlistformat_layout_direction(void* self);
 /// @param self QTextListFormat*
 /// @param brush QBrush*
 ///
-void q_textlistformat_set_background(void* self, void* brush);
+void q_textlistformat_set_background(void* self, const void* brush);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#background)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 ///
-QBrush* q_textlistformat_background(void* self);
+QBrush* q_textlistformat_background(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -2608,15 +2608,15 @@ void q_textlistformat_clear_background(void* self);
 /// @param self QTextListFormat*
 /// @param brush QBrush*
 ///
-void q_textlistformat_set_foreground(void* self, void* brush);
+void q_textlistformat_set_foreground(void* self, const void* brush);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#foreground)
 ///
-/// @param self QTextListFormat*
+/// @param self const QTextListFormat*
 ///
-QBrush* q_textlistformat_foreground(void* self);
+QBrush* q_textlistformat_foreground(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -2646,13 +2646,13 @@ QTextImageFormat* q_textimageformat_new();
 ///
 /// @param param1 QTextImageFormat*
 ///
-QTextImageFormat* q_textimageformat_new2(void* param1);
+QTextImageFormat* q_textimageformat_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextimageformat.html#isValid)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-bool q_textimageformat_is_valid(void* self);
+bool q_textimageformat_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextimageformat.html#setName)
 ///
@@ -2665,9 +2665,9 @@ void q_textimageformat_set_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-const char* q_textimageformat_name(void* self);
+const char* q_textimageformat_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextimageformat.html#setWidth)
 ///
@@ -2678,9 +2678,9 @@ void q_textimageformat_set_width(void* self, double width);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextimageformat.html#width)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-double q_textimageformat_width(void* self);
+double q_textimageformat_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextimageformat.html#setMaximumWidth)
 ///
@@ -2691,9 +2691,9 @@ void q_textimageformat_set_maximum_width(void* self, void* maxWidth);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextimageformat.html#maximumWidth)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-QTextLength* q_textimageformat_maximum_width(void* self);
+QTextLength* q_textimageformat_maximum_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextimageformat.html#setHeight)
 ///
@@ -2704,9 +2704,9 @@ void q_textimageformat_set_height(void* self, double height);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextimageformat.html#height)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-double q_textimageformat_height(void* self);
+double q_textimageformat_height(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextimageformat.html#setQuality)
 ///
@@ -2723,9 +2723,9 @@ void q_textimageformat_set_quality2(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextimageformat.html#quality)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-int32_t q_textimageformat_quality(void* self);
+int32_t q_textimageformat_quality(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2734,15 +2734,15 @@ int32_t q_textimageformat_quality(void* self);
 /// @param self QTextImageFormat*
 /// @param font QFont*
 ///
-void q_textimageformat_set_font(void* self, void* font);
+void q_textimageformat_set_font(void* self, const void* font);
 
 /// Inherited from QTextCharFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#font)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-QFont* q_textimageformat_font(void* self);
+QFont* q_textimageformat_font(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2759,9 +2759,9 @@ void q_textimageformat_set_font_family(void* self, const char* family);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-const char* q_textimageformat_font_family(void* self);
+const char* q_textimageformat_font_family(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2776,9 +2776,9 @@ void q_textimageformat_set_font_families(void* self, const char* families[static
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontFamilies)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-QVariant* q_textimageformat_font_families(void* self);
+QVariant* q_textimageformat_font_families(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2793,9 +2793,9 @@ void q_textimageformat_set_font_style_name(void* self, const char* styleName);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontStyleName)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-QVariant* q_textimageformat_font_style_name(void* self);
+QVariant* q_textimageformat_font_style_name(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2810,9 +2810,9 @@ void q_textimageformat_set_font_point_size(void* self, double size);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontPointSize)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-double q_textimageformat_font_point_size(void* self);
+double q_textimageformat_font_point_size(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2827,9 +2827,9 @@ void q_textimageformat_set_font_weight(void* self, int weight);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontWeight)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-int32_t q_textimageformat_font_weight(void* self);
+int32_t q_textimageformat_font_weight(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2844,9 +2844,9 @@ void q_textimageformat_set_font_italic(void* self, bool italic);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontItalic)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-bool q_textimageformat_font_italic(void* self);
+bool q_textimageformat_font_italic(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2861,11 +2861,11 @@ void q_textimageformat_set_font_capitalization(void* self, int32_t capitalizatio
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontCapitalization)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
 /// @return enum QFont__Capitalization
 ///
-int32_t q_textimageformat_font_capitalization(void* self);
+int32_t q_textimageformat_font_capitalization(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2880,11 +2880,11 @@ void q_textimageformat_set_font_letter_spacing_type(void* self, int32_t letterSp
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontLetterSpacingType)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
 /// @return enum QFont__SpacingType
 ///
-int32_t q_textimageformat_font_letter_spacing_type(void* self);
+int32_t q_textimageformat_font_letter_spacing_type(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2899,9 +2899,9 @@ void q_textimageformat_set_font_letter_spacing(void* self, double spacing);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontLetterSpacing)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-double q_textimageformat_font_letter_spacing(void* self);
+double q_textimageformat_font_letter_spacing(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2916,9 +2916,9 @@ void q_textimageformat_set_font_word_spacing(void* self, double spacing);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontWordSpacing)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-double q_textimageformat_font_word_spacing(void* self);
+double q_textimageformat_font_word_spacing(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2933,9 +2933,9 @@ void q_textimageformat_set_font_underline(void* self, bool underline);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontUnderline)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-bool q_textimageformat_font_underline(void* self);
+bool q_textimageformat_font_underline(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2950,9 +2950,9 @@ void q_textimageformat_set_font_overline(void* self, bool overline);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontOverline)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-bool q_textimageformat_font_overline(void* self);
+bool q_textimageformat_font_overline(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2967,9 +2967,9 @@ void q_textimageformat_set_font_strike_out(void* self, bool strikeOut);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontStrikeOut)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-bool q_textimageformat_font_strike_out(void* self);
+bool q_textimageformat_font_strike_out(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2978,15 +2978,15 @@ bool q_textimageformat_font_strike_out(void* self);
 /// @param self QTextImageFormat*
 /// @param color QColor*
 ///
-void q_textimageformat_set_underline_color(void* self, void* color);
+void q_textimageformat_set_underline_color(void* self, const void* color);
 
 /// Inherited from QTextCharFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#underlineColor)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-QColor* q_textimageformat_underline_color(void* self);
+QColor* q_textimageformat_underline_color(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -3001,9 +3001,9 @@ void q_textimageformat_set_font_fixed_pitch(void* self, bool fixedPitch);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontFixedPitch)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-bool q_textimageformat_font_fixed_pitch(void* self);
+bool q_textimageformat_font_fixed_pitch(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -3018,9 +3018,9 @@ void q_textimageformat_set_font_stretch(void* self, int factor);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontStretch)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-int32_t q_textimageformat_font_stretch(void* self);
+int32_t q_textimageformat_font_stretch(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -3044,21 +3044,21 @@ void q_textimageformat_set_font_style_strategy(void* self, int32_t strategy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontStyleHint)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
 /// @return enum QFont__StyleHint
 ///
-int32_t q_textimageformat_font_style_hint(void* self);
+int32_t q_textimageformat_font_style_hint(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontStyleStrategy)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
 /// @return enum QFont__StyleStrategy
 ///
-int32_t q_textimageformat_font_style_strategy(void* self);
+int32_t q_textimageformat_font_style_strategy(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -3073,11 +3073,11 @@ void q_textimageformat_set_font_hinting_preference(void* self, int32_t hintingPr
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontHintingPreference)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
 /// @return enum QFont__HintingPreference
 ///
-int32_t q_textimageformat_font_hinting_preference(void* self);
+int32_t q_textimageformat_font_hinting_preference(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -3092,9 +3092,9 @@ void q_textimageformat_set_font_kerning(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontKerning)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-bool q_textimageformat_font_kerning(void* self);
+bool q_textimageformat_font_kerning(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -3109,11 +3109,11 @@ void q_textimageformat_set_underline_style(void* self, int32_t style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#underlineStyle)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
 /// @return enum QTextCharFormat__UnderlineStyle
 ///
-int32_t q_textimageformat_underline_style(void* self);
+int32_t q_textimageformat_underline_style(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -3128,11 +3128,11 @@ void q_textimageformat_set_vertical_alignment(void* self, int32_t alignment);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#verticalAlignment)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
 /// @return enum QTextCharFormat__VerticalAlignment
 ///
-int32_t q_textimageformat_vertical_alignment(void* self);
+int32_t q_textimageformat_vertical_alignment(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -3141,15 +3141,15 @@ int32_t q_textimageformat_vertical_alignment(void* self);
 /// @param self QTextImageFormat*
 /// @param pen QPen*
 ///
-void q_textimageformat_set_text_outline(void* self, void* pen);
+void q_textimageformat_set_text_outline(void* self, const void* pen);
 
 /// Inherited from QTextCharFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#textOutline)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-QPen* q_textimageformat_text_outline(void* self);
+QPen* q_textimageformat_text_outline(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -3166,9 +3166,9 @@ void q_textimageformat_set_tool_tip(void* self, const char* tip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-const char* q_textimageformat_tool_tip(void* self);
+const char* q_textimageformat_tool_tip(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -3183,9 +3183,9 @@ void q_textimageformat_set_super_script_baseline(void* self, double baseline);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#superScriptBaseline)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-double q_textimageformat_super_script_baseline(void* self);
+double q_textimageformat_super_script_baseline(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -3200,9 +3200,9 @@ void q_textimageformat_set_sub_script_baseline(void* self, double baseline);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#subScriptBaseline)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-double q_textimageformat_sub_script_baseline(void* self);
+double q_textimageformat_sub_script_baseline(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -3217,9 +3217,9 @@ void q_textimageformat_set_baseline_offset(void* self, double baseline);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#baselineOffset)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-double q_textimageformat_baseline_offset(void* self);
+double q_textimageformat_baseline_offset(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -3234,9 +3234,9 @@ void q_textimageformat_set_anchor(void* self, bool anchor);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#isAnchor)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-bool q_textimageformat_is_anchor(void* self);
+bool q_textimageformat_is_anchor(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -3253,9 +3253,9 @@ void q_textimageformat_set_anchor_href(void* self, const char* value);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-const char* q_textimageformat_anchor_href(void* self);
+const char* q_textimageformat_anchor_href(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -3272,9 +3272,9 @@ void q_textimageformat_set_anchor_names(void* self, const char* names[static 1])
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-const char** q_textimageformat_anchor_names(void* self);
+const char** q_textimageformat_anchor_names(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -3289,9 +3289,9 @@ void q_textimageformat_set_table_cell_row_span(void* self, int tableCellRowSpan)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#tableCellRowSpan)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-int32_t q_textimageformat_table_cell_row_span(void* self);
+int32_t q_textimageformat_table_cell_row_span(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -3306,9 +3306,9 @@ void q_textimageformat_set_table_cell_column_span(void* self, int tableCellColum
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#tableCellColumnSpan)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-int32_t q_textimageformat_table_cell_column_span(void* self);
+int32_t q_textimageformat_table_cell_column_span(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -3317,7 +3317,7 @@ int32_t q_textimageformat_table_cell_column_span(void* self);
 /// @param self QTextImageFormat*
 /// @param param1 QTextCharFormat*
 ///
-void q_textimageformat_operator_assign(void* self, void* param1);
+void q_textimageformat_operator_assign(void* self, const void* param1);
 
 /// Inherited from QTextCharFormat
 ///
@@ -3327,7 +3327,7 @@ void q_textimageformat_operator_assign(void* self, void* param1);
 /// @param font QFont*
 /// @param behavior enum QTextCharFormat__FontPropertiesInheritanceBehavior
 ///
-void q_textimageformat_set_font2(void* self, void* font, int32_t behavior);
+void q_textimageformat_set_font2(void* self, const void* font, int32_t behavior);
 
 /// Inherited from QTextCharFormat
 ///
@@ -3355,31 +3355,31 @@ void q_textimageformat_swap(void* self, void* other);
 /// @param self QTextImageFormat*
 /// @param other QTextFormat*
 ///
-void q_textimageformat_merge(void* self, void* other);
+void q_textimageformat_merge(void* self, const void* other);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isEmpty)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-bool q_textimageformat_is_empty(void* self);
+bool q_textimageformat_is_empty(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#type)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-int32_t q_textimageformat_type(void* self);
+int32_t q_textimageformat_type(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#objectIndex)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-int32_t q_textimageformat_object_index(void* self);
+int32_t q_textimageformat_object_index(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -3394,10 +3394,10 @@ void q_textimageformat_set_object_index(void* self, int object);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#property)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 /// @param propertyId int
 ///
-QVariant* q_textimageformat_property(void* self, int propertyId);
+QVariant* q_textimageformat_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
@@ -3407,7 +3407,7 @@ QVariant* q_textimageformat_property(void* self, int propertyId);
 /// @param propertyId int
 /// @param value QVariant*
 ///
-void q_textimageformat_set_property(void* self, int propertyId, void* value);
+void q_textimageformat_set_property(void* self, int propertyId, const void* value);
 
 /// Inherited from QTextFormat
 ///
@@ -3422,37 +3422,37 @@ void q_textimageformat_clear_property(void* self, int propertyId);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#hasProperty)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 /// @param propertyId int
 ///
-bool q_textimageformat_has_property(void* self, int propertyId);
+bool q_textimageformat_has_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#boolProperty)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 /// @param propertyId int
 ///
-bool q_textimageformat_bool_property(void* self, int propertyId);
+bool q_textimageformat_bool_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#intProperty)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 /// @param propertyId int
 ///
-int32_t q_textimageformat_int_property(void* self, int propertyId);
+int32_t q_textimageformat_int_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#doubleProperty)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 /// @param propertyId int
 ///
-double q_textimageformat_double_property(void* self, int propertyId);
+double q_textimageformat_double_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
@@ -3460,57 +3460,57 @@ double q_textimageformat_double_property(void* self, int propertyId);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 /// @param propertyId int
 ///
-const char* q_textimageformat_string_property(void* self, int propertyId);
+const char* q_textimageformat_string_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#colorProperty)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 /// @param propertyId int
 ///
-QColor* q_textimageformat_color_property(void* self, int propertyId);
+QColor* q_textimageformat_color_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#penProperty)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 /// @param propertyId int
 ///
-QPen* q_textimageformat_pen_property(void* self, int propertyId);
+QPen* q_textimageformat_pen_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#brushProperty)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 /// @param propertyId int
 ///
-QBrush* q_textimageformat_brush_property(void* self, int propertyId);
+QBrush* q_textimageformat_brush_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#lengthProperty)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 /// @param propertyId int
 ///
-QTextLength* q_textimageformat_length_property(void* self, int propertyId);
+QTextLength* q_textimageformat_length_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#lengthVectorProperty)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 /// @param propertyId int
 ///
 /// @return libqt_list of QTextLength*
 ///
-libqt_list q_textimageformat_length_vector_property(void* self, int propertyId);
+libqt_list q_textimageformat_length_vector_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
@@ -3537,19 +3537,19 @@ void q_textimageformat_set_property2(void* self, int propertyId, libqt_list leng
 /// free(map.values);
 /// ```
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
 /// @return libqt_map of int to QVariant*
 ///
-libqt_map q_textimageformat_properties(void* self);
+libqt_map q_textimageformat_properties(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#propertyCount)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-int32_t q_textimageformat_property_count(void* self);
+int32_t q_textimageformat_property_count(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -3564,147 +3564,147 @@ void q_textimageformat_set_object_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#objectType)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-int32_t q_textimageformat_object_type(void* self);
+int32_t q_textimageformat_object_type(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isCharFormat)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-bool q_textimageformat_is_char_format(void* self);
+bool q_textimageformat_is_char_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isBlockFormat)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-bool q_textimageformat_is_block_format(void* self);
+bool q_textimageformat_is_block_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isListFormat)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-bool q_textimageformat_is_list_format(void* self);
+bool q_textimageformat_is_list_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isFrameFormat)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-bool q_textimageformat_is_frame_format(void* self);
+bool q_textimageformat_is_frame_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isImageFormat)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-bool q_textimageformat_is_image_format(void* self);
+bool q_textimageformat_is_image_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isTableFormat)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-bool q_textimageformat_is_table_format(void* self);
+bool q_textimageformat_is_table_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isTableCellFormat)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-bool q_textimageformat_is_table_cell_format(void* self);
+bool q_textimageformat_is_table_cell_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toBlockFormat)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-QTextBlockFormat* q_textimageformat_to_block_format(void* self);
+QTextBlockFormat* q_textimageformat_to_block_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toCharFormat)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-QTextCharFormat* q_textimageformat_to_char_format(void* self);
+QTextCharFormat* q_textimageformat_to_char_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toListFormat)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-QTextListFormat* q_textimageformat_to_list_format(void* self);
+QTextListFormat* q_textimageformat_to_list_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toTableFormat)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-QTextTableFormat* q_textimageformat_to_table_format(void* self);
+QTextTableFormat* q_textimageformat_to_table_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toFrameFormat)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-QTextFrameFormat* q_textimageformat_to_frame_format(void* self);
+QTextFrameFormat* q_textimageformat_to_frame_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toImageFormat)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-QTextImageFormat* q_textimageformat_to_image_format(void* self);
+QTextImageFormat* q_textimageformat_to_image_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toTableCellFormat)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-QTextTableCellFormat* q_textimageformat_to_table_cell_format(void* self);
+QTextTableCellFormat* q_textimageformat_to_table_cell_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-eq-eq)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 /// @param rhs QTextFormat*
 ///
-bool q_textimageformat_operator_equal(void* self, void* rhs);
+bool q_textimageformat_operator_equal(const void* self, const void* rhs);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-not-eq)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 /// @param rhs QTextFormat*
 ///
-bool q_textimageformat_operator_not_equal(void* self, void* rhs);
+bool q_textimageformat_operator_not_equal(const void* self, const void* rhs);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-QVariant)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-QVariant* q_textimageformat_to_q_variant(void* self);
+QVariant* q_textimageformat_to_q_variant(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -3719,11 +3719,11 @@ void q_textimageformat_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#layoutDirection)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_textimageformat_layout_direction(void* self);
+int32_t q_textimageformat_layout_direction(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -3732,15 +3732,15 @@ int32_t q_textimageformat_layout_direction(void* self);
 /// @param self QTextImageFormat*
 /// @param brush QBrush*
 ///
-void q_textimageformat_set_background(void* self, void* brush);
+void q_textimageformat_set_background(void* self, const void* brush);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#background)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-QBrush* q_textimageformat_background(void* self);
+QBrush* q_textimageformat_background(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -3757,15 +3757,15 @@ void q_textimageformat_clear_background(void* self);
 /// @param self QTextImageFormat*
 /// @param brush QBrush*
 ///
-void q_textimageformat_set_foreground(void* self, void* brush);
+void q_textimageformat_set_foreground(void* self, const void* brush);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#foreground)
 ///
-/// @param self QTextImageFormat*
+/// @param self const QTextImageFormat*
 ///
-QBrush* q_textimageformat_foreground(void* self);
+QBrush* q_textimageformat_foreground(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -3795,13 +3795,13 @@ QTextFrameFormat* q_textframeformat_new();
 ///
 /// @param param1 QTextFrameFormat*
 ///
-QTextFrameFormat* q_textframeformat_new2(void* param1);
+QTextFrameFormat* q_textframeformat_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#isValid)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-bool q_textframeformat_is_valid(void* self);
+bool q_textframeformat_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#setPosition)
 ///
@@ -3812,11 +3812,11 @@ void q_textframeformat_set_position(void* self, int32_t f);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#position)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
 /// @return enum QTextFrameFormat__Position
 ///
-int32_t q_textframeformat_position(void* self);
+int32_t q_textframeformat_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#setBorder)
 ///
@@ -3827,22 +3827,22 @@ void q_textframeformat_set_border(void* self, double border);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#border)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-double q_textframeformat_border(void* self);
+double q_textframeformat_border(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#setBorderBrush)
 ///
 /// @param self QTextFrameFormat*
 /// @param brush QBrush*
 ///
-void q_textframeformat_set_border_brush(void* self, void* brush);
+void q_textframeformat_set_border_brush(void* self, const void* brush);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#borderBrush)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-QBrush* q_textframeformat_border_brush(void* self);
+QBrush* q_textframeformat_border_brush(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#setBorderStyle)
 ///
@@ -3853,11 +3853,11 @@ void q_textframeformat_set_border_style(void* self, int32_t style);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#borderStyle)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
 /// @return enum QTextFrameFormat__BorderStyle
 ///
-int32_t q_textframeformat_border_style(void* self);
+int32_t q_textframeformat_border_style(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#setMargin)
 ///
@@ -3868,9 +3868,9 @@ void q_textframeformat_set_margin(void* self, double margin);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#margin)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-double q_textframeformat_margin(void* self);
+double q_textframeformat_margin(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#setTopMargin)
 ///
@@ -3881,9 +3881,9 @@ void q_textframeformat_set_top_margin(void* self, double margin);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#topMargin)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-double q_textframeformat_top_margin(void* self);
+double q_textframeformat_top_margin(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#setBottomMargin)
 ///
@@ -3894,9 +3894,9 @@ void q_textframeformat_set_bottom_margin(void* self, double margin);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#bottomMargin)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-double q_textframeformat_bottom_margin(void* self);
+double q_textframeformat_bottom_margin(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#setLeftMargin)
 ///
@@ -3907,9 +3907,9 @@ void q_textframeformat_set_left_margin(void* self, double margin);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#leftMargin)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-double q_textframeformat_left_margin(void* self);
+double q_textframeformat_left_margin(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#setRightMargin)
 ///
@@ -3920,9 +3920,9 @@ void q_textframeformat_set_right_margin(void* self, double margin);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#rightMargin)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-double q_textframeformat_right_margin(void* self);
+double q_textframeformat_right_margin(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#setPadding)
 ///
@@ -3933,9 +3933,9 @@ void q_textframeformat_set_padding(void* self, double padding);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#padding)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-double q_textframeformat_padding(void* self);
+double q_textframeformat_padding(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#setWidth)
 ///
@@ -3949,13 +3949,13 @@ void q_textframeformat_set_width(void* self, double width);
 /// @param self QTextFrameFormat*
 /// @param length QTextLength*
 ///
-void q_textframeformat_set_width2(void* self, void* length);
+void q_textframeformat_set_width2(void* self, const void* length);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#width)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-QTextLength* q_textframeformat_width(void* self);
+QTextLength* q_textframeformat_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#setHeight)
 ///
@@ -3969,13 +3969,13 @@ void q_textframeformat_set_height(void* self, double height);
 /// @param self QTextFrameFormat*
 /// @param height QTextLength*
 ///
-void q_textframeformat_set_height2(void* self, void* height);
+void q_textframeformat_set_height2(void* self, const void* height);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#height)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-QTextLength* q_textframeformat_height(void* self);
+QTextLength* q_textframeformat_height(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#setPageBreakPolicy)
 ///
@@ -3986,18 +3986,18 @@ void q_textframeformat_set_page_break_policy(void* self, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#pageBreakPolicy)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
 /// @return flag of enum QTextFormat__PageBreakFlag
 ///
-int32_t q_textframeformat_page_break_policy(void* self);
+int32_t q_textframeformat_page_break_policy(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#operator-eq)
 ///
 /// @param self QTextFrameFormat*
 /// @param param1 QTextFrameFormat*
 ///
-void q_textframeformat_operator_assign(void* self, void* param1);
+void q_textframeformat_operator_assign(void* self, const void* param1);
 
 /// Inherited from QTextFormat
 ///
@@ -4015,31 +4015,31 @@ void q_textframeformat_swap(void* self, void* other);
 /// @param self QTextFrameFormat*
 /// @param other QTextFormat*
 ///
-void q_textframeformat_merge(void* self, void* other);
+void q_textframeformat_merge(void* self, const void* other);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isEmpty)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-bool q_textframeformat_is_empty(void* self);
+bool q_textframeformat_is_empty(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#type)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-int32_t q_textframeformat_type(void* self);
+int32_t q_textframeformat_type(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#objectIndex)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-int32_t q_textframeformat_object_index(void* self);
+int32_t q_textframeformat_object_index(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -4054,10 +4054,10 @@ void q_textframeformat_set_object_index(void* self, int object);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#property)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 /// @param propertyId int
 ///
-QVariant* q_textframeformat_property(void* self, int propertyId);
+QVariant* q_textframeformat_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
@@ -4067,7 +4067,7 @@ QVariant* q_textframeformat_property(void* self, int propertyId);
 /// @param propertyId int
 /// @param value QVariant*
 ///
-void q_textframeformat_set_property(void* self, int propertyId, void* value);
+void q_textframeformat_set_property(void* self, int propertyId, const void* value);
 
 /// Inherited from QTextFormat
 ///
@@ -4082,37 +4082,37 @@ void q_textframeformat_clear_property(void* self, int propertyId);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#hasProperty)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 /// @param propertyId int
 ///
-bool q_textframeformat_has_property(void* self, int propertyId);
+bool q_textframeformat_has_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#boolProperty)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 /// @param propertyId int
 ///
-bool q_textframeformat_bool_property(void* self, int propertyId);
+bool q_textframeformat_bool_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#intProperty)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 /// @param propertyId int
 ///
-int32_t q_textframeformat_int_property(void* self, int propertyId);
+int32_t q_textframeformat_int_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#doubleProperty)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 /// @param propertyId int
 ///
-double q_textframeformat_double_property(void* self, int propertyId);
+double q_textframeformat_double_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
@@ -4120,57 +4120,57 @@ double q_textframeformat_double_property(void* self, int propertyId);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 /// @param propertyId int
 ///
-const char* q_textframeformat_string_property(void* self, int propertyId);
+const char* q_textframeformat_string_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#colorProperty)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 /// @param propertyId int
 ///
-QColor* q_textframeformat_color_property(void* self, int propertyId);
+QColor* q_textframeformat_color_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#penProperty)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 /// @param propertyId int
 ///
-QPen* q_textframeformat_pen_property(void* self, int propertyId);
+QPen* q_textframeformat_pen_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#brushProperty)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 /// @param propertyId int
 ///
-QBrush* q_textframeformat_brush_property(void* self, int propertyId);
+QBrush* q_textframeformat_brush_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#lengthProperty)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 /// @param propertyId int
 ///
-QTextLength* q_textframeformat_length_property(void* self, int propertyId);
+QTextLength* q_textframeformat_length_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#lengthVectorProperty)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 /// @param propertyId int
 ///
 /// @return libqt_list of QTextLength*
 ///
-libqt_list q_textframeformat_length_vector_property(void* self, int propertyId);
+libqt_list q_textframeformat_length_vector_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
@@ -4197,19 +4197,19 @@ void q_textframeformat_set_property2(void* self, int propertyId, libqt_list leng
 /// free(map.values);
 /// ```
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
 /// @return libqt_map of int to QVariant*
 ///
-libqt_map q_textframeformat_properties(void* self);
+libqt_map q_textframeformat_properties(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#propertyCount)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-int32_t q_textframeformat_property_count(void* self);
+int32_t q_textframeformat_property_count(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -4224,147 +4224,147 @@ void q_textframeformat_set_object_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#objectType)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-int32_t q_textframeformat_object_type(void* self);
+int32_t q_textframeformat_object_type(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isCharFormat)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-bool q_textframeformat_is_char_format(void* self);
+bool q_textframeformat_is_char_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isBlockFormat)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-bool q_textframeformat_is_block_format(void* self);
+bool q_textframeformat_is_block_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isListFormat)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-bool q_textframeformat_is_list_format(void* self);
+bool q_textframeformat_is_list_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isFrameFormat)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-bool q_textframeformat_is_frame_format(void* self);
+bool q_textframeformat_is_frame_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isImageFormat)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-bool q_textframeformat_is_image_format(void* self);
+bool q_textframeformat_is_image_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isTableFormat)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-bool q_textframeformat_is_table_format(void* self);
+bool q_textframeformat_is_table_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isTableCellFormat)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-bool q_textframeformat_is_table_cell_format(void* self);
+bool q_textframeformat_is_table_cell_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toBlockFormat)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-QTextBlockFormat* q_textframeformat_to_block_format(void* self);
+QTextBlockFormat* q_textframeformat_to_block_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toCharFormat)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-QTextCharFormat* q_textframeformat_to_char_format(void* self);
+QTextCharFormat* q_textframeformat_to_char_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toListFormat)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-QTextListFormat* q_textframeformat_to_list_format(void* self);
+QTextListFormat* q_textframeformat_to_list_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toTableFormat)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-QTextTableFormat* q_textframeformat_to_table_format(void* self);
+QTextTableFormat* q_textframeformat_to_table_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toFrameFormat)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-QTextFrameFormat* q_textframeformat_to_frame_format(void* self);
+QTextFrameFormat* q_textframeformat_to_frame_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toImageFormat)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-QTextImageFormat* q_textframeformat_to_image_format(void* self);
+QTextImageFormat* q_textframeformat_to_image_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toTableCellFormat)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-QTextTableCellFormat* q_textframeformat_to_table_cell_format(void* self);
+QTextTableCellFormat* q_textframeformat_to_table_cell_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-eq-eq)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 /// @param rhs QTextFormat*
 ///
-bool q_textframeformat_operator_equal(void* self, void* rhs);
+bool q_textframeformat_operator_equal(const void* self, const void* rhs);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-not-eq)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 /// @param rhs QTextFormat*
 ///
-bool q_textframeformat_operator_not_equal(void* self, void* rhs);
+bool q_textframeformat_operator_not_equal(const void* self, const void* rhs);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-QVariant)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-QVariant* q_textframeformat_to_q_variant(void* self);
+QVariant* q_textframeformat_to_q_variant(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -4379,11 +4379,11 @@ void q_textframeformat_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#layoutDirection)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_textframeformat_layout_direction(void* self);
+int32_t q_textframeformat_layout_direction(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -4392,15 +4392,15 @@ int32_t q_textframeformat_layout_direction(void* self);
 /// @param self QTextFrameFormat*
 /// @param brush QBrush*
 ///
-void q_textframeformat_set_background(void* self, void* brush);
+void q_textframeformat_set_background(void* self, const void* brush);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#background)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-QBrush* q_textframeformat_background(void* self);
+QBrush* q_textframeformat_background(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -4417,15 +4417,15 @@ void q_textframeformat_clear_background(void* self);
 /// @param self QTextFrameFormat*
 /// @param brush QBrush*
 ///
-void q_textframeformat_set_foreground(void* self, void* brush);
+void q_textframeformat_set_foreground(void* self, const void* brush);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#foreground)
 ///
-/// @param self QTextFrameFormat*
+/// @param self const QTextFrameFormat*
 ///
-QBrush* q_textframeformat_foreground(void* self);
+QBrush* q_textframeformat_foreground(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -4455,19 +4455,19 @@ QTextTableFormat* q_texttableformat_new();
 ///
 /// @param param1 QTextTableFormat*
 ///
-QTextTableFormat* q_texttableformat_new2(void* param1);
+QTextTableFormat* q_texttableformat_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttableformat.html#isValid)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-bool q_texttableformat_is_valid(void* self);
+bool q_texttableformat_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttableformat.html#columns)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-int32_t q_texttableformat_columns(void* self);
+int32_t q_texttableformat_columns(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttableformat.html#setColumns)
 ///
@@ -4485,11 +4485,11 @@ void q_texttableformat_set_column_width_constraints(void* self, libqt_list const
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttableformat.html#columnWidthConstraints)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
 /// @return libqt_list of QTextLength*
 ///
-libqt_list q_texttableformat_column_width_constraints(void* self);
+libqt_list q_texttableformat_column_width_constraints(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttableformat.html#clearColumnWidthConstraints)
 ///
@@ -4499,9 +4499,9 @@ void q_texttableformat_clear_column_width_constraints(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttableformat.html#cellSpacing)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-double q_texttableformat_cell_spacing(void* self);
+double q_texttableformat_cell_spacing(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttableformat.html#setCellSpacing)
 ///
@@ -4512,9 +4512,9 @@ void q_texttableformat_set_cell_spacing(void* self, double spacing);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttableformat.html#cellPadding)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-double q_texttableformat_cell_padding(void* self);
+double q_texttableformat_cell_padding(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttableformat.html#setCellPadding)
 ///
@@ -4532,11 +4532,11 @@ void q_texttableformat_set_alignment(void* self, int32_t alignment);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttableformat.html#alignment)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 ///
-int32_t q_texttableformat_alignment(void* self);
+int32_t q_texttableformat_alignment(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttableformat.html#setHeaderRowCount)
 ///
@@ -4547,9 +4547,9 @@ void q_texttableformat_set_header_row_count(void* self, int count);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttableformat.html#headerRowCount)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-int32_t q_texttableformat_header_row_count(void* self);
+int32_t q_texttableformat_header_row_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttableformat.html#setBorderCollapse)
 ///
@@ -4560,9 +4560,9 @@ void q_texttableformat_set_border_collapse(void* self, bool borderCollapse);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttableformat.html#borderCollapse)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-bool q_texttableformat_border_collapse(void* self);
+bool q_texttableformat_border_collapse(const void* self);
 
 /// Inherited from QTextFrameFormat
 ///
@@ -4577,11 +4577,11 @@ void q_texttableformat_set_position(void* self, int32_t f);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#position)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
 /// @return enum QTextFrameFormat__Position
 ///
-int32_t q_texttableformat_position(void* self);
+int32_t q_texttableformat_position(const void* self);
 
 /// Inherited from QTextFrameFormat
 ///
@@ -4596,9 +4596,9 @@ void q_texttableformat_set_border(void* self, double border);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#border)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-double q_texttableformat_border(void* self);
+double q_texttableformat_border(const void* self);
 
 /// Inherited from QTextFrameFormat
 ///
@@ -4607,15 +4607,15 @@ double q_texttableformat_border(void* self);
 /// @param self QTextTableFormat*
 /// @param brush QBrush*
 ///
-void q_texttableformat_set_border_brush(void* self, void* brush);
+void q_texttableformat_set_border_brush(void* self, const void* brush);
 
 /// Inherited from QTextFrameFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#borderBrush)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-QBrush* q_texttableformat_border_brush(void* self);
+QBrush* q_texttableformat_border_brush(const void* self);
 
 /// Inherited from QTextFrameFormat
 ///
@@ -4630,11 +4630,11 @@ void q_texttableformat_set_border_style(void* self, int32_t style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#borderStyle)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
 /// @return enum QTextFrameFormat__BorderStyle
 ///
-int32_t q_texttableformat_border_style(void* self);
+int32_t q_texttableformat_border_style(const void* self);
 
 /// Inherited from QTextFrameFormat
 ///
@@ -4649,9 +4649,9 @@ void q_texttableformat_set_margin(void* self, double margin);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#margin)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-double q_texttableformat_margin(void* self);
+double q_texttableformat_margin(const void* self);
 
 /// Inherited from QTextFrameFormat
 ///
@@ -4666,9 +4666,9 @@ void q_texttableformat_set_top_margin(void* self, double margin);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#topMargin)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-double q_texttableformat_top_margin(void* self);
+double q_texttableformat_top_margin(const void* self);
 
 /// Inherited from QTextFrameFormat
 ///
@@ -4683,9 +4683,9 @@ void q_texttableformat_set_bottom_margin(void* self, double margin);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#bottomMargin)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-double q_texttableformat_bottom_margin(void* self);
+double q_texttableformat_bottom_margin(const void* self);
 
 /// Inherited from QTextFrameFormat
 ///
@@ -4700,9 +4700,9 @@ void q_texttableformat_set_left_margin(void* self, double margin);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#leftMargin)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-double q_texttableformat_left_margin(void* self);
+double q_texttableformat_left_margin(const void* self);
 
 /// Inherited from QTextFrameFormat
 ///
@@ -4717,9 +4717,9 @@ void q_texttableformat_set_right_margin(void* self, double margin);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#rightMargin)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-double q_texttableformat_right_margin(void* self);
+double q_texttableformat_right_margin(const void* self);
 
 /// Inherited from QTextFrameFormat
 ///
@@ -4734,9 +4734,9 @@ void q_texttableformat_set_padding(void* self, double padding);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#padding)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-double q_texttableformat_padding(void* self);
+double q_texttableformat_padding(const void* self);
 
 /// Inherited from QTextFrameFormat
 ///
@@ -4754,15 +4754,15 @@ void q_texttableformat_set_width(void* self, double width);
 /// @param self QTextTableFormat*
 /// @param length QTextLength*
 ///
-void q_texttableformat_set_width2(void* self, void* length);
+void q_texttableformat_set_width2(void* self, const void* length);
 
 /// Inherited from QTextFrameFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#width)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-QTextLength* q_texttableformat_width(void* self);
+QTextLength* q_texttableformat_width(const void* self);
 
 /// Inherited from QTextFrameFormat
 ///
@@ -4780,15 +4780,15 @@ void q_texttableformat_set_height(void* self, double height);
 /// @param self QTextTableFormat*
 /// @param height QTextLength*
 ///
-void q_texttableformat_set_height2(void* self, void* height);
+void q_texttableformat_set_height2(void* self, const void* height);
 
 /// Inherited from QTextFrameFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#height)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-QTextLength* q_texttableformat_height(void* self);
+QTextLength* q_texttableformat_height(const void* self);
 
 /// Inherited from QTextFrameFormat
 ///
@@ -4803,11 +4803,11 @@ void q_texttableformat_set_page_break_policy(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframeformat.html#pageBreakPolicy)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
 /// @return flag of enum QTextFormat__PageBreakFlag
 ///
-int32_t q_texttableformat_page_break_policy(void* self);
+int32_t q_texttableformat_page_break_policy(const void* self);
 
 /// Inherited from QTextFrameFormat
 ///
@@ -4816,7 +4816,7 @@ int32_t q_texttableformat_page_break_policy(void* self);
 /// @param self QTextTableFormat*
 /// @param param1 QTextFrameFormat*
 ///
-void q_texttableformat_operator_assign(void* self, void* param1);
+void q_texttableformat_operator_assign(void* self, const void* param1);
 
 /// Inherited from QTextFormat
 ///
@@ -4834,31 +4834,31 @@ void q_texttableformat_swap(void* self, void* other);
 /// @param self QTextTableFormat*
 /// @param other QTextFormat*
 ///
-void q_texttableformat_merge(void* self, void* other);
+void q_texttableformat_merge(void* self, const void* other);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isEmpty)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-bool q_texttableformat_is_empty(void* self);
+bool q_texttableformat_is_empty(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#type)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-int32_t q_texttableformat_type(void* self);
+int32_t q_texttableformat_type(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#objectIndex)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-int32_t q_texttableformat_object_index(void* self);
+int32_t q_texttableformat_object_index(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -4873,10 +4873,10 @@ void q_texttableformat_set_object_index(void* self, int object);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#property)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 /// @param propertyId int
 ///
-QVariant* q_texttableformat_property(void* self, int propertyId);
+QVariant* q_texttableformat_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
@@ -4886,7 +4886,7 @@ QVariant* q_texttableformat_property(void* self, int propertyId);
 /// @param propertyId int
 /// @param value QVariant*
 ///
-void q_texttableformat_set_property(void* self, int propertyId, void* value);
+void q_texttableformat_set_property(void* self, int propertyId, const void* value);
 
 /// Inherited from QTextFormat
 ///
@@ -4901,37 +4901,37 @@ void q_texttableformat_clear_property(void* self, int propertyId);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#hasProperty)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 /// @param propertyId int
 ///
-bool q_texttableformat_has_property(void* self, int propertyId);
+bool q_texttableformat_has_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#boolProperty)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 /// @param propertyId int
 ///
-bool q_texttableformat_bool_property(void* self, int propertyId);
+bool q_texttableformat_bool_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#intProperty)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 /// @param propertyId int
 ///
-int32_t q_texttableformat_int_property(void* self, int propertyId);
+int32_t q_texttableformat_int_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#doubleProperty)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 /// @param propertyId int
 ///
-double q_texttableformat_double_property(void* self, int propertyId);
+double q_texttableformat_double_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
@@ -4939,57 +4939,57 @@ double q_texttableformat_double_property(void* self, int propertyId);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 /// @param propertyId int
 ///
-const char* q_texttableformat_string_property(void* self, int propertyId);
+const char* q_texttableformat_string_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#colorProperty)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 /// @param propertyId int
 ///
-QColor* q_texttableformat_color_property(void* self, int propertyId);
+QColor* q_texttableformat_color_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#penProperty)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 /// @param propertyId int
 ///
-QPen* q_texttableformat_pen_property(void* self, int propertyId);
+QPen* q_texttableformat_pen_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#brushProperty)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 /// @param propertyId int
 ///
-QBrush* q_texttableformat_brush_property(void* self, int propertyId);
+QBrush* q_texttableformat_brush_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#lengthProperty)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 /// @param propertyId int
 ///
-QTextLength* q_texttableformat_length_property(void* self, int propertyId);
+QTextLength* q_texttableformat_length_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#lengthVectorProperty)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 /// @param propertyId int
 ///
 /// @return libqt_list of QTextLength*
 ///
-libqt_list q_texttableformat_length_vector_property(void* self, int propertyId);
+libqt_list q_texttableformat_length_vector_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
@@ -5016,19 +5016,19 @@ void q_texttableformat_set_property2(void* self, int propertyId, libqt_list leng
 /// free(map.values);
 /// ```
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
 /// @return libqt_map of int to QVariant*
 ///
-libqt_map q_texttableformat_properties(void* self);
+libqt_map q_texttableformat_properties(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#propertyCount)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-int32_t q_texttableformat_property_count(void* self);
+int32_t q_texttableformat_property_count(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -5043,147 +5043,147 @@ void q_texttableformat_set_object_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#objectType)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-int32_t q_texttableformat_object_type(void* self);
+int32_t q_texttableformat_object_type(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isCharFormat)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-bool q_texttableformat_is_char_format(void* self);
+bool q_texttableformat_is_char_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isBlockFormat)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-bool q_texttableformat_is_block_format(void* self);
+bool q_texttableformat_is_block_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isListFormat)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-bool q_texttableformat_is_list_format(void* self);
+bool q_texttableformat_is_list_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isFrameFormat)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-bool q_texttableformat_is_frame_format(void* self);
+bool q_texttableformat_is_frame_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isImageFormat)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-bool q_texttableformat_is_image_format(void* self);
+bool q_texttableformat_is_image_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isTableFormat)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-bool q_texttableformat_is_table_format(void* self);
+bool q_texttableformat_is_table_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isTableCellFormat)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-bool q_texttableformat_is_table_cell_format(void* self);
+bool q_texttableformat_is_table_cell_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toBlockFormat)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-QTextBlockFormat* q_texttableformat_to_block_format(void* self);
+QTextBlockFormat* q_texttableformat_to_block_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toCharFormat)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-QTextCharFormat* q_texttableformat_to_char_format(void* self);
+QTextCharFormat* q_texttableformat_to_char_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toListFormat)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-QTextListFormat* q_texttableformat_to_list_format(void* self);
+QTextListFormat* q_texttableformat_to_list_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toTableFormat)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-QTextTableFormat* q_texttableformat_to_table_format(void* self);
+QTextTableFormat* q_texttableformat_to_table_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toFrameFormat)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-QTextFrameFormat* q_texttableformat_to_frame_format(void* self);
+QTextFrameFormat* q_texttableformat_to_frame_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toImageFormat)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-QTextImageFormat* q_texttableformat_to_image_format(void* self);
+QTextImageFormat* q_texttableformat_to_image_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toTableCellFormat)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-QTextTableCellFormat* q_texttableformat_to_table_cell_format(void* self);
+QTextTableCellFormat* q_texttableformat_to_table_cell_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-eq-eq)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 /// @param rhs QTextFormat*
 ///
-bool q_texttableformat_operator_equal(void* self, void* rhs);
+bool q_texttableformat_operator_equal(const void* self, const void* rhs);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-not-eq)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 /// @param rhs QTextFormat*
 ///
-bool q_texttableformat_operator_not_equal(void* self, void* rhs);
+bool q_texttableformat_operator_not_equal(const void* self, const void* rhs);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-QVariant)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-QVariant* q_texttableformat_to_q_variant(void* self);
+QVariant* q_texttableformat_to_q_variant(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -5198,11 +5198,11 @@ void q_texttableformat_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#layoutDirection)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_texttableformat_layout_direction(void* self);
+int32_t q_texttableformat_layout_direction(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -5211,15 +5211,15 @@ int32_t q_texttableformat_layout_direction(void* self);
 /// @param self QTextTableFormat*
 /// @param brush QBrush*
 ///
-void q_texttableformat_set_background(void* self, void* brush);
+void q_texttableformat_set_background(void* self, const void* brush);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#background)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-QBrush* q_texttableformat_background(void* self);
+QBrush* q_texttableformat_background(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -5236,15 +5236,15 @@ void q_texttableformat_clear_background(void* self);
 /// @param self QTextTableFormat*
 /// @param brush QBrush*
 ///
-void q_texttableformat_set_foreground(void* self, void* brush);
+void q_texttableformat_set_foreground(void* self, const void* brush);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#foreground)
 ///
-/// @param self QTextTableFormat*
+/// @param self const QTextTableFormat*
 ///
-QBrush* q_texttableformat_foreground(void* self);
+QBrush* q_texttableformat_foreground(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -5274,13 +5274,13 @@ QTextTableCellFormat* q_texttablecellformat_new();
 ///
 /// @param param1 QTextTableCellFormat*
 ///
-QTextTableCellFormat* q_texttablecellformat_new2(void* param1);
+QTextTableCellFormat* q_texttablecellformat_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#isValid)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-bool q_texttablecellformat_is_valid(void* self);
+bool q_texttablecellformat_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#setTopPadding)
 ///
@@ -5291,9 +5291,9 @@ void q_texttablecellformat_set_top_padding(void* self, double padding);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#topPadding)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-double q_texttablecellformat_top_padding(void* self);
+double q_texttablecellformat_top_padding(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#setBottomPadding)
 ///
@@ -5304,9 +5304,9 @@ void q_texttablecellformat_set_bottom_padding(void* self, double padding);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#bottomPadding)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-double q_texttablecellformat_bottom_padding(void* self);
+double q_texttablecellformat_bottom_padding(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#setLeftPadding)
 ///
@@ -5317,9 +5317,9 @@ void q_texttablecellformat_set_left_padding(void* self, double padding);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#leftPadding)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-double q_texttablecellformat_left_padding(void* self);
+double q_texttablecellformat_left_padding(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#setRightPadding)
 ///
@@ -5330,9 +5330,9 @@ void q_texttablecellformat_set_right_padding(void* self, double padding);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#rightPadding)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-double q_texttablecellformat_right_padding(void* self);
+double q_texttablecellformat_right_padding(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#setPadding)
 ///
@@ -5350,9 +5350,9 @@ void q_texttablecellformat_set_top_border(void* self, double width);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#topBorder)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-double q_texttablecellformat_top_border(void* self);
+double q_texttablecellformat_top_border(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#setBottomBorder)
 ///
@@ -5363,9 +5363,9 @@ void q_texttablecellformat_set_bottom_border(void* self, double width);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#bottomBorder)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-double q_texttablecellformat_bottom_border(void* self);
+double q_texttablecellformat_bottom_border(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#setLeftBorder)
 ///
@@ -5376,9 +5376,9 @@ void q_texttablecellformat_set_left_border(void* self, double width);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#leftBorder)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-double q_texttablecellformat_left_border(void* self);
+double q_texttablecellformat_left_border(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#setRightBorder)
 ///
@@ -5389,9 +5389,9 @@ void q_texttablecellformat_set_right_border(void* self, double width);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#rightBorder)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-double q_texttablecellformat_right_border(void* self);
+double q_texttablecellformat_right_border(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#setBorder)
 ///
@@ -5409,11 +5409,11 @@ void q_texttablecellformat_set_top_border_style(void* self, int32_t style);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#topBorderStyle)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
 /// @return enum QTextFrameFormat__BorderStyle
 ///
-int32_t q_texttablecellformat_top_border_style(void* self);
+int32_t q_texttablecellformat_top_border_style(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#setBottomBorderStyle)
 ///
@@ -5424,11 +5424,11 @@ void q_texttablecellformat_set_bottom_border_style(void* self, int32_t style);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#bottomBorderStyle)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
 /// @return enum QTextFrameFormat__BorderStyle
 ///
-int32_t q_texttablecellformat_bottom_border_style(void* self);
+int32_t q_texttablecellformat_bottom_border_style(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#setLeftBorderStyle)
 ///
@@ -5439,11 +5439,11 @@ void q_texttablecellformat_set_left_border_style(void* self, int32_t style);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#leftBorderStyle)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
 /// @return enum QTextFrameFormat__BorderStyle
 ///
-int32_t q_texttablecellformat_left_border_style(void* self);
+int32_t q_texttablecellformat_left_border_style(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#setRightBorderStyle)
 ///
@@ -5454,11 +5454,11 @@ void q_texttablecellformat_set_right_border_style(void* self, int32_t style);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#rightBorderStyle)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
 /// @return enum QTextFrameFormat__BorderStyle
 ///
-int32_t q_texttablecellformat_right_border_style(void* self);
+int32_t q_texttablecellformat_right_border_style(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#setBorderStyle)
 ///
@@ -5472,59 +5472,59 @@ void q_texttablecellformat_set_border_style(void* self, int32_t style);
 /// @param self QTextTableCellFormat*
 /// @param brush QBrush*
 ///
-void q_texttablecellformat_set_top_border_brush(void* self, void* brush);
+void q_texttablecellformat_set_top_border_brush(void* self, const void* brush);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#topBorderBrush)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-QBrush* q_texttablecellformat_top_border_brush(void* self);
+QBrush* q_texttablecellformat_top_border_brush(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#setBottomBorderBrush)
 ///
 /// @param self QTextTableCellFormat*
 /// @param brush QBrush*
 ///
-void q_texttablecellformat_set_bottom_border_brush(void* self, void* brush);
+void q_texttablecellformat_set_bottom_border_brush(void* self, const void* brush);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#bottomBorderBrush)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-QBrush* q_texttablecellformat_bottom_border_brush(void* self);
+QBrush* q_texttablecellformat_bottom_border_brush(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#setLeftBorderBrush)
 ///
 /// @param self QTextTableCellFormat*
 /// @param brush QBrush*
 ///
-void q_texttablecellformat_set_left_border_brush(void* self, void* brush);
+void q_texttablecellformat_set_left_border_brush(void* self, const void* brush);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#leftBorderBrush)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-QBrush* q_texttablecellformat_left_border_brush(void* self);
+QBrush* q_texttablecellformat_left_border_brush(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#setRightBorderBrush)
 ///
 /// @param self QTextTableCellFormat*
 /// @param brush QBrush*
 ///
-void q_texttablecellformat_set_right_border_brush(void* self, void* brush);
+void q_texttablecellformat_set_right_border_brush(void* self, const void* brush);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#rightBorderBrush)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-QBrush* q_texttablecellformat_right_border_brush(void* self);
+QBrush* q_texttablecellformat_right_border_brush(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecellformat.html#setBorderBrush)
 ///
 /// @param self QTextTableCellFormat*
 /// @param brush QBrush*
 ///
-void q_texttablecellformat_set_border_brush(void* self, void* brush);
+void q_texttablecellformat_set_border_brush(void* self, const void* brush);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5533,15 +5533,15 @@ void q_texttablecellformat_set_border_brush(void* self, void* brush);
 /// @param self QTextTableCellFormat*
 /// @param font QFont*
 ///
-void q_texttablecellformat_set_font(void* self, void* font);
+void q_texttablecellformat_set_font(void* self, const void* font);
 
 /// Inherited from QTextCharFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#font)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-QFont* q_texttablecellformat_font(void* self);
+QFont* q_texttablecellformat_font(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5558,9 +5558,9 @@ void q_texttablecellformat_set_font_family(void* self, const char* family);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-const char* q_texttablecellformat_font_family(void* self);
+const char* q_texttablecellformat_font_family(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5575,9 +5575,9 @@ void q_texttablecellformat_set_font_families(void* self, const char* families[st
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontFamilies)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-QVariant* q_texttablecellformat_font_families(void* self);
+QVariant* q_texttablecellformat_font_families(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5592,9 +5592,9 @@ void q_texttablecellformat_set_font_style_name(void* self, const char* styleName
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontStyleName)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-QVariant* q_texttablecellformat_font_style_name(void* self);
+QVariant* q_texttablecellformat_font_style_name(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5609,9 +5609,9 @@ void q_texttablecellformat_set_font_point_size(void* self, double size);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontPointSize)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-double q_texttablecellformat_font_point_size(void* self);
+double q_texttablecellformat_font_point_size(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5626,9 +5626,9 @@ void q_texttablecellformat_set_font_weight(void* self, int weight);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontWeight)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-int32_t q_texttablecellformat_font_weight(void* self);
+int32_t q_texttablecellformat_font_weight(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5643,9 +5643,9 @@ void q_texttablecellformat_set_font_italic(void* self, bool italic);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontItalic)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-bool q_texttablecellformat_font_italic(void* self);
+bool q_texttablecellformat_font_italic(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5660,11 +5660,11 @@ void q_texttablecellformat_set_font_capitalization(void* self, int32_t capitaliz
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontCapitalization)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
 /// @return enum QFont__Capitalization
 ///
-int32_t q_texttablecellformat_font_capitalization(void* self);
+int32_t q_texttablecellformat_font_capitalization(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5679,11 +5679,11 @@ void q_texttablecellformat_set_font_letter_spacing_type(void* self, int32_t lett
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontLetterSpacingType)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
 /// @return enum QFont__SpacingType
 ///
-int32_t q_texttablecellformat_font_letter_spacing_type(void* self);
+int32_t q_texttablecellformat_font_letter_spacing_type(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5698,9 +5698,9 @@ void q_texttablecellformat_set_font_letter_spacing(void* self, double spacing);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontLetterSpacing)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-double q_texttablecellformat_font_letter_spacing(void* self);
+double q_texttablecellformat_font_letter_spacing(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5715,9 +5715,9 @@ void q_texttablecellformat_set_font_word_spacing(void* self, double spacing);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontWordSpacing)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-double q_texttablecellformat_font_word_spacing(void* self);
+double q_texttablecellformat_font_word_spacing(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5732,9 +5732,9 @@ void q_texttablecellformat_set_font_underline(void* self, bool underline);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontUnderline)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-bool q_texttablecellformat_font_underline(void* self);
+bool q_texttablecellformat_font_underline(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5749,9 +5749,9 @@ void q_texttablecellformat_set_font_overline(void* self, bool overline);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontOverline)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-bool q_texttablecellformat_font_overline(void* self);
+bool q_texttablecellformat_font_overline(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5766,9 +5766,9 @@ void q_texttablecellformat_set_font_strike_out(void* self, bool strikeOut);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontStrikeOut)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-bool q_texttablecellformat_font_strike_out(void* self);
+bool q_texttablecellformat_font_strike_out(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5777,15 +5777,15 @@ bool q_texttablecellformat_font_strike_out(void* self);
 /// @param self QTextTableCellFormat*
 /// @param color QColor*
 ///
-void q_texttablecellformat_set_underline_color(void* self, void* color);
+void q_texttablecellformat_set_underline_color(void* self, const void* color);
 
 /// Inherited from QTextCharFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#underlineColor)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-QColor* q_texttablecellformat_underline_color(void* self);
+QColor* q_texttablecellformat_underline_color(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5800,9 +5800,9 @@ void q_texttablecellformat_set_font_fixed_pitch(void* self, bool fixedPitch);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontFixedPitch)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-bool q_texttablecellformat_font_fixed_pitch(void* self);
+bool q_texttablecellformat_font_fixed_pitch(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5817,9 +5817,9 @@ void q_texttablecellformat_set_font_stretch(void* self, int factor);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontStretch)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-int32_t q_texttablecellformat_font_stretch(void* self);
+int32_t q_texttablecellformat_font_stretch(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5843,21 +5843,21 @@ void q_texttablecellformat_set_font_style_strategy(void* self, int32_t strategy)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontStyleHint)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
 /// @return enum QFont__StyleHint
 ///
-int32_t q_texttablecellformat_font_style_hint(void* self);
+int32_t q_texttablecellformat_font_style_hint(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontStyleStrategy)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
 /// @return enum QFont__StyleStrategy
 ///
-int32_t q_texttablecellformat_font_style_strategy(void* self);
+int32_t q_texttablecellformat_font_style_strategy(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5872,11 +5872,11 @@ void q_texttablecellformat_set_font_hinting_preference(void* self, int32_t hinti
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontHintingPreference)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
 /// @return enum QFont__HintingPreference
 ///
-int32_t q_texttablecellformat_font_hinting_preference(void* self);
+int32_t q_texttablecellformat_font_hinting_preference(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5891,9 +5891,9 @@ void q_texttablecellformat_set_font_kerning(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontKerning)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-bool q_texttablecellformat_font_kerning(void* self);
+bool q_texttablecellformat_font_kerning(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5908,11 +5908,11 @@ void q_texttablecellformat_set_underline_style(void* self, int32_t style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#underlineStyle)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
 /// @return enum QTextCharFormat__UnderlineStyle
 ///
-int32_t q_texttablecellformat_underline_style(void* self);
+int32_t q_texttablecellformat_underline_style(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5927,11 +5927,11 @@ void q_texttablecellformat_set_vertical_alignment(void* self, int32_t alignment)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#verticalAlignment)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
 /// @return enum QTextCharFormat__VerticalAlignment
 ///
-int32_t q_texttablecellformat_vertical_alignment(void* self);
+int32_t q_texttablecellformat_vertical_alignment(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5940,15 +5940,15 @@ int32_t q_texttablecellformat_vertical_alignment(void* self);
 /// @param self QTextTableCellFormat*
 /// @param pen QPen*
 ///
-void q_texttablecellformat_set_text_outline(void* self, void* pen);
+void q_texttablecellformat_set_text_outline(void* self, const void* pen);
 
 /// Inherited from QTextCharFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#textOutline)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-QPen* q_texttablecellformat_text_outline(void* self);
+QPen* q_texttablecellformat_text_outline(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5965,9 +5965,9 @@ void q_texttablecellformat_set_tool_tip(void* self, const char* tip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-const char* q_texttablecellformat_tool_tip(void* self);
+const char* q_texttablecellformat_tool_tip(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5982,9 +5982,9 @@ void q_texttablecellformat_set_super_script_baseline(void* self, double baseline
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#superScriptBaseline)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-double q_texttablecellformat_super_script_baseline(void* self);
+double q_texttablecellformat_super_script_baseline(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5999,9 +5999,9 @@ void q_texttablecellformat_set_sub_script_baseline(void* self, double baseline);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#subScriptBaseline)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-double q_texttablecellformat_sub_script_baseline(void* self);
+double q_texttablecellformat_sub_script_baseline(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -6016,9 +6016,9 @@ void q_texttablecellformat_set_baseline_offset(void* self, double baseline);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#baselineOffset)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-double q_texttablecellformat_baseline_offset(void* self);
+double q_texttablecellformat_baseline_offset(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -6033,9 +6033,9 @@ void q_texttablecellformat_set_anchor(void* self, bool anchor);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#isAnchor)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-bool q_texttablecellformat_is_anchor(void* self);
+bool q_texttablecellformat_is_anchor(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -6052,9 +6052,9 @@ void q_texttablecellformat_set_anchor_href(void* self, const char* value);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-const char* q_texttablecellformat_anchor_href(void* self);
+const char* q_texttablecellformat_anchor_href(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -6071,9 +6071,9 @@ void q_texttablecellformat_set_anchor_names(void* self, const char* names[static
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-const char** q_texttablecellformat_anchor_names(void* self);
+const char** q_texttablecellformat_anchor_names(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -6088,9 +6088,9 @@ void q_texttablecellformat_set_table_cell_row_span(void* self, int tableCellRowS
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#tableCellRowSpan)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-int32_t q_texttablecellformat_table_cell_row_span(void* self);
+int32_t q_texttablecellformat_table_cell_row_span(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -6105,9 +6105,9 @@ void q_texttablecellformat_set_table_cell_column_span(void* self, int tableCellC
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#tableCellColumnSpan)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-int32_t q_texttablecellformat_table_cell_column_span(void* self);
+int32_t q_texttablecellformat_table_cell_column_span(const void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -6116,7 +6116,7 @@ int32_t q_texttablecellformat_table_cell_column_span(void* self);
 /// @param self QTextTableCellFormat*
 /// @param param1 QTextCharFormat*
 ///
-void q_texttablecellformat_operator_assign(void* self, void* param1);
+void q_texttablecellformat_operator_assign(void* self, const void* param1);
 
 /// Inherited from QTextCharFormat
 ///
@@ -6126,7 +6126,7 @@ void q_texttablecellformat_operator_assign(void* self, void* param1);
 /// @param font QFont*
 /// @param behavior enum QTextCharFormat__FontPropertiesInheritanceBehavior
 ///
-void q_texttablecellformat_set_font2(void* self, void* font, int32_t behavior);
+void q_texttablecellformat_set_font2(void* self, const void* font, int32_t behavior);
 
 /// Inherited from QTextCharFormat
 ///
@@ -6154,31 +6154,31 @@ void q_texttablecellformat_swap(void* self, void* other);
 /// @param self QTextTableCellFormat*
 /// @param other QTextFormat*
 ///
-void q_texttablecellformat_merge(void* self, void* other);
+void q_texttablecellformat_merge(void* self, const void* other);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isEmpty)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-bool q_texttablecellformat_is_empty(void* self);
+bool q_texttablecellformat_is_empty(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#type)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-int32_t q_texttablecellformat_type(void* self);
+int32_t q_texttablecellformat_type(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#objectIndex)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-int32_t q_texttablecellformat_object_index(void* self);
+int32_t q_texttablecellformat_object_index(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -6193,10 +6193,10 @@ void q_texttablecellformat_set_object_index(void* self, int object);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#property)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 /// @param propertyId int
 ///
-QVariant* q_texttablecellformat_property(void* self, int propertyId);
+QVariant* q_texttablecellformat_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
@@ -6206,7 +6206,7 @@ QVariant* q_texttablecellformat_property(void* self, int propertyId);
 /// @param propertyId int
 /// @param value QVariant*
 ///
-void q_texttablecellformat_set_property(void* self, int propertyId, void* value);
+void q_texttablecellformat_set_property(void* self, int propertyId, const void* value);
 
 /// Inherited from QTextFormat
 ///
@@ -6221,37 +6221,37 @@ void q_texttablecellformat_clear_property(void* self, int propertyId);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#hasProperty)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 /// @param propertyId int
 ///
-bool q_texttablecellformat_has_property(void* self, int propertyId);
+bool q_texttablecellformat_has_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#boolProperty)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 /// @param propertyId int
 ///
-bool q_texttablecellformat_bool_property(void* self, int propertyId);
+bool q_texttablecellformat_bool_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#intProperty)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 /// @param propertyId int
 ///
-int32_t q_texttablecellformat_int_property(void* self, int propertyId);
+int32_t q_texttablecellformat_int_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#doubleProperty)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 /// @param propertyId int
 ///
-double q_texttablecellformat_double_property(void* self, int propertyId);
+double q_texttablecellformat_double_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
@@ -6259,57 +6259,57 @@ double q_texttablecellformat_double_property(void* self, int propertyId);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 /// @param propertyId int
 ///
-const char* q_texttablecellformat_string_property(void* self, int propertyId);
+const char* q_texttablecellformat_string_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#colorProperty)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 /// @param propertyId int
 ///
-QColor* q_texttablecellformat_color_property(void* self, int propertyId);
+QColor* q_texttablecellformat_color_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#penProperty)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 /// @param propertyId int
 ///
-QPen* q_texttablecellformat_pen_property(void* self, int propertyId);
+QPen* q_texttablecellformat_pen_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#brushProperty)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 /// @param propertyId int
 ///
-QBrush* q_texttablecellformat_brush_property(void* self, int propertyId);
+QBrush* q_texttablecellformat_brush_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#lengthProperty)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 /// @param propertyId int
 ///
-QTextLength* q_texttablecellformat_length_property(void* self, int propertyId);
+QTextLength* q_texttablecellformat_length_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#lengthVectorProperty)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 /// @param propertyId int
 ///
 /// @return libqt_list of QTextLength*
 ///
-libqt_list q_texttablecellformat_length_vector_property(void* self, int propertyId);
+libqt_list q_texttablecellformat_length_vector_property(const void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
@@ -6336,19 +6336,19 @@ void q_texttablecellformat_set_property2(void* self, int propertyId, libqt_list 
 /// free(map.values);
 /// ```
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
 /// @return libqt_map of int to QVariant*
 ///
-libqt_map q_texttablecellformat_properties(void* self);
+libqt_map q_texttablecellformat_properties(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#propertyCount)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-int32_t q_texttablecellformat_property_count(void* self);
+int32_t q_texttablecellformat_property_count(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -6363,147 +6363,147 @@ void q_texttablecellformat_set_object_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#objectType)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-int32_t q_texttablecellformat_object_type(void* self);
+int32_t q_texttablecellformat_object_type(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isCharFormat)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-bool q_texttablecellformat_is_char_format(void* self);
+bool q_texttablecellformat_is_char_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isBlockFormat)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-bool q_texttablecellformat_is_block_format(void* self);
+bool q_texttablecellformat_is_block_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isListFormat)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-bool q_texttablecellformat_is_list_format(void* self);
+bool q_texttablecellformat_is_list_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isFrameFormat)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-bool q_texttablecellformat_is_frame_format(void* self);
+bool q_texttablecellformat_is_frame_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isImageFormat)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-bool q_texttablecellformat_is_image_format(void* self);
+bool q_texttablecellformat_is_image_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isTableFormat)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-bool q_texttablecellformat_is_table_format(void* self);
+bool q_texttablecellformat_is_table_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#isTableCellFormat)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-bool q_texttablecellformat_is_table_cell_format(void* self);
+bool q_texttablecellformat_is_table_cell_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toBlockFormat)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-QTextBlockFormat* q_texttablecellformat_to_block_format(void* self);
+QTextBlockFormat* q_texttablecellformat_to_block_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toCharFormat)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-QTextCharFormat* q_texttablecellformat_to_char_format(void* self);
+QTextCharFormat* q_texttablecellformat_to_char_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toListFormat)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-QTextListFormat* q_texttablecellformat_to_list_format(void* self);
+QTextListFormat* q_texttablecellformat_to_list_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toTableFormat)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-QTextTableFormat* q_texttablecellformat_to_table_format(void* self);
+QTextTableFormat* q_texttablecellformat_to_table_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toFrameFormat)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-QTextFrameFormat* q_texttablecellformat_to_frame_format(void* self);
+QTextFrameFormat* q_texttablecellformat_to_frame_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toImageFormat)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-QTextImageFormat* q_texttablecellformat_to_image_format(void* self);
+QTextImageFormat* q_texttablecellformat_to_image_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#toTableCellFormat)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-QTextTableCellFormat* q_texttablecellformat_to_table_cell_format(void* self);
+QTextTableCellFormat* q_texttablecellformat_to_table_cell_format(const void* self);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-eq-eq)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 /// @param rhs QTextFormat*
 ///
-bool q_texttablecellformat_operator_equal(void* self, void* rhs);
+bool q_texttablecellformat_operator_equal(const void* self, const void* rhs);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-not-eq)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 /// @param rhs QTextFormat*
 ///
-bool q_texttablecellformat_operator_not_equal(void* self, void* rhs);
+bool q_texttablecellformat_operator_not_equal(const void* self, const void* rhs);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-QVariant)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-QVariant* q_texttablecellformat_to_q_variant(void* self);
+QVariant* q_texttablecellformat_to_q_variant(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -6518,11 +6518,11 @@ void q_texttablecellformat_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#layoutDirection)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_texttablecellformat_layout_direction(void* self);
+int32_t q_texttablecellformat_layout_direction(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -6531,15 +6531,15 @@ int32_t q_texttablecellformat_layout_direction(void* self);
 /// @param self QTextTableCellFormat*
 /// @param brush QBrush*
 ///
-void q_texttablecellformat_set_background(void* self, void* brush);
+void q_texttablecellformat_set_background(void* self, const void* brush);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#background)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-QBrush* q_texttablecellformat_background(void* self);
+QBrush* q_texttablecellformat_background(const void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -6556,15 +6556,15 @@ void q_texttablecellformat_clear_background(void* self);
 /// @param self QTextTableCellFormat*
 /// @param brush QBrush*
 ///
-void q_texttablecellformat_set_foreground(void* self, void* brush);
+void q_texttablecellformat_set_foreground(void* self, const void* brush);
 
 /// Inherited from QTextFormat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#foreground)
 ///
-/// @param self QTextTableCellFormat*
+/// @param self const QTextTableCellFormat*
 ///
-QBrush* q_texttablecellformat_foreground(void* self);
+QBrush* q_texttablecellformat_foreground(const void* self);
 
 /// Inherited from QTextFormat
 ///

@@ -12,51 +12,59 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendererinterface.html#graphicsApi)
 ///
-/// @param self QSGRendererInterface*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const QSGRendererInterface*
 ///
 /// @return enum QSGRendererInterface__GraphicsApi
 ///
-int32_t q_sgrendererinterface_graphics_api(void* self);
+int32_t q_sgrendererinterface_graphics_api(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendererinterface.html#getResource)
 ///
-/// @param self QSGRendererInterface*
+/// @param self const QSGRendererInterface*
 /// @param window QQuickWindow*
 /// @param resource enum QSGRendererInterface__Resource
 ///
-void* q_sgrendererinterface_get_resource(void* self, void* window, int32_t resource);
+void* q_sgrendererinterface_get_resource(const void* self, void* window, int32_t resource);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendererinterface.html#getResource)
 ///
-/// @param self QSGRendererInterface*
+/// @param self const QSGRendererInterface*
 /// @param window QQuickWindow*
 /// @param resource const char*
 ///
-void* q_sgrendererinterface_get_resource2(void* self, void* window, const char* resource);
+void* q_sgrendererinterface_get_resource2(const void* self, void* window, const char* resource);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendererinterface.html#shaderType)
 ///
-/// @param self QSGRendererInterface*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const QSGRendererInterface*
 ///
 /// @return enum QSGRendererInterface__ShaderType
 ///
-int32_t q_sgrendererinterface_shader_type(void* self);
+int32_t q_sgrendererinterface_shader_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendererinterface.html#shaderCompilationType)
 ///
-/// @param self QSGRendererInterface*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const QSGRendererInterface*
 ///
 /// @return flag of enum QSGRendererInterface__ShaderCompilationType
 ///
-int32_t q_sgrendererinterface_shader_compilation_type(void* self);
+int32_t q_sgrendererinterface_shader_compilation_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendererinterface.html#shaderSourceType)
 ///
-/// @param self QSGRendererInterface*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const QSGRendererInterface*
 ///
 /// @return flag of enum QSGRendererInterface__ShaderSourceType
 ///
-int32_t q_sgrendererinterface_shader_source_type(void* self);
+int32_t q_sgrendererinterface_shader_source_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendererinterface.html#isApiRhiBased)
 ///
@@ -69,7 +77,7 @@ bool q_sgrendererinterface_is_api_rhi_based(int32_t api);
 /// @param self QSGRendererInterface*
 /// @param param1 QSGRendererInterface*
 ///
-void q_sgrendererinterface_operator_assign(void* self, void* param1);
+void q_sgrendererinterface_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendererinterface.html#dtor.QSGRendererInterface)
 ///

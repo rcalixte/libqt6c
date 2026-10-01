@@ -44,7 +44,7 @@ QByteArrayMatcher* q_bytearraymatcher_new4(const char* pattern);
 ///
 /// @param other QByteArrayMatcher*
 ///
-QByteArrayMatcher* q_bytearraymatcher_new5(void* other);
+QByteArrayMatcher* q_bytearraymatcher_new5(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearraymatcher.html)
 
@@ -60,7 +60,7 @@ QByteArrayMatcher* q_bytearraymatcher_new6(const char* pattern, intptr_t length)
 /// @param self QByteArrayMatcher*
 /// @param other QByteArrayMatcher*
 ///
-void q_bytearraymatcher_operator_assign(void* self, void* other);
+void q_bytearraymatcher_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearraymatcher.html#setPattern)
 ///
@@ -71,43 +71,43 @@ void q_bytearraymatcher_set_pattern(void* self, char* pattern);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearraymatcher.html#indexIn)
 ///
-/// @param self QByteArrayMatcher*
+/// @param self const QByteArrayMatcher*
 /// @param str const char*
 /// @param lenVal intptr_t
 ///
-intptr_t q_bytearraymatcher_index_in(void* self, const char* str, intptr_t lenVal);
+intptr_t q_bytearraymatcher_index_in(const void* self, const char* str, intptr_t lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearraymatcher.html#indexIn)
 ///
-/// @param self QByteArrayMatcher*
+/// @param self const QByteArrayMatcher*
 /// @param data char*
 ///
-intptr_t q_bytearraymatcher_index_in2(void* self, char* data);
+intptr_t q_bytearraymatcher_index_in2(const void* self, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearraymatcher.html#pattern)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QByteArrayMatcher*
+/// @param self const QByteArrayMatcher*
 ///
-char* q_bytearraymatcher_pattern(void* self);
+char* q_bytearraymatcher_pattern(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearraymatcher.html#indexIn)
 ///
-/// @param self QByteArrayMatcher*
+/// @param self const QByteArrayMatcher*
 /// @param str const char*
 /// @param lenVal intptr_t
 /// @param from intptr_t
 ///
-intptr_t q_bytearraymatcher_index_in3(void* self, const char* str, intptr_t lenVal, intptr_t from);
+intptr_t q_bytearraymatcher_index_in3(const void* self, const char* str, intptr_t lenVal, intptr_t from);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearraymatcher.html#indexIn)
 ///
-/// @param self QByteArrayMatcher*
+/// @param self const QByteArrayMatcher*
 /// @param data char*
 /// @param from intptr_t
 ///
-intptr_t q_bytearraymatcher_index_in22(void* self, char* data, intptr_t from);
+intptr_t q_bytearraymatcher_index_in22(const void* self, char* data, intptr_t from);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearraymatcher.html#dtor.QByteArrayMatcher)
 ///
@@ -123,7 +123,7 @@ void q_bytearraymatcher_delete(void* self);
 ///
 /// @param other QStaticByteArrayMatcherBase*
 ///
-QStaticByteArrayMatcherBase* q_staticbytearraymatcherbase_new(void* other);
+QStaticByteArrayMatcherBase* q_staticbytearraymatcherbase_new(const void* other);
 
 /// q_staticbytearraymatcherbase_copy_assign shallow copies `other` into `self`.
 ///

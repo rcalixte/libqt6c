@@ -53,7 +53,7 @@ void QQuick3DObject_ItemChange(QQuick3DObject* self, int param1, const QQuick3DO
 void QQuick3DObject_ClassBegin(QQuick3DObject* self);
 void QQuick3DObject_ComponentComplete(QQuick3DObject* self);
 void QQuick3DObject_PreSync(QQuick3DObject* self);
-void QQuick3DObject_OnMetaObject(const QQuick3DObject* self, intptr_t slot);
+void QQuick3DObject_OnMetaObject(QQuick3DObject* self, intptr_t slot);
 QMetaObject* QQuick3DObject_SuperMetaObject(const QQuick3DObject* self);
 void QQuick3DObject_OnMetacast(QQuick3DObject* self, intptr_t slot);
 void* QQuick3DObject_SuperMetacast(QQuick3DObject* self, const char* param1);
@@ -91,20 +91,10 @@ void QQuick3DObject_DisconnectNotify(QQuick3DObject* self, const QMetaMethod* si
 void QQuick3DObject_OnDisconnectNotify(QQuick3DObject* self, intptr_t slot);
 void QQuick3DObject_SuperDisconnectNotify(QQuick3DObject* self, const QMetaMethod* signal);
 bool QQuick3DObject_IsComponentComplete(const QQuick3DObject* self);
-void QQuick3DObject_OnIsComponentComplete(const QQuick3DObject* self, intptr_t slot);
-bool QQuick3DObject_SuperIsComponentComplete(const QQuick3DObject* self);
 QObject* QQuick3DObject_Sender(const QQuick3DObject* self);
-void QQuick3DObject_OnSender(const QQuick3DObject* self, intptr_t slot);
-QObject* QQuick3DObject_SuperSender(const QQuick3DObject* self);
 int QQuick3DObject_SenderSignalIndex(const QQuick3DObject* self);
-void QQuick3DObject_OnSenderSignalIndex(const QQuick3DObject* self, intptr_t slot);
-int QQuick3DObject_SuperSenderSignalIndex(const QQuick3DObject* self);
 int QQuick3DObject_Receivers(const QQuick3DObject* self, const char* signal);
-void QQuick3DObject_OnReceivers(const QQuick3DObject* self, intptr_t slot);
-int QQuick3DObject_SuperReceivers(const QQuick3DObject* self, const char* signal);
 bool QQuick3DObject_IsSignalConnected(const QQuick3DObject* self, const QMetaMethod* signal);
-void QQuick3DObject_OnIsSignalConnected(const QQuick3DObject* self, intptr_t slot);
-bool QQuick3DObject_SuperIsSignalConnected(const QQuick3DObject* self, const QMetaMethod* signal);
 void QQuick3DObject_Delete(QQuick3DObject* self);
 
 QQuick3DObject__ItemChangeData* QQuick3DObject__ItemChangeData_New(const QQuick3DObject__ItemChangeData* other);

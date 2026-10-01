@@ -29,7 +29,7 @@ KGuiItem* k_guiitem_new2(const char* text);
 /// @param text const char*
 /// @param icon QIcon*
 ///
-KGuiItem* k_guiitem_new3(const char* text, void* icon);
+KGuiItem* k_guiitem_new3(const char* text, const void* icon);
 
 /// [Upstream resources](https://api.kde.org/kguiitem.html)
 
@@ -37,7 +37,7 @@ KGuiItem* k_guiitem_new3(const char* text, void* icon);
 ///
 /// @param other KGuiItem*
 ///
-KGuiItem* k_guiitem_new4(void* other);
+KGuiItem* k_guiitem_new4(const void* other);
 
 /// [Upstream resources](https://api.kde.org/kguiitem.html)
 
@@ -77,7 +77,7 @@ KGuiItem* k_guiitem_new7(const char* text, const char* iconName, const char* too
 /// @param icon QIcon*
 /// @param toolTip const char*
 ///
-KGuiItem* k_guiitem_new8(const char* text, void* icon, const char* toolTip);
+KGuiItem* k_guiitem_new8(const char* text, const void* icon, const char* toolTip);
 
 /// [Upstream resources](https://api.kde.org/kguiitem.html)
 
@@ -88,14 +88,14 @@ KGuiItem* k_guiitem_new8(const char* text, void* icon, const char* toolTip);
 /// @param toolTip const char*
 /// @param whatsThis const char*
 ///
-KGuiItem* k_guiitem_new9(const char* text, void* icon, const char* toolTip, const char* whatsThis);
+KGuiItem* k_guiitem_new9(const char* text, const void* icon, const char* toolTip, const char* whatsThis);
 
 /// [Upstream resources](https://api.kde.org/kguiitem.html#operator-eq)
 ///
 /// @param self KGuiItem*
 /// @param other KGuiItem*
 ///
-void k_guiitem_operator_assign(void* self, void* other);
+void k_guiitem_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/kguiitem.html#setText)
 ///
@@ -108,30 +108,30 @@ void k_guiitem_set_text(void* self, const char* text);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KGuiItem*
+/// @param self const KGuiItem*
 ///
-const char* k_guiitem_text(void* self);
+const char* k_guiitem_text(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kguiitem.html#plainText)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KGuiItem*
+/// @param self const KGuiItem*
 ///
-const char* k_guiitem_plain_text(void* self);
+const char* k_guiitem_plain_text(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kguiitem.html#setIcon)
 ///
 /// @param self KGuiItem*
 /// @param iconset QIcon*
 ///
-void k_guiitem_set_icon(void* self, void* iconset);
+void k_guiitem_set_icon(void* self, const void* iconset);
 
 /// [Upstream resources](https://api.kde.org/kguiitem.html#icon)
 ///
-/// @param self KGuiItem*
+/// @param self const KGuiItem*
 ///
-QIcon* k_guiitem_icon(void* self);
+QIcon* k_guiitem_icon(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kguiitem.html#setIconName)
 ///
@@ -144,15 +144,15 @@ void k_guiitem_set_icon_name(void* self, const char* iconName);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KGuiItem*
+/// @param self const KGuiItem*
 ///
-const char* k_guiitem_icon_name(void* self);
+const char* k_guiitem_icon_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kguiitem.html#hasIcon)
 ///
-/// @param self KGuiItem*
+/// @param self const KGuiItem*
 ///
-bool k_guiitem_has_icon(void* self);
+bool k_guiitem_has_icon(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kguiitem.html#setToolTip)
 ///
@@ -165,9 +165,9 @@ void k_guiitem_set_tool_tip(void* self, const char* tooltip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KGuiItem*
+/// @param self const KGuiItem*
 ///
-const char* k_guiitem_tool_tip(void* self);
+const char* k_guiitem_tool_tip(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kguiitem.html#setWhatsThis)
 ///
@@ -180,9 +180,9 @@ void k_guiitem_set_whats_this(void* self, const char* whatsThis);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KGuiItem*
+/// @param self const KGuiItem*
 ///
-const char* k_guiitem_whats_this(void* self);
+const char* k_guiitem_whats_this(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kguiitem.html#setEnabled)
 ///
@@ -193,16 +193,16 @@ void k_guiitem_set_enabled(void* self, bool enable);
 
 /// [Upstream resources](https://api.kde.org/kguiitem.html#isEnabled)
 ///
-/// @param self KGuiItem*
+/// @param self const KGuiItem*
 ///
-bool k_guiitem_is_enabled(void* self);
+bool k_guiitem_is_enabled(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kguiitem.html#assign)
 ///
 /// @param button QPushButton*
 /// @param item KGuiItem*
 ///
-void k_guiitem_assign(void* button, void* item);
+void k_guiitem_assign(void* button, const void* item);
 
 /// [Upstream resources](https://api.kde.org/kguiitem.html#dtor.KGuiItem)
 ///

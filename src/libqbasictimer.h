@@ -23,23 +23,23 @@ void q_basictimer_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbasictimer.html#isActive)
 ///
-/// @param self QBasicTimer*
+/// @param self const QBasicTimer*
 ///
-bool q_basictimer_is_active(void* self);
+bool q_basictimer_is_active(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbasictimer.html#timerId)
 ///
-/// @param self QBasicTimer*
+/// @param self const QBasicTimer*
 ///
-int32_t q_basictimer_timer_id(void* self);
+int32_t q_basictimer_timer_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbasictimer.html#id)
 ///
-/// @param self QBasicTimer*
+/// @param self const QBasicTimer*
 ///
 /// @return enum Qt__TimerId
 ///
-int32_t q_basictimer_id(void* self);
+int32_t q_basictimer_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbasictimer.html#start)
 ///

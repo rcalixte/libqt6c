@@ -9,11 +9,11 @@ QDBusUnixFileDescriptor* q_dbusunixfiledescriptor_new2(int fileDescriptor) {
     return QDBusUnixFileDescriptor_New2(fileDescriptor);
 }
 
-QDBusUnixFileDescriptor* q_dbusunixfiledescriptor_new3(void* other) {
+QDBusUnixFileDescriptor* q_dbusunixfiledescriptor_new3(const void* other) {
     return QDBusUnixFileDescriptor_New3((QDBusUnixFileDescriptor*)other);
 }
 
-void q_dbusunixfiledescriptor_operator_assign(void* self, void* other) {
+void q_dbusunixfiledescriptor_operator_assign(void* self, const void* other) {
     QDBusUnixFileDescriptor_OperatorAssign((QDBusUnixFileDescriptor*)self, (QDBusUnixFileDescriptor*)other);
 }
 
@@ -21,11 +21,11 @@ void q_dbusunixfiledescriptor_swap(void* self, void* other) {
     QDBusUnixFileDescriptor_Swap((QDBusUnixFileDescriptor*)self, (QDBusUnixFileDescriptor*)other);
 }
 
-bool q_dbusunixfiledescriptor_is_valid(void* self) {
+bool q_dbusunixfiledescriptor_is_valid(const void* self) {
     return QDBusUnixFileDescriptor_IsValid((QDBusUnixFileDescriptor*)self);
 }
 
-int32_t q_dbusunixfiledescriptor_file_descriptor(void* self) {
+int32_t q_dbusunixfiledescriptor_file_descriptor(const void* self) {
     return QDBusUnixFileDescriptor_FileDescriptor((QDBusUnixFileDescriptor*)self);
 }
 

@@ -123,108 +123,118 @@ KCodecs__Codec* k_codecs__codec_codec_for_name(char* name);
 
 /// [Upstream resources](https://api.kde.org/kcodecs-codec.html#maxEncodedSizeFor)
 ///
-/// @param self KCodecs__Codec*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const KCodecs__Codec*
 /// @param insize intptr_t
 /// @param newline enum KCodecs__Codec__NewlineType
 ///
-intptr_t k_codecs__codec_max_encoded_size_for(void* self, intptr_t insize, int32_t newline);
+intptr_t k_codecs__codec_max_encoded_size_for(const void* self, intptr_t insize, int32_t newline);
 
 /// [Upstream resources](https://api.kde.org/kcodecs-codec.html#maxDecodedSizeFor)
 ///
-/// @param self KCodecs__Codec*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const KCodecs__Codec*
 /// @param insize intptr_t
 /// @param newline enum KCodecs__Codec__NewlineType
 ///
-intptr_t k_codecs__codec_max_decoded_size_for(void* self, intptr_t insize, int32_t newline);
+intptr_t k_codecs__codec_max_decoded_size_for(const void* self, intptr_t insize, int32_t newline);
 
 /// [Upstream resources](https://api.kde.org/kcodecs-codec.html#makeEncoder)
 ///
-/// @param self KCodecs__Codec*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const KCodecs__Codec*
 /// @param newline enum KCodecs__Codec__NewlineType
 ///
-KCodecs__Encoder* k_codecs__codec_make_encoder(void* self, int32_t newline);
+KCodecs__Encoder* k_codecs__codec_make_encoder(const void* self, int32_t newline);
 
 /// [Upstream resources](https://api.kde.org/kcodecs-codec.html#makeDecoder)
 ///
-/// @param self KCodecs__Codec*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const KCodecs__Codec*
 /// @param newline enum KCodecs__Codec__NewlineType
 ///
-KCodecs__Decoder* k_codecs__codec_make_decoder(void* self, int32_t newline);
+KCodecs__Decoder* k_codecs__codec_make_decoder(const void* self, int32_t newline);
 
 /// [Upstream resources](https://api.kde.org/kcodecs-codec.html#encode)
 ///
-/// @param self KCodecs__Codec*
+/// @param self const KCodecs__Codec*
 /// @param scursor const char*
 /// @param send const char*
 /// @param dcursor char*
 /// @param dend const char*
 /// @param newline enum KCodecs__Codec__NewlineType
 ///
-bool k_codecs__codec_encode(void* self, const char* scursor, const char* send, char* dcursor, const char* dend, int32_t newline);
+bool k_codecs__codec_encode(const void* self, const char* scursor, const char* send, char* dcursor, const char* dend, int32_t newline);
 
 /// [Upstream resources](https://api.kde.org/kcodecs-codec.html#decode)
 ///
-/// @param self KCodecs__Codec*
+/// @param self const KCodecs__Codec*
 /// @param scursor const char*
 /// @param send const char*
 /// @param dcursor char*
 /// @param dend const char*
 /// @param newline enum KCodecs__Codec__NewlineType
 ///
-bool k_codecs__codec_decode(void* self, const char* scursor, const char* send, char* dcursor, const char* dend, int32_t newline);
+bool k_codecs__codec_decode(const void* self, const char* scursor, const char* send, char* dcursor, const char* dend, int32_t newline);
 
 /// [Upstream resources](https://api.kde.org/kcodecs-codec.html#encode)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KCodecs__Codec*
+/// @param self const KCodecs__Codec*
 /// @param src char*
 ///
-char* k_codecs__codec_encode2(void* self, char* src);
+char* k_codecs__codec_encode2(const void* self, char* src);
 
 /// [Upstream resources](https://api.kde.org/kcodecs-codec.html#decode)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KCodecs__Codec*
+/// @param self const KCodecs__Codec*
 /// @param src char*
 ///
-char* k_codecs__codec_decode2(void* self, char* src);
+char* k_codecs__codec_decode2(const void* self, char* src);
 
 /// [Upstream resources](https://api.kde.org/kcodecs-codec.html#name)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCodecs__Codec*
+/// @param self const KCodecs__Codec*
 ///
-const char* k_codecs__codec_name(void* self);
+const char* k_codecs__codec_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcodecs-codec.html#operator-eq)
 ///
 /// @param self KCodecs__Codec*
 /// @param param1 KCodecs__Codec*
 ///
-void k_codecs__codec_operator_assign(void* self, void* param1);
+void k_codecs__codec_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kcodecs-codec.html#encode)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KCodecs__Codec*
+/// @param self const KCodecs__Codec*
 /// @param src char*
 /// @param newline enum KCodecs__Codec__NewlineType
 ///
-char* k_codecs__codec_encode22(void* self, char* src, int32_t newline);
+char* k_codecs__codec_encode22(const void* self, char* src, int32_t newline);
 
 /// [Upstream resources](https://api.kde.org/kcodecs-codec.html#decode)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KCodecs__Codec*
+/// @param self const KCodecs__Codec*
 /// @param src char*
 /// @param newline enum KCodecs__Codec__NewlineType
 ///
-char* k_codecs__codec_decode22(void* self, char* src, int32_t newline);
+char* k_codecs__codec_decode22(const void* self, char* src, int32_t newline);
 
 /// Delete this object from C++ memory.
 ///
@@ -236,6 +246,8 @@ void k_codecs__codec_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcodecs-decoder.html#decode)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self KCodecs__Decoder*
 /// @param scursor const char*
 /// @param send const char*
@@ -245,6 +257,8 @@ void k_codecs__codec_delete(void* self);
 bool k_codecs__decoder_decode(void* self, const char* scursor, const char* send, char* dcursor, const char* dend);
 
 /// [Upstream resources](https://api.kde.org/kcodecs-decoder.html#finish)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self KCodecs__Decoder*
 /// @param dcursor char*
@@ -262,6 +276,8 @@ void k_codecs__decoder_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcodecs-encoder.html#encode)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self KCodecs__Encoder*
 /// @param scursor const char*
 /// @param send const char*
@@ -271,6 +287,8 @@ void k_codecs__decoder_delete(void* self);
 bool k_codecs__encoder_encode(void* self, const char* scursor, const char* send, char* dcursor, const char* dend);
 
 /// [Upstream resources](https://api.kde.org/kcodecs-encoder.html#finish)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self KCodecs__Encoder*
 /// @param dcursor char*

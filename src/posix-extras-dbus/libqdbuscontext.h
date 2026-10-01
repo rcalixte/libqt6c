@@ -16,64 +16,64 @@ QDBusContext* q_dbuscontext_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuscontext.html#calledFromDBus)
 ///
-/// @param self QDBusContext*
+/// @param self const QDBusContext*
 ///
-bool q_dbuscontext_called_from_d_bus(void* self);
+bool q_dbuscontext_called_from_d_bus(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuscontext.html#connection)
 ///
-/// @param self QDBusContext*
+/// @param self const QDBusContext*
 ///
-QDBusConnection* q_dbuscontext_connection(void* self);
+QDBusConnection* q_dbuscontext_connection(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuscontext.html#message)
 ///
-/// @param self QDBusContext*
+/// @param self const QDBusContext*
 ///
-const QDBusMessage* q_dbuscontext_message(void* self);
+const QDBusMessage* q_dbuscontext_message(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuscontext.html#isDelayedReply)
 ///
-/// @param self QDBusContext*
+/// @param self const QDBusContext*
 ///
-bool q_dbuscontext_is_delayed_reply(void* self);
+bool q_dbuscontext_is_delayed_reply(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuscontext.html#setDelayedReply)
 ///
-/// @param self QDBusContext*
+/// @param self const QDBusContext*
 /// @param enable bool
 ///
-void q_dbuscontext_set_delayed_reply(void* self, bool enable);
+void q_dbuscontext_set_delayed_reply(const void* self, bool enable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuscontext.html#sendErrorReply)
 ///
-/// @param self QDBusContext*
+/// @param self const QDBusContext*
 /// @param name const char*
 ///
-void q_dbuscontext_send_error_reply(void* self, const char* name);
+void q_dbuscontext_send_error_reply(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuscontext.html#sendErrorReply)
 ///
-/// @param self QDBusContext*
+/// @param self const QDBusContext*
 /// @param type enum QDBusError__ErrorType
 ///
-void q_dbuscontext_send_error_reply2(void* self, int32_t type);
+void q_dbuscontext_send_error_reply2(const void* self, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuscontext.html#sendErrorReply)
 ///
-/// @param self QDBusContext*
+/// @param self const QDBusContext*
 /// @param name const char*
 /// @param msg const char*
 ///
-void q_dbuscontext_send_error_reply22(void* self, const char* name, const char* msg);
+void q_dbuscontext_send_error_reply22(const void* self, const char* name, const char* msg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuscontext.html#sendErrorReply)
 ///
-/// @param self QDBusContext*
+/// @param self const QDBusContext*
 /// @param type enum QDBusError__ErrorType
 /// @param msg const char*
 ///
-void q_dbuscontext_send_error_reply23(void* self, int32_t type, const char* msg);
+void q_dbuscontext_send_error_reply23(const void* self, int32_t type, const char* msg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuscontext.html#dtor.QDBusContext)
 ///

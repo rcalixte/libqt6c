@@ -51,26 +51,26 @@ KSvg__ImageSet* k_svg__imageset_new5(const char* imageSetName, const char* baseP
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 ///
-const QMetaObject* k_svg__imageset_meta_object(void* self);
+const QMetaObject* k_svg__imageset_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KSvg__ImageSet*
-/// @param callback const QMetaObject* func()
+/// @param self const KSvg__ImageSet*
+/// @param callback const QMetaObject* func(const KSvg__ImageSet* self)
 ///
-void k_svg__imageset_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_svg__imageset_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 ///
-const QMetaObject* k_svg__imageset_super_meta_object(void* self);
+const QMetaObject* k_svg__imageset_super_meta_object(const void* self);
 
 /// @param self KSvg__ImageSet*
 /// @param param1 const char*
@@ -133,9 +133,9 @@ void k_svg__imageset_set_base_path(void* self, const char* basePath);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 ///
-const char* k_svg__imageset_base_path(void* self);
+const char* k_svg__imageset_base_path(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksvg-imageset.html#setSelectors)
 ///
@@ -148,9 +148,9 @@ void k_svg__imageset_set_selectors(void* self, const char* selectors[static 1]);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 ///
-const char** k_svg__imageset_selectors(void* self);
+const char** k_svg__imageset_selectors(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksvg-imageset.html#setImageSetName)
 ///
@@ -163,34 +163,34 @@ void k_svg__imageset_set_image_set_name(void* self, const char* imageSetName);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 ///
-const char* k_svg__imageset_image_set_name(void* self);
+const char* k_svg__imageset_image_set_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksvg-imageset.html#imagePath)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 /// @param name const char*
 ///
-const char* k_svg__imageset_image_path(void* self, const char* name);
+const char* k_svg__imageset_image_path(const void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/ksvg-imageset.html#filePath)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 /// @param name const char*
 ///
-const char* k_svg__imageset_file_path(void* self, const char* name);
+const char* k_svg__imageset_file_path(const void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/ksvg-imageset.html#currentImageSetHasImage)
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 /// @param name const char*
 ///
-bool k_svg__imageset_current_image_set_has_image(void* self, const char* name);
+bool k_svg__imageset_current_image_set_has_image(const void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/ksvg-imageset.html#setUseGlobalSettings)
 ///
@@ -201,9 +201,9 @@ void k_svg__imageset_set_use_global_settings(void* self, bool useGlobal);
 
 /// [Upstream resources](https://api.kde.org/ksvg-imageset.html#useGlobalSettings)
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 ///
-bool k_svg__imageset_use_global_settings(void* self);
+bool k_svg__imageset_use_global_settings(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksvg-imageset.html#setCacheLimit)
 ///
@@ -214,9 +214,9 @@ void k_svg__imageset_set_cache_limit(void* self, int kbytes);
 
 /// [Upstream resources](https://api.kde.org/ksvg-imageset.html#metadata)
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 ///
-KPluginMetaData* k_svg__imageset_metadata(void* self);
+KPluginMetaData* k_svg__imageset_metadata(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksvg-imageset.html#imageSetChanged)
 ///
@@ -271,9 +271,9 @@ const char* k_svg__imageset_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 ///
-const char* k_svg__imageset_object_name(void* self);
+const char* k_svg__imageset_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -288,33 +288,33 @@ void k_svg__imageset_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 ///
-bool k_svg__imageset_is_widget_type(void* self);
+bool k_svg__imageset_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 ///
-bool k_svg__imageset_is_window_type(void* self);
+bool k_svg__imageset_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 ///
-bool k_svg__imageset_is_quick_item_type(void* self);
+bool k_svg__imageset_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 ///
-bool k_svg__imageset_signals_blocked(void* self);
+bool k_svg__imageset_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -329,9 +329,9 @@ bool k_svg__imageset_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 ///
-QThread* k_svg__imageset_thread(void* self);
+QThread* k_svg__imageset_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -382,11 +382,11 @@ void k_svg__imageset_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_svg__imageset_children(void* self);
+libqt_list k_svg__imageset_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -424,7 +424,7 @@ void k_svg__imageset_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_svg__imageset_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_svg__imageset_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -435,18 +435,18 @@ QMetaObject__Connection* k_svg__imageset_connect(void* sender, const char* signa
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_svg__imageset_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_svg__imageset_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_svg__imageset_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_svg__imageset_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -457,7 +457,7 @@ QMetaObject__Connection* k_svg__imageset_connect3(void* self, void* sender, cons
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_svg__imageset_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_svg__imageset_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -468,24 +468,24 @@ bool k_svg__imageset_disconnect(void* sender, const char* signal, void* receiver
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_svg__imageset_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_svg__imageset_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 ///
-bool k_svg__imageset_disconnect3(void* self);
+bool k_svg__imageset_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 /// @param receiver QObject*
 ///
-bool k_svg__imageset_disconnect4(void* self, void* receiver);
+bool k_svg__imageset_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -493,23 +493,23 @@ bool k_svg__imageset_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_svg__imageset_disconnect5(void* param1);
+bool k_svg__imageset_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 ///
-void k_svg__imageset_dump_object_tree(void* self);
+void k_svg__imageset_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 ///
-void k_svg__imageset_dump_object_info(void* self);
+void k_svg__imageset_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -519,16 +519,16 @@ void k_svg__imageset_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_svg__imageset_set_property(void* self, const char* name, void* value);
+bool k_svg__imageset_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 /// @param name const char*
 ///
-QVariant* k_svg__imageset_property(void* self, const char* name);
+QVariant* k_svg__imageset_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -536,9 +536,9 @@ QVariant* k_svg__imageset_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 ///
-const char** k_svg__imageset_dynamic_property_names(void* self);
+const char** k_svg__imageset_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -552,9 +552,9 @@ QBindingStorage* k_svg__imageset_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 ///
-const QBindingStorage* k_svg__imageset_binding_storage2(void* self);
+const QBindingStorage* k_svg__imageset_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -577,18 +577,18 @@ void k_svg__imageset_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 ///
-QObject* k_svg__imageset_parent(void* self);
+QObject* k_svg__imageset_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 /// @param classname const char*
 ///
-bool k_svg__imageset_inherits(void* self, const char* classname);
+bool k_svg__imageset_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -628,7 +628,7 @@ int32_t k_svg__imageset_start_timer23(void* self, int64_t time, int32_t timerTyp
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_svg__imageset_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_svg__imageset_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -640,59 +640,59 @@ QMetaObject__Connection* k_svg__imageset_connect5(void* sender, const char* sign
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_svg__imageset_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_svg__imageset_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_svg__imageset_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_svg__imageset_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 /// @param signal const char*
 ///
-bool k_svg__imageset_disconnect1(void* self, const char* signal);
+bool k_svg__imageset_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KSvg__ImageSet*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_svg__imageset_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_svg__imageset_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_svg__imageset_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_svg__imageset_disconnect23(void* self, void* receiver, const char* member);
+bool k_svg__imageset_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KSvg__ImageSet*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_svg__imageset_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -888,7 +888,7 @@ void k_svg__imageset_on_custom_event(void* self, void (*callback)(void*, void*))
 /// @param self KSvg__ImageSet*
 /// @param signal QMetaMethod*
 ///
-void k_svg__imageset_connect_notify(void* self, void* signal);
+void k_svg__imageset_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -899,7 +899,7 @@ void k_svg__imageset_connect_notify(void* self, void* signal);
 /// @param self KSvg__ImageSet*
 /// @param signal QMetaMethod*
 ///
-void k_svg__imageset_super_connect_notify(void* self, void* signal);
+void k_svg__imageset_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -910,7 +910,7 @@ void k_svg__imageset_super_connect_notify(void* self, void* signal);
 /// @param self KSvg__ImageSet*
 /// @param callback void func(KSvg__ImageSet* self, QMetaMethod* signal)
 ///
-void k_svg__imageset_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_svg__imageset_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -921,7 +921,7 @@ void k_svg__imageset_on_connect_notify(void* self, void (*callback)(void*, void*
 /// @param self KSvg__ImageSet*
 /// @param signal QMetaMethod*
 ///
-void k_svg__imageset_disconnect_notify(void* self, void* signal);
+void k_svg__imageset_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -932,7 +932,7 @@ void k_svg__imageset_disconnect_notify(void* self, void* signal);
 /// @param self KSvg__ImageSet*
 /// @param signal QMetaMethod*
 ///
-void k_svg__imageset_super_disconnect_notify(void* self, void* signal);
+void k_svg__imageset_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -943,7 +943,7 @@ void k_svg__imageset_super_disconnect_notify(void* self, void* signal);
 /// @param self KSvg__ImageSet*
 /// @param callback void func(KSvg__ImageSet* self, QMetaMethod* signal)
 ///
-void k_svg__imageset_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_svg__imageset_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -951,9 +951,9 @@ void k_svg__imageset_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 ///
-QObject* k_svg__imageset_sender(void* self);
+QObject* k_svg__imageset_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -961,9 +961,9 @@ QObject* k_svg__imageset_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 ///
-QObject* k_svg__imageset_super_sender(void* self);
+QObject* k_svg__imageset_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -971,10 +971,10 @@ QObject* k_svg__imageset_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KSvg__ImageSet*
-/// @param callback QObject* func()
+/// @param self const KSvg__ImageSet*
+/// @param callback QObject* func(KSvg__ImageSet* self)
 ///
-void k_svg__imageset_on_sender(void* self, QObject* (*callback)());
+void k_svg__imageset_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -982,9 +982,9 @@ void k_svg__imageset_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 ///
-int32_t k_svg__imageset_sender_signal_index(void* self);
+int32_t k_svg__imageset_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -992,9 +992,9 @@ int32_t k_svg__imageset_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 ///
-int32_t k_svg__imageset_super_sender_signal_index(void* self);
+int32_t k_svg__imageset_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1002,10 +1002,10 @@ int32_t k_svg__imageset_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KSvg__ImageSet*
-/// @param callback int32_t func()
+/// @param self const KSvg__ImageSet*
+/// @param callback int32_t func(KSvg__ImageSet* self)
 ///
-void k_svg__imageset_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_svg__imageset_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1013,10 +1013,10 @@ void k_svg__imageset_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 /// @param signal const char*
 ///
-int32_t k_svg__imageset_receivers(void* self, const char* signal);
+int32_t k_svg__imageset_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1024,10 +1024,10 @@ int32_t k_svg__imageset_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 /// @param signal const char*
 ///
-int32_t k_svg__imageset_super_receivers(void* self, const char* signal);
+int32_t k_svg__imageset_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1035,10 +1035,10 @@ int32_t k_svg__imageset_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 /// @param callback int32_t func(KSvg__ImageSet* self, const char* signal)
 ///
-void k_svg__imageset_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_svg__imageset_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1046,10 +1046,10 @@ void k_svg__imageset_on_receivers(void* self, int32_t (*callback)(void*, const c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 /// @param signal QMetaMethod*
 ///
-bool k_svg__imageset_is_signal_connected(void* self, void* signal);
+bool k_svg__imageset_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1057,10 +1057,10 @@ bool k_svg__imageset_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 /// @param signal QMetaMethod*
 ///
-bool k_svg__imageset_super_is_signal_connected(void* self, void* signal);
+bool k_svg__imageset_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1068,10 +1068,10 @@ bool k_svg__imageset_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KSvg__ImageSet*
+/// @param self const KSvg__ImageSet*
 /// @param callback bool func(KSvg__ImageSet* self, QMetaMethod* signal)
 ///
-void k_svg__imageset_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_svg__imageset_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

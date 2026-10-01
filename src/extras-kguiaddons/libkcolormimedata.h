@@ -15,24 +15,24 @@
 /// @param mimeData QMimeData*
 /// @param color QColor*
 ///
-void k_colormimedata_populate_mime_data(void* mimeData, void* color);
+void k_colormimedata_populate_mime_data(void* mimeData, const void* color);
 
 /// [Upstream resources](https://api.kde.org/kcolormimedata.html#canDecode)
 ///
 /// @param mimeData QMimeData*
 ///
-bool k_colormimedata_can_decode(void* mimeData);
+bool k_colormimedata_can_decode(const void* mimeData);
 
 /// [Upstream resources](https://api.kde.org/kcolormimedata.html#fromMimeData)
 ///
 /// @param mimeData QMimeData*
 ///
-QColor* k_colormimedata_from_mime_data(void* mimeData);
+QColor* k_colormimedata_from_mime_data(const void* mimeData);
 
 /// [Upstream resources](https://api.kde.org/kcolormimedata.html#createDrag)
 ///
 /// @param color QColor*
 /// @param dragsource QObject*
 ///
-QDrag* k_colormimedata_create_drag(void* color, void* dragsource);
+QDrag* k_colormimedata_create_drag(const void* color, void* dragsource);
 #endif

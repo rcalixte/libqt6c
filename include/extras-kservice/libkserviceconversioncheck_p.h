@@ -14,7 +14,7 @@
 ///
 /// @param other KServiceConversionCheck__supported*
 ///
-KServiceConversionCheck__supported* k_serviceconversioncheck__supported_new(void* other);
+KServiceConversionCheck__supported* k_serviceconversioncheck__supported_new(const void* other);
 
 /// [Upstream resources](https://api.kde.org/kserviceconversioncheck-supported.html)
 
@@ -50,7 +50,7 @@ void k_serviceconversioncheck__supported_delete(void* self);
 ///
 /// @param other KServiceConversionCheck__unsupported*
 ///
-KServiceConversionCheck__unsupported* k_serviceconversioncheck__unsupported_new(void* other);
+KServiceConversionCheck__unsupported* k_serviceconversioncheck__unsupported_new(const void* other);
 
 /// [Upstream resources](https://api.kde.org/kserviceconversioncheck-unsupported.html)
 

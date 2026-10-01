@@ -22,7 +22,7 @@ QHstsPolicy* q_hstspolicy_new();
 /// @param flags flag of enum QHstsPolicy__PolicyFlag
 /// @param host const char*
 ///
-QHstsPolicy* q_hstspolicy_new2(void* expiry, int32_t flags, const char* host);
+QHstsPolicy* q_hstspolicy_new2(const void* expiry, int32_t flags, const char* host);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhstspolicy.html)
 
@@ -30,7 +30,7 @@ QHstsPolicy* q_hstspolicy_new2(void* expiry, int32_t flags, const char* host);
 ///
 /// @param rhs QHstsPolicy*
 ///
-QHstsPolicy* q_hstspolicy_new3(void* rhs);
+QHstsPolicy* q_hstspolicy_new3(const void* rhs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhstspolicy.html)
 
@@ -41,14 +41,14 @@ QHstsPolicy* q_hstspolicy_new3(void* rhs);
 /// @param host const char*
 /// @param mode enum QUrl__ParsingMode
 ///
-QHstsPolicy* q_hstspolicy_new4(void* expiry, int32_t flags, const char* host, int32_t mode);
+QHstsPolicy* q_hstspolicy_new4(const void* expiry, int32_t flags, const char* host, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhstspolicy.html#operator-eq)
 ///
 /// @param self QHstsPolicy*
 /// @param rhs QHstsPolicy*
 ///
-void q_hstspolicy_operator_assign(void* self, void* rhs);
+void q_hstspolicy_operator_assign(void* self, const void* rhs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhstspolicy.html#swap)
 ///
@@ -68,22 +68,22 @@ void q_hstspolicy_set_host(void* self, const char* host);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QHstsPolicy*
+/// @param self const QHstsPolicy*
 ///
-const char* q_hstspolicy_host(void* self);
+const char* q_hstspolicy_host(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhstspolicy.html#setExpiry)
 ///
 /// @param self QHstsPolicy*
 /// @param expiry QDateTime*
 ///
-void q_hstspolicy_set_expiry(void* self, void* expiry);
+void q_hstspolicy_set_expiry(void* self, const void* expiry);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhstspolicy.html#expiry)
 ///
-/// @param self QHstsPolicy*
+/// @param self const QHstsPolicy*
 ///
-QDateTime* q_hstspolicy_expiry(void* self);
+QDateTime* q_hstspolicy_expiry(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhstspolicy.html#setIncludesSubDomains)
 ///
@@ -94,15 +94,15 @@ void q_hstspolicy_set_includes_sub_domains(void* self, bool include);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhstspolicy.html#includesSubDomains)
 ///
-/// @param self QHstsPolicy*
+/// @param self const QHstsPolicy*
 ///
-bool q_hstspolicy_includes_sub_domains(void* self);
+bool q_hstspolicy_includes_sub_domains(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhstspolicy.html#isExpired)
 ///
-/// @param self QHstsPolicy*
+/// @param self const QHstsPolicy*
 ///
-bool q_hstspolicy_is_expired(void* self);
+bool q_hstspolicy_is_expired(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhstspolicy.html#setHost)
 ///
@@ -116,10 +116,10 @@ void q_hstspolicy_set_host2(void* self, const char* host, int32_t mode);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QHstsPolicy*
+/// @param self const QHstsPolicy*
 /// @param options flag of enum QUrl__ComponentFormattingOption
 ///
-const char* q_hstspolicy_host1(void* self, uint32_t options);
+const char* q_hstspolicy_host1(const void* self, uint32_t options);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhstspolicy.html#dtor.QHstsPolicy)
 ///

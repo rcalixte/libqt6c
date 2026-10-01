@@ -41,7 +41,7 @@ QCommandLineOption* q_commandlineoption_new4(const char* names[static 1], const 
     return _out;
 }
 
-QCommandLineOption* q_commandlineoption_new5(void* other) {
+QCommandLineOption* q_commandlineoption_new5(const void* other) {
     return QCommandLineOption_New5((QCommandLineOption*)other);
 }
 
@@ -85,7 +85,7 @@ QCommandLineOption* q_commandlineoption_new9(const char* names[static 1], const 
     return _out;
 }
 
-void q_commandlineoption_operator_assign(void* self, void* other) {
+void q_commandlineoption_operator_assign(void* self, const void* other) {
     QCommandLineOption_OperatorAssign((QCommandLineOption*)self, (QCommandLineOption*)other);
 }
 
@@ -93,7 +93,7 @@ void q_commandlineoption_swap(void* self, void* other) {
     QCommandLineOption_Swap((QCommandLineOption*)self, (QCommandLineOption*)other);
 }
 
-const char** q_commandlineoption_names(void* self) {
+const char** q_commandlineoption_names(const void* self) {
     libqt_list _arr = QCommandLineOption_Names((QCommandLineOption*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -114,7 +114,7 @@ void q_commandlineoption_set_value_name(void* self, const char* name) {
     QCommandLineOption_SetValueName((QCommandLineOption*)self, qstring(name));
 }
 
-const char* q_commandlineoption_value_name(void* self) {
+const char* q_commandlineoption_value_name(const void* self) {
     libqt_string _str = QCommandLineOption_ValueName((QCommandLineOption*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -125,7 +125,7 @@ void q_commandlineoption_set_description(void* self, const char* description) {
     QCommandLineOption_SetDescription((QCommandLineOption*)self, qstring(description));
 }
 
-const char* q_commandlineoption_description(void* self) {
+const char* q_commandlineoption_description(const void* self) {
     libqt_string _str = QCommandLineOption_Description((QCommandLineOption*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -150,7 +150,7 @@ void q_commandlineoption_set_default_values(void* self, const char* defaultValue
     free(defaultValues_qstr);
 }
 
-const char** q_commandlineoption_default_values(void* self) {
+const char** q_commandlineoption_default_values(const void* self) {
     libqt_list _arr = QCommandLineOption_DefaultValues((QCommandLineOption*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -167,7 +167,7 @@ const char** q_commandlineoption_default_values(void* self) {
     return _ret;
 }
 
-int32_t q_commandlineoption_flags(void* self) {
+int32_t q_commandlineoption_flags(const void* self) {
     return QCommandLineOption_Flags((QCommandLineOption*)self);
 }
 

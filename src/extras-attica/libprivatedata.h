@@ -20,14 +20,14 @@ Attica__PrivateData* k_attica__privatedata_new();
 ///
 /// @param other Attica__PrivateData*
 ///
-Attica__PrivateData* k_attica__privatedata_new2(void* other);
+Attica__PrivateData* k_attica__privatedata_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-privatedata.html#operator-eq)
 ///
 /// @param self Attica__PrivateData*
 /// @param other Attica__PrivateData*
 ///
-void k_attica__privatedata_operator_assign(void* self, void* other);
+void k_attica__privatedata_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-privatedata.html#setAttribute)
 ///
@@ -41,10 +41,10 @@ void k_attica__privatedata_set_attribute(void* self, const char* key, const char
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__PrivateData*
+/// @param self const Attica__PrivateData*
 /// @param key const char*
 ///
-const char* k_attica__privatedata_attribute(void* self, const char* key);
+const char* k_attica__privatedata_attribute(const void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/attica-privatedata.html#setTimestamp)
 ///
@@ -52,22 +52,22 @@ const char* k_attica__privatedata_attribute(void* self, const char* key);
 /// @param key const char*
 /// @param when QDateTime*
 ///
-void k_attica__privatedata_set_timestamp(void* self, const char* key, void* when);
+void k_attica__privatedata_set_timestamp(void* self, const char* key, const void* when);
 
 /// [Upstream resources](https://api.kde.org/attica-privatedata.html#timestamp)
 ///
-/// @param self Attica__PrivateData*
+/// @param self const Attica__PrivateData*
 /// @param key const char*
 ///
-QDateTime* k_attica__privatedata_timestamp(void* self, const char* key);
+QDateTime* k_attica__privatedata_timestamp(const void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/attica-privatedata.html#keys)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Attica__PrivateData*
+/// @param self const Attica__PrivateData*
 ///
-const char** k_attica__privatedata_keys(void* self);
+const char** k_attica__privatedata_keys(const void* self);
 
 /// Delete this object from C++ memory.
 ///

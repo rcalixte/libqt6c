@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 ///
-const QMetaObject* q_webenginedownloadrequest_meta_object(void* self);
+const QMetaObject* q_webenginedownloadrequest_meta_object(const void* self);
 
 /// @param self QWebEngineDownloadRequest*
 /// @param param1 const char*
@@ -38,63 +38,63 @@ const char* q_webenginedownloadrequest_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#id)
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 ///
-uint32_t q_webenginedownloadrequest_id(void* self);
+uint32_t q_webenginedownloadrequest_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#state)
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 ///
 /// @return enum QWebEngineDownloadRequest__DownloadState
 ///
-int32_t q_webenginedownloadrequest_state(void* self);
+int32_t q_webenginedownloadrequest_state(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#totalBytes)
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 ///
-int64_t q_webenginedownloadrequest_total_bytes(void* self);
+int64_t q_webenginedownloadrequest_total_bytes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#receivedBytes)
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 ///
-int64_t q_webenginedownloadrequest_received_bytes(void* self);
+int64_t q_webenginedownloadrequest_received_bytes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#url)
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 ///
-QUrl* q_webenginedownloadrequest_url(void* self);
+QUrl* q_webenginedownloadrequest_url(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#mimeType)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 ///
-const char* q_webenginedownloadrequest_mime_type(void* self);
+const char* q_webenginedownloadrequest_mime_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#isFinished)
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 ///
-bool q_webenginedownloadrequest_is_finished(void* self);
+bool q_webenginedownloadrequest_is_finished(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#isPaused)
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 ///
-bool q_webenginedownloadrequest_is_paused(void* self);
+bool q_webenginedownloadrequest_is_paused(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#savePageFormat)
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 ///
 /// @return enum QWebEngineDownloadRequest__SavePageFormat
 ///
-int32_t q_webenginedownloadrequest_save_page_format(void* self);
+int32_t q_webenginedownloadrequest_save_page_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#setSavePageFormat)
 ///
@@ -105,41 +105,41 @@ void q_webenginedownloadrequest_set_save_page_format(void* self, int32_t format)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#interruptReason)
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 ///
 /// @return enum QWebEngineDownloadRequest__DownloadInterruptReason
 ///
-int32_t q_webenginedownloadrequest_interrupt_reason(void* self);
+int32_t q_webenginedownloadrequest_interrupt_reason(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#interruptReasonString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 ///
-const char* q_webenginedownloadrequest_interrupt_reason_string(void* self);
+const char* q_webenginedownloadrequest_interrupt_reason_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#isSavePageDownload)
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 ///
-bool q_webenginedownloadrequest_is_save_page_download(void* self);
+bool q_webenginedownloadrequest_is_save_page_download(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#suggestedFileName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 ///
-const char* q_webenginedownloadrequest_suggested_file_name(void* self);
+const char* q_webenginedownloadrequest_suggested_file_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#downloadDirectory)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 ///
-const char* q_webenginedownloadrequest_download_directory(void* self);
+const char* q_webenginedownloadrequest_download_directory(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#setDownloadDirectory)
 ///
@@ -152,9 +152,9 @@ void q_webenginedownloadrequest_set_download_directory(void* self, const char* d
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 ///
-const char* q_webenginedownloadrequest_download_file_name(void* self);
+const char* q_webenginedownloadrequest_download_file_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#setDownloadFileName)
 ///
@@ -165,9 +165,9 @@ void q_webenginedownloadrequest_set_download_file_name(void* self, const char* f
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#page)
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 ///
-QWebEnginePage* q_webenginedownloadrequest_page(void* self);
+QWebEnginePage* q_webenginedownloadrequest_page(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#accept)
 ///
@@ -355,9 +355,9 @@ bool q_webenginedownloadrequest_event_filter(void* self, void* watched, void* ev
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 ///
-const char* q_webenginedownloadrequest_object_name(void* self);
+const char* q_webenginedownloadrequest_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -372,33 +372,33 @@ void q_webenginedownloadrequest_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 ///
-bool q_webenginedownloadrequest_is_widget_type(void* self);
+bool q_webenginedownloadrequest_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 ///
-bool q_webenginedownloadrequest_is_window_type(void* self);
+bool q_webenginedownloadrequest_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 ///
-bool q_webenginedownloadrequest_is_quick_item_type(void* self);
+bool q_webenginedownloadrequest_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 ///
-bool q_webenginedownloadrequest_signals_blocked(void* self);
+bool q_webenginedownloadrequest_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -413,9 +413,9 @@ bool q_webenginedownloadrequest_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 ///
-QThread* q_webenginedownloadrequest_thread(void* self);
+QThread* q_webenginedownloadrequest_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -466,11 +466,11 @@ void q_webenginedownloadrequest_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_webenginedownloadrequest_children(void* self);
+libqt_list q_webenginedownloadrequest_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -508,7 +508,7 @@ void q_webenginedownloadrequest_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_webenginedownloadrequest_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_webenginedownloadrequest_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -519,18 +519,18 @@ QMetaObject__Connection* q_webenginedownloadrequest_connect(void* sender, const 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_webenginedownloadrequest_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_webenginedownloadrequest_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_webenginedownloadrequest_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_webenginedownloadrequest_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -541,7 +541,7 @@ QMetaObject__Connection* q_webenginedownloadrequest_connect3(void* self, void* s
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_webenginedownloadrequest_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_webenginedownloadrequest_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -552,24 +552,24 @@ bool q_webenginedownloadrequest_disconnect(void* sender, const char* signal, voi
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_webenginedownloadrequest_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_webenginedownloadrequest_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 ///
-bool q_webenginedownloadrequest_disconnect3(void* self);
+bool q_webenginedownloadrequest_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 /// @param receiver QObject*
 ///
-bool q_webenginedownloadrequest_disconnect4(void* self, void* receiver);
+bool q_webenginedownloadrequest_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -577,23 +577,23 @@ bool q_webenginedownloadrequest_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_webenginedownloadrequest_disconnect5(void* param1);
+bool q_webenginedownloadrequest_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 ///
-void q_webenginedownloadrequest_dump_object_tree(void* self);
+void q_webenginedownloadrequest_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 ///
-void q_webenginedownloadrequest_dump_object_info(void* self);
+void q_webenginedownloadrequest_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -603,16 +603,16 @@ void q_webenginedownloadrequest_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_webenginedownloadrequest_set_property(void* self, const char* name, void* value);
+bool q_webenginedownloadrequest_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 /// @param name const char*
 ///
-QVariant* q_webenginedownloadrequest_property(void* self, const char* name);
+QVariant* q_webenginedownloadrequest_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -620,9 +620,9 @@ QVariant* q_webenginedownloadrequest_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 ///
-const char** q_webenginedownloadrequest_dynamic_property_names(void* self);
+const char** q_webenginedownloadrequest_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -636,9 +636,9 @@ QBindingStorage* q_webenginedownloadrequest_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 ///
-const QBindingStorage* q_webenginedownloadrequest_binding_storage2(void* self);
+const QBindingStorage* q_webenginedownloadrequest_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -661,18 +661,18 @@ void q_webenginedownloadrequest_on_destroyed(void* self, void (*callback)(void*)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 ///
-QObject* q_webenginedownloadrequest_parent(void* self);
+QObject* q_webenginedownloadrequest_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 /// @param classname const char*
 ///
-bool q_webenginedownloadrequest_inherits(void* self, const char* classname);
+bool q_webenginedownloadrequest_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -712,7 +712,7 @@ int32_t q_webenginedownloadrequest_start_timer23(void* self, int64_t time, int32
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_webenginedownloadrequest_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_webenginedownloadrequest_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -724,59 +724,59 @@ QMetaObject__Connection* q_webenginedownloadrequest_connect5(void* sender, const
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_webenginedownloadrequest_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_webenginedownloadrequest_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_webenginedownloadrequest_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_webenginedownloadrequest_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 /// @param signal const char*
 ///
-bool q_webenginedownloadrequest_disconnect1(void* self, const char* signal);
+bool q_webenginedownloadrequest_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWebEngineDownloadRequest*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_webenginedownloadrequest_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_webenginedownloadrequest_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_webenginedownloadrequest_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWebEngineDownloadRequest*
+/// @param self const QWebEngineDownloadRequest*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_webenginedownloadrequest_disconnect23(void* self, void* receiver, const char* member);
+bool q_webenginedownloadrequest_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QWebEngineDownloadRequest*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_webenginedownloadrequest_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

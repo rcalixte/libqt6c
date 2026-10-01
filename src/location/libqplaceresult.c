@@ -7,15 +7,15 @@ QPlaceResult* q_placeresult_new() {
     return QPlaceResult_New();
 }
 
-QPlaceResult* q_placeresult_new2(void* other) {
+QPlaceResult* q_placeresult_new2(const void* other) {
     return QPlaceResult_New2((QPlaceSearchResult*)other);
 }
 
-QPlaceResult* q_placeresult_new3(void* param1) {
+QPlaceResult* q_placeresult_new3(const void* param1) {
     return QPlaceResult_New3((QPlaceResult*)param1);
 }
 
-double q_placeresult_distance(void* self) {
+double q_placeresult_distance(const void* self) {
     return QPlaceResult_Distance((QPlaceResult*)self);
 }
 
@@ -23,15 +23,15 @@ void q_placeresult_set_distance(void* self, double distance) {
     QPlaceResult_SetDistance((QPlaceResult*)self, distance);
 }
 
-QPlace* q_placeresult_place(void* self) {
+QPlace* q_placeresult_place(const void* self) {
     return QPlaceResult_Place((QPlaceResult*)self);
 }
 
-void q_placeresult_set_place(void* self, void* place) {
+void q_placeresult_set_place(void* self, const void* place) {
     QPlaceResult_SetPlace((QPlaceResult*)self, (QPlace*)place);
 }
 
-bool q_placeresult_is_sponsored(void* self) {
+bool q_placeresult_is_sponsored(const void* self) {
     return QPlaceResult_IsSponsored((QPlaceResult*)self);
 }
 
@@ -39,23 +39,23 @@ void q_placeresult_set_sponsored(void* self, bool sponsored) {
     QPlaceResult_SetSponsored((QPlaceResult*)self, sponsored);
 }
 
-void q_placeresult_operator_assign(void* self, void* param1) {
+void q_placeresult_operator_assign(void* self, const void* param1) {
     QPlaceResult_OperatorAssign((QPlaceResult*)self, (QPlaceResult*)param1);
 }
 
-bool q_placeresult_operator_equal(void* self, void* other) {
+bool q_placeresult_operator_equal(const void* self, const void* other) {
     return QPlaceSearchResult_OperatorEqual((QPlaceSearchResult*)self, (QPlaceSearchResult*)other);
 }
 
-bool q_placeresult_operator_not_equal(void* self, void* other) {
+bool q_placeresult_operator_not_equal(const void* self, const void* other) {
     return QPlaceSearchResult_OperatorNotEqual((QPlaceSearchResult*)self, (QPlaceSearchResult*)other);
 }
 
-int32_t q_placeresult_type(void* self) {
+int32_t q_placeresult_type(const void* self) {
     return QPlaceSearchResult_Type((QPlaceSearchResult*)self);
 }
 
-const char* q_placeresult_title(void* self) {
+const char* q_placeresult_title(const void* self) {
     libqt_string _str = QPlaceSearchResult_Title((QPlaceSearchResult*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -66,11 +66,11 @@ void q_placeresult_set_title(void* self, const char* title) {
     QPlaceSearchResult_SetTitle((QPlaceSearchResult*)self, qstring(title));
 }
 
-QPlaceIcon* q_placeresult_icon(void* self) {
+QPlaceIcon* q_placeresult_icon(const void* self) {
     return QPlaceSearchResult_Icon((QPlaceSearchResult*)self);
 }
 
-void q_placeresult_set_icon(void* self, void* icon) {
+void q_placeresult_set_icon(void* self, const void* icon) {
     QPlaceSearchResult_SetIcon((QPlaceSearchResult*)self, (QPlaceIcon*)icon);
 }
 

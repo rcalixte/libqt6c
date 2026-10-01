@@ -27,26 +27,26 @@ KActionCollection* k_actioncollection_new2(void* parent, const char* cName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
-const QMetaObject* k_actioncollection_meta_object(void* self);
+const QMetaObject* k_actioncollection_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KActionCollection*
-/// @param callback const QMetaObject* func()
+/// @param self const KActionCollection*
+/// @param callback const QMetaObject* func(const KActionCollection* self)
 ///
-void k_actioncollection_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_actioncollection_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
-const QMetaObject* k_actioncollection_super_meta_object(void* self);
+const QMetaObject* k_actioncollection_super_meta_object(const void* self);
 
 /// @param self KActionCollection*
 /// @param param1 const char*
@@ -112,10 +112,10 @@ void k_actioncollection_clear(void* self);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#associateWidget)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 /// @param widget QWidget*
 ///
-void k_actioncollection_associate_widget(void* self, void* widget);
+void k_actioncollection_associate_widget(const void* self, void* widget);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#addAssociatedWidget)
 ///
@@ -133,11 +133,11 @@ void k_actioncollection_remove_associated_widget(void* self, void* widget);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#associatedWidgets)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
 /// @return libqt_list of QWidget*
 ///
-libqt_list k_actioncollection_associated_widgets(void* self);
+libqt_list k_actioncollection_associated_widgets(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#clearAssociatedWidgets)
 ///
@@ -149,15 +149,15 @@ void k_actioncollection_clear_associated_widgets(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
-const char* k_actioncollection_config_group(void* self);
+const char* k_actioncollection_config_group(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#configIsGlobal)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
-bool k_actioncollection_config_is_global(void* self);
+bool k_actioncollection_config_is_global(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#setConfigGroup)
 ///
@@ -188,66 +188,66 @@ void k_actioncollection_import_global_shortcuts(void* self, void* config);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#exportGlobalShortcuts)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 /// @param config KConfigGroup*
 ///
-void k_actioncollection_export_global_shortcuts(void* self, void* config);
+void k_actioncollection_export_global_shortcuts(const void* self, void* config);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#writeSettings)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
-void k_actioncollection_write_settings(void* self);
+void k_actioncollection_write_settings(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#count)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
-int32_t k_actioncollection_count(void* self);
+int32_t k_actioncollection_count(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#isEmpty)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
-bool k_actioncollection_is_empty(void* self);
+bool k_actioncollection_is_empty(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#action)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 /// @param index int
 ///
-QAction* k_actioncollection_action(void* self, int index);
+QAction* k_actioncollection_action(const void* self, int index);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#action)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 /// @param name const char*
 ///
-QAction* k_actioncollection_action2(void* self, const char* name);
+QAction* k_actioncollection_action2(const void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#actions)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list k_actioncollection_actions(void* self);
+libqt_list k_actioncollection_actions(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#actionsWithoutGroup)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list k_actioncollection_actions_without_group(void* self);
+libqt_list k_actioncollection_actions_without_group(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#actionGroups)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
 /// @return libqt_list of QActionGroup*
 ///
-libqt_list k_actioncollection_action_groups(void* self);
+libqt_list k_actioncollection_action_groups(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#setComponentName)
 ///
@@ -260,9 +260,9 @@ void k_actioncollection_set_component_name(void* self, const char* componentName
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
-const char* k_actioncollection_component_name(void* self);
+const char* k_actioncollection_component_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#setComponentDisplayName)
 ///
@@ -275,15 +275,15 @@ void k_actioncollection_set_component_display_name(void* self, const char* displ
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
-const char* k_actioncollection_component_display_name(void* self);
+const char* k_actioncollection_component_display_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#parentGUIClient)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
-const KXMLGUIClient* k_actioncollection_parent_g_u_i_client(void* self);
+const KXMLGUIClient* k_actioncollection_parent_g_u_i_client(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#inserted)
 ///
@@ -345,7 +345,7 @@ void k_actioncollection_on_action_triggered(void* self, void (*callback)(void*, 
 /// @param self KActionCollection*
 /// @param signal QMetaMethod*
 ///
-void k_actioncollection_connect_notify(void* self, void* signal);
+void k_actioncollection_connect_notify(void* self, const void* signal);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#connectNotify)
 ///
@@ -354,7 +354,7 @@ void k_actioncollection_connect_notify(void* self, void* signal);
 /// @param self KActionCollection*
 /// @param callback void func(KActionCollection* self, QMetaMethod* signal)
 ///
-void k_actioncollection_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_actioncollection_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#connectNotify)
 ///
@@ -363,7 +363,7 @@ void k_actioncollection_on_connect_notify(void* self, void (*callback)(void*, vo
 /// @param self KActionCollection*
 /// @param signal QMetaMethod*
 ///
-void k_actioncollection_super_connect_notify(void* self, void* signal);
+void k_actioncollection_super_connect_notify(void* self, const void* signal);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#slotActionTriggered)
 ///
@@ -376,9 +376,9 @@ void k_actioncollection_slot_action_triggered(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KActionCollection*
-/// @param callback void func()
+/// @param callback void func(KActionCollection* self)
 ///
-void k_actioncollection_on_slot_action_triggered(void* self, void (*callback)());
+void k_actioncollection_on_slot_action_triggered(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#slotActionTriggered)
 ///
@@ -465,7 +465,7 @@ libqt_list k_actioncollection_default_shortcuts(void* action);
 /// @param action QAction*
 /// @param shortcut QKeySequence*
 ///
-void k_actioncollection_set_default_shortcut(void* action, void* shortcut);
+void k_actioncollection_set_default_shortcut(void* action, const void* shortcut);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#setDefaultShortcuts)
 ///
@@ -515,35 +515,35 @@ void k_actioncollection_read_settings1(void* self, void* config);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#exportGlobalShortcuts)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 /// @param config KConfigGroup*
 /// @param writeDefaults bool
 ///
-void k_actioncollection_export_global_shortcuts2(void* self, void* config, bool writeDefaults);
+void k_actioncollection_export_global_shortcuts2(const void* self, void* config, bool writeDefaults);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#writeSettings)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 /// @param config KConfigGroup*
 ///
-void k_actioncollection_write_settings1(void* self, void* config);
+void k_actioncollection_write_settings1(const void* self, void* config);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#writeSettings)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 /// @param config KConfigGroup*
 /// @param writeDefaults bool
 ///
-void k_actioncollection_write_settings2(void* self, void* config, bool writeDefaults);
+void k_actioncollection_write_settings2(const void* self, void* config, bool writeDefaults);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#writeSettings)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 /// @param config KConfigGroup*
 /// @param writeDefaults bool
 /// @param oneAction QAction*
 ///
-void k_actioncollection_write_settings3(void* self, void* config, bool writeDefaults, void* oneAction);
+void k_actioncollection_write_settings3(const void* self, void* config, bool writeDefaults, void* oneAction);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#addAction)
 ///
@@ -551,7 +551,7 @@ void k_actioncollection_write_settings3(void* self, void* config, bool writeDefa
 /// @param actionType enum KStandardAction__StandardAction
 /// @param receiver QObject*
 ///
-QAction* k_actioncollection_add_action22(void* self, int32_t actionType, void* receiver);
+QAction* k_actioncollection_add_action22(void* self, int32_t actionType, const void* receiver);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#addAction)
 ///
@@ -560,7 +560,7 @@ QAction* k_actioncollection_add_action22(void* self, int32_t actionType, void* r
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QAction* k_actioncollection_add_action32(void* self, int32_t actionType, void* receiver, const char* member);
+QAction* k_actioncollection_add_action32(void* self, int32_t actionType, const void* receiver, const char* member);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#addAction)
 ///
@@ -569,7 +569,7 @@ QAction* k_actioncollection_add_action32(void* self, int32_t actionType, void* r
 /// @param name const char*
 /// @param receiver QObject*
 ///
-QAction* k_actioncollection_add_action33(void* self, int32_t actionType, const char* name, void* receiver);
+QAction* k_actioncollection_add_action33(void* self, int32_t actionType, const char* name, const void* receiver);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#addAction)
 ///
@@ -579,7 +579,7 @@ QAction* k_actioncollection_add_action33(void* self, int32_t actionType, const c
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QAction* k_actioncollection_add_action42(void* self, int32_t actionType, const char* name, void* receiver, const char* member);
+QAction* k_actioncollection_add_action42(void* self, int32_t actionType, const char* name, const void* receiver, const char* member);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#addAction)
 ///
@@ -587,7 +587,7 @@ QAction* k_actioncollection_add_action42(void* self, int32_t actionType, const c
 /// @param name const char*
 /// @param receiver QObject*
 ///
-QAction* k_actioncollection_add_action23(void* self, const char* name, void* receiver);
+QAction* k_actioncollection_add_action23(void* self, const char* name, const void* receiver);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#addAction)
 ///
@@ -596,7 +596,7 @@ QAction* k_actioncollection_add_action23(void* self, const char* name, void* rec
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QAction* k_actioncollection_add_action34(void* self, const char* name, void* receiver, const char* member);
+QAction* k_actioncollection_add_action34(void* self, const char* name, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -604,9 +604,9 @@ QAction* k_actioncollection_add_action34(void* self, const char* name, void* rec
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
-const char* k_actioncollection_object_name(void* self);
+const char* k_actioncollection_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -621,33 +621,33 @@ void k_actioncollection_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
-bool k_actioncollection_is_widget_type(void* self);
+bool k_actioncollection_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
-bool k_actioncollection_is_window_type(void* self);
+bool k_actioncollection_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
-bool k_actioncollection_is_quick_item_type(void* self);
+bool k_actioncollection_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
-bool k_actioncollection_signals_blocked(void* self);
+bool k_actioncollection_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -662,9 +662,9 @@ bool k_actioncollection_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
-QThread* k_actioncollection_thread(void* self);
+QThread* k_actioncollection_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -715,11 +715,11 @@ void k_actioncollection_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_actioncollection_children(void* self);
+libqt_list k_actioncollection_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -757,7 +757,7 @@ void k_actioncollection_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_actioncollection_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_actioncollection_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -768,18 +768,18 @@ QMetaObject__Connection* k_actioncollection_connect(void* sender, const char* si
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_actioncollection_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_actioncollection_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_actioncollection_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_actioncollection_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -790,7 +790,7 @@ QMetaObject__Connection* k_actioncollection_connect3(void* self, void* sender, c
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_actioncollection_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_actioncollection_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -801,24 +801,24 @@ bool k_actioncollection_disconnect(void* sender, const char* signal, void* recei
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_actioncollection_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_actioncollection_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
-bool k_actioncollection_disconnect3(void* self);
+bool k_actioncollection_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 /// @param receiver QObject*
 ///
-bool k_actioncollection_disconnect4(void* self, void* receiver);
+bool k_actioncollection_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -826,23 +826,23 @@ bool k_actioncollection_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_actioncollection_disconnect5(void* param1);
+bool k_actioncollection_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
-void k_actioncollection_dump_object_tree(void* self);
+void k_actioncollection_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
-void k_actioncollection_dump_object_info(void* self);
+void k_actioncollection_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -852,16 +852,16 @@ void k_actioncollection_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_actioncollection_set_property(void* self, const char* name, void* value);
+bool k_actioncollection_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 /// @param name const char*
 ///
-QVariant* k_actioncollection_property(void* self, const char* name);
+QVariant* k_actioncollection_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -869,9 +869,9 @@ QVariant* k_actioncollection_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
-const char** k_actioncollection_dynamic_property_names(void* self);
+const char** k_actioncollection_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -885,9 +885,9 @@ QBindingStorage* k_actioncollection_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
-const QBindingStorage* k_actioncollection_binding_storage2(void* self);
+const QBindingStorage* k_actioncollection_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -910,18 +910,18 @@ void k_actioncollection_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
-QObject* k_actioncollection_parent(void* self);
+QObject* k_actioncollection_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 /// @param classname const char*
 ///
-bool k_actioncollection_inherits(void* self, const char* classname);
+bool k_actioncollection_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -961,7 +961,7 @@ int32_t k_actioncollection_start_timer23(void* self, int64_t time, int32_t timer
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_actioncollection_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_actioncollection_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -973,59 +973,59 @@ QMetaObject__Connection* k_actioncollection_connect5(void* sender, const char* s
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_actioncollection_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_actioncollection_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_actioncollection_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_actioncollection_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 /// @param signal const char*
 ///
-bool k_actioncollection_disconnect1(void* self, const char* signal);
+bool k_actioncollection_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KActionCollection*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_actioncollection_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_actioncollection_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_actioncollection_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_actioncollection_disconnect23(void* self, void* receiver, const char* member);
+bool k_actioncollection_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KActionCollection*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_actioncollection_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1221,7 +1221,7 @@ void k_actioncollection_on_custom_event(void* self, void (*callback)(void*, void
 /// @param self KActionCollection*
 /// @param signal QMetaMethod*
 ///
-void k_actioncollection_disconnect_notify(void* self, void* signal);
+void k_actioncollection_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1232,7 +1232,7 @@ void k_actioncollection_disconnect_notify(void* self, void* signal);
 /// @param self KActionCollection*
 /// @param signal QMetaMethod*
 ///
-void k_actioncollection_super_disconnect_notify(void* self, void* signal);
+void k_actioncollection_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1243,7 +1243,7 @@ void k_actioncollection_super_disconnect_notify(void* self, void* signal);
 /// @param self KActionCollection*
 /// @param callback void func(KActionCollection* self, QMetaMethod* signal)
 ///
-void k_actioncollection_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_actioncollection_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1251,9 +1251,9 @@ void k_actioncollection_on_disconnect_notify(void* self, void (*callback)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
-QObject* k_actioncollection_sender(void* self);
+QObject* k_actioncollection_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1261,9 +1261,9 @@ QObject* k_actioncollection_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
-QObject* k_actioncollection_super_sender(void* self);
+QObject* k_actioncollection_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1271,10 +1271,10 @@ QObject* k_actioncollection_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KActionCollection*
-/// @param callback QObject* func()
+/// @param self const KActionCollection*
+/// @param callback QObject* func(KActionCollection* self)
 ///
-void k_actioncollection_on_sender(void* self, QObject* (*callback)());
+void k_actioncollection_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1282,9 +1282,9 @@ void k_actioncollection_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
-int32_t k_actioncollection_sender_signal_index(void* self);
+int32_t k_actioncollection_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1292,9 +1292,9 @@ int32_t k_actioncollection_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 ///
-int32_t k_actioncollection_super_sender_signal_index(void* self);
+int32_t k_actioncollection_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1302,10 +1302,10 @@ int32_t k_actioncollection_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KActionCollection*
-/// @param callback int32_t func()
+/// @param self const KActionCollection*
+/// @param callback int32_t func(KActionCollection* self)
 ///
-void k_actioncollection_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_actioncollection_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1313,10 +1313,10 @@ void k_actioncollection_on_sender_signal_index(void* self, int32_t (*callback)()
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 /// @param signal const char*
 ///
-int32_t k_actioncollection_receivers(void* self, const char* signal);
+int32_t k_actioncollection_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1324,10 +1324,10 @@ int32_t k_actioncollection_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 /// @param signal const char*
 ///
-int32_t k_actioncollection_super_receivers(void* self, const char* signal);
+int32_t k_actioncollection_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1335,10 +1335,10 @@ int32_t k_actioncollection_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 /// @param callback int32_t func(KActionCollection* self, const char* signal)
 ///
-void k_actioncollection_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_actioncollection_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1346,10 +1346,10 @@ void k_actioncollection_on_receivers(void* self, int32_t (*callback)(void*, cons
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 /// @param signal QMetaMethod*
 ///
-bool k_actioncollection_is_signal_connected(void* self, void* signal);
+bool k_actioncollection_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1357,10 +1357,10 @@ bool k_actioncollection_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 /// @param signal QMetaMethod*
 ///
-bool k_actioncollection_super_is_signal_connected(void* self, void* signal);
+bool k_actioncollection_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1368,10 +1368,10 @@ bool k_actioncollection_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KActionCollection*
+/// @param self const KActionCollection*
 /// @param callback bool func(KActionCollection* self, QMetaMethod* signal)
 ///
-void k_actioncollection_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_actioncollection_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

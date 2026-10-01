@@ -7,43 +7,43 @@
 #include "libqqmlinfo.hpp"
 #include "libqqmlinfo.h"
 
-QQmlInfo* q_qqmlinfo_h_qml_debug(void* me) {
+QQmlInfo* q_qqmlinfo_h_qml_debug(const void* me) {
     return qqmlinfo_h_QmlDebug((QObject*)me);
 }
 
-QQmlInfo* q_qqmlinfo_h_qml_debug2(void* me, void* error) {
+QQmlInfo* q_qqmlinfo_h_qml_debug2(const void* me, const void* error) {
     return qqmlinfo_h_QmlDebug2((QObject*)me, (QQmlError*)error);
 }
 
-QQmlInfo* q_qqmlinfo_h_qml_debug3(void* me, libqt_list /* of QQmlError* */ errors) {
+QQmlInfo* q_qqmlinfo_h_qml_debug3(const void* me, libqt_list /* of QQmlError* */ errors) {
     return qqmlinfo_h_QmlDebug3((QObject*)me, errors);
 }
 
-QQmlInfo* q_qqmlinfo_h_qml_info(void* me) {
+QQmlInfo* q_qqmlinfo_h_qml_info(const void* me) {
     return qqmlinfo_h_QmlInfo((QObject*)me);
 }
 
-QQmlInfo* q_qqmlinfo_h_qml_info2(void* me, void* error) {
+QQmlInfo* q_qqmlinfo_h_qml_info2(const void* me, const void* error) {
     return qqmlinfo_h_QmlInfo2((QObject*)me, (QQmlError*)error);
 }
 
-QQmlInfo* q_qqmlinfo_h_qml_info3(void* me, libqt_list /* of QQmlError* */ errors) {
+QQmlInfo* q_qqmlinfo_h_qml_info3(const void* me, libqt_list /* of QQmlError* */ errors) {
     return qqmlinfo_h_QmlInfo3((QObject*)me, errors);
 }
 
-QQmlInfo* q_qqmlinfo_h_qml_warning(void* me) {
+QQmlInfo* q_qqmlinfo_h_qml_warning(const void* me) {
     return qqmlinfo_h_QmlWarning((QObject*)me);
 }
 
-QQmlInfo* q_qqmlinfo_h_qml_warning2(void* me, void* error) {
+QQmlInfo* q_qqmlinfo_h_qml_warning2(const void* me, const void* error) {
     return qqmlinfo_h_QmlWarning2((QObject*)me, (QQmlError*)error);
 }
 
-QQmlInfo* q_qqmlinfo_h_qml_warning3(void* me, libqt_list /* of QQmlError* */ errors) {
+QQmlInfo* q_qqmlinfo_h_qml_warning3(const void* me, libqt_list /* of QQmlError* */ errors) {
     return qqmlinfo_h_QmlWarning3((QObject*)me, errors);
 }
 
-QQmlInfo* q_qmlinfo_new(void* param1) {
+QQmlInfo* q_qmlinfo_new(const void* param1) {
     return QQmlInfo_New((QQmlInfo*)param1);
 }
 
@@ -127,11 +127,11 @@ QQmlInfo* q_qmlinfo_operator_shift_left20(void* self, QTextStream* (*f)(void* fu
     return QQmlInfo_OperatorShiftLeft20((QQmlInfo*)self, (intptr_t)f);
 }
 
-QQmlInfo* q_qmlinfo_operator_shift_left22(void* self, void* t) {
+QQmlInfo* q_qmlinfo_operator_shift_left22(void* self, const void* t) {
     return QQmlInfo_OperatorShiftLeft22((QQmlInfo*)self, (QUrl*)t);
 }
 
-void q_qmlinfo_operator_assign(void* self, void* param1) {
+void q_qmlinfo_operator_assign(void* self, const void* param1) {
     QQmlInfo_OperatorAssign((QQmlInfo*)self, (QQmlInfo*)param1);
 }
 
@@ -159,7 +159,7 @@ QDebug* q_qmlinfo_verbosity(void* self, int verbosityLevel) {
     return QDebug_Verbosity((QDebug*)self, verbosityLevel);
 }
 
-int32_t q_qmlinfo_verbosity2(void* self) {
+int32_t q_qmlinfo_verbosity2(const void* self) {
     return QDebug_Verbosity2((QDebug*)self);
 }
 
@@ -167,7 +167,7 @@ void q_qmlinfo_set_verbosity(void* self, int verbosityLevel) {
     QDebug_SetVerbosity((QDebug*)self, verbosityLevel);
 }
 
-bool q_qmlinfo_auto_insert_spaces(void* self) {
+bool q_qmlinfo_auto_insert_spaces(const void* self) {
     return QDebug_AutoInsertSpaces((QDebug*)self);
 }
 
@@ -175,7 +175,7 @@ void q_qmlinfo_set_auto_insert_spaces(void* self, bool b) {
     QDebug_SetAutoInsertSpaces((QDebug*)self, b);
 }
 
-bool q_qmlinfo_quote_strings(void* self) {
+bool q_qmlinfo_quote_strings(const void* self) {
     return QDebug_QuoteStrings((QDebug*)self);
 }
 

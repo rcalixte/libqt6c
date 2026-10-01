@@ -26,55 +26,55 @@ PackageKit__Details* q_packagekit__details_new2(libqt_map other);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self PackageKit__Details*
+/// @param self const PackageKit__Details*
 ///
-const char* q_packagekit__details_package_id(void* self);
+const char* q_packagekit__details_package_id(const void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self PackageKit__Details*
+/// @param self const PackageKit__Details*
 ///
-const char* q_packagekit__details_description(void* self);
+const char* q_packagekit__details_description(const void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
-/// @param self PackageKit__Details*
+/// @param self const PackageKit__Details*
 ///
 /// @return enum PackageKit__Transaction__Group
 ///
-int32_t q_packagekit__details_group(void* self);
+int32_t q_packagekit__details_group(const void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self PackageKit__Details*
+/// @param self const PackageKit__Details*
 ///
-const char* q_packagekit__details_summary(void* self);
+const char* q_packagekit__details_summary(const void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self PackageKit__Details*
+/// @param self const PackageKit__Details*
 ///
-const char* q_packagekit__details_url(void* self);
+const char* q_packagekit__details_url(const void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self PackageKit__Details*
+/// @param self const PackageKit__Details*
 ///
-const char* q_packagekit__details_license(void* self);
+const char* q_packagekit__details_license(const void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
-/// @param self PackageKit__Details*
+/// @param self const PackageKit__Details*
 ///
-uintptr_t q_packagekit__details_size(void* self);
+uintptr_t q_packagekit__details_size(const void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///

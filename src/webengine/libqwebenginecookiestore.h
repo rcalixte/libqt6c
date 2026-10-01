@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QWebEngineCookieStore*
+/// @param self const QWebEngineCookieStore*
 ///
-const QMetaObject* q_webenginecookiestore_meta_object(void* self);
+const QMetaObject* q_webenginecookiestore_meta_object(const void* self);
 
 /// @param self QWebEngineCookieStore*
 /// @param param1 const char*
@@ -41,21 +41,21 @@ const char* q_webenginecookiestore_tr(const char* s);
 /// @param self QWebEngineCookieStore*
 /// @param filterCallback bool func(QWebEngineCookieStore__FilterRequest* param1)
 ///
-void q_webenginecookiestore_set_cookie_filter(void* self, bool (*filterCallback)(void* funcparam1));
+void q_webenginecookiestore_set_cookie_filter(void* self, bool (*filterCallback)(const void* funcparam1));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore.html#setCookie)
 ///
 /// @param self QWebEngineCookieStore*
 /// @param cookie QNetworkCookie*
 ///
-void q_webenginecookiestore_set_cookie(void* self, void* cookie);
+void q_webenginecookiestore_set_cookie(void* self, const void* cookie);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore.html#deleteCookie)
 ///
 /// @param self QWebEngineCookieStore*
 /// @param cookie QNetworkCookie*
 ///
-void q_webenginecookiestore_delete_cookie(void* self, void* cookie);
+void q_webenginecookiestore_delete_cookie(void* self, const void* cookie);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore.html#deleteSessionCookies)
 ///
@@ -80,28 +80,28 @@ void q_webenginecookiestore_load_all_cookies(void* self);
 /// @param self QWebEngineCookieStore*
 /// @param cookie QNetworkCookie*
 ///
-void q_webenginecookiestore_cookie_added(void* self, void* cookie);
+void q_webenginecookiestore_cookie_added(void* self, const void* cookie);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore.html#cookieAdded)
 ///
 /// @param self QWebEngineCookieStore*
 /// @param callback void func(QWebEngineCookieStore* self, QNetworkCookie* cookie)
 ///
-void q_webenginecookiestore_on_cookie_added(void* self, void (*callback)(void*, void*));
+void q_webenginecookiestore_on_cookie_added(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore.html#cookieRemoved)
 ///
 /// @param self QWebEngineCookieStore*
 /// @param cookie QNetworkCookie*
 ///
-void q_webenginecookiestore_cookie_removed(void* self, void* cookie);
+void q_webenginecookiestore_cookie_removed(void* self, const void* cookie);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore.html#cookieRemoved)
 ///
 /// @param self QWebEngineCookieStore*
 /// @param callback void func(QWebEngineCookieStore* self, QNetworkCookie* cookie)
 ///
-void q_webenginecookiestore_on_cookie_removed(void* self, void (*callback)(void*, void*));
+void q_webenginecookiestore_on_cookie_removed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -128,7 +128,7 @@ const char* q_webenginecookiestore_tr3(const char* s, const char* c, int n);
 /// @param cookie QNetworkCookie*
 /// @param origin QUrl*
 ///
-void q_webenginecookiestore_set_cookie2(void* self, void* cookie, void* origin);
+void q_webenginecookiestore_set_cookie2(void* self, const void* cookie, const void* origin);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore.html#deleteCookie)
 ///
@@ -136,7 +136,7 @@ void q_webenginecookiestore_set_cookie2(void* self, void* cookie, void* origin);
 /// @param cookie QNetworkCookie*
 /// @param origin QUrl*
 ///
-void q_webenginecookiestore_delete_cookie2(void* self, void* cookie, void* origin);
+void q_webenginecookiestore_delete_cookie2(void* self, const void* cookie, const void* origin);
 
 /// Inherited from QObject
 ///
@@ -163,9 +163,9 @@ bool q_webenginecookiestore_event_filter(void* self, void* watched, void* event)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWebEngineCookieStore*
+/// @param self const QWebEngineCookieStore*
 ///
-const char* q_webenginecookiestore_object_name(void* self);
+const char* q_webenginecookiestore_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -180,33 +180,33 @@ void q_webenginecookiestore_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QWebEngineCookieStore*
+/// @param self const QWebEngineCookieStore*
 ///
-bool q_webenginecookiestore_is_widget_type(void* self);
+bool q_webenginecookiestore_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QWebEngineCookieStore*
+/// @param self const QWebEngineCookieStore*
 ///
-bool q_webenginecookiestore_is_window_type(void* self);
+bool q_webenginecookiestore_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QWebEngineCookieStore*
+/// @param self const QWebEngineCookieStore*
 ///
-bool q_webenginecookiestore_is_quick_item_type(void* self);
+bool q_webenginecookiestore_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QWebEngineCookieStore*
+/// @param self const QWebEngineCookieStore*
 ///
-bool q_webenginecookiestore_signals_blocked(void* self);
+bool q_webenginecookiestore_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -221,9 +221,9 @@ bool q_webenginecookiestore_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QWebEngineCookieStore*
+/// @param self const QWebEngineCookieStore*
 ///
-QThread* q_webenginecookiestore_thread(void* self);
+QThread* q_webenginecookiestore_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -274,11 +274,11 @@ void q_webenginecookiestore_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QWebEngineCookieStore*
+/// @param self const QWebEngineCookieStore*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_webenginecookiestore_children(void* self);
+libqt_list q_webenginecookiestore_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -316,7 +316,7 @@ void q_webenginecookiestore_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_webenginecookiestore_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_webenginecookiestore_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -327,18 +327,18 @@ QMetaObject__Connection* q_webenginecookiestore_connect(void* sender, const char
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_webenginecookiestore_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_webenginecookiestore_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QWebEngineCookieStore*
+/// @param self const QWebEngineCookieStore*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_webenginecookiestore_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_webenginecookiestore_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -349,7 +349,7 @@ QMetaObject__Connection* q_webenginecookiestore_connect3(void* self, void* sende
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_webenginecookiestore_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_webenginecookiestore_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -360,24 +360,24 @@ bool q_webenginecookiestore_disconnect(void* sender, const char* signal, void* r
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_webenginecookiestore_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_webenginecookiestore_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWebEngineCookieStore*
+/// @param self const QWebEngineCookieStore*
 ///
-bool q_webenginecookiestore_disconnect3(void* self);
+bool q_webenginecookiestore_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWebEngineCookieStore*
+/// @param self const QWebEngineCookieStore*
 /// @param receiver QObject*
 ///
-bool q_webenginecookiestore_disconnect4(void* self, void* receiver);
+bool q_webenginecookiestore_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -385,23 +385,23 @@ bool q_webenginecookiestore_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_webenginecookiestore_disconnect5(void* param1);
+bool q_webenginecookiestore_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QWebEngineCookieStore*
+/// @param self const QWebEngineCookieStore*
 ///
-void q_webenginecookiestore_dump_object_tree(void* self);
+void q_webenginecookiestore_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QWebEngineCookieStore*
+/// @param self const QWebEngineCookieStore*
 ///
-void q_webenginecookiestore_dump_object_info(void* self);
+void q_webenginecookiestore_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -411,16 +411,16 @@ void q_webenginecookiestore_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_webenginecookiestore_set_property(void* self, const char* name, void* value);
+bool q_webenginecookiestore_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QWebEngineCookieStore*
+/// @param self const QWebEngineCookieStore*
 /// @param name const char*
 ///
-QVariant* q_webenginecookiestore_property(void* self, const char* name);
+QVariant* q_webenginecookiestore_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -428,9 +428,9 @@ QVariant* q_webenginecookiestore_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QWebEngineCookieStore*
+/// @param self const QWebEngineCookieStore*
 ///
-const char** q_webenginecookiestore_dynamic_property_names(void* self);
+const char** q_webenginecookiestore_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -444,9 +444,9 @@ QBindingStorage* q_webenginecookiestore_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QWebEngineCookieStore*
+/// @param self const QWebEngineCookieStore*
 ///
-const QBindingStorage* q_webenginecookiestore_binding_storage2(void* self);
+const QBindingStorage* q_webenginecookiestore_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -469,18 +469,18 @@ void q_webenginecookiestore_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QWebEngineCookieStore*
+/// @param self const QWebEngineCookieStore*
 ///
-QObject* q_webenginecookiestore_parent(void* self);
+QObject* q_webenginecookiestore_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QWebEngineCookieStore*
+/// @param self const QWebEngineCookieStore*
 /// @param classname const char*
 ///
-bool q_webenginecookiestore_inherits(void* self, const char* classname);
+bool q_webenginecookiestore_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -520,7 +520,7 @@ int32_t q_webenginecookiestore_start_timer23(void* self, int64_t time, int32_t t
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_webenginecookiestore_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_webenginecookiestore_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -532,59 +532,59 @@ QMetaObject__Connection* q_webenginecookiestore_connect5(void* sender, const cha
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_webenginecookiestore_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_webenginecookiestore_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QWebEngineCookieStore*
+/// @param self const QWebEngineCookieStore*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_webenginecookiestore_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_webenginecookiestore_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWebEngineCookieStore*
+/// @param self const QWebEngineCookieStore*
 /// @param signal const char*
 ///
-bool q_webenginecookiestore_disconnect1(void* self, const char* signal);
+bool q_webenginecookiestore_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWebEngineCookieStore*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_webenginecookiestore_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QWebEngineCookieStore*
+/// @param self const QWebEngineCookieStore*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_webenginecookiestore_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_webenginecookiestore_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWebEngineCookieStore*
+/// @param self const QWebEngineCookieStore*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_webenginecookiestore_disconnect23(void* self, void* receiver, const char* member);
+bool q_webenginecookiestore_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QWebEngineCookieStore*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_webenginecookiestore_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -635,13 +635,13 @@ QWebEngineCookieStore__FilterRequest* q_webenginecookiestore__filterrequest_new(
 ///
 /// @param param1 QWebEngineCookieStore__FilterRequest*
 ///
-QWebEngineCookieStore__FilterRequest* q_webenginecookiestore__filterrequest_new2(void* param1);
+QWebEngineCookieStore__FilterRequest* q_webenginecookiestore__filterrequest_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#firstPartyUrl-var)
 ///
-/// @param self QWebEngineCookieStore__FilterRequest*
+/// @param self const QWebEngineCookieStore__FilterRequest*
 ///
-QUrl* q_webenginecookiestore__filterrequest_first_party_url(void* self);
+QUrl* q_webenginecookiestore__filterrequest_first_party_url(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#firstPartyUrl-var)
 ///
@@ -652,9 +652,9 @@ void q_webenginecookiestore__filterrequest_set_first_party_url(void* self, void*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#origin-var)
 ///
-/// @param self QWebEngineCookieStore__FilterRequest*
+/// @param self const QWebEngineCookieStore__FilterRequest*
 ///
-QUrl* q_webenginecookiestore__filterrequest_origin(void* self);
+QUrl* q_webenginecookiestore__filterrequest_origin(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#origin-var)
 ///
@@ -665,9 +665,9 @@ void q_webenginecookiestore__filterrequest_set_origin(void* self, void* origin);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#thirdParty-var)
 ///
-/// @param self QWebEngineCookieStore__FilterRequest*
+/// @param self const QWebEngineCookieStore__FilterRequest*
 ///
-bool q_webenginecookiestore__filterrequest_third_party(void* self);
+bool q_webenginecookiestore__filterrequest_third_party(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#thirdParty-var)
 ///
@@ -678,9 +678,9 @@ void q_webenginecookiestore__filterrequest_set_third_party(void* self, bool thir
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#reservedFlag-var)
 ///
-/// @param self QWebEngineCookieStore__FilterRequest*
+/// @param self const QWebEngineCookieStore__FilterRequest*
 ///
-bool q_webenginecookiestore__filterrequest_reserved_flag(void* self);
+bool q_webenginecookiestore__filterrequest_reserved_flag(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#reservedFlag-var)
 ///
@@ -691,9 +691,9 @@ void q_webenginecookiestore__filterrequest_set_reserved_flag(void* self, bool re
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#reservedType-var)
 ///
-/// @param self QWebEngineCookieStore__FilterRequest*
+/// @param self const QWebEngineCookieStore__FilterRequest*
 ///
-uint16_t q_webenginecookiestore__filterrequest_reserved_type(void* self);
+uint16_t q_webenginecookiestore__filterrequest_reserved_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#reservedType-var)
 ///
@@ -707,7 +707,7 @@ void q_webenginecookiestore__filterrequest_set_reserved_type(void* self, uint16_
 /// @param self QWebEngineCookieStore__FilterRequest*
 /// @param param1 QWebEngineCookieStore__FilterRequest*
 ///
-void q_webenginecookiestore__filterrequest_operator_assign(void* self, void* param1);
+void q_webenginecookiestore__filterrequest_operator_assign(void* self, const void* param1);
 
 /// Delete this object from C++ memory.
 ///

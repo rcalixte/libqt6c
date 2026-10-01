@@ -24,26 +24,26 @@ QVideoWidget* q_videowidget_new2();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-const QMetaObject* q_videowidget_meta_object(void* self);
+const QMetaObject* q_videowidget_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QVideoWidget*
-/// @param callback const QMetaObject* func()
+/// @param self const QVideoWidget*
+/// @param callback const QMetaObject* func(const QVideoWidget* self)
 ///
-void q_videowidget_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_videowidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-const QMetaObject* q_videowidget_super_meta_object(void* self);
+const QMetaObject* q_videowidget_super_meta_object(const void* self);
 
 /// @param self QVideoWidget*
 /// @param param1 const char*
@@ -97,42 +97,42 @@ const char* q_videowidget_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideowidget.html#videoSink)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QVideoSink* q_videowidget_video_sink(void* self);
+QVideoSink* q_videowidget_video_sink(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideowidget.html#aspectRatioMode)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
 /// @return enum Qt__AspectRatioMode
 ///
-int32_t q_videowidget_aspect_ratio_mode(void* self);
+int32_t q_videowidget_aspect_ratio_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideowidget.html#sizeHint)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QSize* q_videowidget_size_hint(void* self);
+QSize* q_videowidget_size_hint(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideowidget.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QVideoWidget*
-/// @param callback QSize* func()
+/// @param self const QVideoWidget*
+/// @param callback QSize* func(const QVideoWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_videowidget_on_size_hint(void* self, QSize* (*callback)());
+void q_videowidget_on_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideowidget.html#sizeHint)
 ///
 /// Base class method implementation
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QSize* q_videowidget_super_size_hint(void* self);
+QSize* q_videowidget_super_size_hint(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideowidget.html#setFullScreen)
 ///
@@ -340,9 +340,9 @@ QVideoWidget* q_videowidget_from_q_paint_device(void* _qpaintdevice);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-uintptr_t q_videowidget_win_id(void* self);
+uintptr_t q_videowidget_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -356,25 +356,25 @@ void q_videowidget_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-uintptr_t q_videowidget_internal_win_id(void* self);
+uintptr_t q_videowidget_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-uintptr_t q_videowidget_effective_win_id(void* self);
+uintptr_t q_videowidget_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QStyle* q_videowidget_style(void* self);
+QStyle* q_videowidget_style(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -389,35 +389,35 @@ void q_videowidget_set_style(void* self, void* style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-bool q_videowidget_is_top_level(void* self);
+bool q_videowidget_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-bool q_videowidget_is_window(void* self);
+bool q_videowidget_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-bool q_videowidget_is_modal(void* self);
+bool q_videowidget_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t q_videowidget_window_modality(void* self);
+int32_t q_videowidget_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -432,18 +432,18 @@ void q_videowidget_set_window_modality(void* self, int32_t windowModality);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-bool q_videowidget_is_enabled(void* self);
+bool q_videowidget_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param param1 QWidget*
 ///
-bool q_videowidget_is_enabled_to(void* self, void* param1);
+bool q_videowidget_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -476,153 +476,153 @@ void q_videowidget_set_window_modified(void* self, bool windowModified);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QRect* q_videowidget_frame_geometry(void* self);
+QRect* q_videowidget_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-const QRect* q_videowidget_geometry(void* self);
+const QRect* q_videowidget_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QRect* q_videowidget_normal_geometry(void* self);
+QRect* q_videowidget_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-int32_t q_videowidget_x(void* self);
+int32_t q_videowidget_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-int32_t q_videowidget_y(void* self);
+int32_t q_videowidget_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QPoint* q_videowidget_pos(void* self);
+QPoint* q_videowidget_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QSize* q_videowidget_frame_size(void* self);
+QSize* q_videowidget_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QSize* q_videowidget_size(void* self);
+QSize* q_videowidget_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-int32_t q_videowidget_width(void* self);
+int32_t q_videowidget_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-int32_t q_videowidget_height(void* self);
+int32_t q_videowidget_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QRect* q_videowidget_rect(void* self);
+QRect* q_videowidget_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QRect* q_videowidget_children_rect(void* self);
+QRect* q_videowidget_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QRegion* q_videowidget_children_region(void* self);
+QRegion* q_videowidget_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QSize* q_videowidget_minimum_size(void* self);
+QSize* q_videowidget_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QSize* q_videowidget_maximum_size(void* self);
+QSize* q_videowidget_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-int32_t q_videowidget_minimum_width(void* self);
+int32_t q_videowidget_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-int32_t q_videowidget_minimum_height(void* self);
+int32_t q_videowidget_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-int32_t q_videowidget_maximum_width(void* self);
+int32_t q_videowidget_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-int32_t q_videowidget_maximum_height(void* self);
+int32_t q_videowidget_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -631,7 +631,7 @@ int32_t q_videowidget_maximum_height(void* self);
 /// @param self QVideoWidget*
 /// @param minimumSize QSize*
 ///
-void q_videowidget_set_minimum_size(void* self, void* minimumSize);
+void q_videowidget_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -650,7 +650,7 @@ void q_videowidget_set_minimum_size2(void* self, int minw, int minh);
 /// @param self QVideoWidget*
 /// @param maximumSize QSize*
 ///
-void q_videowidget_set_maximum_size(void* self, void* maximumSize);
+void q_videowidget_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -702,9 +702,9 @@ void q_videowidget_set_maximum_height(void* self, int maxh);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QSize* q_videowidget_size_increment(void* self);
+QSize* q_videowidget_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -713,7 +713,7 @@ QSize* q_videowidget_size_increment(void* self);
 /// @param self QVideoWidget*
 /// @param sizeIncrement QSize*
 ///
-void q_videowidget_set_size_increment(void* self, void* sizeIncrement);
+void q_videowidget_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -729,9 +729,9 @@ void q_videowidget_set_size_increment2(void* self, int w, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QSize* q_videowidget_base_size(void* self);
+QSize* q_videowidget_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -740,7 +740,7 @@ QSize* q_videowidget_base_size(void* self);
 /// @param self QVideoWidget*
 /// @param baseSize QSize*
 ///
-void q_videowidget_set_base_size(void* self, void* baseSize);
+void q_videowidget_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -759,7 +759,7 @@ void q_videowidget_set_base_size2(void* self, int basew, int baseh);
 /// @param self QVideoWidget*
 /// @param fixedSize QSize*
 ///
-void q_videowidget_set_fixed_size(void* self, void* fixedSize);
+void q_videowidget_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -793,145 +793,145 @@ void q_videowidget_set_fixed_height(void* self, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param param1 QPointF*
 ///
-QPointF* q_videowidget_map_to_global(void* self, void* param1);
+QPointF* q_videowidget_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param param1 QPoint*
 ///
-QPoint* q_videowidget_map_to_global2(void* self, void* param1);
+QPoint* q_videowidget_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param param1 QPointF*
 ///
-QPointF* q_videowidget_map_from_global(void* self, void* param1);
+QPointF* q_videowidget_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param param1 QPoint*
 ///
-QPoint* q_videowidget_map_from_global2(void* self, void* param1);
+QPoint* q_videowidget_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param param1 QPointF*
 ///
-QPointF* q_videowidget_map_to_parent(void* self, void* param1);
+QPointF* q_videowidget_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param param1 QPoint*
 ///
-QPoint* q_videowidget_map_to_parent2(void* self, void* param1);
+QPoint* q_videowidget_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param param1 QPointF*
 ///
-QPointF* q_videowidget_map_from_parent(void* self, void* param1);
+QPointF* q_videowidget_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param param1 QPoint*
 ///
-QPoint* q_videowidget_map_from_parent2(void* self, void* param1);
+QPoint* q_videowidget_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* q_videowidget_map_to(void* self, void* param1, void* param2);
+QPointF* q_videowidget_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* q_videowidget_map_to2(void* self, void* param1, void* param2);
+QPoint* q_videowidget_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* q_videowidget_map_from(void* self, void* param1, void* param2);
+QPointF* q_videowidget_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* q_videowidget_map_from2(void* self, void* param1, void* param2);
+QPoint* q_videowidget_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QWidget* q_videowidget_window(void* self);
+QWidget* q_videowidget_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QWidget* q_videowidget_native_parent_widget(void* self);
+QWidget* q_videowidget_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QWidget* q_videowidget_top_level_widget(void* self);
+QWidget* q_videowidget_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-const QPalette* q_videowidget_palette(void* self);
+const QPalette* q_videowidget_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -940,7 +940,7 @@ const QPalette* q_videowidget_palette(void* self);
 /// @param self QVideoWidget*
 /// @param palette QPalette*
 ///
-void q_videowidget_set_palette(void* self, void* palette);
+void q_videowidget_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -955,11 +955,11 @@ void q_videowidget_set_background_role(void* self, int32_t backgroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t q_videowidget_background_role(void* self);
+int32_t q_videowidget_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -974,19 +974,19 @@ void q_videowidget_set_foreground_role(void* self, int32_t foregroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t q_videowidget_foreground_role(void* self);
+int32_t q_videowidget_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-const QFont* q_videowidget_font(void* self);
+const QFont* q_videowidget_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -995,31 +995,31 @@ const QFont* q_videowidget_font(void* self);
 /// @param self QVideoWidget*
 /// @param font QFont*
 ///
-void q_videowidget_set_font(void* self, void* font);
+void q_videowidget_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QFontMetrics* q_videowidget_font_metrics(void* self);
+QFontMetrics* q_videowidget_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QFontInfo* q_videowidget_font_info(void* self);
+QFontInfo* q_videowidget_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QCursor* q_videowidget_cursor(void* self);
+QCursor* q_videowidget_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1028,7 +1028,7 @@ QCursor* q_videowidget_cursor(void* self);
 /// @param self QVideoWidget*
 /// @param cursor QCursor*
 ///
-void q_videowidget_set_cursor(void* self, void* cursor);
+void q_videowidget_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -1051,17 +1051,17 @@ void q_videowidget_set_mouse_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-bool q_videowidget_has_mouse_tracking(void* self);
+bool q_videowidget_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-bool q_videowidget_under_mouse(void* self);
+bool q_videowidget_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1076,9 +1076,9 @@ void q_videowidget_set_tablet_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-bool q_videowidget_has_tablet_tracking(void* self);
+bool q_videowidget_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1087,7 +1087,7 @@ bool q_videowidget_has_tablet_tracking(void* self);
 /// @param self QVideoWidget*
 /// @param mask QBitmap*
 ///
-void q_videowidget_set_mask(void* self, void* mask);
+void q_videowidget_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -1096,15 +1096,15 @@ void q_videowidget_set_mask(void* self, void* mask);
 /// @param self QVideoWidget*
 /// @param mask QRegion*
 ///
-void q_videowidget_set_mask2(void* self, void* mask);
+void q_videowidget_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QRegion* q_videowidget_mask(void* self);
+QRegion* q_videowidget_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1144,9 +1144,9 @@ QPixmap* q_videowidget_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QGraphicsEffect* q_videowidget_graphics_effect(void* self);
+QGraphicsEffect* q_videowidget_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1199,9 +1199,9 @@ void q_videowidget_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-const char* q_videowidget_style_sheet(void* self);
+const char* q_videowidget_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1209,9 +1209,9 @@ const char* q_videowidget_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-const char* q_videowidget_window_title(void* self);
+const char* q_videowidget_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1220,15 +1220,15 @@ const char* q_videowidget_window_title(void* self);
 /// @param self QVideoWidget*
 /// @param icon QIcon*
 ///
-void q_videowidget_set_window_icon(void* self, void* icon);
+void q_videowidget_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QIcon* q_videowidget_window_icon(void* self);
+QIcon* q_videowidget_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1245,9 +1245,9 @@ void q_videowidget_set_window_icon_text(void* self, const char* windowIconText);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-const char* q_videowidget_window_icon_text(void* self);
+const char* q_videowidget_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1264,9 +1264,9 @@ void q_videowidget_set_window_role(void* self, const char* windowRole);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-const char* q_videowidget_window_role(void* self);
+const char* q_videowidget_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1283,9 +1283,9 @@ void q_videowidget_set_window_file_path(void* self, const char* filePath);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-const char* q_videowidget_window_file_path(void* self);
+const char* q_videowidget_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1300,17 +1300,17 @@ void q_videowidget_set_window_opacity(void* self, double level);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-double q_videowidget_window_opacity(void* self);
+double q_videowidget_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-bool q_videowidget_is_window_modified(void* self);
+bool q_videowidget_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1327,9 +1327,9 @@ void q_videowidget_set_tool_tip(void* self, const char* toolTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-const char* q_videowidget_tool_tip(void* self);
+const char* q_videowidget_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1344,9 +1344,9 @@ void q_videowidget_set_tool_tip_duration(void* self, int msec);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-int32_t q_videowidget_tool_tip_duration(void* self);
+int32_t q_videowidget_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1363,9 +1363,9 @@ void q_videowidget_set_status_tip(void* self, const char* statusTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-const char* q_videowidget_status_tip(void* self);
+const char* q_videowidget_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1382,9 +1382,9 @@ void q_videowidget_set_whats_this(void* self, const char* whatsThis);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-const char* q_videowidget_whats_this(void* self);
+const char* q_videowidget_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1392,9 +1392,9 @@ const char* q_videowidget_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-const char* q_videowidget_accessible_name(void* self);
+const char* q_videowidget_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1411,9 +1411,9 @@ void q_videowidget_set_accessible_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-const char* q_videowidget_accessible_description(void* self);
+const char* q_videowidget_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1437,11 +1437,11 @@ void q_videowidget_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_videowidget_layout_direction(void* self);
+int32_t q_videowidget_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1458,15 +1458,15 @@ void q_videowidget_unset_layout_direction(void* self);
 /// @param self QVideoWidget*
 /// @param locale QLocale*
 ///
-void q_videowidget_set_locale(void* self, void* locale);
+void q_videowidget_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QLocale* q_videowidget_locale(void* self);
+QLocale* q_videowidget_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1480,17 +1480,17 @@ void q_videowidget_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-bool q_videowidget_is_right_to_left(void* self);
+bool q_videowidget_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-bool q_videowidget_is_left_to_right(void* self);
+bool q_videowidget_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1504,9 +1504,9 @@ void q_videowidget_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-bool q_videowidget_is_active_window(void* self);
+bool q_videowidget_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1537,11 +1537,11 @@ void q_videowidget_set_focus2(void* self, int32_t reason);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t q_videowidget_focus_policy(void* self);
+int32_t q_videowidget_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1556,9 +1556,9 @@ void q_videowidget_set_focus_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-bool q_videowidget_has_focus(void* self);
+bool q_videowidget_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1582,19 +1582,19 @@ void q_videowidget_set_focus_proxy(void* self, void* focusProxy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QWidget* q_videowidget_focus_proxy(void* self);
+QWidget* q_videowidget_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t q_videowidget_context_menu_policy(void* self);
+int32_t q_videowidget_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1620,7 +1620,7 @@ void q_videowidget_grab_mouse(void* self);
 /// @param self QVideoWidget*
 /// @param param1 QCursor*
 ///
-void q_videowidget_grab_mouse2(void* self, void* param1);
+void q_videowidget_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1653,7 +1653,7 @@ void q_videowidget_release_keyboard(void* self);
 /// @param self QVideoWidget*
 /// @param key QKeySequence*
 ///
-int32_t q_videowidget_grab_shortcut(void* self, void* key);
+int32_t q_videowidget_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -1698,9 +1698,9 @@ QWidget* q_videowidget_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-bool q_videowidget_updates_enabled(void* self);
+bool q_videowidget_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1715,9 +1715,9 @@ void q_videowidget_set_updates_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QGraphicsProxyWidget* q_videowidget_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* q_videowidget_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1754,7 +1754,7 @@ void q_videowidget_update2(void* self, int x, int y, int w, int h);
 /// @param self QVideoWidget*
 /// @param param1 QRect*
 ///
-void q_videowidget_update3(void* self, void* param1);
+void q_videowidget_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1763,7 +1763,7 @@ void q_videowidget_update3(void* self, void* param1);
 /// @param self QVideoWidget*
 /// @param param1 QRegion*
 ///
-void q_videowidget_update4(void* self, void* param1);
+void q_videowidget_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1784,7 +1784,7 @@ void q_videowidget_repaint2(void* self, int x, int y, int w, int h);
 /// @param self QVideoWidget*
 /// @param param1 QRect*
 ///
-void q_videowidget_repaint3(void* self, void* param1);
+void q_videowidget_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1793,7 +1793,7 @@ void q_videowidget_repaint3(void* self, void* param1);
 /// @param self QVideoWidget*
 /// @param param1 QRegion*
 ///
-void q_videowidget_repaint4(void* self, void* param1);
+void q_videowidget_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1902,7 +1902,7 @@ void q_videowidget_move(void* self, int x, int y);
 /// @param self QVideoWidget*
 /// @param param1 QPoint*
 ///
-void q_videowidget_move2(void* self, void* param1);
+void q_videowidget_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1921,7 +1921,7 @@ void q_videowidget_resize(void* self, int w, int h);
 /// @param self QVideoWidget*
 /// @param param1 QSize*
 ///
-void q_videowidget_resize2(void* self, void* param1);
+void q_videowidget_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1942,7 +1942,7 @@ void q_videowidget_set_geometry(void* self, int x, int y, int w, int h);
 /// @param self QVideoWidget*
 /// @param geometry QRect*
 ///
-void q_videowidget_set_geometry2(void* self, void* geometry);
+void q_videowidget_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -1950,9 +1950,9 @@ void q_videowidget_set_geometry2(void* self, void* geometry);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-char* q_videowidget_save_geometry(void* self);
+char* q_videowidget_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1975,60 +1975,60 @@ void q_videowidget_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-bool q_videowidget_is_visible(void* self);
+bool q_videowidget_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param param1 QWidget*
 ///
-bool q_videowidget_is_visible_to(void* self, void* param1);
+bool q_videowidget_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-bool q_videowidget_is_hidden(void* self);
+bool q_videowidget_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-bool q_videowidget_is_minimized(void* self);
+bool q_videowidget_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-bool q_videowidget_is_maximized(void* self);
+bool q_videowidget_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-bool q_videowidget_is_full_screen(void* self);
+bool q_videowidget_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t q_videowidget_window_state(void* self);
+int32_t q_videowidget_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2052,9 +2052,9 @@ void q_videowidget_override_window_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QSizePolicy* q_videowidget_size_policy(void* self);
+QSizePolicy* q_videowidget_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2079,9 +2079,9 @@ void q_videowidget_set_size_policy2(void* self, int32_t horizontal, int32_t vert
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QRegion* q_videowidget_visible_region(void* self);
+QRegion* q_videowidget_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2102,31 +2102,31 @@ void q_videowidget_set_contents_margins(void* self, int left, int top, int right
 /// @param self QVideoWidget*
 /// @param margins QMargins*
 ///
-void q_videowidget_set_contents_margins2(void* self, void* margins);
+void q_videowidget_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QMargins* q_videowidget_contents_margins(void* self);
+QMargins* q_videowidget_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QRect* q_videowidget_contents_rect(void* self);
+QRect* q_videowidget_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QLayout* q_videowidget_layout(void* self);
+QLayout* q_videowidget_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2183,39 +2183,39 @@ void q_videowidget_scroll(void* self, int dx, int dy);
 /// @param dy int
 /// @param param3 QRect*
 ///
-void q_videowidget_scroll2(void* self, int dx, int dy, void* param3);
+void q_videowidget_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QWidget* q_videowidget_focus_widget(void* self);
+QWidget* q_videowidget_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QWidget* q_videowidget_next_in_focus_chain(void* self);
+QWidget* q_videowidget_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QWidget* q_videowidget_previous_in_focus_chain(void* self);
+QWidget* q_videowidget_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-bool q_videowidget_accept_drops(void* self);
+bool q_videowidget_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2277,11 +2277,11 @@ void q_videowidget_remove_action(void* self, void* action);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list q_videowidget_actions(void* self);
+libqt_list q_videowidget_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2300,7 +2300,7 @@ QAction* q_videowidget_add_action2(void* self, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* q_videowidget_add_action3(void* self, void* icon, const char* text);
+QAction* q_videowidget_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -2310,7 +2310,7 @@ QAction* q_videowidget_add_action3(void* self, void* icon, const char* text);
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* q_videowidget_add_action4(void* self, const char* text, void* shortcut);
+QAction* q_videowidget_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -2321,15 +2321,15 @@ QAction* q_videowidget_add_action4(void* self, const char* text, void* shortcut)
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* q_videowidget_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* q_videowidget_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QWidget* q_videowidget_parent_widget(void* self);
+QWidget* q_videowidget_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2344,11 +2344,11 @@ void q_videowidget_set_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t q_videowidget_window_flags(void* self);
+int32_t q_videowidget_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2372,11 +2372,11 @@ void q_videowidget_override_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t q_videowidget_window_type(void* self);
+int32_t q_videowidget_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2390,29 +2390,29 @@ QWidget* q_videowidget_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param x int
 /// @param y int
 ///
-QWidget* q_videowidget_child_at(void* self, int x, int y);
+QWidget* q_videowidget_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param p QPoint*
 ///
-QWidget* q_videowidget_child_at2(void* self, void* p);
+QWidget* q_videowidget_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param p QPointF*
 ///
-QWidget* q_videowidget_child_at3(void* self, void* p);
+QWidget* q_videowidget_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -2427,35 +2427,35 @@ void q_videowidget_set_attribute(void* self, int32_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool q_videowidget_test_attribute(void* self, int32_t param1);
+bool q_videowidget_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-void q_videowidget_ensure_polished(void* self);
+void q_videowidget_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param child QWidget*
 ///
-bool q_videowidget_is_ancestor_of(void* self, void* child);
+bool q_videowidget_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-bool q_videowidget_auto_fill_background(void* self);
+bool q_videowidget_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2470,25 +2470,25 @@ void q_videowidget_set_auto_fill_background(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QBackingStore* q_videowidget_backing_store(void* self);
+QBackingStore* q_videowidget_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QWindow* q_videowidget_window_handle(void* self);
+QWindow* q_videowidget_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QScreen* q_videowidget_screen(void* self);
+QScreen* q_videowidget_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2532,7 +2532,7 @@ void q_videowidget_on_window_title_changed(void* self, void (*callback)(void*, c
 /// @param self QVideoWidget*
 /// @param icon QIcon*
 ///
-void q_videowidget_window_icon_changed(void* self, void* icon);
+void q_videowidget_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -2541,7 +2541,7 @@ void q_videowidget_window_icon_changed(void* self, void* icon);
 /// @param self QVideoWidget*
 /// @param callback void func(QVideoWidget* self, QIcon* icon)
 ///
-void q_videowidget_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void q_videowidget_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -2568,7 +2568,7 @@ void q_videowidget_on_window_icon_text_changed(void* self, void (*callback)(void
 /// @param self QVideoWidget*
 /// @param pos QPoint*
 ///
-void q_videowidget_custom_context_menu_requested(void* self, void* pos);
+void q_videowidget_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -2577,17 +2577,17 @@ void q_videowidget_custom_context_menu_requested(void* self, void* pos);
 /// @param self QVideoWidget*
 /// @param callback void func(QVideoWidget* self, QPoint* pos)
 ///
-void q_videowidget_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void q_videowidget_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t q_videowidget_input_method_hints(void* self);
+int32_t q_videowidget_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2606,7 +2606,7 @@ void q_videowidget_set_input_method_hints(void* self, int32_t hints);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void q_videowidget_render22(void* self, void* target, void* targetOffset);
+void q_videowidget_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -2617,7 +2617,7 @@ void q_videowidget_render22(void* self, void* target, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void q_videowidget_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void q_videowidget_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -2629,7 +2629,7 @@ void q_videowidget_render3(void* self, void* target, void* targetOffset, void* s
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void q_videowidget_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void q_videowidget_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2639,7 +2639,7 @@ void q_videowidget_render4(void* self, void* target, void* targetOffset, void* s
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void q_videowidget_render23(void* self, void* painter, void* targetOffset);
+void q_videowidget_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -2650,7 +2650,7 @@ void q_videowidget_render23(void* self, void* painter, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void q_videowidget_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void q_videowidget_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -2662,7 +2662,7 @@ void q_videowidget_render32(void* self, void* painter, void* targetOffset, void*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void q_videowidget_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void q_videowidget_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2671,7 +2671,7 @@ void q_videowidget_render42(void* self, void* painter, void* targetOffset, void*
 /// @param self QVideoWidget*
 /// @param rectangle QRect*
 ///
-QPixmap* q_videowidget_grab1(void* self, void* rectangle);
+QPixmap* q_videowidget_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -2691,7 +2691,7 @@ void q_videowidget_grab_gesture2(void* self, int32_t type, int32_t flags);
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t q_videowidget_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t q_videowidget_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -2758,9 +2758,9 @@ QWidget* q_videowidget_create_window_container3(void* window, void* parent, int3
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-const char* q_videowidget_object_name(void* self);
+const char* q_videowidget_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2775,33 +2775,33 @@ void q_videowidget_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-bool q_videowidget_is_widget_type(void* self);
+bool q_videowidget_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-bool q_videowidget_is_window_type(void* self);
+bool q_videowidget_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-bool q_videowidget_is_quick_item_type(void* self);
+bool q_videowidget_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-bool q_videowidget_signals_blocked(void* self);
+bool q_videowidget_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2816,9 +2816,9 @@ bool q_videowidget_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QThread* q_videowidget_thread(void* self);
+QThread* q_videowidget_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2869,11 +2869,11 @@ void q_videowidget_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_videowidget_children(void* self);
+libqt_list q_videowidget_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2902,7 +2902,7 @@ void q_videowidget_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_videowidget_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_videowidget_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2913,18 +2913,18 @@ QMetaObject__Connection* q_videowidget_connect(void* sender, const char* signal,
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_videowidget_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_videowidget_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_videowidget_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_videowidget_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2935,7 +2935,7 @@ QMetaObject__Connection* q_videowidget_connect3(void* self, void* sender, const 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_videowidget_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_videowidget_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2946,24 +2946,24 @@ bool q_videowidget_disconnect(void* sender, const char* signal, void* receiver, 
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_videowidget_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_videowidget_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-bool q_videowidget_disconnect3(void* self);
+bool q_videowidget_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param receiver QObject*
 ///
-bool q_videowidget_disconnect4(void* self, void* receiver);
+bool q_videowidget_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -2971,23 +2971,23 @@ bool q_videowidget_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_videowidget_disconnect5(void* param1);
+bool q_videowidget_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-void q_videowidget_dump_object_tree(void* self);
+void q_videowidget_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-void q_videowidget_dump_object_info(void* self);
+void q_videowidget_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2997,16 +2997,16 @@ void q_videowidget_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_videowidget_set_property(void* self, const char* name, void* value);
+bool q_videowidget_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param name const char*
 ///
-QVariant* q_videowidget_property(void* self, const char* name);
+QVariant* q_videowidget_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -3014,9 +3014,9 @@ QVariant* q_videowidget_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-const char** q_videowidget_dynamic_property_names(void* self);
+const char** q_videowidget_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3030,9 +3030,9 @@ QBindingStorage* q_videowidget_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-const QBindingStorage* q_videowidget_binding_storage2(void* self);
+const QBindingStorage* q_videowidget_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3055,18 +3055,18 @@ void q_videowidget_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QObject* q_videowidget_parent(void* self);
+QObject* q_videowidget_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param classname const char*
 ///
-bool q_videowidget_inherits(void* self, const char* classname);
+bool q_videowidget_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -3106,7 +3106,7 @@ int32_t q_videowidget_start_timer23(void* self, int64_t time, int32_t timerType)
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_videowidget_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_videowidget_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -3118,59 +3118,59 @@ QMetaObject__Connection* q_videowidget_connect5(void* sender, const char* signal
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_videowidget_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_videowidget_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_videowidget_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_videowidget_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param signal const char*
 ///
-bool q_videowidget_disconnect1(void* self, const char* signal);
+bool q_videowidget_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QVideoWidget*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_videowidget_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_videowidget_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_videowidget_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_videowidget_disconnect23(void* self, void* receiver, const char* member);
+bool q_videowidget_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QVideoWidget*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_videowidget_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3194,89 +3194,89 @@ void q_videowidget_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-bool q_videowidget_painting_active(void* self);
+bool q_videowidget_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-int32_t q_videowidget_width_m_m(void* self);
+int32_t q_videowidget_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-int32_t q_videowidget_height_m_m(void* self);
+int32_t q_videowidget_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-int32_t q_videowidget_logical_dpi_x(void* self);
+int32_t q_videowidget_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-int32_t q_videowidget_logical_dpi_y(void* self);
+int32_t q_videowidget_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-int32_t q_videowidget_physical_dpi_x(void* self);
+int32_t q_videowidget_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-int32_t q_videowidget_physical_dpi_y(void* self);
+int32_t q_videowidget_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-double q_videowidget_device_pixel_ratio(void* self);
+double q_videowidget_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-double q_videowidget_device_pixel_ratio_f(void* self);
+double q_videowidget_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-int32_t q_videowidget_color_count(void* self);
+int32_t q_videowidget_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-int32_t q_videowidget_depth(void* self);
+int32_t q_videowidget_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -3299,9 +3299,9 @@ int32_t q_videowidget_encode_metric_f(int32_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-int32_t q_videowidget_dev_type(void* self);
+int32_t q_videowidget_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3309,9 +3309,9 @@ int32_t q_videowidget_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-int32_t q_videowidget_super_dev_type(void* self);
+int32_t q_videowidget_super_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3319,10 +3319,10 @@ int32_t q_videowidget_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QVideoWidget*
-/// @param callback int32_t func()
+/// @param self const QVideoWidget*
+/// @param callback int32_t func(QVideoWidget* self)
 ///
-void q_videowidget_on_dev_type(void* self, int32_t (*callback)());
+void q_videowidget_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3363,9 +3363,9 @@ void q_videowidget_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QSize* q_videowidget_minimum_size_hint(void* self);
+QSize* q_videowidget_minimum_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3373,9 +3373,9 @@ QSize* q_videowidget_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QSize* q_videowidget_super_minimum_size_hint(void* self);
+QSize* q_videowidget_super_minimum_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3383,12 +3383,12 @@ QSize* q_videowidget_super_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QVideoWidget*
-/// @param callback QSize* func()
+/// @param self const QVideoWidget*
+/// @param callback QSize* func(QVideoWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_videowidget_on_minimum_size_hint(void* self, QSize* (*callback)());
+void q_videowidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3396,10 +3396,10 @@ void q_videowidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param param1 int
 ///
-int32_t q_videowidget_height_for_width(void* self, int param1);
+int32_t q_videowidget_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -3407,10 +3407,10 @@ int32_t q_videowidget_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param param1 int
 ///
-int32_t q_videowidget_super_height_for_width(void* self, int param1);
+int32_t q_videowidget_super_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -3418,10 +3418,10 @@ int32_t q_videowidget_super_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param callback int32_t func(QVideoWidget* self, int param1)
 ///
-void q_videowidget_on_height_for_width(void* self, int32_t (*callback)(void*, int));
+void q_videowidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -3429,9 +3429,9 @@ void q_videowidget_on_height_for_width(void* self, int32_t (*callback)(void*, in
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-bool q_videowidget_has_height_for_width(void* self);
+bool q_videowidget_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3439,9 +3439,9 @@ bool q_videowidget_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-bool q_videowidget_super_has_height_for_width(void* self);
+bool q_videowidget_super_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3449,10 +3449,10 @@ bool q_videowidget_super_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QVideoWidget*
-/// @param callback bool func()
+/// @param self const QVideoWidget*
+/// @param callback bool func(QVideoWidget* self)
 ///
-void q_videowidget_on_has_height_for_width(void* self, bool (*callback)());
+void q_videowidget_on_has_height_for_width(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3460,9 +3460,9 @@ void q_videowidget_on_has_height_for_width(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QPaintEngine* q_videowidget_paint_engine(void* self);
+QPaintEngine* q_videowidget_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3470,9 +3470,9 @@ QPaintEngine* q_videowidget_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QPaintEngine* q_videowidget_super_paint_engine(void* self);
+QPaintEngine* q_videowidget_super_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3480,10 +3480,10 @@ QPaintEngine* q_videowidget_super_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QVideoWidget*
-/// @param callback QPaintEngine* func()
+/// @param self const QVideoWidget*
+/// @param callback QPaintEngine* func(QVideoWidget* self)
 ///
-void q_videowidget_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void q_videowidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4221,10 +4221,10 @@ void q_videowidget_on_change_event(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_videowidget_metric(void* self, int32_t param1);
+int32_t q_videowidget_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4232,10 +4232,10 @@ int32_t q_videowidget_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_videowidget_super_metric(void* self, int32_t param1);
+int32_t q_videowidget_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4243,10 +4243,10 @@ int32_t q_videowidget_super_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param callback int32_t func(QVideoWidget* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_videowidget_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void q_videowidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4254,10 +4254,10 @@ void q_videowidget_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param painter QPainter*
 ///
-void q_videowidget_init_painter(void* self, void* painter);
+void q_videowidget_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4265,10 +4265,10 @@ void q_videowidget_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param painter QPainter*
 ///
-void q_videowidget_super_init_painter(void* self, void* painter);
+void q_videowidget_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4276,10 +4276,10 @@ void q_videowidget_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param callback void func(QVideoWidget* self, QPainter* painter)
 ///
-void q_videowidget_on_init_painter(void* self, void (*callback)(void*, void*));
+void q_videowidget_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4287,10 +4287,10 @@ void q_videowidget_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_videowidget_redirected(void* self, void* offset);
+QPaintDevice* q_videowidget_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4298,10 +4298,10 @@ QPaintDevice* q_videowidget_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_videowidget_super_redirected(void* self, void* offset);
+QPaintDevice* q_videowidget_super_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4309,10 +4309,10 @@ QPaintDevice* q_videowidget_super_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param callback QPaintDevice* func(QVideoWidget* self, QPoint* offset)
 ///
-void q_videowidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void q_videowidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4320,9 +4320,9 @@ void q_videowidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QPainter* q_videowidget_shared_painter(void* self);
+QPainter* q_videowidget_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4330,9 +4330,9 @@ QPainter* q_videowidget_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QPainter* q_videowidget_super_shared_painter(void* self);
+QPainter* q_videowidget_super_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4340,10 +4340,10 @@ QPainter* q_videowidget_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QVideoWidget*
-/// @param callback QPainter* func()
+/// @param self const QVideoWidget*
+/// @param callback QPainter* func(QVideoWidget* self)
 ///
-void q_videowidget_on_shared_painter(void* self, QPainter* (*callback)());
+void q_videowidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4384,10 +4384,10 @@ void q_videowidget_on_input_method_event(void* self, void (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_videowidget_input_method_query(void* self, int32_t param1);
+QVariant* q_videowidget_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4395,10 +4395,10 @@ QVariant* q_videowidget_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_videowidget_super_input_method_query(void* self, int32_t param1);
+QVariant* q_videowidget_super_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4406,12 +4406,12 @@ QVariant* q_videowidget_super_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param callback QVariant* func(QVideoWidget* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_videowidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void q_videowidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4589,7 +4589,7 @@ void q_videowidget_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QVideoWidget*
 /// @param signal QMetaMethod*
 ///
-void q_videowidget_connect_notify(void* self, void* signal);
+void q_videowidget_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4600,7 +4600,7 @@ void q_videowidget_connect_notify(void* self, void* signal);
 /// @param self QVideoWidget*
 /// @param signal QMetaMethod*
 ///
-void q_videowidget_super_connect_notify(void* self, void* signal);
+void q_videowidget_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4611,7 +4611,7 @@ void q_videowidget_super_connect_notify(void* self, void* signal);
 /// @param self QVideoWidget*
 /// @param callback void func(QVideoWidget* self, QMetaMethod* signal)
 ///
-void q_videowidget_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_videowidget_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -4622,7 +4622,7 @@ void q_videowidget_on_connect_notify(void* self, void (*callback)(void*, void*))
 /// @param self QVideoWidget*
 /// @param signal QMetaMethod*
 ///
-void q_videowidget_disconnect_notify(void* self, void* signal);
+void q_videowidget_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4633,7 +4633,7 @@ void q_videowidget_disconnect_notify(void* self, void* signal);
 /// @param self QVideoWidget*
 /// @param signal QMetaMethod*
 ///
-void q_videowidget_super_disconnect_notify(void* self, void* signal);
+void q_videowidget_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4644,7 +4644,7 @@ void q_videowidget_super_disconnect_notify(void* self, void* signal);
 /// @param self QVideoWidget*
 /// @param callback void func(QVideoWidget* self, QMetaMethod* signal)
 ///
-void q_videowidget_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_videowidget_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -4673,9 +4673,9 @@ void q_videowidget_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVideoWidget*
-/// @param callback void func()
+/// @param callback void func(QVideoWidget* self)
 ///
-void q_videowidget_on_update_micro_focus(void* self, void (*callback)());
+void q_videowidget_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -4704,9 +4704,9 @@ void q_videowidget_super_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVideoWidget*
-/// @param callback void func()
+/// @param callback void func(QVideoWidget* self)
 ///
-void q_videowidget_on_create(void* self, void (*callback)());
+void q_videowidget_on_create(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -4735,9 +4735,9 @@ void q_videowidget_super_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVideoWidget*
-/// @param callback void func()
+/// @param callback void func(QVideoWidget* self)
 ///
-void q_videowidget_on_destroy(void* self, void (*callback)());
+void q_videowidget_on_destroy(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -4766,9 +4766,9 @@ bool q_videowidget_super_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVideoWidget*
-/// @param callback bool func()
+/// @param callback bool func(QVideoWidget* self)
 ///
-void q_videowidget_on_focus_next_child(void* self, bool (*callback)());
+void q_videowidget_on_focus_next_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -4797,9 +4797,9 @@ bool q_videowidget_super_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVideoWidget*
-/// @param callback bool func()
+/// @param callback bool func(QVideoWidget* self)
 ///
-void q_videowidget_on_focus_previous_child(void* self, bool (*callback)());
+void q_videowidget_on_focus_previous_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -4807,9 +4807,9 @@ void q_videowidget_on_focus_previous_child(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QObject* q_videowidget_sender(void* self);
+QObject* q_videowidget_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4817,9 +4817,9 @@ QObject* q_videowidget_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-QObject* q_videowidget_super_sender(void* self);
+QObject* q_videowidget_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4827,10 +4827,10 @@ QObject* q_videowidget_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QVideoWidget*
-/// @param callback QObject* func()
+/// @param self const QVideoWidget*
+/// @param callback QObject* func(QVideoWidget* self)
 ///
-void q_videowidget_on_sender(void* self, QObject* (*callback)());
+void q_videowidget_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4838,9 +4838,9 @@ void q_videowidget_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-int32_t q_videowidget_sender_signal_index(void* self);
+int32_t q_videowidget_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4848,9 +4848,9 @@ int32_t q_videowidget_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 ///
-int32_t q_videowidget_super_sender_signal_index(void* self);
+int32_t q_videowidget_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4858,10 +4858,10 @@ int32_t q_videowidget_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QVideoWidget*
-/// @param callback int32_t func()
+/// @param self const QVideoWidget*
+/// @param callback int32_t func(QVideoWidget* self)
 ///
-void q_videowidget_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_videowidget_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4869,10 +4869,10 @@ void q_videowidget_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param signal const char*
 ///
-int32_t q_videowidget_receivers(void* self, const char* signal);
+int32_t q_videowidget_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -4880,10 +4880,10 @@ int32_t q_videowidget_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param signal const char*
 ///
-int32_t q_videowidget_super_receivers(void* self, const char* signal);
+int32_t q_videowidget_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -4891,10 +4891,10 @@ int32_t q_videowidget_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param callback int32_t func(QVideoWidget* self, const char* signal)
 ///
-void q_videowidget_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_videowidget_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -4902,10 +4902,10 @@ void q_videowidget_on_receivers(void* self, int32_t (*callback)(void*, const cha
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param signal QMetaMethod*
 ///
-bool q_videowidget_is_signal_connected(void* self, void* signal);
+bool q_videowidget_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4913,10 +4913,10 @@ bool q_videowidget_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param signal QMetaMethod*
 ///
-bool q_videowidget_super_is_signal_connected(void* self, void* signal);
+bool q_videowidget_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4924,10 +4924,10 @@ bool q_videowidget_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param callback bool func(QVideoWidget* self, QMetaMethod* signal)
 ///
-void q_videowidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_videowidget_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -4935,11 +4935,11 @@ void q_videowidget_on_is_signal_connected(void* self, bool (*callback)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_videowidget_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_videowidget_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -4947,11 +4947,11 @@ double q_videowidget_get_decoded_metric_f(void* self, int32_t metricA, int32_t m
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_videowidget_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_videowidget_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -4959,10 +4959,10 @@ double q_videowidget_super_get_decoded_metric_f(void* self, int32_t metricA, int
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QVideoWidget*
+/// @param self const QVideoWidget*
 /// @param callback double func(QVideoWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_videowidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void q_videowidget_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

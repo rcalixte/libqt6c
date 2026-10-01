@@ -14,7 +14,7 @@
 ///
 /// @param other KRecentDocument*
 ///
-KRecentDocument* k_recentdocument_new(void* other);
+KRecentDocument* k_recentdocument_new(const void* other);
 
 /// [Upstream resources](https://api.kde.org/krecentdocument.html)
 
@@ -48,21 +48,21 @@ libqt_list k_recentdocument_recent_urls();
 ///
 /// @param url QUrl*
 ///
-void k_recentdocument_add(void* url);
+void k_recentdocument_add(const void* url);
 
 /// [Upstream resources](https://api.kde.org/krecentdocument.html#add)
 ///
 /// @param url QUrl*
 /// @param groups libqt_list of enum KRecentDocument__RecentDocumentGroup
 ///
-void k_recentdocument_add2(void* url, libqt_list groups);
+void k_recentdocument_add2(const void* url, libqt_list groups);
 
 /// [Upstream resources](https://api.kde.org/krecentdocument.html#add)
 ///
 /// @param url QUrl*
 /// @param desktopEntryName const char*
 ///
-void k_recentdocument_add3(void* url, const char* desktopEntryName);
+void k_recentdocument_add3(const void* url, const char* desktopEntryName);
 
 /// [Upstream resources](https://api.kde.org/krecentdocument.html#add)
 ///
@@ -70,13 +70,13 @@ void k_recentdocument_add3(void* url, const char* desktopEntryName);
 /// @param desktopEntryName const char*
 /// @param groups libqt_list of enum KRecentDocument__RecentDocumentGroup
 ///
-void k_recentdocument_add4(void* url, const char* desktopEntryName, libqt_list groups);
+void k_recentdocument_add4(const void* url, const char* desktopEntryName, libqt_list groups);
 
 /// [Upstream resources](https://api.kde.org/krecentdocument.html#removeFile)
 ///
 /// @param url QUrl*
 ///
-void k_recentdocument_remove_file(void* url);
+void k_recentdocument_remove_file(const void* url);
 
 /// [Upstream resources](https://api.kde.org/krecentdocument.html#removeApplication)
 ///
@@ -88,7 +88,7 @@ void k_recentdocument_remove_application(const char* desktopEntryName);
 ///
 /// @param since QDateTime*
 ///
-void k_recentdocument_remove_bookmarks_modified_since(void* since);
+void k_recentdocument_remove_bookmarks_modified_since(const void* since);
 
 /// [Upstream resources](https://api.kde.org/krecentdocument.html#clear)
 ///

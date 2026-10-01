@@ -1,7 +1,7 @@
 #include "libqmimetype.hpp"
 #include "libqmimetype.h"
 
-size_t q_qmimetype_q_hash(void* key, size_t seed) {
+size_t q_qmimetype_q_hash(const void* key, size_t seed) {
     return qmimetype_QHash((QMimeType*)key, seed);
 }
 
@@ -9,11 +9,11 @@ QMimeType* q_mimetype_new() {
     return QMimeType_New();
 }
 
-QMimeType* q_mimetype_new2(void* other) {
+QMimeType* q_mimetype_new2(const void* other) {
     return QMimeType_New2((QMimeType*)other);
 }
 
-void q_mimetype_operator_assign(void* self, void* other) {
+void q_mimetype_operator_assign(void* self, const void* other) {
     QMimeType_OperatorAssign((QMimeType*)self, (QMimeType*)other);
 }
 
@@ -21,43 +21,43 @@ void q_mimetype_swap(void* self, void* other) {
     QMimeType_Swap((QMimeType*)self, (QMimeType*)other);
 }
 
-bool q_mimetype_is_valid(void* self) {
+bool q_mimetype_is_valid(const void* self) {
     return QMimeType_IsValid((QMimeType*)self);
 }
 
-bool q_mimetype_is_default(void* self) {
+bool q_mimetype_is_default(const void* self) {
     return QMimeType_IsDefault((QMimeType*)self);
 }
 
-const char* q_mimetype_name(void* self) {
+const char* q_mimetype_name(const void* self) {
     libqt_string _str = QMimeType_Name((QMimeType*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_mimetype_comment(void* self) {
+const char* q_mimetype_comment(const void* self) {
     libqt_string _str = QMimeType_Comment((QMimeType*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_mimetype_generic_icon_name(void* self) {
+const char* q_mimetype_generic_icon_name(const void* self) {
     libqt_string _str = QMimeType_GenericIconName((QMimeType*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_mimetype_icon_name(void* self) {
+const char* q_mimetype_icon_name(const void* self) {
     libqt_string _str = QMimeType_IconName((QMimeType*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** q_mimetype_glob_patterns(void* self) {
+const char** q_mimetype_glob_patterns(const void* self) {
     libqt_list _arr = QMimeType_GlobPatterns((QMimeType*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -74,7 +74,7 @@ const char** q_mimetype_glob_patterns(void* self) {
     return _ret;
 }
 
-const char** q_mimetype_parent_mime_types(void* self) {
+const char** q_mimetype_parent_mime_types(const void* self) {
     libqt_list _arr = QMimeType_ParentMimeTypes((QMimeType*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -91,7 +91,7 @@ const char** q_mimetype_parent_mime_types(void* self) {
     return _ret;
 }
 
-const char** q_mimetype_all_ancestors(void* self) {
+const char** q_mimetype_all_ancestors(const void* self) {
     libqt_list _arr = QMimeType_AllAncestors((QMimeType*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -108,7 +108,7 @@ const char** q_mimetype_all_ancestors(void* self) {
     return _ret;
 }
 
-const char** q_mimetype_aliases(void* self) {
+const char** q_mimetype_aliases(const void* self) {
     libqt_list _arr = QMimeType_Aliases((QMimeType*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -125,7 +125,7 @@ const char** q_mimetype_aliases(void* self) {
     return _ret;
 }
 
-const char** q_mimetype_suffixes(void* self) {
+const char** q_mimetype_suffixes(const void* self) {
     libqt_list _arr = QMimeType_Suffixes((QMimeType*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -142,18 +142,18 @@ const char** q_mimetype_suffixes(void* self) {
     return _ret;
 }
 
-const char* q_mimetype_preferred_suffix(void* self) {
+const char* q_mimetype_preferred_suffix(const void* self) {
     libqt_string _str = QMimeType_PreferredSuffix((QMimeType*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_mimetype_inherits(void* self, const char* mimeTypeName) {
+bool q_mimetype_inherits(const void* self, const char* mimeTypeName) {
     return QMimeType_Inherits((QMimeType*)self, qstring(mimeTypeName));
 }
 
-const char* q_mimetype_filter_string(void* self) {
+const char* q_mimetype_filter_string(const void* self) {
     libqt_string _str = QMimeType_FilterString((QMimeType*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

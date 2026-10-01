@@ -13,11 +13,11 @@ QGeoCoordinate* q_geocoordinate_new3(double latitude, double longitude, double a
     return QGeoCoordinate_New3(latitude, longitude, altitude);
 }
 
-QGeoCoordinate* q_geocoordinate_new4(void* other) {
+QGeoCoordinate* q_geocoordinate_new4(const void* other) {
     return QGeoCoordinate_New4((QGeoCoordinate*)other);
 }
 
-void q_geocoordinate_operator_assign(void* self, void* other) {
+void q_geocoordinate_operator_assign(void* self, const void* other) {
     QGeoCoordinate_OperatorAssign((QGeoCoordinate*)self, (QGeoCoordinate*)other);
 }
 
@@ -25,11 +25,11 @@ void q_geocoordinate_swap(void* self, void* other) {
     QGeoCoordinate_Swap((QGeoCoordinate*)self, (QGeoCoordinate*)other);
 }
 
-bool q_geocoordinate_is_valid(void* self) {
+bool q_geocoordinate_is_valid(const void* self) {
     return QGeoCoordinate_IsValid((QGeoCoordinate*)self);
 }
 
-int32_t q_geocoordinate_type(void* self) {
+int32_t q_geocoordinate_type(const void* self) {
     return QGeoCoordinate_Type((QGeoCoordinate*)self);
 }
 
@@ -37,7 +37,7 @@ void q_geocoordinate_set_latitude(void* self, double latitude) {
     QGeoCoordinate_SetLatitude((QGeoCoordinate*)self, latitude);
 }
 
-double q_geocoordinate_latitude(void* self) {
+double q_geocoordinate_latitude(const void* self) {
     return QGeoCoordinate_Latitude((QGeoCoordinate*)self);
 }
 
@@ -45,7 +45,7 @@ void q_geocoordinate_set_longitude(void* self, double longitude) {
     QGeoCoordinate_SetLongitude((QGeoCoordinate*)self, longitude);
 }
 
-double q_geocoordinate_longitude(void* self) {
+double q_geocoordinate_longitude(const void* self) {
     return QGeoCoordinate_Longitude((QGeoCoordinate*)self);
 }
 
@@ -53,34 +53,34 @@ void q_geocoordinate_set_altitude(void* self, double altitude) {
     QGeoCoordinate_SetAltitude((QGeoCoordinate*)self, altitude);
 }
 
-double q_geocoordinate_altitude(void* self) {
+double q_geocoordinate_altitude(const void* self) {
     return QGeoCoordinate_Altitude((QGeoCoordinate*)self);
 }
 
-double q_geocoordinate_distance_to(void* self, void* other) {
+double q_geocoordinate_distance_to(const void* self, const void* other) {
     return QGeoCoordinate_DistanceTo((QGeoCoordinate*)self, (QGeoCoordinate*)other);
 }
 
-double q_geocoordinate_azimuth_to(void* self, void* other) {
+double q_geocoordinate_azimuth_to(const void* self, const void* other) {
     return QGeoCoordinate_AzimuthTo((QGeoCoordinate*)self, (QGeoCoordinate*)other);
 }
 
-QGeoCoordinate* q_geocoordinate_at_distance_and_azimuth(void* self, double distance, double azimuth) {
+QGeoCoordinate* q_geocoordinate_at_distance_and_azimuth(const void* self, double distance, double azimuth) {
     return QGeoCoordinate_AtDistanceAndAzimuth((QGeoCoordinate*)self, distance, azimuth);
 }
 
-const char* q_geocoordinate_to_string(void* self) {
+const char* q_geocoordinate_to_string(const void* self) {
     libqt_string _str = QGeoCoordinate_ToString((QGeoCoordinate*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QGeoCoordinate* q_geocoordinate_at_distance_and_azimuth3(void* self, double distance, double azimuth, double distanceUp) {
+QGeoCoordinate* q_geocoordinate_at_distance_and_azimuth3(const void* self, double distance, double azimuth, double distanceUp) {
     return QGeoCoordinate_AtDistanceAndAzimuth3((QGeoCoordinate*)self, distance, azimuth, distanceUp);
 }
 
-const char* q_geocoordinate_to_string1(void* self, int32_t format) {
+const char* q_geocoordinate_to_string1(const void* self, int32_t format) {
     libqt_string _str = QGeoCoordinate_ToString1((QGeoCoordinate*)self, format);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -91,6 +91,6 @@ void q_geocoordinate_delete(void* self) {
     QGeoCoordinate_Delete((QGeoCoordinate*)(self));
 }
 
-size_t q_qgeocoordinate_h_q_hash(void* coordinate, size_t seed) {
+size_t q_qgeocoordinate_h_q_hash(const void* coordinate, size_t seed) {
     return qgeocoordinate_h_QHash((QGeoCoordinate*)coordinate, seed);
 }

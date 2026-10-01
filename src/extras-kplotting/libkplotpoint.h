@@ -29,7 +29,7 @@ KPlotPoint* k_plotpoint_new2(double x, double y);
 ///
 /// @param p QPointF*
 ///
-KPlotPoint* k_plotpoint_new3(void* p);
+KPlotPoint* k_plotpoint_new3(const void* p);
 
 /// [Upstream resources](https://api.kde.org/kplotpoint.html)
 
@@ -59,7 +59,7 @@ KPlotPoint* k_plotpoint_new5(double x, double y, const char* label, double width
 /// @param p QPointF*
 /// @param label const char*
 ///
-KPlotPoint* k_plotpoint_new6(void* p, const char* label);
+KPlotPoint* k_plotpoint_new6(const void* p, const char* label);
 
 /// [Upstream resources](https://api.kde.org/kplotpoint.html)
 
@@ -69,26 +69,26 @@ KPlotPoint* k_plotpoint_new6(void* p, const char* label);
 /// @param label const char*
 /// @param width double
 ///
-KPlotPoint* k_plotpoint_new7(void* p, const char* label, double width);
+KPlotPoint* k_plotpoint_new7(const void* p, const char* label, double width);
 
 /// [Upstream resources](https://api.kde.org/kplotpoint.html#position)
 ///
-/// @param self KPlotPoint*
+/// @param self const KPlotPoint*
 ///
-QPointF* k_plotpoint_position(void* self);
+QPointF* k_plotpoint_position(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kplotpoint.html#setPosition)
 ///
 /// @param self KPlotPoint*
 /// @param pos QPointF*
 ///
-void k_plotpoint_set_position(void* self, void* pos);
+void k_plotpoint_set_position(void* self, const void* pos);
 
 /// [Upstream resources](https://api.kde.org/kplotpoint.html#x)
 ///
-/// @param self KPlotPoint*
+/// @param self const KPlotPoint*
 ///
-double k_plotpoint_x(void* self);
+double k_plotpoint_x(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kplotpoint.html#setX)
 ///
@@ -99,9 +99,9 @@ void k_plotpoint_set_x(void* self, double x);
 
 /// [Upstream resources](https://api.kde.org/kplotpoint.html#y)
 ///
-/// @param self KPlotPoint*
+/// @param self const KPlotPoint*
 ///
-double k_plotpoint_y(void* self);
+double k_plotpoint_y(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kplotpoint.html#setY)
 ///
@@ -114,9 +114,9 @@ void k_plotpoint_set_y(void* self, double y);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KPlotPoint*
+/// @param self const KPlotPoint*
 ///
-const char* k_plotpoint_label(void* self);
+const char* k_plotpoint_label(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kplotpoint.html#setLabel)
 ///
@@ -127,9 +127,9 @@ void k_plotpoint_set_label(void* self, const char* label);
 
 /// [Upstream resources](https://api.kde.org/kplotpoint.html#barWidth)
 ///
-/// @param self KPlotPoint*
+/// @param self const KPlotPoint*
 ///
-double k_plotpoint_bar_width(void* self);
+double k_plotpoint_bar_width(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kplotpoint.html#setBarWidth)
 ///

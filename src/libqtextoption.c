@@ -10,11 +10,11 @@ QTextOption* q_textoption_new2(int32_t alignment) {
     return QTextOption_New2(alignment);
 }
 
-QTextOption* q_textoption_new3(void* o) {
+QTextOption* q_textoption_new3(const void* o) {
     return QTextOption_New3((QTextOption*)o);
 }
 
-void q_textoption_operator_assign(void* self, void* o) {
+void q_textoption_operator_assign(void* self, const void* o) {
     QTextOption_OperatorAssign((QTextOption*)self, (QTextOption*)o);
 }
 
@@ -22,7 +22,7 @@ void q_textoption_set_alignment(void* self, int32_t alignment) {
     QTextOption_SetAlignment((QTextOption*)self, alignment);
 }
 
-int32_t q_textoption_alignment(void* self) {
+int32_t q_textoption_alignment(const void* self) {
     return QTextOption_Alignment((QTextOption*)self);
 }
 
@@ -30,7 +30,7 @@ void q_textoption_set_text_direction(void* self, int32_t aDirection) {
     QTextOption_SetTextDirection((QTextOption*)self, aDirection);
 }
 
-int32_t q_textoption_text_direction(void* self) {
+int32_t q_textoption_text_direction(const void* self) {
     return QTextOption_TextDirection((QTextOption*)self);
 }
 
@@ -38,7 +38,7 @@ void q_textoption_set_wrap_mode(void* self, int32_t wrap) {
     QTextOption_SetWrapMode((QTextOption*)self, wrap);
 }
 
-int32_t q_textoption_wrap_mode(void* self) {
+int32_t q_textoption_wrap_mode(const void* self) {
     return QTextOption_WrapMode((QTextOption*)self);
 }
 
@@ -46,7 +46,7 @@ void q_textoption_set_flags(void* self, int32_t flags) {
     QTextOption_SetFlags((QTextOption*)self, flags);
 }
 
-int32_t q_textoption_flags(void* self) {
+int32_t q_textoption_flags(const void* self) {
     return QTextOption_Flags((QTextOption*)self);
 }
 
@@ -54,7 +54,7 @@ void q_textoption_set_tab_stop_distance(void* self, double tabStopDistance) {
     QTextOption_SetTabStopDistance((QTextOption*)self, tabStopDistance);
 }
 
-double q_textoption_tab_stop_distance(void* self) {
+double q_textoption_tab_stop_distance(const void* self) {
     return QTextOption_TabStopDistance((QTextOption*)self);
 }
 
@@ -62,7 +62,7 @@ void q_textoption_set_tab_array(void* self, libqt_list /* of double */ tabStops)
     QTextOption_SetTabArray((QTextOption*)self, tabStops);
 }
 
-libqt_list /* of double */ q_textoption_tab_array(void* self) {
+libqt_list /* of double */ q_textoption_tab_array(const void* self) {
     libqt_list _arr = QTextOption_TabArray((QTextOption*)self);
     return _arr;
 }
@@ -71,7 +71,7 @@ void q_textoption_set_tabs(void* self, libqt_list /* of QTextOption__Tab* */ tab
     QTextOption_SetTabs((QTextOption*)self, tabStops);
 }
 
-libqt_list /* of QTextOption__Tab* */ q_textoption_tabs(void* self) {
+libqt_list /* of QTextOption__Tab* */ q_textoption_tabs(const void* self) {
     libqt_list _arr = QTextOption_Tabs((QTextOption*)self);
     return _arr;
 }
@@ -80,7 +80,7 @@ void q_textoption_set_use_design_metrics(void* self, bool b) {
     QTextOption_SetUseDesignMetrics((QTextOption*)self, b);
 }
 
-bool q_textoption_use_design_metrics(void* self) {
+bool q_textoption_use_design_metrics(const void* self) {
     return QTextOption_UseDesignMetrics((QTextOption*)self);
 }
 
@@ -88,7 +88,7 @@ void q_textoption_delete(void* self) {
     QTextOption_Delete((QTextOption*)(self));
 }
 
-QTextOption__Tab* q_textoption__tab_new(void* other) {
+QTextOption__Tab* q_textoption__tab_new(const void* other) {
     return QTextOption__Tab_New((QTextOption__Tab*)other);
 }
 
@@ -116,15 +116,15 @@ void q_textoption__tab_move_assign(void* self, void* other) {
     QTextOption__Tab_MoveAssign((QTextOption__Tab*)self, (QTextOption__Tab*)other);
 }
 
-bool q_textoption__tab_operator_equal(void* self, void* other) {
+bool q_textoption__tab_operator_equal(const void* self, const void* other) {
     return QTextOption__Tab_OperatorEqual((QTextOption__Tab*)self, (QTextOption__Tab*)other);
 }
 
-bool q_textoption__tab_operator_not_equal(void* self, void* other) {
+bool q_textoption__tab_operator_not_equal(const void* self, const void* other) {
     return QTextOption__Tab_OperatorNotEqual((QTextOption__Tab*)self, (QTextOption__Tab*)other);
 }
 
-double q_textoption__tab_position(void* self) {
+double q_textoption__tab_position(const void* self) {
     return QTextOption__Tab_Position((QTextOption__Tab*)self);
 }
 
@@ -132,7 +132,7 @@ void q_textoption__tab_set_position(void* self, double position) {
     QTextOption__Tab_SetPosition((QTextOption__Tab*)self, position);
 }
 
-int32_t q_textoption__tab_type(void* self) {
+int32_t q_textoption__tab_type(const void* self) {
     return QTextOption__Tab_Type((QTextOption__Tab*)self);
 }
 
@@ -140,7 +140,7 @@ void q_textoption__tab_set_type(void* self, int32_t type) {
     QTextOption__Tab_SetType((QTextOption__Tab*)self, type);
 }
 
-QChar* q_textoption__tab_delimiter(void* self) {
+QChar* q_textoption__tab_delimiter(const void* self) {
     return QTextOption__Tab_Delimiter((QTextOption__Tab*)self);
 }
 

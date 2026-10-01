@@ -14,7 +14,7 @@
 ///
 /// @param other QSGMaterialType*
 ///
-QSGMaterialType* q_sgmaterialtype_new(void* other);
+QSGMaterialType* q_sgmaterialtype_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialtype.html)
 

@@ -31,7 +31,7 @@ QGraphicsScene* q_graphicsscene_new() {
     return QGraphicsScene_New();
 }
 
-QGraphicsScene* q_graphicsscene_new2(void* sceneRect) {
+QGraphicsScene* q_graphicsscene_new2(const void* sceneRect) {
     return QGraphicsScene_New2((QRectF*)sceneRect);
 }
 
@@ -43,7 +43,7 @@ QGraphicsScene* q_graphicsscene_new4(void* parent) {
     return QGraphicsScene_New4((QObject*)parent);
 }
 
-QGraphicsScene* q_graphicsscene_new5(void* sceneRect, void* parent) {
+QGraphicsScene* q_graphicsscene_new5(const void* sceneRect, void* parent) {
     return QGraphicsScene_New5((QRectF*)sceneRect, (QObject*)parent);
 }
 
@@ -51,15 +51,15 @@ QGraphicsScene* q_graphicsscene_new6(double x, double y, double width, double he
     return QGraphicsScene_New6(x, y, width, height, (QObject*)parent);
 }
 
-const QMetaObject* q_graphicsscene_meta_object(void* self) {
+const QMetaObject* q_graphicsscene_meta_object(const void* self) {
     return QGraphicsScene_MetaObject((QGraphicsScene*)self);
 }
 
-void q_graphicsscene_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_graphicsscene_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QGraphicsScene_OnMetaObject((QGraphicsScene*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_graphicsscene_super_meta_object(void* self) {
+const QMetaObject* q_graphicsscene_super_meta_object(const void* self) {
     return QGraphicsScene_SuperMetaObject((QGraphicsScene*)self);
 }
 
@@ -94,19 +94,19 @@ const char* q_graphicsscene_tr(const char* s) {
     return _ret;
 }
 
-QRectF* q_graphicsscene_scene_rect(void* self) {
+QRectF* q_graphicsscene_scene_rect(const void* self) {
     return QGraphicsScene_SceneRect((QGraphicsScene*)self);
 }
 
-double q_graphicsscene_width(void* self) {
+double q_graphicsscene_width(const void* self) {
     return QGraphicsScene_Width((QGraphicsScene*)self);
 }
 
-double q_graphicsscene_height(void* self) {
+double q_graphicsscene_height(const void* self) {
     return QGraphicsScene_Height((QGraphicsScene*)self);
 }
 
-void q_graphicsscene_set_scene_rect(void* self, void* rect) {
+void q_graphicsscene_set_scene_rect(void* self, const void* rect) {
     QGraphicsScene_SetSceneRect((QGraphicsScene*)self, (QRectF*)rect);
 }
 
@@ -118,7 +118,7 @@ void q_graphicsscene_render(void* self, void* painter) {
     QGraphicsScene_Render((QGraphicsScene*)self, (QPainter*)painter);
 }
 
-int32_t q_graphicsscene_item_index_method(void* self) {
+int32_t q_graphicsscene_item_index_method(const void* self) {
     return QGraphicsScene_ItemIndexMethod((QGraphicsScene*)self);
 }
 
@@ -126,7 +126,7 @@ void q_graphicsscene_set_item_index_method(void* self, int32_t method) {
     QGraphicsScene_SetItemIndexMethod((QGraphicsScene*)self, method);
 }
 
-int32_t q_graphicsscene_bsp_tree_depth(void* self) {
+int32_t q_graphicsscene_bsp_tree_depth(const void* self) {
     return QGraphicsScene_BspTreeDepth((QGraphicsScene*)self);
 }
 
@@ -134,67 +134,67 @@ void q_graphicsscene_set_bsp_tree_depth(void* self, int depth) {
     QGraphicsScene_SetBspTreeDepth((QGraphicsScene*)self, depth);
 }
 
-QRectF* q_graphicsscene_items_bounding_rect(void* self) {
+QRectF* q_graphicsscene_items_bounding_rect(const void* self) {
     return QGraphicsScene_ItemsBoundingRect((QGraphicsScene*)self);
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items(void* self) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items(const void* self) {
     libqt_list _arr = QGraphicsScene_Items((QGraphicsScene*)self);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items2(void* self, void* pos) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items2(const void* self, const void* pos) {
     libqt_list _arr = QGraphicsScene_Items2((QGraphicsScene*)self, (QPointF*)pos);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items3(void* self, void* rect) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items3(const void* self, const void* rect) {
     libqt_list _arr = QGraphicsScene_Items3((QGraphicsScene*)self, (QRectF*)rect);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items4(void* self, void* polygon) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items4(const void* self, const void* polygon) {
     libqt_list _arr = QGraphicsScene_Items4((QGraphicsScene*)self, (QPolygonF*)polygon);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items5(void* self, void* path) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items5(const void* self, const void* path) {
     libqt_list _arr = QGraphicsScene_Items5((QGraphicsScene*)self, (QPainterPath*)path);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items6(void* self, double x, double y, double w, double h, int32_t mode, int32_t order) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items6(const void* self, double x, double y, double w, double h, int32_t mode, int32_t order) {
     libqt_list _arr = QGraphicsScene_Items6((QGraphicsScene*)self, x, y, w, h, mode, order);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_colliding_items(void* self, void* item) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_colliding_items(const void* self, const void* item) {
     libqt_list _arr = QGraphicsScene_CollidingItems((QGraphicsScene*)self, (QGraphicsItem*)item);
     return _arr;
 }
 
-QGraphicsItem* q_graphicsscene_item_at(void* self, void* pos, void* deviceTransform) {
+QGraphicsItem* q_graphicsscene_item_at(const void* self, const void* pos, const void* deviceTransform) {
     return QGraphicsScene_ItemAt((QGraphicsScene*)self, (QPointF*)pos, (QTransform*)deviceTransform);
 }
 
-QGraphicsItem* q_graphicsscene_item_at2(void* self, double x, double y, void* deviceTransform) {
+QGraphicsItem* q_graphicsscene_item_at2(const void* self, double x, double y, const void* deviceTransform) {
     return QGraphicsScene_ItemAt2((QGraphicsScene*)self, x, y, (QTransform*)deviceTransform);
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_selected_items(void* self) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_selected_items(const void* self) {
     libqt_list _arr = QGraphicsScene_SelectedItems((QGraphicsScene*)self);
     return _arr;
 }
 
-QPainterPath* q_graphicsscene_selection_area(void* self) {
+QPainterPath* q_graphicsscene_selection_area(const void* self) {
     return QGraphicsScene_SelectionArea((QGraphicsScene*)self);
 }
 
-void q_graphicsscene_set_selection_area(void* self, void* path, void* deviceTransform) {
+void q_graphicsscene_set_selection_area(void* self, const void* path, const void* deviceTransform) {
     QGraphicsScene_SetSelectionArea((QGraphicsScene*)self, (QPainterPath*)path, (QTransform*)deviceTransform);
 }
 
-void q_graphicsscene_set_selection_area2(void* self, void* path) {
+void q_graphicsscene_set_selection_area2(void* self, const void* path) {
     QGraphicsScene_SetSelectionArea2((QGraphicsScene*)self, (QPainterPath*)path);
 }
 
@@ -210,27 +210,27 @@ void q_graphicsscene_add_item(void* self, void* item) {
     QGraphicsScene_AddItem((QGraphicsScene*)self, (QGraphicsItem*)item);
 }
 
-QGraphicsEllipseItem* q_graphicsscene_add_ellipse(void* self, void* rect) {
+QGraphicsEllipseItem* q_graphicsscene_add_ellipse(void* self, const void* rect) {
     return QGraphicsScene_AddEllipse((QGraphicsScene*)self, (QRectF*)rect);
 }
 
-QGraphicsLineItem* q_graphicsscene_add_line(void* self, void* line) {
+QGraphicsLineItem* q_graphicsscene_add_line(void* self, const void* line) {
     return QGraphicsScene_AddLine((QGraphicsScene*)self, (QLineF*)line);
 }
 
-QGraphicsPathItem* q_graphicsscene_add_path(void* self, void* path) {
+QGraphicsPathItem* q_graphicsscene_add_path(void* self, const void* path) {
     return QGraphicsScene_AddPath((QGraphicsScene*)self, (QPainterPath*)path);
 }
 
-QGraphicsPixmapItem* q_graphicsscene_add_pixmap(void* self, void* pixmap) {
+QGraphicsPixmapItem* q_graphicsscene_add_pixmap(void* self, const void* pixmap) {
     return QGraphicsScene_AddPixmap((QGraphicsScene*)self, (QPixmap*)pixmap);
 }
 
-QGraphicsPolygonItem* q_graphicsscene_add_polygon(void* self, void* polygon) {
+QGraphicsPolygonItem* q_graphicsscene_add_polygon(void* self, const void* polygon) {
     return QGraphicsScene_AddPolygon((QGraphicsScene*)self, (QPolygonF*)polygon);
 }
 
-QGraphicsRectItem* q_graphicsscene_add_rect(void* self, void* rect) {
+QGraphicsRectItem* q_graphicsscene_add_rect(void* self, const void* rect) {
     return QGraphicsScene_AddRect((QGraphicsScene*)self, (QRectF*)rect);
 }
 
@@ -262,7 +262,7 @@ void q_graphicsscene_remove_item(void* self, void* item) {
     QGraphicsScene_RemoveItem((QGraphicsScene*)self, (QGraphicsItem*)item);
 }
 
-QGraphicsItem* q_graphicsscene_focus_item(void* self) {
+QGraphicsItem* q_graphicsscene_focus_item(const void* self) {
     return QGraphicsScene_FocusItem((QGraphicsScene*)self);
 }
 
@@ -270,7 +270,7 @@ void q_graphicsscene_set_focus_item(void* self, void* item) {
     QGraphicsScene_SetFocusItem((QGraphicsScene*)self, (QGraphicsItem*)item);
 }
 
-bool q_graphicsscene_has_focus(void* self) {
+bool q_graphicsscene_has_focus(const void* self) {
     return QGraphicsScene_HasFocus((QGraphicsScene*)self);
 }
 
@@ -286,43 +286,43 @@ void q_graphicsscene_set_sticky_focus(void* self, bool enabled) {
     QGraphicsScene_SetStickyFocus((QGraphicsScene*)self, enabled);
 }
 
-bool q_graphicsscene_sticky_focus(void* self) {
+bool q_graphicsscene_sticky_focus(const void* self) {
     return QGraphicsScene_StickyFocus((QGraphicsScene*)self);
 }
 
-QGraphicsItem* q_graphicsscene_mouse_grabber_item(void* self) {
+QGraphicsItem* q_graphicsscene_mouse_grabber_item(const void* self) {
     return QGraphicsScene_MouseGrabberItem((QGraphicsScene*)self);
 }
 
-QBrush* q_graphicsscene_background_brush(void* self) {
+QBrush* q_graphicsscene_background_brush(const void* self) {
     return QGraphicsScene_BackgroundBrush((QGraphicsScene*)self);
 }
 
-void q_graphicsscene_set_background_brush(void* self, void* brush) {
+void q_graphicsscene_set_background_brush(void* self, const void* brush) {
     QGraphicsScene_SetBackgroundBrush((QGraphicsScene*)self, (QBrush*)brush);
 }
 
-QBrush* q_graphicsscene_foreground_brush(void* self) {
+QBrush* q_graphicsscene_foreground_brush(const void* self) {
     return QGraphicsScene_ForegroundBrush((QGraphicsScene*)self);
 }
 
-void q_graphicsscene_set_foreground_brush(void* self, void* brush) {
+void q_graphicsscene_set_foreground_brush(void* self, const void* brush) {
     QGraphicsScene_SetForegroundBrush((QGraphicsScene*)self, (QBrush*)brush);
 }
 
-QVariant* q_graphicsscene_input_method_query(void* self, int32_t query) {
+QVariant* q_graphicsscene_input_method_query(const void* self, int32_t query) {
     return QGraphicsScene_InputMethodQuery((QGraphicsScene*)self, query);
 }
 
-void q_graphicsscene_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
+void q_graphicsscene_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
     QGraphicsScene_OnInputMethodQuery((QGraphicsScene*)self, (intptr_t)callback);
 }
 
-QVariant* q_graphicsscene_super_input_method_query(void* self, int32_t query) {
+QVariant* q_graphicsscene_super_input_method_query(const void* self, int32_t query) {
     return QGraphicsScene_SuperInputMethodQuery((QGraphicsScene*)self, query);
 }
 
-libqt_list /* of QGraphicsView* */ q_graphicsscene_views(void* self) {
+libqt_list /* of QGraphicsView* */ q_graphicsscene_views(const void* self) {
     libqt_list _arr = QGraphicsScene_Views((QGraphicsScene*)self);
     return _arr;
 }
@@ -335,7 +335,7 @@ void q_graphicsscene_invalidate(void* self, double x, double y, double w, double
     QGraphicsScene_Invalidate((QGraphicsScene*)self, x, y, w, h);
 }
 
-QStyle* q_graphicsscene_style(void* self) {
+QStyle* q_graphicsscene_style(const void* self) {
     return QGraphicsScene_Style((QGraphicsScene*)self);
 }
 
@@ -343,27 +343,27 @@ void q_graphicsscene_set_style(void* self, void* style) {
     QGraphicsScene_SetStyle((QGraphicsScene*)self, (QStyle*)style);
 }
 
-QFont* q_graphicsscene_font(void* self) {
+QFont* q_graphicsscene_font(const void* self) {
     return QGraphicsScene_Font((QGraphicsScene*)self);
 }
 
-void q_graphicsscene_set_font(void* self, void* font) {
+void q_graphicsscene_set_font(void* self, const void* font) {
     QGraphicsScene_SetFont((QGraphicsScene*)self, (QFont*)font);
 }
 
-QPalette* q_graphicsscene_palette(void* self) {
+QPalette* q_graphicsscene_palette(const void* self) {
     return QGraphicsScene_Palette((QGraphicsScene*)self);
 }
 
-void q_graphicsscene_set_palette(void* self, void* palette) {
+void q_graphicsscene_set_palette(void* self, const void* palette) {
     QGraphicsScene_SetPalette((QGraphicsScene*)self, (QPalette*)palette);
 }
 
-bool q_graphicsscene_is_active(void* self) {
+bool q_graphicsscene_is_active(const void* self) {
     return QGraphicsScene_IsActive((QGraphicsScene*)self);
 }
 
-QGraphicsItem* q_graphicsscene_active_panel(void* self) {
+QGraphicsItem* q_graphicsscene_active_panel(const void* self) {
     return QGraphicsScene_ActivePanel((QGraphicsScene*)self);
 }
 
@@ -371,7 +371,7 @@ void q_graphicsscene_set_active_panel(void* self, void* item) {
     QGraphicsScene_SetActivePanel((QGraphicsScene*)self, (QGraphicsItem*)item);
 }
 
-QGraphicsWidget* q_graphicsscene_active_window(void* self) {
+QGraphicsWidget* q_graphicsscene_active_window(const void* self) {
     return QGraphicsScene_ActiveWindow((QGraphicsScene*)self);
 }
 
@@ -383,7 +383,7 @@ bool q_graphicsscene_send_event(void* self, void* item, void* event) {
     return QGraphicsScene_SendEvent((QGraphicsScene*)self, (QGraphicsItem*)item, (QEvent*)event);
 }
 
-double q_graphicsscene_minimum_render_size(void* self) {
+double q_graphicsscene_minimum_render_size(const void* self) {
     return QGraphicsScene_MinimumRenderSize((QGraphicsScene*)self);
 }
 
@@ -391,7 +391,7 @@ void q_graphicsscene_set_minimum_render_size(void* self, double minSize) {
     QGraphicsScene_SetMinimumRenderSize((QGraphicsScene*)self, minSize);
 }
 
-bool q_graphicsscene_focus_on_touch(void* self) {
+bool q_graphicsscene_focus_on_touch(const void* self) {
     return QGraphicsScene_FocusOnTouch((QGraphicsScene*)self);
 }
 
@@ -635,39 +635,39 @@ void q_graphicsscene_super_input_method_event(void* self, void* event) {
     QGraphicsScene_SuperInputMethodEvent((QGraphicsScene*)self, (QInputMethodEvent*)event);
 }
 
-void q_graphicsscene_draw_background(void* self, void* painter, void* rect) {
+void q_graphicsscene_draw_background(void* self, void* painter, const void* rect) {
     QGraphicsScene_DrawBackground((QGraphicsScene*)self, (QPainter*)painter, (QRectF*)rect);
 }
 
-void q_graphicsscene_on_draw_background(void* self, void (*callback)(void*, void*, void*)) {
+void q_graphicsscene_on_draw_background(void* self, void (*callback)(void*, void*, const void*)) {
     QGraphicsScene_OnDrawBackground((QGraphicsScene*)self, (intptr_t)callback);
 }
 
-void q_graphicsscene_super_draw_background(void* self, void* painter, void* rect) {
+void q_graphicsscene_super_draw_background(void* self, void* painter, const void* rect) {
     QGraphicsScene_SuperDrawBackground((QGraphicsScene*)self, (QPainter*)painter, (QRectF*)rect);
 }
 
-void q_graphicsscene_draw_foreground(void* self, void* painter, void* rect) {
+void q_graphicsscene_draw_foreground(void* self, void* painter, const void* rect) {
     QGraphicsScene_DrawForeground((QGraphicsScene*)self, (QPainter*)painter, (QRectF*)rect);
 }
 
-void q_graphicsscene_on_draw_foreground(void* self, void (*callback)(void*, void*, void*)) {
+void q_graphicsscene_on_draw_foreground(void* self, void (*callback)(void*, void*, const void*)) {
     QGraphicsScene_OnDrawForeground((QGraphicsScene*)self, (intptr_t)callback);
 }
 
-void q_graphicsscene_super_draw_foreground(void* self, void* painter, void* rect) {
+void q_graphicsscene_super_draw_foreground(void* self, void* painter, const void* rect) {
     QGraphicsScene_SuperDrawForeground((QGraphicsScene*)self, (QPainter*)painter, (QRectF*)rect);
 }
 
-void q_graphicsscene_draw_items(void* self, void* painter, int numItems, void** items, void* options, void* widget) {
+void q_graphicsscene_draw_items(void* self, void* painter, int numItems, void** items, const void* options, void* widget) {
     QGraphicsScene_DrawItems((QGraphicsScene*)self, (QPainter*)painter, numItems, (QGraphicsItem**)items, (QStyleOptionGraphicsItem*)options, (QWidget*)widget);
 }
 
-void q_graphicsscene_on_draw_items(void* self, void (*callback)(void*, void*, int, void**, void*, void*)) {
+void q_graphicsscene_on_draw_items(void* self, void (*callback)(void*, void*, int, void**, const void*, void*)) {
     QGraphicsScene_OnDrawItems((QGraphicsScene*)self, (intptr_t)callback);
 }
 
-void q_graphicsscene_super_draw_items(void* self, void* painter, int numItems, void** items, void* options, void* widget) {
+void q_graphicsscene_super_draw_items(void* self, void* painter, int numItems, void** items, const void* options, void* widget) {
     QGraphicsScene_SuperDrawItems((QGraphicsScene*)self, (QPainter*)painter, numItems, (QGraphicsItem**)items, (QStyleOptionGraphicsItem*)options, (QWidget*)widget);
 }
 
@@ -691,11 +691,11 @@ void q_graphicsscene_on_changed(void* self, void (*callback)(void*, libqt_list /
     QGraphicsScene_Connect_Changed((QGraphicsScene*)self, (intptr_t)callback);
 }
 
-void q_graphicsscene_scene_rect_changed(void* self, void* rect) {
+void q_graphicsscene_scene_rect_changed(void* self, const void* rect) {
     QGraphicsScene_SceneRectChanged((QGraphicsScene*)self, (QRectF*)rect);
 }
 
-void q_graphicsscene_on_scene_rect_changed(void* self, void (*callback)(void*, void*)) {
+void q_graphicsscene_on_scene_rect_changed(void* self, void (*callback)(void*, const void*)) {
     QGraphicsScene_Connect_SceneRectChanged((QGraphicsScene*)self, (intptr_t)callback);
 }
 
@@ -729,146 +729,146 @@ const char* q_graphicsscene_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_graphicsscene_render2(void* self, void* painter, void* target) {
+void q_graphicsscene_render2(void* self, void* painter, const void* target) {
     QGraphicsScene_Render2((QGraphicsScene*)self, (QPainter*)painter, (QRectF*)target);
 }
 
-void q_graphicsscene_render3(void* self, void* painter, void* target, void* source) {
+void q_graphicsscene_render3(void* self, void* painter, const void* target, const void* source) {
     QGraphicsScene_Render3((QGraphicsScene*)self, (QPainter*)painter, (QRectF*)target, (QRectF*)source);
 }
 
-void q_graphicsscene_render4(void* self, void* painter, void* target, void* source, int32_t aspectRatioMode) {
+void q_graphicsscene_render4(void* self, void* painter, const void* target, const void* source, int32_t aspectRatioMode) {
     QGraphicsScene_Render4((QGraphicsScene*)self, (QPainter*)painter, (QRectF*)target, (QRectF*)source, aspectRatioMode);
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items1(void* self, int32_t order) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items1(const void* self, int32_t order) {
     libqt_list _arr = QGraphicsScene_Items1((QGraphicsScene*)self, order);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items22(void* self, void* pos, int32_t mode) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items22(const void* self, const void* pos, int32_t mode) {
     libqt_list _arr = QGraphicsScene_Items22((QGraphicsScene*)self, (QPointF*)pos, mode);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items32(void* self, void* pos, int32_t mode, int32_t order) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items32(const void* self, const void* pos, int32_t mode, int32_t order) {
     libqt_list _arr = QGraphicsScene_Items32((QGraphicsScene*)self, (QPointF*)pos, mode, order);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items42(void* self, void* pos, int32_t mode, int32_t order, void* deviceTransform) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items42(const void* self, const void* pos, int32_t mode, int32_t order, const void* deviceTransform) {
     libqt_list _arr = QGraphicsScene_Items42((QGraphicsScene*)self, (QPointF*)pos, mode, order, (QTransform*)deviceTransform);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items23(void* self, void* rect, int32_t mode) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items23(const void* self, const void* rect, int32_t mode) {
     libqt_list _arr = QGraphicsScene_Items23((QGraphicsScene*)self, (QRectF*)rect, mode);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items33(void* self, void* rect, int32_t mode, int32_t order) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items33(const void* self, const void* rect, int32_t mode, int32_t order) {
     libqt_list _arr = QGraphicsScene_Items33((QGraphicsScene*)self, (QRectF*)rect, mode, order);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items43(void* self, void* rect, int32_t mode, int32_t order, void* deviceTransform) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items43(const void* self, const void* rect, int32_t mode, int32_t order, const void* deviceTransform) {
     libqt_list _arr = QGraphicsScene_Items43((QGraphicsScene*)self, (QRectF*)rect, mode, order, (QTransform*)deviceTransform);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items24(void* self, void* polygon, int32_t mode) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items24(const void* self, const void* polygon, int32_t mode) {
     libqt_list _arr = QGraphicsScene_Items24((QGraphicsScene*)self, (QPolygonF*)polygon, mode);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items34(void* self, void* polygon, int32_t mode, int32_t order) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items34(const void* self, const void* polygon, int32_t mode, int32_t order) {
     libqt_list _arr = QGraphicsScene_Items34((QGraphicsScene*)self, (QPolygonF*)polygon, mode, order);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items44(void* self, void* polygon, int32_t mode, int32_t order, void* deviceTransform) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items44(const void* self, const void* polygon, int32_t mode, int32_t order, const void* deviceTransform) {
     libqt_list _arr = QGraphicsScene_Items44((QGraphicsScene*)self, (QPolygonF*)polygon, mode, order, (QTransform*)deviceTransform);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items25(void* self, void* path, int32_t mode) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items25(const void* self, const void* path, int32_t mode) {
     libqt_list _arr = QGraphicsScene_Items25((QGraphicsScene*)self, (QPainterPath*)path, mode);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items35(void* self, void* path, int32_t mode, int32_t order) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items35(const void* self, const void* path, int32_t mode, int32_t order) {
     libqt_list _arr = QGraphicsScene_Items35((QGraphicsScene*)self, (QPainterPath*)path, mode, order);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items45(void* self, void* path, int32_t mode, int32_t order, void* deviceTransform) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items45(const void* self, const void* path, int32_t mode, int32_t order, const void* deviceTransform) {
     libqt_list _arr = QGraphicsScene_Items45((QGraphicsScene*)self, (QPainterPath*)path, mode, order, (QTransform*)deviceTransform);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items7(void* self, double x, double y, double w, double h, int32_t mode, int32_t order, void* deviceTransform) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items7(const void* self, double x, double y, double w, double h, int32_t mode, int32_t order, const void* deviceTransform) {
     libqt_list _arr = QGraphicsScene_Items7((QGraphicsScene*)self, x, y, w, h, mode, order, (QTransform*)deviceTransform);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_colliding_items2(void* self, void* item, int32_t mode) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_colliding_items2(const void* self, const void* item, int32_t mode) {
     libqt_list _arr = QGraphicsScene_CollidingItems2((QGraphicsScene*)self, (QGraphicsItem*)item, mode);
     return _arr;
 }
 
-void q_graphicsscene_set_selection_area22(void* self, void* path, int32_t selectionOperation) {
+void q_graphicsscene_set_selection_area22(void* self, const void* path, int32_t selectionOperation) {
     QGraphicsScene_SetSelectionArea22((QGraphicsScene*)self, (QPainterPath*)path, selectionOperation);
 }
 
-void q_graphicsscene_set_selection_area3(void* self, void* path, int32_t selectionOperation, int32_t mode) {
+void q_graphicsscene_set_selection_area3(void* self, const void* path, int32_t selectionOperation, int32_t mode) {
     QGraphicsScene_SetSelectionArea3((QGraphicsScene*)self, (QPainterPath*)path, selectionOperation, mode);
 }
 
-void q_graphicsscene_set_selection_area4(void* self, void* path, int32_t selectionOperation, int32_t mode, void* deviceTransform) {
+void q_graphicsscene_set_selection_area4(void* self, const void* path, int32_t selectionOperation, int32_t mode, const void* deviceTransform) {
     QGraphicsScene_SetSelectionArea4((QGraphicsScene*)self, (QPainterPath*)path, selectionOperation, mode, (QTransform*)deviceTransform);
 }
 
-QGraphicsEllipseItem* q_graphicsscene_add_ellipse22(void* self, void* rect, void* pen) {
+QGraphicsEllipseItem* q_graphicsscene_add_ellipse22(void* self, const void* rect, const void* pen) {
     return QGraphicsScene_AddEllipse22((QGraphicsScene*)self, (QRectF*)rect, (QPen*)pen);
 }
 
-QGraphicsEllipseItem* q_graphicsscene_add_ellipse3(void* self, void* rect, void* pen, void* brush) {
+QGraphicsEllipseItem* q_graphicsscene_add_ellipse3(void* self, const void* rect, const void* pen, const void* brush) {
     return QGraphicsScene_AddEllipse3((QGraphicsScene*)self, (QRectF*)rect, (QPen*)pen, (QBrush*)brush);
 }
 
-QGraphicsLineItem* q_graphicsscene_add_line22(void* self, void* line, void* pen) {
+QGraphicsLineItem* q_graphicsscene_add_line22(void* self, const void* line, const void* pen) {
     return QGraphicsScene_AddLine22((QGraphicsScene*)self, (QLineF*)line, (QPen*)pen);
 }
 
-QGraphicsPathItem* q_graphicsscene_add_path2(void* self, void* path, void* pen) {
+QGraphicsPathItem* q_graphicsscene_add_path2(void* self, const void* path, const void* pen) {
     return QGraphicsScene_AddPath2((QGraphicsScene*)self, (QPainterPath*)path, (QPen*)pen);
 }
 
-QGraphicsPathItem* q_graphicsscene_add_path3(void* self, void* path, void* pen, void* brush) {
+QGraphicsPathItem* q_graphicsscene_add_path3(void* self, const void* path, const void* pen, const void* brush) {
     return QGraphicsScene_AddPath3((QGraphicsScene*)self, (QPainterPath*)path, (QPen*)pen, (QBrush*)brush);
 }
 
-QGraphicsPolygonItem* q_graphicsscene_add_polygon2(void* self, void* polygon, void* pen) {
+QGraphicsPolygonItem* q_graphicsscene_add_polygon2(void* self, const void* polygon, const void* pen) {
     return QGraphicsScene_AddPolygon2((QGraphicsScene*)self, (QPolygonF*)polygon, (QPen*)pen);
 }
 
-QGraphicsPolygonItem* q_graphicsscene_add_polygon3(void* self, void* polygon, void* pen, void* brush) {
+QGraphicsPolygonItem* q_graphicsscene_add_polygon3(void* self, const void* polygon, const void* pen, const void* brush) {
     return QGraphicsScene_AddPolygon3((QGraphicsScene*)self, (QPolygonF*)polygon, (QPen*)pen, (QBrush*)brush);
 }
 
-QGraphicsRectItem* q_graphicsscene_add_rect22(void* self, void* rect, void* pen) {
+QGraphicsRectItem* q_graphicsscene_add_rect22(void* self, const void* rect, const void* pen) {
     return QGraphicsScene_AddRect22((QGraphicsScene*)self, (QRectF*)rect, (QPen*)pen);
 }
 
-QGraphicsRectItem* q_graphicsscene_add_rect3(void* self, void* rect, void* pen, void* brush) {
+QGraphicsRectItem* q_graphicsscene_add_rect3(void* self, const void* rect, const void* pen, const void* brush) {
     return QGraphicsScene_AddRect3((QGraphicsScene*)self, (QRectF*)rect, (QPen*)pen, (QBrush*)brush);
 }
 
-QGraphicsTextItem* q_graphicsscene_add_text2(void* self, const char* text, void* font) {
+QGraphicsTextItem* q_graphicsscene_add_text2(void* self, const char* text, const void* font) {
     return QGraphicsScene_AddText2((QGraphicsScene*)self, qstring(text), (QFont*)font);
 }
 
-QGraphicsSimpleTextItem* q_graphicsscene_add_simple_text2(void* self, const char* text, void* font) {
+QGraphicsSimpleTextItem* q_graphicsscene_add_simple_text2(void* self, const char* text, const void* font) {
     return QGraphicsScene_AddSimpleText2((QGraphicsScene*)self, qstring(text), (QFont*)font);
 }
 
@@ -876,23 +876,23 @@ QGraphicsProxyWidget* q_graphicsscene_add_widget2(void* self, void* widget, int3
     return QGraphicsScene_AddWidget2((QGraphicsScene*)self, (QWidget*)widget, wFlags);
 }
 
-QGraphicsEllipseItem* q_graphicsscene_add_ellipse5(void* self, double x, double y, double w, double h, void* pen) {
+QGraphicsEllipseItem* q_graphicsscene_add_ellipse5(void* self, double x, double y, double w, double h, const void* pen) {
     return QGraphicsScene_AddEllipse5((QGraphicsScene*)self, x, y, w, h, (QPen*)pen);
 }
 
-QGraphicsEllipseItem* q_graphicsscene_add_ellipse6(void* self, double x, double y, double w, double h, void* pen, void* brush) {
+QGraphicsEllipseItem* q_graphicsscene_add_ellipse6(void* self, double x, double y, double w, double h, const void* pen, const void* brush) {
     return QGraphicsScene_AddEllipse6((QGraphicsScene*)self, x, y, w, h, (QPen*)pen, (QBrush*)brush);
 }
 
-QGraphicsLineItem* q_graphicsscene_add_line5(void* self, double x1, double y1, double x2, double y2, void* pen) {
+QGraphicsLineItem* q_graphicsscene_add_line5(void* self, double x1, double y1, double x2, double y2, const void* pen) {
     return QGraphicsScene_AddLine5((QGraphicsScene*)self, x1, y1, x2, y2, (QPen*)pen);
 }
 
-QGraphicsRectItem* q_graphicsscene_add_rect5(void* self, double x, double y, double w, double h, void* pen) {
+QGraphicsRectItem* q_graphicsscene_add_rect5(void* self, double x, double y, double w, double h, const void* pen) {
     return QGraphicsScene_AddRect5((QGraphicsScene*)self, x, y, w, h, (QPen*)pen);
 }
 
-QGraphicsRectItem* q_graphicsscene_add_rect6(void* self, double x, double y, double w, double h, void* pen, void* brush) {
+QGraphicsRectItem* q_graphicsscene_add_rect6(void* self, double x, double y, double w, double h, const void* pen, const void* brush) {
     return QGraphicsScene_AddRect6((QGraphicsScene*)self, x, y, w, h, (QPen*)pen, (QBrush*)brush);
 }
 
@@ -908,19 +908,19 @@ void q_graphicsscene_invalidate5(void* self, double x, double y, double w, doubl
     QGraphicsScene_Invalidate5((QGraphicsScene*)self, x, y, w, h, layers);
 }
 
-void q_graphicsscene_update1(void* self, void* rect) {
+void q_graphicsscene_update1(void* self, const void* rect) {
     QGraphicsScene_Update1((QGraphicsScene*)self, (QRectF*)rect);
 }
 
-void q_graphicsscene_invalidate1(void* self, void* rect) {
+void q_graphicsscene_invalidate1(void* self, const void* rect) {
     QGraphicsScene_Invalidate1((QGraphicsScene*)self, (QRectF*)rect);
 }
 
-void q_graphicsscene_invalidate22(void* self, void* rect, int32_t layers) {
+void q_graphicsscene_invalidate22(void* self, const void* rect, int32_t layers) {
     QGraphicsScene_Invalidate22((QGraphicsScene*)self, (QRectF*)rect, layers);
 }
 
-const char* q_graphicsscene_object_name(void* self) {
+const char* q_graphicsscene_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -931,19 +931,19 @@ void q_graphicsscene_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_graphicsscene_is_widget_type(void* self) {
+bool q_graphicsscene_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_graphicsscene_is_window_type(void* self) {
+bool q_graphicsscene_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_graphicsscene_is_quick_item_type(void* self) {
+bool q_graphicsscene_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_graphicsscene_signals_blocked(void* self) {
+bool q_graphicsscene_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -951,7 +951,7 @@ bool q_graphicsscene_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_graphicsscene_thread(void* self) {
+QThread* q_graphicsscene_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -975,7 +975,7 @@ void q_graphicsscene_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_graphicsscene_children(void* self) {
+libqt_list /* of QObject* */ q_graphicsscene_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -992,55 +992,55 @@ void q_graphicsscene_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_graphicsscene_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_graphicsscene_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_graphicsscene_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_graphicsscene_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_graphicsscene_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_graphicsscene_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_graphicsscene_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_graphicsscene_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_graphicsscene_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_graphicsscene_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_graphicsscene_disconnect3(void* self) {
+bool q_graphicsscene_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_graphicsscene_disconnect4(void* self, void* receiver) {
+bool q_graphicsscene_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_graphicsscene_disconnect5(void* param1) {
+bool q_graphicsscene_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_graphicsscene_dump_object_tree(void* self) {
+void q_graphicsscene_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_graphicsscene_dump_object_info(void* self) {
+void q_graphicsscene_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_graphicsscene_set_property(void* self, const char* name, void* value) {
+bool q_graphicsscene_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_graphicsscene_property(void* self, const char* name) {
+QVariant* q_graphicsscene_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_graphicsscene_dynamic_property_names(void* self) {
+const char** q_graphicsscene_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -1061,7 +1061,7 @@ QBindingStorage* q_graphicsscene_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_graphicsscene_binding_storage2(void* self) {
+const QBindingStorage* q_graphicsscene_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -1073,11 +1073,11 @@ void q_graphicsscene_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_graphicsscene_parent(void* self) {
+QObject* q_graphicsscene_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_graphicsscene_inherits(void* self, const char* classname) {
+bool q_graphicsscene_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -1093,31 +1093,31 @@ int32_t q_graphicsscene_start_timer23(void* self, int64_t time, int32_t timerTyp
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_graphicsscene_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_graphicsscene_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_graphicsscene_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_graphicsscene_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_graphicsscene_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_graphicsscene_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_graphicsscene_disconnect1(void* self, const char* signal) {
+bool q_graphicsscene_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_graphicsscene_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_graphicsscene_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_graphicsscene_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_graphicsscene_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_graphicsscene_disconnect23(void* self, void* receiver, const char* member) {
+bool q_graphicsscene_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -1165,76 +1165,44 @@ void q_graphicsscene_on_custom_event(void* self, void (*callback)(void*, void*))
     QGraphicsScene_OnCustomEvent((QGraphicsScene*)self, (intptr_t)callback);
 }
 
-void q_graphicsscene_connect_notify(void* self, void* signal) {
+void q_graphicsscene_connect_notify(void* self, const void* signal) {
     QGraphicsScene_ConnectNotify((QGraphicsScene*)self, (QMetaMethod*)signal);
 }
 
-void q_graphicsscene_super_connect_notify(void* self, void* signal) {
+void q_graphicsscene_super_connect_notify(void* self, const void* signal) {
     QGraphicsScene_SuperConnectNotify((QGraphicsScene*)self, (QMetaMethod*)signal);
 }
 
-void q_graphicsscene_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_graphicsscene_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QGraphicsScene_OnConnectNotify((QGraphicsScene*)self, (intptr_t)callback);
 }
 
-void q_graphicsscene_disconnect_notify(void* self, void* signal) {
+void q_graphicsscene_disconnect_notify(void* self, const void* signal) {
     QGraphicsScene_DisconnectNotify((QGraphicsScene*)self, (QMetaMethod*)signal);
 }
 
-void q_graphicsscene_super_disconnect_notify(void* self, void* signal) {
+void q_graphicsscene_super_disconnect_notify(void* self, const void* signal) {
     QGraphicsScene_SuperDisconnectNotify((QGraphicsScene*)self, (QMetaMethod*)signal);
 }
 
-void q_graphicsscene_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_graphicsscene_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QGraphicsScene_OnDisconnectNotify((QGraphicsScene*)self, (intptr_t)callback);
 }
 
-QObject* q_graphicsscene_sender(void* self) {
+QObject* q_graphicsscene_sender(const void* self) {
     return QGraphicsScene_Sender((QGraphicsScene*)self);
 }
 
-QObject* q_graphicsscene_super_sender(void* self) {
-    return QGraphicsScene_SuperSender((QGraphicsScene*)self);
-}
-
-void q_graphicsscene_on_sender(void* self, QObject* (*callback)()) {
-    QGraphicsScene_OnSender((QGraphicsScene*)self, (intptr_t)callback);
-}
-
-int32_t q_graphicsscene_sender_signal_index(void* self) {
+int32_t q_graphicsscene_sender_signal_index(const void* self) {
     return QGraphicsScene_SenderSignalIndex((QGraphicsScene*)self);
 }
 
-int32_t q_graphicsscene_super_sender_signal_index(void* self) {
-    return QGraphicsScene_SuperSenderSignalIndex((QGraphicsScene*)self);
-}
-
-void q_graphicsscene_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QGraphicsScene_OnSenderSignalIndex((QGraphicsScene*)self, (intptr_t)callback);
-}
-
-int32_t q_graphicsscene_receivers(void* self, const char* signal) {
+int32_t q_graphicsscene_receivers(const void* self, const char* signal) {
     return QGraphicsScene_Receivers((QGraphicsScene*)self, signal);
 }
 
-int32_t q_graphicsscene_super_receivers(void* self, const char* signal) {
-    return QGraphicsScene_SuperReceivers((QGraphicsScene*)self, signal);
-}
-
-void q_graphicsscene_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QGraphicsScene_OnReceivers((QGraphicsScene*)self, (intptr_t)callback);
-}
-
-bool q_graphicsscene_is_signal_connected(void* self, void* signal) {
+bool q_graphicsscene_is_signal_connected(const void* self, const void* signal) {
     return QGraphicsScene_IsSignalConnected((QGraphicsScene*)self, (QMetaMethod*)signal);
-}
-
-bool q_graphicsscene_super_is_signal_connected(void* self, void* signal) {
-    return QGraphicsScene_SuperIsSignalConnected((QGraphicsScene*)self, (QMetaMethod*)signal);
-}
-
-void q_graphicsscene_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QGraphicsScene_OnIsSignalConnected((QGraphicsScene*)self, (intptr_t)callback);
 }
 
 void q_graphicsscene_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

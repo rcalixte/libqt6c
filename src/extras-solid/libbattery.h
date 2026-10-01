@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
-const QMetaObject* k_solid__battery_meta_object(void* self);
+const QMetaObject* k_solid__battery_meta_object(const void* self);
 
 /// @param self Solid__Battery*
 /// @param param1 const char*
@@ -44,125 +44,125 @@ int32_t k_solid__battery_device_interface_type();
 
 /// [Upstream resources](https://api.kde.org/solid-battery.html#isPresent)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
-bool k_solid__battery_is_present(void* self);
+bool k_solid__battery_is_present(const void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-battery.html#type)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
 /// @return enum Solid__Battery__BatteryType
 ///
-int32_t k_solid__battery_type(void* self);
+int32_t k_solid__battery_type(const void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-battery.html#chargePercent)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
-int32_t k_solid__battery_charge_percent(void* self);
+int32_t k_solid__battery_charge_percent(const void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-battery.html#capacity)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
-int32_t k_solid__battery_capacity(void* self);
+int32_t k_solid__battery_capacity(const void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-battery.html#cycleCount)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
-int32_t k_solid__battery_cycle_count(void* self);
+int32_t k_solid__battery_cycle_count(const void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-battery.html#isRechargeable)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
-bool k_solid__battery_is_rechargeable(void* self);
+bool k_solid__battery_is_rechargeable(const void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-battery.html#isPowerSupply)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
-bool k_solid__battery_is_power_supply(void* self);
+bool k_solid__battery_is_power_supply(const void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-battery.html#chargeState)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
 /// @return enum Solid__Battery__ChargeState
 ///
-int32_t k_solid__battery_charge_state(void* self);
+int32_t k_solid__battery_charge_state(const void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-battery.html#timeToEmpty)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
-long long k_solid__battery_time_to_empty(void* self);
+long long k_solid__battery_time_to_empty(const void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-battery.html#timeToFull)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
-long long k_solid__battery_time_to_full(void* self);
+long long k_solid__battery_time_to_full(const void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-battery.html#technology)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
 /// @return enum Solid__Battery__Technology
 ///
-int32_t k_solid__battery_technology(void* self);
+int32_t k_solid__battery_technology(const void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-battery.html#energy)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
-double k_solid__battery_energy(void* self);
+double k_solid__battery_energy(const void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-battery.html#energyFull)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
-double k_solid__battery_energy_full(void* self);
+double k_solid__battery_energy_full(const void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-battery.html#energyFullDesign)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
-double k_solid__battery_energy_full_design(void* self);
+double k_solid__battery_energy_full_design(const void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-battery.html#energyRate)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
-double k_solid__battery_energy_rate(void* self);
+double k_solid__battery_energy_rate(const void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-battery.html#voltage)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
-double k_solid__battery_voltage(void* self);
+double k_solid__battery_voltage(const void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-battery.html#temperature)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
-double k_solid__battery_temperature(void* self);
+double k_solid__battery_temperature(const void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-battery.html#serial)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
-const char* k_solid__battery_serial(void* self);
+const char* k_solid__battery_serial(const void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-battery.html#remainingTime)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
-long long k_solid__battery_remaining_time(void* self);
+long long k_solid__battery_remaining_time(const void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-battery.html#presentStateChanged)
 ///
@@ -426,9 +426,9 @@ void k_solid__battery_on_charge_state_changed2(void* self, void (*callback)(void
 ///
 /// [Upstream resources](https://api.kde.org/solid-deviceinterface.html#isValid)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
-bool k_solid__battery_is_valid(void* self);
+bool k_solid__battery_is_valid(const void* self);
 
 /// Inherited from Solid::DeviceInterface
 ///
@@ -485,9 +485,9 @@ bool k_solid__battery_event_filter(void* self, void* watched, void* event);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
-const char* k_solid__battery_object_name(void* self);
+const char* k_solid__battery_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -502,33 +502,33 @@ void k_solid__battery_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
-bool k_solid__battery_is_widget_type(void* self);
+bool k_solid__battery_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
-bool k_solid__battery_is_window_type(void* self);
+bool k_solid__battery_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
-bool k_solid__battery_is_quick_item_type(void* self);
+bool k_solid__battery_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
-bool k_solid__battery_signals_blocked(void* self);
+bool k_solid__battery_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -543,9 +543,9 @@ bool k_solid__battery_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
-QThread* k_solid__battery_thread(void* self);
+QThread* k_solid__battery_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -596,11 +596,11 @@ void k_solid__battery_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_solid__battery_children(void* self);
+libqt_list k_solid__battery_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -638,7 +638,7 @@ void k_solid__battery_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_solid__battery_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_solid__battery_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -649,18 +649,18 @@ QMetaObject__Connection* k_solid__battery_connect(void* sender, const char* sign
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_solid__battery_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_solid__battery_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_solid__battery_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_solid__battery_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -671,7 +671,7 @@ QMetaObject__Connection* k_solid__battery_connect3(void* self, void* sender, con
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_solid__battery_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_solid__battery_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -682,24 +682,24 @@ bool k_solid__battery_disconnect(void* sender, const char* signal, void* receive
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_solid__battery_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_solid__battery_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
-bool k_solid__battery_disconnect3(void* self);
+bool k_solid__battery_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 /// @param receiver QObject*
 ///
-bool k_solid__battery_disconnect4(void* self, void* receiver);
+bool k_solid__battery_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -707,23 +707,23 @@ bool k_solid__battery_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_solid__battery_disconnect5(void* param1);
+bool k_solid__battery_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
-void k_solid__battery_dump_object_tree(void* self);
+void k_solid__battery_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
-void k_solid__battery_dump_object_info(void* self);
+void k_solid__battery_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -733,16 +733,16 @@ void k_solid__battery_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_solid__battery_set_property(void* self, const char* name, void* value);
+bool k_solid__battery_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 /// @param name const char*
 ///
-QVariant* k_solid__battery_property(void* self, const char* name);
+QVariant* k_solid__battery_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -750,9 +750,9 @@ QVariant* k_solid__battery_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
-const char** k_solid__battery_dynamic_property_names(void* self);
+const char** k_solid__battery_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -766,9 +766,9 @@ QBindingStorage* k_solid__battery_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
-const QBindingStorage* k_solid__battery_binding_storage2(void* self);
+const QBindingStorage* k_solid__battery_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -791,18 +791,18 @@ void k_solid__battery_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 ///
-QObject* k_solid__battery_parent(void* self);
+QObject* k_solid__battery_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 /// @param classname const char*
 ///
-bool k_solid__battery_inherits(void* self, const char* classname);
+bool k_solid__battery_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -842,7 +842,7 @@ int32_t k_solid__battery_start_timer23(void* self, int64_t time, int32_t timerTy
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_solid__battery_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_solid__battery_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -854,59 +854,59 @@ QMetaObject__Connection* k_solid__battery_connect5(void* sender, const char* sig
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_solid__battery_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_solid__battery_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_solid__battery_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_solid__battery_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 /// @param signal const char*
 ///
-bool k_solid__battery_disconnect1(void* self, const char* signal);
+bool k_solid__battery_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Solid__Battery*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_solid__battery_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_solid__battery_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_solid__battery_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Solid__Battery*
+/// @param self const Solid__Battery*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_solid__battery_disconnect23(void* self, void* receiver, const char* member);
+bool k_solid__battery_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const Solid__Battery*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_solid__battery_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

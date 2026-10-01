@@ -14,7 +14,7 @@
 ///
 /// @param other QUntypedPropertyData*
 ///
-QUntypedPropertyData* q_untypedpropertydata_new(void* other);
+QUntypedPropertyData* q_untypedpropertydata_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quntypedpropertydata.html)
 

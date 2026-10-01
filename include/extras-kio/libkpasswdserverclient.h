@@ -39,7 +39,7 @@ int32_t k_passwdserverclient_query_auth_info(void* self, void* info, const char*
 /// @param info KIO__AuthInfo*
 /// @param windowId long long
 ///
-void k_passwdserverclient_add_auth_info(void* self, void* info, long long windowId);
+void k_passwdserverclient_add_auth_info(void* self, const void* info, long long windowId);
 
 /// [Upstream resources](https://api.kde.org/kpasswdserverclient.html#removeAuthInfo)
 ///

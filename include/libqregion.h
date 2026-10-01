@@ -31,7 +31,7 @@ QRegion* q_region_new2(int x, int y, int w, int h);
 ///
 /// @param r QRect*
 ///
-QRegion* q_region_new3(void* r);
+QRegion* q_region_new3(const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html)
 
@@ -39,7 +39,7 @@ QRegion* q_region_new3(void* r);
 ///
 /// @param pa QPolygon*
 ///
-QRegion* q_region_new4(void* pa);
+QRegion* q_region_new4(const void* pa);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html)
 
@@ -47,7 +47,7 @@ QRegion* q_region_new4(void* pa);
 ///
 /// @param region QRegion*
 ///
-QRegion* q_region_new5(void* region);
+QRegion* q_region_new5(const void* region);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html)
 
@@ -55,7 +55,7 @@ QRegion* q_region_new5(void* region);
 ///
 /// @param bitmap QBitmap*
 ///
-QRegion* q_region_new6(void* bitmap);
+QRegion* q_region_new6(const void* bitmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html)
 
@@ -76,7 +76,7 @@ QRegion* q_region_new7(int x, int y, int w, int h, int32_t t);
 /// @param r QRect*
 /// @param t enum QRegion__RegionType
 ///
-QRegion* q_region_new8(void* r, int32_t t);
+QRegion* q_region_new8(const void* r, int32_t t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html)
 
@@ -85,14 +85,14 @@ QRegion* q_region_new8(void* r, int32_t t);
 /// @param pa QPolygon*
 /// @param fillRule enum Qt__FillRule
 ///
-QRegion* q_region_new9(void* pa, int32_t fillRule);
+QRegion* q_region_new9(const void* pa, int32_t fillRule);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#operator-eq)
 ///
 /// @param self QRegion*
 /// @param param1 QRegion*
 ///
-void q_region_operator_assign(void* self, void* param1);
+void q_region_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#swap)
 ///
@@ -103,53 +103,53 @@ void q_region_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#isEmpty)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 ///
-bool q_region_is_empty(void* self);
+bool q_region_is_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#isNull)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 ///
-bool q_region_is_null(void* self);
+bool q_region_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#begin)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 ///
-const QRect* q_region_begin(void* self);
+const QRect* q_region_begin(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#cbegin)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 ///
-const QRect* q_region_cbegin(void* self);
+const QRect* q_region_cbegin(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#end)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 ///
-const QRect* q_region_end(void* self);
+const QRect* q_region_end(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#cend)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 ///
-const QRect* q_region_cend(void* self);
+const QRect* q_region_cend(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#contains)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 /// @param p QPoint*
 ///
-bool q_region_contains(void* self, void* p);
+bool q_region_contains(const void* self, const void* p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#contains)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 /// @param r QRect*
 ///
-bool q_region_contains2(void* self, void* r);
+bool q_region_contains2(const void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#translate)
 ///
@@ -164,84 +164,84 @@ void q_region_translate(void* self, int dx, int dy);
 /// @param self QRegion*
 /// @param p QPoint*
 ///
-void q_region_translate2(void* self, void* p);
+void q_region_translate2(void* self, const void* p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#translated)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 /// @param dx int
 /// @param dy int
 ///
-QRegion* q_region_translated(void* self, int dx, int dy);
+QRegion* q_region_translated(const void* self, int dx, int dy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#translated)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 /// @param p QPoint*
 ///
-QRegion* q_region_translated2(void* self, void* p);
+QRegion* q_region_translated2(const void* self, const void* p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#united)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 /// @param r QRegion*
 ///
-QRegion* q_region_united(void* self, void* r);
+QRegion* q_region_united(const void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#united)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 /// @param r QRect*
 ///
-QRegion* q_region_united2(void* self, void* r);
+QRegion* q_region_united2(const void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#intersected)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 /// @param r QRegion*
 ///
-QRegion* q_region_intersected(void* self, void* r);
+QRegion* q_region_intersected(const void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#intersected)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 /// @param r QRect*
 ///
-QRegion* q_region_intersected2(void* self, void* r);
+QRegion* q_region_intersected2(const void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#subtracted)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 /// @param r QRegion*
 ///
-QRegion* q_region_subtracted(void* self, void* r);
+QRegion* q_region_subtracted(const void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#xored)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 /// @param r QRegion*
 ///
-QRegion* q_region_xored(void* self, void* r);
+QRegion* q_region_xored(const void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#intersects)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 /// @param r QRegion*
 ///
-bool q_region_intersects(void* self, void* r);
+bool q_region_intersects(const void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#intersects)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 /// @param r QRect*
 ///
-bool q_region_intersects2(void* self, void* r);
+bool q_region_intersects2(const void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#boundingRect)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 ///
-QRect* q_region_bounding_rect(void* self);
+QRect* q_region_bounding_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#setRects)
 ///
@@ -249,7 +249,7 @@ QRect* q_region_bounding_rect(void* self);
 /// @param rect QRect*
 /// @param num int
 ///
-void q_region_set_rects(void* self, void* rect, int num);
+void q_region_set_rects(void* self, const void* rect, int num);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#setRects)
 ///
@@ -260,135 +260,135 @@ void q_region_set_rects2(void* self, libqt_list r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#rects)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 ///
 /// @return libqt_list of QRect*
 ///
-libqt_list q_region_rects(void* self);
+libqt_list q_region_rects(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#rectCount)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 ///
-int32_t q_region_rect_count(void* self);
+int32_t q_region_rect_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#operator-7c)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 /// @param r QRegion*
 ///
-QRegion* q_region_operator_bitwise_or(void* self, void* r);
+QRegion* q_region_operator_bitwise_or(const void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#operator-2b)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 /// @param r QRegion*
 ///
-QRegion* q_region_operator_plus(void* self, void* r);
+QRegion* q_region_operator_plus(const void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#operator-2b)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 /// @param r QRect*
 ///
-QRegion* q_region_operator_plus2(void* self, void* r);
+QRegion* q_region_operator_plus2(const void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#operator-and)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 /// @param r QRegion*
 ///
-QRegion* q_region_operator_bitwise_and(void* self, void* r);
+QRegion* q_region_operator_bitwise_and(const void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#operator-and)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 /// @param r QRect*
 ///
-QRegion* q_region_operator_bitwise_and2(void* self, void* r);
+QRegion* q_region_operator_bitwise_and2(const void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#operator-)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 /// @param r QRegion*
 ///
-QRegion* q_region_operator_minus(void* self, void* r);
+QRegion* q_region_operator_minus(const void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#operator-5e)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 /// @param r QRegion*
 ///
-QRegion* q_region_operator_bitwise_not(void* self, void* r);
+QRegion* q_region_operator_bitwise_not(const void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#operator-7c-eq)
 ///
 /// @param self QRegion*
 /// @param r QRegion*
 ///
-void q_region_operator_bitwise_or_assign(void* self, void* r);
+void q_region_operator_bitwise_or_assign(void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#operator-2b-eq)
 ///
 /// @param self QRegion*
 /// @param r QRegion*
 ///
-QRegion* q_region_operator_plus_assign(void* self, void* r);
+QRegion* q_region_operator_plus_assign(void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#operator-2b-eq)
 ///
 /// @param self QRegion*
 /// @param r QRect*
 ///
-QRegion* q_region_operator_plus_assign2(void* self, void* r);
+QRegion* q_region_operator_plus_assign2(void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#operator-and-eq)
 ///
 /// @param self QRegion*
 /// @param r QRegion*
 ///
-void q_region_operator_bitwise_and_assign(void* self, void* r);
+void q_region_operator_bitwise_and_assign(void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#operator-and-eq)
 ///
 /// @param self QRegion*
 /// @param r QRect*
 ///
-void q_region_operator_bitwise_and_assign2(void* self, void* r);
+void q_region_operator_bitwise_and_assign2(void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#operator--eq)
 ///
 /// @param self QRegion*
 /// @param r QRegion*
 ///
-QRegion* q_region_operator_minus_assign(void* self, void* r);
+QRegion* q_region_operator_minus_assign(void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#operator-5e-eq)
 ///
 /// @param self QRegion*
 /// @param r QRegion*
 ///
-void q_region_operator_bitwise_not_assign(void* self, void* r);
+void q_region_operator_bitwise_not_assign(void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#operator-eq-eq)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 /// @param r QRegion*
 ///
-bool q_region_operator_equal(void* self, void* r);
+bool q_region_operator_equal(const void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#operator-not-eq)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 /// @param r QRegion*
 ///
-bool q_region_operator_not_equal(void* self, void* r);
+bool q_region_operator_not_equal(const void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#operator-QVariant)
 ///
-/// @param self QRegion*
+/// @param self const QRegion*
 ///
-QVariant* q_region_to_q_variant(void* self);
+QVariant* q_region_to_q_variant(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#dtor.QRegion)
 ///

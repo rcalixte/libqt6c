@@ -20,14 +20,14 @@ QPlaceAttribute* q_placeattribute_new();
 ///
 /// @param other QPlaceAttribute*
 ///
-QPlaceAttribute* q_placeattribute_new2(void* other);
+QPlaceAttribute* q_placeattribute_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceattribute.html#operator-eq)
 ///
 /// @param self QPlaceAttribute*
 /// @param other QPlaceAttribute*
 ///
-void q_placeattribute_operator_assign(void* self, void* other);
+void q_placeattribute_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceattribute.html#swap)
 ///
@@ -40,9 +40,9 @@ void q_placeattribute_swap(void* self, void* other);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPlaceAttribute*
+/// @param self const QPlaceAttribute*
 ///
-const char* q_placeattribute_label(void* self);
+const char* q_placeattribute_label(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceattribute.html#setLabel)
 ///
@@ -55,9 +55,9 @@ void q_placeattribute_set_label(void* self, const char* label);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPlaceAttribute*
+/// @param self const QPlaceAttribute*
 ///
-const char* q_placeattribute_text(void* self);
+const char* q_placeattribute_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceattribute.html#setText)
 ///
@@ -68,9 +68,9 @@ void q_placeattribute_set_text(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceattribute.html#isEmpty)
 ///
-/// @param self QPlaceAttribute*
+/// @param self const QPlaceAttribute*
 ///
-bool q_placeattribute_is_empty(void* self);
+bool q_placeattribute_is_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceattribute.html#dtor.QPlaceAttribute)
 ///

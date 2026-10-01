@@ -14,15 +14,15 @@ KOverlayIconPlugin* k_overlayiconplugin_new2(void* parent) {
     return KOverlayIconPlugin_New2((QObject*)parent);
 }
 
-const QMetaObject* k_overlayiconplugin_meta_object(void* self) {
+const QMetaObject* k_overlayiconplugin_meta_object(const void* self) {
     return KOverlayIconPlugin_MetaObject((KOverlayIconPlugin*)self);
 }
 
-void k_overlayiconplugin_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_overlayiconplugin_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     KOverlayIconPlugin_OnMetaObject((KOverlayIconPlugin*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_overlayiconplugin_super_meta_object(void* self) {
+const QMetaObject* k_overlayiconplugin_super_meta_object(const void* self) {
     return KOverlayIconPlugin_SuperMetaObject((KOverlayIconPlugin*)self);
 }
 
@@ -57,7 +57,7 @@ const char* k_overlayiconplugin_tr(const char* s) {
     return _ret;
 }
 
-const char** k_overlayiconplugin_get_overlays(void* self, void* item) {
+const char** k_overlayiconplugin_get_overlays(void* self, const void* item) {
     libqt_list _arr = KOverlayIconPlugin_GetOverlays((KOverlayIconPlugin*)self, (QUrl*)item);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -74,28 +74,11 @@ const char** k_overlayiconplugin_get_overlays(void* self, void* item) {
     return _ret;
 }
 
-void k_overlayiconplugin_on_get_overlays(void* self, const char** (*callback)(void*, void*)) {
+void k_overlayiconplugin_on_get_overlays(void* self, const char** (*callback)(void*, const void*)) {
     KOverlayIconPlugin_OnGetOverlays((KOverlayIconPlugin*)self, (intptr_t)callback);
 }
 
-const char** k_overlayiconplugin_super_get_overlays(void* self, void* item) {
-    libqt_list _arr = KOverlayIconPlugin_SuperGetOverlays((KOverlayIconPlugin*)self, (QUrl*)item);
-    const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
-    const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_overlayiconplugin_get_overlays\n");
-        abort();
-    }
-    for (size_t i = 0; i < _arr.len; ++i) {
-        _ret[i] = qstring_to_char(_qstr[i]);
-        libqt_string_free((libqt_string*)&_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    libqt_free(_arr.data.ptr);
-    return _ret;
-}
-
-void k_overlayiconplugin_overlays_changed(void* self, void* url, const char* overlays[static 1]) {
+void k_overlayiconplugin_overlays_changed(void* self, const void* url, const char* overlays[static 1]) {
     size_t overlays_len = libqt_strv_length(overlays);
     libqt_string* overlays_qstr = (libqt_string*)malloc(overlays_len * sizeof(libqt_string));
     if (overlays_qstr == NULL) {
@@ -109,7 +92,7 @@ void k_overlayiconplugin_overlays_changed(void* self, void* url, const char* ove
     free(overlays_qstr);
 }
 
-void k_overlayiconplugin_on_overlays_changed(void* self, void (*callback)(void*, void*, const char**)) {
+void k_overlayiconplugin_on_overlays_changed(void* self, void (*callback)(void*, const void*, const char**)) {
     KOverlayIconPlugin_Connect_OverlaysChanged((KOverlayIconPlugin*)self, (intptr_t)callback);
 }
 
@@ -127,7 +110,7 @@ const char* k_overlayiconplugin_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-const char* k_overlayiconplugin_object_name(void* self) {
+const char* k_overlayiconplugin_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -138,19 +121,19 @@ void k_overlayiconplugin_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_overlayiconplugin_is_widget_type(void* self) {
+bool k_overlayiconplugin_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_overlayiconplugin_is_window_type(void* self) {
+bool k_overlayiconplugin_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_overlayiconplugin_is_quick_item_type(void* self) {
+bool k_overlayiconplugin_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_overlayiconplugin_signals_blocked(void* self) {
+bool k_overlayiconplugin_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -158,7 +141,7 @@ bool k_overlayiconplugin_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_overlayiconplugin_thread(void* self) {
+QThread* k_overlayiconplugin_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -182,7 +165,7 @@ void k_overlayiconplugin_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_overlayiconplugin_children(void* self) {
+libqt_list /* of QObject* */ k_overlayiconplugin_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -199,55 +182,55 @@ void k_overlayiconplugin_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_overlayiconplugin_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_overlayiconplugin_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_overlayiconplugin_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_overlayiconplugin_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_overlayiconplugin_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_overlayiconplugin_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_overlayiconplugin_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_overlayiconplugin_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_overlayiconplugin_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_overlayiconplugin_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_overlayiconplugin_disconnect3(void* self) {
+bool k_overlayiconplugin_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_overlayiconplugin_disconnect4(void* self, void* receiver) {
+bool k_overlayiconplugin_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_overlayiconplugin_disconnect5(void* param1) {
+bool k_overlayiconplugin_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_overlayiconplugin_dump_object_tree(void* self) {
+void k_overlayiconplugin_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_overlayiconplugin_dump_object_info(void* self) {
+void k_overlayiconplugin_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_overlayiconplugin_set_property(void* self, const char* name, void* value) {
+bool k_overlayiconplugin_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_overlayiconplugin_property(void* self, const char* name) {
+QVariant* k_overlayiconplugin_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_overlayiconplugin_dynamic_property_names(void* self) {
+const char** k_overlayiconplugin_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -268,7 +251,7 @@ QBindingStorage* k_overlayiconplugin_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_overlayiconplugin_binding_storage2(void* self) {
+const QBindingStorage* k_overlayiconplugin_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -280,11 +263,11 @@ void k_overlayiconplugin_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_overlayiconplugin_parent(void* self) {
+QObject* k_overlayiconplugin_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_overlayiconplugin_inherits(void* self, const char* classname) {
+bool k_overlayiconplugin_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -300,31 +283,31 @@ int32_t k_overlayiconplugin_start_timer23(void* self, int64_t time, int32_t time
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_overlayiconplugin_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_overlayiconplugin_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_overlayiconplugin_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_overlayiconplugin_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_overlayiconplugin_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_overlayiconplugin_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_overlayiconplugin_disconnect1(void* self, const char* signal) {
+bool k_overlayiconplugin_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_overlayiconplugin_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_overlayiconplugin_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_overlayiconplugin_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_overlayiconplugin_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_overlayiconplugin_disconnect23(void* self, void* receiver, const char* member) {
+bool k_overlayiconplugin_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -396,76 +379,44 @@ void k_overlayiconplugin_on_custom_event(void* self, void (*callback)(void*, voi
     KOverlayIconPlugin_OnCustomEvent((KOverlayIconPlugin*)self, (intptr_t)callback);
 }
 
-void k_overlayiconplugin_connect_notify(void* self, void* signal) {
+void k_overlayiconplugin_connect_notify(void* self, const void* signal) {
     KOverlayIconPlugin_ConnectNotify((KOverlayIconPlugin*)self, (QMetaMethod*)signal);
 }
 
-void k_overlayiconplugin_super_connect_notify(void* self, void* signal) {
+void k_overlayiconplugin_super_connect_notify(void* self, const void* signal) {
     KOverlayIconPlugin_SuperConnectNotify((KOverlayIconPlugin*)self, (QMetaMethod*)signal);
 }
 
-void k_overlayiconplugin_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_overlayiconplugin_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     KOverlayIconPlugin_OnConnectNotify((KOverlayIconPlugin*)self, (intptr_t)callback);
 }
 
-void k_overlayiconplugin_disconnect_notify(void* self, void* signal) {
+void k_overlayiconplugin_disconnect_notify(void* self, const void* signal) {
     KOverlayIconPlugin_DisconnectNotify((KOverlayIconPlugin*)self, (QMetaMethod*)signal);
 }
 
-void k_overlayiconplugin_super_disconnect_notify(void* self, void* signal) {
+void k_overlayiconplugin_super_disconnect_notify(void* self, const void* signal) {
     KOverlayIconPlugin_SuperDisconnectNotify((KOverlayIconPlugin*)self, (QMetaMethod*)signal);
 }
 
-void k_overlayiconplugin_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_overlayiconplugin_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     KOverlayIconPlugin_OnDisconnectNotify((KOverlayIconPlugin*)self, (intptr_t)callback);
 }
 
-QObject* k_overlayiconplugin_sender(void* self) {
+QObject* k_overlayiconplugin_sender(const void* self) {
     return KOverlayIconPlugin_Sender((KOverlayIconPlugin*)self);
 }
 
-QObject* k_overlayiconplugin_super_sender(void* self) {
-    return KOverlayIconPlugin_SuperSender((KOverlayIconPlugin*)self);
-}
-
-void k_overlayiconplugin_on_sender(void* self, QObject* (*callback)()) {
-    KOverlayIconPlugin_OnSender((KOverlayIconPlugin*)self, (intptr_t)callback);
-}
-
-int32_t k_overlayiconplugin_sender_signal_index(void* self) {
+int32_t k_overlayiconplugin_sender_signal_index(const void* self) {
     return KOverlayIconPlugin_SenderSignalIndex((KOverlayIconPlugin*)self);
 }
 
-int32_t k_overlayiconplugin_super_sender_signal_index(void* self) {
-    return KOverlayIconPlugin_SuperSenderSignalIndex((KOverlayIconPlugin*)self);
-}
-
-void k_overlayiconplugin_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    KOverlayIconPlugin_OnSenderSignalIndex((KOverlayIconPlugin*)self, (intptr_t)callback);
-}
-
-int32_t k_overlayiconplugin_receivers(void* self, const char* signal) {
+int32_t k_overlayiconplugin_receivers(const void* self, const char* signal) {
     return KOverlayIconPlugin_Receivers((KOverlayIconPlugin*)self, signal);
 }
 
-int32_t k_overlayiconplugin_super_receivers(void* self, const char* signal) {
-    return KOverlayIconPlugin_SuperReceivers((KOverlayIconPlugin*)self, signal);
-}
-
-void k_overlayiconplugin_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    KOverlayIconPlugin_OnReceivers((KOverlayIconPlugin*)self, (intptr_t)callback);
-}
-
-bool k_overlayiconplugin_is_signal_connected(void* self, void* signal) {
+bool k_overlayiconplugin_is_signal_connected(const void* self, const void* signal) {
     return KOverlayIconPlugin_IsSignalConnected((KOverlayIconPlugin*)self, (QMetaMethod*)signal);
-}
-
-bool k_overlayiconplugin_super_is_signal_connected(void* self, void* signal) {
-    return KOverlayIconPlugin_SuperIsSignalConnected((KOverlayIconPlugin*)self, (QMetaMethod*)signal);
-}
-
-void k_overlayiconplugin_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    KOverlayIconPlugin_OnIsSignalConnected((KOverlayIconPlugin*)self, (intptr_t)callback);
 }
 
 void k_overlayiconplugin_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

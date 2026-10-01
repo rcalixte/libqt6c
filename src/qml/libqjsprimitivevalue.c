@@ -3,7 +3,7 @@
 #include "libqjsprimitivevalue.hpp"
 #include "libqjsprimitivevalue.h"
 
-QJSPrimitiveUndefined* q_jsprimitiveundefined_new(void* other) {
+QJSPrimitiveUndefined* q_jsprimitiveundefined_new(const void* other) {
     return QJSPrimitiveUndefined_New((QJSPrimitiveUndefined*)other);
 }
 
@@ -15,7 +15,7 @@ QJSPrimitiveUndefined* q_jsprimitiveundefined_new3() {
     return QJSPrimitiveUndefined_New3();
 }
 
-QJSPrimitiveUndefined* q_jsprimitiveundefined_new4(void* param1) {
+QJSPrimitiveUndefined* q_jsprimitiveundefined_new4(const void* param1) {
     return QJSPrimitiveUndefined_New4((QJSPrimitiveUndefined*)param1);
 }
 
@@ -31,7 +31,7 @@ void q_jsprimitiveundefined_delete(void* self) {
     QJSPrimitiveUndefined_Delete((QJSPrimitiveUndefined*)(self));
 }
 
-QJSPrimitiveNull* q_jsprimitivenull_new(void* other) {
+QJSPrimitiveNull* q_jsprimitivenull_new(const void* other) {
     return QJSPrimitiveNull_New((QJSPrimitiveNull*)other);
 }
 
@@ -43,7 +43,7 @@ QJSPrimitiveNull* q_jsprimitivenull_new3() {
     return QJSPrimitiveNull_New3();
 }
 
-QJSPrimitiveNull* q_jsprimitivenull_new4(void* param1) {
+QJSPrimitiveNull* q_jsprimitivenull_new4(const void* param1) {
     return QJSPrimitiveNull_New4((QJSPrimitiveNull*)param1);
 }
 
@@ -87,7 +87,7 @@ QJSPrimitiveValue* q_jsprimitivevalue_new7(const char* string) {
     return QJSPrimitiveValue_New7(qstring(string));
 }
 
-QJSPrimitiveValue* q_jsprimitivevalue_new8(void* type, void* value) {
+QJSPrimitiveValue* q_jsprimitivevalue_new8(const void* type, void* value) {
     return QJSPrimitiveValue_New8((QMetaType*)type, value);
 }
 
@@ -95,19 +95,19 @@ QJSPrimitiveValue* q_jsprimitivevalue_new9(void* type) {
     return QJSPrimitiveValue_New9((QMetaType*)type);
 }
 
-QJSPrimitiveValue* q_jsprimitivevalue_new10(void* variant) {
+QJSPrimitiveValue* q_jsprimitivevalue_new10(const void* variant) {
     return QJSPrimitiveValue_New10((QVariant*)variant);
 }
 
-QJSPrimitiveValue* q_jsprimitivevalue_new11(void* param1) {
+QJSPrimitiveValue* q_jsprimitivevalue_new11(const void* param1) {
     return QJSPrimitiveValue_New11((QJSPrimitiveValue*)param1);
 }
 
-uint8_t q_jsprimitivevalue_type(void* self) {
+uint8_t q_jsprimitivevalue_type(const void* self) {
     return QJSPrimitiveValue_Type((QJSPrimitiveValue*)self);
 }
 
-QMetaType* q_jsprimitivevalue_meta_type(void* self) {
+QMetaType* q_jsprimitivevalue_meta_type(const void* self) {
     return QJSPrimitiveValue_MetaType((QJSPrimitiveValue*)self);
 }
 
@@ -115,34 +115,34 @@ void* q_jsprimitivevalue_data(void* self) {
     return QJSPrimitiveValue_Data((QJSPrimitiveValue*)self);
 }
 
-const void* q_jsprimitivevalue_data2(void* self) {
+const void* q_jsprimitivevalue_data2(const void* self) {
     return QJSPrimitiveValue_Data2((QJSPrimitiveValue*)self);
 }
 
-const void* q_jsprimitivevalue_const_data(void* self) {
+const void* q_jsprimitivevalue_const_data(const void* self) {
     return QJSPrimitiveValue_ConstData((QJSPrimitiveValue*)self);
 }
 
-bool q_jsprimitivevalue_to_boolean(void* self) {
+bool q_jsprimitivevalue_to_boolean(const void* self) {
     return QJSPrimitiveValue_ToBoolean((QJSPrimitiveValue*)self);
 }
 
-int32_t q_jsprimitivevalue_to_integer(void* self) {
+int32_t q_jsprimitivevalue_to_integer(const void* self) {
     return QJSPrimitiveValue_ToInteger((QJSPrimitiveValue*)self);
 }
 
-double q_jsprimitivevalue_to_double(void* self) {
+double q_jsprimitivevalue_to_double(const void* self) {
     return QJSPrimitiveValue_ToDouble((QJSPrimitiveValue*)self);
 }
 
-const char* q_jsprimitivevalue_to_string(void* self) {
+const char* q_jsprimitivevalue_to_string(const void* self) {
     libqt_string _str = QJSPrimitiveValue_ToString((QJSPrimitiveValue*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QVariant* q_jsprimitivevalue_to_variant(void* self) {
+QVariant* q_jsprimitivevalue_to_variant(const void* self) {
     return QJSPrimitiveValue_ToVariant((QJSPrimitiveValue*)self);
 }
 
@@ -170,15 +170,15 @@ QJSPrimitiveValue* q_jsprimitivevalue_operator_minus(void* self) {
     return QJSPrimitiveValue_OperatorMinus((QJSPrimitiveValue*)self);
 }
 
-bool q_jsprimitivevalue_strictly_equals(void* self, void* other) {
+bool q_jsprimitivevalue_strictly_equals(const void* self, const void* other) {
     return QJSPrimitiveValue_StrictlyEquals((QJSPrimitiveValue*)self, (QJSPrimitiveValue*)other);
 }
 
-bool q_jsprimitivevalue_equals(void* self, void* other) {
+bool q_jsprimitivevalue_equals(const void* self, const void* other) {
     return QJSPrimitiveValue_Equals((QJSPrimitiveValue*)self, (QJSPrimitiveValue*)other);
 }
 
-void q_jsprimitivevalue_operator_assign(void* self, void* param1) {
+void q_jsprimitivevalue_operator_assign(void* self, const void* param1) {
     QJSPrimitiveValue_OperatorAssign((QJSPrimitiveValue*)self, (QJSPrimitiveValue*)param1);
 }
 

@@ -44,7 +44,7 @@ void q_geoserviceproviderfactory_super_set_qml_engine(void* self, void* engine);
 /// @param self QGeoServiceProviderFactory*
 /// @param param1 QGeoServiceProviderFactory*
 ///
-void q_geoserviceproviderfactory_operator_assign(void* self, void* param1);
+void q_geoserviceproviderfactory_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoserviceproviderfactory.html#dtor.QGeoServiceProviderFactory)
 ///

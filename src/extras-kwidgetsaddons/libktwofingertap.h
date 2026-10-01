@@ -24,26 +24,26 @@ KTwoFingerTap* k_twofingertap_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 ///
-const QMetaObject* k_twofingertap_meta_object(void* self);
+const QMetaObject* k_twofingertap_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KTwoFingerTap*
-/// @param callback const QMetaObject* func()
+/// @param self const KTwoFingerTap*
+/// @param callback const QMetaObject* func(const KTwoFingerTap* self)
 ///
-void k_twofingertap_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_twofingertap_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 ///
-const QMetaObject* k_twofingertap_super_meta_object(void* self);
+const QMetaObject* k_twofingertap_super_meta_object(const void* self);
 
 /// @param self KTwoFingerTap*
 /// @param param1 const char*
@@ -97,9 +97,9 @@ const char* k_twofingertap_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/ktwofingertap.html#pos)
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 ///
-QPointF* k_twofingertap_pos(void* self);
+QPointF* k_twofingertap_pos(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktwofingertap.html#setPos)
 ///
@@ -110,9 +110,9 @@ void k_twofingertap_set_pos(void* self, void* pos);
 
 /// [Upstream resources](https://api.kde.org/ktwofingertap.html#screenPos)
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 ///
-QPointF* k_twofingertap_screen_pos(void* self);
+QPointF* k_twofingertap_screen_pos(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktwofingertap.html#setScreenPos)
 ///
@@ -123,9 +123,9 @@ void k_twofingertap_set_screen_pos(void* self, void* screenPos);
 
 /// [Upstream resources](https://api.kde.org/ktwofingertap.html#scenePos)
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 ///
-QPointF* k_twofingertap_scene_pos(void* self);
+QPointF* k_twofingertap_scene_pos(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktwofingertap.html#setScenePos)
 ///
@@ -157,29 +157,29 @@ const char* k_twofingertap_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#gestureType)
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 ///
 /// @return enum Qt__GestureType
 ///
-int32_t k_twofingertap_gesture_type(void* self);
+int32_t k_twofingertap_gesture_type(const void* self);
 
 /// Inherited from QGesture
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#state)
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 ///
 /// @return enum Qt__GestureState
 ///
-int32_t k_twofingertap_state(void* self);
+int32_t k_twofingertap_state(const void* self);
 
 /// Inherited from QGesture
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#hotSpot)
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 ///
-QPointF* k_twofingertap_hot_spot(void* self);
+QPointF* k_twofingertap_hot_spot(const void* self);
 
 /// Inherited from QGesture
 ///
@@ -188,15 +188,15 @@ QPointF* k_twofingertap_hot_spot(void* self);
 /// @param self KTwoFingerTap*
 /// @param value QPointF*
 ///
-void k_twofingertap_set_hot_spot(void* self, void* value);
+void k_twofingertap_set_hot_spot(void* self, const void* value);
 
 /// Inherited from QGesture
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#hasHotSpot)
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 ///
-bool k_twofingertap_has_hot_spot(void* self);
+bool k_twofingertap_has_hot_spot(const void* self);
 
 /// Inherited from QGesture
 ///
@@ -219,11 +219,11 @@ void k_twofingertap_set_gesture_cancel_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#gestureCancelPolicy)
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 ///
 /// @return enum QGesture__GestureCancelPolicy
 ///
-int32_t k_twofingertap_gesture_cancel_policy(void* self);
+int32_t k_twofingertap_gesture_cancel_policy(const void* self);
 
 /// Inherited from QObject
 ///
@@ -231,9 +231,9 @@ int32_t k_twofingertap_gesture_cancel_policy(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 ///
-const char* k_twofingertap_object_name(void* self);
+const char* k_twofingertap_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -248,33 +248,33 @@ void k_twofingertap_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 ///
-bool k_twofingertap_is_widget_type(void* self);
+bool k_twofingertap_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 ///
-bool k_twofingertap_is_window_type(void* self);
+bool k_twofingertap_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 ///
-bool k_twofingertap_is_quick_item_type(void* self);
+bool k_twofingertap_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 ///
-bool k_twofingertap_signals_blocked(void* self);
+bool k_twofingertap_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -289,9 +289,9 @@ bool k_twofingertap_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 ///
-QThread* k_twofingertap_thread(void* self);
+QThread* k_twofingertap_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -342,11 +342,11 @@ void k_twofingertap_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_twofingertap_children(void* self);
+libqt_list k_twofingertap_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -384,7 +384,7 @@ void k_twofingertap_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_twofingertap_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_twofingertap_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -395,18 +395,18 @@ QMetaObject__Connection* k_twofingertap_connect(void* sender, const char* signal
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_twofingertap_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_twofingertap_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_twofingertap_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_twofingertap_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -417,7 +417,7 @@ QMetaObject__Connection* k_twofingertap_connect3(void* self, void* sender, const
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_twofingertap_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_twofingertap_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -428,24 +428,24 @@ bool k_twofingertap_disconnect(void* sender, const char* signal, void* receiver,
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_twofingertap_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_twofingertap_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 ///
-bool k_twofingertap_disconnect3(void* self);
+bool k_twofingertap_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 /// @param receiver QObject*
 ///
-bool k_twofingertap_disconnect4(void* self, void* receiver);
+bool k_twofingertap_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -453,23 +453,23 @@ bool k_twofingertap_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_twofingertap_disconnect5(void* param1);
+bool k_twofingertap_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 ///
-void k_twofingertap_dump_object_tree(void* self);
+void k_twofingertap_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 ///
-void k_twofingertap_dump_object_info(void* self);
+void k_twofingertap_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -479,16 +479,16 @@ void k_twofingertap_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_twofingertap_set_property(void* self, const char* name, void* value);
+bool k_twofingertap_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 /// @param name const char*
 ///
-QVariant* k_twofingertap_property(void* self, const char* name);
+QVariant* k_twofingertap_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -496,9 +496,9 @@ QVariant* k_twofingertap_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 ///
-const char** k_twofingertap_dynamic_property_names(void* self);
+const char** k_twofingertap_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -512,9 +512,9 @@ QBindingStorage* k_twofingertap_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 ///
-const QBindingStorage* k_twofingertap_binding_storage2(void* self);
+const QBindingStorage* k_twofingertap_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -537,18 +537,18 @@ void k_twofingertap_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 ///
-QObject* k_twofingertap_parent(void* self);
+QObject* k_twofingertap_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 /// @param classname const char*
 ///
-bool k_twofingertap_inherits(void* self, const char* classname);
+bool k_twofingertap_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -588,7 +588,7 @@ int32_t k_twofingertap_start_timer23(void* self, int64_t time, int32_t timerType
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_twofingertap_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_twofingertap_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -600,59 +600,59 @@ QMetaObject__Connection* k_twofingertap_connect5(void* sender, const char* signa
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_twofingertap_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_twofingertap_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_twofingertap_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_twofingertap_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 /// @param signal const char*
 ///
-bool k_twofingertap_disconnect1(void* self, const char* signal);
+bool k_twofingertap_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KTwoFingerTap*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_twofingertap_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_twofingertap_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_twofingertap_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_twofingertap_disconnect23(void* self, void* receiver, const char* member);
+bool k_twofingertap_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KTwoFingerTap*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_twofingertap_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -848,7 +848,7 @@ void k_twofingertap_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self KTwoFingerTap*
 /// @param signal QMetaMethod*
 ///
-void k_twofingertap_connect_notify(void* self, void* signal);
+void k_twofingertap_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -859,7 +859,7 @@ void k_twofingertap_connect_notify(void* self, void* signal);
 /// @param self KTwoFingerTap*
 /// @param signal QMetaMethod*
 ///
-void k_twofingertap_super_connect_notify(void* self, void* signal);
+void k_twofingertap_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -870,7 +870,7 @@ void k_twofingertap_super_connect_notify(void* self, void* signal);
 /// @param self KTwoFingerTap*
 /// @param callback void func(KTwoFingerTap* self, QMetaMethod* signal)
 ///
-void k_twofingertap_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_twofingertap_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -881,7 +881,7 @@ void k_twofingertap_on_connect_notify(void* self, void (*callback)(void*, void*)
 /// @param self KTwoFingerTap*
 /// @param signal QMetaMethod*
 ///
-void k_twofingertap_disconnect_notify(void* self, void* signal);
+void k_twofingertap_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -892,7 +892,7 @@ void k_twofingertap_disconnect_notify(void* self, void* signal);
 /// @param self KTwoFingerTap*
 /// @param signal QMetaMethod*
 ///
-void k_twofingertap_super_disconnect_notify(void* self, void* signal);
+void k_twofingertap_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -903,7 +903,7 @@ void k_twofingertap_super_disconnect_notify(void* self, void* signal);
 /// @param self KTwoFingerTap*
 /// @param callback void func(KTwoFingerTap* self, QMetaMethod* signal)
 ///
-void k_twofingertap_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_twofingertap_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -911,9 +911,9 @@ void k_twofingertap_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 ///
-QObject* k_twofingertap_sender(void* self);
+QObject* k_twofingertap_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -921,9 +921,9 @@ QObject* k_twofingertap_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 ///
-QObject* k_twofingertap_super_sender(void* self);
+QObject* k_twofingertap_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -931,10 +931,10 @@ QObject* k_twofingertap_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KTwoFingerTap*
-/// @param callback QObject* func()
+/// @param self const KTwoFingerTap*
+/// @param callback QObject* func(KTwoFingerTap* self)
 ///
-void k_twofingertap_on_sender(void* self, QObject* (*callback)());
+void k_twofingertap_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -942,9 +942,9 @@ void k_twofingertap_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 ///
-int32_t k_twofingertap_sender_signal_index(void* self);
+int32_t k_twofingertap_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -952,9 +952,9 @@ int32_t k_twofingertap_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 ///
-int32_t k_twofingertap_super_sender_signal_index(void* self);
+int32_t k_twofingertap_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -962,10 +962,10 @@ int32_t k_twofingertap_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KTwoFingerTap*
-/// @param callback int32_t func()
+/// @param self const KTwoFingerTap*
+/// @param callback int32_t func(KTwoFingerTap* self)
 ///
-void k_twofingertap_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_twofingertap_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -973,10 +973,10 @@ void k_twofingertap_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 /// @param signal const char*
 ///
-int32_t k_twofingertap_receivers(void* self, const char* signal);
+int32_t k_twofingertap_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -984,10 +984,10 @@ int32_t k_twofingertap_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 /// @param signal const char*
 ///
-int32_t k_twofingertap_super_receivers(void* self, const char* signal);
+int32_t k_twofingertap_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -995,10 +995,10 @@ int32_t k_twofingertap_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 /// @param callback int32_t func(KTwoFingerTap* self, const char* signal)
 ///
-void k_twofingertap_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_twofingertap_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1006,10 +1006,10 @@ void k_twofingertap_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 /// @param signal QMetaMethod*
 ///
-bool k_twofingertap_is_signal_connected(void* self, void* signal);
+bool k_twofingertap_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1017,10 +1017,10 @@ bool k_twofingertap_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 /// @param signal QMetaMethod*
 ///
-bool k_twofingertap_super_is_signal_connected(void* self, void* signal);
+bool k_twofingertap_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1028,10 +1028,10 @@ bool k_twofingertap_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KTwoFingerTap*
+/// @param self const KTwoFingerTap*
 /// @param callback bool func(KTwoFingerTap* self, QMetaMethod* signal)
 ///
-void k_twofingertap_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_twofingertap_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1118,9 +1118,9 @@ int32_t k_twofingertaprecognizer_super_recognize(void* self, void* gesture, void
 
 /// [Upstream resources](https://api.kde.org/ktwofingertaprecognizer.html#tapRadius)
 ///
-/// @param self KTwoFingerTapRecognizer*
+/// @param self const KTwoFingerTapRecognizer*
 ///
-int32_t k_twofingertaprecognizer_tap_radius(void* self);
+int32_t k_twofingertaprecognizer_tap_radius(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktwofingertaprecognizer.html#setTapRadius)
 ///
@@ -1154,7 +1154,7 @@ void k_twofingertaprecognizer_unregister_recognizer(int32_t type);
 /// @param self KTwoFingerTapRecognizer*
 /// @param param1 QGestureRecognizer*
 ///
-void k_twofingertaprecognizer_operator_assign(void* self, void* param1);
+void k_twofingertaprecognizer_operator_assign(void* self, const void* param1);
 
 /// Inherited from QGestureRecognizer
 ///

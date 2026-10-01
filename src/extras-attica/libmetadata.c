@@ -5,15 +5,15 @@ Attica__Metadata* k_attica__metadata_new() {
     return Attica__Metadata_New();
 }
 
-Attica__Metadata* k_attica__metadata_new2(void* other) {
+Attica__Metadata* k_attica__metadata_new2(const void* other) {
     return Attica__Metadata_New2((Attica__Metadata*)other);
 }
 
-void k_attica__metadata_operator_assign(void* self, void* other) {
+void k_attica__metadata_operator_assign(void* self, const void* other) {
     Attica__Metadata_OperatorAssign((Attica__Metadata*)self, (Attica__Metadata*)other);
 }
 
-int32_t k_attica__metadata_error(void* self) {
+int32_t k_attica__metadata_error(const void* self) {
     return Attica__Metadata_Error((Attica__Metadata*)self);
 }
 
@@ -21,7 +21,7 @@ void k_attica__metadata_set_error(void* self, int32_t error) {
     Attica__Metadata_SetError((Attica__Metadata*)self, error);
 }
 
-int32_t k_attica__metadata_status_code(void* self) {
+int32_t k_attica__metadata_status_code(const void* self) {
     return Attica__Metadata_StatusCode((Attica__Metadata*)self);
 }
 
@@ -29,7 +29,7 @@ void k_attica__metadata_set_status_code(void* self, int code) {
     Attica__Metadata_SetStatusCode((Attica__Metadata*)self, code);
 }
 
-const char* k_attica__metadata_status_string(void* self) {
+const char* k_attica__metadata_status_string(const void* self) {
     libqt_string _str = Attica__Metadata_StatusString((Attica__Metadata*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -78,7 +78,7 @@ void k_attica__metadata_set_resulting_id(void* self, const char* id) {
     Attica__Metadata_SetResultingId((Attica__Metadata*)self, qstring(id));
 }
 
-libqt_list /* of libqt_pair tuple of char* and char* */ k_attica__metadata_headers(void* self) {
+libqt_list /* of libqt_pair tuple of char* and char* */ k_attica__metadata_headers(const void* self) {
     libqt_list _arr = Attica__Metadata_Headers((Attica__Metadata*)self);
     libqt_pair* _data = (libqt_pair*)_arr.data.ptr;
     for (size_t i = 0; i < _arr.len; ++i) {

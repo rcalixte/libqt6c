@@ -28,14 +28,14 @@ QDBusUnixFileDescriptor* q_dbusunixfiledescriptor_new2(int fileDescriptor);
 ///
 /// @param other QDBusUnixFileDescriptor*
 ///
-QDBusUnixFileDescriptor* q_dbusunixfiledescriptor_new3(void* other);
+QDBusUnixFileDescriptor* q_dbusunixfiledescriptor_new3(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusunixfiledescriptor.html#operator-eq)
 ///
 /// @param self QDBusUnixFileDescriptor*
 /// @param other QDBusUnixFileDescriptor*
 ///
-void q_dbusunixfiledescriptor_operator_assign(void* self, void* other);
+void q_dbusunixfiledescriptor_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusunixfiledescriptor.html#swap)
 ///
@@ -46,15 +46,15 @@ void q_dbusunixfiledescriptor_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusunixfiledescriptor.html#isValid)
 ///
-/// @param self QDBusUnixFileDescriptor*
+/// @param self const QDBusUnixFileDescriptor*
 ///
-bool q_dbusunixfiledescriptor_is_valid(void* self);
+bool q_dbusunixfiledescriptor_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusunixfiledescriptor.html#fileDescriptor)
 ///
-/// @param self QDBusUnixFileDescriptor*
+/// @param self const QDBusUnixFileDescriptor*
 ///
-int32_t q_dbusunixfiledescriptor_file_descriptor(void* self);
+int32_t q_dbusunixfiledescriptor_file_descriptor(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusunixfiledescriptor.html#setFileDescriptor)
 ///

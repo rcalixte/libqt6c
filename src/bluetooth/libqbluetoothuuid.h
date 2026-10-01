@@ -14,7 +14,7 @@
 ///
 /// @param other QBluetoothUuid*
 ///
-QBluetoothUuid* q_bluetoothuuid_new(void* other);
+QBluetoothUuid* q_bluetoothuuid_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html)
 
@@ -76,7 +76,7 @@ QBluetoothUuid* q_bluetoothuuid_new8(uint32_t uuid);
 ///
 /// @param uuid QBluetoothUuid*
 ///
-QBluetoothUuid* q_bluetoothuuid_new9(void* uuid);
+QBluetoothUuid* q_bluetoothuuid_new9(const void* uuid);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html)
 
@@ -84,7 +84,7 @@ QBluetoothUuid* q_bluetoothuuid_new9(void* uuid);
 ///
 /// @param uuid QUuid*
 ///
-QBluetoothUuid* q_bluetoothuuid_new10(void* uuid);
+QBluetoothUuid* q_bluetoothuuid_new10(const void* uuid);
 
 /// q_bluetoothuuid_copy_assign shallow copies `other` into `self`.
 ///
@@ -98,31 +98,31 @@ void q_bluetoothuuid_copy_assign(void* self, void* other);
 /// @param self QBluetoothUuid*
 /// @param other QBluetoothUuid*
 ///
-void q_bluetoothuuid_operator_assign(void* self, void* other);
+void q_bluetoothuuid_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html#minimumSize)
 ///
-/// @param self QBluetoothUuid*
+/// @param self const QBluetoothUuid*
 ///
-int32_t q_bluetoothuuid_minimum_size(void* self);
+int32_t q_bluetoothuuid_minimum_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html#toUInt16)
 ///
-/// @param self QBluetoothUuid*
+/// @param self const QBluetoothUuid*
 ///
-uint16_t q_bluetoothuuid_to_u_int16(void* self);
+uint16_t q_bluetoothuuid_to_u_int16(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html#toUInt32)
 ///
-/// @param self QBluetoothUuid*
+/// @param self const QBluetoothUuid*
 ///
-uint32_t q_bluetoothuuid_to_u_int32(void* self);
+uint32_t q_bluetoothuuid_to_u_int32(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html#toUInt128)
 ///
-/// @param self QBluetoothUuid*
+/// @param self const QBluetoothUuid*
 ///
-__uint128_t q_bluetoothuuid_to_u_int128(void* self);
+__uint128_t q_bluetoothuuid_to_u_int128(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html#serviceClassToString)
 ///
@@ -158,24 +158,24 @@ const char* q_bluetoothuuid_descriptor_to_string(int32_t uuid);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html#toUInt16)
 ///
-/// @param self QBluetoothUuid*
+/// @param self const QBluetoothUuid*
 /// @param ok bool*
 ///
-uint16_t q_bluetoothuuid_to_u_int161(void* self, bool* ok);
+uint16_t q_bluetoothuuid_to_u_int161(const void* self, bool* ok);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html#toUInt32)
 ///
-/// @param self QBluetoothUuid*
+/// @param self const QBluetoothUuid*
 /// @param ok bool*
 ///
-uint32_t q_bluetoothuuid_to_u_int321(void* self, bool* ok);
+uint32_t q_bluetoothuuid_to_u_int321(const void* self, bool* ok);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html#toUInt128)
 ///
-/// @param self QBluetoothUuid*
+/// @param self const QBluetoothUuid*
 /// @param order enum QSysInfo__Endian
 ///
-__uint128_t q_bluetoothuuid_to_u_int1281(void* self, int32_t order);
+__uint128_t q_bluetoothuuid_to_u_int1281(const void* self, int32_t order);
 
 /// Inherited from QUuid
 ///
@@ -191,9 +191,9 @@ QUuid* q_bluetoothuuid_from_string(const char* string);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QBluetoothUuid*
+/// @param self const QBluetoothUuid*
 ///
-const char* q_bluetoothuuid_to_string(void* self);
+const char* q_bluetoothuuid_to_string(const void* self);
 
 /// Inherited from QUuid
 ///
@@ -201,17 +201,17 @@ const char* q_bluetoothuuid_to_string(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QBluetoothUuid*
+/// @param self const QBluetoothUuid*
 ///
-char* q_bluetoothuuid_to_byte_array(void* self);
+char* q_bluetoothuuid_to_byte_array(const void* self);
 
 /// Inherited from QUuid
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#toBytes)
 ///
-/// @param self QBluetoothUuid*
+/// @param self const QBluetoothUuid*
 ///
-QUuid__Id128Bytes* q_bluetoothuuid_to_bytes(void* self);
+QUuid__Id128Bytes* q_bluetoothuuid_to_bytes(const void* self);
 
 /// Inherited from QUuid
 ///
@@ -219,9 +219,9 @@ QUuid__Id128Bytes* q_bluetoothuuid_to_bytes(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QBluetoothUuid*
+/// @param self const QBluetoothUuid*
 ///
-char* q_bluetoothuuid_to_rfc4122(void* self);
+char* q_bluetoothuuid_to_rfc4122(const void* self);
 
 /// Inherited from QUuid
 ///
@@ -243,9 +243,9 @@ QUuid* q_bluetoothuuid_from_rfc4122(char* param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#isNull)
 ///
-/// @param self QBluetoothUuid*
+/// @param self const QBluetoothUuid*
 ///
-bool q_bluetoothuuid_is_null(void* self);
+bool q_bluetoothuuid_is_null(const void* self);
 
 /// Inherited from QUuid
 ///
@@ -275,29 +275,29 @@ QUuid* q_bluetoothuuid_create_uuid_v3(void* ns, char* baseData);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#variant)
 ///
-/// @param self QBluetoothUuid*
+/// @param self const QBluetoothUuid*
 ///
 /// @return enum QUuid__Variant
 ///
-int32_t q_bluetoothuuid_variant(void* self);
+int32_t q_bluetoothuuid_variant(const void* self);
 
 /// Inherited from QUuid
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#version)
 ///
-/// @param self QBluetoothUuid*
+/// @param self const QBluetoothUuid*
 ///
 /// @return enum QUuid__Version
 ///
-int32_t q_bluetoothuuid_version(void* self);
+int32_t q_bluetoothuuid_version(const void* self);
 
 /// Inherited from QUuid
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#data1-var)
 ///
-/// @param self QBluetoothUuid*
+/// @param self const QBluetoothUuid*
 ///
-uint32_t q_bluetoothuuid_data1(void* self);
+uint32_t q_bluetoothuuid_data1(const void* self);
 
 /// Inherited from QUuid
 ///
@@ -312,9 +312,9 @@ void q_bluetoothuuid_set_data1(void* self, uint32_t data1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#data2-var)
 ///
-/// @param self QBluetoothUuid*
+/// @param self const QBluetoothUuid*
 ///
-uint16_t q_bluetoothuuid_data2(void* self);
+uint16_t q_bluetoothuuid_data2(const void* self);
 
 /// Inherited from QUuid
 ///
@@ -329,9 +329,9 @@ void q_bluetoothuuid_set_data2(void* self, uint16_t data2);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#data3-var)
 ///
-/// @param self QBluetoothUuid*
+/// @param self const QBluetoothUuid*
 ///
-uint16_t q_bluetoothuuid_data3(void* self);
+uint16_t q_bluetoothuuid_data3(const void* self);
 
 /// Inherited from QUuid
 ///
@@ -348,10 +348,10 @@ void q_bluetoothuuid_set_data3(void* self, uint16_t data3);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QBluetoothUuid*
+/// @param self const QBluetoothUuid*
 /// @param mode enum QUuid__StringFormat
 ///
-const char* q_bluetoothuuid_to_string1(void* self, int32_t mode);
+const char* q_bluetoothuuid_to_string1(const void* self, int32_t mode);
 
 /// Inherited from QUuid
 ///
@@ -359,19 +359,19 @@ const char* q_bluetoothuuid_to_string1(void* self, int32_t mode);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QBluetoothUuid*
+/// @param self const QBluetoothUuid*
 /// @param mode enum QUuid__StringFormat
 ///
-char* q_bluetoothuuid_to_byte_array1(void* self, int32_t mode);
+char* q_bluetoothuuid_to_byte_array1(const void* self, int32_t mode);
 
 /// Inherited from QUuid
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#toBytes)
 ///
-/// @param self QBluetoothUuid*
+/// @param self const QBluetoothUuid*
 /// @param order enum QSysInfo__Endian
 ///
-QUuid__Id128Bytes* q_bluetoothuuid_to_bytes1(void* self, int32_t order);
+QUuid__Id128Bytes* q_bluetoothuuid_to_bytes1(const void* self, int32_t order);
 
 /// Inherited from QUuid
 ///

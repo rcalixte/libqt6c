@@ -57,9 +57,9 @@ void q_cborstreamreader_set_device(void* self, void* device);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#device)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-QIODevice* q_cborstreamreader_device(void* self);
+QIODevice* q_cborstreamreader_device(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#addData)
 ///
@@ -104,41 +104,41 @@ void q_cborstreamreader_reset(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#lastError)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-QCborError* q_cborstreamreader_last_error(void* self);
+QCborError* q_cborstreamreader_last_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#currentOffset)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-int64_t q_cborstreamreader_current_offset(void* self);
+int64_t q_cborstreamreader_current_offset(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#isValid)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-bool q_cborstreamreader_is_valid(void* self);
+bool q_cborstreamreader_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#containerDepth)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-int32_t q_cborstreamreader_container_depth(void* self);
+int32_t q_cborstreamreader_container_depth(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#parentContainerType)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
 /// @return enum QCborStreamReader__Type
 ///
-uint8_t q_cborstreamreader_parent_container_type(void* self);
+uint8_t q_cborstreamreader_parent_container_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#hasNext)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-bool q_cborstreamreader_has_next(void* self);
+bool q_cborstreamreader_has_next(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#next)
 ///
@@ -148,144 +148,144 @@ bool q_cborstreamreader_next(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#type)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
 /// @return enum QCborStreamReader__Type
 ///
-uint8_t q_cborstreamreader_type(void* self);
+uint8_t q_cborstreamreader_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#isUnsignedInteger)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-bool q_cborstreamreader_is_unsigned_integer(void* self);
+bool q_cborstreamreader_is_unsigned_integer(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#isNegativeInteger)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-bool q_cborstreamreader_is_negative_integer(void* self);
+bool q_cborstreamreader_is_negative_integer(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#isInteger)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-bool q_cborstreamreader_is_integer(void* self);
+bool q_cborstreamreader_is_integer(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#isByteArray)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-bool q_cborstreamreader_is_byte_array(void* self);
+bool q_cborstreamreader_is_byte_array(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#isString)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-bool q_cborstreamreader_is_string(void* self);
+bool q_cborstreamreader_is_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#isArray)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-bool q_cborstreamreader_is_array(void* self);
+bool q_cborstreamreader_is_array(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#isMap)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-bool q_cborstreamreader_is_map(void* self);
+bool q_cborstreamreader_is_map(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#isTag)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-bool q_cborstreamreader_is_tag(void* self);
+bool q_cborstreamreader_is_tag(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#isSimpleType)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-bool q_cborstreamreader_is_simple_type(void* self);
+bool q_cborstreamreader_is_simple_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#isFloat16)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-bool q_cborstreamreader_is_float16(void* self);
+bool q_cborstreamreader_is_float16(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#isFloat)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-bool q_cborstreamreader_is_float(void* self);
+bool q_cborstreamreader_is_float(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#isDouble)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-bool q_cborstreamreader_is_double(void* self);
+bool q_cborstreamreader_is_double(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#isInvalid)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-bool q_cborstreamreader_is_invalid(void* self);
+bool q_cborstreamreader_is_invalid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#isSimpleType)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 /// @param st enum QCborStreamReader__QCborSimpleType
 ///
-bool q_cborstreamreader_is_simple_type2(void* self, uint8_t st);
+bool q_cborstreamreader_is_simple_type2(const void* self, uint8_t st);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#isFalse)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-bool q_cborstreamreader_is_false(void* self);
+bool q_cborstreamreader_is_false(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#isTrue)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-bool q_cborstreamreader_is_true(void* self);
+bool q_cborstreamreader_is_true(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#isBool)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-bool q_cborstreamreader_is_bool(void* self);
+bool q_cborstreamreader_is_bool(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#isNull)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-bool q_cborstreamreader_is_null(void* self);
+bool q_cborstreamreader_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#isUndefined)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-bool q_cborstreamreader_is_undefined(void* self);
+bool q_cborstreamreader_is_undefined(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#isLengthKnown)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-bool q_cborstreamreader_is_length_known(void* self);
+bool q_cborstreamreader_is_length_known(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#length)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-uint64_t q_cborstreamreader_length(void* self);
+uint64_t q_cborstreamreader_length(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#isContainer)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-bool q_cborstreamreader_is_container(void* self);
+bool q_cborstreamreader_is_container(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#enterContainer)
 ///
@@ -322,63 +322,63 @@ bool q_cborstreamreader_read_and_append_to_byte_array(void* self, char* dst);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#currentStringChunkSize)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-intptr_t q_cborstreamreader_current_string_chunk_size(void* self);
+intptr_t q_cborstreamreader_current_string_chunk_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#toBool)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-bool q_cborstreamreader_to_bool(void* self);
+bool q_cborstreamreader_to_bool(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#toTag)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
 /// @return enum QCborStreamReader__QCborTag
 ///
-uint64_t q_cborstreamreader_to_tag(void* self);
+uint64_t q_cborstreamreader_to_tag(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#toUnsignedInteger)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-uint64_t q_cborstreamreader_to_unsigned_integer(void* self);
+uint64_t q_cborstreamreader_to_unsigned_integer(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#toNegativeInteger)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
 /// @return enum QCborStreamReader__QCborNegativeInteger
 ///
-uint64_t q_cborstreamreader_to_negative_integer(void* self);
+uint64_t q_cborstreamreader_to_negative_integer(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#toSimpleType)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
 /// @return enum QCborStreamReader__QCborSimpleType
 ///
-uint8_t q_cborstreamreader_to_simple_type(void* self);
+uint8_t q_cborstreamreader_to_simple_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#toFloat)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-float q_cborstreamreader_to_float(void* self);
+float q_cborstreamreader_to_float(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#toDouble)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-double q_cborstreamreader_to_double(void* self);
+double q_cborstreamreader_to_double(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#toInteger)
 ///
-/// @param self QCborStreamReader*
+/// @param self const QCborStreamReader*
 ///
-int64_t q_cborstreamreader_to_integer(void* self);
+int64_t q_cborstreamreader_to_integer(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#readAllString)
 ///

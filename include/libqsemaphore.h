@@ -58,9 +58,9 @@ void q_semaphore_release(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsemaphore.html#available)
 ///
-/// @param self QSemaphore*
+/// @param self const QSemaphore*
 ///
-int32_t q_semaphore_available(void* self);
+int32_t q_semaphore_available(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsemaphore.html#try_acquire)
 ///
@@ -146,9 +146,9 @@ void q_semaphorereleaser_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsemaphorereleaser.html#semaphore)
 ///
-/// @param self QSemaphoreReleaser*
+/// @param self const QSemaphoreReleaser*
 ///
-QSemaphore* q_semaphorereleaser_semaphore(void* self);
+QSemaphore* q_semaphorereleaser_semaphore(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsemaphorereleaser.html#cancel)
 ///

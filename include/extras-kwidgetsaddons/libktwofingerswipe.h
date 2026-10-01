@@ -24,26 +24,26 @@ KTwoFingerSwipe* k_twofingerswipe_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 ///
-const QMetaObject* k_twofingerswipe_meta_object(void* self);
+const QMetaObject* k_twofingerswipe_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KTwoFingerSwipe*
-/// @param callback const QMetaObject* func()
+/// @param self const KTwoFingerSwipe*
+/// @param callback const QMetaObject* func(const KTwoFingerSwipe* self)
 ///
-void k_twofingerswipe_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_twofingerswipe_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 ///
-const QMetaObject* k_twofingerswipe_super_meta_object(void* self);
+const QMetaObject* k_twofingerswipe_super_meta_object(const void* self);
 
 /// @param self KTwoFingerSwipe*
 /// @param param1 const char*
@@ -97,9 +97,9 @@ const char* k_twofingerswipe_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/ktwofingerswipe.html#pos)
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 ///
-QPointF* k_twofingerswipe_pos(void* self);
+QPointF* k_twofingerswipe_pos(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktwofingerswipe.html#setPos)
 ///
@@ -110,9 +110,9 @@ void k_twofingerswipe_set_pos(void* self, void* pos);
 
 /// [Upstream resources](https://api.kde.org/ktwofingerswipe.html#screenPos)
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 ///
-QPointF* k_twofingerswipe_screen_pos(void* self);
+QPointF* k_twofingerswipe_screen_pos(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktwofingerswipe.html#setScreenPos)
 ///
@@ -123,9 +123,9 @@ void k_twofingerswipe_set_screen_pos(void* self, void* screenPos);
 
 /// [Upstream resources](https://api.kde.org/ktwofingerswipe.html#scenePos)
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 ///
-QPointF* k_twofingerswipe_scene_pos(void* self);
+QPointF* k_twofingerswipe_scene_pos(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktwofingerswipe.html#setScenePos)
 ///
@@ -136,9 +136,9 @@ void k_twofingerswipe_set_scene_pos(void* self, void* scenePos);
 
 /// [Upstream resources](https://api.kde.org/ktwofingerswipe.html#swipeAngle)
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 ///
-double k_twofingerswipe_swipe_angle(void* self);
+double k_twofingerswipe_swipe_angle(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktwofingerswipe.html#setSwipeAngle)
 ///
@@ -170,29 +170,29 @@ const char* k_twofingerswipe_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#gestureType)
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 ///
 /// @return enum Qt__GestureType
 ///
-int32_t k_twofingerswipe_gesture_type(void* self);
+int32_t k_twofingerswipe_gesture_type(const void* self);
 
 /// Inherited from QGesture
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#state)
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 ///
 /// @return enum Qt__GestureState
 ///
-int32_t k_twofingerswipe_state(void* self);
+int32_t k_twofingerswipe_state(const void* self);
 
 /// Inherited from QGesture
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#hotSpot)
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 ///
-QPointF* k_twofingerswipe_hot_spot(void* self);
+QPointF* k_twofingerswipe_hot_spot(const void* self);
 
 /// Inherited from QGesture
 ///
@@ -201,15 +201,15 @@ QPointF* k_twofingerswipe_hot_spot(void* self);
 /// @param self KTwoFingerSwipe*
 /// @param value QPointF*
 ///
-void k_twofingerswipe_set_hot_spot(void* self, void* value);
+void k_twofingerswipe_set_hot_spot(void* self, const void* value);
 
 /// Inherited from QGesture
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#hasHotSpot)
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 ///
-bool k_twofingerswipe_has_hot_spot(void* self);
+bool k_twofingerswipe_has_hot_spot(const void* self);
 
 /// Inherited from QGesture
 ///
@@ -232,11 +232,11 @@ void k_twofingerswipe_set_gesture_cancel_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#gestureCancelPolicy)
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 ///
 /// @return enum QGesture__GestureCancelPolicy
 ///
-int32_t k_twofingerswipe_gesture_cancel_policy(void* self);
+int32_t k_twofingerswipe_gesture_cancel_policy(const void* self);
 
 /// Inherited from QObject
 ///
@@ -244,9 +244,9 @@ int32_t k_twofingerswipe_gesture_cancel_policy(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 ///
-const char* k_twofingerswipe_object_name(void* self);
+const char* k_twofingerswipe_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -261,33 +261,33 @@ void k_twofingerswipe_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 ///
-bool k_twofingerswipe_is_widget_type(void* self);
+bool k_twofingerswipe_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 ///
-bool k_twofingerswipe_is_window_type(void* self);
+bool k_twofingerswipe_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 ///
-bool k_twofingerswipe_is_quick_item_type(void* self);
+bool k_twofingerswipe_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 ///
-bool k_twofingerswipe_signals_blocked(void* self);
+bool k_twofingerswipe_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -302,9 +302,9 @@ bool k_twofingerswipe_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 ///
-QThread* k_twofingerswipe_thread(void* self);
+QThread* k_twofingerswipe_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -355,11 +355,11 @@ void k_twofingerswipe_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_twofingerswipe_children(void* self);
+libqt_list k_twofingerswipe_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -397,7 +397,7 @@ void k_twofingerswipe_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_twofingerswipe_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_twofingerswipe_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -408,18 +408,18 @@ QMetaObject__Connection* k_twofingerswipe_connect(void* sender, const char* sign
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_twofingerswipe_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_twofingerswipe_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_twofingerswipe_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_twofingerswipe_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -430,7 +430,7 @@ QMetaObject__Connection* k_twofingerswipe_connect3(void* self, void* sender, con
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_twofingerswipe_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_twofingerswipe_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -441,24 +441,24 @@ bool k_twofingerswipe_disconnect(void* sender, const char* signal, void* receive
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_twofingerswipe_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_twofingerswipe_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 ///
-bool k_twofingerswipe_disconnect3(void* self);
+bool k_twofingerswipe_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 /// @param receiver QObject*
 ///
-bool k_twofingerswipe_disconnect4(void* self, void* receiver);
+bool k_twofingerswipe_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -466,23 +466,23 @@ bool k_twofingerswipe_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_twofingerswipe_disconnect5(void* param1);
+bool k_twofingerswipe_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 ///
-void k_twofingerswipe_dump_object_tree(void* self);
+void k_twofingerswipe_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 ///
-void k_twofingerswipe_dump_object_info(void* self);
+void k_twofingerswipe_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -492,16 +492,16 @@ void k_twofingerswipe_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_twofingerswipe_set_property(void* self, const char* name, void* value);
+bool k_twofingerswipe_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 /// @param name const char*
 ///
-QVariant* k_twofingerswipe_property(void* self, const char* name);
+QVariant* k_twofingerswipe_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -509,9 +509,9 @@ QVariant* k_twofingerswipe_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 ///
-const char** k_twofingerswipe_dynamic_property_names(void* self);
+const char** k_twofingerswipe_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -525,9 +525,9 @@ QBindingStorage* k_twofingerswipe_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 ///
-const QBindingStorage* k_twofingerswipe_binding_storage2(void* self);
+const QBindingStorage* k_twofingerswipe_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -550,18 +550,18 @@ void k_twofingerswipe_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 ///
-QObject* k_twofingerswipe_parent(void* self);
+QObject* k_twofingerswipe_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 /// @param classname const char*
 ///
-bool k_twofingerswipe_inherits(void* self, const char* classname);
+bool k_twofingerswipe_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -601,7 +601,7 @@ int32_t k_twofingerswipe_start_timer23(void* self, int64_t time, int32_t timerTy
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_twofingerswipe_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_twofingerswipe_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -613,59 +613,59 @@ QMetaObject__Connection* k_twofingerswipe_connect5(void* sender, const char* sig
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_twofingerswipe_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_twofingerswipe_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_twofingerswipe_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_twofingerswipe_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 /// @param signal const char*
 ///
-bool k_twofingerswipe_disconnect1(void* self, const char* signal);
+bool k_twofingerswipe_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KTwoFingerSwipe*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_twofingerswipe_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_twofingerswipe_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_twofingerswipe_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_twofingerswipe_disconnect23(void* self, void* receiver, const char* member);
+bool k_twofingerswipe_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KTwoFingerSwipe*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_twofingerswipe_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -861,7 +861,7 @@ void k_twofingerswipe_on_custom_event(void* self, void (*callback)(void*, void*)
 /// @param self KTwoFingerSwipe*
 /// @param signal QMetaMethod*
 ///
-void k_twofingerswipe_connect_notify(void* self, void* signal);
+void k_twofingerswipe_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -872,7 +872,7 @@ void k_twofingerswipe_connect_notify(void* self, void* signal);
 /// @param self KTwoFingerSwipe*
 /// @param signal QMetaMethod*
 ///
-void k_twofingerswipe_super_connect_notify(void* self, void* signal);
+void k_twofingerswipe_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -883,7 +883,7 @@ void k_twofingerswipe_super_connect_notify(void* self, void* signal);
 /// @param self KTwoFingerSwipe*
 /// @param callback void func(KTwoFingerSwipe* self, QMetaMethod* signal)
 ///
-void k_twofingerswipe_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_twofingerswipe_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -894,7 +894,7 @@ void k_twofingerswipe_on_connect_notify(void* self, void (*callback)(void*, void
 /// @param self KTwoFingerSwipe*
 /// @param signal QMetaMethod*
 ///
-void k_twofingerswipe_disconnect_notify(void* self, void* signal);
+void k_twofingerswipe_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -905,7 +905,7 @@ void k_twofingerswipe_disconnect_notify(void* self, void* signal);
 /// @param self KTwoFingerSwipe*
 /// @param signal QMetaMethod*
 ///
-void k_twofingerswipe_super_disconnect_notify(void* self, void* signal);
+void k_twofingerswipe_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -916,7 +916,7 @@ void k_twofingerswipe_super_disconnect_notify(void* self, void* signal);
 /// @param self KTwoFingerSwipe*
 /// @param callback void func(KTwoFingerSwipe* self, QMetaMethod* signal)
 ///
-void k_twofingerswipe_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_twofingerswipe_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -924,9 +924,9 @@ void k_twofingerswipe_on_disconnect_notify(void* self, void (*callback)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 ///
-QObject* k_twofingerswipe_sender(void* self);
+QObject* k_twofingerswipe_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -934,9 +934,9 @@ QObject* k_twofingerswipe_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 ///
-QObject* k_twofingerswipe_super_sender(void* self);
+QObject* k_twofingerswipe_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -944,10 +944,10 @@ QObject* k_twofingerswipe_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KTwoFingerSwipe*
-/// @param callback QObject* func()
+/// @param self const KTwoFingerSwipe*
+/// @param callback QObject* func(KTwoFingerSwipe* self)
 ///
-void k_twofingerswipe_on_sender(void* self, QObject* (*callback)());
+void k_twofingerswipe_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -955,9 +955,9 @@ void k_twofingerswipe_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 ///
-int32_t k_twofingerswipe_sender_signal_index(void* self);
+int32_t k_twofingerswipe_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -965,9 +965,9 @@ int32_t k_twofingerswipe_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 ///
-int32_t k_twofingerswipe_super_sender_signal_index(void* self);
+int32_t k_twofingerswipe_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -975,10 +975,10 @@ int32_t k_twofingerswipe_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KTwoFingerSwipe*
-/// @param callback int32_t func()
+/// @param self const KTwoFingerSwipe*
+/// @param callback int32_t func(KTwoFingerSwipe* self)
 ///
-void k_twofingerswipe_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_twofingerswipe_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -986,10 +986,10 @@ void k_twofingerswipe_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 /// @param signal const char*
 ///
-int32_t k_twofingerswipe_receivers(void* self, const char* signal);
+int32_t k_twofingerswipe_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -997,10 +997,10 @@ int32_t k_twofingerswipe_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 /// @param signal const char*
 ///
-int32_t k_twofingerswipe_super_receivers(void* self, const char* signal);
+int32_t k_twofingerswipe_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1008,10 +1008,10 @@ int32_t k_twofingerswipe_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 /// @param callback int32_t func(KTwoFingerSwipe* self, const char* signal)
 ///
-void k_twofingerswipe_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_twofingerswipe_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1019,10 +1019,10 @@ void k_twofingerswipe_on_receivers(void* self, int32_t (*callback)(void*, const 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 /// @param signal QMetaMethod*
 ///
-bool k_twofingerswipe_is_signal_connected(void* self, void* signal);
+bool k_twofingerswipe_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1030,10 +1030,10 @@ bool k_twofingerswipe_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 /// @param signal QMetaMethod*
 ///
-bool k_twofingerswipe_super_is_signal_connected(void* self, void* signal);
+bool k_twofingerswipe_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1041,10 +1041,10 @@ bool k_twofingerswipe_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KTwoFingerSwipe*
+/// @param self const KTwoFingerSwipe*
 /// @param callback bool func(KTwoFingerSwipe* self, QMetaMethod* signal)
 ///
-void k_twofingerswipe_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_twofingerswipe_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1131,9 +1131,9 @@ int32_t k_twofingerswiperecognizer_super_recognize(void* self, void* gesture, vo
 
 /// [Upstream resources](https://api.kde.org/ktwofingerswiperecognizer.html#maxSwipeTime)
 ///
-/// @param self KTwoFingerSwipeRecognizer*
+/// @param self const KTwoFingerSwipeRecognizer*
 ///
-int32_t k_twofingerswiperecognizer_max_swipe_time(void* self);
+int32_t k_twofingerswiperecognizer_max_swipe_time(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktwofingerswiperecognizer.html#setMaxSwipeTime)
 ///
@@ -1144,9 +1144,9 @@ void k_twofingerswiperecognizer_set_max_swipe_time(void* self, int i);
 
 /// [Upstream resources](https://api.kde.org/ktwofingerswiperecognizer.html#minSswipeDistance)
 ///
-/// @param self KTwoFingerSwipeRecognizer*
+/// @param self const KTwoFingerSwipeRecognizer*
 ///
-int32_t k_twofingerswiperecognizer_min_sswipe_distance(void* self);
+int32_t k_twofingerswiperecognizer_min_sswipe_distance(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktwofingerswiperecognizer.html#setSwipeDistance)
 ///
@@ -1180,7 +1180,7 @@ void k_twofingerswiperecognizer_unregister_recognizer(int32_t type);
 /// @param self KTwoFingerSwipeRecognizer*
 /// @param param1 QGestureRecognizer*
 ///
-void k_twofingerswiperecognizer_operator_assign(void* self, void* param1);
+void k_twofingerswiperecognizer_operator_assign(void* self, const void* param1);
 
 /// Inherited from QGestureRecognizer
 ///

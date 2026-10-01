@@ -14,7 +14,7 @@
 ///
 /// @param other KIO__OpenWith*
 ///
-KIO__OpenWith* k_io__openwith_new(void* other);
+KIO__OpenWith* k_io__openwith_new(const void* other);
 
 /// [Upstream resources](https://api.kde.org/kio-openwith.html)
 
@@ -56,13 +56,13 @@ KIO__OpenWith__AcceptResult* k_io__openwith__acceptresult_new();
 ///
 /// @param param1 KIO__OpenWith__AcceptResult*
 ///
-KIO__OpenWith__AcceptResult* k_io__openwith__acceptresult_new2(void* param1);
+KIO__OpenWith__AcceptResult* k_io__openwith__acceptresult_new2(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kio-openwith-acceptresult.html#accept-var)
 ///
-/// @param self KIO__OpenWith__AcceptResult*
+/// @param self const KIO__OpenWith__AcceptResult*
 ///
-bool k_io__openwith__acceptresult_accept(void* self);
+bool k_io__openwith__acceptresult_accept(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-openwith-acceptresult.html#accept-var)
 ///
@@ -75,9 +75,9 @@ void k_io__openwith__acceptresult_set_accept(void* self, bool accept);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__OpenWith__AcceptResult*
+/// @param self const KIO__OpenWith__AcceptResult*
 ///
-const char* k_io__openwith__acceptresult_error(void* self);
+const char* k_io__openwith__acceptresult_error(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-openwith-acceptresult.html#error-var)
 ///
@@ -88,9 +88,9 @@ void k_io__openwith__acceptresult_set_error(void* self, const char* error);
 
 /// [Upstream resources](https://api.kde.org/kio-openwith-acceptresult.html#rebuildSycoca-var)
 ///
-/// @param self KIO__OpenWith__AcceptResult*
+/// @param self const KIO__OpenWith__AcceptResult*
 ///
-bool k_io__openwith__acceptresult_rebuild_sycoca(void* self);
+bool k_io__openwith__acceptresult_rebuild_sycoca(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-openwith-acceptresult.html#rebuildSycoca-var)
 ///
@@ -104,7 +104,7 @@ void k_io__openwith__acceptresult_set_rebuild_sycoca(void* self, bool rebuildSyc
 /// @param self KIO__OpenWith__AcceptResult*
 /// @param param1 KIO__OpenWith__AcceptResult*
 ///
-void k_io__openwith__acceptresult_operator_assign(void* self, void* param1);
+void k_io__openwith__acceptresult_operator_assign(void* self, const void* param1);
 
 /// Delete this object from C++ memory.
 ///

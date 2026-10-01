@@ -12,15 +12,15 @@ QDrag* q_drag_new(void* dragSource) {
     return QDrag_New((QObject*)dragSource);
 }
 
-const QMetaObject* q_drag_meta_object(void* self) {
+const QMetaObject* q_drag_meta_object(const void* self) {
     return QDrag_MetaObject((QDrag*)self);
 }
 
-void q_drag_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_drag_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QDrag_OnMetaObject((QDrag*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_drag_super_meta_object(void* self) {
+const QMetaObject* q_drag_super_meta_object(const void* self) {
     return QDrag_SuperMetaObject((QDrag*)self);
 }
 
@@ -59,31 +59,31 @@ void q_drag_set_mime_data(void* self, void* data) {
     QDrag_SetMimeData((QDrag*)self, (QMimeData*)data);
 }
 
-QMimeData* q_drag_mime_data(void* self) {
+QMimeData* q_drag_mime_data(const void* self) {
     return QDrag_MimeData((QDrag*)self);
 }
 
-void q_drag_set_pixmap(void* self, void* pixmap) {
+void q_drag_set_pixmap(void* self, const void* pixmap) {
     QDrag_SetPixmap((QDrag*)self, (QPixmap*)pixmap);
 }
 
-QPixmap* q_drag_pixmap(void* self) {
+QPixmap* q_drag_pixmap(const void* self) {
     return QDrag_Pixmap((QDrag*)self);
 }
 
-void q_drag_set_hot_spot(void* self, void* hotspot) {
+void q_drag_set_hot_spot(void* self, const void* hotspot) {
     QDrag_SetHotSpot((QDrag*)self, (QPoint*)hotspot);
 }
 
-QPoint* q_drag_hot_spot(void* self) {
+QPoint* q_drag_hot_spot(const void* self) {
     return QDrag_HotSpot((QDrag*)self);
 }
 
-QObject* q_drag_source(void* self) {
+QObject* q_drag_source(const void* self) {
     return QDrag_Source((QDrag*)self);
 }
 
-QObject* q_drag_target(void* self) {
+QObject* q_drag_target(const void* self) {
     return QDrag_Target((QDrag*)self);
 }
 
@@ -95,19 +95,19 @@ int32_t q_drag_exec2(void* self, int32_t supportedActions, int32_t defaultAction
     return QDrag_Exec2((QDrag*)self, supportedActions, defaultAction);
 }
 
-void q_drag_set_drag_cursor(void* self, void* cursor, int32_t action) {
+void q_drag_set_drag_cursor(void* self, const void* cursor, int32_t action) {
     QDrag_SetDragCursor((QDrag*)self, (QPixmap*)cursor, action);
 }
 
-QPixmap* q_drag_drag_cursor(void* self, int32_t action) {
+QPixmap* q_drag_drag_cursor(const void* self, int32_t action) {
     return QDrag_DragCursor((QDrag*)self, action);
 }
 
-int32_t q_drag_supported_actions(void* self) {
+int32_t q_drag_supported_actions(const void* self) {
     return QDrag_SupportedActions((QDrag*)self);
 }
 
-int32_t q_drag_default_action(void* self) {
+int32_t q_drag_default_action(const void* self) {
     return QDrag_DefaultAction((QDrag*)self);
 }
 
@@ -149,7 +149,7 @@ int32_t q_drag_exec1(void* self, int32_t supportedActions) {
     return QDrag_Exec1((QDrag*)self, supportedActions);
 }
 
-const char* q_drag_object_name(void* self) {
+const char* q_drag_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -160,19 +160,19 @@ void q_drag_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_drag_is_widget_type(void* self) {
+bool q_drag_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_drag_is_window_type(void* self) {
+bool q_drag_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_drag_is_quick_item_type(void* self) {
+bool q_drag_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_drag_signals_blocked(void* self) {
+bool q_drag_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -180,7 +180,7 @@ bool q_drag_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_drag_thread(void* self) {
+QThread* q_drag_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -204,7 +204,7 @@ void q_drag_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_drag_children(void* self) {
+libqt_list /* of QObject* */ q_drag_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -221,55 +221,55 @@ void q_drag_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_drag_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_drag_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_drag_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_drag_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_drag_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_drag_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_drag_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_drag_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_drag_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_drag_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_drag_disconnect3(void* self) {
+bool q_drag_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_drag_disconnect4(void* self, void* receiver) {
+bool q_drag_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_drag_disconnect5(void* param1) {
+bool q_drag_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_drag_dump_object_tree(void* self) {
+void q_drag_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_drag_dump_object_info(void* self) {
+void q_drag_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_drag_set_property(void* self, const char* name, void* value) {
+bool q_drag_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_drag_property(void* self, const char* name) {
+QVariant* q_drag_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_drag_dynamic_property_names(void* self) {
+const char** q_drag_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -290,7 +290,7 @@ QBindingStorage* q_drag_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_drag_binding_storage2(void* self) {
+const QBindingStorage* q_drag_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -302,11 +302,11 @@ void q_drag_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_drag_parent(void* self) {
+QObject* q_drag_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_drag_inherits(void* self, const char* classname) {
+bool q_drag_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -322,31 +322,31 @@ int32_t q_drag_start_timer23(void* self, int64_t time, int32_t timerType) {
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_drag_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_drag_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_drag_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_drag_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_drag_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_drag_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_drag_disconnect1(void* self, const char* signal) {
+bool q_drag_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_drag_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_drag_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_drag_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_drag_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_drag_disconnect23(void* self, void* receiver, const char* member) {
+bool q_drag_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -418,76 +418,44 @@ void q_drag_on_custom_event(void* self, void (*callback)(void*, void*)) {
     QDrag_OnCustomEvent((QDrag*)self, (intptr_t)callback);
 }
 
-void q_drag_connect_notify(void* self, void* signal) {
+void q_drag_connect_notify(void* self, const void* signal) {
     QDrag_ConnectNotify((QDrag*)self, (QMetaMethod*)signal);
 }
 
-void q_drag_super_connect_notify(void* self, void* signal) {
+void q_drag_super_connect_notify(void* self, const void* signal) {
     QDrag_SuperConnectNotify((QDrag*)self, (QMetaMethod*)signal);
 }
 
-void q_drag_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_drag_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QDrag_OnConnectNotify((QDrag*)self, (intptr_t)callback);
 }
 
-void q_drag_disconnect_notify(void* self, void* signal) {
+void q_drag_disconnect_notify(void* self, const void* signal) {
     QDrag_DisconnectNotify((QDrag*)self, (QMetaMethod*)signal);
 }
 
-void q_drag_super_disconnect_notify(void* self, void* signal) {
+void q_drag_super_disconnect_notify(void* self, const void* signal) {
     QDrag_SuperDisconnectNotify((QDrag*)self, (QMetaMethod*)signal);
 }
 
-void q_drag_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_drag_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QDrag_OnDisconnectNotify((QDrag*)self, (intptr_t)callback);
 }
 
-QObject* q_drag_sender(void* self) {
+QObject* q_drag_sender(const void* self) {
     return QDrag_Sender((QDrag*)self);
 }
 
-QObject* q_drag_super_sender(void* self) {
-    return QDrag_SuperSender((QDrag*)self);
-}
-
-void q_drag_on_sender(void* self, QObject* (*callback)()) {
-    QDrag_OnSender((QDrag*)self, (intptr_t)callback);
-}
-
-int32_t q_drag_sender_signal_index(void* self) {
+int32_t q_drag_sender_signal_index(const void* self) {
     return QDrag_SenderSignalIndex((QDrag*)self);
 }
 
-int32_t q_drag_super_sender_signal_index(void* self) {
-    return QDrag_SuperSenderSignalIndex((QDrag*)self);
-}
-
-void q_drag_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QDrag_OnSenderSignalIndex((QDrag*)self, (intptr_t)callback);
-}
-
-int32_t q_drag_receivers(void* self, const char* signal) {
+int32_t q_drag_receivers(const void* self, const char* signal) {
     return QDrag_Receivers((QDrag*)self, signal);
 }
 
-int32_t q_drag_super_receivers(void* self, const char* signal) {
-    return QDrag_SuperReceivers((QDrag*)self, signal);
-}
-
-void q_drag_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QDrag_OnReceivers((QDrag*)self, (intptr_t)callback);
-}
-
-bool q_drag_is_signal_connected(void* self, void* signal) {
+bool q_drag_is_signal_connected(const void* self, const void* signal) {
     return QDrag_IsSignalConnected((QDrag*)self, (QMetaMethod*)signal);
-}
-
-bool q_drag_super_is_signal_connected(void* self, void* signal) {
-    return QDrag_SuperIsSignalConnected((QDrag*)self, (QMetaMethod*)signal);
-}
-
-void q_drag_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QDrag_OnIsSignalConnected((QDrag*)self, (intptr_t)callback);
 }
 
 void q_drag_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

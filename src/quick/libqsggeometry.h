@@ -15,7 +15,7 @@
 /// @param attribs QSGGeometry__AttributeSet*
 /// @param vertexCount int
 ///
-QSGGeometry* q_sggeometry_new(void* attribs, int vertexCount);
+QSGGeometry* q_sggeometry_new(const void* attribs, int vertexCount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html)
 
@@ -25,7 +25,7 @@ QSGGeometry* q_sggeometry_new(void* attribs, int vertexCount);
 /// @param vertexCount int
 /// @param indexCount int
 ///
-QSGGeometry* q_sggeometry_new2(void* attribs, int vertexCount, int indexCount);
+QSGGeometry* q_sggeometry_new2(const void* attribs, int vertexCount, int indexCount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html)
 
@@ -36,7 +36,7 @@ QSGGeometry* q_sggeometry_new2(void* attribs, int vertexCount, int indexCount);
 /// @param indexCount int
 /// @param indexType int
 ///
-QSGGeometry* q_sggeometry_new3(void* attribs, int vertexCount, int indexCount, int indexType);
+QSGGeometry* q_sggeometry_new3(const void* attribs, int vertexCount, int indexCount, int indexType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html#defaultAttributes_Point2D)
 ///
@@ -59,9 +59,9 @@ void q_sggeometry_set_drawing_mode(void* self, uint32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html#drawingMode)
 ///
-/// @param self QSGGeometry*
+/// @param self const QSGGeometry*
 ///
-uint32_t q_sggeometry_drawing_mode(void* self);
+uint32_t q_sggeometry_drawing_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html#allocate)
 ///
@@ -72,9 +72,9 @@ void q_sggeometry_allocate(void* self, int vertexCount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html#vertexCount)
 ///
-/// @param self QSGGeometry*
+/// @param self const QSGGeometry*
 ///
-int32_t q_sggeometry_vertex_count(void* self);
+int32_t q_sggeometry_vertex_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html#vertexData)
 ///
@@ -102,39 +102,39 @@ QSGGeometry__ColoredPoint2D* q_sggeometry_vertex_data_as_colored_point2_d(void* 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html#vertexData)
 ///
-/// @param self QSGGeometry*
+/// @param self const QSGGeometry*
 ///
-const void* q_sggeometry_vertex_data2(void* self);
+const void* q_sggeometry_vertex_data2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html#vertexDataAsPoint2D)
 ///
-/// @param self QSGGeometry*
+/// @param self const QSGGeometry*
 ///
-const QSGGeometry__Point2D* q_sggeometry_vertex_data_as_point2_d2(void* self);
+const QSGGeometry__Point2D* q_sggeometry_vertex_data_as_point2_d2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html#vertexDataAsTexturedPoint2D)
 ///
-/// @param self QSGGeometry*
+/// @param self const QSGGeometry*
 ///
-const QSGGeometry__TexturedPoint2D* q_sggeometry_vertex_data_as_textured_point2_d2(void* self);
+const QSGGeometry__TexturedPoint2D* q_sggeometry_vertex_data_as_textured_point2_d2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html#vertexDataAsColoredPoint2D)
 ///
-/// @param self QSGGeometry*
+/// @param self const QSGGeometry*
 ///
-const QSGGeometry__ColoredPoint2D* q_sggeometry_vertex_data_as_colored_point2_d2(void* self);
+const QSGGeometry__ColoredPoint2D* q_sggeometry_vertex_data_as_colored_point2_d2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html#indexType)
 ///
-/// @param self QSGGeometry*
+/// @param self const QSGGeometry*
 ///
-int32_t q_sggeometry_index_type(void* self);
+int32_t q_sggeometry_index_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html#indexCount)
 ///
-/// @param self QSGGeometry*
+/// @param self const QSGGeometry*
 ///
-int32_t q_sggeometry_index_count(void* self);
+int32_t q_sggeometry_index_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html#indexData)
 ///
@@ -156,52 +156,52 @@ uint16_t* q_sggeometry_index_data_as_u_short(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html#sizeOfIndex)
 ///
-/// @param self QSGGeometry*
+/// @param self const QSGGeometry*
 ///
-int32_t q_sggeometry_size_of_index(void* self);
+int32_t q_sggeometry_size_of_index(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html#indexData)
 ///
-/// @param self QSGGeometry*
+/// @param self const QSGGeometry*
 ///
-const void* q_sggeometry_index_data2(void* self);
+const void* q_sggeometry_index_data2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html#indexDataAsUInt)
 ///
-/// @param self QSGGeometry*
+/// @param self const QSGGeometry*
 ///
-const uint32_t* q_sggeometry_index_data_as_u_int2(void* self);
+const uint32_t* q_sggeometry_index_data_as_u_int2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html#indexDataAsUShort)
 ///
-/// @param self QSGGeometry*
+/// @param self const QSGGeometry*
 ///
-const uint16_t* q_sggeometry_index_data_as_u_short2(void* self);
+const uint16_t* q_sggeometry_index_data_as_u_short2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html#attributeCount)
 ///
-/// @param self QSGGeometry*
+/// @param self const QSGGeometry*
 ///
-int32_t q_sggeometry_attribute_count(void* self);
+int32_t q_sggeometry_attribute_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html#attributes)
 ///
-/// @param self QSGGeometry*
+/// @param self const QSGGeometry*
 ///
-const QSGGeometry__Attribute* q_sggeometry_attributes(void* self);
+const QSGGeometry__Attribute* q_sggeometry_attributes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html#sizeOfVertex)
 ///
-/// @param self QSGGeometry*
+/// @param self const QSGGeometry*
 ///
-int32_t q_sggeometry_size_of_vertex(void* self);
+int32_t q_sggeometry_size_of_vertex(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html#updateRectGeometry)
 ///
 /// @param g QSGGeometry*
 /// @param rect QRectF*
 ///
-void q_sggeometry_update_rect_geometry(void* g, void* rect);
+void q_sggeometry_update_rect_geometry(void* g, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html#updateTexturedRectGeometry)
 ///
@@ -209,14 +209,14 @@ void q_sggeometry_update_rect_geometry(void* g, void* rect);
 /// @param rect QRectF*
 /// @param sourceRect QRectF*
 ///
-void q_sggeometry_update_textured_rect_geometry(void* g, void* rect, void* sourceRect);
+void q_sggeometry_update_textured_rect_geometry(void* g, const void* rect, const void* sourceRect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html#updateColoredRectGeometry)
 ///
 /// @param g QSGGeometry*
 /// @param rect QRectF*
 ///
-void q_sggeometry_update_colored_rect_geometry(void* g, void* rect);
+void q_sggeometry_update_colored_rect_geometry(void* g, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html#setIndexDataPattern)
 ///
@@ -227,11 +227,11 @@ void q_sggeometry_set_index_data_pattern(void* self, int32_t p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html#indexDataPattern)
 ///
-/// @param self QSGGeometry*
+/// @param self const QSGGeometry*
 ///
 /// @return enum QSGGeometry__DataPattern
 ///
-int32_t q_sggeometry_index_data_pattern(void* self);
+int32_t q_sggeometry_index_data_pattern(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html#setVertexDataPattern)
 ///
@@ -242,11 +242,11 @@ void q_sggeometry_set_vertex_data_pattern(void* self, int32_t p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html#vertexDataPattern)
 ///
-/// @param self QSGGeometry*
+/// @param self const QSGGeometry*
 ///
 /// @return enum QSGGeometry__DataPattern
 ///
-int32_t q_sggeometry_vertex_data_pattern(void* self);
+int32_t q_sggeometry_vertex_data_pattern(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html#markIndexDataDirty)
 ///
@@ -262,9 +262,9 @@ void q_sggeometry_mark_vertex_data_dirty(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html#lineWidth)
 ///
-/// @param self QSGGeometry*
+/// @param self const QSGGeometry*
 ///
-float q_sggeometry_line_width(void* self);
+float q_sggeometry_line_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry.html#setLineWidth)
 ///
@@ -293,9 +293,9 @@ void q_sggeometry_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-attribute.html#position-var)
 ///
-/// @param self QSGGeometry__Attribute*
+/// @param self const QSGGeometry__Attribute*
 ///
-int32_t q_sggeometry__attribute_position(void* self);
+int32_t q_sggeometry__attribute_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-attribute.html#position-var)
 ///
@@ -306,9 +306,9 @@ void q_sggeometry__attribute_set_position(void* self, int position);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-attribute.html#tupleSize-var)
 ///
-/// @param self QSGGeometry__Attribute*
+/// @param self const QSGGeometry__Attribute*
 ///
-int32_t q_sggeometry__attribute_tuple_size(void* self);
+int32_t q_sggeometry__attribute_tuple_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-attribute.html#tupleSize-var)
 ///
@@ -319,9 +319,9 @@ void q_sggeometry__attribute_set_tuple_size(void* self, int tupleSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-attribute.html#type-var)
 ///
-/// @param self QSGGeometry__Attribute*
+/// @param self const QSGGeometry__Attribute*
 ///
-int32_t q_sggeometry__attribute_type(void* self);
+int32_t q_sggeometry__attribute_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-attribute.html#type-var)
 ///
@@ -332,9 +332,9 @@ void q_sggeometry__attribute_set_type(void* self, int type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-attribute.html#isVertexCoordinate-var)
 ///
-/// @param self QSGGeometry__Attribute*
+/// @param self const QSGGeometry__Attribute*
 ///
-uint32_t q_sggeometry__attribute_is_vertex_coordinate(void* self);
+uint32_t q_sggeometry__attribute_is_vertex_coordinate(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-attribute.html#isVertexCoordinate-var)
 ///
@@ -345,11 +345,11 @@ void q_sggeometry__attribute_set_is_vertex_coordinate(void* self, uint32_t isVer
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-attribute.html#attributeType-var)
 ///
-/// @param self QSGGeometry__Attribute*
+/// @param self const QSGGeometry__Attribute*
 ///
 /// @return enum QSGGeometry__AttributeType
 ///
-int32_t q_sggeometry__attribute_attribute_type(void* self);
+int32_t q_sggeometry__attribute_attribute_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-attribute.html#attributeType-var)
 ///
@@ -360,9 +360,9 @@ void q_sggeometry__attribute_set_attribute_type(void* self, int32_t attributeTyp
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-attribute.html#reserved-var)
 ///
-/// @param self QSGGeometry__Attribute*
+/// @param self const QSGGeometry__Attribute*
 ///
-uint32_t q_sggeometry__attribute_reserved(void* self);
+uint32_t q_sggeometry__attribute_reserved(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-attribute.html#reserved-var)
 ///
@@ -407,9 +407,9 @@ void q_sggeometry__attribute_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-attributeset.html#count-var)
 ///
-/// @param self QSGGeometry__AttributeSet*
+/// @param self const QSGGeometry__AttributeSet*
 ///
-int32_t q_sggeometry__attributeset_count(void* self);
+int32_t q_sggeometry__attributeset_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-attributeset.html#count-var)
 ///
@@ -420,9 +420,9 @@ void q_sggeometry__attributeset_set_count(void* self, int count);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-attributeset.html#stride-var)
 ///
-/// @param self QSGGeometry__AttributeSet*
+/// @param self const QSGGeometry__AttributeSet*
 ///
-int32_t q_sggeometry__attributeset_stride(void* self);
+int32_t q_sggeometry__attributeset_stride(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-attributeset.html#stride-var)
 ///
@@ -433,16 +433,16 @@ void q_sggeometry__attributeset_set_stride(void* self, int stride);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-attributeset.html#attributes-var)
 ///
-/// @param self QSGGeometry__AttributeSet*
+/// @param self const QSGGeometry__AttributeSet*
 ///
-const QSGGeometry__Attribute* q_sggeometry__attributeset_attributes(void* self);
+const QSGGeometry__Attribute* q_sggeometry__attributeset_attributes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-attributeset.html#attributes-var)
 ///
 /// @param self QSGGeometry__AttributeSet*
 /// @param attributes QSGGeometry__Attribute*
 ///
-void q_sggeometry__attributeset_set_attributes(void* self, void* attributes);
+void q_sggeometry__attributeset_set_attributes(void* self, const void* attributes);
 
 /// Delete this object from C++ memory.
 ///
@@ -454,9 +454,9 @@ void q_sggeometry__attributeset_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-point2d.html#x-var)
 ///
-/// @param self QSGGeometry__Point2D*
+/// @param self const QSGGeometry__Point2D*
 ///
-float q_sggeometry__point2d_x(void* self);
+float q_sggeometry__point2d_x(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-point2d.html#x-var)
 ///
@@ -467,9 +467,9 @@ void q_sggeometry__point2d_set_x(void* self, float x);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-point2d.html#y-var)
 ///
-/// @param self QSGGeometry__Point2D*
+/// @param self const QSGGeometry__Point2D*
 ///
-float q_sggeometry__point2d_y(void* self);
+float q_sggeometry__point2d_y(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-point2d.html#y-var)
 ///
@@ -496,9 +496,9 @@ void q_sggeometry__point2d_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-texturedpoint2d.html#x-var)
 ///
-/// @param self QSGGeometry__TexturedPoint2D*
+/// @param self const QSGGeometry__TexturedPoint2D*
 ///
-float q_sggeometry__texturedpoint2d_x(void* self);
+float q_sggeometry__texturedpoint2d_x(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-texturedpoint2d.html#x-var)
 ///
@@ -509,9 +509,9 @@ void q_sggeometry__texturedpoint2d_set_x(void* self, float x);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-texturedpoint2d.html#y-var)
 ///
-/// @param self QSGGeometry__TexturedPoint2D*
+/// @param self const QSGGeometry__TexturedPoint2D*
 ///
-float q_sggeometry__texturedpoint2d_y(void* self);
+float q_sggeometry__texturedpoint2d_y(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-texturedpoint2d.html#y-var)
 ///
@@ -522,9 +522,9 @@ void q_sggeometry__texturedpoint2d_set_y(void* self, float y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-texturedpoint2d.html#tx-var)
 ///
-/// @param self QSGGeometry__TexturedPoint2D*
+/// @param self const QSGGeometry__TexturedPoint2D*
 ///
-float q_sggeometry__texturedpoint2d_tx(void* self);
+float q_sggeometry__texturedpoint2d_tx(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-texturedpoint2d.html#tx-var)
 ///
@@ -535,9 +535,9 @@ void q_sggeometry__texturedpoint2d_set_tx(void* self, float tx);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-texturedpoint2d.html#ty-var)
 ///
-/// @param self QSGGeometry__TexturedPoint2D*
+/// @param self const QSGGeometry__TexturedPoint2D*
 ///
-float q_sggeometry__texturedpoint2d_ty(void* self);
+float q_sggeometry__texturedpoint2d_ty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-texturedpoint2d.html#ty-var)
 ///
@@ -566,9 +566,9 @@ void q_sggeometry__texturedpoint2d_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-coloredpoint2d.html#x-var)
 ///
-/// @param self QSGGeometry__ColoredPoint2D*
+/// @param self const QSGGeometry__ColoredPoint2D*
 ///
-float q_sggeometry__coloredpoint2d_x(void* self);
+float q_sggeometry__coloredpoint2d_x(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-coloredpoint2d.html#x-var)
 ///
@@ -579,9 +579,9 @@ void q_sggeometry__coloredpoint2d_set_x(void* self, float x);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-coloredpoint2d.html#y-var)
 ///
-/// @param self QSGGeometry__ColoredPoint2D*
+/// @param self const QSGGeometry__ColoredPoint2D*
 ///
-float q_sggeometry__coloredpoint2d_y(void* self);
+float q_sggeometry__coloredpoint2d_y(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-coloredpoint2d.html#y-var)
 ///
@@ -592,9 +592,9 @@ void q_sggeometry__coloredpoint2d_set_y(void* self, float y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-coloredpoint2d.html#r-var)
 ///
-/// @param self QSGGeometry__ColoredPoint2D*
+/// @param self const QSGGeometry__ColoredPoint2D*
 ///
-unsigned char q_sggeometry__coloredpoint2d_r(void* self);
+unsigned char q_sggeometry__coloredpoint2d_r(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-coloredpoint2d.html#r-var)
 ///
@@ -605,9 +605,9 @@ void q_sggeometry__coloredpoint2d_set_r(void* self, unsigned char r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-coloredpoint2d.html#g-var)
 ///
-/// @param self QSGGeometry__ColoredPoint2D*
+/// @param self const QSGGeometry__ColoredPoint2D*
 ///
-unsigned char q_sggeometry__coloredpoint2d_g(void* self);
+unsigned char q_sggeometry__coloredpoint2d_g(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-coloredpoint2d.html#g-var)
 ///
@@ -618,9 +618,9 @@ void q_sggeometry__coloredpoint2d_set_g(void* self, unsigned char g);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-coloredpoint2d.html#b-var)
 ///
-/// @param self QSGGeometry__ColoredPoint2D*
+/// @param self const QSGGeometry__ColoredPoint2D*
 ///
-unsigned char q_sggeometry__coloredpoint2d_b(void* self);
+unsigned char q_sggeometry__coloredpoint2d_b(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-coloredpoint2d.html#b-var)
 ///
@@ -631,9 +631,9 @@ void q_sggeometry__coloredpoint2d_set_b(void* self, unsigned char b);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-coloredpoint2d.html#a-var)
 ///
-/// @param self QSGGeometry__ColoredPoint2D*
+/// @param self const QSGGeometry__ColoredPoint2D*
 ///
-unsigned char q_sggeometry__coloredpoint2d_a(void* self);
+unsigned char q_sggeometry__coloredpoint2d_a(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometry-coloredpoint2d.html#a-var)
 ///

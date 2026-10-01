@@ -16,26 +16,20 @@ QNativeInterface__QSGOpenGLTexture* q_nativeinterface__qsgopengltexture_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeinterface-qsgopengltexture.html#nativeTexture)
 ///
-/// @param self QNativeInterface__QSGOpenGLTexture*
+/// @warning This method must be implemented with `q_nativeinterface__qsgopengltexture_on_native_texture` before it can be called.
 ///
-uint32_t q_nativeinterface__qsgopengltexture_native_texture(void* self);
+/// @param self const QNativeInterface__QSGOpenGLTexture*
+///
+uint32_t q_nativeinterface__qsgopengltexture_native_texture(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeinterface-qsgopengltexture.html#nativeTexture)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QNativeInterface__QSGOpenGLTexture*
-/// @param callback uint32_t func()
+/// @param self const QNativeInterface__QSGOpenGLTexture*
+/// @param callback uint32_t func(const QNativeInterface__QSGOpenGLTexture* self)
 ///
-void q_nativeinterface__qsgopengltexture_on_native_texture(void* self, uint32_t (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qnativeinterface-qsgopengltexture.html#nativeTexture)
-///
-/// Base class method implementation
-///
-/// @param self QNativeInterface__QSGOpenGLTexture*
-///
-uint32_t q_nativeinterface__qsgopengltexture_super_native_texture(void* self);
+void q_nativeinterface__qsgopengltexture_on_native_texture(const void* self, uint32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeinterface-qsgopengltexture.html#fromNative)
 ///
@@ -43,7 +37,7 @@ uint32_t q_nativeinterface__qsgopengltexture_super_native_texture(void* self);
 /// @param window QQuickWindow*
 /// @param size QSize*
 ///
-QSGTexture* q_nativeinterface__qsgopengltexture_from_native(uint32_t textureId, void* window, void* size);
+QSGTexture* q_nativeinterface__qsgopengltexture_from_native(uint32_t textureId, void* window, const void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeinterface-qsgopengltexture.html#fromNativeExternalOES)
 ///
@@ -51,7 +45,7 @@ QSGTexture* q_nativeinterface__qsgopengltexture_from_native(uint32_t textureId, 
 /// @param window QQuickWindow*
 /// @param size QSize*
 ///
-QSGTexture* q_nativeinterface__qsgopengltexture_from_native_external_o_e_s(uint32_t textureId, void* window, void* size);
+QSGTexture* q_nativeinterface__qsgopengltexture_from_native_external_o_e_s(uint32_t textureId, void* window, const void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeinterface-qsgopengltexture.html#fromNative)
 ///
@@ -60,7 +54,7 @@ QSGTexture* q_nativeinterface__qsgopengltexture_from_native_external_o_e_s(uint3
 /// @param size QSize*
 /// @param options flag of enum QQuickWindow__CreateTextureOption
 ///
-QSGTexture* q_nativeinterface__qsgopengltexture_from_native4(uint32_t textureId, void* window, void* size, int32_t options);
+QSGTexture* q_nativeinterface__qsgopengltexture_from_native4(uint32_t textureId, void* window, const void* size, int32_t options);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeinterface-qsgopengltexture.html#fromNativeExternalOES)
 ///
@@ -69,5 +63,5 @@ QSGTexture* q_nativeinterface__qsgopengltexture_from_native4(uint32_t textureId,
 /// @param size QSize*
 /// @param options flag of enum QQuickWindow__CreateTextureOption
 ///
-QSGTexture* q_nativeinterface__qsgopengltexture_from_native_external_o_e_s4(uint32_t textureId, void* window, void* size, int32_t options);
+QSGTexture* q_nativeinterface__qsgopengltexture_from_native_external_o_e_s4(uint32_t textureId, void* window, const void* size, int32_t options);
 #endif

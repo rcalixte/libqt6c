@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QSGTextureProvider*
+/// @param self const QSGTextureProvider*
 ///
-const QMetaObject* q_sgtextureprovider_meta_object(void* self);
+const QMetaObject* q_sgtextureprovider_meta_object(const void* self);
 
 /// @param self QSGTextureProvider*
 /// @param param1 const char*
@@ -38,9 +38,11 @@ const char* q_sgtextureprovider_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtextureprovider.html#texture)
 ///
-/// @param self QSGTextureProvider*
+/// @warning Use caution when calling this method as it might not be defined.
 ///
-QSGTexture* q_sgtextureprovider_texture(void* self);
+/// @param self const QSGTextureProvider*
+///
+QSGTexture* q_sgtextureprovider_texture(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtextureprovider.html#textureChanged)
 ///
@@ -99,9 +101,9 @@ bool q_sgtextureprovider_event_filter(void* self, void* watched, void* event);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSGTextureProvider*
+/// @param self const QSGTextureProvider*
 ///
-const char* q_sgtextureprovider_object_name(void* self);
+const char* q_sgtextureprovider_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -116,33 +118,33 @@ void q_sgtextureprovider_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QSGTextureProvider*
+/// @param self const QSGTextureProvider*
 ///
-bool q_sgtextureprovider_is_widget_type(void* self);
+bool q_sgtextureprovider_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QSGTextureProvider*
+/// @param self const QSGTextureProvider*
 ///
-bool q_sgtextureprovider_is_window_type(void* self);
+bool q_sgtextureprovider_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QSGTextureProvider*
+/// @param self const QSGTextureProvider*
 ///
-bool q_sgtextureprovider_is_quick_item_type(void* self);
+bool q_sgtextureprovider_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QSGTextureProvider*
+/// @param self const QSGTextureProvider*
 ///
-bool q_sgtextureprovider_signals_blocked(void* self);
+bool q_sgtextureprovider_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -157,9 +159,9 @@ bool q_sgtextureprovider_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QSGTextureProvider*
+/// @param self const QSGTextureProvider*
 ///
-QThread* q_sgtextureprovider_thread(void* self);
+QThread* q_sgtextureprovider_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -210,11 +212,11 @@ void q_sgtextureprovider_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QSGTextureProvider*
+/// @param self const QSGTextureProvider*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_sgtextureprovider_children(void* self);
+libqt_list q_sgtextureprovider_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -252,7 +254,7 @@ void q_sgtextureprovider_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_sgtextureprovider_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_sgtextureprovider_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -263,18 +265,18 @@ QMetaObject__Connection* q_sgtextureprovider_connect(void* sender, const char* s
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_sgtextureprovider_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_sgtextureprovider_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QSGTextureProvider*
+/// @param self const QSGTextureProvider*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_sgtextureprovider_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_sgtextureprovider_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -285,7 +287,7 @@ QMetaObject__Connection* q_sgtextureprovider_connect3(void* self, void* sender, 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_sgtextureprovider_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_sgtextureprovider_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -296,24 +298,24 @@ bool q_sgtextureprovider_disconnect(void* sender, const char* signal, void* rece
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_sgtextureprovider_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_sgtextureprovider_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSGTextureProvider*
+/// @param self const QSGTextureProvider*
 ///
-bool q_sgtextureprovider_disconnect3(void* self);
+bool q_sgtextureprovider_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSGTextureProvider*
+/// @param self const QSGTextureProvider*
 /// @param receiver QObject*
 ///
-bool q_sgtextureprovider_disconnect4(void* self, void* receiver);
+bool q_sgtextureprovider_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -321,23 +323,23 @@ bool q_sgtextureprovider_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_sgtextureprovider_disconnect5(void* param1);
+bool q_sgtextureprovider_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QSGTextureProvider*
+/// @param self const QSGTextureProvider*
 ///
-void q_sgtextureprovider_dump_object_tree(void* self);
+void q_sgtextureprovider_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QSGTextureProvider*
+/// @param self const QSGTextureProvider*
 ///
-void q_sgtextureprovider_dump_object_info(void* self);
+void q_sgtextureprovider_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -347,16 +349,16 @@ void q_sgtextureprovider_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_sgtextureprovider_set_property(void* self, const char* name, void* value);
+bool q_sgtextureprovider_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QSGTextureProvider*
+/// @param self const QSGTextureProvider*
 /// @param name const char*
 ///
-QVariant* q_sgtextureprovider_property(void* self, const char* name);
+QVariant* q_sgtextureprovider_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -364,9 +366,9 @@ QVariant* q_sgtextureprovider_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QSGTextureProvider*
+/// @param self const QSGTextureProvider*
 ///
-const char** q_sgtextureprovider_dynamic_property_names(void* self);
+const char** q_sgtextureprovider_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -380,9 +382,9 @@ QBindingStorage* q_sgtextureprovider_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QSGTextureProvider*
+/// @param self const QSGTextureProvider*
 ///
-const QBindingStorage* q_sgtextureprovider_binding_storage2(void* self);
+const QBindingStorage* q_sgtextureprovider_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -405,18 +407,18 @@ void q_sgtextureprovider_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QSGTextureProvider*
+/// @param self const QSGTextureProvider*
 ///
-QObject* q_sgtextureprovider_parent(void* self);
+QObject* q_sgtextureprovider_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QSGTextureProvider*
+/// @param self const QSGTextureProvider*
 /// @param classname const char*
 ///
-bool q_sgtextureprovider_inherits(void* self, const char* classname);
+bool q_sgtextureprovider_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -456,7 +458,7 @@ int32_t q_sgtextureprovider_start_timer23(void* self, int64_t time, int32_t time
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_sgtextureprovider_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_sgtextureprovider_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -468,59 +470,59 @@ QMetaObject__Connection* q_sgtextureprovider_connect5(void* sender, const char* 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_sgtextureprovider_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_sgtextureprovider_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QSGTextureProvider*
+/// @param self const QSGTextureProvider*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_sgtextureprovider_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_sgtextureprovider_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSGTextureProvider*
+/// @param self const QSGTextureProvider*
 /// @param signal const char*
 ///
-bool q_sgtextureprovider_disconnect1(void* self, const char* signal);
+bool q_sgtextureprovider_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSGTextureProvider*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_sgtextureprovider_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QSGTextureProvider*
+/// @param self const QSGTextureProvider*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_sgtextureprovider_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_sgtextureprovider_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSGTextureProvider*
+/// @param self const QSGTextureProvider*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_sgtextureprovider_disconnect23(void* self, void* receiver, const char* member);
+bool q_sgtextureprovider_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QSGTextureProvider*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_sgtextureprovider_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

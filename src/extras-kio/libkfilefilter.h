@@ -30,65 +30,65 @@ KFileFilter* k_filefilter_new2(const char* label, const char* filePatterns[stati
 ///
 /// @param other KFileFilter*
 ///
-KFileFilter* k_filefilter_new3(void* other);
+KFileFilter* k_filefilter_new3(const void* other);
 
 /// [Upstream resources](https://api.kde.org/kfilefilter.html#operator-eq)
 ///
 /// @param self KFileFilter*
 /// @param other KFileFilter*
 ///
-void k_filefilter_operator_assign(void* self, void* other);
+void k_filefilter_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/kfilefilter.html#operator-eq-eq)
 ///
-/// @param self KFileFilter*
+/// @param self const KFileFilter*
 /// @param other KFileFilter*
 ///
-bool k_filefilter_operator_equal(void* self, void* other);
+bool k_filefilter_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/kfilefilter.html#label)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileFilter*
+/// @param self const KFileFilter*
 ///
-const char* k_filefilter_label(void* self);
+const char* k_filefilter_label(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilefilter.html#filePatterns)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KFileFilter*
+/// @param self const KFileFilter*
 ///
-const char** k_filefilter_file_patterns(void* self);
+const char** k_filefilter_file_patterns(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilefilter.html#mimePatterns)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KFileFilter*
+/// @param self const KFileFilter*
 ///
-const char** k_filefilter_mime_patterns(void* self);
+const char** k_filefilter_mime_patterns(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilefilter.html#toFilterString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileFilter*
+/// @param self const KFileFilter*
 ///
-const char* k_filefilter_to_filter_string(void* self);
+const char* k_filefilter_to_filter_string(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilefilter.html#isEmpty)
 ///
-/// @param self KFileFilter*
+/// @param self const KFileFilter*
 ///
-bool k_filefilter_is_empty(void* self);
+bool k_filefilter_is_empty(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilefilter.html#isValid)
 ///
-/// @param self KFileFilter*
+/// @param self const KFileFilter*
 ///
-bool k_filefilter_is_valid(void* self);
+bool k_filefilter_is_valid(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilefilter.html#fromMimeType)
 ///

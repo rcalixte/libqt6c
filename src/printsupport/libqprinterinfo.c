@@ -7,102 +7,102 @@ QPrinterInfo* q_printerinfo_new() {
     return QPrinterInfo_New();
 }
 
-QPrinterInfo* q_printerinfo_new2(void* other) {
+QPrinterInfo* q_printerinfo_new2(const void* other) {
     return QPrinterInfo_New2((QPrinterInfo*)other);
 }
 
-QPrinterInfo* q_printerinfo_new3(void* printer) {
+QPrinterInfo* q_printerinfo_new3(const void* printer) {
     return QPrinterInfo_New3((QPrinter*)printer);
 }
 
-void q_printerinfo_operator_assign(void* self, void* other) {
+void q_printerinfo_operator_assign(void* self, const void* other) {
     QPrinterInfo_OperatorAssign((QPrinterInfo*)self, (QPrinterInfo*)other);
 }
 
-const char* q_printerinfo_printer_name(void* self) {
+const char* q_printerinfo_printer_name(const void* self) {
     libqt_string _str = QPrinterInfo_PrinterName((QPrinterInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_printerinfo_description(void* self) {
+const char* q_printerinfo_description(const void* self) {
     libqt_string _str = QPrinterInfo_Description((QPrinterInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_printerinfo_location(void* self) {
+const char* q_printerinfo_location(const void* self) {
     libqt_string _str = QPrinterInfo_Location((QPrinterInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_printerinfo_make_and_model(void* self) {
+const char* q_printerinfo_make_and_model(const void* self) {
     libqt_string _str = QPrinterInfo_MakeAndModel((QPrinterInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_printerinfo_is_null(void* self) {
+bool q_printerinfo_is_null(const void* self) {
     return QPrinterInfo_IsNull((QPrinterInfo*)self);
 }
 
-bool q_printerinfo_is_default(void* self) {
+bool q_printerinfo_is_default(const void* self) {
     return QPrinterInfo_IsDefault((QPrinterInfo*)self);
 }
 
-bool q_printerinfo_is_remote(void* self) {
+bool q_printerinfo_is_remote(const void* self) {
     return QPrinterInfo_IsRemote((QPrinterInfo*)self);
 }
 
-int32_t q_printerinfo_state(void* self) {
+int32_t q_printerinfo_state(const void* self) {
     return QPrinterInfo_State((QPrinterInfo*)self);
 }
 
-libqt_list /* of QPageSize* */ q_printerinfo_supported_page_sizes(void* self) {
+libqt_list /* of QPageSize* */ q_printerinfo_supported_page_sizes(const void* self) {
     libqt_list _arr = QPrinterInfo_SupportedPageSizes((QPrinterInfo*)self);
     return _arr;
 }
 
-QPageSize* q_printerinfo_default_page_size(void* self) {
+QPageSize* q_printerinfo_default_page_size(const void* self) {
     return QPrinterInfo_DefaultPageSize((QPrinterInfo*)self);
 }
 
-bool q_printerinfo_supports_custom_page_sizes(void* self) {
+bool q_printerinfo_supports_custom_page_sizes(const void* self) {
     return QPrinterInfo_SupportsCustomPageSizes((QPrinterInfo*)self);
 }
 
-QPageSize* q_printerinfo_minimum_physical_page_size(void* self) {
+QPageSize* q_printerinfo_minimum_physical_page_size(const void* self) {
     return QPrinterInfo_MinimumPhysicalPageSize((QPrinterInfo*)self);
 }
 
-QPageSize* q_printerinfo_maximum_physical_page_size(void* self) {
+QPageSize* q_printerinfo_maximum_physical_page_size(const void* self) {
     return QPrinterInfo_MaximumPhysicalPageSize((QPrinterInfo*)self);
 }
 
-libqt_list /* of int */ q_printerinfo_supported_resolutions(void* self) {
+libqt_list /* of int */ q_printerinfo_supported_resolutions(const void* self) {
     libqt_list _arr = QPrinterInfo_SupportedResolutions((QPrinterInfo*)self);
     return _arr;
 }
 
-int32_t q_printerinfo_default_duplex_mode(void* self) {
+int32_t q_printerinfo_default_duplex_mode(const void* self) {
     return QPrinterInfo_DefaultDuplexMode((QPrinterInfo*)self);
 }
 
-libqt_list /* of enum QPrinter__DuplexMode */ q_printerinfo_supported_duplex_modes(void* self) {
+libqt_list /* of enum QPrinter__DuplexMode */ q_printerinfo_supported_duplex_modes(const void* self) {
     libqt_list _arr = QPrinterInfo_SupportedDuplexModes((QPrinterInfo*)self);
     return _arr;
 }
 
-int32_t q_printerinfo_default_color_mode(void* self) {
+int32_t q_printerinfo_default_color_mode(const void* self) {
     return QPrinterInfo_DefaultColorMode((QPrinterInfo*)self);
 }
 
-libqt_list /* of enum QPrinter__ColorMode */ q_printerinfo_supported_color_modes(void* self) {
+libqt_list /* of enum QPrinter__ColorMode */ q_printerinfo_supported_color_modes(const void* self) {
     libqt_list _arr = QPrinterInfo_SupportedColorModes((QPrinterInfo*)self);
     return _arr;
 }

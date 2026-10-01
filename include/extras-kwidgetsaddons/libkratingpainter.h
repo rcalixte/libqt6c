@@ -16,55 +16,55 @@ KRatingPainter* k_ratingpainter_new();
 
 /// [Upstream resources](https://api.kde.org/kratingpainter.html#maxRating)
 ///
-/// @param self KRatingPainter*
+/// @param self const KRatingPainter*
 ///
-int32_t k_ratingpainter_max_rating(void* self);
+int32_t k_ratingpainter_max_rating(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kratingpainter.html#halfStepsEnabled)
 ///
-/// @param self KRatingPainter*
+/// @param self const KRatingPainter*
 ///
-bool k_ratingpainter_half_steps_enabled(void* self);
+bool k_ratingpainter_half_steps_enabled(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kratingpainter.html#alignment)
 ///
-/// @param self KRatingPainter*
+/// @param self const KRatingPainter*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 ///
-int32_t k_ratingpainter_alignment(void* self);
+int32_t k_ratingpainter_alignment(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kratingpainter.html#layoutDirection)
 ///
-/// @param self KRatingPainter*
+/// @param self const KRatingPainter*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t k_ratingpainter_layout_direction(void* self);
+int32_t k_ratingpainter_layout_direction(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kratingpainter.html#icon)
 ///
-/// @param self KRatingPainter*
+/// @param self const KRatingPainter*
 ///
-QIcon* k_ratingpainter_icon(void* self);
+QIcon* k_ratingpainter_icon(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kratingpainter.html#isEnabled)
 ///
-/// @param self KRatingPainter*
+/// @param self const KRatingPainter*
 ///
-bool k_ratingpainter_is_enabled(void* self);
+bool k_ratingpainter_is_enabled(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kratingpainter.html#customPixmap)
 ///
-/// @param self KRatingPainter*
+/// @param self const KRatingPainter*
 ///
-QPixmap* k_ratingpainter_custom_pixmap(void* self);
+QPixmap* k_ratingpainter_custom_pixmap(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kratingpainter.html#spacing)
 ///
-/// @param self KRatingPainter*
+/// @param self const KRatingPainter*
 ///
-int32_t k_ratingpainter_spacing(void* self);
+int32_t k_ratingpainter_spacing(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kratingpainter.html#setMaxRating)
 ///
@@ -99,7 +99,7 @@ void k_ratingpainter_set_layout_direction(void* self, int32_t direction);
 /// @param self KRatingPainter*
 /// @param icon QIcon*
 ///
-void k_ratingpainter_set_icon(void* self, void* icon);
+void k_ratingpainter_set_icon(void* self, const void* icon);
 
 /// [Upstream resources](https://api.kde.org/kratingpainter.html#setEnabled)
 ///
@@ -113,7 +113,7 @@ void k_ratingpainter_set_enabled(void* self, bool enabled);
 /// @param self KRatingPainter*
 /// @param pixmap QPixmap*
 ///
-void k_ratingpainter_set_custom_pixmap(void* self, void* pixmap);
+void k_ratingpainter_set_custom_pixmap(void* self, const void* pixmap);
 
 /// [Upstream resources](https://api.kde.org/kratingpainter.html#setSpacing)
 ///
@@ -124,20 +124,20 @@ void k_ratingpainter_set_spacing(void* self, int spacing);
 
 /// [Upstream resources](https://api.kde.org/kratingpainter.html#paint)
 ///
-/// @param self KRatingPainter*
+/// @param self const KRatingPainter*
 /// @param painter QPainter*
 /// @param rect QRect*
 /// @param rating int
 ///
-void k_ratingpainter_paint(void* self, void* painter, void* rect, int rating);
+void k_ratingpainter_paint(const void* self, void* painter, const void* rect, int rating);
 
 /// [Upstream resources](https://api.kde.org/kratingpainter.html#ratingFromPosition)
 ///
-/// @param self KRatingPainter*
+/// @param self const KRatingPainter*
 /// @param rect QRect*
 /// @param pos QPoint*
 ///
-int32_t k_ratingpainter_rating_from_position(void* self, void* rect, void* pos);
+int32_t k_ratingpainter_rating_from_position(const void* self, const void* rect, const void* pos);
 
 /// [Upstream resources](https://api.kde.org/kratingpainter.html#paintRating)
 ///
@@ -146,7 +146,7 @@ int32_t k_ratingpainter_rating_from_position(void* self, void* rect, void* pos);
 /// @param align flag of enum Qt__AlignmentFlag
 /// @param rating int
 ///
-void k_ratingpainter_paint_rating(void* p, void* rect, int32_t align, int rating);
+void k_ratingpainter_paint_rating(void* p, const void* rect, int32_t align, int rating);
 
 /// [Upstream resources](https://api.kde.org/kratingpainter.html#getRatingFromPosition)
 ///
@@ -155,17 +155,17 @@ void k_ratingpainter_paint_rating(void* p, void* rect, int32_t align, int rating
 /// @param direction enum Qt__LayoutDirection
 /// @param pos QPoint*
 ///
-int32_t k_ratingpainter_get_rating_from_position(void* rect, int32_t align, int32_t direction, void* pos);
+int32_t k_ratingpainter_get_rating_from_position(const void* rect, int32_t align, int32_t direction, const void* pos);
 
 /// [Upstream resources](https://api.kde.org/kratingpainter.html#paint)
 ///
-/// @param self KRatingPainter*
+/// @param self const KRatingPainter*
 /// @param painter QPainter*
 /// @param rect QRect*
 /// @param rating int
 /// @param hoverRating int
 ///
-void k_ratingpainter_paint4(void* self, void* painter, void* rect, int rating, int hoverRating);
+void k_ratingpainter_paint4(const void* self, void* painter, const void* rect, int rating, int hoverRating);
 
 /// [Upstream resources](https://api.kde.org/kratingpainter.html#paintRating)
 ///
@@ -175,7 +175,7 @@ void k_ratingpainter_paint4(void* self, void* painter, void* rect, int rating, i
 /// @param rating int
 /// @param hoverRating int
 ///
-void k_ratingpainter_paint_rating5(void* p, void* rect, int32_t align, int rating, int hoverRating);
+void k_ratingpainter_paint_rating5(void* p, const void* rect, int32_t align, int rating, int hoverRating);
 
 /// [Upstream resources](https://api.kde.org/kratingpainter.html#dtor.KRatingPainter)
 ///

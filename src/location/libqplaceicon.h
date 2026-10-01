@@ -20,14 +20,14 @@ QPlaceIcon* q_placeicon_new();
 ///
 /// @param other QPlaceIcon*
 ///
-QPlaceIcon* q_placeicon_new2(void* other);
+QPlaceIcon* q_placeicon_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceicon.html#operator-eq)
 ///
 /// @param self QPlaceIcon*
 /// @param other QPlaceIcon*
 ///
-void q_placeicon_operator_assign(void* self, void* other);
+void q_placeicon_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceicon.html#swap)
 ///
@@ -38,15 +38,15 @@ void q_placeicon_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceicon.html#url)
 ///
-/// @param self QPlaceIcon*
+/// @param self const QPlaceIcon*
 ///
-QUrl* q_placeicon_url(void* self);
+QUrl* q_placeicon_url(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceicon.html#manager)
 ///
-/// @param self QPlaceIcon*
+/// @param self const QPlaceIcon*
 ///
-QPlaceManager* q_placeicon_manager(void* self);
+QPlaceManager* q_placeicon_manager(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceicon.html#setManager)
 ///
@@ -69,11 +69,11 @@ void q_placeicon_set_manager(void* self, void* manager);
 /// free(map.values);
 /// ```
 ///
-/// @param self QPlaceIcon*
+/// @param self const QPlaceIcon*
 ///
 /// @return libqt_map of const char* to QVariant*
 ///
-libqt_map q_placeicon_parameters(void* self);
+libqt_map q_placeicon_parameters(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceicon.html#setParameters)
 ///
@@ -84,16 +84,16 @@ void q_placeicon_set_parameters(void* self, libqt_map parameters);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceicon.html#isEmpty)
 ///
-/// @param self QPlaceIcon*
+/// @param self const QPlaceIcon*
 ///
-bool q_placeicon_is_empty(void* self);
+bool q_placeicon_is_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceicon.html#url)
 ///
-/// @param self QPlaceIcon*
+/// @param self const QPlaceIcon*
 /// @param size QSize*
 ///
-QUrl* q_placeicon_url1(void* self, void* size);
+QUrl* q_placeicon_url1(const void* self, const void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceicon.html#dtor.QPlaceIcon)
 ///

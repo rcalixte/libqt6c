@@ -18,15 +18,15 @@ QVirtualKeyboardInputContext* q_virtualkeyboardinputcontext_new2(void* parent) {
     return QVirtualKeyboardInputContext_New2((QObject*)parent);
 }
 
-const QMetaObject* q_virtualkeyboardinputcontext_meta_object(void* self) {
+const QMetaObject* q_virtualkeyboardinputcontext_meta_object(const void* self) {
     return QVirtualKeyboardInputContext_MetaObject((QVirtualKeyboardInputContext*)self);
 }
 
-void q_virtualkeyboardinputcontext_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_virtualkeyboardinputcontext_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QVirtualKeyboardInputContext_OnMetaObject((QVirtualKeyboardInputContext*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_virtualkeyboardinputcontext_super_meta_object(void* self) {
+const QMetaObject* q_virtualkeyboardinputcontext_super_meta_object(const void* self) {
     return QVirtualKeyboardInputContext_SuperMetaObject((QVirtualKeyboardInputContext*)self);
 }
 
@@ -61,31 +61,31 @@ const char* q_virtualkeyboardinputcontext_tr(const char* s) {
     return _ret;
 }
 
-bool q_virtualkeyboardinputcontext_is_shift_active(void* self) {
+bool q_virtualkeyboardinputcontext_is_shift_active(const void* self) {
     return QVirtualKeyboardInputContext_IsShiftActive((QVirtualKeyboardInputContext*)self);
 }
 
-bool q_virtualkeyboardinputcontext_is_caps_lock_active(void* self) {
+bool q_virtualkeyboardinputcontext_is_caps_lock_active(const void* self) {
     return QVirtualKeyboardInputContext_IsCapsLockActive((QVirtualKeyboardInputContext*)self);
 }
 
-bool q_virtualkeyboardinputcontext_is_uppercase(void* self) {
+bool q_virtualkeyboardinputcontext_is_uppercase(const void* self) {
     return QVirtualKeyboardInputContext_IsUppercase((QVirtualKeyboardInputContext*)self);
 }
 
-int32_t q_virtualkeyboardinputcontext_anchor_position(void* self) {
+int32_t q_virtualkeyboardinputcontext_anchor_position(const void* self) {
     return QVirtualKeyboardInputContext_AnchorPosition((QVirtualKeyboardInputContext*)self);
 }
 
-int32_t q_virtualkeyboardinputcontext_cursor_position(void* self) {
+int32_t q_virtualkeyboardinputcontext_cursor_position(const void* self) {
     return QVirtualKeyboardInputContext_CursorPosition((QVirtualKeyboardInputContext*)self);
 }
 
-int32_t q_virtualkeyboardinputcontext_input_method_hints(void* self) {
+int32_t q_virtualkeyboardinputcontext_input_method_hints(const void* self) {
     return QVirtualKeyboardInputContext_InputMethodHints((QVirtualKeyboardInputContext*)self);
 }
 
-const char* q_virtualkeyboardinputcontext_preedit_text(void* self) {
+const char* q_virtualkeyboardinputcontext_preedit_text(const void* self) {
     libqt_string _str = QVirtualKeyboardInputContext_PreeditText((QVirtualKeyboardInputContext*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -96,34 +96,34 @@ void q_virtualkeyboardinputcontext_set_preedit_text(void* self, const char* text
     QVirtualKeyboardInputContext_SetPreeditText((QVirtualKeyboardInputContext*)self, qstring(text));
 }
 
-libqt_list /* of QInputMethodEvent__Attribute* */ q_virtualkeyboardinputcontext_preedit_text_attributes(void* self) {
+libqt_list /* of QInputMethodEvent__Attribute* */ q_virtualkeyboardinputcontext_preedit_text_attributes(const void* self) {
     libqt_list _arr = QVirtualKeyboardInputContext_PreeditTextAttributes((QVirtualKeyboardInputContext*)self);
     return _arr;
 }
 
-const char* q_virtualkeyboardinputcontext_surrounding_text(void* self) {
+const char* q_virtualkeyboardinputcontext_surrounding_text(const void* self) {
     libqt_string _str = QVirtualKeyboardInputContext_SurroundingText((QVirtualKeyboardInputContext*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_virtualkeyboardinputcontext_selected_text(void* self) {
+const char* q_virtualkeyboardinputcontext_selected_text(const void* self) {
     libqt_string _str = QVirtualKeyboardInputContext_SelectedText((QVirtualKeyboardInputContext*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QRectF* q_virtualkeyboardinputcontext_anchor_rectangle(void* self) {
+QRectF* q_virtualkeyboardinputcontext_anchor_rectangle(const void* self) {
     return QVirtualKeyboardInputContext_AnchorRectangle((QVirtualKeyboardInputContext*)self);
 }
 
-QRectF* q_virtualkeyboardinputcontext_cursor_rectangle(void* self) {
+QRectF* q_virtualkeyboardinputcontext_cursor_rectangle(const void* self) {
     return QVirtualKeyboardInputContext_CursorRectangle((QVirtualKeyboardInputContext*)self);
 }
 
-bool q_virtualkeyboardinputcontext_is_animating(void* self) {
+bool q_virtualkeyboardinputcontext_is_animating(const void* self) {
     return QVirtualKeyboardInputContext_IsAnimating((QVirtualKeyboardInputContext*)self);
 }
 
@@ -131,34 +131,34 @@ void q_virtualkeyboardinputcontext_set_animating(void* self, bool isAnimating) {
     QVirtualKeyboardInputContext_SetAnimating((QVirtualKeyboardInputContext*)self, isAnimating);
 }
 
-const char* q_virtualkeyboardinputcontext_locale(void* self) {
+const char* q_virtualkeyboardinputcontext_locale(const void* self) {
     libqt_string _str = QVirtualKeyboardInputContext_Locale((QVirtualKeyboardInputContext*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QObject* q_virtualkeyboardinputcontext_input_item(void* self) {
+QObject* q_virtualkeyboardinputcontext_input_item(const void* self) {
     return QVirtualKeyboardInputContext_InputItem((QVirtualKeyboardInputContext*)self);
 }
 
-QVirtualKeyboardInputEngine* q_virtualkeyboardinputcontext_input_engine(void* self) {
+QVirtualKeyboardInputEngine* q_virtualkeyboardinputcontext_input_engine(const void* self) {
     return QVirtualKeyboardInputContext_InputEngine((QVirtualKeyboardInputContext*)self);
 }
 
-bool q_virtualkeyboardinputcontext_is_selection_control_visible(void* self) {
+bool q_virtualkeyboardinputcontext_is_selection_control_visible(const void* self) {
     return QVirtualKeyboardInputContext_IsSelectionControlVisible((QVirtualKeyboardInputContext*)self);
 }
 
-bool q_virtualkeyboardinputcontext_anchor_rect_intersects_clip_rect(void* self) {
+bool q_virtualkeyboardinputcontext_anchor_rect_intersects_clip_rect(const void* self) {
     return QVirtualKeyboardInputContext_AnchorRectIntersectsClipRect((QVirtualKeyboardInputContext*)self);
 }
 
-bool q_virtualkeyboardinputcontext_cursor_rect_intersects_clip_rect(void* self) {
+bool q_virtualkeyboardinputcontext_cursor_rect_intersects_clip_rect(const void* self) {
     return QVirtualKeyboardInputContext_CursorRectIntersectsClipRect((QVirtualKeyboardInputContext*)self);
 }
 
-QVirtualKeyboardObserver* q_virtualkeyboardinputcontext_keyboard_observer(void* self) {
+QVirtualKeyboardObserver* q_virtualkeyboardinputcontext_keyboard_observer(const void* self) {
     return QVirtualKeyboardInputContext_KeyboardObserver((QVirtualKeyboardInputContext*)self);
 }
 
@@ -178,7 +178,7 @@ void q_virtualkeyboardinputcontext_clear(void* self) {
     QVirtualKeyboardInputContext_Clear((QVirtualKeyboardInputContext*)self);
 }
 
-void q_virtualkeyboardinputcontext_set_selection_on_focus_object(void* self, void* anchorPos, void* cursorPos) {
+void q_virtualkeyboardinputcontext_set_selection_on_focus_object(void* self, const void* anchorPos, const void* cursorPos) {
     QVirtualKeyboardInputContext_SetSelectionOnFocusObject((QVirtualKeyboardInputContext*)self, (QPointF*)anchorPos, (QPointF*)cursorPos);
 }
 
@@ -356,7 +356,7 @@ void q_virtualkeyboardinputcontext_commit3(void* self, const char* text, int rep
     QVirtualKeyboardInputContext_Commit3((QVirtualKeyboardInputContext*)self, qstring(text), replaceFrom, replaceLength);
 }
 
-const char* q_virtualkeyboardinputcontext_object_name(void* self) {
+const char* q_virtualkeyboardinputcontext_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -367,19 +367,19 @@ void q_virtualkeyboardinputcontext_set_object_name(void* self, const char* name)
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_virtualkeyboardinputcontext_is_widget_type(void* self) {
+bool q_virtualkeyboardinputcontext_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_virtualkeyboardinputcontext_is_window_type(void* self) {
+bool q_virtualkeyboardinputcontext_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_virtualkeyboardinputcontext_is_quick_item_type(void* self) {
+bool q_virtualkeyboardinputcontext_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_virtualkeyboardinputcontext_signals_blocked(void* self) {
+bool q_virtualkeyboardinputcontext_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -387,7 +387,7 @@ bool q_virtualkeyboardinputcontext_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_virtualkeyboardinputcontext_thread(void* self) {
+QThread* q_virtualkeyboardinputcontext_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -411,7 +411,7 @@ void q_virtualkeyboardinputcontext_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_virtualkeyboardinputcontext_children(void* self) {
+libqt_list /* of QObject* */ q_virtualkeyboardinputcontext_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -428,55 +428,55 @@ void q_virtualkeyboardinputcontext_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_virtualkeyboardinputcontext_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_virtualkeyboardinputcontext_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_virtualkeyboardinputcontext_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_virtualkeyboardinputcontext_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_virtualkeyboardinputcontext_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_virtualkeyboardinputcontext_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_virtualkeyboardinputcontext_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_virtualkeyboardinputcontext_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_virtualkeyboardinputcontext_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_virtualkeyboardinputcontext_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_virtualkeyboardinputcontext_disconnect3(void* self) {
+bool q_virtualkeyboardinputcontext_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_virtualkeyboardinputcontext_disconnect4(void* self, void* receiver) {
+bool q_virtualkeyboardinputcontext_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_virtualkeyboardinputcontext_disconnect5(void* param1) {
+bool q_virtualkeyboardinputcontext_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_virtualkeyboardinputcontext_dump_object_tree(void* self) {
+void q_virtualkeyboardinputcontext_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_virtualkeyboardinputcontext_dump_object_info(void* self) {
+void q_virtualkeyboardinputcontext_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_virtualkeyboardinputcontext_set_property(void* self, const char* name, void* value) {
+bool q_virtualkeyboardinputcontext_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_virtualkeyboardinputcontext_property(void* self, const char* name) {
+QVariant* q_virtualkeyboardinputcontext_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_virtualkeyboardinputcontext_dynamic_property_names(void* self) {
+const char** q_virtualkeyboardinputcontext_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -497,7 +497,7 @@ QBindingStorage* q_virtualkeyboardinputcontext_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_virtualkeyboardinputcontext_binding_storage2(void* self) {
+const QBindingStorage* q_virtualkeyboardinputcontext_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -509,11 +509,11 @@ void q_virtualkeyboardinputcontext_on_destroyed(void* self, void (*callback)(voi
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_virtualkeyboardinputcontext_parent(void* self) {
+QObject* q_virtualkeyboardinputcontext_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_virtualkeyboardinputcontext_inherits(void* self, const char* classname) {
+bool q_virtualkeyboardinputcontext_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -529,31 +529,31 @@ int32_t q_virtualkeyboardinputcontext_start_timer23(void* self, int64_t time, in
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_virtualkeyboardinputcontext_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_virtualkeyboardinputcontext_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_virtualkeyboardinputcontext_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_virtualkeyboardinputcontext_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_virtualkeyboardinputcontext_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_virtualkeyboardinputcontext_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_virtualkeyboardinputcontext_disconnect1(void* self, const char* signal) {
+bool q_virtualkeyboardinputcontext_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_virtualkeyboardinputcontext_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_virtualkeyboardinputcontext_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_virtualkeyboardinputcontext_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_virtualkeyboardinputcontext_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_virtualkeyboardinputcontext_disconnect23(void* self, void* receiver, const char* member) {
+bool q_virtualkeyboardinputcontext_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -625,76 +625,44 @@ void q_virtualkeyboardinputcontext_on_custom_event(void* self, void (*callback)(
     QVirtualKeyboardInputContext_OnCustomEvent((QVirtualKeyboardInputContext*)self, (intptr_t)callback);
 }
 
-void q_virtualkeyboardinputcontext_connect_notify(void* self, void* signal) {
+void q_virtualkeyboardinputcontext_connect_notify(void* self, const void* signal) {
     QVirtualKeyboardInputContext_ConnectNotify((QVirtualKeyboardInputContext*)self, (QMetaMethod*)signal);
 }
 
-void q_virtualkeyboardinputcontext_super_connect_notify(void* self, void* signal) {
+void q_virtualkeyboardinputcontext_super_connect_notify(void* self, const void* signal) {
     QVirtualKeyboardInputContext_SuperConnectNotify((QVirtualKeyboardInputContext*)self, (QMetaMethod*)signal);
 }
 
-void q_virtualkeyboardinputcontext_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_virtualkeyboardinputcontext_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QVirtualKeyboardInputContext_OnConnectNotify((QVirtualKeyboardInputContext*)self, (intptr_t)callback);
 }
 
-void q_virtualkeyboardinputcontext_disconnect_notify(void* self, void* signal) {
+void q_virtualkeyboardinputcontext_disconnect_notify(void* self, const void* signal) {
     QVirtualKeyboardInputContext_DisconnectNotify((QVirtualKeyboardInputContext*)self, (QMetaMethod*)signal);
 }
 
-void q_virtualkeyboardinputcontext_super_disconnect_notify(void* self, void* signal) {
+void q_virtualkeyboardinputcontext_super_disconnect_notify(void* self, const void* signal) {
     QVirtualKeyboardInputContext_SuperDisconnectNotify((QVirtualKeyboardInputContext*)self, (QMetaMethod*)signal);
 }
 
-void q_virtualkeyboardinputcontext_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_virtualkeyboardinputcontext_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QVirtualKeyboardInputContext_OnDisconnectNotify((QVirtualKeyboardInputContext*)self, (intptr_t)callback);
 }
 
-QObject* q_virtualkeyboardinputcontext_sender(void* self) {
+QObject* q_virtualkeyboardinputcontext_sender(const void* self) {
     return QVirtualKeyboardInputContext_Sender((QVirtualKeyboardInputContext*)self);
 }
 
-QObject* q_virtualkeyboardinputcontext_super_sender(void* self) {
-    return QVirtualKeyboardInputContext_SuperSender((QVirtualKeyboardInputContext*)self);
-}
-
-void q_virtualkeyboardinputcontext_on_sender(void* self, QObject* (*callback)()) {
-    QVirtualKeyboardInputContext_OnSender((QVirtualKeyboardInputContext*)self, (intptr_t)callback);
-}
-
-int32_t q_virtualkeyboardinputcontext_sender_signal_index(void* self) {
+int32_t q_virtualkeyboardinputcontext_sender_signal_index(const void* self) {
     return QVirtualKeyboardInputContext_SenderSignalIndex((QVirtualKeyboardInputContext*)self);
 }
 
-int32_t q_virtualkeyboardinputcontext_super_sender_signal_index(void* self) {
-    return QVirtualKeyboardInputContext_SuperSenderSignalIndex((QVirtualKeyboardInputContext*)self);
-}
-
-void q_virtualkeyboardinputcontext_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QVirtualKeyboardInputContext_OnSenderSignalIndex((QVirtualKeyboardInputContext*)self, (intptr_t)callback);
-}
-
-int32_t q_virtualkeyboardinputcontext_receivers(void* self, const char* signal) {
+int32_t q_virtualkeyboardinputcontext_receivers(const void* self, const char* signal) {
     return QVirtualKeyboardInputContext_Receivers((QVirtualKeyboardInputContext*)self, signal);
 }
 
-int32_t q_virtualkeyboardinputcontext_super_receivers(void* self, const char* signal) {
-    return QVirtualKeyboardInputContext_SuperReceivers((QVirtualKeyboardInputContext*)self, signal);
-}
-
-void q_virtualkeyboardinputcontext_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QVirtualKeyboardInputContext_OnReceivers((QVirtualKeyboardInputContext*)self, (intptr_t)callback);
-}
-
-bool q_virtualkeyboardinputcontext_is_signal_connected(void* self, void* signal) {
+bool q_virtualkeyboardinputcontext_is_signal_connected(const void* self, const void* signal) {
     return QVirtualKeyboardInputContext_IsSignalConnected((QVirtualKeyboardInputContext*)self, (QMetaMethod*)signal);
-}
-
-bool q_virtualkeyboardinputcontext_super_is_signal_connected(void* self, void* signal) {
-    return QVirtualKeyboardInputContext_SuperIsSignalConnected((QVirtualKeyboardInputContext*)self, (QMetaMethod*)signal);
-}
-
-void q_virtualkeyboardinputcontext_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QVirtualKeyboardInputContext_OnIsSignalConnected((QVirtualKeyboardInputContext*)self, (intptr_t)callback);
 }
 
 void q_virtualkeyboardinputcontext_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

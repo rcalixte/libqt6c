@@ -20,14 +20,14 @@ QPlaceSearchRequest* q_placesearchrequest_new();
 ///
 /// @param other QPlaceSearchRequest*
 ///
-QPlaceSearchRequest* q_placesearchrequest_new2(void* other);
+QPlaceSearchRequest* q_placesearchrequest_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchrequest.html#operator-eq)
 ///
 /// @param self QPlaceSearchRequest*
 /// @param other QPlaceSearchRequest*
 ///
-void q_placesearchrequest_operator_assign(void* self, void* other);
+void q_placesearchrequest_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchrequest.html#swap)
 ///
@@ -40,9 +40,9 @@ void q_placesearchrequest_swap(void* self, void* other);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPlaceSearchRequest*
+/// @param self const QPlaceSearchRequest*
 ///
-const char* q_placesearchrequest_search_term(void* self);
+const char* q_placesearchrequest_search_term(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchrequest.html#setSearchTerm)
 ///
@@ -53,18 +53,18 @@ void q_placesearchrequest_set_search_term(void* self, const char* term);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchrequest.html#categories)
 ///
-/// @param self QPlaceSearchRequest*
+/// @param self const QPlaceSearchRequest*
 ///
 /// @return libqt_list of QPlaceCategory*
 ///
-libqt_list q_placesearchrequest_categories(void* self);
+libqt_list q_placesearchrequest_categories(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchrequest.html#setCategory)
 ///
 /// @param self QPlaceSearchRequest*
 /// @param category QPlaceCategory*
 ///
-void q_placesearchrequest_set_category(void* self, void* category);
+void q_placesearchrequest_set_category(void* self, const void* category);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchrequest.html#setCategories)
 ///
@@ -75,24 +75,24 @@ void q_placesearchrequest_set_categories(void* self, libqt_list categories);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchrequest.html#searchArea)
 ///
-/// @param self QPlaceSearchRequest*
+/// @param self const QPlaceSearchRequest*
 ///
-QGeoShape* q_placesearchrequest_search_area(void* self);
+QGeoShape* q_placesearchrequest_search_area(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchrequest.html#setSearchArea)
 ///
 /// @param self QPlaceSearchRequest*
 /// @param area QGeoShape*
 ///
-void q_placesearchrequest_set_search_area(void* self, void* area);
+void q_placesearchrequest_set_search_area(void* self, const void* area);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchrequest.html#recommendationId)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPlaceSearchRequest*
+/// @param self const QPlaceSearchRequest*
 ///
-const char* q_placesearchrequest_recommendation_id(void* self);
+const char* q_placesearchrequest_recommendation_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchrequest.html#setRecommendationId)
 ///
@@ -103,24 +103,24 @@ void q_placesearchrequest_set_recommendation_id(void* self, const char* recommen
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchrequest.html#searchContext)
 ///
-/// @param self QPlaceSearchRequest*
+/// @param self const QPlaceSearchRequest*
 ///
-QVariant* q_placesearchrequest_search_context(void* self);
+QVariant* q_placesearchrequest_search_context(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchrequest.html#setSearchContext)
 ///
 /// @param self QPlaceSearchRequest*
 /// @param context QVariant*
 ///
-void q_placesearchrequest_set_search_context(void* self, void* context);
+void q_placesearchrequest_set_search_context(void* self, const void* context);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchrequest.html#visibilityScope)
 ///
-/// @param self QPlaceSearchRequest*
+/// @param self const QPlaceSearchRequest*
 ///
 /// @return flag of enum QLocation__Visibility
 ///
-int32_t q_placesearchrequest_visibility_scope(void* self);
+int32_t q_placesearchrequest_visibility_scope(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchrequest.html#setVisibilityScope)
 ///
@@ -131,11 +131,11 @@ void q_placesearchrequest_set_visibility_scope(void* self, int32_t visibilitySco
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchrequest.html#relevanceHint)
 ///
-/// @param self QPlaceSearchRequest*
+/// @param self const QPlaceSearchRequest*
 ///
 /// @return enum QPlaceSearchRequest__RelevanceHint
 ///
-int32_t q_placesearchrequest_relevance_hint(void* self);
+int32_t q_placesearchrequest_relevance_hint(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchrequest.html#setRelevanceHint)
 ///
@@ -146,9 +146,9 @@ void q_placesearchrequest_set_relevance_hint(void* self, int32_t hint);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchrequest.html#limit)
 ///
-/// @param self QPlaceSearchRequest*
+/// @param self const QPlaceSearchRequest*
 ///
-int32_t q_placesearchrequest_limit(void* self);
+int32_t q_placesearchrequest_limit(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchrequest.html#setLimit)
 ///

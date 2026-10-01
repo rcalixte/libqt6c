@@ -23,7 +23,7 @@ void k_textautocorrectioncore__autocorrection_load_global_file_name(void* self, 
     TextAutoCorrectionCore__AutoCorrection_LoadGlobalFileName((TextAutoCorrectionCore__AutoCorrection*)self, qstring(fname));
 }
 
-TextAutoCorrectionCore__AutoCorrectionSettings* k_textautocorrectioncore__autocorrection_auto_correction_settings(void* self) {
+TextAutoCorrectionCore__AutoCorrectionSettings* k_textautocorrectioncore__autocorrection_auto_correction_settings(const void* self) {
     return TextAutoCorrectionCore__AutoCorrection_AutoCorrectionSettings((TextAutoCorrectionCore__AutoCorrection*)self);
 }
 

@@ -14,14 +14,14 @@
 ///
 /// @param other QDBusPendingCall*
 ///
-QDBusPendingCall* q_dbuspendingcall_new(void* other);
+QDBusPendingCall* q_dbuspendingcall_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuspendingcall.html#operator-eq)
 ///
 /// @param self QDBusPendingCall*
 /// @param other QDBusPendingCall*
 ///
-void q_dbuspendingcall_operator_assign(void* self, void* other);
+void q_dbuspendingcall_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuspendingcall.html#swap)
 ///
@@ -32,9 +32,9 @@ void q_dbuspendingcall_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuspendingcall.html#isFinished)
 ///
-/// @param self QDBusPendingCall*
+/// @param self const QDBusPendingCall*
 ///
-bool q_dbuspendingcall_is_finished(void* self);
+bool q_dbuspendingcall_is_finished(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuspendingcall.html#waitForFinished)
 ///
@@ -44,39 +44,39 @@ void q_dbuspendingcall_wait_for_finished(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuspendingcall.html#isError)
 ///
-/// @param self QDBusPendingCall*
+/// @param self const QDBusPendingCall*
 ///
-bool q_dbuspendingcall_is_error(void* self);
+bool q_dbuspendingcall_is_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuspendingcall.html#isValid)
 ///
-/// @param self QDBusPendingCall*
+/// @param self const QDBusPendingCall*
 ///
-bool q_dbuspendingcall_is_valid(void* self);
+bool q_dbuspendingcall_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuspendingcall.html#error)
 ///
-/// @param self QDBusPendingCall*
+/// @param self const QDBusPendingCall*
 ///
-QDBusError* q_dbuspendingcall_error(void* self);
+QDBusError* q_dbuspendingcall_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuspendingcall.html#reply)
 ///
-/// @param self QDBusPendingCall*
+/// @param self const QDBusPendingCall*
 ///
-QDBusMessage* q_dbuspendingcall_reply(void* self);
+QDBusMessage* q_dbuspendingcall_reply(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuspendingcall.html#fromError)
 ///
 /// @param error QDBusError*
 ///
-QDBusPendingCall* q_dbuspendingcall_from_error(void* error);
+QDBusPendingCall* q_dbuspendingcall_from_error(const void* error);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuspendingcall.html#fromCompletedCall)
 ///
 /// @param message QDBusMessage*
 ///
-QDBusPendingCall* q_dbuspendingcall_from_completed_call(void* message);
+QDBusPendingCall* q_dbuspendingcall_from_completed_call(const void* message);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuspendingcall.html#dtor.QDBusPendingCall)
 ///
@@ -92,7 +92,7 @@ void q_dbuspendingcall_delete(void* self);
 ///
 /// @param call QDBusPendingCall*
 ///
-QDBusPendingCallWatcher* q_dbuspendingcallwatcher_new(void* call);
+QDBusPendingCallWatcher* q_dbuspendingcallwatcher_new(const void* call);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuspendingcallwatcher.html)
 
@@ -101,7 +101,7 @@ QDBusPendingCallWatcher* q_dbuspendingcallwatcher_new(void* call);
 /// @param call QDBusPendingCall*
 /// @param parent QObject*
 ///
-QDBusPendingCallWatcher* q_dbuspendingcallwatcher_new2(void* call, void* parent);
+QDBusPendingCallWatcher* q_dbuspendingcallwatcher_new2(const void* call, void* parent);
 
 /// Upcasts to a QDBusPendingCall object
 ///
@@ -111,26 +111,26 @@ QDBusPendingCall* q_dbuspendingcallwatcher_as_q_d_bus_pending_call(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 ///
-const QMetaObject* q_dbuspendingcallwatcher_meta_object(void* self);
+const QMetaObject* q_dbuspendingcallwatcher_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDBusPendingCallWatcher*
-/// @param callback const QMetaObject* func()
+/// @param self const QDBusPendingCallWatcher*
+/// @param callback const QMetaObject* func(const QDBusPendingCallWatcher* self)
 ///
-void q_dbuspendingcallwatcher_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_dbuspendingcallwatcher_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 ///
-const QMetaObject* q_dbuspendingcallwatcher_super_meta_object(void* self);
+const QMetaObject* q_dbuspendingcallwatcher_super_meta_object(const void* self);
 
 /// @param self QDBusPendingCallWatcher*
 /// @param param1 const char*
@@ -240,9 +240,9 @@ void q_dbuspendingcallwatcher_on_finished1(void* self, void (*callback)(void*, v
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 ///
-const char* q_dbuspendingcallwatcher_object_name(void* self);
+const char* q_dbuspendingcallwatcher_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -257,33 +257,33 @@ void q_dbuspendingcallwatcher_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 ///
-bool q_dbuspendingcallwatcher_is_widget_type(void* self);
+bool q_dbuspendingcallwatcher_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 ///
-bool q_dbuspendingcallwatcher_is_window_type(void* self);
+bool q_dbuspendingcallwatcher_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 ///
-bool q_dbuspendingcallwatcher_is_quick_item_type(void* self);
+bool q_dbuspendingcallwatcher_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 ///
-bool q_dbuspendingcallwatcher_signals_blocked(void* self);
+bool q_dbuspendingcallwatcher_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -298,9 +298,9 @@ bool q_dbuspendingcallwatcher_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 ///
-QThread* q_dbuspendingcallwatcher_thread(void* self);
+QThread* q_dbuspendingcallwatcher_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -351,11 +351,11 @@ void q_dbuspendingcallwatcher_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_dbuspendingcallwatcher_children(void* self);
+libqt_list q_dbuspendingcallwatcher_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -393,7 +393,7 @@ void q_dbuspendingcallwatcher_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_dbuspendingcallwatcher_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_dbuspendingcallwatcher_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -404,18 +404,18 @@ QMetaObject__Connection* q_dbuspendingcallwatcher_connect(void* sender, const ch
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_dbuspendingcallwatcher_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_dbuspendingcallwatcher_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_dbuspendingcallwatcher_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_dbuspendingcallwatcher_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -426,7 +426,7 @@ QMetaObject__Connection* q_dbuspendingcallwatcher_connect3(void* self, void* sen
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_dbuspendingcallwatcher_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_dbuspendingcallwatcher_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -437,24 +437,24 @@ bool q_dbuspendingcallwatcher_disconnect(void* sender, const char* signal, void*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_dbuspendingcallwatcher_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_dbuspendingcallwatcher_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 ///
-bool q_dbuspendingcallwatcher_disconnect3(void* self);
+bool q_dbuspendingcallwatcher_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 /// @param receiver QObject*
 ///
-bool q_dbuspendingcallwatcher_disconnect4(void* self, void* receiver);
+bool q_dbuspendingcallwatcher_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -462,23 +462,23 @@ bool q_dbuspendingcallwatcher_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_dbuspendingcallwatcher_disconnect5(void* param1);
+bool q_dbuspendingcallwatcher_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 ///
-void q_dbuspendingcallwatcher_dump_object_tree(void* self);
+void q_dbuspendingcallwatcher_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 ///
-void q_dbuspendingcallwatcher_dump_object_info(void* self);
+void q_dbuspendingcallwatcher_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -488,16 +488,16 @@ void q_dbuspendingcallwatcher_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_dbuspendingcallwatcher_set_property(void* self, const char* name, void* value);
+bool q_dbuspendingcallwatcher_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 /// @param name const char*
 ///
-QVariant* q_dbuspendingcallwatcher_property(void* self, const char* name);
+QVariant* q_dbuspendingcallwatcher_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -505,9 +505,9 @@ QVariant* q_dbuspendingcallwatcher_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 ///
-const char** q_dbuspendingcallwatcher_dynamic_property_names(void* self);
+const char** q_dbuspendingcallwatcher_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -521,9 +521,9 @@ QBindingStorage* q_dbuspendingcallwatcher_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 ///
-const QBindingStorage* q_dbuspendingcallwatcher_binding_storage2(void* self);
+const QBindingStorage* q_dbuspendingcallwatcher_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -546,18 +546,18 @@ void q_dbuspendingcallwatcher_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 ///
-QObject* q_dbuspendingcallwatcher_parent(void* self);
+QObject* q_dbuspendingcallwatcher_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 /// @param classname const char*
 ///
-bool q_dbuspendingcallwatcher_inherits(void* self, const char* classname);
+bool q_dbuspendingcallwatcher_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -597,7 +597,7 @@ int32_t q_dbuspendingcallwatcher_start_timer23(void* self, int64_t time, int32_t
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_dbuspendingcallwatcher_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_dbuspendingcallwatcher_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -609,59 +609,59 @@ QMetaObject__Connection* q_dbuspendingcallwatcher_connect5(void* sender, const c
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_dbuspendingcallwatcher_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_dbuspendingcallwatcher_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_dbuspendingcallwatcher_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_dbuspendingcallwatcher_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 /// @param signal const char*
 ///
-bool q_dbuspendingcallwatcher_disconnect1(void* self, const char* signal);
+bool q_dbuspendingcallwatcher_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDBusPendingCallWatcher*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_dbuspendingcallwatcher_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_dbuspendingcallwatcher_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_dbuspendingcallwatcher_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_dbuspendingcallwatcher_disconnect23(void* self, void* receiver, const char* member);
+bool q_dbuspendingcallwatcher_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QDBusPendingCallWatcher*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_dbuspendingcallwatcher_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -688,7 +688,7 @@ void q_dbuspendingcallwatcher_on_destroyed1(void* self, void (*callback)(void*, 
 /// @param self QDBusPendingCallWatcher*
 /// @param other QDBusPendingCall*
 ///
-void q_dbuspendingcallwatcher_operator_assign(void* self, void* other);
+void q_dbuspendingcallwatcher_operator_assign(void* self, const void* other);
 
 /// Inherited from QDBusPendingCall
 ///
@@ -703,41 +703,41 @@ void q_dbuspendingcallwatcher_swap(void* self, void* other);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuspendingcall.html#isFinished)
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 ///
-bool q_dbuspendingcallwatcher_is_finished(void* self);
+bool q_dbuspendingcallwatcher_is_finished(const void* self);
 
 /// Inherited from QDBusPendingCall
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuspendingcall.html#isError)
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 ///
-bool q_dbuspendingcallwatcher_is_error(void* self);
+bool q_dbuspendingcallwatcher_is_error(const void* self);
 
 /// Inherited from QDBusPendingCall
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuspendingcall.html#isValid)
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 ///
-bool q_dbuspendingcallwatcher_is_valid(void* self);
+bool q_dbuspendingcallwatcher_is_valid(const void* self);
 
 /// Inherited from QDBusPendingCall
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuspendingcall.html#error)
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 ///
-QDBusError* q_dbuspendingcallwatcher_error(void* self);
+QDBusError* q_dbuspendingcallwatcher_error(const void* self);
 
 /// Inherited from QDBusPendingCall
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuspendingcall.html#reply)
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 ///
-QDBusMessage* q_dbuspendingcallwatcher_reply(void* self);
+QDBusMessage* q_dbuspendingcallwatcher_reply(const void* self);
 
 /// Inherited from QDBusPendingCall
 ///
@@ -745,7 +745,7 @@ QDBusMessage* q_dbuspendingcallwatcher_reply(void* self);
 ///
 /// @param error QDBusError*
 ///
-QDBusPendingCall* q_dbuspendingcallwatcher_from_error(void* error);
+QDBusPendingCall* q_dbuspendingcallwatcher_from_error(const void* error);
 
 /// Inherited from QDBusPendingCall
 ///
@@ -753,7 +753,7 @@ QDBusPendingCall* q_dbuspendingcallwatcher_from_error(void* error);
 ///
 /// @param message QDBusMessage*
 ///
-QDBusPendingCall* q_dbuspendingcallwatcher_from_completed_call(void* message);
+QDBusPendingCall* q_dbuspendingcallwatcher_from_completed_call(const void* message);
 
 /// Inherited from QObject
 ///
@@ -931,7 +931,7 @@ void q_dbuspendingcallwatcher_on_custom_event(void* self, void (*callback)(void*
 /// @param self QDBusPendingCallWatcher*
 /// @param signal QMetaMethod*
 ///
-void q_dbuspendingcallwatcher_connect_notify(void* self, void* signal);
+void q_dbuspendingcallwatcher_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -942,7 +942,7 @@ void q_dbuspendingcallwatcher_connect_notify(void* self, void* signal);
 /// @param self QDBusPendingCallWatcher*
 /// @param signal QMetaMethod*
 ///
-void q_dbuspendingcallwatcher_super_connect_notify(void* self, void* signal);
+void q_dbuspendingcallwatcher_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -953,7 +953,7 @@ void q_dbuspendingcallwatcher_super_connect_notify(void* self, void* signal);
 /// @param self QDBusPendingCallWatcher*
 /// @param callback void func(QDBusPendingCallWatcher* self, QMetaMethod* signal)
 ///
-void q_dbuspendingcallwatcher_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_dbuspendingcallwatcher_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -964,7 +964,7 @@ void q_dbuspendingcallwatcher_on_connect_notify(void* self, void (*callback)(voi
 /// @param self QDBusPendingCallWatcher*
 /// @param signal QMetaMethod*
 ///
-void q_dbuspendingcallwatcher_disconnect_notify(void* self, void* signal);
+void q_dbuspendingcallwatcher_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -975,7 +975,7 @@ void q_dbuspendingcallwatcher_disconnect_notify(void* self, void* signal);
 /// @param self QDBusPendingCallWatcher*
 /// @param signal QMetaMethod*
 ///
-void q_dbuspendingcallwatcher_super_disconnect_notify(void* self, void* signal);
+void q_dbuspendingcallwatcher_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -986,7 +986,7 @@ void q_dbuspendingcallwatcher_super_disconnect_notify(void* self, void* signal);
 /// @param self QDBusPendingCallWatcher*
 /// @param callback void func(QDBusPendingCallWatcher* self, QMetaMethod* signal)
 ///
-void q_dbuspendingcallwatcher_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_dbuspendingcallwatcher_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -994,9 +994,9 @@ void q_dbuspendingcallwatcher_on_disconnect_notify(void* self, void (*callback)(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 ///
-QObject* q_dbuspendingcallwatcher_sender(void* self);
+QObject* q_dbuspendingcallwatcher_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1004,9 +1004,9 @@ QObject* q_dbuspendingcallwatcher_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 ///
-QObject* q_dbuspendingcallwatcher_super_sender(void* self);
+QObject* q_dbuspendingcallwatcher_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1014,10 +1014,10 @@ QObject* q_dbuspendingcallwatcher_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDBusPendingCallWatcher*
-/// @param callback QObject* func()
+/// @param self const QDBusPendingCallWatcher*
+/// @param callback QObject* func(QDBusPendingCallWatcher* self)
 ///
-void q_dbuspendingcallwatcher_on_sender(void* self, QObject* (*callback)());
+void q_dbuspendingcallwatcher_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1025,9 +1025,9 @@ void q_dbuspendingcallwatcher_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 ///
-int32_t q_dbuspendingcallwatcher_sender_signal_index(void* self);
+int32_t q_dbuspendingcallwatcher_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1035,9 +1035,9 @@ int32_t q_dbuspendingcallwatcher_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 ///
-int32_t q_dbuspendingcallwatcher_super_sender_signal_index(void* self);
+int32_t q_dbuspendingcallwatcher_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1045,10 +1045,10 @@ int32_t q_dbuspendingcallwatcher_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDBusPendingCallWatcher*
-/// @param callback int32_t func()
+/// @param self const QDBusPendingCallWatcher*
+/// @param callback int32_t func(QDBusPendingCallWatcher* self)
 ///
-void q_dbuspendingcallwatcher_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_dbuspendingcallwatcher_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1056,10 +1056,10 @@ void q_dbuspendingcallwatcher_on_sender_signal_index(void* self, int32_t (*callb
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 /// @param signal const char*
 ///
-int32_t q_dbuspendingcallwatcher_receivers(void* self, const char* signal);
+int32_t q_dbuspendingcallwatcher_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1067,10 +1067,10 @@ int32_t q_dbuspendingcallwatcher_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 /// @param signal const char*
 ///
-int32_t q_dbuspendingcallwatcher_super_receivers(void* self, const char* signal);
+int32_t q_dbuspendingcallwatcher_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1078,10 +1078,10 @@ int32_t q_dbuspendingcallwatcher_super_receivers(void* self, const char* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 /// @param callback int32_t func(QDBusPendingCallWatcher* self, const char* signal)
 ///
-void q_dbuspendingcallwatcher_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_dbuspendingcallwatcher_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1089,10 +1089,10 @@ void q_dbuspendingcallwatcher_on_receivers(void* self, int32_t (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 /// @param signal QMetaMethod*
 ///
-bool q_dbuspendingcallwatcher_is_signal_connected(void* self, void* signal);
+bool q_dbuspendingcallwatcher_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1100,10 +1100,10 @@ bool q_dbuspendingcallwatcher_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 /// @param signal QMetaMethod*
 ///
-bool q_dbuspendingcallwatcher_super_is_signal_connected(void* self, void* signal);
+bool q_dbuspendingcallwatcher_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1111,10 +1111,10 @@ bool q_dbuspendingcallwatcher_super_is_signal_connected(void* self, void* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 /// @param callback bool func(QDBusPendingCallWatcher* self, QMetaMethod* signal)
 ///
-void q_dbuspendingcallwatcher_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_dbuspendingcallwatcher_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

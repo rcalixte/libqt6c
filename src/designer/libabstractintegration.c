@@ -18,15 +18,15 @@ QDesignerIntegrationInterface* q_designerintegrationinterface_new2(void* core, v
     return QDesignerIntegrationInterface_New2((QDesignerFormEditorInterface*)core, (QObject*)parent);
 }
 
-const QMetaObject* q_designerintegrationinterface_meta_object(void* self) {
+const QMetaObject* q_designerintegrationinterface_meta_object(const void* self) {
     return QDesignerIntegrationInterface_MetaObject((QDesignerIntegrationInterface*)self);
 }
 
-void q_designerintegrationinterface_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_designerintegrationinterface_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QDesignerIntegrationInterface_OnMetaObject((QDesignerIntegrationInterface*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_designerintegrationinterface_super_meta_object(void* self) {
+const QMetaObject* q_designerintegrationinterface_super_meta_object(const void* self) {
     return QDesignerIntegrationInterface_SuperMetaObject((QDesignerIntegrationInterface*)self);
 }
 
@@ -61,20 +61,16 @@ const char* q_designerintegrationinterface_tr(const char* s) {
     return _ret;
 }
 
-QDesignerFormEditorInterface* q_designerintegrationinterface_core(void* self) {
+QDesignerFormEditorInterface* q_designerintegrationinterface_core(const void* self) {
     return QDesignerIntegrationInterface_Core((QDesignerIntegrationInterface*)self);
 }
 
-QWidget* q_designerintegrationinterface_container_window(void* self, void* widget) {
+QWidget* q_designerintegrationinterface_container_window(const void* self, void* widget) {
     return QDesignerIntegrationInterface_ContainerWindow((QDesignerIntegrationInterface*)self, (QWidget*)widget);
 }
 
-void q_designerintegrationinterface_on_container_window(void* self, QWidget* (*callback)(void*, void*)) {
+void q_designerintegrationinterface_on_container_window(const void* self, QWidget* (*callback)(const void*, void*)) {
     QDesignerIntegrationInterface_OnContainerWindow((QDesignerIntegrationInterface*)self, (intptr_t)callback);
-}
-
-QWidget* q_designerintegrationinterface_super_container_window(void* self, void* widget) {
-    return QDesignerIntegrationInterface_SuperContainerWindow((QDesignerIntegrationInterface*)self, (QWidget*)widget);
 }
 
 QDesignerResourceBrowserInterface* q_designerintegrationinterface_create_resource_browser(void* self, void* parent) {
@@ -85,26 +81,15 @@ void q_designerintegrationinterface_on_create_resource_browser(void* self, QDesi
     QDesignerIntegrationInterface_OnCreateResourceBrowser((QDesignerIntegrationInterface*)self, (intptr_t)callback);
 }
 
-QDesignerResourceBrowserInterface* q_designerintegrationinterface_super_create_resource_browser(void* self, void* parent) {
-    return QDesignerIntegrationInterface_SuperCreateResourceBrowser((QDesignerIntegrationInterface*)self, (QWidget*)parent);
-}
-
-const char* q_designerintegrationinterface_header_suffix(void* self) {
+const char* q_designerintegrationinterface_header_suffix(const void* self) {
     libqt_string _str = QDesignerIntegrationInterface_HeaderSuffix((QDesignerIntegrationInterface*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_designerintegrationinterface_on_header_suffix(void* self, const char* (*callback)()) {
+void q_designerintegrationinterface_on_header_suffix(const void* self, const char* (*callback)(const void*)) {
     QDesignerIntegrationInterface_OnHeaderSuffix((QDesignerIntegrationInterface*)self, (intptr_t)callback);
-}
-
-const char* q_designerintegrationinterface_super_header_suffix(void* self) {
-    libqt_string _str = QDesignerIntegrationInterface_SuperHeaderSuffix((QDesignerIntegrationInterface*)self);
-    char* _ret = qstring_to_char(_str);
-    libqt_string_free(&_str);
-    return _ret;
 }
 
 void q_designerintegrationinterface_set_header_suffix(void* self, const char* headerSuffix) {
@@ -115,20 +100,12 @@ void q_designerintegrationinterface_on_set_header_suffix(void* self, void (*call
     QDesignerIntegrationInterface_OnSetHeaderSuffix((QDesignerIntegrationInterface*)self, (intptr_t)callback);
 }
 
-void q_designerintegrationinterface_super_set_header_suffix(void* self, const char* headerSuffix) {
-    QDesignerIntegrationInterface_SuperSetHeaderSuffix((QDesignerIntegrationInterface*)self, qstring(headerSuffix));
-}
-
-bool q_designerintegrationinterface_is_header_lowercase(void* self) {
+bool q_designerintegrationinterface_is_header_lowercase(const void* self) {
     return QDesignerIntegrationInterface_IsHeaderLowercase((QDesignerIntegrationInterface*)self);
 }
 
-void q_designerintegrationinterface_on_is_header_lowercase(void* self, bool (*callback)()) {
+void q_designerintegrationinterface_on_is_header_lowercase(const void* self, bool (*callback)(const void*)) {
     QDesignerIntegrationInterface_OnIsHeaderLowercase((QDesignerIntegrationInterface*)self, (intptr_t)callback);
-}
-
-bool q_designerintegrationinterface_super_is_header_lowercase(void* self) {
-    return QDesignerIntegrationInterface_SuperIsHeaderLowercase((QDesignerIntegrationInterface*)self);
 }
 
 void q_designerintegrationinterface_set_header_lowercase(void* self, bool headerLowerCase) {
@@ -139,36 +116,24 @@ void q_designerintegrationinterface_on_set_header_lowercase(void* self, void (*c
     QDesignerIntegrationInterface_OnSetHeaderLowercase((QDesignerIntegrationInterface*)self, (intptr_t)callback);
 }
 
-void q_designerintegrationinterface_super_set_header_lowercase(void* self, bool headerLowerCase) {
-    QDesignerIntegrationInterface_SuperSetHeaderLowercase((QDesignerIntegrationInterface*)self, headerLowerCase);
-}
-
-int32_t q_designerintegrationinterface_features(void* self) {
+int32_t q_designerintegrationinterface_features(const void* self) {
     return QDesignerIntegrationInterface_Features((QDesignerIntegrationInterface*)self);
 }
 
-void q_designerintegrationinterface_on_features(void* self, int32_t (*callback)()) {
+void q_designerintegrationinterface_on_features(const void* self, int32_t (*callback)(const void*)) {
     QDesignerIntegrationInterface_OnFeatures((QDesignerIntegrationInterface*)self, (intptr_t)callback);
 }
 
-int32_t q_designerintegrationinterface_super_features(void* self) {
-    return QDesignerIntegrationInterface_SuperFeatures((QDesignerIntegrationInterface*)self);
-}
-
-bool q_designerintegrationinterface_has_feature(void* self, int32_t f) {
+bool q_designerintegrationinterface_has_feature(const void* self, int32_t f) {
     return QDesignerIntegrationInterface_HasFeature((QDesignerIntegrationInterface*)self, f);
 }
 
-int32_t q_designerintegrationinterface_resource_file_watcher_behaviour(void* self) {
+int32_t q_designerintegrationinterface_resource_file_watcher_behaviour(const void* self) {
     return QDesignerIntegrationInterface_ResourceFileWatcherBehaviour((QDesignerIntegrationInterface*)self);
 }
 
-void q_designerintegrationinterface_on_resource_file_watcher_behaviour(void* self, int32_t (*callback)()) {
+void q_designerintegrationinterface_on_resource_file_watcher_behaviour(const void* self, int32_t (*callback)(const void*)) {
     QDesignerIntegrationInterface_OnResourceFileWatcherBehaviour((QDesignerIntegrationInterface*)self, (intptr_t)callback);
-}
-
-int32_t q_designerintegrationinterface_super_resource_file_watcher_behaviour(void* self) {
-    return QDesignerIntegrationInterface_SuperResourceFileWatcherBehaviour((QDesignerIntegrationInterface*)self);
 }
 
 void q_designerintegrationinterface_set_resource_file_watcher_behaviour(void* self, int32_t behaviour) {
@@ -179,26 +144,15 @@ void q_designerintegrationinterface_on_set_resource_file_watcher_behaviour(void*
     QDesignerIntegrationInterface_OnSetResourceFileWatcherBehaviour((QDesignerIntegrationInterface*)self, (intptr_t)callback);
 }
 
-void q_designerintegrationinterface_super_set_resource_file_watcher_behaviour(void* self, int32_t behaviour) {
-    QDesignerIntegrationInterface_SuperSetResourceFileWatcherBehaviour((QDesignerIntegrationInterface*)self, behaviour);
-}
-
-const char* q_designerintegrationinterface_context_help_id(void* self) {
+const char* q_designerintegrationinterface_context_help_id(const void* self) {
     libqt_string _str = QDesignerIntegrationInterface_ContextHelpId((QDesignerIntegrationInterface*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_designerintegrationinterface_on_context_help_id(void* self, const char* (*callback)()) {
+void q_designerintegrationinterface_on_context_help_id(const void* self, const char* (*callback)(const void*)) {
     QDesignerIntegrationInterface_OnContextHelpId((QDesignerIntegrationInterface*)self, (intptr_t)callback);
-}
-
-const char* q_designerintegrationinterface_super_context_help_id(void* self) {
-    libqt_string _str = QDesignerIntegrationInterface_SuperContextHelpId((QDesignerIntegrationInterface*)self);
-    char* _ret = qstring_to_char(_str);
-    libqt_string_free(&_str);
-    return _ret;
 }
 
 void q_designerintegrationinterface_emit_object_name_changed(void* self, void* formWindow, void* object, const char* newName, const char* oldName) {
@@ -227,11 +181,11 @@ void q_designerintegrationinterface_emit_help_requested(void* self, const char* 
     QDesignerIntegrationInterface_EmitHelpRequested((QDesignerIntegrationInterface*)self, qstring(manual), qstring(document));
 }
 
-void q_designerintegrationinterface_property_changed(void* self, void* formWindow, const char* name, void* value) {
+void q_designerintegrationinterface_property_changed(void* self, void* formWindow, const char* name, const void* value) {
     QDesignerIntegrationInterface_PropertyChanged((QDesignerIntegrationInterface*)self, (QDesignerFormWindowInterface*)formWindow, qstring(name), (QVariant*)value);
 }
 
-void q_designerintegrationinterface_on_property_changed(void* self, void (*callback)(void*, void*, const char*, void*)) {
+void q_designerintegrationinterface_on_property_changed(void* self, void (*callback)(void*, void*, const char*, const void*)) {
     QDesignerIntegrationInterface_Connect_PropertyChanged((QDesignerIntegrationInterface*)self, (intptr_t)callback);
 }
 
@@ -285,32 +239,20 @@ void q_designerintegrationinterface_on_set_features(void* self, void (*callback)
     QDesignerIntegrationInterface_OnSetFeatures((QDesignerIntegrationInterface*)self, (intptr_t)callback);
 }
 
-void q_designerintegrationinterface_super_set_features(void* self, int32_t f) {
-    QDesignerIntegrationInterface_SuperSetFeatures((QDesignerIntegrationInterface*)self, f);
-}
-
-void q_designerintegrationinterface_update_property(void* self, const char* name, void* value, bool enableSubPropertyHandling) {
+void q_designerintegrationinterface_update_property(void* self, const char* name, const void* value, bool enableSubPropertyHandling) {
     QDesignerIntegrationInterface_UpdateProperty((QDesignerIntegrationInterface*)self, qstring(name), (QVariant*)value, enableSubPropertyHandling);
 }
 
-void q_designerintegrationinterface_on_update_property(void* self, void (*callback)(void*, const char*, void*, bool)) {
+void q_designerintegrationinterface_on_update_property(void* self, void (*callback)(void*, const char*, const void*, bool)) {
     QDesignerIntegrationInterface_OnUpdateProperty((QDesignerIntegrationInterface*)self, (intptr_t)callback);
 }
 
-void q_designerintegrationinterface_super_update_property(void* self, const char* name, void* value, bool enableSubPropertyHandling) {
-    QDesignerIntegrationInterface_SuperUpdateProperty((QDesignerIntegrationInterface*)self, qstring(name), (QVariant*)value, enableSubPropertyHandling);
-}
-
-void q_designerintegrationinterface_update_property2(void* self, const char* name, void* value) {
+void q_designerintegrationinterface_update_property2(void* self, const char* name, const void* value) {
     QDesignerIntegrationInterface_UpdateProperty2((QDesignerIntegrationInterface*)self, qstring(name), (QVariant*)value);
 }
 
-void q_designerintegrationinterface_on_update_property2(void* self, void (*callback)(void*, const char*, void*)) {
+void q_designerintegrationinterface_on_update_property2(void* self, void (*callback)(void*, const char*, const void*)) {
     QDesignerIntegrationInterface_OnUpdateProperty2((QDesignerIntegrationInterface*)self, (intptr_t)callback);
-}
-
-void q_designerintegrationinterface_super_update_property2(void* self, const char* name, void* value) {
-    QDesignerIntegrationInterface_SuperUpdateProperty2((QDesignerIntegrationInterface*)self, qstring(name), (QVariant*)value);
 }
 
 void q_designerintegrationinterface_reset_property(void* self, const char* name) {
@@ -321,20 +263,12 @@ void q_designerintegrationinterface_on_reset_property(void* self, void (*callbac
     QDesignerIntegrationInterface_OnResetProperty((QDesignerIntegrationInterface*)self, (intptr_t)callback);
 }
 
-void q_designerintegrationinterface_super_reset_property(void* self, const char* name) {
-    QDesignerIntegrationInterface_SuperResetProperty((QDesignerIntegrationInterface*)self, qstring(name));
-}
-
-void q_designerintegrationinterface_add_dynamic_property(void* self, const char* name, void* value) {
+void q_designerintegrationinterface_add_dynamic_property(void* self, const char* name, const void* value) {
     QDesignerIntegrationInterface_AddDynamicProperty((QDesignerIntegrationInterface*)self, qstring(name), (QVariant*)value);
 }
 
-void q_designerintegrationinterface_on_add_dynamic_property(void* self, void (*callback)(void*, const char*, void*)) {
+void q_designerintegrationinterface_on_add_dynamic_property(void* self, void (*callback)(void*, const char*, const void*)) {
     QDesignerIntegrationInterface_OnAddDynamicProperty((QDesignerIntegrationInterface*)self, (intptr_t)callback);
-}
-
-void q_designerintegrationinterface_super_add_dynamic_property(void* self, const char* name, void* value) {
-    QDesignerIntegrationInterface_SuperAddDynamicProperty((QDesignerIntegrationInterface*)self, qstring(name), (QVariant*)value);
 }
 
 void q_designerintegrationinterface_remove_dynamic_property(void* self, const char* name) {
@@ -345,20 +279,12 @@ void q_designerintegrationinterface_on_remove_dynamic_property(void* self, void 
     QDesignerIntegrationInterface_OnRemoveDynamicProperty((QDesignerIntegrationInterface*)self, (intptr_t)callback);
 }
 
-void q_designerintegrationinterface_super_remove_dynamic_property(void* self, const char* name) {
-    QDesignerIntegrationInterface_SuperRemoveDynamicProperty((QDesignerIntegrationInterface*)self, qstring(name));
-}
-
 void q_designerintegrationinterface_update_active_form_window(void* self, void* formWindow) {
     QDesignerIntegrationInterface_UpdateActiveFormWindow((QDesignerIntegrationInterface*)self, (QDesignerFormWindowInterface*)formWindow);
 }
 
 void q_designerintegrationinterface_on_update_active_form_window(void* self, void (*callback)(void*, void*)) {
     QDesignerIntegrationInterface_OnUpdateActiveFormWindow((QDesignerIntegrationInterface*)self, (intptr_t)callback);
-}
-
-void q_designerintegrationinterface_super_update_active_form_window(void* self, void* formWindow) {
-    QDesignerIntegrationInterface_SuperUpdateActiveFormWindow((QDesignerIntegrationInterface*)self, (QDesignerFormWindowInterface*)formWindow);
 }
 
 void q_designerintegrationinterface_setup_form_window(void* self, void* formWindow) {
@@ -369,32 +295,20 @@ void q_designerintegrationinterface_on_setup_form_window(void* self, void (*call
     QDesignerIntegrationInterface_OnSetupFormWindow((QDesignerIntegrationInterface*)self, (intptr_t)callback);
 }
 
-void q_designerintegrationinterface_super_setup_form_window(void* self, void* formWindow) {
-    QDesignerIntegrationInterface_SuperSetupFormWindow((QDesignerIntegrationInterface*)self, (QDesignerFormWindowInterface*)formWindow);
-}
-
 void q_designerintegrationinterface_update_selection(void* self) {
     QDesignerIntegrationInterface_UpdateSelection((QDesignerIntegrationInterface*)self);
 }
 
-void q_designerintegrationinterface_on_update_selection(void* self, void (*callback)()) {
+void q_designerintegrationinterface_on_update_selection(void* self, void (*callback)(void*)) {
     QDesignerIntegrationInterface_OnUpdateSelection((QDesignerIntegrationInterface*)self, (intptr_t)callback);
-}
-
-void q_designerintegrationinterface_super_update_selection(void* self) {
-    QDesignerIntegrationInterface_SuperUpdateSelection((QDesignerIntegrationInterface*)self);
 }
 
 void q_designerintegrationinterface_update_custom_widget_plugins(void* self) {
     QDesignerIntegrationInterface_UpdateCustomWidgetPlugins((QDesignerIntegrationInterface*)self);
 }
 
-void q_designerintegrationinterface_on_update_custom_widget_plugins(void* self, void (*callback)()) {
+void q_designerintegrationinterface_on_update_custom_widget_plugins(void* self, void (*callback)(void*)) {
     QDesignerIntegrationInterface_OnUpdateCustomWidgetPlugins((QDesignerIntegrationInterface*)self, (intptr_t)callback);
-}
-
-void q_designerintegrationinterface_super_update_custom_widget_plugins(void* self) {
-    QDesignerIntegrationInterface_SuperUpdateCustomWidgetPlugins((QDesignerIntegrationInterface*)self);
 }
 
 const char* q_designerintegrationinterface_tr2(const char* s, const char* c) {
@@ -411,7 +325,7 @@ const char* q_designerintegrationinterface_tr3(const char* s, const char* c, int
     return _ret;
 }
 
-const char* q_designerintegrationinterface_object_name(void* self) {
+const char* q_designerintegrationinterface_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -422,19 +336,19 @@ void q_designerintegrationinterface_set_object_name(void* self, const char* name
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_designerintegrationinterface_is_widget_type(void* self) {
+bool q_designerintegrationinterface_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_designerintegrationinterface_is_window_type(void* self) {
+bool q_designerintegrationinterface_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_designerintegrationinterface_is_quick_item_type(void* self) {
+bool q_designerintegrationinterface_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_designerintegrationinterface_signals_blocked(void* self) {
+bool q_designerintegrationinterface_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -442,7 +356,7 @@ bool q_designerintegrationinterface_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_designerintegrationinterface_thread(void* self) {
+QThread* q_designerintegrationinterface_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -466,7 +380,7 @@ void q_designerintegrationinterface_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_designerintegrationinterface_children(void* self) {
+libqt_list /* of QObject* */ q_designerintegrationinterface_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -483,55 +397,55 @@ void q_designerintegrationinterface_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_designerintegrationinterface_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_designerintegrationinterface_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_designerintegrationinterface_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_designerintegrationinterface_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_designerintegrationinterface_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_designerintegrationinterface_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_designerintegrationinterface_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_designerintegrationinterface_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_designerintegrationinterface_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_designerintegrationinterface_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_designerintegrationinterface_disconnect3(void* self) {
+bool q_designerintegrationinterface_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_designerintegrationinterface_disconnect4(void* self, void* receiver) {
+bool q_designerintegrationinterface_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_designerintegrationinterface_disconnect5(void* param1) {
+bool q_designerintegrationinterface_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_designerintegrationinterface_dump_object_tree(void* self) {
+void q_designerintegrationinterface_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_designerintegrationinterface_dump_object_info(void* self) {
+void q_designerintegrationinterface_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_designerintegrationinterface_set_property(void* self, const char* name, void* value) {
+bool q_designerintegrationinterface_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_designerintegrationinterface_property(void* self, const char* name) {
+QVariant* q_designerintegrationinterface_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_designerintegrationinterface_dynamic_property_names(void* self) {
+const char** q_designerintegrationinterface_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -552,7 +466,7 @@ QBindingStorage* q_designerintegrationinterface_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_designerintegrationinterface_binding_storage2(void* self) {
+const QBindingStorage* q_designerintegrationinterface_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -564,11 +478,11 @@ void q_designerintegrationinterface_on_destroyed(void* self, void (*callback)(vo
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_designerintegrationinterface_parent(void* self) {
+QObject* q_designerintegrationinterface_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_designerintegrationinterface_inherits(void* self, const char* classname) {
+bool q_designerintegrationinterface_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -584,31 +498,31 @@ int32_t q_designerintegrationinterface_start_timer23(void* self, int64_t time, i
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_designerintegrationinterface_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_designerintegrationinterface_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_designerintegrationinterface_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_designerintegrationinterface_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_designerintegrationinterface_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_designerintegrationinterface_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_designerintegrationinterface_disconnect1(void* self, const char* signal) {
+bool q_designerintegrationinterface_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_designerintegrationinterface_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_designerintegrationinterface_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_designerintegrationinterface_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_designerintegrationinterface_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_designerintegrationinterface_disconnect23(void* self, void* receiver, const char* member) {
+bool q_designerintegrationinterface_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -680,76 +594,44 @@ void q_designerintegrationinterface_on_custom_event(void* self, void (*callback)
     QDesignerIntegrationInterface_OnCustomEvent((QDesignerIntegrationInterface*)self, (intptr_t)callback);
 }
 
-void q_designerintegrationinterface_connect_notify(void* self, void* signal) {
+void q_designerintegrationinterface_connect_notify(void* self, const void* signal) {
     QDesignerIntegrationInterface_ConnectNotify((QDesignerIntegrationInterface*)self, (QMetaMethod*)signal);
 }
 
-void q_designerintegrationinterface_super_connect_notify(void* self, void* signal) {
+void q_designerintegrationinterface_super_connect_notify(void* self, const void* signal) {
     QDesignerIntegrationInterface_SuperConnectNotify((QDesignerIntegrationInterface*)self, (QMetaMethod*)signal);
 }
 
-void q_designerintegrationinterface_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_designerintegrationinterface_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QDesignerIntegrationInterface_OnConnectNotify((QDesignerIntegrationInterface*)self, (intptr_t)callback);
 }
 
-void q_designerintegrationinterface_disconnect_notify(void* self, void* signal) {
+void q_designerintegrationinterface_disconnect_notify(void* self, const void* signal) {
     QDesignerIntegrationInterface_DisconnectNotify((QDesignerIntegrationInterface*)self, (QMetaMethod*)signal);
 }
 
-void q_designerintegrationinterface_super_disconnect_notify(void* self, void* signal) {
+void q_designerintegrationinterface_super_disconnect_notify(void* self, const void* signal) {
     QDesignerIntegrationInterface_SuperDisconnectNotify((QDesignerIntegrationInterface*)self, (QMetaMethod*)signal);
 }
 
-void q_designerintegrationinterface_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_designerintegrationinterface_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QDesignerIntegrationInterface_OnDisconnectNotify((QDesignerIntegrationInterface*)self, (intptr_t)callback);
 }
 
-QObject* q_designerintegrationinterface_sender(void* self) {
+QObject* q_designerintegrationinterface_sender(const void* self) {
     return QDesignerIntegrationInterface_Sender((QDesignerIntegrationInterface*)self);
 }
 
-QObject* q_designerintegrationinterface_super_sender(void* self) {
-    return QDesignerIntegrationInterface_SuperSender((QDesignerIntegrationInterface*)self);
-}
-
-void q_designerintegrationinterface_on_sender(void* self, QObject* (*callback)()) {
-    QDesignerIntegrationInterface_OnSender((QDesignerIntegrationInterface*)self, (intptr_t)callback);
-}
-
-int32_t q_designerintegrationinterface_sender_signal_index(void* self) {
+int32_t q_designerintegrationinterface_sender_signal_index(const void* self) {
     return QDesignerIntegrationInterface_SenderSignalIndex((QDesignerIntegrationInterface*)self);
 }
 
-int32_t q_designerintegrationinterface_super_sender_signal_index(void* self) {
-    return QDesignerIntegrationInterface_SuperSenderSignalIndex((QDesignerIntegrationInterface*)self);
-}
-
-void q_designerintegrationinterface_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QDesignerIntegrationInterface_OnSenderSignalIndex((QDesignerIntegrationInterface*)self, (intptr_t)callback);
-}
-
-int32_t q_designerintegrationinterface_receivers(void* self, const char* signal) {
+int32_t q_designerintegrationinterface_receivers(const void* self, const char* signal) {
     return QDesignerIntegrationInterface_Receivers((QDesignerIntegrationInterface*)self, signal);
 }
 
-int32_t q_designerintegrationinterface_super_receivers(void* self, const char* signal) {
-    return QDesignerIntegrationInterface_SuperReceivers((QDesignerIntegrationInterface*)self, signal);
-}
-
-void q_designerintegrationinterface_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QDesignerIntegrationInterface_OnReceivers((QDesignerIntegrationInterface*)self, (intptr_t)callback);
-}
-
-bool q_designerintegrationinterface_is_signal_connected(void* self, void* signal) {
+bool q_designerintegrationinterface_is_signal_connected(const void* self, const void* signal) {
     return QDesignerIntegrationInterface_IsSignalConnected((QDesignerIntegrationInterface*)self, (QMetaMethod*)signal);
-}
-
-bool q_designerintegrationinterface_super_is_signal_connected(void* self, void* signal) {
-    return QDesignerIntegrationInterface_SuperIsSignalConnected((QDesignerIntegrationInterface*)self, (QMetaMethod*)signal);
-}
-
-void q_designerintegrationinterface_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QDesignerIntegrationInterface_OnIsSignalConnected((QDesignerIntegrationInterface*)self, (intptr_t)callback);
 }
 
 void q_designerintegrationinterface_delete(void* self) {
@@ -764,15 +646,15 @@ QDesignerIntegration* q_designerintegration_new2(void* core, void* parent) {
     return QDesignerIntegration_New2((QDesignerFormEditorInterface*)core, (QObject*)parent);
 }
 
-const QMetaObject* q_designerintegration_meta_object(void* self) {
+const QMetaObject* q_designerintegration_meta_object(const void* self) {
     return QDesignerIntegration_MetaObject((QDesignerIntegration*)self);
 }
 
-void q_designerintegration_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_designerintegration_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QDesignerIntegration_OnMetaObject((QDesignerIntegration*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_designerintegration_super_meta_object(void* self) {
+const QMetaObject* q_designerintegration_super_meta_object(const void* self) {
     return QDesignerIntegration_SuperMetaObject((QDesignerIntegration*)self);
 }
 
@@ -807,18 +689,18 @@ const char* q_designerintegration_tr(const char* s) {
     return _ret;
 }
 
-const char* q_designerintegration_header_suffix(void* self) {
+const char* q_designerintegration_header_suffix(const void* self) {
     libqt_string _str = QDesignerIntegration_HeaderSuffix((QDesignerIntegration*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_designerintegration_on_header_suffix(void* self, const char* (*callback)()) {
+void q_designerintegration_on_header_suffix(const void* self, const char* (*callback)(const void*)) {
     QDesignerIntegration_OnHeaderSuffix((QDesignerIntegration*)self, (intptr_t)callback);
 }
 
-const char* q_designerintegration_super_header_suffix(void* self) {
+const char* q_designerintegration_super_header_suffix(const void* self) {
     libqt_string _str = QDesignerIntegration_SuperHeaderSuffix((QDesignerIntegration*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -837,15 +719,15 @@ void q_designerintegration_super_set_header_suffix(void* self, const char* heade
     QDesignerIntegration_SuperSetHeaderSuffix((QDesignerIntegration*)self, qstring(headerSuffix));
 }
 
-bool q_designerintegration_is_header_lowercase(void* self) {
+bool q_designerintegration_is_header_lowercase(const void* self) {
     return QDesignerIntegration_IsHeaderLowercase((QDesignerIntegration*)self);
 }
 
-void q_designerintegration_on_is_header_lowercase(void* self, bool (*callback)()) {
+void q_designerintegration_on_is_header_lowercase(const void* self, bool (*callback)(const void*)) {
     QDesignerIntegration_OnIsHeaderLowercase((QDesignerIntegration*)self, (intptr_t)callback);
 }
 
-bool q_designerintegration_super_is_header_lowercase(void* self) {
+bool q_designerintegration_super_is_header_lowercase(const void* self) {
     return QDesignerIntegration_SuperIsHeaderLowercase((QDesignerIntegration*)self);
 }
 
@@ -861,15 +743,15 @@ void q_designerintegration_super_set_header_lowercase(void* self, bool headerLow
     QDesignerIntegration_SuperSetHeaderLowercase((QDesignerIntegration*)self, headerLowerCase);
 }
 
-int32_t q_designerintegration_features(void* self) {
+int32_t q_designerintegration_features(const void* self) {
     return QDesignerIntegration_Features((QDesignerIntegration*)self);
 }
 
-void q_designerintegration_on_features(void* self, int32_t (*callback)()) {
+void q_designerintegration_on_features(const void* self, int32_t (*callback)(const void*)) {
     QDesignerIntegration_OnFeatures((QDesignerIntegration*)self, (intptr_t)callback);
 }
 
-int32_t q_designerintegration_super_features(void* self) {
+int32_t q_designerintegration_super_features(const void* self) {
     return QDesignerIntegration_SuperFeatures((QDesignerIntegration*)self);
 }
 
@@ -885,15 +767,15 @@ void q_designerintegration_super_set_features(void* self, int32_t f) {
     QDesignerIntegration_SuperSetFeatures((QDesignerIntegration*)self, f);
 }
 
-int32_t q_designerintegration_resource_file_watcher_behaviour(void* self) {
+int32_t q_designerintegration_resource_file_watcher_behaviour(const void* self) {
     return QDesignerIntegration_ResourceFileWatcherBehaviour((QDesignerIntegration*)self);
 }
 
-void q_designerintegration_on_resource_file_watcher_behaviour(void* self, int32_t (*callback)()) {
+void q_designerintegration_on_resource_file_watcher_behaviour(const void* self, int32_t (*callback)(const void*)) {
     QDesignerIntegration_OnResourceFileWatcherBehaviour((QDesignerIntegration*)self, (intptr_t)callback);
 }
 
-int32_t q_designerintegration_super_resource_file_watcher_behaviour(void* self) {
+int32_t q_designerintegration_super_resource_file_watcher_behaviour(const void* self) {
     return QDesignerIntegration_SuperResourceFileWatcherBehaviour((QDesignerIntegration*)self);
 }
 
@@ -909,15 +791,15 @@ void q_designerintegration_super_set_resource_file_watcher_behaviour(void* self,
     QDesignerIntegration_SuperSetResourceFileWatcherBehaviour((QDesignerIntegration*)self, behaviour);
 }
 
-QWidget* q_designerintegration_container_window(void* self, void* widget) {
+QWidget* q_designerintegration_container_window(const void* self, void* widget) {
     return QDesignerIntegration_ContainerWindow((QDesignerIntegration*)self, (QWidget*)widget);
 }
 
-void q_designerintegration_on_container_window(void* self, QWidget* (*callback)(void*, void*)) {
+void q_designerintegration_on_container_window(const void* self, QWidget* (*callback)(const void*, void*)) {
     QDesignerIntegration_OnContainerWindow((QDesignerIntegration*)self, (intptr_t)callback);
 }
 
-QWidget* q_designerintegration_super_container_window(void* self, void* widget) {
+QWidget* q_designerintegration_super_container_window(const void* self, void* widget) {
     return QDesignerIntegration_SuperContainerWindow((QDesignerIntegration*)self, (QWidget*)widget);
 }
 
@@ -937,45 +819,45 @@ QDesignerResourceBrowserInterface* q_designerintegration_super_create_resource_b
     return QDesignerIntegration_SuperCreateResourceBrowser((QDesignerIntegration*)self, (QWidget*)parent);
 }
 
-const char* q_designerintegration_context_help_id(void* self) {
+const char* q_designerintegration_context_help_id(const void* self) {
     libqt_string _str = QDesignerIntegration_ContextHelpId((QDesignerIntegration*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_designerintegration_on_context_help_id(void* self, const char* (*callback)()) {
+void q_designerintegration_on_context_help_id(const void* self, const char* (*callback)(const void*)) {
     QDesignerIntegration_OnContextHelpId((QDesignerIntegration*)self, (intptr_t)callback);
 }
 
-const char* q_designerintegration_super_context_help_id(void* self) {
+const char* q_designerintegration_super_context_help_id(const void* self) {
     libqt_string _str = QDesignerIntegration_SuperContextHelpId((QDesignerIntegration*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_designerintegration_update_property(void* self, const char* name, void* value, bool enableSubPropertyHandling) {
+void q_designerintegration_update_property(void* self, const char* name, const void* value, bool enableSubPropertyHandling) {
     QDesignerIntegration_UpdateProperty((QDesignerIntegration*)self, qstring(name), (QVariant*)value, enableSubPropertyHandling);
 }
 
-void q_designerintegration_on_update_property(void* self, void (*callback)(void*, const char*, void*, bool)) {
+void q_designerintegration_on_update_property(void* self, void (*callback)(void*, const char*, const void*, bool)) {
     QDesignerIntegration_OnUpdateProperty((QDesignerIntegration*)self, (intptr_t)callback);
 }
 
-void q_designerintegration_super_update_property(void* self, const char* name, void* value, bool enableSubPropertyHandling) {
+void q_designerintegration_super_update_property(void* self, const char* name, const void* value, bool enableSubPropertyHandling) {
     QDesignerIntegration_SuperUpdateProperty((QDesignerIntegration*)self, qstring(name), (QVariant*)value, enableSubPropertyHandling);
 }
 
-void q_designerintegration_update_property2(void* self, const char* name, void* value) {
+void q_designerintegration_update_property2(void* self, const char* name, const void* value) {
     QDesignerIntegration_UpdateProperty2((QDesignerIntegration*)self, qstring(name), (QVariant*)value);
 }
 
-void q_designerintegration_on_update_property2(void* self, void (*callback)(void*, const char*, void*)) {
+void q_designerintegration_on_update_property2(void* self, void (*callback)(void*, const char*, const void*)) {
     QDesignerIntegration_OnUpdateProperty2((QDesignerIntegration*)self, (intptr_t)callback);
 }
 
-void q_designerintegration_super_update_property2(void* self, const char* name, void* value) {
+void q_designerintegration_super_update_property2(void* self, const char* name, const void* value) {
     QDesignerIntegration_SuperUpdateProperty2((QDesignerIntegration*)self, qstring(name), (QVariant*)value);
 }
 
@@ -991,15 +873,15 @@ void q_designerintegration_super_reset_property(void* self, const char* name) {
     QDesignerIntegration_SuperResetProperty((QDesignerIntegration*)self, qstring(name));
 }
 
-void q_designerintegration_add_dynamic_property(void* self, const char* name, void* value) {
+void q_designerintegration_add_dynamic_property(void* self, const char* name, const void* value) {
     QDesignerIntegration_AddDynamicProperty((QDesignerIntegration*)self, qstring(name), (QVariant*)value);
 }
 
-void q_designerintegration_on_add_dynamic_property(void* self, void (*callback)(void*, const char*, void*)) {
+void q_designerintegration_on_add_dynamic_property(void* self, void (*callback)(void*, const char*, const void*)) {
     QDesignerIntegration_OnAddDynamicProperty((QDesignerIntegration*)self, (intptr_t)callback);
 }
 
-void q_designerintegration_super_add_dynamic_property(void* self, const char* name, void* value) {
+void q_designerintegration_super_add_dynamic_property(void* self, const char* name, const void* value) {
     QDesignerIntegration_SuperAddDynamicProperty((QDesignerIntegration*)self, qstring(name), (QVariant*)value);
 }
 
@@ -1043,7 +925,7 @@ void q_designerintegration_update_selection(void* self) {
     QDesignerIntegration_UpdateSelection((QDesignerIntegration*)self);
 }
 
-void q_designerintegration_on_update_selection(void* self, void (*callback)()) {
+void q_designerintegration_on_update_selection(void* self, void (*callback)(void*)) {
     QDesignerIntegration_OnUpdateSelection((QDesignerIntegration*)self, (intptr_t)callback);
 }
 
@@ -1055,7 +937,7 @@ void q_designerintegration_update_custom_widget_plugins(void* self) {
     QDesignerIntegration_UpdateCustomWidgetPlugins((QDesignerIntegration*)self);
 }
 
-void q_designerintegration_on_update_custom_widget_plugins(void* self, void (*callback)()) {
+void q_designerintegration_on_update_custom_widget_plugins(void* self, void (*callback)(void*)) {
     QDesignerIntegration_OnUpdateCustomWidgetPlugins((QDesignerIntegration*)self, (intptr_t)callback);
 }
 
@@ -1077,11 +959,11 @@ const char* q_designerintegration_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QDesignerFormEditorInterface* q_designerintegration_core(void* self) {
+QDesignerFormEditorInterface* q_designerintegration_core(const void* self) {
     return QDesignerIntegrationInterface_Core((QDesignerIntegrationInterface*)self);
 }
 
-bool q_designerintegration_has_feature(void* self, int32_t f) {
+bool q_designerintegration_has_feature(const void* self, int32_t f) {
     return QDesignerIntegrationInterface_HasFeature((QDesignerIntegrationInterface*)self, f);
 }
 
@@ -1111,11 +993,11 @@ void q_designerintegration_emit_help_requested(void* self, const char* manual, c
     QDesignerIntegrationInterface_EmitHelpRequested((QDesignerIntegrationInterface*)self, qstring(manual), qstring(document));
 }
 
-void q_designerintegration_property_changed(void* self, void* formWindow, const char* name, void* value) {
+void q_designerintegration_property_changed(void* self, void* formWindow, const char* name, const void* value) {
     QDesignerIntegrationInterface_PropertyChanged((QDesignerIntegrationInterface*)self, (QDesignerFormWindowInterface*)formWindow, qstring(name), (QVariant*)value);
 }
 
-void q_designerintegration_on_property_changed(void* self, void (*callback)(void*, void*, const char*, void*)) {
+void q_designerintegration_on_property_changed(void* self, void (*callback)(void*, void*, const char*, const void*)) {
     QDesignerIntegrationInterface_Connect_PropertyChanged((QDesignerIntegrationInterface*)self, (intptr_t)callback);
 }
 
@@ -1161,7 +1043,7 @@ void q_designerintegration_on_navigate_to_slot2(void* self, void (*callback)(voi
     QDesignerIntegrationInterface_Connect_NavigateToSlot2((QDesignerIntegrationInterface*)self, (intptr_t)callback);
 }
 
-const char* q_designerintegration_object_name(void* self) {
+const char* q_designerintegration_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1172,19 +1054,19 @@ void q_designerintegration_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_designerintegration_is_widget_type(void* self) {
+bool q_designerintegration_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_designerintegration_is_window_type(void* self) {
+bool q_designerintegration_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_designerintegration_is_quick_item_type(void* self) {
+bool q_designerintegration_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_designerintegration_signals_blocked(void* self) {
+bool q_designerintegration_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -1192,7 +1074,7 @@ bool q_designerintegration_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_designerintegration_thread(void* self) {
+QThread* q_designerintegration_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -1216,7 +1098,7 @@ void q_designerintegration_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_designerintegration_children(void* self) {
+libqt_list /* of QObject* */ q_designerintegration_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1233,55 +1115,55 @@ void q_designerintegration_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_designerintegration_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_designerintegration_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_designerintegration_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_designerintegration_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_designerintegration_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_designerintegration_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_designerintegration_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_designerintegration_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_designerintegration_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_designerintegration_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_designerintegration_disconnect3(void* self) {
+bool q_designerintegration_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_designerintegration_disconnect4(void* self, void* receiver) {
+bool q_designerintegration_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_designerintegration_disconnect5(void* param1) {
+bool q_designerintegration_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_designerintegration_dump_object_tree(void* self) {
+void q_designerintegration_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_designerintegration_dump_object_info(void* self) {
+void q_designerintegration_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_designerintegration_set_property(void* self, const char* name, void* value) {
+bool q_designerintegration_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_designerintegration_property(void* self, const char* name) {
+QVariant* q_designerintegration_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_designerintegration_dynamic_property_names(void* self) {
+const char** q_designerintegration_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -1302,7 +1184,7 @@ QBindingStorage* q_designerintegration_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_designerintegration_binding_storage2(void* self) {
+const QBindingStorage* q_designerintegration_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -1314,11 +1196,11 @@ void q_designerintegration_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_designerintegration_parent(void* self) {
+QObject* q_designerintegration_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_designerintegration_inherits(void* self, const char* classname) {
+bool q_designerintegration_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -1334,31 +1216,31 @@ int32_t q_designerintegration_start_timer23(void* self, int64_t time, int32_t ti
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_designerintegration_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_designerintegration_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_designerintegration_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_designerintegration_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_designerintegration_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_designerintegration_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_designerintegration_disconnect1(void* self, const char* signal) {
+bool q_designerintegration_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_designerintegration_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_designerintegration_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_designerintegration_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_designerintegration_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_designerintegration_disconnect23(void* self, void* receiver, const char* member) {
+bool q_designerintegration_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -1430,76 +1312,44 @@ void q_designerintegration_on_custom_event(void* self, void (*callback)(void*, v
     QDesignerIntegration_OnCustomEvent((QDesignerIntegration*)self, (intptr_t)callback);
 }
 
-void q_designerintegration_connect_notify(void* self, void* signal) {
+void q_designerintegration_connect_notify(void* self, const void* signal) {
     QDesignerIntegration_ConnectNotify((QDesignerIntegration*)self, (QMetaMethod*)signal);
 }
 
-void q_designerintegration_super_connect_notify(void* self, void* signal) {
+void q_designerintegration_super_connect_notify(void* self, const void* signal) {
     QDesignerIntegration_SuperConnectNotify((QDesignerIntegration*)self, (QMetaMethod*)signal);
 }
 
-void q_designerintegration_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_designerintegration_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QDesignerIntegration_OnConnectNotify((QDesignerIntegration*)self, (intptr_t)callback);
 }
 
-void q_designerintegration_disconnect_notify(void* self, void* signal) {
+void q_designerintegration_disconnect_notify(void* self, const void* signal) {
     QDesignerIntegration_DisconnectNotify((QDesignerIntegration*)self, (QMetaMethod*)signal);
 }
 
-void q_designerintegration_super_disconnect_notify(void* self, void* signal) {
+void q_designerintegration_super_disconnect_notify(void* self, const void* signal) {
     QDesignerIntegration_SuperDisconnectNotify((QDesignerIntegration*)self, (QMetaMethod*)signal);
 }
 
-void q_designerintegration_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_designerintegration_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QDesignerIntegration_OnDisconnectNotify((QDesignerIntegration*)self, (intptr_t)callback);
 }
 
-QObject* q_designerintegration_sender(void* self) {
+QObject* q_designerintegration_sender(const void* self) {
     return QDesignerIntegration_Sender((QDesignerIntegration*)self);
 }
 
-QObject* q_designerintegration_super_sender(void* self) {
-    return QDesignerIntegration_SuperSender((QDesignerIntegration*)self);
-}
-
-void q_designerintegration_on_sender(void* self, QObject* (*callback)()) {
-    QDesignerIntegration_OnSender((QDesignerIntegration*)self, (intptr_t)callback);
-}
-
-int32_t q_designerintegration_sender_signal_index(void* self) {
+int32_t q_designerintegration_sender_signal_index(const void* self) {
     return QDesignerIntegration_SenderSignalIndex((QDesignerIntegration*)self);
 }
 
-int32_t q_designerintegration_super_sender_signal_index(void* self) {
-    return QDesignerIntegration_SuperSenderSignalIndex((QDesignerIntegration*)self);
-}
-
-void q_designerintegration_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QDesignerIntegration_OnSenderSignalIndex((QDesignerIntegration*)self, (intptr_t)callback);
-}
-
-int32_t q_designerintegration_receivers(void* self, const char* signal) {
+int32_t q_designerintegration_receivers(const void* self, const char* signal) {
     return QDesignerIntegration_Receivers((QDesignerIntegration*)self, signal);
 }
 
-int32_t q_designerintegration_super_receivers(void* self, const char* signal) {
-    return QDesignerIntegration_SuperReceivers((QDesignerIntegration*)self, signal);
-}
-
-void q_designerintegration_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QDesignerIntegration_OnReceivers((QDesignerIntegration*)self, (intptr_t)callback);
-}
-
-bool q_designerintegration_is_signal_connected(void* self, void* signal) {
+bool q_designerintegration_is_signal_connected(const void* self, const void* signal) {
     return QDesignerIntegration_IsSignalConnected((QDesignerIntegration*)self, (QMetaMethod*)signal);
-}
-
-bool q_designerintegration_super_is_signal_connected(void* self, void* signal) {
-    return QDesignerIntegration_SuperIsSignalConnected((QDesignerIntegration*)self, (QMetaMethod*)signal);
-}
-
-void q_designerintegration_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QDesignerIntegration_OnIsSignalConnected((QDesignerIntegration*)self, (intptr_t)callback);
 }
 
 void q_designerintegration_delete(void* self) {

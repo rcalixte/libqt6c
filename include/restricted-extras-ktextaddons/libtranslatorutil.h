@@ -14,7 +14,7 @@
 ///
 /// @param other TextTranslator__TranslatorUtil*
 ///
-TextTranslator__TranslatorUtil* k_texttranslator__translatorutil_new(void* other);
+TextTranslator__TranslatorUtil* k_texttranslator__translatorutil_new(const void* other);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorUtil.html)
 
@@ -148,14 +148,14 @@ TextTranslator__TranslatorUtil__TranslatorSettings* k_texttranslator__translator
 ///
 /// @param param1 TextTranslator__TranslatorUtil__TranslatorSettings*
 ///
-TextTranslator__TranslatorUtil__TranslatorSettings* k_texttranslator__translatorutil__translatorsettings_new2(void* param1);
+TextTranslator__TranslatorUtil__TranslatorSettings* k_texttranslator__translatorutil__translatorsettings_new2(const void* param1);
 
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextTranslator__TranslatorUtil__TranslatorSettings*
+/// @param self const TextTranslator__TranslatorUtil__TranslatorSettings*
 ///
-const char* k_texttranslator__translatorutil__translatorsettings_engine(void* self);
+const char* k_texttranslator__translatorutil__translatorsettings_engine(const void* self);
 
 ///
 /// @param self TextTranslator__TranslatorUtil__TranslatorSettings*
@@ -166,9 +166,9 @@ void k_texttranslator__translatorutil__translatorsettings_set_engine(void* self,
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextTranslator__TranslatorUtil__TranslatorSettings*
+/// @param self const TextTranslator__TranslatorUtil__TranslatorSettings*
 ///
-const char* k_texttranslator__translatorutil__translatorsettings_from(void* self);
+const char* k_texttranslator__translatorutil__translatorsettings_from(const void* self);
 
 ///
 /// @param self TextTranslator__TranslatorUtil__TranslatorSettings*
@@ -179,9 +179,9 @@ void k_texttranslator__translatorutil__translatorsettings_set_from(void* self, c
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextTranslator__TranslatorUtil__TranslatorSettings*
+/// @param self const TextTranslator__TranslatorUtil__TranslatorSettings*
 ///
-const char* k_texttranslator__translatorutil__translatorsettings_to(void* self);
+const char* k_texttranslator__translatorutil__translatorsettings_to(const void* self);
 
 ///
 /// @param self TextTranslator__TranslatorUtil__TranslatorSettings*
@@ -193,7 +193,7 @@ void k_texttranslator__translatorutil__translatorsettings_set_to(void* self, con
 /// @param self TextTranslator__TranslatorUtil__TranslatorSettings*
 /// @param param1 TextTranslator__TranslatorUtil__TranslatorSettings*
 ///
-void k_texttranslator__translatorutil__translatorsettings_operator_assign(void* self, void* param1);
+void k_texttranslator__translatorutil__translatorsettings_operator_assign(void* self, const void* param1);
 
 /// Delete this object from C++ memory.
 ///

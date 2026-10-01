@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QNetworkInformation*
+/// @param self const QNetworkInformation*
 ///
-const QMetaObject* q_networkinformation_meta_object(void* self);
+const QMetaObject* q_networkinformation_meta_object(const void* self);
 
 /// @param self QNetworkInformation*
 /// @param param1 const char*
@@ -38,54 +38,54 @@ const char* q_networkinformation_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#reachability)
 ///
-/// @param self QNetworkInformation*
+/// @param self const QNetworkInformation*
 ///
 /// @return enum QNetworkInformation__Reachability
 ///
-int32_t q_networkinformation_reachability(void* self);
+int32_t q_networkinformation_reachability(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#isBehindCaptivePortal)
 ///
-/// @param self QNetworkInformation*
+/// @param self const QNetworkInformation*
 ///
-bool q_networkinformation_is_behind_captive_portal(void* self);
+bool q_networkinformation_is_behind_captive_portal(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#transportMedium)
 ///
-/// @param self QNetworkInformation*
+/// @param self const QNetworkInformation*
 ///
 /// @return enum QNetworkInformation__TransportMedium
 ///
-int32_t q_networkinformation_transport_medium(void* self);
+int32_t q_networkinformation_transport_medium(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#isMetered)
 ///
-/// @param self QNetworkInformation*
+/// @param self const QNetworkInformation*
 ///
-bool q_networkinformation_is_metered(void* self);
+bool q_networkinformation_is_metered(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#backendName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QNetworkInformation*
+/// @param self const QNetworkInformation*
 ///
-const char* q_networkinformation_backend_name(void* self);
+const char* q_networkinformation_backend_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#supports)
 ///
-/// @param self QNetworkInformation*
+/// @param self const QNetworkInformation*
 /// @param features flag of enum QNetworkInformation__Feature
 ///
-bool q_networkinformation_supports(void* self, int32_t features);
+bool q_networkinformation_supports(const void* self, int32_t features);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#supportedFeatures)
 ///
-/// @param self QNetworkInformation*
+/// @param self const QNetworkInformation*
 ///
 /// @return flag of enum QNetworkInformation__Feature
 ///
-int32_t q_networkinformation_supported_features(void* self);
+int32_t q_networkinformation_supported_features(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#loadDefaultBackend)
 ///
@@ -225,9 +225,9 @@ bool q_networkinformation_event_filter(void* self, void* watched, void* event);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QNetworkInformation*
+/// @param self const QNetworkInformation*
 ///
-const char* q_networkinformation_object_name(void* self);
+const char* q_networkinformation_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -242,33 +242,33 @@ void q_networkinformation_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QNetworkInformation*
+/// @param self const QNetworkInformation*
 ///
-bool q_networkinformation_is_widget_type(void* self);
+bool q_networkinformation_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QNetworkInformation*
+/// @param self const QNetworkInformation*
 ///
-bool q_networkinformation_is_window_type(void* self);
+bool q_networkinformation_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QNetworkInformation*
+/// @param self const QNetworkInformation*
 ///
-bool q_networkinformation_is_quick_item_type(void* self);
+bool q_networkinformation_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QNetworkInformation*
+/// @param self const QNetworkInformation*
 ///
-bool q_networkinformation_signals_blocked(void* self);
+bool q_networkinformation_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -283,9 +283,9 @@ bool q_networkinformation_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QNetworkInformation*
+/// @param self const QNetworkInformation*
 ///
-QThread* q_networkinformation_thread(void* self);
+QThread* q_networkinformation_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -336,11 +336,11 @@ void q_networkinformation_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QNetworkInformation*
+/// @param self const QNetworkInformation*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_networkinformation_children(void* self);
+libqt_list q_networkinformation_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -378,7 +378,7 @@ void q_networkinformation_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_networkinformation_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_networkinformation_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -389,18 +389,18 @@ QMetaObject__Connection* q_networkinformation_connect(void* sender, const char* 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_networkinformation_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_networkinformation_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QNetworkInformation*
+/// @param self const QNetworkInformation*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_networkinformation_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_networkinformation_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -411,7 +411,7 @@ QMetaObject__Connection* q_networkinformation_connect3(void* self, void* sender,
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_networkinformation_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_networkinformation_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -422,24 +422,24 @@ bool q_networkinformation_disconnect(void* sender, const char* signal, void* rec
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_networkinformation_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_networkinformation_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QNetworkInformation*
+/// @param self const QNetworkInformation*
 ///
-bool q_networkinformation_disconnect3(void* self);
+bool q_networkinformation_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QNetworkInformation*
+/// @param self const QNetworkInformation*
 /// @param receiver QObject*
 ///
-bool q_networkinformation_disconnect4(void* self, void* receiver);
+bool q_networkinformation_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -447,23 +447,23 @@ bool q_networkinformation_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_networkinformation_disconnect5(void* param1);
+bool q_networkinformation_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QNetworkInformation*
+/// @param self const QNetworkInformation*
 ///
-void q_networkinformation_dump_object_tree(void* self);
+void q_networkinformation_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QNetworkInformation*
+/// @param self const QNetworkInformation*
 ///
-void q_networkinformation_dump_object_info(void* self);
+void q_networkinformation_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -473,16 +473,16 @@ void q_networkinformation_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_networkinformation_set_property(void* self, const char* name, void* value);
+bool q_networkinformation_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QNetworkInformation*
+/// @param self const QNetworkInformation*
 /// @param name const char*
 ///
-QVariant* q_networkinformation_property(void* self, const char* name);
+QVariant* q_networkinformation_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -490,9 +490,9 @@ QVariant* q_networkinformation_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QNetworkInformation*
+/// @param self const QNetworkInformation*
 ///
-const char** q_networkinformation_dynamic_property_names(void* self);
+const char** q_networkinformation_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -506,9 +506,9 @@ QBindingStorage* q_networkinformation_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QNetworkInformation*
+/// @param self const QNetworkInformation*
 ///
-const QBindingStorage* q_networkinformation_binding_storage2(void* self);
+const QBindingStorage* q_networkinformation_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -531,18 +531,18 @@ void q_networkinformation_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QNetworkInformation*
+/// @param self const QNetworkInformation*
 ///
-QObject* q_networkinformation_parent(void* self);
+QObject* q_networkinformation_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QNetworkInformation*
+/// @param self const QNetworkInformation*
 /// @param classname const char*
 ///
-bool q_networkinformation_inherits(void* self, const char* classname);
+bool q_networkinformation_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -582,7 +582,7 @@ int32_t q_networkinformation_start_timer23(void* self, int64_t time, int32_t tim
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_networkinformation_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_networkinformation_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -594,59 +594,59 @@ QMetaObject__Connection* q_networkinformation_connect5(void* sender, const char*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_networkinformation_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_networkinformation_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QNetworkInformation*
+/// @param self const QNetworkInformation*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_networkinformation_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_networkinformation_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QNetworkInformation*
+/// @param self const QNetworkInformation*
 /// @param signal const char*
 ///
-bool q_networkinformation_disconnect1(void* self, const char* signal);
+bool q_networkinformation_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QNetworkInformation*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_networkinformation_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QNetworkInformation*
+/// @param self const QNetworkInformation*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_networkinformation_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_networkinformation_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QNetworkInformation*
+/// @param self const QNetworkInformation*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_networkinformation_disconnect23(void* self, void* receiver, const char* member);
+bool q_networkinformation_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QNetworkInformation*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_networkinformation_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

@@ -14,38 +14,38 @@
 ///
 /// @param param1 KNSCore__CategoryMetadata*
 ///
-KNSCore__CategoryMetadata* k_nscore__categorymetadata_new(void* param1);
+KNSCore__CategoryMetadata* k_nscore__categorymetadata_new(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/knscore-categorymetadata.html#id)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__CategoryMetadata*
+/// @param self const KNSCore__CategoryMetadata*
 ///
-const char* k_nscore__categorymetadata_id(void* self);
+const char* k_nscore__categorymetadata_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-categorymetadata.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__CategoryMetadata*
+/// @param self const KNSCore__CategoryMetadata*
 ///
-const char* k_nscore__categorymetadata_name(void* self);
+const char* k_nscore__categorymetadata_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-categorymetadata.html#displayName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__CategoryMetadata*
+/// @param self const KNSCore__CategoryMetadata*
 ///
-const char* k_nscore__categorymetadata_display_name(void* self);
+const char* k_nscore__categorymetadata_display_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-categorymetadata.html#operator-eq)
 ///
 /// @param self KNSCore__CategoryMetadata*
 /// @param param1 KNSCore__CategoryMetadata*
 ///
-void k_nscore__categorymetadata_operator_assign(void* self, void* param1);
+void k_nscore__categorymetadata_operator_assign(void* self, const void* param1);
 
 /// Delete this object from C++ memory.
 ///

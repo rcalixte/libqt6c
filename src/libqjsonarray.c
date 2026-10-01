@@ -7,11 +7,11 @@ QJsonArray* q_jsonarray_new() {
     return QJsonArray_New();
 }
 
-QJsonArray* q_jsonarray_new2(void* other) {
+QJsonArray* q_jsonarray_new2(const void* other) {
     return QJsonArray_New2((QJsonArray*)other);
 }
 
-void q_jsonarray_operator_assign(void* self, void* other) {
+void q_jsonarray_operator_assign(void* self, const void* other) {
     QJsonArray_OperatorAssign((QJsonArray*)self, (QJsonArray*)other);
 }
 
@@ -34,40 +34,40 @@ QJsonArray* q_jsonarray_from_variant_list(libqt_list /* of QVariant* */ list) {
     return QJsonArray_FromVariantList(list);
 }
 
-libqt_list /* of QVariant* */ q_jsonarray_to_variant_list(void* self) {
+libqt_list /* of QVariant* */ q_jsonarray_to_variant_list(const void* self) {
     libqt_list _arr = QJsonArray_ToVariantList((QJsonArray*)self);
     return _arr;
 }
 
-intptr_t q_jsonarray_size(void* self) {
+intptr_t q_jsonarray_size(const void* self) {
     return QJsonArray_Size((QJsonArray*)self);
 }
 
-intptr_t q_jsonarray_count(void* self) {
+intptr_t q_jsonarray_count(const void* self) {
     return QJsonArray_Count((QJsonArray*)self);
 }
 
-bool q_jsonarray_is_empty(void* self) {
+bool q_jsonarray_is_empty(const void* self) {
     return QJsonArray_IsEmpty((QJsonArray*)self);
 }
 
-QJsonValue* q_jsonarray_at(void* self, intptr_t i) {
+QJsonValue* q_jsonarray_at(const void* self, intptr_t i) {
     return QJsonArray_At((QJsonArray*)self, i);
 }
 
-QJsonValue* q_jsonarray_first(void* self) {
+QJsonValue* q_jsonarray_first(const void* self) {
     return QJsonArray_First((QJsonArray*)self);
 }
 
-QJsonValue* q_jsonarray_last(void* self) {
+QJsonValue* q_jsonarray_last(const void* self) {
     return QJsonArray_Last((QJsonArray*)self);
 }
 
-void q_jsonarray_prepend(void* self, void* value) {
+void q_jsonarray_prepend(void* self, const void* value) {
     QJsonArray_Prepend((QJsonArray*)self, (QJsonValue*)value);
 }
 
-void q_jsonarray_append(void* self, void* value) {
+void q_jsonarray_append(void* self, const void* value) {
     QJsonArray_Append((QJsonArray*)self, (QJsonValue*)value);
 }
 
@@ -87,15 +87,15 @@ void q_jsonarray_remove_last(void* self) {
     QJsonArray_RemoveLast((QJsonArray*)self);
 }
 
-void q_jsonarray_insert(void* self, intptr_t i, void* value) {
+void q_jsonarray_insert(void* self, intptr_t i, const void* value) {
     QJsonArray_Insert((QJsonArray*)self, i, (QJsonValue*)value);
 }
 
-void q_jsonarray_replace(void* self, intptr_t i, void* value) {
+void q_jsonarray_replace(void* self, intptr_t i, const void* value) {
     QJsonArray_Replace((QJsonArray*)self, i, (QJsonValue*)value);
 }
 
-bool q_jsonarray_contains(void* self, void* element) {
+bool q_jsonarray_contains(const void* self, const void* element) {
     return QJsonArray_Contains((QJsonArray*)self, (QJsonValue*)element);
 }
 
@@ -103,7 +103,7 @@ QJsonValueRef* q_jsonarray_operator_subscript(void* self, intptr_t i) {
     return QJsonArray_OperatorSubscript((QJsonArray*)self, i);
 }
 
-QJsonValue* q_jsonarray_operator_subscript2(void* self, intptr_t i) {
+QJsonValue* q_jsonarray_operator_subscript2(const void* self, intptr_t i) {
     return QJsonArray_OperatorSubscript2((QJsonArray*)self, i);
 }
 
@@ -115,15 +115,15 @@ QJsonArray__iterator* q_jsonarray_begin(void* self) {
     return QJsonArray_Begin((QJsonArray*)self);
 }
 
-QJsonArray__const_iterator* q_jsonarray_begin2(void* self) {
+QJsonArray__const_iterator* q_jsonarray_begin2(const void* self) {
     return QJsonArray_Begin2((QJsonArray*)self);
 }
 
-QJsonArray__const_iterator* q_jsonarray_const_begin(void* self) {
+QJsonArray__const_iterator* q_jsonarray_const_begin(const void* self) {
     return QJsonArray_ConstBegin((QJsonArray*)self);
 }
 
-QJsonArray__const_iterator* q_jsonarray_cbegin(void* self) {
+QJsonArray__const_iterator* q_jsonarray_cbegin(const void* self) {
     return QJsonArray_Cbegin((QJsonArray*)self);
 }
 
@@ -131,19 +131,19 @@ QJsonArray__iterator* q_jsonarray_end(void* self) {
     return QJsonArray_End((QJsonArray*)self);
 }
 
-QJsonArray__const_iterator* q_jsonarray_end2(void* self) {
+QJsonArray__const_iterator* q_jsonarray_end2(const void* self) {
     return QJsonArray_End2((QJsonArray*)self);
 }
 
-QJsonArray__const_iterator* q_jsonarray_const_end(void* self) {
+QJsonArray__const_iterator* q_jsonarray_const_end(const void* self) {
     return QJsonArray_ConstEnd((QJsonArray*)self);
 }
 
-QJsonArray__const_iterator* q_jsonarray_cend(void* self) {
+QJsonArray__const_iterator* q_jsonarray_cend(const void* self) {
     return QJsonArray_Cend((QJsonArray*)self);
 }
 
-QJsonArray__iterator* q_jsonarray_insert2(void* self, void* before, void* value) {
+QJsonArray__iterator* q_jsonarray_insert2(void* self, void* before, const void* value) {
     return QJsonArray_Insert2((QJsonArray*)self, (QJsonArray__iterator*)before, (QJsonValue*)value);
 }
 
@@ -151,23 +151,23 @@ QJsonArray__iterator* q_jsonarray_erase(void* self, void* it) {
     return QJsonArray_Erase((QJsonArray*)self, (QJsonArray__iterator*)it);
 }
 
-QJsonArray* q_jsonarray_operator_plus(void* self, void* v) {
+QJsonArray* q_jsonarray_operator_plus(const void* self, const void* v) {
     return QJsonArray_OperatorPlus((QJsonArray*)self, (QJsonValue*)v);
 }
 
-QJsonArray* q_jsonarray_operator_plus_assign(void* self, void* v) {
+QJsonArray* q_jsonarray_operator_plus_assign(void* self, const void* v) {
     return QJsonArray_OperatorPlusAssign((QJsonArray*)self, (QJsonValue*)v);
 }
 
-QJsonArray* q_jsonarray_operator_shift_left(void* self, void* v) {
+QJsonArray* q_jsonarray_operator_shift_left(void* self, const void* v) {
     return QJsonArray_OperatorShiftLeft((QJsonArray*)self, (QJsonValue*)v);
 }
 
-void q_jsonarray_push_back(void* self, void* t) {
+void q_jsonarray_push_back(void* self, const void* t) {
     QJsonArray_PushBack((QJsonArray*)self, (QJsonValue*)t);
 }
 
-void q_jsonarray_push_front(void* self, void* t) {
+void q_jsonarray_push_front(void* self, const void* t) {
     QJsonArray_PushFront((QJsonArray*)self, (QJsonValue*)t);
 }
 
@@ -179,7 +179,7 @@ void q_jsonarray_pop_back(void* self) {
     QJsonArray_PopBack((QJsonArray*)self);
 }
 
-bool q_jsonarray_empty(void* self) {
+bool q_jsonarray_empty(const void* self) {
     return QJsonArray_Empty((QJsonArray*)self);
 }
 
@@ -187,11 +187,11 @@ void q_jsonarray_delete(void* self) {
     QJsonArray_Delete((QJsonArray*)(self));
 }
 
-size_t q_qjsonarray_q_hash(void* array, size_t seed) {
+size_t q_qjsonarray_q_hash(const void* array, size_t seed) {
     return qjsonarray_QHash((QJsonArray*)array, seed);
 }
 
-QJsonArray__iterator* q_jsonarray__iterator_new(void* other) {
+QJsonArray__iterator* q_jsonarray__iterator_new(const void* other) {
     return QJsonArray__iterator_New((QJsonArray__iterator*)other);
 }
 
@@ -203,19 +203,19 @@ QJsonArray__iterator* q_jsonarray__iterator_new3(void* array, intptr_t index) {
     return QJsonArray__iterator_New3((QJsonArray*)array, index);
 }
 
-QJsonArray__iterator* q_jsonarray__iterator_new4(void* other) {
+QJsonArray__iterator* q_jsonarray__iterator_new4(const void* other) {
     return QJsonArray__iterator_New4((QJsonArray__iterator*)other);
 }
 
-void q_jsonarray__iterator_operator_assign(void* self, void* other) {
+void q_jsonarray__iterator_operator_assign(void* self, const void* other) {
     QJsonArray__iterator_OperatorAssign((QJsonArray__iterator*)self, (QJsonArray__iterator*)other);
 }
 
-QJsonValueRef* q_jsonarray__iterator_operator_multiply(void* self) {
+QJsonValueRef* q_jsonarray__iterator_operator_multiply(const void* self) {
     return QJsonArray__iterator_OperatorMultiply((QJsonArray__iterator*)self);
 }
 
-const QJsonValueConstRef* q_jsonarray__iterator_operator_minus_greater(void* self) {
+const QJsonValueConstRef* q_jsonarray__iterator_operator_minus_greater(const void* self) {
     return QJsonArray__iterator_OperatorMinusGreater((QJsonArray__iterator*)self);
 }
 
@@ -223,7 +223,7 @@ QJsonValueRef* q_jsonarray__iterator_operator_minus_greater2(void* self) {
     return QJsonArray__iterator_OperatorMinusGreater2((QJsonArray__iterator*)self);
 }
 
-QJsonValueRef* q_jsonarray__iterator_operator_subscript(void* self, intptr_t j) {
+QJsonValueRef* q_jsonarray__iterator_operator_subscript(const void* self, intptr_t j) {
     return QJsonArray__iterator_OperatorSubscript((QJsonArray__iterator*)self, j);
 }
 
@@ -251,15 +251,15 @@ QJsonArray__iterator* q_jsonarray__iterator_operator_minus_assign(void* self, in
     return QJsonArray__iterator_OperatorMinusAssign((QJsonArray__iterator*)self, j);
 }
 
-QJsonArray__iterator* q_jsonarray__iterator_operator_plus(void* self, intptr_t j) {
+QJsonArray__iterator* q_jsonarray__iterator_operator_plus(const void* self, intptr_t j) {
     return QJsonArray__iterator_OperatorPlus((QJsonArray__iterator*)self, j);
 }
 
-QJsonArray__iterator* q_jsonarray__iterator_operator_minus(void* self, intptr_t j) {
+QJsonArray__iterator* q_jsonarray__iterator_operator_minus(const void* self, intptr_t j) {
     return QJsonArray__iterator_OperatorMinus((QJsonArray__iterator*)self, j);
 }
 
-intptr_t q_jsonarray__iterator_operator_minus2(void* self, void* j) {
+intptr_t q_jsonarray__iterator_operator_minus2(const void* self, void* j) {
     return QJsonArray__iterator_OperatorMinus2((QJsonArray__iterator*)self, (QJsonArray__iterator*)j);
 }
 
@@ -267,7 +267,7 @@ void q_jsonarray__iterator_delete(void* self) {
     QJsonArray__iterator_Delete((QJsonArray__iterator*)(self));
 }
 
-QJsonArray__const_iterator* q_jsonarray__const_iterator_new(void* other) {
+QJsonArray__const_iterator* q_jsonarray__const_iterator_new(const void* other) {
     return QJsonArray__const_iterator_New((QJsonArray__const_iterator*)other);
 }
 
@@ -275,31 +275,31 @@ QJsonArray__const_iterator* q_jsonarray__const_iterator_new2() {
     return QJsonArray__const_iterator_New2();
 }
 
-QJsonArray__const_iterator* q_jsonarray__const_iterator_new3(void* array, intptr_t index) {
+QJsonArray__const_iterator* q_jsonarray__const_iterator_new3(const void* array, intptr_t index) {
     return QJsonArray__const_iterator_New3((QJsonArray*)array, index);
 }
 
-QJsonArray__const_iterator* q_jsonarray__const_iterator_new4(void* o) {
+QJsonArray__const_iterator* q_jsonarray__const_iterator_new4(const void* o) {
     return QJsonArray__const_iterator_New4((QJsonArray__iterator*)o);
 }
 
-QJsonArray__const_iterator* q_jsonarray__const_iterator_new5(void* other) {
+QJsonArray__const_iterator* q_jsonarray__const_iterator_new5(const void* other) {
     return QJsonArray__const_iterator_New5((QJsonArray__const_iterator*)other);
 }
 
-void q_jsonarray__const_iterator_operator_assign(void* self, void* other) {
+void q_jsonarray__const_iterator_operator_assign(void* self, const void* other) {
     QJsonArray__const_iterator_OperatorAssign((QJsonArray__const_iterator*)self, (QJsonArray__const_iterator*)other);
 }
 
-const QJsonValueConstRef* q_jsonarray__const_iterator_operator_multiply(void* self) {
+const QJsonValueConstRef* q_jsonarray__const_iterator_operator_multiply(const void* self) {
     return QJsonArray__const_iterator_OperatorMultiply((QJsonArray__const_iterator*)self);
 }
 
-const QJsonValueConstRef* q_jsonarray__const_iterator_operator_minus_greater(void* self) {
+const QJsonValueConstRef* q_jsonarray__const_iterator_operator_minus_greater(const void* self) {
     return QJsonArray__const_iterator_OperatorMinusGreater((QJsonArray__const_iterator*)self);
 }
 
-QJsonValueConstRef* q_jsonarray__const_iterator_operator_subscript(void* self, intptr_t j) {
+QJsonValueConstRef* q_jsonarray__const_iterator_operator_subscript(const void* self, intptr_t j) {
     return QJsonArray__const_iterator_OperatorSubscript((QJsonArray__const_iterator*)self, j);
 }
 
@@ -327,15 +327,15 @@ QJsonArray__const_iterator* q_jsonarray__const_iterator_operator_minus_assign(vo
     return QJsonArray__const_iterator_OperatorMinusAssign((QJsonArray__const_iterator*)self, j);
 }
 
-QJsonArray__const_iterator* q_jsonarray__const_iterator_operator_plus(void* self, intptr_t j) {
+QJsonArray__const_iterator* q_jsonarray__const_iterator_operator_plus(const void* self, intptr_t j) {
     return QJsonArray__const_iterator_OperatorPlus((QJsonArray__const_iterator*)self, j);
 }
 
-QJsonArray__const_iterator* q_jsonarray__const_iterator_operator_minus(void* self, intptr_t j) {
+QJsonArray__const_iterator* q_jsonarray__const_iterator_operator_minus(const void* self, intptr_t j) {
     return QJsonArray__const_iterator_OperatorMinus((QJsonArray__const_iterator*)self, j);
 }
 
-intptr_t q_jsonarray__const_iterator_operator_minus2(void* self, void* j) {
+intptr_t q_jsonarray__const_iterator_operator_minus2(const void* self, void* j) {
     return QJsonArray__const_iterator_OperatorMinus2((QJsonArray__const_iterator*)self, (QJsonArray__const_iterator*)j);
 }
 

@@ -10,15 +10,15 @@ void q_basictimer_swap(void* self, void* other) {
     QBasicTimer_Swap((QBasicTimer*)self, (QBasicTimer*)other);
 }
 
-bool q_basictimer_is_active(void* self) {
+bool q_basictimer_is_active(const void* self) {
     return QBasicTimer_IsActive((QBasicTimer*)self);
 }
 
-int32_t q_basictimer_timer_id(void* self) {
+int32_t q_basictimer_timer_id(const void* self) {
     return QBasicTimer_TimerId((QBasicTimer*)self);
 }
 
-int32_t q_basictimer_id(void* self) {
+int32_t q_basictimer_id(const void* self) {
     return QBasicTimer_Id((QBasicTimer*)self);
 }
 

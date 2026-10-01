@@ -32,7 +32,7 @@ int KColorSchemeWatcher_Metacall(KColorSchemeWatcher* self, int param1, int para
 int KColorSchemeWatcher_SystemPreference(const KColorSchemeWatcher* self);
 void KColorSchemeWatcher_SystemPreferenceChanged(KColorSchemeWatcher* self);
 void KColorSchemeWatcher_Connect_SystemPreferenceChanged(KColorSchemeWatcher* self, intptr_t slot);
-void KColorSchemeWatcher_OnMetaObject(const KColorSchemeWatcher* self, intptr_t slot);
+void KColorSchemeWatcher_OnMetaObject(KColorSchemeWatcher* self, intptr_t slot);
 QMetaObject* KColorSchemeWatcher_SuperMetaObject(const KColorSchemeWatcher* self);
 void KColorSchemeWatcher_OnMetacast(KColorSchemeWatcher* self, intptr_t slot);
 void* KColorSchemeWatcher_SuperMetacast(KColorSchemeWatcher* self, const char* param1);
@@ -60,17 +60,9 @@ void KColorSchemeWatcher_DisconnectNotify(KColorSchemeWatcher* self, const QMeta
 void KColorSchemeWatcher_OnDisconnectNotify(KColorSchemeWatcher* self, intptr_t slot);
 void KColorSchemeWatcher_SuperDisconnectNotify(KColorSchemeWatcher* self, const QMetaMethod* signal);
 QObject* KColorSchemeWatcher_Sender(const KColorSchemeWatcher* self);
-void KColorSchemeWatcher_OnSender(const KColorSchemeWatcher* self, intptr_t slot);
-QObject* KColorSchemeWatcher_SuperSender(const KColorSchemeWatcher* self);
 int KColorSchemeWatcher_SenderSignalIndex(const KColorSchemeWatcher* self);
-void KColorSchemeWatcher_OnSenderSignalIndex(const KColorSchemeWatcher* self, intptr_t slot);
-int KColorSchemeWatcher_SuperSenderSignalIndex(const KColorSchemeWatcher* self);
 int KColorSchemeWatcher_Receivers(const KColorSchemeWatcher* self, const char* signal);
-void KColorSchemeWatcher_OnReceivers(const KColorSchemeWatcher* self, intptr_t slot);
-int KColorSchemeWatcher_SuperReceivers(const KColorSchemeWatcher* self, const char* signal);
 bool KColorSchemeWatcher_IsSignalConnected(const KColorSchemeWatcher* self, const QMetaMethod* signal);
-void KColorSchemeWatcher_OnIsSignalConnected(const KColorSchemeWatcher* self, intptr_t slot);
-bool KColorSchemeWatcher_SuperIsSignalConnected(const KColorSchemeWatcher* self, const QMetaMethod* signal);
 void KColorSchemeWatcher_Delete(KColorSchemeWatcher* self);
 
 #ifdef __cplusplus

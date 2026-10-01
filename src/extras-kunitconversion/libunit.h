@@ -20,188 +20,188 @@ KUnitConversion__Unit* k_unitconversion__unit_new();
 ///
 /// @param other KUnitConversion__Unit*
 ///
-KUnitConversion__Unit* k_unitconversion__unit_new2(void* other);
+KUnitConversion__Unit* k_unitconversion__unit_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/kunitconversion-unit.html#operator-eq)
 ///
 /// @param self KUnitConversion__Unit*
 /// @param other KUnitConversion__Unit*
 ///
-void k_unitconversion__unit_operator_assign(void* self, void* other);
+void k_unitconversion__unit_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/kunitconversion-unit.html#operator-eq-eq)
 ///
-/// @param self KUnitConversion__Unit*
+/// @param self const KUnitConversion__Unit*
 /// @param other KUnitConversion__Unit*
 ///
-bool k_unitconversion__unit_operator_equal(void* self, void* other);
+bool k_unitconversion__unit_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/kunitconversion-unit.html#operator-not-eq)
 ///
-/// @param self KUnitConversion__Unit*
+/// @param self const KUnitConversion__Unit*
 /// @param other KUnitConversion__Unit*
 ///
-bool k_unitconversion__unit_operator_not_equal(void* self, void* other);
+bool k_unitconversion__unit_operator_not_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/kunitconversion-unit.html#isNull)
 ///
-/// @param self KUnitConversion__Unit*
+/// @param self const KUnitConversion__Unit*
 ///
-bool k_unitconversion__unit_is_null(void* self);
+bool k_unitconversion__unit_is_null(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kunitconversion-unit.html#isValid)
 ///
-/// @param self KUnitConversion__Unit*
+/// @param self const KUnitConversion__Unit*
 ///
-bool k_unitconversion__unit_is_valid(void* self);
+bool k_unitconversion__unit_is_valid(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kunitconversion-unit.html#id)
 ///
-/// @param self KUnitConversion__Unit*
+/// @param self const KUnitConversion__Unit*
 ///
 /// @return enum KUnitConversion__UnitId
 ///
-int32_t k_unitconversion__unit_id(void* self);
+int32_t k_unitconversion__unit_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kunitconversion-unit.html#categoryId)
 ///
-/// @param self KUnitConversion__Unit*
+/// @param self const KUnitConversion__Unit*
 ///
 /// @return enum KUnitConversion__CategoryId
 ///
-int32_t k_unitconversion__unit_category_id(void* self);
+int32_t k_unitconversion__unit_category_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kunitconversion-unit.html#category)
 ///
-/// @param self KUnitConversion__Unit*
+/// @param self const KUnitConversion__Unit*
 ///
-KUnitConversion__UnitCategory* k_unitconversion__unit_category(void* self);
+KUnitConversion__UnitCategory* k_unitconversion__unit_category(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kunitconversion-unit.html#description)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUnitConversion__Unit*
+/// @param self const KUnitConversion__Unit*
 ///
-const char* k_unitconversion__unit_description(void* self);
+const char* k_unitconversion__unit_description(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kunitconversion-unit.html#symbol)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUnitConversion__Unit*
+/// @param self const KUnitConversion__Unit*
 ///
-const char* k_unitconversion__unit_symbol(void* self);
+const char* k_unitconversion__unit_symbol(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kunitconversion-unit.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUnitConversion__Unit*
+/// @param self const KUnitConversion__Unit*
 /// @param value double
 ///
-const char* k_unitconversion__unit_to_string(void* self, double value);
+const char* k_unitconversion__unit_to_string(const void* self, double value);
 
 /// [Upstream resources](https://api.kde.org/kunitconversion-unit.html#toSymbolString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUnitConversion__Unit*
+/// @param self const KUnitConversion__Unit*
 /// @param value double
 ///
-const char* k_unitconversion__unit_to_symbol_string(void* self, double value);
+const char* k_unitconversion__unit_to_symbol_string(const void* self, double value);
 
 /// [Upstream resources](https://api.kde.org/kunitconversion-unit.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUnitConversion__Unit*
+/// @param self const KUnitConversion__Unit*
 /// @param value double
 /// @param fieldWidth int
 ///
-const char* k_unitconversion__unit_to_string2(void* self, double value, int fieldWidth);
+const char* k_unitconversion__unit_to_string2(const void* self, double value, int fieldWidth);
 
 /// [Upstream resources](https://api.kde.org/kunitconversion-unit.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUnitConversion__Unit*
+/// @param self const KUnitConversion__Unit*
 /// @param value double
 /// @param fieldWidth int
 /// @param format char
 ///
-const char* k_unitconversion__unit_to_string3(void* self, double value, int fieldWidth, char format);
+const char* k_unitconversion__unit_to_string3(const void* self, double value, int fieldWidth, char format);
 
 /// [Upstream resources](https://api.kde.org/kunitconversion-unit.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUnitConversion__Unit*
-/// @param value double
-/// @param fieldWidth int
-/// @param format char
-/// @param precision int
-///
-const char* k_unitconversion__unit_to_string4(void* self, double value, int fieldWidth, char format, int precision);
-
-/// [Upstream resources](https://api.kde.org/kunitconversion-unit.html#toString)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KUnitConversion__Unit*
-/// @param value double
-/// @param fieldWidth int
-/// @param format char
-/// @param precision int
-/// @param fillChar QChar*
-///
-const char* k_unitconversion__unit_to_string5(void* self, double value, int fieldWidth, char format, int precision, void* fillChar);
-
-/// [Upstream resources](https://api.kde.org/kunitconversion-unit.html#toSymbolString)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KUnitConversion__Unit*
-/// @param value double
-/// @param fieldWidth int
-///
-const char* k_unitconversion__unit_to_symbol_string2(void* self, double value, int fieldWidth);
-
-/// [Upstream resources](https://api.kde.org/kunitconversion-unit.html#toSymbolString)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KUnitConversion__Unit*
-/// @param value double
-/// @param fieldWidth int
-/// @param format char
-///
-const char* k_unitconversion__unit_to_symbol_string3(void* self, double value, int fieldWidth, char format);
-
-/// [Upstream resources](https://api.kde.org/kunitconversion-unit.html#toSymbolString)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KUnitConversion__Unit*
+/// @param self const KUnitConversion__Unit*
 /// @param value double
 /// @param fieldWidth int
 /// @param format char
 /// @param precision int
 ///
-const char* k_unitconversion__unit_to_symbol_string4(void* self, double value, int fieldWidth, char format, int precision);
+const char* k_unitconversion__unit_to_string4(const void* self, double value, int fieldWidth, char format, int precision);
 
-/// [Upstream resources](https://api.kde.org/kunitconversion-unit.html#toSymbolString)
+/// [Upstream resources](https://api.kde.org/kunitconversion-unit.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUnitConversion__Unit*
+/// @param self const KUnitConversion__Unit*
 /// @param value double
 /// @param fieldWidth int
 /// @param format char
 /// @param precision int
 /// @param fillChar QChar*
 ///
-const char* k_unitconversion__unit_to_symbol_string5(void* self, double value, int fieldWidth, char format, int precision, void* fillChar);
+const char* k_unitconversion__unit_to_string5(const void* self, double value, int fieldWidth, char format, int precision, const void* fillChar);
+
+/// [Upstream resources](https://api.kde.org/kunitconversion-unit.html#toSymbolString)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KUnitConversion__Unit*
+/// @param value double
+/// @param fieldWidth int
+///
+const char* k_unitconversion__unit_to_symbol_string2(const void* self, double value, int fieldWidth);
+
+/// [Upstream resources](https://api.kde.org/kunitconversion-unit.html#toSymbolString)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KUnitConversion__Unit*
+/// @param value double
+/// @param fieldWidth int
+/// @param format char
+///
+const char* k_unitconversion__unit_to_symbol_string3(const void* self, double value, int fieldWidth, char format);
+
+/// [Upstream resources](https://api.kde.org/kunitconversion-unit.html#toSymbolString)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KUnitConversion__Unit*
+/// @param value double
+/// @param fieldWidth int
+/// @param format char
+/// @param precision int
+///
+const char* k_unitconversion__unit_to_symbol_string4(const void* self, double value, int fieldWidth, char format, int precision);
+
+/// [Upstream resources](https://api.kde.org/kunitconversion-unit.html#toSymbolString)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KUnitConversion__Unit*
+/// @param value double
+/// @param fieldWidth int
+/// @param format char
+/// @param precision int
+/// @param fillChar QChar*
+///
+const char* k_unitconversion__unit_to_symbol_string5(const void* self, double value, int fieldWidth, char format, int precision, const void* fillChar);
 
 /// Delete this object from C++ memory.
 ///

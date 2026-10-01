@@ -44,7 +44,7 @@ QDBusObjectPath* q_dbusobjectpath_new4(const char* path);
 ///
 /// @param param1 QDBusObjectPath*
 ///
-QDBusObjectPath* q_dbusobjectpath_new5(void* param1);
+QDBusObjectPath* q_dbusobjectpath_new5(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusobjectpath.html#swap)
 ///
@@ -64,22 +64,22 @@ void q_dbusobjectpath_set_path(void* self, const char* path);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDBusObjectPath*
+/// @param self const QDBusObjectPath*
 ///
-const char* q_dbusobjectpath_path(void* self);
+const char* q_dbusobjectpath_path(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusobjectpath.html#operator-QVariant)
 ///
-/// @param self QDBusObjectPath*
+/// @param self const QDBusObjectPath*
 ///
-QVariant* q_dbusobjectpath_to_q_variant(void* self);
+QVariant* q_dbusobjectpath_to_q_variant(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusobjectpath.html#operator-eq)
 ///
 /// @param self QDBusObjectPath*
 /// @param param1 QDBusObjectPath*
 ///
-void q_dbusobjectpath_operator_assign(void* self, void* param1);
+void q_dbusobjectpath_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusobjectpath.html#dtor.QDBusObjectPath)
 ///
@@ -96,14 +96,14 @@ void q_dbusobjectpath_delete(void* self);
 /// @param objectPath QDBusObjectPath*
 /// @param seed size_t
 ///
-size_t q_qdbusextratypes_h_q_hash(void* objectPath, size_t seed);
+size_t q_qdbusextratypes_h_q_hash(const void* objectPath, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusextratypes-h.html#qHash)
 ///
 /// @param signature QDBusSignature*
 /// @param seed size_t
 ///
-size_t q_qdbusextratypes_h_q_hash2(void* signature, size_t seed);
+size_t q_qdbusextratypes_h_q_hash2(const void* signature, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbussignature.html)
 
@@ -141,7 +141,7 @@ QDBusSignature* q_dbussignature_new4(const char* signature);
 ///
 /// @param param1 QDBusSignature*
 ///
-QDBusSignature* q_dbussignature_new5(void* param1);
+QDBusSignature* q_dbussignature_new5(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbussignature.html#swap)
 ///
@@ -161,16 +161,16 @@ void q_dbussignature_set_signature(void* self, const char* signature);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDBusSignature*
+/// @param self const QDBusSignature*
 ///
-const char* q_dbussignature_signature(void* self);
+const char* q_dbussignature_signature(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbussignature.html#operator-eq)
 ///
 /// @param self QDBusSignature*
 /// @param param1 QDBusSignature*
 ///
-void q_dbussignature_operator_assign(void* self, void* param1);
+void q_dbussignature_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbussignature.html#dtor.QDBusSignature)
 ///
@@ -192,7 +192,7 @@ QDBusVariant* q_dbusvariant_new();
 ///
 /// @param variant QVariant*
 ///
-QDBusVariant* q_dbusvariant_new2(void* variant);
+QDBusVariant* q_dbusvariant_new2(const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusvariant.html)
 
@@ -200,7 +200,7 @@ QDBusVariant* q_dbusvariant_new2(void* variant);
 ///
 /// @param param1 QDBusVariant*
 ///
-QDBusVariant* q_dbusvariant_new3(void* param1);
+QDBusVariant* q_dbusvariant_new3(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusvariant.html#swap)
 ///
@@ -214,20 +214,20 @@ void q_dbusvariant_swap(void* self, void* other);
 /// @param self QDBusVariant*
 /// @param variant QVariant*
 ///
-void q_dbusvariant_set_variant(void* self, void* variant);
+void q_dbusvariant_set_variant(void* self, const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusvariant.html#variant)
 ///
-/// @param self QDBusVariant*
+/// @param self const QDBusVariant*
 ///
-QVariant* q_dbusvariant_variant(void* self);
+QVariant* q_dbusvariant_variant(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusvariant.html#operator-eq)
 ///
 /// @param self QDBusVariant*
 /// @param param1 QDBusVariant*
 ///
-void q_dbusvariant_operator_assign(void* self, void* param1);
+void q_dbusvariant_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusvariant.html#dtor.QDBusVariant)
 ///

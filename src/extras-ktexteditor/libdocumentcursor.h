@@ -41,13 +41,13 @@ KTextEditor__DocumentCursor* k_texteditor__documentcursor_new3(void* document, i
 ///
 /// @param other KTextEditor__DocumentCursor*
 ///
-KTextEditor__DocumentCursor* k_texteditor__documentcursor_new4(void* other);
+KTextEditor__DocumentCursor* k_texteditor__documentcursor_new4(const void* other);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#document)
 ///
-/// @param self KTextEditor__DocumentCursor*
+/// @param self const KTextEditor__DocumentCursor*
 ///
-KTextEditor__Document* k_texteditor__documentcursor_document(void* self);
+KTextEditor__Document* k_texteditor__documentcursor_document(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#setPosition)
 ///
@@ -58,27 +58,27 @@ void k_texteditor__documentcursor_set_position(void* self, void* position);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#line)
 ///
-/// @param self KTextEditor__DocumentCursor*
+/// @param self const KTextEditor__DocumentCursor*
 ///
-int32_t k_texteditor__documentcursor_line(void* self);
+int32_t k_texteditor__documentcursor_line(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#column)
 ///
-/// @param self KTextEditor__DocumentCursor*
+/// @param self const KTextEditor__DocumentCursor*
 ///
-int32_t k_texteditor__documentcursor_column(void* self);
+int32_t k_texteditor__documentcursor_column(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#isValid)
 ///
-/// @param self KTextEditor__DocumentCursor*
+/// @param self const KTextEditor__DocumentCursor*
 ///
-bool k_texteditor__documentcursor_is_valid(void* self);
+bool k_texteditor__documentcursor_is_valid(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#isValidTextPosition)
 ///
-/// @param self KTextEditor__DocumentCursor*
+/// @param self const KTextEditor__DocumentCursor*
 ///
-bool k_texteditor__documentcursor_is_valid_text_position(void* self);
+bool k_texteditor__documentcursor_is_valid_text_position(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#makeValid)
 ///
@@ -110,27 +110,27 @@ void k_texteditor__documentcursor_set_column(void* self, int column);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#atStartOfLine)
 ///
-/// @param self KTextEditor__DocumentCursor*
+/// @param self const KTextEditor__DocumentCursor*
 ///
-bool k_texteditor__documentcursor_at_start_of_line(void* self);
+bool k_texteditor__documentcursor_at_start_of_line(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#atEndOfLine)
 ///
-/// @param self KTextEditor__DocumentCursor*
+/// @param self const KTextEditor__DocumentCursor*
 ///
-bool k_texteditor__documentcursor_at_end_of_line(void* self);
+bool k_texteditor__documentcursor_at_end_of_line(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#atStartOfDocument)
 ///
-/// @param self KTextEditor__DocumentCursor*
+/// @param self const KTextEditor__DocumentCursor*
 ///
-bool k_texteditor__documentcursor_at_start_of_document(void* self);
+bool k_texteditor__documentcursor_at_start_of_document(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#atEndOfDocument)
 ///
-/// @param self KTextEditor__DocumentCursor*
+/// @param self const KTextEditor__DocumentCursor*
 ///
-bool k_texteditor__documentcursor_at_end_of_document(void* self);
+bool k_texteditor__documentcursor_at_end_of_document(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#gotoNextLine)
 ///
@@ -153,22 +153,22 @@ bool k_texteditor__documentcursor_move(void* self, int chars);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#toCursor)
 ///
-/// @param self KTextEditor__DocumentCursor*
+/// @param self const KTextEditor__DocumentCursor*
 ///
-KTextEditor__Cursor* k_texteditor__documentcursor_to_cursor(void* self);
+KTextEditor__Cursor* k_texteditor__documentcursor_to_cursor(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#operator-KTextEditor-3a-3aCursor)
 ///
-/// @param self KTextEditor__DocumentCursor*
+/// @param self const KTextEditor__DocumentCursor*
 ///
-KTextEditor__Cursor* k_texteditor__documentcursor_to_cursor2(void* self);
+KTextEditor__Cursor* k_texteditor__documentcursor_to_cursor2(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#operator-eq)
 ///
 /// @param self KTextEditor__DocumentCursor*
 /// @param other KTextEditor__DocumentCursor*
 ///
-void k_texteditor__documentcursor_operator_assign(void* self, void* other);
+void k_texteditor__documentcursor_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#move)
 ///

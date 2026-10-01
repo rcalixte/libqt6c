@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QAbstractEventDispatcher*
+/// @param self const QAbstractEventDispatcher*
 ///
-const QMetaObject* q_abstracteventdispatcher_meta_object(void* self);
+const QMetaObject* q_abstracteventdispatcher_meta_object(const void* self);
 
 /// @param self QAbstractEventDispatcher*
 /// @param param1 const char*
@@ -42,6 +42,8 @@ QAbstractEventDispatcher* q_abstracteventdispatcher_instance();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#processEvents)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self QAbstractEventDispatcher*
 /// @param flags flag of enum QEventLoop__ProcessEventsFlag
 ///
@@ -49,12 +51,16 @@ bool q_abstracteventdispatcher_process_events(void* self, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#registerSocketNotifier)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self QAbstractEventDispatcher*
 /// @param notifier QSocketNotifier*
 ///
 void q_abstracteventdispatcher_register_socket_notifier(void* self, void* notifier);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#unregisterSocketNotifier)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self QAbstractEventDispatcher*
 /// @param notifier QSocketNotifier*
@@ -72,6 +78,8 @@ int32_t q_abstracteventdispatcher_register_timer2(void* self, int64_t interval, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#registerTimer)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self QAbstractEventDispatcher*
 /// @param timerId int
 /// @param interval int64_t
@@ -82,12 +90,16 @@ void q_abstracteventdispatcher_register_timer3(void* self, int timerId, int64_t 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#unregisterTimer)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self QAbstractEventDispatcher*
 /// @param timerId int
 ///
 bool q_abstracteventdispatcher_unregister_timer(void* self, int timerId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#unregisterTimers)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self QAbstractEventDispatcher*
 /// @param object QObject*
@@ -96,14 +108,18 @@ bool q_abstracteventdispatcher_unregister_timers(void* self, void* object);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#registeredTimers)
 ///
-/// @param self QAbstractEventDispatcher*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const QAbstractEventDispatcher*
 /// @param object QObject*
 ///
 /// @return libqt_list of QAbstractEventDispatcher__TimerInfo*
 ///
-libqt_list q_abstracteventdispatcher_registered_timers(void* self, void* object);
+libqt_list q_abstracteventdispatcher_registered_timers(const void* self, void* object);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#remainingTime)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self QAbstractEventDispatcher*
 /// @param timerId int
@@ -119,20 +135,24 @@ bool q_abstracteventdispatcher_unregister_timer2(void* self, int32_t timerId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#timersForObject)
 ///
-/// @param self QAbstractEventDispatcher*
+/// @param self const QAbstractEventDispatcher*
 /// @param object QObject*
 ///
 /// @return libqt_list of QAbstractEventDispatcher__TimerInfoV2*
 ///
-libqt_list q_abstracteventdispatcher_timers_for_object(void* self, void* object);
+libqt_list q_abstracteventdispatcher_timers_for_object(const void* self, void* object);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#wakeUp)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self QAbstractEventDispatcher*
 ///
 void q_abstracteventdispatcher_wake_up(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#interrupt)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self QAbstractEventDispatcher*
 ///
@@ -249,9 +269,9 @@ bool q_abstracteventdispatcher_event_filter(void* self, void* watched, void* eve
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QAbstractEventDispatcher*
+/// @param self const QAbstractEventDispatcher*
 ///
-const char* q_abstracteventdispatcher_object_name(void* self);
+const char* q_abstracteventdispatcher_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -266,33 +286,33 @@ void q_abstracteventdispatcher_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QAbstractEventDispatcher*
+/// @param self const QAbstractEventDispatcher*
 ///
-bool q_abstracteventdispatcher_is_widget_type(void* self);
+bool q_abstracteventdispatcher_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QAbstractEventDispatcher*
+/// @param self const QAbstractEventDispatcher*
 ///
-bool q_abstracteventdispatcher_is_window_type(void* self);
+bool q_abstracteventdispatcher_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QAbstractEventDispatcher*
+/// @param self const QAbstractEventDispatcher*
 ///
-bool q_abstracteventdispatcher_is_quick_item_type(void* self);
+bool q_abstracteventdispatcher_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QAbstractEventDispatcher*
+/// @param self const QAbstractEventDispatcher*
 ///
-bool q_abstracteventdispatcher_signals_blocked(void* self);
+bool q_abstracteventdispatcher_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -307,9 +327,9 @@ bool q_abstracteventdispatcher_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QAbstractEventDispatcher*
+/// @param self const QAbstractEventDispatcher*
 ///
-QThread* q_abstracteventdispatcher_thread(void* self);
+QThread* q_abstracteventdispatcher_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -360,11 +380,11 @@ void q_abstracteventdispatcher_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QAbstractEventDispatcher*
+/// @param self const QAbstractEventDispatcher*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_abstracteventdispatcher_children(void* self);
+libqt_list q_abstracteventdispatcher_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -402,7 +422,7 @@ void q_abstracteventdispatcher_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_abstracteventdispatcher_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_abstracteventdispatcher_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -413,18 +433,18 @@ QMetaObject__Connection* q_abstracteventdispatcher_connect(void* sender, const c
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_abstracteventdispatcher_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_abstracteventdispatcher_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QAbstractEventDispatcher*
+/// @param self const QAbstractEventDispatcher*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_abstracteventdispatcher_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_abstracteventdispatcher_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -435,7 +455,7 @@ QMetaObject__Connection* q_abstracteventdispatcher_connect3(void* self, void* se
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_abstracteventdispatcher_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_abstracteventdispatcher_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -446,24 +466,24 @@ bool q_abstracteventdispatcher_disconnect(void* sender, const char* signal, void
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_abstracteventdispatcher_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_abstracteventdispatcher_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAbstractEventDispatcher*
+/// @param self const QAbstractEventDispatcher*
 ///
-bool q_abstracteventdispatcher_disconnect3(void* self);
+bool q_abstracteventdispatcher_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAbstractEventDispatcher*
+/// @param self const QAbstractEventDispatcher*
 /// @param receiver QObject*
 ///
-bool q_abstracteventdispatcher_disconnect4(void* self, void* receiver);
+bool q_abstracteventdispatcher_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -471,23 +491,23 @@ bool q_abstracteventdispatcher_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_abstracteventdispatcher_disconnect5(void* param1);
+bool q_abstracteventdispatcher_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QAbstractEventDispatcher*
+/// @param self const QAbstractEventDispatcher*
 ///
-void q_abstracteventdispatcher_dump_object_tree(void* self);
+void q_abstracteventdispatcher_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QAbstractEventDispatcher*
+/// @param self const QAbstractEventDispatcher*
 ///
-void q_abstracteventdispatcher_dump_object_info(void* self);
+void q_abstracteventdispatcher_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -497,16 +517,16 @@ void q_abstracteventdispatcher_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_abstracteventdispatcher_set_property(void* self, const char* name, void* value);
+bool q_abstracteventdispatcher_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QAbstractEventDispatcher*
+/// @param self const QAbstractEventDispatcher*
 /// @param name const char*
 ///
-QVariant* q_abstracteventdispatcher_property(void* self, const char* name);
+QVariant* q_abstracteventdispatcher_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -514,9 +534,9 @@ QVariant* q_abstracteventdispatcher_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QAbstractEventDispatcher*
+/// @param self const QAbstractEventDispatcher*
 ///
-const char** q_abstracteventdispatcher_dynamic_property_names(void* self);
+const char** q_abstracteventdispatcher_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -530,9 +550,9 @@ QBindingStorage* q_abstracteventdispatcher_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QAbstractEventDispatcher*
+/// @param self const QAbstractEventDispatcher*
 ///
-const QBindingStorage* q_abstracteventdispatcher_binding_storage2(void* self);
+const QBindingStorage* q_abstracteventdispatcher_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -555,18 +575,18 @@ void q_abstracteventdispatcher_on_destroyed(void* self, void (*callback)(void*))
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QAbstractEventDispatcher*
+/// @param self const QAbstractEventDispatcher*
 ///
-QObject* q_abstracteventdispatcher_parent(void* self);
+QObject* q_abstracteventdispatcher_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QAbstractEventDispatcher*
+/// @param self const QAbstractEventDispatcher*
 /// @param classname const char*
 ///
-bool q_abstracteventdispatcher_inherits(void* self, const char* classname);
+bool q_abstracteventdispatcher_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -606,7 +626,7 @@ int32_t q_abstracteventdispatcher_start_timer23(void* self, int64_t time, int32_
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_abstracteventdispatcher_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_abstracteventdispatcher_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -618,59 +638,59 @@ QMetaObject__Connection* q_abstracteventdispatcher_connect5(void* sender, const 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_abstracteventdispatcher_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_abstracteventdispatcher_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QAbstractEventDispatcher*
+/// @param self const QAbstractEventDispatcher*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_abstracteventdispatcher_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_abstracteventdispatcher_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAbstractEventDispatcher*
+/// @param self const QAbstractEventDispatcher*
 /// @param signal const char*
 ///
-bool q_abstracteventdispatcher_disconnect1(void* self, const char* signal);
+bool q_abstracteventdispatcher_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAbstractEventDispatcher*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_abstracteventdispatcher_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QAbstractEventDispatcher*
+/// @param self const QAbstractEventDispatcher*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_abstracteventdispatcher_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_abstracteventdispatcher_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAbstractEventDispatcher*
+/// @param self const QAbstractEventDispatcher*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_abstracteventdispatcher_disconnect23(void* self, void* receiver, const char* member);
+bool q_abstracteventdispatcher_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QAbstractEventDispatcher*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_abstracteventdispatcher_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -713,9 +733,9 @@ void q_abstracteventdispatcher_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QAbstractEventDispatcherV2*
+/// @param self const QAbstractEventDispatcherV2*
 ///
-const QMetaObject* q_abstracteventdispatcherv2_meta_object(void* self);
+const QMetaObject* q_abstracteventdispatcherv2_meta_object(const void* self);
 
 /// @param self QAbstractEventDispatcherV2*
 /// @param param1 const char*
@@ -736,22 +756,6 @@ int32_t q_abstracteventdispatcherv2_metacall(void* self, int32_t param1, int par
 /// @param s const char*
 ///
 const char* q_abstracteventdispatcherv2_tr(const char* s);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcherv2.html#unregisterTimer)
-///
-/// @param self QAbstractEventDispatcherV2*
-/// @param timerId enum Qt__TimerId
-///
-bool q_abstracteventdispatcherv2_unregister_timer(void* self, int32_t timerId);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcherv2.html#timersForObject)
-///
-/// @param self QAbstractEventDispatcherV2*
-/// @param object QObject*
-///
-/// @return libqt_list of QAbstractEventDispatcher__TimerInfoV2*
-///
-libqt_list q_abstracteventdispatcherv2_timers_for_object(void* self, void* object);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcherv2.html#processEventsWithDeadline)
 ///
@@ -788,33 +792,6 @@ QAbstractEventDispatcher* q_abstracteventdispatcherv2_instance();
 
 /// Inherited from QAbstractEventDispatcher
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#processEvents)
-///
-/// @param self QAbstractEventDispatcherV2*
-/// @param flags flag of enum QEventLoop__ProcessEventsFlag
-///
-bool q_abstracteventdispatcherv2_process_events(void* self, int32_t flags);
-
-/// Inherited from QAbstractEventDispatcher
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#registerSocketNotifier)
-///
-/// @param self QAbstractEventDispatcherV2*
-/// @param notifier QSocketNotifier*
-///
-void q_abstracteventdispatcherv2_register_socket_notifier(void* self, void* notifier);
-
-/// Inherited from QAbstractEventDispatcher
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#unregisterSocketNotifier)
-///
-/// @param self QAbstractEventDispatcherV2*
-/// @param notifier QSocketNotifier*
-///
-void q_abstracteventdispatcherv2_unregister_socket_notifier(void* self, void* notifier);
-
-/// Inherited from QAbstractEventDispatcher
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#registerTimer)
 ///
 /// @param self QAbstractEventDispatcherV2*
@@ -826,69 +803,12 @@ int32_t q_abstracteventdispatcherv2_register_timer2(void* self, int64_t interval
 
 /// Inherited from QAbstractEventDispatcher
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#registerTimer)
-///
-/// @param self QAbstractEventDispatcherV2*
-/// @param timerId int
-/// @param interval int64_t
-/// @param timerType enum Qt__TimerType
-/// @param object QObject*
-///
-void q_abstracteventdispatcherv2_register_timer3(void* self, int timerId, int64_t interval, int32_t timerType, void* object);
-
-/// Inherited from QAbstractEventDispatcher
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#unregisterTimers)
-///
-/// @param self QAbstractEventDispatcherV2*
-/// @param object QObject*
-///
-bool q_abstracteventdispatcherv2_unregister_timers(void* self, void* object);
-
-/// Inherited from QAbstractEventDispatcher
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#registeredTimers)
-///
-/// @param self QAbstractEventDispatcherV2*
-/// @param object QObject*
-///
-/// @return libqt_list of QAbstractEventDispatcher__TimerInfo*
-///
-libqt_list q_abstracteventdispatcherv2_registered_timers(void* self, void* object);
-
-/// Inherited from QAbstractEventDispatcher
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#remainingTime)
-///
-/// @param self QAbstractEventDispatcherV2*
-/// @param timerId int
-///
-int32_t q_abstracteventdispatcherv2_remaining_time(void* self, int timerId);
-
-/// Inherited from QAbstractEventDispatcher
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#unregisterTimer)
 ///
 /// @param self QAbstractEventDispatcherV2*
 /// @param timerId enum Qt__TimerId
 ///
 bool q_abstracteventdispatcherv2_unregister_timer2(void* self, int32_t timerId);
-
-/// Inherited from QAbstractEventDispatcher
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#wakeUp)
-///
-/// @param self QAbstractEventDispatcherV2*
-///
-void q_abstracteventdispatcherv2_wake_up(void* self);
-
-/// Inherited from QAbstractEventDispatcher
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#interrupt)
-///
-/// @param self QAbstractEventDispatcherV2*
-///
-void q_abstracteventdispatcherv2_interrupt(void* self);
 
 /// Inherited from QAbstractEventDispatcher
 ///
@@ -1002,9 +922,9 @@ bool q_abstracteventdispatcherv2_event_filter(void* self, void* watched, void* e
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QAbstractEventDispatcherV2*
+/// @param self const QAbstractEventDispatcherV2*
 ///
-const char* q_abstracteventdispatcherv2_object_name(void* self);
+const char* q_abstracteventdispatcherv2_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1019,33 +939,33 @@ void q_abstracteventdispatcherv2_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QAbstractEventDispatcherV2*
+/// @param self const QAbstractEventDispatcherV2*
 ///
-bool q_abstracteventdispatcherv2_is_widget_type(void* self);
+bool q_abstracteventdispatcherv2_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QAbstractEventDispatcherV2*
+/// @param self const QAbstractEventDispatcherV2*
 ///
-bool q_abstracteventdispatcherv2_is_window_type(void* self);
+bool q_abstracteventdispatcherv2_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QAbstractEventDispatcherV2*
+/// @param self const QAbstractEventDispatcherV2*
 ///
-bool q_abstracteventdispatcherv2_is_quick_item_type(void* self);
+bool q_abstracteventdispatcherv2_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QAbstractEventDispatcherV2*
+/// @param self const QAbstractEventDispatcherV2*
 ///
-bool q_abstracteventdispatcherv2_signals_blocked(void* self);
+bool q_abstracteventdispatcherv2_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1060,9 +980,9 @@ bool q_abstracteventdispatcherv2_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QAbstractEventDispatcherV2*
+/// @param self const QAbstractEventDispatcherV2*
 ///
-QThread* q_abstracteventdispatcherv2_thread(void* self);
+QThread* q_abstracteventdispatcherv2_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1113,11 +1033,11 @@ void q_abstracteventdispatcherv2_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QAbstractEventDispatcherV2*
+/// @param self const QAbstractEventDispatcherV2*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_abstracteventdispatcherv2_children(void* self);
+libqt_list q_abstracteventdispatcherv2_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1155,7 +1075,7 @@ void q_abstracteventdispatcherv2_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_abstracteventdispatcherv2_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_abstracteventdispatcherv2_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1166,18 +1086,18 @@ QMetaObject__Connection* q_abstracteventdispatcherv2_connect(void* sender, const
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_abstracteventdispatcherv2_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_abstracteventdispatcherv2_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QAbstractEventDispatcherV2*
+/// @param self const QAbstractEventDispatcherV2*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_abstracteventdispatcherv2_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_abstracteventdispatcherv2_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1188,7 +1108,7 @@ QMetaObject__Connection* q_abstracteventdispatcherv2_connect3(void* self, void* 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_abstracteventdispatcherv2_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_abstracteventdispatcherv2_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1199,24 +1119,24 @@ bool q_abstracteventdispatcherv2_disconnect(void* sender, const char* signal, vo
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_abstracteventdispatcherv2_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_abstracteventdispatcherv2_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAbstractEventDispatcherV2*
+/// @param self const QAbstractEventDispatcherV2*
 ///
-bool q_abstracteventdispatcherv2_disconnect3(void* self);
+bool q_abstracteventdispatcherv2_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAbstractEventDispatcherV2*
+/// @param self const QAbstractEventDispatcherV2*
 /// @param receiver QObject*
 ///
-bool q_abstracteventdispatcherv2_disconnect4(void* self, void* receiver);
+bool q_abstracteventdispatcherv2_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1224,23 +1144,23 @@ bool q_abstracteventdispatcherv2_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_abstracteventdispatcherv2_disconnect5(void* param1);
+bool q_abstracteventdispatcherv2_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QAbstractEventDispatcherV2*
+/// @param self const QAbstractEventDispatcherV2*
 ///
-void q_abstracteventdispatcherv2_dump_object_tree(void* self);
+void q_abstracteventdispatcherv2_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QAbstractEventDispatcherV2*
+/// @param self const QAbstractEventDispatcherV2*
 ///
-void q_abstracteventdispatcherv2_dump_object_info(void* self);
+void q_abstracteventdispatcherv2_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1250,16 +1170,16 @@ void q_abstracteventdispatcherv2_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_abstracteventdispatcherv2_set_property(void* self, const char* name, void* value);
+bool q_abstracteventdispatcherv2_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QAbstractEventDispatcherV2*
+/// @param self const QAbstractEventDispatcherV2*
 /// @param name const char*
 ///
-QVariant* q_abstracteventdispatcherv2_property(void* self, const char* name);
+QVariant* q_abstracteventdispatcherv2_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1267,9 +1187,9 @@ QVariant* q_abstracteventdispatcherv2_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QAbstractEventDispatcherV2*
+/// @param self const QAbstractEventDispatcherV2*
 ///
-const char** q_abstracteventdispatcherv2_dynamic_property_names(void* self);
+const char** q_abstracteventdispatcherv2_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1283,9 +1203,9 @@ QBindingStorage* q_abstracteventdispatcherv2_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QAbstractEventDispatcherV2*
+/// @param self const QAbstractEventDispatcherV2*
 ///
-const QBindingStorage* q_abstracteventdispatcherv2_binding_storage2(void* self);
+const QBindingStorage* q_abstracteventdispatcherv2_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1308,18 +1228,18 @@ void q_abstracteventdispatcherv2_on_destroyed(void* self, void (*callback)(void*
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QAbstractEventDispatcherV2*
+/// @param self const QAbstractEventDispatcherV2*
 ///
-QObject* q_abstracteventdispatcherv2_parent(void* self);
+QObject* q_abstracteventdispatcherv2_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QAbstractEventDispatcherV2*
+/// @param self const QAbstractEventDispatcherV2*
 /// @param classname const char*
 ///
-bool q_abstracteventdispatcherv2_inherits(void* self, const char* classname);
+bool q_abstracteventdispatcherv2_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1359,7 +1279,7 @@ int32_t q_abstracteventdispatcherv2_start_timer23(void* self, int64_t time, int3
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_abstracteventdispatcherv2_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_abstracteventdispatcherv2_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1371,59 +1291,59 @@ QMetaObject__Connection* q_abstracteventdispatcherv2_connect5(void* sender, cons
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_abstracteventdispatcherv2_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_abstracteventdispatcherv2_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QAbstractEventDispatcherV2*
+/// @param self const QAbstractEventDispatcherV2*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_abstracteventdispatcherv2_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_abstracteventdispatcherv2_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAbstractEventDispatcherV2*
+/// @param self const QAbstractEventDispatcherV2*
 /// @param signal const char*
 ///
-bool q_abstracteventdispatcherv2_disconnect1(void* self, const char* signal);
+bool q_abstracteventdispatcherv2_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAbstractEventDispatcherV2*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_abstracteventdispatcherv2_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QAbstractEventDispatcherV2*
+/// @param self const QAbstractEventDispatcherV2*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_abstracteventdispatcherv2_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_abstracteventdispatcherv2_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAbstractEventDispatcherV2*
+/// @param self const QAbstractEventDispatcherV2*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_abstracteventdispatcherv2_disconnect23(void* self, void* receiver, const char* member);
+bool q_abstracteventdispatcherv2_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QAbstractEventDispatcherV2*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_abstracteventdispatcherv2_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1468,7 +1388,7 @@ void q_abstracteventdispatcherv2_delete(void* self);
 ///
 /// @param other QAbstractEventDispatcher__TimerInfo*
 ///
-QAbstractEventDispatcher__TimerInfo* q_abstracteventdispatcher__timerinfo_new(void* other);
+QAbstractEventDispatcher__TimerInfo* q_abstracteventdispatcher__timerinfo_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher-timerinfo.html)
 
@@ -1494,7 +1414,7 @@ QAbstractEventDispatcher__TimerInfo* q_abstracteventdispatcher__timerinfo_new3(i
 ///
 /// @param param1 QAbstractEventDispatcher__TimerInfo*
 ///
-QAbstractEventDispatcher__TimerInfo* q_abstracteventdispatcher__timerinfo_new4(void* param1);
+QAbstractEventDispatcher__TimerInfo* q_abstracteventdispatcher__timerinfo_new4(const void* param1);
 
 /// q_abstracteventdispatcher__timerinfo_copy_assign shallow copies `other` into `self`.
 ///
@@ -1512,9 +1432,9 @@ void q_abstracteventdispatcher__timerinfo_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher-timerinfo.html#timerId-var)
 ///
-/// @param self QAbstractEventDispatcher__TimerInfo*
+/// @param self const QAbstractEventDispatcher__TimerInfo*
 ///
-int32_t q_abstracteventdispatcher__timerinfo_timer_id(void* self);
+int32_t q_abstracteventdispatcher__timerinfo_timer_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher-timerinfo.html#timerId-var)
 ///
@@ -1525,9 +1445,9 @@ void q_abstracteventdispatcher__timerinfo_set_timer_id(void* self, int timerId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher-timerinfo.html#interval-var)
 ///
-/// @param self QAbstractEventDispatcher__TimerInfo*
+/// @param self const QAbstractEventDispatcher__TimerInfo*
 ///
-int32_t q_abstracteventdispatcher__timerinfo_interval(void* self);
+int32_t q_abstracteventdispatcher__timerinfo_interval(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher-timerinfo.html#interval-var)
 ///
@@ -1538,11 +1458,11 @@ void q_abstracteventdispatcher__timerinfo_set_interval(void* self, int interval)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher-timerinfo.html#timerType-var)
 ///
-/// @param self QAbstractEventDispatcher__TimerInfo*
+/// @param self const QAbstractEventDispatcher__TimerInfo*
 ///
 /// @return enum Qt__TimerType
 ///
-int32_t q_abstracteventdispatcher__timerinfo_timer_type(void* self);
+int32_t q_abstracteventdispatcher__timerinfo_timer_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher-timerinfo.html#timerType-var)
 ///
@@ -1563,7 +1483,7 @@ void q_abstracteventdispatcher__timerinfo_delete(void* self);
 ///
 /// @param param1 QAbstractEventDispatcher__TimerInfoV2*
 ///
-QAbstractEventDispatcher__TimerInfoV2* q_abstracteventdispatcher__timerinfov2_new(void* param1);
+QAbstractEventDispatcher__TimerInfoV2* q_abstracteventdispatcher__timerinfov2_new(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher-timerinfov2.html)
 
@@ -1573,11 +1493,11 @@ QAbstractEventDispatcher__TimerInfoV2* q_abstracteventdispatcher__timerinfov2_ne
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher-timerinfov2.html#timerId-var)
 ///
-/// @param self QAbstractEventDispatcher__TimerInfoV2*
+/// @param self const QAbstractEventDispatcher__TimerInfoV2*
 ///
 /// @return enum Qt__TimerId
 ///
-int32_t q_abstracteventdispatcher__timerinfov2_timer_id(void* self);
+int32_t q_abstracteventdispatcher__timerinfov2_timer_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher-timerinfov2.html#timerId-var)
 ///
@@ -1588,11 +1508,11 @@ void q_abstracteventdispatcher__timerinfov2_set_timer_id(void* self, int32_t tim
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher-timerinfov2.html#timerType-var)
 ///
-/// @param self QAbstractEventDispatcher__TimerInfoV2*
+/// @param self const QAbstractEventDispatcher__TimerInfoV2*
 ///
 /// @return enum Qt__TimerType
 ///
-int32_t q_abstracteventdispatcher__timerinfov2_timer_type(void* self);
+int32_t q_abstracteventdispatcher__timerinfov2_timer_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher-timerinfov2.html#timerType-var)
 ///
@@ -1606,7 +1526,7 @@ void q_abstracteventdispatcher__timerinfov2_set_timer_type(void* self, int32_t t
 /// @param self QAbstractEventDispatcher__TimerInfoV2*
 /// @param param1 QAbstractEventDispatcher__TimerInfoV2*
 ///
-void q_abstracteventdispatcher__timerinfov2_operator_assign(void* self, void* param1);
+void q_abstracteventdispatcher__timerinfov2_operator_assign(void* self, const void* param1);
 
 /// Delete this object from C++ memory.
 ///

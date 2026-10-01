@@ -20,7 +20,7 @@ QDeadlineTimer* q_deadlinetimer_new();
 ///
 /// @param other QDeadlineTimer*
 ///
-QDeadlineTimer* q_deadlinetimer_new2(void* other);
+QDeadlineTimer* q_deadlinetimer_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdeadlinetimer.html)
 
@@ -60,7 +60,7 @@ QDeadlineTimer* q_deadlinetimer_new6(int64_t msecs);
 ///
 /// @param param1 QDeadlineTimer*
 ///
-QDeadlineTimer* q_deadlinetimer_new7(void* param1);
+QDeadlineTimer* q_deadlinetimer_new7(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdeadlinetimer.html)
 
@@ -103,23 +103,23 @@ void q_deadlinetimer_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdeadlinetimer.html#isForever)
 ///
-/// @param self QDeadlineTimer*
+/// @param self const QDeadlineTimer*
 ///
-bool q_deadlinetimer_is_forever(void* self);
+bool q_deadlinetimer_is_forever(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdeadlinetimer.html#hasExpired)
 ///
-/// @param self QDeadlineTimer*
+/// @param self const QDeadlineTimer*
 ///
-bool q_deadlinetimer_has_expired(void* self);
+bool q_deadlinetimer_has_expired(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdeadlinetimer.html#timerType)
 ///
-/// @param self QDeadlineTimer*
+/// @param self const QDeadlineTimer*
 ///
 /// @return enum Qt__TimerType
 ///
-int32_t q_deadlinetimer_timer_type(void* self);
+int32_t q_deadlinetimer_timer_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdeadlinetimer.html#setTimerType)
 ///
@@ -130,15 +130,15 @@ void q_deadlinetimer_set_timer_type(void* self, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdeadlinetimer.html#remainingTime)
 ///
-/// @param self QDeadlineTimer*
+/// @param self const QDeadlineTimer*
 ///
-int64_t q_deadlinetimer_remaining_time(void* self);
+int64_t q_deadlinetimer_remaining_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdeadlinetimer.html#remainingTimeNSecs)
 ///
-/// @param self QDeadlineTimer*
+/// @param self const QDeadlineTimer*
 ///
-int64_t q_deadlinetimer_remaining_time_n_secs(void* self);
+int64_t q_deadlinetimer_remaining_time_n_secs(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdeadlinetimer.html#setRemainingTime)
 ///
@@ -156,15 +156,15 @@ void q_deadlinetimer_set_precise_remaining_time(void* self, int64_t secs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdeadlinetimer.html#deadline)
 ///
-/// @param self QDeadlineTimer*
+/// @param self const QDeadlineTimer*
 ///
-int64_t q_deadlinetimer_deadline(void* self);
+int64_t q_deadlinetimer_deadline(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdeadlinetimer.html#deadlineNSecs)
 ///
-/// @param self QDeadlineTimer*
+/// @param self const QDeadlineTimer*
 ///
-int64_t q_deadlinetimer_deadline_n_secs(void* self);
+int64_t q_deadlinetimer_deadline_n_secs(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdeadlinetimer.html#setDeadline)
 ///
@@ -207,18 +207,18 @@ QDeadlineTimer* q_deadlinetimer_operator_minus_assign(void* self, int64_t msecs)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdeadlinetimer.html#remainingTimeAsDuration)
 ///
-/// @param self QDeadlineTimer*
+/// @param self const QDeadlineTimer*
 ///
 /// @return int64_t of nanoseconds
 ///
-int64_t q_deadlinetimer_remaining_time_as_duration(void* self);
+int64_t q_deadlinetimer_remaining_time_as_duration(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdeadlinetimer.html#operator-eq)
 ///
 /// @param self QDeadlineTimer*
 /// @param param1 QDeadlineTimer*
 ///
-void q_deadlinetimer_operator_assign(void* self, void* param1);
+void q_deadlinetimer_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdeadlinetimer.html#setRemainingTime)
 ///

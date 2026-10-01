@@ -14,7 +14,7 @@
 ///
 /// @param other KSyntaxHighlighting__FoldingRegion*
 ///
-KSyntaxHighlighting__FoldingRegion* k_syntaxhighlighting__foldingregion_new(void* other);
+KSyntaxHighlighting__FoldingRegion* k_syntaxhighlighting__foldingregion_new(const void* other);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-foldingregion.html)
 
@@ -36,7 +36,7 @@ KSyntaxHighlighting__FoldingRegion* k_syntaxhighlighting__foldingregion_new3();
 ///
 /// @param param1 KSyntaxHighlighting__FoldingRegion*
 ///
-KSyntaxHighlighting__FoldingRegion* k_syntaxhighlighting__foldingregion_new4(void* param1);
+KSyntaxHighlighting__FoldingRegion* k_syntaxhighlighting__foldingregion_new4(const void* param1);
 
 /// k_syntaxhighlighting__foldingregion_copy_assign shallow copies `other` into `self`.
 ///
@@ -54,36 +54,36 @@ void k_syntaxhighlighting__foldingregion_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-foldingregion.html#operator-eq-eq)
 ///
-/// @param self KSyntaxHighlighting__FoldingRegion*
+/// @param self const KSyntaxHighlighting__FoldingRegion*
 /// @param other KSyntaxHighlighting__FoldingRegion*
 ///
-bool k_syntaxhighlighting__foldingregion_operator_equal(void* self, void* other);
+bool k_syntaxhighlighting__foldingregion_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-foldingregion.html#isValid)
 ///
-/// @param self KSyntaxHighlighting__FoldingRegion*
+/// @param self const KSyntaxHighlighting__FoldingRegion*
 ///
-bool k_syntaxhighlighting__foldingregion_is_valid(void* self);
+bool k_syntaxhighlighting__foldingregion_is_valid(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-foldingregion.html#id)
 ///
-/// @param self KSyntaxHighlighting__FoldingRegion*
+/// @param self const KSyntaxHighlighting__FoldingRegion*
 ///
-int32_t k_syntaxhighlighting__foldingregion_id(void* self);
+int32_t k_syntaxhighlighting__foldingregion_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-foldingregion.html#type)
 ///
-/// @param self KSyntaxHighlighting__FoldingRegion*
+/// @param self const KSyntaxHighlighting__FoldingRegion*
 ///
 /// @return enum KSyntaxHighlighting__FoldingRegion__Type
 ///
-int32_t k_syntaxhighlighting__foldingregion_type(void* self);
+int32_t k_syntaxhighlighting__foldingregion_type(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-foldingregion.html#sibling)
 ///
-/// @param self KSyntaxHighlighting__FoldingRegion*
+/// @param self const KSyntaxHighlighting__FoldingRegion*
 ///
-KSyntaxHighlighting__FoldingRegion* k_syntaxhighlighting__foldingregion_sibling(void* self);
+KSyntaxHighlighting__FoldingRegion* k_syntaxhighlighting__foldingregion_sibling(const void* self);
 
 /// Delete this object from C++ memory.
 ///

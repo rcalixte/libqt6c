@@ -20,33 +20,33 @@ Attica__Icon* k_attica__icon_new();
 ///
 /// @param other Attica__Icon*
 ///
-Attica__Icon* k_attica__icon_new2(void* other);
+Attica__Icon* k_attica__icon_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-icon.html#operator-eq)
 ///
 /// @param self Attica__Icon*
 /// @param other Attica__Icon*
 ///
-void k_attica__icon_operator_assign(void* self, void* other);
+void k_attica__icon_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-icon.html#url)
 ///
-/// @param self Attica__Icon*
+/// @param self const Attica__Icon*
 ///
-QUrl* k_attica__icon_url(void* self);
+QUrl* k_attica__icon_url(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-icon.html#setUrl)
 ///
 /// @param self Attica__Icon*
 /// @param url QUrl*
 ///
-void k_attica__icon_set_url(void* self, void* url);
+void k_attica__icon_set_url(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/attica-icon.html#width)
 ///
-/// @param self Attica__Icon*
+/// @param self const Attica__Icon*
 ///
-uint32_t k_attica__icon_width(void* self);
+uint32_t k_attica__icon_width(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-icon.html#setWidth)
 ///
@@ -57,9 +57,9 @@ void k_attica__icon_set_width(void* self, uint32_t width);
 
 /// [Upstream resources](https://api.kde.org/attica-icon.html#height)
 ///
-/// @param self Attica__Icon*
+/// @param self const Attica__Icon*
 ///
-uint32_t k_attica__icon_height(void* self);
+uint32_t k_attica__icon_height(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-icon.html#setHeight)
 ///

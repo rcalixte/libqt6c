@@ -2,7 +2,7 @@
 #include "libqline.hpp"
 #include "libqline.h"
 
-QLine* q_line_new(void* other) {
+QLine* q_line_new(const void* other) {
     return QLine_New((QLine*)other);
 }
 
@@ -14,7 +14,7 @@ QLine* q_line_new3() {
     return QLine_New3();
 }
 
-QLine* q_line_new4(void* pt1, void* pt2) {
+QLine* q_line_new4(const void* pt1, const void* pt2) {
     return QLine_New4((QPoint*)pt1, (QPoint*)pt2);
 }
 
@@ -22,7 +22,7 @@ QLine* q_line_new5(int x1, int y1, int x2, int y2) {
     return QLine_New5(x1, y1, x2, y2);
 }
 
-QLine* q_line_new6(void* param1) {
+QLine* q_line_new6(const void* param1) {
     return QLine_New6((QLine*)param1);
 }
 
@@ -34,43 +34,43 @@ void q_line_move_assign(void* self, void* other) {
     QLine_MoveAssign((QLine*)self, (QLine*)other);
 }
 
-bool q_line_is_null(void* self) {
+bool q_line_is_null(const void* self) {
     return QLine_IsNull((QLine*)self);
 }
 
-QPoint* q_line_p1(void* self) {
+QPoint* q_line_p1(const void* self) {
     return QLine_P1((QLine*)self);
 }
 
-QPoint* q_line_p2(void* self) {
+QPoint* q_line_p2(const void* self) {
     return QLine_P2((QLine*)self);
 }
 
-int32_t q_line_x1(void* self) {
+int32_t q_line_x1(const void* self) {
     return QLine_X1((QLine*)self);
 }
 
-int32_t q_line_y1(void* self) {
+int32_t q_line_y1(const void* self) {
     return QLine_Y1((QLine*)self);
 }
 
-int32_t q_line_x2(void* self) {
+int32_t q_line_x2(const void* self) {
     return QLine_X2((QLine*)self);
 }
 
-int32_t q_line_y2(void* self) {
+int32_t q_line_y2(const void* self) {
     return QLine_Y2((QLine*)self);
 }
 
-int32_t q_line_dx(void* self) {
+int32_t q_line_dx(const void* self) {
     return QLine_Dx((QLine*)self);
 }
 
-int32_t q_line_dy(void* self) {
+int32_t q_line_dy(const void* self) {
     return QLine_Dy((QLine*)self);
 }
 
-void q_line_translate(void* self, void* p) {
+void q_line_translate(void* self, const void* p) {
     QLine_Translate((QLine*)self, (QPoint*)p);
 }
 
@@ -78,27 +78,27 @@ void q_line_translate2(void* self, int dx, int dy) {
     QLine_Translate2((QLine*)self, dx, dy);
 }
 
-QLine* q_line_translated(void* self, void* p) {
+QLine* q_line_translated(const void* self, const void* p) {
     return QLine_Translated((QLine*)self, (QPoint*)p);
 }
 
-QLine* q_line_translated2(void* self, int dx, int dy) {
+QLine* q_line_translated2(const void* self, int dx, int dy) {
     return QLine_Translated2((QLine*)self, dx, dy);
 }
 
-QPoint* q_line_center(void* self) {
+QPoint* q_line_center(const void* self) {
     return QLine_Center((QLine*)self);
 }
 
-void q_line_set_p1(void* self, void* p1) {
+void q_line_set_p1(void* self, const void* p1) {
     QLine_SetP1((QLine*)self, (QPoint*)p1);
 }
 
-void q_line_set_p2(void* self, void* p2) {
+void q_line_set_p2(void* self, const void* p2) {
     QLine_SetP2((QLine*)self, (QPoint*)p2);
 }
 
-void q_line_set_points(void* self, void* p1, void* p2) {
+void q_line_set_points(void* self, const void* p1, const void* p2) {
     QLine_SetPoints((QLine*)self, (QPoint*)p1, (QPoint*)p2);
 }
 
@@ -106,7 +106,7 @@ void q_line_set_line(void* self, int x1, int y1, int x2, int y2) {
     QLine_SetLine((QLine*)self, x1, y1, x2, y2);
 }
 
-QLineF* q_line_to_line_f(void* self) {
+QLineF* q_line_to_line_f(const void* self) {
     return QLine_ToLineF((QLine*)self);
 }
 
@@ -114,7 +114,7 @@ void q_line_delete(void* self) {
     QLine_Delete((QLine*)(self));
 }
 
-QLineF* q_linef_new(void* other) {
+QLineF* q_linef_new(const void* other) {
     return QLineF_New((QLineF*)other);
 }
 
@@ -126,7 +126,7 @@ QLineF* q_linef_new3() {
     return QLineF_New3();
 }
 
-QLineF* q_linef_new4(void* pt1, void* pt2) {
+QLineF* q_linef_new4(const void* pt1, const void* pt2) {
     return QLineF_New4((QPointF*)pt1, (QPointF*)pt2);
 }
 
@@ -134,11 +134,11 @@ QLineF* q_linef_new5(double x1, double y1, double x2, double y2) {
     return QLineF_New5(x1, y1, x2, y2);
 }
 
-QLineF* q_linef_new6(void* line) {
+QLineF* q_linef_new6(const void* line) {
     return QLineF_New6((QLine*)line);
 }
 
-QLineF* q_linef_new7(void* param1) {
+QLineF* q_linef_new7(const void* param1) {
     return QLineF_New7((QLineF*)param1);
 }
 
@@ -154,43 +154,43 @@ QLineF* q_linef_from_polar(double length, double angle) {
     return QLineF_FromPolar(length, angle);
 }
 
-bool q_linef_is_null(void* self) {
+bool q_linef_is_null(const void* self) {
     return QLineF_IsNull((QLineF*)self);
 }
 
-QPointF* q_linef_p1(void* self) {
+QPointF* q_linef_p1(const void* self) {
     return QLineF_P1((QLineF*)self);
 }
 
-QPointF* q_linef_p2(void* self) {
+QPointF* q_linef_p2(const void* self) {
     return QLineF_P2((QLineF*)self);
 }
 
-double q_linef_x1(void* self) {
+double q_linef_x1(const void* self) {
     return QLineF_X1((QLineF*)self);
 }
 
-double q_linef_y1(void* self) {
+double q_linef_y1(const void* self) {
     return QLineF_Y1((QLineF*)self);
 }
 
-double q_linef_x2(void* self) {
+double q_linef_x2(const void* self) {
     return QLineF_X2((QLineF*)self);
 }
 
-double q_linef_y2(void* self) {
+double q_linef_y2(const void* self) {
     return QLineF_Y2((QLineF*)self);
 }
 
-double q_linef_dx(void* self) {
+double q_linef_dx(const void* self) {
     return QLineF_Dx((QLineF*)self);
 }
 
-double q_linef_dy(void* self) {
+double q_linef_dy(const void* self) {
     return QLineF_Dy((QLineF*)self);
 }
 
-double q_linef_length(void* self) {
+double q_linef_length(const void* self) {
     return QLineF_Length((QLineF*)self);
 }
 
@@ -198,7 +198,7 @@ void q_linef_set_length(void* self, double lenVal) {
     QLineF_SetLength((QLineF*)self, lenVal);
 }
 
-double q_linef_angle(void* self) {
+double q_linef_angle(const void* self) {
     return QLineF_Angle((QLineF*)self);
 }
 
@@ -206,27 +206,27 @@ void q_linef_set_angle(void* self, double angle) {
     QLineF_SetAngle((QLineF*)self, angle);
 }
 
-double q_linef_angle_to(void* self, void* l) {
+double q_linef_angle_to(const void* self, const void* l) {
     return QLineF_AngleTo((QLineF*)self, (QLineF*)l);
 }
 
-QLineF* q_linef_unit_vector(void* self) {
+QLineF* q_linef_unit_vector(const void* self) {
     return QLineF_UnitVector((QLineF*)self);
 }
 
-QLineF* q_linef_normal_vector(void* self) {
+QLineF* q_linef_normal_vector(const void* self) {
     return QLineF_NormalVector((QLineF*)self);
 }
 
-int32_t q_linef_intersects(void* self, void* l) {
+int32_t q_linef_intersects(const void* self, const void* l) {
     return QLineF_Intersects((QLineF*)self, (QLineF*)l);
 }
 
-QPointF* q_linef_point_at(void* self, double t) {
+QPointF* q_linef_point_at(const void* self, double t) {
     return QLineF_PointAt((QLineF*)self, t);
 }
 
-void q_linef_translate(void* self, void* p) {
+void q_linef_translate(void* self, const void* p) {
     QLineF_Translate((QLineF*)self, (QPointF*)p);
 }
 
@@ -234,27 +234,27 @@ void q_linef_translate2(void* self, double dx, double dy) {
     QLineF_Translate2((QLineF*)self, dx, dy);
 }
 
-QLineF* q_linef_translated(void* self, void* p) {
+QLineF* q_linef_translated(const void* self, const void* p) {
     return QLineF_Translated((QLineF*)self, (QPointF*)p);
 }
 
-QLineF* q_linef_translated2(void* self, double dx, double dy) {
+QLineF* q_linef_translated2(const void* self, double dx, double dy) {
     return QLineF_Translated2((QLineF*)self, dx, dy);
 }
 
-QPointF* q_linef_center(void* self) {
+QPointF* q_linef_center(const void* self) {
     return QLineF_Center((QLineF*)self);
 }
 
-void q_linef_set_p1(void* self, void* p1) {
+void q_linef_set_p1(void* self, const void* p1) {
     QLineF_SetP1((QLineF*)self, (QPointF*)p1);
 }
 
-void q_linef_set_p2(void* self, void* p2) {
+void q_linef_set_p2(void* self, const void* p2) {
     QLineF_SetP2((QLineF*)self, (QPointF*)p2);
 }
 
-void q_linef_set_points(void* self, void* p1, void* p2) {
+void q_linef_set_points(void* self, const void* p1, const void* p2) {
     QLineF_SetPoints((QLineF*)self, (QPointF*)p1, (QPointF*)p2);
 }
 
@@ -262,11 +262,11 @@ void q_linef_set_line(void* self, double x1, double y1, double x2, double y2) {
     QLineF_SetLine((QLineF*)self, x1, y1, x2, y2);
 }
 
-QLine* q_linef_to_line(void* self) {
+QLine* q_linef_to_line(const void* self) {
     return QLineF_ToLine((QLineF*)self);
 }
 
-int32_t q_linef_intersects2(void* self, void* l, void* intersectionPoint) {
+int32_t q_linef_intersects2(const void* self, const void* l, void* intersectionPoint) {
     return QLineF_Intersects2((QLineF*)self, (QLineF*)l, (QPointF*)intersectionPoint);
 }
 

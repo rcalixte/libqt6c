@@ -55,7 +55,7 @@ QTimeZone* q_timezone_new5(char* zoneId, int offsetSeconds, const char* name, co
 ///
 /// @param other QTimeZone*
 ///
-QTimeZone* q_timezone_new6(void* other);
+QTimeZone* q_timezone_new6(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html)
 
@@ -87,7 +87,7 @@ QTimeZone* q_timezone_new8(char* zoneId, int offsetSeconds, const char* name, co
 /// @param self QTimeZone*
 /// @param other QTimeZone*
 ///
-void q_timezone_operator_assign(void* self, void* other);
+void q_timezone_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#swap)
 ///
@@ -98,9 +98,9 @@ void q_timezone_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#isValid)
 ///
-/// @param self QTimeZone*
+/// @param self const QTimeZone*
 ///
-bool q_timezone_is_valid(void* self);
+bool q_timezone_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#fromDurationAheadOfUtc)
 ///
@@ -116,17 +116,17 @@ QTimeZone* q_timezone_from_seconds_ahead_of_utc(int offset);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#timeSpec)
 ///
-/// @param self QTimeZone*
+/// @param self const QTimeZone*
 ///
 /// @return enum Qt__TimeSpec
 ///
-int32_t q_timezone_time_spec(void* self);
+int32_t q_timezone_time_spec(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#fixedSecondsAheadOfUtc)
 ///
-/// @param self QTimeZone*
+/// @param self const QTimeZone*
 ///
-int32_t q_timezone_fixed_seconds_ahead_of_utc(void* self);
+int32_t q_timezone_fixed_seconds_ahead_of_utc(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#isUtcOrFixedOffset)
 ///
@@ -136,152 +136,152 @@ bool q_timezone_is_utc_or_fixed_offset(int32_t spec);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#isUtcOrFixedOffset)
 ///
-/// @param self QTimeZone*
+/// @param self const QTimeZone*
 ///
-bool q_timezone_is_utc_or_fixed_offset2(void* self);
+bool q_timezone_is_utc_or_fixed_offset2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#asBackendZone)
 ///
-/// @param self QTimeZone*
+/// @param self const QTimeZone*
 ///
-QTimeZone* q_timezone_as_backend_zone(void* self);
+QTimeZone* q_timezone_as_backend_zone(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#hasAlternativeName)
 ///
-/// @param self QTimeZone*
+/// @param self const QTimeZone*
 /// @param alias char*
 ///
-bool q_timezone_has_alternative_name(void* self, char* alias);
+bool q_timezone_has_alternative_name(const void* self, char* alias);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#id)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QTimeZone*
+/// @param self const QTimeZone*
 ///
-char* q_timezone_id(void* self);
+char* q_timezone_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#territory)
 ///
-/// @param self QTimeZone*
+/// @param self const QTimeZone*
 ///
 /// @return enum QLocale__Country
 ///
-uint16_t q_timezone_territory(void* self);
+uint16_t q_timezone_territory(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#country)
 ///
-/// @param self QTimeZone*
+/// @param self const QTimeZone*
 ///
 /// @return enum QLocale__Country
 ///
-uint16_t q_timezone_country(void* self);
+uint16_t q_timezone_country(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#comment)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTimeZone*
+/// @param self const QTimeZone*
 ///
-const char* q_timezone_comment(void* self);
+const char* q_timezone_comment(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#displayName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTimeZone*
+/// @param self const QTimeZone*
 /// @param atDateTime QDateTime*
 ///
-const char* q_timezone_display_name(void* self, void* atDateTime);
+const char* q_timezone_display_name(const void* self, const void* atDateTime);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#displayName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTimeZone*
+/// @param self const QTimeZone*
 /// @param timeType enum QTimeZone__TimeType
 ///
-const char* q_timezone_display_name2(void* self, int32_t timeType);
+const char* q_timezone_display_name2(const void* self, int32_t timeType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#abbreviation)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTimeZone*
+/// @param self const QTimeZone*
 /// @param atDateTime QDateTime*
 ///
-const char* q_timezone_abbreviation(void* self, void* atDateTime);
+const char* q_timezone_abbreviation(const void* self, const void* atDateTime);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#offsetFromUtc)
 ///
-/// @param self QTimeZone*
+/// @param self const QTimeZone*
 /// @param atDateTime QDateTime*
 ///
-int32_t q_timezone_offset_from_utc(void* self, void* atDateTime);
+int32_t q_timezone_offset_from_utc(const void* self, const void* atDateTime);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#standardTimeOffset)
 ///
-/// @param self QTimeZone*
+/// @param self const QTimeZone*
 /// @param atDateTime QDateTime*
 ///
-int32_t q_timezone_standard_time_offset(void* self, void* atDateTime);
+int32_t q_timezone_standard_time_offset(const void* self, const void* atDateTime);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#daylightTimeOffset)
 ///
-/// @param self QTimeZone*
+/// @param self const QTimeZone*
 /// @param atDateTime QDateTime*
 ///
-int32_t q_timezone_daylight_time_offset(void* self, void* atDateTime);
+int32_t q_timezone_daylight_time_offset(const void* self, const void* atDateTime);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#hasDaylightTime)
 ///
-/// @param self QTimeZone*
+/// @param self const QTimeZone*
 ///
-bool q_timezone_has_daylight_time(void* self);
+bool q_timezone_has_daylight_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#isDaylightTime)
 ///
-/// @param self QTimeZone*
+/// @param self const QTimeZone*
 /// @param atDateTime QDateTime*
 ///
-bool q_timezone_is_daylight_time(void* self, void* atDateTime);
+bool q_timezone_is_daylight_time(const void* self, const void* atDateTime);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#offsetData)
 ///
-/// @param self QTimeZone*
+/// @param self const QTimeZone*
 /// @param forDateTime QDateTime*
 ///
-QTimeZone__OffsetData* q_timezone_offset_data(void* self, void* forDateTime);
+QTimeZone__OffsetData* q_timezone_offset_data(const void* self, const void* forDateTime);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#hasTransitions)
 ///
-/// @param self QTimeZone*
+/// @param self const QTimeZone*
 ///
-bool q_timezone_has_transitions(void* self);
+bool q_timezone_has_transitions(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#nextTransition)
 ///
-/// @param self QTimeZone*
+/// @param self const QTimeZone*
 /// @param afterDateTime QDateTime*
 ///
-QTimeZone__OffsetData* q_timezone_next_transition(void* self, void* afterDateTime);
+QTimeZone__OffsetData* q_timezone_next_transition(const void* self, const void* afterDateTime);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#previousTransition)
 ///
-/// @param self QTimeZone*
+/// @param self const QTimeZone*
 /// @param beforeDateTime QDateTime*
 ///
-QTimeZone__OffsetData* q_timezone_previous_transition(void* self, void* beforeDateTime);
+QTimeZone__OffsetData* q_timezone_previous_transition(const void* self, const void* beforeDateTime);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#transitions)
 ///
-/// @param self QTimeZone*
+/// @param self const QTimeZone*
 /// @param fromDateTime QDateTime*
 /// @param toDateTime QDateTime*
 ///
 /// @return libqt_list of QTimeZone__OffsetData*
 ///
-libqt_list q_timezone_transitions(void* self, void* fromDateTime, void* toDateTime);
+libqt_list q_timezone_transitions(const void* self, const void* fromDateTime, const void* toDateTime);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#systemTimeZoneId)
 ///
@@ -371,43 +371,43 @@ const char** q_timezone_windows_id_to_iana_ids2(char* windowsId, uint16_t territ
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTimeZone*
+/// @param self const QTimeZone*
 /// @param atDateTime QDateTime*
 /// @param nameType enum QTimeZone__NameType
 ///
-const char* q_timezone_display_name22(void* self, void* atDateTime, int32_t nameType);
+const char* q_timezone_display_name22(const void* self, const void* atDateTime, int32_t nameType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#displayName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTimeZone*
+/// @param self const QTimeZone*
 /// @param atDateTime QDateTime*
 /// @param nameType enum QTimeZone__NameType
 /// @param locale QLocale*
 ///
-const char* q_timezone_display_name3(void* self, void* atDateTime, int32_t nameType, void* locale);
+const char* q_timezone_display_name3(const void* self, const void* atDateTime, int32_t nameType, const void* locale);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#displayName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTimeZone*
+/// @param self const QTimeZone*
 /// @param timeType enum QTimeZone__TimeType
 /// @param nameType enum QTimeZone__NameType
 ///
-const char* q_timezone_display_name23(void* self, int32_t timeType, int32_t nameType);
+const char* q_timezone_display_name23(const void* self, int32_t timeType, int32_t nameType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#displayName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTimeZone*
+/// @param self const QTimeZone*
 /// @param timeType enum QTimeZone__TimeType
 /// @param nameType enum QTimeZone__NameType
 /// @param locale QLocale*
 ///
-const char* q_timezone_display_name32(void* self, int32_t timeType, int32_t nameType, void* locale);
+const char* q_timezone_display_name32(const void* self, int32_t timeType, int32_t nameType, const void* locale);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#dtor.QTimeZone)
 ///
@@ -429,15 +429,15 @@ QTimeZone__OffsetData* q_timezone__offsetdata_new();
 ///
 /// @param param1 QTimeZone__OffsetData*
 ///
-QTimeZone__OffsetData* q_timezone__offsetdata_new2(void* param1);
+QTimeZone__OffsetData* q_timezone__offsetdata_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone-offsetdata.html#abbreviation-var)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTimeZone__OffsetData*
+/// @param self const QTimeZone__OffsetData*
 ///
-const char* q_timezone__offsetdata_abbreviation(void* self);
+const char* q_timezone__offsetdata_abbreviation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone-offsetdata.html#abbreviation-var)
 ///
@@ -448,9 +448,9 @@ void q_timezone__offsetdata_set_abbreviation(void* self, const char* abbreviatio
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone-offsetdata.html#atUtc-var)
 ///
-/// @param self QTimeZone__OffsetData*
+/// @param self const QTimeZone__OffsetData*
 ///
-QDateTime* q_timezone__offsetdata_at_utc(void* self);
+QDateTime* q_timezone__offsetdata_at_utc(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone-offsetdata.html#atUtc-var)
 ///
@@ -461,9 +461,9 @@ void q_timezone__offsetdata_set_at_utc(void* self, void* atUtc);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone-offsetdata.html#offsetFromUtc-var)
 ///
-/// @param self QTimeZone__OffsetData*
+/// @param self const QTimeZone__OffsetData*
 ///
-int32_t q_timezone__offsetdata_offset_from_utc(void* self);
+int32_t q_timezone__offsetdata_offset_from_utc(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone-offsetdata.html#offsetFromUtc-var)
 ///
@@ -474,9 +474,9 @@ void q_timezone__offsetdata_set_offset_from_utc(void* self, int offsetFromUtc);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone-offsetdata.html#standardTimeOffset-var)
 ///
-/// @param self QTimeZone__OffsetData*
+/// @param self const QTimeZone__OffsetData*
 ///
-int32_t q_timezone__offsetdata_standard_time_offset(void* self);
+int32_t q_timezone__offsetdata_standard_time_offset(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone-offsetdata.html#standardTimeOffset-var)
 ///
@@ -487,9 +487,9 @@ void q_timezone__offsetdata_set_standard_time_offset(void* self, int standardTim
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone-offsetdata.html#daylightTimeOffset-var)
 ///
-/// @param self QTimeZone__OffsetData*
+/// @param self const QTimeZone__OffsetData*
 ///
-int32_t q_timezone__offsetdata_daylight_time_offset(void* self);
+int32_t q_timezone__offsetdata_daylight_time_offset(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone-offsetdata.html#daylightTimeOffset-var)
 ///
@@ -503,7 +503,7 @@ void q_timezone__offsetdata_set_daylight_time_offset(void* self, int daylightTim
 /// @param self QTimeZone__OffsetData*
 /// @param param1 QTimeZone__OffsetData*
 ///
-void q_timezone__offsetdata_operator_assign(void* self, void* param1);
+void q_timezone__offsetdata_operator_assign(void* self, const void* param1);
 
 /// Delete this object from C++ memory.
 ///

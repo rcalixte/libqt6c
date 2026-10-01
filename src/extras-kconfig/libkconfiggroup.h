@@ -30,7 +30,7 @@ KConfigGroup* k_configgroup_new2(void* master, const char* group);
 /// @param master KConfigBase*
 /// @param group const char*
 ///
-KConfigGroup* k_configgroup_new3(void* master, const char* group);
+KConfigGroup* k_configgroup_new3(const void* master, const char* group);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html)
 
@@ -38,34 +38,34 @@ KConfigGroup* k_configgroup_new3(void* master, const char* group);
 ///
 /// @param param1 KConfigGroup*
 ///
-KConfigGroup* k_configgroup_new4(void* param1);
+KConfigGroup* k_configgroup_new4(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#operator-eq)
 ///
 /// @param self KConfigGroup*
 /// @param param1 KConfigGroup*
 ///
-void k_configgroup_operator_assign(void* self, void* param1);
+void k_configgroup_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#isValid)
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 ///
-bool k_configgroup_is_valid(void* self);
+bool k_configgroup_is_valid(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 ///
-const char* k_configgroup_name(void* self);
+const char* k_configgroup_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#exists)
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 ///
-bool k_configgroup_exists(void* self);
+bool k_configgroup_exists(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#sync)
 ///
@@ -78,9 +78,9 @@ bool k_configgroup_sync(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KConfigGroup*
-/// @param callback bool func()
+/// @param callback bool func(KConfigGroup* self)
 ///
-void k_configgroup_on_sync(void* self, bool (*callback)());
+void k_configgroup_on_sync(void* self, bool (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#sync)
 ///
@@ -101,9 +101,9 @@ void k_configgroup_mark_as_clean(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KConfigGroup*
-/// @param callback void func()
+/// @param callback void func(KConfigGroup* self)
 ///
-void k_configgroup_on_mark_as_clean(void* self, void (*callback)());
+void k_configgroup_on_mark_as_clean(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#markAsClean)
 ///
@@ -115,30 +115,30 @@ void k_configgroup_super_mark_as_clean(void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#accessMode)
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 ///
 /// @return enum KConfigBase__AccessMode
 ///
-int32_t k_configgroup_access_mode(void* self);
+int32_t k_configgroup_access_mode(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#accessMode)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KConfigGroup*
-/// @param callback int32_t func()
+/// @param self const KConfigGroup*
+/// @param callback int32_t func(const KConfigGroup* self)
 ///
-void k_configgroup_on_access_mode(void* self, int32_t (*callback)());
+void k_configgroup_on_access_mode(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#accessMode)
 ///
 /// Base class method implementation
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 ///
 /// @return enum KConfigBase__AccessMode
 ///
-int32_t k_configgroup_super_access_mode(void* self);
+int32_t k_configgroup_super_access_mode(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#config)
 ///
@@ -148,16 +148,16 @@ KConfig* k_configgroup_config(void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#config)
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 ///
-const KConfig* k_configgroup_config2(void* self);
+const KConfig* k_configgroup_config2(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#copyTo)
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param other KConfigBase*
 ///
-void k_configgroup_copy_to(void* self, void* other);
+void k_configgroup_copy_to(const void* self, void* other);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#reparent)
 ///
@@ -183,42 +183,42 @@ void k_configgroup_move_values_to2(void* self, void* other);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#parent)
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 ///
-KConfigGroup* k_configgroup_parent(void* self);
+KConfigGroup* k_configgroup_parent(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#groupList)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 ///
-const char** k_configgroup_group_list(void* self);
+const char** k_configgroup_group_list(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#groupList)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KConfigGroup*
-/// @param callback const char** func()
+/// @param self const KConfigGroup*
+/// @param callback const char** func(const KConfigGroup* self)
 ///
-void k_configgroup_on_group_list(void* self, const char** (*callback)());
+void k_configgroup_on_group_list(const void* self, const char** (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#groupList)
 ///
 /// Base class method implementation
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 ///
-const char** k_configgroup_super_group_list(void* self);
+const char** k_configgroup_super_group_list(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#keyList)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 ///
-const char** k_configgroup_key_list(void* self);
+const char** k_configgroup_key_list(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#deleteGroup)
 ///
@@ -228,173 +228,173 @@ void k_configgroup_delete_group(void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param key const char*
 /// @param aDefault QVariant*
 ///
-QVariant* k_configgroup_read_entry(void* self, const char* key, void* aDefault);
+QVariant* k_configgroup_read_entry(const void* self, const char* key, const void* aDefault);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param key const char*
 /// @param aDefault QVariant*
 ///
-QVariant* k_configgroup_read_entry2(void* self, const char* key, void* aDefault);
+QVariant* k_configgroup_read_entry2(const void* self, const char* key, const void* aDefault);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param key const char*
 /// @param aDefault const char*
 ///
-const char* k_configgroup_read_entry3(void* self, const char* key, const char* aDefault);
+const char* k_configgroup_read_entry3(const void* self, const char* key, const char* aDefault);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param key const char*
 /// @param aDefault const char*
 ///
-const char* k_configgroup_read_entry4(void* self, const char* key, const char* aDefault);
+const char* k_configgroup_read_entry4(const void* self, const char* key, const char* aDefault);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param key const char*
 ///
-const char* k_configgroup_read_entry5(void* self, const char* key);
+const char* k_configgroup_read_entry5(const void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param key const char*
 ///
-const char* k_configgroup_read_entry6(void* self, const char* key);
+const char* k_configgroup_read_entry6(const void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param key const char*
 /// @param aDefault libqt_list of QVariant*
 ///
 /// @return libqt_list of QVariant*
 ///
-libqt_list k_configgroup_read_entry7(void* self, const char* key, libqt_list aDefault);
+libqt_list k_configgroup_read_entry7(const void* self, const char* key, libqt_list aDefault);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param key const char*
 /// @param aDefault libqt_list of QVariant*
 ///
 /// @return libqt_list of QVariant*
 ///
-libqt_list k_configgroup_read_entry8(void* self, const char* key, libqt_list aDefault);
+libqt_list k_configgroup_read_entry8(const void* self, const char* key, libqt_list aDefault);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param key const char*
 /// @param aDefault const char**
 ///
-const char** k_configgroup_read_entry9(void* self, const char* key, const char* aDefault[static 1]);
+const char** k_configgroup_read_entry9(const void* self, const char* key, const char* aDefault[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param key const char*
 /// @param aDefault const char**
 ///
-const char** k_configgroup_read_entry10(void* self, const char* key, const char* aDefault[static 1]);
+const char** k_configgroup_read_entry10(const void* self, const char* key, const char* aDefault[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readXdgListEntry)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param pKey const char*
 ///
-const char** k_configgroup_read_xdg_list_entry(void* self, const char* pKey);
+const char** k_configgroup_read_xdg_list_entry(const void* self, const char* pKey);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readXdgListEntry)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param key const char*
 ///
-const char** k_configgroup_read_xdg_list_entry2(void* self, const char* key);
+const char** k_configgroup_read_xdg_list_entry2(const void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readPathEntry)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param pKey const char*
 /// @param aDefault const char*
 ///
-const char* k_configgroup_read_path_entry(void* self, const char* pKey, const char* aDefault);
+const char* k_configgroup_read_path_entry(const void* self, const char* pKey, const char* aDefault);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readPathEntry)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param key const char*
 /// @param aDefault const char*
 ///
-const char* k_configgroup_read_path_entry2(void* self, const char* key, const char* aDefault);
+const char* k_configgroup_read_path_entry2(const void* self, const char* key, const char* aDefault);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readPathEntry)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param pKey const char*
 /// @param aDefault const char**
 ///
-const char** k_configgroup_read_path_entry3(void* self, const char* pKey, const char* aDefault[static 1]);
+const char** k_configgroup_read_path_entry3(const void* self, const char* pKey, const char* aDefault[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readPathEntry)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param key const char*
 /// @param aDefault const char**
 ///
-const char** k_configgroup_read_path_entry4(void* self, const char* key, const char* aDefault[static 1]);
+const char** k_configgroup_read_path_entry4(const void* self, const char* key, const char* aDefault[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntryUntranslated)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param pKey const char*
 ///
-const char* k_configgroup_read_entry_untranslated(void* self, const char* pKey);
+const char* k_configgroup_read_entry_untranslated(const void* self, const char* pKey);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntryUntranslated)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param key const char*
 ///
-const char* k_configgroup_read_entry_untranslated2(void* self, const char* key);
+const char* k_configgroup_read_entry_untranslated2(const void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
@@ -402,7 +402,7 @@ const char* k_configgroup_read_entry_untranslated2(void* self, const char* key);
 /// @param key const char*
 /// @param value QVariant*
 ///
-void k_configgroup_write_entry(void* self, const char* key, void* value);
+void k_configgroup_write_entry(void* self, const char* key, const void* value);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
@@ -410,7 +410,7 @@ void k_configgroup_write_entry(void* self, const char* key, void* value);
 /// @param key const char*
 /// @param value QVariant*
 ///
-void k_configgroup_write_entry2(void* self, const char* key, void* value);
+void k_configgroup_write_entry2(void* self, const char* key, const void* value);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
@@ -556,54 +556,54 @@ void k_configgroup_delete_entry2(void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#hasKey)
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param key const char*
 ///
-bool k_configgroup_has_key(void* self, const char* key);
+bool k_configgroup_has_key(const void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#hasKey)
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param key const char*
 ///
-bool k_configgroup_has_key2(void* self, const char* key);
+bool k_configgroup_has_key2(const void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#isImmutable)
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 ///
-bool k_configgroup_is_immutable(void* self);
+bool k_configgroup_is_immutable(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#isImmutable)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KConfigGroup*
-/// @param callback bool func()
+/// @param self const KConfigGroup*
+/// @param callback bool func(const KConfigGroup* self)
 ///
-void k_configgroup_on_is_immutable(void* self, bool (*callback)());
+void k_configgroup_on_is_immutable(const void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#isImmutable)
 ///
 /// Base class method implementation
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 ///
-bool k_configgroup_super_is_immutable(void* self);
+bool k_configgroup_super_is_immutable(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#isEntryImmutable)
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param key const char*
 ///
-bool k_configgroup_is_entry_immutable(void* self, const char* key);
+bool k_configgroup_is_entry_immutable(const void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#isEntryImmutable)
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param key const char*
 ///
-bool k_configgroup_is_entry_immutable2(void* self, const char* key);
+bool k_configgroup_is_entry_immutable2(const void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#revertToDefault)
 ///
@@ -621,17 +621,17 @@ void k_configgroup_revert_to_default2(void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#hasDefault)
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param key const char*
 ///
-bool k_configgroup_has_default(void* self, const char* key);
+bool k_configgroup_has_default(const void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#hasDefault)
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param key const char*
 ///
-bool k_configgroup_has_default2(void* self, const char* key);
+bool k_configgroup_has_default2(const void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#entryMap)
 ///
@@ -647,90 +647,36 @@ bool k_configgroup_has_default2(void* self, const char* key);
 /// free(map.values);
 /// ```
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 ///
 /// @return libqt_map of const char* to const char*
 ///
-libqt_map k_configgroup_entry_map(void* self);
+libqt_map k_configgroup_entry_map(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#hasGroupImpl)
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param groupName const char*
 ///
-bool k_configgroup_has_group_impl(void* self, const char* groupName);
+bool k_configgroup_has_group_impl(const void* self, const char* groupName);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#hasGroupImpl)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KConfigGroup*
-/// @param callback bool func(KConfigGroup* self, const char* groupName)
+/// @param self const KConfigGroup*
+/// @param callback bool func(const KConfigGroup* self, const char* groupName)
 ///
-void k_configgroup_on_has_group_impl(void* self, bool (*callback)(void*, const char*));
+void k_configgroup_on_has_group_impl(const void* self, bool (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#hasGroupImpl)
 ///
 /// Base class method implementation
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param groupName const char*
 ///
-bool k_configgroup_super_has_group_impl(void* self, const char* groupName);
-
-/// [Upstream resources](https://api.kde.org/kconfiggroup.html#groupImpl)
-///
-/// @param self KConfigGroup*
-/// @param groupName const char*
-///
-KConfigGroup* k_configgroup_group_impl(void* self, const char* groupName);
-
-/// [Upstream resources](https://api.kde.org/kconfiggroup.html#groupImpl)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KConfigGroup*
-/// @param callback KConfigGroup* func(KConfigGroup* self, const char* groupName)
-///
-/// @warning Memory for the returned type of the callback is freed by the library.
-///
-void k_configgroup_on_group_impl(void* self, KConfigGroup* (*callback)(void*, const char*));
-
-/// [Upstream resources](https://api.kde.org/kconfiggroup.html#groupImpl)
-///
-/// Base class method implementation
-///
-/// @param self KConfigGroup*
-/// @param groupName const char*
-///
-KConfigGroup* k_configgroup_super_group_impl(void* self, const char* groupName);
-
-/// [Upstream resources](https://api.kde.org/kconfiggroup.html#groupImpl)
-///
-/// @param self KConfigGroup*
-/// @param groupName const char*
-///
-const KConfigGroup* k_configgroup_group_impl2(void* self, const char* groupName);
-
-/// [Upstream resources](https://api.kde.org/kconfiggroup.html#groupImpl)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KConfigGroup*
-/// @param callback const KConfigGroup* func(KConfigGroup* self, const char* groupName)
-///
-/// @warning Memory for the returned type of the callback is freed by the library.
-///
-void k_configgroup_on_group_impl2(void* self, const KConfigGroup* (*callback)(void*, const char*));
-
-/// [Upstream resources](https://api.kde.org/kconfiggroup.html#groupImpl)
-///
-/// Base class method implementation
-///
-/// @param self KConfigGroup*
-/// @param groupName const char*
-///
-const KConfigGroup* k_configgroup_super_group_impl2(void* self, const char* groupName);
+bool k_configgroup_super_has_group_impl(const void* self, const char* groupName);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#deleteGroupImpl)
 ///
@@ -761,36 +707,36 @@ void k_configgroup_super_delete_group_impl(void* self, const char* groupName, in
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#isGroupImmutableImpl)
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param groupName const char*
 ///
-bool k_configgroup_is_group_immutable_impl(void* self, const char* groupName);
+bool k_configgroup_is_group_immutable_impl(const void* self, const char* groupName);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#isGroupImmutableImpl)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KConfigGroup*
-/// @param callback bool func(KConfigGroup* self, const char* groupName)
+/// @param self const KConfigGroup*
+/// @param callback bool func(const KConfigGroup* self, const char* groupName)
 ///
-void k_configgroup_on_is_group_immutable_impl(void* self, bool (*callback)(void*, const char*));
+void k_configgroup_on_is_group_immutable_impl(const void* self, bool (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#isGroupImmutableImpl)
 ///
 /// Base class method implementation
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param groupName const char*
 ///
-bool k_configgroup_super_is_group_immutable_impl(void* self, const char* groupName);
+bool k_configgroup_super_is_group_immutable_impl(const void* self, const char* groupName);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#copyTo)
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param other KConfigBase*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 ///
-void k_configgroup_copy_to2(void* self, void* other, int32_t pFlags);
+void k_configgroup_copy_to2(const void* self, void* other, int32_t pFlags);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#reparent)
 ///
@@ -828,61 +774,61 @@ void k_configgroup_delete_group1(void* self, int32_t pFlags);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param key const char*
 /// @param aDefault const char*
 ///
-const char* k_configgroup_read_entry22(void* self, const char* key, const char* aDefault);
+const char* k_configgroup_read_entry22(const void* self, const char* key, const char* aDefault);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param key const char*
 /// @param aDefault const char*
 ///
-const char* k_configgroup_read_entry23(void* self, const char* key, const char* aDefault);
+const char* k_configgroup_read_entry23(const void* self, const char* key, const char* aDefault);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readXdgListEntry)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param pKey const char*
 /// @param aDefault const char**
 ///
-const char** k_configgroup_read_xdg_list_entry22(void* self, const char* pKey, const char* aDefault[static 1]);
+const char** k_configgroup_read_xdg_list_entry22(const void* self, const char* pKey, const char* aDefault[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readXdgListEntry)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param key const char*
 /// @param aDefault const char**
 ///
-const char** k_configgroup_read_xdg_list_entry23(void* self, const char* key, const char* aDefault[static 1]);
+const char** k_configgroup_read_xdg_list_entry23(const void* self, const char* key, const char* aDefault[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntryUntranslated)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param pKey const char*
 /// @param aDefault const char*
 ///
-const char* k_configgroup_read_entry_untranslated22(void* self, const char* pKey, const char* aDefault);
+const char* k_configgroup_read_entry_untranslated22(const void* self, const char* pKey, const char* aDefault);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntryUntranslated)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param key const char*
 /// @param aDefault const char*
 ///
-const char* k_configgroup_read_entry_untranslated23(void* self, const char* key, const char* aDefault);
+const char* k_configgroup_read_entry_untranslated23(const void* self, const char* key, const char* aDefault);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
@@ -891,7 +837,7 @@ const char* k_configgroup_read_entry_untranslated23(void* self, const char* key,
 /// @param value QVariant*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 ///
-void k_configgroup_write_entry32(void* self, const char* key, void* value, int32_t pFlags);
+void k_configgroup_write_entry32(void* self, const char* key, const void* value, int32_t pFlags);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
@@ -900,7 +846,7 @@ void k_configgroup_write_entry32(void* self, const char* key, void* value, int32
 /// @param value QVariant*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 ///
-void k_configgroup_write_entry33(void* self, const char* key, void* value, int32_t pFlags);
+void k_configgroup_write_entry33(void* self, const char* key, const void* value, int32_t pFlags);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
@@ -1082,10 +1028,10 @@ void k_configgroup_revert_to_default23(void* self, const char* key, int32_t pFla
 ///
 /// [Upstream resources](https://api.kde.org/kconfigbase.html#hasGroup)
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param group const char*
 ///
-bool k_configgroup_has_group(void* self, const char* group);
+bool k_configgroup_has_group(const void* self, const char* group);
 
 /// Inherited from KConfigBase
 ///
@@ -1100,19 +1046,19 @@ KConfigGroup* k_configgroup_group(void* self, const char* group);
 ///
 /// [Upstream resources](https://api.kde.org/kconfigbase.html#group)
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param group const char*
 ///
-const KConfigGroup* k_configgroup_group2(void* self, const char* group);
+const KConfigGroup* k_configgroup_group2(const void* self, const char* group);
 
 /// Inherited from KConfigBase
 ///
 /// [Upstream resources](https://api.kde.org/kconfigbase.html#isGroupImmutable)
 ///
-/// @param self KConfigGroup*
+/// @param self const KConfigGroup*
 /// @param group const char*
 ///
-bool k_configgroup_is_group_immutable(void* self, const char* group);
+bool k_configgroup_is_group_immutable(const void* self, const char* group);
 
 /// Inherited from KConfigBase
 ///

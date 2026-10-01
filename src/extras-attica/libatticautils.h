@@ -14,7 +14,7 @@
 ///
 /// @param other Attica__Utils*
 ///
-Attica__Utils* k_attica__utils_new(void* other);
+Attica__Utils* k_attica__utils_new(const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-utils.html)
 

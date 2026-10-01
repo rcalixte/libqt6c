@@ -51,7 +51,7 @@ void QQuickRenderControl_Connect_RenderRequested(QQuickRenderControl* self, intp
 void QQuickRenderControl_SceneChanged(QQuickRenderControl* self);
 void QQuickRenderControl_Connect_SceneChanged(QQuickRenderControl* self, intptr_t slot);
 QWindow* QQuickRenderControl_RenderWindowFor2(QQuickWindow* win, QPoint* offset);
-void QQuickRenderControl_OnMetaObject(const QQuickRenderControl* self, intptr_t slot);
+void QQuickRenderControl_OnMetaObject(QQuickRenderControl* self, intptr_t slot);
 QMetaObject* QQuickRenderControl_SuperMetaObject(const QQuickRenderControl* self);
 void QQuickRenderControl_OnMetacast(QQuickRenderControl* self, intptr_t slot);
 void* QQuickRenderControl_SuperMetacast(QQuickRenderControl* self, const char* param1);
@@ -81,17 +81,9 @@ void QQuickRenderControl_DisconnectNotify(QQuickRenderControl* self, const QMeta
 void QQuickRenderControl_OnDisconnectNotify(QQuickRenderControl* self, intptr_t slot);
 void QQuickRenderControl_SuperDisconnectNotify(QQuickRenderControl* self, const QMetaMethod* signal);
 QObject* QQuickRenderControl_Sender(const QQuickRenderControl* self);
-void QQuickRenderControl_OnSender(const QQuickRenderControl* self, intptr_t slot);
-QObject* QQuickRenderControl_SuperSender(const QQuickRenderControl* self);
 int QQuickRenderControl_SenderSignalIndex(const QQuickRenderControl* self);
-void QQuickRenderControl_OnSenderSignalIndex(const QQuickRenderControl* self, intptr_t slot);
-int QQuickRenderControl_SuperSenderSignalIndex(const QQuickRenderControl* self);
 int QQuickRenderControl_Receivers(const QQuickRenderControl* self, const char* signal);
-void QQuickRenderControl_OnReceivers(const QQuickRenderControl* self, intptr_t slot);
-int QQuickRenderControl_SuperReceivers(const QQuickRenderControl* self, const char* signal);
 bool QQuickRenderControl_IsSignalConnected(const QQuickRenderControl* self, const QMetaMethod* signal);
-void QQuickRenderControl_OnIsSignalConnected(const QQuickRenderControl* self, intptr_t slot);
-bool QQuickRenderControl_SuperIsSignalConnected(const QQuickRenderControl* self, const QMetaMethod* signal);
 void QQuickRenderControl_Delete(QQuickRenderControl* self);
 
 #ifdef __cplusplus

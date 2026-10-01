@@ -61,7 +61,7 @@ void QUndoGroup_RedoTextChanged(QUndoGroup* self, const libqt_string redoText);
 void QUndoGroup_Connect_RedoTextChanged(QUndoGroup* self, intptr_t slot);
 QAction* QUndoGroup_CreateUndoAction2(const QUndoGroup* self, QObject* parent, const libqt_string prefix);
 QAction* QUndoGroup_CreateRedoAction2(const QUndoGroup* self, QObject* parent, const libqt_string prefix);
-void QUndoGroup_OnMetaObject(const QUndoGroup* self, intptr_t slot);
+void QUndoGroup_OnMetaObject(QUndoGroup* self, intptr_t slot);
 QMetaObject* QUndoGroup_SuperMetaObject(const QUndoGroup* self);
 void QUndoGroup_OnMetacast(QUndoGroup* self, intptr_t slot);
 void* QUndoGroup_SuperMetacast(QUndoGroup* self, const char* param1);
@@ -89,17 +89,9 @@ void QUndoGroup_DisconnectNotify(QUndoGroup* self, const QMetaMethod* signal);
 void QUndoGroup_OnDisconnectNotify(QUndoGroup* self, intptr_t slot);
 void QUndoGroup_SuperDisconnectNotify(QUndoGroup* self, const QMetaMethod* signal);
 QObject* QUndoGroup_Sender(const QUndoGroup* self);
-void QUndoGroup_OnSender(const QUndoGroup* self, intptr_t slot);
-QObject* QUndoGroup_SuperSender(const QUndoGroup* self);
 int QUndoGroup_SenderSignalIndex(const QUndoGroup* self);
-void QUndoGroup_OnSenderSignalIndex(const QUndoGroup* self, intptr_t slot);
-int QUndoGroup_SuperSenderSignalIndex(const QUndoGroup* self);
 int QUndoGroup_Receivers(const QUndoGroup* self, const char* signal);
-void QUndoGroup_OnReceivers(const QUndoGroup* self, intptr_t slot);
-int QUndoGroup_SuperReceivers(const QUndoGroup* self, const char* signal);
 bool QUndoGroup_IsSignalConnected(const QUndoGroup* self, const QMetaMethod* signal);
-void QUndoGroup_OnIsSignalConnected(const QUndoGroup* self, intptr_t slot);
-bool QUndoGroup_SuperIsSignalConnected(const QUndoGroup* self, const QMetaMethod* signal);
 void QUndoGroup_Delete(QUndoGroup* self);
 
 #ifdef __cplusplus

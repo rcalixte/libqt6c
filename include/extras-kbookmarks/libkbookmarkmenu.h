@@ -31,26 +31,26 @@ KBookmarkMenu* k_bookmarkmenu_new2(void* mgr, void* owner, void* parentMenu, con
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 ///
-const QMetaObject* k_bookmarkmenu_meta_object(void* self);
+const QMetaObject* k_bookmarkmenu_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KBookmarkMenu*
-/// @param callback const QMetaObject* func()
+/// @param self const KBookmarkMenu*
+/// @param callback const QMetaObject* func(const KBookmarkMenu* self)
 ///
-void k_bookmarkmenu_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_bookmarkmenu_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 ///
-const QMetaObject* k_bookmarkmenu_super_meta_object(void* self);
+const QMetaObject* k_bookmarkmenu_super_meta_object(const void* self);
 
 /// @param self KBookmarkMenu*
 /// @param param1 const char*
@@ -110,27 +110,27 @@ void k_bookmarkmenu_ensure_up_to_date(void* self);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#addBookmarkAction)
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 ///
-QAction* k_bookmarkmenu_add_bookmark_action(void* self);
+QAction* k_bookmarkmenu_add_bookmark_action(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#bookmarkTabsAsFolderAction)
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 ///
-QAction* k_bookmarkmenu_bookmark_tabs_as_folder_action(void* self);
+QAction* k_bookmarkmenu_bookmark_tabs_as_folder_action(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#newBookmarkFolderAction)
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 ///
-QAction* k_bookmarkmenu_new_bookmark_folder_action(void* self);
+QAction* k_bookmarkmenu_new_bookmark_folder_action(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#editBookmarksAction)
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 ///
-QAction* k_bookmarkmenu_edit_bookmarks_action(void* self);
+QAction* k_bookmarkmenu_edit_bookmarks_action(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#setBrowserMode)
 ///
@@ -141,9 +141,9 @@ void k_bookmarkmenu_set_browser_mode(void* self, bool browserMode);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#browserMode)
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 ///
-bool k_bookmarkmenu_browser_mode(void* self);
+bool k_bookmarkmenu_browser_mode(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#slotBookmarksChanged)
 ///
@@ -158,45 +158,11 @@ void k_bookmarkmenu_slot_bookmarks_changed(void* self, const char* param1);
 ///
 void k_bookmarkmenu_slot_about_to_show(void* self);
 
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#slotAboutToShow)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KBookmarkMenu*
-/// @param callback void func()
-///
-void k_bookmarkmenu_on_slot_about_to_show(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#slotAboutToShow)
-///
-/// Base class method implementation
-///
-/// @param self KBookmarkMenu*
-///
-void k_bookmarkmenu_super_slot_about_to_show(void* self);
-
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#slotAddBookmarksList)
 ///
 /// @param self KBookmarkMenu*
 ///
 void k_bookmarkmenu_slot_add_bookmarks_list(void* self);
-
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#slotAddBookmarksList)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KBookmarkMenu*
-/// @param callback void func()
-///
-void k_bookmarkmenu_on_slot_add_bookmarks_list(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#slotAddBookmarksList)
-///
-/// Base class method implementation
-///
-/// @param self KBookmarkMenu*
-///
-void k_bookmarkmenu_super_slot_add_bookmarks_list(void* self);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#slotAddBookmark)
 ///
@@ -204,68 +170,17 @@ void k_bookmarkmenu_super_slot_add_bookmarks_list(void* self);
 ///
 void k_bookmarkmenu_slot_add_bookmark(void* self);
 
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#slotAddBookmark)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KBookmarkMenu*
-/// @param callback void func()
-///
-void k_bookmarkmenu_on_slot_add_bookmark(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#slotAddBookmark)
-///
-/// Base class method implementation
-///
-/// @param self KBookmarkMenu*
-///
-void k_bookmarkmenu_super_slot_add_bookmark(void* self);
-
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#slotNewFolder)
 ///
 /// @param self KBookmarkMenu*
 ///
 void k_bookmarkmenu_slot_new_folder(void* self);
 
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#slotNewFolder)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KBookmarkMenu*
-/// @param callback void func()
-///
-void k_bookmarkmenu_on_slot_new_folder(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#slotNewFolder)
-///
-/// Base class method implementation
-///
-/// @param self KBookmarkMenu*
-///
-void k_bookmarkmenu_super_slot_new_folder(void* self);
-
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#slotOpenFolderInTabs)
 ///
 /// @param self KBookmarkMenu*
 ///
 void k_bookmarkmenu_slot_open_folder_in_tabs(void* self);
-
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#slotOpenFolderInTabs)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KBookmarkMenu*
-/// @param callback void func()
-///
-void k_bookmarkmenu_on_slot_open_folder_in_tabs(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#slotOpenFolderInTabs)
-///
-/// Base class method implementation
-///
-/// @param self KBookmarkMenu*
-///
-void k_bookmarkmenu_super_slot_open_folder_in_tabs(void* self);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#clear)
 ///
@@ -278,9 +193,9 @@ void k_bookmarkmenu_clear(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KBookmarkMenu*
-/// @param callback void func()
+/// @param callback void func(KBookmarkMenu* self)
 ///
-void k_bookmarkmenu_on_clear(void* self, void (*callback)());
+void k_bookmarkmenu_on_clear(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#clear)
 ///
@@ -301,9 +216,9 @@ void k_bookmarkmenu_refill(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KBookmarkMenu*
-/// @param callback void func()
+/// @param callback void func(KBookmarkMenu* self)
 ///
-void k_bookmarkmenu_on_refill(void* self, void (*callback)());
+void k_bookmarkmenu_on_refill(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#refill)
 ///
@@ -318,7 +233,7 @@ void k_bookmarkmenu_super_refill(void* self);
 /// @param self KBookmarkMenu*
 /// @param bm KBookmark*
 ///
-QAction* k_bookmarkmenu_action_for_bookmark(void* self, void* bm);
+QAction* k_bookmarkmenu_action_for_bookmark(void* self, const void* bm);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#actionForBookmark)
 ///
@@ -327,7 +242,7 @@ QAction* k_bookmarkmenu_action_for_bookmark(void* self, void* bm);
 /// @param self KBookmarkMenu*
 /// @param callback QAction* func(KBookmarkMenu* self, KBookmark* bm)
 ///
-void k_bookmarkmenu_on_action_for_bookmark(void* self, QAction* (*callback)(void*, void*));
+void k_bookmarkmenu_on_action_for_bookmark(void* self, QAction* (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#actionForBookmark)
 ///
@@ -336,7 +251,7 @@ void k_bookmarkmenu_on_action_for_bookmark(void* self, QAction* (*callback)(void
 /// @param self KBookmarkMenu*
 /// @param bm KBookmark*
 ///
-QAction* k_bookmarkmenu_super_action_for_bookmark(void* self, void* bm);
+QAction* k_bookmarkmenu_super_action_for_bookmark(void* self, const void* bm);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#contextMenu)
 ///
@@ -369,45 +284,11 @@ QMenu* k_bookmarkmenu_super_context_menu(void* self, void* action);
 ///
 void k_bookmarkmenu_add_actions(void* self);
 
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#addActions)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KBookmarkMenu*
-/// @param callback void func()
-///
-void k_bookmarkmenu_on_add_actions(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#addActions)
-///
-/// Base class method implementation
-///
-/// @param self KBookmarkMenu*
-///
-void k_bookmarkmenu_super_add_actions(void* self);
-
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#fillBookmarks)
 ///
 /// @param self KBookmarkMenu*
 ///
 void k_bookmarkmenu_fill_bookmarks(void* self);
-
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#fillBookmarks)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KBookmarkMenu*
-/// @param callback void func()
-///
-void k_bookmarkmenu_on_fill_bookmarks(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#fillBookmarks)
-///
-/// Base class method implementation
-///
-/// @param self KBookmarkMenu*
-///
-void k_bookmarkmenu_super_fill_bookmarks(void* self);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#addAddBookmark)
 ///
@@ -415,45 +296,11 @@ void k_bookmarkmenu_super_fill_bookmarks(void* self);
 ///
 void k_bookmarkmenu_add_add_bookmark(void* self);
 
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#addAddBookmark)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KBookmarkMenu*
-/// @param callback void func()
-///
-void k_bookmarkmenu_on_add_add_bookmark(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#addAddBookmark)
-///
-/// Base class method implementation
-///
-/// @param self KBookmarkMenu*
-///
-void k_bookmarkmenu_super_add_add_bookmark(void* self);
-
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#addAddBookmarksList)
 ///
 /// @param self KBookmarkMenu*
 ///
 void k_bookmarkmenu_add_add_bookmarks_list(void* self);
-
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#addAddBookmarksList)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KBookmarkMenu*
-/// @param callback void func()
-///
-void k_bookmarkmenu_on_add_add_bookmarks_list(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#addAddBookmarksList)
-///
-/// Base class method implementation
-///
-/// @param self KBookmarkMenu*
-///
-void k_bookmarkmenu_super_add_add_bookmarks_list(void* self);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#addEditBookmarks)
 ///
@@ -461,45 +308,11 @@ void k_bookmarkmenu_super_add_add_bookmarks_list(void* self);
 ///
 void k_bookmarkmenu_add_edit_bookmarks(void* self);
 
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#addEditBookmarks)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KBookmarkMenu*
-/// @param callback void func()
-///
-void k_bookmarkmenu_on_add_edit_bookmarks(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#addEditBookmarks)
-///
-/// Base class method implementation
-///
-/// @param self KBookmarkMenu*
-///
-void k_bookmarkmenu_super_add_edit_bookmarks(void* self);
-
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#addNewFolder)
 ///
 /// @param self KBookmarkMenu*
 ///
 void k_bookmarkmenu_add_new_folder(void* self);
-
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#addNewFolder)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KBookmarkMenu*
-/// @param callback void func()
-///
-void k_bookmarkmenu_on_add_new_folder(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#addNewFolder)
-///
-/// Base class method implementation
-///
-/// @param self KBookmarkMenu*
-///
-void k_bookmarkmenu_super_add_new_folder(void* self);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#addOpenInTabs)
 ///
@@ -507,162 +320,43 @@ void k_bookmarkmenu_super_add_new_folder(void* self);
 ///
 void k_bookmarkmenu_add_open_in_tabs(void* self);
 
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#addOpenInTabs)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KBookmarkMenu*
-/// @param callback void func()
-///
-void k_bookmarkmenu_on_add_open_in_tabs(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#addOpenInTabs)
-///
-/// Base class method implementation
-///
-/// @param self KBookmarkMenu*
-///
-void k_bookmarkmenu_super_add_open_in_tabs(void* self);
-
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#isRoot)
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 ///
-bool k_bookmarkmenu_is_root(void* self);
-
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#isRoot)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KBookmarkMenu*
-/// @param callback bool func()
-///
-void k_bookmarkmenu_on_is_root(void* self, bool (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#isRoot)
-///
-/// Base class method implementation
-///
-/// @param self KBookmarkMenu*
-///
-bool k_bookmarkmenu_super_is_root(void* self);
+bool k_bookmarkmenu_is_root(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#isDirty)
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 ///
-bool k_bookmarkmenu_is_dirty(void* self);
-
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#isDirty)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KBookmarkMenu*
-/// @param callback bool func()
-///
-void k_bookmarkmenu_on_is_dirty(void* self, bool (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#isDirty)
-///
-/// Base class method implementation
-///
-/// @param self KBookmarkMenu*
-///
-bool k_bookmarkmenu_super_is_dirty(void* self);
+bool k_bookmarkmenu_is_dirty(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#parentAddress)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 ///
-const char* k_bookmarkmenu_parent_address(void* self);
-
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#parentAddress)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KBookmarkMenu*
-/// @param callback const char* func()
-///
-void k_bookmarkmenu_on_parent_address(void* self, const char* (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#parentAddress)
-///
-/// Base class method implementation
-///
-/// @param self KBookmarkMenu*
-///
-const char* k_bookmarkmenu_super_parent_address(void* self);
+const char* k_bookmarkmenu_parent_address(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#manager)
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 ///
-KBookmarkManager* k_bookmarkmenu_manager(void* self);
-
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#manager)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KBookmarkMenu*
-/// @param callback KBookmarkManager* func()
-///
-void k_bookmarkmenu_on_manager(void* self, KBookmarkManager* (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#manager)
-///
-/// Base class method implementation
-///
-/// @param self KBookmarkMenu*
-///
-KBookmarkManager* k_bookmarkmenu_super_manager(void* self);
+KBookmarkManager* k_bookmarkmenu_manager(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#owner)
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 ///
-KBookmarkOwner* k_bookmarkmenu_owner(void* self);
-
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#owner)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KBookmarkMenu*
-/// @param callback KBookmarkOwner* func()
-///
-void k_bookmarkmenu_on_owner(void* self, KBookmarkOwner* (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#owner)
-///
-/// Base class method implementation
-///
-/// @param self KBookmarkMenu*
-///
-KBookmarkOwner* k_bookmarkmenu_super_owner(void* self);
+KBookmarkOwner* k_bookmarkmenu_owner(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#parentMenu)
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 ///
-QMenu* k_bookmarkmenu_parent_menu(void* self);
-
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#parentMenu)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KBookmarkMenu*
-/// @param callback QMenu* func()
-///
-void k_bookmarkmenu_on_parent_menu(void* self, QMenu* (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#parentMenu)
-///
-/// Base class method implementation
-///
-/// @param self KBookmarkMenu*
-///
-QMenu* k_bookmarkmenu_super_parent_menu(void* self);
+QMenu* k_bookmarkmenu_parent_menu(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -689,9 +383,9 @@ const char* k_bookmarkmenu_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 ///
-const char* k_bookmarkmenu_object_name(void* self);
+const char* k_bookmarkmenu_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -706,33 +400,33 @@ void k_bookmarkmenu_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 ///
-bool k_bookmarkmenu_is_widget_type(void* self);
+bool k_bookmarkmenu_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 ///
-bool k_bookmarkmenu_is_window_type(void* self);
+bool k_bookmarkmenu_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 ///
-bool k_bookmarkmenu_is_quick_item_type(void* self);
+bool k_bookmarkmenu_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 ///
-bool k_bookmarkmenu_signals_blocked(void* self);
+bool k_bookmarkmenu_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -747,9 +441,9 @@ bool k_bookmarkmenu_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 ///
-QThread* k_bookmarkmenu_thread(void* self);
+QThread* k_bookmarkmenu_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -800,11 +494,11 @@ void k_bookmarkmenu_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_bookmarkmenu_children(void* self);
+libqt_list k_bookmarkmenu_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -842,7 +536,7 @@ void k_bookmarkmenu_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_bookmarkmenu_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_bookmarkmenu_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -853,18 +547,18 @@ QMetaObject__Connection* k_bookmarkmenu_connect(void* sender, const char* signal
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_bookmarkmenu_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_bookmarkmenu_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_bookmarkmenu_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_bookmarkmenu_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -875,7 +569,7 @@ QMetaObject__Connection* k_bookmarkmenu_connect3(void* self, void* sender, const
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_bookmarkmenu_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_bookmarkmenu_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -886,24 +580,24 @@ bool k_bookmarkmenu_disconnect(void* sender, const char* signal, void* receiver,
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_bookmarkmenu_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_bookmarkmenu_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 ///
-bool k_bookmarkmenu_disconnect3(void* self);
+bool k_bookmarkmenu_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 /// @param receiver QObject*
 ///
-bool k_bookmarkmenu_disconnect4(void* self, void* receiver);
+bool k_bookmarkmenu_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -911,23 +605,23 @@ bool k_bookmarkmenu_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_bookmarkmenu_disconnect5(void* param1);
+bool k_bookmarkmenu_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 ///
-void k_bookmarkmenu_dump_object_tree(void* self);
+void k_bookmarkmenu_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 ///
-void k_bookmarkmenu_dump_object_info(void* self);
+void k_bookmarkmenu_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -937,16 +631,16 @@ void k_bookmarkmenu_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_bookmarkmenu_set_property(void* self, const char* name, void* value);
+bool k_bookmarkmenu_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 /// @param name const char*
 ///
-QVariant* k_bookmarkmenu_property(void* self, const char* name);
+QVariant* k_bookmarkmenu_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -954,9 +648,9 @@ QVariant* k_bookmarkmenu_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 ///
-const char** k_bookmarkmenu_dynamic_property_names(void* self);
+const char** k_bookmarkmenu_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -970,9 +664,9 @@ QBindingStorage* k_bookmarkmenu_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 ///
-const QBindingStorage* k_bookmarkmenu_binding_storage2(void* self);
+const QBindingStorage* k_bookmarkmenu_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -995,18 +689,18 @@ void k_bookmarkmenu_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 ///
-QObject* k_bookmarkmenu_parent(void* self);
+QObject* k_bookmarkmenu_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 /// @param classname const char*
 ///
-bool k_bookmarkmenu_inherits(void* self, const char* classname);
+bool k_bookmarkmenu_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1046,7 +740,7 @@ int32_t k_bookmarkmenu_start_timer23(void* self, int64_t time, int32_t timerType
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_bookmarkmenu_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_bookmarkmenu_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1058,59 +752,59 @@ QMetaObject__Connection* k_bookmarkmenu_connect5(void* sender, const char* signa
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_bookmarkmenu_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_bookmarkmenu_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_bookmarkmenu_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_bookmarkmenu_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 /// @param signal const char*
 ///
-bool k_bookmarkmenu_disconnect1(void* self, const char* signal);
+bool k_bookmarkmenu_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KBookmarkMenu*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_bookmarkmenu_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_bookmarkmenu_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_bookmarkmenu_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_bookmarkmenu_disconnect23(void* self, void* receiver, const char* member);
+bool k_bookmarkmenu_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KBookmarkMenu*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_bookmarkmenu_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1306,7 +1000,7 @@ void k_bookmarkmenu_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self KBookmarkMenu*
 /// @param signal QMetaMethod*
 ///
-void k_bookmarkmenu_connect_notify(void* self, void* signal);
+void k_bookmarkmenu_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1317,7 +1011,7 @@ void k_bookmarkmenu_connect_notify(void* self, void* signal);
 /// @param self KBookmarkMenu*
 /// @param signal QMetaMethod*
 ///
-void k_bookmarkmenu_super_connect_notify(void* self, void* signal);
+void k_bookmarkmenu_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1328,7 +1022,7 @@ void k_bookmarkmenu_super_connect_notify(void* self, void* signal);
 /// @param self KBookmarkMenu*
 /// @param callback void func(KBookmarkMenu* self, QMetaMethod* signal)
 ///
-void k_bookmarkmenu_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_bookmarkmenu_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1339,7 +1033,7 @@ void k_bookmarkmenu_on_connect_notify(void* self, void (*callback)(void*, void*)
 /// @param self KBookmarkMenu*
 /// @param signal QMetaMethod*
 ///
-void k_bookmarkmenu_disconnect_notify(void* self, void* signal);
+void k_bookmarkmenu_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1350,7 +1044,7 @@ void k_bookmarkmenu_disconnect_notify(void* self, void* signal);
 /// @param self KBookmarkMenu*
 /// @param signal QMetaMethod*
 ///
-void k_bookmarkmenu_super_disconnect_notify(void* self, void* signal);
+void k_bookmarkmenu_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1361,7 +1055,7 @@ void k_bookmarkmenu_super_disconnect_notify(void* self, void* signal);
 /// @param self KBookmarkMenu*
 /// @param callback void func(KBookmarkMenu* self, QMetaMethod* signal)
 ///
-void k_bookmarkmenu_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_bookmarkmenu_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1369,9 +1063,9 @@ void k_bookmarkmenu_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 ///
-QObject* k_bookmarkmenu_sender(void* self);
+QObject* k_bookmarkmenu_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1379,9 +1073,9 @@ QObject* k_bookmarkmenu_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 ///
-QObject* k_bookmarkmenu_super_sender(void* self);
+QObject* k_bookmarkmenu_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1389,10 +1083,10 @@ QObject* k_bookmarkmenu_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KBookmarkMenu*
-/// @param callback QObject* func()
+/// @param self const KBookmarkMenu*
+/// @param callback QObject* func(KBookmarkMenu* self)
 ///
-void k_bookmarkmenu_on_sender(void* self, QObject* (*callback)());
+void k_bookmarkmenu_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1400,9 +1094,9 @@ void k_bookmarkmenu_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 ///
-int32_t k_bookmarkmenu_sender_signal_index(void* self);
+int32_t k_bookmarkmenu_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1410,9 +1104,9 @@ int32_t k_bookmarkmenu_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 ///
-int32_t k_bookmarkmenu_super_sender_signal_index(void* self);
+int32_t k_bookmarkmenu_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1420,10 +1114,10 @@ int32_t k_bookmarkmenu_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KBookmarkMenu*
-/// @param callback int32_t func()
+/// @param self const KBookmarkMenu*
+/// @param callback int32_t func(KBookmarkMenu* self)
 ///
-void k_bookmarkmenu_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_bookmarkmenu_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1431,10 +1125,10 @@ void k_bookmarkmenu_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 /// @param signal const char*
 ///
-int32_t k_bookmarkmenu_receivers(void* self, const char* signal);
+int32_t k_bookmarkmenu_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1442,10 +1136,10 @@ int32_t k_bookmarkmenu_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 /// @param signal const char*
 ///
-int32_t k_bookmarkmenu_super_receivers(void* self, const char* signal);
+int32_t k_bookmarkmenu_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1453,10 +1147,10 @@ int32_t k_bookmarkmenu_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 /// @param callback int32_t func(KBookmarkMenu* self, const char* signal)
 ///
-void k_bookmarkmenu_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_bookmarkmenu_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1464,10 +1158,10 @@ void k_bookmarkmenu_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 /// @param signal QMetaMethod*
 ///
-bool k_bookmarkmenu_is_signal_connected(void* self, void* signal);
+bool k_bookmarkmenu_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1475,10 +1169,10 @@ bool k_bookmarkmenu_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 /// @param signal QMetaMethod*
 ///
-bool k_bookmarkmenu_super_is_signal_connected(void* self, void* signal);
+bool k_bookmarkmenu_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1486,10 +1180,10 @@ bool k_bookmarkmenu_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KBookmarkMenu*
+/// @param self const KBookmarkMenu*
 /// @param callback bool func(KBookmarkMenu* self, QMetaMethod* signal)
 ///
-void k_bookmarkmenu_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_bookmarkmenu_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

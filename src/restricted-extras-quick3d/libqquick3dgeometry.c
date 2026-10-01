@@ -16,15 +16,15 @@ QQuick3DGeometry* q_quick3dgeometry_new2(void* parent) {
     return QQuick3DGeometry_New2((QQuick3DObject*)parent);
 }
 
-const QMetaObject* q_quick3dgeometry_meta_object(void* self) {
+const QMetaObject* q_quick3dgeometry_meta_object(const void* self) {
     return QQuick3DGeometry_MetaObject((QQuick3DGeometry*)self);
 }
 
-void q_quick3dgeometry_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_quick3dgeometry_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QQuick3DGeometry_OnMetaObject((QQuick3DGeometry*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_quick3dgeometry_super_meta_object(void* self) {
+const QMetaObject* q_quick3dgeometry_super_meta_object(const void* self) {
     return QQuick3DGeometry_SuperMetaObject((QQuick3DGeometry*)self);
 }
 
@@ -59,41 +59,41 @@ const char* q_quick3dgeometry_tr(const char* s) {
     return _ret;
 }
 
-char* q_quick3dgeometry_vertex_data(void* self) {
+char* q_quick3dgeometry_vertex_data(const void* self) {
     libqt_string _str = QQuick3DGeometry_VertexData((QQuick3DGeometry*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_quick3dgeometry_index_data(void* self) {
+char* q_quick3dgeometry_index_data(const void* self) {
     libqt_string _str = QQuick3DGeometry_IndexData((QQuick3DGeometry*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t q_quick3dgeometry_attribute_count(void* self) {
+int32_t q_quick3dgeometry_attribute_count(const void* self) {
     return QQuick3DGeometry_AttributeCount((QQuick3DGeometry*)self);
 }
 
-QQuick3DGeometry__Attribute* q_quick3dgeometry_attribute(void* self, int index) {
+QQuick3DGeometry__Attribute* q_quick3dgeometry_attribute(const void* self, int index) {
     return QQuick3DGeometry_Attribute((QQuick3DGeometry*)self, index);
 }
 
-int32_t q_quick3dgeometry_primitive_type(void* self) {
+int32_t q_quick3dgeometry_primitive_type(const void* self) {
     return QQuick3DGeometry_PrimitiveType((QQuick3DGeometry*)self);
 }
 
-QVector3D* q_quick3dgeometry_bounds_min(void* self) {
+QVector3D* q_quick3dgeometry_bounds_min(const void* self) {
     return QQuick3DGeometry_BoundsMin((QQuick3DGeometry*)self);
 }
 
-QVector3D* q_quick3dgeometry_bounds_max(void* self) {
+QVector3D* q_quick3dgeometry_bounds_max(const void* self) {
     return QQuick3DGeometry_BoundsMax((QQuick3DGeometry*)self);
 }
 
-int32_t q_quick3dgeometry_stride(void* self) {
+int32_t q_quick3dgeometry_stride(const void* self) {
     return QQuick3DGeometry_Stride((QQuick3DGeometry*)self);
 }
 
@@ -117,7 +117,7 @@ void q_quick3dgeometry_set_stride(void* self, int stride) {
     QQuick3DGeometry_SetStride((QQuick3DGeometry*)self, stride);
 }
 
-void q_quick3dgeometry_set_bounds(void* self, void* min, void* max) {
+void q_quick3dgeometry_set_bounds(void* self, const void* min, const void* max) {
     QQuick3DGeometry_SetBounds((QQuick3DGeometry*)self, (QVector3D*)min, (QVector3D*)max);
 }
 
@@ -129,42 +129,42 @@ void q_quick3dgeometry_add_attribute(void* self, int32_t semantic, int offset, i
     QQuick3DGeometry_AddAttribute((QQuick3DGeometry*)self, semantic, offset, componentType);
 }
 
-void q_quick3dgeometry_add_attribute2(void* self, void* att) {
+void q_quick3dgeometry_add_attribute2(void* self, const void* att) {
     QQuick3DGeometry_AddAttribute2((QQuick3DGeometry*)self, (QQuick3DGeometry__Attribute*)att);
 }
 
-int32_t q_quick3dgeometry_subset_count(void* self) {
+int32_t q_quick3dgeometry_subset_count(const void* self) {
     return QQuick3DGeometry_SubsetCount((QQuick3DGeometry*)self);
 }
 
-QVector3D* q_quick3dgeometry_subset_bounds_min(void* self, int subset) {
+QVector3D* q_quick3dgeometry_subset_bounds_min(const void* self, int subset) {
     return QQuick3DGeometry_SubsetBoundsMin((QQuick3DGeometry*)self, subset);
 }
 
-QVector3D* q_quick3dgeometry_subset_bounds_max(void* self, int subset) {
+QVector3D* q_quick3dgeometry_subset_bounds_max(const void* self, int subset) {
     return QQuick3DGeometry_SubsetBoundsMax((QQuick3DGeometry*)self, subset);
 }
 
-int32_t q_quick3dgeometry_subset_offset(void* self, int subset) {
+int32_t q_quick3dgeometry_subset_offset(const void* self, int subset) {
     return QQuick3DGeometry_SubsetOffset((QQuick3DGeometry*)self, subset);
 }
 
-int32_t q_quick3dgeometry_subset_count2(void* self, int subset) {
+int32_t q_quick3dgeometry_subset_count2(const void* self, int subset) {
     return QQuick3DGeometry_SubsetCount2((QQuick3DGeometry*)self, subset);
 }
 
-const char* q_quick3dgeometry_subset_name(void* self, int subset) {
+const char* q_quick3dgeometry_subset_name(const void* self, int subset) {
     libqt_string _str = QQuick3DGeometry_SubsetName((QQuick3DGeometry*)self, subset);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_quick3dgeometry_add_subset(void* self, int offset, int count, void* boundsMin, void* boundsMax) {
+void q_quick3dgeometry_add_subset(void* self, int offset, int count, const void* boundsMin, const void* boundsMax) {
     QQuick3DGeometry_AddSubset((QQuick3DGeometry*)self, offset, count, (QVector3D*)boundsMin, (QVector3D*)boundsMax);
 }
 
-char* q_quick3dgeometry_target_data(void* self) {
+char* q_quick3dgeometry_target_data(const void* self) {
     libqt_string _str = QQuick3DGeometry_TargetData((QQuick3DGeometry*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -179,11 +179,11 @@ void q_quick3dgeometry_set_target_data2(void* self, int offset, char* data) {
     QQuick3DGeometry_SetTargetData2((QQuick3DGeometry*)self, offset, qstring(data));
 }
 
-QQuick3DGeometry__TargetAttribute* q_quick3dgeometry_target_attribute(void* self, int index) {
+QQuick3DGeometry__TargetAttribute* q_quick3dgeometry_target_attribute(const void* self, int index) {
     return QQuick3DGeometry_TargetAttribute((QQuick3DGeometry*)self, index);
 }
 
-int32_t q_quick3dgeometry_target_attribute_count(void* self) {
+int32_t q_quick3dgeometry_target_attribute_count(const void* self) {
     return QQuick3DGeometry_TargetAttributeCount((QQuick3DGeometry*)self);
 }
 
@@ -191,7 +191,7 @@ void q_quick3dgeometry_add_target_attribute(void* self, uint32_t targetId, int32
     QQuick3DGeometry_AddTargetAttribute((QQuick3DGeometry*)self, targetId, semantic, offset);
 }
 
-void q_quick3dgeometry_add_target_attribute2(void* self, void* att) {
+void q_quick3dgeometry_add_target_attribute2(void* self, const void* att) {
     QQuick3DGeometry_AddTargetAttribute2((QQuick3DGeometry*)self, (QQuick3DGeometry__TargetAttribute*)att);
 }
 
@@ -219,7 +219,7 @@ void q_quick3dgeometry_mark_all_dirty(void* self) {
     QQuick3DGeometry_MarkAllDirty((QQuick3DGeometry*)self);
 }
 
-void q_quick3dgeometry_on_mark_all_dirty(void* self, void (*callback)()) {
+void q_quick3dgeometry_on_mark_all_dirty(void* self, void (*callback)(void*)) {
     QQuick3DGeometry_OnMarkAllDirty((QQuick3DGeometry*)self, (intptr_t)callback);
 }
 
@@ -241,7 +241,7 @@ const char* q_quick3dgeometry_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_quick3dgeometry_add_subset5(void* self, int offset, int count, void* boundsMin, void* boundsMax, const char* name) {
+void q_quick3dgeometry_add_subset5(void* self, int offset, int count, const void* boundsMin, const void* boundsMax, const char* name) {
     QQuick3DGeometry_AddSubset5((QQuick3DGeometry*)self, offset, count, (QVector3D*)boundsMin, (QVector3D*)boundsMax, qstring(name));
 }
 
@@ -257,7 +257,7 @@ QQuick3DGeometry* q_quick3dgeometry_from_q_qml_parser_status(void* _qqmlparserst
     return (QQuick3DGeometry*)QQuick3DObject_FromQQmlParserStatus((QQmlParserStatus*)_qqmlparserstatus);
 }
 
-const char* q_quick3dgeometry_state(void* self) {
+const char* q_quick3dgeometry_state(const void* self) {
     libqt_string _str = QQuick3DObject_State((QQuick3DObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -268,12 +268,12 @@ void q_quick3dgeometry_set_state(void* self, const char* state) {
     QQuick3DObject_SetState((QQuick3DObject*)self, qstring(state));
 }
 
-libqt_list /* of QQuick3DObject* */ q_quick3dgeometry_child_items(void* self) {
+libqt_list /* of QQuick3DObject* */ q_quick3dgeometry_child_items(const void* self) {
     libqt_list _arr = QQuick3DObject_ChildItems((QQuick3DObject*)self);
     return _arr;
 }
 
-QQuick3DObject* q_quick3dgeometry_parent_item(void* self) {
+QQuick3DObject* q_quick3dgeometry_parent_item(const void* self) {
     return QQuick3DObject_ParentItem((QQuick3DObject*)self);
 }
 
@@ -309,7 +309,7 @@ void q_quick3dgeometry_on_state_changed(void* self, void (*callback)(void*)) {
     QQuick3DObject_Connect_StateChanged((QQuick3DObject*)self, (intptr_t)callback);
 }
 
-const char* q_quick3dgeometry_object_name(void* self) {
+const char* q_quick3dgeometry_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -320,19 +320,19 @@ void q_quick3dgeometry_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_quick3dgeometry_is_widget_type(void* self) {
+bool q_quick3dgeometry_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_quick3dgeometry_is_window_type(void* self) {
+bool q_quick3dgeometry_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_quick3dgeometry_is_quick_item_type(void* self) {
+bool q_quick3dgeometry_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_quick3dgeometry_signals_blocked(void* self) {
+bool q_quick3dgeometry_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -340,7 +340,7 @@ bool q_quick3dgeometry_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_quick3dgeometry_thread(void* self) {
+QThread* q_quick3dgeometry_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -364,7 +364,7 @@ void q_quick3dgeometry_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_quick3dgeometry_children(void* self) {
+libqt_list /* of QObject* */ q_quick3dgeometry_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -381,55 +381,55 @@ void q_quick3dgeometry_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_quick3dgeometry_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_quick3dgeometry_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_quick3dgeometry_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_quick3dgeometry_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_quick3dgeometry_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_quick3dgeometry_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_quick3dgeometry_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_quick3dgeometry_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_quick3dgeometry_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_quick3dgeometry_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_quick3dgeometry_disconnect3(void* self) {
+bool q_quick3dgeometry_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_quick3dgeometry_disconnect4(void* self, void* receiver) {
+bool q_quick3dgeometry_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_quick3dgeometry_disconnect5(void* param1) {
+bool q_quick3dgeometry_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_quick3dgeometry_dump_object_tree(void* self) {
+void q_quick3dgeometry_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_quick3dgeometry_dump_object_info(void* self) {
+void q_quick3dgeometry_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_quick3dgeometry_set_property(void* self, const char* name, void* value) {
+bool q_quick3dgeometry_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_quick3dgeometry_property(void* self, const char* name) {
+QVariant* q_quick3dgeometry_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_quick3dgeometry_dynamic_property_names(void* self) {
+const char** q_quick3dgeometry_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -450,7 +450,7 @@ QBindingStorage* q_quick3dgeometry_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_quick3dgeometry_binding_storage2(void* self) {
+const QBindingStorage* q_quick3dgeometry_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -462,11 +462,11 @@ void q_quick3dgeometry_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_quick3dgeometry_parent(void* self) {
+QObject* q_quick3dgeometry_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_quick3dgeometry_inherits(void* self, const char* classname) {
+bool q_quick3dgeometry_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -482,31 +482,31 @@ int32_t q_quick3dgeometry_start_timer23(void* self, int64_t time, int32_t timerT
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_quick3dgeometry_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_quick3dgeometry_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_quick3dgeometry_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_quick3dgeometry_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_quick3dgeometry_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_quick3dgeometry_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_quick3dgeometry_disconnect1(void* self, const char* signal) {
+bool q_quick3dgeometry_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_quick3dgeometry_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_quick3dgeometry_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_quick3dgeometry_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_quick3dgeometry_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_quick3dgeometry_disconnect23(void* self, void* receiver, const char* member) {
+bool q_quick3dgeometry_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -518,19 +518,19 @@ void q_quick3dgeometry_on_destroyed1(void* self, void (*callback)(void*, void*))
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void q_quick3dgeometry_operator_assign(void* self, void* param1) {
+void q_quick3dgeometry_operator_assign(void* self, const void* param1) {
     QQmlParserStatus_OperatorAssign(q_quick3dgeometry_as_q_qml_parser_status(self), (QQmlParserStatus*)param1);
 }
 
-void q_quick3dgeometry_item_change(void* self, int32_t param1, void* param2) {
+void q_quick3dgeometry_item_change(void* self, int32_t param1, const void* param2) {
     QQuick3DGeometry_ItemChange((QQuick3DGeometry*)self, param1, (QQuick3DObject__ItemChangeData*)param2);
 }
 
-void q_quick3dgeometry_super_item_change(void* self, int32_t param1, void* param2) {
+void q_quick3dgeometry_super_item_change(void* self, int32_t param1, const void* param2) {
     QQuick3DGeometry_SuperItemChange((QQuick3DGeometry*)self, param1, (QQuick3DObject__ItemChangeData*)param2);
 }
 
-void q_quick3dgeometry_on_item_change(void* self, void (*callback)(void*, int32_t, void*)) {
+void q_quick3dgeometry_on_item_change(void* self, void (*callback)(void*, int32_t, const void*)) {
     QQuick3DGeometry_OnItemChange((QQuick3DGeometry*)self, (intptr_t)callback);
 }
 
@@ -542,7 +542,7 @@ void q_quick3dgeometry_super_class_begin(void* self) {
     QQuick3DGeometry_SuperClassBegin((QQuick3DGeometry*)self);
 }
 
-void q_quick3dgeometry_on_class_begin(void* self, void (*callback)()) {
+void q_quick3dgeometry_on_class_begin(void* self, void (*callback)(void*)) {
     QQuick3DGeometry_OnClassBegin((QQuick3DGeometry*)self, (intptr_t)callback);
 }
 
@@ -554,7 +554,7 @@ void q_quick3dgeometry_super_component_complete(void* self) {
     QQuick3DGeometry_SuperComponentComplete((QQuick3DGeometry*)self);
 }
 
-void q_quick3dgeometry_on_component_complete(void* self, void (*callback)()) {
+void q_quick3dgeometry_on_component_complete(void* self, void (*callback)(void*)) {
     QQuick3DGeometry_OnComponentComplete((QQuick3DGeometry*)self, (intptr_t)callback);
 }
 
@@ -566,7 +566,7 @@ void q_quick3dgeometry_super_pre_sync(void* self) {
     QQuick3DGeometry_SuperPreSync((QQuick3DGeometry*)self);
 }
 
-void q_quick3dgeometry_on_pre_sync(void* self, void (*callback)()) {
+void q_quick3dgeometry_on_pre_sync(void* self, void (*callback)(void*)) {
     QQuick3DGeometry_OnPreSync((QQuick3DGeometry*)self, (intptr_t)callback);
 }
 
@@ -630,88 +630,48 @@ void q_quick3dgeometry_on_custom_event(void* self, void (*callback)(void*, void*
     QQuick3DGeometry_OnCustomEvent((QQuick3DGeometry*)self, (intptr_t)callback);
 }
 
-void q_quick3dgeometry_connect_notify(void* self, void* signal) {
+void q_quick3dgeometry_connect_notify(void* self, const void* signal) {
     QQuick3DGeometry_ConnectNotify((QQuick3DGeometry*)self, (QMetaMethod*)signal);
 }
 
-void q_quick3dgeometry_super_connect_notify(void* self, void* signal) {
+void q_quick3dgeometry_super_connect_notify(void* self, const void* signal) {
     QQuick3DGeometry_SuperConnectNotify((QQuick3DGeometry*)self, (QMetaMethod*)signal);
 }
 
-void q_quick3dgeometry_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_quick3dgeometry_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QQuick3DGeometry_OnConnectNotify((QQuick3DGeometry*)self, (intptr_t)callback);
 }
 
-void q_quick3dgeometry_disconnect_notify(void* self, void* signal) {
+void q_quick3dgeometry_disconnect_notify(void* self, const void* signal) {
     QQuick3DGeometry_DisconnectNotify((QQuick3DGeometry*)self, (QMetaMethod*)signal);
 }
 
-void q_quick3dgeometry_super_disconnect_notify(void* self, void* signal) {
+void q_quick3dgeometry_super_disconnect_notify(void* self, const void* signal) {
     QQuick3DGeometry_SuperDisconnectNotify((QQuick3DGeometry*)self, (QMetaMethod*)signal);
 }
 
-void q_quick3dgeometry_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_quick3dgeometry_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QQuick3DGeometry_OnDisconnectNotify((QQuick3DGeometry*)self, (intptr_t)callback);
 }
 
-bool q_quick3dgeometry_is_component_complete(void* self) {
+bool q_quick3dgeometry_is_component_complete(const void* self) {
     return QQuick3DGeometry_IsComponentComplete((QQuick3DGeometry*)self);
 }
 
-bool q_quick3dgeometry_super_is_component_complete(void* self) {
-    return QQuick3DGeometry_SuperIsComponentComplete((QQuick3DGeometry*)self);
-}
-
-void q_quick3dgeometry_on_is_component_complete(void* self, bool (*callback)()) {
-    QQuick3DGeometry_OnIsComponentComplete((QQuick3DGeometry*)self, (intptr_t)callback);
-}
-
-QObject* q_quick3dgeometry_sender(void* self) {
+QObject* q_quick3dgeometry_sender(const void* self) {
     return QQuick3DGeometry_Sender((QQuick3DGeometry*)self);
 }
 
-QObject* q_quick3dgeometry_super_sender(void* self) {
-    return QQuick3DGeometry_SuperSender((QQuick3DGeometry*)self);
-}
-
-void q_quick3dgeometry_on_sender(void* self, QObject* (*callback)()) {
-    QQuick3DGeometry_OnSender((QQuick3DGeometry*)self, (intptr_t)callback);
-}
-
-int32_t q_quick3dgeometry_sender_signal_index(void* self) {
+int32_t q_quick3dgeometry_sender_signal_index(const void* self) {
     return QQuick3DGeometry_SenderSignalIndex((QQuick3DGeometry*)self);
 }
 
-int32_t q_quick3dgeometry_super_sender_signal_index(void* self) {
-    return QQuick3DGeometry_SuperSenderSignalIndex((QQuick3DGeometry*)self);
-}
-
-void q_quick3dgeometry_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QQuick3DGeometry_OnSenderSignalIndex((QQuick3DGeometry*)self, (intptr_t)callback);
-}
-
-int32_t q_quick3dgeometry_receivers(void* self, const char* signal) {
+int32_t q_quick3dgeometry_receivers(const void* self, const char* signal) {
     return QQuick3DGeometry_Receivers((QQuick3DGeometry*)self, signal);
 }
 
-int32_t q_quick3dgeometry_super_receivers(void* self, const char* signal) {
-    return QQuick3DGeometry_SuperReceivers((QQuick3DGeometry*)self, signal);
-}
-
-void q_quick3dgeometry_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QQuick3DGeometry_OnReceivers((QQuick3DGeometry*)self, (intptr_t)callback);
-}
-
-bool q_quick3dgeometry_is_signal_connected(void* self, void* signal) {
+bool q_quick3dgeometry_is_signal_connected(const void* self, const void* signal) {
     return QQuick3DGeometry_IsSignalConnected((QQuick3DGeometry*)self, (QMetaMethod*)signal);
-}
-
-bool q_quick3dgeometry_super_is_signal_connected(void* self, void* signal) {
-    return QQuick3DGeometry_SuperIsSignalConnected((QQuick3DGeometry*)self, (QMetaMethod*)signal);
-}
-
-void q_quick3dgeometry_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QQuick3DGeometry_OnIsSignalConnected((QQuick3DGeometry*)self, (intptr_t)callback);
 }
 
 void q_quick3dgeometry_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
@@ -726,7 +686,7 @@ QQuick3DGeometry__Attribute* q_quick3dgeometry__attribute_new() {
     return QQuick3DGeometry__Attribute_New();
 }
 
-QQuick3DGeometry__Attribute* q_quick3dgeometry__attribute_new2(void* other) {
+QQuick3DGeometry__Attribute* q_quick3dgeometry__attribute_new2(const void* other) {
     return QQuick3DGeometry__Attribute_New2((QQuick3DGeometry__Attribute*)other);
 }
 
@@ -742,7 +702,7 @@ void q_quick3dgeometry__attribute_move_assign(void* self, void* other) {
     QQuick3DGeometry__Attribute_MoveAssign((QQuick3DGeometry__Attribute*)self, (QQuick3DGeometry__Attribute*)other);
 }
 
-int32_t q_quick3dgeometry__attribute_semantic(void* self) {
+int32_t q_quick3dgeometry__attribute_semantic(const void* self) {
     return QQuick3DGeometry__Attribute_Semantic((QQuick3DGeometry__Attribute*)self);
 }
 
@@ -750,7 +710,7 @@ void q_quick3dgeometry__attribute_set_semantic(void* self, int32_t semantic) {
     QQuick3DGeometry__Attribute_SetSemantic((QQuick3DGeometry__Attribute*)self, semantic);
 }
 
-int32_t q_quick3dgeometry__attribute_offset(void* self) {
+int32_t q_quick3dgeometry__attribute_offset(const void* self) {
     return QQuick3DGeometry__Attribute_Offset((QQuick3DGeometry__Attribute*)self);
 }
 
@@ -758,7 +718,7 @@ void q_quick3dgeometry__attribute_set_offset(void* self, int offset) {
     QQuick3DGeometry__Attribute_SetOffset((QQuick3DGeometry__Attribute*)self, offset);
 }
 
-int32_t q_quick3dgeometry__attribute_component_type(void* self) {
+int32_t q_quick3dgeometry__attribute_component_type(const void* self) {
     return QQuick3DGeometry__Attribute_ComponentType((QQuick3DGeometry__Attribute*)self);
 }
 
@@ -774,7 +734,7 @@ QQuick3DGeometry__TargetAttribute* q_quick3dgeometry__targetattribute_new() {
     return QQuick3DGeometry__TargetAttribute_New();
 }
 
-QQuick3DGeometry__TargetAttribute* q_quick3dgeometry__targetattribute_new2(void* other) {
+QQuick3DGeometry__TargetAttribute* q_quick3dgeometry__targetattribute_new2(const void* other) {
     return QQuick3DGeometry__TargetAttribute_New2((QQuick3DGeometry__TargetAttribute*)other);
 }
 
@@ -790,7 +750,7 @@ void q_quick3dgeometry__targetattribute_move_assign(void* self, void* other) {
     QQuick3DGeometry__TargetAttribute_MoveAssign((QQuick3DGeometry__TargetAttribute*)self, (QQuick3DGeometry__TargetAttribute*)other);
 }
 
-uint32_t q_quick3dgeometry__targetattribute_target_id(void* self) {
+uint32_t q_quick3dgeometry__targetattribute_target_id(const void* self) {
     return QQuick3DGeometry__TargetAttribute_TargetId((QQuick3DGeometry__TargetAttribute*)self);
 }
 
@@ -798,7 +758,7 @@ void q_quick3dgeometry__targetattribute_set_target_id(void* self, uint32_t targe
     QQuick3DGeometry__TargetAttribute_SetTargetId((QQuick3DGeometry__TargetAttribute*)self, targetId);
 }
 
-QQuick3DGeometry__Attribute* q_quick3dgeometry__targetattribute_attr(void* self) {
+QQuick3DGeometry__Attribute* q_quick3dgeometry__targetattribute_attr(const void* self) {
     return QQuick3DGeometry__TargetAttribute_Attr((QQuick3DGeometry__TargetAttribute*)self);
 }
 
@@ -806,7 +766,7 @@ void q_quick3dgeometry__targetattribute_set_attr(void* self, void* attr) {
     QQuick3DGeometry__TargetAttribute_SetAttr((QQuick3DGeometry__TargetAttribute*)self, (QQuick3DGeometry__Attribute*)attr);
 }
 
-int32_t q_quick3dgeometry__targetattribute_stride(void* self) {
+int32_t q_quick3dgeometry__targetattribute_stride(const void* self) {
     return QQuick3DGeometry__TargetAttribute_Stride((QQuick3DGeometry__TargetAttribute*)self);
 }
 

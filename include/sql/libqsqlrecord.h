@@ -20,14 +20,14 @@ QSqlRecord* q_sqlrecord_new();
 ///
 /// @param other QSqlRecord*
 ///
-QSqlRecord* q_sqlrecord_new2(void* other);
+QSqlRecord* q_sqlrecord_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#operator-eq)
 ///
 /// @param self QSqlRecord*
 /// @param other QSqlRecord*
 ///
-void q_sqlrecord_operator_assign(void* self, void* other);
+void q_sqlrecord_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#swap)
 ///
@@ -38,31 +38,31 @@ void q_sqlrecord_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#operator-eq-eq)
 ///
-/// @param self QSqlRecord*
+/// @param self const QSqlRecord*
 /// @param other QSqlRecord*
 ///
-bool q_sqlrecord_operator_equal(void* self, void* other);
+bool q_sqlrecord_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#operator-not-eq)
 ///
-/// @param self QSqlRecord*
+/// @param self const QSqlRecord*
 /// @param other QSqlRecord*
 ///
-bool q_sqlrecord_operator_not_equal(void* self, void* other);
+bool q_sqlrecord_operator_not_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#value)
 ///
-/// @param self QSqlRecord*
+/// @param self const QSqlRecord*
 /// @param i int
 ///
-QVariant* q_sqlrecord_value(void* self, int i);
+QVariant* q_sqlrecord_value(const void* self, int i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#value)
 ///
-/// @param self QSqlRecord*
+/// @param self const QSqlRecord*
 /// @param name const char*
 ///
-QVariant* q_sqlrecord_value2(void* self, const char* name);
+QVariant* q_sqlrecord_value2(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#setValue)
 ///
@@ -70,7 +70,7 @@ QVariant* q_sqlrecord_value2(void* self, const char* name);
 /// @param i int
 /// @param val QVariant*
 ///
-void q_sqlrecord_set_value(void* self, int i, void* val);
+void q_sqlrecord_set_value(void* self, int i, const void* val);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#setValue)
 ///
@@ -78,7 +78,7 @@ void q_sqlrecord_set_value(void* self, int i, void* val);
 /// @param name const char*
 /// @param val QVariant*
 ///
-void q_sqlrecord_set_value2(void* self, const char* name, void* val);
+void q_sqlrecord_set_value2(void* self, const char* name, const void* val);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#setNull)
 ///
@@ -96,61 +96,61 @@ void q_sqlrecord_set_null2(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#isNull)
 ///
-/// @param self QSqlRecord*
+/// @param self const QSqlRecord*
 /// @param i int
 ///
-bool q_sqlrecord_is_null(void* self, int i);
+bool q_sqlrecord_is_null(const void* self, int i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#isNull)
 ///
-/// @param self QSqlRecord*
+/// @param self const QSqlRecord*
 /// @param name const char*
 ///
-bool q_sqlrecord_is_null2(void* self, const char* name);
+bool q_sqlrecord_is_null2(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#indexOf)
 ///
-/// @param self QSqlRecord*
+/// @param self const QSqlRecord*
 /// @param name const char*
 ///
-int32_t q_sqlrecord_index_of(void* self, const char* name);
+int32_t q_sqlrecord_index_of(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#fieldName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSqlRecord*
+/// @param self const QSqlRecord*
 /// @param i int
 ///
-const char* q_sqlrecord_field_name(void* self, int i);
+const char* q_sqlrecord_field_name(const void* self, int i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#field)
 ///
-/// @param self QSqlRecord*
+/// @param self const QSqlRecord*
 /// @param i int
 ///
-QSqlField* q_sqlrecord_field(void* self, int i);
+QSqlField* q_sqlrecord_field(const void* self, int i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#field)
 ///
-/// @param self QSqlRecord*
+/// @param self const QSqlRecord*
 /// @param name const char*
 ///
-QSqlField* q_sqlrecord_field2(void* self, const char* name);
+QSqlField* q_sqlrecord_field2(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#isGenerated)
 ///
-/// @param self QSqlRecord*
+/// @param self const QSqlRecord*
 /// @param i int
 ///
-bool q_sqlrecord_is_generated(void* self, int i);
+bool q_sqlrecord_is_generated(const void* self, int i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#isGenerated)
 ///
-/// @param self QSqlRecord*
+/// @param self const QSqlRecord*
 /// @param name const char*
 ///
-bool q_sqlrecord_is_generated2(void* self, const char* name);
+bool q_sqlrecord_is_generated2(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#setGenerated)
 ///
@@ -173,7 +173,7 @@ void q_sqlrecord_set_generated2(void* self, int i, bool generated);
 /// @param self QSqlRecord*
 /// @param field QSqlField*
 ///
-void q_sqlrecord_append(void* self, void* field);
+void q_sqlrecord_append(void* self, const void* field);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#replace)
 ///
@@ -181,7 +181,7 @@ void q_sqlrecord_append(void* self, void* field);
 /// @param pos int
 /// @param field QSqlField*
 ///
-void q_sqlrecord_replace(void* self, int pos, void* field);
+void q_sqlrecord_replace(void* self, int pos, const void* field);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#insert)
 ///
@@ -189,7 +189,7 @@ void q_sqlrecord_replace(void* self, int pos, void* field);
 /// @param pos int
 /// @param field QSqlField*
 ///
-void q_sqlrecord_insert(void* self, int pos, void* field);
+void q_sqlrecord_insert(void* self, int pos, const void* field);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#remove)
 ///
@@ -200,16 +200,16 @@ void q_sqlrecord_remove(void* self, int pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#isEmpty)
 ///
-/// @param self QSqlRecord*
+/// @param self const QSqlRecord*
 ///
-bool q_sqlrecord_is_empty(void* self);
+bool q_sqlrecord_is_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#contains)
 ///
-/// @param self QSqlRecord*
+/// @param self const QSqlRecord*
 /// @param name const char*
 ///
-bool q_sqlrecord_contains(void* self, const char* name);
+bool q_sqlrecord_contains(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#clear)
 ///
@@ -225,16 +225,16 @@ void q_sqlrecord_clear_values(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#count)
 ///
-/// @param self QSqlRecord*
+/// @param self const QSqlRecord*
 ///
-int32_t q_sqlrecord_count(void* self);
+int32_t q_sqlrecord_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#keyValues)
 ///
-/// @param self QSqlRecord*
+/// @param self const QSqlRecord*
 /// @param keyFields QSqlRecord*
 ///
-QSqlRecord* q_sqlrecord_key_values(void* self, void* keyFields);
+QSqlRecord* q_sqlrecord_key_values(const void* self, const void* keyFields);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#dtor.QSqlRecord)
 ///

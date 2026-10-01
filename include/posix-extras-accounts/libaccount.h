@@ -24,26 +24,26 @@ Accounts__Watch* q_accounts__watch_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 ///
-const QMetaObject* q_accounts__watch_meta_object(void* self);
+const QMetaObject* q_accounts__watch_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self Accounts__Watch*
-/// @param callback const QMetaObject* func()
+/// @param self const Accounts__Watch*
+/// @param callback const QMetaObject* func(const Accounts__Watch* self)
 ///
-void q_accounts__watch_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_accounts__watch_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 ///
-const QMetaObject* q_accounts__watch_super_meta_object(void* self);
+const QMetaObject* q_accounts__watch_super_meta_object(const void* self);
 
 /// @param self Accounts__Watch*
 /// @param param1 const char*
@@ -134,9 +134,9 @@ const char* q_accounts__watch_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 ///
-const char* q_accounts__watch_object_name(void* self);
+const char* q_accounts__watch_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -151,33 +151,33 @@ void q_accounts__watch_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 ///
-bool q_accounts__watch_is_widget_type(void* self);
+bool q_accounts__watch_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 ///
-bool q_accounts__watch_is_window_type(void* self);
+bool q_accounts__watch_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 ///
-bool q_accounts__watch_is_quick_item_type(void* self);
+bool q_accounts__watch_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 ///
-bool q_accounts__watch_signals_blocked(void* self);
+bool q_accounts__watch_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -192,9 +192,9 @@ bool q_accounts__watch_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 ///
-QThread* q_accounts__watch_thread(void* self);
+QThread* q_accounts__watch_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -245,11 +245,11 @@ void q_accounts__watch_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_accounts__watch_children(void* self);
+libqt_list q_accounts__watch_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -287,7 +287,7 @@ void q_accounts__watch_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_accounts__watch_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_accounts__watch_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -298,18 +298,18 @@ QMetaObject__Connection* q_accounts__watch_connect(void* sender, const char* sig
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_accounts__watch_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_accounts__watch_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_accounts__watch_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_accounts__watch_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -320,7 +320,7 @@ QMetaObject__Connection* q_accounts__watch_connect3(void* self, void* sender, co
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_accounts__watch_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_accounts__watch_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -331,24 +331,24 @@ bool q_accounts__watch_disconnect(void* sender, const char* signal, void* receiv
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_accounts__watch_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_accounts__watch_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 ///
-bool q_accounts__watch_disconnect3(void* self);
+bool q_accounts__watch_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 /// @param receiver QObject*
 ///
-bool q_accounts__watch_disconnect4(void* self, void* receiver);
+bool q_accounts__watch_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -356,23 +356,23 @@ bool q_accounts__watch_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_accounts__watch_disconnect5(void* param1);
+bool q_accounts__watch_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 ///
-void q_accounts__watch_dump_object_tree(void* self);
+void q_accounts__watch_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 ///
-void q_accounts__watch_dump_object_info(void* self);
+void q_accounts__watch_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -382,16 +382,16 @@ void q_accounts__watch_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_accounts__watch_set_property(void* self, const char* name, void* value);
+bool q_accounts__watch_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 /// @param name const char*
 ///
-QVariant* q_accounts__watch_property(void* self, const char* name);
+QVariant* q_accounts__watch_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -399,9 +399,9 @@ QVariant* q_accounts__watch_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 ///
-const char** q_accounts__watch_dynamic_property_names(void* self);
+const char** q_accounts__watch_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -415,9 +415,9 @@ QBindingStorage* q_accounts__watch_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 ///
-const QBindingStorage* q_accounts__watch_binding_storage2(void* self);
+const QBindingStorage* q_accounts__watch_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -440,18 +440,18 @@ void q_accounts__watch_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 ///
-QObject* q_accounts__watch_parent(void* self);
+QObject* q_accounts__watch_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 /// @param classname const char*
 ///
-bool q_accounts__watch_inherits(void* self, const char* classname);
+bool q_accounts__watch_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -491,7 +491,7 @@ int32_t q_accounts__watch_start_timer23(void* self, int64_t time, int32_t timerT
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_accounts__watch_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_accounts__watch_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -503,59 +503,59 @@ QMetaObject__Connection* q_accounts__watch_connect5(void* sender, const char* si
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_accounts__watch_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_accounts__watch_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_accounts__watch_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_accounts__watch_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 /// @param signal const char*
 ///
-bool q_accounts__watch_disconnect1(void* self, const char* signal);
+bool q_accounts__watch_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Accounts__Watch*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_accounts__watch_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_accounts__watch_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_accounts__watch_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_accounts__watch_disconnect23(void* self, void* receiver, const char* member);
+bool q_accounts__watch_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const Accounts__Watch*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_accounts__watch_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -751,7 +751,7 @@ void q_accounts__watch_on_custom_event(void* self, void (*callback)(void*, void*
 /// @param self Accounts__Watch*
 /// @param signal QMetaMethod*
 ///
-void q_accounts__watch_connect_notify(void* self, void* signal);
+void q_accounts__watch_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -762,7 +762,7 @@ void q_accounts__watch_connect_notify(void* self, void* signal);
 /// @param self Accounts__Watch*
 /// @param signal QMetaMethod*
 ///
-void q_accounts__watch_super_connect_notify(void* self, void* signal);
+void q_accounts__watch_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -773,7 +773,7 @@ void q_accounts__watch_super_connect_notify(void* self, void* signal);
 /// @param self Accounts__Watch*
 /// @param callback void func(Accounts__Watch* self, QMetaMethod* signal)
 ///
-void q_accounts__watch_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_accounts__watch_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -784,7 +784,7 @@ void q_accounts__watch_on_connect_notify(void* self, void (*callback)(void*, voi
 /// @param self Accounts__Watch*
 /// @param signal QMetaMethod*
 ///
-void q_accounts__watch_disconnect_notify(void* self, void* signal);
+void q_accounts__watch_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -795,7 +795,7 @@ void q_accounts__watch_disconnect_notify(void* self, void* signal);
 /// @param self Accounts__Watch*
 /// @param signal QMetaMethod*
 ///
-void q_accounts__watch_super_disconnect_notify(void* self, void* signal);
+void q_accounts__watch_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -806,7 +806,7 @@ void q_accounts__watch_super_disconnect_notify(void* self, void* signal);
 /// @param self Accounts__Watch*
 /// @param callback void func(Accounts__Watch* self, QMetaMethod* signal)
 ///
-void q_accounts__watch_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_accounts__watch_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -814,9 +814,9 @@ void q_accounts__watch_on_disconnect_notify(void* self, void (*callback)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 ///
-QObject* q_accounts__watch_sender(void* self);
+QObject* q_accounts__watch_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -824,9 +824,9 @@ QObject* q_accounts__watch_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 ///
-QObject* q_accounts__watch_super_sender(void* self);
+QObject* q_accounts__watch_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -834,10 +834,10 @@ QObject* q_accounts__watch_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Accounts__Watch*
-/// @param callback QObject* func()
+/// @param self const Accounts__Watch*
+/// @param callback QObject* func(Accounts__Watch* self)
 ///
-void q_accounts__watch_on_sender(void* self, QObject* (*callback)());
+void q_accounts__watch_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -845,9 +845,9 @@ void q_accounts__watch_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 ///
-int32_t q_accounts__watch_sender_signal_index(void* self);
+int32_t q_accounts__watch_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -855,9 +855,9 @@ int32_t q_accounts__watch_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 ///
-int32_t q_accounts__watch_super_sender_signal_index(void* self);
+int32_t q_accounts__watch_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -865,10 +865,10 @@ int32_t q_accounts__watch_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Accounts__Watch*
-/// @param callback int32_t func()
+/// @param self const Accounts__Watch*
+/// @param callback int32_t func(Accounts__Watch* self)
 ///
-void q_accounts__watch_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_accounts__watch_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -876,10 +876,10 @@ void q_accounts__watch_on_sender_signal_index(void* self, int32_t (*callback)())
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 /// @param signal const char*
 ///
-int32_t q_accounts__watch_receivers(void* self, const char* signal);
+int32_t q_accounts__watch_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -887,10 +887,10 @@ int32_t q_accounts__watch_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 /// @param signal const char*
 ///
-int32_t q_accounts__watch_super_receivers(void* self, const char* signal);
+int32_t q_accounts__watch_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -898,10 +898,10 @@ int32_t q_accounts__watch_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 /// @param callback int32_t func(Accounts__Watch* self, const char* signal)
 ///
-void q_accounts__watch_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_accounts__watch_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -909,10 +909,10 @@ void q_accounts__watch_on_receivers(void* self, int32_t (*callback)(void*, const
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 /// @param signal QMetaMethod*
 ///
-bool q_accounts__watch_is_signal_connected(void* self, void* signal);
+bool q_accounts__watch_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -920,10 +920,10 @@ bool q_accounts__watch_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 /// @param signal QMetaMethod*
 ///
-bool q_accounts__watch_super_is_signal_connected(void* self, void* signal);
+bool q_accounts__watch_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -931,10 +931,10 @@ bool q_accounts__watch_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Accounts__Watch*
+/// @param self const Accounts__Watch*
 /// @param callback bool func(Accounts__Watch* self, QMetaMethod* signal)
 ///
-void q_accounts__watch_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_accounts__watch_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -976,26 +976,26 @@ Accounts__Account* q_accounts__account_new2(void* manager, const char* provider,
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-const QMetaObject* q_accounts__account_meta_object(void* self);
+const QMetaObject* q_accounts__account_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self Accounts__Account*
-/// @param callback const QMetaObject* func()
+/// @param self const Accounts__Account*
+/// @param callback const QMetaObject* func(const Accounts__Account* self)
 ///
-void q_accounts__account_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_accounts__account_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-const QMetaObject* q_accounts__account_super_meta_object(void* self);
+const QMetaObject* q_accounts__account_super_meta_object(const void* self);
 
 /// @param self Accounts__Account*
 /// @param param1 const char*
@@ -1056,50 +1056,50 @@ Accounts__Account* q_accounts__account_from_id(void* manager, uint32_t id);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-uint32_t q_accounts__account_id(void* self);
+uint32_t q_accounts__account_id(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-Accounts__Manager* q_accounts__account_manager(void* self);
+Accounts__Manager* q_accounts__account_manager(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param serviceType const char*
 ///
-bool q_accounts__account_supports_service(void* self, const char* serviceType);
+bool q_accounts__account_supports_service(const void* self, const char* serviceType);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
 /// @return libqt_list of Accounts__Service*
 ///
-libqt_list q_accounts__account_services(void* self);
+libqt_list q_accounts__account_services(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
 /// @return libqt_list of Accounts__Service*
 ///
-libqt_list q_accounts__account_enabled_services(void* self);
+libqt_list q_accounts__account_enabled_services(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-bool q_accounts__account_enabled(void* self);
+bool q_accounts__account_enabled(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-bool q_accounts__account_is_enabled(void* self);
+bool q_accounts__account_is_enabled(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
@@ -1125,9 +1125,9 @@ void q_accounts__account_set_credentials_id(void* self, uint32_t id);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-const char* q_accounts__account_display_name(void* self);
+const char* q_accounts__account_display_name(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
@@ -1140,15 +1140,15 @@ void q_accounts__account_set_display_name(void* self, const char* displayName);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-const char* q_accounts__account_provider_name(void* self);
+const char* q_accounts__account_provider_name(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-Accounts__Provider* q_accounts__account_provider(void* self);
+Accounts__Provider* q_accounts__account_provider(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
@@ -1158,17 +1158,17 @@ void q_accounts__account_select_service(void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-Accounts__Service* q_accounts__account_selected_service(void* self);
+Accounts__Service* q_accounts__account_selected_service(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-const char** q_accounts__account_all_keys(void* self);
+const char** q_accounts__account_all_keys(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
@@ -1181,17 +1181,17 @@ void q_accounts__account_begin_group(void* self, const char* prefix);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-const char** q_accounts__account_child_groups(void* self);
+const char** q_accounts__account_child_groups(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-const char** q_accounts__account_child_keys(void* self);
+const char** q_accounts__account_child_keys(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
@@ -1201,10 +1201,10 @@ void q_accounts__account_clear(void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param key const char*
 ///
-bool q_accounts__account_contains(void* self, const char* key);
+bool q_accounts__account_contains(const void* self, const char* key);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
@@ -1216,15 +1216,15 @@ void q_accounts__account_end_group(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-const char* q_accounts__account_group(void* self);
+const char* q_accounts__account_group(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-bool q_accounts__account_is_writable(void* self);
+bool q_accounts__account_is_writable(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
@@ -1239,54 +1239,54 @@ void q_accounts__account_remove(void* self, const char* key);
 /// @param key const char*
 /// @param value QVariant*
 ///
-void q_accounts__account_set_value(void* self, const char* key, void* value);
+void q_accounts__account_set_value(void* self, const char* key, const void* value);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param key const char*
 ///
-QVariant* q_accounts__account_value(void* self, const char* key);
+QVariant* q_accounts__account_value(const void* self, const char* key);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param key const char*
 /// @param value QVariant*
 ///
 /// @return enum Accounts__SettingSource
 ///
-int32_t q_accounts__account_value2(void* self, const char* key, void* value);
+int32_t q_accounts__account_value2(const void* self, const char* key, void* value);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param key const char*
 ///
-const char* q_accounts__account_value_as_string(void* self, const char* key);
+const char* q_accounts__account_value_as_string(const void* self, const char* key);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param key const char*
 ///
-int32_t q_accounts__account_value_as_int(void* self, const char* key);
+int32_t q_accounts__account_value_as_int(const void* self, const char* key);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param key const char*
 ///
-uint64_t q_accounts__account_value_as_u_int64(void* self, const char* key);
+uint64_t q_accounts__account_value_as_u_int64(const void* self, const char* key);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param key const char*
 ///
-bool q_accounts__account_value_as_bool(void* self, const char* key);
+bool q_accounts__account_value_as_bool(const void* self, const char* key);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
@@ -1434,108 +1434,108 @@ Accounts__Account* q_accounts__account_from_id3(void* manager, uint32_t id, void
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param serviceType const char*
 ///
 /// @return libqt_list of Accounts__Service*
 ///
-libqt_list q_accounts__account_services1(void* self, const char* serviceType);
+libqt_list q_accounts__account_services1(const void* self, const char* serviceType);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
 /// @param self Accounts__Account*
 /// @param service Accounts__Service*
 ///
-void q_accounts__account_select_service1(void* self, void* service);
+void q_accounts__account_select_service1(void* self, const void* service);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param key const char*
 /// @param defaultValue QVariant*
 ///
-QVariant* q_accounts__account_value22(void* self, const char* key, void* defaultValue);
+QVariant* q_accounts__account_value22(const void* self, const char* key, const void* defaultValue);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param key const char*
 /// @param defaultValue QVariant*
 /// @param source enum Accounts__SettingSource*
 ///
-QVariant* q_accounts__account_value3(void* self, const char* key, void* defaultValue, int32_t* source);
+QVariant* q_accounts__account_value3(const void* self, const char* key, const void* defaultValue, int32_t* source);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param key const char*
 /// @param default_value const char*
 ///
-const char* q_accounts__account_value_as_string2(void* self, const char* key, const char* default_value);
+const char* q_accounts__account_value_as_string2(const void* self, const char* key, const char* default_value);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param key const char*
 /// @param default_value const char*
 /// @param source enum Accounts__SettingSource*
 ///
-const char* q_accounts__account_value_as_string3(void* self, const char* key, const char* default_value, int32_t* source);
+const char* q_accounts__account_value_as_string3(const void* self, const char* key, const char* default_value, int32_t* source);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param key const char*
 /// @param default_value int
 ///
-int32_t q_accounts__account_value_as_int2(void* self, const char* key, int default_value);
+int32_t q_accounts__account_value_as_int2(const void* self, const char* key, int default_value);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param key const char*
 /// @param default_value int
 /// @param source enum Accounts__SettingSource*
 ///
-int32_t q_accounts__account_value_as_int3(void* self, const char* key, int default_value, int32_t* source);
+int32_t q_accounts__account_value_as_int3(const void* self, const char* key, int default_value, int32_t* source);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param key const char*
 /// @param default_value uint64_t
 ///
-uint64_t q_accounts__account_value_as_u_int642(void* self, const char* key, uint64_t default_value);
+uint64_t q_accounts__account_value_as_u_int642(const void* self, const char* key, uint64_t default_value);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param key const char*
 /// @param default_value uint64_t
 /// @param source enum Accounts__SettingSource*
 ///
-uint64_t q_accounts__account_value_as_u_int643(void* self, const char* key, uint64_t default_value, int32_t* source);
+uint64_t q_accounts__account_value_as_u_int643(const void* self, const char* key, uint64_t default_value, int32_t* source);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param key const char*
 /// @param default_value bool
 ///
-bool q_accounts__account_value_as_bool2(void* self, const char* key, bool default_value);
+bool q_accounts__account_value_as_bool2(const void* self, const char* key, bool default_value);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param key const char*
 /// @param default_value bool
 /// @param source enum Accounts__SettingSource*
 ///
-bool q_accounts__account_value_as_bool3(void* self, const char* key, bool default_value, int32_t* source);
+bool q_accounts__account_value_as_bool3(const void* self, const char* key, bool default_value, int32_t* source);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
@@ -1550,9 +1550,9 @@ Accounts__Watch* q_accounts__account_watch_key1(void* self, const char* key);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-const char* q_accounts__account_object_name(void* self);
+const char* q_accounts__account_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1567,33 +1567,33 @@ void q_accounts__account_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-bool q_accounts__account_is_widget_type(void* self);
+bool q_accounts__account_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-bool q_accounts__account_is_window_type(void* self);
+bool q_accounts__account_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-bool q_accounts__account_is_quick_item_type(void* self);
+bool q_accounts__account_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-bool q_accounts__account_signals_blocked(void* self);
+bool q_accounts__account_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1608,9 +1608,9 @@ bool q_accounts__account_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-QThread* q_accounts__account_thread(void* self);
+QThread* q_accounts__account_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1661,11 +1661,11 @@ void q_accounts__account_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_accounts__account_children(void* self);
+libqt_list q_accounts__account_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1703,7 +1703,7 @@ void q_accounts__account_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_accounts__account_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_accounts__account_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1714,18 +1714,18 @@ QMetaObject__Connection* q_accounts__account_connect(void* sender, const char* s
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_accounts__account_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_accounts__account_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_accounts__account_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_accounts__account_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1736,7 +1736,7 @@ QMetaObject__Connection* q_accounts__account_connect3(void* self, void* sender, 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_accounts__account_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_accounts__account_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1747,24 +1747,24 @@ bool q_accounts__account_disconnect(void* sender, const char* signal, void* rece
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_accounts__account_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_accounts__account_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-bool q_accounts__account_disconnect3(void* self);
+bool q_accounts__account_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param receiver QObject*
 ///
-bool q_accounts__account_disconnect4(void* self, void* receiver);
+bool q_accounts__account_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1772,23 +1772,23 @@ bool q_accounts__account_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_accounts__account_disconnect5(void* param1);
+bool q_accounts__account_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-void q_accounts__account_dump_object_tree(void* self);
+void q_accounts__account_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-void q_accounts__account_dump_object_info(void* self);
+void q_accounts__account_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1798,16 +1798,16 @@ void q_accounts__account_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_accounts__account_set_property(void* self, const char* name, void* value);
+bool q_accounts__account_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param name const char*
 ///
-QVariant* q_accounts__account_property(void* self, const char* name);
+QVariant* q_accounts__account_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1815,9 +1815,9 @@ QVariant* q_accounts__account_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-const char** q_accounts__account_dynamic_property_names(void* self);
+const char** q_accounts__account_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1831,9 +1831,9 @@ QBindingStorage* q_accounts__account_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-const QBindingStorage* q_accounts__account_binding_storage2(void* self);
+const QBindingStorage* q_accounts__account_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1856,18 +1856,18 @@ void q_accounts__account_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-QObject* q_accounts__account_parent(void* self);
+QObject* q_accounts__account_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param classname const char*
 ///
-bool q_accounts__account_inherits(void* self, const char* classname);
+bool q_accounts__account_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1907,7 +1907,7 @@ int32_t q_accounts__account_start_timer23(void* self, int64_t time, int32_t time
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_accounts__account_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_accounts__account_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1919,59 +1919,59 @@ QMetaObject__Connection* q_accounts__account_connect5(void* sender, const char* 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_accounts__account_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_accounts__account_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_accounts__account_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_accounts__account_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param signal const char*
 ///
-bool q_accounts__account_disconnect1(void* self, const char* signal);
+bool q_accounts__account_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Accounts__Account*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_accounts__account_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_accounts__account_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_accounts__account_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_accounts__account_disconnect23(void* self, void* receiver, const char* member);
+bool q_accounts__account_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const Accounts__Account*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_accounts__account_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2167,7 +2167,7 @@ void q_accounts__account_on_custom_event(void* self, void (*callback)(void*, voi
 /// @param self Accounts__Account*
 /// @param signal QMetaMethod*
 ///
-void q_accounts__account_connect_notify(void* self, void* signal);
+void q_accounts__account_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2178,7 +2178,7 @@ void q_accounts__account_connect_notify(void* self, void* signal);
 /// @param self Accounts__Account*
 /// @param signal QMetaMethod*
 ///
-void q_accounts__account_super_connect_notify(void* self, void* signal);
+void q_accounts__account_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2189,7 +2189,7 @@ void q_accounts__account_super_connect_notify(void* self, void* signal);
 /// @param self Accounts__Account*
 /// @param callback void func(Accounts__Account* self, QMetaMethod* signal)
 ///
-void q_accounts__account_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_accounts__account_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2200,7 +2200,7 @@ void q_accounts__account_on_connect_notify(void* self, void (*callback)(void*, v
 /// @param self Accounts__Account*
 /// @param signal QMetaMethod*
 ///
-void q_accounts__account_disconnect_notify(void* self, void* signal);
+void q_accounts__account_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2211,7 +2211,7 @@ void q_accounts__account_disconnect_notify(void* self, void* signal);
 /// @param self Accounts__Account*
 /// @param signal QMetaMethod*
 ///
-void q_accounts__account_super_disconnect_notify(void* self, void* signal);
+void q_accounts__account_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2222,7 +2222,7 @@ void q_accounts__account_super_disconnect_notify(void* self, void* signal);
 /// @param self Accounts__Account*
 /// @param callback void func(Accounts__Account* self, QMetaMethod* signal)
 ///
-void q_accounts__account_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_accounts__account_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2230,9 +2230,9 @@ void q_accounts__account_on_disconnect_notify(void* self, void (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-QObject* q_accounts__account_sender(void* self);
+QObject* q_accounts__account_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2240,9 +2240,9 @@ QObject* q_accounts__account_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-QObject* q_accounts__account_super_sender(void* self);
+QObject* q_accounts__account_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2250,10 +2250,10 @@ QObject* q_accounts__account_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Accounts__Account*
-/// @param callback QObject* func()
+/// @param self const Accounts__Account*
+/// @param callback QObject* func(Accounts__Account* self)
 ///
-void q_accounts__account_on_sender(void* self, QObject* (*callback)());
+void q_accounts__account_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2261,9 +2261,9 @@ void q_accounts__account_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-int32_t q_accounts__account_sender_signal_index(void* self);
+int32_t q_accounts__account_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2271,9 +2271,9 @@ int32_t q_accounts__account_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 ///
-int32_t q_accounts__account_super_sender_signal_index(void* self);
+int32_t q_accounts__account_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2281,10 +2281,10 @@ int32_t q_accounts__account_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Accounts__Account*
-/// @param callback int32_t func()
+/// @param self const Accounts__Account*
+/// @param callback int32_t func(Accounts__Account* self)
 ///
-void q_accounts__account_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_accounts__account_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2292,10 +2292,10 @@ void q_accounts__account_on_sender_signal_index(void* self, int32_t (*callback)(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param signal const char*
 ///
-int32_t q_accounts__account_receivers(void* self, const char* signal);
+int32_t q_accounts__account_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2303,10 +2303,10 @@ int32_t q_accounts__account_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param signal const char*
 ///
-int32_t q_accounts__account_super_receivers(void* self, const char* signal);
+int32_t q_accounts__account_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2314,10 +2314,10 @@ int32_t q_accounts__account_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param callback int32_t func(Accounts__Account* self, const char* signal)
 ///
-void q_accounts__account_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_accounts__account_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2325,10 +2325,10 @@ void q_accounts__account_on_receivers(void* self, int32_t (*callback)(void*, con
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param signal QMetaMethod*
 ///
-bool q_accounts__account_is_signal_connected(void* self, void* signal);
+bool q_accounts__account_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2336,10 +2336,10 @@ bool q_accounts__account_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param signal QMetaMethod*
 ///
-bool q_accounts__account_super_is_signal_connected(void* self, void* signal);
+bool q_accounts__account_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2347,10 +2347,10 @@ bool q_accounts__account_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Accounts__Account*
+/// @param self const Accounts__Account*
 /// @param callback bool func(Accounts__Account* self, QMetaMethod* signal)
 ///
-void q_accounts__account_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_accounts__account_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

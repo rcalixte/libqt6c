@@ -18,26 +18,26 @@ Kirigami__Platform__IconSizes* k_kirigami__platform__iconsizes_new(void* units);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 ///
-const QMetaObject* k_kirigami__platform__iconsizes_meta_object(void* self);
+const QMetaObject* k_kirigami__platform__iconsizes_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self Kirigami__Platform__IconSizes*
-/// @param callback const QMetaObject* func()
+/// @param self const Kirigami__Platform__IconSizes*
+/// @param callback const QMetaObject* func(const Kirigami__Platform__IconSizes* self)
 ///
-void k_kirigami__platform__iconsizes_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_kirigami__platform__iconsizes_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 ///
-const QMetaObject* k_kirigami__platform__iconsizes_super_meta_object(void* self);
+const QMetaObject* k_kirigami__platform__iconsizes_super_meta_object(const void* self);
 
 /// @param self Kirigami__Platform__IconSizes*
 /// @param param1 const char*
@@ -91,52 +91,52 @@ const char* k_kirigami__platform__iconsizes_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-iconsizes.html#sizeForLabels)
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 ///
-int32_t k_kirigami__platform__iconsizes_size_for_labels(void* self);
+int32_t k_kirigami__platform__iconsizes_size_for_labels(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-iconsizes.html#small)
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 ///
-int32_t k_kirigami__platform__iconsizes_small(void* self);
+int32_t k_kirigami__platform__iconsizes_small(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-iconsizes.html#smallMedium)
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 ///
-int32_t k_kirigami__platform__iconsizes_small_medium(void* self);
+int32_t k_kirigami__platform__iconsizes_small_medium(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-iconsizes.html#medium)
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 ///
-int32_t k_kirigami__platform__iconsizes_medium(void* self);
+int32_t k_kirigami__platform__iconsizes_medium(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-iconsizes.html#large)
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 ///
-int32_t k_kirigami__platform__iconsizes_large(void* self);
+int32_t k_kirigami__platform__iconsizes_large(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-iconsizes.html#huge)
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 ///
-int32_t k_kirigami__platform__iconsizes_huge(void* self);
+int32_t k_kirigami__platform__iconsizes_huge(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-iconsizes.html#enormous)
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 ///
-int32_t k_kirigami__platform__iconsizes_enormous(void* self);
+int32_t k_kirigami__platform__iconsizes_enormous(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-iconsizes.html#roundedIconSize)
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 /// @param size int
 ///
-int32_t k_kirigami__platform__iconsizes_rounded_icon_size(void* self, int size);
+int32_t k_kirigami__platform__iconsizes_rounded_icon_size(const void* self, int size);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-iconsizes.html#sizeForLabelsChanged)
 ///
@@ -254,9 +254,9 @@ const char* k_kirigami__platform__iconsizes_tr3(const char* s, const char* c, in
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 ///
-const char* k_kirigami__platform__iconsizes_object_name(void* self);
+const char* k_kirigami__platform__iconsizes_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -271,33 +271,33 @@ void k_kirigami__platform__iconsizes_set_object_name(void* self, const char* nam
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 ///
-bool k_kirigami__platform__iconsizes_is_widget_type(void* self);
+bool k_kirigami__platform__iconsizes_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 ///
-bool k_kirigami__platform__iconsizes_is_window_type(void* self);
+bool k_kirigami__platform__iconsizes_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 ///
-bool k_kirigami__platform__iconsizes_is_quick_item_type(void* self);
+bool k_kirigami__platform__iconsizes_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 ///
-bool k_kirigami__platform__iconsizes_signals_blocked(void* self);
+bool k_kirigami__platform__iconsizes_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -312,9 +312,9 @@ bool k_kirigami__platform__iconsizes_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 ///
-QThread* k_kirigami__platform__iconsizes_thread(void* self);
+QThread* k_kirigami__platform__iconsizes_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -365,11 +365,11 @@ void k_kirigami__platform__iconsizes_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_kirigami__platform__iconsizes_children(void* self);
+libqt_list k_kirigami__platform__iconsizes_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -407,7 +407,7 @@ void k_kirigami__platform__iconsizes_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_kirigami__platform__iconsizes_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_kirigami__platform__iconsizes_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -418,18 +418,18 @@ QMetaObject__Connection* k_kirigami__platform__iconsizes_connect(void* sender, c
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_kirigami__platform__iconsizes_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_kirigami__platform__iconsizes_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_kirigami__platform__iconsizes_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_kirigami__platform__iconsizes_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -440,7 +440,7 @@ QMetaObject__Connection* k_kirigami__platform__iconsizes_connect3(void* self, vo
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_kirigami__platform__iconsizes_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_kirigami__platform__iconsizes_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -451,24 +451,24 @@ bool k_kirigami__platform__iconsizes_disconnect(void* sender, const char* signal
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_kirigami__platform__iconsizes_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_kirigami__platform__iconsizes_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 ///
-bool k_kirigami__platform__iconsizes_disconnect3(void* self);
+bool k_kirigami__platform__iconsizes_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 /// @param receiver QObject*
 ///
-bool k_kirigami__platform__iconsizes_disconnect4(void* self, void* receiver);
+bool k_kirigami__platform__iconsizes_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -476,23 +476,23 @@ bool k_kirigami__platform__iconsizes_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_kirigami__platform__iconsizes_disconnect5(void* param1);
+bool k_kirigami__platform__iconsizes_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 ///
-void k_kirigami__platform__iconsizes_dump_object_tree(void* self);
+void k_kirigami__platform__iconsizes_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 ///
-void k_kirigami__platform__iconsizes_dump_object_info(void* self);
+void k_kirigami__platform__iconsizes_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -502,16 +502,16 @@ void k_kirigami__platform__iconsizes_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_kirigami__platform__iconsizes_set_property(void* self, const char* name, void* value);
+bool k_kirigami__platform__iconsizes_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 /// @param name const char*
 ///
-QVariant* k_kirigami__platform__iconsizes_property(void* self, const char* name);
+QVariant* k_kirigami__platform__iconsizes_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -519,9 +519,9 @@ QVariant* k_kirigami__platform__iconsizes_property(void* self, const char* name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 ///
-const char** k_kirigami__platform__iconsizes_dynamic_property_names(void* self);
+const char** k_kirigami__platform__iconsizes_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -535,9 +535,9 @@ QBindingStorage* k_kirigami__platform__iconsizes_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 ///
-const QBindingStorage* k_kirigami__platform__iconsizes_binding_storage2(void* self);
+const QBindingStorage* k_kirigami__platform__iconsizes_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -560,18 +560,18 @@ void k_kirigami__platform__iconsizes_on_destroyed(void* self, void (*callback)(v
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 ///
-QObject* k_kirigami__platform__iconsizes_parent(void* self);
+QObject* k_kirigami__platform__iconsizes_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 /// @param classname const char*
 ///
-bool k_kirigami__platform__iconsizes_inherits(void* self, const char* classname);
+bool k_kirigami__platform__iconsizes_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -611,7 +611,7 @@ int32_t k_kirigami__platform__iconsizes_start_timer23(void* self, int64_t time, 
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_kirigami__platform__iconsizes_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_kirigami__platform__iconsizes_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -623,59 +623,59 @@ QMetaObject__Connection* k_kirigami__platform__iconsizes_connect5(void* sender, 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_kirigami__platform__iconsizes_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_kirigami__platform__iconsizes_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_kirigami__platform__iconsizes_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_kirigami__platform__iconsizes_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 /// @param signal const char*
 ///
-bool k_kirigami__platform__iconsizes_disconnect1(void* self, const char* signal);
+bool k_kirigami__platform__iconsizes_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Kirigami__Platform__IconSizes*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_kirigami__platform__iconsizes_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_kirigami__platform__iconsizes_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_kirigami__platform__iconsizes_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_kirigami__platform__iconsizes_disconnect23(void* self, void* receiver, const char* member);
+bool k_kirigami__platform__iconsizes_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const Kirigami__Platform__IconSizes*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_kirigami__platform__iconsizes_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -871,7 +871,7 @@ void k_kirigami__platform__iconsizes_on_custom_event(void* self, void (*callback
 /// @param self Kirigami__Platform__IconSizes*
 /// @param signal QMetaMethod*
 ///
-void k_kirigami__platform__iconsizes_connect_notify(void* self, void* signal);
+void k_kirigami__platform__iconsizes_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -882,7 +882,7 @@ void k_kirigami__platform__iconsizes_connect_notify(void* self, void* signal);
 /// @param self Kirigami__Platform__IconSizes*
 /// @param signal QMetaMethod*
 ///
-void k_kirigami__platform__iconsizes_super_connect_notify(void* self, void* signal);
+void k_kirigami__platform__iconsizes_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -893,7 +893,7 @@ void k_kirigami__platform__iconsizes_super_connect_notify(void* self, void* sign
 /// @param self Kirigami__Platform__IconSizes*
 /// @param callback void func(Kirigami__Platform__IconSizes* self, QMetaMethod* signal)
 ///
-void k_kirigami__platform__iconsizes_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_kirigami__platform__iconsizes_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -904,7 +904,7 @@ void k_kirigami__platform__iconsizes_on_connect_notify(void* self, void (*callba
 /// @param self Kirigami__Platform__IconSizes*
 /// @param signal QMetaMethod*
 ///
-void k_kirigami__platform__iconsizes_disconnect_notify(void* self, void* signal);
+void k_kirigami__platform__iconsizes_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -915,7 +915,7 @@ void k_kirigami__platform__iconsizes_disconnect_notify(void* self, void* signal)
 /// @param self Kirigami__Platform__IconSizes*
 /// @param signal QMetaMethod*
 ///
-void k_kirigami__platform__iconsizes_super_disconnect_notify(void* self, void* signal);
+void k_kirigami__platform__iconsizes_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -926,7 +926,7 @@ void k_kirigami__platform__iconsizes_super_disconnect_notify(void* self, void* s
 /// @param self Kirigami__Platform__IconSizes*
 /// @param callback void func(Kirigami__Platform__IconSizes* self, QMetaMethod* signal)
 ///
-void k_kirigami__platform__iconsizes_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_kirigami__platform__iconsizes_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -934,9 +934,9 @@ void k_kirigami__platform__iconsizes_on_disconnect_notify(void* self, void (*cal
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 ///
-QObject* k_kirigami__platform__iconsizes_sender(void* self);
+QObject* k_kirigami__platform__iconsizes_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -944,9 +944,9 @@ QObject* k_kirigami__platform__iconsizes_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 ///
-QObject* k_kirigami__platform__iconsizes_super_sender(void* self);
+QObject* k_kirigami__platform__iconsizes_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -954,10 +954,10 @@ QObject* k_kirigami__platform__iconsizes_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Kirigami__Platform__IconSizes*
-/// @param callback QObject* func()
+/// @param self const Kirigami__Platform__IconSizes*
+/// @param callback QObject* func(Kirigami__Platform__IconSizes* self)
 ///
-void k_kirigami__platform__iconsizes_on_sender(void* self, QObject* (*callback)());
+void k_kirigami__platform__iconsizes_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -965,9 +965,9 @@ void k_kirigami__platform__iconsizes_on_sender(void* self, QObject* (*callback)(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 ///
-int32_t k_kirigami__platform__iconsizes_sender_signal_index(void* self);
+int32_t k_kirigami__platform__iconsizes_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -975,9 +975,9 @@ int32_t k_kirigami__platform__iconsizes_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 ///
-int32_t k_kirigami__platform__iconsizes_super_sender_signal_index(void* self);
+int32_t k_kirigami__platform__iconsizes_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -985,10 +985,10 @@ int32_t k_kirigami__platform__iconsizes_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Kirigami__Platform__IconSizes*
-/// @param callback int32_t func()
+/// @param self const Kirigami__Platform__IconSizes*
+/// @param callback int32_t func(Kirigami__Platform__IconSizes* self)
 ///
-void k_kirigami__platform__iconsizes_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_kirigami__platform__iconsizes_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -996,10 +996,10 @@ void k_kirigami__platform__iconsizes_on_sender_signal_index(void* self, int32_t 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 /// @param signal const char*
 ///
-int32_t k_kirigami__platform__iconsizes_receivers(void* self, const char* signal);
+int32_t k_kirigami__platform__iconsizes_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1007,10 +1007,10 @@ int32_t k_kirigami__platform__iconsizes_receivers(void* self, const char* signal
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 /// @param signal const char*
 ///
-int32_t k_kirigami__platform__iconsizes_super_receivers(void* self, const char* signal);
+int32_t k_kirigami__platform__iconsizes_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1018,10 +1018,10 @@ int32_t k_kirigami__platform__iconsizes_super_receivers(void* self, const char* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 /// @param callback int32_t func(Kirigami__Platform__IconSizes* self, const char* signal)
 ///
-void k_kirigami__platform__iconsizes_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_kirigami__platform__iconsizes_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1029,10 +1029,10 @@ void k_kirigami__platform__iconsizes_on_receivers(void* self, int32_t (*callback
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 /// @param signal QMetaMethod*
 ///
-bool k_kirigami__platform__iconsizes_is_signal_connected(void* self, void* signal);
+bool k_kirigami__platform__iconsizes_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1040,10 +1040,10 @@ bool k_kirigami__platform__iconsizes_is_signal_connected(void* self, void* signa
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 /// @param signal QMetaMethod*
 ///
-bool k_kirigami__platform__iconsizes_super_is_signal_connected(void* self, void* signal);
+bool k_kirigami__platform__iconsizes_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1051,10 +1051,10 @@ bool k_kirigami__platform__iconsizes_super_is_signal_connected(void* self, void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Kirigami__Platform__IconSizes*
+/// @param self const Kirigami__Platform__IconSizes*
 /// @param callback bool func(Kirigami__Platform__IconSizes* self, QMetaMethod* signal)
 ///
-void k_kirigami__platform__iconsizes_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_kirigami__platform__iconsizes_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1077,9 +1077,9 @@ void k_kirigami__platform__iconsizes_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 ///
-const QMetaObject* k_kirigami__platform__units_meta_object(void* self);
+const QMetaObject* k_kirigami__platform__units_meta_object(const void* self);
 
 /// @param self Kirigami__Platform__Units*
 /// @param param1 const char*
@@ -1103,9 +1103,9 @@ const char* k_kirigami__platform__units_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-units.html#gridUnit)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 ///
-int32_t k_kirigami__platform__units_grid_unit(void* self);
+int32_t k_kirigami__platform__units_grid_unit(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-units.html#setGridUnit)
 ///
@@ -1116,9 +1116,9 @@ void k_kirigami__platform__units_set_grid_unit(void* self, int size);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-units.html#smallSpacing)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 ///
-int32_t k_kirigami__platform__units_small_spacing(void* self);
+int32_t k_kirigami__platform__units_small_spacing(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-units.html#setSmallSpacing)
 ///
@@ -1129,9 +1129,9 @@ void k_kirigami__platform__units_set_small_spacing(void* self, int size);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-units.html#mediumSpacing)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 ///
-int32_t k_kirigami__platform__units_medium_spacing(void* self);
+int32_t k_kirigami__platform__units_medium_spacing(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-units.html#setMediumSpacing)
 ///
@@ -1142,9 +1142,9 @@ void k_kirigami__platform__units_set_medium_spacing(void* self, int size);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-units.html#largeSpacing)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 ///
-int32_t k_kirigami__platform__units_large_spacing(void* self);
+int32_t k_kirigami__platform__units_large_spacing(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-units.html#setLargeSpacing)
 ///
@@ -1155,9 +1155,9 @@ void k_kirigami__platform__units_set_large_spacing(void* self, int size);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-units.html#veryLongDuration)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 ///
-int32_t k_kirigami__platform__units_very_long_duration(void* self);
+int32_t k_kirigami__platform__units_very_long_duration(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-units.html#setVeryLongDuration)
 ///
@@ -1168,9 +1168,9 @@ void k_kirigami__platform__units_set_very_long_duration(void* self, int duration
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-units.html#longDuration)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 ///
-int32_t k_kirigami__platform__units_long_duration(void* self);
+int32_t k_kirigami__platform__units_long_duration(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-units.html#setLongDuration)
 ///
@@ -1181,9 +1181,9 @@ void k_kirigami__platform__units_set_long_duration(void* self, int duration);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-units.html#shortDuration)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 ///
-int32_t k_kirigami__platform__units_short_duration(void* self);
+int32_t k_kirigami__platform__units_short_duration(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-units.html#setShortDuration)
 ///
@@ -1194,9 +1194,9 @@ void k_kirigami__platform__units_set_short_duration(void* self, int duration);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-units.html#veryShortDuration)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 ///
-int32_t k_kirigami__platform__units_very_short_duration(void* self);
+int32_t k_kirigami__platform__units_very_short_duration(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-units.html#setVeryShortDuration)
 ///
@@ -1207,9 +1207,9 @@ void k_kirigami__platform__units_set_very_short_duration(void* self, int duratio
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-units.html#humanMoment)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 ///
-int32_t k_kirigami__platform__units_human_moment(void* self);
+int32_t k_kirigami__platform__units_human_moment(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-units.html#setHumanMoment)
 ///
@@ -1220,9 +1220,9 @@ void k_kirigami__platform__units_set_human_moment(void* self, int duration);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-units.html#toolTipDelay)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 ///
-int32_t k_kirigami__platform__units_tool_tip_delay(void* self);
+int32_t k_kirigami__platform__units_tool_tip_delay(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-units.html#setToolTipDelay)
 ///
@@ -1233,9 +1233,9 @@ void k_kirigami__platform__units_set_tool_tip_delay(void* self, int delay);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-units.html#cornerRadius)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 ///
-double k_kirigami__platform__units_corner_radius(void* self);
+double k_kirigami__platform__units_corner_radius(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-units.html#setcornerRadius)
 ///
@@ -1246,9 +1246,9 @@ void k_kirigami__platform__units_setcorner_radius(void* self, double cornerRadiu
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-units.html#iconSizes)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 ///
-Kirigami__Platform__IconSizes* k_kirigami__platform__units_icon_sizes(void* self);
+Kirigami__Platform__IconSizes* k_kirigami__platform__units_icon_sizes(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-units.html#create)
 ///
@@ -1447,9 +1447,9 @@ bool k_kirigami__platform__units_event(void* self, void* event);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 ///
-const char* k_kirigami__platform__units_object_name(void* self);
+const char* k_kirigami__platform__units_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1464,33 +1464,33 @@ void k_kirigami__platform__units_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 ///
-bool k_kirigami__platform__units_is_widget_type(void* self);
+bool k_kirigami__platform__units_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 ///
-bool k_kirigami__platform__units_is_window_type(void* self);
+bool k_kirigami__platform__units_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 ///
-bool k_kirigami__platform__units_is_quick_item_type(void* self);
+bool k_kirigami__platform__units_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 ///
-bool k_kirigami__platform__units_signals_blocked(void* self);
+bool k_kirigami__platform__units_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1505,9 +1505,9 @@ bool k_kirigami__platform__units_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 ///
-QThread* k_kirigami__platform__units_thread(void* self);
+QThread* k_kirigami__platform__units_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1558,11 +1558,11 @@ void k_kirigami__platform__units_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_kirigami__platform__units_children(void* self);
+libqt_list k_kirigami__platform__units_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1600,7 +1600,7 @@ void k_kirigami__platform__units_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_kirigami__platform__units_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_kirigami__platform__units_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1611,18 +1611,18 @@ QMetaObject__Connection* k_kirigami__platform__units_connect(void* sender, const
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_kirigami__platform__units_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_kirigami__platform__units_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_kirigami__platform__units_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_kirigami__platform__units_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1633,7 +1633,7 @@ QMetaObject__Connection* k_kirigami__platform__units_connect3(void* self, void* 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_kirigami__platform__units_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_kirigami__platform__units_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1644,24 +1644,24 @@ bool k_kirigami__platform__units_disconnect(void* sender, const char* signal, vo
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_kirigami__platform__units_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_kirigami__platform__units_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 ///
-bool k_kirigami__platform__units_disconnect3(void* self);
+bool k_kirigami__platform__units_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 /// @param receiver QObject*
 ///
-bool k_kirigami__platform__units_disconnect4(void* self, void* receiver);
+bool k_kirigami__platform__units_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1669,23 +1669,23 @@ bool k_kirigami__platform__units_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_kirigami__platform__units_disconnect5(void* param1);
+bool k_kirigami__platform__units_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 ///
-void k_kirigami__platform__units_dump_object_tree(void* self);
+void k_kirigami__platform__units_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 ///
-void k_kirigami__platform__units_dump_object_info(void* self);
+void k_kirigami__platform__units_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1695,16 +1695,16 @@ void k_kirigami__platform__units_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_kirigami__platform__units_set_property(void* self, const char* name, void* value);
+bool k_kirigami__platform__units_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 /// @param name const char*
 ///
-QVariant* k_kirigami__platform__units_property(void* self, const char* name);
+QVariant* k_kirigami__platform__units_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1712,9 +1712,9 @@ QVariant* k_kirigami__platform__units_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 ///
-const char** k_kirigami__platform__units_dynamic_property_names(void* self);
+const char** k_kirigami__platform__units_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1728,9 +1728,9 @@ QBindingStorage* k_kirigami__platform__units_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 ///
-const QBindingStorage* k_kirigami__platform__units_binding_storage2(void* self);
+const QBindingStorage* k_kirigami__platform__units_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1753,18 +1753,18 @@ void k_kirigami__platform__units_on_destroyed(void* self, void (*callback)(void*
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 ///
-QObject* k_kirigami__platform__units_parent(void* self);
+QObject* k_kirigami__platform__units_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 /// @param classname const char*
 ///
-bool k_kirigami__platform__units_inherits(void* self, const char* classname);
+bool k_kirigami__platform__units_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1804,7 +1804,7 @@ int32_t k_kirigami__platform__units_start_timer23(void* self, int64_t time, int3
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_kirigami__platform__units_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_kirigami__platform__units_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1816,59 +1816,59 @@ QMetaObject__Connection* k_kirigami__platform__units_connect5(void* sender, cons
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_kirigami__platform__units_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_kirigami__platform__units_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_kirigami__platform__units_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_kirigami__platform__units_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 /// @param signal const char*
 ///
-bool k_kirigami__platform__units_disconnect1(void* self, const char* signal);
+bool k_kirigami__platform__units_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Kirigami__Platform__Units*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_kirigami__platform__units_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_kirigami__platform__units_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_kirigami__platform__units_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Kirigami__Platform__Units*
+/// @param self const Kirigami__Platform__Units*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_kirigami__platform__units_disconnect23(void* self, void* receiver, const char* member);
+bool k_kirigami__platform__units_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const Kirigami__Platform__Units*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_kirigami__platform__units_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

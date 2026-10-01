@@ -11,7 +11,7 @@ QOpenGLPaintDevice* q_openglpaintdevice_new() {
     return QOpenGLPaintDevice_New();
 }
 
-QOpenGLPaintDevice* q_openglpaintdevice_new2(void* size) {
+QOpenGLPaintDevice* q_openglpaintdevice_new2(const void* size) {
     return QOpenGLPaintDevice_New2((QSize*)size);
 }
 
@@ -19,39 +19,39 @@ QOpenGLPaintDevice* q_openglpaintdevice_new3(int width, int height) {
     return QOpenGLPaintDevice_New3(width, height);
 }
 
-int32_t q_openglpaintdevice_dev_type(void* self) {
+int32_t q_openglpaintdevice_dev_type(const void* self) {
     return QOpenGLPaintDevice_DevType((QOpenGLPaintDevice*)self);
 }
 
-void q_openglpaintdevice_on_dev_type(void* self, int32_t (*callback)()) {
+void q_openglpaintdevice_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
     QOpenGLPaintDevice_OnDevType((QOpenGLPaintDevice*)self, (intptr_t)callback);
 }
 
-int32_t q_openglpaintdevice_super_dev_type(void* self) {
+int32_t q_openglpaintdevice_super_dev_type(const void* self) {
     return QOpenGLPaintDevice_SuperDevType((QOpenGLPaintDevice*)self);
 }
 
-QPaintEngine* q_openglpaintdevice_paint_engine(void* self) {
+QPaintEngine* q_openglpaintdevice_paint_engine(const void* self) {
     return QOpenGLPaintDevice_PaintEngine((QOpenGLPaintDevice*)self);
 }
 
-void q_openglpaintdevice_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+void q_openglpaintdevice_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
     QOpenGLPaintDevice_OnPaintEngine((QOpenGLPaintDevice*)self, (intptr_t)callback);
 }
 
-QPaintEngine* q_openglpaintdevice_super_paint_engine(void* self) {
+QPaintEngine* q_openglpaintdevice_super_paint_engine(const void* self) {
     return QOpenGLPaintDevice_SuperPaintEngine((QOpenGLPaintDevice*)self);
 }
 
-QOpenGLContext* q_openglpaintdevice_context(void* self) {
+QOpenGLContext* q_openglpaintdevice_context(const void* self) {
     return QOpenGLPaintDevice_Context((QOpenGLPaintDevice*)self);
 }
 
-QSize* q_openglpaintdevice_size(void* self) {
+QSize* q_openglpaintdevice_size(const void* self) {
     return QOpenGLPaintDevice_Size((QOpenGLPaintDevice*)self);
 }
 
-void q_openglpaintdevice_set_size(void* self, void* size) {
+void q_openglpaintdevice_set_size(void* self, const void* size) {
     QOpenGLPaintDevice_SetSize((QOpenGLPaintDevice*)self, (QSize*)size);
 }
 
@@ -59,11 +59,11 @@ void q_openglpaintdevice_set_device_pixel_ratio(void* self, double devicePixelRa
     QOpenGLPaintDevice_SetDevicePixelRatio((QOpenGLPaintDevice*)self, devicePixelRatio);
 }
 
-double q_openglpaintdevice_dots_per_meter_x(void* self) {
+double q_openglpaintdevice_dots_per_meter_x(const void* self) {
     return QOpenGLPaintDevice_DotsPerMeterX((QOpenGLPaintDevice*)self);
 }
 
-double q_openglpaintdevice_dots_per_meter_y(void* self) {
+double q_openglpaintdevice_dots_per_meter_y(const void* self) {
     return QOpenGLPaintDevice_DotsPerMeterY((QOpenGLPaintDevice*)self);
 }
 
@@ -79,7 +79,7 @@ void q_openglpaintdevice_set_paint_flipped(void* self, bool flipped) {
     QOpenGLPaintDevice_SetPaintFlipped((QOpenGLPaintDevice*)self, flipped);
 }
 
-bool q_openglpaintdevice_paint_flipped(void* self) {
+bool q_openglpaintdevice_paint_flipped(const void* self) {
     return QOpenGLPaintDevice_PaintFlipped((QOpenGLPaintDevice*)self);
 }
 
@@ -87,7 +87,7 @@ void q_openglpaintdevice_ensure_active_target(void* self) {
     QOpenGLPaintDevice_EnsureActiveTarget((QOpenGLPaintDevice*)self);
 }
 
-void q_openglpaintdevice_on_ensure_active_target(void* self, void (*callback)()) {
+void q_openglpaintdevice_on_ensure_active_target(void* self, void (*callback)(void*)) {
     QOpenGLPaintDevice_OnEnsureActiveTarget((QOpenGLPaintDevice*)self, (intptr_t)callback);
 }
 
@@ -95,67 +95,67 @@ void q_openglpaintdevice_super_ensure_active_target(void* self) {
     QOpenGLPaintDevice_SuperEnsureActiveTarget((QOpenGLPaintDevice*)self);
 }
 
-int32_t q_openglpaintdevice_metric(void* self, int32_t metric) {
+int32_t q_openglpaintdevice_metric(const void* self, int32_t metric) {
     return QOpenGLPaintDevice_Metric((QOpenGLPaintDevice*)self, metric);
 }
 
-void q_openglpaintdevice_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
+void q_openglpaintdevice_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
     QOpenGLPaintDevice_OnMetric((QOpenGLPaintDevice*)self, (intptr_t)callback);
 }
 
-int32_t q_openglpaintdevice_super_metric(void* self, int32_t metric) {
+int32_t q_openglpaintdevice_super_metric(const void* self, int32_t metric) {
     return QOpenGLPaintDevice_SuperMetric((QOpenGLPaintDevice*)self, metric);
 }
 
-bool q_openglpaintdevice_painting_active(void* self) {
+bool q_openglpaintdevice_painting_active(const void* self) {
     return QPaintDevice_PaintingActive((QPaintDevice*)self);
 }
 
-int32_t q_openglpaintdevice_width(void* self) {
+int32_t q_openglpaintdevice_width(const void* self) {
     return QPaintDevice_Width((QPaintDevice*)self);
 }
 
-int32_t q_openglpaintdevice_height(void* self) {
+int32_t q_openglpaintdevice_height(const void* self) {
     return QPaintDevice_Height((QPaintDevice*)self);
 }
 
-int32_t q_openglpaintdevice_width_m_m(void* self) {
+int32_t q_openglpaintdevice_width_m_m(const void* self) {
     return QPaintDevice_WidthMM((QPaintDevice*)self);
 }
 
-int32_t q_openglpaintdevice_height_m_m(void* self) {
+int32_t q_openglpaintdevice_height_m_m(const void* self) {
     return QPaintDevice_HeightMM((QPaintDevice*)self);
 }
 
-int32_t q_openglpaintdevice_logical_dpi_x(void* self) {
+int32_t q_openglpaintdevice_logical_dpi_x(const void* self) {
     return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
 }
 
-int32_t q_openglpaintdevice_logical_dpi_y(void* self) {
+int32_t q_openglpaintdevice_logical_dpi_y(const void* self) {
     return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
 }
 
-int32_t q_openglpaintdevice_physical_dpi_x(void* self) {
+int32_t q_openglpaintdevice_physical_dpi_x(const void* self) {
     return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
 }
 
-int32_t q_openglpaintdevice_physical_dpi_y(void* self) {
+int32_t q_openglpaintdevice_physical_dpi_y(const void* self) {
     return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
 }
 
-double q_openglpaintdevice_device_pixel_ratio(void* self) {
+double q_openglpaintdevice_device_pixel_ratio(const void* self) {
     return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
 }
 
-double q_openglpaintdevice_device_pixel_ratio_f(void* self) {
+double q_openglpaintdevice_device_pixel_ratio_f(const void* self) {
     return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
 }
 
-int32_t q_openglpaintdevice_color_count(void* self) {
+int32_t q_openglpaintdevice_color_count(const void* self) {
     return QPaintDevice_ColorCount((QPaintDevice*)self);
 }
 
-int32_t q_openglpaintdevice_depth(void* self) {
+int32_t q_openglpaintdevice_depth(const void* self) {
     return QPaintDevice_Depth((QPaintDevice*)self);
 }
 
@@ -167,52 +167,44 @@ int32_t q_openglpaintdevice_encode_metric_f(int32_t metric, double value) {
     return QPaintDevice_EncodeMetricF(metric, value);
 }
 
-void q_openglpaintdevice_init_painter(void* self, void* painter) {
+void q_openglpaintdevice_init_painter(const void* self, void* painter) {
     QOpenGLPaintDevice_InitPainter((QOpenGLPaintDevice*)self, (QPainter*)painter);
 }
 
-void q_openglpaintdevice_super_init_painter(void* self, void* painter) {
+void q_openglpaintdevice_super_init_painter(const void* self, void* painter) {
     QOpenGLPaintDevice_SuperInitPainter((QOpenGLPaintDevice*)self, (QPainter*)painter);
 }
 
-void q_openglpaintdevice_on_init_painter(void* self, void (*callback)(void*, void*)) {
-    QOpenGLPaintDevice_OnInitPainter((QOpenGLPaintDevice*)self, (intptr_t)callback);
+void q_openglpaintdevice_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
+    QOpenGLPaintDevice_OnInitPainter((const QOpenGLPaintDevice*)self, (intptr_t)callback);
 }
 
-QPaintDevice* q_openglpaintdevice_redirected(void* self, void* offset) {
+QPaintDevice* q_openglpaintdevice_redirected(const void* self, void* offset) {
     return QOpenGLPaintDevice_Redirected((QOpenGLPaintDevice*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_openglpaintdevice_super_redirected(void* self, void* offset) {
+QPaintDevice* q_openglpaintdevice_super_redirected(const void* self, void* offset) {
     return QOpenGLPaintDevice_SuperRedirected((QOpenGLPaintDevice*)self, (QPoint*)offset);
 }
 
-void q_openglpaintdevice_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
-    QOpenGLPaintDevice_OnRedirected((QOpenGLPaintDevice*)self, (intptr_t)callback);
+void q_openglpaintdevice_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QOpenGLPaintDevice_OnRedirected((const QOpenGLPaintDevice*)self, (intptr_t)callback);
 }
 
-QPainter* q_openglpaintdevice_shared_painter(void* self) {
+QPainter* q_openglpaintdevice_shared_painter(const void* self) {
     return QOpenGLPaintDevice_SharedPainter((QOpenGLPaintDevice*)self);
 }
 
-QPainter* q_openglpaintdevice_super_shared_painter(void* self) {
+QPainter* q_openglpaintdevice_super_shared_painter(const void* self) {
     return QOpenGLPaintDevice_SuperSharedPainter((QOpenGLPaintDevice*)self);
 }
 
-void q_openglpaintdevice_on_shared_painter(void* self, QPainter* (*callback)()) {
-    QOpenGLPaintDevice_OnSharedPainter((QOpenGLPaintDevice*)self, (intptr_t)callback);
+void q_openglpaintdevice_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
+    QOpenGLPaintDevice_OnSharedPainter((const QOpenGLPaintDevice*)self, (intptr_t)callback);
 }
 
-double q_openglpaintdevice_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+double q_openglpaintdevice_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB) {
     return QOpenGLPaintDevice_GetDecodedMetricF((QOpenGLPaintDevice*)self, metricA, metricB);
-}
-
-double q_openglpaintdevice_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QOpenGLPaintDevice_SuperGetDecodedMetricF((QOpenGLPaintDevice*)self, metricA, metricB);
-}
-
-void q_openglpaintdevice_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {
-    QOpenGLPaintDevice_OnGetDecodedMetricF((QOpenGLPaintDevice*)self, (intptr_t)callback);
 }
 
 void q_openglpaintdevice_delete(void* self) {

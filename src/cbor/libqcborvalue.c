@@ -16,7 +16,7 @@ QCborParserError* q_cborparsererror_new() {
     return QCborParserError_New();
 }
 
-QCborParserError* q_cborparsererror_new2(void* other) {
+QCborParserError* q_cborparsererror_new2(const void* other) {
     return QCborParserError_New2((QCborParserError*)other);
 }
 
@@ -32,7 +32,7 @@ void q_cborparsererror_move_assign(void* self, void* other) {
     QCborParserError_MoveAssign((QCborParserError*)self, (QCborParserError*)other);
 }
 
-int64_t q_cborparsererror_offset(void* self) {
+int64_t q_cborparsererror_offset(const void* self) {
     return QCborParserError_Offset((QCborParserError*)self);
 }
 
@@ -40,7 +40,7 @@ void q_cborparsererror_set_offset(void* self, int64_t offset) {
     QCborParserError_SetOffset((QCborParserError*)self, offset);
 }
 
-QCborError* q_cborparsererror_error(void* self) {
+QCborError* q_cborparsererror_error(const void* self) {
     return QCborParserError_Error((QCborParserError*)self);
 }
 
@@ -48,7 +48,7 @@ void q_cborparsererror_set_error(void* self, void* error) {
     QCborParserError_SetError((QCborParserError*)self, (QCborError*)error);
 }
 
-const char* q_cborparsererror_error_string(void* self) {
+const char* q_cborparsererror_error_string(const void* self) {
     libqt_string _str = QCborParserError_ErrorString((QCborParserError*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -111,11 +111,11 @@ QCborValue* q_cborvalue_new13(const char* s) {
     return QCborValue_New13(s);
 }
 
-QCborValue* q_cborvalue_new14(void* a) {
+QCborValue* q_cborvalue_new14(const void* a) {
     return QCborValue_New14((QCborArray*)a);
 }
 
-QCborValue* q_cborvalue_new15(void* m) {
+QCborValue* q_cborvalue_new15(const void* m) {
     return QCborValue_New15((QCborMap*)m);
 }
 
@@ -127,35 +127,35 @@ QCborValue* q_cborvalue_new17(int32_t t_) {
     return QCborValue_New17(t_);
 }
 
-QCborValue* q_cborvalue_new18(void* dt) {
+QCborValue* q_cborvalue_new18(const void* dt) {
     return QCborValue_New18((QDateTime*)dt);
 }
 
-QCborValue* q_cborvalue_new19(void* url) {
+QCborValue* q_cborvalue_new19(const void* url) {
     return QCborValue_New19((QUrl*)url);
 }
 
-QCborValue* q_cborvalue_new20(void* rx) {
+QCborValue* q_cborvalue_new20(const void* rx) {
     return QCborValue_New20((QRegularExpression*)rx);
 }
 
-QCborValue* q_cborvalue_new21(void* uuid) {
+QCborValue* q_cborvalue_new21(const void* uuid) {
     return QCborValue_New21((QUuid*)uuid);
 }
 
-QCborValue* q_cborvalue_new22(void* other) {
+QCborValue* q_cborvalue_new22(const void* other) {
     return QCborValue_New22((QCborValue*)other);
 }
 
-QCborValue* q_cborvalue_new23(uint64_t tag, void* taggedValue) {
+QCborValue* q_cborvalue_new23(uint64_t tag, const void* taggedValue) {
     return QCborValue_New23(tag, (QCborValue*)taggedValue);
 }
 
-QCborValue* q_cborvalue_new24(int32_t t_, void* tv) {
+QCborValue* q_cborvalue_new24(int32_t t_, const void* tv) {
     return QCborValue_New24(t_, (QCborValue*)tv);
 }
 
-void q_cborvalue_operator_assign(void* self, void* other) {
+void q_cborvalue_operator_assign(void* self, const void* other) {
     QCborValue_OperatorAssign((QCborValue*)self, (QCborValue*)other);
 }
 
@@ -163,169 +163,169 @@ void q_cborvalue_swap(void* self, void* other) {
     QCborValue_Swap((QCborValue*)self, (QCborValue*)other);
 }
 
-int32_t q_cborvalue_type(void* self) {
+int32_t q_cborvalue_type(const void* self) {
     return QCborValue_Type((QCborValue*)self);
 }
 
-bool q_cborvalue_is_integer(void* self) {
+bool q_cborvalue_is_integer(const void* self) {
     return QCborValue_IsInteger((QCborValue*)self);
 }
 
-bool q_cborvalue_is_byte_array(void* self) {
+bool q_cborvalue_is_byte_array(const void* self) {
     return QCborValue_IsByteArray((QCborValue*)self);
 }
 
-bool q_cborvalue_is_string(void* self) {
+bool q_cborvalue_is_string(const void* self) {
     return QCborValue_IsString((QCborValue*)self);
 }
 
-bool q_cborvalue_is_array(void* self) {
+bool q_cborvalue_is_array(const void* self) {
     return QCborValue_IsArray((QCborValue*)self);
 }
 
-bool q_cborvalue_is_map(void* self) {
+bool q_cborvalue_is_map(const void* self) {
     return QCborValue_IsMap((QCborValue*)self);
 }
 
-bool q_cborvalue_is_tag(void* self) {
+bool q_cborvalue_is_tag(const void* self) {
     return QCborValue_IsTag((QCborValue*)self);
 }
 
-bool q_cborvalue_is_false(void* self) {
+bool q_cborvalue_is_false(const void* self) {
     return QCborValue_IsFalse((QCborValue*)self);
 }
 
-bool q_cborvalue_is_true(void* self) {
+bool q_cborvalue_is_true(const void* self) {
     return QCborValue_IsTrue((QCborValue*)self);
 }
 
-bool q_cborvalue_is_bool(void* self) {
+bool q_cborvalue_is_bool(const void* self) {
     return QCborValue_IsBool((QCborValue*)self);
 }
 
-bool q_cborvalue_is_null(void* self) {
+bool q_cborvalue_is_null(const void* self) {
     return QCborValue_IsNull((QCborValue*)self);
 }
 
-bool q_cborvalue_is_undefined(void* self) {
+bool q_cborvalue_is_undefined(const void* self) {
     return QCborValue_IsUndefined((QCborValue*)self);
 }
 
-bool q_cborvalue_is_double(void* self) {
+bool q_cborvalue_is_double(const void* self) {
     return QCborValue_IsDouble((QCborValue*)self);
 }
 
-bool q_cborvalue_is_date_time(void* self) {
+bool q_cborvalue_is_date_time(const void* self) {
     return QCborValue_IsDateTime((QCborValue*)self);
 }
 
-bool q_cborvalue_is_url(void* self) {
+bool q_cborvalue_is_url(const void* self) {
     return QCborValue_IsUrl((QCborValue*)self);
 }
 
-bool q_cborvalue_is_regular_expression(void* self) {
+bool q_cborvalue_is_regular_expression(const void* self) {
     return QCborValue_IsRegularExpression((QCborValue*)self);
 }
 
-bool q_cborvalue_is_uuid(void* self) {
+bool q_cborvalue_is_uuid(const void* self) {
     return QCborValue_IsUuid((QCborValue*)self);
 }
 
-bool q_cborvalue_is_invalid(void* self) {
+bool q_cborvalue_is_invalid(const void* self) {
     return QCborValue_IsInvalid((QCborValue*)self);
 }
 
-bool q_cborvalue_is_container(void* self) {
+bool q_cborvalue_is_container(const void* self) {
     return QCborValue_IsContainer((QCborValue*)self);
 }
 
-bool q_cborvalue_is_simple_type(void* self) {
+bool q_cborvalue_is_simple_type(const void* self) {
     return QCborValue_IsSimpleType((QCborValue*)self);
 }
 
-bool q_cborvalue_is_simple_type2(void* self, uint8_t st) {
+bool q_cborvalue_is_simple_type2(const void* self, uint8_t st) {
     return QCborValue_IsSimpleType2((QCborValue*)self, st);
 }
 
-uint8_t q_cborvalue_to_simple_type(void* self) {
+uint8_t q_cborvalue_to_simple_type(const void* self) {
     return QCborValue_ToSimpleType((QCborValue*)self);
 }
 
-int64_t q_cborvalue_to_integer(void* self) {
+int64_t q_cborvalue_to_integer(const void* self) {
     return QCborValue_ToInteger((QCborValue*)self);
 }
 
-bool q_cborvalue_to_bool(void* self) {
+bool q_cborvalue_to_bool(const void* self) {
     return QCborValue_ToBool((QCborValue*)self);
 }
 
-double q_cborvalue_to_double(void* self) {
+double q_cborvalue_to_double(const void* self) {
     return QCborValue_ToDouble((QCborValue*)self);
 }
 
-uint64_t q_cborvalue_tag(void* self) {
+uint64_t q_cborvalue_tag(const void* self) {
     return QCborValue_Tag((QCborValue*)self);
 }
 
-QCborValue* q_cborvalue_tagged_value(void* self) {
+QCborValue* q_cborvalue_tagged_value(const void* self) {
     return QCborValue_TaggedValue((QCborValue*)self);
 }
 
-char* q_cborvalue_to_byte_array(void* self) {
+char* q_cborvalue_to_byte_array(const void* self) {
     libqt_string _str = QCborValue_ToByteArray((QCborValue*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_cborvalue_to_string(void* self) {
+const char* q_cborvalue_to_string(const void* self) {
     libqt_string _str = QCborValue_ToString((QCborValue*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QDateTime* q_cborvalue_to_date_time(void* self) {
+QDateTime* q_cborvalue_to_date_time(const void* self) {
     return QCborValue_ToDateTime((QCborValue*)self);
 }
 
-QUrl* q_cborvalue_to_url(void* self) {
+QUrl* q_cborvalue_to_url(const void* self) {
     return QCborValue_ToUrl((QCborValue*)self);
 }
 
-QRegularExpression* q_cborvalue_to_regular_expression(void* self) {
+QRegularExpression* q_cborvalue_to_regular_expression(const void* self) {
     return QCborValue_ToRegularExpression((QCborValue*)self);
 }
 
-QUuid* q_cborvalue_to_uuid(void* self) {
+QUuid* q_cborvalue_to_uuid(const void* self) {
     return QCborValue_ToUuid((QCborValue*)self);
 }
 
-QCborArray* q_cborvalue_to_array(void* self) {
+QCborArray* q_cborvalue_to_array(const void* self) {
     return QCborValue_ToArray((QCborValue*)self);
 }
 
-QCborArray* q_cborvalue_to_array2(void* self, void* defaultValue) {
+QCborArray* q_cborvalue_to_array2(const void* self, const void* defaultValue) {
     return QCborValue_ToArray2((QCborValue*)self, (QCborArray*)defaultValue);
 }
 
-QCborMap* q_cborvalue_to_map(void* self) {
+QCborMap* q_cborvalue_to_map(const void* self) {
     return QCborValue_ToMap((QCborValue*)self);
 }
 
-QCborMap* q_cborvalue_to_map2(void* self, void* defaultValue) {
+QCborMap* q_cborvalue_to_map2(const void* self, const void* defaultValue) {
     return QCborValue_ToMap2((QCborValue*)self, (QCborMap*)defaultValue);
 }
 
-const QCborValue* q_cborvalue_operator_subscript(void* self, const char* key) {
+const QCborValue* q_cborvalue_operator_subscript(const void* self, const char* key) {
     return QCborValue_OperatorSubscript((QCborValue*)self, qstring(key));
 }
 
-const QCborValue* q_cborvalue_operator_subscript2(void* self, char* key) {
+const QCborValue* q_cborvalue_operator_subscript2(const void* self, char* key) {
     return QCborValue_OperatorSubscript2((QCborValue*)self, qstring(key));
 }
 
-const QCborValue* q_cborvalue_operator_subscript3(void* self, int64_t key) {
+const QCborValue* q_cborvalue_operator_subscript3(const void* self, int64_t key) {
     return QCborValue_OperatorSubscript3((QCborValue*)self, key);
 }
 
@@ -341,23 +341,23 @@ QCborValueRef* q_cborvalue_operator_subscript6(void* self, const char* key) {
     return QCborValue_OperatorSubscript6((QCborValue*)self, qstring(key));
 }
 
-int32_t q_cborvalue_compare(void* self, void* other) {
+int32_t q_cborvalue_compare(const void* self, const void* other) {
     return QCborValue_Compare((QCborValue*)self, (QCborValue*)other);
 }
 
-QCborValue* q_cborvalue_from_variant(void* variant) {
+QCborValue* q_cborvalue_from_variant(const void* variant) {
     return QCborValue_FromVariant((QVariant*)variant);
 }
 
-QVariant* q_cborvalue_to_variant(void* self) {
+QVariant* q_cborvalue_to_variant(const void* self) {
     return QCborValue_ToVariant((QCborValue*)self);
 }
 
-QCborValue* q_cborvalue_from_json_value(void* v) {
+QCborValue* q_cborvalue_from_json_value(const void* v) {
     return QCborValue_FromJsonValue((QJsonValue*)v);
 }
 
-QJsonValue* q_cborvalue_to_json_value(void* self) {
+QJsonValue* q_cborvalue_to_json_value(const void* self) {
     return QCborValue_ToJsonValue((QCborValue*)self);
 }
 
@@ -377,75 +377,75 @@ QCborValue* q_cborvalue_from_cbor4(unsigned char* data, intptr_t lenVal) {
     return QCborValue_FromCbor4(data, lenVal);
 }
 
-char* q_cborvalue_to_cbor(void* self) {
+char* q_cborvalue_to_cbor(const void* self) {
     libqt_string _str = QCborValue_ToCbor((QCborValue*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_cborvalue_to_cbor2(void* self, void* writer) {
+void q_cborvalue_to_cbor2(const void* self, void* writer) {
     QCborValue_ToCbor2((QCborValue*)self, (QCborStreamWriter*)writer);
 }
 
-const char* q_cborvalue_to_diagnostic_notation(void* self) {
+const char* q_cborvalue_to_diagnostic_notation(const void* self) {
     libqt_string _str = QCborValue_ToDiagnosticNotation((QCborValue*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-uint8_t q_cborvalue_to_simple_type1(void* self, uint8_t defaultValue) {
+uint8_t q_cborvalue_to_simple_type1(const void* self, uint8_t defaultValue) {
     return QCborValue_ToSimpleType1((QCborValue*)self, defaultValue);
 }
 
-int64_t q_cborvalue_to_integer1(void* self, int64_t defaultValue) {
+int64_t q_cborvalue_to_integer1(const void* self, int64_t defaultValue) {
     return QCborValue_ToInteger1((QCborValue*)self, defaultValue);
 }
 
-bool q_cborvalue_to_bool1(void* self, bool defaultValue) {
+bool q_cborvalue_to_bool1(const void* self, bool defaultValue) {
     return QCborValue_ToBool1((QCborValue*)self, defaultValue);
 }
 
-double q_cborvalue_to_double1(void* self, double defaultValue) {
+double q_cborvalue_to_double1(const void* self, double defaultValue) {
     return QCborValue_ToDouble1((QCborValue*)self, defaultValue);
 }
 
-uint64_t q_cborvalue_tag1(void* self, uint64_t defaultValue) {
+uint64_t q_cborvalue_tag1(const void* self, uint64_t defaultValue) {
     return QCborValue_Tag1((QCborValue*)self, defaultValue);
 }
 
-QCborValue* q_cborvalue_tagged_value1(void* self, void* defaultValue) {
+QCborValue* q_cborvalue_tagged_value1(const void* self, const void* defaultValue) {
     return QCborValue_TaggedValue1((QCborValue*)self, (QCborValue*)defaultValue);
 }
 
-char* q_cborvalue_to_byte_array1(void* self, char* defaultValue) {
+char* q_cborvalue_to_byte_array1(const void* self, char* defaultValue) {
     libqt_string _str = QCborValue_ToByteArray1((QCborValue*)self, qstring(defaultValue));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_cborvalue_to_string1(void* self, const char* defaultValue) {
+const char* q_cborvalue_to_string1(const void* self, const char* defaultValue) {
     libqt_string _str = QCborValue_ToString1((QCborValue*)self, qstring(defaultValue));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QDateTime* q_cborvalue_to_date_time1(void* self, void* defaultValue) {
+QDateTime* q_cborvalue_to_date_time1(const void* self, const void* defaultValue) {
     return QCborValue_ToDateTime1((QCborValue*)self, (QDateTime*)defaultValue);
 }
 
-QUrl* q_cborvalue_to_url1(void* self, void* defaultValue) {
+QUrl* q_cborvalue_to_url1(const void* self, const void* defaultValue) {
     return QCborValue_ToUrl1((QCborValue*)self, (QUrl*)defaultValue);
 }
 
-QRegularExpression* q_cborvalue_to_regular_expression1(void* self, void* defaultValue) {
+QRegularExpression* q_cborvalue_to_regular_expression1(const void* self, const void* defaultValue) {
     return QCborValue_ToRegularExpression1((QCborValue*)self, (QRegularExpression*)defaultValue);
 }
 
-QUuid* q_cborvalue_to_uuid1(void* self, void* defaultValue) {
+QUuid* q_cborvalue_to_uuid1(const void* self, const void* defaultValue) {
     return QCborValue_ToUuid1((QCborValue*)self, (QUuid*)defaultValue);
 }
 
@@ -461,18 +461,18 @@ QCborValue* q_cborvalue_from_cbor33(unsigned char* data, intptr_t lenVal, void* 
     return QCborValue_FromCbor33(data, lenVal, (QCborParserError*)error);
 }
 
-char* q_cborvalue_to_cbor1(void* self, int32_t opt) {
+char* q_cborvalue_to_cbor1(const void* self, int32_t opt) {
     libqt_string _str = QCborValue_ToCbor1((QCborValue*)self, opt);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_cborvalue_to_cbor22(void* self, void* writer, int32_t opt) {
+void q_cborvalue_to_cbor22(const void* self, void* writer, int32_t opt) {
     QCborValue_ToCbor22((QCborValue*)self, (QCborStreamWriter*)writer, opt);
 }
 
-const char* q_cborvalue_to_diagnostic_notation1(void* self, int32_t opts) {
+const char* q_cborvalue_to_diagnostic_notation1(const void* self, int32_t opts) {
     libqt_string _str = QCborValue_ToDiagnosticNotation1((QCborValue*)self, opts);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -483,280 +483,280 @@ void q_cborvalue_delete(void* self) {
     QCborValue_Delete((QCborValue*)(self));
 }
 
-QCborValueConstRef* q_cborvalueconstref_new(void* other) {
+QCborValueConstRef* q_cborvalueconstref_new(const void* other) {
     return QCborValueConstRef_New((QCborValueConstRef*)other);
 }
 
-QCborValueConstRef* q_cborvalueconstref_new2(void* param1) {
+QCborValueConstRef* q_cborvalueconstref_new2(const void* param1) {
     return QCborValueConstRef_New2((QCborValueConstRef*)param1);
 }
 
-QCborValue* q_cborvalueconstref_to_q_cbor_value(void* self) {
+QCborValue* q_cborvalueconstref_to_q_cbor_value(const void* self) {
     return QCborValueConstRef_ToQCborValue((QCborValueConstRef*)self);
 }
 
-int32_t q_cborvalueconstref_type(void* self) {
+int32_t q_cborvalueconstref_type(const void* self) {
     return QCborValueConstRef_Type((QCborValueConstRef*)self);
 }
 
-bool q_cborvalueconstref_is_integer(void* self) {
+bool q_cborvalueconstref_is_integer(const void* self) {
     return QCborValueConstRef_IsInteger((QCborValueConstRef*)self);
 }
 
-bool q_cborvalueconstref_is_byte_array(void* self) {
+bool q_cborvalueconstref_is_byte_array(const void* self) {
     return QCborValueConstRef_IsByteArray((QCborValueConstRef*)self);
 }
 
-bool q_cborvalueconstref_is_string(void* self) {
+bool q_cborvalueconstref_is_string(const void* self) {
     return QCborValueConstRef_IsString((QCborValueConstRef*)self);
 }
 
-bool q_cborvalueconstref_is_array(void* self) {
+bool q_cborvalueconstref_is_array(const void* self) {
     return QCborValueConstRef_IsArray((QCborValueConstRef*)self);
 }
 
-bool q_cborvalueconstref_is_map(void* self) {
+bool q_cborvalueconstref_is_map(const void* self) {
     return QCborValueConstRef_IsMap((QCborValueConstRef*)self);
 }
 
-bool q_cborvalueconstref_is_tag(void* self) {
+bool q_cborvalueconstref_is_tag(const void* self) {
     return QCborValueConstRef_IsTag((QCborValueConstRef*)self);
 }
 
-bool q_cborvalueconstref_is_false(void* self) {
+bool q_cborvalueconstref_is_false(const void* self) {
     return QCborValueConstRef_IsFalse((QCborValueConstRef*)self);
 }
 
-bool q_cborvalueconstref_is_true(void* self) {
+bool q_cborvalueconstref_is_true(const void* self) {
     return QCborValueConstRef_IsTrue((QCborValueConstRef*)self);
 }
 
-bool q_cborvalueconstref_is_bool(void* self) {
+bool q_cborvalueconstref_is_bool(const void* self) {
     return QCborValueConstRef_IsBool((QCborValueConstRef*)self);
 }
 
-bool q_cborvalueconstref_is_null(void* self) {
+bool q_cborvalueconstref_is_null(const void* self) {
     return QCborValueConstRef_IsNull((QCborValueConstRef*)self);
 }
 
-bool q_cborvalueconstref_is_undefined(void* self) {
+bool q_cborvalueconstref_is_undefined(const void* self) {
     return QCborValueConstRef_IsUndefined((QCborValueConstRef*)self);
 }
 
-bool q_cborvalueconstref_is_double(void* self) {
+bool q_cborvalueconstref_is_double(const void* self) {
     return QCborValueConstRef_IsDouble((QCborValueConstRef*)self);
 }
 
-bool q_cborvalueconstref_is_date_time(void* self) {
+bool q_cborvalueconstref_is_date_time(const void* self) {
     return QCborValueConstRef_IsDateTime((QCborValueConstRef*)self);
 }
 
-bool q_cborvalueconstref_is_url(void* self) {
+bool q_cborvalueconstref_is_url(const void* self) {
     return QCborValueConstRef_IsUrl((QCborValueConstRef*)self);
 }
 
-bool q_cborvalueconstref_is_regular_expression(void* self) {
+bool q_cborvalueconstref_is_regular_expression(const void* self) {
     return QCborValueConstRef_IsRegularExpression((QCborValueConstRef*)self);
 }
 
-bool q_cborvalueconstref_is_uuid(void* self) {
+bool q_cborvalueconstref_is_uuid(const void* self) {
     return QCborValueConstRef_IsUuid((QCborValueConstRef*)self);
 }
 
-bool q_cborvalueconstref_is_invalid(void* self) {
+bool q_cborvalueconstref_is_invalid(const void* self) {
     return QCborValueConstRef_IsInvalid((QCborValueConstRef*)self);
 }
 
-bool q_cborvalueconstref_is_container(void* self) {
+bool q_cborvalueconstref_is_container(const void* self) {
     return QCborValueConstRef_IsContainer((QCborValueConstRef*)self);
 }
 
-bool q_cborvalueconstref_is_simple_type(void* self) {
+bool q_cborvalueconstref_is_simple_type(const void* self) {
     return QCborValueConstRef_IsSimpleType((QCborValueConstRef*)self);
 }
 
-bool q_cborvalueconstref_is_simple_type2(void* self, uint8_t st) {
+bool q_cborvalueconstref_is_simple_type2(const void* self, uint8_t st) {
     return QCborValueConstRef_IsSimpleType2((QCborValueConstRef*)self, st);
 }
 
-uint8_t q_cborvalueconstref_to_simple_type(void* self) {
+uint8_t q_cborvalueconstref_to_simple_type(const void* self) {
     return QCborValueConstRef_ToSimpleType((QCborValueConstRef*)self);
 }
 
-uint64_t q_cborvalueconstref_tag(void* self) {
+uint64_t q_cborvalueconstref_tag(const void* self) {
     return QCborValueConstRef_Tag((QCborValueConstRef*)self);
 }
 
-QCborValue* q_cborvalueconstref_tagged_value(void* self) {
+QCborValue* q_cborvalueconstref_tagged_value(const void* self) {
     return QCborValueConstRef_TaggedValue((QCborValueConstRef*)self);
 }
 
-int64_t q_cborvalueconstref_to_integer(void* self) {
+int64_t q_cborvalueconstref_to_integer(const void* self) {
     return QCborValueConstRef_ToInteger((QCborValueConstRef*)self);
 }
 
-bool q_cborvalueconstref_to_bool(void* self) {
+bool q_cborvalueconstref_to_bool(const void* self) {
     return QCborValueConstRef_ToBool((QCborValueConstRef*)self);
 }
 
-double q_cborvalueconstref_to_double(void* self) {
+double q_cborvalueconstref_to_double(const void* self) {
     return QCborValueConstRef_ToDouble((QCborValueConstRef*)self);
 }
 
-char* q_cborvalueconstref_to_byte_array(void* self) {
+char* q_cborvalueconstref_to_byte_array(const void* self) {
     libqt_string _str = QCborValueConstRef_ToByteArray((QCborValueConstRef*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_cborvalueconstref_to_string(void* self) {
+const char* q_cborvalueconstref_to_string(const void* self) {
     libqt_string _str = QCborValueConstRef_ToString((QCborValueConstRef*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QDateTime* q_cborvalueconstref_to_date_time(void* self) {
+QDateTime* q_cborvalueconstref_to_date_time(const void* self) {
     return QCborValueConstRef_ToDateTime((QCborValueConstRef*)self);
 }
 
-QUrl* q_cborvalueconstref_to_url(void* self) {
+QUrl* q_cborvalueconstref_to_url(const void* self) {
     return QCborValueConstRef_ToUrl((QCborValueConstRef*)self);
 }
 
-QRegularExpression* q_cborvalueconstref_to_regular_expression(void* self) {
+QRegularExpression* q_cborvalueconstref_to_regular_expression(const void* self) {
     return QCborValueConstRef_ToRegularExpression((QCborValueConstRef*)self);
 }
 
-QUuid* q_cborvalueconstref_to_uuid(void* self) {
+QUuid* q_cborvalueconstref_to_uuid(const void* self) {
     return QCborValueConstRef_ToUuid((QCborValueConstRef*)self);
 }
 
-QCborArray* q_cborvalueconstref_to_array(void* self) {
+QCborArray* q_cborvalueconstref_to_array(const void* self) {
     return QCborValueConstRef_ToArray((QCborValueConstRef*)self);
 }
 
-QCborArray* q_cborvalueconstref_to_array2(void* self, void* a) {
+QCborArray* q_cborvalueconstref_to_array2(const void* self, const void* a) {
     return QCborValueConstRef_ToArray2((QCborValueConstRef*)self, (QCborArray*)a);
 }
 
-QCborMap* q_cborvalueconstref_to_map(void* self) {
+QCborMap* q_cborvalueconstref_to_map(const void* self) {
     return QCborValueConstRef_ToMap((QCborValueConstRef*)self);
 }
 
-QCborMap* q_cborvalueconstref_to_map2(void* self, void* m) {
+QCborMap* q_cborvalueconstref_to_map2(const void* self, const void* m) {
     return QCborValueConstRef_ToMap2((QCborValueConstRef*)self, (QCborMap*)m);
 }
 
-const QCborValue* q_cborvalueconstref_operator_subscript(void* self, const char* key) {
+const QCborValue* q_cborvalueconstref_operator_subscript(const void* self, const char* key) {
     return QCborValueConstRef_OperatorSubscript((QCborValueConstRef*)self, qstring(key));
 }
 
-const QCborValue* q_cborvalueconstref_operator_subscript2(void* self, char* key) {
+const QCborValue* q_cborvalueconstref_operator_subscript2(const void* self, char* key) {
     return QCborValueConstRef_OperatorSubscript2((QCborValueConstRef*)self, qstring(key));
 }
 
-const QCborValue* q_cborvalueconstref_operator_subscript3(void* self, int64_t key) {
+const QCborValue* q_cborvalueconstref_operator_subscript3(const void* self, int64_t key) {
     return QCborValueConstRef_OperatorSubscript3((QCborValueConstRef*)self, key);
 }
 
-int32_t q_cborvalueconstref_compare(void* self, void* other) {
+int32_t q_cborvalueconstref_compare(const void* self, const void* other) {
     return QCborValueConstRef_Compare((QCborValueConstRef*)self, (QCborValue*)other);
 }
 
-QVariant* q_cborvalueconstref_to_variant(void* self) {
+QVariant* q_cborvalueconstref_to_variant(const void* self) {
     return QCborValueConstRef_ToVariant((QCborValueConstRef*)self);
 }
 
-QJsonValue* q_cborvalueconstref_to_json_value(void* self) {
+QJsonValue* q_cborvalueconstref_to_json_value(const void* self) {
     return QCborValueConstRef_ToJsonValue((QCborValueConstRef*)self);
 }
 
-char* q_cborvalueconstref_to_cbor(void* self) {
+char* q_cborvalueconstref_to_cbor(const void* self) {
     libqt_string _str = QCborValueConstRef_ToCbor((QCborValueConstRef*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_cborvalueconstref_to_cbor2(void* self, void* writer) {
+void q_cborvalueconstref_to_cbor2(const void* self, void* writer) {
     QCborValueConstRef_ToCbor2((QCborValueConstRef*)self, (QCborStreamWriter*)writer);
 }
 
-const char* q_cborvalueconstref_to_diagnostic_notation(void* self) {
+const char* q_cborvalueconstref_to_diagnostic_notation(const void* self) {
     libqt_string _str = QCborValueConstRef_ToDiagnosticNotation((QCborValueConstRef*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-uint8_t q_cborvalueconstref_to_simple_type1(void* self, uint8_t defaultValue) {
+uint8_t q_cborvalueconstref_to_simple_type1(const void* self, uint8_t defaultValue) {
     return QCborValueConstRef_ToSimpleType1((QCborValueConstRef*)self, defaultValue);
 }
 
-uint64_t q_cborvalueconstref_tag1(void* self, uint64_t defaultValue) {
+uint64_t q_cborvalueconstref_tag1(const void* self, uint64_t defaultValue) {
     return QCborValueConstRef_Tag1((QCborValueConstRef*)self, defaultValue);
 }
 
-QCborValue* q_cborvalueconstref_tagged_value1(void* self, void* defaultValue) {
+QCborValue* q_cborvalueconstref_tagged_value1(const void* self, const void* defaultValue) {
     return QCborValueConstRef_TaggedValue1((QCborValueConstRef*)self, (QCborValue*)defaultValue);
 }
 
-int64_t q_cborvalueconstref_to_integer1(void* self, int64_t defaultValue) {
+int64_t q_cborvalueconstref_to_integer1(const void* self, int64_t defaultValue) {
     return QCborValueConstRef_ToInteger1((QCborValueConstRef*)self, defaultValue);
 }
 
-bool q_cborvalueconstref_to_bool1(void* self, bool defaultValue) {
+bool q_cborvalueconstref_to_bool1(const void* self, bool defaultValue) {
     return QCborValueConstRef_ToBool1((QCborValueConstRef*)self, defaultValue);
 }
 
-double q_cborvalueconstref_to_double1(void* self, double defaultValue) {
+double q_cborvalueconstref_to_double1(const void* self, double defaultValue) {
     return QCborValueConstRef_ToDouble1((QCborValueConstRef*)self, defaultValue);
 }
 
-char* q_cborvalueconstref_to_byte_array1(void* self, char* defaultValue) {
+char* q_cborvalueconstref_to_byte_array1(const void* self, char* defaultValue) {
     libqt_string _str = QCborValueConstRef_ToByteArray1((QCborValueConstRef*)self, qstring(defaultValue));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_cborvalueconstref_to_string1(void* self, const char* defaultValue) {
+const char* q_cborvalueconstref_to_string1(const void* self, const char* defaultValue) {
     libqt_string _str = QCborValueConstRef_ToString1((QCborValueConstRef*)self, qstring(defaultValue));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QDateTime* q_cborvalueconstref_to_date_time1(void* self, void* defaultValue) {
+QDateTime* q_cborvalueconstref_to_date_time1(const void* self, const void* defaultValue) {
     return QCborValueConstRef_ToDateTime1((QCborValueConstRef*)self, (QDateTime*)defaultValue);
 }
 
-QUrl* q_cborvalueconstref_to_url1(void* self, void* defaultValue) {
+QUrl* q_cborvalueconstref_to_url1(const void* self, const void* defaultValue) {
     return QCborValueConstRef_ToUrl1((QCborValueConstRef*)self, (QUrl*)defaultValue);
 }
 
-QRegularExpression* q_cborvalueconstref_to_regular_expression1(void* self, void* defaultValue) {
+QRegularExpression* q_cborvalueconstref_to_regular_expression1(const void* self, const void* defaultValue) {
     return QCborValueConstRef_ToRegularExpression1((QCborValueConstRef*)self, (QRegularExpression*)defaultValue);
 }
 
-QUuid* q_cborvalueconstref_to_uuid1(void* self, void* defaultValue) {
+QUuid* q_cborvalueconstref_to_uuid1(const void* self, const void* defaultValue) {
     return QCborValueConstRef_ToUuid1((QCborValueConstRef*)self, (QUuid*)defaultValue);
 }
 
-char* q_cborvalueconstref_to_cbor1(void* self, int32_t opt) {
+char* q_cborvalueconstref_to_cbor1(const void* self, int32_t opt) {
     libqt_string _str = QCborValueConstRef_ToCbor1((QCborValueConstRef*)self, opt);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_cborvalueconstref_to_cbor22(void* self, void* writer, int32_t opt) {
+void q_cborvalueconstref_to_cbor22(const void* self, void* writer, int32_t opt) {
     QCborValueConstRef_ToCbor22((QCborValueConstRef*)self, (QCborStreamWriter*)writer, opt);
 }
 
-const char* q_cborvalueconstref_to_diagnostic_notation1(void* self, int32_t opt) {
+const char* q_cborvalueconstref_to_diagnostic_notation1(const void* self, int32_t opt) {
     libqt_string _str = QCborValueConstRef_ToDiagnosticNotation1((QCborValueConstRef*)self, opt);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -767,7 +767,7 @@ void q_cborvalueconstref_delete(void* self) {
     QCborValueConstRef_Delete((QCborValueConstRef*)(self));
 }
 
-QCborValueRef* q_cborvalueref_new(void* other) {
+QCborValueRef* q_cborvalueref_new(const void* other) {
     return QCborValueRef_New((QCborValueRef*)other);
 }
 
@@ -775,15 +775,15 @@ QCborValueRef* q_cborvalueref_new2(void* other) {
     return QCborValueRef_New2((QCborValueRef*)other);
 }
 
-QCborValueRef* q_cborvalueref_new3(void* param1) {
+QCborValueRef* q_cborvalueref_new3(const void* param1) {
     return QCborValueRef_New3((QCborValueRef*)param1);
 }
 
-void q_cborvalueref_operator_assign(void* self, void* other) {
+void q_cborvalueref_operator_assign(void* self, const void* other) {
     QCborValueRef_OperatorAssign((QCborValueRef*)self, (QCborValue*)other);
 }
 
-void q_cborvalueref_operator_assign2(void* self, void* other) {
+void q_cborvalueref_operator_assign2(void* self, const void* other) {
     QCborValueRef_OperatorAssign2((QCborValueRef*)self, (QCborValueRef*)other);
 }
 
@@ -799,185 +799,185 @@ QCborValueRef* q_cborvalueref_operator_subscript3(void* self, const char* key) {
     return QCborValueRef_OperatorSubscript3((QCborValueRef*)self, qstring(key));
 }
 
-QCborValue* q_cborvalueref_to_q_cbor_value(void* self) {
+QCborValue* q_cborvalueref_to_q_cbor_value(const void* self) {
     return QCborValueRef_ToQCborValue((QCborValueRef*)self);
 }
 
-int32_t q_cborvalueref_type(void* self) {
+int32_t q_cborvalueref_type(const void* self) {
     return QCborValueRef_Type((QCborValueRef*)self);
 }
 
-bool q_cborvalueref_is_integer(void* self) {
+bool q_cborvalueref_is_integer(const void* self) {
     return QCborValueRef_IsInteger((QCborValueRef*)self);
 }
 
-bool q_cborvalueref_is_byte_array(void* self) {
+bool q_cborvalueref_is_byte_array(const void* self) {
     return QCborValueRef_IsByteArray((QCborValueRef*)self);
 }
 
-bool q_cborvalueref_is_string(void* self) {
+bool q_cborvalueref_is_string(const void* self) {
     return QCborValueRef_IsString((QCborValueRef*)self);
 }
 
-bool q_cborvalueref_is_array(void* self) {
+bool q_cborvalueref_is_array(const void* self) {
     return QCborValueRef_IsArray((QCborValueRef*)self);
 }
 
-bool q_cborvalueref_is_map(void* self) {
+bool q_cborvalueref_is_map(const void* self) {
     return QCborValueRef_IsMap((QCborValueRef*)self);
 }
 
-bool q_cborvalueref_is_tag(void* self) {
+bool q_cborvalueref_is_tag(const void* self) {
     return QCborValueRef_IsTag((QCborValueRef*)self);
 }
 
-bool q_cborvalueref_is_false(void* self) {
+bool q_cborvalueref_is_false(const void* self) {
     return QCborValueRef_IsFalse((QCborValueRef*)self);
 }
 
-bool q_cborvalueref_is_true(void* self) {
+bool q_cborvalueref_is_true(const void* self) {
     return QCborValueRef_IsTrue((QCborValueRef*)self);
 }
 
-bool q_cborvalueref_is_bool(void* self) {
+bool q_cborvalueref_is_bool(const void* self) {
     return QCborValueRef_IsBool((QCborValueRef*)self);
 }
 
-bool q_cborvalueref_is_null(void* self) {
+bool q_cborvalueref_is_null(const void* self) {
     return QCborValueRef_IsNull((QCborValueRef*)self);
 }
 
-bool q_cborvalueref_is_undefined(void* self) {
+bool q_cborvalueref_is_undefined(const void* self) {
     return QCborValueRef_IsUndefined((QCborValueRef*)self);
 }
 
-bool q_cborvalueref_is_double(void* self) {
+bool q_cborvalueref_is_double(const void* self) {
     return QCborValueRef_IsDouble((QCborValueRef*)self);
 }
 
-bool q_cborvalueref_is_date_time(void* self) {
+bool q_cborvalueref_is_date_time(const void* self) {
     return QCborValueRef_IsDateTime((QCborValueRef*)self);
 }
 
-bool q_cborvalueref_is_url(void* self) {
+bool q_cborvalueref_is_url(const void* self) {
     return QCborValueRef_IsUrl((QCborValueRef*)self);
 }
 
-bool q_cborvalueref_is_regular_expression(void* self) {
+bool q_cborvalueref_is_regular_expression(const void* self) {
     return QCborValueRef_IsRegularExpression((QCborValueRef*)self);
 }
 
-bool q_cborvalueref_is_uuid(void* self) {
+bool q_cborvalueref_is_uuid(const void* self) {
     return QCborValueRef_IsUuid((QCborValueRef*)self);
 }
 
-bool q_cborvalueref_is_invalid(void* self) {
+bool q_cborvalueref_is_invalid(const void* self) {
     return QCborValueRef_IsInvalid((QCborValueRef*)self);
 }
 
-bool q_cborvalueref_is_container(void* self) {
+bool q_cborvalueref_is_container(const void* self) {
     return QCborValueRef_IsContainer((QCborValueRef*)self);
 }
 
-bool q_cborvalueref_is_simple_type(void* self) {
+bool q_cborvalueref_is_simple_type(const void* self) {
     return QCborValueRef_IsSimpleType((QCborValueRef*)self);
 }
 
-bool q_cborvalueref_is_simple_type2(void* self, uint8_t st) {
+bool q_cborvalueref_is_simple_type2(const void* self, uint8_t st) {
     return QCborValueRef_IsSimpleType2((QCborValueRef*)self, st);
 }
 
-uint8_t q_cborvalueref_to_simple_type(void* self) {
+uint8_t q_cborvalueref_to_simple_type(const void* self) {
     return QCborValueRef_ToSimpleType((QCborValueRef*)self);
 }
 
-uint64_t q_cborvalueref_tag(void* self) {
+uint64_t q_cborvalueref_tag(const void* self) {
     return QCborValueRef_Tag((QCborValueRef*)self);
 }
 
-QCborValue* q_cborvalueref_tagged_value(void* self) {
+QCborValue* q_cborvalueref_tagged_value(const void* self) {
     return QCborValueRef_TaggedValue((QCborValueRef*)self);
 }
 
-int64_t q_cborvalueref_to_integer(void* self) {
+int64_t q_cborvalueref_to_integer(const void* self) {
     return QCborValueRef_ToInteger((QCborValueRef*)self);
 }
 
-bool q_cborvalueref_to_bool(void* self) {
+bool q_cborvalueref_to_bool(const void* self) {
     return QCborValueRef_ToBool((QCborValueRef*)self);
 }
 
-double q_cborvalueref_to_double(void* self) {
+double q_cborvalueref_to_double(const void* self) {
     return QCborValueRef_ToDouble((QCborValueRef*)self);
 }
 
-char* q_cborvalueref_to_byte_array(void* self) {
+char* q_cborvalueref_to_byte_array(const void* self) {
     libqt_string _str = QCborValueRef_ToByteArray((QCborValueRef*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_cborvalueref_to_string(void* self) {
+const char* q_cborvalueref_to_string(const void* self) {
     libqt_string _str = QCborValueRef_ToString((QCborValueRef*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QDateTime* q_cborvalueref_to_date_time(void* self) {
+QDateTime* q_cborvalueref_to_date_time(const void* self) {
     return QCborValueRef_ToDateTime((QCborValueRef*)self);
 }
 
-QUrl* q_cborvalueref_to_url(void* self) {
+QUrl* q_cborvalueref_to_url(const void* self) {
     return QCborValueRef_ToUrl((QCborValueRef*)self);
 }
 
-QRegularExpression* q_cborvalueref_to_regular_expression(void* self) {
+QRegularExpression* q_cborvalueref_to_regular_expression(const void* self) {
     return QCborValueRef_ToRegularExpression((QCborValueRef*)self);
 }
 
-QUuid* q_cborvalueref_to_uuid(void* self) {
+QUuid* q_cborvalueref_to_uuid(const void* self) {
     return QCborValueRef_ToUuid((QCborValueRef*)self);
 }
 
-QCborArray* q_cborvalueref_to_array(void* self) {
+QCborArray* q_cborvalueref_to_array(const void* self) {
     return QCborValueRef_ToArray((QCborValueRef*)self);
 }
 
-QCborArray* q_cborvalueref_to_array2(void* self, void* a) {
+QCborArray* q_cborvalueref_to_array2(const void* self, const void* a) {
     return QCborValueRef_ToArray2((QCborValueRef*)self, (QCborArray*)a);
 }
 
-QCborMap* q_cborvalueref_to_map(void* self) {
+QCborMap* q_cborvalueref_to_map(const void* self) {
     return QCborValueRef_ToMap((QCborValueRef*)self);
 }
 
-QCborMap* q_cborvalueref_to_map2(void* self, void* m) {
+QCborMap* q_cborvalueref_to_map2(const void* self, const void* m) {
     return QCborValueRef_ToMap2((QCborValueRef*)self, (QCborMap*)m);
 }
 
-const QCborValue* q_cborvalueref_operator_subscript4(void* self, const char* key) {
+const QCborValue* q_cborvalueref_operator_subscript4(const void* self, const char* key) {
     return QCborValueRef_OperatorSubscript4((QCborValueRef*)self, qstring(key));
 }
 
-const QCborValue* q_cborvalueref_operator_subscript5(void* self, char* key) {
+const QCborValue* q_cborvalueref_operator_subscript5(const void* self, char* key) {
     return QCborValueRef_OperatorSubscript5((QCborValueRef*)self, qstring(key));
 }
 
-const QCborValue* q_cborvalueref_operator_subscript6(void* self, int64_t key) {
+const QCborValue* q_cborvalueref_operator_subscript6(const void* self, int64_t key) {
     return QCborValueRef_OperatorSubscript6((QCborValueRef*)self, key);
 }
 
-int32_t q_cborvalueref_compare(void* self, void* other) {
+int32_t q_cborvalueref_compare(const void* self, const void* other) {
     return QCborValueRef_Compare((QCborValueRef*)self, (QCborValue*)other);
 }
 
-QVariant* q_cborvalueref_to_variant(void* self) {
+QVariant* q_cborvalueref_to_variant(const void* self) {
     return QCborValueRef_ToVariant((QCborValueRef*)self);
 }
 
-QJsonValue* q_cborvalueref_to_json_value(void* self) {
+QJsonValue* q_cborvalueref_to_json_value(const void* self) {
     return QCborValueRef_ToJsonValue((QCborValueRef*)self);
 }
 
@@ -999,57 +999,57 @@ const char* q_cborvalueref_to_diagnostic_notation(void* self) {
     return _ret;
 }
 
-uint8_t q_cborvalueref_to_simple_type1(void* self, uint8_t defaultValue) {
+uint8_t q_cborvalueref_to_simple_type1(const void* self, uint8_t defaultValue) {
     return QCborValueRef_ToSimpleType1((QCborValueRef*)self, defaultValue);
 }
 
-uint64_t q_cborvalueref_tag1(void* self, uint64_t defaultValue) {
+uint64_t q_cborvalueref_tag1(const void* self, uint64_t defaultValue) {
     return QCborValueRef_Tag1((QCborValueRef*)self, defaultValue);
 }
 
-QCborValue* q_cborvalueref_tagged_value1(void* self, void* defaultValue) {
+QCborValue* q_cborvalueref_tagged_value1(const void* self, const void* defaultValue) {
     return QCborValueRef_TaggedValue1((QCborValueRef*)self, (QCborValue*)defaultValue);
 }
 
-int64_t q_cborvalueref_to_integer1(void* self, int64_t defaultValue) {
+int64_t q_cborvalueref_to_integer1(const void* self, int64_t defaultValue) {
     return QCborValueRef_ToInteger1((QCborValueRef*)self, defaultValue);
 }
 
-bool q_cborvalueref_to_bool1(void* self, bool defaultValue) {
+bool q_cborvalueref_to_bool1(const void* self, bool defaultValue) {
     return QCborValueRef_ToBool1((QCborValueRef*)self, defaultValue);
 }
 
-double q_cborvalueref_to_double1(void* self, double defaultValue) {
+double q_cborvalueref_to_double1(const void* self, double defaultValue) {
     return QCborValueRef_ToDouble1((QCborValueRef*)self, defaultValue);
 }
 
-char* q_cborvalueref_to_byte_array1(void* self, char* defaultValue) {
+char* q_cborvalueref_to_byte_array1(const void* self, char* defaultValue) {
     libqt_string _str = QCborValueRef_ToByteArray1((QCborValueRef*)self, qstring(defaultValue));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_cborvalueref_to_string1(void* self, const char* defaultValue) {
+const char* q_cborvalueref_to_string1(const void* self, const char* defaultValue) {
     libqt_string _str = QCborValueRef_ToString1((QCborValueRef*)self, qstring(defaultValue));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QDateTime* q_cborvalueref_to_date_time1(void* self, void* defaultValue) {
+QDateTime* q_cborvalueref_to_date_time1(const void* self, const void* defaultValue) {
     return QCborValueRef_ToDateTime1((QCborValueRef*)self, (QDateTime*)defaultValue);
 }
 
-QUrl* q_cborvalueref_to_url1(void* self, void* defaultValue) {
+QUrl* q_cborvalueref_to_url1(const void* self, const void* defaultValue) {
     return QCborValueRef_ToUrl1((QCborValueRef*)self, (QUrl*)defaultValue);
 }
 
-QRegularExpression* q_cborvalueref_to_regular_expression1(void* self, void* defaultValue) {
+QRegularExpression* q_cborvalueref_to_regular_expression1(const void* self, const void* defaultValue) {
     return QCborValueRef_ToRegularExpression1((QCborValueRef*)self, (QRegularExpression*)defaultValue);
 }
 
-QUuid* q_cborvalueref_to_uuid1(void* self, void* defaultValue) {
+QUuid* q_cborvalueref_to_uuid1(const void* self, const void* defaultValue) {
     return QCborValueRef_ToUuid1((QCborValueRef*)self, (QUuid*)defaultValue);
 }
 
@@ -1075,6 +1075,6 @@ void q_cborvalueref_delete(void* self) {
     QCborValueRef_Delete((QCborValueRef*)(self));
 }
 
-size_t q_qcborvalue_q_hash(void* value, size_t seed) {
+size_t q_qcborvalue_q_hash(const void* value, size_t seed) {
     return qcborvalue_QHash((QCborValue*)value, seed);
 }

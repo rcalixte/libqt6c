@@ -12,44 +12,50 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurface.html#surfaceClass)
 ///
-/// @param self QSurface*
+/// @param self const QSurface*
 ///
 /// @return enum QSurface__SurfaceClass
 ///
-int32_t q_surface_surface_class(void* self);
+int32_t q_surface_surface_class(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurface.html#format)
 ///
-/// @param self QSurface*
+/// @warning Use caution when calling this method as it might not be defined.
 ///
-QSurfaceFormat* q_surface_format(void* self);
+/// @param self const QSurface*
+///
+QSurfaceFormat* q_surface_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurface.html#surfaceType)
 ///
-/// @param self QSurface*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const QSurface*
 ///
 /// @return enum QSurface__SurfaceType
 ///
-int32_t q_surface_surface_type(void* self);
+int32_t q_surface_surface_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurface.html#supportsOpenGL)
 ///
-/// @param self QSurface*
+/// @param self const QSurface*
 ///
-bool q_surface_supports_open_g_l(void* self);
+bool q_surface_supports_open_g_l(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurface.html#size)
 ///
-/// @param self QSurface*
+/// @warning Use caution when calling this method as it might not be defined.
 ///
-QSize* q_surface_size(void* self);
+/// @param self const QSurface*
+///
+QSize* q_surface_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurface.html#operator-eq)
 ///
 /// @param self QSurface*
 /// @param param1 QSurface*
 ///
-void q_surface_operator_assign(void* self, void* param1);
+void q_surface_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurface.html#dtor.QSurface)
 ///

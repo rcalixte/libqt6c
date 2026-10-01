@@ -12,6 +12,8 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgninepatchnode.html#setTexture)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self QSGNinePatchNode*
 /// @param texture QSGTexture*
 ///
@@ -19,12 +21,16 @@ void q_sgninepatchnode_set_texture(void* self, void* texture);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgninepatchnode.html#setBounds)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self QSGNinePatchNode*
 /// @param bounds QRectF*
 ///
-void q_sgninepatchnode_set_bounds(void* self, void* bounds);
+void q_sgninepatchnode_set_bounds(void* self, const void* bounds);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgninepatchnode.html#setDevicePixelRatio)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self QSGNinePatchNode*
 /// @param ratio double
@@ -32,6 +38,8 @@ void q_sgninepatchnode_set_bounds(void* self, void* bounds);
 void q_sgninepatchnode_set_device_pixel_ratio(void* self, double ratio);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgninepatchnode.html#setPadding)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self QSGNinePatchNode*
 /// @param left double
@@ -42,6 +50,8 @@ void q_sgninepatchnode_set_device_pixel_ratio(void* self, double ratio);
 void q_sgninepatchnode_set_padding(void* self, double left, double top, double right, double bottom);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgninepatchnode.html#update)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self QSGNinePatchNode*
 ///
@@ -55,7 +65,7 @@ void q_sgninepatchnode_update(void* self);
 /// @param bounds QRectF*
 /// @param dpr double
 ///
-void q_sgninepatchnode_rebuild_geometry(void* texture, void* geometry, void* padding, void* bounds, double dpr);
+void q_sgninepatchnode_rebuild_geometry(void* texture, void* geometry, const void* padding, const void* bounds, double dpr);
 
 /// Inherited from QSGGeometryNode
 ///
@@ -70,9 +80,9 @@ void q_sgninepatchnode_set_material(void* self, void* material);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometrynode.html#material)
 ///
-/// @param self QSGNinePatchNode*
+/// @param self const QSGNinePatchNode*
 ///
-QSGMaterial* q_sgninepatchnode_material(void* self);
+QSGMaterial* q_sgninepatchnode_material(const void* self);
 
 /// Inherited from QSGGeometryNode
 ///
@@ -87,17 +97,17 @@ void q_sgninepatchnode_set_opaque_material(void* self, void* material);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometrynode.html#opaqueMaterial)
 ///
-/// @param self QSGNinePatchNode*
+/// @param self const QSGNinePatchNode*
 ///
-QSGMaterial* q_sgninepatchnode_opaque_material(void* self);
+QSGMaterial* q_sgninepatchnode_opaque_material(const void* self);
 
 /// Inherited from QSGGeometryNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometrynode.html#activeMaterial)
 ///
-/// @param self QSGNinePatchNode*
+/// @param self const QSGNinePatchNode*
 ///
-QSGMaterial* q_sgninepatchnode_active_material(void* self);
+QSGMaterial* q_sgninepatchnode_active_material(const void* self);
 
 /// Inherited from QSGGeometryNode
 ///
@@ -112,9 +122,9 @@ void q_sgninepatchnode_set_render_order(void* self, int order);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometrynode.html#renderOrder)
 ///
-/// @param self QSGNinePatchNode*
+/// @param self const QSGNinePatchNode*
 ///
-int32_t q_sgninepatchnode_render_order(void* self);
+int32_t q_sgninepatchnode_render_order(const void* self);
 
 /// Inherited from QSGGeometryNode
 ///
@@ -129,9 +139,9 @@ void q_sgninepatchnode_set_inherited_opacity(void* self, double opacity);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometrynode.html#inheritedOpacity)
 ///
-/// @param self QSGNinePatchNode*
+/// @param self const QSGNinePatchNode*
 ///
-double q_sgninepatchnode_inherited_opacity(void* self);
+double q_sgninepatchnode_inherited_opacity(const void* self);
 
 /// Inherited from QSGBasicGeometryNode
 ///
@@ -146,9 +156,9 @@ void q_sgninepatchnode_set_geometry(void* self, void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgbasicgeometrynode.html#geometry)
 ///
-/// @param self QSGNinePatchNode*
+/// @param self const QSGNinePatchNode*
 ///
-const QSGGeometry* q_sgninepatchnode_geometry(void* self);
+const QSGGeometry* q_sgninepatchnode_geometry(const void* self);
 
 /// Inherited from QSGBasicGeometryNode
 ///
@@ -162,17 +172,17 @@ QSGGeometry* q_sgninepatchnode_geometry2(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgbasicgeometrynode.html#matrix)
 ///
-/// @param self QSGNinePatchNode*
+/// @param self const QSGNinePatchNode*
 ///
-const QMatrix4x4* q_sgninepatchnode_matrix(void* self);
+const QMatrix4x4* q_sgninepatchnode_matrix(const void* self);
 
 /// Inherited from QSGBasicGeometryNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgbasicgeometrynode.html#clipList)
 ///
-/// @param self QSGNinePatchNode*
+/// @param self const QSGNinePatchNode*
 ///
-const QSGClipNode* q_sgninepatchnode_clip_list(void* self);
+const QSGClipNode* q_sgninepatchnode_clip_list(const void* self);
 
 /// Inherited from QSGBasicGeometryNode
 ///
@@ -181,7 +191,7 @@ const QSGClipNode* q_sgninepatchnode_clip_list(void* self);
 /// @param self QSGNinePatchNode*
 /// @param m QMatrix4x4*
 ///
-void q_sgninepatchnode_set_renderer_matrix(void* self, void* m);
+void q_sgninepatchnode_set_renderer_matrix(void* self, const void* m);
 
 /// Inherited from QSGBasicGeometryNode
 ///
@@ -190,15 +200,15 @@ void q_sgninepatchnode_set_renderer_matrix(void* self, void* m);
 /// @param self QSGNinePatchNode*
 /// @param c QSGClipNode*
 ///
-void q_sgninepatchnode_set_renderer_clip_list(void* self, void* c);
+void q_sgninepatchnode_set_renderer_clip_list(void* self, const void* c);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#parent)
 ///
-/// @param self QSGNinePatchNode*
+/// @param self const QSGNinePatchNode*
 ///
-QSGNode* q_sgninepatchnode_parent(void* self);
+QSGNode* q_sgninepatchnode_parent(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -268,60 +278,60 @@ void q_sgninepatchnode_reparent_child_nodes_to(void* self, void* newParent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#childCount)
 ///
-/// @param self QSGNinePatchNode*
+/// @param self const QSGNinePatchNode*
 ///
-int32_t q_sgninepatchnode_child_count(void* self);
+int32_t q_sgninepatchnode_child_count(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#childAtIndex)
 ///
-/// @param self QSGNinePatchNode*
+/// @param self const QSGNinePatchNode*
 /// @param i int
 ///
-QSGNode* q_sgninepatchnode_child_at_index(void* self, int i);
+QSGNode* q_sgninepatchnode_child_at_index(const void* self, int i);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#firstChild)
 ///
-/// @param self QSGNinePatchNode*
+/// @param self const QSGNinePatchNode*
 ///
-QSGNode* q_sgninepatchnode_first_child(void* self);
+QSGNode* q_sgninepatchnode_first_child(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#lastChild)
 ///
-/// @param self QSGNinePatchNode*
+/// @param self const QSGNinePatchNode*
 ///
-QSGNode* q_sgninepatchnode_last_child(void* self);
+QSGNode* q_sgninepatchnode_last_child(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#nextSibling)
 ///
-/// @param self QSGNinePatchNode*
+/// @param self const QSGNinePatchNode*
 ///
-QSGNode* q_sgninepatchnode_next_sibling(void* self);
+QSGNode* q_sgninepatchnode_next_sibling(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#previousSibling)
 ///
-/// @param self QSGNinePatchNode*
+/// @param self const QSGNinePatchNode*
 ///
-QSGNode* q_sgninepatchnode_previous_sibling(void* self);
+QSGNode* q_sgninepatchnode_previous_sibling(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#type)
 ///
-/// @param self QSGNinePatchNode*
+/// @param self const QSGNinePatchNode*
 ///
 /// @return enum QSGNode__NodeType
 ///
-int32_t q_sgninepatchnode_type(void* self);
+int32_t q_sgninepatchnode_type(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -344,29 +354,29 @@ void q_sgninepatchnode_mark_dirty(void* self, int32_t bits);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#dirtyState)
 ///
-/// @param self QSGNinePatchNode*
+/// @param self const QSGNinePatchNode*
 ///
 /// @return flag of enum QSGNode__DirtyStateBit
 ///
-int32_t q_sgninepatchnode_dirty_state(void* self);
+int32_t q_sgninepatchnode_dirty_state(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#isSubtreeBlocked)
 ///
-/// @param self QSGNinePatchNode*
+/// @param self const QSGNinePatchNode*
 ///
-bool q_sgninepatchnode_is_subtree_blocked(void* self);
+bool q_sgninepatchnode_is_subtree_blocked(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#flags)
 ///
-/// @param self QSGNinePatchNode*
+/// @param self const QSGNinePatchNode*
 ///
 /// @return flag of enum QSGNode__Flag
 ///
-int32_t q_sgninepatchnode_flags(void* self);
+int32_t q_sgninepatchnode_flags(const void* self);
 
 /// Inherited from QSGNode
 ///

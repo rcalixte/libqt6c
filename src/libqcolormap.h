@@ -14,7 +14,7 @@
 ///
 /// @param colormap QColormap*
 ///
-QColormap* q_colormap_new(void* colormap);
+QColormap* q_colormap_new(const void* colormap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolormap.html#initialize)
 ///
@@ -33,49 +33,49 @@ QColormap* q_colormap_instance();
 /// @param self QColormap*
 /// @param colormap QColormap*
 ///
-void q_colormap_operator_assign(void* self, void* colormap);
+void q_colormap_operator_assign(void* self, const void* colormap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolormap.html#mode)
 ///
-/// @param self QColormap*
+/// @param self const QColormap*
 ///
 /// @return enum QColormap__Mode
 ///
-int32_t q_colormap_mode(void* self);
+int32_t q_colormap_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolormap.html#depth)
 ///
-/// @param self QColormap*
+/// @param self const QColormap*
 ///
-int32_t q_colormap_depth(void* self);
+int32_t q_colormap_depth(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolormap.html#size)
 ///
-/// @param self QColormap*
+/// @param self const QColormap*
 ///
-int32_t q_colormap_size(void* self);
+int32_t q_colormap_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolormap.html#pixel)
 ///
-/// @param self QColormap*
+/// @param self const QColormap*
 /// @param color QColor*
 ///
-uint32_t q_colormap_pixel(void* self, void* color);
+uint32_t q_colormap_pixel(const void* self, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolormap.html#colorAt)
 ///
-/// @param self QColormap*
+/// @param self const QColormap*
 /// @param pixel uint32_t
 ///
-const QColor* q_colormap_color_at(void* self, uint32_t pixel);
+const QColor* q_colormap_color_at(const void* self, uint32_t pixel);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolormap.html#colormap)
 ///
-/// @param self QColormap*
+/// @param self const QColormap*
 ///
 /// @return libqt_list of QColor*
 ///
-libqt_list q_colormap_colormap(void* self);
+libqt_list q_colormap_colormap(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolormap.html#instance)
 ///

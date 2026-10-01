@@ -32,60 +32,60 @@ KDesktopFileAction* k_desktopfileaction_new2(const char* name, const char* text,
 ///
 /// @param other KDesktopFileAction*
 ///
-KDesktopFileAction* k_desktopfileaction_new3(void* other);
+KDesktopFileAction* k_desktopfileaction_new3(const void* other);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfileaction.html#operator-eq)
 ///
 /// @param self KDesktopFileAction*
 /// @param other KDesktopFileAction*
 ///
-void k_desktopfileaction_operator_assign(void* self, void* other);
+void k_desktopfileaction_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfileaction.html#actionsKey)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KDesktopFileAction*
+/// @param self const KDesktopFileAction*
 ///
-const char* k_desktopfileaction_actions_key(void* self);
+const char* k_desktopfileaction_actions_key(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfileaction.html#desktopFilePath)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KDesktopFileAction*
+/// @param self const KDesktopFileAction*
 ///
-const char* k_desktopfileaction_desktop_file_path(void* self);
+const char* k_desktopfileaction_desktop_file_path(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfileaction.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KDesktopFileAction*
+/// @param self const KDesktopFileAction*
 ///
-const char* k_desktopfileaction_name(void* self);
+const char* k_desktopfileaction_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfileaction.html#icon)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KDesktopFileAction*
+/// @param self const KDesktopFileAction*
 ///
-const char* k_desktopfileaction_icon(void* self);
+const char* k_desktopfileaction_icon(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfileaction.html#exec)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KDesktopFileAction*
+/// @param self const KDesktopFileAction*
 ///
-const char* k_desktopfileaction_exec(void* self);
+const char* k_desktopfileaction_exec(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfileaction.html#isSeparator)
 ///
-/// @param self KDesktopFileAction*
+/// @param self const KDesktopFileAction*
 ///
-bool k_desktopfileaction_is_separator(void* self);
+bool k_desktopfileaction_is_separator(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfileaction.html#dtor.KDesktopFileAction)
 ///

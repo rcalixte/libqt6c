@@ -61,351 +61,351 @@ QAccessibleWidget* q_accessiblewidget_from_q_accessible_action_interface(void* _
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#isValid)
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 ///
-bool q_accessiblewidget_is_valid(void* self);
+bool q_accessiblewidget_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#isValid)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAccessibleWidget*
-/// @param callback bool func()
+/// @param self const QAccessibleWidget*
+/// @param callback bool func(const QAccessibleWidget* self)
 ///
-void q_accessiblewidget_on_is_valid(void* self, bool (*callback)());
+void q_accessiblewidget_on_is_valid(const void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#isValid)
 ///
 /// Base class method implementation
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 ///
-bool q_accessiblewidget_super_is_valid(void* self);
+bool q_accessiblewidget_super_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#window)
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 ///
-QWindow* q_accessiblewidget_window(void* self);
+QWindow* q_accessiblewidget_window(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#window)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAccessibleWidget*
-/// @param callback QWindow* func()
+/// @param self const QAccessibleWidget*
+/// @param callback QWindow* func(const QAccessibleWidget* self)
 ///
-void q_accessiblewidget_on_window(void* self, QWindow* (*callback)());
+void q_accessiblewidget_on_window(const void* self, QWindow* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#window)
 ///
 /// Base class method implementation
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 ///
-QWindow* q_accessiblewidget_super_window(void* self);
+QWindow* q_accessiblewidget_super_window(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#childCount)
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 ///
-int32_t q_accessiblewidget_child_count(void* self);
+int32_t q_accessiblewidget_child_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#childCount)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAccessibleWidget*
-/// @param callback int32_t func()
+/// @param self const QAccessibleWidget*
+/// @param callback int32_t func(const QAccessibleWidget* self)
 ///
-void q_accessiblewidget_on_child_count(void* self, int32_t (*callback)());
+void q_accessiblewidget_on_child_count(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#childCount)
 ///
 /// Base class method implementation
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 ///
-int32_t q_accessiblewidget_super_child_count(void* self);
+int32_t q_accessiblewidget_super_child_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#indexOfChild)
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 /// @param child QAccessibleInterface*
 ///
-int32_t q_accessiblewidget_index_of_child(void* self, void* child);
+int32_t q_accessiblewidget_index_of_child(const void* self, const void* child);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#indexOfChild)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAccessibleWidget*
-/// @param callback int32_t func(QAccessibleWidget* self, QAccessibleInterface* child)
+/// @param self const QAccessibleWidget*
+/// @param callback int32_t func(const QAccessibleWidget* self, QAccessibleInterface* child)
 ///
-void q_accessiblewidget_on_index_of_child(void* self, int32_t (*callback)(void*, void*));
+void q_accessiblewidget_on_index_of_child(const void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#indexOfChild)
 ///
 /// Base class method implementation
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 /// @param child QAccessibleInterface*
 ///
-int32_t q_accessiblewidget_super_index_of_child(void* self, void* child);
+int32_t q_accessiblewidget_super_index_of_child(const void* self, const void* child);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#relations)
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 /// @param match flag of enum QAccessible__RelationFlag
 ///
 /// @return libqt_list of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag
 ///
-libqt_list q_accessiblewidget_relations(void* self, int32_t match);
+libqt_list q_accessiblewidget_relations(const void* self, int32_t match);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#relations)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAccessibleWidget*
-/// @param callback libqt_list of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag func(QAccessibleWidget* self, flag of enum QAccessible__RelationFlag match)
+/// @param self const QAccessibleWidget*
+/// @param callback libqt_list of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag func(const QAccessibleWidget* self, flag of enum QAccessible__RelationFlag match)
 ///
-void q_accessiblewidget_on_relations(void* self, libqt_list (*callback)(void*, int32_t));
+void q_accessiblewidget_on_relations(const void* self, libqt_list (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#relations)
 ///
 /// Base class method implementation
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 /// @param match flag of enum QAccessible__RelationFlag
 ///
 /// @return libqt_list of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag
 ///
-libqt_list q_accessiblewidget_super_relations(void* self, int32_t match);
+libqt_list q_accessiblewidget_super_relations(const void* self, int32_t match);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#focusChild)
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 ///
-QAccessibleInterface* q_accessiblewidget_focus_child(void* self);
+QAccessibleInterface* q_accessiblewidget_focus_child(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#focusChild)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAccessibleWidget*
-/// @param callback QAccessibleInterface* func()
+/// @param self const QAccessibleWidget*
+/// @param callback QAccessibleInterface* func(const QAccessibleWidget* self)
 ///
-void q_accessiblewidget_on_focus_child(void* self, QAccessibleInterface* (*callback)());
+void q_accessiblewidget_on_focus_child(const void* self, QAccessibleInterface* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#focusChild)
 ///
 /// Base class method implementation
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 ///
-QAccessibleInterface* q_accessiblewidget_super_focus_child(void* self);
+QAccessibleInterface* q_accessiblewidget_super_focus_child(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#rect)
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 ///
-QRect* q_accessiblewidget_rect(void* self);
+QRect* q_accessiblewidget_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#rect)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAccessibleWidget*
-/// @param callback QRect* func()
+/// @param self const QAccessibleWidget*
+/// @param callback QRect* func(const QAccessibleWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_accessiblewidget_on_rect(void* self, QRect* (*callback)());
+void q_accessiblewidget_on_rect(const void* self, QRect* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#rect)
 ///
 /// Base class method implementation
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 ///
-QRect* q_accessiblewidget_super_rect(void* self);
+QRect* q_accessiblewidget_super_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#parent)
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 ///
-QAccessibleInterface* q_accessiblewidget_parent(void* self);
+QAccessibleInterface* q_accessiblewidget_parent(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#parent)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAccessibleWidget*
-/// @param callback QAccessibleInterface* func()
+/// @param self const QAccessibleWidget*
+/// @param callback QAccessibleInterface* func(const QAccessibleWidget* self)
 ///
-void q_accessiblewidget_on_parent(void* self, QAccessibleInterface* (*callback)());
+void q_accessiblewidget_on_parent(const void* self, QAccessibleInterface* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#parent)
 ///
 /// Base class method implementation
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 ///
-QAccessibleInterface* q_accessiblewidget_super_parent(void* self);
+QAccessibleInterface* q_accessiblewidget_super_parent(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#child)
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 /// @param index int
 ///
-QAccessibleInterface* q_accessiblewidget_child(void* self, int index);
+QAccessibleInterface* q_accessiblewidget_child(const void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#child)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAccessibleWidget*
-/// @param callback QAccessibleInterface* func(QAccessibleWidget* self, int index)
+/// @param self const QAccessibleWidget*
+/// @param callback QAccessibleInterface* func(const QAccessibleWidget* self, int index)
 ///
-void q_accessiblewidget_on_child(void* self, QAccessibleInterface* (*callback)(void*, int));
+void q_accessiblewidget_on_child(const void* self, QAccessibleInterface* (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#child)
 ///
 /// Base class method implementation
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 /// @param index int
 ///
-QAccessibleInterface* q_accessiblewidget_super_child(void* self, int index);
+QAccessibleInterface* q_accessiblewidget_super_child(const void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#text)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 /// @param t enum QAccessible__Text
 ///
-const char* q_accessiblewidget_text(void* self, int32_t t);
+const char* q_accessiblewidget_text(const void* self, int32_t t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#text)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAccessibleWidget*
-/// @param callback const char* func(QAccessibleWidget* self, enum QAccessible__Text t)
+/// @param self const QAccessibleWidget*
+/// @param callback const char* func(const QAccessibleWidget* self, enum QAccessible__Text t)
 ///
-void q_accessiblewidget_on_text(void* self, const char* (*callback)(void*, int32_t));
+void q_accessiblewidget_on_text(const void* self, const char* (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#text)
 ///
 /// Base class method implementation
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 /// @param t enum QAccessible__Text
 ///
-const char* q_accessiblewidget_super_text(void* self, int32_t t);
+const char* q_accessiblewidget_super_text(const void* self, int32_t t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#role)
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 ///
 /// @return enum QAccessible__Role
 ///
-int32_t q_accessiblewidget_role(void* self);
+int32_t q_accessiblewidget_role(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#role)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAccessibleWidget*
-/// @param callback int32_t func()
+/// @param self const QAccessibleWidget*
+/// @param callback int32_t func(const QAccessibleWidget* self)
 ///
-void q_accessiblewidget_on_role(void* self, int32_t (*callback)());
+void q_accessiblewidget_on_role(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#role)
 ///
 /// Base class method implementation
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 ///
 /// @return enum QAccessible__Role
 ///
-int32_t q_accessiblewidget_super_role(void* self);
+int32_t q_accessiblewidget_super_role(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#state)
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 ///
-QAccessible__State* q_accessiblewidget_state(void* self);
+QAccessible__State* q_accessiblewidget_state(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#state)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAccessibleWidget*
-/// @param callback QAccessible__State* func()
+/// @param self const QAccessibleWidget*
+/// @param callback QAccessible__State* func(const QAccessibleWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_accessiblewidget_on_state(void* self, QAccessible__State* (*callback)());
+void q_accessiblewidget_on_state(const void* self, QAccessible__State* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#state)
 ///
 /// Base class method implementation
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 ///
-QAccessible__State* q_accessiblewidget_super_state(void* self);
+QAccessible__State* q_accessiblewidget_super_state(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#foregroundColor)
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 ///
-QColor* q_accessiblewidget_foreground_color(void* self);
+QColor* q_accessiblewidget_foreground_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#foregroundColor)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAccessibleWidget*
-/// @param callback QColor* func()
+/// @param self const QAccessibleWidget*
+/// @param callback QColor* func(const QAccessibleWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_accessiblewidget_on_foreground_color(void* self, QColor* (*callback)());
+void q_accessiblewidget_on_foreground_color(const void* self, QColor* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#foregroundColor)
 ///
 /// Base class method implementation
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 ///
-QColor* q_accessiblewidget_super_foreground_color(void* self);
+QColor* q_accessiblewidget_super_foreground_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#backgroundColor)
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 ///
-QColor* q_accessiblewidget_background_color(void* self);
+QColor* q_accessiblewidget_background_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#backgroundColor)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAccessibleWidget*
-/// @param callback QColor* func()
+/// @param self const QAccessibleWidget*
+/// @param callback QColor* func(const QAccessibleWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_accessiblewidget_on_background_color(void* self, QColor* (*callback)());
+void q_accessiblewidget_on_background_color(const void* self, QColor* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#backgroundColor)
 ///
 /// Base class method implementation
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 ///
-QColor* q_accessiblewidget_super_background_color(void* self);
+QColor* q_accessiblewidget_super_background_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#interface_cast)
 ///
@@ -436,26 +436,26 @@ void* q_accessiblewidget_super_interface_cast(void* self, int32_t t);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 ///
-const char** q_accessiblewidget_action_names(void* self);
+const char** q_accessiblewidget_action_names(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#actionNames)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAccessibleWidget*
-/// @param callback const char** func()
+/// @param self const QAccessibleWidget*
+/// @param callback const char** func(const QAccessibleWidget* self)
 ///
-void q_accessiblewidget_on_action_names(void* self, const char** (*callback)());
+void q_accessiblewidget_on_action_names(const void* self, const char** (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#actionNames)
 ///
 /// Base class method implementation
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 ///
-const char** q_accessiblewidget_super_action_names(void* self);
+const char** q_accessiblewidget_super_action_names(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#doAction)
 ///
@@ -486,74 +486,40 @@ void q_accessiblewidget_super_do_action(void* self, const char* actionName);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 /// @param actionName const char*
 ///
-const char** q_accessiblewidget_key_bindings_for_action(void* self, const char* actionName);
+const char** q_accessiblewidget_key_bindings_for_action(const void* self, const char* actionName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#keyBindingsForAction)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAccessibleWidget*
-/// @param callback const char** func(QAccessibleWidget* self, const char* actionName)
+/// @param self const QAccessibleWidget*
+/// @param callback const char** func(const QAccessibleWidget* self, const char* actionName)
 ///
-void q_accessiblewidget_on_key_bindings_for_action(void* self, const char** (*callback)(void*, const char*));
+void q_accessiblewidget_on_key_bindings_for_action(const void* self, const char** (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#keyBindingsForAction)
 ///
 /// Base class method implementation
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 /// @param actionName const char*
 ///
-const char** q_accessiblewidget_super_key_bindings_for_action(void* self, const char* actionName);
+const char** q_accessiblewidget_super_key_bindings_for_action(const void* self, const char* actionName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#widget)
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 ///
-QWidget* q_accessiblewidget_widget(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#widget)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QAccessibleWidget*
-/// @param callback QWidget* func()
-///
-void q_accessiblewidget_on_widget(void* self, QWidget* (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#widget)
-///
-/// Base class method implementation
-///
-/// @param self QAccessibleWidget*
-///
-QWidget* q_accessiblewidget_super_widget(void* self);
+QWidget* q_accessiblewidget_widget(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#parentObject)
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 ///
-QObject* q_accessiblewidget_parent_object(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#parentObject)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QAccessibleWidget*
-/// @param callback QObject* func()
-///
-void q_accessiblewidget_on_parent_object(void* self, QObject* (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#parentObject)
-///
-/// Base class method implementation
-///
-/// @param self QAccessibleWidget*
-///
-QObject* q_accessiblewidget_super_parent_object(void* self);
+QObject* q_accessiblewidget_parent_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#addControllingSignal)
 ///
@@ -561,24 +527,6 @@ QObject* q_accessiblewidget_super_parent_object(void* self);
 /// @param signal const char*
 ///
 void q_accessiblewidget_add_controlling_signal(void* self, const char* signal);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#addControllingSignal)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QAccessibleWidget*
-/// @param callback void func(QAccessibleWidget* self, const char* signal)
-///
-void q_accessiblewidget_on_add_controlling_signal(void* self, void (*callback)(void*, const char*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#addControllingSignal)
-///
-/// Base class method implementation
-///
-/// @param self QAccessibleWidget*
-/// @param signal const char*
-///
-void q_accessiblewidget_super_add_controlling_signal(void* self, const char* signal);
 
 /// Inherited from QAccessibleInterface
 ///
@@ -667,7 +615,7 @@ QAccessibleAttributesInterface* q_accessiblewidget_attributes_interface(void* se
 /// @param self QAccessibleWidget*
 /// @param param1 QAccessibleInterface*
 ///
-void q_accessiblewidget_operator_assign(void* self, void* param1);
+void q_accessiblewidget_operator_assign(void* self, const void* param1);
 
 /// Inherited from QAccessibleActionInterface
 ///
@@ -804,9 +752,9 @@ const char* q_accessiblewidget_tr3(const char* sourceText, const char* disambigu
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 ///
-QObject* q_accessiblewidget_object(void* self);
+QObject* q_accessiblewidget_object(const void* self);
 
 /// Inherited from QAccessibleObject
 ///
@@ -814,9 +762,9 @@ QObject* q_accessiblewidget_object(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 ///
-QObject* q_accessiblewidget_super_object(void* self);
+QObject* q_accessiblewidget_super_object(const void* self);
 
 /// Inherited from QAccessibleObject
 ///
@@ -824,10 +772,10 @@ QObject* q_accessiblewidget_super_object(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAccessibleWidget*
-/// @param callback QObject* func()
+/// @param self const QAccessibleWidget*
+/// @param callback QObject* func(QAccessibleWidget* self)
 ///
-void q_accessiblewidget_on_object(void* self, QObject* (*callback)());
+void q_accessiblewidget_on_object(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QAccessibleObject
 ///
@@ -870,11 +818,11 @@ void q_accessiblewidget_on_set_text(void* self, void (*callback)(void*, int32_t,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 /// @param x int
 /// @param y int
 ///
-QAccessibleInterface* q_accessiblewidget_child_at(void* self, int x, int y);
+QAccessibleInterface* q_accessiblewidget_child_at(const void* self, int x, int y);
 
 /// Inherited from QAccessibleObject
 ///
@@ -882,11 +830,11 @@ QAccessibleInterface* q_accessiblewidget_child_at(void* self, int x, int y);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 /// @param x int
 /// @param y int
 ///
-QAccessibleInterface* q_accessiblewidget_super_child_at(void* self, int x, int y);
+QAccessibleInterface* q_accessiblewidget_super_child_at(const void* self, int x, int y);
 
 /// Inherited from QAccessibleObject
 ///
@@ -894,10 +842,10 @@ QAccessibleInterface* q_accessiblewidget_super_child_at(void* self, int x, int y
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 /// @param callback QAccessibleInterface* func(QAccessibleWidget* self, int x, int y)
 ///
-void q_accessiblewidget_on_child_at(void* self, QAccessibleInterface* (*callback)(void*, int, int));
+void q_accessiblewidget_on_child_at(const void* self, QAccessibleInterface* (*callback)(const void*, int, int));
 
 /// Inherited from QAccessibleInterface
 ///
@@ -942,10 +890,10 @@ void q_accessiblewidget_on_virtual_hook(void* self, void (*callback)(void*, int,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 /// @param name const char*
 ///
-const char* q_accessiblewidget_localized_action_name(void* self, const char* name);
+const char* q_accessiblewidget_localized_action_name(const void* self, const char* name);
 
 /// Inherited from QAccessibleActionInterface
 ///
@@ -955,10 +903,10 @@ const char* q_accessiblewidget_localized_action_name(void* self, const char* nam
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 /// @param name const char*
 ///
-const char* q_accessiblewidget_super_localized_action_name(void* self, const char* name);
+const char* q_accessiblewidget_super_localized_action_name(const void* self, const char* name);
 
 /// Inherited from QAccessibleActionInterface
 ///
@@ -966,10 +914,10 @@ const char* q_accessiblewidget_super_localized_action_name(void* self, const cha
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 /// @param callback const char* func(QAccessibleWidget* self, const char* name)
 ///
-void q_accessiblewidget_on_localized_action_name(void* self, const char* (*callback)(void*, const char*));
+void q_accessiblewidget_on_localized_action_name(const void* self, const char* (*callback)(const void*, const char*));
 
 /// Inherited from QAccessibleActionInterface
 ///
@@ -979,10 +927,10 @@ void q_accessiblewidget_on_localized_action_name(void* self, const char* (*callb
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 /// @param name const char*
 ///
-const char* q_accessiblewidget_localized_action_description(void* self, const char* name);
+const char* q_accessiblewidget_localized_action_description(const void* self, const char* name);
 
 /// Inherited from QAccessibleActionInterface
 ///
@@ -992,10 +940,10 @@ const char* q_accessiblewidget_localized_action_description(void* self, const ch
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 /// @param name const char*
 ///
-const char* q_accessiblewidget_super_localized_action_description(void* self, const char* name);
+const char* q_accessiblewidget_super_localized_action_description(const void* self, const char* name);
 
 /// Inherited from QAccessibleActionInterface
 ///
@@ -1003,8 +951,8 @@ const char* q_accessiblewidget_super_localized_action_description(void* self, co
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAccessibleWidget*
+/// @param self const QAccessibleWidget*
 /// @param callback const char* func(QAccessibleWidget* self, const char* name)
 ///
-void q_accessiblewidget_on_localized_action_description(void* self, const char* (*callback)(void*, const char*));
+void q_accessiblewidget_on_localized_action_description(const void* self, const char* (*callback)(const void*, const char*));
 #endif

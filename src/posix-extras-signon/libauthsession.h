@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self SignOn__AuthSession*
+/// @param self const SignOn__AuthSession*
 ///
-const QMetaObject* q_signon__authsession_meta_object(void* self);
+const QMetaObject* q_signon__authsession_meta_object(const void* self);
 
 /// @param self SignOn__AuthSession*
 /// @param param1 const char*
@@ -40,9 +40,9 @@ const char* q_signon__authsession_tr(const char* s);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self SignOn__AuthSession*
+/// @param self const SignOn__AuthSession*
 ///
-const char* q_signon__authsession_name(void* self);
+const char* q_signon__authsession_name(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1AuthSession.html)
 ///
@@ -55,21 +55,21 @@ void q_signon__authsession_query_available_mechanisms(void* self);
 /// @param self SignOn__AuthSession*
 /// @param sessionData SignOn__SessionData*
 ///
-void q_signon__authsession_process(void* self, void* sessionData);
+void q_signon__authsession_process(void* self, const void* sessionData);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1AuthSession.html)
 ///
 /// @param self SignOn__AuthSession*
 /// @param sessionData SignOn__SessionData*
 ///
-void q_signon__authsession_challenge(void* self, void* sessionData);
+void q_signon__authsession_challenge(void* self, const void* sessionData);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1AuthSession.html)
 ///
 /// @param self SignOn__AuthSession*
 /// @param sessionData SignOn__SessionData*
 ///
-void q_signon__authsession_request(void* self, void* sessionData);
+void q_signon__authsession_request(void* self, const void* sessionData);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1AuthSession.html)
 ///
@@ -82,21 +82,21 @@ void q_signon__authsession_cancel(void* self);
 /// @param self SignOn__AuthSession*
 /// @param params SignOn__SessionData*
 ///
-void q_signon__authsession_sign_message(void* self, void* params);
+void q_signon__authsession_sign_message(void* self, const void* params);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1AuthSession.html)
 ///
 /// @param self SignOn__AuthSession*
 /// @param err SignOn__Error*
 ///
-void q_signon__authsession_error(void* self, void* err);
+void q_signon__authsession_error(void* self, const void* err);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1AuthSession.html)
 ///
 /// @param self SignOn__AuthSession*
 /// @param callback void func(SignOn__AuthSession* self, SignOn__Error* err)
 ///
-void q_signon__authsession_on_error(void* self, void (*callback)(void*, void*));
+void q_signon__authsession_on_error(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1AuthSession.html)
 ///
@@ -117,14 +117,14 @@ void q_signon__authsession_on_mechanisms_available(void* self, void (*callback)(
 /// @param self SignOn__AuthSession*
 /// @param sessionData SignOn__SessionData*
 ///
-void q_signon__authsession_response(void* self, void* sessionData);
+void q_signon__authsession_response(void* self, const void* sessionData);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1AuthSession.html)
 ///
 /// @param self SignOn__AuthSession*
 /// @param callback void func(SignOn__AuthSession* self, SignOn__SessionData* sessionData)
 ///
-void q_signon__authsession_on_response(void* self, void (*callback)(void*, void*));
+void q_signon__authsession_on_response(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1AuthSession.html)
 ///
@@ -173,7 +173,7 @@ void q_signon__authsession_query_available_mechanisms1(void* self, const char* w
 /// @param sessionData SignOn__SessionData*
 /// @param mechanism const char*
 ///
-void q_signon__authsession_process2(void* self, void* sessionData, const char* mechanism);
+void q_signon__authsession_process2(void* self, const void* sessionData, const char* mechanism);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1AuthSession.html)
 ///
@@ -181,7 +181,7 @@ void q_signon__authsession_process2(void* self, void* sessionData, const char* m
 /// @param sessionData SignOn__SessionData*
 /// @param mechanism const char*
 ///
-void q_signon__authsession_challenge2(void* self, void* sessionData, const char* mechanism);
+void q_signon__authsession_challenge2(void* self, const void* sessionData, const char* mechanism);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1AuthSession.html)
 ///
@@ -189,7 +189,7 @@ void q_signon__authsession_challenge2(void* self, void* sessionData, const char*
 /// @param sessionData SignOn__SessionData*
 /// @param mechanism const char*
 ///
-void q_signon__authsession_request2(void* self, void* sessionData, const char* mechanism);
+void q_signon__authsession_request2(void* self, const void* sessionData, const char* mechanism);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1AuthSession.html)
 ///
@@ -197,7 +197,7 @@ void q_signon__authsession_request2(void* self, void* sessionData, const char* m
 /// @param params SignOn__SessionData*
 /// @param mechanism const char*
 ///
-void q_signon__authsession_sign_message2(void* self, void* params, const char* mechanism);
+void q_signon__authsession_sign_message2(void* self, const void* params, const char* mechanism);
 
 /// Inherited from QObject
 ///
@@ -224,9 +224,9 @@ bool q_signon__authsession_event_filter(void* self, void* watched, void* event);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self SignOn__AuthSession*
+/// @param self const SignOn__AuthSession*
 ///
-const char* q_signon__authsession_object_name(void* self);
+const char* q_signon__authsession_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -241,33 +241,33 @@ void q_signon__authsession_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self SignOn__AuthSession*
+/// @param self const SignOn__AuthSession*
 ///
-bool q_signon__authsession_is_widget_type(void* self);
+bool q_signon__authsession_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self SignOn__AuthSession*
+/// @param self const SignOn__AuthSession*
 ///
-bool q_signon__authsession_is_window_type(void* self);
+bool q_signon__authsession_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self SignOn__AuthSession*
+/// @param self const SignOn__AuthSession*
 ///
-bool q_signon__authsession_is_quick_item_type(void* self);
+bool q_signon__authsession_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self SignOn__AuthSession*
+/// @param self const SignOn__AuthSession*
 ///
-bool q_signon__authsession_signals_blocked(void* self);
+bool q_signon__authsession_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -282,9 +282,9 @@ bool q_signon__authsession_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self SignOn__AuthSession*
+/// @param self const SignOn__AuthSession*
 ///
-QThread* q_signon__authsession_thread(void* self);
+QThread* q_signon__authsession_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -335,11 +335,11 @@ void q_signon__authsession_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self SignOn__AuthSession*
+/// @param self const SignOn__AuthSession*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_signon__authsession_children(void* self);
+libqt_list q_signon__authsession_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -377,7 +377,7 @@ void q_signon__authsession_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_signon__authsession_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_signon__authsession_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -388,18 +388,18 @@ QMetaObject__Connection* q_signon__authsession_connect(void* sender, const char*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_signon__authsession_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_signon__authsession_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self SignOn__AuthSession*
+/// @param self const SignOn__AuthSession*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_signon__authsession_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_signon__authsession_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -410,7 +410,7 @@ QMetaObject__Connection* q_signon__authsession_connect3(void* self, void* sender
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_signon__authsession_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_signon__authsession_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -421,24 +421,24 @@ bool q_signon__authsession_disconnect(void* sender, const char* signal, void* re
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_signon__authsession_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_signon__authsession_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self SignOn__AuthSession*
+/// @param self const SignOn__AuthSession*
 ///
-bool q_signon__authsession_disconnect3(void* self);
+bool q_signon__authsession_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self SignOn__AuthSession*
+/// @param self const SignOn__AuthSession*
 /// @param receiver QObject*
 ///
-bool q_signon__authsession_disconnect4(void* self, void* receiver);
+bool q_signon__authsession_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -446,23 +446,23 @@ bool q_signon__authsession_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_signon__authsession_disconnect5(void* param1);
+bool q_signon__authsession_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self SignOn__AuthSession*
+/// @param self const SignOn__AuthSession*
 ///
-void q_signon__authsession_dump_object_tree(void* self);
+void q_signon__authsession_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self SignOn__AuthSession*
+/// @param self const SignOn__AuthSession*
 ///
-void q_signon__authsession_dump_object_info(void* self);
+void q_signon__authsession_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -472,16 +472,16 @@ void q_signon__authsession_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_signon__authsession_set_property(void* self, const char* name, void* value);
+bool q_signon__authsession_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self SignOn__AuthSession*
+/// @param self const SignOn__AuthSession*
 /// @param name const char*
 ///
-QVariant* q_signon__authsession_property(void* self, const char* name);
+QVariant* q_signon__authsession_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -489,9 +489,9 @@ QVariant* q_signon__authsession_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self SignOn__AuthSession*
+/// @param self const SignOn__AuthSession*
 ///
-const char** q_signon__authsession_dynamic_property_names(void* self);
+const char** q_signon__authsession_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -505,9 +505,9 @@ QBindingStorage* q_signon__authsession_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self SignOn__AuthSession*
+/// @param self const SignOn__AuthSession*
 ///
-const QBindingStorage* q_signon__authsession_binding_storage2(void* self);
+const QBindingStorage* q_signon__authsession_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -530,18 +530,18 @@ void q_signon__authsession_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self SignOn__AuthSession*
+/// @param self const SignOn__AuthSession*
 ///
-QObject* q_signon__authsession_parent(void* self);
+QObject* q_signon__authsession_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self SignOn__AuthSession*
+/// @param self const SignOn__AuthSession*
 /// @param classname const char*
 ///
-bool q_signon__authsession_inherits(void* self, const char* classname);
+bool q_signon__authsession_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -581,7 +581,7 @@ int32_t q_signon__authsession_start_timer23(void* self, int64_t time, int32_t ti
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_signon__authsession_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_signon__authsession_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -593,59 +593,59 @@ QMetaObject__Connection* q_signon__authsession_connect5(void* sender, const char
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_signon__authsession_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_signon__authsession_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self SignOn__AuthSession*
+/// @param self const SignOn__AuthSession*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_signon__authsession_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_signon__authsession_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self SignOn__AuthSession*
+/// @param self const SignOn__AuthSession*
 /// @param signal const char*
 ///
-bool q_signon__authsession_disconnect1(void* self, const char* signal);
+bool q_signon__authsession_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self SignOn__AuthSession*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_signon__authsession_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self SignOn__AuthSession*
+/// @param self const SignOn__AuthSession*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_signon__authsession_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_signon__authsession_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self SignOn__AuthSession*
+/// @param self const SignOn__AuthSession*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_signon__authsession_disconnect23(void* self, void* receiver, const char* member);
+bool q_signon__authsession_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const SignOn__AuthSession*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_signon__authsession_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

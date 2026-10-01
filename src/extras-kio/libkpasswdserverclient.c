@@ -14,7 +14,7 @@ int32_t k_passwdserverclient_query_auth_info(void* self, void* info, const char*
     return KPasswdServerClient_QueryAuthInfo((KPasswdServerClient*)self, (KIO__AuthInfo*)info, qstring(errorMsg), windowId, usertime);
 }
 
-void k_passwdserverclient_add_auth_info(void* self, void* info, long long windowId) {
+void k_passwdserverclient_add_auth_info(void* self, const void* info, long long windowId) {
     KPasswdServerClient_AddAuthInfo((KPasswdServerClient*)self, (KIO__AuthInfo*)info, windowId);
 }
 

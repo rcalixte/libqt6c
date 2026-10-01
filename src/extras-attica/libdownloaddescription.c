@@ -5,101 +5,101 @@ Attica__DownloadDescription* k_attica__downloaddescription_new() {
     return Attica__DownloadDescription_New();
 }
 
-Attica__DownloadDescription* k_attica__downloaddescription_new2(void* other) {
+Attica__DownloadDescription* k_attica__downloaddescription_new2(const void* other) {
     return Attica__DownloadDescription_New2((Attica__DownloadDescription*)other);
 }
 
-void k_attica__downloaddescription_operator_assign(void* self, void* other) {
+void k_attica__downloaddescription_operator_assign(void* self, const void* other) {
     Attica__DownloadDescription_OperatorAssign((Attica__DownloadDescription*)self, (Attica__DownloadDescription*)other);
 }
 
-int32_t k_attica__downloaddescription_id(void* self) {
+int32_t k_attica__downloaddescription_id(const void* self) {
     return Attica__DownloadDescription_Id((Attica__DownloadDescription*)self);
 }
 
-int32_t k_attica__downloaddescription_type(void* self) {
+int32_t k_attica__downloaddescription_type(const void* self) {
     return Attica__DownloadDescription_Type((Attica__DownloadDescription*)self);
 }
 
-bool k_attica__downloaddescription_has_price(void* self) {
+bool k_attica__downloaddescription_has_price(const void* self) {
     return Attica__DownloadDescription_HasPrice((Attica__DownloadDescription*)self);
 }
 
-const char* k_attica__downloaddescription_category(void* self) {
+const char* k_attica__downloaddescription_category(const void* self) {
     libqt_string _str = Attica__DownloadDescription_Category((Attica__DownloadDescription*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_attica__downloaddescription_name(void* self) {
+const char* k_attica__downloaddescription_name(const void* self) {
     libqt_string _str = Attica__DownloadDescription_Name((Attica__DownloadDescription*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_attica__downloaddescription_link(void* self) {
+const char* k_attica__downloaddescription_link(const void* self) {
     libqt_string _str = Attica__DownloadDescription_Link((Attica__DownloadDescription*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_attica__downloaddescription_distribution_type(void* self) {
+const char* k_attica__downloaddescription_distribution_type(const void* self) {
     libqt_string _str = Attica__DownloadDescription_DistributionType((Attica__DownloadDescription*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_attica__downloaddescription_price_reason(void* self) {
+const char* k_attica__downloaddescription_price_reason(const void* self) {
     libqt_string _str = Attica__DownloadDescription_PriceReason((Attica__DownloadDescription*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_attica__downloaddescription_price_amount(void* self) {
+const char* k_attica__downloaddescription_price_amount(const void* self) {
     libqt_string _str = Attica__DownloadDescription_PriceAmount((Attica__DownloadDescription*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-uint32_t k_attica__downloaddescription_size(void* self) {
+uint32_t k_attica__downloaddescription_size(const void* self) {
     return Attica__DownloadDescription_Size((Attica__DownloadDescription*)self);
 }
 
-const char* k_attica__downloaddescription_gpg_fingerprint(void* self) {
+const char* k_attica__downloaddescription_gpg_fingerprint(const void* self) {
     libqt_string _str = Attica__DownloadDescription_GpgFingerprint((Attica__DownloadDescription*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_attica__downloaddescription_gpg_signature(void* self) {
+const char* k_attica__downloaddescription_gpg_signature(const void* self) {
     libqt_string _str = Attica__DownloadDescription_GpgSignature((Attica__DownloadDescription*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_attica__downloaddescription_package_name(void* self) {
+const char* k_attica__downloaddescription_package_name(const void* self) {
     libqt_string _str = Attica__DownloadDescription_PackageName((Attica__DownloadDescription*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_attica__downloaddescription_repository(void* self) {
+const char* k_attica__downloaddescription_repository(const void* self) {
     libqt_string _str = Attica__DownloadDescription_Repository((Attica__DownloadDescription*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** k_attica__downloaddescription_tags(void* self) {
+const char** k_attica__downloaddescription_tags(const void* self) {
     libqt_list _arr = Attica__DownloadDescription_Tags((Attica__DownloadDescription*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -186,7 +186,7 @@ void k_attica__downloaddescription_set_tags(void* self, const char* tags[static 
     free(tags_qstr);
 }
 
-const char* k_attica__downloaddescription_version(void* self) {
+const char* k_attica__downloaddescription_version(const void* self) {
     libqt_string _str = Attica__DownloadDescription_Version((Attica__DownloadDescription*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

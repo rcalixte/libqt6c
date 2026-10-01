@@ -20,7 +20,7 @@ QFormDataPartBuilder* q_formdatapartbuilder_new();
 ///
 /// @param param1 QFormDataPartBuilder*
 ///
-QFormDataPartBuilder* q_formdatapartbuilder_new2(void* param1);
+QFormDataPartBuilder* q_formdatapartbuilder_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qformdatapartbuilder.html#swap)
 ///
@@ -48,7 +48,7 @@ QFormDataPartBuilder* q_formdatapartbuilder_set_body_device(void* self, void* bo
 /// @param self QFormDataPartBuilder*
 /// @param headers QHttpHeaders*
 ///
-QFormDataPartBuilder* q_formdatapartbuilder_set_headers(void* self, void* headers);
+QFormDataPartBuilder* q_formdatapartbuilder_set_headers(void* self, const void* headers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qformdatapartbuilder.html#setBody)
 ///

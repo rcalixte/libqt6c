@@ -20,7 +20,7 @@ QOpenGLPaintDevice* q_openglpaintdevice_new();
 ///
 /// @param size QSize*
 ///
-QOpenGLPaintDevice* q_openglpaintdevice_new2(void* size);
+QOpenGLPaintDevice* q_openglpaintdevice_new2(const void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpaintdevice.html)
 
@@ -33,68 +33,68 @@ QOpenGLPaintDevice* q_openglpaintdevice_new3(int width, int height);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpaintdevice.html#devType)
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 ///
-int32_t q_openglpaintdevice_dev_type(void* self);
+int32_t q_openglpaintdevice_dev_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpaintdevice.html#devType)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QOpenGLPaintDevice*
-/// @param callback int32_t func()
+/// @param self const QOpenGLPaintDevice*
+/// @param callback int32_t func(const QOpenGLPaintDevice* self)
 ///
-void q_openglpaintdevice_on_dev_type(void* self, int32_t (*callback)());
+void q_openglpaintdevice_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpaintdevice.html#devType)
 ///
 /// Base class method implementation
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 ///
-int32_t q_openglpaintdevice_super_dev_type(void* self);
+int32_t q_openglpaintdevice_super_dev_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpaintdevice.html#paintEngine)
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 ///
-QPaintEngine* q_openglpaintdevice_paint_engine(void* self);
+QPaintEngine* q_openglpaintdevice_paint_engine(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpaintdevice.html#paintEngine)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QOpenGLPaintDevice*
-/// @param callback QPaintEngine* func()
+/// @param self const QOpenGLPaintDevice*
+/// @param callback QPaintEngine* func(const QOpenGLPaintDevice* self)
 ///
-void q_openglpaintdevice_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void q_openglpaintdevice_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpaintdevice.html#paintEngine)
 ///
 /// Base class method implementation
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 ///
-QPaintEngine* q_openglpaintdevice_super_paint_engine(void* self);
+QPaintEngine* q_openglpaintdevice_super_paint_engine(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpaintdevice.html#context)
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 ///
-QOpenGLContext* q_openglpaintdevice_context(void* self);
+QOpenGLContext* q_openglpaintdevice_context(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpaintdevice.html#size)
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 ///
-QSize* q_openglpaintdevice_size(void* self);
+QSize* q_openglpaintdevice_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpaintdevice.html#setSize)
 ///
 /// @param self QOpenGLPaintDevice*
 /// @param size QSize*
 ///
-void q_openglpaintdevice_set_size(void* self, void* size);
+void q_openglpaintdevice_set_size(void* self, const void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpaintdevice.html#setDevicePixelRatio)
 ///
@@ -105,15 +105,15 @@ void q_openglpaintdevice_set_device_pixel_ratio(void* self, double devicePixelRa
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpaintdevice.html#dotsPerMeterX)
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 ///
-double q_openglpaintdevice_dots_per_meter_x(void* self);
+double q_openglpaintdevice_dots_per_meter_x(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpaintdevice.html#dotsPerMeterY)
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 ///
-double q_openglpaintdevice_dots_per_meter_y(void* self);
+double q_openglpaintdevice_dots_per_meter_y(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpaintdevice.html#setDotsPerMeterX)
 ///
@@ -138,9 +138,9 @@ void q_openglpaintdevice_set_paint_flipped(void* self, bool flipped);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpaintdevice.html#paintFlipped)
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 ///
-bool q_openglpaintdevice_paint_flipped(void* self);
+bool q_openglpaintdevice_paint_flipped(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpaintdevice.html#ensureActiveTarget)
 ///
@@ -153,9 +153,9 @@ void q_openglpaintdevice_ensure_active_target(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QOpenGLPaintDevice*
-/// @param callback void func()
+/// @param callback void func(QOpenGLPaintDevice* self)
 ///
-void q_openglpaintdevice_on_ensure_active_target(void* self, void (*callback)());
+void q_openglpaintdevice_on_ensure_active_target(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpaintdevice.html#ensureActiveTarget)
 ///
@@ -167,132 +167,132 @@ void q_openglpaintdevice_super_ensure_active_target(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpaintdevice.html#metric)
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_openglpaintdevice_metric(void* self, int32_t metric);
+int32_t q_openglpaintdevice_metric(const void* self, int32_t metric);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpaintdevice.html#metric)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QOpenGLPaintDevice*
-/// @param callback int32_t func(QOpenGLPaintDevice* self, enum QPaintDevice__PaintDeviceMetric metric)
+/// @param self const QOpenGLPaintDevice*
+/// @param callback int32_t func(const QOpenGLPaintDevice* self, enum QPaintDevice__PaintDeviceMetric metric)
 ///
-void q_openglpaintdevice_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void q_openglpaintdevice_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpaintdevice.html#metric)
 ///
 /// Base class method implementation
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_openglpaintdevice_super_metric(void* self, int32_t metric);
+int32_t q_openglpaintdevice_super_metric(const void* self, int32_t metric);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 ///
-bool q_openglpaintdevice_painting_active(void* self);
+bool q_openglpaintdevice_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#width)
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 ///
-int32_t q_openglpaintdevice_width(void* self);
+int32_t q_openglpaintdevice_width(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#height)
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 ///
-int32_t q_openglpaintdevice_height(void* self);
+int32_t q_openglpaintdevice_height(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 ///
-int32_t q_openglpaintdevice_width_m_m(void* self);
+int32_t q_openglpaintdevice_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 ///
-int32_t q_openglpaintdevice_height_m_m(void* self);
+int32_t q_openglpaintdevice_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 ///
-int32_t q_openglpaintdevice_logical_dpi_x(void* self);
+int32_t q_openglpaintdevice_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 ///
-int32_t q_openglpaintdevice_logical_dpi_y(void* self);
+int32_t q_openglpaintdevice_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 ///
-int32_t q_openglpaintdevice_physical_dpi_x(void* self);
+int32_t q_openglpaintdevice_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 ///
-int32_t q_openglpaintdevice_physical_dpi_y(void* self);
+int32_t q_openglpaintdevice_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 ///
-double q_openglpaintdevice_device_pixel_ratio(void* self);
+double q_openglpaintdevice_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 ///
-double q_openglpaintdevice_device_pixel_ratio_f(void* self);
+double q_openglpaintdevice_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 ///
-int32_t q_openglpaintdevice_color_count(void* self);
+int32_t q_openglpaintdevice_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 ///
-int32_t q_openglpaintdevice_depth(void* self);
+int32_t q_openglpaintdevice_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -315,10 +315,10 @@ int32_t q_openglpaintdevice_encode_metric_f(int32_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 /// @param painter QPainter*
 ///
-void q_openglpaintdevice_init_painter(void* self, void* painter);
+void q_openglpaintdevice_init_painter(const void* self, void* painter);
 
 /// Inherited from QPaintDevice
 ///
@@ -326,10 +326,10 @@ void q_openglpaintdevice_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 /// @param painter QPainter*
 ///
-void q_openglpaintdevice_super_init_painter(void* self, void* painter);
+void q_openglpaintdevice_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QPaintDevice
 ///
@@ -337,10 +337,10 @@ void q_openglpaintdevice_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 /// @param callback void func(QOpenGLPaintDevice* self, QPainter* painter)
 ///
-void q_openglpaintdevice_on_init_painter(void* self, void (*callback)(void*, void*));
+void q_openglpaintdevice_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -348,10 +348,10 @@ void q_openglpaintdevice_on_init_painter(void* self, void (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_openglpaintdevice_redirected(void* self, void* offset);
+QPaintDevice* q_openglpaintdevice_redirected(const void* self, void* offset);
 
 /// Inherited from QPaintDevice
 ///
@@ -359,10 +359,10 @@ QPaintDevice* q_openglpaintdevice_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_openglpaintdevice_super_redirected(void* self, void* offset);
+QPaintDevice* q_openglpaintdevice_super_redirected(const void* self, void* offset);
 
 /// Inherited from QPaintDevice
 ///
@@ -370,10 +370,10 @@ QPaintDevice* q_openglpaintdevice_super_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 /// @param callback QPaintDevice* func(QOpenGLPaintDevice* self, QPoint* offset)
 ///
-void q_openglpaintdevice_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void q_openglpaintdevice_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -381,9 +381,9 @@ void q_openglpaintdevice_on_redirected(void* self, QPaintDevice* (*callback)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 ///
-QPainter* q_openglpaintdevice_shared_painter(void* self);
+QPainter* q_openglpaintdevice_shared_painter(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -391,9 +391,9 @@ QPainter* q_openglpaintdevice_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 ///
-QPainter* q_openglpaintdevice_super_shared_painter(void* self);
+QPainter* q_openglpaintdevice_super_shared_painter(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -401,10 +401,10 @@ QPainter* q_openglpaintdevice_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLPaintDevice*
-/// @param callback QPainter* func()
+/// @param self const QOpenGLPaintDevice*
+/// @param callback QPainter* func(QOpenGLPaintDevice* self)
 ///
-void q_openglpaintdevice_on_shared_painter(void* self, QPainter* (*callback)());
+void q_openglpaintdevice_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -412,11 +412,11 @@ void q_openglpaintdevice_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_openglpaintdevice_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_openglpaintdevice_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -424,11 +424,11 @@ double q_openglpaintdevice_get_decoded_metric_f(void* self, int32_t metricA, int
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_openglpaintdevice_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_openglpaintdevice_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -436,10 +436,10 @@ double q_openglpaintdevice_super_get_decoded_metric_f(void* self, int32_t metric
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLPaintDevice*
+/// @param self const QOpenGLPaintDevice*
 /// @param callback double func(QOpenGLPaintDevice* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_openglpaintdevice_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void q_openglpaintdevice_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpaintdevice.html#dtor.QOpenGLPaintDevice)
 ///

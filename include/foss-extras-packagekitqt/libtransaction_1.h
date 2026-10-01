@@ -14,30 +14,30 @@
 ///
 /// @param tid QDBusObjectPath*
 ///
-PackageKit__Transaction* q_packagekit__transaction_new(void* tid);
+PackageKit__Transaction* q_packagekit__transaction_new(const void* tid);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-const QMetaObject* q_packagekit__transaction_meta_object(void* self);
+const QMetaObject* q_packagekit__transaction_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self PackageKit__Transaction*
-/// @param callback const QMetaObject* func()
+/// @param self const PackageKit__Transaction*
+/// @param callback const QMetaObject* func(const PackageKit__Transaction* self)
 ///
-void q_packagekit__transaction_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_packagekit__transaction_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-const QMetaObject* q_packagekit__transaction_super_meta_object(void* self);
+const QMetaObject* q_packagekit__transaction_super_meta_object(const void* self);
 
 /// @param self PackageKit__Transaction*
 /// @param param1 const char*
@@ -91,131 +91,131 @@ const char* q_packagekit__transaction_tr(const char* s);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-QDBusObjectPath* q_packagekit__transaction_tid(void* self);
+QDBusObjectPath* q_packagekit__transaction_tid(const void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-bool q_packagekit__transaction_allow_cancel(void* self);
+bool q_packagekit__transaction_allow_cancel(const void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-bool q_packagekit__transaction_is_caller_active(void* self);
+bool q_packagekit__transaction_is_caller_active(const void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-const char* q_packagekit__transaction_last_package(void* self);
+const char* q_packagekit__transaction_last_package(const void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-uint32_t q_packagekit__transaction_percentage(void* self);
+uint32_t q_packagekit__transaction_percentage(const void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-uint32_t q_packagekit__transaction_elapsed_time(void* self);
+uint32_t q_packagekit__transaction_elapsed_time(const void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-uint32_t q_packagekit__transaction_remaining_time(void* self);
+uint32_t q_packagekit__transaction_remaining_time(const void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-uint32_t q_packagekit__transaction_speed(void* self);
+uint32_t q_packagekit__transaction_speed(const void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-uintptr_t q_packagekit__transaction_download_size_remaining(void* self);
+uintptr_t q_packagekit__transaction_download_size_remaining(const void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
 /// @return enum PackageKit__Transaction__Role
 ///
-int32_t q_packagekit__transaction_role(void* self);
+int32_t q_packagekit__transaction_role(const void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
 /// @return enum PackageKit__Transaction__Status
 ///
-int32_t q_packagekit__transaction_status(void* self);
+int32_t q_packagekit__transaction_status(const void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
 /// @return flag of enum PackageKit__Transaction__TransactionFlag
 ///
-int32_t q_packagekit__transaction_transaction_flags(void* self);
+int32_t q_packagekit__transaction_transaction_flags(const void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-QDateTime* q_packagekit__transaction_timespec(void* self);
+QDateTime* q_packagekit__transaction_timespec(const void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-bool q_packagekit__transaction_succeeded(void* self);
+bool q_packagekit__transaction_succeeded(const void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-uint32_t q_packagekit__transaction_duration(void* self);
-
-/// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self PackageKit__Transaction*
-///
-const char* q_packagekit__transaction_data(void* self);
-
-/// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
-///
-/// @param self PackageKit__Transaction*
-///
-uint32_t q_packagekit__transaction_uid(void* self);
+uint32_t q_packagekit__transaction_duration(const void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-const char* q_packagekit__transaction_sender_name(void* self);
+const char* q_packagekit__transaction_data(const void* self);
+
+/// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
+///
+/// @param self const PackageKit__Transaction*
+///
+uint32_t q_packagekit__transaction_uid(const void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-const char* q_packagekit__transaction_cmdline(void* self);
+const char* q_packagekit__transaction_sender_name(const void* self);
+
+/// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const PackageKit__Transaction*
+///
+const char* q_packagekit__transaction_cmdline(const void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -567,14 +567,14 @@ void q_packagekit__transaction_on_package(void* self, void (*callback)(void*, in
 /// @param self PackageKit__Transaction*
 /// @param values PackageKit__Details*
 ///
-void q_packagekit__transaction_details(void* self, void* values);
+void q_packagekit__transaction_details(void* self, const void* values);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param self PackageKit__Transaction*
 /// @param callback void func(PackageKit__Transaction* self, PackageKit__Details* values)
 ///
-void q_packagekit__transaction_on_details(void* self, void (*callback)(void*, void*));
+void q_packagekit__transaction_on_details(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -592,14 +592,14 @@ void q_packagekit__transaction_on_details(void* self, void (*callback)(void*, vo
 /// @param issued QDateTime*
 /// @param updated QDateTime*
 ///
-void q_packagekit__transaction_update_detail(void* self, const char* packageID, const char* updates[static 1], const char* obsoletes[static 1], const char* vendorUrls[static 1], const char* bugzillaUrls[static 1], const char* cveUrls[static 1], int32_t restart, const char* updateText, const char* changelog, int32_t state, void* issued, void* updated);
+void q_packagekit__transaction_update_detail(void* self, const char* packageID, const char* updates[static 1], const char* obsoletes[static 1], const char* vendorUrls[static 1], const char* bugzillaUrls[static 1], const char* cveUrls[static 1], int32_t restart, const char* updateText, const char* changelog, int32_t state, const void* issued, const void* updated);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param self PackageKit__Transaction*
 /// @param callback void func(PackageKit__Transaction* self, const char* packageID, const char** updates, const char** obsoletes, const char** vendorUrls, const char** bugzillaUrls, const char** cveUrls, enum PackageKit__Transaction__Restart restart, const char* updateText, const char* changelog, enum PackageKit__Transaction__UpdateState state, QDateTime* issued, QDateTime* updated)
 ///
-void q_packagekit__transaction_on_update_detail(void* self, void (*callback)(void*, const char*, const char**, const char**, const char**, const char**, const char**, int32_t, const char*, const char*, int32_t, void*, void*));
+void q_packagekit__transaction_on_update_detail(void* self, void (*callback)(void*, const char*, const char**, const char**, const char**, const char**, const char**, int32_t, const char*, const char*, int32_t, const void*, const void*));
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -678,30 +678,10 @@ int32_t q_packagekit__transaction_parse_error(void* self, const char* errorName)
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
-/// Allows for overriding the related default method
-///
-/// @param self PackageKit__Transaction*
-/// @param callback int32_t func(PackageKit__Transaction* self, const char* errorName)
-///
-void q_packagekit__transaction_on_parse_error(void* self, int32_t (*callback)(void*, const char*));
-
-/// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
-///
-/// Base class method implementation
-///
-/// @param self PackageKit__Transaction*
-/// @param errorName const char*
-///
-/// @return enum PackageKit__Transaction__InternalError
-///
-int32_t q_packagekit__transaction_super_parse_error(void* self, const char* errorName);
-
-/// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
-///
 /// @param self PackageKit__Transaction*
 /// @param signal QMetaMethod*
 ///
-void q_packagekit__transaction_connect_notify(void* self, void* signal);
+void q_packagekit__transaction_connect_notify(void* self, const void* signal);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -710,7 +690,7 @@ void q_packagekit__transaction_connect_notify(void* self, void* signal);
 /// @param self PackageKit__Transaction*
 /// @param callback void func(PackageKit__Transaction* self, QMetaMethod* signal)
 ///
-void q_packagekit__transaction_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_packagekit__transaction_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -719,14 +699,14 @@ void q_packagekit__transaction_on_connect_notify(void* self, void (*callback)(vo
 /// @param self PackageKit__Transaction*
 /// @param signal QMetaMethod*
 ///
-void q_packagekit__transaction_super_connect_notify(void* self, void* signal);
+void q_packagekit__transaction_super_connect_notify(void* self, const void* signal);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param self PackageKit__Transaction*
 /// @param signal QMetaMethod*
 ///
-void q_packagekit__transaction_disconnect_notify(void* self, void* signal);
+void q_packagekit__transaction_disconnect_notify(void* self, const void* signal);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -735,7 +715,7 @@ void q_packagekit__transaction_disconnect_notify(void* self, void* signal);
 /// @param self PackageKit__Transaction*
 /// @param callback void func(PackageKit__Transaction* self, QMetaMethod* signal)
 ///
-void q_packagekit__transaction_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_packagekit__transaction_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -744,7 +724,7 @@ void q_packagekit__transaction_on_disconnect_notify(void* self, void (*callback)
 /// @param self PackageKit__Transaction*
 /// @param signal QMetaMethod*
 ///
-void q_packagekit__transaction_super_disconnect_notify(void* self, void* signal);
+void q_packagekit__transaction_super_disconnect_notify(void* self, const void* signal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -771,9 +751,9 @@ const char* q_packagekit__transaction_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-const char* q_packagekit__transaction_object_name(void* self);
+const char* q_packagekit__transaction_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -788,33 +768,33 @@ void q_packagekit__transaction_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-bool q_packagekit__transaction_is_widget_type(void* self);
+bool q_packagekit__transaction_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-bool q_packagekit__transaction_is_window_type(void* self);
+bool q_packagekit__transaction_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-bool q_packagekit__transaction_is_quick_item_type(void* self);
+bool q_packagekit__transaction_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-bool q_packagekit__transaction_signals_blocked(void* self);
+bool q_packagekit__transaction_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -829,9 +809,9 @@ bool q_packagekit__transaction_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-QThread* q_packagekit__transaction_thread(void* self);
+QThread* q_packagekit__transaction_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -882,11 +862,11 @@ void q_packagekit__transaction_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_packagekit__transaction_children(void* self);
+libqt_list q_packagekit__transaction_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -924,7 +904,7 @@ void q_packagekit__transaction_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_packagekit__transaction_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_packagekit__transaction_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -935,18 +915,18 @@ QMetaObject__Connection* q_packagekit__transaction_connect(void* sender, const c
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_packagekit__transaction_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_packagekit__transaction_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_packagekit__transaction_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_packagekit__transaction_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -957,7 +937,7 @@ QMetaObject__Connection* q_packagekit__transaction_connect3(void* self, void* se
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_packagekit__transaction_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_packagekit__transaction_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -968,24 +948,24 @@ bool q_packagekit__transaction_disconnect(void* sender, const char* signal, void
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_packagekit__transaction_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_packagekit__transaction_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-bool q_packagekit__transaction_disconnect3(void* self);
+bool q_packagekit__transaction_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 /// @param receiver QObject*
 ///
-bool q_packagekit__transaction_disconnect4(void* self, void* receiver);
+bool q_packagekit__transaction_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -993,23 +973,23 @@ bool q_packagekit__transaction_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_packagekit__transaction_disconnect5(void* param1);
+bool q_packagekit__transaction_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-void q_packagekit__transaction_dump_object_tree(void* self);
+void q_packagekit__transaction_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-void q_packagekit__transaction_dump_object_info(void* self);
+void q_packagekit__transaction_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1019,16 +999,16 @@ void q_packagekit__transaction_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_packagekit__transaction_set_property(void* self, const char* name, void* value);
+bool q_packagekit__transaction_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 /// @param name const char*
 ///
-QVariant* q_packagekit__transaction_property(void* self, const char* name);
+QVariant* q_packagekit__transaction_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1036,9 +1016,9 @@ QVariant* q_packagekit__transaction_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-const char** q_packagekit__transaction_dynamic_property_names(void* self);
+const char** q_packagekit__transaction_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1052,9 +1032,9 @@ QBindingStorage* q_packagekit__transaction_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-const QBindingStorage* q_packagekit__transaction_binding_storage2(void* self);
+const QBindingStorage* q_packagekit__transaction_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1077,18 +1057,18 @@ void q_packagekit__transaction_on_destroyed(void* self, void (*callback)(void*))
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-QObject* q_packagekit__transaction_parent(void* self);
+QObject* q_packagekit__transaction_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 /// @param classname const char*
 ///
-bool q_packagekit__transaction_inherits(void* self, const char* classname);
+bool q_packagekit__transaction_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1128,7 +1108,7 @@ int32_t q_packagekit__transaction_start_timer23(void* self, int64_t time, int32_
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_packagekit__transaction_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_packagekit__transaction_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1140,59 +1120,59 @@ QMetaObject__Connection* q_packagekit__transaction_connect5(void* sender, const 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_packagekit__transaction_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_packagekit__transaction_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_packagekit__transaction_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_packagekit__transaction_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 /// @param signal const char*
 ///
-bool q_packagekit__transaction_disconnect1(void* self, const char* signal);
+bool q_packagekit__transaction_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self PackageKit__Transaction*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_packagekit__transaction_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_packagekit__transaction_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_packagekit__transaction_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_packagekit__transaction_disconnect23(void* self, void* receiver, const char* member);
+bool q_packagekit__transaction_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const PackageKit__Transaction*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_packagekit__transaction_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1385,9 +1365,9 @@ void q_packagekit__transaction_on_custom_event(void* self, void (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-QObject* q_packagekit__transaction_sender(void* self);
+QObject* q_packagekit__transaction_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1395,9 +1375,9 @@ QObject* q_packagekit__transaction_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-QObject* q_packagekit__transaction_super_sender(void* self);
+QObject* q_packagekit__transaction_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1405,10 +1385,10 @@ QObject* q_packagekit__transaction_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self PackageKit__Transaction*
-/// @param callback QObject* func()
+/// @param self const PackageKit__Transaction*
+/// @param callback QObject* func(PackageKit__Transaction* self)
 ///
-void q_packagekit__transaction_on_sender(void* self, QObject* (*callback)());
+void q_packagekit__transaction_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1416,9 +1396,9 @@ void q_packagekit__transaction_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-int32_t q_packagekit__transaction_sender_signal_index(void* self);
+int32_t q_packagekit__transaction_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1426,9 +1406,9 @@ int32_t q_packagekit__transaction_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 ///
-int32_t q_packagekit__transaction_super_sender_signal_index(void* self);
+int32_t q_packagekit__transaction_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1436,10 +1416,10 @@ int32_t q_packagekit__transaction_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self PackageKit__Transaction*
-/// @param callback int32_t func()
+/// @param self const PackageKit__Transaction*
+/// @param callback int32_t func(PackageKit__Transaction* self)
 ///
-void q_packagekit__transaction_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_packagekit__transaction_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1447,10 +1427,10 @@ void q_packagekit__transaction_on_sender_signal_index(void* self, int32_t (*call
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 /// @param signal const char*
 ///
-int32_t q_packagekit__transaction_receivers(void* self, const char* signal);
+int32_t q_packagekit__transaction_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1458,10 +1438,10 @@ int32_t q_packagekit__transaction_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 /// @param signal const char*
 ///
-int32_t q_packagekit__transaction_super_receivers(void* self, const char* signal);
+int32_t q_packagekit__transaction_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1469,10 +1449,10 @@ int32_t q_packagekit__transaction_super_receivers(void* self, const char* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 /// @param callback int32_t func(PackageKit__Transaction* self, const char* signal)
 ///
-void q_packagekit__transaction_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_packagekit__transaction_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1480,10 +1460,10 @@ void q_packagekit__transaction_on_receivers(void* self, int32_t (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 /// @param signal QMetaMethod*
 ///
-bool q_packagekit__transaction_is_signal_connected(void* self, void* signal);
+bool q_packagekit__transaction_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1491,10 +1471,10 @@ bool q_packagekit__transaction_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 /// @param signal QMetaMethod*
 ///
-bool q_packagekit__transaction_super_is_signal_connected(void* self, void* signal);
+bool q_packagekit__transaction_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1502,10 +1482,10 @@ bool q_packagekit__transaction_super_is_signal_connected(void* self, void* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self PackageKit__Transaction*
+/// @param self const PackageKit__Transaction*
 /// @param callback bool func(PackageKit__Transaction* self, QMetaMethod* signal)
 ///
-void q_packagekit__transaction_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_packagekit__transaction_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

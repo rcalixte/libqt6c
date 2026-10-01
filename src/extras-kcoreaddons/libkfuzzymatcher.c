@@ -5,7 +5,7 @@ KFuzzyMatcher__Result* k_fuzzymatcher__result_new() {
     return KFuzzyMatcher__Result_New();
 }
 
-KFuzzyMatcher__Result* k_fuzzymatcher__result_new2(void* other) {
+KFuzzyMatcher__Result* k_fuzzymatcher__result_new2(const void* other) {
     return KFuzzyMatcher__Result_New2((KFuzzyMatcher__Result*)other);
 }
 
@@ -21,7 +21,7 @@ void k_fuzzymatcher__result_move_assign(void* self, void* other) {
     KFuzzyMatcher__Result_MoveAssign((KFuzzyMatcher__Result*)self, (KFuzzyMatcher__Result*)other);
 }
 
-int32_t k_fuzzymatcher__result_score(void* self) {
+int32_t k_fuzzymatcher__result_score(const void* self) {
     return KFuzzyMatcher__Result_Score((KFuzzyMatcher__Result*)self);
 }
 
@@ -29,7 +29,7 @@ void k_fuzzymatcher__result_set_score(void* self, int score) {
     KFuzzyMatcher__Result_SetScore((KFuzzyMatcher__Result*)self, score);
 }
 
-bool k_fuzzymatcher__result_matched(void* self) {
+bool k_fuzzymatcher__result_matched(const void* self) {
     return KFuzzyMatcher__Result_Matched((KFuzzyMatcher__Result*)self);
 }
 
@@ -45,11 +45,11 @@ KFuzzyMatcher__Range* k_fuzzymatcher__range_new() {
     return KFuzzyMatcher__Range_New();
 }
 
-KFuzzyMatcher__Range* k_fuzzymatcher__range_new2(void* param1) {
+KFuzzyMatcher__Range* k_fuzzymatcher__range_new2(const void* param1) {
     return KFuzzyMatcher__Range_New2((KFuzzyMatcher__Range*)param1);
 }
 
-int32_t k_fuzzymatcher__range_start(void* self) {
+int32_t k_fuzzymatcher__range_start(const void* self) {
     return KFuzzyMatcher__Range_Start((KFuzzyMatcher__Range*)self);
 }
 
@@ -57,7 +57,7 @@ void k_fuzzymatcher__range_set_start(void* self, int start) {
     KFuzzyMatcher__Range_SetStart((KFuzzyMatcher__Range*)self, start);
 }
 
-int32_t k_fuzzymatcher__range_length(void* self) {
+int32_t k_fuzzymatcher__range_length(const void* self) {
     return KFuzzyMatcher__Range_Length((KFuzzyMatcher__Range*)self);
 }
 

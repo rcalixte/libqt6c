@@ -14,7 +14,7 @@
 ///
 /// @param other QQmlDebuggingEnabler*
 ///
-QQmlDebuggingEnabler* q_qmldebuggingenabler_new(void* other);
+QQmlDebuggingEnabler* q_qmldebuggingenabler_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmldebuggingenabler.html)
 

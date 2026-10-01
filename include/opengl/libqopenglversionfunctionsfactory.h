@@ -14,7 +14,7 @@
 ///
 /// @param other QOpenGLVersionFunctionsFactory*
 ///
-QOpenGLVersionFunctionsFactory* q_openglversionfunctionsfactory_new(void* other);
+QOpenGLVersionFunctionsFactory* q_openglversionfunctionsfactory_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsfactory.html)
 
@@ -46,14 +46,14 @@ QAbstractOpenGLFunctions* q_openglversionfunctionsfactory_get();
 ///
 /// @param versionProfile QOpenGLVersionProfile*
 ///
-QAbstractOpenGLFunctions* q_openglversionfunctionsfactory_get1(void* versionProfile);
+QAbstractOpenGLFunctions* q_openglversionfunctionsfactory_get1(const void* versionProfile);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsfactory.html#get)
 ///
 /// @param versionProfile QOpenGLVersionProfile*
 /// @param context QOpenGLContext*
 ///
-QAbstractOpenGLFunctions* q_openglversionfunctionsfactory_get2(void* versionProfile, void* context);
+QAbstractOpenGLFunctions* q_openglversionfunctionsfactory_get2(const void* versionProfile, void* context);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsfactory.html#dtor.QOpenGLVersionFunctionsFactory)
 ///

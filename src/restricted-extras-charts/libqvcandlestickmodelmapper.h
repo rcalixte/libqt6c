@@ -24,26 +24,26 @@ QVCandlestickModelMapper* q_vcandlestickmodelmapper_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-const QMetaObject* q_vcandlestickmodelmapper_meta_object(void* self);
+const QMetaObject* q_vcandlestickmodelmapper_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QVCandlestickModelMapper*
-/// @param callback const QMetaObject* func()
+/// @param self const QVCandlestickModelMapper*
+/// @param callback const QMetaObject* func(const QVCandlestickModelMapper* self)
 ///
-void q_vcandlestickmodelmapper_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_vcandlestickmodelmapper_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-const QMetaObject* q_vcandlestickmodelmapper_super_meta_object(void* self);
+const QMetaObject* q_vcandlestickmodelmapper_super_meta_object(const void* self);
 
 /// @param self QVCandlestickModelMapper*
 /// @param param1 const char*
@@ -97,30 +97,30 @@ const char* q_vcandlestickmodelmapper_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvcandlestickmodelmapper-qtcharts.html#orientation)
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
 /// @return enum Qt__Orientation
 ///
-int32_t q_vcandlestickmodelmapper_orientation(void* self);
+int32_t q_vcandlestickmodelmapper_orientation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvcandlestickmodelmapper-qtcharts.html#orientation)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QVCandlestickModelMapper*
-/// @param callback int32_t func()
+/// @param self const QVCandlestickModelMapper*
+/// @param callback int32_t func(const QVCandlestickModelMapper* self)
 ///
-void q_vcandlestickmodelmapper_on_orientation(void* self, int32_t (*callback)());
+void q_vcandlestickmodelmapper_on_orientation(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvcandlestickmodelmapper-qtcharts.html#orientation)
 ///
 /// Base class method implementation
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
 /// @return enum Qt__Orientation
 ///
-int32_t q_vcandlestickmodelmapper_super_orientation(void* self);
+int32_t q_vcandlestickmodelmapper_super_orientation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvcandlestickmodelmapper-qtcharts.html#setTimestampRow)
 ///
@@ -131,9 +131,9 @@ void q_vcandlestickmodelmapper_set_timestamp_row(void* self, int timestampRow);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvcandlestickmodelmapper-qtcharts.html#timestampRow)
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-int32_t q_vcandlestickmodelmapper_timestamp_row(void* self);
+int32_t q_vcandlestickmodelmapper_timestamp_row(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvcandlestickmodelmapper-qtcharts.html#setOpenRow)
 ///
@@ -144,9 +144,9 @@ void q_vcandlestickmodelmapper_set_open_row(void* self, int openRow);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvcandlestickmodelmapper-qtcharts.html#openRow)
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-int32_t q_vcandlestickmodelmapper_open_row(void* self);
+int32_t q_vcandlestickmodelmapper_open_row(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvcandlestickmodelmapper-qtcharts.html#setHighRow)
 ///
@@ -157,9 +157,9 @@ void q_vcandlestickmodelmapper_set_high_row(void* self, int highRow);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvcandlestickmodelmapper-qtcharts.html#highRow)
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-int32_t q_vcandlestickmodelmapper_high_row(void* self);
+int32_t q_vcandlestickmodelmapper_high_row(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvcandlestickmodelmapper-qtcharts.html#setLowRow)
 ///
@@ -170,9 +170,9 @@ void q_vcandlestickmodelmapper_set_low_row(void* self, int lowRow);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvcandlestickmodelmapper-qtcharts.html#lowRow)
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-int32_t q_vcandlestickmodelmapper_low_row(void* self);
+int32_t q_vcandlestickmodelmapper_low_row(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvcandlestickmodelmapper-qtcharts.html#setCloseRow)
 ///
@@ -183,9 +183,9 @@ void q_vcandlestickmodelmapper_set_close_row(void* self, int closeRow);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvcandlestickmodelmapper-qtcharts.html#closeRow)
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-int32_t q_vcandlestickmodelmapper_close_row(void* self);
+int32_t q_vcandlestickmodelmapper_close_row(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvcandlestickmodelmapper-qtcharts.html#setFirstSetColumn)
 ///
@@ -196,9 +196,9 @@ void q_vcandlestickmodelmapper_set_first_set_column(void* self, int firstSetColu
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvcandlestickmodelmapper-qtcharts.html#firstSetColumn)
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-int32_t q_vcandlestickmodelmapper_first_set_column(void* self);
+int32_t q_vcandlestickmodelmapper_first_set_column(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvcandlestickmodelmapper-qtcharts.html#setLastSetColumn)
 ///
@@ -209,9 +209,9 @@ void q_vcandlestickmodelmapper_set_last_set_column(void* self, int lastSetColumn
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvcandlestickmodelmapper-qtcharts.html#lastSetColumn)
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-int32_t q_vcandlestickmodelmapper_last_set_column(void* self);
+int32_t q_vcandlestickmodelmapper_last_set_column(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvcandlestickmodelmapper-qtcharts.html#timestampRowChanged)
 ///
@@ -336,9 +336,9 @@ void q_vcandlestickmodelmapper_set_model(void* self, void* model);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#model)
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-QAbstractItemModel* q_vcandlestickmodelmapper_model(void* self);
+QAbstractItemModel* q_vcandlestickmodelmapper_model(const void* self);
 
 /// Inherited from QCandlestickModelMapper
 ///
@@ -353,9 +353,9 @@ void q_vcandlestickmodelmapper_set_series(void* self, void* series);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#series)
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-QCandlestickSeries* q_vcandlestickmodelmapper_series(void* self);
+QCandlestickSeries* q_vcandlestickmodelmapper_series(const void* self);
 
 /// Inherited from QCandlestickModelMapper
 ///
@@ -397,9 +397,9 @@ void q_vcandlestickmodelmapper_on_series_replaced(void* self, void (*callback)(v
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-const char* q_vcandlestickmodelmapper_object_name(void* self);
+const char* q_vcandlestickmodelmapper_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -414,33 +414,33 @@ void q_vcandlestickmodelmapper_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-bool q_vcandlestickmodelmapper_is_widget_type(void* self);
+bool q_vcandlestickmodelmapper_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-bool q_vcandlestickmodelmapper_is_window_type(void* self);
+bool q_vcandlestickmodelmapper_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-bool q_vcandlestickmodelmapper_is_quick_item_type(void* self);
+bool q_vcandlestickmodelmapper_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-bool q_vcandlestickmodelmapper_signals_blocked(void* self);
+bool q_vcandlestickmodelmapper_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -455,9 +455,9 @@ bool q_vcandlestickmodelmapper_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-QThread* q_vcandlestickmodelmapper_thread(void* self);
+QThread* q_vcandlestickmodelmapper_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -508,11 +508,11 @@ void q_vcandlestickmodelmapper_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_vcandlestickmodelmapper_children(void* self);
+libqt_list q_vcandlestickmodelmapper_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -550,7 +550,7 @@ void q_vcandlestickmodelmapper_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_vcandlestickmodelmapper_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_vcandlestickmodelmapper_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -561,18 +561,18 @@ QMetaObject__Connection* q_vcandlestickmodelmapper_connect(void* sender, const c
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_vcandlestickmodelmapper_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_vcandlestickmodelmapper_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_vcandlestickmodelmapper_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_vcandlestickmodelmapper_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -583,7 +583,7 @@ QMetaObject__Connection* q_vcandlestickmodelmapper_connect3(void* self, void* se
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_vcandlestickmodelmapper_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_vcandlestickmodelmapper_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -594,24 +594,24 @@ bool q_vcandlestickmodelmapper_disconnect(void* sender, const char* signal, void
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_vcandlestickmodelmapper_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_vcandlestickmodelmapper_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-bool q_vcandlestickmodelmapper_disconnect3(void* self);
+bool q_vcandlestickmodelmapper_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 /// @param receiver QObject*
 ///
-bool q_vcandlestickmodelmapper_disconnect4(void* self, void* receiver);
+bool q_vcandlestickmodelmapper_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -619,23 +619,23 @@ bool q_vcandlestickmodelmapper_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_vcandlestickmodelmapper_disconnect5(void* param1);
+bool q_vcandlestickmodelmapper_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-void q_vcandlestickmodelmapper_dump_object_tree(void* self);
+void q_vcandlestickmodelmapper_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-void q_vcandlestickmodelmapper_dump_object_info(void* self);
+void q_vcandlestickmodelmapper_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -645,16 +645,16 @@ void q_vcandlestickmodelmapper_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_vcandlestickmodelmapper_set_property(void* self, const char* name, void* value);
+bool q_vcandlestickmodelmapper_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 /// @param name const char*
 ///
-QVariant* q_vcandlestickmodelmapper_property(void* self, const char* name);
+QVariant* q_vcandlestickmodelmapper_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -662,9 +662,9 @@ QVariant* q_vcandlestickmodelmapper_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-const char** q_vcandlestickmodelmapper_dynamic_property_names(void* self);
+const char** q_vcandlestickmodelmapper_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -678,9 +678,9 @@ QBindingStorage* q_vcandlestickmodelmapper_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-const QBindingStorage* q_vcandlestickmodelmapper_binding_storage2(void* self);
+const QBindingStorage* q_vcandlestickmodelmapper_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -703,18 +703,18 @@ void q_vcandlestickmodelmapper_on_destroyed(void* self, void (*callback)(void*))
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-QObject* q_vcandlestickmodelmapper_parent(void* self);
+QObject* q_vcandlestickmodelmapper_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 /// @param classname const char*
 ///
-bool q_vcandlestickmodelmapper_inherits(void* self, const char* classname);
+bool q_vcandlestickmodelmapper_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -754,7 +754,7 @@ int32_t q_vcandlestickmodelmapper_start_timer23(void* self, int64_t time, int32_
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_vcandlestickmodelmapper_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_vcandlestickmodelmapper_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -766,59 +766,59 @@ QMetaObject__Connection* q_vcandlestickmodelmapper_connect5(void* sender, const 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_vcandlestickmodelmapper_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_vcandlestickmodelmapper_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_vcandlestickmodelmapper_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_vcandlestickmodelmapper_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 /// @param signal const char*
 ///
-bool q_vcandlestickmodelmapper_disconnect1(void* self, const char* signal);
+bool q_vcandlestickmodelmapper_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QVCandlestickModelMapper*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_vcandlestickmodelmapper_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_vcandlestickmodelmapper_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_vcandlestickmodelmapper_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_vcandlestickmodelmapper_disconnect23(void* self, void* receiver, const char* member);
+bool q_vcandlestickmodelmapper_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QVCandlestickModelMapper*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_vcandlestickmodelmapper_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1014,7 +1014,7 @@ void q_vcandlestickmodelmapper_on_custom_event(void* self, void (*callback)(void
 /// @param self QVCandlestickModelMapper*
 /// @param signal QMetaMethod*
 ///
-void q_vcandlestickmodelmapper_connect_notify(void* self, void* signal);
+void q_vcandlestickmodelmapper_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1025,7 +1025,7 @@ void q_vcandlestickmodelmapper_connect_notify(void* self, void* signal);
 /// @param self QVCandlestickModelMapper*
 /// @param signal QMetaMethod*
 ///
-void q_vcandlestickmodelmapper_super_connect_notify(void* self, void* signal);
+void q_vcandlestickmodelmapper_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1036,7 +1036,7 @@ void q_vcandlestickmodelmapper_super_connect_notify(void* self, void* signal);
 /// @param self QVCandlestickModelMapper*
 /// @param callback void func(QVCandlestickModelMapper* self, QMetaMethod* signal)
 ///
-void q_vcandlestickmodelmapper_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_vcandlestickmodelmapper_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1047,7 +1047,7 @@ void q_vcandlestickmodelmapper_on_connect_notify(void* self, void (*callback)(vo
 /// @param self QVCandlestickModelMapper*
 /// @param signal QMetaMethod*
 ///
-void q_vcandlestickmodelmapper_disconnect_notify(void* self, void* signal);
+void q_vcandlestickmodelmapper_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1058,7 +1058,7 @@ void q_vcandlestickmodelmapper_disconnect_notify(void* self, void* signal);
 /// @param self QVCandlestickModelMapper*
 /// @param signal QMetaMethod*
 ///
-void q_vcandlestickmodelmapper_super_disconnect_notify(void* self, void* signal);
+void q_vcandlestickmodelmapper_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1069,7 +1069,7 @@ void q_vcandlestickmodelmapper_super_disconnect_notify(void* self, void* signal)
 /// @param self QVCandlestickModelMapper*
 /// @param callback void func(QVCandlestickModelMapper* self, QMetaMethod* signal)
 ///
-void q_vcandlestickmodelmapper_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_vcandlestickmodelmapper_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QCandlestickModelMapper
 ///
@@ -1110,9 +1110,9 @@ void q_vcandlestickmodelmapper_on_set_timestamp(void* self, void (*callback)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-int32_t q_vcandlestickmodelmapper_timestamp(void* self);
+int32_t q_vcandlestickmodelmapper_timestamp(const void* self);
 
 /// Inherited from QCandlestickModelMapper
 ///
@@ -1120,9 +1120,9 @@ int32_t q_vcandlestickmodelmapper_timestamp(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-int32_t q_vcandlestickmodelmapper_super_timestamp(void* self);
+int32_t q_vcandlestickmodelmapper_super_timestamp(const void* self);
 
 /// Inherited from QCandlestickModelMapper
 ///
@@ -1130,10 +1130,10 @@ int32_t q_vcandlestickmodelmapper_super_timestamp(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
-/// @param callback int32_t func()
+/// @param self const QVCandlestickModelMapper*
+/// @param callback int32_t func(QVCandlestickModelMapper* self)
 ///
-void q_vcandlestickmodelmapper_on_timestamp(void* self, int32_t (*callback)());
+void q_vcandlestickmodelmapper_on_timestamp(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCandlestickModelMapper
 ///
@@ -1174,9 +1174,9 @@ void q_vcandlestickmodelmapper_on_set_open(void* self, void (*callback)(void*, i
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-int32_t q_vcandlestickmodelmapper_open(void* self);
+int32_t q_vcandlestickmodelmapper_open(const void* self);
 
 /// Inherited from QCandlestickModelMapper
 ///
@@ -1184,9 +1184,9 @@ int32_t q_vcandlestickmodelmapper_open(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-int32_t q_vcandlestickmodelmapper_super_open(void* self);
+int32_t q_vcandlestickmodelmapper_super_open(const void* self);
 
 /// Inherited from QCandlestickModelMapper
 ///
@@ -1194,10 +1194,10 @@ int32_t q_vcandlestickmodelmapper_super_open(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
-/// @param callback int32_t func()
+/// @param self const QVCandlestickModelMapper*
+/// @param callback int32_t func(QVCandlestickModelMapper* self)
 ///
-void q_vcandlestickmodelmapper_on_open(void* self, int32_t (*callback)());
+void q_vcandlestickmodelmapper_on_open(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCandlestickModelMapper
 ///
@@ -1238,9 +1238,9 @@ void q_vcandlestickmodelmapper_on_set_high(void* self, void (*callback)(void*, i
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-int32_t q_vcandlestickmodelmapper_high(void* self);
+int32_t q_vcandlestickmodelmapper_high(const void* self);
 
 /// Inherited from QCandlestickModelMapper
 ///
@@ -1248,9 +1248,9 @@ int32_t q_vcandlestickmodelmapper_high(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-int32_t q_vcandlestickmodelmapper_super_high(void* self);
+int32_t q_vcandlestickmodelmapper_super_high(const void* self);
 
 /// Inherited from QCandlestickModelMapper
 ///
@@ -1258,10 +1258,10 @@ int32_t q_vcandlestickmodelmapper_super_high(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
-/// @param callback int32_t func()
+/// @param self const QVCandlestickModelMapper*
+/// @param callback int32_t func(QVCandlestickModelMapper* self)
 ///
-void q_vcandlestickmodelmapper_on_high(void* self, int32_t (*callback)());
+void q_vcandlestickmodelmapper_on_high(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCandlestickModelMapper
 ///
@@ -1302,9 +1302,9 @@ void q_vcandlestickmodelmapper_on_set_low(void* self, void (*callback)(void*, in
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-int32_t q_vcandlestickmodelmapper_low(void* self);
+int32_t q_vcandlestickmodelmapper_low(const void* self);
 
 /// Inherited from QCandlestickModelMapper
 ///
@@ -1312,9 +1312,9 @@ int32_t q_vcandlestickmodelmapper_low(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-int32_t q_vcandlestickmodelmapper_super_low(void* self);
+int32_t q_vcandlestickmodelmapper_super_low(const void* self);
 
 /// Inherited from QCandlestickModelMapper
 ///
@@ -1322,10 +1322,10 @@ int32_t q_vcandlestickmodelmapper_super_low(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
-/// @param callback int32_t func()
+/// @param self const QVCandlestickModelMapper*
+/// @param callback int32_t func(QVCandlestickModelMapper* self)
 ///
-void q_vcandlestickmodelmapper_on_low(void* self, int32_t (*callback)());
+void q_vcandlestickmodelmapper_on_low(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCandlestickModelMapper
 ///
@@ -1366,9 +1366,9 @@ void q_vcandlestickmodelmapper_on_set_close(void* self, void (*callback)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-int32_t q_vcandlestickmodelmapper_close(void* self);
+int32_t q_vcandlestickmodelmapper_close(const void* self);
 
 /// Inherited from QCandlestickModelMapper
 ///
@@ -1376,9 +1376,9 @@ int32_t q_vcandlestickmodelmapper_close(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-int32_t q_vcandlestickmodelmapper_super_close(void* self);
+int32_t q_vcandlestickmodelmapper_super_close(const void* self);
 
 /// Inherited from QCandlestickModelMapper
 ///
@@ -1386,10 +1386,10 @@ int32_t q_vcandlestickmodelmapper_super_close(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
-/// @param callback int32_t func()
+/// @param self const QVCandlestickModelMapper*
+/// @param callback int32_t func(QVCandlestickModelMapper* self)
 ///
-void q_vcandlestickmodelmapper_on_close(void* self, int32_t (*callback)());
+void q_vcandlestickmodelmapper_on_close(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCandlestickModelMapper
 ///
@@ -1430,9 +1430,9 @@ void q_vcandlestickmodelmapper_on_set_first_set_section(void* self, void (*callb
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-int32_t q_vcandlestickmodelmapper_first_set_section(void* self);
+int32_t q_vcandlestickmodelmapper_first_set_section(const void* self);
 
 /// Inherited from QCandlestickModelMapper
 ///
@@ -1440,9 +1440,9 @@ int32_t q_vcandlestickmodelmapper_first_set_section(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-int32_t q_vcandlestickmodelmapper_super_first_set_section(void* self);
+int32_t q_vcandlestickmodelmapper_super_first_set_section(const void* self);
 
 /// Inherited from QCandlestickModelMapper
 ///
@@ -1450,10 +1450,10 @@ int32_t q_vcandlestickmodelmapper_super_first_set_section(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
-/// @param callback int32_t func()
+/// @param self const QVCandlestickModelMapper*
+/// @param callback int32_t func(QVCandlestickModelMapper* self)
 ///
-void q_vcandlestickmodelmapper_on_first_set_section(void* self, int32_t (*callback)());
+void q_vcandlestickmodelmapper_on_first_set_section(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCandlestickModelMapper
 ///
@@ -1494,9 +1494,9 @@ void q_vcandlestickmodelmapper_on_set_last_set_section(void* self, void (*callba
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-int32_t q_vcandlestickmodelmapper_last_set_section(void* self);
+int32_t q_vcandlestickmodelmapper_last_set_section(const void* self);
 
 /// Inherited from QCandlestickModelMapper
 ///
@@ -1504,9 +1504,9 @@ int32_t q_vcandlestickmodelmapper_last_set_section(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-int32_t q_vcandlestickmodelmapper_super_last_set_section(void* self);
+int32_t q_vcandlestickmodelmapper_super_last_set_section(const void* self);
 
 /// Inherited from QCandlestickModelMapper
 ///
@@ -1514,10 +1514,10 @@ int32_t q_vcandlestickmodelmapper_super_last_set_section(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
-/// @param callback int32_t func()
+/// @param self const QVCandlestickModelMapper*
+/// @param callback int32_t func(QVCandlestickModelMapper* self)
 ///
-void q_vcandlestickmodelmapper_on_last_set_section(void* self, int32_t (*callback)());
+void q_vcandlestickmodelmapper_on_last_set_section(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1525,9 +1525,9 @@ void q_vcandlestickmodelmapper_on_last_set_section(void* self, int32_t (*callbac
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-QObject* q_vcandlestickmodelmapper_sender(void* self);
+QObject* q_vcandlestickmodelmapper_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1535,9 +1535,9 @@ QObject* q_vcandlestickmodelmapper_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-QObject* q_vcandlestickmodelmapper_super_sender(void* self);
+QObject* q_vcandlestickmodelmapper_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1545,10 +1545,10 @@ QObject* q_vcandlestickmodelmapper_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
-/// @param callback QObject* func()
+/// @param self const QVCandlestickModelMapper*
+/// @param callback QObject* func(QVCandlestickModelMapper* self)
 ///
-void q_vcandlestickmodelmapper_on_sender(void* self, QObject* (*callback)());
+void q_vcandlestickmodelmapper_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1556,9 +1556,9 @@ void q_vcandlestickmodelmapper_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-int32_t q_vcandlestickmodelmapper_sender_signal_index(void* self);
+int32_t q_vcandlestickmodelmapper_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1566,9 +1566,9 @@ int32_t q_vcandlestickmodelmapper_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 ///
-int32_t q_vcandlestickmodelmapper_super_sender_signal_index(void* self);
+int32_t q_vcandlestickmodelmapper_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1576,10 +1576,10 @@ int32_t q_vcandlestickmodelmapper_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
-/// @param callback int32_t func()
+/// @param self const QVCandlestickModelMapper*
+/// @param callback int32_t func(QVCandlestickModelMapper* self)
 ///
-void q_vcandlestickmodelmapper_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_vcandlestickmodelmapper_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1587,10 +1587,10 @@ void q_vcandlestickmodelmapper_on_sender_signal_index(void* self, int32_t (*call
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 /// @param signal const char*
 ///
-int32_t q_vcandlestickmodelmapper_receivers(void* self, const char* signal);
+int32_t q_vcandlestickmodelmapper_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1598,10 +1598,10 @@ int32_t q_vcandlestickmodelmapper_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 /// @param signal const char*
 ///
-int32_t q_vcandlestickmodelmapper_super_receivers(void* self, const char* signal);
+int32_t q_vcandlestickmodelmapper_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1609,10 +1609,10 @@ int32_t q_vcandlestickmodelmapper_super_receivers(void* self, const char* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 /// @param callback int32_t func(QVCandlestickModelMapper* self, const char* signal)
 ///
-void q_vcandlestickmodelmapper_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_vcandlestickmodelmapper_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1620,10 +1620,10 @@ void q_vcandlestickmodelmapper_on_receivers(void* self, int32_t (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 /// @param signal QMetaMethod*
 ///
-bool q_vcandlestickmodelmapper_is_signal_connected(void* self, void* signal);
+bool q_vcandlestickmodelmapper_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1631,10 +1631,10 @@ bool q_vcandlestickmodelmapper_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 /// @param signal QMetaMethod*
 ///
-bool q_vcandlestickmodelmapper_super_is_signal_connected(void* self, void* signal);
+bool q_vcandlestickmodelmapper_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1642,10 +1642,10 @@ bool q_vcandlestickmodelmapper_super_is_signal_connected(void* self, void* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QVCandlestickModelMapper*
+/// @param self const QVCandlestickModelMapper*
 /// @param callback bool func(QVCandlestickModelMapper* self, QMetaMethod* signal)
 ///
-void q_vcandlestickmodelmapper_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_vcandlestickmodelmapper_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

@@ -14,7 +14,7 @@
 ///
 /// @param other QPixelFormat*
 ///
-QPixelFormat* q_pixelformat_new(void* other);
+QPixelFormat* q_pixelformat_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat.html)
 
@@ -54,7 +54,7 @@ QPixelFormat* q_pixelformat_new4(int32_t colorModel, unsigned char firstSize, un
 ///
 /// @param param1 QPixelFormat*
 ///
-QPixelFormat* q_pixelformat_new5(void* param1);
+QPixelFormat* q_pixelformat_new5(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat.html)
 
@@ -111,149 +111,149 @@ void q_pixelformat_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat.html#colorModel)
 ///
-/// @param self QPixelFormat*
+/// @param self const QPixelFormat*
 ///
 /// @return enum QPixelFormat__ColorModel
 ///
-int32_t q_pixelformat_color_model(void* self);
+int32_t q_pixelformat_color_model(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat.html#channelCount)
 ///
-/// @param self QPixelFormat*
+/// @param self const QPixelFormat*
 ///
-unsigned char q_pixelformat_channel_count(void* self);
+unsigned char q_pixelformat_channel_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat.html#redSize)
 ///
-/// @param self QPixelFormat*
+/// @param self const QPixelFormat*
 ///
-unsigned char q_pixelformat_red_size(void* self);
+unsigned char q_pixelformat_red_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat.html#greenSize)
 ///
-/// @param self QPixelFormat*
+/// @param self const QPixelFormat*
 ///
-unsigned char q_pixelformat_green_size(void* self);
+unsigned char q_pixelformat_green_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat.html#blueSize)
 ///
-/// @param self QPixelFormat*
+/// @param self const QPixelFormat*
 ///
-unsigned char q_pixelformat_blue_size(void* self);
+unsigned char q_pixelformat_blue_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat.html#cyanSize)
 ///
-/// @param self QPixelFormat*
+/// @param self const QPixelFormat*
 ///
-unsigned char q_pixelformat_cyan_size(void* self);
+unsigned char q_pixelformat_cyan_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat.html#magentaSize)
 ///
-/// @param self QPixelFormat*
+/// @param self const QPixelFormat*
 ///
-unsigned char q_pixelformat_magenta_size(void* self);
+unsigned char q_pixelformat_magenta_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat.html#yellowSize)
 ///
-/// @param self QPixelFormat*
+/// @param self const QPixelFormat*
 ///
-unsigned char q_pixelformat_yellow_size(void* self);
+unsigned char q_pixelformat_yellow_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat.html#blackSize)
 ///
-/// @param self QPixelFormat*
+/// @param self const QPixelFormat*
 ///
-unsigned char q_pixelformat_black_size(void* self);
+unsigned char q_pixelformat_black_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat.html#hueSize)
 ///
-/// @param self QPixelFormat*
+/// @param self const QPixelFormat*
 ///
-unsigned char q_pixelformat_hue_size(void* self);
+unsigned char q_pixelformat_hue_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat.html#saturationSize)
 ///
-/// @param self QPixelFormat*
+/// @param self const QPixelFormat*
 ///
-unsigned char q_pixelformat_saturation_size(void* self);
+unsigned char q_pixelformat_saturation_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat.html#lightnessSize)
 ///
-/// @param self QPixelFormat*
+/// @param self const QPixelFormat*
 ///
-unsigned char q_pixelformat_lightness_size(void* self);
+unsigned char q_pixelformat_lightness_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat.html#brightnessSize)
 ///
-/// @param self QPixelFormat*
+/// @param self const QPixelFormat*
 ///
-unsigned char q_pixelformat_brightness_size(void* self);
+unsigned char q_pixelformat_brightness_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat.html#alphaSize)
 ///
-/// @param self QPixelFormat*
+/// @param self const QPixelFormat*
 ///
-unsigned char q_pixelformat_alpha_size(void* self);
+unsigned char q_pixelformat_alpha_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat.html#bitsPerPixel)
 ///
-/// @param self QPixelFormat*
+/// @param self const QPixelFormat*
 ///
-unsigned char q_pixelformat_bits_per_pixel(void* self);
+unsigned char q_pixelformat_bits_per_pixel(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat.html#alphaUsage)
 ///
-/// @param self QPixelFormat*
+/// @param self const QPixelFormat*
 ///
 /// @return enum QPixelFormat__AlphaUsage
 ///
-int32_t q_pixelformat_alpha_usage(void* self);
+int32_t q_pixelformat_alpha_usage(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat.html#alphaPosition)
 ///
-/// @param self QPixelFormat*
+/// @param self const QPixelFormat*
 ///
 /// @return enum QPixelFormat__AlphaPosition
 ///
-int32_t q_pixelformat_alpha_position(void* self);
+int32_t q_pixelformat_alpha_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat.html#premultiplied)
 ///
-/// @param self QPixelFormat*
+/// @param self const QPixelFormat*
 ///
 /// @return enum QPixelFormat__AlphaPremultiplied
 ///
-int32_t q_pixelformat_premultiplied(void* self);
+int32_t q_pixelformat_premultiplied(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat.html#typeInterpretation)
 ///
-/// @param self QPixelFormat*
+/// @param self const QPixelFormat*
 ///
 /// @return enum QPixelFormat__TypeInterpretation
 ///
-int32_t q_pixelformat_type_interpretation(void* self);
+int32_t q_pixelformat_type_interpretation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat.html#byteOrder)
 ///
-/// @param self QPixelFormat*
+/// @param self const QPixelFormat*
 ///
 /// @return enum QPixelFormat__ByteOrder
 ///
-int32_t q_pixelformat_byte_order(void* self);
+int32_t q_pixelformat_byte_order(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat.html#yuvLayout)
 ///
-/// @param self QPixelFormat*
+/// @param self const QPixelFormat*
 ///
 /// @return enum QPixelFormat__YUVLayout
 ///
-int32_t q_pixelformat_yuv_layout(void* self);
+int32_t q_pixelformat_yuv_layout(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat.html#subEnum)
 ///
-/// @param self QPixelFormat*
+/// @param self const QPixelFormat*
 ///
-unsigned char q_pixelformat_sub_enum(void* self);
+unsigned char q_pixelformat_sub_enum(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat.html#dtor.QPixelFormat)
 ///

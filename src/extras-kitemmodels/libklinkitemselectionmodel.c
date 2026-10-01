@@ -23,15 +23,15 @@ KLinkItemSelectionModel* k_linkitemselectionmodel_new4(void* parent) {
     return KLinkItemSelectionModel_New4((QObject*)parent);
 }
 
-const QMetaObject* k_linkitemselectionmodel_meta_object(void* self) {
+const QMetaObject* k_linkitemselectionmodel_meta_object(const void* self) {
     return KLinkItemSelectionModel_MetaObject((KLinkItemSelectionModel*)self);
 }
 
-void k_linkitemselectionmodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_linkitemselectionmodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     KLinkItemSelectionModel_OnMetaObject((KLinkItemSelectionModel*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_linkitemselectionmodel_super_meta_object(void* self) {
+const QMetaObject* k_linkitemselectionmodel_super_meta_object(const void* self) {
     return KLinkItemSelectionModel_SuperMetaObject((KLinkItemSelectionModel*)self);
 }
 
@@ -66,7 +66,7 @@ const char* k_linkitemselectionmodel_tr(const char* s) {
     return _ret;
 }
 
-QItemSelectionModel* k_linkitemselectionmodel_linked_item_selection_model(void* self) {
+QItemSelectionModel* k_linkitemselectionmodel_linked_item_selection_model(const void* self) {
     return KLinkItemSelectionModel_LinkedItemSelectionModel((KLinkItemSelectionModel*)self);
 }
 
@@ -74,27 +74,27 @@ void k_linkitemselectionmodel_set_linked_item_selection_model(void* self, void* 
     KLinkItemSelectionModel_SetLinkedItemSelectionModel((KLinkItemSelectionModel*)self, (QItemSelectionModel*)selectionModel);
 }
 
-void k_linkitemselectionmodel_select(void* self, void* index, int32_t command) {
+void k_linkitemselectionmodel_select(void* self, const void* index, int32_t command) {
     KLinkItemSelectionModel_Select((KLinkItemSelectionModel*)self, (QModelIndex*)index, command);
 }
 
-void k_linkitemselectionmodel_on_select(void* self, void (*callback)(void*, void*, int32_t)) {
+void k_linkitemselectionmodel_on_select(void* self, void (*callback)(void*, const void*, int32_t)) {
     KLinkItemSelectionModel_OnSelect((KLinkItemSelectionModel*)self, (intptr_t)callback);
 }
 
-void k_linkitemselectionmodel_super_select(void* self, void* index, int32_t command) {
+void k_linkitemselectionmodel_super_select(void* self, const void* index, int32_t command) {
     KLinkItemSelectionModel_SuperSelect((KLinkItemSelectionModel*)self, (QModelIndex*)index, command);
 }
 
-void k_linkitemselectionmodel_select2(void* self, void* selection, int32_t command) {
+void k_linkitemselectionmodel_select2(void* self, const void* selection, int32_t command) {
     KLinkItemSelectionModel_Select2((KLinkItemSelectionModel*)self, (QItemSelection*)selection, command);
 }
 
-void k_linkitemselectionmodel_on_select2(void* self, void (*callback)(void*, void*, int32_t)) {
+void k_linkitemselectionmodel_on_select2(void* self, void (*callback)(void*, const void*, int32_t)) {
     KLinkItemSelectionModel_OnSelect2((KLinkItemSelectionModel*)self, (intptr_t)callback);
 }
 
-void k_linkitemselectionmodel_super_select2(void* self, void* selection, int32_t command) {
+void k_linkitemselectionmodel_super_select2(void* self, const void* selection, int32_t command) {
     KLinkItemSelectionModel_SuperSelect2((KLinkItemSelectionModel*)self, (QItemSelection*)selection, command);
 }
 
@@ -120,54 +120,54 @@ const char* k_linkitemselectionmodel_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QModelIndex* k_linkitemselectionmodel_current_index(void* self) {
+QModelIndex* k_linkitemselectionmodel_current_index(const void* self) {
     return QItemSelectionModel_CurrentIndex((QItemSelectionModel*)self);
 }
 
-bool k_linkitemselectionmodel_is_selected(void* self, void* index) {
+bool k_linkitemselectionmodel_is_selected(const void* self, const void* index) {
     return QItemSelectionModel_IsSelected((QItemSelectionModel*)self, (QModelIndex*)index);
 }
 
-bool k_linkitemselectionmodel_is_row_selected(void* self, int row) {
+bool k_linkitemselectionmodel_is_row_selected(const void* self, int row) {
     return QItemSelectionModel_IsRowSelected((QItemSelectionModel*)self, row);
 }
 
-bool k_linkitemselectionmodel_is_column_selected(void* self, int column) {
+bool k_linkitemselectionmodel_is_column_selected(const void* self, int column) {
     return QItemSelectionModel_IsColumnSelected((QItemSelectionModel*)self, column);
 }
 
-bool k_linkitemselectionmodel_row_intersects_selection(void* self, int row) {
+bool k_linkitemselectionmodel_row_intersects_selection(const void* self, int row) {
     return QItemSelectionModel_RowIntersectsSelection((QItemSelectionModel*)self, row);
 }
 
-bool k_linkitemselectionmodel_column_intersects_selection(void* self, int column) {
+bool k_linkitemselectionmodel_column_intersects_selection(const void* self, int column) {
     return QItemSelectionModel_ColumnIntersectsSelection((QItemSelectionModel*)self, column);
 }
 
-bool k_linkitemselectionmodel_has_selection(void* self) {
+bool k_linkitemselectionmodel_has_selection(const void* self) {
     return QItemSelectionModel_HasSelection((QItemSelectionModel*)self);
 }
 
-libqt_list /* of QModelIndex* */ k_linkitemselectionmodel_selected_indexes(void* self) {
+libqt_list /* of QModelIndex* */ k_linkitemselectionmodel_selected_indexes(const void* self) {
     libqt_list _arr = QItemSelectionModel_SelectedIndexes((QItemSelectionModel*)self);
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ k_linkitemselectionmodel_selected_rows(void* self) {
+libqt_list /* of QModelIndex* */ k_linkitemselectionmodel_selected_rows(const void* self) {
     libqt_list _arr = QItemSelectionModel_SelectedRows((QItemSelectionModel*)self);
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ k_linkitemselectionmodel_selected_columns(void* self) {
+libqt_list /* of QModelIndex* */ k_linkitemselectionmodel_selected_columns(const void* self) {
     libqt_list _arr = QItemSelectionModel_SelectedColumns((QItemSelectionModel*)self);
     return _arr;
 }
 
-const QItemSelection* k_linkitemselectionmodel_selection(void* self) {
+const QItemSelection* k_linkitemselectionmodel_selection(const void* self) {
     return QItemSelectionModel_Selection((QItemSelectionModel*)self);
 }
 
-const QAbstractItemModel* k_linkitemselectionmodel_model(void* self) {
+const QAbstractItemModel* k_linkitemselectionmodel_model(const void* self) {
     return QItemSelectionModel_Model((QItemSelectionModel*)self);
 }
 
@@ -183,35 +183,35 @@ void k_linkitemselectionmodel_clear_selection(void* self) {
     QItemSelectionModel_ClearSelection((QItemSelectionModel*)self);
 }
 
-void k_linkitemselectionmodel_selection_changed(void* self, void* selected, void* deselected) {
+void k_linkitemselectionmodel_selection_changed(void* self, const void* selected, const void* deselected) {
     QItemSelectionModel_SelectionChanged((QItemSelectionModel*)self, (QItemSelection*)selected, (QItemSelection*)deselected);
 }
 
-void k_linkitemselectionmodel_on_selection_changed(void* self, void (*callback)(void*, void*, void*)) {
+void k_linkitemselectionmodel_on_selection_changed(void* self, void (*callback)(void*, const void*, const void*)) {
     QItemSelectionModel_Connect_SelectionChanged((QItemSelectionModel*)self, (intptr_t)callback);
 }
 
-void k_linkitemselectionmodel_current_changed(void* self, void* current, void* previous) {
+void k_linkitemselectionmodel_current_changed(void* self, const void* current, const void* previous) {
     QItemSelectionModel_CurrentChanged((QItemSelectionModel*)self, (QModelIndex*)current, (QModelIndex*)previous);
 }
 
-void k_linkitemselectionmodel_on_current_changed(void* self, void (*callback)(void*, void*, void*)) {
+void k_linkitemselectionmodel_on_current_changed(void* self, void (*callback)(void*, const void*, const void*)) {
     QItemSelectionModel_Connect_CurrentChanged((QItemSelectionModel*)self, (intptr_t)callback);
 }
 
-void k_linkitemselectionmodel_current_row_changed(void* self, void* current, void* previous) {
+void k_linkitemselectionmodel_current_row_changed(void* self, const void* current, const void* previous) {
     QItemSelectionModel_CurrentRowChanged((QItemSelectionModel*)self, (QModelIndex*)current, (QModelIndex*)previous);
 }
 
-void k_linkitemselectionmodel_on_current_row_changed(void* self, void (*callback)(void*, void*, void*)) {
+void k_linkitemselectionmodel_on_current_row_changed(void* self, void (*callback)(void*, const void*, const void*)) {
     QItemSelectionModel_Connect_CurrentRowChanged((QItemSelectionModel*)self, (intptr_t)callback);
 }
 
-void k_linkitemselectionmodel_current_column_changed(void* self, void* current, void* previous) {
+void k_linkitemselectionmodel_current_column_changed(void* self, const void* current, const void* previous) {
     QItemSelectionModel_CurrentColumnChanged((QItemSelectionModel*)self, (QModelIndex*)current, (QModelIndex*)previous);
 }
 
-void k_linkitemselectionmodel_on_current_column_changed(void* self, void (*callback)(void*, void*, void*)) {
+void k_linkitemselectionmodel_on_current_column_changed(void* self, void (*callback)(void*, const void*, const void*)) {
     QItemSelectionModel_Connect_CurrentColumnChanged((QItemSelectionModel*)self, (intptr_t)callback);
 }
 
@@ -223,33 +223,33 @@ void k_linkitemselectionmodel_on_model_changed(void* self, void (*callback)(void
     QItemSelectionModel_Connect_ModelChanged((QItemSelectionModel*)self, (intptr_t)callback);
 }
 
-bool k_linkitemselectionmodel_is_row_selected2(void* self, int row, void* parent) {
+bool k_linkitemselectionmodel_is_row_selected2(const void* self, int row, const void* parent) {
     return QItemSelectionModel_IsRowSelected2((QItemSelectionModel*)self, row, (QModelIndex*)parent);
 }
 
-bool k_linkitemselectionmodel_is_column_selected2(void* self, int column, void* parent) {
+bool k_linkitemselectionmodel_is_column_selected2(const void* self, int column, const void* parent) {
     return QItemSelectionModel_IsColumnSelected2((QItemSelectionModel*)self, column, (QModelIndex*)parent);
 }
 
-bool k_linkitemselectionmodel_row_intersects_selection2(void* self, int row, void* parent) {
+bool k_linkitemselectionmodel_row_intersects_selection2(const void* self, int row, const void* parent) {
     return QItemSelectionModel_RowIntersectsSelection2((QItemSelectionModel*)self, row, (QModelIndex*)parent);
 }
 
-bool k_linkitemselectionmodel_column_intersects_selection2(void* self, int column, void* parent) {
+bool k_linkitemselectionmodel_column_intersects_selection2(const void* self, int column, const void* parent) {
     return QItemSelectionModel_ColumnIntersectsSelection2((QItemSelectionModel*)self, column, (QModelIndex*)parent);
 }
 
-libqt_list /* of QModelIndex* */ k_linkitemselectionmodel_selected_rows1(void* self, int column) {
+libqt_list /* of QModelIndex* */ k_linkitemselectionmodel_selected_rows1(const void* self, int column) {
     libqt_list _arr = QItemSelectionModel_SelectedRows1((QItemSelectionModel*)self, column);
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ k_linkitemselectionmodel_selected_columns1(void* self, int row) {
+libqt_list /* of QModelIndex* */ k_linkitemselectionmodel_selected_columns1(const void* self, int row) {
     libqt_list _arr = QItemSelectionModel_SelectedColumns1((QItemSelectionModel*)self, row);
     return _arr;
 }
 
-const char* k_linkitemselectionmodel_object_name(void* self) {
+const char* k_linkitemselectionmodel_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -260,19 +260,19 @@ void k_linkitemselectionmodel_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_linkitemselectionmodel_is_widget_type(void* self) {
+bool k_linkitemselectionmodel_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_linkitemselectionmodel_is_window_type(void* self) {
+bool k_linkitemselectionmodel_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_linkitemselectionmodel_is_quick_item_type(void* self) {
+bool k_linkitemselectionmodel_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_linkitemselectionmodel_signals_blocked(void* self) {
+bool k_linkitemselectionmodel_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -280,7 +280,7 @@ bool k_linkitemselectionmodel_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_linkitemselectionmodel_thread(void* self) {
+QThread* k_linkitemselectionmodel_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -304,7 +304,7 @@ void k_linkitemselectionmodel_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_linkitemselectionmodel_children(void* self) {
+libqt_list /* of QObject* */ k_linkitemselectionmodel_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -321,55 +321,55 @@ void k_linkitemselectionmodel_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_linkitemselectionmodel_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_linkitemselectionmodel_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_linkitemselectionmodel_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_linkitemselectionmodel_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_linkitemselectionmodel_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_linkitemselectionmodel_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_linkitemselectionmodel_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_linkitemselectionmodel_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_linkitemselectionmodel_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_linkitemselectionmodel_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_linkitemselectionmodel_disconnect3(void* self) {
+bool k_linkitemselectionmodel_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_linkitemselectionmodel_disconnect4(void* self, void* receiver) {
+bool k_linkitemselectionmodel_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_linkitemselectionmodel_disconnect5(void* param1) {
+bool k_linkitemselectionmodel_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_linkitemselectionmodel_dump_object_tree(void* self) {
+void k_linkitemselectionmodel_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_linkitemselectionmodel_dump_object_info(void* self) {
+void k_linkitemselectionmodel_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_linkitemselectionmodel_set_property(void* self, const char* name, void* value) {
+bool k_linkitemselectionmodel_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_linkitemselectionmodel_property(void* self, const char* name) {
+QVariant* k_linkitemselectionmodel_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_linkitemselectionmodel_dynamic_property_names(void* self) {
+const char** k_linkitemselectionmodel_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -390,7 +390,7 @@ QBindingStorage* k_linkitemselectionmodel_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_linkitemselectionmodel_binding_storage2(void* self) {
+const QBindingStorage* k_linkitemselectionmodel_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -402,11 +402,11 @@ void k_linkitemselectionmodel_on_destroyed(void* self, void (*callback)(void*)) 
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_linkitemselectionmodel_parent(void* self) {
+QObject* k_linkitemselectionmodel_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_linkitemselectionmodel_inherits(void* self, const char* classname) {
+bool k_linkitemselectionmodel_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -422,31 +422,31 @@ int32_t k_linkitemselectionmodel_start_timer23(void* self, int64_t time, int32_t
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_linkitemselectionmodel_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_linkitemselectionmodel_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_linkitemselectionmodel_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_linkitemselectionmodel_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_linkitemselectionmodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_linkitemselectionmodel_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_linkitemselectionmodel_disconnect1(void* self, const char* signal) {
+bool k_linkitemselectionmodel_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_linkitemselectionmodel_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_linkitemselectionmodel_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_linkitemselectionmodel_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_linkitemselectionmodel_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_linkitemselectionmodel_disconnect23(void* self, void* receiver, const char* member) {
+bool k_linkitemselectionmodel_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -458,15 +458,15 @@ void k_linkitemselectionmodel_on_destroyed1(void* self, void (*callback)(void*, 
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void k_linkitemselectionmodel_set_current_index(void* self, void* index, int32_t command) {
+void k_linkitemselectionmodel_set_current_index(void* self, const void* index, int32_t command) {
     KLinkItemSelectionModel_SetCurrentIndex((KLinkItemSelectionModel*)self, (QModelIndex*)index, command);
 }
 
-void k_linkitemselectionmodel_super_set_current_index(void* self, void* index, int32_t command) {
+void k_linkitemselectionmodel_super_set_current_index(void* self, const void* index, int32_t command) {
     KLinkItemSelectionModel_SuperSetCurrentIndex((KLinkItemSelectionModel*)self, (QModelIndex*)index, command);
 }
 
-void k_linkitemselectionmodel_on_set_current_index(void* self, void (*callback)(void*, void*, int32_t)) {
+void k_linkitemselectionmodel_on_set_current_index(void* self, void (*callback)(void*, const void*, int32_t)) {
     KLinkItemSelectionModel_OnSetCurrentIndex((KLinkItemSelectionModel*)self, (intptr_t)callback);
 }
 
@@ -478,7 +478,7 @@ void k_linkitemselectionmodel_super_clear(void* self) {
     KLinkItemSelectionModel_SuperClear((KLinkItemSelectionModel*)self);
 }
 
-void k_linkitemselectionmodel_on_clear(void* self, void (*callback)()) {
+void k_linkitemselectionmodel_on_clear(void* self, void (*callback)(void*)) {
     KLinkItemSelectionModel_OnClear((KLinkItemSelectionModel*)self, (intptr_t)callback);
 }
 
@@ -490,7 +490,7 @@ void k_linkitemselectionmodel_super_reset(void* self) {
     KLinkItemSelectionModel_SuperReset((KLinkItemSelectionModel*)self);
 }
 
-void k_linkitemselectionmodel_on_reset(void* self, void (*callback)()) {
+void k_linkitemselectionmodel_on_reset(void* self, void (*callback)(void*)) {
     KLinkItemSelectionModel_OnReset((KLinkItemSelectionModel*)self, (intptr_t)callback);
 }
 
@@ -502,7 +502,7 @@ void k_linkitemselectionmodel_super_clear_current_index(void* self) {
     KLinkItemSelectionModel_SuperClearCurrentIndex((KLinkItemSelectionModel*)self);
 }
 
-void k_linkitemselectionmodel_on_clear_current_index(void* self, void (*callback)()) {
+void k_linkitemselectionmodel_on_clear_current_index(void* self, void (*callback)(void*)) {
     KLinkItemSelectionModel_OnClearCurrentIndex((KLinkItemSelectionModel*)self, (intptr_t)callback);
 }
 
@@ -566,88 +566,48 @@ void k_linkitemselectionmodel_on_custom_event(void* self, void (*callback)(void*
     KLinkItemSelectionModel_OnCustomEvent((KLinkItemSelectionModel*)self, (intptr_t)callback);
 }
 
-void k_linkitemselectionmodel_connect_notify(void* self, void* signal) {
+void k_linkitemselectionmodel_connect_notify(void* self, const void* signal) {
     KLinkItemSelectionModel_ConnectNotify((KLinkItemSelectionModel*)self, (QMetaMethod*)signal);
 }
 
-void k_linkitemselectionmodel_super_connect_notify(void* self, void* signal) {
+void k_linkitemselectionmodel_super_connect_notify(void* self, const void* signal) {
     KLinkItemSelectionModel_SuperConnectNotify((KLinkItemSelectionModel*)self, (QMetaMethod*)signal);
 }
 
-void k_linkitemselectionmodel_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_linkitemselectionmodel_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     KLinkItemSelectionModel_OnConnectNotify((KLinkItemSelectionModel*)self, (intptr_t)callback);
 }
 
-void k_linkitemselectionmodel_disconnect_notify(void* self, void* signal) {
+void k_linkitemselectionmodel_disconnect_notify(void* self, const void* signal) {
     KLinkItemSelectionModel_DisconnectNotify((KLinkItemSelectionModel*)self, (QMetaMethod*)signal);
 }
 
-void k_linkitemselectionmodel_super_disconnect_notify(void* self, void* signal) {
+void k_linkitemselectionmodel_super_disconnect_notify(void* self, const void* signal) {
     KLinkItemSelectionModel_SuperDisconnectNotify((KLinkItemSelectionModel*)self, (QMetaMethod*)signal);
 }
 
-void k_linkitemselectionmodel_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_linkitemselectionmodel_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     KLinkItemSelectionModel_OnDisconnectNotify((KLinkItemSelectionModel*)self, (intptr_t)callback);
 }
 
-void k_linkitemselectionmodel_emit_selection_changed(void* self, void* newSelection, void* oldSelection) {
+void k_linkitemselectionmodel_emit_selection_changed(void* self, const void* newSelection, const void* oldSelection) {
     KLinkItemSelectionModel_EmitSelectionChanged((KLinkItemSelectionModel*)self, (QItemSelection*)newSelection, (QItemSelection*)oldSelection);
 }
 
-void k_linkitemselectionmodel_super_emit_selection_changed(void* self, void* newSelection, void* oldSelection) {
-    KLinkItemSelectionModel_SuperEmitSelectionChanged((KLinkItemSelectionModel*)self, (QItemSelection*)newSelection, (QItemSelection*)oldSelection);
-}
-
-void k_linkitemselectionmodel_on_emit_selection_changed(void* self, void (*callback)(void*, void*, void*)) {
-    KLinkItemSelectionModel_OnEmitSelectionChanged((KLinkItemSelectionModel*)self, (intptr_t)callback);
-}
-
-QObject* k_linkitemselectionmodel_sender(void* self) {
+QObject* k_linkitemselectionmodel_sender(const void* self) {
     return KLinkItemSelectionModel_Sender((KLinkItemSelectionModel*)self);
 }
 
-QObject* k_linkitemselectionmodel_super_sender(void* self) {
-    return KLinkItemSelectionModel_SuperSender((KLinkItemSelectionModel*)self);
-}
-
-void k_linkitemselectionmodel_on_sender(void* self, QObject* (*callback)()) {
-    KLinkItemSelectionModel_OnSender((KLinkItemSelectionModel*)self, (intptr_t)callback);
-}
-
-int32_t k_linkitemselectionmodel_sender_signal_index(void* self) {
+int32_t k_linkitemselectionmodel_sender_signal_index(const void* self) {
     return KLinkItemSelectionModel_SenderSignalIndex((KLinkItemSelectionModel*)self);
 }
 
-int32_t k_linkitemselectionmodel_super_sender_signal_index(void* self) {
-    return KLinkItemSelectionModel_SuperSenderSignalIndex((KLinkItemSelectionModel*)self);
-}
-
-void k_linkitemselectionmodel_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    KLinkItemSelectionModel_OnSenderSignalIndex((KLinkItemSelectionModel*)self, (intptr_t)callback);
-}
-
-int32_t k_linkitemselectionmodel_receivers(void* self, const char* signal) {
+int32_t k_linkitemselectionmodel_receivers(const void* self, const char* signal) {
     return KLinkItemSelectionModel_Receivers((KLinkItemSelectionModel*)self, signal);
 }
 
-int32_t k_linkitemselectionmodel_super_receivers(void* self, const char* signal) {
-    return KLinkItemSelectionModel_SuperReceivers((KLinkItemSelectionModel*)self, signal);
-}
-
-void k_linkitemselectionmodel_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    KLinkItemSelectionModel_OnReceivers((KLinkItemSelectionModel*)self, (intptr_t)callback);
-}
-
-bool k_linkitemselectionmodel_is_signal_connected(void* self, void* signal) {
+bool k_linkitemselectionmodel_is_signal_connected(const void* self, const void* signal) {
     return KLinkItemSelectionModel_IsSignalConnected((KLinkItemSelectionModel*)self, (QMetaMethod*)signal);
-}
-
-bool k_linkitemselectionmodel_super_is_signal_connected(void* self, void* signal) {
-    return KLinkItemSelectionModel_SuperIsSignalConnected((KLinkItemSelectionModel*)self, (QMetaMethod*)signal);
-}
-
-void k_linkitemselectionmodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    KLinkItemSelectionModel_OnIsSignalConnected((KLinkItemSelectionModel*)self, (intptr_t)callback);
 }
 
 void k_linkitemselectionmodel_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

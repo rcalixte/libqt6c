@@ -12,6 +12,8 @@
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#setInsertBehaviors)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self KTextEditor__MovingRange*
 /// @param insertBehaviors flag of enum KTextEditor__MovingRange__InsertBehavior
 ///
@@ -19,13 +21,17 @@ void k_texteditor__movingrange_set_insert_behaviors(void* self, int32_t insertBe
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#insertBehaviors)
 ///
-/// @param self KTextEditor__MovingRange*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const KTextEditor__MovingRange*
 ///
 /// @return flag of enum KTextEditor__MovingRange__InsertBehavior
 ///
-int32_t k_texteditor__movingrange_insert_behaviors(void* self);
+int32_t k_texteditor__movingrange_insert_behaviors(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#setEmptyBehavior)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self KTextEditor__MovingRange*
 /// @param emptyBehavior enum KTextEditor__MovingRange__EmptyBehavior
@@ -34,19 +40,25 @@ void k_texteditor__movingrange_set_empty_behavior(void* self, int32_t emptyBehav
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#emptyBehavior)
 ///
-/// @param self KTextEditor__MovingRange*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const KTextEditor__MovingRange*
 ///
 /// @return enum KTextEditor__MovingRange__EmptyBehavior
 ///
-int32_t k_texteditor__movingrange_empty_behavior(void* self);
+int32_t k_texteditor__movingrange_empty_behavior(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#document)
 ///
-/// @param self KTextEditor__MovingRange*
+/// @warning Use caution when calling this method as it might not be defined.
 ///
-KTextEditor__Document* k_texteditor__movingrange_document(void* self);
+/// @param self const KTextEditor__MovingRange*
+///
+KTextEditor__Document* k_texteditor__movingrange_document(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#setRange)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self KTextEditor__MovingRange*
 /// @param range KTextEditor__Range*
@@ -55,23 +67,31 @@ void k_texteditor__movingrange_set_range(void* self, void* range);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#start)
 ///
-/// @param self KTextEditor__MovingRange*
+/// @warning Use caution when calling this method as it might not be defined.
 ///
-const KTextEditor__MovingCursor* k_texteditor__movingrange_start(void* self);
+/// @param self const KTextEditor__MovingRange*
+///
+const KTextEditor__MovingCursor* k_texteditor__movingrange_start(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#end)
 ///
-/// @param self KTextEditor__MovingRange*
+/// @warning Use caution when calling this method as it might not be defined.
 ///
-const KTextEditor__MovingCursor* k_texteditor__movingrange_end(void* self);
+/// @param self const KTextEditor__MovingRange*
+///
+const KTextEditor__MovingCursor* k_texteditor__movingrange_end(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#view)
 ///
-/// @param self KTextEditor__MovingRange*
+/// @warning Use caution when calling this method as it might not be defined.
 ///
-KTextEditor__View* k_texteditor__movingrange_view(void* self);
+/// @param self const KTextEditor__MovingRange*
+///
+KTextEditor__View* k_texteditor__movingrange_view(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#setView)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self KTextEditor__MovingRange*
 /// @param view KTextEditor__View*
@@ -80,11 +100,15 @@ void k_texteditor__movingrange_set_view(void* self, void* view);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#attributeOnlyForViews)
 ///
-/// @param self KTextEditor__MovingRange*
+/// @warning Use caution when calling this method as it might not be defined.
 ///
-bool k_texteditor__movingrange_attribute_only_for_views(void* self);
+/// @param self const KTextEditor__MovingRange*
+///
+bool k_texteditor__movingrange_attribute_only_for_views(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#setAttributeOnlyForViews)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self KTextEditor__MovingRange*
 /// @param onlyForViews bool
@@ -93,11 +117,15 @@ void k_texteditor__movingrange_set_attribute_only_for_views(void* self, bool onl
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#feedback)
 ///
-/// @param self KTextEditor__MovingRange*
+/// @warning Use caution when calling this method as it might not be defined.
 ///
-KTextEditor__MovingRangeFeedback* k_texteditor__movingrange_feedback(void* self);
+/// @param self const KTextEditor__MovingRange*
+///
+KTextEditor__MovingRangeFeedback* k_texteditor__movingrange_feedback(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#setFeedback)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self KTextEditor__MovingRange*
 /// @param feedback KTextEditor__MovingRangeFeedback*
@@ -106,11 +134,15 @@ void k_texteditor__movingrange_set_feedback(void* self, void* feedback);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#zDepth)
 ///
-/// @param self KTextEditor__MovingRange*
+/// @warning Use caution when calling this method as it might not be defined.
 ///
-double k_texteditor__movingrange_z_depth(void* self);
+/// @param self const KTextEditor__MovingRange*
+///
+double k_texteditor__movingrange_z_depth(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#setZDepth)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self KTextEditor__MovingRange*
 /// @param zDepth double
@@ -127,88 +159,88 @@ void k_texteditor__movingrange_set_range4(void* self, void* start, void* end);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#toRange)
 ///
-/// @param self KTextEditor__MovingRange*
+/// @param self const KTextEditor__MovingRange*
 ///
-const KTextEditor__Range* k_texteditor__movingrange_to_range(void* self);
+const KTextEditor__Range* k_texteditor__movingrange_to_range(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#operator-KTextEditor-3a-3aRange)
 ///
-/// @param self KTextEditor__MovingRange*
+/// @param self const KTextEditor__MovingRange*
 ///
-KTextEditor__Range* k_texteditor__movingrange_to_range2(void* self);
+KTextEditor__Range* k_texteditor__movingrange_to_range2(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#toLineRange)
 ///
-/// @param self KTextEditor__MovingRange*
+/// @param self const KTextEditor__MovingRange*
 ///
-KTextEditor__LineRange* k_texteditor__movingrange_to_line_range(void* self);
+KTextEditor__LineRange* k_texteditor__movingrange_to_line_range(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#isEmpty)
 ///
-/// @param self KTextEditor__MovingRange*
+/// @param self const KTextEditor__MovingRange*
 ///
-bool k_texteditor__movingrange_is_empty(void* self);
+bool k_texteditor__movingrange_is_empty(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#contains)
 ///
-/// @param self KTextEditor__MovingRange*
+/// @param self const KTextEditor__MovingRange*
 /// @param range KTextEditor__Range*
 ///
-bool k_texteditor__movingrange_contains(void* self, void* range);
+bool k_texteditor__movingrange_contains(const void* self, const void* range);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#contains)
 ///
-/// @param self KTextEditor__MovingRange*
+/// @param self const KTextEditor__MovingRange*
 /// @param cursor KTextEditor__Cursor*
 ///
-bool k_texteditor__movingrange_contains2(void* self, void* cursor);
+bool k_texteditor__movingrange_contains2(const void* self, void* cursor);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#containsLine)
 ///
-/// @param self KTextEditor__MovingRange*
+/// @param self const KTextEditor__MovingRange*
 /// @param line int
 ///
-bool k_texteditor__movingrange_contains_line(void* self, int line);
+bool k_texteditor__movingrange_contains_line(const void* self, int line);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#containsColumn)
 ///
-/// @param self KTextEditor__MovingRange*
+/// @param self const KTextEditor__MovingRange*
 /// @param column int
 ///
-bool k_texteditor__movingrange_contains_column(void* self, int column);
+bool k_texteditor__movingrange_contains_column(const void* self, int column);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#overlaps)
 ///
-/// @param self KTextEditor__MovingRange*
+/// @param self const KTextEditor__MovingRange*
 /// @param range KTextEditor__Range*
 ///
-bool k_texteditor__movingrange_overlaps(void* self, void* range);
+bool k_texteditor__movingrange_overlaps(const void* self, const void* range);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#overlapsLine)
 ///
-/// @param self KTextEditor__MovingRange*
+/// @param self const KTextEditor__MovingRange*
 /// @param line int
 ///
-bool k_texteditor__movingrange_overlaps_line(void* self, int line);
+bool k_texteditor__movingrange_overlaps_line(const void* self, int line);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#overlapsColumn)
 ///
-/// @param self KTextEditor__MovingRange*
+/// @param self const KTextEditor__MovingRange*
 /// @param column int
 ///
-bool k_texteditor__movingrange_overlaps_column(void* self, int column);
+bool k_texteditor__movingrange_overlaps_column(const void* self, int column);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#onSingleLine)
 ///
-/// @param self KTextEditor__MovingRange*
+/// @param self const KTextEditor__MovingRange*
 ///
-bool k_texteditor__movingrange_on_single_line(void* self);
+bool k_texteditor__movingrange_on_single_line(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#numberOfLines)
 ///
-/// @param self KTextEditor__MovingRange*
+/// @param self const KTextEditor__MovingRange*
 ///
-int32_t k_texteditor__movingrange_number_of_lines(void* self);
+int32_t k_texteditor__movingrange_number_of_lines(const void* self);
 
 /// Delete this object from C++ memory.
 ///

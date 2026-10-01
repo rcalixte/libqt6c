@@ -13,7 +13,7 @@ KAboutPerson* k_aboutperson_new() {
     return KAboutPerson_New();
 }
 
-KAboutPerson* k_aboutperson_new2(void* other) {
+KAboutPerson* k_aboutperson_new2(const void* other) {
     return KAboutPerson_New2((KAboutPerson*)other);
 }
 
@@ -33,47 +33,47 @@ KAboutPerson* k_aboutperson_new6(const char* name, const char* task, const char*
     return KAboutPerson_New6(qstring(name), qstring(task), qstring(emailAddress), qstring(webAddress));
 }
 
-KAboutPerson* k_aboutperson_new7(const char* name, const char* task, const char* emailAddress, const char* webAddress, void* avatarUrl) {
+KAboutPerson* k_aboutperson_new7(const char* name, const char* task, const char* emailAddress, const char* webAddress, const void* avatarUrl) {
     return KAboutPerson_New7(qstring(name), qstring(task), qstring(emailAddress), qstring(webAddress), (QUrl*)avatarUrl);
 }
 
-void k_aboutperson_operator_assign(void* self, void* other) {
+void k_aboutperson_operator_assign(void* self, const void* other) {
     KAboutPerson_OperatorAssign((KAboutPerson*)self, (KAboutPerson*)other);
 }
 
-const char* k_aboutperson_name(void* self) {
+const char* k_aboutperson_name(const void* self) {
     libqt_string _str = KAboutPerson_Name((KAboutPerson*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_aboutperson_task(void* self) {
+const char* k_aboutperson_task(const void* self) {
     libqt_string _str = KAboutPerson_Task((KAboutPerson*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_aboutperson_email_address(void* self) {
+const char* k_aboutperson_email_address(const void* self) {
     libqt_string _str = KAboutPerson_EmailAddress((KAboutPerson*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_aboutperson_web_address(void* self) {
+const char* k_aboutperson_web_address(const void* self) {
     libqt_string _str = KAboutPerson_WebAddress((KAboutPerson*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QUrl* k_aboutperson_avatar_url(void* self) {
+QUrl* k_aboutperson_avatar_url(const void* self) {
     return KAboutPerson_AvatarUrl((KAboutPerson*)self);
 }
 
-KAboutPerson* k_aboutperson_from_j_s_o_n(void* obj) {
+KAboutPerson* k_aboutperson_from_j_s_o_n(const void* obj) {
     return KAboutPerson_FromJSON((QJsonObject*)obj);
 }
 
@@ -85,33 +85,33 @@ KAboutLicense* k_aboutlicense_new() {
     return KAboutLicense_New();
 }
 
-KAboutLicense* k_aboutlicense_new2(void* other) {
+KAboutLicense* k_aboutlicense_new2(const void* other) {
     return KAboutLicense_New2((KAboutLicense*)other);
 }
 
-void k_aboutlicense_operator_assign(void* self, void* other) {
+void k_aboutlicense_operator_assign(void* self, const void* other) {
     KAboutLicense_OperatorAssign((KAboutLicense*)self, (KAboutLicense*)other);
 }
 
-const char* k_aboutlicense_text(void* self) {
+const char* k_aboutlicense_text(const void* self) {
     libqt_string _str = KAboutLicense_Text((KAboutLicense*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_aboutlicense_name(void* self) {
+const char* k_aboutlicense_name(const void* self) {
     libqt_string _str = KAboutLicense_Name((KAboutLicense*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t k_aboutlicense_key(void* self) {
+int32_t k_aboutlicense_key(const void* self) {
     return KAboutLicense_Key((KAboutLicense*)self);
 }
 
-const char* k_aboutlicense_spdx(void* self) {
+const char* k_aboutlicense_spdx(const void* self) {
     libqt_string _str = KAboutLicense_Spdx((KAboutLicense*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -122,7 +122,7 @@ KAboutLicense* k_aboutlicense_by_keyword(const char* keyword) {
     return KAboutLicense_ByKeyword(qstring(keyword));
 }
 
-const char* k_aboutlicense_name1(void* self, int32_t formatName) {
+const char* k_aboutlicense_name1(const void* self, int32_t formatName) {
     libqt_string _str = KAboutLicense_Name1((KAboutLicense*)self, formatName);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -141,7 +141,7 @@ KAboutComponent* k_aboutcomponent_new2(const char* name, const char* description
     return KAboutComponent_New2(qstring(name), qstring(description), qstring(version), qstring(webAddress), qstring(pathToLicenseFile));
 }
 
-KAboutComponent* k_aboutcomponent_new3(void* other) {
+KAboutComponent* k_aboutcomponent_new3(const void* other) {
     return KAboutComponent_New3((KAboutComponent*)other);
 }
 
@@ -165,39 +165,39 @@ KAboutComponent* k_aboutcomponent_new8(const char* name, const char* description
     return KAboutComponent_New8(qstring(name), qstring(description), qstring(version), qstring(webAddress), licenseType);
 }
 
-void k_aboutcomponent_operator_assign(void* self, void* other) {
+void k_aboutcomponent_operator_assign(void* self, const void* other) {
     KAboutComponent_OperatorAssign((KAboutComponent*)self, (KAboutComponent*)other);
 }
 
-const char* k_aboutcomponent_name(void* self) {
+const char* k_aboutcomponent_name(const void* self) {
     libqt_string _str = KAboutComponent_Name((KAboutComponent*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_aboutcomponent_description(void* self) {
+const char* k_aboutcomponent_description(const void* self) {
     libqt_string _str = KAboutComponent_Description((KAboutComponent*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_aboutcomponent_version(void* self) {
+const char* k_aboutcomponent_version(const void* self) {
     libqt_string _str = KAboutComponent_Version((KAboutComponent*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_aboutcomponent_web_address(void* self) {
+const char* k_aboutcomponent_web_address(const void* self) {
     libqt_string _str = KAboutComponent_WebAddress((KAboutComponent*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-KAboutLicense* k_aboutcomponent_license(void* self) {
+KAboutLicense* k_aboutcomponent_license(const void* self) {
     return KAboutComponent_License((KAboutComponent*)self);
 }
 
@@ -213,7 +213,7 @@ KAboutData* k_aboutdata_new2() {
     return KAboutData_New2();
 }
 
-KAboutData* k_aboutdata_new3(void* other) {
+KAboutData* k_aboutdata_new3(const void* other) {
     return KAboutData_New3((KAboutData*)other);
 }
 
@@ -249,15 +249,15 @@ KAboutData* k_aboutdata_application_data() {
     return KAboutData_ApplicationData();
 }
 
-void k_aboutdata_set_application_data(void* aboutData) {
+void k_aboutdata_set_application_data(const void* aboutData) {
     KAboutData_SetApplicationData((KAboutData*)aboutData);
 }
 
-void k_aboutdata_operator_assign(void* self, void* other) {
+void k_aboutdata_operator_assign(void* self, const void* other) {
     KAboutData_OperatorAssign((KAboutData*)self, (KAboutData*)other);
 }
 
-KAboutData* k_aboutdata_add_author(void* self, void* author) {
+KAboutData* k_aboutdata_add_author(void* self, const void* author) {
     return KAboutData_AddAuthor((KAboutData*)self, (KAboutPerson*)author);
 }
 
@@ -269,7 +269,7 @@ KAboutData* k_aboutdata_add_author3(void* self, const char* name, const char* ta
     return KAboutData_AddAuthor3((KAboutData*)self, qstring(name), qstring(task), qstring(emailAddress), qstring(webAddress), qstring(kdeStoreUsername));
 }
 
-KAboutData* k_aboutdata_add_credit(void* self, void* person) {
+KAboutData* k_aboutdata_add_credit(void* self, const void* person) {
     return KAboutData_AddCredit((KAboutData*)self, (KAboutPerson*)person);
 }
 
@@ -285,7 +285,7 @@ KAboutData* k_aboutdata_set_translator(void* self, const char* name, const char*
     return KAboutData_SetTranslator((KAboutData*)self, qstring(name), qstring(emailAddress));
 }
 
-KAboutData* k_aboutdata_add_component(void* self, void* component) {
+KAboutData* k_aboutdata_add_component(void* self, const void* component) {
     return KAboutData_AddComponent((KAboutData*)self, (KAboutComponent*)component);
 }
 
@@ -321,7 +321,7 @@ KAboutData* k_aboutdata_set_display_name(void* self, const char* displayName) {
     return KAboutData_SetDisplayName((KAboutData*)self, qstring(displayName));
 }
 
-KAboutData* k_aboutdata_set_program_logo(void* self, void* image) {
+KAboutData* k_aboutdata_set_program_logo(void* self, const void* image) {
     return KAboutData_SetProgramLogo((KAboutData*)self, (QVariant*)image);
 }
 
@@ -373,93 +373,93 @@ KAboutData* k_aboutdata_set_product_name(void* self, char* name) {
     return KAboutData_SetProductName((KAboutData*)self, qstring(name));
 }
 
-const char* k_aboutdata_component_name(void* self) {
+const char* k_aboutdata_component_name(const void* self) {
     libqt_string _str = KAboutData_ComponentName((KAboutData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_aboutdata_product_name(void* self) {
+const char* k_aboutdata_product_name(const void* self) {
     libqt_string _str = KAboutData_ProductName((KAboutData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_aboutdata_internal_product_name(void* self) {
+const char* k_aboutdata_internal_product_name(const void* self) {
     return KAboutData_InternalProductName((KAboutData*)self);
 }
 
-const char* k_aboutdata_display_name(void* self) {
+const char* k_aboutdata_display_name(const void* self) {
     libqt_string _str = KAboutData_DisplayName((KAboutData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_aboutdata_organization_domain(void* self) {
+const char* k_aboutdata_organization_domain(const void* self) {
     libqt_string _str = KAboutData_OrganizationDomain((KAboutData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_aboutdata_internal_program_name(void* self) {
+const char* k_aboutdata_internal_program_name(const void* self) {
     return KAboutData_InternalProgramName((KAboutData*)self);
 }
 
-QVariant* k_aboutdata_program_logo(void* self) {
+QVariant* k_aboutdata_program_logo(const void* self) {
     return KAboutData_ProgramLogo((KAboutData*)self);
 }
 
-const char* k_aboutdata_version(void* self) {
+const char* k_aboutdata_version(const void* self) {
     libqt_string _str = KAboutData_Version((KAboutData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_aboutdata_internal_version(void* self) {
+const char* k_aboutdata_internal_version(const void* self) {
     return KAboutData_InternalVersion((KAboutData*)self);
 }
 
-const char* k_aboutdata_short_description(void* self) {
+const char* k_aboutdata_short_description(const void* self) {
     libqt_string _str = KAboutData_ShortDescription((KAboutData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_aboutdata_homepage(void* self) {
+const char* k_aboutdata_homepage(const void* self) {
     libqt_string _str = KAboutData_Homepage((KAboutData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_aboutdata_bug_address(void* self) {
+const char* k_aboutdata_bug_address(const void* self) {
     libqt_string _str = KAboutData_BugAddress((KAboutData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_aboutdata_internal_bug_address(void* self) {
+const char* k_aboutdata_internal_bug_address(const void* self) {
     return KAboutData_InternalBugAddress((KAboutData*)self);
 }
 
-libqt_list /* of KAboutPerson* */ k_aboutdata_authors(void* self) {
+libqt_list /* of KAboutPerson* */ k_aboutdata_authors(const void* self) {
     libqt_list _arr = KAboutData_Authors((KAboutData*)self);
     return _arr;
 }
 
-libqt_list /* of KAboutPerson* */ k_aboutdata_credits(void* self) {
+libqt_list /* of KAboutPerson* */ k_aboutdata_credits(const void* self) {
     libqt_list _arr = KAboutData_Credits((KAboutData*)self);
     return _arr;
 }
 
-libqt_list /* of KAboutPerson* */ k_aboutdata_translators(void* self) {
+libqt_list /* of KAboutPerson* */ k_aboutdata_translators(const void* self) {
     libqt_list _arr = KAboutData_Translators((KAboutData*)self);
     return _arr;
 }
@@ -471,45 +471,45 @@ const char* k_aboutdata_about_translation_team() {
     return _ret;
 }
 
-libqt_list /* of KAboutComponent* */ k_aboutdata_components(void* self) {
+libqt_list /* of KAboutComponent* */ k_aboutdata_components(const void* self) {
     libqt_list _arr = KAboutData_Components((KAboutData*)self);
     return _arr;
 }
 
-const char* k_aboutdata_other_text(void* self) {
+const char* k_aboutdata_other_text(const void* self) {
     libqt_string _str = KAboutData_OtherText((KAboutData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-libqt_list /* of KAboutLicense* */ k_aboutdata_licenses(void* self) {
+libqt_list /* of KAboutLicense* */ k_aboutdata_licenses(const void* self) {
     libqt_list _arr = KAboutData_Licenses((KAboutData*)self);
     return _arr;
 }
 
-const char* k_aboutdata_copyright_statement(void* self) {
+const char* k_aboutdata_copyright_statement(const void* self) {
     libqt_string _str = KAboutData_CopyrightStatement((KAboutData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_aboutdata_custom_author_plain_text(void* self) {
+const char* k_aboutdata_custom_author_plain_text(const void* self) {
     libqt_string _str = KAboutData_CustomAuthorPlainText((KAboutData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_aboutdata_custom_author_rich_text(void* self) {
+const char* k_aboutdata_custom_author_rich_text(const void* self) {
     libqt_string _str = KAboutData_CustomAuthorRichText((KAboutData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_aboutdata_custom_author_text_enabled(void* self) {
+bool k_aboutdata_custom_author_text_enabled(const void* self) {
     return KAboutData_CustomAuthorTextEnabled((KAboutData*)self);
 }
 
@@ -533,7 +533,7 @@ KAboutData* k_aboutdata_set_desktop_file_name(void* self, const char* desktopFil
     return KAboutData_SetDesktopFileName((KAboutData*)self, qstring(desktopFileName));
 }
 
-const char* k_aboutdata_desktop_file_name(void* self) {
+const char* k_aboutdata_desktop_file_name(const void* self) {
     libqt_string _str = KAboutData_DesktopFileName((KAboutData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -552,7 +552,7 @@ KAboutData* k_aboutdata_add_author4(void* self, const char* name, const char* ta
     return KAboutData_AddAuthor4((KAboutData*)self, qstring(name), qstring(task), qstring(emailAddress), qstring(webAddress));
 }
 
-KAboutData* k_aboutdata_add_author5(void* self, const char* name, const char* task, const char* emailAddress, const char* webAddress, void* avatarUrl) {
+KAboutData* k_aboutdata_add_author5(void* self, const char* name, const char* task, const char* emailAddress, const char* webAddress, const void* avatarUrl) {
     return KAboutData_AddAuthor5((KAboutData*)self, qstring(name), qstring(task), qstring(emailAddress), qstring(webAddress), (QUrl*)avatarUrl);
 }
 
@@ -568,7 +568,7 @@ KAboutData* k_aboutdata_add_credit4(void* self, const char* name, const char* ta
     return KAboutData_AddCredit4((KAboutData*)self, qstring(name), qstring(task), qstring(emailAddress), qstring(webAddress));
 }
 
-KAboutData* k_aboutdata_add_credit5(void* self, const char* name, const char* task, const char* emailAddress, const char* webAddress, void* avatarUrl) {
+KAboutData* k_aboutdata_add_credit5(void* self, const char* name, const char* task, const char* emailAddress, const char* webAddress, const void* avatarUrl) {
     return KAboutData_AddCredit5((KAboutData*)self, qstring(name), qstring(task), qstring(emailAddress), qstring(webAddress), (QUrl*)avatarUrl);
 }
 

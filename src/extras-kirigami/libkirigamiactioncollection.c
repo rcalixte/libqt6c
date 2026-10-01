@@ -17,15 +17,15 @@ KirigamiActionCollection* k_irigamiactioncollection_new2(void* parent, const cha
     return KirigamiActionCollection_New2((QObject*)parent, qstring(cName));
 }
 
-const QMetaObject* k_irigamiactioncollection_meta_object(void* self) {
+const QMetaObject* k_irigamiactioncollection_meta_object(const void* self) {
     return KirigamiActionCollection_MetaObject((KirigamiActionCollection*)self);
 }
 
-void k_irigamiactioncollection_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_irigamiactioncollection_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     KirigamiActionCollection_OnMetaObject((KirigamiActionCollection*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_irigamiactioncollection_super_meta_object(void* self) {
+const QMetaObject* k_irigamiactioncollection_super_meta_object(const void* self) {
     return KirigamiActionCollection_SuperMetaObject((KirigamiActionCollection*)self);
 }
 
@@ -69,14 +69,14 @@ void k_irigamiactioncollection_clear(void* self) {
     KirigamiActionCollection_Clear((KirigamiActionCollection*)self);
 }
 
-const char* k_irigamiactioncollection_config_group(void* self) {
+const char* k_irigamiactioncollection_config_group(const void* self) {
     libqt_string _str = KirigamiActionCollection_ConfigGroup((KirigamiActionCollection*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_irigamiactioncollection_config_is_global(void* self) {
+bool k_irigamiactioncollection_config_is_global(const void* self) {
     return KirigamiActionCollection_ConfigIsGlobal((KirigamiActionCollection*)self);
 }
 
@@ -92,37 +92,37 @@ void k_irigamiactioncollection_read_settings(void* self) {
     KirigamiActionCollection_ReadSettings((KirigamiActionCollection*)self);
 }
 
-void k_irigamiactioncollection_write_settings(void* self) {
+void k_irigamiactioncollection_write_settings(const void* self) {
     KirigamiActionCollection_WriteSettings((KirigamiActionCollection*)self);
 }
 
-int32_t k_irigamiactioncollection_count(void* self) {
+int32_t k_irigamiactioncollection_count(const void* self) {
     return KirigamiActionCollection_Count((KirigamiActionCollection*)self);
 }
 
-bool k_irigamiactioncollection_is_empty(void* self) {
+bool k_irigamiactioncollection_is_empty(const void* self) {
     return KirigamiActionCollection_IsEmpty((KirigamiActionCollection*)self);
 }
 
-QAction* k_irigamiactioncollection_action(void* self, int index) {
+QAction* k_irigamiactioncollection_action(const void* self, int index) {
     return KirigamiActionCollection_Action((KirigamiActionCollection*)self, index);
 }
 
-QAction* k_irigamiactioncollection_action2(void* self, const char* name) {
+QAction* k_irigamiactioncollection_action2(const void* self, const char* name) {
     return KirigamiActionCollection_Action2((KirigamiActionCollection*)self, qstring(name));
 }
 
-libqt_list /* of QAction* */ k_irigamiactioncollection_actions(void* self) {
+libqt_list /* of QAction* */ k_irigamiactioncollection_actions(const void* self) {
     libqt_list _arr = KirigamiActionCollection_Actions((KirigamiActionCollection*)self);
     return _arr;
 }
 
-libqt_list /* of QAction* */ k_irigamiactioncollection_actions_without_group(void* self) {
+libqt_list /* of QAction* */ k_irigamiactioncollection_actions_without_group(const void* self) {
     libqt_list _arr = KirigamiActionCollection_ActionsWithoutGroup((KirigamiActionCollection*)self);
     return _arr;
 }
 
-libqt_list /* of QActionGroup* */ k_irigamiactioncollection_action_groups(void* self) {
+libqt_list /* of QActionGroup* */ k_irigamiactioncollection_action_groups(const void* self) {
     libqt_list _arr = KirigamiActionCollection_ActionGroups((KirigamiActionCollection*)self);
     return _arr;
 }
@@ -131,7 +131,7 @@ void k_irigamiactioncollection_set_component_name(void* self, const char* compon
     KirigamiActionCollection_SetComponentName((KirigamiActionCollection*)self, qstring(componentName));
 }
 
-const char* k_irigamiactioncollection_component_name(void* self) {
+const char* k_irigamiactioncollection_component_name(const void* self) {
     libqt_string _str = KirigamiActionCollection_ComponentName((KirigamiActionCollection*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -142,7 +142,7 @@ void k_irigamiactioncollection_set_component_display_name(void* self, const char
     KirigamiActionCollection_SetComponentDisplayName((KirigamiActionCollection*)self, qstring(displayName));
 }
 
-const char* k_irigamiactioncollection_component_display_name(void* self) {
+const char* k_irigamiactioncollection_component_display_name(const void* self) {
     libqt_string _str = KirigamiActionCollection_ComponentDisplayName((KirigamiActionCollection*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -181,15 +181,15 @@ void k_irigamiactioncollection_on_action_triggered(void* self, void (*callback)(
     KirigamiActionCollection_Connect_ActionTriggered((KirigamiActionCollection*)self, (intptr_t)callback);
 }
 
-void k_irigamiactioncollection_connect_notify(void* self, void* signal) {
+void k_irigamiactioncollection_connect_notify(void* self, const void* signal) {
     KirigamiActionCollection_ConnectNotify((KirigamiActionCollection*)self, (QMetaMethod*)signal);
 }
 
-void k_irigamiactioncollection_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_irigamiactioncollection_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     KirigamiActionCollection_OnConnectNotify((KirigamiActionCollection*)self, (intptr_t)callback);
 }
 
-void k_irigamiactioncollection_super_connect_notify(void* self, void* signal) {
+void k_irigamiactioncollection_super_connect_notify(void* self, const void* signal) {
     KirigamiActionCollection_SuperConnectNotify((KirigamiActionCollection*)self, (QMetaMethod*)signal);
 }
 
@@ -197,7 +197,7 @@ void k_irigamiactioncollection_slot_action_triggered(void* self) {
     KirigamiActionCollection_SlotActionTriggered((KirigamiActionCollection*)self);
 }
 
-void k_irigamiactioncollection_on_slot_action_triggered(void* self, void (*callback)()) {
+void k_irigamiactioncollection_on_slot_action_triggered(void* self, void (*callback)(void*)) {
     KirigamiActionCollection_OnSlotActionTriggered((KirigamiActionCollection*)self, (intptr_t)callback);
 }
 
@@ -230,7 +230,7 @@ libqt_list /* of QKeySequence* */ k_irigamiactioncollection_default_shortcuts(vo
     return _arr;
 }
 
-void k_irigamiactioncollection_set_default_shortcut(void* action, void* shortcut) {
+void k_irigamiactioncollection_set_default_shortcut(void* action, const void* shortcut) {
     KirigamiActionCollection_SetDefaultShortcut((QAction*)action, (QKeySequence*)shortcut);
 }
 
@@ -264,19 +264,19 @@ void k_irigamiactioncollection_read_settings1(void* self, void* config) {
     KirigamiActionCollection_ReadSettings1((KirigamiActionCollection*)self, (KConfigGroup*)config);
 }
 
-void k_irigamiactioncollection_write_settings1(void* self, void* config) {
+void k_irigamiactioncollection_write_settings1(const void* self, void* config) {
     KirigamiActionCollection_WriteSettings1((KirigamiActionCollection*)self, (KConfigGroup*)config);
 }
 
-void k_irigamiactioncollection_write_settings2(void* self, void* config, bool writeDefaults) {
+void k_irigamiactioncollection_write_settings2(const void* self, void* config, bool writeDefaults) {
     KirigamiActionCollection_WriteSettings2((KirigamiActionCollection*)self, (KConfigGroup*)config, writeDefaults);
 }
 
-void k_irigamiactioncollection_write_settings3(void* self, void* config, bool writeDefaults, void* oneAction) {
+void k_irigamiactioncollection_write_settings3(const void* self, void* config, bool writeDefaults, void* oneAction) {
     KirigamiActionCollection_WriteSettings3((KirigamiActionCollection*)self, (KConfigGroup*)config, writeDefaults, (QAction*)oneAction);
 }
 
-const char* k_irigamiactioncollection_object_name(void* self) {
+const char* k_irigamiactioncollection_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -287,19 +287,19 @@ void k_irigamiactioncollection_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_irigamiactioncollection_is_widget_type(void* self) {
+bool k_irigamiactioncollection_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_irigamiactioncollection_is_window_type(void* self) {
+bool k_irigamiactioncollection_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_irigamiactioncollection_is_quick_item_type(void* self) {
+bool k_irigamiactioncollection_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_irigamiactioncollection_signals_blocked(void* self) {
+bool k_irigamiactioncollection_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -307,7 +307,7 @@ bool k_irigamiactioncollection_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_irigamiactioncollection_thread(void* self) {
+QThread* k_irigamiactioncollection_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -331,7 +331,7 @@ void k_irigamiactioncollection_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_irigamiactioncollection_children(void* self) {
+libqt_list /* of QObject* */ k_irigamiactioncollection_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -348,55 +348,55 @@ void k_irigamiactioncollection_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_irigamiactioncollection_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_irigamiactioncollection_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_irigamiactioncollection_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_irigamiactioncollection_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_irigamiactioncollection_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_irigamiactioncollection_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_irigamiactioncollection_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_irigamiactioncollection_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_irigamiactioncollection_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_irigamiactioncollection_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_irigamiactioncollection_disconnect3(void* self) {
+bool k_irigamiactioncollection_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_irigamiactioncollection_disconnect4(void* self, void* receiver) {
+bool k_irigamiactioncollection_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_irigamiactioncollection_disconnect5(void* param1) {
+bool k_irigamiactioncollection_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_irigamiactioncollection_dump_object_tree(void* self) {
+void k_irigamiactioncollection_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_irigamiactioncollection_dump_object_info(void* self) {
+void k_irigamiactioncollection_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_irigamiactioncollection_set_property(void* self, const char* name, void* value) {
+bool k_irigamiactioncollection_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_irigamiactioncollection_property(void* self, const char* name) {
+QVariant* k_irigamiactioncollection_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_irigamiactioncollection_dynamic_property_names(void* self) {
+const char** k_irigamiactioncollection_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -417,7 +417,7 @@ QBindingStorage* k_irigamiactioncollection_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_irigamiactioncollection_binding_storage2(void* self) {
+const QBindingStorage* k_irigamiactioncollection_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -429,11 +429,11 @@ void k_irigamiactioncollection_on_destroyed(void* self, void (*callback)(void*))
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_irigamiactioncollection_parent(void* self) {
+QObject* k_irigamiactioncollection_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_irigamiactioncollection_inherits(void* self, const char* classname) {
+bool k_irigamiactioncollection_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -449,31 +449,31 @@ int32_t k_irigamiactioncollection_start_timer23(void* self, int64_t time, int32_
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_irigamiactioncollection_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_irigamiactioncollection_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_irigamiactioncollection_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_irigamiactioncollection_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_irigamiactioncollection_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_irigamiactioncollection_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_irigamiactioncollection_disconnect1(void* self, const char* signal) {
+bool k_irigamiactioncollection_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_irigamiactioncollection_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_irigamiactioncollection_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_irigamiactioncollection_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_irigamiactioncollection_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_irigamiactioncollection_disconnect23(void* self, void* receiver, const char* member) {
+bool k_irigamiactioncollection_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -545,64 +545,32 @@ void k_irigamiactioncollection_on_custom_event(void* self, void (*callback)(void
     KirigamiActionCollection_OnCustomEvent((KirigamiActionCollection*)self, (intptr_t)callback);
 }
 
-void k_irigamiactioncollection_disconnect_notify(void* self, void* signal) {
+void k_irigamiactioncollection_disconnect_notify(void* self, const void* signal) {
     KirigamiActionCollection_DisconnectNotify((KirigamiActionCollection*)self, (QMetaMethod*)signal);
 }
 
-void k_irigamiactioncollection_super_disconnect_notify(void* self, void* signal) {
+void k_irigamiactioncollection_super_disconnect_notify(void* self, const void* signal) {
     KirigamiActionCollection_SuperDisconnectNotify((KirigamiActionCollection*)self, (QMetaMethod*)signal);
 }
 
-void k_irigamiactioncollection_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_irigamiactioncollection_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     KirigamiActionCollection_OnDisconnectNotify((KirigamiActionCollection*)self, (intptr_t)callback);
 }
 
-QObject* k_irigamiactioncollection_sender(void* self) {
+QObject* k_irigamiactioncollection_sender(const void* self) {
     return KirigamiActionCollection_Sender((KirigamiActionCollection*)self);
 }
 
-QObject* k_irigamiactioncollection_super_sender(void* self) {
-    return KirigamiActionCollection_SuperSender((KirigamiActionCollection*)self);
-}
-
-void k_irigamiactioncollection_on_sender(void* self, QObject* (*callback)()) {
-    KirigamiActionCollection_OnSender((KirigamiActionCollection*)self, (intptr_t)callback);
-}
-
-int32_t k_irigamiactioncollection_sender_signal_index(void* self) {
+int32_t k_irigamiactioncollection_sender_signal_index(const void* self) {
     return KirigamiActionCollection_SenderSignalIndex((KirigamiActionCollection*)self);
 }
 
-int32_t k_irigamiactioncollection_super_sender_signal_index(void* self) {
-    return KirigamiActionCollection_SuperSenderSignalIndex((KirigamiActionCollection*)self);
-}
-
-void k_irigamiactioncollection_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    KirigamiActionCollection_OnSenderSignalIndex((KirigamiActionCollection*)self, (intptr_t)callback);
-}
-
-int32_t k_irigamiactioncollection_receivers(void* self, const char* signal) {
+int32_t k_irigamiactioncollection_receivers(const void* self, const char* signal) {
     return KirigamiActionCollection_Receivers((KirigamiActionCollection*)self, signal);
 }
 
-int32_t k_irigamiactioncollection_super_receivers(void* self, const char* signal) {
-    return KirigamiActionCollection_SuperReceivers((KirigamiActionCollection*)self, signal);
-}
-
-void k_irigamiactioncollection_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    KirigamiActionCollection_OnReceivers((KirigamiActionCollection*)self, (intptr_t)callback);
-}
-
-bool k_irigamiactioncollection_is_signal_connected(void* self, void* signal) {
+bool k_irigamiactioncollection_is_signal_connected(const void* self, const void* signal) {
     return KirigamiActionCollection_IsSignalConnected((KirigamiActionCollection*)self, (QMetaMethod*)signal);
-}
-
-bool k_irigamiactioncollection_super_is_signal_connected(void* self, void* signal) {
-    return KirigamiActionCollection_SuperIsSignalConnected((KirigamiActionCollection*)self, (QMetaMethod*)signal);
-}
-
-void k_irigamiactioncollection_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    KirigamiActionCollection_OnIsSignalConnected((KirigamiActionCollection*)self, (intptr_t)callback);
 }
 
 void k_irigamiactioncollection_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

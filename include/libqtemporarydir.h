@@ -31,23 +31,23 @@ void q_temporarydir_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtemporarydir.html#isValid)
 ///
-/// @param self QTemporaryDir*
+/// @param self const QTemporaryDir*
 ///
-bool q_temporarydir_is_valid(void* self);
+bool q_temporarydir_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtemporarydir.html#errorString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTemporaryDir*
+/// @param self const QTemporaryDir*
 ///
-const char* q_temporarydir_error_string(void* self);
+const char* q_temporarydir_error_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtemporarydir.html#autoRemove)
 ///
-/// @param self QTemporaryDir*
+/// @param self const QTemporaryDir*
 ///
-bool q_temporarydir_auto_remove(void* self);
+bool q_temporarydir_auto_remove(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtemporarydir.html#setAutoRemove)
 ///
@@ -66,18 +66,18 @@ bool q_temporarydir_remove(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTemporaryDir*
+/// @param self const QTemporaryDir*
 ///
-const char* q_temporarydir_path(void* self);
+const char* q_temporarydir_path(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtemporarydir.html#filePath)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTemporaryDir*
+/// @param self const QTemporaryDir*
 /// @param fileName const char*
 ///
-const char* q_temporarydir_file_path(void* self, const char* fileName);
+const char* q_temporarydir_file_path(const void* self, const char* fileName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtemporarydir.html#dtor.QTemporaryDir)
 ///

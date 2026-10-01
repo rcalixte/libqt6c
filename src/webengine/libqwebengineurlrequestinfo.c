@@ -3,38 +3,38 @@
 #include "libqwebengineurlrequestinfo.hpp"
 #include "libqwebengineurlrequestinfo.h"
 
-int32_t q_webengineurlrequestinfo_resource_type(void* self) {
+int32_t q_webengineurlrequestinfo_resource_type(const void* self) {
     return QWebEngineUrlRequestInfo_ResourceType((QWebEngineUrlRequestInfo*)self);
 }
 
-int32_t q_webengineurlrequestinfo_navigation_type(void* self) {
+int32_t q_webengineurlrequestinfo_navigation_type(const void* self) {
     return QWebEngineUrlRequestInfo_NavigationType((QWebEngineUrlRequestInfo*)self);
 }
 
-QUrl* q_webengineurlrequestinfo_request_url(void* self) {
+QUrl* q_webengineurlrequestinfo_request_url(const void* self) {
     return QWebEngineUrlRequestInfo_RequestUrl((QWebEngineUrlRequestInfo*)self);
 }
 
-QUrl* q_webengineurlrequestinfo_first_party_url(void* self) {
+QUrl* q_webengineurlrequestinfo_first_party_url(const void* self) {
     return QWebEngineUrlRequestInfo_FirstPartyUrl((QWebEngineUrlRequestInfo*)self);
 }
 
-QUrl* q_webengineurlrequestinfo_initiator(void* self) {
+QUrl* q_webengineurlrequestinfo_initiator(const void* self) {
     return QWebEngineUrlRequestInfo_Initiator((QWebEngineUrlRequestInfo*)self);
 }
 
-char* q_webengineurlrequestinfo_request_method(void* self) {
+char* q_webengineurlrequestinfo_request_method(const void* self) {
     libqt_string _str = QWebEngineUrlRequestInfo_RequestMethod((QWebEngineUrlRequestInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QIODevice* q_webengineurlrequestinfo_request_body(void* self) {
+QIODevice* q_webengineurlrequestinfo_request_body(const void* self) {
     return QWebEngineUrlRequestInfo_RequestBody((QWebEngineUrlRequestInfo*)self);
 }
 
-bool q_webengineurlrequestinfo_changed(void* self) {
+bool q_webengineurlrequestinfo_changed(const void* self) {
     return QWebEngineUrlRequestInfo_Changed((QWebEngineUrlRequestInfo*)self);
 }
 
@@ -42,7 +42,7 @@ void q_webengineurlrequestinfo_block(void* self, bool shouldBlock) {
     QWebEngineUrlRequestInfo_Block((QWebEngineUrlRequestInfo*)self, shouldBlock);
 }
 
-void q_webengineurlrequestinfo_redirect(void* self, void* url) {
+void q_webengineurlrequestinfo_redirect(void* self, const void* url) {
     QWebEngineUrlRequestInfo_Redirect((QWebEngineUrlRequestInfo*)self, (QUrl*)url);
 }
 
@@ -50,7 +50,7 @@ void q_webengineurlrequestinfo_set_http_header(void* self, char* name, char* val
     QWebEngineUrlRequestInfo_SetHttpHeader((QWebEngineUrlRequestInfo*)self, qstring(name), qstring(value));
 }
 
-libqt_map /* of char* to char* */ q_webengineurlrequestinfo_http_headers(void* self) {
+libqt_map /* of char* to char* */ q_webengineurlrequestinfo_http_headers(const void* self) {
     // Convert QHash<QByteArray,QByteArray> to libqt_map
     libqt_map _out = QWebEngineUrlRequestInfo_HttpHeaders((QWebEngineUrlRequestInfo*)self);
     libqt_map _ret;

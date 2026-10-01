@@ -33,26 +33,26 @@ KAssistantDialog* k_assistantdialog_new3(void* parent, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-const QMetaObject* k_assistantdialog_meta_object(void* self);
+const QMetaObject* k_assistantdialog_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KAssistantDialog*
-/// @param callback const QMetaObject* func()
+/// @param self const KAssistantDialog*
+/// @param callback const QMetaObject* func(const KAssistantDialog* self)
 ///
-void k_assistantdialog_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_assistantdialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-const QMetaObject* k_assistantdialog_super_meta_object(void* self);
+const QMetaObject* k_assistantdialog_super_meta_object(const void* self);
 
 /// @param self KAssistantDialog*
 /// @param param1 const char*
@@ -114,10 +114,10 @@ void k_assistantdialog_set_valid(void* self, void* page, bool enable);
 
 /// [Upstream resources](https://api.kde.org/kassistantdialog.html#isValid)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param page KPageWidgetItem*
 ///
-bool k_assistantdialog_is_valid(void* self, void* page);
+bool k_assistantdialog_is_valid(const void* self, void* page);
 
 /// [Upstream resources](https://api.kde.org/kassistantdialog.html#setAppropriate)
 ///
@@ -129,28 +129,28 @@ void k_assistantdialog_set_appropriate(void* self, void* page, bool appropriate)
 
 /// [Upstream resources](https://api.kde.org/kassistantdialog.html#isAppropriate)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param page KPageWidgetItem*
 ///
-bool k_assistantdialog_is_appropriate(void* self, void* page);
+bool k_assistantdialog_is_appropriate(const void* self, void* page);
 
 /// [Upstream resources](https://api.kde.org/kassistantdialog.html#nextButton)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QPushButton* k_assistantdialog_next_button(void* self);
+QPushButton* k_assistantdialog_next_button(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kassistantdialog.html#backButton)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QPushButton* k_assistantdialog_back_button(void* self);
+QPushButton* k_assistantdialog_back_button(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kassistantdialog.html#finishButton)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QPushButton* k_assistantdialog_finish_button(void* self);
+QPushButton* k_assistantdialog_finish_button(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kassistantdialog.html#back)
 ///
@@ -163,9 +163,9 @@ void k_assistantdialog_back(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void func()
+/// @param callback void func(KAssistantDialog* self)
 ///
-void k_assistantdialog_on_back(void* self, void (*callback)());
+void k_assistantdialog_on_back(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kassistantdialog.html#back)
 ///
@@ -186,9 +186,9 @@ void k_assistantdialog_next(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void func()
+/// @param callback void func(KAssistantDialog* self)
 ///
-void k_assistantdialog_on_next(void* self, void (*callback)());
+void k_assistantdialog_on_next(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kassistantdialog.html#next)
 ///
@@ -334,9 +334,9 @@ void k_assistantdialog_set_current_page(void* self, void* item);
 ///
 /// [Upstream resources](https://api.kde.org/kpagedialog.html#currentPage)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-KPageWidgetItem* k_assistantdialog_current_page(void* self);
+KPageWidgetItem* k_assistantdialog_current_page(const void* self);
 
 /// Inherited from KPageDialog
 ///
@@ -351,10 +351,10 @@ void k_assistantdialog_set_standard_buttons(void* self, int32_t buttons);
 ///
 /// [Upstream resources](https://api.kde.org/kpagedialog.html#button)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param which enum QDialogButtonBox__StandardButton
 ///
-QPushButton* k_assistantdialog_button(void* self, int32_t which);
+QPushButton* k_assistantdialog_button(const void* self, int32_t which);
 
 /// Inherited from KPageDialog
 ///
@@ -406,9 +406,9 @@ void k_assistantdialog_on_page_removed(void* self, void (*callback)(void*, void*
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#result)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-int32_t k_assistantdialog_result(void* self);
+int32_t k_assistantdialog_result(const void* self);
 
 /// Inherited from QDialog
 ///
@@ -423,9 +423,9 @@ void k_assistantdialog_set_size_grip_enabled(void* self, bool sizeGripEnabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#isSizeGripEnabled)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-bool k_assistantdialog_is_size_grip_enabled(void* self);
+bool k_assistantdialog_is_size_grip_enabled(const void* self);
 
 /// Inherited from QDialog
 ///
@@ -517,9 +517,9 @@ KAssistantDialog* k_assistantdialog_from_q_paint_device(void* _qpaintdevice);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-uintptr_t k_assistantdialog_win_id(void* self);
+uintptr_t k_assistantdialog_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -533,25 +533,25 @@ void k_assistantdialog_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-uintptr_t k_assistantdialog_internal_win_id(void* self);
+uintptr_t k_assistantdialog_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-uintptr_t k_assistantdialog_effective_win_id(void* self);
+uintptr_t k_assistantdialog_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QStyle* k_assistantdialog_style(void* self);
+QStyle* k_assistantdialog_style(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -566,35 +566,35 @@ void k_assistantdialog_set_style(void* self, void* style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-bool k_assistantdialog_is_top_level(void* self);
+bool k_assistantdialog_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-bool k_assistantdialog_is_window(void* self);
+bool k_assistantdialog_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-bool k_assistantdialog_is_modal(void* self);
+bool k_assistantdialog_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t k_assistantdialog_window_modality(void* self);
+int32_t k_assistantdialog_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -609,18 +609,18 @@ void k_assistantdialog_set_window_modality(void* self, int32_t windowModality);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-bool k_assistantdialog_is_enabled(void* self);
+bool k_assistantdialog_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param param1 QWidget*
 ///
-bool k_assistantdialog_is_enabled_to(void* self, void* param1);
+bool k_assistantdialog_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -653,153 +653,153 @@ void k_assistantdialog_set_window_modified(void* self, bool windowModified);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QRect* k_assistantdialog_frame_geometry(void* self);
+QRect* k_assistantdialog_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-const QRect* k_assistantdialog_geometry(void* self);
+const QRect* k_assistantdialog_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QRect* k_assistantdialog_normal_geometry(void* self);
+QRect* k_assistantdialog_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-int32_t k_assistantdialog_x(void* self);
+int32_t k_assistantdialog_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-int32_t k_assistantdialog_y(void* self);
+int32_t k_assistantdialog_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QPoint* k_assistantdialog_pos(void* self);
+QPoint* k_assistantdialog_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QSize* k_assistantdialog_frame_size(void* self);
+QSize* k_assistantdialog_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QSize* k_assistantdialog_size(void* self);
+QSize* k_assistantdialog_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-int32_t k_assistantdialog_width(void* self);
+int32_t k_assistantdialog_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-int32_t k_assistantdialog_height(void* self);
+int32_t k_assistantdialog_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QRect* k_assistantdialog_rect(void* self);
+QRect* k_assistantdialog_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QRect* k_assistantdialog_children_rect(void* self);
+QRect* k_assistantdialog_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QRegion* k_assistantdialog_children_region(void* self);
+QRegion* k_assistantdialog_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QSize* k_assistantdialog_minimum_size(void* self);
+QSize* k_assistantdialog_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QSize* k_assistantdialog_maximum_size(void* self);
+QSize* k_assistantdialog_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-int32_t k_assistantdialog_minimum_width(void* self);
+int32_t k_assistantdialog_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-int32_t k_assistantdialog_minimum_height(void* self);
+int32_t k_assistantdialog_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-int32_t k_assistantdialog_maximum_width(void* self);
+int32_t k_assistantdialog_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-int32_t k_assistantdialog_maximum_height(void* self);
+int32_t k_assistantdialog_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -808,7 +808,7 @@ int32_t k_assistantdialog_maximum_height(void* self);
 /// @param self KAssistantDialog*
 /// @param minimumSize QSize*
 ///
-void k_assistantdialog_set_minimum_size(void* self, void* minimumSize);
+void k_assistantdialog_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -827,7 +827,7 @@ void k_assistantdialog_set_minimum_size2(void* self, int minw, int minh);
 /// @param self KAssistantDialog*
 /// @param maximumSize QSize*
 ///
-void k_assistantdialog_set_maximum_size(void* self, void* maximumSize);
+void k_assistantdialog_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -879,9 +879,9 @@ void k_assistantdialog_set_maximum_height(void* self, int maxh);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QSize* k_assistantdialog_size_increment(void* self);
+QSize* k_assistantdialog_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -890,7 +890,7 @@ QSize* k_assistantdialog_size_increment(void* self);
 /// @param self KAssistantDialog*
 /// @param sizeIncrement QSize*
 ///
-void k_assistantdialog_set_size_increment(void* self, void* sizeIncrement);
+void k_assistantdialog_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -906,9 +906,9 @@ void k_assistantdialog_set_size_increment2(void* self, int w, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QSize* k_assistantdialog_base_size(void* self);
+QSize* k_assistantdialog_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -917,7 +917,7 @@ QSize* k_assistantdialog_base_size(void* self);
 /// @param self KAssistantDialog*
 /// @param baseSize QSize*
 ///
-void k_assistantdialog_set_base_size(void* self, void* baseSize);
+void k_assistantdialog_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -936,7 +936,7 @@ void k_assistantdialog_set_base_size2(void* self, int basew, int baseh);
 /// @param self KAssistantDialog*
 /// @param fixedSize QSize*
 ///
-void k_assistantdialog_set_fixed_size(void* self, void* fixedSize);
+void k_assistantdialog_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -970,145 +970,145 @@ void k_assistantdialog_set_fixed_height(void* self, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param param1 QPointF*
 ///
-QPointF* k_assistantdialog_map_to_global(void* self, void* param1);
+QPointF* k_assistantdialog_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param param1 QPoint*
 ///
-QPoint* k_assistantdialog_map_to_global2(void* self, void* param1);
+QPoint* k_assistantdialog_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param param1 QPointF*
 ///
-QPointF* k_assistantdialog_map_from_global(void* self, void* param1);
+QPointF* k_assistantdialog_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param param1 QPoint*
 ///
-QPoint* k_assistantdialog_map_from_global2(void* self, void* param1);
+QPoint* k_assistantdialog_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param param1 QPointF*
 ///
-QPointF* k_assistantdialog_map_to_parent(void* self, void* param1);
+QPointF* k_assistantdialog_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param param1 QPoint*
 ///
-QPoint* k_assistantdialog_map_to_parent2(void* self, void* param1);
+QPoint* k_assistantdialog_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param param1 QPointF*
 ///
-QPointF* k_assistantdialog_map_from_parent(void* self, void* param1);
+QPointF* k_assistantdialog_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param param1 QPoint*
 ///
-QPoint* k_assistantdialog_map_from_parent2(void* self, void* param1);
+QPoint* k_assistantdialog_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_assistantdialog_map_to(void* self, void* param1, void* param2);
+QPointF* k_assistantdialog_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_assistantdialog_map_to2(void* self, void* param1, void* param2);
+QPoint* k_assistantdialog_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_assistantdialog_map_from(void* self, void* param1, void* param2);
+QPointF* k_assistantdialog_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_assistantdialog_map_from2(void* self, void* param1, void* param2);
+QPoint* k_assistantdialog_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QWidget* k_assistantdialog_window(void* self);
+QWidget* k_assistantdialog_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QWidget* k_assistantdialog_native_parent_widget(void* self);
+QWidget* k_assistantdialog_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QWidget* k_assistantdialog_top_level_widget(void* self);
+QWidget* k_assistantdialog_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-const QPalette* k_assistantdialog_palette(void* self);
+const QPalette* k_assistantdialog_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1117,7 +1117,7 @@ const QPalette* k_assistantdialog_palette(void* self);
 /// @param self KAssistantDialog*
 /// @param palette QPalette*
 ///
-void k_assistantdialog_set_palette(void* self, void* palette);
+void k_assistantdialog_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -1132,11 +1132,11 @@ void k_assistantdialog_set_background_role(void* self, int32_t backgroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_assistantdialog_background_role(void* self);
+int32_t k_assistantdialog_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1151,19 +1151,19 @@ void k_assistantdialog_set_foreground_role(void* self, int32_t foregroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_assistantdialog_foreground_role(void* self);
+int32_t k_assistantdialog_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-const QFont* k_assistantdialog_font(void* self);
+const QFont* k_assistantdialog_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1172,31 +1172,31 @@ const QFont* k_assistantdialog_font(void* self);
 /// @param self KAssistantDialog*
 /// @param font QFont*
 ///
-void k_assistantdialog_set_font(void* self, void* font);
+void k_assistantdialog_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QFontMetrics* k_assistantdialog_font_metrics(void* self);
+QFontMetrics* k_assistantdialog_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QFontInfo* k_assistantdialog_font_info(void* self);
+QFontInfo* k_assistantdialog_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QCursor* k_assistantdialog_cursor(void* self);
+QCursor* k_assistantdialog_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1205,7 +1205,7 @@ QCursor* k_assistantdialog_cursor(void* self);
 /// @param self KAssistantDialog*
 /// @param cursor QCursor*
 ///
-void k_assistantdialog_set_cursor(void* self, void* cursor);
+void k_assistantdialog_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -1228,17 +1228,17 @@ void k_assistantdialog_set_mouse_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-bool k_assistantdialog_has_mouse_tracking(void* self);
+bool k_assistantdialog_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-bool k_assistantdialog_under_mouse(void* self);
+bool k_assistantdialog_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1253,9 +1253,9 @@ void k_assistantdialog_set_tablet_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-bool k_assistantdialog_has_tablet_tracking(void* self);
+bool k_assistantdialog_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1264,7 +1264,7 @@ bool k_assistantdialog_has_tablet_tracking(void* self);
 /// @param self KAssistantDialog*
 /// @param mask QBitmap*
 ///
-void k_assistantdialog_set_mask(void* self, void* mask);
+void k_assistantdialog_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -1273,15 +1273,15 @@ void k_assistantdialog_set_mask(void* self, void* mask);
 /// @param self KAssistantDialog*
 /// @param mask QRegion*
 ///
-void k_assistantdialog_set_mask2(void* self, void* mask);
+void k_assistantdialog_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QRegion* k_assistantdialog_mask(void* self);
+QRegion* k_assistantdialog_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1321,9 +1321,9 @@ QPixmap* k_assistantdialog_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QGraphicsEffect* k_assistantdialog_graphics_effect(void* self);
+QGraphicsEffect* k_assistantdialog_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1376,9 +1376,9 @@ void k_assistantdialog_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-const char* k_assistantdialog_style_sheet(void* self);
+const char* k_assistantdialog_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1386,9 +1386,9 @@ const char* k_assistantdialog_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-const char* k_assistantdialog_window_title(void* self);
+const char* k_assistantdialog_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1397,15 +1397,15 @@ const char* k_assistantdialog_window_title(void* self);
 /// @param self KAssistantDialog*
 /// @param icon QIcon*
 ///
-void k_assistantdialog_set_window_icon(void* self, void* icon);
+void k_assistantdialog_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QIcon* k_assistantdialog_window_icon(void* self);
+QIcon* k_assistantdialog_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1422,9 +1422,9 @@ void k_assistantdialog_set_window_icon_text(void* self, const char* windowIconTe
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-const char* k_assistantdialog_window_icon_text(void* self);
+const char* k_assistantdialog_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1441,9 +1441,9 @@ void k_assistantdialog_set_window_role(void* self, const char* windowRole);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-const char* k_assistantdialog_window_role(void* self);
+const char* k_assistantdialog_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1460,9 +1460,9 @@ void k_assistantdialog_set_window_file_path(void* self, const char* filePath);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-const char* k_assistantdialog_window_file_path(void* self);
+const char* k_assistantdialog_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1477,17 +1477,17 @@ void k_assistantdialog_set_window_opacity(void* self, double level);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-double k_assistantdialog_window_opacity(void* self);
+double k_assistantdialog_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-bool k_assistantdialog_is_window_modified(void* self);
+bool k_assistantdialog_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1504,9 +1504,9 @@ void k_assistantdialog_set_tool_tip(void* self, const char* toolTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-const char* k_assistantdialog_tool_tip(void* self);
+const char* k_assistantdialog_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1521,9 +1521,9 @@ void k_assistantdialog_set_tool_tip_duration(void* self, int msec);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-int32_t k_assistantdialog_tool_tip_duration(void* self);
+int32_t k_assistantdialog_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1540,9 +1540,9 @@ void k_assistantdialog_set_status_tip(void* self, const char* statusTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-const char* k_assistantdialog_status_tip(void* self);
+const char* k_assistantdialog_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1559,9 +1559,9 @@ void k_assistantdialog_set_whats_this(void* self, const char* whatsThis);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-const char* k_assistantdialog_whats_this(void* self);
+const char* k_assistantdialog_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1569,9 +1569,9 @@ const char* k_assistantdialog_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-const char* k_assistantdialog_accessible_name(void* self);
+const char* k_assistantdialog_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1588,9 +1588,9 @@ void k_assistantdialog_set_accessible_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-const char* k_assistantdialog_accessible_description(void* self);
+const char* k_assistantdialog_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1614,11 +1614,11 @@ void k_assistantdialog_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t k_assistantdialog_layout_direction(void* self);
+int32_t k_assistantdialog_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1635,15 +1635,15 @@ void k_assistantdialog_unset_layout_direction(void* self);
 /// @param self KAssistantDialog*
 /// @param locale QLocale*
 ///
-void k_assistantdialog_set_locale(void* self, void* locale);
+void k_assistantdialog_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QLocale* k_assistantdialog_locale(void* self);
+QLocale* k_assistantdialog_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1657,17 +1657,17 @@ void k_assistantdialog_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-bool k_assistantdialog_is_right_to_left(void* self);
+bool k_assistantdialog_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-bool k_assistantdialog_is_left_to_right(void* self);
+bool k_assistantdialog_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1681,9 +1681,9 @@ void k_assistantdialog_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-bool k_assistantdialog_is_active_window(void* self);
+bool k_assistantdialog_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1714,11 +1714,11 @@ void k_assistantdialog_set_focus2(void* self, int32_t reason);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t k_assistantdialog_focus_policy(void* self);
+int32_t k_assistantdialog_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1733,9 +1733,9 @@ void k_assistantdialog_set_focus_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-bool k_assistantdialog_has_focus(void* self);
+bool k_assistantdialog_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1759,19 +1759,19 @@ void k_assistantdialog_set_focus_proxy(void* self, void* focusProxy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QWidget* k_assistantdialog_focus_proxy(void* self);
+QWidget* k_assistantdialog_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t k_assistantdialog_context_menu_policy(void* self);
+int32_t k_assistantdialog_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1797,7 +1797,7 @@ void k_assistantdialog_grab_mouse(void* self);
 /// @param self KAssistantDialog*
 /// @param param1 QCursor*
 ///
-void k_assistantdialog_grab_mouse2(void* self, void* param1);
+void k_assistantdialog_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1830,7 +1830,7 @@ void k_assistantdialog_release_keyboard(void* self);
 /// @param self KAssistantDialog*
 /// @param key QKeySequence*
 ///
-int32_t k_assistantdialog_grab_shortcut(void* self, void* key);
+int32_t k_assistantdialog_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -1875,9 +1875,9 @@ QWidget* k_assistantdialog_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-bool k_assistantdialog_updates_enabled(void* self);
+bool k_assistantdialog_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1892,9 +1892,9 @@ void k_assistantdialog_set_updates_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QGraphicsProxyWidget* k_assistantdialog_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* k_assistantdialog_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1931,7 +1931,7 @@ void k_assistantdialog_update2(void* self, int x, int y, int w, int h);
 /// @param self KAssistantDialog*
 /// @param param1 QRect*
 ///
-void k_assistantdialog_update3(void* self, void* param1);
+void k_assistantdialog_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1940,7 +1940,7 @@ void k_assistantdialog_update3(void* self, void* param1);
 /// @param self KAssistantDialog*
 /// @param param1 QRegion*
 ///
-void k_assistantdialog_update4(void* self, void* param1);
+void k_assistantdialog_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1961,7 +1961,7 @@ void k_assistantdialog_repaint2(void* self, int x, int y, int w, int h);
 /// @param self KAssistantDialog*
 /// @param param1 QRect*
 ///
-void k_assistantdialog_repaint3(void* self, void* param1);
+void k_assistantdialog_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1970,7 +1970,7 @@ void k_assistantdialog_repaint3(void* self, void* param1);
 /// @param self KAssistantDialog*
 /// @param param1 QRegion*
 ///
-void k_assistantdialog_repaint4(void* self, void* param1);
+void k_assistantdialog_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2079,7 +2079,7 @@ void k_assistantdialog_move(void* self, int x, int y);
 /// @param self KAssistantDialog*
 /// @param param1 QPoint*
 ///
-void k_assistantdialog_move2(void* self, void* param1);
+void k_assistantdialog_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2098,7 +2098,7 @@ void k_assistantdialog_resize(void* self, int w, int h);
 /// @param self KAssistantDialog*
 /// @param param1 QSize*
 ///
-void k_assistantdialog_resize2(void* self, void* param1);
+void k_assistantdialog_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2119,7 +2119,7 @@ void k_assistantdialog_set_geometry(void* self, int x, int y, int w, int h);
 /// @param self KAssistantDialog*
 /// @param geometry QRect*
 ///
-void k_assistantdialog_set_geometry2(void* self, void* geometry);
+void k_assistantdialog_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -2127,9 +2127,9 @@ void k_assistantdialog_set_geometry2(void* self, void* geometry);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-char* k_assistantdialog_save_geometry(void* self);
+char* k_assistantdialog_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2152,60 +2152,60 @@ void k_assistantdialog_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-bool k_assistantdialog_is_visible(void* self);
+bool k_assistantdialog_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param param1 QWidget*
 ///
-bool k_assistantdialog_is_visible_to(void* self, void* param1);
+bool k_assistantdialog_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-bool k_assistantdialog_is_hidden(void* self);
+bool k_assistantdialog_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-bool k_assistantdialog_is_minimized(void* self);
+bool k_assistantdialog_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-bool k_assistantdialog_is_maximized(void* self);
+bool k_assistantdialog_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-bool k_assistantdialog_is_full_screen(void* self);
+bool k_assistantdialog_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t k_assistantdialog_window_state(void* self);
+int32_t k_assistantdialog_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2229,9 +2229,9 @@ void k_assistantdialog_override_window_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QSizePolicy* k_assistantdialog_size_policy(void* self);
+QSizePolicy* k_assistantdialog_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2256,9 +2256,9 @@ void k_assistantdialog_set_size_policy2(void* self, int32_t horizontal, int32_t 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QRegion* k_assistantdialog_visible_region(void* self);
+QRegion* k_assistantdialog_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2279,31 +2279,31 @@ void k_assistantdialog_set_contents_margins(void* self, int left, int top, int r
 /// @param self KAssistantDialog*
 /// @param margins QMargins*
 ///
-void k_assistantdialog_set_contents_margins2(void* self, void* margins);
+void k_assistantdialog_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QMargins* k_assistantdialog_contents_margins(void* self);
+QMargins* k_assistantdialog_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QRect* k_assistantdialog_contents_rect(void* self);
+QRect* k_assistantdialog_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QLayout* k_assistantdialog_layout(void* self);
+QLayout* k_assistantdialog_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2360,39 +2360,39 @@ void k_assistantdialog_scroll(void* self, int dx, int dy);
 /// @param dy int
 /// @param param3 QRect*
 ///
-void k_assistantdialog_scroll2(void* self, int dx, int dy, void* param3);
+void k_assistantdialog_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QWidget* k_assistantdialog_focus_widget(void* self);
+QWidget* k_assistantdialog_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QWidget* k_assistantdialog_next_in_focus_chain(void* self);
+QWidget* k_assistantdialog_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QWidget* k_assistantdialog_previous_in_focus_chain(void* self);
+QWidget* k_assistantdialog_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-bool k_assistantdialog_accept_drops(void* self);
+bool k_assistantdialog_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2454,11 +2454,11 @@ void k_assistantdialog_remove_action(void* self, void* action);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list k_assistantdialog_actions(void* self);
+libqt_list k_assistantdialog_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2477,7 +2477,7 @@ QAction* k_assistantdialog_add_action2(void* self, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* k_assistantdialog_add_action3(void* self, void* icon, const char* text);
+QAction* k_assistantdialog_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -2487,7 +2487,7 @@ QAction* k_assistantdialog_add_action3(void* self, void* icon, const char* text)
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_assistantdialog_add_action4(void* self, const char* text, void* shortcut);
+QAction* k_assistantdialog_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -2498,15 +2498,15 @@ QAction* k_assistantdialog_add_action4(void* self, const char* text, void* short
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_assistantdialog_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* k_assistantdialog_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QWidget* k_assistantdialog_parent_widget(void* self);
+QWidget* k_assistantdialog_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2521,11 +2521,11 @@ void k_assistantdialog_set_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t k_assistantdialog_window_flags(void* self);
+int32_t k_assistantdialog_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2549,11 +2549,11 @@ void k_assistantdialog_override_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t k_assistantdialog_window_type(void* self);
+int32_t k_assistantdialog_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2567,29 +2567,29 @@ QWidget* k_assistantdialog_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param x int
 /// @param y int
 ///
-QWidget* k_assistantdialog_child_at(void* self, int x, int y);
+QWidget* k_assistantdialog_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param p QPoint*
 ///
-QWidget* k_assistantdialog_child_at2(void* self, void* p);
+QWidget* k_assistantdialog_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param p QPointF*
 ///
-QWidget* k_assistantdialog_child_at3(void* self, void* p);
+QWidget* k_assistantdialog_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -2604,35 +2604,35 @@ void k_assistantdialog_set_attribute(void* self, int32_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool k_assistantdialog_test_attribute(void* self, int32_t param1);
+bool k_assistantdialog_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-void k_assistantdialog_ensure_polished(void* self);
+void k_assistantdialog_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param child QWidget*
 ///
-bool k_assistantdialog_is_ancestor_of(void* self, void* child);
+bool k_assistantdialog_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-bool k_assistantdialog_auto_fill_background(void* self);
+bool k_assistantdialog_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2647,25 +2647,25 @@ void k_assistantdialog_set_auto_fill_background(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QBackingStore* k_assistantdialog_backing_store(void* self);
+QBackingStore* k_assistantdialog_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QWindow* k_assistantdialog_window_handle(void* self);
+QWindow* k_assistantdialog_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QScreen* k_assistantdialog_screen(void* self);
+QScreen* k_assistantdialog_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2709,7 +2709,7 @@ void k_assistantdialog_on_window_title_changed(void* self, void (*callback)(void
 /// @param self KAssistantDialog*
 /// @param icon QIcon*
 ///
-void k_assistantdialog_window_icon_changed(void* self, void* icon);
+void k_assistantdialog_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -2718,7 +2718,7 @@ void k_assistantdialog_window_icon_changed(void* self, void* icon);
 /// @param self KAssistantDialog*
 /// @param callback void func(KAssistantDialog* self, QIcon* icon)
 ///
-void k_assistantdialog_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void k_assistantdialog_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -2745,7 +2745,7 @@ void k_assistantdialog_on_window_icon_text_changed(void* self, void (*callback)(
 /// @param self KAssistantDialog*
 /// @param pos QPoint*
 ///
-void k_assistantdialog_custom_context_menu_requested(void* self, void* pos);
+void k_assistantdialog_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -2754,17 +2754,17 @@ void k_assistantdialog_custom_context_menu_requested(void* self, void* pos);
 /// @param self KAssistantDialog*
 /// @param callback void func(KAssistantDialog* self, QPoint* pos)
 ///
-void k_assistantdialog_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void k_assistantdialog_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t k_assistantdialog_input_method_hints(void* self);
+int32_t k_assistantdialog_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2783,7 +2783,7 @@ void k_assistantdialog_set_input_method_hints(void* self, int32_t hints);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void k_assistantdialog_render22(void* self, void* target, void* targetOffset);
+void k_assistantdialog_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -2794,7 +2794,7 @@ void k_assistantdialog_render22(void* self, void* target, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_assistantdialog_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void k_assistantdialog_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -2806,7 +2806,7 @@ void k_assistantdialog_render3(void* self, void* target, void* targetOffset, voi
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_assistantdialog_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_assistantdialog_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2816,7 +2816,7 @@ void k_assistantdialog_render4(void* self, void* target, void* targetOffset, voi
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void k_assistantdialog_render23(void* self, void* painter, void* targetOffset);
+void k_assistantdialog_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -2827,7 +2827,7 @@ void k_assistantdialog_render23(void* self, void* painter, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_assistantdialog_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void k_assistantdialog_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -2839,7 +2839,7 @@ void k_assistantdialog_render32(void* self, void* painter, void* targetOffset, v
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_assistantdialog_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_assistantdialog_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2848,7 +2848,7 @@ void k_assistantdialog_render42(void* self, void* painter, void* targetOffset, v
 /// @param self KAssistantDialog*
 /// @param rectangle QRect*
 ///
-QPixmap* k_assistantdialog_grab1(void* self, void* rectangle);
+QPixmap* k_assistantdialog_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -2868,7 +2868,7 @@ void k_assistantdialog_grab_gesture2(void* self, int32_t type, int32_t flags);
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t k_assistantdialog_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t k_assistantdialog_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -2935,9 +2935,9 @@ QWidget* k_assistantdialog_create_window_container3(void* window, void* parent, 
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-const char* k_assistantdialog_object_name(void* self);
+const char* k_assistantdialog_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2952,33 +2952,33 @@ void k_assistantdialog_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-bool k_assistantdialog_is_widget_type(void* self);
+bool k_assistantdialog_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-bool k_assistantdialog_is_window_type(void* self);
+bool k_assistantdialog_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-bool k_assistantdialog_is_quick_item_type(void* self);
+bool k_assistantdialog_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-bool k_assistantdialog_signals_blocked(void* self);
+bool k_assistantdialog_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2993,9 +2993,9 @@ bool k_assistantdialog_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QThread* k_assistantdialog_thread(void* self);
+QThread* k_assistantdialog_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3046,11 +3046,11 @@ void k_assistantdialog_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_assistantdialog_children(void* self);
+libqt_list k_assistantdialog_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3079,7 +3079,7 @@ void k_assistantdialog_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_assistantdialog_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_assistantdialog_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3090,18 +3090,18 @@ QMetaObject__Connection* k_assistantdialog_connect(void* sender, const char* sig
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_assistantdialog_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_assistantdialog_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_assistantdialog_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_assistantdialog_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3112,7 +3112,7 @@ QMetaObject__Connection* k_assistantdialog_connect3(void* self, void* sender, co
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_assistantdialog_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_assistantdialog_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3123,24 +3123,24 @@ bool k_assistantdialog_disconnect(void* sender, const char* signal, void* receiv
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_assistantdialog_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_assistantdialog_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-bool k_assistantdialog_disconnect3(void* self);
+bool k_assistantdialog_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param receiver QObject*
 ///
-bool k_assistantdialog_disconnect4(void* self, void* receiver);
+bool k_assistantdialog_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -3148,23 +3148,23 @@ bool k_assistantdialog_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_assistantdialog_disconnect5(void* param1);
+bool k_assistantdialog_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-void k_assistantdialog_dump_object_tree(void* self);
+void k_assistantdialog_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-void k_assistantdialog_dump_object_info(void* self);
+void k_assistantdialog_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3174,16 +3174,16 @@ void k_assistantdialog_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_assistantdialog_set_property(void* self, const char* name, void* value);
+bool k_assistantdialog_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param name const char*
 ///
-QVariant* k_assistantdialog_property(void* self, const char* name);
+QVariant* k_assistantdialog_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -3191,9 +3191,9 @@ QVariant* k_assistantdialog_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-const char** k_assistantdialog_dynamic_property_names(void* self);
+const char** k_assistantdialog_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3207,9 +3207,9 @@ QBindingStorage* k_assistantdialog_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-const QBindingStorage* k_assistantdialog_binding_storage2(void* self);
+const QBindingStorage* k_assistantdialog_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3232,18 +3232,18 @@ void k_assistantdialog_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QObject* k_assistantdialog_parent(void* self);
+QObject* k_assistantdialog_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param classname const char*
 ///
-bool k_assistantdialog_inherits(void* self, const char* classname);
+bool k_assistantdialog_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -3283,7 +3283,7 @@ int32_t k_assistantdialog_start_timer23(void* self, int64_t time, int32_t timerT
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_assistantdialog_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_assistantdialog_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -3295,59 +3295,59 @@ QMetaObject__Connection* k_assistantdialog_connect5(void* sender, const char* si
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_assistantdialog_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_assistantdialog_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_assistantdialog_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_assistantdialog_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param signal const char*
 ///
-bool k_assistantdialog_disconnect1(void* self, const char* signal);
+bool k_assistantdialog_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KAssistantDialog*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_assistantdialog_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_assistantdialog_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_assistantdialog_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_assistantdialog_disconnect23(void* self, void* receiver, const char* member);
+bool k_assistantdialog_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KAssistantDialog*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_assistantdialog_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3371,89 +3371,89 @@ void k_assistantdialog_on_destroyed1(void* self, void (*callback)(void*, void*))
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-bool k_assistantdialog_painting_active(void* self);
+bool k_assistantdialog_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-int32_t k_assistantdialog_width_m_m(void* self);
+int32_t k_assistantdialog_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-int32_t k_assistantdialog_height_m_m(void* self);
+int32_t k_assistantdialog_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-int32_t k_assistantdialog_logical_dpi_x(void* self);
+int32_t k_assistantdialog_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-int32_t k_assistantdialog_logical_dpi_y(void* self);
+int32_t k_assistantdialog_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-int32_t k_assistantdialog_physical_dpi_x(void* self);
+int32_t k_assistantdialog_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-int32_t k_assistantdialog_physical_dpi_y(void* self);
+int32_t k_assistantdialog_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-double k_assistantdialog_device_pixel_ratio(void* self);
+double k_assistantdialog_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-double k_assistantdialog_device_pixel_ratio_f(void* self);
+double k_assistantdialog_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-int32_t k_assistantdialog_color_count(void* self);
+int32_t k_assistantdialog_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-int32_t k_assistantdialog_depth(void* self);
+int32_t k_assistantdialog_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -3509,9 +3509,9 @@ void k_assistantdialog_on_set_visible(void* self, void (*callback)(void*, bool))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QSize* k_assistantdialog_size_hint(void* self);
+QSize* k_assistantdialog_size_hint(const void* self);
 
 /// Inherited from QDialog
 ///
@@ -3519,9 +3519,9 @@ QSize* k_assistantdialog_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QSize* k_assistantdialog_super_size_hint(void* self);
+QSize* k_assistantdialog_super_size_hint(const void* self);
 
 /// Inherited from QDialog
 ///
@@ -3529,12 +3529,12 @@ QSize* k_assistantdialog_super_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
-/// @param callback QSize* func()
+/// @param self const KAssistantDialog*
+/// @param callback QSize* func(KAssistantDialog* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_assistantdialog_on_size_hint(void* self, QSize* (*callback)());
+void k_assistantdialog_on_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QDialog
 ///
@@ -3542,9 +3542,9 @@ void k_assistantdialog_on_size_hint(void* self, QSize* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QSize* k_assistantdialog_minimum_size_hint(void* self);
+QSize* k_assistantdialog_minimum_size_hint(const void* self);
 
 /// Inherited from QDialog
 ///
@@ -3552,9 +3552,9 @@ QSize* k_assistantdialog_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QSize* k_assistantdialog_super_minimum_size_hint(void* self);
+QSize* k_assistantdialog_super_minimum_size_hint(const void* self);
 
 /// Inherited from QDialog
 ///
@@ -3562,12 +3562,12 @@ QSize* k_assistantdialog_super_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
-/// @param callback QSize* func()
+/// @param self const KAssistantDialog*
+/// @param callback QSize* func(KAssistantDialog* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_assistantdialog_on_minimum_size_hint(void* self, QSize* (*callback)());
+void k_assistantdialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QDialog
 ///
@@ -3596,9 +3596,9 @@ void k_assistantdialog_super_open(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void func()
+/// @param callback void func(KAssistantDialog* self)
 ///
-void k_assistantdialog_on_open(void* self, void (*callback)());
+void k_assistantdialog_on_open(void* self, void (*callback)(void*));
 
 /// Inherited from QDialog
 ///
@@ -3627,9 +3627,9 @@ int32_t k_assistantdialog_super_exec(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback int32_t func()
+/// @param callback int32_t func(KAssistantDialog* self)
 ///
-void k_assistantdialog_on_exec(void* self, int32_t (*callback)());
+void k_assistantdialog_on_exec(void* self, int32_t (*callback)(void*));
 
 /// Inherited from QDialog
 ///
@@ -3691,9 +3691,9 @@ void k_assistantdialog_super_accept(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void func()
+/// @param callback void func(KAssistantDialog* self)
 ///
-void k_assistantdialog_on_accept(void* self, void (*callback)());
+void k_assistantdialog_on_accept(void* self, void (*callback)(void*));
 
 /// Inherited from QDialog
 ///
@@ -3722,9 +3722,9 @@ void k_assistantdialog_super_reject(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void func()
+/// @param callback void func(KAssistantDialog* self)
 ///
-void k_assistantdialog_on_reject(void* self, void (*callback)());
+void k_assistantdialog_on_reject(void* self, void (*callback)(void*));
 
 /// Inherited from QDialog
 ///
@@ -3899,9 +3899,9 @@ void k_assistantdialog_on_event_filter(void* self, bool (*callback)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-int32_t k_assistantdialog_dev_type(void* self);
+int32_t k_assistantdialog_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3909,9 +3909,9 @@ int32_t k_assistantdialog_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-int32_t k_assistantdialog_super_dev_type(void* self);
+int32_t k_assistantdialog_super_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3919,10 +3919,10 @@ int32_t k_assistantdialog_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
-/// @param callback int32_t func()
+/// @param self const KAssistantDialog*
+/// @param callback int32_t func(KAssistantDialog* self)
 ///
-void k_assistantdialog_on_dev_type(void* self, int32_t (*callback)());
+void k_assistantdialog_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3930,10 +3930,10 @@ void k_assistantdialog_on_dev_type(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param param1 int
 ///
-int32_t k_assistantdialog_height_for_width(void* self, int param1);
+int32_t k_assistantdialog_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -3941,10 +3941,10 @@ int32_t k_assistantdialog_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param param1 int
 ///
-int32_t k_assistantdialog_super_height_for_width(void* self, int param1);
+int32_t k_assistantdialog_super_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -3952,10 +3952,10 @@ int32_t k_assistantdialog_super_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param callback int32_t func(KAssistantDialog* self, int param1)
 ///
-void k_assistantdialog_on_height_for_width(void* self, int32_t (*callback)(void*, int));
+void k_assistantdialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -3963,9 +3963,9 @@ void k_assistantdialog_on_height_for_width(void* self, int32_t (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-bool k_assistantdialog_has_height_for_width(void* self);
+bool k_assistantdialog_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3973,9 +3973,9 @@ bool k_assistantdialog_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-bool k_assistantdialog_super_has_height_for_width(void* self);
+bool k_assistantdialog_super_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3983,10 +3983,10 @@ bool k_assistantdialog_super_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
-/// @param callback bool func()
+/// @param self const KAssistantDialog*
+/// @param callback bool func(KAssistantDialog* self)
 ///
-void k_assistantdialog_on_has_height_for_width(void* self, bool (*callback)());
+void k_assistantdialog_on_has_height_for_width(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3994,9 +3994,9 @@ void k_assistantdialog_on_has_height_for_width(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QPaintEngine* k_assistantdialog_paint_engine(void* self);
+QPaintEngine* k_assistantdialog_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4004,9 +4004,9 @@ QPaintEngine* k_assistantdialog_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QPaintEngine* k_assistantdialog_super_paint_engine(void* self);
+QPaintEngine* k_assistantdialog_super_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4014,10 +4014,10 @@ QPaintEngine* k_assistantdialog_super_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
-/// @param callback QPaintEngine* func()
+/// @param self const KAssistantDialog*
+/// @param callback QPaintEngine* func(KAssistantDialog* self)
 ///
-void k_assistantdialog_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void k_assistantdialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4755,10 +4755,10 @@ void k_assistantdialog_on_change_event(void* self, void (*callback)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_assistantdialog_metric(void* self, int32_t param1);
+int32_t k_assistantdialog_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4766,10 +4766,10 @@ int32_t k_assistantdialog_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_assistantdialog_super_metric(void* self, int32_t param1);
+int32_t k_assistantdialog_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4777,10 +4777,10 @@ int32_t k_assistantdialog_super_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param callback int32_t func(KAssistantDialog* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_assistantdialog_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void k_assistantdialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4788,10 +4788,10 @@ void k_assistantdialog_on_metric(void* self, int32_t (*callback)(void*, int32_t)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param painter QPainter*
 ///
-void k_assistantdialog_init_painter(void* self, void* painter);
+void k_assistantdialog_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4799,10 +4799,10 @@ void k_assistantdialog_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param painter QPainter*
 ///
-void k_assistantdialog_super_init_painter(void* self, void* painter);
+void k_assistantdialog_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4810,10 +4810,10 @@ void k_assistantdialog_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param callback void func(KAssistantDialog* self, QPainter* painter)
 ///
-void k_assistantdialog_on_init_painter(void* self, void (*callback)(void*, void*));
+void k_assistantdialog_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4821,10 +4821,10 @@ void k_assistantdialog_on_init_painter(void* self, void (*callback)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_assistantdialog_redirected(void* self, void* offset);
+QPaintDevice* k_assistantdialog_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4832,10 +4832,10 @@ QPaintDevice* k_assistantdialog_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_assistantdialog_super_redirected(void* self, void* offset);
+QPaintDevice* k_assistantdialog_super_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4843,10 +4843,10 @@ QPaintDevice* k_assistantdialog_super_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param callback QPaintDevice* func(KAssistantDialog* self, QPoint* offset)
 ///
-void k_assistantdialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void k_assistantdialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4854,9 +4854,9 @@ void k_assistantdialog_on_redirected(void* self, QPaintDevice* (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QPainter* k_assistantdialog_shared_painter(void* self);
+QPainter* k_assistantdialog_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4864,9 +4864,9 @@ QPainter* k_assistantdialog_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QPainter* k_assistantdialog_super_shared_painter(void* self);
+QPainter* k_assistantdialog_super_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4874,10 +4874,10 @@ QPainter* k_assistantdialog_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
-/// @param callback QPainter* func()
+/// @param self const KAssistantDialog*
+/// @param callback QPainter* func(KAssistantDialog* self)
 ///
-void k_assistantdialog_on_shared_painter(void* self, QPainter* (*callback)());
+void k_assistantdialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4918,10 +4918,10 @@ void k_assistantdialog_on_input_method_event(void* self, void (*callback)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_assistantdialog_input_method_query(void* self, int32_t param1);
+QVariant* k_assistantdialog_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4929,10 +4929,10 @@ QVariant* k_assistantdialog_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_assistantdialog_super_input_method_query(void* self, int32_t param1);
+QVariant* k_assistantdialog_super_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4940,12 +4940,12 @@ QVariant* k_assistantdialog_super_input_method_query(void* self, int32_t param1)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param callback QVariant* func(KAssistantDialog* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_assistantdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void k_assistantdialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5088,7 +5088,7 @@ void k_assistantdialog_on_custom_event(void* self, void (*callback)(void*, void*
 /// @param self KAssistantDialog*
 /// @param signal QMetaMethod*
 ///
-void k_assistantdialog_connect_notify(void* self, void* signal);
+void k_assistantdialog_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5099,7 +5099,7 @@ void k_assistantdialog_connect_notify(void* self, void* signal);
 /// @param self KAssistantDialog*
 /// @param signal QMetaMethod*
 ///
-void k_assistantdialog_super_connect_notify(void* self, void* signal);
+void k_assistantdialog_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5110,7 +5110,7 @@ void k_assistantdialog_super_connect_notify(void* self, void* signal);
 /// @param self KAssistantDialog*
 /// @param callback void func(KAssistantDialog* self, QMetaMethod* signal)
 ///
-void k_assistantdialog_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_assistantdialog_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -5121,7 +5121,7 @@ void k_assistantdialog_on_connect_notify(void* self, void (*callback)(void*, voi
 /// @param self KAssistantDialog*
 /// @param signal QMetaMethod*
 ///
-void k_assistantdialog_disconnect_notify(void* self, void* signal);
+void k_assistantdialog_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5132,7 +5132,7 @@ void k_assistantdialog_disconnect_notify(void* self, void* signal);
 /// @param self KAssistantDialog*
 /// @param signal QMetaMethod*
 ///
-void k_assistantdialog_super_disconnect_notify(void* self, void* signal);
+void k_assistantdialog_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5143,7 +5143,7 @@ void k_assistantdialog_super_disconnect_notify(void* self, void* signal);
 /// @param self KAssistantDialog*
 /// @param callback void func(KAssistantDialog* self, QMetaMethod* signal)
 ///
-void k_assistantdialog_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_assistantdialog_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from KPageDialog
 ///
@@ -5172,9 +5172,9 @@ KPageWidget* k_assistantdialog_super_page_widget(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback KPageWidget* func()
+/// @param callback KPageWidget* func(KAssistantDialog* self)
 ///
-void k_assistantdialog_on_page_widget(void* self, KPageWidget* (*callback)());
+void k_assistantdialog_on_page_widget(void* self, KPageWidget* (*callback)(void*));
 
 /// Inherited from KPageDialog
 ///
@@ -5236,9 +5236,9 @@ QDialogButtonBox* k_assistantdialog_super_button_box(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback QDialogButtonBox* func()
+/// @param callback QDialogButtonBox* func(KAssistantDialog* self)
 ///
-void k_assistantdialog_on_button_box(void* self, QDialogButtonBox* (*callback)());
+void k_assistantdialog_on_button_box(void* self, QDialogButtonBox* (*callback)(void*));
 
 /// Inherited from KPageDialog
 ///
@@ -5333,9 +5333,9 @@ void k_assistantdialog_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void func()
+/// @param callback void func(KAssistantDialog* self)
 ///
-void k_assistantdialog_on_update_micro_focus(void* self, void (*callback)());
+void k_assistantdialog_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5364,9 +5364,9 @@ void k_assistantdialog_super_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void func()
+/// @param callback void func(KAssistantDialog* self)
 ///
-void k_assistantdialog_on_create(void* self, void (*callback)());
+void k_assistantdialog_on_create(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5395,9 +5395,9 @@ void k_assistantdialog_super_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void func()
+/// @param callback void func(KAssistantDialog* self)
 ///
-void k_assistantdialog_on_destroy(void* self, void (*callback)());
+void k_assistantdialog_on_destroy(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5426,9 +5426,9 @@ bool k_assistantdialog_super_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback bool func()
+/// @param callback bool func(KAssistantDialog* self)
 ///
-void k_assistantdialog_on_focus_next_child(void* self, bool (*callback)());
+void k_assistantdialog_on_focus_next_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5457,9 +5457,9 @@ bool k_assistantdialog_super_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback bool func()
+/// @param callback bool func(KAssistantDialog* self)
 ///
-void k_assistantdialog_on_focus_previous_child(void* self, bool (*callback)());
+void k_assistantdialog_on_focus_previous_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -5467,9 +5467,9 @@ void k_assistantdialog_on_focus_previous_child(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QObject* k_assistantdialog_sender(void* self);
+QObject* k_assistantdialog_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5477,9 +5477,9 @@ QObject* k_assistantdialog_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-QObject* k_assistantdialog_super_sender(void* self);
+QObject* k_assistantdialog_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5487,10 +5487,10 @@ QObject* k_assistantdialog_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
-/// @param callback QObject* func()
+/// @param self const KAssistantDialog*
+/// @param callback QObject* func(KAssistantDialog* self)
 ///
-void k_assistantdialog_on_sender(void* self, QObject* (*callback)());
+void k_assistantdialog_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5498,9 +5498,9 @@ void k_assistantdialog_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-int32_t k_assistantdialog_sender_signal_index(void* self);
+int32_t k_assistantdialog_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5508,9 +5508,9 @@ int32_t k_assistantdialog_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 ///
-int32_t k_assistantdialog_super_sender_signal_index(void* self);
+int32_t k_assistantdialog_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5518,10 +5518,10 @@ int32_t k_assistantdialog_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
-/// @param callback int32_t func()
+/// @param self const KAssistantDialog*
+/// @param callback int32_t func(KAssistantDialog* self)
 ///
-void k_assistantdialog_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_assistantdialog_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5529,10 +5529,10 @@ void k_assistantdialog_on_sender_signal_index(void* self, int32_t (*callback)())
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param signal const char*
 ///
-int32_t k_assistantdialog_receivers(void* self, const char* signal);
+int32_t k_assistantdialog_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5540,10 +5540,10 @@ int32_t k_assistantdialog_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param signal const char*
 ///
-int32_t k_assistantdialog_super_receivers(void* self, const char* signal);
+int32_t k_assistantdialog_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5551,10 +5551,10 @@ int32_t k_assistantdialog_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param callback int32_t func(KAssistantDialog* self, const char* signal)
 ///
-void k_assistantdialog_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_assistantdialog_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5562,10 +5562,10 @@ void k_assistantdialog_on_receivers(void* self, int32_t (*callback)(void*, const
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param signal QMetaMethod*
 ///
-bool k_assistantdialog_is_signal_connected(void* self, void* signal);
+bool k_assistantdialog_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5573,10 +5573,10 @@ bool k_assistantdialog_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param signal QMetaMethod*
 ///
-bool k_assistantdialog_super_is_signal_connected(void* self, void* signal);
+bool k_assistantdialog_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5584,10 +5584,10 @@ bool k_assistantdialog_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param callback bool func(KAssistantDialog* self, QMetaMethod* signal)
 ///
-void k_assistantdialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_assistantdialog_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5595,11 +5595,11 @@ void k_assistantdialog_on_is_signal_connected(void* self, bool (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_assistantdialog_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_assistantdialog_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5607,11 +5607,11 @@ double k_assistantdialog_get_decoded_metric_f(void* self, int32_t metricA, int32
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_assistantdialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_assistantdialog_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5619,10 +5619,10 @@ double k_assistantdialog_super_get_decoded_metric_f(void* self, int32_t metricA,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KAssistantDialog*
+/// @param self const KAssistantDialog*
 /// @param callback double func(KAssistantDialog* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_assistantdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void k_assistantdialog_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

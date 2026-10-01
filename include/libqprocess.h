@@ -28,14 +28,14 @@ QProcessEnvironment* q_processenvironment_new2(int32_t param1);
 ///
 /// @param other QProcessEnvironment*
 ///
-QProcessEnvironment* q_processenvironment_new3(void* other);
+QProcessEnvironment* q_processenvironment_new3(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocessenvironment.html#operator-eq)
 ///
 /// @param self QProcessEnvironment*
 /// @param other QProcessEnvironment*
 ///
-void q_processenvironment_operator_assign(void* self, void* other);
+void q_processenvironment_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocessenvironment.html#swap)
 ///
@@ -46,15 +46,15 @@ void q_processenvironment_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocessenvironment.html#isEmpty)
 ///
-/// @param self QProcessEnvironment*
+/// @param self const QProcessEnvironment*
 ///
-bool q_processenvironment_is_empty(void* self);
+bool q_processenvironment_is_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocessenvironment.html#inheritsFromParent)
 ///
-/// @param self QProcessEnvironment*
+/// @param self const QProcessEnvironment*
 ///
-bool q_processenvironment_inherits_from_parent(void* self);
+bool q_processenvironment_inherits_from_parent(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocessenvironment.html#clear)
 ///
@@ -64,10 +64,10 @@ void q_processenvironment_clear(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocessenvironment.html#contains)
 ///
-/// @param self QProcessEnvironment*
+/// @param self const QProcessEnvironment*
 /// @param name const char*
 ///
-bool q_processenvironment_contains(void* self, const char* name);
+bool q_processenvironment_contains(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocessenvironment.html#insert)
 ///
@@ -88,33 +88,33 @@ void q_processenvironment_remove(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QProcessEnvironment*
+/// @param self const QProcessEnvironment*
 /// @param name const char*
 ///
-const char* q_processenvironment_value(void* self, const char* name);
+const char* q_processenvironment_value(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocessenvironment.html#toStringList)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QProcessEnvironment*
+/// @param self const QProcessEnvironment*
 ///
-const char** q_processenvironment_to_string_list(void* self);
+const char** q_processenvironment_to_string_list(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocessenvironment.html#keys)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QProcessEnvironment*
+/// @param self const QProcessEnvironment*
 ///
-const char** q_processenvironment_keys(void* self);
+const char** q_processenvironment_keys(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocessenvironment.html#insert)
 ///
 /// @param self QProcessEnvironment*
 /// @param e QProcessEnvironment*
 ///
-void q_processenvironment_insert2(void* self, void* e);
+void q_processenvironment_insert2(void* self, const void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocessenvironment.html#systemEnvironment)
 ///
@@ -124,11 +124,11 @@ QProcessEnvironment* q_processenvironment_system_environment();
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QProcessEnvironment*
+/// @param self const QProcessEnvironment*
 /// @param name const char*
 /// @param defaultValue const char*
 ///
-const char* q_processenvironment_value2(void* self, const char* name, const char* defaultValue);
+const char* q_processenvironment_value2(const void* self, const char* name, const char* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocessenvironment.html#dtor.QProcessEnvironment)
 ///
@@ -154,26 +154,26 @@ QProcess* q_process_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-const QMetaObject* q_process_meta_object(void* self);
+const QMetaObject* q_process_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QProcess*
-/// @param callback const QMetaObject* func()
+/// @param self const QProcess*
+/// @param callback const QMetaObject* func(const QProcess* self)
 ///
-void q_process_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_process_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-const QMetaObject* q_process_super_meta_object(void* self);
+const QMetaObject* q_process_super_meta_object(const void* self);
 
 /// @param self QProcess*
 /// @param param1 const char*
@@ -280,9 +280,9 @@ bool q_process_super_open(void* self, int32_t mode);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-const char* q_process_program(void* self);
+const char* q_process_program(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#setProgram)
 ///
@@ -295,9 +295,9 @@ void q_process_set_program(void* self, const char* program);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-const char** q_process_arguments(void* self);
+const char** q_process_arguments(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#setArguments)
 ///
@@ -308,11 +308,11 @@ void q_process_set_arguments(void* self, const char* arguments[static 1]);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#processChannelMode)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
 /// @return enum QProcess__ProcessChannelMode
 ///
-int32_t q_process_process_channel_mode(void* self);
+int32_t q_process_process_channel_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#setProcessChannelMode)
 ///
@@ -323,11 +323,11 @@ void q_process_set_process_channel_mode(void* self, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#inputChannelMode)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
 /// @return enum QProcess__InputChannelMode
 ///
-int32_t q_process_input_channel_mode(void* self);
+int32_t q_process_input_channel_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#setInputChannelMode)
 ///
@@ -338,11 +338,11 @@ void q_process_set_input_channel_mode(void* self, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#readChannel)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
 /// @return enum QProcess__ProcessChannel
 ///
-int32_t q_process_read_channel(void* self);
+int32_t q_process_read_channel(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#setReadChannel)
 ///
@@ -413,9 +413,9 @@ void q_process_fail_child_process_modifier(void* self, const char* description);
 #ifndef _WIN32
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#unixProcessParameters)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-QProcess__UnixProcessParameters* q_process_unix_process_parameters(void* self);
+QProcess__UnixProcessParameters* q_process_unix_process_parameters(const void* self);
 #endif
 
 #ifndef _WIN32
@@ -424,7 +424,7 @@ QProcess__UnixProcessParameters* q_process_unix_process_parameters(void* self);
 /// @param self QProcess*
 /// @param params QProcess__UnixProcessParameters*
 ///
-void q_process_set_unix_process_parameters(void* self, void* params);
+void q_process_set_unix_process_parameters(void* self, const void* params);
 #endif
 
 #ifndef _WIN32
@@ -440,9 +440,9 @@ void q_process_set_unix_process_parameters2(void* self, uint32_t flagsOnly);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-const char* q_process_working_directory(void* self);
+const char* q_process_working_directory(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#setWorkingDirectory)
 ///
@@ -462,44 +462,44 @@ void q_process_set_environment(void* self, const char* environment[static 1]);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-const char** q_process_environment(void* self);
+const char** q_process_environment(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#setProcessEnvironment)
 ///
 /// @param self QProcess*
 /// @param environment QProcessEnvironment*
 ///
-void q_process_set_process_environment(void* self, void* environment);
+void q_process_set_process_environment(void* self, const void* environment);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#processEnvironment)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-QProcessEnvironment* q_process_process_environment(void* self);
+QProcessEnvironment* q_process_process_environment(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#error)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
 /// @return enum QProcess__ProcessError
 ///
-int32_t q_process_error(void* self);
+int32_t q_process_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#state)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
 /// @return enum QProcess__ProcessState
 ///
-int32_t q_process_state(void* self);
+int32_t q_process_state(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#processId)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-int64_t q_process_process_id(void* self);
+int64_t q_process_process_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#waitForStarted)
 ///
@@ -581,63 +581,63 @@ char* q_process_read_all_standard_error(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#exitCode)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-int32_t q_process_exit_code(void* self);
+int32_t q_process_exit_code(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#exitStatus)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
 /// @return enum QProcess__ExitStatus
 ///
-int32_t q_process_exit_status(void* self);
+int32_t q_process_exit_status(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#bytesToWrite)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-int64_t q_process_bytes_to_write(void* self);
+int64_t q_process_bytes_to_write(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#bytesToWrite)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QProcess*
-/// @param callback int64_t func()
+/// @param self const QProcess*
+/// @param callback int64_t func(const QProcess* self)
 ///
-void q_process_on_bytes_to_write(void* self, int64_t (*callback)());
+void q_process_on_bytes_to_write(const void* self, int64_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#bytesToWrite)
 ///
 /// Base class method implementation
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-int64_t q_process_super_bytes_to_write(void* self);
+int64_t q_process_super_bytes_to_write(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#isSequential)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-bool q_process_is_sequential(void* self);
+bool q_process_is_sequential(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#isSequential)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QProcess*
-/// @param callback bool func()
+/// @param self const QProcess*
+/// @param callback bool func(const QProcess* self)
 ///
-void q_process_on_is_sequential(void* self, bool (*callback)());
+void q_process_on_is_sequential(const void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#isSequential)
 ///
 /// Base class method implementation
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-bool q_process_super_is_sequential(void* self);
+bool q_process_super_is_sequential(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#close)
 ///
@@ -650,9 +650,9 @@ void q_process_close(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QProcess*
-/// @param callback void func()
+/// @param callback void func(QProcess* self)
 ///
-void q_process_on_close(void* self, void (*callback)());
+void q_process_on_close(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#close)
 ///
@@ -740,24 +740,6 @@ void q_process_on_error_occurred(void* self, void (*callback)(void*, int32_t));
 /// @param state enum QProcess__ProcessState
 ///
 void q_process_set_process_state(void* self, int32_t state);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#setProcessState)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QProcess*
-/// @param callback void func(QProcess* self, enum QProcess__ProcessState state)
-///
-void q_process_on_set_process_state(void* self, void (*callback)(void*, int32_t));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#setProcessState)
-///
-/// Base class method implementation
-///
-/// @param self QProcess*
-/// @param state enum QProcess__ProcessState
-///
-void q_process_super_set_process_state(void* self, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#readData)
 ///
@@ -969,11 +951,11 @@ QIODeviceBase* q_process_as_q_i_o_device_base(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#openMode)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
 /// @return flag of enum QIODeviceBase__OpenModeFlag
 ///
-int32_t q_process_open_mode(void* self);
+int32_t q_process_open_mode(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -988,57 +970,57 @@ void q_process_set_text_mode_enabled(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isTextModeEnabled)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-bool q_process_is_text_mode_enabled(void* self);
+bool q_process_is_text_mode_enabled(const void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isOpen)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-bool q_process_is_open(void* self);
+bool q_process_is_open(const void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isReadable)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-bool q_process_is_readable(void* self);
+bool q_process_is_readable(const void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isWritable)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-bool q_process_is_writable(void* self);
+bool q_process_is_writable(const void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readChannelCount)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-int32_t q_process_read_channel_count(void* self);
+int32_t q_process_read_channel_count(const void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#writeChannelCount)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-int32_t q_process_write_channel_count(void* self);
+int32_t q_process_write_channel_count(const void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#currentReadChannel)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-int32_t q_process_current_read_channel(void* self);
+int32_t q_process_current_read_channel(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1053,9 +1035,9 @@ void q_process_set_current_read_channel(void* self, int channel);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#currentWriteChannel)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-int32_t q_process_current_write_channel(void* self);
+int32_t q_process_current_write_channel(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1145,9 +1127,9 @@ void q_process_rollback_transaction(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isTransactionStarted)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-bool q_process_is_transaction_started(void* self);
+bool q_process_is_transaction_started(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1240,9 +1222,9 @@ bool q_process_get_char(void* self, char* c);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-const char* q_process_error_string(void* self);
+const char* q_process_error_string(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1367,9 +1349,9 @@ char* q_process_read_line1(void* self, int64_t maxlen);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-const char* q_process_object_name(void* self);
+const char* q_process_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1384,33 +1366,33 @@ void q_process_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-bool q_process_is_widget_type(void* self);
+bool q_process_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-bool q_process_is_window_type(void* self);
+bool q_process_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-bool q_process_is_quick_item_type(void* self);
+bool q_process_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-bool q_process_signals_blocked(void* self);
+bool q_process_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1425,9 +1407,9 @@ bool q_process_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-QThread* q_process_thread(void* self);
+QThread* q_process_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1478,11 +1460,11 @@ void q_process_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_process_children(void* self);
+libqt_list q_process_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1520,7 +1502,7 @@ void q_process_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_process_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_process_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1531,18 +1513,18 @@ QMetaObject__Connection* q_process_connect(void* sender, const char* signal, voi
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_process_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_process_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_process_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_process_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1553,7 +1535,7 @@ QMetaObject__Connection* q_process_connect3(void* self, void* sender, const char
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_process_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_process_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1564,24 +1546,24 @@ bool q_process_disconnect(void* sender, const char* signal, void* receiver, cons
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_process_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_process_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-bool q_process_disconnect3(void* self);
+bool q_process_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 /// @param receiver QObject*
 ///
-bool q_process_disconnect4(void* self, void* receiver);
+bool q_process_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1589,23 +1571,23 @@ bool q_process_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_process_disconnect5(void* param1);
+bool q_process_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-void q_process_dump_object_tree(void* self);
+void q_process_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-void q_process_dump_object_info(void* self);
+void q_process_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1615,16 +1597,16 @@ void q_process_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_process_set_property(void* self, const char* name, void* value);
+bool q_process_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 /// @param name const char*
 ///
-QVariant* q_process_property(void* self, const char* name);
+QVariant* q_process_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1632,9 +1614,9 @@ QVariant* q_process_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-const char** q_process_dynamic_property_names(void* self);
+const char** q_process_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1648,9 +1630,9 @@ QBindingStorage* q_process_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-const QBindingStorage* q_process_binding_storage2(void* self);
+const QBindingStorage* q_process_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1673,18 +1655,18 @@ void q_process_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-QObject* q_process_parent(void* self);
+QObject* q_process_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 /// @param classname const char*
 ///
-bool q_process_inherits(void* self, const char* classname);
+bool q_process_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1724,7 +1706,7 @@ int32_t q_process_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_process_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_process_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1736,59 +1718,59 @@ QMetaObject__Connection* q_process_connect5(void* sender, const char* signal, vo
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_process_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_process_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_process_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_process_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 /// @param signal const char*
 ///
-bool q_process_disconnect1(void* self, const char* signal);
+bool q_process_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QProcess*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_process_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QProcess*
+/// @param self const QProcess*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_process_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_process_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_process_disconnect23(void* self, void* receiver, const char* member);
+bool q_process_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QProcess*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_process_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1814,9 +1796,9 @@ void q_process_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-int64_t q_process_pos(void* self);
+int64_t q_process_pos(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1824,9 +1806,9 @@ int64_t q_process_pos(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-int64_t q_process_super_pos(void* self);
+int64_t q_process_super_pos(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1834,10 +1816,10 @@ int64_t q_process_super_pos(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QProcess*
-/// @param callback int64_t func()
+/// @param self const QProcess*
+/// @param callback int64_t func(QProcess* self)
 ///
-void q_process_on_pos(void* self, int64_t (*callback)());
+void q_process_on_pos(const void* self, int64_t (*callback)(const void*));
 
 /// Inherited from QIODevice
 ///
@@ -1845,9 +1827,9 @@ void q_process_on_pos(void* self, int64_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-int64_t q_process_size(void* self);
+int64_t q_process_size(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1855,9 +1837,9 @@ int64_t q_process_size(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-int64_t q_process_super_size(void* self);
+int64_t q_process_super_size(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1865,10 +1847,10 @@ int64_t q_process_super_size(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QProcess*
-/// @param callback int64_t func()
+/// @param self const QProcess*
+/// @param callback int64_t func(QProcess* self)
 ///
-void q_process_on_size(void* self, int64_t (*callback)());
+void q_process_on_size(const void* self, int64_t (*callback)(const void*));
 
 /// Inherited from QIODevice
 ///
@@ -1909,9 +1891,9 @@ void q_process_on_seek(void* self, bool (*callback)(void*, int64_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-bool q_process_at_end(void* self);
+bool q_process_at_end(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1919,9 +1901,9 @@ bool q_process_at_end(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-bool q_process_super_at_end(void* self);
+bool q_process_super_at_end(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1929,10 +1911,10 @@ bool q_process_super_at_end(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QProcess*
-/// @param callback bool func()
+/// @param self const QProcess*
+/// @param callback bool func(QProcess* self)
 ///
-void q_process_on_at_end(void* self, bool (*callback)());
+void q_process_on_at_end(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QIODevice
 ///
@@ -1961,9 +1943,9 @@ bool q_process_super_reset(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QProcess*
-/// @param callback bool func()
+/// @param callback bool func(QProcess* self)
 ///
-void q_process_on_reset(void* self, bool (*callback)());
+void q_process_on_reset(void* self, bool (*callback)(void*));
 
 /// Inherited from QIODevice
 ///
@@ -1971,9 +1953,9 @@ void q_process_on_reset(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-int64_t q_process_bytes_available(void* self);
+int64_t q_process_bytes_available(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1981,9 +1963,9 @@ int64_t q_process_bytes_available(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-int64_t q_process_super_bytes_available(void* self);
+int64_t q_process_super_bytes_available(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1991,10 +1973,10 @@ int64_t q_process_super_bytes_available(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QProcess*
-/// @param callback int64_t func()
+/// @param self const QProcess*
+/// @param callback int64_t func(QProcess* self)
 ///
-void q_process_on_bytes_available(void* self, int64_t (*callback)());
+void q_process_on_bytes_available(const void* self, int64_t (*callback)(const void*));
 
 /// Inherited from QIODevice
 ///
@@ -2002,9 +1984,9 @@ void q_process_on_bytes_available(void* self, int64_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-bool q_process_can_read_line(void* self);
+bool q_process_can_read_line(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -2012,9 +1994,9 @@ bool q_process_can_read_line(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-bool q_process_super_can_read_line(void* self);
+bool q_process_super_can_read_line(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -2022,10 +2004,10 @@ bool q_process_super_can_read_line(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QProcess*
-/// @param callback bool func()
+/// @param self const QProcess*
+/// @param callback bool func(QProcess* self)
 ///
-void q_process_on_can_read_line(void* self, bool (*callback)());
+void q_process_on_can_read_line(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QIODevice
 ///
@@ -2271,7 +2253,7 @@ void q_process_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QProcess*
 /// @param signal QMetaMethod*
 ///
-void q_process_connect_notify(void* self, void* signal);
+void q_process_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2282,7 +2264,7 @@ void q_process_connect_notify(void* self, void* signal);
 /// @param self QProcess*
 /// @param signal QMetaMethod*
 ///
-void q_process_super_connect_notify(void* self, void* signal);
+void q_process_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2293,7 +2275,7 @@ void q_process_super_connect_notify(void* self, void* signal);
 /// @param self QProcess*
 /// @param callback void func(QProcess* self, QMetaMethod* signal)
 ///
-void q_process_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_process_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2304,7 +2286,7 @@ void q_process_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QProcess*
 /// @param signal QMetaMethod*
 ///
-void q_process_disconnect_notify(void* self, void* signal);
+void q_process_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2315,7 +2297,7 @@ void q_process_disconnect_notify(void* self, void* signal);
 /// @param self QProcess*
 /// @param signal QMetaMethod*
 ///
-void q_process_super_disconnect_notify(void* self, void* signal);
+void q_process_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2326,7 +2308,7 @@ void q_process_super_disconnect_notify(void* self, void* signal);
 /// @param self QProcess*
 /// @param callback void func(QProcess* self, QMetaMethod* signal)
 ///
-void q_process_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_process_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QIODevice
 ///
@@ -2400,9 +2382,9 @@ void q_process_on_set_error_string(void* self, void (*callback)(void*, const cha
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-QObject* q_process_sender(void* self);
+QObject* q_process_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2410,9 +2392,9 @@ QObject* q_process_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-QObject* q_process_super_sender(void* self);
+QObject* q_process_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2420,10 +2402,10 @@ QObject* q_process_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QProcess*
-/// @param callback QObject* func()
+/// @param self const QProcess*
+/// @param callback QObject* func(QProcess* self)
 ///
-void q_process_on_sender(void* self, QObject* (*callback)());
+void q_process_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2431,9 +2413,9 @@ void q_process_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-int32_t q_process_sender_signal_index(void* self);
+int32_t q_process_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2441,9 +2423,9 @@ int32_t q_process_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 ///
-int32_t q_process_super_sender_signal_index(void* self);
+int32_t q_process_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2451,10 +2433,10 @@ int32_t q_process_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QProcess*
-/// @param callback int32_t func()
+/// @param self const QProcess*
+/// @param callback int32_t func(QProcess* self)
 ///
-void q_process_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_process_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2462,10 +2444,10 @@ void q_process_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 /// @param signal const char*
 ///
-int32_t q_process_receivers(void* self, const char* signal);
+int32_t q_process_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2473,10 +2455,10 @@ int32_t q_process_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 /// @param signal const char*
 ///
-int32_t q_process_super_receivers(void* self, const char* signal);
+int32_t q_process_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2484,10 +2466,10 @@ int32_t q_process_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 /// @param callback int32_t func(QProcess* self, const char* signal)
 ///
-void q_process_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_process_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2495,10 +2477,10 @@ void q_process_on_receivers(void* self, int32_t (*callback)(void*, const char*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 /// @param signal QMetaMethod*
 ///
-bool q_process_is_signal_connected(void* self, void* signal);
+bool q_process_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2506,10 +2488,10 @@ bool q_process_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 /// @param signal QMetaMethod*
 ///
-bool q_process_super_is_signal_connected(void* self, void* signal);
+bool q_process_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2517,10 +2499,10 @@ bool q_process_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QProcess*
+/// @param self const QProcess*
 /// @param callback bool func(QProcess* self, QMetaMethod* signal)
 ///
-void q_process_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_process_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#started)
 ///
@@ -2592,7 +2574,7 @@ QProcess__UnixProcessParameters* q_process__unixprocessparameters_new();
 ///
 /// @param other QProcess__UnixProcessParameters*
 ///
-QProcess__UnixProcessParameters* q_process__unixprocessparameters_new2(void* other);
+QProcess__UnixProcessParameters* q_process__unixprocessparameters_new2(const void* other);
 #endif
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess-unixprocessparameters.html)
@@ -2626,11 +2608,11 @@ void q_process__unixprocessparameters_move_assign(void* self, void* other);
 #ifndef _WIN32
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess-unixprocessparameters.html#flags-var)
 ///
-/// @param self QProcess__UnixProcessParameters*
+/// @param self const QProcess__UnixProcessParameters*
 ///
 /// @return flag of enum QProcess__UnixProcessFlag
 ///
-uint32_t q_process__unixprocessparameters_flags(void* self);
+uint32_t q_process__unixprocessparameters_flags(const void* self);
 #endif
 
 #ifndef _WIN32
@@ -2645,9 +2627,9 @@ void q_process__unixprocessparameters_set_flags(void* self, uint32_t flags);
 #ifndef _WIN32
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess-unixprocessparameters.html#lowestFileDescriptorToClose-var)
 ///
-/// @param self QProcess__UnixProcessParameters*
+/// @param self const QProcess__UnixProcessParameters*
 ///
-int32_t q_process__unixprocessparameters_lowest_file_descriptor_to_close(void* self);
+int32_t q_process__unixprocessparameters_lowest_file_descriptor_to_close(const void* self);
 #endif
 
 #ifndef _WIN32

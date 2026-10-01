@@ -12,17 +12,21 @@
 
 /// [Upstream resources](https://api.kde.org/kio-jobuidelegatefactory.html#createDelegate)
 ///
-/// @param self KIO__JobUiDelegateFactory*
+/// @warning Use caution when calling this method as it might not be defined.
 ///
-KJobUiDelegate* k_io__jobuidelegatefactory_create_delegate(void* self);
+/// @param self const KIO__JobUiDelegateFactory*
+///
+KJobUiDelegate* k_io__jobuidelegatefactory_create_delegate(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-jobuidelegatefactory.html#createDelegate)
 ///
-/// @param self KIO__JobUiDelegateFactory*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const KIO__JobUiDelegateFactory*
 /// @param flags flag of enum KJobUiDelegate__Flag
 /// @param window QWidget*
 ///
-KJobUiDelegate* k_io__jobuidelegatefactory_create_delegate2(void* self, int32_t flags, void* window);
+KJobUiDelegate* k_io__jobuidelegatefactory_create_delegate2(const void* self, int32_t flags, void* window);
 
 /// [Upstream resources](https://api.kde.org/kio.html)
 

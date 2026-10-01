@@ -20,7 +20,7 @@ const char** k_protocolinfo_protocols();
 ///
 /// @param url QUrl*
 ///
-bool k_protocolinfo_is_known_protocol(void* url);
+bool k_protocolinfo_is_known_protocol(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kprotocolinfo.html#isKnownProtocol)
 ///
@@ -42,13 +42,13 @@ const char* k_protocolinfo_exec(const char* protocol);
 ///
 /// @return libqt_list of KProtocolInfo__ExtraField*
 ///
-libqt_list k_protocolinfo_extra_fields(void* url);
+libqt_list k_protocolinfo_extra_fields(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kprotocolinfo.html#isHelperProtocol)
 ///
 /// @param url QUrl*
 ///
-bool k_protocolinfo_is_helper_protocol(void* url);
+bool k_protocolinfo_is_helper_protocol(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kprotocolinfo.html#isHelperProtocol)
 ///
@@ -60,7 +60,7 @@ bool k_protocolinfo_is_helper_protocol2(const char* protocol);
 ///
 /// @param url QUrl*
 ///
-bool k_protocolinfo_is_filter_protocol(void* url);
+bool k_protocolinfo_is_filter_protocol(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kprotocolinfo.html#isFilterProtocol)
 ///
@@ -192,15 +192,15 @@ KProtocolInfo__ExtraField* k_protocolinfo__extrafield_new2(const char* _name, in
 ///
 /// @param param1 KProtocolInfo__ExtraField*
 ///
-KProtocolInfo__ExtraField* k_protocolinfo__extrafield_new3(void* param1);
+KProtocolInfo__ExtraField* k_protocolinfo__extrafield_new3(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kprotocolinfo-extrafield.html#name-var)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KProtocolInfo__ExtraField*
+/// @param self const KProtocolInfo__ExtraField*
 ///
-const char* k_protocolinfo__extrafield_name(void* self);
+const char* k_protocolinfo__extrafield_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kprotocolinfo-extrafield.html#name-var)
 ///
@@ -211,11 +211,11 @@ void k_protocolinfo__extrafield_set_name(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/kprotocolinfo-extrafield.html#type-var)
 ///
-/// @param self KProtocolInfo__ExtraField*
+/// @param self const KProtocolInfo__ExtraField*
 ///
 /// @return enum KProtocolInfo__ExtraField__Type
 ///
-int32_t k_protocolinfo__extrafield_type(void* self);
+int32_t k_protocolinfo__extrafield_type(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kprotocolinfo-extrafield.html#type-var)
 ///
@@ -229,7 +229,7 @@ void k_protocolinfo__extrafield_set_type(void* self, int32_t type);
 /// @param self KProtocolInfo__ExtraField*
 /// @param param1 KProtocolInfo__ExtraField*
 ///
-void k_protocolinfo__extrafield_operator_assign(void* self, void* param1);
+void k_protocolinfo__extrafield_operator_assign(void* self, const void* param1);
 
 /// Delete this object from C++ memory.
 ///

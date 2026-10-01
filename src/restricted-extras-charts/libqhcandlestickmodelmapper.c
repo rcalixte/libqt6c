@@ -14,15 +14,15 @@ QHCandlestickModelMapper* q_hcandlestickmodelmapper_new2(void* parent) {
     return QHCandlestickModelMapper_New2((QObject*)parent);
 }
 
-const QMetaObject* q_hcandlestickmodelmapper_meta_object(void* self) {
+const QMetaObject* q_hcandlestickmodelmapper_meta_object(const void* self) {
     return QHCandlestickModelMapper_MetaObject((QHCandlestickModelMapper*)self);
 }
 
-void q_hcandlestickmodelmapper_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_hcandlestickmodelmapper_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QHCandlestickModelMapper_OnMetaObject((QHCandlestickModelMapper*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_hcandlestickmodelmapper_super_meta_object(void* self) {
+const QMetaObject* q_hcandlestickmodelmapper_super_meta_object(const void* self) {
     return QHCandlestickModelMapper_SuperMetaObject((QHCandlestickModelMapper*)self);
 }
 
@@ -57,15 +57,15 @@ const char* q_hcandlestickmodelmapper_tr(const char* s) {
     return _ret;
 }
 
-int32_t q_hcandlestickmodelmapper_orientation(void* self) {
+int32_t q_hcandlestickmodelmapper_orientation(const void* self) {
     return QHCandlestickModelMapper_Orientation((QHCandlestickModelMapper*)self);
 }
 
-void q_hcandlestickmodelmapper_on_orientation(void* self, int32_t (*callback)()) {
+void q_hcandlestickmodelmapper_on_orientation(const void* self, int32_t (*callback)(const void*)) {
     QHCandlestickModelMapper_OnOrientation((QHCandlestickModelMapper*)self, (intptr_t)callback);
 }
 
-int32_t q_hcandlestickmodelmapper_super_orientation(void* self) {
+int32_t q_hcandlestickmodelmapper_super_orientation(const void* self) {
     return QHCandlestickModelMapper_SuperOrientation((QHCandlestickModelMapper*)self);
 }
 
@@ -73,7 +73,7 @@ void q_hcandlestickmodelmapper_set_timestamp_column(void* self, int timestampCol
     QHCandlestickModelMapper_SetTimestampColumn((QHCandlestickModelMapper*)self, timestampColumn);
 }
 
-int32_t q_hcandlestickmodelmapper_timestamp_column(void* self) {
+int32_t q_hcandlestickmodelmapper_timestamp_column(const void* self) {
     return QHCandlestickModelMapper_TimestampColumn((QHCandlestickModelMapper*)self);
 }
 
@@ -81,7 +81,7 @@ void q_hcandlestickmodelmapper_set_open_column(void* self, int openColumn) {
     QHCandlestickModelMapper_SetOpenColumn((QHCandlestickModelMapper*)self, openColumn);
 }
 
-int32_t q_hcandlestickmodelmapper_open_column(void* self) {
+int32_t q_hcandlestickmodelmapper_open_column(const void* self) {
     return QHCandlestickModelMapper_OpenColumn((QHCandlestickModelMapper*)self);
 }
 
@@ -89,7 +89,7 @@ void q_hcandlestickmodelmapper_set_high_column(void* self, int highColumn) {
     QHCandlestickModelMapper_SetHighColumn((QHCandlestickModelMapper*)self, highColumn);
 }
 
-int32_t q_hcandlestickmodelmapper_high_column(void* self) {
+int32_t q_hcandlestickmodelmapper_high_column(const void* self) {
     return QHCandlestickModelMapper_HighColumn((QHCandlestickModelMapper*)self);
 }
 
@@ -97,7 +97,7 @@ void q_hcandlestickmodelmapper_set_low_column(void* self, int lowColumn) {
     QHCandlestickModelMapper_SetLowColumn((QHCandlestickModelMapper*)self, lowColumn);
 }
 
-int32_t q_hcandlestickmodelmapper_low_column(void* self) {
+int32_t q_hcandlestickmodelmapper_low_column(const void* self) {
     return QHCandlestickModelMapper_LowColumn((QHCandlestickModelMapper*)self);
 }
 
@@ -105,7 +105,7 @@ void q_hcandlestickmodelmapper_set_close_column(void* self, int closeColumn) {
     QHCandlestickModelMapper_SetCloseColumn((QHCandlestickModelMapper*)self, closeColumn);
 }
 
-int32_t q_hcandlestickmodelmapper_close_column(void* self) {
+int32_t q_hcandlestickmodelmapper_close_column(const void* self) {
     return QHCandlestickModelMapper_CloseColumn((QHCandlestickModelMapper*)self);
 }
 
@@ -113,7 +113,7 @@ void q_hcandlestickmodelmapper_set_first_set_row(void* self, int firstSetRow) {
     QHCandlestickModelMapper_SetFirstSetRow((QHCandlestickModelMapper*)self, firstSetRow);
 }
 
-int32_t q_hcandlestickmodelmapper_first_set_row(void* self) {
+int32_t q_hcandlestickmodelmapper_first_set_row(const void* self) {
     return QHCandlestickModelMapper_FirstSetRow((QHCandlestickModelMapper*)self);
 }
 
@@ -121,7 +121,7 @@ void q_hcandlestickmodelmapper_set_last_set_row(void* self, int lastSetRow) {
     QHCandlestickModelMapper_SetLastSetRow((QHCandlestickModelMapper*)self, lastSetRow);
 }
 
-int32_t q_hcandlestickmodelmapper_last_set_row(void* self) {
+int32_t q_hcandlestickmodelmapper_last_set_row(const void* self) {
     return QHCandlestickModelMapper_LastSetRow((QHCandlestickModelMapper*)self);
 }
 
@@ -199,7 +199,7 @@ void q_hcandlestickmodelmapper_set_model(void* self, void* model) {
     QCandlestickModelMapper_SetModel((QCandlestickModelMapper*)self, (QAbstractItemModel*)model);
 }
 
-QAbstractItemModel* q_hcandlestickmodelmapper_model(void* self) {
+QAbstractItemModel* q_hcandlestickmodelmapper_model(const void* self) {
     return QCandlestickModelMapper_Model((QCandlestickModelMapper*)self);
 }
 
@@ -207,7 +207,7 @@ void q_hcandlestickmodelmapper_set_series(void* self, void* series) {
     QCandlestickModelMapper_SetSeries((QCandlestickModelMapper*)self, (QCandlestickSeries*)series);
 }
 
-QCandlestickSeries* q_hcandlestickmodelmapper_series(void* self) {
+QCandlestickSeries* q_hcandlestickmodelmapper_series(const void* self) {
     return QCandlestickModelMapper_Series((QCandlestickModelMapper*)self);
 }
 
@@ -227,7 +227,7 @@ void q_hcandlestickmodelmapper_on_series_replaced(void* self, void (*callback)(v
     QCandlestickModelMapper_Connect_SeriesReplaced((QCandlestickModelMapper*)self, (intptr_t)callback);
 }
 
-const char* q_hcandlestickmodelmapper_object_name(void* self) {
+const char* q_hcandlestickmodelmapper_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -238,19 +238,19 @@ void q_hcandlestickmodelmapper_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_hcandlestickmodelmapper_is_widget_type(void* self) {
+bool q_hcandlestickmodelmapper_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_hcandlestickmodelmapper_is_window_type(void* self) {
+bool q_hcandlestickmodelmapper_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_hcandlestickmodelmapper_is_quick_item_type(void* self) {
+bool q_hcandlestickmodelmapper_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_hcandlestickmodelmapper_signals_blocked(void* self) {
+bool q_hcandlestickmodelmapper_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -258,7 +258,7 @@ bool q_hcandlestickmodelmapper_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_hcandlestickmodelmapper_thread(void* self) {
+QThread* q_hcandlestickmodelmapper_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -282,7 +282,7 @@ void q_hcandlestickmodelmapper_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_hcandlestickmodelmapper_children(void* self) {
+libqt_list /* of QObject* */ q_hcandlestickmodelmapper_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -299,55 +299,55 @@ void q_hcandlestickmodelmapper_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_hcandlestickmodelmapper_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_hcandlestickmodelmapper_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_hcandlestickmodelmapper_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_hcandlestickmodelmapper_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_hcandlestickmodelmapper_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_hcandlestickmodelmapper_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_hcandlestickmodelmapper_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_hcandlestickmodelmapper_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_hcandlestickmodelmapper_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_hcandlestickmodelmapper_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_hcandlestickmodelmapper_disconnect3(void* self) {
+bool q_hcandlestickmodelmapper_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_hcandlestickmodelmapper_disconnect4(void* self, void* receiver) {
+bool q_hcandlestickmodelmapper_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_hcandlestickmodelmapper_disconnect5(void* param1) {
+bool q_hcandlestickmodelmapper_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_hcandlestickmodelmapper_dump_object_tree(void* self) {
+void q_hcandlestickmodelmapper_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_hcandlestickmodelmapper_dump_object_info(void* self) {
+void q_hcandlestickmodelmapper_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_hcandlestickmodelmapper_set_property(void* self, const char* name, void* value) {
+bool q_hcandlestickmodelmapper_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_hcandlestickmodelmapper_property(void* self, const char* name) {
+QVariant* q_hcandlestickmodelmapper_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_hcandlestickmodelmapper_dynamic_property_names(void* self) {
+const char** q_hcandlestickmodelmapper_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -368,7 +368,7 @@ QBindingStorage* q_hcandlestickmodelmapper_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_hcandlestickmodelmapper_binding_storage2(void* self) {
+const QBindingStorage* q_hcandlestickmodelmapper_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -380,11 +380,11 @@ void q_hcandlestickmodelmapper_on_destroyed(void* self, void (*callback)(void*))
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_hcandlestickmodelmapper_parent(void* self) {
+QObject* q_hcandlestickmodelmapper_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_hcandlestickmodelmapper_inherits(void* self, const char* classname) {
+bool q_hcandlestickmodelmapper_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -400,31 +400,31 @@ int32_t q_hcandlestickmodelmapper_start_timer23(void* self, int64_t time, int32_
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_hcandlestickmodelmapper_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_hcandlestickmodelmapper_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_hcandlestickmodelmapper_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_hcandlestickmodelmapper_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_hcandlestickmodelmapper_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_hcandlestickmodelmapper_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_hcandlestickmodelmapper_disconnect1(void* self, const char* signal) {
+bool q_hcandlestickmodelmapper_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_hcandlestickmodelmapper_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_hcandlestickmodelmapper_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_hcandlestickmodelmapper_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_hcandlestickmodelmapper_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_hcandlestickmodelmapper_disconnect23(void* self, void* receiver, const char* member) {
+bool q_hcandlestickmodelmapper_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -496,27 +496,27 @@ void q_hcandlestickmodelmapper_on_custom_event(void* self, void (*callback)(void
     QHCandlestickModelMapper_OnCustomEvent((QHCandlestickModelMapper*)self, (intptr_t)callback);
 }
 
-void q_hcandlestickmodelmapper_connect_notify(void* self, void* signal) {
+void q_hcandlestickmodelmapper_connect_notify(void* self, const void* signal) {
     QHCandlestickModelMapper_ConnectNotify((QHCandlestickModelMapper*)self, (QMetaMethod*)signal);
 }
 
-void q_hcandlestickmodelmapper_super_connect_notify(void* self, void* signal) {
+void q_hcandlestickmodelmapper_super_connect_notify(void* self, const void* signal) {
     QHCandlestickModelMapper_SuperConnectNotify((QHCandlestickModelMapper*)self, (QMetaMethod*)signal);
 }
 
-void q_hcandlestickmodelmapper_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_hcandlestickmodelmapper_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QHCandlestickModelMapper_OnConnectNotify((QHCandlestickModelMapper*)self, (intptr_t)callback);
 }
 
-void q_hcandlestickmodelmapper_disconnect_notify(void* self, void* signal) {
+void q_hcandlestickmodelmapper_disconnect_notify(void* self, const void* signal) {
     QHCandlestickModelMapper_DisconnectNotify((QHCandlestickModelMapper*)self, (QMetaMethod*)signal);
 }
 
-void q_hcandlestickmodelmapper_super_disconnect_notify(void* self, void* signal) {
+void q_hcandlestickmodelmapper_super_disconnect_notify(void* self, const void* signal) {
     QHCandlestickModelMapper_SuperDisconnectNotify((QHCandlestickModelMapper*)self, (QMetaMethod*)signal);
 }
 
-void q_hcandlestickmodelmapper_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_hcandlestickmodelmapper_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QHCandlestickModelMapper_OnDisconnectNotify((QHCandlestickModelMapper*)self, (intptr_t)callback);
 }
 
@@ -524,216 +524,72 @@ void q_hcandlestickmodelmapper_set_timestamp(void* self, int timestamp) {
     QHCandlestickModelMapper_SetTimestamp((QHCandlestickModelMapper*)self, timestamp);
 }
 
-void q_hcandlestickmodelmapper_super_set_timestamp(void* self, int timestamp) {
-    QHCandlestickModelMapper_SuperSetTimestamp((QHCandlestickModelMapper*)self, timestamp);
-}
-
-void q_hcandlestickmodelmapper_on_set_timestamp(void* self, void (*callback)(void*, int)) {
-    QHCandlestickModelMapper_OnSetTimestamp((QHCandlestickModelMapper*)self, (intptr_t)callback);
-}
-
-int32_t q_hcandlestickmodelmapper_timestamp(void* self) {
+int32_t q_hcandlestickmodelmapper_timestamp(const void* self) {
     return QHCandlestickModelMapper_Timestamp((QHCandlestickModelMapper*)self);
-}
-
-int32_t q_hcandlestickmodelmapper_super_timestamp(void* self) {
-    return QHCandlestickModelMapper_SuperTimestamp((QHCandlestickModelMapper*)self);
-}
-
-void q_hcandlestickmodelmapper_on_timestamp(void* self, int32_t (*callback)()) {
-    QHCandlestickModelMapper_OnTimestamp((QHCandlestickModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hcandlestickmodelmapper_set_open(void* self, int open) {
     QHCandlestickModelMapper_SetOpen((QHCandlestickModelMapper*)self, open);
 }
 
-void q_hcandlestickmodelmapper_super_set_open(void* self, int open) {
-    QHCandlestickModelMapper_SuperSetOpen((QHCandlestickModelMapper*)self, open);
-}
-
-void q_hcandlestickmodelmapper_on_set_open(void* self, void (*callback)(void*, int)) {
-    QHCandlestickModelMapper_OnSetOpen((QHCandlestickModelMapper*)self, (intptr_t)callback);
-}
-
-int32_t q_hcandlestickmodelmapper_open(void* self) {
+int32_t q_hcandlestickmodelmapper_open(const void* self) {
     return QHCandlestickModelMapper_Open((QHCandlestickModelMapper*)self);
-}
-
-int32_t q_hcandlestickmodelmapper_super_open(void* self) {
-    return QHCandlestickModelMapper_SuperOpen((QHCandlestickModelMapper*)self);
-}
-
-void q_hcandlestickmodelmapper_on_open(void* self, int32_t (*callback)()) {
-    QHCandlestickModelMapper_OnOpen((QHCandlestickModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hcandlestickmodelmapper_set_high(void* self, int high) {
     QHCandlestickModelMapper_SetHigh((QHCandlestickModelMapper*)self, high);
 }
 
-void q_hcandlestickmodelmapper_super_set_high(void* self, int high) {
-    QHCandlestickModelMapper_SuperSetHigh((QHCandlestickModelMapper*)self, high);
-}
-
-void q_hcandlestickmodelmapper_on_set_high(void* self, void (*callback)(void*, int)) {
-    QHCandlestickModelMapper_OnSetHigh((QHCandlestickModelMapper*)self, (intptr_t)callback);
-}
-
-int32_t q_hcandlestickmodelmapper_high(void* self) {
+int32_t q_hcandlestickmodelmapper_high(const void* self) {
     return QHCandlestickModelMapper_High((QHCandlestickModelMapper*)self);
-}
-
-int32_t q_hcandlestickmodelmapper_super_high(void* self) {
-    return QHCandlestickModelMapper_SuperHigh((QHCandlestickModelMapper*)self);
-}
-
-void q_hcandlestickmodelmapper_on_high(void* self, int32_t (*callback)()) {
-    QHCandlestickModelMapper_OnHigh((QHCandlestickModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hcandlestickmodelmapper_set_low(void* self, int low) {
     QHCandlestickModelMapper_SetLow((QHCandlestickModelMapper*)self, low);
 }
 
-void q_hcandlestickmodelmapper_super_set_low(void* self, int low) {
-    QHCandlestickModelMapper_SuperSetLow((QHCandlestickModelMapper*)self, low);
-}
-
-void q_hcandlestickmodelmapper_on_set_low(void* self, void (*callback)(void*, int)) {
-    QHCandlestickModelMapper_OnSetLow((QHCandlestickModelMapper*)self, (intptr_t)callback);
-}
-
-int32_t q_hcandlestickmodelmapper_low(void* self) {
+int32_t q_hcandlestickmodelmapper_low(const void* self) {
     return QHCandlestickModelMapper_Low((QHCandlestickModelMapper*)self);
-}
-
-int32_t q_hcandlestickmodelmapper_super_low(void* self) {
-    return QHCandlestickModelMapper_SuperLow((QHCandlestickModelMapper*)self);
-}
-
-void q_hcandlestickmodelmapper_on_low(void* self, int32_t (*callback)()) {
-    QHCandlestickModelMapper_OnLow((QHCandlestickModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hcandlestickmodelmapper_set_close(void* self, int close) {
     QHCandlestickModelMapper_SetClose((QHCandlestickModelMapper*)self, close);
 }
 
-void q_hcandlestickmodelmapper_super_set_close(void* self, int close) {
-    QHCandlestickModelMapper_SuperSetClose((QHCandlestickModelMapper*)self, close);
-}
-
-void q_hcandlestickmodelmapper_on_set_close(void* self, void (*callback)(void*, int)) {
-    QHCandlestickModelMapper_OnSetClose((QHCandlestickModelMapper*)self, (intptr_t)callback);
-}
-
-int32_t q_hcandlestickmodelmapper_close(void* self) {
+int32_t q_hcandlestickmodelmapper_close(const void* self) {
     return QHCandlestickModelMapper_Close((QHCandlestickModelMapper*)self);
-}
-
-int32_t q_hcandlestickmodelmapper_super_close(void* self) {
-    return QHCandlestickModelMapper_SuperClose((QHCandlestickModelMapper*)self);
-}
-
-void q_hcandlestickmodelmapper_on_close(void* self, int32_t (*callback)()) {
-    QHCandlestickModelMapper_OnClose((QHCandlestickModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hcandlestickmodelmapper_set_first_set_section(void* self, int firstSetSection) {
     QHCandlestickModelMapper_SetFirstSetSection((QHCandlestickModelMapper*)self, firstSetSection);
 }
 
-void q_hcandlestickmodelmapper_super_set_first_set_section(void* self, int firstSetSection) {
-    QHCandlestickModelMapper_SuperSetFirstSetSection((QHCandlestickModelMapper*)self, firstSetSection);
-}
-
-void q_hcandlestickmodelmapper_on_set_first_set_section(void* self, void (*callback)(void*, int)) {
-    QHCandlestickModelMapper_OnSetFirstSetSection((QHCandlestickModelMapper*)self, (intptr_t)callback);
-}
-
-int32_t q_hcandlestickmodelmapper_first_set_section(void* self) {
+int32_t q_hcandlestickmodelmapper_first_set_section(const void* self) {
     return QHCandlestickModelMapper_FirstSetSection((QHCandlestickModelMapper*)self);
-}
-
-int32_t q_hcandlestickmodelmapper_super_first_set_section(void* self) {
-    return QHCandlestickModelMapper_SuperFirstSetSection((QHCandlestickModelMapper*)self);
-}
-
-void q_hcandlestickmodelmapper_on_first_set_section(void* self, int32_t (*callback)()) {
-    QHCandlestickModelMapper_OnFirstSetSection((QHCandlestickModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hcandlestickmodelmapper_set_last_set_section(void* self, int lastSetSection) {
     QHCandlestickModelMapper_SetLastSetSection((QHCandlestickModelMapper*)self, lastSetSection);
 }
 
-void q_hcandlestickmodelmapper_super_set_last_set_section(void* self, int lastSetSection) {
-    QHCandlestickModelMapper_SuperSetLastSetSection((QHCandlestickModelMapper*)self, lastSetSection);
-}
-
-void q_hcandlestickmodelmapper_on_set_last_set_section(void* self, void (*callback)(void*, int)) {
-    QHCandlestickModelMapper_OnSetLastSetSection((QHCandlestickModelMapper*)self, (intptr_t)callback);
-}
-
-int32_t q_hcandlestickmodelmapper_last_set_section(void* self) {
+int32_t q_hcandlestickmodelmapper_last_set_section(const void* self) {
     return QHCandlestickModelMapper_LastSetSection((QHCandlestickModelMapper*)self);
 }
 
-int32_t q_hcandlestickmodelmapper_super_last_set_section(void* self) {
-    return QHCandlestickModelMapper_SuperLastSetSection((QHCandlestickModelMapper*)self);
-}
-
-void q_hcandlestickmodelmapper_on_last_set_section(void* self, int32_t (*callback)()) {
-    QHCandlestickModelMapper_OnLastSetSection((QHCandlestickModelMapper*)self, (intptr_t)callback);
-}
-
-QObject* q_hcandlestickmodelmapper_sender(void* self) {
+QObject* q_hcandlestickmodelmapper_sender(const void* self) {
     return QHCandlestickModelMapper_Sender((QHCandlestickModelMapper*)self);
 }
 
-QObject* q_hcandlestickmodelmapper_super_sender(void* self) {
-    return QHCandlestickModelMapper_SuperSender((QHCandlestickModelMapper*)self);
-}
-
-void q_hcandlestickmodelmapper_on_sender(void* self, QObject* (*callback)()) {
-    QHCandlestickModelMapper_OnSender((QHCandlestickModelMapper*)self, (intptr_t)callback);
-}
-
-int32_t q_hcandlestickmodelmapper_sender_signal_index(void* self) {
+int32_t q_hcandlestickmodelmapper_sender_signal_index(const void* self) {
     return QHCandlestickModelMapper_SenderSignalIndex((QHCandlestickModelMapper*)self);
 }
 
-int32_t q_hcandlestickmodelmapper_super_sender_signal_index(void* self) {
-    return QHCandlestickModelMapper_SuperSenderSignalIndex((QHCandlestickModelMapper*)self);
-}
-
-void q_hcandlestickmodelmapper_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QHCandlestickModelMapper_OnSenderSignalIndex((QHCandlestickModelMapper*)self, (intptr_t)callback);
-}
-
-int32_t q_hcandlestickmodelmapper_receivers(void* self, const char* signal) {
+int32_t q_hcandlestickmodelmapper_receivers(const void* self, const char* signal) {
     return QHCandlestickModelMapper_Receivers((QHCandlestickModelMapper*)self, signal);
 }
 
-int32_t q_hcandlestickmodelmapper_super_receivers(void* self, const char* signal) {
-    return QHCandlestickModelMapper_SuperReceivers((QHCandlestickModelMapper*)self, signal);
-}
-
-void q_hcandlestickmodelmapper_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QHCandlestickModelMapper_OnReceivers((QHCandlestickModelMapper*)self, (intptr_t)callback);
-}
-
-bool q_hcandlestickmodelmapper_is_signal_connected(void* self, void* signal) {
+bool q_hcandlestickmodelmapper_is_signal_connected(const void* self, const void* signal) {
     return QHCandlestickModelMapper_IsSignalConnected((QHCandlestickModelMapper*)self, (QMetaMethod*)signal);
-}
-
-bool q_hcandlestickmodelmapper_super_is_signal_connected(void* self, void* signal) {
-    return QHCandlestickModelMapper_SuperIsSignalConnected((QHCandlestickModelMapper*)self, (QMetaMethod*)signal);
-}
-
-void q_hcandlestickmodelmapper_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QHCandlestickModelMapper_OnIsSignalConnected((QHCandlestickModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hcandlestickmodelmapper_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

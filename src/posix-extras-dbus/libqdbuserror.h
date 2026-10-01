@@ -28,7 +28,7 @@ QDBusError* q_dbuserror_new2(void* error);
 ///
 /// @param msg QDBusMessage*
 ///
-QDBusError* q_dbuserror_new3(void* msg);
+QDBusError* q_dbuserror_new3(const void* msg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html)
 
@@ -45,21 +45,21 @@ QDBusError* q_dbuserror_new4(int32_t error, const char* message);
 ///
 /// @param other QDBusError*
 ///
-QDBusError* q_dbuserror_new5(void* other);
+QDBusError* q_dbuserror_new5(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#operator-eq)
 ///
 /// @param self QDBusError*
 /// @param other QDBusError*
 ///
-void q_dbuserror_operator_assign(void* self, void* other);
+void q_dbuserror_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#operator-eq)
 ///
 /// @param self QDBusError*
 /// @param msg QDBusMessage*
 ///
-void q_dbuserror_operator_assign2(void* self, void* msg);
+void q_dbuserror_operator_assign2(void* self, const void* msg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#swap)
 ///
@@ -70,33 +70,33 @@ void q_dbuserror_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#type)
 ///
-/// @param self QDBusError*
+/// @param self const QDBusError*
 ///
 /// @return enum QDBusError__ErrorType
 ///
-int32_t q_dbuserror_type(void* self);
+int32_t q_dbuserror_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDBusError*
+/// @param self const QDBusError*
 ///
-const char* q_dbuserror_name(void* self);
+const char* q_dbuserror_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#message)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDBusError*
+/// @param self const QDBusError*
 ///
-const char* q_dbuserror_message(void* self);
+const char* q_dbuserror_message(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#isValid)
 ///
-/// @param self QDBusError*
+/// @param self const QDBusError*
 ///
-bool q_dbuserror_is_valid(void* self);
+bool q_dbuserror_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#errorString)
 ///

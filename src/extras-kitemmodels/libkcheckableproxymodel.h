@@ -24,26 +24,26 @@ KCheckableProxyModel* k_checkableproxymodel_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
-const QMetaObject* k_checkableproxymodel_meta_object(void* self);
+const QMetaObject* k_checkableproxymodel_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCheckableProxyModel*
-/// @param callback const QMetaObject* func()
+/// @param self const KCheckableProxyModel*
+/// @param callback const QMetaObject* func(const KCheckableProxyModel* self)
 ///
-void k_checkableproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_checkableproxymodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
-const QMetaObject* k_checkableproxymodel_super_meta_object(void* self);
+const QMetaObject* k_checkableproxymodel_super_meta_object(const void* self);
 
 /// @param self KCheckableProxyModel*
 /// @param param1 const char*
@@ -104,67 +104,67 @@ void k_checkableproxymodel_set_selection_model(void* self, void* itemSelectionMo
 
 /// [Upstream resources](https://api.kde.org/kcheckableproxymodel.html#selectionModel)
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
-QItemSelectionModel* k_checkableproxymodel_selection_model(void* self);
+QItemSelectionModel* k_checkableproxymodel_selection_model(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcheckableproxymodel.html#flags)
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
 ///
-int32_t k_checkableproxymodel_flags(void* self, void* index);
+int32_t k_checkableproxymodel_flags(const void* self, const void* index);
 
 /// [Upstream resources](https://api.kde.org/kcheckableproxymodel.html#flags)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCheckableProxyModel*
-/// @param callback int32_t func(KCheckableProxyModel* self, QModelIndex* index)
+/// @param self const KCheckableProxyModel*
+/// @param callback int32_t func(const KCheckableProxyModel* self, QModelIndex* index)
 ///
-void k_checkableproxymodel_on_flags(void* self, int32_t (*callback)(void*, void*));
+void k_checkableproxymodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcheckableproxymodel.html#flags)
 ///
 /// Base class method implementation
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
 ///
-int32_t k_checkableproxymodel_super_flags(void* self, void* index);
+int32_t k_checkableproxymodel_super_flags(const void* self, const void* index);
 
 /// [Upstream resources](https://api.kde.org/kcheckableproxymodel.html#data)
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param index QModelIndex*
 /// @param role int
 ///
-QVariant* k_checkableproxymodel_data(void* self, void* index, int role);
+QVariant* k_checkableproxymodel_data(const void* self, const void* index, int role);
 
 /// [Upstream resources](https://api.kde.org/kcheckableproxymodel.html#data)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCheckableProxyModel*
-/// @param callback QVariant* func(KCheckableProxyModel* self, QModelIndex* index, int role)
+/// @param self const KCheckableProxyModel*
+/// @param callback QVariant* func(const KCheckableProxyModel* self, QModelIndex* index, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_checkableproxymodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
+void k_checkableproxymodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int));
 
 /// [Upstream resources](https://api.kde.org/kcheckableproxymodel.html#data)
 ///
 /// Base class method implementation
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param index QModelIndex*
 /// @param role int
 ///
-QVariant* k_checkableproxymodel_super_data(void* self, void* index, int role);
+QVariant* k_checkableproxymodel_super_data(const void* self, const void* index, int role);
 
 /// [Upstream resources](https://api.kde.org/kcheckableproxymodel.html#setData)
 ///
@@ -173,7 +173,7 @@ QVariant* k_checkableproxymodel_super_data(void* self, void* index, int role);
 /// @param value QVariant*
 /// @param role int
 ///
-bool k_checkableproxymodel_set_data(void* self, void* index, void* value, int role);
+bool k_checkableproxymodel_set_data(void* self, const void* index, const void* value, int role);
 
 /// [Upstream resources](https://api.kde.org/kcheckableproxymodel.html#setData)
 ///
@@ -182,7 +182,7 @@ bool k_checkableproxymodel_set_data(void* self, void* index, void* value, int ro
 /// @param self KCheckableProxyModel*
 /// @param callback bool func(KCheckableProxyModel* self, QModelIndex* index, QVariant* value, int role)
 ///
-void k_checkableproxymodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int));
+void k_checkableproxymodel_on_set_data(void* self, bool (*callback)(void*, const void*, const void*, int));
 
 /// [Upstream resources](https://api.kde.org/kcheckableproxymodel.html#setData)
 ///
@@ -193,7 +193,7 @@ void k_checkableproxymodel_on_set_data(void* self, bool (*callback)(void*, void*
 /// @param value QVariant*
 /// @param role int
 ///
-bool k_checkableproxymodel_super_set_data(void* self, void* index, void* value, int role);
+bool k_checkableproxymodel_super_set_data(void* self, const void* index, const void* value, int role);
 
 /// [Upstream resources](https://api.kde.org/kcheckableproxymodel.html#setSourceModel)
 ///
@@ -233,30 +233,30 @@ void k_checkableproxymodel_super_set_source_model(void* self, void* sourceModel)
 /// free(map.values);
 /// ```
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
 /// @return libqt_map of int to char*
 ///
-libqt_map k_checkableproxymodel_role_names(void* self);
+libqt_map k_checkableproxymodel_role_names(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcheckableproxymodel.html#roleNames)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KCheckableProxyModel*
-/// @param callback libqt_map of int to char* func()
+/// @param self const KCheckableProxyModel*
+/// @param callback libqt_map of int to char* func(const KCheckableProxyModel* self)
 ///
-void k_checkableproxymodel_on_role_names(void* self, libqt_map (*callback)());
+void k_checkableproxymodel_on_role_names(const void* self, libqt_map (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcheckableproxymodel.html#roleNames)
 ///
 /// Base class method implementation
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
 /// @return libqt_map of int to char*
 ///
-libqt_map k_checkableproxymodel_super_role_names(void* self);
+libqt_map k_checkableproxymodel_super_role_names(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcheckableproxymodel.html#select)
 ///
@@ -264,7 +264,7 @@ libqt_map k_checkableproxymodel_super_role_names(void* self);
 /// @param selection QItemSelection*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
 ///
-bool k_checkableproxymodel_select(void* self, void* selection, int32_t command);
+bool k_checkableproxymodel_select(void* self, const void* selection, int32_t command);
 
 /// [Upstream resources](https://api.kde.org/kcheckableproxymodel.html#select)
 ///
@@ -273,7 +273,7 @@ bool k_checkableproxymodel_select(void* self, void* selection, int32_t command);
 /// @param self KCheckableProxyModel*
 /// @param callback bool func(KCheckableProxyModel* self, QItemSelection* selection, flag of enum QItemSelectionModel__SelectionFlag command)
 ///
-void k_checkableproxymodel_on_select(void* self, bool (*callback)(void*, void*, int32_t));
+void k_checkableproxymodel_on_select(void* self, bool (*callback)(void*, const void*, int32_t));
 
 /// [Upstream resources](https://api.kde.org/kcheckableproxymodel.html#select)
 ///
@@ -283,7 +283,7 @@ void k_checkableproxymodel_on_select(void* self, bool (*callback)(void*, void*, 
 /// @param selection QItemSelection*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
 ///
-bool k_checkableproxymodel_super_select(void* self, void* selection, int32_t command);
+bool k_checkableproxymodel_super_select(void* self, const void* selection, int32_t command);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -308,35 +308,35 @@ const char* k_checkableproxymodel_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#handleSourceLayoutChanges)
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
-bool k_checkableproxymodel_handle_source_layout_changes(void* self);
+bool k_checkableproxymodel_handle_source_layout_changes(const void* self);
 
 /// Inherited from QIdentityProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#handleSourceDataChanges)
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
-bool k_checkableproxymodel_handle_source_data_changes(void* self);
+bool k_checkableproxymodel_handle_source_data_changes(const void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#sourceModel)
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
-QAbstractItemModel* k_checkableproxymodel_source_model(void* self);
+QAbstractItemModel* k_checkableproxymodel_source_model(const void* self);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param row int
 /// @param column int
 ///
-bool k_checkableproxymodel_has_index(void* self, int row, int column);
+bool k_checkableproxymodel_has_index(const void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -384,7 +384,7 @@ bool k_checkableproxymodel_remove_column(void* self, int column);
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool k_checkableproxymodel_move_row(void* self, void* sourceParent, int sourceRow, void* destinationParent, int destinationChild);
+bool k_checkableproxymodel_move_row(void* self, const void* sourceParent, int sourceRow, const void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -396,16 +396,16 @@ bool k_checkableproxymodel_move_row(void* self, void* sourceParent, int sourceRo
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool k_checkableproxymodel_move_column(void* self, void* sourceParent, int sourceColumn, void* destinationParent, int destinationChild);
+bool k_checkableproxymodel_move_column(void* self, const void* sourceParent, int sourceColumn, const void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param index QModelIndex*
 ///
-bool k_checkableproxymodel_check_index(void* self, void* index);
+bool k_checkableproxymodel_check_index(const void* self, const void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -415,7 +415,7 @@ bool k_checkableproxymodel_check_index(void* self, void* index);
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
 ///
-void k_checkableproxymodel_data_changed(void* self, void* topLeft, void* bottomRight);
+void k_checkableproxymodel_data_changed(void* self, const void* topLeft, const void* bottomRight);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -424,7 +424,7 @@ void k_checkableproxymodel_data_changed(void* self, void* topLeft, void* bottomR
 /// @param self KCheckableProxyModel*
 /// @param callback void func(KCheckableProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight)
 ///
-void k_checkableproxymodel_on_data_changed(void* self, void (*callback)(void*, void*, void*));
+void k_checkableproxymodel_on_data_changed(void* self, void (*callback)(void*, const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -484,12 +484,12 @@ void k_checkableproxymodel_on_layout_about_to_be_changed(void* self, void (*call
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool k_checkableproxymodel_has_index3(void* self, int row, int column, void* parent);
+bool k_checkableproxymodel_has_index3(const void* self, int row, int column, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -499,7 +499,7 @@ bool k_checkableproxymodel_has_index3(void* self, int row, int column, void* par
 /// @param row int
 /// @param parent QModelIndex*
 ///
-bool k_checkableproxymodel_insert_row2(void* self, int row, void* parent);
+bool k_checkableproxymodel_insert_row2(void* self, int row, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -509,7 +509,7 @@ bool k_checkableproxymodel_insert_row2(void* self, int row, void* parent);
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool k_checkableproxymodel_insert_column2(void* self, int column, void* parent);
+bool k_checkableproxymodel_insert_column2(void* self, int column, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -519,7 +519,7 @@ bool k_checkableproxymodel_insert_column2(void* self, int column, void* parent);
 /// @param row int
 /// @param parent QModelIndex*
 ///
-bool k_checkableproxymodel_remove_row2(void* self, int row, void* parent);
+bool k_checkableproxymodel_remove_row2(void* self, int row, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -529,17 +529,17 @@ bool k_checkableproxymodel_remove_row2(void* self, int row, void* parent);
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool k_checkableproxymodel_remove_column2(void* self, int column, void* parent);
+bool k_checkableproxymodel_remove_column2(void* self, int column, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param index QModelIndex*
 /// @param options flag of enum QAbstractItemModel__CheckIndexOption
 ///
-bool k_checkableproxymodel_check_index2(void* self, void* index, int32_t options);
+bool k_checkableproxymodel_check_index2(const void* self, const void* index, int32_t options);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -550,7 +550,7 @@ bool k_checkableproxymodel_check_index2(void* self, void* index, int32_t options
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void k_checkableproxymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
+void k_checkableproxymodel_data_changed3(void* self, const void* topLeft, const void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -559,7 +559,7 @@ void k_checkableproxymodel_data_changed3(void* self, void* topLeft, void* bottom
 /// @param self KCheckableProxyModel*
 /// @param callback void func(KCheckableProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list of int roles)
 ///
-void k_checkableproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list));
+void k_checkableproxymodel_on_data_changed3(void* self, void (*callback)(void*, const void*, const void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -641,9 +641,9 @@ void k_checkableproxymodel_on_layout_about_to_be_changed2(void* self, void (*cal
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
-const char* k_checkableproxymodel_object_name(void* self);
+const char* k_checkableproxymodel_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -658,33 +658,33 @@ void k_checkableproxymodel_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
-bool k_checkableproxymodel_is_widget_type(void* self);
+bool k_checkableproxymodel_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
-bool k_checkableproxymodel_is_window_type(void* self);
+bool k_checkableproxymodel_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
-bool k_checkableproxymodel_is_quick_item_type(void* self);
+bool k_checkableproxymodel_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
-bool k_checkableproxymodel_signals_blocked(void* self);
+bool k_checkableproxymodel_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -699,9 +699,9 @@ bool k_checkableproxymodel_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
-QThread* k_checkableproxymodel_thread(void* self);
+QThread* k_checkableproxymodel_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -752,11 +752,11 @@ void k_checkableproxymodel_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_checkableproxymodel_children(void* self);
+libqt_list k_checkableproxymodel_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -794,7 +794,7 @@ void k_checkableproxymodel_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_checkableproxymodel_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_checkableproxymodel_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -805,18 +805,18 @@ QMetaObject__Connection* k_checkableproxymodel_connect(void* sender, const char*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_checkableproxymodel_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_checkableproxymodel_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_checkableproxymodel_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_checkableproxymodel_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -827,7 +827,7 @@ QMetaObject__Connection* k_checkableproxymodel_connect3(void* self, void* sender
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_checkableproxymodel_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_checkableproxymodel_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -838,24 +838,24 @@ bool k_checkableproxymodel_disconnect(void* sender, const char* signal, void* re
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_checkableproxymodel_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_checkableproxymodel_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
-bool k_checkableproxymodel_disconnect3(void* self);
+bool k_checkableproxymodel_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param receiver QObject*
 ///
-bool k_checkableproxymodel_disconnect4(void* self, void* receiver);
+bool k_checkableproxymodel_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -863,23 +863,23 @@ bool k_checkableproxymodel_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_checkableproxymodel_disconnect5(void* param1);
+bool k_checkableproxymodel_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
-void k_checkableproxymodel_dump_object_tree(void* self);
+void k_checkableproxymodel_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
-void k_checkableproxymodel_dump_object_info(void* self);
+void k_checkableproxymodel_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -889,16 +889,16 @@ void k_checkableproxymodel_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_checkableproxymodel_set_property(void* self, const char* name, void* value);
+bool k_checkableproxymodel_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param name const char*
 ///
-QVariant* k_checkableproxymodel_property(void* self, const char* name);
+QVariant* k_checkableproxymodel_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -906,9 +906,9 @@ QVariant* k_checkableproxymodel_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
-const char** k_checkableproxymodel_dynamic_property_names(void* self);
+const char** k_checkableproxymodel_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -922,9 +922,9 @@ QBindingStorage* k_checkableproxymodel_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
-const QBindingStorage* k_checkableproxymodel_binding_storage2(void* self);
+const QBindingStorage* k_checkableproxymodel_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -947,10 +947,10 @@ void k_checkableproxymodel_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param classname const char*
 ///
-bool k_checkableproxymodel_inherits(void* self, const char* classname);
+bool k_checkableproxymodel_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -990,7 +990,7 @@ int32_t k_checkableproxymodel_start_timer23(void* self, int64_t time, int32_t ti
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_checkableproxymodel_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_checkableproxymodel_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1002,59 +1002,59 @@ QMetaObject__Connection* k_checkableproxymodel_connect5(void* sender, const char
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_checkableproxymodel_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_checkableproxymodel_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_checkableproxymodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_checkableproxymodel_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param signal const char*
 ///
-bool k_checkableproxymodel_disconnect1(void* self, const char* signal);
+bool k_checkableproxymodel_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KCheckableProxyModel*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_checkableproxymodel_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_checkableproxymodel_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_checkableproxymodel_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_checkableproxymodel_disconnect23(void* self, void* receiver, const char* member);
+bool k_checkableproxymodel_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KCheckableProxyModel*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_checkableproxymodel_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1080,10 +1080,10 @@ void k_checkableproxymodel_on_destroyed1(void* self, void (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param parent QModelIndex*
 ///
-int32_t k_checkableproxymodel_column_count(void* self, void* parent);
+int32_t k_checkableproxymodel_column_count(const void* self, const void* parent);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1091,10 +1091,10 @@ int32_t k_checkableproxymodel_column_count(void* self, void* parent);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param parent QModelIndex*
 ///
-int32_t k_checkableproxymodel_super_column_count(void* self, void* parent);
+int32_t k_checkableproxymodel_super_column_count(const void* self, const void* parent);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1102,10 +1102,10 @@ int32_t k_checkableproxymodel_super_column_count(void* self, void* parent);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param callback int32_t func(KCheckableProxyModel* self, QModelIndex* parent)
 ///
-void k_checkableproxymodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
+void k_checkableproxymodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1113,12 +1113,12 @@ void k_checkableproxymodel_on_column_count(void* self, int32_t (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
 ///
-QModelIndex* k_checkableproxymodel_index(void* self, int row, int column, void* parent);
+QModelIndex* k_checkableproxymodel_index(const void* self, int row, int column, const void* parent);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1126,12 +1126,12 @@ QModelIndex* k_checkableproxymodel_index(void* self, int row, int column, void* 
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
 ///
-QModelIndex* k_checkableproxymodel_super_index(void* self, int row, int column, void* parent);
+QModelIndex* k_checkableproxymodel_super_index(const void* self, int row, int column, const void* parent);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1139,12 +1139,12 @@ QModelIndex* k_checkableproxymodel_super_index(void* self, int row, int column, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param callback QModelIndex* func(KCheckableProxyModel* self, int row, int column, QModelIndex* parent)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_checkableproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
+void k_checkableproxymodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1152,10 +1152,10 @@ void k_checkableproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param sourceIndex QModelIndex*
 ///
-QModelIndex* k_checkableproxymodel_map_from_source(void* self, void* sourceIndex);
+QModelIndex* k_checkableproxymodel_map_from_source(const void* self, const void* sourceIndex);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1163,10 +1163,10 @@ QModelIndex* k_checkableproxymodel_map_from_source(void* self, void* sourceIndex
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param sourceIndex QModelIndex*
 ///
-QModelIndex* k_checkableproxymodel_super_map_from_source(void* self, void* sourceIndex);
+QModelIndex* k_checkableproxymodel_super_map_from_source(const void* self, const void* sourceIndex);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1174,12 +1174,12 @@ QModelIndex* k_checkableproxymodel_super_map_from_source(void* self, void* sourc
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param callback QModelIndex* func(KCheckableProxyModel* self, QModelIndex* sourceIndex)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_checkableproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(void*, void*));
+void k_checkableproxymodel_on_map_from_source(const void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1187,10 +1187,10 @@ void k_checkableproxymodel_on_map_from_source(void* self, QModelIndex* (*callbac
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param proxyIndex QModelIndex*
 ///
-QModelIndex* k_checkableproxymodel_map_to_source(void* self, void* proxyIndex);
+QModelIndex* k_checkableproxymodel_map_to_source(const void* self, const void* proxyIndex);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1198,10 +1198,10 @@ QModelIndex* k_checkableproxymodel_map_to_source(void* self, void* proxyIndex);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param proxyIndex QModelIndex*
 ///
-QModelIndex* k_checkableproxymodel_super_map_to_source(void* self, void* proxyIndex);
+QModelIndex* k_checkableproxymodel_super_map_to_source(const void* self, const void* proxyIndex);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1209,12 +1209,12 @@ QModelIndex* k_checkableproxymodel_super_map_to_source(void* self, void* proxyIn
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param callback QModelIndex* func(KCheckableProxyModel* self, QModelIndex* proxyIndex)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_checkableproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(void*, void*));
+void k_checkableproxymodel_on_map_to_source(const void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1222,10 +1222,10 @@ void k_checkableproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param child QModelIndex*
 ///
-QModelIndex* k_checkableproxymodel_parent(void* self, void* child);
+QModelIndex* k_checkableproxymodel_parent(const void* self, const void* child);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1233,10 +1233,10 @@ QModelIndex* k_checkableproxymodel_parent(void* self, void* child);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param child QModelIndex*
 ///
-QModelIndex* k_checkableproxymodel_super_parent(void* self, void* child);
+QModelIndex* k_checkableproxymodel_super_parent(const void* self, const void* child);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1244,12 +1244,12 @@ QModelIndex* k_checkableproxymodel_super_parent(void* self, void* child);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param callback QModelIndex* func(KCheckableProxyModel* self, QModelIndex* child)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_checkableproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
+void k_checkableproxymodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1257,10 +1257,10 @@ void k_checkableproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param parent QModelIndex*
 ///
-int32_t k_checkableproxymodel_row_count(void* self, void* parent);
+int32_t k_checkableproxymodel_row_count(const void* self, const void* parent);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1268,10 +1268,10 @@ int32_t k_checkableproxymodel_row_count(void* self, void* parent);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param parent QModelIndex*
 ///
-int32_t k_checkableproxymodel_super_row_count(void* self, void* parent);
+int32_t k_checkableproxymodel_super_row_count(const void* self, const void* parent);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1279,10 +1279,10 @@ int32_t k_checkableproxymodel_super_row_count(void* self, void* parent);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param callback int32_t func(KCheckableProxyModel* self, QModelIndex* parent)
 ///
-void k_checkableproxymodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
+void k_checkableproxymodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1290,12 +1290,12 @@ void k_checkableproxymodel_on_row_count(void* self, int32_t (*callback)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
 ///
-QVariant* k_checkableproxymodel_header_data(void* self, int section, int32_t orientation, int role);
+QVariant* k_checkableproxymodel_header_data(const void* self, int section, int32_t orientation, int role);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1303,12 +1303,12 @@ QVariant* k_checkableproxymodel_header_data(void* self, int section, int32_t ori
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
 ///
-QVariant* k_checkableproxymodel_super_header_data(void* self, int section, int32_t orientation, int role);
+QVariant* k_checkableproxymodel_super_header_data(const void* self, int section, int32_t orientation, int role);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1316,12 +1316,12 @@ QVariant* k_checkableproxymodel_super_header_data(void* self, int section, int32
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param callback QVariant* func(KCheckableProxyModel* self, int section, enum Qt__Orientation orientation, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_checkableproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
+void k_checkableproxymodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int));
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1336,7 +1336,7 @@ void k_checkableproxymodel_on_header_data(void* self, QVariant* (*callback)(void
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool k_checkableproxymodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
+bool k_checkableproxymodel_drop_mime_data(void* self, const void* data, int32_t action, int row, int column, const void* parent);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1351,7 +1351,7 @@ bool k_checkableproxymodel_drop_mime_data(void* self, void* data, int32_t action
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool k_checkableproxymodel_super_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
+bool k_checkableproxymodel_super_drop_mime_data(void* self, const void* data, int32_t action, int row, int column, const void* parent);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1362,7 +1362,7 @@ bool k_checkableproxymodel_super_drop_mime_data(void* self, void* data, int32_t 
 /// @param self KCheckableProxyModel*
 /// @param callback bool func(KCheckableProxyModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 ///
-void k_checkableproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
+void k_checkableproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*, const void*, int32_t, int, int, const void*));
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1370,12 +1370,12 @@ void k_checkableproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param row int
 /// @param column int
 /// @param idx QModelIndex*
 ///
-QModelIndex* k_checkableproxymodel_sibling(void* self, int row, int column, void* idx);
+QModelIndex* k_checkableproxymodel_sibling(const void* self, int row, int column, const void* idx);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1383,12 +1383,12 @@ QModelIndex* k_checkableproxymodel_sibling(void* self, int row, int column, void
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param row int
 /// @param column int
 /// @param idx QModelIndex*
 ///
-QModelIndex* k_checkableproxymodel_super_sibling(void* self, int row, int column, void* idx);
+QModelIndex* k_checkableproxymodel_super_sibling(const void* self, int row, int column, const void* idx);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1396,12 +1396,12 @@ QModelIndex* k_checkableproxymodel_super_sibling(void* self, int row, int column
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param callback QModelIndex* func(KCheckableProxyModel* self, int row, int column, QModelIndex* idx)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_checkableproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
+void k_checkableproxymodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1409,10 +1409,10 @@ void k_checkableproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param selection QItemSelection*
 ///
-QItemSelection* k_checkableproxymodel_map_selection_from_source(void* self, void* selection);
+QItemSelection* k_checkableproxymodel_map_selection_from_source(const void* self, const void* selection);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1420,10 +1420,10 @@ QItemSelection* k_checkableproxymodel_map_selection_from_source(void* self, void
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param selection QItemSelection*
 ///
-QItemSelection* k_checkableproxymodel_super_map_selection_from_source(void* self, void* selection);
+QItemSelection* k_checkableproxymodel_super_map_selection_from_source(const void* self, const void* selection);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1431,12 +1431,12 @@ QItemSelection* k_checkableproxymodel_super_map_selection_from_source(void* self
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param callback QItemSelection* func(KCheckableProxyModel* self, QItemSelection* selection)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_checkableproxymodel_on_map_selection_from_source(void* self, QItemSelection* (*callback)(void*, void*));
+void k_checkableproxymodel_on_map_selection_from_source(const void* self, QItemSelection* (*callback)(const void*, const void*));
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1444,10 +1444,10 @@ void k_checkableproxymodel_on_map_selection_from_source(void* self, QItemSelecti
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param selection QItemSelection*
 ///
-QItemSelection* k_checkableproxymodel_map_selection_to_source(void* self, void* selection);
+QItemSelection* k_checkableproxymodel_map_selection_to_source(const void* self, const void* selection);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1455,10 +1455,10 @@ QItemSelection* k_checkableproxymodel_map_selection_to_source(void* self, void* 
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param selection QItemSelection*
 ///
-QItemSelection* k_checkableproxymodel_super_map_selection_to_source(void* self, void* selection);
+QItemSelection* k_checkableproxymodel_super_map_selection_to_source(const void* self, const void* selection);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1466,12 +1466,12 @@ QItemSelection* k_checkableproxymodel_super_map_selection_to_source(void* self, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param callback QItemSelection* func(KCheckableProxyModel* self, QItemSelection* selection)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_checkableproxymodel_on_map_selection_to_source(void* self, QItemSelection* (*callback)(void*, void*));
+void k_checkableproxymodel_on_map_selection_to_source(const void* self, QItemSelection* (*callback)(const void*, const void*));
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1479,7 +1479,7 @@ void k_checkableproxymodel_on_map_selection_to_source(void* self, QItemSelection
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param start QModelIndex*
 /// @param role int
 /// @param value QVariant*
@@ -1488,7 +1488,7 @@ void k_checkableproxymodel_on_map_selection_to_source(void* self, QItemSelection
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list k_checkableproxymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
+libqt_list k_checkableproxymodel_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1496,7 +1496,7 @@ libqt_list k_checkableproxymodel_match(void* self, void* start, int role, void* 
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param start QModelIndex*
 /// @param role int
 /// @param value QVariant*
@@ -1505,7 +1505,7 @@ libqt_list k_checkableproxymodel_match(void* self, void* start, int role, void* 
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list k_checkableproxymodel_super_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
+libqt_list k_checkableproxymodel_super_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1513,10 +1513,10 @@ libqt_list k_checkableproxymodel_super_match(void* self, void* start, int role, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param callback libqt_list of QModelIndex* func(KCheckableProxyModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
 ///
-void k_checkableproxymodel_on_match(void* self, libqt_list (*callback)(void*, void*, int, void*, int, int32_t));
+void k_checkableproxymodel_on_match(const void* self, libqt_list (*callback)(const void*, const void*, int, const void*, int, int32_t));
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1529,7 +1529,7 @@ void k_checkableproxymodel_on_match(void* self, libqt_list (*callback)(void*, vo
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool k_checkableproxymodel_insert_columns(void* self, int column, int count, void* parent);
+bool k_checkableproxymodel_insert_columns(void* self, int column, int count, const void* parent);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1542,7 +1542,7 @@ bool k_checkableproxymodel_insert_columns(void* self, int column, int count, voi
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool k_checkableproxymodel_super_insert_columns(void* self, int column, int count, void* parent);
+bool k_checkableproxymodel_super_insert_columns(void* self, int column, int count, const void* parent);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1553,7 +1553,7 @@ bool k_checkableproxymodel_super_insert_columns(void* self, int column, int coun
 /// @param self KCheckableProxyModel*
 /// @param callback bool func(KCheckableProxyModel* self, int column, int count, QModelIndex* parent)
 ///
-void k_checkableproxymodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*));
+void k_checkableproxymodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, const void*));
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1566,7 +1566,7 @@ void k_checkableproxymodel_on_insert_columns(void* self, bool (*callback)(void*,
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool k_checkableproxymodel_insert_rows(void* self, int row, int count, void* parent);
+bool k_checkableproxymodel_insert_rows(void* self, int row, int count, const void* parent);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1579,7 +1579,7 @@ bool k_checkableproxymodel_insert_rows(void* self, int row, int count, void* par
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool k_checkableproxymodel_super_insert_rows(void* self, int row, int count, void* parent);
+bool k_checkableproxymodel_super_insert_rows(void* self, int row, int count, const void* parent);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1590,7 +1590,7 @@ bool k_checkableproxymodel_super_insert_rows(void* self, int row, int count, voi
 /// @param self KCheckableProxyModel*
 /// @param callback bool func(KCheckableProxyModel* self, int row, int count, QModelIndex* parent)
 ///
-void k_checkableproxymodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*));
+void k_checkableproxymodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, const void*));
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1603,7 +1603,7 @@ void k_checkableproxymodel_on_insert_rows(void* self, bool (*callback)(void*, in
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool k_checkableproxymodel_remove_columns(void* self, int column, int count, void* parent);
+bool k_checkableproxymodel_remove_columns(void* self, int column, int count, const void* parent);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1616,7 +1616,7 @@ bool k_checkableproxymodel_remove_columns(void* self, int column, int count, voi
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool k_checkableproxymodel_super_remove_columns(void* self, int column, int count, void* parent);
+bool k_checkableproxymodel_super_remove_columns(void* self, int column, int count, const void* parent);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1627,7 +1627,7 @@ bool k_checkableproxymodel_super_remove_columns(void* self, int column, int coun
 /// @param self KCheckableProxyModel*
 /// @param callback bool func(KCheckableProxyModel* self, int column, int count, QModelIndex* parent)
 ///
-void k_checkableproxymodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*));
+void k_checkableproxymodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, const void*));
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1640,7 +1640,7 @@ void k_checkableproxymodel_on_remove_columns(void* self, bool (*callback)(void*,
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool k_checkableproxymodel_remove_rows(void* self, int row, int count, void* parent);
+bool k_checkableproxymodel_remove_rows(void* self, int row, int count, const void* parent);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1653,7 +1653,7 @@ bool k_checkableproxymodel_remove_rows(void* self, int row, int count, void* par
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool k_checkableproxymodel_super_remove_rows(void* self, int row, int count, void* parent);
+bool k_checkableproxymodel_super_remove_rows(void* self, int row, int count, const void* parent);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1664,7 +1664,7 @@ bool k_checkableproxymodel_super_remove_rows(void* self, int row, int count, voi
 /// @param self KCheckableProxyModel*
 /// @param callback bool func(KCheckableProxyModel* self, int row, int count, QModelIndex* parent)
 ///
-void k_checkableproxymodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*));
+void k_checkableproxymodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, const void*));
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1679,7 +1679,7 @@ void k_checkableproxymodel_on_remove_rows(void* self, bool (*callback)(void*, in
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool k_checkableproxymodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
+bool k_checkableproxymodel_move_rows(void* self, const void* sourceParent, int sourceRow, int count, const void* destinationParent, int destinationChild);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1694,7 +1694,7 @@ bool k_checkableproxymodel_move_rows(void* self, void* sourceParent, int sourceR
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool k_checkableproxymodel_super_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
+bool k_checkableproxymodel_super_move_rows(void* self, const void* sourceParent, int sourceRow, int count, const void* destinationParent, int destinationChild);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1705,7 +1705,7 @@ bool k_checkableproxymodel_super_move_rows(void* self, void* sourceParent, int s
 /// @param self KCheckableProxyModel*
 /// @param callback bool func(KCheckableProxyModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild)
 ///
-void k_checkableproxymodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
+void k_checkableproxymodel_on_move_rows(void* self, bool (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1720,7 +1720,7 @@ void k_checkableproxymodel_on_move_rows(void* self, bool (*callback)(void*, void
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool k_checkableproxymodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
+bool k_checkableproxymodel_move_columns(void* self, const void* sourceParent, int sourceColumn, int count, const void* destinationParent, int destinationChild);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1735,7 +1735,7 @@ bool k_checkableproxymodel_move_columns(void* self, void* sourceParent, int sour
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool k_checkableproxymodel_super_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
+bool k_checkableproxymodel_super_move_columns(void* self, const void* sourceParent, int sourceColumn, int count, const void* destinationParent, int destinationChild);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1746,7 +1746,7 @@ bool k_checkableproxymodel_super_move_columns(void* self, void* sourceParent, in
 /// @param self KCheckableProxyModel*
 /// @param callback bool func(KCheckableProxyModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild)
 ///
-void k_checkableproxymodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
+void k_checkableproxymodel_on_move_columns(void* self, bool (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1775,9 +1775,9 @@ bool k_checkableproxymodel_super_submit(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCheckableProxyModel*
-/// @param callback bool func()
+/// @param callback bool func(KCheckableProxyModel* self)
 ///
-void k_checkableproxymodel_on_submit(void* self, bool (*callback)());
+void k_checkableproxymodel_on_submit(void* self, bool (*callback)(void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1806,9 +1806,9 @@ void k_checkableproxymodel_super_revert(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCheckableProxyModel*
-/// @param callback void func()
+/// @param callback void func(KCheckableProxyModel* self)
 ///
-void k_checkableproxymodel_on_revert(void* self, void (*callback)());
+void k_checkableproxymodel_on_revert(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1827,12 +1827,12 @@ void k_checkableproxymodel_on_revert(void* self, void (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param index QModelIndex*
 ///
 /// @return libqt_map of int to QVariant*
 ///
-libqt_map k_checkableproxymodel_item_data(void* self, void* index);
+libqt_map k_checkableproxymodel_item_data(const void* self, const void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1851,12 +1851,12 @@ libqt_map k_checkableproxymodel_item_data(void* self, void* index);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param index QModelIndex*
 ///
 /// @return libqt_map of int to QVariant*
 ///
-libqt_map k_checkableproxymodel_super_item_data(void* self, void* index);
+libqt_map k_checkableproxymodel_super_item_data(const void* self, const void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1864,10 +1864,10 @@ libqt_map k_checkableproxymodel_super_item_data(void* self, void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param callback libqt_map of int to QVariant* func(KCheckableProxyModel* self, QModelIndex* index)
 ///
-void k_checkableproxymodel_on_item_data(void* self, libqt_map (*callback)(void*, void*));
+void k_checkableproxymodel_on_item_data(const void* self, libqt_map (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1879,7 +1879,7 @@ void k_checkableproxymodel_on_item_data(void* self, libqt_map (*callback)(void*,
 /// @param index QModelIndex*
 /// @param roles libqt_map of int to QVariant*
 ///
-bool k_checkableproxymodel_set_item_data(void* self, void* index, libqt_map roles);
+bool k_checkableproxymodel_set_item_data(void* self, const void* index, libqt_map roles);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1891,7 +1891,7 @@ bool k_checkableproxymodel_set_item_data(void* self, void* index, libqt_map role
 /// @param index QModelIndex*
 /// @param roles libqt_map of int to QVariant*
 ///
-bool k_checkableproxymodel_super_set_item_data(void* self, void* index, libqt_map roles);
+bool k_checkableproxymodel_super_set_item_data(void* self, const void* index, libqt_map roles);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1902,7 +1902,7 @@ bool k_checkableproxymodel_super_set_item_data(void* self, void* index, libqt_ma
 /// @param self KCheckableProxyModel*
 /// @param callback bool func(KCheckableProxyModel* self, QModelIndex* index, libqt_map of int to QVariant* roles)
 ///
-void k_checkableproxymodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map));
+void k_checkableproxymodel_on_set_item_data(void* self, bool (*callback)(void*, const void*, libqt_map));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1916,7 +1916,7 @@ void k_checkableproxymodel_on_set_item_data(void* self, bool (*callback)(void*, 
 /// @param value QVariant*
 /// @param role int
 ///
-bool k_checkableproxymodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
+bool k_checkableproxymodel_set_header_data(void* self, int section, int32_t orientation, const void* value, int role);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1930,7 +1930,7 @@ bool k_checkableproxymodel_set_header_data(void* self, int section, int32_t orie
 /// @param value QVariant*
 /// @param role int
 ///
-bool k_checkableproxymodel_super_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
+bool k_checkableproxymodel_super_set_header_data(void* self, int section, int32_t orientation, const void* value, int role);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1941,7 +1941,7 @@ bool k_checkableproxymodel_super_set_header_data(void* self, int section, int32_
 /// @param self KCheckableProxyModel*
 /// @param callback bool func(KCheckableProxyModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role)
 ///
-void k_checkableproxymodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int));
+void k_checkableproxymodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, const void*, int));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1952,7 +1952,7 @@ void k_checkableproxymodel_on_set_header_data(void* self, bool (*callback)(void*
 /// @param self KCheckableProxyModel*
 /// @param index QModelIndex*
 ///
-bool k_checkableproxymodel_clear_item_data(void* self, void* index);
+bool k_checkableproxymodel_clear_item_data(void* self, const void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1963,7 +1963,7 @@ bool k_checkableproxymodel_clear_item_data(void* self, void* index);
 /// @param self KCheckableProxyModel*
 /// @param index QModelIndex*
 ///
-bool k_checkableproxymodel_super_clear_item_data(void* self, void* index);
+bool k_checkableproxymodel_super_clear_item_data(void* self, const void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1974,7 +1974,7 @@ bool k_checkableproxymodel_super_clear_item_data(void* self, void* index);
 /// @param self KCheckableProxyModel*
 /// @param callback bool func(KCheckableProxyModel* self, QModelIndex* index)
 ///
-void k_checkableproxymodel_on_clear_item_data(void* self, bool (*callback)(void*, void*));
+void k_checkableproxymodel_on_clear_item_data(void* self, bool (*callback)(void*, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1982,10 +1982,10 @@ void k_checkableproxymodel_on_clear_item_data(void* self, bool (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param index QModelIndex*
 ///
-QModelIndex* k_checkableproxymodel_buddy(void* self, void* index);
+QModelIndex* k_checkableproxymodel_buddy(const void* self, const void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1993,10 +1993,10 @@ QModelIndex* k_checkableproxymodel_buddy(void* self, void* index);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param index QModelIndex*
 ///
-QModelIndex* k_checkableproxymodel_super_buddy(void* self, void* index);
+QModelIndex* k_checkableproxymodel_super_buddy(const void* self, const void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2004,12 +2004,12 @@ QModelIndex* k_checkableproxymodel_super_buddy(void* self, void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param callback QModelIndex* func(KCheckableProxyModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_checkableproxymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
+void k_checkableproxymodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2017,10 +2017,10 @@ void k_checkableproxymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param parent QModelIndex*
 ///
-bool k_checkableproxymodel_can_fetch_more(void* self, void* parent);
+bool k_checkableproxymodel_can_fetch_more(const void* self, const void* parent);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2028,10 +2028,10 @@ bool k_checkableproxymodel_can_fetch_more(void* self, void* parent);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param parent QModelIndex*
 ///
-bool k_checkableproxymodel_super_can_fetch_more(void* self, void* parent);
+bool k_checkableproxymodel_super_can_fetch_more(const void* self, const void* parent);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2039,10 +2039,10 @@ bool k_checkableproxymodel_super_can_fetch_more(void* self, void* parent);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param callback bool func(KCheckableProxyModel* self, QModelIndex* parent)
 ///
-void k_checkableproxymodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*));
+void k_checkableproxymodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2053,7 +2053,7 @@ void k_checkableproxymodel_on_can_fetch_more(void* self, bool (*callback)(void*,
 /// @param self KCheckableProxyModel*
 /// @param parent QModelIndex*
 ///
-void k_checkableproxymodel_fetch_more(void* self, void* parent);
+void k_checkableproxymodel_fetch_more(void* self, const void* parent);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2064,7 +2064,7 @@ void k_checkableproxymodel_fetch_more(void* self, void* parent);
 /// @param self KCheckableProxyModel*
 /// @param parent QModelIndex*
 ///
-void k_checkableproxymodel_super_fetch_more(void* self, void* parent);
+void k_checkableproxymodel_super_fetch_more(void* self, const void* parent);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2075,7 +2075,7 @@ void k_checkableproxymodel_super_fetch_more(void* self, void* parent);
 /// @param self KCheckableProxyModel*
 /// @param callback void func(KCheckableProxyModel* self, QModelIndex* parent)
 ///
-void k_checkableproxymodel_on_fetch_more(void* self, void (*callback)(void*, void*));
+void k_checkableproxymodel_on_fetch_more(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2118,10 +2118,10 @@ void k_checkableproxymodel_on_sort(void* self, void (*callback)(void*, int, int3
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param index QModelIndex*
 ///
-QSize* k_checkableproxymodel_span(void* self, void* index);
+QSize* k_checkableproxymodel_span(const void* self, const void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2129,10 +2129,10 @@ QSize* k_checkableproxymodel_span(void* self, void* index);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param index QModelIndex*
 ///
-QSize* k_checkableproxymodel_super_span(void* self, void* index);
+QSize* k_checkableproxymodel_super_span(const void* self, const void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2140,12 +2140,12 @@ QSize* k_checkableproxymodel_super_span(void* self, void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param callback QSize* func(KCheckableProxyModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_checkableproxymodel_on_span(void* self, QSize* (*callback)(void*, void*));
+void k_checkableproxymodel_on_span(const void* self, QSize* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2153,10 +2153,10 @@ void k_checkableproxymodel_on_span(void* self, QSize* (*callback)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param parent QModelIndex*
 ///
-bool k_checkableproxymodel_has_children(void* self, void* parent);
+bool k_checkableproxymodel_has_children(const void* self, const void* parent);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2164,10 +2164,10 @@ bool k_checkableproxymodel_has_children(void* self, void* parent);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param parent QModelIndex*
 ///
-bool k_checkableproxymodel_super_has_children(void* self, void* parent);
+bool k_checkableproxymodel_super_has_children(const void* self, const void* parent);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2175,10 +2175,10 @@ bool k_checkableproxymodel_super_has_children(void* self, void* parent);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param callback bool func(KCheckableProxyModel* self, QModelIndex* parent)
 ///
-void k_checkableproxymodel_on_has_children(void* self, bool (*callback)(void*, void*));
+void k_checkableproxymodel_on_has_children(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2186,10 +2186,10 @@ void k_checkableproxymodel_on_has_children(void* self, bool (*callback)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* k_checkableproxymodel_mime_data(void* self, libqt_list indexes);
+QMimeData* k_checkableproxymodel_mime_data(const void* self, libqt_list indexes);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2197,10 +2197,10 @@ QMimeData* k_checkableproxymodel_mime_data(void* self, libqt_list indexes);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* k_checkableproxymodel_super_mime_data(void* self, libqt_list indexes);
+QMimeData* k_checkableproxymodel_super_mime_data(const void* self, libqt_list indexes);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2208,10 +2208,10 @@ QMimeData* k_checkableproxymodel_super_mime_data(void* self, libqt_list indexes)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param callback QMimeData* func(KCheckableProxyModel* self, libqt_list of QModelIndex* indexes)
 ///
-void k_checkableproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
+void k_checkableproxymodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2219,14 +2219,14 @@ void k_checkableproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param data QMimeData*
 /// @param action enum Qt__DropAction
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool k_checkableproxymodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
+bool k_checkableproxymodel_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2234,14 +2234,14 @@ bool k_checkableproxymodel_can_drop_mime_data(void* self, void* data, int32_t ac
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param data QMimeData*
 /// @param action enum Qt__DropAction
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool k_checkableproxymodel_super_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
+bool k_checkableproxymodel_super_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2249,10 +2249,10 @@ bool k_checkableproxymodel_super_can_drop_mime_data(void* self, void* data, int3
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param callback bool func(KCheckableProxyModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 ///
-void k_checkableproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
+void k_checkableproxymodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2262,9 +2262,9 @@ void k_checkableproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
-const char** k_checkableproxymodel_mime_types(void* self);
+const char** k_checkableproxymodel_mime_types(const void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2274,9 +2274,9 @@ const char** k_checkableproxymodel_mime_types(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
-const char** k_checkableproxymodel_super_mime_types(void* self);
+const char** k_checkableproxymodel_super_mime_types(const void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2284,10 +2284,10 @@ const char** k_checkableproxymodel_super_mime_types(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
-/// @param callback const char** func()
+/// @param self const KCheckableProxyModel*
+/// @param callback const char** func(KCheckableProxyModel* self)
 ///
-void k_checkableproxymodel_on_mime_types(void* self, const char** (*callback)());
+void k_checkableproxymodel_on_mime_types(const void* self, const char** (*callback)(const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2295,11 +2295,11 @@ void k_checkableproxymodel_on_mime_types(void* self, const char** (*callback)())
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t k_checkableproxymodel_supported_drag_actions(void* self);
+int32_t k_checkableproxymodel_supported_drag_actions(const void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2307,11 +2307,11 @@ int32_t k_checkableproxymodel_supported_drag_actions(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t k_checkableproxymodel_super_supported_drag_actions(void* self);
+int32_t k_checkableproxymodel_super_supported_drag_actions(const void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2319,10 +2319,10 @@ int32_t k_checkableproxymodel_super_supported_drag_actions(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
-/// @param callback int32_t func()
+/// @param self const KCheckableProxyModel*
+/// @param callback int32_t func(KCheckableProxyModel* self)
 ///
-void k_checkableproxymodel_on_supported_drag_actions(void* self, int32_t (*callback)());
+void k_checkableproxymodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2330,11 +2330,11 @@ void k_checkableproxymodel_on_supported_drag_actions(void* self, int32_t (*callb
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t k_checkableproxymodel_supported_drop_actions(void* self);
+int32_t k_checkableproxymodel_supported_drop_actions(const void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2342,11 +2342,11 @@ int32_t k_checkableproxymodel_supported_drop_actions(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t k_checkableproxymodel_super_supported_drop_actions(void* self);
+int32_t k_checkableproxymodel_super_supported_drop_actions(const void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2354,10 +2354,10 @@ int32_t k_checkableproxymodel_super_supported_drop_actions(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
-/// @param callback int32_t func()
+/// @param self const KCheckableProxyModel*
+/// @param callback int32_t func(KCheckableProxyModel* self)
 ///
-void k_checkableproxymodel_on_supported_drop_actions(void* self, int32_t (*callback)());
+void k_checkableproxymodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2365,11 +2365,11 @@ void k_checkableproxymodel_on_supported_drop_actions(void* self, int32_t (*callb
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param index QModelIndex*
 /// @param roleDataSpan QModelRoleDataSpan*
 ///
-void k_checkableproxymodel_multi_data(void* self, void* index, void* roleDataSpan);
+void k_checkableproxymodel_multi_data(const void* self, const void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2377,11 +2377,11 @@ void k_checkableproxymodel_multi_data(void* self, void* index, void* roleDataSpa
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param index QModelIndex*
 /// @param roleDataSpan QModelRoleDataSpan*
 ///
-void k_checkableproxymodel_super_multi_data(void* self, void* index, void* roleDataSpan);
+void k_checkableproxymodel_super_multi_data(const void* self, const void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2389,10 +2389,10 @@ void k_checkableproxymodel_super_multi_data(void* self, void* index, void* roleD
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param callback void func(KCheckableProxyModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
 ///
-void k_checkableproxymodel_on_multi_data(void* self, void (*callback)(void*, void*, void*));
+void k_checkableproxymodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2421,9 +2421,9 @@ void k_checkableproxymodel_super_reset_internal_data(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCheckableProxyModel*
-/// @param callback void func()
+/// @param callback void func(KCheckableProxyModel* self)
 ///
-void k_checkableproxymodel_on_reset_internal_data(void* self, void (*callback)());
+void k_checkableproxymodel_on_reset_internal_data(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -2601,7 +2601,7 @@ void k_checkableproxymodel_on_custom_event(void* self, void (*callback)(void*, v
 /// @param self KCheckableProxyModel*
 /// @param signal QMetaMethod*
 ///
-void k_checkableproxymodel_connect_notify(void* self, void* signal);
+void k_checkableproxymodel_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2612,7 +2612,7 @@ void k_checkableproxymodel_connect_notify(void* self, void* signal);
 /// @param self KCheckableProxyModel*
 /// @param signal QMetaMethod*
 ///
-void k_checkableproxymodel_super_connect_notify(void* self, void* signal);
+void k_checkableproxymodel_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2623,7 +2623,7 @@ void k_checkableproxymodel_super_connect_notify(void* self, void* signal);
 /// @param self KCheckableProxyModel*
 /// @param callback void func(KCheckableProxyModel* self, QMetaMethod* signal)
 ///
-void k_checkableproxymodel_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_checkableproxymodel_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2634,7 +2634,7 @@ void k_checkableproxymodel_on_connect_notify(void* self, void (*callback)(void*,
 /// @param self KCheckableProxyModel*
 /// @param signal QMetaMethod*
 ///
-void k_checkableproxymodel_disconnect_notify(void* self, void* signal);
+void k_checkableproxymodel_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2645,7 +2645,7 @@ void k_checkableproxymodel_disconnect_notify(void* self, void* signal);
 /// @param self KCheckableProxyModel*
 /// @param signal QMetaMethod*
 ///
-void k_checkableproxymodel_super_disconnect_notify(void* self, void* signal);
+void k_checkableproxymodel_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2656,7 +2656,7 @@ void k_checkableproxymodel_super_disconnect_notify(void* self, void* signal);
 /// @param self KCheckableProxyModel*
 /// @param callback void func(KCheckableProxyModel* self, QMetaMethod* signal)
 ///
-void k_checkableproxymodel_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_checkableproxymodel_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -2730,12 +2730,12 @@ void k_checkableproxymodel_on_set_handle_source_data_changes(void* self, void (*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param row int
 /// @param col int
 /// @param internalPtr void*
 ///
-QModelIndex* k_checkableproxymodel_create_source_index(void* self, int row, int col, void* internalPtr);
+QModelIndex* k_checkableproxymodel_create_source_index(const void* self, int row, int col, void* internalPtr);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2743,12 +2743,12 @@ QModelIndex* k_checkableproxymodel_create_source_index(void* self, int row, int 
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param row int
 /// @param col int
 /// @param internalPtr void*
 ///
-QModelIndex* k_checkableproxymodel_super_create_source_index(void* self, int row, int col, void* internalPtr);
+QModelIndex* k_checkableproxymodel_super_create_source_index(const void* self, int row, int col, void* internalPtr);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2756,12 +2756,12 @@ QModelIndex* k_checkableproxymodel_super_create_source_index(void* self, int row
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param callback QModelIndex* func(KCheckableProxyModel* self, int row, int col, void* internalPtr)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_checkableproxymodel_on_create_source_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
+void k_checkableproxymodel_on_create_source_index(const void* self, QModelIndex* (*callback)(const void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2769,11 +2769,11 @@ void k_checkableproxymodel_on_create_source_index(void* self, QModelIndex* (*cal
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param row int
 /// @param column int
 ///
-QModelIndex* k_checkableproxymodel_create_index(void* self, int row, int column);
+QModelIndex* k_checkableproxymodel_create_index(const void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2781,11 +2781,11 @@ QModelIndex* k_checkableproxymodel_create_index(void* self, int row, int column)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param row int
 /// @param column int
 ///
-QModelIndex* k_checkableproxymodel_super_create_index(void* self, int row, int column);
+QModelIndex* k_checkableproxymodel_super_create_index(const void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2793,12 +2793,12 @@ QModelIndex* k_checkableproxymodel_super_create_index(void* self, int row, int c
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param callback QModelIndex* func(KCheckableProxyModel* self, int row, int column)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_checkableproxymodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
+void k_checkableproxymodel_on_create_index(const void* self, QModelIndex* (*callback)(const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2806,11 +2806,11 @@ void k_checkableproxymodel_on_create_index(void* self, QModelIndex* (*callback)(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void k_checkableproxymodel_encode_data(void* self, libqt_list indexes, void* stream);
+void k_checkableproxymodel_encode_data(const void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2818,11 +2818,11 @@ void k_checkableproxymodel_encode_data(void* self, libqt_list indexes, void* str
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void k_checkableproxymodel_super_encode_data(void* self, libqt_list indexes, void* stream);
+void k_checkableproxymodel_super_encode_data(const void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2830,10 +2830,10 @@ void k_checkableproxymodel_super_encode_data(void* self, libqt_list indexes, voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param callback void func(KCheckableProxyModel* self, libqt_list of QModelIndex* indexes, QDataStream* stream)
 ///
-void k_checkableproxymodel_on_encode_data(void* self, void (*callback)(void*, libqt_list, void*));
+void k_checkableproxymodel_on_encode_data(const void* self, void (*callback)(const void*, libqt_list, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2847,7 +2847,7 @@ void k_checkableproxymodel_on_encode_data(void* self, void (*callback)(void*, li
 /// @param parent QModelIndex*
 /// @param stream QDataStream*
 ///
-bool k_checkableproxymodel_decode_data(void* self, int row, int column, void* parent, void* stream);
+bool k_checkableproxymodel_decode_data(void* self, int row, int column, const void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2861,7 +2861,7 @@ bool k_checkableproxymodel_decode_data(void* self, int row, int column, void* pa
 /// @param parent QModelIndex*
 /// @param stream QDataStream*
 ///
-bool k_checkableproxymodel_super_decode_data(void* self, int row, int column, void* parent, void* stream);
+bool k_checkableproxymodel_super_decode_data(void* self, int row, int column, const void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2872,7 +2872,7 @@ bool k_checkableproxymodel_super_decode_data(void* self, int row, int column, vo
 /// @param self KCheckableProxyModel*
 /// @param callback bool func(KCheckableProxyModel* self, int row, int column, QModelIndex* parent, QDataStream* stream)
 ///
-void k_checkableproxymodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*));
+void k_checkableproxymodel_on_decode_data(void* self, bool (*callback)(void*, int, int, const void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2885,7 +2885,7 @@ void k_checkableproxymodel_on_decode_data(void* self, bool (*callback)(void*, in
 /// @param first int
 /// @param last int
 ///
-void k_checkableproxymodel_begin_insert_rows(void* self, void* parent, int first, int last);
+void k_checkableproxymodel_begin_insert_rows(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2898,7 +2898,7 @@ void k_checkableproxymodel_begin_insert_rows(void* self, void* parent, int first
 /// @param first int
 /// @param last int
 ///
-void k_checkableproxymodel_super_begin_insert_rows(void* self, void* parent, int first, int last);
+void k_checkableproxymodel_super_begin_insert_rows(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2909,7 +2909,7 @@ void k_checkableproxymodel_super_begin_insert_rows(void* self, void* parent, int
 /// @param self KCheckableProxyModel*
 /// @param callback void func(KCheckableProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_checkableproxymodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int));
+void k_checkableproxymodel_on_begin_insert_rows(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2938,9 +2938,9 @@ void k_checkableproxymodel_super_end_insert_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCheckableProxyModel*
-/// @param callback void func()
+/// @param callback void func(KCheckableProxyModel* self)
 ///
-void k_checkableproxymodel_on_end_insert_rows(void* self, void (*callback)());
+void k_checkableproxymodel_on_end_insert_rows(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2953,7 +2953,7 @@ void k_checkableproxymodel_on_end_insert_rows(void* self, void (*callback)());
 /// @param first int
 /// @param last int
 ///
-void k_checkableproxymodel_begin_remove_rows(void* self, void* parent, int first, int last);
+void k_checkableproxymodel_begin_remove_rows(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2966,7 +2966,7 @@ void k_checkableproxymodel_begin_remove_rows(void* self, void* parent, int first
 /// @param first int
 /// @param last int
 ///
-void k_checkableproxymodel_super_begin_remove_rows(void* self, void* parent, int first, int last);
+void k_checkableproxymodel_super_begin_remove_rows(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2977,7 +2977,7 @@ void k_checkableproxymodel_super_begin_remove_rows(void* self, void* parent, int
 /// @param self KCheckableProxyModel*
 /// @param callback void func(KCheckableProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_checkableproxymodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int));
+void k_checkableproxymodel_on_begin_remove_rows(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3006,9 +3006,9 @@ void k_checkableproxymodel_super_end_remove_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCheckableProxyModel*
-/// @param callback void func()
+/// @param callback void func(KCheckableProxyModel* self)
 ///
-void k_checkableproxymodel_on_end_remove_rows(void* self, void (*callback)());
+void k_checkableproxymodel_on_end_remove_rows(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3023,7 +3023,7 @@ void k_checkableproxymodel_on_end_remove_rows(void* self, void (*callback)());
 /// @param destinationParent QModelIndex*
 /// @param destinationRow int
 ///
-bool k_checkableproxymodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
+bool k_checkableproxymodel_begin_move_rows(void* self, const void* sourceParent, int sourceFirst, int sourceLast, const void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3038,7 +3038,7 @@ bool k_checkableproxymodel_begin_move_rows(void* self, void* sourceParent, int s
 /// @param destinationParent QModelIndex*
 /// @param destinationRow int
 ///
-bool k_checkableproxymodel_super_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
+bool k_checkableproxymodel_super_begin_move_rows(void* self, const void* sourceParent, int sourceFirst, int sourceLast, const void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3049,7 +3049,7 @@ bool k_checkableproxymodel_super_begin_move_rows(void* self, void* sourceParent,
 /// @param self KCheckableProxyModel*
 /// @param callback bool func(KCheckableProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow)
 ///
-void k_checkableproxymodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
+void k_checkableproxymodel_on_begin_move_rows(void* self, bool (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3078,9 +3078,9 @@ void k_checkableproxymodel_super_end_move_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCheckableProxyModel*
-/// @param callback void func()
+/// @param callback void func(KCheckableProxyModel* self)
 ///
-void k_checkableproxymodel_on_end_move_rows(void* self, void (*callback)());
+void k_checkableproxymodel_on_end_move_rows(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3093,7 +3093,7 @@ void k_checkableproxymodel_on_end_move_rows(void* self, void (*callback)());
 /// @param first int
 /// @param last int
 ///
-void k_checkableproxymodel_begin_insert_columns(void* self, void* parent, int first, int last);
+void k_checkableproxymodel_begin_insert_columns(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3106,7 +3106,7 @@ void k_checkableproxymodel_begin_insert_columns(void* self, void* parent, int fi
 /// @param first int
 /// @param last int
 ///
-void k_checkableproxymodel_super_begin_insert_columns(void* self, void* parent, int first, int last);
+void k_checkableproxymodel_super_begin_insert_columns(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3117,7 +3117,7 @@ void k_checkableproxymodel_super_begin_insert_columns(void* self, void* parent, 
 /// @param self KCheckableProxyModel*
 /// @param callback void func(KCheckableProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_checkableproxymodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int));
+void k_checkableproxymodel_on_begin_insert_columns(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3146,9 +3146,9 @@ void k_checkableproxymodel_super_end_insert_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCheckableProxyModel*
-/// @param callback void func()
+/// @param callback void func(KCheckableProxyModel* self)
 ///
-void k_checkableproxymodel_on_end_insert_columns(void* self, void (*callback)());
+void k_checkableproxymodel_on_end_insert_columns(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3161,7 +3161,7 @@ void k_checkableproxymodel_on_end_insert_columns(void* self, void (*callback)())
 /// @param first int
 /// @param last int
 ///
-void k_checkableproxymodel_begin_remove_columns(void* self, void* parent, int first, int last);
+void k_checkableproxymodel_begin_remove_columns(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3174,7 +3174,7 @@ void k_checkableproxymodel_begin_remove_columns(void* self, void* parent, int fi
 /// @param first int
 /// @param last int
 ///
-void k_checkableproxymodel_super_begin_remove_columns(void* self, void* parent, int first, int last);
+void k_checkableproxymodel_super_begin_remove_columns(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3185,7 +3185,7 @@ void k_checkableproxymodel_super_begin_remove_columns(void* self, void* parent, 
 /// @param self KCheckableProxyModel*
 /// @param callback void func(KCheckableProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_checkableproxymodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int));
+void k_checkableproxymodel_on_begin_remove_columns(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3214,9 +3214,9 @@ void k_checkableproxymodel_super_end_remove_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCheckableProxyModel*
-/// @param callback void func()
+/// @param callback void func(KCheckableProxyModel* self)
 ///
-void k_checkableproxymodel_on_end_remove_columns(void* self, void (*callback)());
+void k_checkableproxymodel_on_end_remove_columns(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3231,7 +3231,7 @@ void k_checkableproxymodel_on_end_remove_columns(void* self, void (*callback)())
 /// @param destinationParent QModelIndex*
 /// @param destinationColumn int
 ///
-bool k_checkableproxymodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
+bool k_checkableproxymodel_begin_move_columns(void* self, const void* sourceParent, int sourceFirst, int sourceLast, const void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3246,7 +3246,7 @@ bool k_checkableproxymodel_begin_move_columns(void* self, void* sourceParent, in
 /// @param destinationParent QModelIndex*
 /// @param destinationColumn int
 ///
-bool k_checkableproxymodel_super_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
+bool k_checkableproxymodel_super_begin_move_columns(void* self, const void* sourceParent, int sourceFirst, int sourceLast, const void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3257,7 +3257,7 @@ bool k_checkableproxymodel_super_begin_move_columns(void* self, void* sourcePare
 /// @param self KCheckableProxyModel*
 /// @param callback bool func(KCheckableProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn)
 ///
-void k_checkableproxymodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
+void k_checkableproxymodel_on_begin_move_columns(void* self, bool (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3286,9 +3286,9 @@ void k_checkableproxymodel_super_end_move_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCheckableProxyModel*
-/// @param callback void func()
+/// @param callback void func(KCheckableProxyModel* self)
 ///
-void k_checkableproxymodel_on_end_move_columns(void* self, void (*callback)());
+void k_checkableproxymodel_on_end_move_columns(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3317,9 +3317,9 @@ void k_checkableproxymodel_super_begin_reset_model(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCheckableProxyModel*
-/// @param callback void func()
+/// @param callback void func(KCheckableProxyModel* self)
 ///
-void k_checkableproxymodel_on_begin_reset_model(void* self, void (*callback)());
+void k_checkableproxymodel_on_begin_reset_model(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3348,9 +3348,9 @@ void k_checkableproxymodel_super_end_reset_model(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCheckableProxyModel*
-/// @param callback void func()
+/// @param callback void func(KCheckableProxyModel* self)
 ///
-void k_checkableproxymodel_on_end_reset_model(void* self, void (*callback)());
+void k_checkableproxymodel_on_end_reset_model(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3362,7 +3362,7 @@ void k_checkableproxymodel_on_end_reset_model(void* self, void (*callback)());
 /// @param from QModelIndex*
 /// @param to QModelIndex*
 ///
-void k_checkableproxymodel_change_persistent_index(void* self, void* from, void* to);
+void k_checkableproxymodel_change_persistent_index(void* self, const void* from, const void* to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3374,7 +3374,7 @@ void k_checkableproxymodel_change_persistent_index(void* self, void* from, void*
 /// @param from QModelIndex*
 /// @param to QModelIndex*
 ///
-void k_checkableproxymodel_super_change_persistent_index(void* self, void* from, void* to);
+void k_checkableproxymodel_super_change_persistent_index(void* self, const void* from, const void* to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3385,7 +3385,7 @@ void k_checkableproxymodel_super_change_persistent_index(void* self, void* from,
 /// @param self KCheckableProxyModel*
 /// @param callback void func(KCheckableProxyModel* self, QModelIndex* from, QModelIndex* to)
 ///
-void k_checkableproxymodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*));
+void k_checkableproxymodel_on_change_persistent_index(void* self, void (*callback)(void*, const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3428,11 +3428,11 @@ void k_checkableproxymodel_on_change_persistent_index_list(void* self, void (*ca
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list k_checkableproxymodel_persistent_index_list(void* self);
+libqt_list k_checkableproxymodel_persistent_index_list(const void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3440,11 +3440,11 @@ libqt_list k_checkableproxymodel_persistent_index_list(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list k_checkableproxymodel_super_persistent_index_list(void* self);
+libqt_list k_checkableproxymodel_super_persistent_index_list(const void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3452,10 +3452,10 @@ libqt_list k_checkableproxymodel_super_persistent_index_list(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
-/// @param callback libqt_list of QModelIndex* func()
+/// @param self const KCheckableProxyModel*
+/// @param callback libqt_list of QModelIndex* func(KCheckableProxyModel* self)
 ///
-void k_checkableproxymodel_on_persistent_index_list(void* self, libqt_list (*callback)());
+void k_checkableproxymodel_on_persistent_index_list(const void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3463,9 +3463,9 @@ void k_checkableproxymodel_on_persistent_index_list(void* self, libqt_list (*cal
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
-QObject* k_checkableproxymodel_sender(void* self);
+QObject* k_checkableproxymodel_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3473,9 +3473,9 @@ QObject* k_checkableproxymodel_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
-QObject* k_checkableproxymodel_super_sender(void* self);
+QObject* k_checkableproxymodel_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3483,10 +3483,10 @@ QObject* k_checkableproxymodel_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
-/// @param callback QObject* func()
+/// @param self const KCheckableProxyModel*
+/// @param callback QObject* func(KCheckableProxyModel* self)
 ///
-void k_checkableproxymodel_on_sender(void* self, QObject* (*callback)());
+void k_checkableproxymodel_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3494,9 +3494,9 @@ void k_checkableproxymodel_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
-int32_t k_checkableproxymodel_sender_signal_index(void* self);
+int32_t k_checkableproxymodel_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3504,9 +3504,9 @@ int32_t k_checkableproxymodel_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 ///
-int32_t k_checkableproxymodel_super_sender_signal_index(void* self);
+int32_t k_checkableproxymodel_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3514,10 +3514,10 @@ int32_t k_checkableproxymodel_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
-/// @param callback int32_t func()
+/// @param self const KCheckableProxyModel*
+/// @param callback int32_t func(KCheckableProxyModel* self)
 ///
-void k_checkableproxymodel_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_checkableproxymodel_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3525,10 +3525,10 @@ void k_checkableproxymodel_on_sender_signal_index(void* self, int32_t (*callback
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param signal const char*
 ///
-int32_t k_checkableproxymodel_receivers(void* self, const char* signal);
+int32_t k_checkableproxymodel_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -3536,10 +3536,10 @@ int32_t k_checkableproxymodel_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param signal const char*
 ///
-int32_t k_checkableproxymodel_super_receivers(void* self, const char* signal);
+int32_t k_checkableproxymodel_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -3547,10 +3547,10 @@ int32_t k_checkableproxymodel_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param callback int32_t func(KCheckableProxyModel* self, const char* signal)
 ///
-void k_checkableproxymodel_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_checkableproxymodel_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3558,10 +3558,10 @@ void k_checkableproxymodel_on_receivers(void* self, int32_t (*callback)(void*, c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param signal QMetaMethod*
 ///
-bool k_checkableproxymodel_is_signal_connected(void* self, void* signal);
+bool k_checkableproxymodel_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3569,10 +3569,10 @@ bool k_checkableproxymodel_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param signal QMetaMethod*
 ///
-bool k_checkableproxymodel_super_is_signal_connected(void* self, void* signal);
+bool k_checkableproxymodel_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3580,10 +3580,10 @@ bool k_checkableproxymodel_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KCheckableProxyModel*
+/// @param self const KCheckableProxyModel*
 /// @param callback bool func(KCheckableProxyModel* self, QMetaMethod* signal)
 ///
-void k_checkableproxymodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_checkableproxymodel_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -3605,7 +3605,7 @@ void k_checkableproxymodel_on_source_model_changed(void* self, void (*callback)(
 /// @param self KCheckableProxyModel*
 /// @param callback void func(KCheckableProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_checkableproxymodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
+void k_checkableproxymodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3616,7 +3616,7 @@ void k_checkableproxymodel_on_rows_about_to_be_inserted(void* self, void (*callb
 /// @param self KCheckableProxyModel*
 /// @param callback void func(KCheckableProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_checkableproxymodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
+void k_checkableproxymodel_on_rows_inserted(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3627,7 +3627,7 @@ void k_checkableproxymodel_on_rows_inserted(void* self, void (*callback)(void*, 
 /// @param self KCheckableProxyModel*
 /// @param callback void func(KCheckableProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_checkableproxymodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
+void k_checkableproxymodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3638,7 +3638,7 @@ void k_checkableproxymodel_on_rows_about_to_be_removed(void* self, void (*callba
 /// @param self KCheckableProxyModel*
 /// @param callback void func(KCheckableProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_checkableproxymodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int));
+void k_checkableproxymodel_on_rows_removed(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3649,7 +3649,7 @@ void k_checkableproxymodel_on_rows_removed(void* self, void (*callback)(void*, v
 /// @param self KCheckableProxyModel*
 /// @param callback void func(KCheckableProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_checkableproxymodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
+void k_checkableproxymodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3660,7 +3660,7 @@ void k_checkableproxymodel_on_columns_about_to_be_inserted(void* self, void (*ca
 /// @param self KCheckableProxyModel*
 /// @param callback void func(KCheckableProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_checkableproxymodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int));
+void k_checkableproxymodel_on_columns_inserted(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3671,7 +3671,7 @@ void k_checkableproxymodel_on_columns_inserted(void* self, void (*callback)(void
 /// @param self KCheckableProxyModel*
 /// @param callback void func(KCheckableProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_checkableproxymodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
+void k_checkableproxymodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3682,7 +3682,7 @@ void k_checkableproxymodel_on_columns_about_to_be_removed(void* self, void (*cal
 /// @param self KCheckableProxyModel*
 /// @param callback void func(KCheckableProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_checkableproxymodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int));
+void k_checkableproxymodel_on_columns_removed(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3715,7 +3715,7 @@ void k_checkableproxymodel_on_model_reset(void* self, void (*callback)(void*));
 /// @param self KCheckableProxyModel*
 /// @param callback void func(KCheckableProxyModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
 ///
-void k_checkableproxymodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
+void k_checkableproxymodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3726,7 +3726,7 @@ void k_checkableproxymodel_on_rows_about_to_be_moved(void* self, void (*callback
 /// @param self KCheckableProxyModel*
 /// @param callback void func(KCheckableProxyModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
 ///
-void k_checkableproxymodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
+void k_checkableproxymodel_on_rows_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3737,7 +3737,7 @@ void k_checkableproxymodel_on_rows_moved(void* self, void (*callback)(void*, voi
 /// @param self KCheckableProxyModel*
 /// @param callback void func(KCheckableProxyModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
 ///
-void k_checkableproxymodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
+void k_checkableproxymodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3748,7 +3748,7 @@ void k_checkableproxymodel_on_columns_about_to_be_moved(void* self, void (*callb
 /// @param self KCheckableProxyModel*
 /// @param callback void func(KCheckableProxyModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
 ///
-void k_checkableproxymodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
+void k_checkableproxymodel_on_columns_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QObject
 ///

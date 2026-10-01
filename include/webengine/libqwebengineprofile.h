@@ -41,26 +41,26 @@ QWebEngineProfile* q_webengineprofile_new4(const char* name, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-const QMetaObject* q_webengineprofile_meta_object(void* self);
+const QMetaObject* q_webengineprofile_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QWebEngineProfile*
-/// @param callback const QMetaObject* func()
+/// @param self const QWebEngineProfile*
+/// @param callback const QMetaObject* func(const QWebEngineProfile* self)
 ///
-void q_webengineprofile_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_webengineprofile_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-const QMetaObject* q_webengineprofile_super_meta_object(void* self);
+const QMetaObject* q_webengineprofile_super_meta_object(const void* self);
 
 /// @param self QWebEngineProfile*
 /// @param param1 const char*
@@ -116,23 +116,23 @@ const char* q_webengineprofile_tr(const char* s);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-const char* q_webengineprofile_storage_name(void* self);
+const char* q_webengineprofile_storage_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#isOffTheRecord)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-bool q_webengineprofile_is_off_the_record(void* self);
+bool q_webengineprofile_is_off_the_record(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#persistentStoragePath)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-const char* q_webengineprofile_persistent_storage_path(void* self);
+const char* q_webengineprofile_persistent_storage_path(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#setPersistentStoragePath)
 ///
@@ -145,9 +145,9 @@ void q_webengineprofile_set_persistent_storage_path(void* self, const char* path
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-const char* q_webengineprofile_cache_path(void* self);
+const char* q_webengineprofile_cache_path(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#setCachePath)
 ///
@@ -160,9 +160,9 @@ void q_webengineprofile_set_cache_path(void* self, const char* path);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-const char* q_webengineprofile_http_user_agent(void* self);
+const char* q_webengineprofile_http_user_agent(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#setHttpUserAgent)
 ///
@@ -173,11 +173,11 @@ void q_webengineprofile_set_http_user_agent(void* self, const char* userAgent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#httpCacheType)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
 /// @return enum QWebEngineProfile__HttpCacheType
 ///
-int32_t q_webengineprofile_http_cache_type(void* self);
+int32_t q_webengineprofile_http_cache_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#setHttpCacheType)
 ///
@@ -197,17 +197,17 @@ void q_webengineprofile_set_http_accept_language(void* self, const char* httpAcc
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-const char* q_webengineprofile_http_accept_language(void* self);
+const char* q_webengineprofile_http_accept_language(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#persistentCookiesPolicy)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
 /// @return enum QWebEngineProfile__PersistentCookiesPolicy
 ///
-int32_t q_webengineprofile_persistent_cookies_policy(void* self);
+int32_t q_webengineprofile_persistent_cookies_policy(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#setPersistentCookiesPolicy)
 ///
@@ -218,11 +218,11 @@ void q_webengineprofile_set_persistent_cookies_policy(void* self, int32_t persis
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#persistentPermissionsPolicy)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
 /// @return enum QWebEngineProfile__PersistentPermissionsPolicy
 ///
-uint8_t q_webengineprofile_persistent_permissions_policy(void* self);
+uint8_t q_webengineprofile_persistent_permissions_policy(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#setPersistentPermissionsPolicy)
 ///
@@ -233,9 +233,9 @@ void q_webengineprofile_set_persistent_permissions_policy(void* self, uint8_t pe
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#httpCacheMaximumSize)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-int32_t q_webengineprofile_http_cache_maximum_size(void* self);
+int32_t q_webengineprofile_http_cache_maximum_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#setHttpCacheMaximumSize)
 ///
@@ -272,35 +272,35 @@ void q_webengineprofile_clear_visited_links(void* self, libqt_list urls);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#visitedLinksContainsUrl)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 /// @param url QUrl*
 ///
-bool q_webengineprofile_visited_links_contains_url(void* self, void* url);
+bool q_webengineprofile_visited_links_contains_url(const void* self, const void* url);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#settings)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-QWebEngineSettings* q_webengineprofile_settings(void* self);
+QWebEngineSettings* q_webengineprofile_settings(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#scripts)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-QWebEngineScriptCollection* q_webengineprofile_scripts(void* self);
+QWebEngineScriptCollection* q_webengineprofile_scripts(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#clientHints)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-QWebEngineClientHints* q_webengineprofile_client_hints(void* self);
+QWebEngineClientHints* q_webengineprofile_client_hints(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#urlSchemeHandler)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 /// @param param1 char*
 ///
-const QWebEngineUrlSchemeHandler* q_webengineprofile_url_scheme_handler(void* self, char* param1);
+const QWebEngineUrlSchemeHandler* q_webengineprofile_url_scheme_handler(const void* self, char* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#installUrlSchemeHandler)
 ///
@@ -347,9 +347,9 @@ void q_webengineprofile_set_spell_check_languages(void* self, const char* langua
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-const char** q_webengineprofile_spell_check_languages(void* self);
+const char** q_webengineprofile_spell_check_languages(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#setSpellCheckEnabled)
 ///
@@ -360,17 +360,17 @@ void q_webengineprofile_set_spell_check_enabled(void* self, bool enabled);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#isSpellCheckEnabled)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-bool q_webengineprofile_is_spell_check_enabled(void* self);
+bool q_webengineprofile_is_spell_check_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#downloadPath)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-const char* q_webengineprofile_download_path(void* self);
+const char* q_webengineprofile_download_path(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#setDownloadPath)
 ///
@@ -381,9 +381,9 @@ void q_webengineprofile_set_download_path(void* self, const char* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#isPushServiceEnabled)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-bool q_webengineprofile_is_push_service_enabled(void* self);
+bool q_webengineprofile_is_push_service_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#setPushServiceEnabled)
 ///
@@ -407,55 +407,55 @@ QWebEngineClientCertificateStore* q_webengineprofile_client_certificate_store(vo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#requestIconForPageURL)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 /// @param url QUrl*
 /// @param desiredSizeInPixel int
 /// @param iconAvailableCallback void func(QIcon* param1, QUrl* param2, QUrl* param3)
 ///
-void q_webengineprofile_request_icon_for_page_u_r_l(void* self, void* url, int desiredSizeInPixel, void (*iconAvailableCallback)(void* funcparam1, void* funcparam2, void* funcparam3));
+void q_webengineprofile_request_icon_for_page_u_r_l(const void* self, const void* url, int desiredSizeInPixel, void (*iconAvailableCallback)(const void* funcparam1, const void* funcparam2, const void* funcparam3));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#requestIconForIconURL)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 /// @param url QUrl*
 /// @param desiredSizeInPixel int
 /// @param iconAvailableCallback void func(QIcon* param1, QUrl* param2)
 ///
-void q_webengineprofile_request_icon_for_icon_u_r_l(void* self, void* url, int desiredSizeInPixel, void (*iconAvailableCallback)(void* funcparam1, void* funcparam2));
+void q_webengineprofile_request_icon_for_icon_u_r_l(const void* self, const void* url, int desiredSizeInPixel, void (*iconAvailableCallback)(const void* funcparam1, const void* funcparam2));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#queryPermission)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 /// @param securityOrigin QUrl*
 /// @param permissionType enum QWebEnginePermission__PermissionType
 ///
-QWebEnginePermission* q_webengineprofile_query_permission(void* self, void* securityOrigin, uint8_t permissionType);
+QWebEnginePermission* q_webengineprofile_query_permission(const void* self, const void* securityOrigin, uint8_t permissionType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#listAllPermissions)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
 /// @return libqt_list of QWebEnginePermission*
 ///
-libqt_list q_webengineprofile_list_all_permissions(void* self);
+libqt_list q_webengineprofile_list_all_permissions(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#listPermissionsForOrigin)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 /// @param securityOrigin QUrl*
 ///
 /// @return libqt_list of QWebEnginePermission*
 ///
-libqt_list q_webengineprofile_list_permissions_for_origin(void* self, void* securityOrigin);
+libqt_list q_webengineprofile_list_permissions_for_origin(const void* self, const void* securityOrigin);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#listPermissionsForPermissionType)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 /// @param permissionType enum QWebEnginePermission__PermissionType
 ///
 /// @return libqt_list of QWebEnginePermission*
 ///
-libqt_list q_webengineprofile_list_permissions_for_permission_type(void* self, uint8_t permissionType);
+libqt_list q_webengineprofile_list_permissions_for_permission_type(const void* self, uint8_t permissionType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#defaultProfile)
 ///
@@ -513,9 +513,9 @@ const char* q_webengineprofile_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-const char* q_webengineprofile_object_name(void* self);
+const char* q_webengineprofile_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -530,33 +530,33 @@ void q_webengineprofile_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-bool q_webengineprofile_is_widget_type(void* self);
+bool q_webengineprofile_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-bool q_webengineprofile_is_window_type(void* self);
+bool q_webengineprofile_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-bool q_webengineprofile_is_quick_item_type(void* self);
+bool q_webengineprofile_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-bool q_webengineprofile_signals_blocked(void* self);
+bool q_webengineprofile_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -571,9 +571,9 @@ bool q_webengineprofile_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-QThread* q_webengineprofile_thread(void* self);
+QThread* q_webengineprofile_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -624,11 +624,11 @@ void q_webengineprofile_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_webengineprofile_children(void* self);
+libqt_list q_webengineprofile_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -666,7 +666,7 @@ void q_webengineprofile_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_webengineprofile_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_webengineprofile_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -677,18 +677,18 @@ QMetaObject__Connection* q_webengineprofile_connect(void* sender, const char* si
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_webengineprofile_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_webengineprofile_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_webengineprofile_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_webengineprofile_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -699,7 +699,7 @@ QMetaObject__Connection* q_webengineprofile_connect3(void* self, void* sender, c
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_webengineprofile_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_webengineprofile_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -710,24 +710,24 @@ bool q_webengineprofile_disconnect(void* sender, const char* signal, void* recei
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_webengineprofile_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_webengineprofile_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-bool q_webengineprofile_disconnect3(void* self);
+bool q_webengineprofile_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 /// @param receiver QObject*
 ///
-bool q_webengineprofile_disconnect4(void* self, void* receiver);
+bool q_webengineprofile_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -735,23 +735,23 @@ bool q_webengineprofile_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_webengineprofile_disconnect5(void* param1);
+bool q_webengineprofile_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-void q_webengineprofile_dump_object_tree(void* self);
+void q_webengineprofile_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-void q_webengineprofile_dump_object_info(void* self);
+void q_webengineprofile_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -761,16 +761,16 @@ void q_webengineprofile_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_webengineprofile_set_property(void* self, const char* name, void* value);
+bool q_webengineprofile_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 /// @param name const char*
 ///
-QVariant* q_webengineprofile_property(void* self, const char* name);
+QVariant* q_webengineprofile_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -778,9 +778,9 @@ QVariant* q_webengineprofile_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-const char** q_webengineprofile_dynamic_property_names(void* self);
+const char** q_webengineprofile_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -794,9 +794,9 @@ QBindingStorage* q_webengineprofile_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-const QBindingStorage* q_webengineprofile_binding_storage2(void* self);
+const QBindingStorage* q_webengineprofile_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -819,18 +819,18 @@ void q_webengineprofile_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-QObject* q_webengineprofile_parent(void* self);
+QObject* q_webengineprofile_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 /// @param classname const char*
 ///
-bool q_webengineprofile_inherits(void* self, const char* classname);
+bool q_webengineprofile_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -870,7 +870,7 @@ int32_t q_webengineprofile_start_timer23(void* self, int64_t time, int32_t timer
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_webengineprofile_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_webengineprofile_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -882,59 +882,59 @@ QMetaObject__Connection* q_webengineprofile_connect5(void* sender, const char* s
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_webengineprofile_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_webengineprofile_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_webengineprofile_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_webengineprofile_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 /// @param signal const char*
 ///
-bool q_webengineprofile_disconnect1(void* self, const char* signal);
+bool q_webengineprofile_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWebEngineProfile*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_webengineprofile_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_webengineprofile_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_webengineprofile_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_webengineprofile_disconnect23(void* self, void* receiver, const char* member);
+bool q_webengineprofile_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QWebEngineProfile*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_webengineprofile_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1130,7 +1130,7 @@ void q_webengineprofile_on_custom_event(void* self, void (*callback)(void*, void
 /// @param self QWebEngineProfile*
 /// @param signal QMetaMethod*
 ///
-void q_webengineprofile_connect_notify(void* self, void* signal);
+void q_webengineprofile_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1141,7 +1141,7 @@ void q_webengineprofile_connect_notify(void* self, void* signal);
 /// @param self QWebEngineProfile*
 /// @param signal QMetaMethod*
 ///
-void q_webengineprofile_super_connect_notify(void* self, void* signal);
+void q_webengineprofile_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1152,7 +1152,7 @@ void q_webengineprofile_super_connect_notify(void* self, void* signal);
 /// @param self QWebEngineProfile*
 /// @param callback void func(QWebEngineProfile* self, QMetaMethod* signal)
 ///
-void q_webengineprofile_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_webengineprofile_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1163,7 +1163,7 @@ void q_webengineprofile_on_connect_notify(void* self, void (*callback)(void*, vo
 /// @param self QWebEngineProfile*
 /// @param signal QMetaMethod*
 ///
-void q_webengineprofile_disconnect_notify(void* self, void* signal);
+void q_webengineprofile_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1174,7 +1174,7 @@ void q_webengineprofile_disconnect_notify(void* self, void* signal);
 /// @param self QWebEngineProfile*
 /// @param signal QMetaMethod*
 ///
-void q_webengineprofile_super_disconnect_notify(void* self, void* signal);
+void q_webengineprofile_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1185,7 +1185,7 @@ void q_webengineprofile_super_disconnect_notify(void* self, void* signal);
 /// @param self QWebEngineProfile*
 /// @param callback void func(QWebEngineProfile* self, QMetaMethod* signal)
 ///
-void q_webengineprofile_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_webengineprofile_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1193,9 +1193,9 @@ void q_webengineprofile_on_disconnect_notify(void* self, void (*callback)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-QObject* q_webengineprofile_sender(void* self);
+QObject* q_webengineprofile_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1203,9 +1203,9 @@ QObject* q_webengineprofile_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-QObject* q_webengineprofile_super_sender(void* self);
+QObject* q_webengineprofile_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1213,10 +1213,10 @@ QObject* q_webengineprofile_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWebEngineProfile*
-/// @param callback QObject* func()
+/// @param self const QWebEngineProfile*
+/// @param callback QObject* func(QWebEngineProfile* self)
 ///
-void q_webengineprofile_on_sender(void* self, QObject* (*callback)());
+void q_webengineprofile_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1224,9 +1224,9 @@ void q_webengineprofile_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-int32_t q_webengineprofile_sender_signal_index(void* self);
+int32_t q_webengineprofile_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1234,9 +1234,9 @@ int32_t q_webengineprofile_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 ///
-int32_t q_webengineprofile_super_sender_signal_index(void* self);
+int32_t q_webengineprofile_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1244,10 +1244,10 @@ int32_t q_webengineprofile_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWebEngineProfile*
-/// @param callback int32_t func()
+/// @param self const QWebEngineProfile*
+/// @param callback int32_t func(QWebEngineProfile* self)
 ///
-void q_webengineprofile_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_webengineprofile_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1255,10 +1255,10 @@ void q_webengineprofile_on_sender_signal_index(void* self, int32_t (*callback)()
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 /// @param signal const char*
 ///
-int32_t q_webengineprofile_receivers(void* self, const char* signal);
+int32_t q_webengineprofile_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1266,10 +1266,10 @@ int32_t q_webengineprofile_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 /// @param signal const char*
 ///
-int32_t q_webengineprofile_super_receivers(void* self, const char* signal);
+int32_t q_webengineprofile_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1277,10 +1277,10 @@ int32_t q_webengineprofile_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 /// @param callback int32_t func(QWebEngineProfile* self, const char* signal)
 ///
-void q_webengineprofile_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_webengineprofile_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1288,10 +1288,10 @@ void q_webengineprofile_on_receivers(void* self, int32_t (*callback)(void*, cons
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 /// @param signal QMetaMethod*
 ///
-bool q_webengineprofile_is_signal_connected(void* self, void* signal);
+bool q_webengineprofile_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1299,10 +1299,10 @@ bool q_webengineprofile_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 /// @param signal QMetaMethod*
 ///
-bool q_webengineprofile_super_is_signal_connected(void* self, void* signal);
+bool q_webengineprofile_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1310,10 +1310,10 @@ bool q_webengineprofile_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWebEngineProfile*
+/// @param self const QWebEngineProfile*
 /// @param callback bool func(QWebEngineProfile* self, QMetaMethod* signal)
 ///
-void q_webengineprofile_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_webengineprofile_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

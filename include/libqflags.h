@@ -14,7 +14,7 @@
 ///
 /// @param other QFlag*
 ///
-QFlag* q_flag_new(void* other);
+QFlag* q_flag_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qflag.html)
 
@@ -62,7 +62,7 @@ QFlag* q_flag_new6(uint16_t value);
 ///
 /// @param param1 QFlag*
 ///
-QFlag* q_flag_new7(void* param1);
+QFlag* q_flag_new7(const void* param1);
 
 /// q_flag_copy_assign shallow copies `other` into `self`.
 ///
@@ -80,15 +80,15 @@ void q_flag_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qflag.html#operator-int)
 ///
-/// @param self QFlag*
+/// @param self const QFlag*
 ///
-int32_t q_flag_to_int(void* self);
+int32_t q_flag_to_int(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qflag.html#operator-unsigned-int)
 ///
-/// @param self QFlag*
+/// @param self const QFlag*
 ///
-uint32_t q_flag_to_unsigned_int(void* self);
+uint32_t q_flag_to_unsigned_int(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qflag.html#dtor.QFlag)
 ///
@@ -104,7 +104,7 @@ void q_flag_delete(void* self);
 ///
 /// @param other QIncompatibleFlag*
 ///
-QIncompatibleFlag* q_incompatibleflag_new(void* other);
+QIncompatibleFlag* q_incompatibleflag_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qincompatibleflag.html)
 
@@ -128,7 +128,7 @@ QIncompatibleFlag* q_incompatibleflag_new3(int i);
 ///
 /// @param param1 QIncompatibleFlag*
 ///
-QIncompatibleFlag* q_incompatibleflag_new4(void* param1);
+QIncompatibleFlag* q_incompatibleflag_new4(const void* param1);
 
 /// q_incompatibleflag_copy_assign shallow copies `other` into `self`.
 ///
@@ -146,9 +146,9 @@ void q_incompatibleflag_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qincompatibleflag.html#operator-int)
 ///
-/// @param self QIncompatibleFlag*
+/// @param self const QIncompatibleFlag*
 ///
-int32_t q_incompatibleflag_to_int(void* self);
+int32_t q_incompatibleflag_to_int(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qincompatibleflag.html#dtor.QIncompatibleFlag)
 ///

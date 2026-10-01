@@ -15,15 +15,15 @@ TextEmoticonsCore__EmojiModelManager* k_textemoticonscore__emojimodelmanager_new
     return TextEmoticonsCore__EmojiModelManager_New2((QObject*)parent);
 }
 
-const QMetaObject* k_textemoticonscore__emojimodelmanager_meta_object(void* self) {
+const QMetaObject* k_textemoticonscore__emojimodelmanager_meta_object(const void* self) {
     return TextEmoticonsCore__EmojiModelManager_MetaObject((TextEmoticonsCore__EmojiModelManager*)self);
 }
 
-void k_textemoticonscore__emojimodelmanager_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_textemoticonscore__emojimodelmanager_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     TextEmoticonsCore__EmojiModelManager_OnMetaObject((TextEmoticonsCore__EmojiModelManager*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_textemoticonscore__emojimodelmanager_super_meta_object(void* self) {
+const QMetaObject* k_textemoticonscore__emojimodelmanager_super_meta_object(const void* self) {
     return TextEmoticonsCore__EmojiModelManager_SuperMetaObject((TextEmoticonsCore__EmojiModelManager*)self);
 }
 
@@ -62,11 +62,11 @@ TextEmoticonsCore__EmojiModelManager* k_textemoticonscore__emojimodelmanager_sel
     return TextEmoticonsCore__EmojiModelManager_Self();
 }
 
-TextEmoticonsCore__EmojiModel* k_textemoticonscore__emojimodelmanager_emoji_model(void* self) {
+TextEmoticonsCore__EmojiModel* k_textemoticonscore__emojimodelmanager_emoji_model(const void* self) {
     return TextEmoticonsCore__EmojiModelManager_EmojiModel((TextEmoticonsCore__EmojiModelManager*)self);
 }
 
-const char** k_textemoticonscore__emojimodelmanager_recent_identifier(void* self) {
+const char** k_textemoticonscore__emojimodelmanager_recent_identifier(const void* self) {
     libqt_list _arr = TextEmoticonsCore__EmojiModelManager_RecentIdentifier((TextEmoticonsCore__EmojiModelManager*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -101,7 +101,7 @@ void k_textemoticonscore__emojimodelmanager_add_identifier(void* self, const cha
     TextEmoticonsCore__EmojiModelManager_AddIdentifier((TextEmoticonsCore__EmojiModelManager*)self, qstring(identifier));
 }
 
-TextEmoticonsCore__CustomEmojiIconManager* k_textemoticonscore__emojimodelmanager_custom_emoji_icon_manager(void* self) {
+TextEmoticonsCore__CustomEmojiIconManager* k_textemoticonscore__emojimodelmanager_custom_emoji_icon_manager(const void* self) {
     return TextEmoticonsCore__EmojiModelManager_CustomEmojiIconManager((TextEmoticonsCore__EmojiModelManager*)self);
 }
 
@@ -109,7 +109,7 @@ void k_textemoticonscore__emojimodelmanager_set_custom_emoji_icon_manager(void* 
     TextEmoticonsCore__EmojiModelManager_SetCustomEmojiIconManager((TextEmoticonsCore__EmojiModelManager*)self, (TextEmoticonsCore__CustomEmojiIconManager*)newCustomEmojiIconManager);
 }
 
-const char** k_textemoticonscore__emojimodelmanager_exclude_emoticons(void* self) {
+const char** k_textemoticonscore__emojimodelmanager_exclude_emoticons(const void* self) {
     libqt_list _arr = TextEmoticonsCore__EmojiModelManager_ExcludeEmoticons((TextEmoticonsCore__EmojiModelManager*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -180,7 +180,7 @@ const char* k_textemoticonscore__emojimodelmanager_tr3(const char* s, const char
     return _ret;
 }
 
-const char* k_textemoticonscore__emojimodelmanager_object_name(void* self) {
+const char* k_textemoticonscore__emojimodelmanager_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -191,19 +191,19 @@ void k_textemoticonscore__emojimodelmanager_set_object_name(void* self, const ch
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_textemoticonscore__emojimodelmanager_is_widget_type(void* self) {
+bool k_textemoticonscore__emojimodelmanager_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_textemoticonscore__emojimodelmanager_is_window_type(void* self) {
+bool k_textemoticonscore__emojimodelmanager_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_textemoticonscore__emojimodelmanager_is_quick_item_type(void* self) {
+bool k_textemoticonscore__emojimodelmanager_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_textemoticonscore__emojimodelmanager_signals_blocked(void* self) {
+bool k_textemoticonscore__emojimodelmanager_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -211,7 +211,7 @@ bool k_textemoticonscore__emojimodelmanager_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_textemoticonscore__emojimodelmanager_thread(void* self) {
+QThread* k_textemoticonscore__emojimodelmanager_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -235,7 +235,7 @@ void k_textemoticonscore__emojimodelmanager_kill_timer2(void* self, int32_t id) 
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_textemoticonscore__emojimodelmanager_children(void* self) {
+libqt_list /* of QObject* */ k_textemoticonscore__emojimodelmanager_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -252,55 +252,55 @@ void k_textemoticonscore__emojimodelmanager_remove_event_filter(void* self, void
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_textemoticonscore__emojimodelmanager_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_textemoticonscore__emojimodelmanager_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_textemoticonscore__emojimodelmanager_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_textemoticonscore__emojimodelmanager_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_textemoticonscore__emojimodelmanager_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_textemoticonscore__emojimodelmanager_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_textemoticonscore__emojimodelmanager_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_textemoticonscore__emojimodelmanager_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_textemoticonscore__emojimodelmanager_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_textemoticonscore__emojimodelmanager_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_textemoticonscore__emojimodelmanager_disconnect3(void* self) {
+bool k_textemoticonscore__emojimodelmanager_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_textemoticonscore__emojimodelmanager_disconnect4(void* self, void* receiver) {
+bool k_textemoticonscore__emojimodelmanager_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_textemoticonscore__emojimodelmanager_disconnect5(void* param1) {
+bool k_textemoticonscore__emojimodelmanager_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_textemoticonscore__emojimodelmanager_dump_object_tree(void* self) {
+void k_textemoticonscore__emojimodelmanager_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_textemoticonscore__emojimodelmanager_dump_object_info(void* self) {
+void k_textemoticonscore__emojimodelmanager_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_textemoticonscore__emojimodelmanager_set_property(void* self, const char* name, void* value) {
+bool k_textemoticonscore__emojimodelmanager_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_textemoticonscore__emojimodelmanager_property(void* self, const char* name) {
+QVariant* k_textemoticonscore__emojimodelmanager_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_textemoticonscore__emojimodelmanager_dynamic_property_names(void* self) {
+const char** k_textemoticonscore__emojimodelmanager_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -321,7 +321,7 @@ QBindingStorage* k_textemoticonscore__emojimodelmanager_binding_storage(void* se
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_textemoticonscore__emojimodelmanager_binding_storage2(void* self) {
+const QBindingStorage* k_textemoticonscore__emojimodelmanager_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -333,11 +333,11 @@ void k_textemoticonscore__emojimodelmanager_on_destroyed(void* self, void (*call
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_textemoticonscore__emojimodelmanager_parent(void* self) {
+QObject* k_textemoticonscore__emojimodelmanager_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_textemoticonscore__emojimodelmanager_inherits(void* self, const char* classname) {
+bool k_textemoticonscore__emojimodelmanager_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -353,31 +353,31 @@ int32_t k_textemoticonscore__emojimodelmanager_start_timer23(void* self, int64_t
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_textemoticonscore__emojimodelmanager_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_textemoticonscore__emojimodelmanager_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_textemoticonscore__emojimodelmanager_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_textemoticonscore__emojimodelmanager_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_textemoticonscore__emojimodelmanager_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_textemoticonscore__emojimodelmanager_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_textemoticonscore__emojimodelmanager_disconnect1(void* self, const char* signal) {
+bool k_textemoticonscore__emojimodelmanager_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_textemoticonscore__emojimodelmanager_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_textemoticonscore__emojimodelmanager_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_textemoticonscore__emojimodelmanager_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_textemoticonscore__emojimodelmanager_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_textemoticonscore__emojimodelmanager_disconnect23(void* self, void* receiver, const char* member) {
+bool k_textemoticonscore__emojimodelmanager_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -449,76 +449,44 @@ void k_textemoticonscore__emojimodelmanager_on_custom_event(void* self, void (*c
     TextEmoticonsCore__EmojiModelManager_OnCustomEvent((TextEmoticonsCore__EmojiModelManager*)self, (intptr_t)callback);
 }
 
-void k_textemoticonscore__emojimodelmanager_connect_notify(void* self, void* signal) {
+void k_textemoticonscore__emojimodelmanager_connect_notify(void* self, const void* signal) {
     TextEmoticonsCore__EmojiModelManager_ConnectNotify((TextEmoticonsCore__EmojiModelManager*)self, (QMetaMethod*)signal);
 }
 
-void k_textemoticonscore__emojimodelmanager_super_connect_notify(void* self, void* signal) {
+void k_textemoticonscore__emojimodelmanager_super_connect_notify(void* self, const void* signal) {
     TextEmoticonsCore__EmojiModelManager_SuperConnectNotify((TextEmoticonsCore__EmojiModelManager*)self, (QMetaMethod*)signal);
 }
 
-void k_textemoticonscore__emojimodelmanager_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_textemoticonscore__emojimodelmanager_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     TextEmoticonsCore__EmojiModelManager_OnConnectNotify((TextEmoticonsCore__EmojiModelManager*)self, (intptr_t)callback);
 }
 
-void k_textemoticonscore__emojimodelmanager_disconnect_notify(void* self, void* signal) {
+void k_textemoticonscore__emojimodelmanager_disconnect_notify(void* self, const void* signal) {
     TextEmoticonsCore__EmojiModelManager_DisconnectNotify((TextEmoticonsCore__EmojiModelManager*)self, (QMetaMethod*)signal);
 }
 
-void k_textemoticonscore__emojimodelmanager_super_disconnect_notify(void* self, void* signal) {
+void k_textemoticonscore__emojimodelmanager_super_disconnect_notify(void* self, const void* signal) {
     TextEmoticonsCore__EmojiModelManager_SuperDisconnectNotify((TextEmoticonsCore__EmojiModelManager*)self, (QMetaMethod*)signal);
 }
 
-void k_textemoticonscore__emojimodelmanager_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_textemoticonscore__emojimodelmanager_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     TextEmoticonsCore__EmojiModelManager_OnDisconnectNotify((TextEmoticonsCore__EmojiModelManager*)self, (intptr_t)callback);
 }
 
-QObject* k_textemoticonscore__emojimodelmanager_sender(void* self) {
+QObject* k_textemoticonscore__emojimodelmanager_sender(const void* self) {
     return TextEmoticonsCore__EmojiModelManager_Sender((TextEmoticonsCore__EmojiModelManager*)self);
 }
 
-QObject* k_textemoticonscore__emojimodelmanager_super_sender(void* self) {
-    return TextEmoticonsCore__EmojiModelManager_SuperSender((TextEmoticonsCore__EmojiModelManager*)self);
-}
-
-void k_textemoticonscore__emojimodelmanager_on_sender(void* self, QObject* (*callback)()) {
-    TextEmoticonsCore__EmojiModelManager_OnSender((TextEmoticonsCore__EmojiModelManager*)self, (intptr_t)callback);
-}
-
-int32_t k_textemoticonscore__emojimodelmanager_sender_signal_index(void* self) {
+int32_t k_textemoticonscore__emojimodelmanager_sender_signal_index(const void* self) {
     return TextEmoticonsCore__EmojiModelManager_SenderSignalIndex((TextEmoticonsCore__EmojiModelManager*)self);
 }
 
-int32_t k_textemoticonscore__emojimodelmanager_super_sender_signal_index(void* self) {
-    return TextEmoticonsCore__EmojiModelManager_SuperSenderSignalIndex((TextEmoticonsCore__EmojiModelManager*)self);
-}
-
-void k_textemoticonscore__emojimodelmanager_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    TextEmoticonsCore__EmojiModelManager_OnSenderSignalIndex((TextEmoticonsCore__EmojiModelManager*)self, (intptr_t)callback);
-}
-
-int32_t k_textemoticonscore__emojimodelmanager_receivers(void* self, const char* signal) {
+int32_t k_textemoticonscore__emojimodelmanager_receivers(const void* self, const char* signal) {
     return TextEmoticonsCore__EmojiModelManager_Receivers((TextEmoticonsCore__EmojiModelManager*)self, signal);
 }
 
-int32_t k_textemoticonscore__emojimodelmanager_super_receivers(void* self, const char* signal) {
-    return TextEmoticonsCore__EmojiModelManager_SuperReceivers((TextEmoticonsCore__EmojiModelManager*)self, signal);
-}
-
-void k_textemoticonscore__emojimodelmanager_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    TextEmoticonsCore__EmojiModelManager_OnReceivers((TextEmoticonsCore__EmojiModelManager*)self, (intptr_t)callback);
-}
-
-bool k_textemoticonscore__emojimodelmanager_is_signal_connected(void* self, void* signal) {
+bool k_textemoticonscore__emojimodelmanager_is_signal_connected(const void* self, const void* signal) {
     return TextEmoticonsCore__EmojiModelManager_IsSignalConnected((TextEmoticonsCore__EmojiModelManager*)self, (QMetaMethod*)signal);
-}
-
-bool k_textemoticonscore__emojimodelmanager_super_is_signal_connected(void* self, void* signal) {
-    return TextEmoticonsCore__EmojiModelManager_SuperIsSignalConnected((TextEmoticonsCore__EmojiModelManager*)self, (QMetaMethod*)signal);
-}
-
-void k_textemoticonscore__emojimodelmanager_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    TextEmoticonsCore__EmojiModelManager_OnIsSignalConnected((TextEmoticonsCore__EmojiModelManager*)self, (intptr_t)callback);
 }
 
 void k_textemoticonscore__emojimodelmanager_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

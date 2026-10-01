@@ -14,7 +14,7 @@
 ///
 /// @param it QTreeWidgetItemIterator*
 ///
-QTreeWidgetItemIterator* q_treewidgetitemiterator_new(void* it);
+QTreeWidgetItemIterator* q_treewidgetitemiterator_new(const void* it);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html)
 
@@ -55,7 +55,7 @@ QTreeWidgetItemIterator* q_treewidgetitemiterator_new5(void* item, int32_t flags
 /// @param self QTreeWidgetItemIterator*
 /// @param it QTreeWidgetItemIterator*
 ///
-void q_treewidgetitemiterator_operator_assign(void* self, void* it);
+void q_treewidgetitemiterator_operator_assign(void* self, const void* it);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html#operator-2b-2b)
 ///
@@ -99,9 +99,9 @@ QTreeWidgetItemIterator* q_treewidgetitemiterator_operator_minus_assign(void* se
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html#operator-2a)
 ///
-/// @param self QTreeWidgetItemIterator*
+/// @param self const QTreeWidgetItemIterator*
 ///
-QTreeWidgetItem* q_treewidgetitemiterator_operator_multiply(void* self);
+QTreeWidgetItem* q_treewidgetitemiterator_operator_multiply(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html#dtor.QTreeWidgetItemIterator)
 ///

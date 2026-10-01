@@ -3,7 +3,7 @@
 #include "libqcolor.hpp"
 #include "libqcolor.h"
 
-QColor* q_color_new(void* other) {
+QColor* q_color_new(const void* other) {
     return QColor_New((QColor*)other);
 }
 
@@ -55,7 +55,7 @@ QColor* q_color_new13(int32_t spec, uint16_t a1, uint16_t a2, uint16_t a3, uint1
     return QColor_New13(spec, a1, a2, a3, a4);
 }
 
-QColor* q_color_new14(void* param1) {
+QColor* q_color_new14(const void* param1) {
     return QColor_New14((QColor*)param1);
 }
 
@@ -83,11 +83,11 @@ void q_color_operator_assign(void* self, int32_t color) {
     QColor_OperatorAssign((QColor*)self, color);
 }
 
-bool q_color_is_valid(void* self) {
+bool q_color_is_valid(const void* self) {
     return QColor_IsValid((QColor*)self);
 }
 
-const char* q_color_name(void* self) {
+const char* q_color_name(const void* self) {
     libqt_string _str = QColor_Name((QColor*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -123,11 +123,11 @@ const char** q_color_color_names() {
     return _ret;
 }
 
-int32_t q_color_spec(void* self) {
+int32_t q_color_spec(const void* self) {
     return QColor_Spec((QColor*)self);
 }
 
-int32_t q_color_alpha(void* self) {
+int32_t q_color_alpha(const void* self) {
     return QColor_Alpha((QColor*)self);
 }
 
@@ -135,7 +135,7 @@ void q_color_set_alpha(void* self, int alpha) {
     QColor_SetAlpha((QColor*)self, alpha);
 }
 
-float q_color_alpha_f(void* self) {
+float q_color_alpha_f(const void* self) {
     return QColor_AlphaF((QColor*)self);
 }
 
@@ -143,15 +143,15 @@ void q_color_set_alpha_f(void* self, float alpha) {
     QColor_SetAlphaF((QColor*)self, alpha);
 }
 
-int32_t q_color_red(void* self) {
+int32_t q_color_red(const void* self) {
     return QColor_Red((QColor*)self);
 }
 
-int32_t q_color_green(void* self) {
+int32_t q_color_green(const void* self) {
     return QColor_Green((QColor*)self);
 }
 
-int32_t q_color_blue(void* self) {
+int32_t q_color_blue(const void* self) {
     return QColor_Blue((QColor*)self);
 }
 
@@ -167,15 +167,15 @@ void q_color_set_blue(void* self, int blue) {
     QColor_SetBlue((QColor*)self, blue);
 }
 
-float q_color_red_f(void* self) {
+float q_color_red_f(const void* self) {
     return QColor_RedF((QColor*)self);
 }
 
-float q_color_green_f(void* self) {
+float q_color_green_f(const void* self) {
     return QColor_GreenF((QColor*)self);
 }
 
-float q_color_blue_f(void* self) {
+float q_color_blue_f(const void* self) {
     return QColor_BlueF((QColor*)self);
 }
 
@@ -191,7 +191,7 @@ void q_color_set_blue_f(void* self, float blue) {
     QColor_SetBlueF((QColor*)self, blue);
 }
 
-void q_color_get_rgb(void* self, int* r, int* g, int* b) {
+void q_color_get_rgb(const void* self, int* r, int* g, int* b) {
     QColor_GetRgb((QColor*)self, r, g, b);
 }
 
@@ -199,7 +199,7 @@ void q_color_set_rgb(void* self, int r, int g, int b) {
     QColor_SetRgb((QColor*)self, r, g, b);
 }
 
-void q_color_get_rgb_f(void* self, float* r, float* g, float* b) {
+void q_color_get_rgb_f(const void* self, float* r, float* g, float* b) {
     QColor_GetRgbF((QColor*)self, r, g, b);
 }
 
@@ -207,7 +207,7 @@ void q_color_set_rgb_f(void* self, float r, float g, float b) {
     QColor_SetRgbF((QColor*)self, r, g, b);
 }
 
-QRgba64* q_color_rgba64(void* self) {
+QRgba64* q_color_rgba64(const void* self) {
     return QColor_Rgba64((QColor*)self);
 }
 
@@ -215,7 +215,7 @@ void q_color_set_rgba64(void* self, void* rgba) {
     QColor_SetRgba64((QColor*)self, (QRgba64*)rgba);
 }
 
-uint32_t q_color_rgba(void* self) {
+uint32_t q_color_rgba(const void* self) {
     return QColor_Rgba((QColor*)self);
 }
 
@@ -223,7 +223,7 @@ void q_color_set_rgba(void* self, uint32_t rgba) {
     QColor_SetRgba((QColor*)self, rgba);
 }
 
-uint32_t q_color_rgb(void* self) {
+uint32_t q_color_rgb(const void* self) {
     return QColor_Rgb((QColor*)self);
 }
 
@@ -231,47 +231,47 @@ void q_color_set_rgb2(void* self, uint32_t rgb) {
     QColor_SetRgb2((QColor*)self, rgb);
 }
 
-int32_t q_color_hue(void* self) {
+int32_t q_color_hue(const void* self) {
     return QColor_Hue((QColor*)self);
 }
 
-int32_t q_color_saturation(void* self) {
+int32_t q_color_saturation(const void* self) {
     return QColor_Saturation((QColor*)self);
 }
 
-int32_t q_color_hsv_hue(void* self) {
+int32_t q_color_hsv_hue(const void* self) {
     return QColor_HsvHue((QColor*)self);
 }
 
-int32_t q_color_hsv_saturation(void* self) {
+int32_t q_color_hsv_saturation(const void* self) {
     return QColor_HsvSaturation((QColor*)self);
 }
 
-int32_t q_color_value(void* self) {
+int32_t q_color_value(const void* self) {
     return QColor_Value((QColor*)self);
 }
 
-float q_color_hue_f(void* self) {
+float q_color_hue_f(const void* self) {
     return QColor_HueF((QColor*)self);
 }
 
-float q_color_saturation_f(void* self) {
+float q_color_saturation_f(const void* self) {
     return QColor_SaturationF((QColor*)self);
 }
 
-float q_color_hsv_hue_f(void* self) {
+float q_color_hsv_hue_f(const void* self) {
     return QColor_HsvHueF((QColor*)self);
 }
 
-float q_color_hsv_saturation_f(void* self) {
+float q_color_hsv_saturation_f(const void* self) {
     return QColor_HsvSaturationF((QColor*)self);
 }
 
-float q_color_value_f(void* self) {
+float q_color_value_f(const void* self) {
     return QColor_ValueF((QColor*)self);
 }
 
-void q_color_get_hsv(void* self, int* h, int* s, int* v) {
+void q_color_get_hsv(const void* self, int* h, int* s, int* v) {
     QColor_GetHsv((QColor*)self, h, s, v);
 }
 
@@ -279,7 +279,7 @@ void q_color_set_hsv(void* self, int h, int s, int v) {
     QColor_SetHsv((QColor*)self, h, s, v);
 }
 
-void q_color_get_hsv_f(void* self, float* h, float* s, float* v) {
+void q_color_get_hsv_f(const void* self, float* h, float* s, float* v) {
     QColor_GetHsvF((QColor*)self, h, s, v);
 }
 
@@ -287,39 +287,39 @@ void q_color_set_hsv_f(void* self, float h, float s, float v) {
     QColor_SetHsvF((QColor*)self, h, s, v);
 }
 
-int32_t q_color_cyan(void* self) {
+int32_t q_color_cyan(const void* self) {
     return QColor_Cyan((QColor*)self);
 }
 
-int32_t q_color_magenta(void* self) {
+int32_t q_color_magenta(const void* self) {
     return QColor_Magenta((QColor*)self);
 }
 
-int32_t q_color_yellow(void* self) {
+int32_t q_color_yellow(const void* self) {
     return QColor_Yellow((QColor*)self);
 }
 
-int32_t q_color_black(void* self) {
+int32_t q_color_black(const void* self) {
     return QColor_Black((QColor*)self);
 }
 
-float q_color_cyan_f(void* self) {
+float q_color_cyan_f(const void* self) {
     return QColor_CyanF((QColor*)self);
 }
 
-float q_color_magenta_f(void* self) {
+float q_color_magenta_f(const void* self) {
     return QColor_MagentaF((QColor*)self);
 }
 
-float q_color_yellow_f(void* self) {
+float q_color_yellow_f(const void* self) {
     return QColor_YellowF((QColor*)self);
 }
 
-float q_color_black_f(void* self) {
+float q_color_black_f(const void* self) {
     return QColor_BlackF((QColor*)self);
 }
 
-void q_color_get_cmyk(void* self, int* c, int* m, int* y, int* k) {
+void q_color_get_cmyk(const void* self, int* c, int* m, int* y, int* k) {
     QColor_GetCmyk((QColor*)self, c, m, y, k);
 }
 
@@ -327,7 +327,7 @@ void q_color_set_cmyk(void* self, int c, int m, int y, int k) {
     QColor_SetCmyk((QColor*)self, c, m, y, k);
 }
 
-void q_color_get_cmyk_f(void* self, float* c, float* m, float* y, float* k) {
+void q_color_get_cmyk_f(const void* self, float* c, float* m, float* y, float* k) {
     QColor_GetCmykF((QColor*)self, c, m, y, k);
 }
 
@@ -335,31 +335,31 @@ void q_color_set_cmyk_f(void* self, float c, float m, float y, float k) {
     QColor_SetCmykF((QColor*)self, c, m, y, k);
 }
 
-int32_t q_color_hsl_hue(void* self) {
+int32_t q_color_hsl_hue(const void* self) {
     return QColor_HslHue((QColor*)self);
 }
 
-int32_t q_color_hsl_saturation(void* self) {
+int32_t q_color_hsl_saturation(const void* self) {
     return QColor_HslSaturation((QColor*)self);
 }
 
-int32_t q_color_lightness(void* self) {
+int32_t q_color_lightness(const void* self) {
     return QColor_Lightness((QColor*)self);
 }
 
-float q_color_hsl_hue_f(void* self) {
+float q_color_hsl_hue_f(const void* self) {
     return QColor_HslHueF((QColor*)self);
 }
 
-float q_color_hsl_saturation_f(void* self) {
+float q_color_hsl_saturation_f(const void* self) {
     return QColor_HslSaturationF((QColor*)self);
 }
 
-float q_color_lightness_f(void* self) {
+float q_color_lightness_f(const void* self) {
     return QColor_LightnessF((QColor*)self);
 }
 
-void q_color_get_hsl(void* self, int* h, int* s, int* l) {
+void q_color_get_hsl(const void* self, int* h, int* s, int* l) {
     QColor_GetHsl((QColor*)self, h, s, l);
 }
 
@@ -367,7 +367,7 @@ void q_color_set_hsl(void* self, int h, int s, int l) {
     QColor_SetHsl((QColor*)self, h, s, l);
 }
 
-void q_color_get_hsl_f(void* self, float* h, float* s, float* l) {
+void q_color_get_hsl_f(const void* self, float* h, float* s, float* l) {
     QColor_GetHslF((QColor*)self, h, s, l);
 }
 
@@ -375,27 +375,27 @@ void q_color_set_hsl_f(void* self, float h, float s, float l) {
     QColor_SetHslF((QColor*)self, h, s, l);
 }
 
-QColor* q_color_to_rgb(void* self) {
+QColor* q_color_to_rgb(const void* self) {
     return QColor_ToRgb((QColor*)self);
 }
 
-QColor* q_color_to_hsv(void* self) {
+QColor* q_color_to_hsv(const void* self) {
     return QColor_ToHsv((QColor*)self);
 }
 
-QColor* q_color_to_cmyk(void* self) {
+QColor* q_color_to_cmyk(const void* self) {
     return QColor_ToCmyk((QColor*)self);
 }
 
-QColor* q_color_to_hsl(void* self) {
+QColor* q_color_to_hsl(const void* self) {
     return QColor_ToHsl((QColor*)self);
 }
 
-QColor* q_color_to_extended_rgb(void* self) {
+QColor* q_color_to_extended_rgb(const void* self) {
     return QColor_ToExtendedRgb((QColor*)self);
 }
 
-QColor* q_color_convert_to(void* self, int32_t colorSpec) {
+QColor* q_color_convert_to(const void* self, int32_t colorSpec) {
     return QColor_ConvertTo((QColor*)self, colorSpec);
 }
 
@@ -447,23 +447,23 @@ QColor* q_color_from_hsl_f(float h, float s, float l) {
     return QColor_FromHslF(h, s, l);
 }
 
-QColor* q_color_lighter(void* self) {
+QColor* q_color_lighter(const void* self) {
     return QColor_Lighter((QColor*)self);
 }
 
-QColor* q_color_darker(void* self) {
+QColor* q_color_darker(const void* self) {
     return QColor_Darker((QColor*)self);
 }
 
-bool q_color_operator_equal(void* self, void* c) {
+bool q_color_operator_equal(const void* self, const void* c) {
     return QColor_OperatorEqual((QColor*)self, (QColor*)c);
 }
 
-bool q_color_operator_not_equal(void* self, void* c) {
+bool q_color_operator_not_equal(const void* self, const void* c) {
     return QColor_OperatorNotEqual((QColor*)self, (QColor*)c);
 }
 
-QVariant* q_color_to_q_variant(void* self) {
+QVariant* q_color_to_q_variant(const void* self) {
     return QColor_ToQVariant((QColor*)self);
 }
 
@@ -483,14 +483,14 @@ bool q_color_is_valid_color_name(const char* param1) {
     return QColor_IsValidColorName(param1);
 }
 
-const char* q_color_name1(void* self, int32_t format) {
+const char* q_color_name1(const void* self, int32_t format) {
     libqt_string _str = QColor_Name1((QColor*)self, format);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_color_get_rgb4(void* self, int* r, int* g, int* b, int* a) {
+void q_color_get_rgb4(const void* self, int* r, int* g, int* b, int* a) {
     QColor_GetRgb4((QColor*)self, r, g, b, a);
 }
 
@@ -498,7 +498,7 @@ void q_color_set_rgb4(void* self, int r, int g, int b, int a) {
     QColor_SetRgb4((QColor*)self, r, g, b, a);
 }
 
-void q_color_get_rgb_f4(void* self, float* r, float* g, float* b, float* a) {
+void q_color_get_rgb_f4(const void* self, float* r, float* g, float* b, float* a) {
     QColor_GetRgbF4((QColor*)self, r, g, b, a);
 }
 
@@ -506,7 +506,7 @@ void q_color_set_rgb_f4(void* self, float r, float g, float b, float a) {
     QColor_SetRgbF4((QColor*)self, r, g, b, a);
 }
 
-void q_color_get_hsv4(void* self, int* h, int* s, int* v, int* a) {
+void q_color_get_hsv4(const void* self, int* h, int* s, int* v, int* a) {
     QColor_GetHsv4((QColor*)self, h, s, v, a);
 }
 
@@ -514,7 +514,7 @@ void q_color_set_hsv4(void* self, int h, int s, int v, int a) {
     QColor_SetHsv4((QColor*)self, h, s, v, a);
 }
 
-void q_color_get_hsv_f4(void* self, float* h, float* s, float* v, float* a) {
+void q_color_get_hsv_f4(const void* self, float* h, float* s, float* v, float* a) {
     QColor_GetHsvF4((QColor*)self, h, s, v, a);
 }
 
@@ -522,7 +522,7 @@ void q_color_set_hsv_f4(void* self, float h, float s, float v, float a) {
     QColor_SetHsvF4((QColor*)self, h, s, v, a);
 }
 
-void q_color_get_cmyk5(void* self, int* c, int* m, int* y, int* k, int* a) {
+void q_color_get_cmyk5(const void* self, int* c, int* m, int* y, int* k, int* a) {
     QColor_GetCmyk5((QColor*)self, c, m, y, k, a);
 }
 
@@ -530,7 +530,7 @@ void q_color_set_cmyk5(void* self, int c, int m, int y, int k, int a) {
     QColor_SetCmyk5((QColor*)self, c, m, y, k, a);
 }
 
-void q_color_get_cmyk_f5(void* self, float* c, float* m, float* y, float* k, float* a) {
+void q_color_get_cmyk_f5(const void* self, float* c, float* m, float* y, float* k, float* a) {
     QColor_GetCmykF5((QColor*)self, c, m, y, k, a);
 }
 
@@ -538,7 +538,7 @@ void q_color_set_cmyk_f5(void* self, float c, float m, float y, float k, float a
     QColor_SetCmykF5((QColor*)self, c, m, y, k, a);
 }
 
-void q_color_get_hsl4(void* self, int* h, int* s, int* l, int* a) {
+void q_color_get_hsl4(const void* self, int* h, int* s, int* l, int* a) {
     QColor_GetHsl4((QColor*)self, h, s, l, a);
 }
 
@@ -546,7 +546,7 @@ void q_color_set_hsl4(void* self, int h, int s, int l, int a) {
     QColor_SetHsl4((QColor*)self, h, s, l, a);
 }
 
-void q_color_get_hsl_f4(void* self, float* h, float* s, float* l, float* a) {
+void q_color_get_hsl_f4(const void* self, float* h, float* s, float* l, float* a) {
     QColor_GetHslF4((QColor*)self, h, s, l, a);
 }
 
@@ -590,11 +590,11 @@ QColor* q_color_from_hsl_f4(float h, float s, float l, float a) {
     return QColor_FromHslF4(h, s, l, a);
 }
 
-QColor* q_color_lighter1(void* self, int f) {
+QColor* q_color_lighter1(const void* self, int f) {
     return QColor_Lighter1((QColor*)self, f);
 }
 
-QColor* q_color_darker1(void* self, int f) {
+QColor* q_color_darker1(const void* self, int f) {
     return QColor_Darker1((QColor*)self, f);
 }
 

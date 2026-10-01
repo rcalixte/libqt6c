@@ -46,7 +46,7 @@ const char* k_parts_get_enum_name2(int32_t param1);
 ///
 /// @return flag of enum KParts__PartCapability
 ///
-int32_t k_parts__partloader_part_capabilities(void* data);
+int32_t k_parts__partloader_part_capabilities(const void* data);
 
 /// [Upstream resources](https://api.kde.org/kparts-partloader.html#partsForMimeType)
 ///

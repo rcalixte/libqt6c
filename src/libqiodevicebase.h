@@ -14,7 +14,7 @@
 ///
 /// @param other QIODeviceBase*
 ///
-QIODeviceBase* q_iodevicebase_new(void* other);
+QIODeviceBase* q_iodevicebase_new(const void* other);
 
 /// q_iodevicebase_copy_assign shallow copies `other` into `self`.
 ///

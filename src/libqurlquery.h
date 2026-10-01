@@ -15,7 +15,7 @@
 /// @param key QUrlQuery*
 /// @param seed size_t
 ///
-size_t q_qurlquery_q_hash(void* key, size_t seed);
+size_t q_qurlquery_q_hash(const void* key, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html)
 
@@ -29,7 +29,7 @@ QUrlQuery* q_urlquery_new();
 ///
 /// @param url QUrl*
 ///
-QUrlQuery* q_urlquery_new2(void* url);
+QUrlQuery* q_urlquery_new2(const void* url);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html)
 
@@ -45,14 +45,14 @@ QUrlQuery* q_urlquery_new3(const char* queryString);
 ///
 /// @param other QUrlQuery*
 ///
-QUrlQuery* q_urlquery_new4(void* other);
+QUrlQuery* q_urlquery_new4(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html#operator-eq)
 ///
 /// @param self QUrlQuery*
 /// @param other QUrlQuery*
 ///
-void q_urlquery_operator_assign(void* self, void* other);
+void q_urlquery_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html#swap)
 ///
@@ -63,15 +63,15 @@ void q_urlquery_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html#isEmpty)
 ///
-/// @param self QUrlQuery*
+/// @param self const QUrlQuery*
 ///
-bool q_urlquery_is_empty(void* self);
+bool q_urlquery_is_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html#isDetached)
 ///
-/// @param self QUrlQuery*
+/// @param self const QUrlQuery*
 ///
-bool q_urlquery_is_detached(void* self);
+bool q_urlquery_is_detached(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html#clear)
 ///
@@ -83,9 +83,9 @@ void q_urlquery_clear(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUrlQuery*
+/// @param self const QUrlQuery*
 ///
-const char* q_urlquery_query(void* self);
+const char* q_urlquery_query(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html#setQuery)
 ///
@@ -98,9 +98,9 @@ void q_urlquery_set_query(void* self, const char* queryString);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUrlQuery*
+/// @param self const QUrlQuery*
 ///
-const char* q_urlquery_to_string(void* self);
+const char* q_urlquery_to_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html#setQueryDelimiters)
 ///
@@ -112,30 +112,30 @@ void q_urlquery_set_query_delimiters(void* self, void* valueDelimiter, void* pai
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html#queryValueDelimiter)
 ///
-/// @param self QUrlQuery*
+/// @param self const QUrlQuery*
 ///
-QChar* q_urlquery_query_value_delimiter(void* self);
+QChar* q_urlquery_query_value_delimiter(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html#queryPairDelimiter)
 ///
-/// @param self QUrlQuery*
+/// @param self const QUrlQuery*
 ///
-QChar* q_urlquery_query_pair_delimiter(void* self);
+QChar* q_urlquery_query_pair_delimiter(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html#queryItems)
 ///
-/// @param self QUrlQuery*
+/// @param self const QUrlQuery*
 ///
 /// @return libqt_list of libqt_pair tuple of const char* and const char*
 ///
-libqt_list q_urlquery_query_items(void* self);
+libqt_list q_urlquery_query_items(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html#hasQueryItem)
 ///
-/// @param self QUrlQuery*
+/// @param self const QUrlQuery*
 /// @param key const char*
 ///
-bool q_urlquery_has_query_item(void* self, const char* key);
+bool q_urlquery_has_query_item(const void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html#addQueryItem)
 ///
@@ -156,19 +156,19 @@ void q_urlquery_remove_query_item(void* self, const char* key);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUrlQuery*
+/// @param self const QUrlQuery*
 /// @param key const char*
 ///
-const char* q_urlquery_query_item_value(void* self, const char* key);
+const char* q_urlquery_query_item_value(const void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html#allQueryItemValues)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QUrlQuery*
+/// @param self const QUrlQuery*
 /// @param key const char*
 ///
-const char** q_urlquery_all_query_item_values(void* self, const char* key);
+const char** q_urlquery_all_query_item_values(const void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html#removeAllQueryItems)
 ///
@@ -181,48 +181,48 @@ void q_urlquery_remove_all_query_items(void* self, const char* key);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUrlQuery*
+/// @param self const QUrlQuery*
 /// @param encoding flag of enum QUrl__ComponentFormattingOption
 ///
-const char* q_urlquery_query1(void* self, uint32_t encoding);
+const char* q_urlquery_query1(const void* self, uint32_t encoding);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUrlQuery*
+/// @param self const QUrlQuery*
 /// @param encoding flag of enum QUrl__ComponentFormattingOption
 ///
-const char* q_urlquery_to_string1(void* self, uint32_t encoding);
+const char* q_urlquery_to_string1(const void* self, uint32_t encoding);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html#queryItems)
 ///
-/// @param self QUrlQuery*
+/// @param self const QUrlQuery*
 /// @param encoding flag of enum QUrl__ComponentFormattingOption
 ///
 /// @return libqt_list of libqt_pair tuple of const char* and const char*
 ///
-libqt_list q_urlquery_query_items1(void* self, uint32_t encoding);
+libqt_list q_urlquery_query_items1(const void* self, uint32_t encoding);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html#queryItemValue)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUrlQuery*
+/// @param self const QUrlQuery*
 /// @param key const char*
 /// @param encoding flag of enum QUrl__ComponentFormattingOption
 ///
-const char* q_urlquery_query_item_value2(void* self, const char* key, uint32_t encoding);
+const char* q_urlquery_query_item_value2(const void* self, const char* key, uint32_t encoding);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html#allQueryItemValues)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QUrlQuery*
+/// @param self const QUrlQuery*
 /// @param key const char*
 /// @param encoding flag of enum QUrl__ComponentFormattingOption
 ///
-const char** q_urlquery_all_query_item_values2(void* self, const char* key, uint32_t encoding);
+const char** q_urlquery_all_query_item_values2(const void* self, const char* key, uint32_t encoding);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html#dtor.QUrlQuery)
 ///

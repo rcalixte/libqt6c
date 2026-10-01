@@ -20,20 +20,20 @@ KParts__OpenUrlArguments* k_parts__openurlarguments_new();
 ///
 /// @param other KParts__OpenUrlArguments*
 ///
-KParts__OpenUrlArguments* k_parts__openurlarguments_new2(void* other);
+KParts__OpenUrlArguments* k_parts__openurlarguments_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/kparts-openurlarguments.html#operator-eq)
 ///
 /// @param self KParts__OpenUrlArguments*
 /// @param other KParts__OpenUrlArguments*
 ///
-void k_parts__openurlarguments_operator_assign(void* self, void* other);
+void k_parts__openurlarguments_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/kparts-openurlarguments.html#reload)
 ///
-/// @param self KParts__OpenUrlArguments*
+/// @param self const KParts__OpenUrlArguments*
 ///
-bool k_parts__openurlarguments_reload(void* self);
+bool k_parts__openurlarguments_reload(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-openurlarguments.html#setReload)
 ///
@@ -44,9 +44,9 @@ void k_parts__openurlarguments_set_reload(void* self, bool b);
 
 /// [Upstream resources](https://api.kde.org/kparts-openurlarguments.html#xOffset)
 ///
-/// @param self KParts__OpenUrlArguments*
+/// @param self const KParts__OpenUrlArguments*
 ///
-int32_t k_parts__openurlarguments_x_offset(void* self);
+int32_t k_parts__openurlarguments_x_offset(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-openurlarguments.html#setXOffset)
 ///
@@ -57,9 +57,9 @@ void k_parts__openurlarguments_set_x_offset(void* self, int x);
 
 /// [Upstream resources](https://api.kde.org/kparts-openurlarguments.html#yOffset)
 ///
-/// @param self KParts__OpenUrlArguments*
+/// @param self const KParts__OpenUrlArguments*
 ///
-int32_t k_parts__openurlarguments_y_offset(void* self);
+int32_t k_parts__openurlarguments_y_offset(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-openurlarguments.html#setYOffset)
 ///
@@ -72,9 +72,9 @@ void k_parts__openurlarguments_set_y_offset(void* self, int y);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KParts__OpenUrlArguments*
+/// @param self const KParts__OpenUrlArguments*
 ///
-const char* k_parts__openurlarguments_mime_type(void* self);
+const char* k_parts__openurlarguments_mime_type(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-openurlarguments.html#setMimeType)
 ///
@@ -85,9 +85,9 @@ void k_parts__openurlarguments_set_mime_type(void* self, const char* mime);
 
 /// [Upstream resources](https://api.kde.org/kparts-openurlarguments.html#actionRequestedByUser)
 ///
-/// @param self KParts__OpenUrlArguments*
+/// @param self const KParts__OpenUrlArguments*
 ///
-bool k_parts__openurlarguments_action_requested_by_user(void* self);
+bool k_parts__openurlarguments_action_requested_by_user(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-openurlarguments.html#setActionRequestedByUser)
 ///
@@ -130,11 +130,11 @@ libqt_map k_parts__openurlarguments_meta_data(void* self);
 /// free(map.values);
 /// ```
 ///
-/// @param self KParts__OpenUrlArguments*
+/// @param self const KParts__OpenUrlArguments*
 ///
 /// @return libqt_map of const char* to const char*
 ///
-libqt_map k_parts__openurlarguments_meta_data2(void* self);
+libqt_map k_parts__openurlarguments_meta_data2(const void* self);
 
 /// Delete this object from C++ memory.
 ///

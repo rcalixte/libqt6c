@@ -7,23 +7,23 @@ QBluetoothDeviceInfo* q_bluetoothdeviceinfo_new() {
     return QBluetoothDeviceInfo_New();
 }
 
-QBluetoothDeviceInfo* q_bluetoothdeviceinfo_new2(void* address, const char* name, uint32_t classOfDevice) {
+QBluetoothDeviceInfo* q_bluetoothdeviceinfo_new2(const void* address, const char* name, uint32_t classOfDevice) {
     return QBluetoothDeviceInfo_New2((QBluetoothAddress*)address, qstring(name), classOfDevice);
 }
 
-QBluetoothDeviceInfo* q_bluetoothdeviceinfo_new3(void* uuid, const char* name, uint32_t classOfDevice) {
+QBluetoothDeviceInfo* q_bluetoothdeviceinfo_new3(const void* uuid, const char* name, uint32_t classOfDevice) {
     return QBluetoothDeviceInfo_New3((QBluetoothUuid*)uuid, qstring(name), classOfDevice);
 }
 
-QBluetoothDeviceInfo* q_bluetoothdeviceinfo_new4(void* other) {
+QBluetoothDeviceInfo* q_bluetoothdeviceinfo_new4(const void* other) {
     return QBluetoothDeviceInfo_New4((QBluetoothDeviceInfo*)other);
 }
 
-bool q_bluetoothdeviceinfo_is_valid(void* self) {
+bool q_bluetoothdeviceinfo_is_valid(const void* self) {
     return QBluetoothDeviceInfo_IsValid((QBluetoothDeviceInfo*)self);
 }
 
-bool q_bluetoothdeviceinfo_is_cached(void* self) {
+bool q_bluetoothdeviceinfo_is_cached(const void* self) {
     return QBluetoothDeviceInfo_IsCached((QBluetoothDeviceInfo*)self);
 }
 
@@ -31,15 +31,15 @@ void q_bluetoothdeviceinfo_set_cached(void* self, bool cached) {
     QBluetoothDeviceInfo_SetCached((QBluetoothDeviceInfo*)self, cached);
 }
 
-void q_bluetoothdeviceinfo_operator_assign(void* self, void* other) {
+void q_bluetoothdeviceinfo_operator_assign(void* self, const void* other) {
     QBluetoothDeviceInfo_OperatorAssign((QBluetoothDeviceInfo*)self, (QBluetoothDeviceInfo*)other);
 }
 
-QBluetoothAddress* q_bluetoothdeviceinfo_address(void* self) {
+QBluetoothAddress* q_bluetoothdeviceinfo_address(const void* self) {
     return QBluetoothDeviceInfo_Address((QBluetoothDeviceInfo*)self);
 }
 
-const char* q_bluetoothdeviceinfo_name(void* self) {
+const char* q_bluetoothdeviceinfo_name(const void* self) {
     libqt_string _str = QBluetoothDeviceInfo_Name((QBluetoothDeviceInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -50,19 +50,19 @@ void q_bluetoothdeviceinfo_set_name(void* self, const char* name) {
     QBluetoothDeviceInfo_SetName((QBluetoothDeviceInfo*)self, qstring(name));
 }
 
-int32_t q_bluetoothdeviceinfo_service_classes(void* self) {
+int32_t q_bluetoothdeviceinfo_service_classes(const void* self) {
     return QBluetoothDeviceInfo_ServiceClasses((QBluetoothDeviceInfo*)self);
 }
 
-int32_t q_bluetoothdeviceinfo_major_device_class(void* self) {
+int32_t q_bluetoothdeviceinfo_major_device_class(const void* self) {
     return QBluetoothDeviceInfo_MajorDeviceClass((QBluetoothDeviceInfo*)self);
 }
 
-uint8_t q_bluetoothdeviceinfo_minor_device_class(void* self) {
+uint8_t q_bluetoothdeviceinfo_minor_device_class(const void* self) {
     return QBluetoothDeviceInfo_MinorDeviceClass((QBluetoothDeviceInfo*)self);
 }
 
-int16_t q_bluetoothdeviceinfo_rssi(void* self) {
+int16_t q_bluetoothdeviceinfo_rssi(const void* self) {
     return QBluetoothDeviceInfo_Rssi((QBluetoothDeviceInfo*)self);
 }
 
@@ -70,7 +70,7 @@ void q_bluetoothdeviceinfo_set_rssi(void* self, int16_t signal) {
     QBluetoothDeviceInfo_SetRssi((QBluetoothDeviceInfo*)self, signal);
 }
 
-libqt_list /* of QBluetoothUuid* */ q_bluetoothdeviceinfo_service_uuids(void* self) {
+libqt_list /* of QBluetoothUuid* */ q_bluetoothdeviceinfo_service_uuids(const void* self) {
     libqt_list _arr = QBluetoothDeviceInfo_ServiceUuids((QBluetoothDeviceInfo*)self);
     return _arr;
 }
@@ -79,12 +79,12 @@ void q_bluetoothdeviceinfo_set_service_uuids(void* self, libqt_list /* of QBluet
     QBluetoothDeviceInfo_SetServiceUuids((QBluetoothDeviceInfo*)self, uuids);
 }
 
-libqt_list /* of uint16_t */ q_bluetoothdeviceinfo_manufacturer_ids(void* self) {
+libqt_list /* of uint16_t */ q_bluetoothdeviceinfo_manufacturer_ids(const void* self) {
     libqt_list _arr = QBluetoothDeviceInfo_ManufacturerIds((QBluetoothDeviceInfo*)self);
     return _arr;
 }
 
-char* q_bluetoothdeviceinfo_manufacturer_data(void* self, uint16_t manufacturerId) {
+char* q_bluetoothdeviceinfo_manufacturer_data(const void* self, uint16_t manufacturerId) {
     libqt_string _str = QBluetoothDeviceInfo_ManufacturerData((QBluetoothDeviceInfo*)self, manufacturerId);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -95,7 +95,7 @@ bool q_bluetoothdeviceinfo_set_manufacturer_data(void* self, uint16_t manufactur
     return QBluetoothDeviceInfo_SetManufacturerData((QBluetoothDeviceInfo*)self, manufacturerId, qstring(data));
 }
 
-libqt_map /* of uint16_t to char** */ q_bluetoothdeviceinfo_manufacturer_data2(void* self) {
+libqt_map /* of uint16_t to char** */ q_bluetoothdeviceinfo_manufacturer_data2(const void* self) {
     // Convert QMultiHash<unsigned short,QByteArray> to libqt_map
     libqt_map _out = QBluetoothDeviceInfo_ManufacturerData2((QBluetoothDeviceInfo*)self);
     libqt_map _ret;
@@ -156,23 +156,23 @@ libqt_map /* of uint16_t to char** */ q_bluetoothdeviceinfo_manufacturer_data2(v
     return _ret;
 }
 
-libqt_list /* of QBluetoothUuid* */ q_bluetoothdeviceinfo_service_ids(void* self) {
+libqt_list /* of QBluetoothUuid* */ q_bluetoothdeviceinfo_service_ids(const void* self) {
     libqt_list _arr = QBluetoothDeviceInfo_ServiceIds((QBluetoothDeviceInfo*)self);
     return _arr;
 }
 
-char* q_bluetoothdeviceinfo_service_data(void* self, void* serviceId) {
+char* q_bluetoothdeviceinfo_service_data(const void* self, const void* serviceId) {
     libqt_string _str = QBluetoothDeviceInfo_ServiceData((QBluetoothDeviceInfo*)self, (QBluetoothUuid*)serviceId);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_bluetoothdeviceinfo_set_service_data(void* self, void* serviceId, char* data) {
+bool q_bluetoothdeviceinfo_set_service_data(void* self, const void* serviceId, char* data) {
     return QBluetoothDeviceInfo_SetServiceData((QBluetoothDeviceInfo*)self, (QBluetoothUuid*)serviceId, qstring(data));
 }
 
-libqt_map /* of QBluetoothUuid* to char** */ q_bluetoothdeviceinfo_service_data2(void* self) {
+libqt_map /* of QBluetoothUuid* to char** */ q_bluetoothdeviceinfo_service_data2(const void* self) {
     // Convert QMultiHash<QBluetoothUuid,QByteArray> to libqt_map
     libqt_map _out = QBluetoothDeviceInfo_ServiceData2((QBluetoothDeviceInfo*)self);
     libqt_map _ret;
@@ -237,15 +237,15 @@ void q_bluetoothdeviceinfo_set_core_configurations(void* self, int32_t coreConfi
     QBluetoothDeviceInfo_SetCoreConfigurations((QBluetoothDeviceInfo*)self, coreConfigs);
 }
 
-int32_t q_bluetoothdeviceinfo_core_configurations(void* self) {
+int32_t q_bluetoothdeviceinfo_core_configurations(const void* self) {
     return QBluetoothDeviceInfo_CoreConfigurations((QBluetoothDeviceInfo*)self);
 }
 
-void q_bluetoothdeviceinfo_set_device_uuid(void* self, void* uuid) {
+void q_bluetoothdeviceinfo_set_device_uuid(void* self, const void* uuid) {
     QBluetoothDeviceInfo_SetDeviceUuid((QBluetoothDeviceInfo*)self, (QBluetoothUuid*)uuid);
 }
 
-QBluetoothUuid* q_bluetoothdeviceinfo_device_uuid(void* self) {
+QBluetoothUuid* q_bluetoothdeviceinfo_device_uuid(const void* self) {
     return QBluetoothDeviceInfo_DeviceUuid((QBluetoothDeviceInfo*)self);
 }
 

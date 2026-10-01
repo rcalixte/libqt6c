@@ -9,11 +9,11 @@ QDebug* q_debug_new(void* device) {
     return QDebug_New((QIODevice*)device);
 }
 
-QDebug* q_debug_new2(void* o) {
+QDebug* q_debug_new2(const void* o) {
     return QDebug_New2((QDebug*)o);
 }
 
-void q_debug_operator_assign(void* self, void* other) {
+void q_debug_operator_assign(void* self, const void* other) {
     QDebug_OperatorAssign((QDebug*)self, (QDebug*)other);
 }
 
@@ -41,7 +41,7 @@ QDebug* q_debug_verbosity(void* self, int verbosityLevel) {
     return QDebug_Verbosity((QDebug*)self, verbosityLevel);
 }
 
-int32_t q_debug_verbosity2(void* self) {
+int32_t q_debug_verbosity2(const void* self) {
     return QDebug_Verbosity2((QDebug*)self);
 }
 
@@ -49,7 +49,7 @@ void q_debug_set_verbosity(void* self, int verbosityLevel) {
     QDebug_SetVerbosity((QDebug*)self, verbosityLevel);
 }
 
-bool q_debug_auto_insert_spaces(void* self) {
+bool q_debug_auto_insert_spaces(const void* self) {
     return QDebug_AutoInsertSpaces((QDebug*)self);
 }
 
@@ -57,7 +57,7 @@ void q_debug_set_auto_insert_spaces(void* self, bool b) {
     QDebug_SetAutoInsertSpaces((QDebug*)self, b);
 }
 
-bool q_debug_quote_strings(void* self) {
+bool q_debug_quote_strings(const void* self) {
     return QDebug_QuoteStrings((QDebug*)self);
 }
 
@@ -177,7 +177,7 @@ void q_debugstatesaver_delete(void* self) {
     QDebugStateSaver_Delete((QDebugStateSaver*)(self));
 }
 
-QNoDebug* q_nodebug_new(void* other) {
+QNoDebug* q_nodebug_new(const void* other) {
     return QNoDebug_New((QNoDebug*)other);
 }
 
@@ -237,10 +237,10 @@ void q_qdebug_q_meta_enum_flag_debug_operator(void* debug, size_t sizeofT, uint3
     qdebug_QMetaEnumFlagDebugOperator((QDebug*)debug, sizeofT, value);
 }
 
-QDebug* q_qdebug_q_meta_enum_debug_operator(void* param1, int64_t value, void* meta, const char* name) {
+QDebug* q_qdebug_q_meta_enum_debug_operator(void* param1, int64_t value, const void* meta, const char* name) {
     return qdebug_QMetaEnumDebugOperator((QDebug*)param1, value, (QMetaObject*)meta, name);
 }
 
-QDebug* q_qdebug_q_meta_enum_flag_debug_operator2(void* dbg, uint64_t value, void* meta, const char* name) {
+QDebug* q_qdebug_q_meta_enum_flag_debug_operator2(void* dbg, uint64_t value, const void* meta, const char* name) {
     return qdebug_QMetaEnumFlagDebugOperator2((QDebug*)dbg, value, (QMetaObject*)meta, name);
 }

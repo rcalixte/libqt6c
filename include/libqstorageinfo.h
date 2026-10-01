@@ -28,7 +28,7 @@ QStorageInfo* q_storageinfo_new2(const char* path);
 ///
 /// @param dir QDir*
 ///
-QStorageInfo* q_storageinfo_new3(void* dir);
+QStorageInfo* q_storageinfo_new3(const void* dir);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html)
 
@@ -36,14 +36,14 @@ QStorageInfo* q_storageinfo_new3(void* dir);
 ///
 /// @param other QStorageInfo*
 ///
-QStorageInfo* q_storageinfo_new4(void* other);
+QStorageInfo* q_storageinfo_new4(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#operator-eq)
 ///
 /// @param self QStorageInfo*
 /// @param other QStorageInfo*
 ///
-void q_storageinfo_operator_assign(void* self, void* other);
+void q_storageinfo_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#swap)
 ///
@@ -63,97 +63,97 @@ void q_storageinfo_set_path(void* self, const char* path);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QStorageInfo*
+/// @param self const QStorageInfo*
 ///
-const char* q_storageinfo_root_path(void* self);
+const char* q_storageinfo_root_path(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#device)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QStorageInfo*
+/// @param self const QStorageInfo*
 ///
-char* q_storageinfo_device(void* self);
+char* q_storageinfo_device(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#subvolume)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QStorageInfo*
+/// @param self const QStorageInfo*
 ///
-char* q_storageinfo_subvolume(void* self);
+char* q_storageinfo_subvolume(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#fileSystemType)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QStorageInfo*
+/// @param self const QStorageInfo*
 ///
-char* q_storageinfo_file_system_type(void* self);
+char* q_storageinfo_file_system_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QStorageInfo*
+/// @param self const QStorageInfo*
 ///
-const char* q_storageinfo_name(void* self);
+const char* q_storageinfo_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#displayName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QStorageInfo*
+/// @param self const QStorageInfo*
 ///
-const char* q_storageinfo_display_name(void* self);
+const char* q_storageinfo_display_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#bytesTotal)
 ///
-/// @param self QStorageInfo*
+/// @param self const QStorageInfo*
 ///
-int64_t q_storageinfo_bytes_total(void* self);
+int64_t q_storageinfo_bytes_total(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#bytesFree)
 ///
-/// @param self QStorageInfo*
+/// @param self const QStorageInfo*
 ///
-int64_t q_storageinfo_bytes_free(void* self);
+int64_t q_storageinfo_bytes_free(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#bytesAvailable)
 ///
-/// @param self QStorageInfo*
+/// @param self const QStorageInfo*
 ///
-int64_t q_storageinfo_bytes_available(void* self);
+int64_t q_storageinfo_bytes_available(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#blockSize)
 ///
-/// @param self QStorageInfo*
+/// @param self const QStorageInfo*
 ///
-int32_t q_storageinfo_block_size(void* self);
+int32_t q_storageinfo_block_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#isRoot)
 ///
-/// @param self QStorageInfo*
+/// @param self const QStorageInfo*
 ///
-bool q_storageinfo_is_root(void* self);
+bool q_storageinfo_is_root(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#isReadOnly)
 ///
-/// @param self QStorageInfo*
+/// @param self const QStorageInfo*
 ///
-bool q_storageinfo_is_read_only(void* self);
+bool q_storageinfo_is_read_only(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#isReady)
 ///
-/// @param self QStorageInfo*
+/// @param self const QStorageInfo*
 ///
-bool q_storageinfo_is_ready(void* self);
+bool q_storageinfo_is_ready(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#isValid)
 ///
-/// @param self QStorageInfo*
+/// @param self const QStorageInfo*
 ///
-bool q_storageinfo_is_valid(void* self);
+bool q_storageinfo_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#refresh)
 ///

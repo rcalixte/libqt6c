@@ -14,7 +14,7 @@
 ///
 /// @param other NETPoint*
 ///
-NETPoint* k_netpoint_new(void* other);
+NETPoint* k_netpoint_new(const void* other);
 
 /// [Upstream resources](https://api.kde.org/netpoint.html)
 
@@ -36,7 +36,7 @@ NETPoint* k_netpoint_new3();
 ///
 /// @param p QPoint*
 ///
-NETPoint* k_netpoint_new4(void* p);
+NETPoint* k_netpoint_new4(const void* p);
 
 /// [Upstream resources](https://api.kde.org/netpoint.html)
 
@@ -44,7 +44,7 @@ NETPoint* k_netpoint_new4(void* p);
 ///
 /// @param param1 NETPoint*
 ///
-NETPoint* k_netpoint_new5(void* param1);
+NETPoint* k_netpoint_new5(const void* param1);
 
 /// k_netpoint_copy_assign shallow copies `other` into `self`.
 ///
@@ -62,15 +62,15 @@ void k_netpoint_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://api.kde.org/netpoint.html#toPoint)
 ///
-/// @param self NETPoint*
+/// @param self const NETPoint*
 ///
-QPoint* k_netpoint_to_point(void* self);
+QPoint* k_netpoint_to_point(const void* self);
 
 /// [Upstream resources](https://api.kde.org/netpoint.html#x-var)
 ///
-/// @param self NETPoint*
+/// @param self const NETPoint*
 ///
-int32_t k_netpoint_x(void* self);
+int32_t k_netpoint_x(const void* self);
 
 /// [Upstream resources](https://api.kde.org/netpoint.html#x-var)
 ///
@@ -81,9 +81,9 @@ void k_netpoint_set_x(void* self, int x);
 
 /// [Upstream resources](https://api.kde.org/netpoint.html#y-var)
 ///
-/// @param self NETPoint*
+/// @param self const NETPoint*
 ///
-int32_t k_netpoint_y(void* self);
+int32_t k_netpoint_y(const void* self);
 
 /// [Upstream resources](https://api.kde.org/netpoint.html#y-var)
 ///
@@ -106,7 +106,7 @@ void k_netpoint_delete(void* self);
 ///
 /// @param other NETSize*
 ///
-NETSize* k_netsize_new(void* other);
+NETSize* k_netsize_new(const void* other);
 
 /// [Upstream resources](https://api.kde.org/netsize.html)
 
@@ -128,7 +128,7 @@ NETSize* k_netsize_new3();
 ///
 /// @param size QSize*
 ///
-NETSize* k_netsize_new4(void* size);
+NETSize* k_netsize_new4(const void* size);
 
 /// [Upstream resources](https://api.kde.org/netsize.html)
 
@@ -136,7 +136,7 @@ NETSize* k_netsize_new4(void* size);
 ///
 /// @param param1 NETSize*
 ///
-NETSize* k_netsize_new5(void* param1);
+NETSize* k_netsize_new5(const void* param1);
 
 /// k_netsize_copy_assign shallow copies `other` into `self`.
 ///
@@ -154,15 +154,15 @@ void k_netsize_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://api.kde.org/netsize.html#toSize)
 ///
-/// @param self NETSize*
+/// @param self const NETSize*
 ///
-QSize* k_netsize_to_size(void* self);
+QSize* k_netsize_to_size(const void* self);
 
 /// [Upstream resources](https://api.kde.org/netsize.html#width-var)
 ///
-/// @param self NETSize*
+/// @param self const NETSize*
 ///
-int32_t k_netsize_width(void* self);
+int32_t k_netsize_width(const void* self);
 
 /// [Upstream resources](https://api.kde.org/netsize.html#width-var)
 ///
@@ -173,9 +173,9 @@ void k_netsize_set_width(void* self, int width);
 
 /// [Upstream resources](https://api.kde.org/netsize.html#height-var)
 ///
-/// @param self NETSize*
+/// @param self const NETSize*
 ///
-int32_t k_netsize_height(void* self);
+int32_t k_netsize_height(const void* self);
 
 /// [Upstream resources](https://api.kde.org/netsize.html#height-var)
 ///
@@ -198,7 +198,7 @@ void k_netsize_delete(void* self);
 ///
 /// @param other NETRect*
 ///
-NETRect* k_netrect_new(void* other);
+NETRect* k_netrect_new(const void* other);
 
 /// [Upstream resources](https://api.kde.org/netrect.html)
 
@@ -220,7 +220,7 @@ NETRect* k_netrect_new3();
 ///
 /// @param rect QRect*
 ///
-NETRect* k_netrect_new4(void* rect);
+NETRect* k_netrect_new4(const void* rect);
 
 /// k_netrect_copy_assign shallow copies `other` into `self`.
 ///
@@ -238,15 +238,15 @@ void k_netrect_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://api.kde.org/netrect.html#toRect)
 ///
-/// @param self NETRect*
+/// @param self const NETRect*
 ///
-QRect* k_netrect_to_rect(void* self);
+QRect* k_netrect_to_rect(const void* self);
 
 /// [Upstream resources](https://api.kde.org/netrect.html#pos-var)
 ///
-/// @param self NETRect*
+/// @param self const NETRect*
 ///
-NETPoint* k_netrect_pos(void* self);
+NETPoint* k_netrect_pos(const void* self);
 
 /// [Upstream resources](https://api.kde.org/netrect.html#pos-var)
 ///
@@ -257,9 +257,9 @@ void k_netrect_set_pos(void* self, void* pos);
 
 /// [Upstream resources](https://api.kde.org/netrect.html#size-var)
 ///
-/// @param self NETRect*
+/// @param self const NETRect*
 ///
-NETSize* k_netrect_size(void* self);
+NETSize* k_netrect_size(const void* self);
 
 /// [Upstream resources](https://api.kde.org/netrect.html#size-var)
 ///
@@ -282,7 +282,7 @@ void k_netrect_delete(void* self);
 ///
 /// @param other NETIcon*
 ///
-NETIcon* k_neticon_new(void* other);
+NETIcon* k_neticon_new(const void* other);
 
 /// [Upstream resources](https://api.kde.org/neticon.html)
 
@@ -314,9 +314,9 @@ void k_neticon_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://api.kde.org/neticon.html#size-var)
 ///
-/// @param self NETIcon*
+/// @param self const NETIcon*
 ///
-NETSize* k_neticon_size(void* self);
+NETSize* k_neticon_size(const void* self);
 
 /// [Upstream resources](https://api.kde.org/neticon.html#size-var)
 ///
@@ -327,9 +327,9 @@ void k_neticon_set_size(void* self, void* size);
 
 /// [Upstream resources](https://api.kde.org/neticon.html#data-var)
 ///
-/// @param self NETIcon*
+/// @param self const NETIcon*
 ///
-unsigned char* k_neticon_data(void* self);
+unsigned char* k_neticon_data(const void* self);
 
 /// [Upstream resources](https://api.kde.org/neticon.html#data-var)
 ///
@@ -352,7 +352,7 @@ void k_neticon_delete(void* self);
 ///
 /// @param other NETExtendedStrut*
 ///
-NETExtendedStrut* k_netextendedstrut_new(void* other);
+NETExtendedStrut* k_netextendedstrut_new(const void* other);
 
 /// [Upstream resources](https://api.kde.org/netextendedstrut.html)
 
@@ -384,9 +384,9 @@ void k_netextendedstrut_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://api.kde.org/netextendedstrut.html#left_width-var)
 ///
-/// @param self NETExtendedStrut*
+/// @param self const NETExtendedStrut*
 ///
-int32_t k_netextendedstrut_left_width(void* self);
+int32_t k_netextendedstrut_left_width(const void* self);
 
 /// [Upstream resources](https://api.kde.org/netextendedstrut.html#left_width-var)
 ///
@@ -397,9 +397,9 @@ void k_netextendedstrut_set_left_width(void* self, int left_width);
 
 /// [Upstream resources](https://api.kde.org/netextendedstrut.html#left_start-var)
 ///
-/// @param self NETExtendedStrut*
+/// @param self const NETExtendedStrut*
 ///
-int32_t k_netextendedstrut_left_start(void* self);
+int32_t k_netextendedstrut_left_start(const void* self);
 
 /// [Upstream resources](https://api.kde.org/netextendedstrut.html#left_start-var)
 ///
@@ -410,9 +410,9 @@ void k_netextendedstrut_set_left_start(void* self, int left_start);
 
 /// [Upstream resources](https://api.kde.org/netextendedstrut.html#left_end-var)
 ///
-/// @param self NETExtendedStrut*
+/// @param self const NETExtendedStrut*
 ///
-int32_t k_netextendedstrut_left_end(void* self);
+int32_t k_netextendedstrut_left_end(const void* self);
 
 /// [Upstream resources](https://api.kde.org/netextendedstrut.html#left_end-var)
 ///
@@ -423,9 +423,9 @@ void k_netextendedstrut_set_left_end(void* self, int left_end);
 
 /// [Upstream resources](https://api.kde.org/netextendedstrut.html#right_width-var)
 ///
-/// @param self NETExtendedStrut*
+/// @param self const NETExtendedStrut*
 ///
-int32_t k_netextendedstrut_right_width(void* self);
+int32_t k_netextendedstrut_right_width(const void* self);
 
 /// [Upstream resources](https://api.kde.org/netextendedstrut.html#right_width-var)
 ///
@@ -436,9 +436,9 @@ void k_netextendedstrut_set_right_width(void* self, int right_width);
 
 /// [Upstream resources](https://api.kde.org/netextendedstrut.html#right_start-var)
 ///
-/// @param self NETExtendedStrut*
+/// @param self const NETExtendedStrut*
 ///
-int32_t k_netextendedstrut_right_start(void* self);
+int32_t k_netextendedstrut_right_start(const void* self);
 
 /// [Upstream resources](https://api.kde.org/netextendedstrut.html#right_start-var)
 ///
@@ -449,9 +449,9 @@ void k_netextendedstrut_set_right_start(void* self, int right_start);
 
 /// [Upstream resources](https://api.kde.org/netextendedstrut.html#right_end-var)
 ///
-/// @param self NETExtendedStrut*
+/// @param self const NETExtendedStrut*
 ///
-int32_t k_netextendedstrut_right_end(void* self);
+int32_t k_netextendedstrut_right_end(const void* self);
 
 /// [Upstream resources](https://api.kde.org/netextendedstrut.html#right_end-var)
 ///
@@ -462,9 +462,9 @@ void k_netextendedstrut_set_right_end(void* self, int right_end);
 
 /// [Upstream resources](https://api.kde.org/netextendedstrut.html#top_width-var)
 ///
-/// @param self NETExtendedStrut*
+/// @param self const NETExtendedStrut*
 ///
-int32_t k_netextendedstrut_top_width(void* self);
+int32_t k_netextendedstrut_top_width(const void* self);
 
 /// [Upstream resources](https://api.kde.org/netextendedstrut.html#top_width-var)
 ///
@@ -475,9 +475,9 @@ void k_netextendedstrut_set_top_width(void* self, int top_width);
 
 /// [Upstream resources](https://api.kde.org/netextendedstrut.html#top_start-var)
 ///
-/// @param self NETExtendedStrut*
+/// @param self const NETExtendedStrut*
 ///
-int32_t k_netextendedstrut_top_start(void* self);
+int32_t k_netextendedstrut_top_start(const void* self);
 
 /// [Upstream resources](https://api.kde.org/netextendedstrut.html#top_start-var)
 ///
@@ -488,9 +488,9 @@ void k_netextendedstrut_set_top_start(void* self, int top_start);
 
 /// [Upstream resources](https://api.kde.org/netextendedstrut.html#top_end-var)
 ///
-/// @param self NETExtendedStrut*
+/// @param self const NETExtendedStrut*
 ///
-int32_t k_netextendedstrut_top_end(void* self);
+int32_t k_netextendedstrut_top_end(const void* self);
 
 /// [Upstream resources](https://api.kde.org/netextendedstrut.html#top_end-var)
 ///
@@ -501,9 +501,9 @@ void k_netextendedstrut_set_top_end(void* self, int top_end);
 
 /// [Upstream resources](https://api.kde.org/netextendedstrut.html#bottom_width-var)
 ///
-/// @param self NETExtendedStrut*
+/// @param self const NETExtendedStrut*
 ///
-int32_t k_netextendedstrut_bottom_width(void* self);
+int32_t k_netextendedstrut_bottom_width(const void* self);
 
 /// [Upstream resources](https://api.kde.org/netextendedstrut.html#bottom_width-var)
 ///
@@ -514,9 +514,9 @@ void k_netextendedstrut_set_bottom_width(void* self, int bottom_width);
 
 /// [Upstream resources](https://api.kde.org/netextendedstrut.html#bottom_start-var)
 ///
-/// @param self NETExtendedStrut*
+/// @param self const NETExtendedStrut*
 ///
-int32_t k_netextendedstrut_bottom_start(void* self);
+int32_t k_netextendedstrut_bottom_start(const void* self);
 
 /// [Upstream resources](https://api.kde.org/netextendedstrut.html#bottom_start-var)
 ///
@@ -527,9 +527,9 @@ void k_netextendedstrut_set_bottom_start(void* self, int bottom_start);
 
 /// [Upstream resources](https://api.kde.org/netextendedstrut.html#bottom_end-var)
 ///
-/// @param self NETExtendedStrut*
+/// @param self const NETExtendedStrut*
 ///
-int32_t k_netextendedstrut_bottom_end(void* self);
+int32_t k_netextendedstrut_bottom_end(const void* self);
 
 /// [Upstream resources](https://api.kde.org/netextendedstrut.html#bottom_end-var)
 ///
@@ -552,7 +552,7 @@ void k_netextendedstrut_delete(void* self);
 ///
 /// @param other NETStrut*
 ///
-NETStrut* k_netstrut_new(void* other);
+NETStrut* k_netstrut_new(const void* other);
 
 /// [Upstream resources](https://api.kde.org/netstrut.html)
 
@@ -584,9 +584,9 @@ void k_netstrut_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://api.kde.org/netstrut.html#left-var)
 ///
-/// @param self NETStrut*
+/// @param self const NETStrut*
 ///
-int32_t k_netstrut_left(void* self);
+int32_t k_netstrut_left(const void* self);
 
 /// [Upstream resources](https://api.kde.org/netstrut.html#left-var)
 ///
@@ -597,9 +597,9 @@ void k_netstrut_set_left(void* self, int left);
 
 /// [Upstream resources](https://api.kde.org/netstrut.html#right-var)
 ///
-/// @param self NETStrut*
+/// @param self const NETStrut*
 ///
-int32_t k_netstrut_right(void* self);
+int32_t k_netstrut_right(const void* self);
 
 /// [Upstream resources](https://api.kde.org/netstrut.html#right-var)
 ///
@@ -610,9 +610,9 @@ void k_netstrut_set_right(void* self, int right);
 
 /// [Upstream resources](https://api.kde.org/netstrut.html#top-var)
 ///
-/// @param self NETStrut*
+/// @param self const NETStrut*
 ///
-int32_t k_netstrut_top(void* self);
+int32_t k_netstrut_top(const void* self);
 
 /// [Upstream resources](https://api.kde.org/netstrut.html#top-var)
 ///
@@ -623,9 +623,9 @@ void k_netstrut_set_top(void* self, int top);
 
 /// [Upstream resources](https://api.kde.org/netstrut.html#bottom-var)
 ///
-/// @param self NETStrut*
+/// @param self const NETStrut*
 ///
-int32_t k_netstrut_bottom(void* self);
+int32_t k_netstrut_bottom(const void* self);
 
 /// [Upstream resources](https://api.kde.org/netstrut.html#bottom-var)
 ///
@@ -648,7 +648,7 @@ void k_netstrut_delete(void* self);
 ///
 /// @param other NETFullscreenMonitors*
 ///
-NETFullscreenMonitors* k_netfullscreenmonitors_new(void* other);
+NETFullscreenMonitors* k_netfullscreenmonitors_new(const void* other);
 
 /// [Upstream resources](https://api.kde.org/netfullscreenmonitors.html)
 
@@ -680,9 +680,9 @@ void k_netfullscreenmonitors_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://api.kde.org/netfullscreenmonitors.html#top-var)
 ///
-/// @param self NETFullscreenMonitors*
+/// @param self const NETFullscreenMonitors*
 ///
-int32_t k_netfullscreenmonitors_top(void* self);
+int32_t k_netfullscreenmonitors_top(const void* self);
 
 /// [Upstream resources](https://api.kde.org/netfullscreenmonitors.html#top-var)
 ///
@@ -693,9 +693,9 @@ void k_netfullscreenmonitors_set_top(void* self, int top);
 
 /// [Upstream resources](https://api.kde.org/netfullscreenmonitors.html#bottom-var)
 ///
-/// @param self NETFullscreenMonitors*
+/// @param self const NETFullscreenMonitors*
 ///
-int32_t k_netfullscreenmonitors_bottom(void* self);
+int32_t k_netfullscreenmonitors_bottom(const void* self);
 
 /// [Upstream resources](https://api.kde.org/netfullscreenmonitors.html#bottom-var)
 ///
@@ -706,9 +706,9 @@ void k_netfullscreenmonitors_set_bottom(void* self, int bottom);
 
 /// [Upstream resources](https://api.kde.org/netfullscreenmonitors.html#left-var)
 ///
-/// @param self NETFullscreenMonitors*
+/// @param self const NETFullscreenMonitors*
 ///
-int32_t k_netfullscreenmonitors_left(void* self);
+int32_t k_netfullscreenmonitors_left(const void* self);
 
 /// [Upstream resources](https://api.kde.org/netfullscreenmonitors.html#left-var)
 ///
@@ -719,9 +719,9 @@ void k_netfullscreenmonitors_set_left(void* self, int left);
 
 /// [Upstream resources](https://api.kde.org/netfullscreenmonitors.html#right-var)
 ///
-/// @param self NETFullscreenMonitors*
+/// @param self const NETFullscreenMonitors*
 ///
-int32_t k_netfullscreenmonitors_right(void* self);
+int32_t k_netfullscreenmonitors_right(const void* self);
 
 /// [Upstream resources](https://api.kde.org/netfullscreenmonitors.html#right-var)
 ///
@@ -732,9 +732,9 @@ void k_netfullscreenmonitors_set_right(void* self, int right);
 
 /// [Upstream resources](https://api.kde.org/netfullscreenmonitors.html#isSet)
 ///
-/// @param self NETFullscreenMonitors*
+/// @param self const NETFullscreenMonitors*
 ///
-bool k_netfullscreenmonitors_is_set(void* self);
+bool k_netfullscreenmonitors_is_set(const void* self);
 
 /// [Upstream resources](https://api.kde.org/netfullscreenmonitors.html#dtor.NETFullscreenMonitors)
 ///
@@ -750,7 +750,7 @@ void k_netfullscreenmonitors_delete(void* self);
 ///
 /// @param other NET*
 ///
-NET* k_net_new(void* other);
+NET* k_net_new(const void* other);
 
 /// [Upstream resources](https://api.kde.org/net.html)
 

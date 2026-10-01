@@ -20,7 +20,7 @@ QCborParserError* q_cborparsererror_new();
 ///
 /// @param other QCborParserError*
 ///
-QCborParserError* q_cborparsererror_new2(void* other);
+QCborParserError* q_cborparsererror_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborparsererror.html)
 
@@ -46,9 +46,9 @@ void q_cborparsererror_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborparsererror.html#offset-var)
 ///
-/// @param self QCborParserError*
+/// @param self const QCborParserError*
 ///
-int64_t q_cborparsererror_offset(void* self);
+int64_t q_cborparsererror_offset(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborparsererror.html#offset-var)
 ///
@@ -59,9 +59,9 @@ void q_cborparsererror_set_offset(void* self, int64_t offset);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborparsererror.html#error-var)
 ///
-/// @param self QCborParserError*
+/// @param self const QCborParserError*
 ///
-QCborError* q_cborparsererror_error(void* self);
+QCborError* q_cborparsererror_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborparsererror.html#error-var)
 ///
@@ -74,9 +74,9 @@ void q_cborparsererror_set_error(void* self, void* error);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QCborParserError*
+/// @param self const QCborParserError*
 ///
-const char* q_cborparsererror_error_string(void* self);
+const char* q_cborparsererror_error_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborparsererror.html#dtor.QCborParserError)
 ///
@@ -194,7 +194,7 @@ QCborValue* q_cborvalue_new13(const char* s);
 ///
 /// @param a QCborArray*
 ///
-QCborValue* q_cborvalue_new14(void* a);
+QCborValue* q_cborvalue_new14(const void* a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html)
 
@@ -202,7 +202,7 @@ QCborValue* q_cborvalue_new14(void* a);
 ///
 /// @param m QCborMap*
 ///
-QCborValue* q_cborvalue_new15(void* m);
+QCborValue* q_cborvalue_new15(const void* m);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html)
 
@@ -226,7 +226,7 @@ QCborValue* q_cborvalue_new17(int32_t t_);
 ///
 /// @param dt QDateTime*
 ///
-QCborValue* q_cborvalue_new18(void* dt);
+QCborValue* q_cborvalue_new18(const void* dt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html)
 
@@ -234,7 +234,7 @@ QCborValue* q_cborvalue_new18(void* dt);
 ///
 /// @param url QUrl*
 ///
-QCborValue* q_cborvalue_new19(void* url);
+QCborValue* q_cborvalue_new19(const void* url);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html)
 
@@ -242,7 +242,7 @@ QCborValue* q_cborvalue_new19(void* url);
 ///
 /// @param rx QRegularExpression*
 ///
-QCborValue* q_cborvalue_new20(void* rx);
+QCborValue* q_cborvalue_new20(const void* rx);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html)
 
@@ -250,7 +250,7 @@ QCborValue* q_cborvalue_new20(void* rx);
 ///
 /// @param uuid QUuid*
 ///
-QCborValue* q_cborvalue_new21(void* uuid);
+QCborValue* q_cborvalue_new21(const void* uuid);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html)
 
@@ -258,7 +258,7 @@ QCborValue* q_cborvalue_new21(void* uuid);
 ///
 /// @param other QCborValue*
 ///
-QCborValue* q_cborvalue_new22(void* other);
+QCborValue* q_cborvalue_new22(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html)
 
@@ -267,7 +267,7 @@ QCborValue* q_cborvalue_new22(void* other);
 /// @param tag enum QCborValue__QCborTag
 /// @param taggedValue QCborValue*
 ///
-QCborValue* q_cborvalue_new23(uint64_t tag, void* taggedValue);
+QCborValue* q_cborvalue_new23(uint64_t tag, const void* taggedValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html)
 
@@ -276,14 +276,14 @@ QCborValue* q_cborvalue_new23(uint64_t tag, void* taggedValue);
 /// @param t_ enum QCborValue__QCborKnownTags
 /// @param tv QCborValue*
 ///
-QCborValue* q_cborvalue_new24(int32_t t_, void* tv);
+QCborValue* q_cborvalue_new24(int32_t t_, const void* tv);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#operator-eq)
 ///
 /// @param self QCborValue*
 /// @param other QCborValue*
 ///
-void q_cborvalue_operator_assign(void* self, void* other);
+void q_cborvalue_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#swap)
 ///
@@ -294,259 +294,259 @@ void q_cborvalue_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#type)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
 /// @return enum QCborValue__Type
 ///
-int32_t q_cborvalue_type(void* self);
+int32_t q_cborvalue_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#isInteger)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-bool q_cborvalue_is_integer(void* self);
+bool q_cborvalue_is_integer(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#isByteArray)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-bool q_cborvalue_is_byte_array(void* self);
+bool q_cborvalue_is_byte_array(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#isString)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-bool q_cborvalue_is_string(void* self);
+bool q_cborvalue_is_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#isArray)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-bool q_cborvalue_is_array(void* self);
+bool q_cborvalue_is_array(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#isMap)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-bool q_cborvalue_is_map(void* self);
+bool q_cborvalue_is_map(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#isTag)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-bool q_cborvalue_is_tag(void* self);
+bool q_cborvalue_is_tag(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#isFalse)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-bool q_cborvalue_is_false(void* self);
+bool q_cborvalue_is_false(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#isTrue)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-bool q_cborvalue_is_true(void* self);
+bool q_cborvalue_is_true(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#isBool)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-bool q_cborvalue_is_bool(void* self);
+bool q_cborvalue_is_bool(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#isNull)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-bool q_cborvalue_is_null(void* self);
+bool q_cborvalue_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#isUndefined)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-bool q_cborvalue_is_undefined(void* self);
+bool q_cborvalue_is_undefined(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#isDouble)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-bool q_cborvalue_is_double(void* self);
+bool q_cborvalue_is_double(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#isDateTime)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-bool q_cborvalue_is_date_time(void* self);
+bool q_cborvalue_is_date_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#isUrl)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-bool q_cborvalue_is_url(void* self);
+bool q_cborvalue_is_url(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#isRegularExpression)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-bool q_cborvalue_is_regular_expression(void* self);
+bool q_cborvalue_is_regular_expression(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#isUuid)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-bool q_cborvalue_is_uuid(void* self);
+bool q_cborvalue_is_uuid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#isInvalid)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-bool q_cborvalue_is_invalid(void* self);
+bool q_cborvalue_is_invalid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#isContainer)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-bool q_cborvalue_is_container(void* self);
+bool q_cborvalue_is_container(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#isSimpleType)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-bool q_cborvalue_is_simple_type(void* self);
+bool q_cborvalue_is_simple_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#isSimpleType)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 /// @param st enum QCborValue__QCborSimpleType
 ///
-bool q_cborvalue_is_simple_type2(void* self, uint8_t st);
+bool q_cborvalue_is_simple_type2(const void* self, uint8_t st);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toSimpleType)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
 /// @return enum QCborValue__QCborSimpleType
 ///
-uint8_t q_cborvalue_to_simple_type(void* self);
+uint8_t q_cborvalue_to_simple_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toInteger)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-int64_t q_cborvalue_to_integer(void* self);
+int64_t q_cborvalue_to_integer(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toBool)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-bool q_cborvalue_to_bool(void* self);
+bool q_cborvalue_to_bool(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toDouble)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-double q_cborvalue_to_double(void* self);
+double q_cborvalue_to_double(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#tag)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
 /// @return enum QCborValue__QCborTag
 ///
-uint64_t q_cborvalue_tag(void* self);
+uint64_t q_cborvalue_tag(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#taggedValue)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-QCborValue* q_cborvalue_tagged_value(void* self);
+QCborValue* q_cborvalue_tagged_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toByteArray)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-char* q_cborvalue_to_byte_array(void* self);
+char* q_cborvalue_to_byte_array(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-const char* q_cborvalue_to_string(void* self);
+const char* q_cborvalue_to_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toDateTime)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-QDateTime* q_cborvalue_to_date_time(void* self);
+QDateTime* q_cborvalue_to_date_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toUrl)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-QUrl* q_cborvalue_to_url(void* self);
+QUrl* q_cborvalue_to_url(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toRegularExpression)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-QRegularExpression* q_cborvalue_to_regular_expression(void* self);
+QRegularExpression* q_cborvalue_to_regular_expression(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toUuid)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-QUuid* q_cborvalue_to_uuid(void* self);
+QUuid* q_cborvalue_to_uuid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toArray)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-QCborArray* q_cborvalue_to_array(void* self);
+QCborArray* q_cborvalue_to_array(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toArray)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 /// @param defaultValue QCborArray*
 ///
-QCborArray* q_cborvalue_to_array2(void* self, void* defaultValue);
+QCborArray* q_cborvalue_to_array2(const void* self, const void* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toMap)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-QCborMap* q_cborvalue_to_map(void* self);
+QCborMap* q_cborvalue_to_map(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toMap)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 /// @param defaultValue QCborMap*
 ///
-QCborMap* q_cborvalue_to_map2(void* self, void* defaultValue);
+QCborMap* q_cborvalue_to_map2(const void* self, const void* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#operator-5b-5d)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 /// @param key const char*
 ///
-const QCborValue* q_cborvalue_operator_subscript(void* self, const char* key);
+const QCborValue* q_cborvalue_operator_subscript(const void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#operator-5b-5d)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 /// @param key char*
 ///
-const QCborValue* q_cborvalue_operator_subscript2(void* self, char* key);
+const QCborValue* q_cborvalue_operator_subscript2(const void* self, char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#operator-5b-5d)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 /// @param key int64_t
 ///
-const QCborValue* q_cborvalue_operator_subscript3(void* self, int64_t key);
+const QCborValue* q_cborvalue_operator_subscript3(const void* self, int64_t key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#operator-5b-5d)
 ///
@@ -571,34 +571,34 @@ QCborValueRef* q_cborvalue_operator_subscript6(void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#compare)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 /// @param other QCborValue*
 ///
-int32_t q_cborvalue_compare(void* self, void* other);
+int32_t q_cborvalue_compare(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#fromVariant)
 ///
 /// @param variant QVariant*
 ///
-QCborValue* q_cborvalue_from_variant(void* variant);
+QCborValue* q_cborvalue_from_variant(const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toVariant)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-QVariant* q_cborvalue_to_variant(void* self);
+QVariant* q_cborvalue_to_variant(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#fromJsonValue)
 ///
 /// @param v QJsonValue*
 ///
-QCborValue* q_cborvalue_from_json_value(void* v);
+QCborValue* q_cborvalue_from_json_value(const void* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toJsonValue)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-QJsonValue* q_cborvalue_to_json_value(void* self);
+QJsonValue* q_cborvalue_to_json_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#fromCbor)
 ///
@@ -630,116 +630,116 @@ QCborValue* q_cborvalue_from_cbor4(unsigned char* data, intptr_t lenVal);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-char* q_cborvalue_to_cbor(void* self);
+char* q_cborvalue_to_cbor(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toCbor)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 /// @param writer QCborStreamWriter*
 ///
-void q_cborvalue_to_cbor2(void* self, void* writer);
+void q_cborvalue_to_cbor2(const void* self, void* writer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toDiagnosticNotation)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 ///
-const char* q_cborvalue_to_diagnostic_notation(void* self);
+const char* q_cborvalue_to_diagnostic_notation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toSimpleType)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 /// @param defaultValue enum QCborValue__QCborSimpleType
 ///
 /// @return enum QCborValue__QCborSimpleType
 ///
-uint8_t q_cborvalue_to_simple_type1(void* self, uint8_t defaultValue);
+uint8_t q_cborvalue_to_simple_type1(const void* self, uint8_t defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toInteger)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 /// @param defaultValue int64_t
 ///
-int64_t q_cborvalue_to_integer1(void* self, int64_t defaultValue);
+int64_t q_cborvalue_to_integer1(const void* self, int64_t defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toBool)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 /// @param defaultValue bool
 ///
-bool q_cborvalue_to_bool1(void* self, bool defaultValue);
+bool q_cborvalue_to_bool1(const void* self, bool defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toDouble)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 /// @param defaultValue double
 ///
-double q_cborvalue_to_double1(void* self, double defaultValue);
+double q_cborvalue_to_double1(const void* self, double defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#tag)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 /// @param defaultValue enum QCborValue__QCborTag
 ///
 /// @return enum QCborValue__QCborTag
 ///
-uint64_t q_cborvalue_tag1(void* self, uint64_t defaultValue);
+uint64_t q_cborvalue_tag1(const void* self, uint64_t defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#taggedValue)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 /// @param defaultValue QCborValue*
 ///
-QCborValue* q_cborvalue_tagged_value1(void* self, void* defaultValue);
+QCborValue* q_cborvalue_tagged_value1(const void* self, const void* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toByteArray)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 /// @param defaultValue char*
 ///
-char* q_cborvalue_to_byte_array1(void* self, char* defaultValue);
+char* q_cborvalue_to_byte_array1(const void* self, char* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 /// @param defaultValue const char*
 ///
-const char* q_cborvalue_to_string1(void* self, const char* defaultValue);
+const char* q_cborvalue_to_string1(const void* self, const char* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toDateTime)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 /// @param defaultValue QDateTime*
 ///
-QDateTime* q_cborvalue_to_date_time1(void* self, void* defaultValue);
+QDateTime* q_cborvalue_to_date_time1(const void* self, const void* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toUrl)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 /// @param defaultValue QUrl*
 ///
-QUrl* q_cborvalue_to_url1(void* self, void* defaultValue);
+QUrl* q_cborvalue_to_url1(const void* self, const void* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toRegularExpression)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 /// @param defaultValue QRegularExpression*
 ///
-QRegularExpression* q_cborvalue_to_regular_expression1(void* self, void* defaultValue);
+QRegularExpression* q_cborvalue_to_regular_expression1(const void* self, const void* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toUuid)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 /// @param defaultValue QUuid*
 ///
-QUuid* q_cborvalue_to_uuid1(void* self, void* defaultValue);
+QUuid* q_cborvalue_to_uuid1(const void* self, const void* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#fromCbor)
 ///
@@ -768,27 +768,27 @@ QCborValue* q_cborvalue_from_cbor33(unsigned char* data, intptr_t lenVal, void* 
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 /// @param opt flag of enum QCborValue__EncodingOption
 ///
-char* q_cborvalue_to_cbor1(void* self, int32_t opt);
+char* q_cborvalue_to_cbor1(const void* self, int32_t opt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toCbor)
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 /// @param writer QCborStreamWriter*
 /// @param opt flag of enum QCborValue__EncodingOption
 ///
-void q_cborvalue_to_cbor22(void* self, void* writer, int32_t opt);
+void q_cborvalue_to_cbor22(const void* self, void* writer, int32_t opt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toDiagnosticNotation)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QCborValue*
+/// @param self const QCborValue*
 /// @param opts flag of enum QCborValue__DiagnosticNotationOption
 ///
-const char* q_cborvalue_to_diagnostic_notation1(void* self, int32_t opts);
+const char* q_cborvalue_to_diagnostic_notation1(const void* self, int32_t opts);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#dtor.QCborValue)
 ///
@@ -804,7 +804,7 @@ void q_cborvalue_delete(void* self);
 ///
 /// @param other QCborValueConstRef*
 ///
-QCborValueConstRef* q_cborvalueconstref_new(void* other);
+QCborValueConstRef* q_cborvalueconstref_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html)
 
@@ -812,429 +812,429 @@ QCborValueConstRef* q_cborvalueconstref_new(void* other);
 ///
 /// @param param1 QCborValueConstRef*
 ///
-QCborValueConstRef* q_cborvalueconstref_new2(void* param1);
+QCborValueConstRef* q_cborvalueconstref_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#operator-QCborValue)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-QCborValue* q_cborvalueconstref_to_q_cbor_value(void* self);
+QCborValue* q_cborvalueconstref_to_q_cbor_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#type)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
 /// @return enum QCborValue__Type
 ///
-int32_t q_cborvalueconstref_type(void* self);
+int32_t q_cborvalueconstref_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#isInteger)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-bool q_cborvalueconstref_is_integer(void* self);
+bool q_cborvalueconstref_is_integer(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#isByteArray)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-bool q_cborvalueconstref_is_byte_array(void* self);
+bool q_cborvalueconstref_is_byte_array(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#isString)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-bool q_cborvalueconstref_is_string(void* self);
+bool q_cborvalueconstref_is_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#isArray)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-bool q_cborvalueconstref_is_array(void* self);
+bool q_cborvalueconstref_is_array(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#isMap)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-bool q_cborvalueconstref_is_map(void* self);
+bool q_cborvalueconstref_is_map(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#isTag)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-bool q_cborvalueconstref_is_tag(void* self);
+bool q_cborvalueconstref_is_tag(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#isFalse)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-bool q_cborvalueconstref_is_false(void* self);
+bool q_cborvalueconstref_is_false(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#isTrue)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-bool q_cborvalueconstref_is_true(void* self);
+bool q_cborvalueconstref_is_true(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#isBool)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-bool q_cborvalueconstref_is_bool(void* self);
+bool q_cborvalueconstref_is_bool(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#isNull)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-bool q_cborvalueconstref_is_null(void* self);
+bool q_cborvalueconstref_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#isUndefined)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-bool q_cborvalueconstref_is_undefined(void* self);
+bool q_cborvalueconstref_is_undefined(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#isDouble)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-bool q_cborvalueconstref_is_double(void* self);
+bool q_cborvalueconstref_is_double(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#isDateTime)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-bool q_cborvalueconstref_is_date_time(void* self);
+bool q_cborvalueconstref_is_date_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#isUrl)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-bool q_cborvalueconstref_is_url(void* self);
+bool q_cborvalueconstref_is_url(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#isRegularExpression)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-bool q_cborvalueconstref_is_regular_expression(void* self);
+bool q_cborvalueconstref_is_regular_expression(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#isUuid)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-bool q_cborvalueconstref_is_uuid(void* self);
+bool q_cborvalueconstref_is_uuid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#isInvalid)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-bool q_cborvalueconstref_is_invalid(void* self);
+bool q_cborvalueconstref_is_invalid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#isContainer)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-bool q_cborvalueconstref_is_container(void* self);
+bool q_cborvalueconstref_is_container(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#isSimpleType)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-bool q_cborvalueconstref_is_simple_type(void* self);
+bool q_cborvalueconstref_is_simple_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#isSimpleType)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 /// @param st enum QCborValueConstRef__QCborSimpleType
 ///
-bool q_cborvalueconstref_is_simple_type2(void* self, uint8_t st);
+bool q_cborvalueconstref_is_simple_type2(const void* self, uint8_t st);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toSimpleType)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
 /// @return enum QCborValueConstRef__QCborSimpleType
 ///
-uint8_t q_cborvalueconstref_to_simple_type(void* self);
+uint8_t q_cborvalueconstref_to_simple_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#tag)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
 /// @return enum QCborValueConstRef__QCborTag
 ///
-uint64_t q_cborvalueconstref_tag(void* self);
+uint64_t q_cborvalueconstref_tag(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#taggedValue)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-QCborValue* q_cborvalueconstref_tagged_value(void* self);
+QCborValue* q_cborvalueconstref_tagged_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toInteger)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-int64_t q_cborvalueconstref_to_integer(void* self);
+int64_t q_cborvalueconstref_to_integer(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toBool)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-bool q_cborvalueconstref_to_bool(void* self);
+bool q_cborvalueconstref_to_bool(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toDouble)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-double q_cborvalueconstref_to_double(void* self);
+double q_cborvalueconstref_to_double(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toByteArray)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-char* q_cborvalueconstref_to_byte_array(void* self);
+char* q_cborvalueconstref_to_byte_array(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-const char* q_cborvalueconstref_to_string(void* self);
+const char* q_cborvalueconstref_to_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toDateTime)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-QDateTime* q_cborvalueconstref_to_date_time(void* self);
+QDateTime* q_cborvalueconstref_to_date_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toUrl)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-QUrl* q_cborvalueconstref_to_url(void* self);
+QUrl* q_cborvalueconstref_to_url(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toRegularExpression)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-QRegularExpression* q_cborvalueconstref_to_regular_expression(void* self);
+QRegularExpression* q_cborvalueconstref_to_regular_expression(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toUuid)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-QUuid* q_cborvalueconstref_to_uuid(void* self);
+QUuid* q_cborvalueconstref_to_uuid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toArray)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-QCborArray* q_cborvalueconstref_to_array(void* self);
+QCborArray* q_cborvalueconstref_to_array(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toArray)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 /// @param a QCborArray*
 ///
-QCborArray* q_cborvalueconstref_to_array2(void* self, void* a);
+QCborArray* q_cborvalueconstref_to_array2(const void* self, const void* a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toMap)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-QCborMap* q_cborvalueconstref_to_map(void* self);
+QCborMap* q_cborvalueconstref_to_map(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toMap)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 /// @param m QCborMap*
 ///
-QCborMap* q_cborvalueconstref_to_map2(void* self, void* m);
+QCborMap* q_cborvalueconstref_to_map2(const void* self, const void* m);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#operator-5b-5d)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 /// @param key const char*
 ///
-const QCborValue* q_cborvalueconstref_operator_subscript(void* self, const char* key);
+const QCborValue* q_cborvalueconstref_operator_subscript(const void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#operator-5b-5d)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 /// @param key char*
 ///
-const QCborValue* q_cborvalueconstref_operator_subscript2(void* self, char* key);
+const QCborValue* q_cborvalueconstref_operator_subscript2(const void* self, char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#operator-5b-5d)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 /// @param key int64_t
 ///
-const QCborValue* q_cborvalueconstref_operator_subscript3(void* self, int64_t key);
+const QCborValue* q_cborvalueconstref_operator_subscript3(const void* self, int64_t key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#compare)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 /// @param other QCborValue*
 ///
-int32_t q_cborvalueconstref_compare(void* self, void* other);
+int32_t q_cborvalueconstref_compare(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toVariant)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-QVariant* q_cborvalueconstref_to_variant(void* self);
+QVariant* q_cborvalueconstref_to_variant(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toJsonValue)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-QJsonValue* q_cborvalueconstref_to_json_value(void* self);
+QJsonValue* q_cborvalueconstref_to_json_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toCbor)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-char* q_cborvalueconstref_to_cbor(void* self);
+char* q_cborvalueconstref_to_cbor(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toCbor)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 /// @param writer QCborStreamWriter*
 ///
-void q_cborvalueconstref_to_cbor2(void* self, void* writer);
+void q_cborvalueconstref_to_cbor2(const void* self, void* writer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toDiagnosticNotation)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 ///
-const char* q_cborvalueconstref_to_diagnostic_notation(void* self);
+const char* q_cborvalueconstref_to_diagnostic_notation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toSimpleType)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 /// @param defaultValue enum QCborValueConstRef__QCborSimpleType
 ///
 /// @return enum QCborValueConstRef__QCborSimpleType
 ///
-uint8_t q_cborvalueconstref_to_simple_type1(void* self, uint8_t defaultValue);
+uint8_t q_cborvalueconstref_to_simple_type1(const void* self, uint8_t defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#tag)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 /// @param defaultValue enum QCborValueConstRef__QCborTag
 ///
 /// @return enum QCborValueConstRef__QCborTag
 ///
-uint64_t q_cborvalueconstref_tag1(void* self, uint64_t defaultValue);
+uint64_t q_cborvalueconstref_tag1(const void* self, uint64_t defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#taggedValue)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 /// @param defaultValue QCborValue*
 ///
-QCborValue* q_cborvalueconstref_tagged_value1(void* self, void* defaultValue);
+QCborValue* q_cborvalueconstref_tagged_value1(const void* self, const void* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toInteger)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 /// @param defaultValue int64_t
 ///
-int64_t q_cborvalueconstref_to_integer1(void* self, int64_t defaultValue);
+int64_t q_cborvalueconstref_to_integer1(const void* self, int64_t defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toBool)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 /// @param defaultValue bool
 ///
-bool q_cborvalueconstref_to_bool1(void* self, bool defaultValue);
+bool q_cborvalueconstref_to_bool1(const void* self, bool defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toDouble)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 /// @param defaultValue double
 ///
-double q_cborvalueconstref_to_double1(void* self, double defaultValue);
+double q_cborvalueconstref_to_double1(const void* self, double defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toByteArray)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 /// @param defaultValue char*
 ///
-char* q_cborvalueconstref_to_byte_array1(void* self, char* defaultValue);
+char* q_cborvalueconstref_to_byte_array1(const void* self, char* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 /// @param defaultValue const char*
 ///
-const char* q_cborvalueconstref_to_string1(void* self, const char* defaultValue);
+const char* q_cborvalueconstref_to_string1(const void* self, const char* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toDateTime)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 /// @param defaultValue QDateTime*
 ///
-QDateTime* q_cborvalueconstref_to_date_time1(void* self, void* defaultValue);
+QDateTime* q_cborvalueconstref_to_date_time1(const void* self, const void* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toUrl)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 /// @param defaultValue QUrl*
 ///
-QUrl* q_cborvalueconstref_to_url1(void* self, void* defaultValue);
+QUrl* q_cborvalueconstref_to_url1(const void* self, const void* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toRegularExpression)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 /// @param defaultValue QRegularExpression*
 ///
-QRegularExpression* q_cborvalueconstref_to_regular_expression1(void* self, void* defaultValue);
+QRegularExpression* q_cborvalueconstref_to_regular_expression1(const void* self, const void* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toUuid)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 /// @param defaultValue QUuid*
 ///
-QUuid* q_cborvalueconstref_to_uuid1(void* self, void* defaultValue);
+QUuid* q_cborvalueconstref_to_uuid1(const void* self, const void* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toCbor)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 /// @param opt flag of enum QCborValue__EncodingOption
 ///
-char* q_cborvalueconstref_to_cbor1(void* self, int32_t opt);
+char* q_cborvalueconstref_to_cbor1(const void* self, int32_t opt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toCbor)
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 /// @param writer QCborStreamWriter*
 /// @param opt flag of enum QCborValue__EncodingOption
 ///
-void q_cborvalueconstref_to_cbor22(void* self, void* writer, int32_t opt);
+void q_cborvalueconstref_to_cbor22(const void* self, void* writer, int32_t opt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toDiagnosticNotation)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QCborValueConstRef*
+/// @param self const QCborValueConstRef*
 /// @param opt flag of enum QCborValue__DiagnosticNotationOption
 ///
-const char* q_cborvalueconstref_to_diagnostic_notation1(void* self, int32_t opt);
+const char* q_cborvalueconstref_to_diagnostic_notation1(const void* self, int32_t opt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#dtor.QCborValueConstRef)
 ///
@@ -1250,7 +1250,7 @@ void q_cborvalueconstref_delete(void* self);
 ///
 /// @param other QCborValueRef*
 ///
-QCborValueRef* q_cborvalueref_new(void* other);
+QCborValueRef* q_cborvalueref_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html)
 
@@ -1266,21 +1266,21 @@ QCborValueRef* q_cborvalueref_new2(void* other);
 ///
 /// @param param1 QCborValueRef*
 ///
-QCborValueRef* q_cborvalueref_new3(void* param1);
+QCborValueRef* q_cborvalueref_new3(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#operator-eq)
 ///
 /// @param self QCborValueRef*
 /// @param other QCborValue*
 ///
-void q_cborvalueref_operator_assign(void* self, void* other);
+void q_cborvalueref_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#operator-eq)
 ///
 /// @param self QCborValueRef*
 /// @param other QCborValueRef*
 ///
-void q_cborvalueref_operator_assign2(void* self, void* other);
+void q_cborvalueref_operator_assign2(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#operator-5b-5d)
 ///
@@ -1305,284 +1305,284 @@ QCborValueRef* q_cborvalueref_operator_subscript3(void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#operator-QCborValue)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-QCborValue* q_cborvalueref_to_q_cbor_value(void* self);
+QCborValue* q_cborvalueref_to_q_cbor_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#type)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
 /// @return enum QCborValue__Type
 ///
-int32_t q_cborvalueref_type(void* self);
+int32_t q_cborvalueref_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#isInteger)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-bool q_cborvalueref_is_integer(void* self);
+bool q_cborvalueref_is_integer(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#isByteArray)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-bool q_cborvalueref_is_byte_array(void* self);
+bool q_cborvalueref_is_byte_array(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#isString)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-bool q_cborvalueref_is_string(void* self);
+bool q_cborvalueref_is_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#isArray)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-bool q_cborvalueref_is_array(void* self);
+bool q_cborvalueref_is_array(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#isMap)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-bool q_cborvalueref_is_map(void* self);
+bool q_cborvalueref_is_map(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#isTag)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-bool q_cborvalueref_is_tag(void* self);
+bool q_cborvalueref_is_tag(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#isFalse)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-bool q_cborvalueref_is_false(void* self);
+bool q_cborvalueref_is_false(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#isTrue)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-bool q_cborvalueref_is_true(void* self);
+bool q_cborvalueref_is_true(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#isBool)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-bool q_cborvalueref_is_bool(void* self);
+bool q_cborvalueref_is_bool(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#isNull)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-bool q_cborvalueref_is_null(void* self);
+bool q_cborvalueref_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#isUndefined)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-bool q_cborvalueref_is_undefined(void* self);
+bool q_cborvalueref_is_undefined(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#isDouble)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-bool q_cborvalueref_is_double(void* self);
+bool q_cborvalueref_is_double(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#isDateTime)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-bool q_cborvalueref_is_date_time(void* self);
+bool q_cborvalueref_is_date_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#isUrl)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-bool q_cborvalueref_is_url(void* self);
+bool q_cborvalueref_is_url(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#isRegularExpression)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-bool q_cborvalueref_is_regular_expression(void* self);
+bool q_cborvalueref_is_regular_expression(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#isUuid)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-bool q_cborvalueref_is_uuid(void* self);
+bool q_cborvalueref_is_uuid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#isInvalid)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-bool q_cborvalueref_is_invalid(void* self);
+bool q_cborvalueref_is_invalid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#isContainer)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-bool q_cborvalueref_is_container(void* self);
+bool q_cborvalueref_is_container(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#isSimpleType)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-bool q_cborvalueref_is_simple_type(void* self);
+bool q_cborvalueref_is_simple_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#isSimpleType)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 /// @param st enum QCborValueRef__QCborSimpleType
 ///
-bool q_cborvalueref_is_simple_type2(void* self, uint8_t st);
+bool q_cborvalueref_is_simple_type2(const void* self, uint8_t st);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toSimpleType)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
 /// @return enum QCborValueRef__QCborSimpleType
 ///
-uint8_t q_cborvalueref_to_simple_type(void* self);
+uint8_t q_cborvalueref_to_simple_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#tag)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
 /// @return enum QCborValueRef__QCborTag
 ///
-uint64_t q_cborvalueref_tag(void* self);
+uint64_t q_cborvalueref_tag(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#taggedValue)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-QCborValue* q_cborvalueref_tagged_value(void* self);
+QCborValue* q_cborvalueref_tagged_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toInteger)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-int64_t q_cborvalueref_to_integer(void* self);
+int64_t q_cborvalueref_to_integer(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toBool)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-bool q_cborvalueref_to_bool(void* self);
+bool q_cborvalueref_to_bool(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toDouble)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-double q_cborvalueref_to_double(void* self);
+double q_cborvalueref_to_double(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toByteArray)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-char* q_cborvalueref_to_byte_array(void* self);
+char* q_cborvalueref_to_byte_array(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-const char* q_cborvalueref_to_string(void* self);
+const char* q_cborvalueref_to_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toDateTime)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-QDateTime* q_cborvalueref_to_date_time(void* self);
+QDateTime* q_cborvalueref_to_date_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toUrl)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-QUrl* q_cborvalueref_to_url(void* self);
+QUrl* q_cborvalueref_to_url(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toRegularExpression)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-QRegularExpression* q_cborvalueref_to_regular_expression(void* self);
+QRegularExpression* q_cborvalueref_to_regular_expression(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toUuid)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-QUuid* q_cborvalueref_to_uuid(void* self);
+QUuid* q_cborvalueref_to_uuid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toArray)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-QCborArray* q_cborvalueref_to_array(void* self);
+QCborArray* q_cborvalueref_to_array(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toArray)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 /// @param a QCborArray*
 ///
-QCborArray* q_cborvalueref_to_array2(void* self, void* a);
+QCborArray* q_cborvalueref_to_array2(const void* self, const void* a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toMap)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-QCborMap* q_cborvalueref_to_map(void* self);
+QCborMap* q_cborvalueref_to_map(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toMap)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 /// @param m QCborMap*
 ///
-QCborMap* q_cborvalueref_to_map2(void* self, void* m);
+QCborMap* q_cborvalueref_to_map2(const void* self, const void* m);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#operator-5b-5d)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 /// @param key const char*
 ///
-const QCborValue* q_cborvalueref_operator_subscript4(void* self, const char* key);
+const QCborValue* q_cborvalueref_operator_subscript4(const void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#operator-5b-5d)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 /// @param key char*
 ///
-const QCborValue* q_cborvalueref_operator_subscript5(void* self, char* key);
+const QCborValue* q_cborvalueref_operator_subscript5(const void* self, char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#operator-5b-5d)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 /// @param key int64_t
 ///
-const QCborValue* q_cborvalueref_operator_subscript6(void* self, int64_t key);
+const QCborValue* q_cborvalueref_operator_subscript6(const void* self, int64_t key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#compare)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 /// @param other QCborValue*
 ///
-int32_t q_cborvalueref_compare(void* self, void* other);
+int32_t q_cborvalueref_compare(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toVariant)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-QVariant* q_cborvalueref_to_variant(void* self);
+QVariant* q_cborvalueref_to_variant(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toJsonValue)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 ///
-QJsonValue* q_cborvalueref_to_json_value(void* self);
+QJsonValue* q_cborvalueref_to_json_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toCbor)
 ///
@@ -1609,95 +1609,95 @@ const char* q_cborvalueref_to_diagnostic_notation(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toSimpleType)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 /// @param defaultValue enum QCborValueRef__QCborSimpleType
 ///
 /// @return enum QCborValueRef__QCborSimpleType
 ///
-uint8_t q_cborvalueref_to_simple_type1(void* self, uint8_t defaultValue);
+uint8_t q_cborvalueref_to_simple_type1(const void* self, uint8_t defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#tag)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 /// @param defaultValue enum QCborValueRef__QCborTag
 ///
 /// @return enum QCborValueRef__QCborTag
 ///
-uint64_t q_cborvalueref_tag1(void* self, uint64_t defaultValue);
+uint64_t q_cborvalueref_tag1(const void* self, uint64_t defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#taggedValue)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 /// @param defaultValue QCborValue*
 ///
-QCborValue* q_cborvalueref_tagged_value1(void* self, void* defaultValue);
+QCborValue* q_cborvalueref_tagged_value1(const void* self, const void* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toInteger)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 /// @param defaultValue int64_t
 ///
-int64_t q_cborvalueref_to_integer1(void* self, int64_t defaultValue);
+int64_t q_cborvalueref_to_integer1(const void* self, int64_t defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toBool)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 /// @param defaultValue bool
 ///
-bool q_cborvalueref_to_bool1(void* self, bool defaultValue);
+bool q_cborvalueref_to_bool1(const void* self, bool defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toDouble)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 /// @param defaultValue double
 ///
-double q_cborvalueref_to_double1(void* self, double defaultValue);
+double q_cborvalueref_to_double1(const void* self, double defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toByteArray)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 /// @param defaultValue char*
 ///
-char* q_cborvalueref_to_byte_array1(void* self, char* defaultValue);
+char* q_cborvalueref_to_byte_array1(const void* self, char* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 /// @param defaultValue const char*
 ///
-const char* q_cborvalueref_to_string1(void* self, const char* defaultValue);
+const char* q_cborvalueref_to_string1(const void* self, const char* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toDateTime)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 /// @param defaultValue QDateTime*
 ///
-QDateTime* q_cborvalueref_to_date_time1(void* self, void* defaultValue);
+QDateTime* q_cborvalueref_to_date_time1(const void* self, const void* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toUrl)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 /// @param defaultValue QUrl*
 ///
-QUrl* q_cborvalueref_to_url1(void* self, void* defaultValue);
+QUrl* q_cborvalueref_to_url1(const void* self, const void* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toRegularExpression)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 /// @param defaultValue QRegularExpression*
 ///
-QRegularExpression* q_cborvalueref_to_regular_expression1(void* self, void* defaultValue);
+QRegularExpression* q_cborvalueref_to_regular_expression1(const void* self, const void* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toUuid)
 ///
-/// @param self QCborValueRef*
+/// @param self const QCborValueRef*
 /// @param defaultValue QUuid*
 ///
-QUuid* q_cborvalueref_to_uuid1(void* self, void* defaultValue);
+QUuid* q_cborvalueref_to_uuid1(const void* self, const void* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toCbor)
 ///
@@ -1740,7 +1740,7 @@ void q_cborvalueref_delete(void* self);
 /// @param value QCborValue*
 /// @param seed size_t
 ///
-size_t q_qcborvalue_q_hash(void* value, size_t seed);
+size_t q_qcborvalue_q_hash(const void* value, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#public-types)
 

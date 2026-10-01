@@ -19,27 +19,27 @@ KStatefulBrush* k_statefulbrush_new4(int32_t param1, int32_t param2) {
     return KStatefulBrush_New4(param1, param2);
 }
 
-KStatefulBrush* k_statefulbrush_new5(void* param1) {
+KStatefulBrush* k_statefulbrush_new5(const void* param1) {
     return KStatefulBrush_New5((QBrush*)param1);
 }
 
-KStatefulBrush* k_statefulbrush_new6(void* param1, void* background) {
+KStatefulBrush* k_statefulbrush_new6(const void* param1, const void* background) {
     return KStatefulBrush_New6((QBrush*)param1, (QBrush*)background);
 }
 
-KStatefulBrush* k_statefulbrush_new7(void* param1) {
+KStatefulBrush* k_statefulbrush_new7(const void* param1) {
     return KStatefulBrush_New7((KStatefulBrush*)param1);
 }
 
-void k_statefulbrush_operator_assign(void* self, void* param1) {
+void k_statefulbrush_operator_assign(void* self, const void* param1) {
     KStatefulBrush_OperatorAssign((KStatefulBrush*)self, (KStatefulBrush*)param1);
 }
 
-QBrush* k_statefulbrush_brush(void* self, int32_t param1) {
+QBrush* k_statefulbrush_brush(const void* self, int32_t param1) {
     return KStatefulBrush_Brush((KStatefulBrush*)self, param1);
 }
 
-QBrush* k_statefulbrush_brush2(void* self, void* param1) {
+QBrush* k_statefulbrush_brush2(const void* self, const void* param1) {
     return KStatefulBrush_Brush2((KStatefulBrush*)self, (QPalette*)param1);
 }
 

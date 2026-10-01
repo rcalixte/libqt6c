@@ -31,40 +31,40 @@ bool q_poppler_is_overprint_preview_available();
 /// @param text const char*
 /// @param bBox QRectF*
 ///
-Poppler__TextBox* q_poppler__textbox_new(const char* text, void* bBox);
+Poppler__TextBox* q_poppler__textbox_new(const char* text, const void* bBox);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextBox.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__TextBox*
+/// @param self const Poppler__TextBox*
 ///
-const char* q_poppler__textbox_text(void* self);
+const char* q_poppler__textbox_text(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextBox.html)
 ///
-/// @param self Poppler__TextBox*
+/// @param self const Poppler__TextBox*
 ///
-QRectF* q_poppler__textbox_bounding_box(void* self);
+QRectF* q_poppler__textbox_bounding_box(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextBox.html)
 ///
-/// @param self Poppler__TextBox*
+/// @param self const Poppler__TextBox*
 ///
-Poppler__TextBox* q_poppler__textbox_next_word(void* self);
+Poppler__TextBox* q_poppler__textbox_next_word(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextBox.html)
 ///
-/// @param self Poppler__TextBox*
+/// @param self const Poppler__TextBox*
 /// @param i int
 ///
-QRectF* q_poppler__textbox_char_bounding_box(void* self, int i);
+QRectF* q_poppler__textbox_char_bounding_box(const void* self, int i);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextBox.html)
 ///
-/// @param self Poppler__TextBox*
+/// @param self const Poppler__TextBox*
 ///
-bool q_poppler__textbox_has_space_after(void* self);
+bool q_poppler__textbox_has_space_after(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextBox.html)
 ///
@@ -86,66 +86,66 @@ Poppler__FontInfo* q_poppler__fontinfo_new();
 ///
 /// @param fi Poppler__FontInfo*
 ///
-Poppler__FontInfo* q_poppler__fontinfo_new2(void* fi);
+Poppler__FontInfo* q_poppler__fontinfo_new2(const void* fi);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FontInfo.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__FontInfo*
+/// @param self const Poppler__FontInfo*
 ///
-const char* q_poppler__fontinfo_name(void* self);
+const char* q_poppler__fontinfo_name(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FontInfo.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__FontInfo*
+/// @param self const Poppler__FontInfo*
 ///
-const char* q_poppler__fontinfo_substitute_name(void* self);
+const char* q_poppler__fontinfo_substitute_name(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FontInfo.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__FontInfo*
+/// @param self const Poppler__FontInfo*
 ///
-const char* q_poppler__fontinfo_file(void* self);
+const char* q_poppler__fontinfo_file(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FontInfo.html)
 ///
-/// @param self Poppler__FontInfo*
+/// @param self const Poppler__FontInfo*
 ///
-bool q_poppler__fontinfo_is_embedded(void* self);
+bool q_poppler__fontinfo_is_embedded(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FontInfo.html)
 ///
-/// @param self Poppler__FontInfo*
+/// @param self const Poppler__FontInfo*
 ///
-bool q_poppler__fontinfo_is_subset(void* self);
+bool q_poppler__fontinfo_is_subset(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FontInfo.html)
 ///
-/// @param self Poppler__FontInfo*
+/// @param self const Poppler__FontInfo*
 ///
 /// @return enum Poppler__FontInfo__Type
 ///
-int32_t q_poppler__fontinfo_type(void* self);
+int32_t q_poppler__fontinfo_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FontInfo.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__FontInfo*
+/// @param self const Poppler__FontInfo*
 ///
-const char* q_poppler__fontinfo_type_name(void* self);
+const char* q_poppler__fontinfo_type_name(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FontInfo.html)
 ///
 /// @param self Poppler__FontInfo*
 /// @param fi Poppler__FontInfo*
 ///
-void q_poppler__fontinfo_operator_assign(void* self, void* fi);
+void q_poppler__fontinfo_operator_assign(void* self, const void* fi);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FontInfo.html)
 ///
@@ -167,15 +167,15 @@ libqt_list q_poppler__fontiterator_next(void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FontIterator.html)
 ///
-/// @param self Poppler__FontIterator*
+/// @param self const Poppler__FontIterator*
 ///
-bool q_poppler__fontiterator_has_next(void* self);
+bool q_poppler__fontiterator_has_next(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FontIterator.html)
 ///
-/// @param self Poppler__FontIterator*
+/// @param self const Poppler__FontIterator*
 ///
-int32_t q_poppler__fontiterator_current_page(void* self);
+int32_t q_poppler__fontiterator_current_page(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FontIterator.html)
 ///
@@ -191,51 +191,51 @@ void q_poppler__fontiterator_delete(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__EmbeddedFile*
+/// @param self const Poppler__EmbeddedFile*
 ///
-const char* q_poppler__embeddedfile_name(void* self);
+const char* q_poppler__embeddedfile_name(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1EmbeddedFile.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__EmbeddedFile*
+/// @param self const Poppler__EmbeddedFile*
 ///
-const char* q_poppler__embeddedfile_description(void* self);
+const char* q_poppler__embeddedfile_description(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1EmbeddedFile.html)
 ///
-/// @param self Poppler__EmbeddedFile*
+/// @param self const Poppler__EmbeddedFile*
 ///
-int32_t q_poppler__embeddedfile_size(void* self);
+int32_t q_poppler__embeddedfile_size(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1EmbeddedFile.html)
 ///
-/// @param self Poppler__EmbeddedFile*
+/// @param self const Poppler__EmbeddedFile*
 ///
-QDateTime* q_poppler__embeddedfile_mod_date(void* self);
+QDateTime* q_poppler__embeddedfile_mod_date(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1EmbeddedFile.html)
 ///
-/// @param self Poppler__EmbeddedFile*
+/// @param self const Poppler__EmbeddedFile*
 ///
-QDateTime* q_poppler__embeddedfile_create_date(void* self);
+QDateTime* q_poppler__embeddedfile_create_date(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1EmbeddedFile.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Poppler__EmbeddedFile*
+/// @param self const Poppler__EmbeddedFile*
 ///
-char* q_poppler__embeddedfile_checksum(void* self);
+char* q_poppler__embeddedfile_checksum(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1EmbeddedFile.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__EmbeddedFile*
+/// @param self const Poppler__EmbeddedFile*
 ///
-const char* q_poppler__embeddedfile_mime_type(void* self);
+const char* q_poppler__embeddedfile_mime_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1EmbeddedFile.html)
 ///
@@ -247,9 +247,9 @@ char* q_poppler__embeddedfile_data(void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1EmbeddedFile.html)
 ///
-/// @param self Poppler__EmbeddedFile*
+/// @param self const Poppler__EmbeddedFile*
 ///
-bool q_poppler__embeddedfile_is_valid(void* self);
+bool q_poppler__embeddedfile_is_valid(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1EmbeddedFile.html)
 ///
@@ -263,13 +263,13 @@ void q_poppler__embeddedfile_delete(void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
+/// @param self const Poppler__Page*
 ///
-QImage* q_poppler__page_render_to_image(void* self);
+QImage* q_poppler__page_render_to_image(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
+/// @param self const Poppler__Page*
 /// @param xres double
 /// @param yres double
 /// @param x int
@@ -281,11 +281,11 @@ QImage* q_poppler__page_render_to_image(void* self);
 /// @param shouldDoPartialUpdateCallback bool func(QVariant* param1)
 /// @param payload QVariant*
 ///
-QImage* q_poppler__page_render_to_image2(void* self, double xres, double yres, int x, int y, int w, int h, int32_t rotate, void (*partialUpdateCallback)(void* funcparam1, void* funcparam2), bool (*shouldDoPartialUpdateCallback)(void* funcparam1), void* payload);
+QImage* q_poppler__page_render_to_image2(const void* self, double xres, double yres, int x, int y, int w, int h, int32_t rotate, void (*partialUpdateCallback)(const void* funcparam1, const void* funcparam2), bool (*shouldDoPartialUpdateCallback)(const void* funcparam1), const void* payload);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
+/// @param self const Poppler__Page*
 /// @param xres double
 /// @param yres double
 /// @param x int
@@ -298,43 +298,43 @@ QImage* q_poppler__page_render_to_image2(void* self, double xres, double yres, i
 /// @param shouldAbortRenderCallback bool func(QVariant* param1)
 /// @param payload QVariant*
 ///
-QImage* q_poppler__page_render_to_image3(void* self, double xres, double yres, int x, int y, int w, int h, int32_t rotate, void (*partialUpdateCallback)(void* funcparam1, void* funcparam2), bool (*shouldDoPartialUpdateCallback)(void* funcparam1), bool (*shouldAbortRenderCallback)(void* funcparam1), void* payload);
+QImage* q_poppler__page_render_to_image3(const void* self, double xres, double yres, int x, int y, int w, int h, int32_t rotate, void (*partialUpdateCallback)(const void* funcparam1, const void* funcparam2), bool (*shouldDoPartialUpdateCallback)(const void* funcparam1), bool (*shouldAbortRenderCallback)(const void* funcparam1), const void* payload);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
+/// @param self const Poppler__Page*
 /// @param painter QPainter*
 ///
-bool q_poppler__page_render_to_painter(void* self, void* painter);
+bool q_poppler__page_render_to_painter(const void* self, void* painter);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
+/// @param self const Poppler__Page*
 ///
-QImage* q_poppler__page_thumbnail(void* self);
+QImage* q_poppler__page_thumbnail(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__Page*
+/// @param self const Poppler__Page*
 /// @param rect QRectF*
 /// @param textLayout enum Poppler__Page__TextLayout
 ///
-const char* q_poppler__page_text(void* self, void* rect, int32_t textLayout);
+const char* q_poppler__page_text(const void* self, const void* rect, int32_t textLayout);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__Page*
+/// @param self const Poppler__Page*
 /// @param rect QRectF*
 ///
-const char* q_poppler__page_text2(void* self, void* rect);
+const char* q_poppler__page_text2(const void* self, const void* rect);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
+/// @param self const Poppler__Page*
 /// @param text const char*
 /// @param sLeft double*
 /// @param sTop double*
@@ -342,68 +342,68 @@ const char* q_poppler__page_text2(void* self, void* rect);
 /// @param sBottom double*
 /// @param direction enum Poppler__Page__SearchDirection
 ///
-bool q_poppler__page_search(void* self, const char* text, double* sLeft, double* sTop, double* sRight, double* sBottom, int32_t direction);
+bool q_poppler__page_search(const void* self, const char* text, double* sLeft, double* sTop, double* sRight, double* sBottom, int32_t direction);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
+/// @param self const Poppler__Page*
 /// @param text const char*
 ///
 /// @return libqt_list of QRectF*
 ///
-libqt_list q_poppler__page_search2(void* self, const char* text);
+libqt_list q_poppler__page_search2(const void* self, const char* text);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
+/// @param self const Poppler__Page*
 ///
 /// @return libqt_list of Poppler__TextBox*
 ///
-libqt_list q_poppler__page_text_list(void* self);
+libqt_list q_poppler__page_text_list(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
+/// @param self const Poppler__Page*
 /// @param rotate enum Poppler__Page__Rotation
 /// @param shouldAbortExtractionCallback bool func(QVariant* param1)
 /// @param closure QVariant*
 ///
 /// @return libqt_list of Poppler__TextBox*
 ///
-libqt_list q_poppler__page_text_list2(void* self, int32_t rotate, bool (*shouldAbortExtractionCallback)(void* funcparam1), void* closure);
+libqt_list q_poppler__page_text_list2(const void* self, int32_t rotate, bool (*shouldAbortExtractionCallback)(const void* funcparam1), const void* closure);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
+/// @param self const Poppler__Page*
 ///
-QSizeF* q_poppler__page_page_size_f(void* self);
+QSizeF* q_poppler__page_page_size_f(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
+/// @param self const Poppler__Page*
 ///
-QSize* q_poppler__page_page_size(void* self);
+QSize* q_poppler__page_page_size(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
+/// @param self const Poppler__Page*
 ///
-Poppler__PageTransition* q_poppler__page_transition(void* self);
+Poppler__PageTransition* q_poppler__page_transition(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
+/// @param self const Poppler__Page*
 /// @param act enum Poppler__Page__PageAction
 ///
-Poppler__Link* q_poppler__page_action(void* self, int32_t act);
+Poppler__Link* q_poppler__page_action(const void* self, int32_t act);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
+/// @param self const Poppler__Page*
 ///
 /// @return enum Poppler__Page__Orientation
 ///
-int32_t q_poppler__page_orientation(void* self);
+int32_t q_poppler__page_orientation(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
@@ -418,195 +418,119 @@ void q_poppler__page_default_c_t_m(void* self, double* CTM, double dpiX, double 
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
+/// @param self const Poppler__Page*
 ///
 /// @return libqt_list of Poppler__Link*
 ///
-libqt_list q_poppler__page_links(void* self);
+libqt_list q_poppler__page_links(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
+/// @param self const Poppler__Page*
 ///
 /// @return libqt_list of Poppler__Annotation*
 ///
-libqt_list q_poppler__page_annotations(void* self);
+libqt_list q_poppler__page_annotations(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
+/// @param self const Poppler__Page*
 /// @param subtypes libqt_list /* set of enum Poppler__Annotation__SubType */ subtypes
 ///
 /// @return libqt_list of Poppler__Annotation*
 ///
-libqt_list q_poppler__page_annotations2(void* self, libqt_list subtypes);
+libqt_list q_poppler__page_annotations2(const void* self, libqt_list subtypes);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
 /// @param self Poppler__Page*
 /// @param ann Poppler__Annotation*
 ///
-void q_poppler__page_add_annotation(void* self, void* ann);
+void q_poppler__page_add_annotation(void* self, const void* ann);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
 /// @param self Poppler__Page*
 /// @param ann Poppler__Annotation*
 ///
-void q_poppler__page_remove_annotation(void* self, void* ann);
+void q_poppler__page_remove_annotation(void* self, const void* ann);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
+/// @param self const Poppler__Page*
 ///
 /// @return libqt_list of Poppler__FormField*
 ///
-libqt_list q_poppler__page_form_fields(void* self);
+libqt_list q_poppler__page_form_fields(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
+/// @param self const Poppler__Page*
 ///
-double q_poppler__page_duration(void* self);
+double q_poppler__page_duration(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__Page*
+/// @param self const Poppler__Page*
 ///
-const char* q_poppler__page_label(void* self);
+const char* q_poppler__page_label(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
+/// @param self const Poppler__Page*
 ///
-int32_t q_poppler__page_index(void* self);
+int32_t q_poppler__page_index(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
+/// @param self const Poppler__Page*
 /// @param xres double
 ///
-QImage* q_poppler__page_render_to_image1(void* self, double xres);
+QImage* q_poppler__page_render_to_image1(const void* self, double xres);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
-/// @param xres double
-/// @param yres double
-///
-QImage* q_poppler__page_render_to_image22(void* self, double xres, double yres);
-
-/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
-///
-/// @param self Poppler__Page*
-/// @param xres double
-/// @param yres double
-/// @param x int
-///
-QImage* q_poppler__page_render_to_image32(void* self, double xres, double yres, int x);
-
-/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
-///
-/// @param self Poppler__Page*
-/// @param xres double
-/// @param yres double
-/// @param x int
-/// @param y int
-///
-QImage* q_poppler__page_render_to_image4(void* self, double xres, double yres, int x, int y);
-
-/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
-///
-/// @param self Poppler__Page*
-/// @param xres double
-/// @param yres double
-/// @param x int
-/// @param y int
-/// @param w int
-///
-QImage* q_poppler__page_render_to_image5(void* self, double xres, double yres, int x, int y, int w);
-
-/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
-///
-/// @param self Poppler__Page*
-/// @param xres double
-/// @param yres double
-/// @param x int
-/// @param y int
-/// @param w int
-/// @param h int
-///
-QImage* q_poppler__page_render_to_image6(void* self, double xres, double yres, int x, int y, int w, int h);
-
-/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
-///
-/// @param self Poppler__Page*
-/// @param xres double
-/// @param yres double
-/// @param x int
-/// @param y int
-/// @param w int
-/// @param h int
-/// @param rotate enum Poppler__Page__Rotation
-///
-QImage* q_poppler__page_render_to_image7(void* self, double xres, double yres, int x, int y, int w, int h, int32_t rotate);
-
-/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
-///
-/// @param self Poppler__Page*
-/// @param painter QPainter*
-/// @param xres double
-///
-bool q_poppler__page_render_to_painter2(void* self, void* painter, double xres);
-
-/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
-///
-/// @param self Poppler__Page*
-/// @param painter QPainter*
+/// @param self const Poppler__Page*
 /// @param xres double
 /// @param yres double
 ///
-bool q_poppler__page_render_to_painter3(void* self, void* painter, double xres, double yres);
+QImage* q_poppler__page_render_to_image22(const void* self, double xres, double yres);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
-/// @param painter QPainter*
+/// @param self const Poppler__Page*
 /// @param xres double
 /// @param yres double
 /// @param x int
 ///
-bool q_poppler__page_render_to_painter4(void* self, void* painter, double xres, double yres, int x);
+QImage* q_poppler__page_render_to_image32(const void* self, double xres, double yres, int x);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
-/// @param painter QPainter*
+/// @param self const Poppler__Page*
 /// @param xres double
 /// @param yres double
 /// @param x int
 /// @param y int
 ///
-bool q_poppler__page_render_to_painter5(void* self, void* painter, double xres, double yres, int x, int y);
+QImage* q_poppler__page_render_to_image4(const void* self, double xres, double yres, int x, int y);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
-/// @param painter QPainter*
+/// @param self const Poppler__Page*
 /// @param xres double
 /// @param yres double
 /// @param x int
 /// @param y int
 /// @param w int
 ///
-bool q_poppler__page_render_to_painter6(void* self, void* painter, double xres, double yres, int x, int y, int w);
+QImage* q_poppler__page_render_to_image5(const void* self, double xres, double yres, int x, int y, int w);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
-/// @param painter QPainter*
+/// @param self const Poppler__Page*
 /// @param xres double
 /// @param yres double
 /// @param x int
@@ -614,12 +538,11 @@ bool q_poppler__page_render_to_painter6(void* self, void* painter, double xres, 
 /// @param w int
 /// @param h int
 ///
-bool q_poppler__page_render_to_painter7(void* self, void* painter, double xres, double yres, int x, int y, int w, int h);
+QImage* q_poppler__page_render_to_image6(const void* self, double xres, double yres, int x, int y, int w, int h);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
-/// @param painter QPainter*
+/// @param self const Poppler__Page*
 /// @param xres double
 /// @param yres double
 /// @param x int
@@ -628,11 +551,88 @@ bool q_poppler__page_render_to_painter7(void* self, void* painter, double xres, 
 /// @param h int
 /// @param rotate enum Poppler__Page__Rotation
 ///
-bool q_poppler__page_render_to_painter8(void* self, void* painter, double xres, double yres, int x, int y, int w, int h, int32_t rotate);
+QImage* q_poppler__page_render_to_image7(const void* self, double xres, double yres, int x, int y, int w, int h, int32_t rotate);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
+/// @param self const Poppler__Page*
+/// @param painter QPainter*
+/// @param xres double
+///
+bool q_poppler__page_render_to_painter2(const void* self, void* painter, double xres);
+
+/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
+///
+/// @param self const Poppler__Page*
+/// @param painter QPainter*
+/// @param xres double
+/// @param yres double
+///
+bool q_poppler__page_render_to_painter3(const void* self, void* painter, double xres, double yres);
+
+/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
+///
+/// @param self const Poppler__Page*
+/// @param painter QPainter*
+/// @param xres double
+/// @param yres double
+/// @param x int
+///
+bool q_poppler__page_render_to_painter4(const void* self, void* painter, double xres, double yres, int x);
+
+/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
+///
+/// @param self const Poppler__Page*
+/// @param painter QPainter*
+/// @param xres double
+/// @param yres double
+/// @param x int
+/// @param y int
+///
+bool q_poppler__page_render_to_painter5(const void* self, void* painter, double xres, double yres, int x, int y);
+
+/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
+///
+/// @param self const Poppler__Page*
+/// @param painter QPainter*
+/// @param xres double
+/// @param yres double
+/// @param x int
+/// @param y int
+/// @param w int
+///
+bool q_poppler__page_render_to_painter6(const void* self, void* painter, double xres, double yres, int x, int y, int w);
+
+/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
+///
+/// @param self const Poppler__Page*
+/// @param painter QPainter*
+/// @param xres double
+/// @param yres double
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
+///
+bool q_poppler__page_render_to_painter7(const void* self, void* painter, double xres, double yres, int x, int y, int w, int h);
+
+/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
+///
+/// @param self const Poppler__Page*
+/// @param painter QPainter*
+/// @param xres double
+/// @param yres double
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
+/// @param rotate enum Poppler__Page__Rotation
+///
+bool q_poppler__page_render_to_painter8(const void* self, void* painter, double xres, double yres, int x, int y, int w, int h, int32_t rotate);
+
+/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
+///
+/// @param self const Poppler__Page*
 /// @param painter QPainter*
 /// @param xres double
 /// @param yres double
@@ -643,11 +643,11 @@ bool q_poppler__page_render_to_painter8(void* self, void* painter, double xres, 
 /// @param rotate enum Poppler__Page__Rotation
 /// @param flags flag of enum Poppler__Page__PainterFlag
 ///
-bool q_poppler__page_render_to_painter9(void* self, void* painter, double xres, double yres, int x, int y, int w, int h, int32_t rotate, int32_t flags);
+bool q_poppler__page_render_to_painter9(const void* self, void* painter, double xres, double yres, int x, int y, int w, int h, int32_t rotate, int32_t flags);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
+/// @param self const Poppler__Page*
 /// @param text const char*
 /// @param sLeft double*
 /// @param sTop double*
@@ -656,11 +656,11 @@ bool q_poppler__page_render_to_painter9(void* self, void* painter, double xres, 
 /// @param direction enum Poppler__Page__SearchDirection
 /// @param flags flag of enum Poppler__Page__SearchFlag
 ///
-bool q_poppler__page_search7(void* self, const char* text, double* sLeft, double* sTop, double* sRight, double* sBottom, int32_t direction, int32_t flags);
+bool q_poppler__page_search7(const void* self, const char* text, double* sLeft, double* sTop, double* sRight, double* sBottom, int32_t direction, int32_t flags);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
+/// @param self const Poppler__Page*
 /// @param text const char*
 /// @param sLeft double*
 /// @param sTop double*
@@ -670,37 +670,37 @@ bool q_poppler__page_search7(void* self, const char* text, double* sLeft, double
 /// @param flags flag of enum Poppler__Page__SearchFlag
 /// @param rotate enum Poppler__Page__Rotation
 ///
-bool q_poppler__page_search8(void* self, const char* text, double* sLeft, double* sTop, double* sRight, double* sBottom, int32_t direction, int32_t flags, int32_t rotate);
+bool q_poppler__page_search8(const void* self, const char* text, double* sLeft, double* sTop, double* sRight, double* sBottom, int32_t direction, int32_t flags, int32_t rotate);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
+/// @param self const Poppler__Page*
 /// @param text const char*
 /// @param flags flag of enum Poppler__Page__SearchFlag
 ///
 /// @return libqt_list of QRectF*
 ///
-libqt_list q_poppler__page_search22(void* self, const char* text, int32_t flags);
+libqt_list q_poppler__page_search22(const void* self, const char* text, int32_t flags);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
+/// @param self const Poppler__Page*
 /// @param text const char*
 /// @param flags flag of enum Poppler__Page__SearchFlag
 /// @param rotate enum Poppler__Page__Rotation
 ///
 /// @return libqt_list of QRectF*
 ///
-libqt_list q_poppler__page_search3(void* self, const char* text, int32_t flags, int32_t rotate);
+libqt_list q_poppler__page_search3(const void* self, const char* text, int32_t flags, int32_t rotate);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
-/// @param self Poppler__Page*
+/// @param self const Poppler__Page*
 /// @param rotate enum Poppler__Page__Rotation
 ///
 /// @return libqt_list of Poppler__TextBox*
 ///
-libqt_list q_poppler__page_text_list1(void* self, int32_t rotate);
+libqt_list q_poppler__page_text_list1(const void* self, int32_t rotate);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Page.html)
 ///
@@ -722,64 +722,64 @@ Poppler__OutlineItem* q_poppler__outlineitem_new();
 ///
 /// @param other Poppler__OutlineItem*
 ///
-Poppler__OutlineItem* q_poppler__outlineitem_new2(void* other);
+Poppler__OutlineItem* q_poppler__outlineitem_new2(const void* other);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1OutlineItem.html)
 ///
 /// @param self Poppler__OutlineItem*
 /// @param other Poppler__OutlineItem*
 ///
-void q_poppler__outlineitem_operator_assign(void* self, void* other);
+void q_poppler__outlineitem_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1OutlineItem.html)
 ///
-/// @param self Poppler__OutlineItem*
+/// @param self const Poppler__OutlineItem*
 ///
-bool q_poppler__outlineitem_is_null(void* self);
-
-/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1OutlineItem.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self Poppler__OutlineItem*
-///
-const char* q_poppler__outlineitem_name(void* self);
-
-/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1OutlineItem.html)
-///
-/// @param self Poppler__OutlineItem*
-///
-bool q_poppler__outlineitem_is_open(void* self);
+bool q_poppler__outlineitem_is_null(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1OutlineItem.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__OutlineItem*
+/// @param self const Poppler__OutlineItem*
 ///
-const char* q_poppler__outlineitem_external_file_name(void* self);
+const char* q_poppler__outlineitem_name(const void* self);
+
+/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1OutlineItem.html)
+///
+/// @param self const Poppler__OutlineItem*
+///
+bool q_poppler__outlineitem_is_open(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1OutlineItem.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__OutlineItem*
+/// @param self const Poppler__OutlineItem*
 ///
-const char* q_poppler__outlineitem_uri(void* self);
+const char* q_poppler__outlineitem_external_file_name(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1OutlineItem.html)
 ///
-/// @param self Poppler__OutlineItem*
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-bool q_poppler__outlineitem_has_children(void* self);
+/// @param self const Poppler__OutlineItem*
+///
+const char* q_poppler__outlineitem_uri(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1OutlineItem.html)
 ///
-/// @param self Poppler__OutlineItem*
+/// @param self const Poppler__OutlineItem*
+///
+bool q_poppler__outlineitem_has_children(const void* self);
+
+/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1OutlineItem.html)
+///
+/// @param self const Poppler__OutlineItem*
 ///
 /// @return libqt_list of Poppler__OutlineItem*
 ///
-libqt_list q_poppler__outlineitem_children(void* self);
+libqt_list q_poppler__outlineitem_children(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1OutlineItem.html)
 ///
@@ -807,15 +807,15 @@ void q_poppler__document_set_color_display_profile_name(void* self, const char* 
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-void* q_poppler__document_color_rgb_profile(void* self);
+void* q_poppler__document_color_rgb_profile(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-void* q_poppler__document_color_display_profile(void* self);
+void* q_poppler__document_color_display_profile(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
@@ -837,47 +837,47 @@ Poppler__Document* q_poppler__document_load_from_data(char* fileContents);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 /// @param index int
 ///
-Poppler__Page* q_poppler__document_page(void* self, int index);
+Poppler__Page* q_poppler__document_page(const void* self, int index);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 /// @param label const char*
 ///
-Poppler__Page* q_poppler__document_page2(void* self, const char* label);
+Poppler__Page* q_poppler__document_page2(const void* self, const char* label);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-int32_t q_poppler__document_num_pages(void* self);
+int32_t q_poppler__document_num_pages(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
 /// @return enum Poppler__Document__PageMode
 ///
-int32_t q_poppler__document_page_mode(void* self);
+int32_t q_poppler__document_page_mode(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
 /// @return enum Poppler__Document__PageLayout
 ///
-int32_t q_poppler__document_page_layout(void* self);
+int32_t q_poppler__document_page_layout(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_poppler__document_text_direction(void* self);
+int32_t q_poppler__document_text_direction(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
@@ -889,16 +889,16 @@ bool q_poppler__document_unlock(void* self, char* ownerPassword, char* userPassw
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-bool q_poppler__document_is_locked(void* self);
+bool q_poppler__document_is_locked(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 /// @param type const char*
 ///
-QDateTime* q_poppler__document_date(void* self, const char* type);
+QDateTime* q_poppler__document_date(const void* self, const char* type);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
@@ -906,42 +906,42 @@ QDateTime* q_poppler__document_date(void* self, const char* type);
 /// @param key const char*
 /// @param val QDateTime*
 ///
-bool q_poppler__document_set_date(void* self, const char* key, void* val);
+bool q_poppler__document_set_date(void* self, const char* key, const void* val);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-QDateTime* q_poppler__document_creation_date(void* self);
-
-/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
-///
-/// @param self Poppler__Document*
-/// @param val QDateTime*
-///
-bool q_poppler__document_set_creation_date(void* self, void* val);
-
-/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
-///
-/// @param self Poppler__Document*
-///
-QDateTime* q_poppler__document_modification_date(void* self);
+QDateTime* q_poppler__document_creation_date(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
 /// @param self Poppler__Document*
 /// @param val QDateTime*
 ///
-bool q_poppler__document_set_modification_date(void* self, void* val);
+bool q_poppler__document_set_creation_date(void* self, const void* val);
+
+/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
+///
+/// @param self const Poppler__Document*
+///
+QDateTime* q_poppler__document_modification_date(const void* self);
+
+/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
+///
+/// @param self Poppler__Document*
+/// @param val QDateTime*
+///
+bool q_poppler__document_set_modification_date(void* self, const void* val);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 /// @param type const char*
 ///
-const char* q_poppler__document_info(void* self, const char* type);
+const char* q_poppler__document_info(const void* self, const char* type);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
@@ -955,9 +955,9 @@ bool q_poppler__document_set_info(void* self, const char* key, const char* val);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-const char* q_poppler__document_title(void* self);
+const char* q_poppler__document_title(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
@@ -970,9 +970,9 @@ bool q_poppler__document_set_title(void* self, const char* val);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-const char* q_poppler__document_author(void* self);
+const char* q_poppler__document_author(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
@@ -985,9 +985,9 @@ bool q_poppler__document_set_author(void* self, const char* val);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-const char* q_poppler__document_subject(void* self);
+const char* q_poppler__document_subject(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
@@ -1000,9 +1000,9 @@ bool q_poppler__document_set_subject(void* self, const char* val);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-const char* q_poppler__document_keywords(void* self);
+const char* q_poppler__document_keywords(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
@@ -1015,9 +1015,9 @@ bool q_poppler__document_set_keywords(void* self, const char* val);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-const char* q_poppler__document_creator(void* self);
+const char* q_poppler__document_creator(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
@@ -1030,9 +1030,9 @@ bool q_poppler__document_set_creator(void* self, const char* val);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-const char* q_poppler__document_producer(void* self);
+const char* q_poppler__document_producer(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
@@ -1051,126 +1051,126 @@ bool q_poppler__document_remove_info(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-const char** q_poppler__document_info_keys(void* self);
+const char** q_poppler__document_info_keys(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-bool q_poppler__document_is_encrypted(void* self);
+bool q_poppler__document_is_encrypted(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-bool q_poppler__document_is_linearized(void* self);
+bool q_poppler__document_is_linearized(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-bool q_poppler__document_ok_to_print(void* self);
+bool q_poppler__document_ok_to_print(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-bool q_poppler__document_ok_to_print_high_res(void* self);
+bool q_poppler__document_ok_to_print_high_res(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-bool q_poppler__document_ok_to_change(void* self);
+bool q_poppler__document_ok_to_change(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-bool q_poppler__document_ok_to_copy(void* self);
+bool q_poppler__document_ok_to_copy(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-bool q_poppler__document_ok_to_add_notes(void* self);
+bool q_poppler__document_ok_to_add_notes(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-bool q_poppler__document_ok_to_fill_form(void* self);
+bool q_poppler__document_ok_to_fill_form(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-bool q_poppler__document_ok_to_create_form_fields(void* self);
+bool q_poppler__document_ok_to_create_form_fields(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-bool q_poppler__document_ok_to_extract_for_accessibility(void* self);
+bool q_poppler__document_ok_to_extract_for_accessibility(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-bool q_poppler__document_ok_to_assemble(void* self);
+bool q_poppler__document_ok_to_assemble(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-Poppler__Document__PdfVersion* q_poppler__document_get_pdf_version(void* self);
+Poppler__Document__PdfVersion* q_poppler__document_get_pdf_version(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
 /// @return libqt_list of Poppler__FontInfo*
 ///
-libqt_list q_poppler__document_fonts(void* self);
+libqt_list q_poppler__document_fonts(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-Poppler__FontIterator* q_poppler__document_new_font_iterator(void* self);
+Poppler__FontIterator* q_poppler__document_new_font_iterator(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 /// @param fi Poppler__FontInfo*
 ///
-char* q_poppler__document_font_data(void* self, void* fi);
+char* q_poppler__document_font_data(const void* self, const void* fi);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
 /// @return libqt_list of Poppler__EmbeddedFile*
 ///
-libqt_list q_poppler__document_embedded_files(void* self);
+libqt_list q_poppler__document_embedded_files(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-bool q_poppler__document_has_embedded_files(void* self);
+bool q_poppler__document_has_embedded_files(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
 /// @return libqt_list of Poppler__OutlineItem*
 ///
-libqt_list q_poppler__document_outline(void* self);
+libqt_list q_poppler__document_outline(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
@@ -1184,13 +1184,13 @@ Poppler__LinkDestination* q_poppler__document_link_destination(void* self, const
 /// @param self Poppler__Document*
 /// @param color QColor*
 ///
-void q_poppler__document_set_paper_color(void* self, void* color);
+void q_poppler__document_set_paper_color(void* self, const void* color);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-QColor* q_poppler__document_paper_color(void* self);
+QColor* q_poppler__document_paper_color(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
@@ -1201,11 +1201,11 @@ void q_poppler__document_set_render_backend(void* self, int32_t backend);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
 /// @return enum Poppler__Document__RenderBackend
 ///
-int32_t q_poppler__document_render_backend(void* self);
+int32_t q_poppler__document_render_backend(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
@@ -1222,37 +1222,37 @@ void q_poppler__document_set_render_hint(void* self, int32_t hint);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
 /// @return flag of enum Poppler__Document__RenderHint
 ///
-int32_t q_poppler__document_render_hints(void* self);
+int32_t q_poppler__document_render_hints(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-Poppler__PSConverter* q_poppler__document_ps_converter(void* self);
+Poppler__PSConverter* q_poppler__document_ps_converter(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-Poppler__PDFConverter* q_poppler__document_pdf_converter(void* self);
+Poppler__PDFConverter* q_poppler__document_pdf_converter(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-const char* q_poppler__document_metadata(void* self);
+const char* q_poppler__document_metadata(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-bool q_poppler__document_has_optional_content(void* self);
+bool q_poppler__document_has_optional_content(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
@@ -1265,52 +1265,52 @@ Poppler__OptContentModel* q_poppler__document_optional_content_model(void* self)
 /// @param self Poppler__Document*
 /// @param link Poppler__LinkResetForm*
 ///
-void q_poppler__document_apply_reset_forms_link(void* self, void* link);
+void q_poppler__document_apply_reset_forms_link(void* self, const void* link);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-const char** q_poppler__document_scripts(void* self);
+const char** q_poppler__document_scripts(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 /// @param type enum Poppler__Document__DocumentAdditionalActionsType
 ///
-Poppler__Link* q_poppler__document_additional_action(void* self, int32_t type);
+Poppler__Link* q_poppler__document_additional_action(const void* self, int32_t type);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
 /// @return enum Poppler__Document__FormType
 ///
-int32_t q_poppler__document_form_type(void* self);
+int32_t q_poppler__document_form_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
 /// @return libqt_list of int
 ///
-libqt_list q_poppler__document_form_calculate_order(void* self);
+libqt_list q_poppler__document_form_calculate_order(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
 /// @return libqt_list of Poppler__FormFieldSignature*
 ///
-libqt_list q_poppler__document_signatures(void* self);
+libqt_list q_poppler__document_signatures(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 ///
-bool q_poppler__document_xref_was_reconstructed(void* self);
+bool q_poppler__document_xref_was_reconstructed(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
@@ -1366,10 +1366,10 @@ Poppler__Document* q_poppler__document_load_from_data3(char* fileContents, char*
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param self Poppler__Document*
+/// @param self const Poppler__Document*
 /// @param startPage int
 ///
-Poppler__FontIterator* q_poppler__document_new_font_iterator1(void* self, int startPage);
+Poppler__FontIterator* q_poppler__document_new_font_iterator1(const void* self, int startPage);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
@@ -1391,53 +1391,53 @@ void q_poppler__document_delete(void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SoundObject.html)
 ///
-/// @param self Poppler__SoundObject*
+/// @param self const Poppler__SoundObject*
 ///
 /// @return enum Poppler__SoundObject__SoundType
 ///
-int32_t q_poppler__soundobject_sound_type(void* self);
+int32_t q_poppler__soundobject_sound_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SoundObject.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__SoundObject*
+/// @param self const Poppler__SoundObject*
 ///
-const char* q_poppler__soundobject_url(void* self);
+const char* q_poppler__soundobject_url(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SoundObject.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Poppler__SoundObject*
+/// @param self const Poppler__SoundObject*
 ///
-char* q_poppler__soundobject_data(void* self);
+char* q_poppler__soundobject_data(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SoundObject.html)
 ///
-/// @param self Poppler__SoundObject*
+/// @param self const Poppler__SoundObject*
 ///
-double q_poppler__soundobject_sampling_rate(void* self);
+double q_poppler__soundobject_sampling_rate(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SoundObject.html)
 ///
-/// @param self Poppler__SoundObject*
+/// @param self const Poppler__SoundObject*
 ///
-int32_t q_poppler__soundobject_channels(void* self);
+int32_t q_poppler__soundobject_channels(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SoundObject.html)
 ///
-/// @param self Poppler__SoundObject*
+/// @param self const Poppler__SoundObject*
 ///
-int32_t q_poppler__soundobject_bits_per_sample(void* self);
+int32_t q_poppler__soundobject_bits_per_sample(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SoundObject.html)
 ///
-/// @param self Poppler__SoundObject*
+/// @param self const Poppler__SoundObject*
 ///
 /// @return enum Poppler__SoundObject__SoundEncoding
 ///
-int32_t q_poppler__soundobject_sound_encoding(void* self);
+int32_t q_poppler__soundobject_sound_encoding(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SoundObject.html)
 ///
@@ -1453,47 +1453,47 @@ void q_poppler__soundobject_delete(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__MovieObject*
+/// @param self const Poppler__MovieObject*
 ///
-const char* q_poppler__movieobject_url(void* self);
+const char* q_poppler__movieobject_url(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1MovieObject.html)
 ///
-/// @param self Poppler__MovieObject*
+/// @param self const Poppler__MovieObject*
 ///
-QSize* q_poppler__movieobject_size(void* self);
+QSize* q_poppler__movieobject_size(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1MovieObject.html)
 ///
-/// @param self Poppler__MovieObject*
+/// @param self const Poppler__MovieObject*
 ///
-int32_t q_poppler__movieobject_rotation(void* self);
+int32_t q_poppler__movieobject_rotation(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1MovieObject.html)
 ///
-/// @param self Poppler__MovieObject*
+/// @param self const Poppler__MovieObject*
 ///
-bool q_poppler__movieobject_show_controls(void* self);
+bool q_poppler__movieobject_show_controls(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1MovieObject.html)
 ///
-/// @param self Poppler__MovieObject*
+/// @param self const Poppler__MovieObject*
 ///
 /// @return enum Poppler__MovieObject__PlayMode
 ///
-int32_t q_poppler__movieobject_play_mode(void* self);
+int32_t q_poppler__movieobject_play_mode(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1MovieObject.html)
 ///
-/// @param self Poppler__MovieObject*
+/// @param self const Poppler__MovieObject*
 ///
-bool q_poppler__movieobject_show_poster_image(void* self);
+bool q_poppler__movieobject_show_poster_image(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1MovieObject.html)
 ///
-/// @param self Poppler__MovieObject*
+/// @param self const Poppler__MovieObject*
 ///
-QImage* q_poppler__movieobject_poster_image(void* self);
+QImage* q_poppler__movieobject_poster_image(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1MovieObject.html)
 ///
@@ -1507,9 +1507,9 @@ void q_poppler__movieobject_delete(void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/structPoppler_1_1Document_1_1PdfVersion.html)
 ///
-/// @param self Poppler__Document__PdfVersion*
+/// @param self const Poppler__Document__PdfVersion*
 ///
-int32_t q_poppler__document__pdfversion_major(void* self);
+int32_t q_poppler__document__pdfversion_major(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/structPoppler_1_1Document_1_1PdfVersion.html)
 ///
@@ -1520,9 +1520,9 @@ void q_poppler__document__pdfversion_set_major(void* self, int major);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/structPoppler_1_1Document_1_1PdfVersion.html)
 ///
-/// @param self Poppler__Document__PdfVersion*
+/// @param self const Poppler__Document__PdfVersion*
 ///
-int32_t q_poppler__document__pdfversion_minor(void* self);
+int32_t q_poppler__document__pdfversion_minor(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/structPoppler_1_1Document_1_1PdfVersion.html)
 ///

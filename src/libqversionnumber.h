@@ -15,7 +15,7 @@
 /// @param key QVersionNumber*
 /// @param seed size_t
 ///
-size_t q_qversionnumber_q_hash(void* key, size_t seed);
+size_t q_qversionnumber_q_hash(const void* key, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html)
 
@@ -64,93 +64,93 @@ QVersionNumber* q_versionnumber_new5(int maj, int min, int mic);
 ///
 /// @param param1 QVersionNumber*
 ///
-QVersionNumber* q_versionnumber_new6(void* param1);
+QVersionNumber* q_versionnumber_new6(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#isNull)
 ///
-/// @param self QVersionNumber*
+/// @param self const QVersionNumber*
 ///
-bool q_versionnumber_is_null(void* self);
+bool q_versionnumber_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#isNormalized)
 ///
-/// @param self QVersionNumber*
+/// @param self const QVersionNumber*
 ///
-bool q_versionnumber_is_normalized(void* self);
+bool q_versionnumber_is_normalized(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#majorVersion)
 ///
-/// @param self QVersionNumber*
+/// @param self const QVersionNumber*
 ///
-int32_t q_versionnumber_major_version(void* self);
+int32_t q_versionnumber_major_version(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#minorVersion)
 ///
-/// @param self QVersionNumber*
+/// @param self const QVersionNumber*
 ///
-int32_t q_versionnumber_minor_version(void* self);
+int32_t q_versionnumber_minor_version(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#microVersion)
 ///
-/// @param self QVersionNumber*
+/// @param self const QVersionNumber*
 ///
-int32_t q_versionnumber_micro_version(void* self);
+int32_t q_versionnumber_micro_version(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#normalized)
 ///
-/// @param self QVersionNumber*
+/// @param self const QVersionNumber*
 ///
-QVersionNumber* q_versionnumber_normalized(void* self);
+QVersionNumber* q_versionnumber_normalized(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#segments)
 ///
-/// @param self QVersionNumber*
+/// @param self const QVersionNumber*
 ///
 /// @return libqt_list of int
 ///
-libqt_list q_versionnumber_segments(void* self);
+libqt_list q_versionnumber_segments(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#segmentAt)
 ///
-/// @param self QVersionNumber*
+/// @param self const QVersionNumber*
 /// @param index intptr_t
 ///
-int32_t q_versionnumber_segment_at(void* self, intptr_t index);
+int32_t q_versionnumber_segment_at(const void* self, intptr_t index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#segmentCount)
 ///
-/// @param self QVersionNumber*
+/// @param self const QVersionNumber*
 ///
-intptr_t q_versionnumber_segment_count(void* self);
+intptr_t q_versionnumber_segment_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#isPrefixOf)
 ///
-/// @param self QVersionNumber*
+/// @param self const QVersionNumber*
 /// @param other QVersionNumber*
 ///
-bool q_versionnumber_is_prefix_of(void* self, void* other);
+bool q_versionnumber_is_prefix_of(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#compare)
 ///
 /// @param v1 QVersionNumber*
 /// @param v2 QVersionNumber*
 ///
-int32_t q_versionnumber_compare(void* v1, void* v2);
+int32_t q_versionnumber_compare(const void* v1, const void* v2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#commonPrefix)
 ///
 /// @param v1 QVersionNumber*
 /// @param v2 QVersionNumber*
 ///
-QVersionNumber* q_versionnumber_common_prefix(void* v1, void* v2);
+QVersionNumber* q_versionnumber_common_prefix(const void* v1, const void* v2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QVersionNumber*
+/// @param self const QVersionNumber*
 ///
-const char* q_versionnumber_to_string(void* self);
+const char* q_versionnumber_to_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#fromString)
 ///
@@ -163,7 +163,7 @@ QVersionNumber* q_versionnumber_from_string(const char* string);
 /// @param self QVersionNumber*
 /// @param param1 QVersionNumber*
 ///
-void q_versionnumber_operator_assign(void* self, void* param1);
+void q_versionnumber_operator_assign(void* self, const void* param1);
 
 #if defined(__linux__) || defined(__FreeBSD__)
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#fromString)

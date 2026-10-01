@@ -1,7 +1,7 @@
 #include "libquuid.hpp"
 #include "libquuid.h"
 
-QUuid* q_uuid_new(void* other) {
+QUuid* q_uuid_new(const void* other) {
     return QUuid_New((QUuid*)other);
 }
 
@@ -25,7 +25,7 @@ QUuid* q_uuid_new6(const char* string) {
     return QUuid_New6(string);
 }
 
-QUuid* q_uuid_new7(void* param1) {
+QUuid* q_uuid_new7(const void* param1) {
     return QUuid_New7((QUuid*)param1);
 }
 
@@ -45,25 +45,25 @@ QUuid* q_uuid_from_string(const char* string) {
     return QUuid_FromString(string);
 }
 
-const char* q_uuid_to_string(void* self) {
+const char* q_uuid_to_string(const void* self) {
     libqt_string _str = QUuid_ToString((QUuid*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_uuid_to_byte_array(void* self) {
+char* q_uuid_to_byte_array(const void* self) {
     libqt_string _str = QUuid_ToByteArray((QUuid*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QUuid__Id128Bytes* q_uuid_to_bytes(void* self) {
+QUuid__Id128Bytes* q_uuid_to_bytes(const void* self) {
     return QUuid_ToBytes((QUuid*)self);
 }
 
-char* q_uuid_to_rfc4122(void* self) {
+char* q_uuid_to_rfc4122(const void* self) {
     libqt_string _str = QUuid_ToRfc4122((QUuid*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -78,7 +78,7 @@ QUuid* q_uuid_from_rfc4122(char* param1) {
     return QUuid_FromRfc4122(qstring(param1));
 }
 
-bool q_uuid_is_null(void* self) {
+bool q_uuid_is_null(const void* self) {
     return QUuid_IsNull((QUuid*)self);
 }
 
@@ -94,15 +94,15 @@ QUuid* q_uuid_create_uuid_v3(void* ns, char* baseData) {
     return QUuid_CreateUuidV3((QUuid*)ns, qstring(baseData));
 }
 
-int32_t q_uuid_variant(void* self) {
+int32_t q_uuid_variant(const void* self) {
     return QUuid_Variant((QUuid*)self);
 }
 
-int32_t q_uuid_version(void* self) {
+int32_t q_uuid_version(const void* self) {
     return QUuid_Version((QUuid*)self);
 }
 
-uint32_t q_uuid_data1(void* self) {
+uint32_t q_uuid_data1(const void* self) {
     return QUuid_Data1((QUuid*)self);
 }
 
@@ -110,7 +110,7 @@ void q_uuid_set_data1(void* self, uint32_t data1) {
     QUuid_SetData1((QUuid*)self, data1);
 }
 
-uint16_t q_uuid_data2(void* self) {
+uint16_t q_uuid_data2(const void* self) {
     return QUuid_Data2((QUuid*)self);
 }
 
@@ -118,7 +118,7 @@ void q_uuid_set_data2(void* self, uint16_t data2) {
     QUuid_SetData2((QUuid*)self, data2);
 }
 
-uint16_t q_uuid_data3(void* self) {
+uint16_t q_uuid_data3(const void* self) {
     return QUuid_Data3((QUuid*)self);
 }
 
@@ -126,21 +126,21 @@ void q_uuid_set_data3(void* self, uint16_t data3) {
     QUuid_SetData3((QUuid*)self, data3);
 }
 
-const char* q_uuid_to_string1(void* self, int32_t mode) {
+const char* q_uuid_to_string1(const void* self, int32_t mode) {
     libqt_string _str = QUuid_ToString1((QUuid*)self, mode);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_uuid_to_byte_array1(void* self, int32_t mode) {
+char* q_uuid_to_byte_array1(const void* self, int32_t mode) {
     libqt_string _str = QUuid_ToByteArray1((QUuid*)self, mode);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QUuid__Id128Bytes* q_uuid_to_bytes1(void* self, int32_t order) {
+QUuid__Id128Bytes* q_uuid_to_bytes1(const void* self, int32_t order) {
     return QUuid_ToBytes1((QUuid*)self, order);
 }
 
@@ -152,7 +152,7 @@ void q_uuid_delete(void* self) {
     QUuid_Delete((QUuid*)(self));
 }
 
-size_t q_quuid_q_hash(void* uuid, size_t seed) {
+size_t q_quuid_q_hash(const void* uuid, size_t seed) {
     return quuid_QHash((QUuid*)uuid, seed);
 }
 
@@ -160,11 +160,11 @@ QUuid__Id128Bytes* q_uuid__id128bytes_new() {
     return QUuid__Id128Bytes_New();
 }
 
-QUuid__Id128Bytes* q_uuid__id128bytes_new2(void* param1) {
+QUuid__Id128Bytes* q_uuid__id128bytes_new2(const void* param1) {
     return QUuid__Id128Bytes_New2((QUuid__Id128Bytes*)param1);
 }
 
-char* q_uuid__id128bytes_to_q_byte_array_view(void* self) {
+char* q_uuid__id128bytes_to_q_byte_array_view(const void* self) {
     libqt_string _str = QUuid__Id128Bytes_ToQByteArrayView((QUuid__Id128Bytes*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

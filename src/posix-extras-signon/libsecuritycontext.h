@@ -29,7 +29,7 @@ SignOn__SecurityContext* q_signon__securitycontext_new2(const char* systemContex
 ///
 /// @param param1 SignOn__SecurityContext*
 ///
-SignOn__SecurityContext* q_signon__securitycontext_new3(void* param1);
+SignOn__SecurityContext* q_signon__securitycontext_new3(const void* param1);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1SecurityContext.html)
 ///
@@ -42,9 +42,9 @@ void q_signon__securitycontext_set_system_context(void* self, const char* system
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self SignOn__SecurityContext*
+/// @param self const SignOn__SecurityContext*
 ///
-const char* q_signon__securitycontext_system_context(void* self);
+const char* q_signon__securitycontext_system_context(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1SecurityContext.html)
 ///
@@ -57,16 +57,16 @@ void q_signon__securitycontext_set_application_context(void* self, const char* a
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self SignOn__SecurityContext*
+/// @param self const SignOn__SecurityContext*
 ///
-const char* q_signon__securitycontext_application_context(void* self);
+const char* q_signon__securitycontext_application_context(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1SecurityContext.html)
 ///
 /// @param self SignOn__SecurityContext*
 /// @param param1 SignOn__SecurityContext*
 ///
-void q_signon__securitycontext_operator_assign(void* self, void* param1);
+void q_signon__securitycontext_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1SecurityContext.html)
 ///

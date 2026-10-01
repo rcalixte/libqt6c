@@ -24,26 +24,26 @@ QWindowCapture* q_windowcapture_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 ///
-const QMetaObject* q_windowcapture_meta_object(void* self);
+const QMetaObject* q_windowcapture_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QWindowCapture*
-/// @param callback const QMetaObject* func()
+/// @param self const QWindowCapture*
+/// @param callback const QMetaObject* func(const QWindowCapture* self)
 ///
-void q_windowcapture_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_windowcapture_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 ///
-const QMetaObject* q_windowcapture_super_meta_object(void* self);
+const QMetaObject* q_windowcapture_super_meta_object(const void* self);
 
 /// @param self QWindowCapture*
 /// @param param1 const char*
@@ -103,9 +103,9 @@ libqt_list q_windowcapture_capturable_windows();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindowcapture.html#captureSession)
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 ///
-QMediaCaptureSession* q_windowcapture_capture_session(void* self);
+QMediaCaptureSession* q_windowcapture_capture_session(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindowcapture.html#setWindow)
 ///
@@ -116,31 +116,31 @@ void q_windowcapture_set_window(void* self, void* window);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindowcapture.html#window)
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 ///
-QCapturableWindow* q_windowcapture_window(void* self);
+QCapturableWindow* q_windowcapture_window(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindowcapture.html#isActive)
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 ///
-bool q_windowcapture_is_active(void* self);
+bool q_windowcapture_is_active(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindowcapture.html#error)
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 ///
 /// @return enum QWindowCapture__Error
 ///
-int32_t q_windowcapture_error(void* self);
+int32_t q_windowcapture_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindowcapture.html#errorString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 ///
-const char* q_windowcapture_error_string(void* self);
+const char* q_windowcapture_error_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindowcapture.html#setActive)
 ///
@@ -242,9 +242,9 @@ const char* q_windowcapture_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 ///
-const char* q_windowcapture_object_name(void* self);
+const char* q_windowcapture_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -259,33 +259,33 @@ void q_windowcapture_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 ///
-bool q_windowcapture_is_widget_type(void* self);
+bool q_windowcapture_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 ///
-bool q_windowcapture_is_window_type(void* self);
+bool q_windowcapture_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 ///
-bool q_windowcapture_is_quick_item_type(void* self);
+bool q_windowcapture_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 ///
-bool q_windowcapture_signals_blocked(void* self);
+bool q_windowcapture_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -300,9 +300,9 @@ bool q_windowcapture_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 ///
-QThread* q_windowcapture_thread(void* self);
+QThread* q_windowcapture_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -353,11 +353,11 @@ void q_windowcapture_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_windowcapture_children(void* self);
+libqt_list q_windowcapture_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -395,7 +395,7 @@ void q_windowcapture_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_windowcapture_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_windowcapture_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -406,18 +406,18 @@ QMetaObject__Connection* q_windowcapture_connect(void* sender, const char* signa
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_windowcapture_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_windowcapture_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_windowcapture_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_windowcapture_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -428,7 +428,7 @@ QMetaObject__Connection* q_windowcapture_connect3(void* self, void* sender, cons
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_windowcapture_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_windowcapture_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -439,24 +439,24 @@ bool q_windowcapture_disconnect(void* sender, const char* signal, void* receiver
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_windowcapture_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_windowcapture_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 ///
-bool q_windowcapture_disconnect3(void* self);
+bool q_windowcapture_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 /// @param receiver QObject*
 ///
-bool q_windowcapture_disconnect4(void* self, void* receiver);
+bool q_windowcapture_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -464,23 +464,23 @@ bool q_windowcapture_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_windowcapture_disconnect5(void* param1);
+bool q_windowcapture_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 ///
-void q_windowcapture_dump_object_tree(void* self);
+void q_windowcapture_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 ///
-void q_windowcapture_dump_object_info(void* self);
+void q_windowcapture_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -490,16 +490,16 @@ void q_windowcapture_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_windowcapture_set_property(void* self, const char* name, void* value);
+bool q_windowcapture_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 /// @param name const char*
 ///
-QVariant* q_windowcapture_property(void* self, const char* name);
+QVariant* q_windowcapture_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -507,9 +507,9 @@ QVariant* q_windowcapture_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 ///
-const char** q_windowcapture_dynamic_property_names(void* self);
+const char** q_windowcapture_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -523,9 +523,9 @@ QBindingStorage* q_windowcapture_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 ///
-const QBindingStorage* q_windowcapture_binding_storage2(void* self);
+const QBindingStorage* q_windowcapture_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -548,18 +548,18 @@ void q_windowcapture_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 ///
-QObject* q_windowcapture_parent(void* self);
+QObject* q_windowcapture_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 /// @param classname const char*
 ///
-bool q_windowcapture_inherits(void* self, const char* classname);
+bool q_windowcapture_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -599,7 +599,7 @@ int32_t q_windowcapture_start_timer23(void* self, int64_t time, int32_t timerTyp
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_windowcapture_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_windowcapture_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -611,59 +611,59 @@ QMetaObject__Connection* q_windowcapture_connect5(void* sender, const char* sign
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_windowcapture_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_windowcapture_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_windowcapture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_windowcapture_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 /// @param signal const char*
 ///
-bool q_windowcapture_disconnect1(void* self, const char* signal);
+bool q_windowcapture_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWindowCapture*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_windowcapture_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_windowcapture_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_windowcapture_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_windowcapture_disconnect23(void* self, void* receiver, const char* member);
+bool q_windowcapture_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QWindowCapture*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_windowcapture_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -859,7 +859,7 @@ void q_windowcapture_on_custom_event(void* self, void (*callback)(void*, void*))
 /// @param self QWindowCapture*
 /// @param signal QMetaMethod*
 ///
-void q_windowcapture_connect_notify(void* self, void* signal);
+void q_windowcapture_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -870,7 +870,7 @@ void q_windowcapture_connect_notify(void* self, void* signal);
 /// @param self QWindowCapture*
 /// @param signal QMetaMethod*
 ///
-void q_windowcapture_super_connect_notify(void* self, void* signal);
+void q_windowcapture_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -881,7 +881,7 @@ void q_windowcapture_super_connect_notify(void* self, void* signal);
 /// @param self QWindowCapture*
 /// @param callback void func(QWindowCapture* self, QMetaMethod* signal)
 ///
-void q_windowcapture_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_windowcapture_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -892,7 +892,7 @@ void q_windowcapture_on_connect_notify(void* self, void (*callback)(void*, void*
 /// @param self QWindowCapture*
 /// @param signal QMetaMethod*
 ///
-void q_windowcapture_disconnect_notify(void* self, void* signal);
+void q_windowcapture_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -903,7 +903,7 @@ void q_windowcapture_disconnect_notify(void* self, void* signal);
 /// @param self QWindowCapture*
 /// @param signal QMetaMethod*
 ///
-void q_windowcapture_super_disconnect_notify(void* self, void* signal);
+void q_windowcapture_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -914,7 +914,7 @@ void q_windowcapture_super_disconnect_notify(void* self, void* signal);
 /// @param self QWindowCapture*
 /// @param callback void func(QWindowCapture* self, QMetaMethod* signal)
 ///
-void q_windowcapture_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_windowcapture_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -922,9 +922,9 @@ void q_windowcapture_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 ///
-QObject* q_windowcapture_sender(void* self);
+QObject* q_windowcapture_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -932,9 +932,9 @@ QObject* q_windowcapture_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 ///
-QObject* q_windowcapture_super_sender(void* self);
+QObject* q_windowcapture_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -942,10 +942,10 @@ QObject* q_windowcapture_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWindowCapture*
-/// @param callback QObject* func()
+/// @param self const QWindowCapture*
+/// @param callback QObject* func(QWindowCapture* self)
 ///
-void q_windowcapture_on_sender(void* self, QObject* (*callback)());
+void q_windowcapture_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -953,9 +953,9 @@ void q_windowcapture_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 ///
-int32_t q_windowcapture_sender_signal_index(void* self);
+int32_t q_windowcapture_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -963,9 +963,9 @@ int32_t q_windowcapture_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 ///
-int32_t q_windowcapture_super_sender_signal_index(void* self);
+int32_t q_windowcapture_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -973,10 +973,10 @@ int32_t q_windowcapture_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWindowCapture*
-/// @param callback int32_t func()
+/// @param self const QWindowCapture*
+/// @param callback int32_t func(QWindowCapture* self)
 ///
-void q_windowcapture_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_windowcapture_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -984,10 +984,10 @@ void q_windowcapture_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 /// @param signal const char*
 ///
-int32_t q_windowcapture_receivers(void* self, const char* signal);
+int32_t q_windowcapture_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -995,10 +995,10 @@ int32_t q_windowcapture_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 /// @param signal const char*
 ///
-int32_t q_windowcapture_super_receivers(void* self, const char* signal);
+int32_t q_windowcapture_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1006,10 +1006,10 @@ int32_t q_windowcapture_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 /// @param callback int32_t func(QWindowCapture* self, const char* signal)
 ///
-void q_windowcapture_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_windowcapture_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1017,10 +1017,10 @@ void q_windowcapture_on_receivers(void* self, int32_t (*callback)(void*, const c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 /// @param signal QMetaMethod*
 ///
-bool q_windowcapture_is_signal_connected(void* self, void* signal);
+bool q_windowcapture_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1028,10 +1028,10 @@ bool q_windowcapture_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 /// @param signal QMetaMethod*
 ///
-bool q_windowcapture_super_is_signal_connected(void* self, void* signal);
+bool q_windowcapture_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1039,10 +1039,10 @@ bool q_windowcapture_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWindowCapture*
+/// @param self const QWindowCapture*
 /// @param callback bool func(QWindowCapture* self, QMetaMethod* signal)
 ///
-void q_windowcapture_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_windowcapture_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

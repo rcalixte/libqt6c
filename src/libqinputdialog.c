@@ -26,15 +26,15 @@ QInputDialog* q_inputdialog_new3(void* parent, int32_t flags) {
     return QInputDialog_New3((QWidget*)parent, flags);
 }
 
-const QMetaObject* q_inputdialog_meta_object(void* self) {
+const QMetaObject* q_inputdialog_meta_object(const void* self) {
     return QInputDialog_MetaObject((QInputDialog*)self);
 }
 
-void q_inputdialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_inputdialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QInputDialog_OnMetaObject((QInputDialog*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_inputdialog_super_meta_object(void* self) {
+const QMetaObject* q_inputdialog_super_meta_object(const void* self) {
     return QInputDialog_SuperMetaObject((QInputDialog*)self);
 }
 
@@ -73,7 +73,7 @@ void q_inputdialog_set_input_mode(void* self, int32_t mode) {
     QInputDialog_SetInputMode((QInputDialog*)self, mode);
 }
 
-int32_t q_inputdialog_input_mode(void* self) {
+int32_t q_inputdialog_input_mode(const void* self) {
     return QInputDialog_InputMode((QInputDialog*)self);
 }
 
@@ -81,7 +81,7 @@ void q_inputdialog_set_label_text(void* self, const char* text) {
     QInputDialog_SetLabelText((QInputDialog*)self, qstring(text));
 }
 
-const char* q_inputdialog_label_text(void* self) {
+const char* q_inputdialog_label_text(const void* self) {
     libqt_string _str = QInputDialog_LabelText((QInputDialog*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -92,7 +92,7 @@ void q_inputdialog_set_option(void* self, int32_t option) {
     QInputDialog_SetOption((QInputDialog*)self, option);
 }
 
-bool q_inputdialog_test_option(void* self, int32_t option) {
+bool q_inputdialog_test_option(const void* self, int32_t option) {
     return QInputDialog_TestOption((QInputDialog*)self, option);
 }
 
@@ -100,7 +100,7 @@ void q_inputdialog_set_options(void* self, int32_t options) {
     QInputDialog_SetOptions((QInputDialog*)self, options);
 }
 
-int32_t q_inputdialog_options(void* self) {
+int32_t q_inputdialog_options(const void* self) {
     return QInputDialog_Options((QInputDialog*)self);
 }
 
@@ -108,7 +108,7 @@ void q_inputdialog_set_text_value(void* self, const char* text) {
     QInputDialog_SetTextValue((QInputDialog*)self, qstring(text));
 }
 
-const char* q_inputdialog_text_value(void* self) {
+const char* q_inputdialog_text_value(const void* self) {
     libqt_string _str = QInputDialog_TextValue((QInputDialog*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -119,7 +119,7 @@ void q_inputdialog_set_text_echo_mode(void* self, int32_t mode) {
     QInputDialog_SetTextEchoMode((QInputDialog*)self, mode);
 }
 
-int32_t q_inputdialog_text_echo_mode(void* self) {
+int32_t q_inputdialog_text_echo_mode(const void* self) {
     return QInputDialog_TextEchoMode((QInputDialog*)self);
 }
 
@@ -127,7 +127,7 @@ void q_inputdialog_set_combo_box_editable(void* self, bool editable) {
     QInputDialog_SetComboBoxEditable((QInputDialog*)self, editable);
 }
 
-bool q_inputdialog_is_combo_box_editable(void* self) {
+bool q_inputdialog_is_combo_box_editable(const void* self) {
     return QInputDialog_IsComboBoxEditable((QInputDialog*)self);
 }
 
@@ -145,7 +145,7 @@ void q_inputdialog_set_combo_box_items(void* self, const char* items[static 1]) 
     free(items_qstr);
 }
 
-const char** q_inputdialog_combo_box_items(void* self) {
+const char** q_inputdialog_combo_box_items(const void* self) {
     libqt_list _arr = QInputDialog_ComboBoxItems((QInputDialog*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -166,7 +166,7 @@ void q_inputdialog_set_int_value(void* self, int value) {
     QInputDialog_SetIntValue((QInputDialog*)self, value);
 }
 
-int32_t q_inputdialog_int_value(void* self) {
+int32_t q_inputdialog_int_value(const void* self) {
     return QInputDialog_IntValue((QInputDialog*)self);
 }
 
@@ -174,7 +174,7 @@ void q_inputdialog_set_int_minimum(void* self, int min) {
     QInputDialog_SetIntMinimum((QInputDialog*)self, min);
 }
 
-int32_t q_inputdialog_int_minimum(void* self) {
+int32_t q_inputdialog_int_minimum(const void* self) {
     return QInputDialog_IntMinimum((QInputDialog*)self);
 }
 
@@ -182,7 +182,7 @@ void q_inputdialog_set_int_maximum(void* self, int max) {
     QInputDialog_SetIntMaximum((QInputDialog*)self, max);
 }
 
-int32_t q_inputdialog_int_maximum(void* self) {
+int32_t q_inputdialog_int_maximum(const void* self) {
     return QInputDialog_IntMaximum((QInputDialog*)self);
 }
 
@@ -194,7 +194,7 @@ void q_inputdialog_set_int_step(void* self, int step) {
     QInputDialog_SetIntStep((QInputDialog*)self, step);
 }
 
-int32_t q_inputdialog_int_step(void* self) {
+int32_t q_inputdialog_int_step(const void* self) {
     return QInputDialog_IntStep((QInputDialog*)self);
 }
 
@@ -202,7 +202,7 @@ void q_inputdialog_set_double_value(void* self, double value) {
     QInputDialog_SetDoubleValue((QInputDialog*)self, value);
 }
 
-double q_inputdialog_double_value(void* self) {
+double q_inputdialog_double_value(const void* self) {
     return QInputDialog_DoubleValue((QInputDialog*)self);
 }
 
@@ -210,7 +210,7 @@ void q_inputdialog_set_double_minimum(void* self, double min) {
     QInputDialog_SetDoubleMinimum((QInputDialog*)self, min);
 }
 
-double q_inputdialog_double_minimum(void* self) {
+double q_inputdialog_double_minimum(const void* self) {
     return QInputDialog_DoubleMinimum((QInputDialog*)self);
 }
 
@@ -218,7 +218,7 @@ void q_inputdialog_set_double_maximum(void* self, double max) {
     QInputDialog_SetDoubleMaximum((QInputDialog*)self, max);
 }
 
-double q_inputdialog_double_maximum(void* self) {
+double q_inputdialog_double_maximum(const void* self) {
     return QInputDialog_DoubleMaximum((QInputDialog*)self);
 }
 
@@ -230,7 +230,7 @@ void q_inputdialog_set_double_decimals(void* self, int decimals) {
     QInputDialog_SetDoubleDecimals((QInputDialog*)self, decimals);
 }
 
-int32_t q_inputdialog_double_decimals(void* self) {
+int32_t q_inputdialog_double_decimals(const void* self) {
     return QInputDialog_DoubleDecimals((QInputDialog*)self);
 }
 
@@ -238,7 +238,7 @@ void q_inputdialog_set_ok_button_text(void* self, const char* text) {
     QInputDialog_SetOkButtonText((QInputDialog*)self, qstring(text));
 }
 
-const char* q_inputdialog_ok_button_text(void* self) {
+const char* q_inputdialog_ok_button_text(const void* self) {
     libqt_string _str = QInputDialog_OkButtonText((QInputDialog*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -249,34 +249,34 @@ void q_inputdialog_set_cancel_button_text(void* self, const char* text) {
     QInputDialog_SetCancelButtonText((QInputDialog*)self, qstring(text));
 }
 
-const char* q_inputdialog_cancel_button_text(void* self) {
+const char* q_inputdialog_cancel_button_text(const void* self) {
     libqt_string _str = QInputDialog_CancelButtonText((QInputDialog*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QSize* q_inputdialog_minimum_size_hint(void* self) {
+QSize* q_inputdialog_minimum_size_hint(const void* self) {
     return QInputDialog_MinimumSizeHint((QInputDialog*)self);
 }
 
-void q_inputdialog_on_minimum_size_hint(void* self, QSize* (*callback)()) {
+void q_inputdialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
     QInputDialog_OnMinimumSizeHint((QInputDialog*)self, (intptr_t)callback);
 }
 
-QSize* q_inputdialog_super_minimum_size_hint(void* self) {
+QSize* q_inputdialog_super_minimum_size_hint(const void* self) {
     return QInputDialog_SuperMinimumSizeHint((QInputDialog*)self);
 }
 
-QSize* q_inputdialog_size_hint(void* self) {
+QSize* q_inputdialog_size_hint(const void* self) {
     return QInputDialog_SizeHint((QInputDialog*)self);
 }
 
-void q_inputdialog_on_size_hint(void* self, QSize* (*callback)()) {
+void q_inputdialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
     QInputDialog_OnSizeHint((QInputDialog*)self, (intptr_t)callback);
 }
 
-QSize* q_inputdialog_super_size_hint(void* self) {
+QSize* q_inputdialog_super_size_hint(const void* self) {
     return QInputDialog_SuperSizeHint((QInputDialog*)self);
 }
 
@@ -335,7 +335,7 @@ void q_inputdialog_set_double_step(void* self, double step) {
     QInputDialog_SetDoubleStep((QInputDialog*)self, step);
 }
 
-double q_inputdialog_double_step(void* self) {
+double q_inputdialog_double_step(const void* self) {
     return QInputDialog_DoubleStep((QInputDialog*)self);
 }
 
@@ -617,7 +617,7 @@ double q_inputdialog_get_double10(void* parent, const char* title, const char* l
     return QInputDialog_GetDouble10((QWidget*)parent, qstring(title), qstring(label), value, minValue, maxValue, decimals, (bool*)ok, flags, step);
 }
 
-int32_t q_inputdialog_result(void* self) {
+int32_t q_inputdialog_result(const void* self) {
     return QDialog_Result((QDialog*)self);
 }
 
@@ -625,7 +625,7 @@ void q_inputdialog_set_size_grip_enabled(void* self, bool sizeGripEnabled) {
     QDialog_SetSizeGripEnabled((QDialog*)self, sizeGripEnabled);
 }
 
-bool q_inputdialog_is_size_grip_enabled(void* self) {
+bool q_inputdialog_is_size_grip_enabled(const void* self) {
     return QDialog_IsSizeGripEnabled((QDialog*)self);
 }
 
@@ -669,7 +669,7 @@ QInputDialog* q_inputdialog_from_q_paint_device(void* _qpaintdevice) {
     return (QInputDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
-uintptr_t q_inputdialog_win_id(void* self) {
+uintptr_t q_inputdialog_win_id(const void* self) {
     return QWidget_WinId((QWidget*)self);
 }
 
@@ -677,15 +677,15 @@ void q_inputdialog_create_win_id(void* self) {
     QWidget_CreateWinId((QWidget*)self);
 }
 
-uintptr_t q_inputdialog_internal_win_id(void* self) {
+uintptr_t q_inputdialog_internal_win_id(const void* self) {
     return QWidget_InternalWinId((QWidget*)self);
 }
 
-uintptr_t q_inputdialog_effective_win_id(void* self) {
+uintptr_t q_inputdialog_effective_win_id(const void* self) {
     return QWidget_EffectiveWinId((QWidget*)self);
 }
 
-QStyle* q_inputdialog_style(void* self) {
+QStyle* q_inputdialog_style(const void* self) {
     return QWidget_Style((QWidget*)self);
 }
 
@@ -693,19 +693,19 @@ void q_inputdialog_set_style(void* self, void* style) {
     QWidget_SetStyle((QWidget*)self, (QStyle*)style);
 }
 
-bool q_inputdialog_is_top_level(void* self) {
+bool q_inputdialog_is_top_level(const void* self) {
     return QWidget_IsTopLevel((QWidget*)self);
 }
 
-bool q_inputdialog_is_window(void* self) {
+bool q_inputdialog_is_window(const void* self) {
     return QWidget_IsWindow((QWidget*)self);
 }
 
-bool q_inputdialog_is_modal(void* self) {
+bool q_inputdialog_is_modal(const void* self) {
     return QWidget_IsModal((QWidget*)self);
 }
 
-int32_t q_inputdialog_window_modality(void* self) {
+int32_t q_inputdialog_window_modality(const void* self) {
     return QWidget_WindowModality((QWidget*)self);
 }
 
@@ -713,11 +713,11 @@ void q_inputdialog_set_window_modality(void* self, int32_t windowModality) {
     QWidget_SetWindowModality((QWidget*)self, windowModality);
 }
 
-bool q_inputdialog_is_enabled(void* self) {
+bool q_inputdialog_is_enabled(const void* self) {
     return QWidget_IsEnabled((QWidget*)self);
 }
 
-bool q_inputdialog_is_enabled_to(void* self, void* param1) {
+bool q_inputdialog_is_enabled_to(const void* self, const void* param1) {
     return QWidget_IsEnabledTo((QWidget*)self, (QWidget*)param1);
 }
 
@@ -733,83 +733,83 @@ void q_inputdialog_set_window_modified(void* self, bool windowModified) {
     QWidget_SetWindowModified((QWidget*)self, windowModified);
 }
 
-QRect* q_inputdialog_frame_geometry(void* self) {
+QRect* q_inputdialog_frame_geometry(const void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-const QRect* q_inputdialog_geometry(void* self) {
+const QRect* q_inputdialog_geometry(const void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
-QRect* q_inputdialog_normal_geometry(void* self) {
+QRect* q_inputdialog_normal_geometry(const void* self) {
     return QWidget_NormalGeometry((QWidget*)self);
 }
 
-int32_t q_inputdialog_x(void* self) {
+int32_t q_inputdialog_x(const void* self) {
     return QWidget_X((QWidget*)self);
 }
 
-int32_t q_inputdialog_y(void* self) {
+int32_t q_inputdialog_y(const void* self) {
     return QWidget_Y((QWidget*)self);
 }
 
-QPoint* q_inputdialog_pos(void* self) {
+QPoint* q_inputdialog_pos(const void* self) {
     return QWidget_Pos((QWidget*)self);
 }
 
-QSize* q_inputdialog_frame_size(void* self) {
+QSize* q_inputdialog_frame_size(const void* self) {
     return QWidget_FrameSize((QWidget*)self);
 }
 
-QSize* q_inputdialog_size(void* self) {
+QSize* q_inputdialog_size(const void* self) {
     return QWidget_Size((QWidget*)self);
 }
 
-int32_t q_inputdialog_width(void* self) {
+int32_t q_inputdialog_width(const void* self) {
     return QWidget_Width((QWidget*)self);
 }
 
-int32_t q_inputdialog_height(void* self) {
+int32_t q_inputdialog_height(const void* self) {
     return QWidget_Height((QWidget*)self);
 }
 
-QRect* q_inputdialog_rect(void* self) {
+QRect* q_inputdialog_rect(const void* self) {
     return QWidget_Rect((QWidget*)self);
 }
 
-QRect* q_inputdialog_children_rect(void* self) {
+QRect* q_inputdialog_children_rect(const void* self) {
     return QWidget_ChildrenRect((QWidget*)self);
 }
 
-QRegion* q_inputdialog_children_region(void* self) {
+QRegion* q_inputdialog_children_region(const void* self) {
     return QWidget_ChildrenRegion((QWidget*)self);
 }
 
-QSize* q_inputdialog_minimum_size(void* self) {
+QSize* q_inputdialog_minimum_size(const void* self) {
     return QWidget_MinimumSize((QWidget*)self);
 }
 
-QSize* q_inputdialog_maximum_size(void* self) {
+QSize* q_inputdialog_maximum_size(const void* self) {
     return QWidget_MaximumSize((QWidget*)self);
 }
 
-int32_t q_inputdialog_minimum_width(void* self) {
+int32_t q_inputdialog_minimum_width(const void* self) {
     return QWidget_MinimumWidth((QWidget*)self);
 }
 
-int32_t q_inputdialog_minimum_height(void* self) {
+int32_t q_inputdialog_minimum_height(const void* self) {
     return QWidget_MinimumHeight((QWidget*)self);
 }
 
-int32_t q_inputdialog_maximum_width(void* self) {
+int32_t q_inputdialog_maximum_width(const void* self) {
     return QWidget_MaximumWidth((QWidget*)self);
 }
 
-int32_t q_inputdialog_maximum_height(void* self) {
+int32_t q_inputdialog_maximum_height(const void* self) {
     return QWidget_MaximumHeight((QWidget*)self);
 }
 
-void q_inputdialog_set_minimum_size(void* self, void* minimumSize) {
+void q_inputdialog_set_minimum_size(void* self, const void* minimumSize) {
     QWidget_SetMinimumSize((QWidget*)self, (QSize*)minimumSize);
 }
 
@@ -817,7 +817,7 @@ void q_inputdialog_set_minimum_size2(void* self, int minw, int minh) {
     QWidget_SetMinimumSize2((QWidget*)self, minw, minh);
 }
 
-void q_inputdialog_set_maximum_size(void* self, void* maximumSize) {
+void q_inputdialog_set_maximum_size(void* self, const void* maximumSize) {
     QWidget_SetMaximumSize((QWidget*)self, (QSize*)maximumSize);
 }
 
@@ -841,11 +841,11 @@ void q_inputdialog_set_maximum_height(void* self, int maxh) {
     QWidget_SetMaximumHeight((QWidget*)self, maxh);
 }
 
-QSize* q_inputdialog_size_increment(void* self) {
+QSize* q_inputdialog_size_increment(const void* self) {
     return QWidget_SizeIncrement((QWidget*)self);
 }
 
-void q_inputdialog_set_size_increment(void* self, void* sizeIncrement) {
+void q_inputdialog_set_size_increment(void* self, const void* sizeIncrement) {
     QWidget_SetSizeIncrement((QWidget*)self, (QSize*)sizeIncrement);
 }
 
@@ -853,11 +853,11 @@ void q_inputdialog_set_size_increment2(void* self, int w, int h) {
     QWidget_SetSizeIncrement2((QWidget*)self, w, h);
 }
 
-QSize* q_inputdialog_base_size(void* self) {
+QSize* q_inputdialog_base_size(const void* self) {
     return QWidget_BaseSize((QWidget*)self);
 }
 
-void q_inputdialog_set_base_size(void* self, void* baseSize) {
+void q_inputdialog_set_base_size(void* self, const void* baseSize) {
     QWidget_SetBaseSize((QWidget*)self, (QSize*)baseSize);
 }
 
@@ -865,7 +865,7 @@ void q_inputdialog_set_base_size2(void* self, int basew, int baseh) {
     QWidget_SetBaseSize2((QWidget*)self, basew, baseh);
 }
 
-void q_inputdialog_set_fixed_size(void* self, void* fixedSize) {
+void q_inputdialog_set_fixed_size(void* self, const void* fixedSize) {
     QWidget_SetFixedSize((QWidget*)self, (QSize*)fixedSize);
 }
 
@@ -881,71 +881,71 @@ void q_inputdialog_set_fixed_height(void* self, int h) {
     QWidget_SetFixedHeight((QWidget*)self, h);
 }
 
-QPointF* q_inputdialog_map_to_global(void* self, void* param1) {
+QPointF* q_inputdialog_map_to_global(const void* self, const void* param1) {
     return QWidget_MapToGlobal((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* q_inputdialog_map_to_global2(void* self, void* param1) {
+QPoint* q_inputdialog_map_to_global2(const void* self, const void* param1) {
     return QWidget_MapToGlobal2((QWidget*)self, (QPoint*)param1);
 }
 
-QPointF* q_inputdialog_map_from_global(void* self, void* param1) {
+QPointF* q_inputdialog_map_from_global(const void* self, const void* param1) {
     return QWidget_MapFromGlobal((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* q_inputdialog_map_from_global2(void* self, void* param1) {
+QPoint* q_inputdialog_map_from_global2(const void* self, const void* param1) {
     return QWidget_MapFromGlobal2((QWidget*)self, (QPoint*)param1);
 }
 
-QPointF* q_inputdialog_map_to_parent(void* self, void* param1) {
+QPointF* q_inputdialog_map_to_parent(const void* self, const void* param1) {
     return QWidget_MapToParent((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* q_inputdialog_map_to_parent2(void* self, void* param1) {
+QPoint* q_inputdialog_map_to_parent2(const void* self, const void* param1) {
     return QWidget_MapToParent2((QWidget*)self, (QPoint*)param1);
 }
 
-QPointF* q_inputdialog_map_from_parent(void* self, void* param1) {
+QPointF* q_inputdialog_map_from_parent(const void* self, const void* param1) {
     return QWidget_MapFromParent((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* q_inputdialog_map_from_parent2(void* self, void* param1) {
+QPoint* q_inputdialog_map_from_parent2(const void* self, const void* param1) {
     return QWidget_MapFromParent2((QWidget*)self, (QPoint*)param1);
 }
 
-QPointF* q_inputdialog_map_to(void* self, void* param1, void* param2) {
+QPointF* q_inputdialog_map_to(const void* self, const void* param1, const void* param2) {
     return QWidget_MapTo((QWidget*)self, (QWidget*)param1, (QPointF*)param2);
 }
 
-QPoint* q_inputdialog_map_to2(void* self, void* param1, void* param2) {
+QPoint* q_inputdialog_map_to2(const void* self, const void* param1, const void* param2) {
     return QWidget_MapTo2((QWidget*)self, (QWidget*)param1, (QPoint*)param2);
 }
 
-QPointF* q_inputdialog_map_from(void* self, void* param1, void* param2) {
+QPointF* q_inputdialog_map_from(const void* self, const void* param1, const void* param2) {
     return QWidget_MapFrom((QWidget*)self, (QWidget*)param1, (QPointF*)param2);
 }
 
-QPoint* q_inputdialog_map_from2(void* self, void* param1, void* param2) {
+QPoint* q_inputdialog_map_from2(const void* self, const void* param1, const void* param2) {
     return QWidget_MapFrom2((QWidget*)self, (QWidget*)param1, (QPoint*)param2);
 }
 
-QWidget* q_inputdialog_window(void* self) {
+QWidget* q_inputdialog_window(const void* self) {
     return QWidget_Window((QWidget*)self);
 }
 
-QWidget* q_inputdialog_native_parent_widget(void* self) {
+QWidget* q_inputdialog_native_parent_widget(const void* self) {
     return QWidget_NativeParentWidget((QWidget*)self);
 }
 
-QWidget* q_inputdialog_top_level_widget(void* self) {
+QWidget* q_inputdialog_top_level_widget(const void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-const QPalette* q_inputdialog_palette(void* self) {
+const QPalette* q_inputdialog_palette(const void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
-void q_inputdialog_set_palette(void* self, void* palette) {
+void q_inputdialog_set_palette(void* self, const void* palette) {
     QWidget_SetPalette((QWidget*)self, (QPalette*)palette);
 }
 
@@ -953,7 +953,7 @@ void q_inputdialog_set_background_role(void* self, int32_t backgroundRole) {
     QWidget_SetBackgroundRole((QWidget*)self, backgroundRole);
 }
 
-int32_t q_inputdialog_background_role(void* self) {
+int32_t q_inputdialog_background_role(const void* self) {
     return QWidget_BackgroundRole((QWidget*)self);
 }
 
@@ -961,31 +961,31 @@ void q_inputdialog_set_foreground_role(void* self, int32_t foregroundRole) {
     QWidget_SetForegroundRole((QWidget*)self, foregroundRole);
 }
 
-int32_t q_inputdialog_foreground_role(void* self) {
+int32_t q_inputdialog_foreground_role(const void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-const QFont* q_inputdialog_font(void* self) {
+const QFont* q_inputdialog_font(const void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
-void q_inputdialog_set_font(void* self, void* font) {
+void q_inputdialog_set_font(void* self, const void* font) {
     QWidget_SetFont((QWidget*)self, (QFont*)font);
 }
 
-QFontMetrics* q_inputdialog_font_metrics(void* self) {
+QFontMetrics* q_inputdialog_font_metrics(const void* self) {
     return QWidget_FontMetrics((QWidget*)self);
 }
 
-QFontInfo* q_inputdialog_font_info(void* self) {
+QFontInfo* q_inputdialog_font_info(const void* self) {
     return QWidget_FontInfo((QWidget*)self);
 }
 
-QCursor* q_inputdialog_cursor(void* self) {
+QCursor* q_inputdialog_cursor(const void* self) {
     return QWidget_Cursor((QWidget*)self);
 }
 
-void q_inputdialog_set_cursor(void* self, void* cursor) {
+void q_inputdialog_set_cursor(void* self, const void* cursor) {
     QWidget_SetCursor((QWidget*)self, (QCursor*)cursor);
 }
 
@@ -997,11 +997,11 @@ void q_inputdialog_set_mouse_tracking(void* self, bool enable) {
     QWidget_SetMouseTracking((QWidget*)self, enable);
 }
 
-bool q_inputdialog_has_mouse_tracking(void* self) {
+bool q_inputdialog_has_mouse_tracking(const void* self) {
     return QWidget_HasMouseTracking((QWidget*)self);
 }
 
-bool q_inputdialog_under_mouse(void* self) {
+bool q_inputdialog_under_mouse(const void* self) {
     return QWidget_UnderMouse((QWidget*)self);
 }
 
@@ -1009,19 +1009,19 @@ void q_inputdialog_set_tablet_tracking(void* self, bool enable) {
     QWidget_SetTabletTracking((QWidget*)self, enable);
 }
 
-bool q_inputdialog_has_tablet_tracking(void* self) {
+bool q_inputdialog_has_tablet_tracking(const void* self) {
     return QWidget_HasTabletTracking((QWidget*)self);
 }
 
-void q_inputdialog_set_mask(void* self, void* mask) {
+void q_inputdialog_set_mask(void* self, const void* mask) {
     QWidget_SetMask((QWidget*)self, (QBitmap*)mask);
 }
 
-void q_inputdialog_set_mask2(void* self, void* mask) {
+void q_inputdialog_set_mask2(void* self, const void* mask) {
     QWidget_SetMask2((QWidget*)self, (QRegion*)mask);
 }
 
-QRegion* q_inputdialog_mask(void* self) {
+QRegion* q_inputdialog_mask(const void* self) {
     return QWidget_Mask((QWidget*)self);
 }
 
@@ -1041,7 +1041,7 @@ QPixmap* q_inputdialog_grab(void* self) {
     return QWidget_Grab((QWidget*)self);
 }
 
-QGraphicsEffect* q_inputdialog_graphics_effect(void* self) {
+QGraphicsEffect* q_inputdialog_graphics_effect(const void* self) {
     return QWidget_GraphicsEffect((QWidget*)self);
 }
 
@@ -1065,25 +1065,25 @@ void q_inputdialog_set_style_sheet(void* self, const char* styleSheet) {
     QWidget_SetStyleSheet((QWidget*)self, qstring(styleSheet));
 }
 
-const char* q_inputdialog_style_sheet(void* self) {
+const char* q_inputdialog_style_sheet(const void* self) {
     libqt_string _str = QWidget_StyleSheet((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_inputdialog_window_title(void* self) {
+const char* q_inputdialog_window_title(const void* self) {
     libqt_string _str = QWidget_WindowTitle((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_inputdialog_set_window_icon(void* self, void* icon) {
+void q_inputdialog_set_window_icon(void* self, const void* icon) {
     QWidget_SetWindowIcon((QWidget*)self, (QIcon*)icon);
 }
 
-QIcon* q_inputdialog_window_icon(void* self) {
+QIcon* q_inputdialog_window_icon(const void* self) {
     return QWidget_WindowIcon((QWidget*)self);
 }
 
@@ -1091,7 +1091,7 @@ void q_inputdialog_set_window_icon_text(void* self, const char* windowIconText) 
     QWidget_SetWindowIconText((QWidget*)self, qstring(windowIconText));
 }
 
-const char* q_inputdialog_window_icon_text(void* self) {
+const char* q_inputdialog_window_icon_text(const void* self) {
     libqt_string _str = QWidget_WindowIconText((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1102,7 +1102,7 @@ void q_inputdialog_set_window_role(void* self, const char* windowRole) {
     QWidget_SetWindowRole((QWidget*)self, qstring(windowRole));
 }
 
-const char* q_inputdialog_window_role(void* self) {
+const char* q_inputdialog_window_role(const void* self) {
     libqt_string _str = QWidget_WindowRole((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1113,7 +1113,7 @@ void q_inputdialog_set_window_file_path(void* self, const char* filePath) {
     QWidget_SetWindowFilePath((QWidget*)self, qstring(filePath));
 }
 
-const char* q_inputdialog_window_file_path(void* self) {
+const char* q_inputdialog_window_file_path(const void* self) {
     libqt_string _str = QWidget_WindowFilePath((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1124,11 +1124,11 @@ void q_inputdialog_set_window_opacity(void* self, double level) {
     QWidget_SetWindowOpacity((QWidget*)self, level);
 }
 
-double q_inputdialog_window_opacity(void* self) {
+double q_inputdialog_window_opacity(const void* self) {
     return QWidget_WindowOpacity((QWidget*)self);
 }
 
-bool q_inputdialog_is_window_modified(void* self) {
+bool q_inputdialog_is_window_modified(const void* self) {
     return QWidget_IsWindowModified((QWidget*)self);
 }
 
@@ -1136,7 +1136,7 @@ void q_inputdialog_set_tool_tip(void* self, const char* toolTip) {
     QWidget_SetToolTip((QWidget*)self, qstring(toolTip));
 }
 
-const char* q_inputdialog_tool_tip(void* self) {
+const char* q_inputdialog_tool_tip(const void* self) {
     libqt_string _str = QWidget_ToolTip((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1147,7 +1147,7 @@ void q_inputdialog_set_tool_tip_duration(void* self, int msec) {
     QWidget_SetToolTipDuration((QWidget*)self, msec);
 }
 
-int32_t q_inputdialog_tool_tip_duration(void* self) {
+int32_t q_inputdialog_tool_tip_duration(const void* self) {
     return QWidget_ToolTipDuration((QWidget*)self);
 }
 
@@ -1155,7 +1155,7 @@ void q_inputdialog_set_status_tip(void* self, const char* statusTip) {
     QWidget_SetStatusTip((QWidget*)self, qstring(statusTip));
 }
 
-const char* q_inputdialog_status_tip(void* self) {
+const char* q_inputdialog_status_tip(const void* self) {
     libqt_string _str = QWidget_StatusTip((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1166,14 +1166,14 @@ void q_inputdialog_set_whats_this(void* self, const char* whatsThis) {
     QWidget_SetWhatsThis((QWidget*)self, qstring(whatsThis));
 }
 
-const char* q_inputdialog_whats_this(void* self) {
+const char* q_inputdialog_whats_this(const void* self) {
     libqt_string _str = QWidget_WhatsThis((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_inputdialog_accessible_name(void* self) {
+const char* q_inputdialog_accessible_name(const void* self) {
     libqt_string _str = QWidget_AccessibleName((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1184,7 +1184,7 @@ void q_inputdialog_set_accessible_name(void* self, const char* name) {
     QWidget_SetAccessibleName((QWidget*)self, qstring(name));
 }
 
-const char* q_inputdialog_accessible_description(void* self) {
+const char* q_inputdialog_accessible_description(const void* self) {
     libqt_string _str = QWidget_AccessibleDescription((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1199,7 +1199,7 @@ void q_inputdialog_set_layout_direction(void* self, int32_t direction) {
     QWidget_SetLayoutDirection((QWidget*)self, direction);
 }
 
-int32_t q_inputdialog_layout_direction(void* self) {
+int32_t q_inputdialog_layout_direction(const void* self) {
     return QWidget_LayoutDirection((QWidget*)self);
 }
 
@@ -1207,11 +1207,11 @@ void q_inputdialog_unset_layout_direction(void* self) {
     QWidget_UnsetLayoutDirection((QWidget*)self);
 }
 
-void q_inputdialog_set_locale(void* self, void* locale) {
+void q_inputdialog_set_locale(void* self, const void* locale) {
     QWidget_SetLocale((QWidget*)self, (QLocale*)locale);
 }
 
-QLocale* q_inputdialog_locale(void* self) {
+QLocale* q_inputdialog_locale(const void* self) {
     return QWidget_Locale((QWidget*)self);
 }
 
@@ -1219,11 +1219,11 @@ void q_inputdialog_unset_locale(void* self) {
     QWidget_UnsetLocale((QWidget*)self);
 }
 
-bool q_inputdialog_is_right_to_left(void* self) {
+bool q_inputdialog_is_right_to_left(const void* self) {
     return QWidget_IsRightToLeft((QWidget*)self);
 }
 
-bool q_inputdialog_is_left_to_right(void* self) {
+bool q_inputdialog_is_left_to_right(const void* self) {
     return QWidget_IsLeftToRight((QWidget*)self);
 }
 
@@ -1231,7 +1231,7 @@ void q_inputdialog_set_focus(void* self) {
     QWidget_SetFocus((QWidget*)self);
 }
 
-bool q_inputdialog_is_active_window(void* self) {
+bool q_inputdialog_is_active_window(const void* self) {
     return QWidget_IsActiveWindow((QWidget*)self);
 }
 
@@ -1247,7 +1247,7 @@ void q_inputdialog_set_focus2(void* self, int32_t reason) {
     QWidget_SetFocus2((QWidget*)self, reason);
 }
 
-int32_t q_inputdialog_focus_policy(void* self) {
+int32_t q_inputdialog_focus_policy(const void* self) {
     return QWidget_FocusPolicy((QWidget*)self);
 }
 
@@ -1255,7 +1255,7 @@ void q_inputdialog_set_focus_policy(void* self, int32_t policy) {
     QWidget_SetFocusPolicy((QWidget*)self, policy);
 }
 
-bool q_inputdialog_has_focus(void* self) {
+bool q_inputdialog_has_focus(const void* self) {
     return QWidget_HasFocus((QWidget*)self);
 }
 
@@ -1267,11 +1267,11 @@ void q_inputdialog_set_focus_proxy(void* self, void* focusProxy) {
     QWidget_SetFocusProxy((QWidget*)self, (QWidget*)focusProxy);
 }
 
-QWidget* q_inputdialog_focus_proxy(void* self) {
+QWidget* q_inputdialog_focus_proxy(const void* self) {
     return QWidget_FocusProxy((QWidget*)self);
 }
 
-int32_t q_inputdialog_context_menu_policy(void* self) {
+int32_t q_inputdialog_context_menu_policy(const void* self) {
     return QWidget_ContextMenuPolicy((QWidget*)self);
 }
 
@@ -1283,7 +1283,7 @@ void q_inputdialog_grab_mouse(void* self) {
     QWidget_GrabMouse((QWidget*)self);
 }
 
-void q_inputdialog_grab_mouse2(void* self, void* param1) {
+void q_inputdialog_grab_mouse2(void* self, const void* param1) {
     QWidget_GrabMouse2((QWidget*)self, (QCursor*)param1);
 }
 
@@ -1299,7 +1299,7 @@ void q_inputdialog_release_keyboard(void* self) {
     QWidget_ReleaseKeyboard((QWidget*)self);
 }
 
-int32_t q_inputdialog_grab_shortcut(void* self, void* key) {
+int32_t q_inputdialog_grab_shortcut(void* self, const void* key) {
     return QWidget_GrabShortcut((QWidget*)self, (QKeySequence*)key);
 }
 
@@ -1323,7 +1323,7 @@ QWidget* q_inputdialog_keyboard_grabber() {
     return QWidget_KeyboardGrabber();
 }
 
-bool q_inputdialog_updates_enabled(void* self) {
+bool q_inputdialog_updates_enabled(const void* self) {
     return QWidget_UpdatesEnabled((QWidget*)self);
 }
 
@@ -1331,7 +1331,7 @@ void q_inputdialog_set_updates_enabled(void* self, bool enable) {
     QWidget_SetUpdatesEnabled((QWidget*)self, enable);
 }
 
-QGraphicsProxyWidget* q_inputdialog_graphics_proxy_widget(void* self) {
+QGraphicsProxyWidget* q_inputdialog_graphics_proxy_widget(const void* self) {
     return QWidget_GraphicsProxyWidget((QWidget*)self);
 }
 
@@ -1347,11 +1347,11 @@ void q_inputdialog_update2(void* self, int x, int y, int w, int h) {
     QWidget_Update2((QWidget*)self, x, y, w, h);
 }
 
-void q_inputdialog_update3(void* self, void* param1) {
+void q_inputdialog_update3(void* self, const void* param1) {
     QWidget_Update3((QWidget*)self, (QRect*)param1);
 }
 
-void q_inputdialog_update4(void* self, void* param1) {
+void q_inputdialog_update4(void* self, const void* param1) {
     QWidget_Update4((QWidget*)self, (QRegion*)param1);
 }
 
@@ -1359,11 +1359,11 @@ void q_inputdialog_repaint2(void* self, int x, int y, int w, int h) {
     QWidget_Repaint2((QWidget*)self, x, y, w, h);
 }
 
-void q_inputdialog_repaint3(void* self, void* param1) {
+void q_inputdialog_repaint3(void* self, const void* param1) {
     QWidget_Repaint3((QWidget*)self, (QRect*)param1);
 }
 
-void q_inputdialog_repaint4(void* self, void* param1) {
+void q_inputdialog_repaint4(void* self, const void* param1) {
     QWidget_Repaint4((QWidget*)self, (QRegion*)param1);
 }
 
@@ -1415,7 +1415,7 @@ void q_inputdialog_move(void* self, int x, int y) {
     QWidget_Move((QWidget*)self, x, y);
 }
 
-void q_inputdialog_move2(void* self, void* param1) {
+void q_inputdialog_move2(void* self, const void* param1) {
     QWidget_Move2((QWidget*)self, (QPoint*)param1);
 }
 
@@ -1423,7 +1423,7 @@ void q_inputdialog_resize(void* self, int w, int h) {
     QWidget_Resize((QWidget*)self, w, h);
 }
 
-void q_inputdialog_resize2(void* self, void* param1) {
+void q_inputdialog_resize2(void* self, const void* param1) {
     QWidget_Resize2((QWidget*)self, (QSize*)param1);
 }
 
@@ -1431,11 +1431,11 @@ void q_inputdialog_set_geometry(void* self, int x, int y, int w, int h) {
     QWidget_SetGeometry((QWidget*)self, x, y, w, h);
 }
 
-void q_inputdialog_set_geometry2(void* self, void* geometry) {
+void q_inputdialog_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* q_inputdialog_save_geometry(void* self) {
+char* q_inputdialog_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1450,31 +1450,31 @@ void q_inputdialog_adjust_size(void* self) {
     QWidget_AdjustSize((QWidget*)self);
 }
 
-bool q_inputdialog_is_visible(void* self) {
+bool q_inputdialog_is_visible(const void* self) {
     return QWidget_IsVisible((QWidget*)self);
 }
 
-bool q_inputdialog_is_visible_to(void* self, void* param1) {
+bool q_inputdialog_is_visible_to(const void* self, const void* param1) {
     return QWidget_IsVisibleTo((QWidget*)self, (QWidget*)param1);
 }
 
-bool q_inputdialog_is_hidden(void* self) {
+bool q_inputdialog_is_hidden(const void* self) {
     return QWidget_IsHidden((QWidget*)self);
 }
 
-bool q_inputdialog_is_minimized(void* self) {
+bool q_inputdialog_is_minimized(const void* self) {
     return QWidget_IsMinimized((QWidget*)self);
 }
 
-bool q_inputdialog_is_maximized(void* self) {
+bool q_inputdialog_is_maximized(const void* self) {
     return QWidget_IsMaximized((QWidget*)self);
 }
 
-bool q_inputdialog_is_full_screen(void* self) {
+bool q_inputdialog_is_full_screen(const void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int32_t q_inputdialog_window_state(void* self) {
+int32_t q_inputdialog_window_state(const void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
@@ -1486,7 +1486,7 @@ void q_inputdialog_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
-QSizePolicy* q_inputdialog_size_policy(void* self) {
+QSizePolicy* q_inputdialog_size_policy(const void* self) {
     return QWidget_SizePolicy((QWidget*)self);
 }
 
@@ -1498,7 +1498,7 @@ void q_inputdialog_set_size_policy2(void* self, int32_t horizontal, int32_t vert
     QWidget_SetSizePolicy2((QWidget*)self, horizontal, vertical);
 }
 
-QRegion* q_inputdialog_visible_region(void* self) {
+QRegion* q_inputdialog_visible_region(const void* self) {
     return QWidget_VisibleRegion((QWidget*)self);
 }
 
@@ -1506,19 +1506,19 @@ void q_inputdialog_set_contents_margins(void* self, int left, int top, int right
     QWidget_SetContentsMargins((QWidget*)self, left, top, right, bottom);
 }
 
-void q_inputdialog_set_contents_margins2(void* self, void* margins) {
+void q_inputdialog_set_contents_margins2(void* self, const void* margins) {
     QWidget_SetContentsMargins2((QWidget*)self, (QMargins*)margins);
 }
 
-QMargins* q_inputdialog_contents_margins(void* self) {
+QMargins* q_inputdialog_contents_margins(const void* self) {
     return QWidget_ContentsMargins((QWidget*)self);
 }
 
-QRect* q_inputdialog_contents_rect(void* self) {
+QRect* q_inputdialog_contents_rect(const void* self) {
     return QWidget_ContentsRect((QWidget*)self);
 }
 
-QLayout* q_inputdialog_layout(void* self) {
+QLayout* q_inputdialog_layout(const void* self) {
     return QWidget_Layout((QWidget*)self);
 }
 
@@ -1542,23 +1542,23 @@ void q_inputdialog_scroll(void* self, int dx, int dy) {
     QWidget_Scroll((QWidget*)self, dx, dy);
 }
 
-void q_inputdialog_scroll2(void* self, int dx, int dy, void* param3) {
+void q_inputdialog_scroll2(void* self, int dx, int dy, const void* param3) {
     QWidget_Scroll2((QWidget*)self, dx, dy, (QRect*)param3);
 }
 
-QWidget* q_inputdialog_focus_widget(void* self) {
+QWidget* q_inputdialog_focus_widget(const void* self) {
     return QWidget_FocusWidget((QWidget*)self);
 }
 
-QWidget* q_inputdialog_next_in_focus_chain(void* self) {
+QWidget* q_inputdialog_next_in_focus_chain(const void* self) {
     return QWidget_NextInFocusChain((QWidget*)self);
 }
 
-QWidget* q_inputdialog_previous_in_focus_chain(void* self) {
+QWidget* q_inputdialog_previous_in_focus_chain(const void* self) {
     return QWidget_PreviousInFocusChain((QWidget*)self);
 }
 
-bool q_inputdialog_accept_drops(void* self) {
+bool q_inputdialog_accept_drops(const void* self) {
     return QWidget_AcceptDrops((QWidget*)self);
 }
 
@@ -1586,7 +1586,7 @@ void q_inputdialog_remove_action(void* self, void* action) {
     QWidget_RemoveAction((QWidget*)self, (QAction*)action);
 }
 
-libqt_list /* of QAction* */ q_inputdialog_actions(void* self) {
+libqt_list /* of QAction* */ q_inputdialog_actions(const void* self) {
     libqt_list _arr = QWidget_Actions((QWidget*)self);
     return _arr;
 }
@@ -1595,19 +1595,19 @@ QAction* q_inputdialog_add_action2(void* self, const char* text) {
     return QWidget_AddAction2((QWidget*)self, qstring(text));
 }
 
-QAction* q_inputdialog_add_action3(void* self, void* icon, const char* text) {
+QAction* q_inputdialog_add_action3(void* self, const void* icon, const char* text) {
     return QWidget_AddAction3((QWidget*)self, (QIcon*)icon, qstring(text));
 }
 
-QAction* q_inputdialog_add_action4(void* self, const char* text, void* shortcut) {
+QAction* q_inputdialog_add_action4(void* self, const char* text, const void* shortcut) {
     return QWidget_AddAction4((QWidget*)self, qstring(text), (QKeySequence*)shortcut);
 }
 
-QAction* q_inputdialog_add_action5(void* self, void* icon, const char* text, void* shortcut) {
+QAction* q_inputdialog_add_action5(void* self, const void* icon, const char* text, const void* shortcut) {
     return QWidget_AddAction5((QWidget*)self, (QIcon*)icon, qstring(text), (QKeySequence*)shortcut);
 }
 
-QWidget* q_inputdialog_parent_widget(void* self) {
+QWidget* q_inputdialog_parent_widget(const void* self) {
     return QWidget_ParentWidget((QWidget*)self);
 }
 
@@ -1615,7 +1615,7 @@ void q_inputdialog_set_window_flags(void* self, int32_t type) {
     QWidget_SetWindowFlags((QWidget*)self, type);
 }
 
-int32_t q_inputdialog_window_flags(void* self) {
+int32_t q_inputdialog_window_flags(const void* self) {
     return QWidget_WindowFlags((QWidget*)self);
 }
 
@@ -1627,7 +1627,7 @@ void q_inputdialog_override_window_flags(void* self, int32_t type) {
     QWidget_OverrideWindowFlags((QWidget*)self, type);
 }
 
-int32_t q_inputdialog_window_type(void* self) {
+int32_t q_inputdialog_window_type(const void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
@@ -1635,15 +1635,15 @@ QWidget* q_inputdialog_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 
-QWidget* q_inputdialog_child_at(void* self, int x, int y) {
+QWidget* q_inputdialog_child_at(const void* self, int x, int y) {
     return QWidget_ChildAt((QWidget*)self, x, y);
 }
 
-QWidget* q_inputdialog_child_at2(void* self, void* p) {
+QWidget* q_inputdialog_child_at2(const void* self, const void* p) {
     return QWidget_ChildAt2((QWidget*)self, (QPoint*)p);
 }
 
-QWidget* q_inputdialog_child_at3(void* self, void* p) {
+QWidget* q_inputdialog_child_at3(const void* self, const void* p) {
     return QWidget_ChildAt3((QWidget*)self, (QPointF*)p);
 }
 
@@ -1651,19 +1651,19 @@ void q_inputdialog_set_attribute(void* self, int32_t param1) {
     QWidget_SetAttribute((QWidget*)self, param1);
 }
 
-bool q_inputdialog_test_attribute(void* self, int32_t param1) {
+bool q_inputdialog_test_attribute(const void* self, int32_t param1) {
     return QWidget_TestAttribute((QWidget*)self, param1);
 }
 
-void q_inputdialog_ensure_polished(void* self) {
+void q_inputdialog_ensure_polished(const void* self) {
     QWidget_EnsurePolished((QWidget*)self);
 }
 
-bool q_inputdialog_is_ancestor_of(void* self, void* child) {
+bool q_inputdialog_is_ancestor_of(const void* self, const void* child) {
     return QWidget_IsAncestorOf((QWidget*)self, (QWidget*)child);
 }
 
-bool q_inputdialog_auto_fill_background(void* self) {
+bool q_inputdialog_auto_fill_background(const void* self) {
     return QWidget_AutoFillBackground((QWidget*)self);
 }
 
@@ -1671,15 +1671,15 @@ void q_inputdialog_set_auto_fill_background(void* self, bool enabled) {
     QWidget_SetAutoFillBackground((QWidget*)self, enabled);
 }
 
-QBackingStore* q_inputdialog_backing_store(void* self) {
+QBackingStore* q_inputdialog_backing_store(const void* self) {
     return QWidget_BackingStore((QWidget*)self);
 }
 
-QWindow* q_inputdialog_window_handle(void* self) {
+QWindow* q_inputdialog_window_handle(const void* self) {
     return QWidget_WindowHandle((QWidget*)self);
 }
 
-QScreen* q_inputdialog_screen(void* self) {
+QScreen* q_inputdialog_screen(const void* self) {
     return QWidget_Screen((QWidget*)self);
 }
 
@@ -1699,11 +1699,11 @@ void q_inputdialog_on_window_title_changed(void* self, void (*callback)(void*, c
     QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
-void q_inputdialog_window_icon_changed(void* self, void* icon) {
+void q_inputdialog_window_icon_changed(void* self, const void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void q_inputdialog_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+void q_inputdialog_on_window_icon_changed(void* self, void (*callback)(void*, const void*)) {
     QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
@@ -1715,15 +1715,15 @@ void q_inputdialog_on_window_icon_text_changed(void* self, void (*callback)(void
     QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
-void q_inputdialog_custom_context_menu_requested(void* self, void* pos) {
+void q_inputdialog_custom_context_menu_requested(void* self, const void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void q_inputdialog_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+void q_inputdialog_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*)) {
     QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
-int32_t q_inputdialog_input_method_hints(void* self) {
+int32_t q_inputdialog_input_method_hints(const void* self) {
     return QWidget_InputMethodHints((QWidget*)self);
 }
 
@@ -1731,31 +1731,31 @@ void q_inputdialog_set_input_method_hints(void* self, int32_t hints) {
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
-void q_inputdialog_render22(void* self, void* target, void* targetOffset) {
+void q_inputdialog_render22(void* self, void* target, const void* targetOffset) {
     QWidget_Render22((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset);
 }
 
-void q_inputdialog_render3(void* self, void* target, void* targetOffset, void* sourceRegion) {
+void q_inputdialog_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion) {
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void q_inputdialog_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
+void q_inputdialog_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
-void q_inputdialog_render23(void* self, void* painter, void* targetOffset) {
+void q_inputdialog_render23(void* self, void* painter, const void* targetOffset) {
     QWidget_Render23((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset);
 }
 
-void q_inputdialog_render32(void* self, void* painter, void* targetOffset, void* sourceRegion) {
+void q_inputdialog_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion) {
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void q_inputdialog_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
+void q_inputdialog_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
-QPixmap* q_inputdialog_grab1(void* self, void* rectangle) {
+QPixmap* q_inputdialog_grab1(void* self, const void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
@@ -1763,7 +1763,7 @@ void q_inputdialog_grab_gesture2(void* self, int32_t type, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, type, flags);
 }
 
-int32_t q_inputdialog_grab_shortcut2(void* self, void* key, int32_t context) {
+int32_t q_inputdialog_grab_shortcut2(void* self, const void* key, int32_t context) {
     return QWidget_GrabShortcut2((QWidget*)self, (QKeySequence*)key, context);
 }
 
@@ -1791,7 +1791,7 @@ QWidget* q_inputdialog_create_window_container3(void* window, void* parent, int3
     return QWidget_CreateWindowContainer3((QWindow*)window, (QWidget*)parent, flags);
 }
 
-const char* q_inputdialog_object_name(void* self) {
+const char* q_inputdialog_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1802,19 +1802,19 @@ void q_inputdialog_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_inputdialog_is_widget_type(void* self) {
+bool q_inputdialog_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_inputdialog_is_window_type(void* self) {
+bool q_inputdialog_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_inputdialog_is_quick_item_type(void* self) {
+bool q_inputdialog_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_inputdialog_signals_blocked(void* self) {
+bool q_inputdialog_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -1822,7 +1822,7 @@ bool q_inputdialog_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_inputdialog_thread(void* self) {
+QThread* q_inputdialog_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -1846,7 +1846,7 @@ void q_inputdialog_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_inputdialog_children(void* self) {
+libqt_list /* of QObject* */ q_inputdialog_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1859,55 +1859,55 @@ void q_inputdialog_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_inputdialog_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_inputdialog_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_inputdialog_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_inputdialog_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_inputdialog_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_inputdialog_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_inputdialog_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_inputdialog_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_inputdialog_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_inputdialog_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_inputdialog_disconnect3(void* self) {
+bool q_inputdialog_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_inputdialog_disconnect4(void* self, void* receiver) {
+bool q_inputdialog_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_inputdialog_disconnect5(void* param1) {
+bool q_inputdialog_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_inputdialog_dump_object_tree(void* self) {
+void q_inputdialog_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_inputdialog_dump_object_info(void* self) {
+void q_inputdialog_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_inputdialog_set_property(void* self, const char* name, void* value) {
+bool q_inputdialog_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_inputdialog_property(void* self, const char* name) {
+QVariant* q_inputdialog_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_inputdialog_dynamic_property_names(void* self) {
+const char** q_inputdialog_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -1928,7 +1928,7 @@ QBindingStorage* q_inputdialog_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_inputdialog_binding_storage2(void* self) {
+const QBindingStorage* q_inputdialog_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -1940,11 +1940,11 @@ void q_inputdialog_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_inputdialog_parent(void* self) {
+QObject* q_inputdialog_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_inputdialog_inherits(void* self, const char* classname) {
+bool q_inputdialog_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -1960,31 +1960,31 @@ int32_t q_inputdialog_start_timer23(void* self, int64_t time, int32_t timerType)
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_inputdialog_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_inputdialog_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_inputdialog_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_inputdialog_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_inputdialog_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_inputdialog_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_inputdialog_disconnect1(void* self, const char* signal) {
+bool q_inputdialog_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_inputdialog_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_inputdialog_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_inputdialog_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_inputdialog_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_inputdialog_disconnect23(void* self, void* receiver, const char* member) {
+bool q_inputdialog_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -1996,47 +1996,47 @@ void q_inputdialog_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-bool q_inputdialog_painting_active(void* self) {
+bool q_inputdialog_painting_active(const void* self) {
     return QPaintDevice_PaintingActive(q_inputdialog_as_q_paint_device(self));
 }
 
-int32_t q_inputdialog_width_m_m(void* self) {
+int32_t q_inputdialog_width_m_m(const void* self) {
     return QPaintDevice_WidthMM(q_inputdialog_as_q_paint_device(self));
 }
 
-int32_t q_inputdialog_height_m_m(void* self) {
+int32_t q_inputdialog_height_m_m(const void* self) {
     return QPaintDevice_HeightMM(q_inputdialog_as_q_paint_device(self));
 }
 
-int32_t q_inputdialog_logical_dpi_x(void* self) {
+int32_t q_inputdialog_logical_dpi_x(const void* self) {
     return QPaintDevice_LogicalDpiX(q_inputdialog_as_q_paint_device(self));
 }
 
-int32_t q_inputdialog_logical_dpi_y(void* self) {
+int32_t q_inputdialog_logical_dpi_y(const void* self) {
     return QPaintDevice_LogicalDpiY(q_inputdialog_as_q_paint_device(self));
 }
 
-int32_t q_inputdialog_physical_dpi_x(void* self) {
+int32_t q_inputdialog_physical_dpi_x(const void* self) {
     return QPaintDevice_PhysicalDpiX(q_inputdialog_as_q_paint_device(self));
 }
 
-int32_t q_inputdialog_physical_dpi_y(void* self) {
+int32_t q_inputdialog_physical_dpi_y(const void* self) {
     return QPaintDevice_PhysicalDpiY(q_inputdialog_as_q_paint_device(self));
 }
 
-double q_inputdialog_device_pixel_ratio(void* self) {
+double q_inputdialog_device_pixel_ratio(const void* self) {
     return QPaintDevice_DevicePixelRatio(q_inputdialog_as_q_paint_device(self));
 }
 
-double q_inputdialog_device_pixel_ratio_f(void* self) {
+double q_inputdialog_device_pixel_ratio_f(const void* self) {
     return QPaintDevice_DevicePixelRatioF(q_inputdialog_as_q_paint_device(self));
 }
 
-int32_t q_inputdialog_color_count(void* self) {
+int32_t q_inputdialog_color_count(const void* self) {
     return QPaintDevice_ColorCount(q_inputdialog_as_q_paint_device(self));
 }
 
-int32_t q_inputdialog_depth(void* self) {
+int32_t q_inputdialog_depth(const void* self) {
     return QPaintDevice_Depth(q_inputdialog_as_q_paint_device(self));
 }
 
@@ -2056,7 +2056,7 @@ void q_inputdialog_super_open(void* self) {
     QInputDialog_SuperOpen((QInputDialog*)self);
 }
 
-void q_inputdialog_on_open(void* self, void (*callback)()) {
+void q_inputdialog_on_open(void* self, void (*callback)(void*)) {
     QInputDialog_OnOpen((QInputDialog*)self, (intptr_t)callback);
 }
 
@@ -2068,7 +2068,7 @@ int32_t q_inputdialog_super_exec(void* self) {
     return QInputDialog_SuperExec((QInputDialog*)self);
 }
 
-void q_inputdialog_on_exec(void* self, int32_t (*callback)()) {
+void q_inputdialog_on_exec(void* self, int32_t (*callback)(void*)) {
     QInputDialog_OnExec((QInputDialog*)self, (intptr_t)callback);
 }
 
@@ -2080,7 +2080,7 @@ void q_inputdialog_super_accept(void* self) {
     QInputDialog_SuperAccept((QInputDialog*)self);
 }
 
-void q_inputdialog_on_accept(void* self, void (*callback)()) {
+void q_inputdialog_on_accept(void* self, void (*callback)(void*)) {
     QInputDialog_OnAccept((QInputDialog*)self, (intptr_t)callback);
 }
 
@@ -2092,7 +2092,7 @@ void q_inputdialog_super_reject(void* self) {
     QInputDialog_SuperReject((QInputDialog*)self);
 }
 
-void q_inputdialog_on_reject(void* self, void (*callback)()) {
+void q_inputdialog_on_reject(void* self, void (*callback)(void*)) {
     QInputDialog_OnReject((QInputDialog*)self, (intptr_t)callback);
 }
 
@@ -2168,52 +2168,52 @@ void q_inputdialog_on_event_filter(void* self, bool (*callback)(void*, void*, vo
     QInputDialog_OnEventFilter((QInputDialog*)self, (intptr_t)callback);
 }
 
-int32_t q_inputdialog_dev_type(void* self) {
+int32_t q_inputdialog_dev_type(const void* self) {
     return QInputDialog_DevType((QInputDialog*)self);
 }
 
-int32_t q_inputdialog_super_dev_type(void* self) {
+int32_t q_inputdialog_super_dev_type(const void* self) {
     return QInputDialog_SuperDevType((QInputDialog*)self);
 }
 
-void q_inputdialog_on_dev_type(void* self, int32_t (*callback)()) {
-    QInputDialog_OnDevType((QInputDialog*)self, (intptr_t)callback);
+void q_inputdialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
+    QInputDialog_OnDevType((const QInputDialog*)self, (intptr_t)callback);
 }
 
-int32_t q_inputdialog_height_for_width(void* self, int param1) {
+int32_t q_inputdialog_height_for_width(const void* self, int param1) {
     return QInputDialog_HeightForWidth((QInputDialog*)self, param1);
 }
 
-int32_t q_inputdialog_super_height_for_width(void* self, int param1) {
+int32_t q_inputdialog_super_height_for_width(const void* self, int param1) {
     return QInputDialog_SuperHeightForWidth((QInputDialog*)self, param1);
 }
 
-void q_inputdialog_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
-    QInputDialog_OnHeightForWidth((QInputDialog*)self, (intptr_t)callback);
+void q_inputdialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
+    QInputDialog_OnHeightForWidth((const QInputDialog*)self, (intptr_t)callback);
 }
 
-bool q_inputdialog_has_height_for_width(void* self) {
+bool q_inputdialog_has_height_for_width(const void* self) {
     return QInputDialog_HasHeightForWidth((QInputDialog*)self);
 }
 
-bool q_inputdialog_super_has_height_for_width(void* self) {
+bool q_inputdialog_super_has_height_for_width(const void* self) {
     return QInputDialog_SuperHasHeightForWidth((QInputDialog*)self);
 }
 
-void q_inputdialog_on_has_height_for_width(void* self, bool (*callback)()) {
-    QInputDialog_OnHasHeightForWidth((QInputDialog*)self, (intptr_t)callback);
+void q_inputdialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
+    QInputDialog_OnHasHeightForWidth((const QInputDialog*)self, (intptr_t)callback);
 }
 
-QPaintEngine* q_inputdialog_paint_engine(void* self) {
+QPaintEngine* q_inputdialog_paint_engine(const void* self) {
     return QInputDialog_PaintEngine((QInputDialog*)self);
 }
 
-QPaintEngine* q_inputdialog_super_paint_engine(void* self) {
+QPaintEngine* q_inputdialog_super_paint_engine(const void* self) {
     return QInputDialog_SuperPaintEngine((QInputDialog*)self);
 }
 
-void q_inputdialog_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
-    QInputDialog_OnPaintEngine((QInputDialog*)self, (intptr_t)callback);
+void q_inputdialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
+    QInputDialog_OnPaintEngine((const QInputDialog*)self, (intptr_t)callback);
 }
 
 bool q_inputdialog_event(void* self, void* event) {
@@ -2480,52 +2480,52 @@ void q_inputdialog_on_change_event(void* self, void (*callback)(void*, void*)) {
     QInputDialog_OnChangeEvent((QInputDialog*)self, (intptr_t)callback);
 }
 
-int32_t q_inputdialog_metric(void* self, int32_t param1) {
+int32_t q_inputdialog_metric(const void* self, int32_t param1) {
     return QInputDialog_Metric((QInputDialog*)self, param1);
 }
 
-int32_t q_inputdialog_super_metric(void* self, int32_t param1) {
+int32_t q_inputdialog_super_metric(const void* self, int32_t param1) {
     return QInputDialog_SuperMetric((QInputDialog*)self, param1);
 }
 
-void q_inputdialog_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
-    QInputDialog_OnMetric((QInputDialog*)self, (intptr_t)callback);
+void q_inputdialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
+    QInputDialog_OnMetric((const QInputDialog*)self, (intptr_t)callback);
 }
 
-void q_inputdialog_init_painter(void* self, void* painter) {
+void q_inputdialog_init_painter(const void* self, void* painter) {
     QInputDialog_InitPainter((QInputDialog*)self, (QPainter*)painter);
 }
 
-void q_inputdialog_super_init_painter(void* self, void* painter) {
+void q_inputdialog_super_init_painter(const void* self, void* painter) {
     QInputDialog_SuperInitPainter((QInputDialog*)self, (QPainter*)painter);
 }
 
-void q_inputdialog_on_init_painter(void* self, void (*callback)(void*, void*)) {
-    QInputDialog_OnInitPainter((QInputDialog*)self, (intptr_t)callback);
+void q_inputdialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
+    QInputDialog_OnInitPainter((const QInputDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* q_inputdialog_redirected(void* self, void* offset) {
+QPaintDevice* q_inputdialog_redirected(const void* self, void* offset) {
     return QInputDialog_Redirected((QInputDialog*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_inputdialog_super_redirected(void* self, void* offset) {
+QPaintDevice* q_inputdialog_super_redirected(const void* self, void* offset) {
     return QInputDialog_SuperRedirected((QInputDialog*)self, (QPoint*)offset);
 }
 
-void q_inputdialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
-    QInputDialog_OnRedirected((QInputDialog*)self, (intptr_t)callback);
+void q_inputdialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QInputDialog_OnRedirected((const QInputDialog*)self, (intptr_t)callback);
 }
 
-QPainter* q_inputdialog_shared_painter(void* self) {
+QPainter* q_inputdialog_shared_painter(const void* self) {
     return QInputDialog_SharedPainter((QInputDialog*)self);
 }
 
-QPainter* q_inputdialog_super_shared_painter(void* self) {
+QPainter* q_inputdialog_super_shared_painter(const void* self) {
     return QInputDialog_SuperSharedPainter((QInputDialog*)self);
 }
 
-void q_inputdialog_on_shared_painter(void* self, QPainter* (*callback)()) {
-    QInputDialog_OnSharedPainter((QInputDialog*)self, (intptr_t)callback);
+void q_inputdialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
+    QInputDialog_OnSharedPainter((const QInputDialog*)self, (intptr_t)callback);
 }
 
 void q_inputdialog_input_method_event(void* self, void* param1) {
@@ -2540,16 +2540,16 @@ void q_inputdialog_on_input_method_event(void* self, void (*callback)(void*, voi
     QInputDialog_OnInputMethodEvent((QInputDialog*)self, (intptr_t)callback);
 }
 
-QVariant* q_inputdialog_input_method_query(void* self, int32_t param1) {
+QVariant* q_inputdialog_input_method_query(const void* self, int32_t param1) {
     return QInputDialog_InputMethodQuery((QInputDialog*)self, param1);
 }
 
-QVariant* q_inputdialog_super_input_method_query(void* self, int32_t param1) {
+QVariant* q_inputdialog_super_input_method_query(const void* self, int32_t param1) {
     return QInputDialog_SuperInputMethodQuery((QInputDialog*)self, param1);
 }
 
-void q_inputdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
-    QInputDialog_OnInputMethodQuery((QInputDialog*)self, (intptr_t)callback);
+void q_inputdialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QInputDialog_OnInputMethodQuery((const QInputDialog*)self, (intptr_t)callback);
 }
 
 bool q_inputdialog_focus_next_prev_child(void* self, bool next) {
@@ -2600,27 +2600,27 @@ void q_inputdialog_on_custom_event(void* self, void (*callback)(void*, void*)) {
     QInputDialog_OnCustomEvent((QInputDialog*)self, (intptr_t)callback);
 }
 
-void q_inputdialog_connect_notify(void* self, void* signal) {
+void q_inputdialog_connect_notify(void* self, const void* signal) {
     QInputDialog_ConnectNotify((QInputDialog*)self, (QMetaMethod*)signal);
 }
 
-void q_inputdialog_super_connect_notify(void* self, void* signal) {
+void q_inputdialog_super_connect_notify(void* self, const void* signal) {
     QInputDialog_SuperConnectNotify((QInputDialog*)self, (QMetaMethod*)signal);
 }
 
-void q_inputdialog_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_inputdialog_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QInputDialog_OnConnectNotify((QInputDialog*)self, (intptr_t)callback);
 }
 
-void q_inputdialog_disconnect_notify(void* self, void* signal) {
+void q_inputdialog_disconnect_notify(void* self, const void* signal) {
     QInputDialog_DisconnectNotify((QInputDialog*)self, (QMetaMethod*)signal);
 }
 
-void q_inputdialog_super_disconnect_notify(void* self, void* signal) {
+void q_inputdialog_super_disconnect_notify(void* self, const void* signal) {
     QInputDialog_SuperDisconnectNotify((QInputDialog*)self, (QMetaMethod*)signal);
 }
 
-void q_inputdialog_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_inputdialog_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QInputDialog_OnDisconnectNotify((QInputDialog*)self, (intptr_t)callback);
 }
 
@@ -2628,132 +2628,44 @@ void q_inputdialog_adjust_position(void* self, void* param1) {
     QInputDialog_AdjustPosition((QInputDialog*)self, (QWidget*)param1);
 }
 
-void q_inputdialog_super_adjust_position(void* self, void* param1) {
-    QInputDialog_SuperAdjustPosition((QInputDialog*)self, (QWidget*)param1);
-}
-
-void q_inputdialog_on_adjust_position(void* self, void (*callback)(void*, void*)) {
-    QInputDialog_OnAdjustPosition((QInputDialog*)self, (intptr_t)callback);
-}
-
 void q_inputdialog_update_micro_focus(void* self) {
     QInputDialog_UpdateMicroFocus((QInputDialog*)self);
-}
-
-void q_inputdialog_super_update_micro_focus(void* self) {
-    QInputDialog_SuperUpdateMicroFocus((QInputDialog*)self);
-}
-
-void q_inputdialog_on_update_micro_focus(void* self, void (*callback)()) {
-    QInputDialog_OnUpdateMicroFocus((QInputDialog*)self, (intptr_t)callback);
 }
 
 void q_inputdialog_create(void* self) {
     QInputDialog_Create((QInputDialog*)self);
 }
 
-void q_inputdialog_super_create(void* self) {
-    QInputDialog_SuperCreate((QInputDialog*)self);
-}
-
-void q_inputdialog_on_create(void* self, void (*callback)()) {
-    QInputDialog_OnCreate((QInputDialog*)self, (intptr_t)callback);
-}
-
 void q_inputdialog_destroy(void* self) {
     QInputDialog_Destroy((QInputDialog*)self);
-}
-
-void q_inputdialog_super_destroy(void* self) {
-    QInputDialog_SuperDestroy((QInputDialog*)self);
-}
-
-void q_inputdialog_on_destroy(void* self, void (*callback)()) {
-    QInputDialog_OnDestroy((QInputDialog*)self, (intptr_t)callback);
 }
 
 bool q_inputdialog_focus_next_child(void* self) {
     return QInputDialog_FocusNextChild((QInputDialog*)self);
 }
 
-bool q_inputdialog_super_focus_next_child(void* self) {
-    return QInputDialog_SuperFocusNextChild((QInputDialog*)self);
-}
-
-void q_inputdialog_on_focus_next_child(void* self, bool (*callback)()) {
-    QInputDialog_OnFocusNextChild((QInputDialog*)self, (intptr_t)callback);
-}
-
 bool q_inputdialog_focus_previous_child(void* self) {
     return QInputDialog_FocusPreviousChild((QInputDialog*)self);
 }
 
-bool q_inputdialog_super_focus_previous_child(void* self) {
-    return QInputDialog_SuperFocusPreviousChild((QInputDialog*)self);
-}
-
-void q_inputdialog_on_focus_previous_child(void* self, bool (*callback)()) {
-    QInputDialog_OnFocusPreviousChild((QInputDialog*)self, (intptr_t)callback);
-}
-
-QObject* q_inputdialog_sender(void* self) {
+QObject* q_inputdialog_sender(const void* self) {
     return QInputDialog_Sender((QInputDialog*)self);
 }
 
-QObject* q_inputdialog_super_sender(void* self) {
-    return QInputDialog_SuperSender((QInputDialog*)self);
-}
-
-void q_inputdialog_on_sender(void* self, QObject* (*callback)()) {
-    QInputDialog_OnSender((QInputDialog*)self, (intptr_t)callback);
-}
-
-int32_t q_inputdialog_sender_signal_index(void* self) {
+int32_t q_inputdialog_sender_signal_index(const void* self) {
     return QInputDialog_SenderSignalIndex((QInputDialog*)self);
 }
 
-int32_t q_inputdialog_super_sender_signal_index(void* self) {
-    return QInputDialog_SuperSenderSignalIndex((QInputDialog*)self);
-}
-
-void q_inputdialog_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QInputDialog_OnSenderSignalIndex((QInputDialog*)self, (intptr_t)callback);
-}
-
-int32_t q_inputdialog_receivers(void* self, const char* signal) {
+int32_t q_inputdialog_receivers(const void* self, const char* signal) {
     return QInputDialog_Receivers((QInputDialog*)self, signal);
 }
 
-int32_t q_inputdialog_super_receivers(void* self, const char* signal) {
-    return QInputDialog_SuperReceivers((QInputDialog*)self, signal);
-}
-
-void q_inputdialog_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QInputDialog_OnReceivers((QInputDialog*)self, (intptr_t)callback);
-}
-
-bool q_inputdialog_is_signal_connected(void* self, void* signal) {
+bool q_inputdialog_is_signal_connected(const void* self, const void* signal) {
     return QInputDialog_IsSignalConnected((QInputDialog*)self, (QMetaMethod*)signal);
 }
 
-bool q_inputdialog_super_is_signal_connected(void* self, void* signal) {
-    return QInputDialog_SuperIsSignalConnected((QInputDialog*)self, (QMetaMethod*)signal);
-}
-
-void q_inputdialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QInputDialog_OnIsSignalConnected((QInputDialog*)self, (intptr_t)callback);
-}
-
-double q_inputdialog_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+double q_inputdialog_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB) {
     return QInputDialog_GetDecodedMetricF((QInputDialog*)self, metricA, metricB);
-}
-
-double q_inputdialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QInputDialog_SuperGetDecodedMetricF((QInputDialog*)self, metricA, metricB);
-}
-
-void q_inputdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {
-    QInputDialog_OnGetDecodedMetricF((QInputDialog*)self, (intptr_t)callback);
 }
 
 void q_inputdialog_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

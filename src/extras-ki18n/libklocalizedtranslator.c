@@ -14,15 +14,15 @@ KLocalizedTranslator* k_localizedtranslator_new2(void* parent) {
     return KLocalizedTranslator_New2((QObject*)parent);
 }
 
-const QMetaObject* k_localizedtranslator_meta_object(void* self) {
+const QMetaObject* k_localizedtranslator_meta_object(const void* self) {
     return KLocalizedTranslator_MetaObject((KLocalizedTranslator*)self);
 }
 
-void k_localizedtranslator_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_localizedtranslator_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     KLocalizedTranslator_OnMetaObject((KLocalizedTranslator*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_localizedtranslator_super_meta_object(void* self) {
+const QMetaObject* k_localizedtranslator_super_meta_object(const void* self) {
     return KLocalizedTranslator_SuperMetaObject((KLocalizedTranslator*)self);
 }
 
@@ -57,18 +57,18 @@ const char* k_localizedtranslator_tr(const char* s) {
     return _ret;
 }
 
-const char* k_localizedtranslator_translate(void* self, const char* context, const char* sourceText, const char* disambiguation, int n) {
+const char* k_localizedtranslator_translate(const void* self, const char* context, const char* sourceText, const char* disambiguation, int n) {
     libqt_string _str = KLocalizedTranslator_Translate((KLocalizedTranslator*)self, context, sourceText, disambiguation, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_localizedtranslator_on_translate(void* self, const char* (*callback)(void*, const char*, const char*, const char*, int)) {
+void k_localizedtranslator_on_translate(const void* self, const char* (*callback)(const void*, const char*, const char*, const char*, int)) {
     KLocalizedTranslator_OnTranslate((KLocalizedTranslator*)self, (intptr_t)callback);
 }
 
-const char* k_localizedtranslator_super_translate(void* self, const char* context, const char* sourceText, const char* disambiguation, int n) {
+const char* k_localizedtranslator_super_translate(const void* self, const char* context, const char* sourceText, const char* disambiguation, int n) {
     libqt_string _str = KLocalizedTranslator_SuperTranslate((KLocalizedTranslator*)self, context, sourceText, disambiguation, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -101,14 +101,14 @@ const char* k_localizedtranslator_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-const char* k_localizedtranslator_language(void* self) {
+const char* k_localizedtranslator_language(const void* self) {
     libqt_string _str = QTranslator_Language((QTranslator*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_localizedtranslator_file_path(void* self) {
+const char* k_localizedtranslator_file_path(const void* self) {
     libqt_string _str = QTranslator_FilePath((QTranslator*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -119,7 +119,7 @@ bool k_localizedtranslator_load(void* self, const char* filename) {
     return QTranslator_Load((QTranslator*)self, qstring(filename));
 }
 
-bool k_localizedtranslator_load2(void* self, void* locale, const char* filename) {
+bool k_localizedtranslator_load2(void* self, const void* locale, const char* filename) {
     return QTranslator_Load2((QTranslator*)self, (QLocale*)locale, qstring(filename));
 }
 
@@ -139,15 +139,15 @@ bool k_localizedtranslator_load4(void* self, const char* filename, const char* d
     return QTranslator_Load4((QTranslator*)self, qstring(filename), qstring(directory), qstring(search_delimiters), qstring(suffix));
 }
 
-bool k_localizedtranslator_load33(void* self, void* locale, const char* filename, const char* prefix) {
+bool k_localizedtranslator_load33(void* self, const void* locale, const char* filename, const char* prefix) {
     return QTranslator_Load33((QTranslator*)self, (QLocale*)locale, qstring(filename), qstring(prefix));
 }
 
-bool k_localizedtranslator_load42(void* self, void* locale, const char* filename, const char* prefix, const char* directory) {
+bool k_localizedtranslator_load42(void* self, const void* locale, const char* filename, const char* prefix, const char* directory) {
     return QTranslator_Load42((QTranslator*)self, (QLocale*)locale, qstring(filename), qstring(prefix), qstring(directory));
 }
 
-bool k_localizedtranslator_load5(void* self, void* locale, const char* filename, const char* prefix, const char* directory, const char* suffix) {
+bool k_localizedtranslator_load5(void* self, const void* locale, const char* filename, const char* prefix, const char* directory, const char* suffix) {
     return QTranslator_Load5((QTranslator*)self, (QLocale*)locale, qstring(filename), qstring(prefix), qstring(directory), qstring(suffix));
 }
 
@@ -155,7 +155,7 @@ bool k_localizedtranslator_load34(void* self, unsigned char* data, int lenVal, c
     return QTranslator_Load34((QTranslator*)self, data, lenVal, qstring(directory));
 }
 
-const char* k_localizedtranslator_object_name(void* self) {
+const char* k_localizedtranslator_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -166,19 +166,19 @@ void k_localizedtranslator_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_localizedtranslator_is_widget_type(void* self) {
+bool k_localizedtranslator_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_localizedtranslator_is_window_type(void* self) {
+bool k_localizedtranslator_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_localizedtranslator_is_quick_item_type(void* self) {
+bool k_localizedtranslator_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_localizedtranslator_signals_blocked(void* self) {
+bool k_localizedtranslator_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -186,7 +186,7 @@ bool k_localizedtranslator_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_localizedtranslator_thread(void* self) {
+QThread* k_localizedtranslator_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -210,7 +210,7 @@ void k_localizedtranslator_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_localizedtranslator_children(void* self) {
+libqt_list /* of QObject* */ k_localizedtranslator_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -227,55 +227,55 @@ void k_localizedtranslator_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_localizedtranslator_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_localizedtranslator_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_localizedtranslator_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_localizedtranslator_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_localizedtranslator_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_localizedtranslator_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_localizedtranslator_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_localizedtranslator_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_localizedtranslator_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_localizedtranslator_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_localizedtranslator_disconnect3(void* self) {
+bool k_localizedtranslator_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_localizedtranslator_disconnect4(void* self, void* receiver) {
+bool k_localizedtranslator_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_localizedtranslator_disconnect5(void* param1) {
+bool k_localizedtranslator_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_localizedtranslator_dump_object_tree(void* self) {
+void k_localizedtranslator_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_localizedtranslator_dump_object_info(void* self) {
+void k_localizedtranslator_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_localizedtranslator_set_property(void* self, const char* name, void* value) {
+bool k_localizedtranslator_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_localizedtranslator_property(void* self, const char* name) {
+QVariant* k_localizedtranslator_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_localizedtranslator_dynamic_property_names(void* self) {
+const char** k_localizedtranslator_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -296,7 +296,7 @@ QBindingStorage* k_localizedtranslator_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_localizedtranslator_binding_storage2(void* self) {
+const QBindingStorage* k_localizedtranslator_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -308,11 +308,11 @@ void k_localizedtranslator_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_localizedtranslator_parent(void* self) {
+QObject* k_localizedtranslator_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_localizedtranslator_inherits(void* self, const char* classname) {
+bool k_localizedtranslator_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -328,31 +328,31 @@ int32_t k_localizedtranslator_start_timer23(void* self, int64_t time, int32_t ti
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_localizedtranslator_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_localizedtranslator_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_localizedtranslator_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_localizedtranslator_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_localizedtranslator_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_localizedtranslator_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_localizedtranslator_disconnect1(void* self, const char* signal) {
+bool k_localizedtranslator_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_localizedtranslator_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_localizedtranslator_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_localizedtranslator_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_localizedtranslator_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_localizedtranslator_disconnect23(void* self, void* receiver, const char* member) {
+bool k_localizedtranslator_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -364,16 +364,16 @@ void k_localizedtranslator_on_destroyed1(void* self, void (*callback)(void*, voi
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-bool k_localizedtranslator_is_empty(void* self) {
+bool k_localizedtranslator_is_empty(const void* self) {
     return KLocalizedTranslator_IsEmpty((KLocalizedTranslator*)self);
 }
 
-bool k_localizedtranslator_super_is_empty(void* self) {
+bool k_localizedtranslator_super_is_empty(const void* self) {
     return KLocalizedTranslator_SuperIsEmpty((KLocalizedTranslator*)self);
 }
 
-void k_localizedtranslator_on_is_empty(void* self, bool (*callback)()) {
-    KLocalizedTranslator_OnIsEmpty((KLocalizedTranslator*)self, (intptr_t)callback);
+void k_localizedtranslator_on_is_empty(const void* self, bool (*callback)(const void*)) {
+    KLocalizedTranslator_OnIsEmpty((const KLocalizedTranslator*)self, (intptr_t)callback);
 }
 
 bool k_localizedtranslator_event(void* self, void* event) {
@@ -436,76 +436,44 @@ void k_localizedtranslator_on_custom_event(void* self, void (*callback)(void*, v
     KLocalizedTranslator_OnCustomEvent((KLocalizedTranslator*)self, (intptr_t)callback);
 }
 
-void k_localizedtranslator_connect_notify(void* self, void* signal) {
+void k_localizedtranslator_connect_notify(void* self, const void* signal) {
     KLocalizedTranslator_ConnectNotify((KLocalizedTranslator*)self, (QMetaMethod*)signal);
 }
 
-void k_localizedtranslator_super_connect_notify(void* self, void* signal) {
+void k_localizedtranslator_super_connect_notify(void* self, const void* signal) {
     KLocalizedTranslator_SuperConnectNotify((KLocalizedTranslator*)self, (QMetaMethod*)signal);
 }
 
-void k_localizedtranslator_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_localizedtranslator_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     KLocalizedTranslator_OnConnectNotify((KLocalizedTranslator*)self, (intptr_t)callback);
 }
 
-void k_localizedtranslator_disconnect_notify(void* self, void* signal) {
+void k_localizedtranslator_disconnect_notify(void* self, const void* signal) {
     KLocalizedTranslator_DisconnectNotify((KLocalizedTranslator*)self, (QMetaMethod*)signal);
 }
 
-void k_localizedtranslator_super_disconnect_notify(void* self, void* signal) {
+void k_localizedtranslator_super_disconnect_notify(void* self, const void* signal) {
     KLocalizedTranslator_SuperDisconnectNotify((KLocalizedTranslator*)self, (QMetaMethod*)signal);
 }
 
-void k_localizedtranslator_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_localizedtranslator_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     KLocalizedTranslator_OnDisconnectNotify((KLocalizedTranslator*)self, (intptr_t)callback);
 }
 
-QObject* k_localizedtranslator_sender(void* self) {
+QObject* k_localizedtranslator_sender(const void* self) {
     return KLocalizedTranslator_Sender((KLocalizedTranslator*)self);
 }
 
-QObject* k_localizedtranslator_super_sender(void* self) {
-    return KLocalizedTranslator_SuperSender((KLocalizedTranslator*)self);
-}
-
-void k_localizedtranslator_on_sender(void* self, QObject* (*callback)()) {
-    KLocalizedTranslator_OnSender((KLocalizedTranslator*)self, (intptr_t)callback);
-}
-
-int32_t k_localizedtranslator_sender_signal_index(void* self) {
+int32_t k_localizedtranslator_sender_signal_index(const void* self) {
     return KLocalizedTranslator_SenderSignalIndex((KLocalizedTranslator*)self);
 }
 
-int32_t k_localizedtranslator_super_sender_signal_index(void* self) {
-    return KLocalizedTranslator_SuperSenderSignalIndex((KLocalizedTranslator*)self);
-}
-
-void k_localizedtranslator_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    KLocalizedTranslator_OnSenderSignalIndex((KLocalizedTranslator*)self, (intptr_t)callback);
-}
-
-int32_t k_localizedtranslator_receivers(void* self, const char* signal) {
+int32_t k_localizedtranslator_receivers(const void* self, const char* signal) {
     return KLocalizedTranslator_Receivers((KLocalizedTranslator*)self, signal);
 }
 
-int32_t k_localizedtranslator_super_receivers(void* self, const char* signal) {
-    return KLocalizedTranslator_SuperReceivers((KLocalizedTranslator*)self, signal);
-}
-
-void k_localizedtranslator_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    KLocalizedTranslator_OnReceivers((KLocalizedTranslator*)self, (intptr_t)callback);
-}
-
-bool k_localizedtranslator_is_signal_connected(void* self, void* signal) {
+bool k_localizedtranslator_is_signal_connected(const void* self, const void* signal) {
     return KLocalizedTranslator_IsSignalConnected((KLocalizedTranslator*)self, (QMetaMethod*)signal);
-}
-
-bool k_localizedtranslator_super_is_signal_connected(void* self, void* signal) {
-    return KLocalizedTranslator_SuperIsSignalConnected((KLocalizedTranslator*)self, (QMetaMethod*)signal);
-}
-
-void k_localizedtranslator_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    KLocalizedTranslator_OnIsSignalConnected((KLocalizedTranslator*)self, (intptr_t)callback);
 }
 
 void k_localizedtranslator_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

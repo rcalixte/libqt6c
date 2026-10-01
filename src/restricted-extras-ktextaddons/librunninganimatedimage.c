@@ -3,11 +3,11 @@
 #include "librunninganimatedimage.hpp"
 #include "librunninganimatedimage.h"
 
-TextEmoticonsCore__RunningAnimatedImage* k_textemoticonscore__runninganimatedimage_new(void* idx) {
+TextEmoticonsCore__RunningAnimatedImage* k_textemoticonscore__runninganimatedimage_new(const void* idx) {
     return TextEmoticonsCore__RunningAnimatedImage_New((QModelIndex*)idx);
 }
 
-QPersistentModelIndex* k_textemoticonscore__runninganimatedimage_index(void* self) {
+QPersistentModelIndex* k_textemoticonscore__runninganimatedimage_index(const void* self) {
     return TextEmoticonsCore__RunningAnimatedImage_Index((TextEmoticonsCore__RunningAnimatedImage*)self);
 }
 
@@ -15,7 +15,7 @@ void k_textemoticonscore__runninganimatedimage_set_index(void* self, void* index
     TextEmoticonsCore__RunningAnimatedImage_SetIndex((TextEmoticonsCore__RunningAnimatedImage*)self, (QPersistentModelIndex*)index);
 }
 
-QMovie* k_textemoticonscore__runninganimatedimage_movie(void* self) {
+QMovie* k_textemoticonscore__runninganimatedimage_movie(const void* self) {
     return TextEmoticonsCore__RunningAnimatedImage_Movie((TextEmoticonsCore__RunningAnimatedImage*)self);
 }
 

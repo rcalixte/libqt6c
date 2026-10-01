@@ -40,5 +40,5 @@ const char* q_qtwebenginecoreglobal_h_q_web_engine_chromium_security_patch_versi
 ///
 /// @param url QUrl*
 ///
-const char* q_qtwebenginecoreglobal_h_q_web_engine_get_domain_and_registry(void* url);
+const char* q_qtwebenginecoreglobal_h_q_web_engine_get_domain_and_registry(const void* url);
 #endif

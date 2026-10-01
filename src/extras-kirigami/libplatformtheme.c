@@ -17,15 +17,15 @@ Kirigami__Platform__PlatformTheme* k_irigami__platform__platformtheme_new2(void*
     return Kirigami__Platform__PlatformTheme_New2((QObject*)parent);
 }
 
-const QMetaObject* k_irigami__platform__platformtheme_meta_object(void* self) {
+const QMetaObject* k_irigami__platform__platformtheme_meta_object(const void* self) {
     return Kirigami__Platform__PlatformTheme_MetaObject((Kirigami__Platform__PlatformTheme*)self);
 }
 
-void k_irigami__platform__platformtheme_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_irigami__platform__platformtheme_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     Kirigami__Platform__PlatformTheme_OnMetaObject((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_irigami__platform__platformtheme_super_meta_object(void* self) {
+const QMetaObject* k_irigami__platform__platformtheme_super_meta_object(const void* self) {
     return Kirigami__Platform__PlatformTheme_SuperMetaObject((Kirigami__Platform__PlatformTheme*)self);
 }
 
@@ -64,7 +64,7 @@ void k_irigami__platform__platformtheme_set_color_set(void* self, int32_t colorS
     Kirigami__Platform__PlatformTheme_SetColorSet((Kirigami__Platform__PlatformTheme*)self, colorSet);
 }
 
-int32_t k_irigami__platform__platformtheme_color_set(void* self) {
+int32_t k_irigami__platform__platformtheme_color_set(const void* self) {
     return Kirigami__Platform__PlatformTheme_ColorSet((Kirigami__Platform__PlatformTheme*)self);
 }
 
@@ -72,11 +72,11 @@ void k_irigami__platform__platformtheme_set_color_group(void* self, int32_t colo
     Kirigami__Platform__PlatformTheme_SetColorGroup((Kirigami__Platform__PlatformTheme*)self, colorGroup);
 }
 
-int32_t k_irigami__platform__platformtheme_color_group(void* self) {
+int32_t k_irigami__platform__platformtheme_color_group(const void* self) {
     return Kirigami__Platform__PlatformTheme_ColorGroup((Kirigami__Platform__PlatformTheme*)self);
 }
 
-bool k_irigami__platform__platformtheme_inherit(void* self) {
+bool k_irigami__platform__platformtheme_inherit(const void* self) {
     return Kirigami__Platform__PlatformTheme_Inherit((Kirigami__Platform__PlatformTheme*)self);
 }
 
@@ -84,119 +84,119 @@ void k_irigami__platform__platformtheme_set_inherit(void* self, bool inherit) {
     Kirigami__Platform__PlatformTheme_SetInherit((Kirigami__Platform__PlatformTheme*)self, inherit);
 }
 
-QColor* k_irigami__platform__platformtheme_text_color(void* self) {
+QColor* k_irigami__platform__platformtheme_text_color(const void* self) {
     return Kirigami__Platform__PlatformTheme_TextColor((Kirigami__Platform__PlatformTheme*)self);
 }
 
-QColor* k_irigami__platform__platformtheme_disabled_text_color(void* self) {
+QColor* k_irigami__platform__platformtheme_disabled_text_color(const void* self) {
     return Kirigami__Platform__PlatformTheme_DisabledTextColor((Kirigami__Platform__PlatformTheme*)self);
 }
 
-QColor* k_irigami__platform__platformtheme_highlighted_text_color(void* self) {
+QColor* k_irigami__platform__platformtheme_highlighted_text_color(const void* self) {
     return Kirigami__Platform__PlatformTheme_HighlightedTextColor((Kirigami__Platform__PlatformTheme*)self);
 }
 
-QColor* k_irigami__platform__platformtheme_active_text_color(void* self) {
+QColor* k_irigami__platform__platformtheme_active_text_color(const void* self) {
     return Kirigami__Platform__PlatformTheme_ActiveTextColor((Kirigami__Platform__PlatformTheme*)self);
 }
 
-QColor* k_irigami__platform__platformtheme_link_color(void* self) {
+QColor* k_irigami__platform__platformtheme_link_color(const void* self) {
     return Kirigami__Platform__PlatformTheme_LinkColor((Kirigami__Platform__PlatformTheme*)self);
 }
 
-QColor* k_irigami__platform__platformtheme_visited_link_color(void* self) {
+QColor* k_irigami__platform__platformtheme_visited_link_color(const void* self) {
     return Kirigami__Platform__PlatformTheme_VisitedLinkColor((Kirigami__Platform__PlatformTheme*)self);
 }
 
-QColor* k_irigami__platform__platformtheme_negative_text_color(void* self) {
+QColor* k_irigami__platform__platformtheme_negative_text_color(const void* self) {
     return Kirigami__Platform__PlatformTheme_NegativeTextColor((Kirigami__Platform__PlatformTheme*)self);
 }
 
-QColor* k_irigami__platform__platformtheme_neutral_text_color(void* self) {
+QColor* k_irigami__platform__platformtheme_neutral_text_color(const void* self) {
     return Kirigami__Platform__PlatformTheme_NeutralTextColor((Kirigami__Platform__PlatformTheme*)self);
 }
 
-QColor* k_irigami__platform__platformtheme_positive_text_color(void* self) {
+QColor* k_irigami__platform__platformtheme_positive_text_color(const void* self) {
     return Kirigami__Platform__PlatformTheme_PositiveTextColor((Kirigami__Platform__PlatformTheme*)self);
 }
 
-QColor* k_irigami__platform__platformtheme_background_color(void* self) {
+QColor* k_irigami__platform__platformtheme_background_color(const void* self) {
     return Kirigami__Platform__PlatformTheme_BackgroundColor((Kirigami__Platform__PlatformTheme*)self);
 }
 
-QColor* k_irigami__platform__platformtheme_alternate_background_color(void* self) {
+QColor* k_irigami__platform__platformtheme_alternate_background_color(const void* self) {
     return Kirigami__Platform__PlatformTheme_AlternateBackgroundColor((Kirigami__Platform__PlatformTheme*)self);
 }
 
-QColor* k_irigami__platform__platformtheme_highlight_color(void* self) {
+QColor* k_irigami__platform__platformtheme_highlight_color(const void* self) {
     return Kirigami__Platform__PlatformTheme_HighlightColor((Kirigami__Platform__PlatformTheme*)self);
 }
 
-QColor* k_irigami__platform__platformtheme_active_background_color(void* self) {
+QColor* k_irigami__platform__platformtheme_active_background_color(const void* self) {
     return Kirigami__Platform__PlatformTheme_ActiveBackgroundColor((Kirigami__Platform__PlatformTheme*)self);
 }
 
-QColor* k_irigami__platform__platformtheme_link_background_color(void* self) {
+QColor* k_irigami__platform__platformtheme_link_background_color(const void* self) {
     return Kirigami__Platform__PlatformTheme_LinkBackgroundColor((Kirigami__Platform__PlatformTheme*)self);
 }
 
-QColor* k_irigami__platform__platformtheme_visited_link_background_color(void* self) {
+QColor* k_irigami__platform__platformtheme_visited_link_background_color(const void* self) {
     return Kirigami__Platform__PlatformTheme_VisitedLinkBackgroundColor((Kirigami__Platform__PlatformTheme*)self);
 }
 
-QColor* k_irigami__platform__platformtheme_negative_background_color(void* self) {
+QColor* k_irigami__platform__platformtheme_negative_background_color(const void* self) {
     return Kirigami__Platform__PlatformTheme_NegativeBackgroundColor((Kirigami__Platform__PlatformTheme*)self);
 }
 
-QColor* k_irigami__platform__platformtheme_neutral_background_color(void* self) {
+QColor* k_irigami__platform__platformtheme_neutral_background_color(const void* self) {
     return Kirigami__Platform__PlatformTheme_NeutralBackgroundColor((Kirigami__Platform__PlatformTheme*)self);
 }
 
-QColor* k_irigami__platform__platformtheme_positive_background_color(void* self) {
+QColor* k_irigami__platform__platformtheme_positive_background_color(const void* self) {
     return Kirigami__Platform__PlatformTheme_PositiveBackgroundColor((Kirigami__Platform__PlatformTheme*)self);
 }
 
-QColor* k_irigami__platform__platformtheme_focus_color(void* self) {
+QColor* k_irigami__platform__platformtheme_focus_color(const void* self) {
     return Kirigami__Platform__PlatformTheme_FocusColor((Kirigami__Platform__PlatformTheme*)self);
 }
 
-QColor* k_irigami__platform__platformtheme_hover_color(void* self) {
+QColor* k_irigami__platform__platformtheme_hover_color(const void* self) {
     return Kirigami__Platform__PlatformTheme_HoverColor((Kirigami__Platform__PlatformTheme*)self);
 }
 
-QFont* k_irigami__platform__platformtheme_default_font(void* self) {
+QFont* k_irigami__platform__platformtheme_default_font(const void* self) {
     return Kirigami__Platform__PlatformTheme_DefaultFont((Kirigami__Platform__PlatformTheme*)self);
 }
 
-QFont* k_irigami__platform__platformtheme_small_font(void* self) {
+QFont* k_irigami__platform__platformtheme_small_font(const void* self) {
     return Kirigami__Platform__PlatformTheme_SmallFont((Kirigami__Platform__PlatformTheme*)self);
 }
 
-QPalette* k_irigami__platform__platformtheme_palette(void* self) {
+QPalette* k_irigami__platform__platformtheme_palette(const void* self) {
     return Kirigami__Platform__PlatformTheme_Palette((Kirigami__Platform__PlatformTheme*)self);
 }
 
-double k_irigami__platform__platformtheme_frame_contrast(void* self) {
+double k_irigami__platform__platformtheme_frame_contrast(const void* self) {
     return Kirigami__Platform__PlatformTheme_FrameContrast((Kirigami__Platform__PlatformTheme*)self);
 }
 
-double k_irigami__platform__platformtheme_light_frame_contrast(void* self) {
+double k_irigami__platform__platformtheme_light_frame_contrast(const void* self) {
     return Kirigami__Platform__PlatformTheme_LightFrameContrast((Kirigami__Platform__PlatformTheme*)self);
 }
 
-QIcon* k_irigami__platform__platformtheme_icon_from_theme(void* self, const char* name, void* customColor) {
+QIcon* k_irigami__platform__platformtheme_icon_from_theme(void* self, const char* name, const void* customColor) {
     return Kirigami__Platform__PlatformTheme_IconFromTheme((Kirigami__Platform__PlatformTheme*)self, qstring(name), (QColor*)customColor);
 }
 
-void k_irigami__platform__platformtheme_on_icon_from_theme(void* self, QIcon* (*callback)(void*, const char*, void*)) {
+void k_irigami__platform__platformtheme_on_icon_from_theme(void* self, QIcon* (*callback)(void*, const char*, const void*)) {
     Kirigami__Platform__PlatformTheme_OnIconFromTheme((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
 }
 
-QIcon* k_irigami__platform__platformtheme_super_icon_from_theme(void* self, const char* name, void* customColor) {
+QIcon* k_irigami__platform__platformtheme_super_icon_from_theme(void* self, const char* name, const void* customColor) {
     return Kirigami__Platform__PlatformTheme_SuperIconFromTheme((Kirigami__Platform__PlatformTheme*)self, qstring(name), (QColor*)customColor);
 }
 
-bool k_irigami__platform__platformtheme_supports_icon_coloring(void* self) {
+bool k_irigami__platform__platformtheme_supports_icon_coloring(const void* self) {
     return Kirigami__Platform__PlatformTheme_SupportsIconColoring((Kirigami__Platform__PlatformTheme*)self);
 }
 
@@ -280,7 +280,7 @@ void k_irigami__platform__platformtheme_set_custom_hover_color(void* self) {
     Kirigami__Platform__PlatformTheme_SetCustomHoverColor((Kirigami__Platform__PlatformTheme*)self);
 }
 
-bool k_irigami__platform__platformtheme_use_alternate_background_color(void* self) {
+bool k_irigami__platform__platformtheme_use_alternate_background_color(const void* self) {
     return Kirigami__Platform__PlatformTheme_UseAlternateBackgroundColor((Kirigami__Platform__PlatformTheme*)self);
 }
 
@@ -300,19 +300,19 @@ void k_irigami__platform__platformtheme_on_colors_changed(void* self, void (*cal
     Kirigami__Platform__PlatformTheme_Connect_ColorsChanged((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
 }
 
-void k_irigami__platform__platformtheme_default_font_changed(void* self, void* font) {
+void k_irigami__platform__platformtheme_default_font_changed(void* self, const void* font) {
     Kirigami__Platform__PlatformTheme_DefaultFontChanged((Kirigami__Platform__PlatformTheme*)self, (QFont*)font);
 }
 
-void k_irigami__platform__platformtheme_on_default_font_changed(void* self, void (*callback)(void*, void*)) {
+void k_irigami__platform__platformtheme_on_default_font_changed(void* self, void (*callback)(void*, const void*)) {
     Kirigami__Platform__PlatformTheme_Connect_DefaultFontChanged((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
 }
 
-void k_irigami__platform__platformtheme_small_font_changed(void* self, void* font) {
+void k_irigami__platform__platformtheme_small_font_changed(void* self, const void* font) {
     Kirigami__Platform__PlatformTheme_SmallFontChanged((Kirigami__Platform__PlatformTheme*)self, (QFont*)font);
 }
 
-void k_irigami__platform__platformtheme_on_small_font_changed(void* self, void (*callback)(void*, void*)) {
+void k_irigami__platform__platformtheme_on_small_font_changed(void* self, void (*callback)(void*, const void*)) {
     Kirigami__Platform__PlatformTheme_Connect_SmallFontChanged((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
 }
 
@@ -332,11 +332,11 @@ void k_irigami__platform__platformtheme_on_color_group_changed(void* self, void 
     Kirigami__Platform__PlatformTheme_Connect_ColorGroupChanged((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
 }
 
-void k_irigami__platform__platformtheme_palette_changed(void* self, void* pal) {
+void k_irigami__platform__platformtheme_palette_changed(void* self, const void* pal) {
     Kirigami__Platform__PlatformTheme_PaletteChanged((Kirigami__Platform__PlatformTheme*)self, (QPalette*)pal);
 }
 
-void k_irigami__platform__platformtheme_on_palette_changed(void* self, void (*callback)(void*, void*)) {
+void k_irigami__platform__platformtheme_on_palette_changed(void* self, void (*callback)(void*, const void*)) {
     Kirigami__Platform__PlatformTheme_Connect_PaletteChanged((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
 }
 
@@ -360,276 +360,92 @@ void k_irigami__platform__platformtheme_set_supports_icon_coloring(void* self, b
     Kirigami__Platform__PlatformTheme_SetSupportsIconColoring((Kirigami__Platform__PlatformTheme*)self, support);
 }
 
-void k_irigami__platform__platformtheme_on_set_supports_icon_coloring(void* self, void (*callback)(void*, bool)) {
-    Kirigami__Platform__PlatformTheme_OnSetSupportsIconColoring((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
-}
-
-void k_irigami__platform__platformtheme_super_set_supports_icon_coloring(void* self, bool support) {
-    Kirigami__Platform__PlatformTheme_SuperSetSupportsIconColoring((Kirigami__Platform__PlatformTheme*)self, support);
-}
-
-void k_irigami__platform__platformtheme_set_text_color(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_text_color(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetTextColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_on_set_text_color(void* self, void (*callback)(void*, void*)) {
-    Kirigami__Platform__PlatformTheme_OnSetTextColor((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
-}
-
-void k_irigami__platform__platformtheme_super_set_text_color(void* self, void* color) {
-    Kirigami__Platform__PlatformTheme_SuperSetTextColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
-}
-
-void k_irigami__platform__platformtheme_set_disabled_text_color(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_disabled_text_color(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetDisabledTextColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_on_set_disabled_text_color(void* self, void (*callback)(void*, void*)) {
-    Kirigami__Platform__PlatformTheme_OnSetDisabledTextColor((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
-}
-
-void k_irigami__platform__platformtheme_super_set_disabled_text_color(void* self, void* color) {
-    Kirigami__Platform__PlatformTheme_SuperSetDisabledTextColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
-}
-
-void k_irigami__platform__platformtheme_set_highlighted_text_color(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_highlighted_text_color(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetHighlightedTextColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_on_set_highlighted_text_color(void* self, void (*callback)(void*, void*)) {
-    Kirigami__Platform__PlatformTheme_OnSetHighlightedTextColor((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
-}
-
-void k_irigami__platform__platformtheme_super_set_highlighted_text_color(void* self, void* color) {
-    Kirigami__Platform__PlatformTheme_SuperSetHighlightedTextColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
-}
-
-void k_irigami__platform__platformtheme_set_active_text_color(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_active_text_color(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetActiveTextColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_on_set_active_text_color(void* self, void (*callback)(void*, void*)) {
-    Kirigami__Platform__PlatformTheme_OnSetActiveTextColor((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
-}
-
-void k_irigami__platform__platformtheme_super_set_active_text_color(void* self, void* color) {
-    Kirigami__Platform__PlatformTheme_SuperSetActiveTextColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
-}
-
-void k_irigami__platform__platformtheme_set_link_color(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_link_color(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetLinkColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_on_set_link_color(void* self, void (*callback)(void*, void*)) {
-    Kirigami__Platform__PlatformTheme_OnSetLinkColor((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
-}
-
-void k_irigami__platform__platformtheme_super_set_link_color(void* self, void* color) {
-    Kirigami__Platform__PlatformTheme_SuperSetLinkColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
-}
-
-void k_irigami__platform__platformtheme_set_visited_link_color(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_visited_link_color(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetVisitedLinkColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_on_set_visited_link_color(void* self, void (*callback)(void*, void*)) {
-    Kirigami__Platform__PlatformTheme_OnSetVisitedLinkColor((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
-}
-
-void k_irigami__platform__platformtheme_super_set_visited_link_color(void* self, void* color) {
-    Kirigami__Platform__PlatformTheme_SuperSetVisitedLinkColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
-}
-
-void k_irigami__platform__platformtheme_set_negative_text_color(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_negative_text_color(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetNegativeTextColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_on_set_negative_text_color(void* self, void (*callback)(void*, void*)) {
-    Kirigami__Platform__PlatformTheme_OnSetNegativeTextColor((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
-}
-
-void k_irigami__platform__platformtheme_super_set_negative_text_color(void* self, void* color) {
-    Kirigami__Platform__PlatformTheme_SuperSetNegativeTextColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
-}
-
-void k_irigami__platform__platformtheme_set_neutral_text_color(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_neutral_text_color(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetNeutralTextColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_on_set_neutral_text_color(void* self, void (*callback)(void*, void*)) {
-    Kirigami__Platform__PlatformTheme_OnSetNeutralTextColor((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
-}
-
-void k_irigami__platform__platformtheme_super_set_neutral_text_color(void* self, void* color) {
-    Kirigami__Platform__PlatformTheme_SuperSetNeutralTextColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
-}
-
-void k_irigami__platform__platformtheme_set_positive_text_color(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_positive_text_color(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetPositiveTextColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_on_set_positive_text_color(void* self, void (*callback)(void*, void*)) {
-    Kirigami__Platform__PlatformTheme_OnSetPositiveTextColor((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
-}
-
-void k_irigami__platform__platformtheme_super_set_positive_text_color(void* self, void* color) {
-    Kirigami__Platform__PlatformTheme_SuperSetPositiveTextColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
-}
-
-void k_irigami__platform__platformtheme_set_background_color(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_background_color(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetBackgroundColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_on_set_background_color(void* self, void (*callback)(void*, void*)) {
-    Kirigami__Platform__PlatformTheme_OnSetBackgroundColor((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
-}
-
-void k_irigami__platform__platformtheme_super_set_background_color(void* self, void* color) {
-    Kirigami__Platform__PlatformTheme_SuperSetBackgroundColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
-}
-
-void k_irigami__platform__platformtheme_set_alternate_background_color(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_alternate_background_color(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetAlternateBackgroundColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_on_set_alternate_background_color(void* self, void (*callback)(void*, void*)) {
-    Kirigami__Platform__PlatformTheme_OnSetAlternateBackgroundColor((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
-}
-
-void k_irigami__platform__platformtheme_super_set_alternate_background_color(void* self, void* color) {
-    Kirigami__Platform__PlatformTheme_SuperSetAlternateBackgroundColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
-}
-
-void k_irigami__platform__platformtheme_set_highlight_color(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_highlight_color(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetHighlightColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_on_set_highlight_color(void* self, void (*callback)(void*, void*)) {
-    Kirigami__Platform__PlatformTheme_OnSetHighlightColor((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
-}
-
-void k_irigami__platform__platformtheme_super_set_highlight_color(void* self, void* color) {
-    Kirigami__Platform__PlatformTheme_SuperSetHighlightColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
-}
-
-void k_irigami__platform__platformtheme_set_active_background_color(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_active_background_color(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetActiveBackgroundColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_on_set_active_background_color(void* self, void (*callback)(void*, void*)) {
-    Kirigami__Platform__PlatformTheme_OnSetActiveBackgroundColor((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
-}
-
-void k_irigami__platform__platformtheme_super_set_active_background_color(void* self, void* color) {
-    Kirigami__Platform__PlatformTheme_SuperSetActiveBackgroundColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
-}
-
-void k_irigami__platform__platformtheme_set_link_background_color(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_link_background_color(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetLinkBackgroundColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_on_set_link_background_color(void* self, void (*callback)(void*, void*)) {
-    Kirigami__Platform__PlatformTheme_OnSetLinkBackgroundColor((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
-}
-
-void k_irigami__platform__platformtheme_super_set_link_background_color(void* self, void* color) {
-    Kirigami__Platform__PlatformTheme_SuperSetLinkBackgroundColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
-}
-
-void k_irigami__platform__platformtheme_set_visited_link_background_color(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_visited_link_background_color(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetVisitedLinkBackgroundColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_on_set_visited_link_background_color(void* self, void (*callback)(void*, void*)) {
-    Kirigami__Platform__PlatformTheme_OnSetVisitedLinkBackgroundColor((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
-}
-
-void k_irigami__platform__platformtheme_super_set_visited_link_background_color(void* self, void* color) {
-    Kirigami__Platform__PlatformTheme_SuperSetVisitedLinkBackgroundColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
-}
-
-void k_irigami__platform__platformtheme_set_negative_background_color(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_negative_background_color(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetNegativeBackgroundColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_on_set_negative_background_color(void* self, void (*callback)(void*, void*)) {
-    Kirigami__Platform__PlatformTheme_OnSetNegativeBackgroundColor((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
-}
-
-void k_irigami__platform__platformtheme_super_set_negative_background_color(void* self, void* color) {
-    Kirigami__Platform__PlatformTheme_SuperSetNegativeBackgroundColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
-}
-
-void k_irigami__platform__platformtheme_set_neutral_background_color(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_neutral_background_color(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetNeutralBackgroundColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_on_set_neutral_background_color(void* self, void (*callback)(void*, void*)) {
-    Kirigami__Platform__PlatformTheme_OnSetNeutralBackgroundColor((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
-}
-
-void k_irigami__platform__platformtheme_super_set_neutral_background_color(void* self, void* color) {
-    Kirigami__Platform__PlatformTheme_SuperSetNeutralBackgroundColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
-}
-
-void k_irigami__platform__platformtheme_set_positive_background_color(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_positive_background_color(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetPositiveBackgroundColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_on_set_positive_background_color(void* self, void (*callback)(void*, void*)) {
-    Kirigami__Platform__PlatformTheme_OnSetPositiveBackgroundColor((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
-}
-
-void k_irigami__platform__platformtheme_super_set_positive_background_color(void* self, void* color) {
-    Kirigami__Platform__PlatformTheme_SuperSetPositiveBackgroundColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
-}
-
-void k_irigami__platform__platformtheme_set_focus_color(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_focus_color(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetFocusColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_on_set_focus_color(void* self, void (*callback)(void*, void*)) {
-    Kirigami__Platform__PlatformTheme_OnSetFocusColor((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
-}
-
-void k_irigami__platform__platformtheme_super_set_focus_color(void* self, void* color) {
-    Kirigami__Platform__PlatformTheme_SuperSetFocusColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
-}
-
-void k_irigami__platform__platformtheme_set_hover_color(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_hover_color(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetHoverColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_on_set_hover_color(void* self, void (*callback)(void*, void*)) {
-    Kirigami__Platform__PlatformTheme_OnSetHoverColor((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
-}
-
-void k_irigami__platform__platformtheme_super_set_hover_color(void* self, void* color) {
-    Kirigami__Platform__PlatformTheme_SuperSetHoverColor((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
-}
-
-void k_irigami__platform__platformtheme_set_default_font(void* self, void* defaultFont) {
+void k_irigami__platform__platformtheme_set_default_font(void* self, const void* defaultFont) {
     Kirigami__Platform__PlatformTheme_SetDefaultFont((Kirigami__Platform__PlatformTheme*)self, (QFont*)defaultFont);
 }
 
-void k_irigami__platform__platformtheme_on_set_default_font(void* self, void (*callback)(void*, void*)) {
-    Kirigami__Platform__PlatformTheme_OnSetDefaultFont((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
-}
-
-void k_irigami__platform__platformtheme_super_set_default_font(void* self, void* defaultFont) {
-    Kirigami__Platform__PlatformTheme_SuperSetDefaultFont((Kirigami__Platform__PlatformTheme*)self, (QFont*)defaultFont);
-}
-
-void k_irigami__platform__platformtheme_set_small_font(void* self, void* smallFont) {
+void k_irigami__platform__platformtheme_set_small_font(void* self, const void* smallFont) {
     Kirigami__Platform__PlatformTheme_SetSmallFont((Kirigami__Platform__PlatformTheme*)self, (QFont*)smallFont);
-}
-
-void k_irigami__platform__platformtheme_on_set_small_font(void* self, void (*callback)(void*, void*)) {
-    Kirigami__Platform__PlatformTheme_OnSetSmallFont((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
-}
-
-void k_irigami__platform__platformtheme_super_set_small_font(void* self, void* smallFont) {
-    Kirigami__Platform__PlatformTheme_SuperSetSmallFont((Kirigami__Platform__PlatformTheme*)self, (QFont*)smallFont);
 }
 
 bool k_irigami__platform__platformtheme_event(void* self, void* event) {
@@ -658,87 +474,87 @@ const char* k_irigami__platform__platformtheme_tr3(const char* s, const char* c,
     return _ret;
 }
 
-void k_irigami__platform__platformtheme_set_custom_text_color1(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_custom_text_color1(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetCustomTextColor1((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_set_custom_disabled_text_color1(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_custom_disabled_text_color1(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetCustomDisabledTextColor1((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_set_custom_highlighted_text_color1(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_custom_highlighted_text_color1(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetCustomHighlightedTextColor1((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_set_custom_active_text_color1(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_custom_active_text_color1(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetCustomActiveTextColor1((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_set_custom_link_color1(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_custom_link_color1(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetCustomLinkColor1((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_set_custom_visited_link_color1(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_custom_visited_link_color1(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetCustomVisitedLinkColor1((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_set_custom_negative_text_color1(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_custom_negative_text_color1(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetCustomNegativeTextColor1((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_set_custom_neutral_text_color1(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_custom_neutral_text_color1(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetCustomNeutralTextColor1((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_set_custom_positive_text_color1(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_custom_positive_text_color1(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetCustomPositiveTextColor1((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_set_custom_background_color1(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_custom_background_color1(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetCustomBackgroundColor1((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_set_custom_alternate_background_color1(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_custom_alternate_background_color1(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetCustomAlternateBackgroundColor1((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_set_custom_highlight_color1(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_custom_highlight_color1(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetCustomHighlightColor1((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_set_custom_active_background_color1(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_custom_active_background_color1(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetCustomActiveBackgroundColor1((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_set_custom_link_background_color1(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_custom_link_background_color1(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetCustomLinkBackgroundColor1((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_set_custom_visited_link_background_color1(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_custom_visited_link_background_color1(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetCustomVisitedLinkBackgroundColor1((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_set_custom_negative_background_color1(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_custom_negative_background_color1(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetCustomNegativeBackgroundColor1((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_set_custom_neutral_background_color1(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_custom_neutral_background_color1(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetCustomNeutralBackgroundColor1((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_set_custom_positive_background_color1(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_custom_positive_background_color1(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetCustomPositiveBackgroundColor1((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_set_custom_focus_color1(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_custom_focus_color1(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetCustomFocusColor1((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-void k_irigami__platform__platformtheme_set_custom_hover_color1(void* self, void* color) {
+void k_irigami__platform__platformtheme_set_custom_hover_color1(void* self, const void* color) {
     Kirigami__Platform__PlatformTheme_SetCustomHoverColor1((Kirigami__Platform__PlatformTheme*)self, (QColor*)color);
 }
 
-const char* k_irigami__platform__platformtheme_object_name(void* self) {
+const char* k_irigami__platform__platformtheme_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -749,19 +565,19 @@ void k_irigami__platform__platformtheme_set_object_name(void* self, const char* 
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_irigami__platform__platformtheme_is_widget_type(void* self) {
+bool k_irigami__platform__platformtheme_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_irigami__platform__platformtheme_is_window_type(void* self) {
+bool k_irigami__platform__platformtheme_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_irigami__platform__platformtheme_is_quick_item_type(void* self) {
+bool k_irigami__platform__platformtheme_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_irigami__platform__platformtheme_signals_blocked(void* self) {
+bool k_irigami__platform__platformtheme_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -769,7 +585,7 @@ bool k_irigami__platform__platformtheme_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_irigami__platform__platformtheme_thread(void* self) {
+QThread* k_irigami__platform__platformtheme_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -793,7 +609,7 @@ void k_irigami__platform__platformtheme_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_irigami__platform__platformtheme_children(void* self) {
+libqt_list /* of QObject* */ k_irigami__platform__platformtheme_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -810,55 +626,55 @@ void k_irigami__platform__platformtheme_remove_event_filter(void* self, void* ob
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_irigami__platform__platformtheme_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_irigami__platform__platformtheme_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_irigami__platform__platformtheme_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_irigami__platform__platformtheme_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_irigami__platform__platformtheme_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_irigami__platform__platformtheme_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_irigami__platform__platformtheme_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_irigami__platform__platformtheme_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_irigami__platform__platformtheme_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_irigami__platform__platformtheme_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_irigami__platform__platformtheme_disconnect3(void* self) {
+bool k_irigami__platform__platformtheme_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_irigami__platform__platformtheme_disconnect4(void* self, void* receiver) {
+bool k_irigami__platform__platformtheme_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_irigami__platform__platformtheme_disconnect5(void* param1) {
+bool k_irigami__platform__platformtheme_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_irigami__platform__platformtheme_dump_object_tree(void* self) {
+void k_irigami__platform__platformtheme_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_irigami__platform__platformtheme_dump_object_info(void* self) {
+void k_irigami__platform__platformtheme_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_irigami__platform__platformtheme_set_property(void* self, const char* name, void* value) {
+bool k_irigami__platform__platformtheme_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_irigami__platform__platformtheme_property(void* self, const char* name) {
+QVariant* k_irigami__platform__platformtheme_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_irigami__platform__platformtheme_dynamic_property_names(void* self) {
+const char** k_irigami__platform__platformtheme_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -879,7 +695,7 @@ QBindingStorage* k_irigami__platform__platformtheme_binding_storage(void* self) 
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_irigami__platform__platformtheme_binding_storage2(void* self) {
+const QBindingStorage* k_irigami__platform__platformtheme_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -891,11 +707,11 @@ void k_irigami__platform__platformtheme_on_destroyed(void* self, void (*callback
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_irigami__platform__platformtheme_parent(void* self) {
+QObject* k_irigami__platform__platformtheme_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_irigami__platform__platformtheme_inherits(void* self, const char* classname) {
+bool k_irigami__platform__platformtheme_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -911,31 +727,31 @@ int32_t k_irigami__platform__platformtheme_start_timer23(void* self, int64_t tim
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_irigami__platform__platformtheme_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_irigami__platform__platformtheme_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_irigami__platform__platformtheme_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_irigami__platform__platformtheme_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_irigami__platform__platformtheme_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_irigami__platform__platformtheme_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_irigami__platform__platformtheme_disconnect1(void* self, const char* signal) {
+bool k_irigami__platform__platformtheme_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_irigami__platform__platformtheme_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_irigami__platform__platformtheme_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_irigami__platform__platformtheme_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_irigami__platform__platformtheme_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_irigami__platform__platformtheme_disconnect23(void* self, void* receiver, const char* member) {
+bool k_irigami__platform__platformtheme_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -995,76 +811,44 @@ void k_irigami__platform__platformtheme_on_custom_event(void* self, void (*callb
     Kirigami__Platform__PlatformTheme_OnCustomEvent((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
 }
 
-void k_irigami__platform__platformtheme_connect_notify(void* self, void* signal) {
+void k_irigami__platform__platformtheme_connect_notify(void* self, const void* signal) {
     Kirigami__Platform__PlatformTheme_ConnectNotify((Kirigami__Platform__PlatformTheme*)self, (QMetaMethod*)signal);
 }
 
-void k_irigami__platform__platformtheme_super_connect_notify(void* self, void* signal) {
+void k_irigami__platform__platformtheme_super_connect_notify(void* self, const void* signal) {
     Kirigami__Platform__PlatformTheme_SuperConnectNotify((Kirigami__Platform__PlatformTheme*)self, (QMetaMethod*)signal);
 }
 
-void k_irigami__platform__platformtheme_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_irigami__platform__platformtheme_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     Kirigami__Platform__PlatformTheme_OnConnectNotify((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
 }
 
-void k_irigami__platform__platformtheme_disconnect_notify(void* self, void* signal) {
+void k_irigami__platform__platformtheme_disconnect_notify(void* self, const void* signal) {
     Kirigami__Platform__PlatformTheme_DisconnectNotify((Kirigami__Platform__PlatformTheme*)self, (QMetaMethod*)signal);
 }
 
-void k_irigami__platform__platformtheme_super_disconnect_notify(void* self, void* signal) {
+void k_irigami__platform__platformtheme_super_disconnect_notify(void* self, const void* signal) {
     Kirigami__Platform__PlatformTheme_SuperDisconnectNotify((Kirigami__Platform__PlatformTheme*)self, (QMetaMethod*)signal);
 }
 
-void k_irigami__platform__platformtheme_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_irigami__platform__platformtheme_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     Kirigami__Platform__PlatformTheme_OnDisconnectNotify((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
 }
 
-QObject* k_irigami__platform__platformtheme_sender(void* self) {
+QObject* k_irigami__platform__platformtheme_sender(const void* self) {
     return Kirigami__Platform__PlatformTheme_Sender((Kirigami__Platform__PlatformTheme*)self);
 }
 
-QObject* k_irigami__platform__platformtheme_super_sender(void* self) {
-    return Kirigami__Platform__PlatformTheme_SuperSender((Kirigami__Platform__PlatformTheme*)self);
-}
-
-void k_irigami__platform__platformtheme_on_sender(void* self, QObject* (*callback)()) {
-    Kirigami__Platform__PlatformTheme_OnSender((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
-}
-
-int32_t k_irigami__platform__platformtheme_sender_signal_index(void* self) {
+int32_t k_irigami__platform__platformtheme_sender_signal_index(const void* self) {
     return Kirigami__Platform__PlatformTheme_SenderSignalIndex((Kirigami__Platform__PlatformTheme*)self);
 }
 
-int32_t k_irigami__platform__platformtheme_super_sender_signal_index(void* self) {
-    return Kirigami__Platform__PlatformTheme_SuperSenderSignalIndex((Kirigami__Platform__PlatformTheme*)self);
-}
-
-void k_irigami__platform__platformtheme_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    Kirigami__Platform__PlatformTheme_OnSenderSignalIndex((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
-}
-
-int32_t k_irigami__platform__platformtheme_receivers(void* self, const char* signal) {
+int32_t k_irigami__platform__platformtheme_receivers(const void* self, const char* signal) {
     return Kirigami__Platform__PlatformTheme_Receivers((Kirigami__Platform__PlatformTheme*)self, signal);
 }
 
-int32_t k_irigami__platform__platformtheme_super_receivers(void* self, const char* signal) {
-    return Kirigami__Platform__PlatformTheme_SuperReceivers((Kirigami__Platform__PlatformTheme*)self, signal);
-}
-
-void k_irigami__platform__platformtheme_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    Kirigami__Platform__PlatformTheme_OnReceivers((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
-}
-
-bool k_irigami__platform__platformtheme_is_signal_connected(void* self, void* signal) {
+bool k_irigami__platform__platformtheme_is_signal_connected(const void* self, const void* signal) {
     return Kirigami__Platform__PlatformTheme_IsSignalConnected((Kirigami__Platform__PlatformTheme*)self, (QMetaMethod*)signal);
-}
-
-bool k_irigami__platform__platformtheme_super_is_signal_connected(void* self, void* signal) {
-    return Kirigami__Platform__PlatformTheme_SuperIsSignalConnected((Kirigami__Platform__PlatformTheme*)self, (QMetaMethod*)signal);
-}
-
-void k_irigami__platform__platformtheme_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    Kirigami__Platform__PlatformTheme_OnIsSignalConnected((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
 }
 
 void k_irigami__platform__platformtheme_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
@@ -1079,7 +863,7 @@ Kirigami__Platform__PlatformThemeChangeTracker* k_irigami__platform__platformthe
     return Kirigami__Platform__PlatformThemeChangeTracker_New((Kirigami__Platform__PlatformTheme*)theme);
 }
 
-Kirigami__Platform__PlatformThemeChangeTracker* k_irigami__platform__platformthemechangetracker_new2(void* param1) {
+Kirigami__Platform__PlatformThemeChangeTracker* k_irigami__platform__platformthemechangetracker_new2(const void* param1) {
     return Kirigami__Platform__PlatformThemeChangeTracker_New2((Kirigami__Platform__PlatformThemeChangeTracker*)param1);
 }
 
@@ -1091,7 +875,7 @@ void k_irigami__platform__platformthemechangetracker_mark_dirty(void* self, uint
     Kirigami__Platform__PlatformThemeChangeTracker_MarkDirty((Kirigami__Platform__PlatformThemeChangeTracker*)self, changes);
 }
 
-void k_irigami__platform__platformthemechangetracker_operator_assign(void* self, void* param1) {
+void k_irigami__platform__platformthemechangetracker_operator_assign(void* self, const void* param1) {
     Kirigami__Platform__PlatformThemeChangeTracker_OperatorAssign((Kirigami__Platform__PlatformThemeChangeTracker*)self, (Kirigami__Platform__PlatformThemeChangeTracker*)param1);
 }
 

@@ -46,26 +46,26 @@ KUrlComboBox* k_urlcombobox_new4(int32_t mode, bool rw, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-const QMetaObject* k_urlcombobox_meta_object(void* self);
+const QMetaObject* k_urlcombobox_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KUrlComboBox*
-/// @param callback const QMetaObject* func()
+/// @param self const KUrlComboBox*
+/// @param callback const QMetaObject* func(const KUrlComboBox* self)
 ///
-void k_urlcombobox_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_urlcombobox_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-const QMetaObject* k_urlcombobox_super_meta_object(void* self);
+const QMetaObject* k_urlcombobox_super_meta_object(const void* self);
 
 /// @param self KUrlComboBox*
 /// @param param1 const char*
@@ -122,7 +122,7 @@ const char* k_urlcombobox_tr(const char* s);
 /// @param self KUrlComboBox*
 /// @param url QUrl*
 ///
-void k_urlcombobox_set_url(void* self, void* url);
+void k_urlcombobox_set_url(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/kurlcombobox.html#setUrls)
 ///
@@ -143,9 +143,9 @@ void k_urlcombobox_set_urls2(void* self, const char* urls[static 1], int32_t rem
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-const char** k_urlcombobox_urls(void* self);
+const char** k_urlcombobox_urls(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurlcombobox.html#setMaxItems)
 ///
@@ -156,16 +156,16 @@ void k_urlcombobox_set_max_items(void* self, int maxItems);
 
 /// [Upstream resources](https://api.kde.org/kurlcombobox.html#maxItems)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-int32_t k_urlcombobox_max_items(void* self);
+int32_t k_urlcombobox_max_items(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurlcombobox.html#addDefaultUrl)
 ///
 /// @param self KUrlComboBox*
 /// @param url QUrl*
 ///
-void k_urlcombobox_add_default_url(void* self, void* url);
+void k_urlcombobox_add_default_url(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/kurlcombobox.html#addDefaultUrl)
 ///
@@ -173,7 +173,7 @@ void k_urlcombobox_add_default_url(void* self, void* url);
 /// @param url QUrl*
 /// @param icon QIcon*
 ///
-void k_urlcombobox_add_default_url2(void* self, void* url, void* icon);
+void k_urlcombobox_add_default_url2(void* self, const void* url, const void* icon);
 
 /// [Upstream resources](https://api.kde.org/kurlcombobox.html#setDefaults)
 ///
@@ -186,7 +186,7 @@ void k_urlcombobox_set_defaults(void* self);
 /// @param self KUrlComboBox*
 /// @param url QUrl*
 ///
-void k_urlcombobox_remove_url(void* self, void* url);
+void k_urlcombobox_remove_url(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/kurlcombobox.html#setCompletionObject)
 ///
@@ -220,14 +220,14 @@ void k_urlcombobox_super_set_completion_object(void* self, void* compObj, bool h
 /// @param self KUrlComboBox*
 /// @param url QUrl*
 ///
-void k_urlcombobox_url_activated(void* self, void* url);
+void k_urlcombobox_url_activated(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/kurlcombobox.html#urlActivated)
 ///
 /// @param self KUrlComboBox*
 /// @param callback void func(KUrlComboBox* self, QUrl* url)
 ///
-void k_urlcombobox_on_url_activated(void* self, void (*callback)(void*, void*));
+void k_urlcombobox_on_url_activated(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kurlcombobox.html#mousePressEvent)
 ///
@@ -304,7 +304,7 @@ const char* k_urlcombobox_tr3(const char* s, const char* c, int n);
 /// @param url QUrl*
 /// @param text const char*
 ///
-void k_urlcombobox_add_default_url22(void* self, void* url, const char* text);
+void k_urlcombobox_add_default_url22(void* self, const void* url, const char* text);
 
 /// [Upstream resources](https://api.kde.org/kurlcombobox.html#addDefaultUrl)
 ///
@@ -313,7 +313,7 @@ void k_urlcombobox_add_default_url22(void* self, void* url, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-void k_urlcombobox_add_default_url3(void* self, void* url, void* icon, const char* text);
+void k_urlcombobox_add_default_url3(void* self, const void* url, const void* icon, const char* text);
 
 /// [Upstream resources](https://api.kde.org/kurlcombobox.html#removeUrl)
 ///
@@ -321,7 +321,7 @@ void k_urlcombobox_add_default_url3(void* self, void* url, void* icon, const cha
 /// @param url QUrl*
 /// @param checkDefaultURLs bool
 ///
-void k_urlcombobox_remove_url2(void* self, void* url, bool checkDefaultURLs);
+void k_urlcombobox_remove_url2(void* self, const void* url, bool checkDefaultURLs);
 
 /// Inherited from KComboBox
 ///
@@ -346,7 +346,7 @@ KUrlComboBox* k_urlcombobox_from_k_completion_base(void* _kcompletionbase);
 /// @param self KUrlComboBox*
 /// @param url QUrl*
 ///
-void k_urlcombobox_set_edit_url(void* self, void* url);
+void k_urlcombobox_set_edit_url(void* self, const void* url);
 
 /// Inherited from KComboBox
 ///
@@ -355,7 +355,7 @@ void k_urlcombobox_set_edit_url(void* self, void* url);
 /// @param self KUrlComboBox*
 /// @param url QUrl*
 ///
-void k_urlcombobox_add_url(void* self, void* url);
+void k_urlcombobox_add_url(void* self, const void* url);
 
 /// Inherited from KComboBox
 ///
@@ -365,7 +365,7 @@ void k_urlcombobox_add_url(void* self, void* url);
 /// @param icon QIcon*
 /// @param url QUrl*
 ///
-void k_urlcombobox_add_url2(void* self, void* icon, void* url);
+void k_urlcombobox_add_url2(void* self, const void* icon, const void* url);
 
 /// Inherited from KComboBox
 ///
@@ -375,7 +375,7 @@ void k_urlcombobox_add_url2(void* self, void* icon, void* url);
 /// @param index int
 /// @param url QUrl*
 ///
-void k_urlcombobox_insert_url(void* self, int index, void* url);
+void k_urlcombobox_insert_url(void* self, int index, const void* url);
 
 /// Inherited from KComboBox
 ///
@@ -386,7 +386,7 @@ void k_urlcombobox_insert_url(void* self, int index, void* url);
 /// @param icon QIcon*
 /// @param url QUrl*
 ///
-void k_urlcombobox_insert_url2(void* self, int index, void* icon, void* url);
+void k_urlcombobox_insert_url2(void* self, int index, const void* icon, const void* url);
 
 /// Inherited from KComboBox
 ///
@@ -396,7 +396,7 @@ void k_urlcombobox_insert_url2(void* self, int index, void* icon, void* url);
 /// @param index int
 /// @param url QUrl*
 ///
-void k_urlcombobox_change_url(void* self, int index, void* url);
+void k_urlcombobox_change_url(void* self, int index, const void* url);
 
 /// Inherited from KComboBox
 ///
@@ -407,40 +407,40 @@ void k_urlcombobox_change_url(void* self, int index, void* url);
 /// @param icon QIcon*
 /// @param url QUrl*
 ///
-void k_urlcombobox_change_url2(void* self, int index, void* icon, void* url);
+void k_urlcombobox_change_url2(void* self, int index, const void* icon, const void* url);
 
 /// Inherited from KComboBox
 ///
 /// [Upstream resources](https://api.kde.org/kcombobox.html#cursorPosition)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-int32_t k_urlcombobox_cursor_position(void* self);
+int32_t k_urlcombobox_cursor_position(const void* self);
 
 /// Inherited from KComboBox
 ///
 /// [Upstream resources](https://api.kde.org/kcombobox.html#autoCompletion)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_auto_completion(void* self);
+bool k_urlcombobox_auto_completion(const void* self);
 
 /// Inherited from KComboBox
 ///
 /// [Upstream resources](https://api.kde.org/kcombobox.html#urlDropsEnabled)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_url_drops_enabled(void* self);
+bool k_urlcombobox_url_drops_enabled(const void* self);
 
 /// Inherited from KComboBox
 ///
 /// [Upstream resources](https://api.kde.org/kcombobox.html#contains)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param text const char*
 ///
-bool k_urlcombobox_contains(void* self, const char* text);
+bool k_urlcombobox_contains(const void* self, const char* text);
 
 /// Inherited from KComboBox
 ///
@@ -455,9 +455,9 @@ void k_urlcombobox_set_trap_return_key(void* self, bool trap);
 ///
 /// [Upstream resources](https://api.kde.org/kcombobox.html#trapReturnKey)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_trap_return_key(void* self);
+bool k_urlcombobox_trap_return_key(const void* self);
 
 /// Inherited from KComboBox
 ///
@@ -480,9 +480,9 @@ void k_urlcombobox_set_editable(void* self, bool editable);
 ///
 /// [Upstream resources](https://api.kde.org/kcombobox.html#contextMenu)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QMenu* k_urlcombobox_context_menu(void* self);
+QMenu* k_urlcombobox_context_menu(const void* self);
 
 /// Inherited from KComboBox
 ///
@@ -644,9 +644,9 @@ void k_urlcombobox_set_current_item3(void* self, const char* item, bool insert, 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#maxVisibleItems)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-int32_t k_urlcombobox_max_visible_items(void* self);
+int32_t k_urlcombobox_max_visible_items(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -661,9 +661,9 @@ void k_urlcombobox_set_max_visible_items(void* self, int maxItems);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#count)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-int32_t k_urlcombobox_count(void* self);
+int32_t k_urlcombobox_count(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -678,17 +678,17 @@ void k_urlcombobox_set_max_count(void* self, int max);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#maxCount)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-int32_t k_urlcombobox_max_count(void* self);
+int32_t k_urlcombobox_max_count(const void* self);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#duplicatesEnabled)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_duplicates_enabled(void* self);
+bool k_urlcombobox_duplicates_enabled(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -712,37 +712,37 @@ void k_urlcombobox_set_frame(void* self, bool frame);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#hasFrame)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_has_frame(void* self);
+bool k_urlcombobox_has_frame(const void* self);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#findText)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param text const char*
 ///
-int32_t k_urlcombobox_find_text(void* self, const char* text);
+int32_t k_urlcombobox_find_text(const void* self, const char* text);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#findData)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param data QVariant*
 ///
-int32_t k_urlcombobox_find_data(void* self, void* data);
+int32_t k_urlcombobox_find_data(const void* self, const void* data);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#insertPolicy)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
 /// @return enum QComboBox__InsertPolicy
 ///
-int32_t k_urlcombobox_insert_policy(void* self);
+int32_t k_urlcombobox_insert_policy(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -757,11 +757,11 @@ void k_urlcombobox_set_insert_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#sizeAdjustPolicy)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
 /// @return enum QComboBox__SizeAdjustPolicy
 ///
-int32_t k_urlcombobox_size_adjust_policy(void* self);
+int32_t k_urlcombobox_size_adjust_policy(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -776,9 +776,9 @@ void k_urlcombobox_set_size_adjust_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#minimumContentsLength)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-int32_t k_urlcombobox_minimum_contents_length(void* self);
+int32_t k_urlcombobox_minimum_contents_length(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -793,9 +793,9 @@ void k_urlcombobox_set_minimum_contents_length(void* self, int characters);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#iconSize)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QSize* k_urlcombobox_icon_size(void* self);
+QSize* k_urlcombobox_icon_size(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -804,7 +804,7 @@ QSize* k_urlcombobox_icon_size(void* self);
 /// @param self KUrlComboBox*
 /// @param size QSize*
 ///
-void k_urlcombobox_set_icon_size(void* self, void* size);
+void k_urlcombobox_set_icon_size(void* self, const void* size);
 
 /// Inherited from QComboBox
 ///
@@ -821,25 +821,25 @@ void k_urlcombobox_set_placeholder_text(void* self, const char* placeholderText)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-const char* k_urlcombobox_placeholder_text(void* self);
+const char* k_urlcombobox_placeholder_text(const void* self);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#isEditable)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_is_editable(void* self);
+bool k_urlcombobox_is_editable(const void* self);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#lineEdit)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QLineEdit* k_urlcombobox_line_edit(void* self);
+QLineEdit* k_urlcombobox_line_edit(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -848,15 +848,15 @@ QLineEdit* k_urlcombobox_line_edit(void* self);
 /// @param self KUrlComboBox*
 /// @param v QValidator*
 ///
-void k_urlcombobox_set_validator(void* self, void* v);
+void k_urlcombobox_set_validator(void* self, const void* v);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#validator)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-const QValidator* k_urlcombobox_validator(void* self);
+const QValidator* k_urlcombobox_validator(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -871,17 +871,17 @@ void k_urlcombobox_set_completer(void* self, void* c);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#completer)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QCompleter* k_urlcombobox_completer(void* self);
+QCompleter* k_urlcombobox_completer(const void* self);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#itemDelegate)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QAbstractItemDelegate* k_urlcombobox_item_delegate(void* self);
+QAbstractItemDelegate* k_urlcombobox_item_delegate(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -896,17 +896,17 @@ void k_urlcombobox_set_item_delegate(void* self, void* delegate);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#model)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QAbstractItemModel* k_urlcombobox_model(void* self);
+QAbstractItemModel* k_urlcombobox_model(const void* self);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#rootModelIndex)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QModelIndex* k_urlcombobox_root_model_index(void* self);
+QModelIndex* k_urlcombobox_root_model_index(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -915,15 +915,15 @@ QModelIndex* k_urlcombobox_root_model_index(void* self);
 /// @param self KUrlComboBox*
 /// @param index QModelIndex*
 ///
-void k_urlcombobox_set_root_model_index(void* self, void* index);
+void k_urlcombobox_set_root_model_index(void* self, const void* index);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#modelColumn)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-int32_t k_urlcombobox_model_column(void* self);
+int32_t k_urlcombobox_model_column(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -938,9 +938,9 @@ void k_urlcombobox_set_model_column(void* self, int visibleColumn);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#currentIndex)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-int32_t k_urlcombobox_current_index(void* self);
+int32_t k_urlcombobox_current_index(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -948,17 +948,17 @@ int32_t k_urlcombobox_current_index(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-const char* k_urlcombobox_current_text(void* self);
+const char* k_urlcombobox_current_text(const void* self);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#currentData)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QVariant* k_urlcombobox_current_data(void* self);
+QVariant* k_urlcombobox_current_data(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -966,28 +966,28 @@ QVariant* k_urlcombobox_current_data(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param index int
 ///
-const char* k_urlcombobox_item_text(void* self, int index);
+const char* k_urlcombobox_item_text(const void* self, int index);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#itemIcon)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param index int
 ///
-QIcon* k_urlcombobox_item_icon(void* self, int index);
+QIcon* k_urlcombobox_item_icon(const void* self, int index);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#itemData)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param index int
 ///
-QVariant* k_urlcombobox_item_data(void* self, int index);
+QVariant* k_urlcombobox_item_data(const void* self, int index);
 
 /// Inherited from QComboBox
 ///
@@ -1006,7 +1006,7 @@ void k_urlcombobox_add_item(void* self, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-void k_urlcombobox_add_item2(void* self, void* icon, const char* text);
+void k_urlcombobox_add_item2(void* self, const void* icon, const char* text);
 
 /// Inherited from QComboBox
 ///
@@ -1036,7 +1036,7 @@ void k_urlcombobox_insert_item(void* self, int index, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-void k_urlcombobox_insert_item2(void* self, int index, void* icon, const char* text);
+void k_urlcombobox_insert_item2(void* self, int index, const void* icon, const char* text);
 
 /// Inherited from QComboBox
 ///
@@ -1084,7 +1084,7 @@ void k_urlcombobox_set_item_text(void* self, int index, const char* text);
 /// @param index int
 /// @param icon QIcon*
 ///
-void k_urlcombobox_set_item_icon(void* self, int index, void* icon);
+void k_urlcombobox_set_item_icon(void* self, int index, const void* icon);
 
 /// Inherited from QComboBox
 ///
@@ -1094,15 +1094,15 @@ void k_urlcombobox_set_item_icon(void* self, int index, void* icon);
 /// @param index int
 /// @param value QVariant*
 ///
-void k_urlcombobox_set_item_data(void* self, int index, void* value);
+void k_urlcombobox_set_item_data(void* self, int index, const void* value);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#view)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QAbstractItemView* k_urlcombobox_view(void* self);
+QAbstractItemView* k_urlcombobox_view(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -1117,11 +1117,11 @@ void k_urlcombobox_set_view(void* self, void* itemView);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#inputMethodQuery)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param query enum Qt__InputMethodQuery
 /// @param argument QVariant*
 ///
-QVariant* k_urlcombobox_input_method_query2(void* self, int32_t query, void* argument);
+QVariant* k_urlcombobox_input_method_query2(const void* self, int32_t query, const void* argument);
 
 /// Inherited from QComboBox
 ///
@@ -1296,51 +1296,51 @@ void k_urlcombobox_on_current_text_changed(void* self, void (*callback)(void*, c
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#findText)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param text const char*
 /// @param flags flag of enum Qt__MatchFlag
 ///
-int32_t k_urlcombobox_find_text2(void* self, const char* text, int32_t flags);
+int32_t k_urlcombobox_find_text2(const void* self, const char* text, int32_t flags);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#findData)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param data QVariant*
 /// @param role int
 ///
-int32_t k_urlcombobox_find_data2(void* self, void* data, int role);
+int32_t k_urlcombobox_find_data2(const void* self, const void* data, int role);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#findData)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param data QVariant*
 /// @param role int
 /// @param flags flag of enum Qt__MatchFlag
 ///
-int32_t k_urlcombobox_find_data3(void* self, void* data, int role, int32_t flags);
+int32_t k_urlcombobox_find_data3(const void* self, const void* data, int role, int32_t flags);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#currentData)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param role int
 ///
-QVariant* k_urlcombobox_current_data1(void* self, int role);
+QVariant* k_urlcombobox_current_data1(const void* self, int role);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#itemData)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param index int
 /// @param role int
 ///
-QVariant* k_urlcombobox_item_data2(void* self, int index, int role);
+QVariant* k_urlcombobox_item_data2(const void* self, int index, int role);
 
 /// Inherited from QComboBox
 ///
@@ -1350,7 +1350,7 @@ QVariant* k_urlcombobox_item_data2(void* self, int index, int role);
 /// @param text const char*
 /// @param userData QVariant*
 ///
-void k_urlcombobox_add_item22(void* self, const char* text, void* userData);
+void k_urlcombobox_add_item22(void* self, const char* text, const void* userData);
 
 /// Inherited from QComboBox
 ///
@@ -1361,7 +1361,7 @@ void k_urlcombobox_add_item22(void* self, const char* text, void* userData);
 /// @param text const char*
 /// @param userData QVariant*
 ///
-void k_urlcombobox_add_item3(void* self, void* icon, const char* text, void* userData);
+void k_urlcombobox_add_item3(void* self, const void* icon, const char* text, const void* userData);
 
 /// Inherited from QComboBox
 ///
@@ -1372,7 +1372,7 @@ void k_urlcombobox_add_item3(void* self, void* icon, const char* text, void* use
 /// @param text const char*
 /// @param userData QVariant*
 ///
-void k_urlcombobox_insert_item3(void* self, int index, const char* text, void* userData);
+void k_urlcombobox_insert_item3(void* self, int index, const char* text, const void* userData);
 
 /// Inherited from QComboBox
 ///
@@ -1384,7 +1384,7 @@ void k_urlcombobox_insert_item3(void* self, int index, const char* text, void* u
 /// @param text const char*
 /// @param userData QVariant*
 ///
-void k_urlcombobox_insert_item4(void* self, int index, void* icon, const char* text, void* userData);
+void k_urlcombobox_insert_item4(void* self, int index, const void* icon, const char* text, const void* userData);
 
 /// Inherited from QComboBox
 ///
@@ -1395,7 +1395,7 @@ void k_urlcombobox_insert_item4(void* self, int index, void* icon, const char* t
 /// @param value QVariant*
 /// @param role int
 ///
-void k_urlcombobox_set_item_data3(void* self, int index, void* value, int role);
+void k_urlcombobox_set_item_data3(void* self, int index, const void* value, int role);
 
 /// Inherited from QWidget
 ///
@@ -1417,9 +1417,9 @@ KUrlComboBox* k_urlcombobox_from_q_paint_device(void* _qpaintdevice);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-uintptr_t k_urlcombobox_win_id(void* self);
+uintptr_t k_urlcombobox_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1433,25 +1433,25 @@ void k_urlcombobox_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-uintptr_t k_urlcombobox_internal_win_id(void* self);
+uintptr_t k_urlcombobox_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-uintptr_t k_urlcombobox_effective_win_id(void* self);
+uintptr_t k_urlcombobox_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QStyle* k_urlcombobox_style(void* self);
+QStyle* k_urlcombobox_style(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1466,35 +1466,35 @@ void k_urlcombobox_set_style(void* self, void* style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_is_top_level(void* self);
+bool k_urlcombobox_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_is_window(void* self);
+bool k_urlcombobox_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_is_modal(void* self);
+bool k_urlcombobox_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t k_urlcombobox_window_modality(void* self);
+int32_t k_urlcombobox_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1509,18 +1509,18 @@ void k_urlcombobox_set_window_modality(void* self, int32_t windowModality);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_is_enabled(void* self);
+bool k_urlcombobox_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param param1 QWidget*
 ///
-bool k_urlcombobox_is_enabled_to(void* self, void* param1);
+bool k_urlcombobox_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1553,153 +1553,153 @@ void k_urlcombobox_set_window_modified(void* self, bool windowModified);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QRect* k_urlcombobox_frame_geometry(void* self);
+QRect* k_urlcombobox_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-const QRect* k_urlcombobox_geometry(void* self);
+const QRect* k_urlcombobox_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QRect* k_urlcombobox_normal_geometry(void* self);
+QRect* k_urlcombobox_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-int32_t k_urlcombobox_x(void* self);
+int32_t k_urlcombobox_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-int32_t k_urlcombobox_y(void* self);
+int32_t k_urlcombobox_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QPoint* k_urlcombobox_pos(void* self);
+QPoint* k_urlcombobox_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QSize* k_urlcombobox_frame_size(void* self);
+QSize* k_urlcombobox_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QSize* k_urlcombobox_size(void* self);
+QSize* k_urlcombobox_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-int32_t k_urlcombobox_width(void* self);
+int32_t k_urlcombobox_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-int32_t k_urlcombobox_height(void* self);
+int32_t k_urlcombobox_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QRect* k_urlcombobox_rect(void* self);
+QRect* k_urlcombobox_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QRect* k_urlcombobox_children_rect(void* self);
+QRect* k_urlcombobox_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QRegion* k_urlcombobox_children_region(void* self);
+QRegion* k_urlcombobox_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QSize* k_urlcombobox_minimum_size(void* self);
+QSize* k_urlcombobox_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QSize* k_urlcombobox_maximum_size(void* self);
+QSize* k_urlcombobox_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-int32_t k_urlcombobox_minimum_width(void* self);
+int32_t k_urlcombobox_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-int32_t k_urlcombobox_minimum_height(void* self);
+int32_t k_urlcombobox_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-int32_t k_urlcombobox_maximum_width(void* self);
+int32_t k_urlcombobox_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-int32_t k_urlcombobox_maximum_height(void* self);
+int32_t k_urlcombobox_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1708,7 +1708,7 @@ int32_t k_urlcombobox_maximum_height(void* self);
 /// @param self KUrlComboBox*
 /// @param minimumSize QSize*
 ///
-void k_urlcombobox_set_minimum_size(void* self, void* minimumSize);
+void k_urlcombobox_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -1727,7 +1727,7 @@ void k_urlcombobox_set_minimum_size2(void* self, int minw, int minh);
 /// @param self KUrlComboBox*
 /// @param maximumSize QSize*
 ///
-void k_urlcombobox_set_maximum_size(void* self, void* maximumSize);
+void k_urlcombobox_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -1779,9 +1779,9 @@ void k_urlcombobox_set_maximum_height(void* self, int maxh);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QSize* k_urlcombobox_size_increment(void* self);
+QSize* k_urlcombobox_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1790,7 +1790,7 @@ QSize* k_urlcombobox_size_increment(void* self);
 /// @param self KUrlComboBox*
 /// @param sizeIncrement QSize*
 ///
-void k_urlcombobox_set_size_increment(void* self, void* sizeIncrement);
+void k_urlcombobox_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -1806,9 +1806,9 @@ void k_urlcombobox_set_size_increment2(void* self, int w, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QSize* k_urlcombobox_base_size(void* self);
+QSize* k_urlcombobox_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1817,7 +1817,7 @@ QSize* k_urlcombobox_base_size(void* self);
 /// @param self KUrlComboBox*
 /// @param baseSize QSize*
 ///
-void k_urlcombobox_set_base_size(void* self, void* baseSize);
+void k_urlcombobox_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -1836,7 +1836,7 @@ void k_urlcombobox_set_base_size2(void* self, int basew, int baseh);
 /// @param self KUrlComboBox*
 /// @param fixedSize QSize*
 ///
-void k_urlcombobox_set_fixed_size(void* self, void* fixedSize);
+void k_urlcombobox_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -1870,145 +1870,145 @@ void k_urlcombobox_set_fixed_height(void* self, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param param1 QPointF*
 ///
-QPointF* k_urlcombobox_map_to_global(void* self, void* param1);
+QPointF* k_urlcombobox_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param param1 QPoint*
 ///
-QPoint* k_urlcombobox_map_to_global2(void* self, void* param1);
+QPoint* k_urlcombobox_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param param1 QPointF*
 ///
-QPointF* k_urlcombobox_map_from_global(void* self, void* param1);
+QPointF* k_urlcombobox_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param param1 QPoint*
 ///
-QPoint* k_urlcombobox_map_from_global2(void* self, void* param1);
+QPoint* k_urlcombobox_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param param1 QPointF*
 ///
-QPointF* k_urlcombobox_map_to_parent(void* self, void* param1);
+QPointF* k_urlcombobox_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param param1 QPoint*
 ///
-QPoint* k_urlcombobox_map_to_parent2(void* self, void* param1);
+QPoint* k_urlcombobox_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param param1 QPointF*
 ///
-QPointF* k_urlcombobox_map_from_parent(void* self, void* param1);
+QPointF* k_urlcombobox_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param param1 QPoint*
 ///
-QPoint* k_urlcombobox_map_from_parent2(void* self, void* param1);
+QPoint* k_urlcombobox_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_urlcombobox_map_to(void* self, void* param1, void* param2);
+QPointF* k_urlcombobox_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_urlcombobox_map_to2(void* self, void* param1, void* param2);
+QPoint* k_urlcombobox_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_urlcombobox_map_from(void* self, void* param1, void* param2);
+QPointF* k_urlcombobox_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_urlcombobox_map_from2(void* self, void* param1, void* param2);
+QPoint* k_urlcombobox_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QWidget* k_urlcombobox_window(void* self);
+QWidget* k_urlcombobox_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QWidget* k_urlcombobox_native_parent_widget(void* self);
+QWidget* k_urlcombobox_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QWidget* k_urlcombobox_top_level_widget(void* self);
+QWidget* k_urlcombobox_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-const QPalette* k_urlcombobox_palette(void* self);
+const QPalette* k_urlcombobox_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2017,7 +2017,7 @@ const QPalette* k_urlcombobox_palette(void* self);
 /// @param self KUrlComboBox*
 /// @param palette QPalette*
 ///
-void k_urlcombobox_set_palette(void* self, void* palette);
+void k_urlcombobox_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -2032,11 +2032,11 @@ void k_urlcombobox_set_background_role(void* self, int32_t backgroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_urlcombobox_background_role(void* self);
+int32_t k_urlcombobox_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2051,19 +2051,19 @@ void k_urlcombobox_set_foreground_role(void* self, int32_t foregroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_urlcombobox_foreground_role(void* self);
+int32_t k_urlcombobox_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-const QFont* k_urlcombobox_font(void* self);
+const QFont* k_urlcombobox_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2072,31 +2072,31 @@ const QFont* k_urlcombobox_font(void* self);
 /// @param self KUrlComboBox*
 /// @param font QFont*
 ///
-void k_urlcombobox_set_font(void* self, void* font);
+void k_urlcombobox_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QFontMetrics* k_urlcombobox_font_metrics(void* self);
+QFontMetrics* k_urlcombobox_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QFontInfo* k_urlcombobox_font_info(void* self);
+QFontInfo* k_urlcombobox_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QCursor* k_urlcombobox_cursor(void* self);
+QCursor* k_urlcombobox_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2105,7 +2105,7 @@ QCursor* k_urlcombobox_cursor(void* self);
 /// @param self KUrlComboBox*
 /// @param cursor QCursor*
 ///
-void k_urlcombobox_set_cursor(void* self, void* cursor);
+void k_urlcombobox_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -2128,17 +2128,17 @@ void k_urlcombobox_set_mouse_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_has_mouse_tracking(void* self);
+bool k_urlcombobox_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_under_mouse(void* self);
+bool k_urlcombobox_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2153,9 +2153,9 @@ void k_urlcombobox_set_tablet_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_has_tablet_tracking(void* self);
+bool k_urlcombobox_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2164,7 +2164,7 @@ bool k_urlcombobox_has_tablet_tracking(void* self);
 /// @param self KUrlComboBox*
 /// @param mask QBitmap*
 ///
-void k_urlcombobox_set_mask(void* self, void* mask);
+void k_urlcombobox_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -2173,15 +2173,15 @@ void k_urlcombobox_set_mask(void* self, void* mask);
 /// @param self KUrlComboBox*
 /// @param mask QRegion*
 ///
-void k_urlcombobox_set_mask2(void* self, void* mask);
+void k_urlcombobox_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QRegion* k_urlcombobox_mask(void* self);
+QRegion* k_urlcombobox_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2221,9 +2221,9 @@ QPixmap* k_urlcombobox_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QGraphicsEffect* k_urlcombobox_graphics_effect(void* self);
+QGraphicsEffect* k_urlcombobox_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2276,9 +2276,9 @@ void k_urlcombobox_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-const char* k_urlcombobox_style_sheet(void* self);
+const char* k_urlcombobox_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2286,9 +2286,9 @@ const char* k_urlcombobox_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-const char* k_urlcombobox_window_title(void* self);
+const char* k_urlcombobox_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2297,15 +2297,15 @@ const char* k_urlcombobox_window_title(void* self);
 /// @param self KUrlComboBox*
 /// @param icon QIcon*
 ///
-void k_urlcombobox_set_window_icon(void* self, void* icon);
+void k_urlcombobox_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QIcon* k_urlcombobox_window_icon(void* self);
+QIcon* k_urlcombobox_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2322,9 +2322,9 @@ void k_urlcombobox_set_window_icon_text(void* self, const char* windowIconText);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-const char* k_urlcombobox_window_icon_text(void* self);
+const char* k_urlcombobox_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2341,9 +2341,9 @@ void k_urlcombobox_set_window_role(void* self, const char* windowRole);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-const char* k_urlcombobox_window_role(void* self);
+const char* k_urlcombobox_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2360,9 +2360,9 @@ void k_urlcombobox_set_window_file_path(void* self, const char* filePath);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-const char* k_urlcombobox_window_file_path(void* self);
+const char* k_urlcombobox_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2377,17 +2377,17 @@ void k_urlcombobox_set_window_opacity(void* self, double level);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-double k_urlcombobox_window_opacity(void* self);
+double k_urlcombobox_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_is_window_modified(void* self);
+bool k_urlcombobox_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2404,9 +2404,9 @@ void k_urlcombobox_set_tool_tip(void* self, const char* toolTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-const char* k_urlcombobox_tool_tip(void* self);
+const char* k_urlcombobox_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2421,9 +2421,9 @@ void k_urlcombobox_set_tool_tip_duration(void* self, int msec);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-int32_t k_urlcombobox_tool_tip_duration(void* self);
+int32_t k_urlcombobox_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2440,9 +2440,9 @@ void k_urlcombobox_set_status_tip(void* self, const char* statusTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-const char* k_urlcombobox_status_tip(void* self);
+const char* k_urlcombobox_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2459,9 +2459,9 @@ void k_urlcombobox_set_whats_this(void* self, const char* whatsThis);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-const char* k_urlcombobox_whats_this(void* self);
+const char* k_urlcombobox_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2469,9 +2469,9 @@ const char* k_urlcombobox_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-const char* k_urlcombobox_accessible_name(void* self);
+const char* k_urlcombobox_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2488,9 +2488,9 @@ void k_urlcombobox_set_accessible_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-const char* k_urlcombobox_accessible_description(void* self);
+const char* k_urlcombobox_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2514,11 +2514,11 @@ void k_urlcombobox_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t k_urlcombobox_layout_direction(void* self);
+int32_t k_urlcombobox_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2535,15 +2535,15 @@ void k_urlcombobox_unset_layout_direction(void* self);
 /// @param self KUrlComboBox*
 /// @param locale QLocale*
 ///
-void k_urlcombobox_set_locale(void* self, void* locale);
+void k_urlcombobox_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QLocale* k_urlcombobox_locale(void* self);
+QLocale* k_urlcombobox_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2557,17 +2557,17 @@ void k_urlcombobox_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_is_right_to_left(void* self);
+bool k_urlcombobox_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_is_left_to_right(void* self);
+bool k_urlcombobox_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2581,9 +2581,9 @@ void k_urlcombobox_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_is_active_window(void* self);
+bool k_urlcombobox_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2614,11 +2614,11 @@ void k_urlcombobox_set_focus2(void* self, int32_t reason);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t k_urlcombobox_focus_policy(void* self);
+int32_t k_urlcombobox_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2633,9 +2633,9 @@ void k_urlcombobox_set_focus_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_has_focus(void* self);
+bool k_urlcombobox_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2659,19 +2659,19 @@ void k_urlcombobox_set_focus_proxy(void* self, void* focusProxy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QWidget* k_urlcombobox_focus_proxy(void* self);
+QWidget* k_urlcombobox_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t k_urlcombobox_context_menu_policy(void* self);
+int32_t k_urlcombobox_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2697,7 +2697,7 @@ void k_urlcombobox_grab_mouse(void* self);
 /// @param self KUrlComboBox*
 /// @param param1 QCursor*
 ///
-void k_urlcombobox_grab_mouse2(void* self, void* param1);
+void k_urlcombobox_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2730,7 +2730,7 @@ void k_urlcombobox_release_keyboard(void* self);
 /// @param self KUrlComboBox*
 /// @param key QKeySequence*
 ///
-int32_t k_urlcombobox_grab_shortcut(void* self, void* key);
+int32_t k_urlcombobox_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -2775,9 +2775,9 @@ QWidget* k_urlcombobox_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_updates_enabled(void* self);
+bool k_urlcombobox_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2792,9 +2792,9 @@ void k_urlcombobox_set_updates_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QGraphicsProxyWidget* k_urlcombobox_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* k_urlcombobox_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2831,7 +2831,7 @@ void k_urlcombobox_update2(void* self, int x, int y, int w, int h);
 /// @param self KUrlComboBox*
 /// @param param1 QRect*
 ///
-void k_urlcombobox_update3(void* self, void* param1);
+void k_urlcombobox_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2840,7 +2840,7 @@ void k_urlcombobox_update3(void* self, void* param1);
 /// @param self KUrlComboBox*
 /// @param param1 QRegion*
 ///
-void k_urlcombobox_update4(void* self, void* param1);
+void k_urlcombobox_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2861,7 +2861,7 @@ void k_urlcombobox_repaint2(void* self, int x, int y, int w, int h);
 /// @param self KUrlComboBox*
 /// @param param1 QRect*
 ///
-void k_urlcombobox_repaint3(void* self, void* param1);
+void k_urlcombobox_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2870,7 +2870,7 @@ void k_urlcombobox_repaint3(void* self, void* param1);
 /// @param self KUrlComboBox*
 /// @param param1 QRegion*
 ///
-void k_urlcombobox_repaint4(void* self, void* param1);
+void k_urlcombobox_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2979,7 +2979,7 @@ void k_urlcombobox_move(void* self, int x, int y);
 /// @param self KUrlComboBox*
 /// @param param1 QPoint*
 ///
-void k_urlcombobox_move2(void* self, void* param1);
+void k_urlcombobox_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2998,7 +2998,7 @@ void k_urlcombobox_resize(void* self, int w, int h);
 /// @param self KUrlComboBox*
 /// @param param1 QSize*
 ///
-void k_urlcombobox_resize2(void* self, void* param1);
+void k_urlcombobox_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3019,7 +3019,7 @@ void k_urlcombobox_set_geometry(void* self, int x, int y, int w, int h);
 /// @param self KUrlComboBox*
 /// @param geometry QRect*
 ///
-void k_urlcombobox_set_geometry2(void* self, void* geometry);
+void k_urlcombobox_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -3027,9 +3027,9 @@ void k_urlcombobox_set_geometry2(void* self, void* geometry);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-char* k_urlcombobox_save_geometry(void* self);
+char* k_urlcombobox_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3052,60 +3052,60 @@ void k_urlcombobox_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_is_visible(void* self);
+bool k_urlcombobox_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param param1 QWidget*
 ///
-bool k_urlcombobox_is_visible_to(void* self, void* param1);
+bool k_urlcombobox_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_is_hidden(void* self);
+bool k_urlcombobox_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_is_minimized(void* self);
+bool k_urlcombobox_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_is_maximized(void* self);
+bool k_urlcombobox_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_is_full_screen(void* self);
+bool k_urlcombobox_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t k_urlcombobox_window_state(void* self);
+int32_t k_urlcombobox_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3129,9 +3129,9 @@ void k_urlcombobox_override_window_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QSizePolicy* k_urlcombobox_size_policy(void* self);
+QSizePolicy* k_urlcombobox_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3156,9 +3156,9 @@ void k_urlcombobox_set_size_policy2(void* self, int32_t horizontal, int32_t vert
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QRegion* k_urlcombobox_visible_region(void* self);
+QRegion* k_urlcombobox_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3179,31 +3179,31 @@ void k_urlcombobox_set_contents_margins(void* self, int left, int top, int right
 /// @param self KUrlComboBox*
 /// @param margins QMargins*
 ///
-void k_urlcombobox_set_contents_margins2(void* self, void* margins);
+void k_urlcombobox_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QMargins* k_urlcombobox_contents_margins(void* self);
+QMargins* k_urlcombobox_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QRect* k_urlcombobox_contents_rect(void* self);
+QRect* k_urlcombobox_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QLayout* k_urlcombobox_layout(void* self);
+QLayout* k_urlcombobox_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3260,39 +3260,39 @@ void k_urlcombobox_scroll(void* self, int dx, int dy);
 /// @param dy int
 /// @param param3 QRect*
 ///
-void k_urlcombobox_scroll2(void* self, int dx, int dy, void* param3);
+void k_urlcombobox_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QWidget* k_urlcombobox_focus_widget(void* self);
+QWidget* k_urlcombobox_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QWidget* k_urlcombobox_next_in_focus_chain(void* self);
+QWidget* k_urlcombobox_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QWidget* k_urlcombobox_previous_in_focus_chain(void* self);
+QWidget* k_urlcombobox_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_accept_drops(void* self);
+bool k_urlcombobox_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3354,11 +3354,11 @@ void k_urlcombobox_remove_action(void* self, void* action);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list k_urlcombobox_actions(void* self);
+libqt_list k_urlcombobox_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3377,7 +3377,7 @@ QAction* k_urlcombobox_add_action2(void* self, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* k_urlcombobox_add_action3(void* self, void* icon, const char* text);
+QAction* k_urlcombobox_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -3387,7 +3387,7 @@ QAction* k_urlcombobox_add_action3(void* self, void* icon, const char* text);
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_urlcombobox_add_action4(void* self, const char* text, void* shortcut);
+QAction* k_urlcombobox_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -3398,15 +3398,15 @@ QAction* k_urlcombobox_add_action4(void* self, const char* text, void* shortcut)
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_urlcombobox_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* k_urlcombobox_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QWidget* k_urlcombobox_parent_widget(void* self);
+QWidget* k_urlcombobox_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3421,11 +3421,11 @@ void k_urlcombobox_set_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t k_urlcombobox_window_flags(void* self);
+int32_t k_urlcombobox_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3449,11 +3449,11 @@ void k_urlcombobox_override_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t k_urlcombobox_window_type(void* self);
+int32_t k_urlcombobox_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3467,29 +3467,29 @@ QWidget* k_urlcombobox_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param x int
 /// @param y int
 ///
-QWidget* k_urlcombobox_child_at(void* self, int x, int y);
+QWidget* k_urlcombobox_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param p QPoint*
 ///
-QWidget* k_urlcombobox_child_at2(void* self, void* p);
+QWidget* k_urlcombobox_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param p QPointF*
 ///
-QWidget* k_urlcombobox_child_at3(void* self, void* p);
+QWidget* k_urlcombobox_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -3504,35 +3504,35 @@ void k_urlcombobox_set_attribute(void* self, int32_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool k_urlcombobox_test_attribute(void* self, int32_t param1);
+bool k_urlcombobox_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-void k_urlcombobox_ensure_polished(void* self);
+void k_urlcombobox_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param child QWidget*
 ///
-bool k_urlcombobox_is_ancestor_of(void* self, void* child);
+bool k_urlcombobox_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_auto_fill_background(void* self);
+bool k_urlcombobox_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3547,25 +3547,25 @@ void k_urlcombobox_set_auto_fill_background(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QBackingStore* k_urlcombobox_backing_store(void* self);
+QBackingStore* k_urlcombobox_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QWindow* k_urlcombobox_window_handle(void* self);
+QWindow* k_urlcombobox_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QScreen* k_urlcombobox_screen(void* self);
+QScreen* k_urlcombobox_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3609,7 +3609,7 @@ void k_urlcombobox_on_window_title_changed(void* self, void (*callback)(void*, c
 /// @param self KUrlComboBox*
 /// @param icon QIcon*
 ///
-void k_urlcombobox_window_icon_changed(void* self, void* icon);
+void k_urlcombobox_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -3618,7 +3618,7 @@ void k_urlcombobox_window_icon_changed(void* self, void* icon);
 /// @param self KUrlComboBox*
 /// @param callback void func(KUrlComboBox* self, QIcon* icon)
 ///
-void k_urlcombobox_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void k_urlcombobox_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -3645,7 +3645,7 @@ void k_urlcombobox_on_window_icon_text_changed(void* self, void (*callback)(void
 /// @param self KUrlComboBox*
 /// @param pos QPoint*
 ///
-void k_urlcombobox_custom_context_menu_requested(void* self, void* pos);
+void k_urlcombobox_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -3654,17 +3654,17 @@ void k_urlcombobox_custom_context_menu_requested(void* self, void* pos);
 /// @param self KUrlComboBox*
 /// @param callback void func(KUrlComboBox* self, QPoint* pos)
 ///
-void k_urlcombobox_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void k_urlcombobox_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t k_urlcombobox_input_method_hints(void* self);
+int32_t k_urlcombobox_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3683,7 +3683,7 @@ void k_urlcombobox_set_input_method_hints(void* self, int32_t hints);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void k_urlcombobox_render22(void* self, void* target, void* targetOffset);
+void k_urlcombobox_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -3694,7 +3694,7 @@ void k_urlcombobox_render22(void* self, void* target, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_urlcombobox_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void k_urlcombobox_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -3706,7 +3706,7 @@ void k_urlcombobox_render3(void* self, void* target, void* targetOffset, void* s
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_urlcombobox_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_urlcombobox_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3716,7 +3716,7 @@ void k_urlcombobox_render4(void* self, void* target, void* targetOffset, void* s
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void k_urlcombobox_render23(void* self, void* painter, void* targetOffset);
+void k_urlcombobox_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -3727,7 +3727,7 @@ void k_urlcombobox_render23(void* self, void* painter, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_urlcombobox_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void k_urlcombobox_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -3739,7 +3739,7 @@ void k_urlcombobox_render32(void* self, void* painter, void* targetOffset, void*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_urlcombobox_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_urlcombobox_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3748,7 +3748,7 @@ void k_urlcombobox_render42(void* self, void* painter, void* targetOffset, void*
 /// @param self KUrlComboBox*
 /// @param rectangle QRect*
 ///
-QPixmap* k_urlcombobox_grab1(void* self, void* rectangle);
+QPixmap* k_urlcombobox_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -3768,7 +3768,7 @@ void k_urlcombobox_grab_gesture2(void* self, int32_t type, int32_t flags);
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t k_urlcombobox_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t k_urlcombobox_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -3835,9 +3835,9 @@ QWidget* k_urlcombobox_create_window_container3(void* window, void* parent, int3
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-const char* k_urlcombobox_object_name(void* self);
+const char* k_urlcombobox_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3852,33 +3852,33 @@ void k_urlcombobox_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_is_widget_type(void* self);
+bool k_urlcombobox_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_is_window_type(void* self);
+bool k_urlcombobox_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_is_quick_item_type(void* self);
+bool k_urlcombobox_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_signals_blocked(void* self);
+bool k_urlcombobox_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3893,9 +3893,9 @@ bool k_urlcombobox_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QThread* k_urlcombobox_thread(void* self);
+QThread* k_urlcombobox_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3946,11 +3946,11 @@ void k_urlcombobox_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_urlcombobox_children(void* self);
+libqt_list k_urlcombobox_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3979,7 +3979,7 @@ void k_urlcombobox_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_urlcombobox_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_urlcombobox_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3990,18 +3990,18 @@ QMetaObject__Connection* k_urlcombobox_connect(void* sender, const char* signal,
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_urlcombobox_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_urlcombobox_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_urlcombobox_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_urlcombobox_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4012,7 +4012,7 @@ QMetaObject__Connection* k_urlcombobox_connect3(void* self, void* sender, const 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_urlcombobox_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_urlcombobox_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4023,24 +4023,24 @@ bool k_urlcombobox_disconnect(void* sender, const char* signal, void* receiver, 
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_urlcombobox_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_urlcombobox_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_disconnect3(void* self);
+bool k_urlcombobox_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param receiver QObject*
 ///
-bool k_urlcombobox_disconnect4(void* self, void* receiver);
+bool k_urlcombobox_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -4048,23 +4048,23 @@ bool k_urlcombobox_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_urlcombobox_disconnect5(void* param1);
+bool k_urlcombobox_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-void k_urlcombobox_dump_object_tree(void* self);
+void k_urlcombobox_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-void k_urlcombobox_dump_object_info(void* self);
+void k_urlcombobox_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4074,16 +4074,16 @@ void k_urlcombobox_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_urlcombobox_set_property(void* self, const char* name, void* value);
+bool k_urlcombobox_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param name const char*
 ///
-QVariant* k_urlcombobox_property(void* self, const char* name);
+QVariant* k_urlcombobox_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -4091,9 +4091,9 @@ QVariant* k_urlcombobox_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-const char** k_urlcombobox_dynamic_property_names(void* self);
+const char** k_urlcombobox_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4107,9 +4107,9 @@ QBindingStorage* k_urlcombobox_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-const QBindingStorage* k_urlcombobox_binding_storage2(void* self);
+const QBindingStorage* k_urlcombobox_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4132,18 +4132,18 @@ void k_urlcombobox_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QObject* k_urlcombobox_parent(void* self);
+QObject* k_urlcombobox_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param classname const char*
 ///
-bool k_urlcombobox_inherits(void* self, const char* classname);
+bool k_urlcombobox_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -4183,7 +4183,7 @@ int32_t k_urlcombobox_start_timer23(void* self, int64_t time, int32_t timerType)
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_urlcombobox_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_urlcombobox_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -4195,59 +4195,59 @@ QMetaObject__Connection* k_urlcombobox_connect5(void* sender, const char* signal
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_urlcombobox_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_urlcombobox_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_urlcombobox_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_urlcombobox_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param signal const char*
 ///
-bool k_urlcombobox_disconnect1(void* self, const char* signal);
+bool k_urlcombobox_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KUrlComboBox*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_urlcombobox_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_urlcombobox_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_urlcombobox_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_urlcombobox_disconnect23(void* self, void* receiver, const char* member);
+bool k_urlcombobox_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KUrlComboBox*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_urlcombobox_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4271,89 +4271,89 @@ void k_urlcombobox_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_painting_active(void* self);
+bool k_urlcombobox_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-int32_t k_urlcombobox_width_m_m(void* self);
+int32_t k_urlcombobox_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-int32_t k_urlcombobox_height_m_m(void* self);
+int32_t k_urlcombobox_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-int32_t k_urlcombobox_logical_dpi_x(void* self);
+int32_t k_urlcombobox_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-int32_t k_urlcombobox_logical_dpi_y(void* self);
+int32_t k_urlcombobox_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-int32_t k_urlcombobox_physical_dpi_x(void* self);
+int32_t k_urlcombobox_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-int32_t k_urlcombobox_physical_dpi_y(void* self);
+int32_t k_urlcombobox_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-double k_urlcombobox_device_pixel_ratio(void* self);
+double k_urlcombobox_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-double k_urlcombobox_device_pixel_ratio_f(void* self);
+double k_urlcombobox_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-int32_t k_urlcombobox_color_count(void* self);
+int32_t k_urlcombobox_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-int32_t k_urlcombobox_depth(void* self);
+int32_t k_urlcombobox_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -4382,9 +4382,9 @@ KCompletion* k_urlcombobox_completion_object(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#isCompletionObjectAutoDeleted)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_is_completion_object_auto_deleted(void* self);
+bool k_urlcombobox_is_completion_object_auto_deleted(const void* self);
 
 /// Inherited from KCompletionBase
 ///
@@ -4408,17 +4408,17 @@ void k_urlcombobox_set_enable_signals(void* self, bool enable);
 ///
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#handleSignals)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_handle_signals(void* self);
+bool k_urlcombobox_handle_signals(const void* self);
 
 /// Inherited from KCompletionBase
 ///
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#emitSignals)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_emit_signals(void* self);
+bool k_urlcombobox_emit_signals(const void* self);
 
 /// Inherited from KCompletionBase
 ///
@@ -4433,11 +4433,11 @@ void k_urlcombobox_set_emit_signals(void* self, bool emitRotationSignals);
 ///
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#completionMode)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
 /// @return enum KCompletion__CompletionMode
 ///
-int32_t k_urlcombobox_completion_mode(void* self);
+int32_t k_urlcombobox_completion_mode(const void* self);
 
 /// Inherited from KCompletionBase
 ///
@@ -4453,12 +4453,12 @@ bool k_urlcombobox_set_key_binding(void* self, int32_t item, libqt_list key);
 ///
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#keyBinding)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param item enum KCompletionBase__KeyBindingType
 ///
 /// @return libqt_list of QKeySequence*
 ///
-libqt_list k_urlcombobox_key_binding(void* self, int32_t item);
+libqt_list k_urlcombobox_key_binding(const void* self, int32_t item);
 
 /// Inherited from KCompletionBase
 ///
@@ -4472,9 +4472,9 @@ void k_urlcombobox_use_global_key_bindings(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#compObj)
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-KCompletion* k_urlcombobox_comp_obj(void* self);
+KCompletion* k_urlcombobox_comp_obj(const void* self);
 
 /// Inherited from KCompletionBase
 ///
@@ -4557,9 +4557,9 @@ void k_urlcombobox_on_set_line_edit(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QSize* k_urlcombobox_minimum_size_hint(void* self);
+QSize* k_urlcombobox_minimum_size_hint(const void* self);
 
 /// Inherited from KComboBox
 ///
@@ -4567,9 +4567,9 @@ QSize* k_urlcombobox_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QSize* k_urlcombobox_super_minimum_size_hint(void* self);
+QSize* k_urlcombobox_super_minimum_size_hint(const void* self);
 
 /// Inherited from KComboBox
 ///
@@ -4577,12 +4577,12 @@ QSize* k_urlcombobox_super_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
-/// @param callback QSize* func()
+/// @param self const KUrlComboBox*
+/// @param callback QSize* func(KUrlComboBox* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_urlcombobox_on_minimum_size_hint(void* self, QSize* (*callback)());
+void k_urlcombobox_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from KComboBox
 ///
@@ -4724,9 +4724,9 @@ void k_urlcombobox_on_set_model(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QSize* k_urlcombobox_size_hint(void* self);
+QSize* k_urlcombobox_size_hint(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -4734,9 +4734,9 @@ QSize* k_urlcombobox_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QSize* k_urlcombobox_super_size_hint(void* self);
+QSize* k_urlcombobox_super_size_hint(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -4744,12 +4744,12 @@ QSize* k_urlcombobox_super_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
-/// @param callback QSize* func()
+/// @param self const KUrlComboBox*
+/// @param callback QSize* func(KUrlComboBox* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_urlcombobox_on_size_hint(void* self, QSize* (*callback)());
+void k_urlcombobox_on_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QComboBox
 ///
@@ -4778,9 +4778,9 @@ void k_urlcombobox_super_show_popup(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlComboBox*
-/// @param callback void func()
+/// @param callback void func(KUrlComboBox* self)
 ///
-void k_urlcombobox_on_show_popup(void* self, void (*callback)());
+void k_urlcombobox_on_show_popup(void* self, void (*callback)(void*));
 
 /// Inherited from QComboBox
 ///
@@ -4809,9 +4809,9 @@ void k_urlcombobox_super_hide_popup(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlComboBox*
-/// @param callback void func()
+/// @param callback void func(KUrlComboBox* self)
 ///
-void k_urlcombobox_on_hide_popup(void* self, void (*callback)());
+void k_urlcombobox_on_hide_popup(void* self, void (*callback)(void*));
 
 /// Inherited from QComboBox
 ///
@@ -4852,10 +4852,10 @@ void k_urlcombobox_on_event(void* self, bool (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_urlcombobox_input_method_query(void* self, int32_t param1);
+QVariant* k_urlcombobox_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QComboBox
 ///
@@ -4863,10 +4863,10 @@ QVariant* k_urlcombobox_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_urlcombobox_super_input_method_query(void* self, int32_t param1);
+QVariant* k_urlcombobox_super_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QComboBox
 ///
@@ -4874,12 +4874,12 @@ QVariant* k_urlcombobox_super_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param callback QVariant* func(KUrlComboBox* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_urlcombobox_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void k_urlcombobox_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QComboBox
 ///
@@ -5316,10 +5316,10 @@ void k_urlcombobox_on_input_method_event(void* self, void (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param option QStyleOptionComboBox*
 ///
-void k_urlcombobox_init_style_option(void* self, void* option);
+void k_urlcombobox_init_style_option(const void* self, void* option);
 
 /// Inherited from QComboBox
 ///
@@ -5327,10 +5327,10 @@ void k_urlcombobox_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param option QStyleOptionComboBox*
 ///
-void k_urlcombobox_super_init_style_option(void* self, void* option);
+void k_urlcombobox_super_init_style_option(const void* self, void* option);
 
 /// Inherited from QComboBox
 ///
@@ -5338,10 +5338,10 @@ void k_urlcombobox_super_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param callback void func(KUrlComboBox* self, QStyleOptionComboBox* option)
 ///
-void k_urlcombobox_on_init_style_option(void* self, void (*callback)(void*, void*));
+void k_urlcombobox_on_init_style_option(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5349,9 +5349,9 @@ void k_urlcombobox_on_init_style_option(void* self, void (*callback)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-int32_t k_urlcombobox_dev_type(void* self);
+int32_t k_urlcombobox_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5359,9 +5359,9 @@ int32_t k_urlcombobox_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-int32_t k_urlcombobox_super_dev_type(void* self);
+int32_t k_urlcombobox_super_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5369,10 +5369,10 @@ int32_t k_urlcombobox_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
-/// @param callback int32_t func()
+/// @param self const KUrlComboBox*
+/// @param callback int32_t func(KUrlComboBox* self)
 ///
-void k_urlcombobox_on_dev_type(void* self, int32_t (*callback)());
+void k_urlcombobox_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5413,10 +5413,10 @@ void k_urlcombobox_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param param1 int
 ///
-int32_t k_urlcombobox_height_for_width(void* self, int param1);
+int32_t k_urlcombobox_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -5424,10 +5424,10 @@ int32_t k_urlcombobox_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param param1 int
 ///
-int32_t k_urlcombobox_super_height_for_width(void* self, int param1);
+int32_t k_urlcombobox_super_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -5435,10 +5435,10 @@ int32_t k_urlcombobox_super_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param callback int32_t func(KUrlComboBox* self, int param1)
 ///
-void k_urlcombobox_on_height_for_width(void* self, int32_t (*callback)(void*, int));
+void k_urlcombobox_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -5446,9 +5446,9 @@ void k_urlcombobox_on_height_for_width(void* self, int32_t (*callback)(void*, in
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_has_height_for_width(void* self);
+bool k_urlcombobox_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5456,9 +5456,9 @@ bool k_urlcombobox_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-bool k_urlcombobox_super_has_height_for_width(void* self);
+bool k_urlcombobox_super_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5466,10 +5466,10 @@ bool k_urlcombobox_super_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
-/// @param callback bool func()
+/// @param self const KUrlComboBox*
+/// @param callback bool func(KUrlComboBox* self)
 ///
-void k_urlcombobox_on_has_height_for_width(void* self, bool (*callback)());
+void k_urlcombobox_on_has_height_for_width(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5477,9 +5477,9 @@ void k_urlcombobox_on_has_height_for_width(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QPaintEngine* k_urlcombobox_paint_engine(void* self);
+QPaintEngine* k_urlcombobox_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5487,9 +5487,9 @@ QPaintEngine* k_urlcombobox_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QPaintEngine* k_urlcombobox_super_paint_engine(void* self);
+QPaintEngine* k_urlcombobox_super_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5497,10 +5497,10 @@ QPaintEngine* k_urlcombobox_super_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
-/// @param callback QPaintEngine* func()
+/// @param self const KUrlComboBox*
+/// @param callback QPaintEngine* func(KUrlComboBox* self)
 ///
-void k_urlcombobox_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void k_urlcombobox_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5908,10 +5908,10 @@ void k_urlcombobox_on_native_event(void* self, bool (*callback)(void*, libqt_str
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_urlcombobox_metric(void* self, int32_t param1);
+int32_t k_urlcombobox_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5919,10 +5919,10 @@ int32_t k_urlcombobox_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_urlcombobox_super_metric(void* self, int32_t param1);
+int32_t k_urlcombobox_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5930,10 +5930,10 @@ int32_t k_urlcombobox_super_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param callback int32_t func(KUrlComboBox* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_urlcombobox_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void k_urlcombobox_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5941,10 +5941,10 @@ void k_urlcombobox_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param painter QPainter*
 ///
-void k_urlcombobox_init_painter(void* self, void* painter);
+void k_urlcombobox_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -5952,10 +5952,10 @@ void k_urlcombobox_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param painter QPainter*
 ///
-void k_urlcombobox_super_init_painter(void* self, void* painter);
+void k_urlcombobox_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -5963,10 +5963,10 @@ void k_urlcombobox_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param callback void func(KUrlComboBox* self, QPainter* painter)
 ///
-void k_urlcombobox_on_init_painter(void* self, void (*callback)(void*, void*));
+void k_urlcombobox_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5974,10 +5974,10 @@ void k_urlcombobox_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_urlcombobox_redirected(void* self, void* offset);
+QPaintDevice* k_urlcombobox_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -5985,10 +5985,10 @@ QPaintDevice* k_urlcombobox_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_urlcombobox_super_redirected(void* self, void* offset);
+QPaintDevice* k_urlcombobox_super_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -5996,10 +5996,10 @@ QPaintDevice* k_urlcombobox_super_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param callback QPaintDevice* func(KUrlComboBox* self, QPoint* offset)
 ///
-void k_urlcombobox_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void k_urlcombobox_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -6007,9 +6007,9 @@ void k_urlcombobox_on_redirected(void* self, QPaintDevice* (*callback)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QPainter* k_urlcombobox_shared_painter(void* self);
+QPainter* k_urlcombobox_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6017,9 +6017,9 @@ QPainter* k_urlcombobox_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QPainter* k_urlcombobox_super_shared_painter(void* self);
+QPainter* k_urlcombobox_super_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6027,10 +6027,10 @@ QPainter* k_urlcombobox_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
-/// @param callback QPainter* func()
+/// @param self const KUrlComboBox*
+/// @param callback QPainter* func(KUrlComboBox* self)
 ///
-void k_urlcombobox_on_shared_painter(void* self, QPainter* (*callback)());
+void k_urlcombobox_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -6208,7 +6208,7 @@ void k_urlcombobox_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self KUrlComboBox*
 /// @param signal QMetaMethod*
 ///
-void k_urlcombobox_connect_notify(void* self, void* signal);
+void k_urlcombobox_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6219,7 +6219,7 @@ void k_urlcombobox_connect_notify(void* self, void* signal);
 /// @param self KUrlComboBox*
 /// @param signal QMetaMethod*
 ///
-void k_urlcombobox_super_connect_notify(void* self, void* signal);
+void k_urlcombobox_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6230,7 +6230,7 @@ void k_urlcombobox_super_connect_notify(void* self, void* signal);
 /// @param self KUrlComboBox*
 /// @param callback void func(KUrlComboBox* self, QMetaMethod* signal)
 ///
-void k_urlcombobox_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_urlcombobox_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -6241,7 +6241,7 @@ void k_urlcombobox_on_connect_notify(void* self, void (*callback)(void*, void*))
 /// @param self KUrlComboBox*
 /// @param signal QMetaMethod*
 ///
-void k_urlcombobox_disconnect_notify(void* self, void* signal);
+void k_urlcombobox_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6252,7 +6252,7 @@ void k_urlcombobox_disconnect_notify(void* self, void* signal);
 /// @param self KUrlComboBox*
 /// @param signal QMetaMethod*
 ///
-void k_urlcombobox_super_disconnect_notify(void* self, void* signal);
+void k_urlcombobox_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6263,7 +6263,7 @@ void k_urlcombobox_super_disconnect_notify(void* self, void* signal);
 /// @param self KUrlComboBox*
 /// @param callback void func(KUrlComboBox* self, QMetaMethod* signal)
 ///
-void k_urlcombobox_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_urlcombobox_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from KCompletionBase
 ///
@@ -6393,9 +6393,9 @@ void k_urlcombobox_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlComboBox*
-/// @param callback void func()
+/// @param callback void func(KUrlComboBox* self)
 ///
-void k_urlcombobox_on_update_micro_focus(void* self, void (*callback)());
+void k_urlcombobox_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -6424,9 +6424,9 @@ void k_urlcombobox_super_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlComboBox*
-/// @param callback void func()
+/// @param callback void func(KUrlComboBox* self)
 ///
-void k_urlcombobox_on_create(void* self, void (*callback)());
+void k_urlcombobox_on_create(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -6455,9 +6455,9 @@ void k_urlcombobox_super_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlComboBox*
-/// @param callback void func()
+/// @param callback void func(KUrlComboBox* self)
 ///
-void k_urlcombobox_on_destroy(void* self, void (*callback)());
+void k_urlcombobox_on_destroy(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -6486,9 +6486,9 @@ bool k_urlcombobox_super_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlComboBox*
-/// @param callback bool func()
+/// @param callback bool func(KUrlComboBox* self)
 ///
-void k_urlcombobox_on_focus_next_child(void* self, bool (*callback)());
+void k_urlcombobox_on_focus_next_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -6517,9 +6517,9 @@ bool k_urlcombobox_super_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlComboBox*
-/// @param callback bool func()
+/// @param callback bool func(KUrlComboBox* self)
 ///
-void k_urlcombobox_on_focus_previous_child(void* self, bool (*callback)());
+void k_urlcombobox_on_focus_previous_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -6527,9 +6527,9 @@ void k_urlcombobox_on_focus_previous_child(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QObject* k_urlcombobox_sender(void* self);
+QObject* k_urlcombobox_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6537,9 +6537,9 @@ QObject* k_urlcombobox_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-QObject* k_urlcombobox_super_sender(void* self);
+QObject* k_urlcombobox_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6547,10 +6547,10 @@ QObject* k_urlcombobox_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
-/// @param callback QObject* func()
+/// @param self const KUrlComboBox*
+/// @param callback QObject* func(KUrlComboBox* self)
 ///
-void k_urlcombobox_on_sender(void* self, QObject* (*callback)());
+void k_urlcombobox_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6558,9 +6558,9 @@ void k_urlcombobox_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-int32_t k_urlcombobox_sender_signal_index(void* self);
+int32_t k_urlcombobox_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6568,9 +6568,9 @@ int32_t k_urlcombobox_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-int32_t k_urlcombobox_super_sender_signal_index(void* self);
+int32_t k_urlcombobox_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6578,10 +6578,10 @@ int32_t k_urlcombobox_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
-/// @param callback int32_t func()
+/// @param self const KUrlComboBox*
+/// @param callback int32_t func(KUrlComboBox* self)
 ///
-void k_urlcombobox_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_urlcombobox_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6589,10 +6589,10 @@ void k_urlcombobox_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param signal const char*
 ///
-int32_t k_urlcombobox_receivers(void* self, const char* signal);
+int32_t k_urlcombobox_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -6600,10 +6600,10 @@ int32_t k_urlcombobox_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param signal const char*
 ///
-int32_t k_urlcombobox_super_receivers(void* self, const char* signal);
+int32_t k_urlcombobox_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -6611,10 +6611,10 @@ int32_t k_urlcombobox_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param callback int32_t func(KUrlComboBox* self, const char* signal)
 ///
-void k_urlcombobox_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_urlcombobox_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -6622,10 +6622,10 @@ void k_urlcombobox_on_receivers(void* self, int32_t (*callback)(void*, const cha
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param signal QMetaMethod*
 ///
-bool k_urlcombobox_is_signal_connected(void* self, void* signal);
+bool k_urlcombobox_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6633,10 +6633,10 @@ bool k_urlcombobox_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param signal QMetaMethod*
 ///
-bool k_urlcombobox_super_is_signal_connected(void* self, void* signal);
+bool k_urlcombobox_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6644,10 +6644,10 @@ bool k_urlcombobox_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param callback bool func(KUrlComboBox* self, QMetaMethod* signal)
 ///
-void k_urlcombobox_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_urlcombobox_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -6655,11 +6655,11 @@ void k_urlcombobox_on_is_signal_connected(void* self, bool (*callback)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_urlcombobox_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_urlcombobox_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -6667,11 +6667,11 @@ double k_urlcombobox_get_decoded_metric_f(void* self, int32_t metricA, int32_t m
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_urlcombobox_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_urlcombobox_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -6679,10 +6679,10 @@ double k_urlcombobox_super_get_decoded_metric_f(void* self, int32_t metricA, int
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 /// @param callback double func(KUrlComboBox* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_urlcombobox_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void k_urlcombobox_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from KCompletionBase
 ///
@@ -6703,11 +6703,11 @@ void k_urlcombobox_on_get_decoded_metric_f(void* self, double (*callback)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
 /// @return libqt_map of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence*
 ///
-libqt_map k_urlcombobox_key_binding_map(void* self);
+libqt_map k_urlcombobox_key_binding_map(const void* self);
 
 /// Inherited from KCompletionBase
 ///
@@ -6728,11 +6728,11 @@ libqt_map k_urlcombobox_key_binding_map(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
 /// @return libqt_map of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence*
 ///
-libqt_map k_urlcombobox_super_key_binding_map(void* self);
+libqt_map k_urlcombobox_super_key_binding_map(const void* self);
 
 /// Inherited from KCompletionBase
 ///
@@ -6740,10 +6740,10 @@ libqt_map k_urlcombobox_super_key_binding_map(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
-/// @param callback libqt_map of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* func()
+/// @param self const KUrlComboBox*
+/// @param callback libqt_map of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* func(KUrlComboBox* self)
 ///
-void k_urlcombobox_on_key_binding_map(void* self, libqt_map (*callback)());
+void k_urlcombobox_on_key_binding_map(const void* self, libqt_map (*callback)(const void*));
 
 /// Inherited from KCompletionBase
 ///
@@ -6817,9 +6817,9 @@ void k_urlcombobox_on_set_delegate(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-KCompletionBase* k_urlcombobox_delegate(void* self);
+KCompletionBase* k_urlcombobox_delegate(const void* self);
 
 /// Inherited from KCompletionBase
 ///
@@ -6827,9 +6827,9 @@ KCompletionBase* k_urlcombobox_delegate(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
+/// @param self const KUrlComboBox*
 ///
-KCompletionBase* k_urlcombobox_super_delegate(void* self);
+KCompletionBase* k_urlcombobox_super_delegate(const void* self);
 
 /// Inherited from KCompletionBase
 ///
@@ -6837,10 +6837,10 @@ KCompletionBase* k_urlcombobox_super_delegate(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboBox*
-/// @param callback KCompletionBase* func()
+/// @param self const KUrlComboBox*
+/// @param callback KCompletionBase* func(KUrlComboBox* self)
 ///
-void k_urlcombobox_on_delegate(void* self, KCompletionBase* (*callback)());
+void k_urlcombobox_on_delegate(const void* self, KCompletionBase* (*callback)(const void*));
 
 /// Inherited from QObject
 ///

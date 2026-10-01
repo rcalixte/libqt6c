@@ -20,20 +20,20 @@ Attica__HomePageType* k_attica__homepagetype_new();
 ///
 /// @param other Attica__HomePageType*
 ///
-Attica__HomePageType* k_attica__homepagetype_new2(void* other);
+Attica__HomePageType* k_attica__homepagetype_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-homepagetype.html#operator-eq)
 ///
 /// @param self Attica__HomePageType*
 /// @param other Attica__HomePageType*
 ///
-void k_attica__homepagetype_operator_assign(void* self, void* other);
+void k_attica__homepagetype_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-homepagetype.html#id)
 ///
-/// @param self Attica__HomePageType*
+/// @param self const Attica__HomePageType*
 ///
-uint32_t k_attica__homepagetype_id(void* self);
+uint32_t k_attica__homepagetype_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-homepagetype.html#setId)
 ///
@@ -46,9 +46,9 @@ void k_attica__homepagetype_set_id(void* self, uint32_t id);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__HomePageType*
+/// @param self const Attica__HomePageType*
 ///
-const char* k_attica__homepagetype_name(void* self);
+const char* k_attica__homepagetype_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-homepagetype.html#setName)
 ///

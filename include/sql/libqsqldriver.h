@@ -24,26 +24,26 @@ QSqlDriver* q_sqldriver_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 ///
-const QMetaObject* q_sqldriver_meta_object(void* self);
+const QMetaObject* q_sqldriver_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSqlDriver*
-/// @param callback const QMetaObject* func()
+/// @param self const QSqlDriver*
+/// @param callback const QMetaObject* func(const QSqlDriver* self)
 ///
-void q_sqldriver_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_sqldriver_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 ///
-const QMetaObject* q_sqldriver_super_meta_object(void* self);
+const QMetaObject* q_sqldriver_super_meta_object(const void* self);
 
 /// @param self QSqlDriver*
 /// @param param1 const char*
@@ -97,32 +97,32 @@ const char* q_sqldriver_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#isOpen)
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 ///
-bool q_sqldriver_is_open(void* self);
+bool q_sqldriver_is_open(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#isOpen)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSqlDriver*
-/// @param callback bool func()
+/// @param self const QSqlDriver*
+/// @param callback bool func(const QSqlDriver* self)
 ///
-void q_sqldriver_on_is_open(void* self, bool (*callback)());
+void q_sqldriver_on_is_open(const void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#isOpen)
 ///
 /// Base class method implementation
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 ///
-bool q_sqldriver_super_is_open(void* self);
+bool q_sqldriver_super_is_open(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#isOpenError)
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 ///
-bool q_sqldriver_is_open_error(void* self);
+bool q_sqldriver_is_open_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#beginTransaction)
 ///
@@ -135,9 +135,9 @@ bool q_sqldriver_begin_transaction(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlDriver*
-/// @param callback bool func()
+/// @param callback bool func(QSqlDriver* self)
 ///
-void q_sqldriver_on_begin_transaction(void* self, bool (*callback)());
+void q_sqldriver_on_begin_transaction(void* self, bool (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#beginTransaction)
 ///
@@ -158,9 +158,9 @@ bool q_sqldriver_commit_transaction(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlDriver*
-/// @param callback bool func()
+/// @param callback bool func(QSqlDriver* self)
 ///
-void q_sqldriver_on_commit_transaction(void* self, bool (*callback)());
+void q_sqldriver_on_commit_transaction(void* self, bool (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#commitTransaction)
 ///
@@ -181,9 +181,9 @@ bool q_sqldriver_rollback_transaction(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlDriver*
-/// @param callback bool func()
+/// @param callback bool func(QSqlDriver* self)
 ///
-void q_sqldriver_on_rollback_transaction(void* self, bool (*callback)());
+void q_sqldriver_on_rollback_transaction(void* self, bool (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#rollbackTransaction)
 ///
@@ -197,231 +197,226 @@ bool q_sqldriver_super_rollback_transaction(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param tableType enum QSql__TableType
 ///
-const char** q_sqldriver_tables(void* self, int32_t tableType);
+const char** q_sqldriver_tables(const void* self, int32_t tableType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#tables)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSqlDriver*
-/// @param callback const char** func(QSqlDriver* self, enum QSql__TableType tableType)
+/// @param self const QSqlDriver*
+/// @param callback const char** func(const QSqlDriver* self, enum QSql__TableType tableType)
 ///
-void q_sqldriver_on_tables(void* self, const char** (*callback)(void*, int32_t));
+void q_sqldriver_on_tables(const void* self, const char** (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#tables)
 ///
 /// Base class method implementation
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param tableType enum QSql__TableType
 ///
-const char** q_sqldriver_super_tables(void* self, int32_t tableType);
+const char** q_sqldriver_super_tables(const void* self, int32_t tableType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#primaryIndex)
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param tableName const char*
 ///
-QSqlIndex* q_sqldriver_primary_index(void* self, const char* tableName);
+QSqlIndex* q_sqldriver_primary_index(const void* self, const char* tableName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#primaryIndex)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSqlDriver*
-/// @param callback QSqlIndex* func(QSqlDriver* self, const char* tableName)
+/// @param self const QSqlDriver*
+/// @param callback QSqlIndex* func(const QSqlDriver* self, const char* tableName)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sqldriver_on_primary_index(void* self, QSqlIndex* (*callback)(void*, const char*));
+void q_sqldriver_on_primary_index(const void* self, QSqlIndex* (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#primaryIndex)
 ///
 /// Base class method implementation
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param tableName const char*
 ///
-QSqlIndex* q_sqldriver_super_primary_index(void* self, const char* tableName);
+QSqlIndex* q_sqldriver_super_primary_index(const void* self, const char* tableName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#record)
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param tableName const char*
 ///
-QSqlRecord* q_sqldriver_record(void* self, const char* tableName);
+QSqlRecord* q_sqldriver_record(const void* self, const char* tableName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#record)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSqlDriver*
-/// @param callback QSqlRecord* func(QSqlDriver* self, const char* tableName)
+/// @param self const QSqlDriver*
+/// @param callback QSqlRecord* func(const QSqlDriver* self, const char* tableName)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sqldriver_on_record(void* self, QSqlRecord* (*callback)(void*, const char*));
+void q_sqldriver_on_record(const void* self, QSqlRecord* (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#record)
 ///
 /// Base class method implementation
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param tableName const char*
 ///
-QSqlRecord* q_sqldriver_super_record(void* self, const char* tableName);
+QSqlRecord* q_sqldriver_super_record(const void* self, const char* tableName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#formatValue)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param field QSqlField*
 /// @param trimStrings bool
 ///
-const char* q_sqldriver_format_value(void* self, void* field, bool trimStrings);
+const char* q_sqldriver_format_value(const void* self, const void* field, bool trimStrings);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#formatValue)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSqlDriver*
-/// @param callback const char* func(QSqlDriver* self, QSqlField* field, bool trimStrings)
+/// @param self const QSqlDriver*
+/// @param callback const char* func(const QSqlDriver* self, QSqlField* field, bool trimStrings)
 ///
-void q_sqldriver_on_format_value(void* self, const char* (*callback)(void*, void*, bool));
+void q_sqldriver_on_format_value(const void* self, const char* (*callback)(const void*, const void*, bool));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#formatValue)
 ///
 /// Base class method implementation
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param field QSqlField*
 /// @param trimStrings bool
 ///
-const char* q_sqldriver_super_format_value(void* self, void* field, bool trimStrings);
+const char* q_sqldriver_super_format_value(const void* self, const void* field, bool trimStrings);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#escapeIdentifier)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param identifier const char*
 /// @param type enum QSqlDriver__IdentifierType
 ///
-const char* q_sqldriver_escape_identifier(void* self, const char* identifier, int32_t type);
+const char* q_sqldriver_escape_identifier(const void* self, const char* identifier, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#escapeIdentifier)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSqlDriver*
-/// @param callback const char* func(QSqlDriver* self, const char* identifier, enum QSqlDriver__IdentifierType type)
+/// @param self const QSqlDriver*
+/// @param callback const char* func(const QSqlDriver* self, const char* identifier, enum QSqlDriver__IdentifierType type)
 ///
-void q_sqldriver_on_escape_identifier(void* self, const char* (*callback)(void*, const char*, int32_t));
+void q_sqldriver_on_escape_identifier(const void* self, const char* (*callback)(const void*, const char*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#escapeIdentifier)
 ///
 /// Base class method implementation
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param identifier const char*
 /// @param type enum QSqlDriver__IdentifierType
 ///
-const char* q_sqldriver_super_escape_identifier(void* self, const char* identifier, int32_t type);
+const char* q_sqldriver_super_escape_identifier(const void* self, const char* identifier, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#sqlStatement)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param type enum QSqlDriver__StatementType
 /// @param tableName const char*
 /// @param rec QSqlRecord*
 /// @param preparedStatement bool
 ///
-const char* q_sqldriver_sql_statement(void* self, int32_t type, const char* tableName, void* rec, bool preparedStatement);
+const char* q_sqldriver_sql_statement(const void* self, int32_t type, const char* tableName, const void* rec, bool preparedStatement);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#sqlStatement)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSqlDriver*
-/// @param callback const char* func(QSqlDriver* self, enum QSqlDriver__StatementType type, const char* tableName, QSqlRecord* rec, bool preparedStatement)
+/// @param self const QSqlDriver*
+/// @param callback const char* func(const QSqlDriver* self, enum QSqlDriver__StatementType type, const char* tableName, QSqlRecord* rec, bool preparedStatement)
 ///
-void q_sqldriver_on_sql_statement(void* self, const char* (*callback)(void*, int32_t, const char*, void*, bool));
+void q_sqldriver_on_sql_statement(const void* self, const char* (*callback)(const void*, int32_t, const char*, const void*, bool));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#sqlStatement)
 ///
 /// Base class method implementation
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param type enum QSqlDriver__StatementType
 /// @param tableName const char*
 /// @param rec QSqlRecord*
 /// @param preparedStatement bool
 ///
-const char* q_sqldriver_super_sql_statement(void* self, int32_t type, const char* tableName, void* rec, bool preparedStatement);
+const char* q_sqldriver_super_sql_statement(const void* self, int32_t type, const char* tableName, const void* rec, bool preparedStatement);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#lastError)
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 ///
-QSqlError* q_sqldriver_last_error(void* self);
+QSqlError* q_sqldriver_last_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#handle)
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 ///
-QVariant* q_sqldriver_handle(void* self);
+QVariant* q_sqldriver_handle(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#handle)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSqlDriver*
-/// @param callback QVariant* func()
+/// @param self const QSqlDriver*
+/// @param callback QVariant* func(const QSqlDriver* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sqldriver_on_handle(void* self, QVariant* (*callback)());
+void q_sqldriver_on_handle(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#handle)
 ///
 /// Base class method implementation
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 ///
-QVariant* q_sqldriver_super_handle(void* self);
+QVariant* q_sqldriver_super_handle(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#hasFeature)
 ///
-/// @param self QSqlDriver*
+/// @warning This method must be implemented with `q_sqldriver_on_has_feature` before it can be called.
+///
+/// @param self const QSqlDriver*
 /// @param f enum QSqlDriver__DriverFeature
 ///
-bool q_sqldriver_has_feature(void* self, int32_t f);
+bool q_sqldriver_has_feature(const void* self, int32_t f);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#hasFeature)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSqlDriver*
-/// @param callback bool func(QSqlDriver* self, enum QSqlDriver__DriverFeature f)
+/// @param self const QSqlDriver*
+/// @param callback bool func(const QSqlDriver* self, enum QSqlDriver__DriverFeature f)
 ///
-void q_sqldriver_on_has_feature(void* self, bool (*callback)(void*, int32_t));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#hasFeature)
-///
-/// Base class method implementation
-///
-/// @param self QSqlDriver*
-/// @param f enum QSqlDriver__DriverFeature
-///
-bool q_sqldriver_super_has_feature(void* self, int32_t f);
+void q_sqldriver_on_has_feature(const void* self, bool (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#close)
+///
+/// @warning This method must be implemented with `q_sqldriver_on_close` before it can be called.
 ///
 /// @param self QSqlDriver*
 ///
@@ -432,42 +427,30 @@ void q_sqldriver_close(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlDriver*
-/// @param callback void func()
+/// @param callback void func(QSqlDriver* self)
 ///
-void q_sqldriver_on_close(void* self, void (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#close)
-///
-/// Base class method implementation
-///
-/// @param self QSqlDriver*
-///
-void q_sqldriver_super_close(void* self);
+void q_sqldriver_on_close(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#createResult)
 ///
-/// @param self QSqlDriver*
+/// @warning This method must be implemented with `q_sqldriver_on_create_result` before it can be called.
 ///
-QSqlResult* q_sqldriver_create_result(void* self);
+/// @param self const QSqlDriver*
+///
+QSqlResult* q_sqldriver_create_result(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#createResult)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSqlDriver*
-/// @param callback QSqlResult* func()
+/// @param self const QSqlDriver*
+/// @param callback QSqlResult* func(const QSqlDriver* self)
 ///
-void q_sqldriver_on_create_result(void* self, QSqlResult* (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#createResult)
-///
-/// Base class method implementation
-///
-/// @param self QSqlDriver*
-///
-QSqlResult* q_sqldriver_super_create_result(void* self);
+void q_sqldriver_on_create_result(const void* self, QSqlResult* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#open)
+///
+/// @warning This method must be implemented with `q_sqldriver_on_open` before it can be called.
 ///
 /// @param self QSqlDriver*
 /// @param db const char*
@@ -487,20 +470,6 @@ bool q_sqldriver_open(void* self, const char* db, const char* user, const char* 
 /// @param callback bool func(QSqlDriver* self, const char* db, const char* user, const char* password, const char* host, int port, const char* connOpts)
 ///
 void q_sqldriver_on_open(void* self, bool (*callback)(void*, const char*, const char*, const char*, const char*, int, const char*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#open)
-///
-/// Base class method implementation
-///
-/// @param self QSqlDriver*
-/// @param db const char*
-/// @param user const char*
-/// @param password const char*
-/// @param host const char*
-/// @param port int
-/// @param connOpts const char*
-///
-bool q_sqldriver_super_open(void* self, const char* db, const char* user, const char* password, const char* host, int port, const char* connOpts);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#subscribeToNotification)
 ///
@@ -556,82 +525,82 @@ bool q_sqldriver_super_unsubscribe_from_notification(void* self, const char* nam
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 ///
-const char** q_sqldriver_subscribed_to_notifications(void* self);
+const char** q_sqldriver_subscribed_to_notifications(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#subscribedToNotifications)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSqlDriver*
-/// @param callback const char** func()
+/// @param self const QSqlDriver*
+/// @param callback const char** func(const QSqlDriver* self)
 ///
-void q_sqldriver_on_subscribed_to_notifications(void* self, const char** (*callback)());
+void q_sqldriver_on_subscribed_to_notifications(const void* self, const char** (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#subscribedToNotifications)
 ///
 /// Base class method implementation
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 ///
-const char** q_sqldriver_super_subscribed_to_notifications(void* self);
+const char** q_sqldriver_super_subscribed_to_notifications(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#isIdentifierEscaped)
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param identifier const char*
 /// @param type enum QSqlDriver__IdentifierType
 ///
-bool q_sqldriver_is_identifier_escaped(void* self, const char* identifier, int32_t type);
+bool q_sqldriver_is_identifier_escaped(const void* self, const char* identifier, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#isIdentifierEscaped)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSqlDriver*
-/// @param callback bool func(QSqlDriver* self, const char* identifier, enum QSqlDriver__IdentifierType type)
+/// @param self const QSqlDriver*
+/// @param callback bool func(const QSqlDriver* self, const char* identifier, enum QSqlDriver__IdentifierType type)
 ///
-void q_sqldriver_on_is_identifier_escaped(void* self, bool (*callback)(void*, const char*, int32_t));
+void q_sqldriver_on_is_identifier_escaped(const void* self, bool (*callback)(const void*, const char*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#isIdentifierEscaped)
 ///
 /// Base class method implementation
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param identifier const char*
 /// @param type enum QSqlDriver__IdentifierType
 ///
-bool q_sqldriver_super_is_identifier_escaped(void* self, const char* identifier, int32_t type);
+bool q_sqldriver_super_is_identifier_escaped(const void* self, const char* identifier, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#stripDelimiters)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param identifier const char*
 /// @param type enum QSqlDriver__IdentifierType
 ///
-const char* q_sqldriver_strip_delimiters(void* self, const char* identifier, int32_t type);
+const char* q_sqldriver_strip_delimiters(const void* self, const char* identifier, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#stripDelimiters)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSqlDriver*
-/// @param callback const char* func(QSqlDriver* self, const char* identifier, enum QSqlDriver__IdentifierType type)
+/// @param self const QSqlDriver*
+/// @param callback const char* func(const QSqlDriver* self, const char* identifier, enum QSqlDriver__IdentifierType type)
 ///
-void q_sqldriver_on_strip_delimiters(void* self, const char* (*callback)(void*, const char*, int32_t));
+void q_sqldriver_on_strip_delimiters(const void* self, const char* (*callback)(const void*, const char*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#stripDelimiters)
 ///
 /// Base class method implementation
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param identifier const char*
 /// @param type enum QSqlDriver__IdentifierType
 ///
-const char* q_sqldriver_super_strip_delimiters(void* self, const char* identifier, int32_t type);
+const char* q_sqldriver_super_strip_delimiters(const void* self, const char* identifier, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#setNumericalPrecisionPolicy)
 ///
@@ -642,44 +611,44 @@ void q_sqldriver_set_numerical_precision_policy(void* self, int32_t precisionPol
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#numericalPrecisionPolicy)
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 ///
 /// @return enum QSql__NumericalPrecisionPolicy
 ///
-int32_t q_sqldriver_numerical_precision_policy(void* self);
+int32_t q_sqldriver_numerical_precision_policy(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#dbmsType)
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 ///
 /// @return enum QSqlDriver__DbmsType
 ///
-int32_t q_sqldriver_dbms_type(void* self);
+int32_t q_sqldriver_dbms_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#maximumIdentifierLength)
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param type enum QSqlDriver__IdentifierType
 ///
-int32_t q_sqldriver_maximum_identifier_length(void* self, int32_t type);
+int32_t q_sqldriver_maximum_identifier_length(const void* self, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#maximumIdentifierLength)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSqlDriver*
-/// @param callback int32_t func(QSqlDriver* self, enum QSqlDriver__IdentifierType type)
+/// @param self const QSqlDriver*
+/// @param callback int32_t func(const QSqlDriver* self, enum QSqlDriver__IdentifierType type)
 ///
-void q_sqldriver_on_maximum_identifier_length(void* self, int32_t (*callback)(void*, int32_t));
+void q_sqldriver_on_maximum_identifier_length(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#maximumIdentifierLength)
 ///
 /// Base class method implementation
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param type enum QSqlDriver__IdentifierType
 ///
-int32_t q_sqldriver_super_maximum_identifier_length(void* self, int32_t type);
+int32_t q_sqldriver_super_maximum_identifier_length(const void* self, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#cancelQuery)
 ///
@@ -692,9 +661,9 @@ bool q_sqldriver_cancel_query(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlDriver*
-/// @param callback bool func()
+/// @param callback bool func(QSqlDriver* self)
 ///
-void q_sqldriver_on_cancel_query(void* self, bool (*callback)());
+void q_sqldriver_on_cancel_query(void* self, bool (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#cancelQuery)
 ///
@@ -711,14 +680,14 @@ bool q_sqldriver_super_cancel_query(void* self);
 /// @param source enum QSqlDriver__NotificationSource
 /// @param payload QVariant*
 ///
-void q_sqldriver_notification(void* self, const char* name, int32_t source, void* payload);
+void q_sqldriver_notification(void* self, const char* name, int32_t source, const void* payload);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#notification)
 ///
 /// @param self QSqlDriver*
 /// @param callback void func(QSqlDriver* self, const char* name, enum QSqlDriver__NotificationSource source, QVariant* payload)
 ///
-void q_sqldriver_on_notification(void* self, void (*callback)(void*, const char*, int32_t, void*));
+void q_sqldriver_on_notification(void* self, void (*callback)(void*, const char*, int32_t, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#setOpen)
 ///
@@ -775,7 +744,7 @@ void q_sqldriver_super_set_open_error(void* self, bool e);
 /// @param self QSqlDriver*
 /// @param e QSqlError*
 ///
-void q_sqldriver_set_last_error(void* self, void* e);
+void q_sqldriver_set_last_error(void* self, const void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#setLastError)
 ///
@@ -784,7 +753,7 @@ void q_sqldriver_set_last_error(void* self, void* e);
 /// @param self QSqlDriver*
 /// @param callback void func(QSqlDriver* self, QSqlError* e)
 ///
-void q_sqldriver_on_set_last_error(void* self, void (*callback)(void*, void*));
+void q_sqldriver_on_set_last_error(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#setLastError)
 ///
@@ -793,7 +762,7 @@ void q_sqldriver_on_set_last_error(void* self, void (*callback)(void*, void*));
 /// @param self QSqlDriver*
 /// @param e QSqlError*
 ///
-void q_sqldriver_super_set_last_error(void* self, void* e);
+void q_sqldriver_super_set_last_error(void* self, const void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -820,9 +789,9 @@ const char* q_sqldriver_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 ///
-const char* q_sqldriver_object_name(void* self);
+const char* q_sqldriver_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -837,33 +806,33 @@ void q_sqldriver_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 ///
-bool q_sqldriver_is_widget_type(void* self);
+bool q_sqldriver_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 ///
-bool q_sqldriver_is_window_type(void* self);
+bool q_sqldriver_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 ///
-bool q_sqldriver_is_quick_item_type(void* self);
+bool q_sqldriver_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 ///
-bool q_sqldriver_signals_blocked(void* self);
+bool q_sqldriver_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -878,9 +847,9 @@ bool q_sqldriver_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 ///
-QThread* q_sqldriver_thread(void* self);
+QThread* q_sqldriver_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -931,11 +900,11 @@ void q_sqldriver_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_sqldriver_children(void* self);
+libqt_list q_sqldriver_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -973,7 +942,7 @@ void q_sqldriver_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_sqldriver_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_sqldriver_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -984,18 +953,18 @@ QMetaObject__Connection* q_sqldriver_connect(void* sender, const char* signal, v
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_sqldriver_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_sqldriver_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_sqldriver_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_sqldriver_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1006,7 +975,7 @@ QMetaObject__Connection* q_sqldriver_connect3(void* self, void* sender, const ch
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_sqldriver_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_sqldriver_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1017,24 +986,24 @@ bool q_sqldriver_disconnect(void* sender, const char* signal, void* receiver, co
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_sqldriver_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_sqldriver_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 ///
-bool q_sqldriver_disconnect3(void* self);
+bool q_sqldriver_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param receiver QObject*
 ///
-bool q_sqldriver_disconnect4(void* self, void* receiver);
+bool q_sqldriver_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1042,23 +1011,23 @@ bool q_sqldriver_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_sqldriver_disconnect5(void* param1);
+bool q_sqldriver_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 ///
-void q_sqldriver_dump_object_tree(void* self);
+void q_sqldriver_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 ///
-void q_sqldriver_dump_object_info(void* self);
+void q_sqldriver_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1068,16 +1037,16 @@ void q_sqldriver_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_sqldriver_set_property(void* self, const char* name, void* value);
+bool q_sqldriver_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param name const char*
 ///
-QVariant* q_sqldriver_property(void* self, const char* name);
+QVariant* q_sqldriver_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1085,9 +1054,9 @@ QVariant* q_sqldriver_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 ///
-const char** q_sqldriver_dynamic_property_names(void* self);
+const char** q_sqldriver_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1101,9 +1070,9 @@ QBindingStorage* q_sqldriver_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 ///
-const QBindingStorage* q_sqldriver_binding_storage2(void* self);
+const QBindingStorage* q_sqldriver_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1126,18 +1095,18 @@ void q_sqldriver_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 ///
-QObject* q_sqldriver_parent(void* self);
+QObject* q_sqldriver_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param classname const char*
 ///
-bool q_sqldriver_inherits(void* self, const char* classname);
+bool q_sqldriver_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1177,7 +1146,7 @@ int32_t q_sqldriver_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_sqldriver_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_sqldriver_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1189,59 +1158,59 @@ QMetaObject__Connection* q_sqldriver_connect5(void* sender, const char* signal, 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_sqldriver_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_sqldriver_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_sqldriver_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_sqldriver_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param signal const char*
 ///
-bool q_sqldriver_disconnect1(void* self, const char* signal);
+bool q_sqldriver_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSqlDriver*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_sqldriver_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_sqldriver_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_sqldriver_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_sqldriver_disconnect23(void* self, void* receiver, const char* member);
+bool q_sqldriver_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QSqlDriver*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_sqldriver_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1437,7 +1406,7 @@ void q_sqldriver_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QSqlDriver*
 /// @param signal QMetaMethod*
 ///
-void q_sqldriver_connect_notify(void* self, void* signal);
+void q_sqldriver_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1448,7 +1417,7 @@ void q_sqldriver_connect_notify(void* self, void* signal);
 /// @param self QSqlDriver*
 /// @param signal QMetaMethod*
 ///
-void q_sqldriver_super_connect_notify(void* self, void* signal);
+void q_sqldriver_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1459,7 +1428,7 @@ void q_sqldriver_super_connect_notify(void* self, void* signal);
 /// @param self QSqlDriver*
 /// @param callback void func(QSqlDriver* self, QMetaMethod* signal)
 ///
-void q_sqldriver_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_sqldriver_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1470,7 +1439,7 @@ void q_sqldriver_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QSqlDriver*
 /// @param signal QMetaMethod*
 ///
-void q_sqldriver_disconnect_notify(void* self, void* signal);
+void q_sqldriver_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1481,7 +1450,7 @@ void q_sqldriver_disconnect_notify(void* self, void* signal);
 /// @param self QSqlDriver*
 /// @param signal QMetaMethod*
 ///
-void q_sqldriver_super_disconnect_notify(void* self, void* signal);
+void q_sqldriver_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1492,7 +1461,7 @@ void q_sqldriver_super_disconnect_notify(void* self, void* signal);
 /// @param self QSqlDriver*
 /// @param callback void func(QSqlDriver* self, QMetaMethod* signal)
 ///
-void q_sqldriver_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_sqldriver_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1500,9 +1469,9 @@ void q_sqldriver_on_disconnect_notify(void* self, void (*callback)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 ///
-QObject* q_sqldriver_sender(void* self);
+QObject* q_sqldriver_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1510,9 +1479,9 @@ QObject* q_sqldriver_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 ///
-QObject* q_sqldriver_super_sender(void* self);
+QObject* q_sqldriver_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1520,10 +1489,10 @@ QObject* q_sqldriver_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSqlDriver*
-/// @param callback QObject* func()
+/// @param self const QSqlDriver*
+/// @param callback QObject* func(QSqlDriver* self)
 ///
-void q_sqldriver_on_sender(void* self, QObject* (*callback)());
+void q_sqldriver_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1531,9 +1500,9 @@ void q_sqldriver_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 ///
-int32_t q_sqldriver_sender_signal_index(void* self);
+int32_t q_sqldriver_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1541,9 +1510,9 @@ int32_t q_sqldriver_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 ///
-int32_t q_sqldriver_super_sender_signal_index(void* self);
+int32_t q_sqldriver_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1551,10 +1520,10 @@ int32_t q_sqldriver_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSqlDriver*
-/// @param callback int32_t func()
+/// @param self const QSqlDriver*
+/// @param callback int32_t func(QSqlDriver* self)
 ///
-void q_sqldriver_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_sqldriver_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1562,10 +1531,10 @@ void q_sqldriver_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param signal const char*
 ///
-int32_t q_sqldriver_receivers(void* self, const char* signal);
+int32_t q_sqldriver_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1573,10 +1542,10 @@ int32_t q_sqldriver_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param signal const char*
 ///
-int32_t q_sqldriver_super_receivers(void* self, const char* signal);
+int32_t q_sqldriver_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1584,10 +1553,10 @@ int32_t q_sqldriver_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param callback int32_t func(QSqlDriver* self, const char* signal)
 ///
-void q_sqldriver_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_sqldriver_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1595,10 +1564,10 @@ void q_sqldriver_on_receivers(void* self, int32_t (*callback)(void*, const char*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param signal QMetaMethod*
 ///
-bool q_sqldriver_is_signal_connected(void* self, void* signal);
+bool q_sqldriver_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1606,10 +1575,10 @@ bool q_sqldriver_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param signal QMetaMethod*
 ///
-bool q_sqldriver_super_is_signal_connected(void* self, void* signal);
+bool q_sqldriver_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1617,10 +1586,10 @@ bool q_sqldriver_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSqlDriver*
+/// @param self const QSqlDriver*
 /// @param callback bool func(QSqlDriver* self, QMetaMethod* signal)
 ///
-void q_sqldriver_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_sqldriver_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

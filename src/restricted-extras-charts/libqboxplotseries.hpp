@@ -74,13 +74,13 @@ void QBoxPlotSeries_BoxsetsAdded(QBoxPlotSeries* self, const libqt_list /* of QB
 void QBoxPlotSeries_Connect_BoxsetsAdded(QBoxPlotSeries* self, intptr_t slot);
 void QBoxPlotSeries_BoxsetsRemoved(QBoxPlotSeries* self, const libqt_list /* of QBoxSet* */ sets);
 void QBoxPlotSeries_Connect_BoxsetsRemoved(QBoxPlotSeries* self, intptr_t slot);
-void QBoxPlotSeries_OnMetaObject(const QBoxPlotSeries* self, intptr_t slot);
+void QBoxPlotSeries_OnMetaObject(QBoxPlotSeries* self, intptr_t slot);
 QMetaObject* QBoxPlotSeries_SuperMetaObject(const QBoxPlotSeries* self);
 void QBoxPlotSeries_OnMetacast(QBoxPlotSeries* self, intptr_t slot);
 void* QBoxPlotSeries_SuperMetacast(QBoxPlotSeries* self, const char* param1);
 void QBoxPlotSeries_OnMetacall(QBoxPlotSeries* self, intptr_t slot);
 int QBoxPlotSeries_SuperMetacall(QBoxPlotSeries* self, int param1, int param2, void** param3);
-void QBoxPlotSeries_OnType(const QBoxPlotSeries* self, intptr_t slot);
+void QBoxPlotSeries_OnType(QBoxPlotSeries* self, intptr_t slot);
 int QBoxPlotSeries_SuperType(const QBoxPlotSeries* self);
 bool QBoxPlotSeries_Event(QBoxPlotSeries* self, QEvent* event);
 void QBoxPlotSeries_OnEvent(QBoxPlotSeries* self, intptr_t slot);
@@ -104,17 +104,9 @@ void QBoxPlotSeries_DisconnectNotify(QBoxPlotSeries* self, const QMetaMethod* si
 void QBoxPlotSeries_OnDisconnectNotify(QBoxPlotSeries* self, intptr_t slot);
 void QBoxPlotSeries_SuperDisconnectNotify(QBoxPlotSeries* self, const QMetaMethod* signal);
 QObject* QBoxPlotSeries_Sender(const QBoxPlotSeries* self);
-void QBoxPlotSeries_OnSender(const QBoxPlotSeries* self, intptr_t slot);
-QObject* QBoxPlotSeries_SuperSender(const QBoxPlotSeries* self);
 int QBoxPlotSeries_SenderSignalIndex(const QBoxPlotSeries* self);
-void QBoxPlotSeries_OnSenderSignalIndex(const QBoxPlotSeries* self, intptr_t slot);
-int QBoxPlotSeries_SuperSenderSignalIndex(const QBoxPlotSeries* self);
 int QBoxPlotSeries_Receivers(const QBoxPlotSeries* self, const char* signal);
-void QBoxPlotSeries_OnReceivers(const QBoxPlotSeries* self, intptr_t slot);
-int QBoxPlotSeries_SuperReceivers(const QBoxPlotSeries* self, const char* signal);
 bool QBoxPlotSeries_IsSignalConnected(const QBoxPlotSeries* self, const QMetaMethod* signal);
-void QBoxPlotSeries_OnIsSignalConnected(const QBoxPlotSeries* self, intptr_t slot);
-bool QBoxPlotSeries_SuperIsSignalConnected(const QBoxPlotSeries* self, const QMetaMethod* signal);
 void QBoxPlotSeries_Delete(QBoxPlotSeries* self);
 
 #ifdef __cplusplus

@@ -124,7 +124,7 @@ size_t q_qhashfunctions_q_hash13(double key, size_t seed);
 /// @param key QChar*
 /// @param seed size_t
 ///
-size_t q_qhashfunctions_q_hash19(void* key, size_t seed);
+size_t q_qhashfunctions_q_hash19(const void* key, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhashfunctions.html#qHash)
 ///
@@ -152,7 +152,7 @@ size_t q_qhashfunctions_q_hash23(const char* key, size_t seed);
 /// @param key QBitArray*
 /// @param seed size_t
 ///
-size_t q_qhashfunctions_q_hash24(void* key, size_t seed);
+size_t q_qhashfunctions_q_hash24(const void* key, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhashfunctions.html#qHash)
 ///
@@ -181,7 +181,7 @@ uint32_t q_qhashfunctions_hash(const char* key, uint32_t chained);
 ///
 /// @param other QHashSeed*
 ///
-QHashSeed* q_hashseed_new(void* other);
+QHashSeed* q_hashseed_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhashseed.html)
 
@@ -221,9 +221,9 @@ void q_hashseed_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhashseed.html#operator-unsigned-long)
 ///
-/// @param self QHashSeed*
+/// @param self const QHashSeed*
 ///
-size_t q_hashseed_to_unsigned_long(void* self);
+size_t q_hashseed_to_unsigned_long(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhashseed.html#globalSeed)
 ///

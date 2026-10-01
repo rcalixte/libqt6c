@@ -6,30 +6,25 @@ QDesignerTaskMenuExtension* q_designertaskmenuextension_new() {
     return QDesignerTaskMenuExtension_New();
 }
 
-QAction* q_designertaskmenuextension_preferred_edit_action(void* self) {
+QAction* q_designertaskmenuextension_preferred_edit_action(const void* self) {
     return QDesignerTaskMenuExtension_PreferredEditAction((QDesignerTaskMenuExtension*)self);
 }
 
-void q_designertaskmenuextension_on_preferred_edit_action(void* self, QAction* (*callback)()) {
+void q_designertaskmenuextension_on_preferred_edit_action(const void* self, QAction* (*callback)(const void*)) {
     QDesignerTaskMenuExtension_OnPreferredEditAction((QDesignerTaskMenuExtension*)self, (intptr_t)callback);
 }
 
-QAction* q_designertaskmenuextension_super_preferred_edit_action(void* self) {
+QAction* q_designertaskmenuextension_super_preferred_edit_action(const void* self) {
     return QDesignerTaskMenuExtension_SuperPreferredEditAction((QDesignerTaskMenuExtension*)self);
 }
 
-libqt_list /* of QAction* */ q_designertaskmenuextension_task_actions(void* self) {
+libqt_list /* of QAction* */ q_designertaskmenuextension_task_actions(const void* self) {
     libqt_list _arr = QDesignerTaskMenuExtension_TaskActions((QDesignerTaskMenuExtension*)self);
     return _arr;
 }
 
-void q_designertaskmenuextension_on_task_actions(void* self, libqt_list /* of QAction* */ (*callback)()) {
+void q_designertaskmenuextension_on_task_actions(const void* self, libqt_list /* of QAction* */ (*callback)(const void*)) {
     QDesignerTaskMenuExtension_OnTaskActions((QDesignerTaskMenuExtension*)self, (intptr_t)callback);
-}
-
-libqt_list /* of QAction* */ q_designertaskmenuextension_super_task_actions(void* self) {
-    libqt_list _arr = QDesignerTaskMenuExtension_SuperTaskActions((QDesignerTaskMenuExtension*)self);
-    return _arr;
 }
 
 void q_designertaskmenuextension_delete(void* self) {

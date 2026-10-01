@@ -20,20 +20,20 @@ QQuickGraphicsDevice* q_quickgraphicsdevice_new();
 ///
 /// @param other QQuickGraphicsDevice*
 ///
-QQuickGraphicsDevice* q_quickgraphicsdevice_new2(void* other);
+QQuickGraphicsDevice* q_quickgraphicsdevice_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickgraphicsdevice.html#operator-eq)
 ///
 /// @param self QQuickGraphicsDevice*
 /// @param other QQuickGraphicsDevice*
 ///
-void q_quickgraphicsdevice_operator_assign(void* self, void* other);
+void q_quickgraphicsdevice_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickgraphicsdevice.html#isNull)
 ///
-/// @param self QQuickGraphicsDevice*
+/// @param self const QQuickGraphicsDevice*
 ///
-bool q_quickgraphicsdevice_is_null(void* self);
+bool q_quickgraphicsdevice_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickgraphicsdevice.html#fromOpenGLContext)
 ///

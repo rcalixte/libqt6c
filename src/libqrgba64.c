@@ -5,7 +5,7 @@ QRgba64* q_rgba64_new() {
     return QRgba64_New();
 }
 
-QRgba64* q_rgba64_new2(void* param1) {
+QRgba64* q_rgba64_new2(const void* param1) {
     return QRgba64_New2((QRgba64*)param1);
 }
 
@@ -25,27 +25,27 @@ QRgba64* q_rgba64_from_argb32(uint32_t rgb) {
     return QRgba64_FromArgb32(rgb);
 }
 
-bool q_rgba64_is_opaque(void* self) {
+bool q_rgba64_is_opaque(const void* self) {
     return QRgba64_IsOpaque((QRgba64*)self);
 }
 
-bool q_rgba64_is_transparent(void* self) {
+bool q_rgba64_is_transparent(const void* self) {
     return QRgba64_IsTransparent((QRgba64*)self);
 }
 
-uint16_t q_rgba64_red(void* self) {
+uint16_t q_rgba64_red(const void* self) {
     return QRgba64_Red((QRgba64*)self);
 }
 
-uint16_t q_rgba64_green(void* self) {
+uint16_t q_rgba64_green(const void* self) {
     return QRgba64_Green((QRgba64*)self);
 }
 
-uint16_t q_rgba64_blue(void* self) {
+uint16_t q_rgba64_blue(const void* self) {
     return QRgba64_Blue((QRgba64*)self);
 }
 
-uint16_t q_rgba64_alpha(void* self) {
+uint16_t q_rgba64_alpha(const void* self) {
     return QRgba64_Alpha((QRgba64*)self);
 }
 
@@ -65,39 +65,39 @@ void q_rgba64_set_alpha(void* self, uint16_t _alpha) {
     QRgba64_SetAlpha((QRgba64*)self, _alpha);
 }
 
-uint8_t q_rgba64_red8(void* self) {
+uint8_t q_rgba64_red8(const void* self) {
     return QRgba64_Red8((QRgba64*)self);
 }
 
-uint8_t q_rgba64_green8(void* self) {
+uint8_t q_rgba64_green8(const void* self) {
     return QRgba64_Green8((QRgba64*)self);
 }
 
-uint8_t q_rgba64_blue8(void* self) {
+uint8_t q_rgba64_blue8(const void* self) {
     return QRgba64_Blue8((QRgba64*)self);
 }
 
-uint8_t q_rgba64_alpha8(void* self) {
+uint8_t q_rgba64_alpha8(const void* self) {
     return QRgba64_Alpha8((QRgba64*)self);
 }
 
-uint32_t q_rgba64_to_argb32(void* self) {
+uint32_t q_rgba64_to_argb32(const void* self) {
     return QRgba64_ToArgb32((QRgba64*)self);
 }
 
-uint16_t q_rgba64_to_rgb16(void* self) {
+uint16_t q_rgba64_to_rgb16(const void* self) {
     return QRgba64_ToRgb16((QRgba64*)self);
 }
 
-QRgba64* q_rgba64_premultiplied(void* self) {
+QRgba64* q_rgba64_premultiplied(const void* self) {
     return QRgba64_Premultiplied((QRgba64*)self);
 }
 
-QRgba64* q_rgba64_unpremultiplied(void* self) {
+QRgba64* q_rgba64_unpremultiplied(const void* self) {
     return QRgba64_Unpremultiplied((QRgba64*)self);
 }
 
-uint64_t q_rgba64_to_unsigned_long_long(void* self) {
+uint64_t q_rgba64_to_unsigned_long_long(const void* self) {
     return QRgba64_ToUnsignedLongLong((QRgba64*)self);
 }
 

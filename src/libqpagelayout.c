@@ -8,23 +8,23 @@ QPageLayout* q_pagelayout_new() {
     return QPageLayout_New();
 }
 
-QPageLayout* q_pagelayout_new2(void* pageSize, int32_t orientation, void* margins) {
+QPageLayout* q_pagelayout_new2(const void* pageSize, int32_t orientation, const void* margins) {
     return QPageLayout_New2((QPageSize*)pageSize, orientation, (QMarginsF*)margins);
 }
 
-QPageLayout* q_pagelayout_new3(void* other) {
+QPageLayout* q_pagelayout_new3(const void* other) {
     return QPageLayout_New3((QPageLayout*)other);
 }
 
-QPageLayout* q_pagelayout_new4(void* pageSize, int32_t orientation, void* margins, int32_t units) {
+QPageLayout* q_pagelayout_new4(const void* pageSize, int32_t orientation, const void* margins, int32_t units) {
     return QPageLayout_New4((QPageSize*)pageSize, orientation, (QMarginsF*)margins, units);
 }
 
-QPageLayout* q_pagelayout_new5(void* pageSize, int32_t orientation, void* margins, int32_t units, void* minMargins) {
+QPageLayout* q_pagelayout_new5(const void* pageSize, int32_t orientation, const void* margins, int32_t units, const void* minMargins) {
     return QPageLayout_New5((QPageSize*)pageSize, orientation, (QMarginsF*)margins, units, (QMarginsF*)minMargins);
 }
 
-void q_pagelayout_operator_assign(void* self, void* other) {
+void q_pagelayout_operator_assign(void* self, const void* other) {
     QPageLayout_OperatorAssign((QPageLayout*)self, (QPageLayout*)other);
 }
 
@@ -32,11 +32,11 @@ void q_pagelayout_swap(void* self, void* other) {
     QPageLayout_Swap((QPageLayout*)self, (QPageLayout*)other);
 }
 
-bool q_pagelayout_is_equivalent_to(void* self, void* other) {
+bool q_pagelayout_is_equivalent_to(const void* self, const void* other) {
     return QPageLayout_IsEquivalentTo((QPageLayout*)self, (QPageLayout*)other);
 }
 
-bool q_pagelayout_is_valid(void* self) {
+bool q_pagelayout_is_valid(const void* self) {
     return QPageLayout_IsValid((QPageLayout*)self);
 }
 
@@ -44,15 +44,15 @@ void q_pagelayout_set_mode(void* self, int32_t mode) {
     QPageLayout_SetMode((QPageLayout*)self, mode);
 }
 
-int32_t q_pagelayout_mode(void* self) {
+int32_t q_pagelayout_mode(const void* self) {
     return QPageLayout_Mode((QPageLayout*)self);
 }
 
-void q_pagelayout_set_page_size(void* self, void* pageSize) {
+void q_pagelayout_set_page_size(void* self, const void* pageSize) {
     QPageLayout_SetPageSize((QPageLayout*)self, (QPageSize*)pageSize);
 }
 
-QPageSize* q_pagelayout_page_size(void* self) {
+QPageSize* q_pagelayout_page_size(const void* self) {
     return QPageLayout_PageSize((QPageLayout*)self);
 }
 
@@ -60,7 +60,7 @@ void q_pagelayout_set_orientation(void* self, int32_t orientation) {
     QPageLayout_SetOrientation((QPageLayout*)self, orientation);
 }
 
-int32_t q_pagelayout_orientation(void* self) {
+int32_t q_pagelayout_orientation(const void* self) {
     return QPageLayout_Orientation((QPageLayout*)self);
 }
 
@@ -68,11 +68,11 @@ void q_pagelayout_set_units(void* self, int32_t units) {
     QPageLayout_SetUnits((QPageLayout*)self, units);
 }
 
-int32_t q_pagelayout_units(void* self) {
+int32_t q_pagelayout_units(const void* self) {
     return QPageLayout_Units((QPageLayout*)self);
 }
 
-bool q_pagelayout_set_margins(void* self, void* margins) {
+bool q_pagelayout_set_margins(void* self, const void* margins) {
     return QPageLayout_SetMargins((QPageLayout*)self, (QMarginsF*)margins);
 }
 
@@ -92,71 +92,71 @@ bool q_pagelayout_set_bottom_margin(void* self, double bottomMargin) {
     return QPageLayout_SetBottomMargin((QPageLayout*)self, bottomMargin);
 }
 
-QMarginsF* q_pagelayout_margins(void* self) {
+QMarginsF* q_pagelayout_margins(const void* self) {
     return QPageLayout_Margins((QPageLayout*)self);
 }
 
-QMarginsF* q_pagelayout_margins2(void* self, int32_t units) {
+QMarginsF* q_pagelayout_margins2(const void* self, int32_t units) {
     return QPageLayout_Margins2((QPageLayout*)self, units);
 }
 
-QMargins* q_pagelayout_margins_points(void* self) {
+QMargins* q_pagelayout_margins_points(const void* self) {
     return QPageLayout_MarginsPoints((QPageLayout*)self);
 }
 
-QMargins* q_pagelayout_margins_pixels(void* self, int resolution) {
+QMargins* q_pagelayout_margins_pixels(const void* self, int resolution) {
     return QPageLayout_MarginsPixels((QPageLayout*)self, resolution);
 }
 
-void q_pagelayout_set_minimum_margins(void* self, void* minMargins) {
+void q_pagelayout_set_minimum_margins(void* self, const void* minMargins) {
     QPageLayout_SetMinimumMargins((QPageLayout*)self, (QMarginsF*)minMargins);
 }
 
-QMarginsF* q_pagelayout_minimum_margins(void* self) {
+QMarginsF* q_pagelayout_minimum_margins(const void* self) {
     return QPageLayout_MinimumMargins((QPageLayout*)self);
 }
 
-QMarginsF* q_pagelayout_maximum_margins(void* self) {
+QMarginsF* q_pagelayout_maximum_margins(const void* self) {
     return QPageLayout_MaximumMargins((QPageLayout*)self);
 }
 
-QRectF* q_pagelayout_full_rect(void* self) {
+QRectF* q_pagelayout_full_rect(const void* self) {
     return QPageLayout_FullRect((QPageLayout*)self);
 }
 
-QRectF* q_pagelayout_full_rect2(void* self, int32_t units) {
+QRectF* q_pagelayout_full_rect2(const void* self, int32_t units) {
     return QPageLayout_FullRect2((QPageLayout*)self, units);
 }
 
-QRect* q_pagelayout_full_rect_points(void* self) {
+QRect* q_pagelayout_full_rect_points(const void* self) {
     return QPageLayout_FullRectPoints((QPageLayout*)self);
 }
 
-QRect* q_pagelayout_full_rect_pixels(void* self, int resolution) {
+QRect* q_pagelayout_full_rect_pixels(const void* self, int resolution) {
     return QPageLayout_FullRectPixels((QPageLayout*)self, resolution);
 }
 
-QRectF* q_pagelayout_paint_rect(void* self) {
+QRectF* q_pagelayout_paint_rect(const void* self) {
     return QPageLayout_PaintRect((QPageLayout*)self);
 }
 
-QRectF* q_pagelayout_paint_rect2(void* self, int32_t units) {
+QRectF* q_pagelayout_paint_rect2(const void* self, int32_t units) {
     return QPageLayout_PaintRect2((QPageLayout*)self, units);
 }
 
-QRect* q_pagelayout_paint_rect_points(void* self) {
+QRect* q_pagelayout_paint_rect_points(const void* self) {
     return QPageLayout_PaintRectPoints((QPageLayout*)self);
 }
 
-QRect* q_pagelayout_paint_rect_pixels(void* self, int resolution) {
+QRect* q_pagelayout_paint_rect_pixels(const void* self, int resolution) {
     return QPageLayout_PaintRectPixels((QPageLayout*)self, resolution);
 }
 
-void q_pagelayout_set_page_size2(void* self, void* pageSize, void* minMargins) {
+void q_pagelayout_set_page_size2(void* self, const void* pageSize, const void* minMargins) {
     QPageLayout_SetPageSize2((QPageLayout*)self, (QPageSize*)pageSize, (QMarginsF*)minMargins);
 }
 
-bool q_pagelayout_set_margins2(void* self, void* margins, int32_t outOfBoundsPolicy) {
+bool q_pagelayout_set_margins2(void* self, const void* margins, int32_t outOfBoundsPolicy) {
     return QPageLayout_SetMargins2((QPageLayout*)self, (QMarginsF*)margins, outOfBoundsPolicy);
 }
 

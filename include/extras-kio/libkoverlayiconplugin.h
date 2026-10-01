@@ -24,26 +24,26 @@ KOverlayIconPlugin* k_overlayiconplugin_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 ///
-const QMetaObject* k_overlayiconplugin_meta_object(void* self);
+const QMetaObject* k_overlayiconplugin_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KOverlayIconPlugin*
-/// @param callback const QMetaObject* func()
+/// @param self const KOverlayIconPlugin*
+/// @param callback const QMetaObject* func(const KOverlayIconPlugin* self)
 ///
-void k_overlayiconplugin_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_overlayiconplugin_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 ///
-const QMetaObject* k_overlayiconplugin_super_meta_object(void* self);
+const QMetaObject* k_overlayiconplugin_super_meta_object(const void* self);
 
 /// @param self KOverlayIconPlugin*
 /// @param param1 const char*
@@ -97,12 +97,14 @@ const char* k_overlayiconplugin_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/koverlayiconplugin.html#getOverlays)
 ///
+/// @warning This method must be implemented with `k_overlayiconplugin_on_get_overlays` before it can be called.
+///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KOverlayIconPlugin*
 /// @param item QUrl*
 ///
-const char** k_overlayiconplugin_get_overlays(void* self, void* item);
+const char** k_overlayiconplugin_get_overlays(void* self, const void* item);
 
 /// [Upstream resources](https://api.kde.org/koverlayiconplugin.html#getOverlays)
 ///
@@ -111,16 +113,7 @@ const char** k_overlayiconplugin_get_overlays(void* self, void* item);
 /// @param self KOverlayIconPlugin*
 /// @param callback const char** func(KOverlayIconPlugin* self, QUrl* item)
 ///
-void k_overlayiconplugin_on_get_overlays(void* self, const char** (*callback)(void*, void*));
-
-/// [Upstream resources](https://api.kde.org/koverlayiconplugin.html#getOverlays)
-///
-/// Base class method implementation
-///
-/// @param self KOverlayIconPlugin*
-/// @param item QUrl*
-///
-const char** k_overlayiconplugin_super_get_overlays(void* self, void* item);
+void k_overlayiconplugin_on_get_overlays(void* self, const char** (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/koverlayiconplugin.html#overlaysChanged)
 ///
@@ -128,14 +121,14 @@ const char** k_overlayiconplugin_super_get_overlays(void* self, void* item);
 /// @param url QUrl*
 /// @param overlays const char**
 ///
-void k_overlayiconplugin_overlays_changed(void* self, void* url, const char* overlays[static 1]);
+void k_overlayiconplugin_overlays_changed(void* self, const void* url, const char* overlays[static 1]);
 
 /// [Upstream resources](https://api.kde.org/koverlayiconplugin.html#overlaysChanged)
 ///
 /// @param self KOverlayIconPlugin*
 /// @param callback void func(KOverlayIconPlugin* self, QUrl* url, const char** overlays)
 ///
-void k_overlayiconplugin_on_overlays_changed(void* self, void (*callback)(void*, void*, const char**));
+void k_overlayiconplugin_on_overlays_changed(void* self, void (*callback)(void*, const void*, const char**));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -162,9 +155,9 @@ const char* k_overlayiconplugin_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 ///
-const char* k_overlayiconplugin_object_name(void* self);
+const char* k_overlayiconplugin_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -179,33 +172,33 @@ void k_overlayiconplugin_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 ///
-bool k_overlayiconplugin_is_widget_type(void* self);
+bool k_overlayiconplugin_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 ///
-bool k_overlayiconplugin_is_window_type(void* self);
+bool k_overlayiconplugin_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 ///
-bool k_overlayiconplugin_is_quick_item_type(void* self);
+bool k_overlayiconplugin_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 ///
-bool k_overlayiconplugin_signals_blocked(void* self);
+bool k_overlayiconplugin_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -220,9 +213,9 @@ bool k_overlayiconplugin_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 ///
-QThread* k_overlayiconplugin_thread(void* self);
+QThread* k_overlayiconplugin_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -273,11 +266,11 @@ void k_overlayiconplugin_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_overlayiconplugin_children(void* self);
+libqt_list k_overlayiconplugin_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -315,7 +308,7 @@ void k_overlayiconplugin_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_overlayiconplugin_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_overlayiconplugin_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -326,18 +319,18 @@ QMetaObject__Connection* k_overlayiconplugin_connect(void* sender, const char* s
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_overlayiconplugin_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_overlayiconplugin_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_overlayiconplugin_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_overlayiconplugin_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -348,7 +341,7 @@ QMetaObject__Connection* k_overlayiconplugin_connect3(void* self, void* sender, 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_overlayiconplugin_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_overlayiconplugin_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -359,24 +352,24 @@ bool k_overlayiconplugin_disconnect(void* sender, const char* signal, void* rece
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_overlayiconplugin_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_overlayiconplugin_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 ///
-bool k_overlayiconplugin_disconnect3(void* self);
+bool k_overlayiconplugin_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 /// @param receiver QObject*
 ///
-bool k_overlayiconplugin_disconnect4(void* self, void* receiver);
+bool k_overlayiconplugin_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -384,23 +377,23 @@ bool k_overlayiconplugin_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_overlayiconplugin_disconnect5(void* param1);
+bool k_overlayiconplugin_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 ///
-void k_overlayiconplugin_dump_object_tree(void* self);
+void k_overlayiconplugin_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 ///
-void k_overlayiconplugin_dump_object_info(void* self);
+void k_overlayiconplugin_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -410,16 +403,16 @@ void k_overlayiconplugin_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_overlayiconplugin_set_property(void* self, const char* name, void* value);
+bool k_overlayiconplugin_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 /// @param name const char*
 ///
-QVariant* k_overlayiconplugin_property(void* self, const char* name);
+QVariant* k_overlayiconplugin_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -427,9 +420,9 @@ QVariant* k_overlayiconplugin_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 ///
-const char** k_overlayiconplugin_dynamic_property_names(void* self);
+const char** k_overlayiconplugin_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -443,9 +436,9 @@ QBindingStorage* k_overlayiconplugin_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 ///
-const QBindingStorage* k_overlayiconplugin_binding_storage2(void* self);
+const QBindingStorage* k_overlayiconplugin_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -468,18 +461,18 @@ void k_overlayiconplugin_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 ///
-QObject* k_overlayiconplugin_parent(void* self);
+QObject* k_overlayiconplugin_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 /// @param classname const char*
 ///
-bool k_overlayiconplugin_inherits(void* self, const char* classname);
+bool k_overlayiconplugin_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -519,7 +512,7 @@ int32_t k_overlayiconplugin_start_timer23(void* self, int64_t time, int32_t time
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_overlayiconplugin_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_overlayiconplugin_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -531,59 +524,59 @@ QMetaObject__Connection* k_overlayiconplugin_connect5(void* sender, const char* 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_overlayiconplugin_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_overlayiconplugin_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_overlayiconplugin_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_overlayiconplugin_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 /// @param signal const char*
 ///
-bool k_overlayiconplugin_disconnect1(void* self, const char* signal);
+bool k_overlayiconplugin_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KOverlayIconPlugin*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_overlayiconplugin_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_overlayiconplugin_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_overlayiconplugin_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_overlayiconplugin_disconnect23(void* self, void* receiver, const char* member);
+bool k_overlayiconplugin_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KOverlayIconPlugin*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_overlayiconplugin_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -779,7 +772,7 @@ void k_overlayiconplugin_on_custom_event(void* self, void (*callback)(void*, voi
 /// @param self KOverlayIconPlugin*
 /// @param signal QMetaMethod*
 ///
-void k_overlayiconplugin_connect_notify(void* self, void* signal);
+void k_overlayiconplugin_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -790,7 +783,7 @@ void k_overlayiconplugin_connect_notify(void* self, void* signal);
 /// @param self KOverlayIconPlugin*
 /// @param signal QMetaMethod*
 ///
-void k_overlayiconplugin_super_connect_notify(void* self, void* signal);
+void k_overlayiconplugin_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -801,7 +794,7 @@ void k_overlayiconplugin_super_connect_notify(void* self, void* signal);
 /// @param self KOverlayIconPlugin*
 /// @param callback void func(KOverlayIconPlugin* self, QMetaMethod* signal)
 ///
-void k_overlayiconplugin_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_overlayiconplugin_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -812,7 +805,7 @@ void k_overlayiconplugin_on_connect_notify(void* self, void (*callback)(void*, v
 /// @param self KOverlayIconPlugin*
 /// @param signal QMetaMethod*
 ///
-void k_overlayiconplugin_disconnect_notify(void* self, void* signal);
+void k_overlayiconplugin_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -823,7 +816,7 @@ void k_overlayiconplugin_disconnect_notify(void* self, void* signal);
 /// @param self KOverlayIconPlugin*
 /// @param signal QMetaMethod*
 ///
-void k_overlayiconplugin_super_disconnect_notify(void* self, void* signal);
+void k_overlayiconplugin_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -834,7 +827,7 @@ void k_overlayiconplugin_super_disconnect_notify(void* self, void* signal);
 /// @param self KOverlayIconPlugin*
 /// @param callback void func(KOverlayIconPlugin* self, QMetaMethod* signal)
 ///
-void k_overlayiconplugin_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_overlayiconplugin_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -842,9 +835,9 @@ void k_overlayiconplugin_on_disconnect_notify(void* self, void (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 ///
-QObject* k_overlayiconplugin_sender(void* self);
+QObject* k_overlayiconplugin_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -852,9 +845,9 @@ QObject* k_overlayiconplugin_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 ///
-QObject* k_overlayiconplugin_super_sender(void* self);
+QObject* k_overlayiconplugin_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -862,10 +855,10 @@ QObject* k_overlayiconplugin_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KOverlayIconPlugin*
-/// @param callback QObject* func()
+/// @param self const KOverlayIconPlugin*
+/// @param callback QObject* func(KOverlayIconPlugin* self)
 ///
-void k_overlayiconplugin_on_sender(void* self, QObject* (*callback)());
+void k_overlayiconplugin_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -873,9 +866,9 @@ void k_overlayiconplugin_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 ///
-int32_t k_overlayiconplugin_sender_signal_index(void* self);
+int32_t k_overlayiconplugin_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -883,9 +876,9 @@ int32_t k_overlayiconplugin_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 ///
-int32_t k_overlayiconplugin_super_sender_signal_index(void* self);
+int32_t k_overlayiconplugin_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -893,10 +886,10 @@ int32_t k_overlayiconplugin_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KOverlayIconPlugin*
-/// @param callback int32_t func()
+/// @param self const KOverlayIconPlugin*
+/// @param callback int32_t func(KOverlayIconPlugin* self)
 ///
-void k_overlayiconplugin_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_overlayiconplugin_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -904,10 +897,10 @@ void k_overlayiconplugin_on_sender_signal_index(void* self, int32_t (*callback)(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 /// @param signal const char*
 ///
-int32_t k_overlayiconplugin_receivers(void* self, const char* signal);
+int32_t k_overlayiconplugin_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -915,10 +908,10 @@ int32_t k_overlayiconplugin_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 /// @param signal const char*
 ///
-int32_t k_overlayiconplugin_super_receivers(void* self, const char* signal);
+int32_t k_overlayiconplugin_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -926,10 +919,10 @@ int32_t k_overlayiconplugin_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 /// @param callback int32_t func(KOverlayIconPlugin* self, const char* signal)
 ///
-void k_overlayiconplugin_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_overlayiconplugin_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -937,10 +930,10 @@ void k_overlayiconplugin_on_receivers(void* self, int32_t (*callback)(void*, con
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 /// @param signal QMetaMethod*
 ///
-bool k_overlayiconplugin_is_signal_connected(void* self, void* signal);
+bool k_overlayiconplugin_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -948,10 +941,10 @@ bool k_overlayiconplugin_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 /// @param signal QMetaMethod*
 ///
-bool k_overlayiconplugin_super_is_signal_connected(void* self, void* signal);
+bool k_overlayiconplugin_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -959,10 +952,10 @@ bool k_overlayiconplugin_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KOverlayIconPlugin*
+/// @param self const KOverlayIconPlugin*
 /// @param callback bool func(KOverlayIconPlugin* self, QMetaMethod* signal)
 ///
-void k_overlayiconplugin_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_overlayiconplugin_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

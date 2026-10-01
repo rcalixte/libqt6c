@@ -14,7 +14,7 @@
 ///
 /// @param other QSysInfo*
 ///
-QSysInfo* q_sysinfo_new(void* other);
+QSysInfo* q_sysinfo_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html)
 

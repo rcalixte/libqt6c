@@ -44,9 +44,9 @@ void k_textautocorrectioncore__autocorrection_load_global_file_name(void* self, 
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1AutoCorrection.html)
 ///
-/// @param self TextAutoCorrectionCore__AutoCorrection*
+/// @param self const TextAutoCorrectionCore__AutoCorrection*
 ///
-TextAutoCorrectionCore__AutoCorrectionSettings* k_textautocorrectioncore__autocorrection_auto_correction_settings(void* self);
+TextAutoCorrectionCore__AutoCorrectionSettings* k_textautocorrectioncore__autocorrection_auto_correction_settings(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1AutoCorrection.html)
 ///

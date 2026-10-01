@@ -1,7 +1,7 @@
 #include "libqstringconverter_base.hpp"
 #include "libqstringconverter_base.h"
 
-bool q_stringconverter_is_valid(void* self) {
+bool q_stringconverter_is_valid(const void* self) {
     return QStringConverter_IsValid((QStringConverter*)self);
 }
 
@@ -9,11 +9,11 @@ void q_stringconverter_reset_state(void* self) {
     QStringConverter_ResetState((QStringConverter*)self);
 }
 
-bool q_stringconverter_has_error(void* self) {
+bool q_stringconverter_has_error(const void* self) {
     return QStringConverter_HasError((QStringConverter*)self);
 }
 
-const char* q_stringconverter_name(void* self) {
+const char* q_stringconverter_name(const void* self) {
     return QStringConverter_Name((QStringConverter*)self);
 }
 

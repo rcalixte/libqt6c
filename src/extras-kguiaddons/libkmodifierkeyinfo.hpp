@@ -49,7 +49,7 @@ void KModifierKeyInfo_KeyAdded(KModifierKeyInfo* self, int key);
 void KModifierKeyInfo_Connect_KeyAdded(KModifierKeyInfo* self, intptr_t slot);
 void KModifierKeyInfo_KeyRemoved(KModifierKeyInfo* self, int key);
 void KModifierKeyInfo_Connect_KeyRemoved(KModifierKeyInfo* self, intptr_t slot);
-void KModifierKeyInfo_OnMetaObject(const KModifierKeyInfo* self, intptr_t slot);
+void KModifierKeyInfo_OnMetaObject(KModifierKeyInfo* self, intptr_t slot);
 QMetaObject* KModifierKeyInfo_SuperMetaObject(const KModifierKeyInfo* self);
 void KModifierKeyInfo_OnMetacast(KModifierKeyInfo* self, intptr_t slot);
 void* KModifierKeyInfo_SuperMetacast(KModifierKeyInfo* self, const char* param1);
@@ -77,17 +77,9 @@ void KModifierKeyInfo_DisconnectNotify(KModifierKeyInfo* self, const QMetaMethod
 void KModifierKeyInfo_OnDisconnectNotify(KModifierKeyInfo* self, intptr_t slot);
 void KModifierKeyInfo_SuperDisconnectNotify(KModifierKeyInfo* self, const QMetaMethod* signal);
 QObject* KModifierKeyInfo_Sender(const KModifierKeyInfo* self);
-void KModifierKeyInfo_OnSender(const KModifierKeyInfo* self, intptr_t slot);
-QObject* KModifierKeyInfo_SuperSender(const KModifierKeyInfo* self);
 int KModifierKeyInfo_SenderSignalIndex(const KModifierKeyInfo* self);
-void KModifierKeyInfo_OnSenderSignalIndex(const KModifierKeyInfo* self, intptr_t slot);
-int KModifierKeyInfo_SuperSenderSignalIndex(const KModifierKeyInfo* self);
 int KModifierKeyInfo_Receivers(const KModifierKeyInfo* self, const char* signal);
-void KModifierKeyInfo_OnReceivers(const KModifierKeyInfo* self, intptr_t slot);
-int KModifierKeyInfo_SuperReceivers(const KModifierKeyInfo* self, const char* signal);
 bool KModifierKeyInfo_IsSignalConnected(const KModifierKeyInfo* self, const QMetaMethod* signal);
-void KModifierKeyInfo_OnIsSignalConnected(const KModifierKeyInfo* self, intptr_t slot);
-bool KModifierKeyInfo_SuperIsSignalConnected(const KModifierKeyInfo* self, const QMetaMethod* signal);
 void KModifierKeyInfo_Delete(KModifierKeyInfo* self);
 
 #ifdef __cplusplus

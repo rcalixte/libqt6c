@@ -6,27 +6,27 @@ QPlaceSearchResult* q_placesearchresult_new() {
     return QPlaceSearchResult_New();
 }
 
-QPlaceSearchResult* q_placesearchresult_new2(void* other) {
+QPlaceSearchResult* q_placesearchresult_new2(const void* other) {
     return QPlaceSearchResult_New2((QPlaceSearchResult*)other);
 }
 
-void q_placesearchresult_operator_assign(void* self, void* other) {
+void q_placesearchresult_operator_assign(void* self, const void* other) {
     QPlaceSearchResult_OperatorAssign((QPlaceSearchResult*)self, (QPlaceSearchResult*)other);
 }
 
-bool q_placesearchresult_operator_equal(void* self, void* other) {
+bool q_placesearchresult_operator_equal(const void* self, const void* other) {
     return QPlaceSearchResult_OperatorEqual((QPlaceSearchResult*)self, (QPlaceSearchResult*)other);
 }
 
-bool q_placesearchresult_operator_not_equal(void* self, void* other) {
+bool q_placesearchresult_operator_not_equal(const void* self, const void* other) {
     return QPlaceSearchResult_OperatorNotEqual((QPlaceSearchResult*)self, (QPlaceSearchResult*)other);
 }
 
-int32_t q_placesearchresult_type(void* self) {
+int32_t q_placesearchresult_type(const void* self) {
     return QPlaceSearchResult_Type((QPlaceSearchResult*)self);
 }
 
-const char* q_placesearchresult_title(void* self) {
+const char* q_placesearchresult_title(const void* self) {
     libqt_string _str = QPlaceSearchResult_Title((QPlaceSearchResult*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -37,11 +37,11 @@ void q_placesearchresult_set_title(void* self, const char* title) {
     QPlaceSearchResult_SetTitle((QPlaceSearchResult*)self, qstring(title));
 }
 
-QPlaceIcon* q_placesearchresult_icon(void* self) {
+QPlaceIcon* q_placesearchresult_icon(const void* self) {
     return QPlaceSearchResult_Icon((QPlaceSearchResult*)self);
 }
 
-void q_placesearchresult_set_icon(void* self, void* icon) {
+void q_placesearchresult_set_icon(void* self, const void* icon) {
     QPlaceSearchResult_SetIcon((QPlaceSearchResult*)self, (QPlaceIcon*)icon);
 }
 

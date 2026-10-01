@@ -14,7 +14,7 @@
 ///
 /// @param data QMimeData*
 ///
-bool k_io_can_paste_mime_data(void* data);
+bool k_io_can_paste_mime_data(const void* data);
 
 /// [Upstream resources](https://api.kde.org/kio.html#pasteActionText)
 ///
@@ -24,7 +24,7 @@ bool k_io_can_paste_mime_data(void* data);
 /// @param enable bool*
 /// @param destItem KFileItem*
 ///
-const char* k_io_paste_action_text(void* mimeData, bool* enable, void* destItem);
+const char* k_io_paste_action_text(const void* mimeData, bool* enable, const void* destItem);
 
 /// [Upstream resources](https://api.kde.org/kio.html#setClipboardDataCut)
 ///
@@ -37,5 +37,5 @@ void k_io_set_clipboard_data_cut(void* mimeData, bool cut);
 ///
 /// @param mimeData QMimeData*
 ///
-bool k_io_is_clipboard_data_cut(void* mimeData);
+bool k_io_is_clipboard_data_cut(const void* mimeData);
 #endif

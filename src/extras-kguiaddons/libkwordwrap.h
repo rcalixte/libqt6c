@@ -14,7 +14,7 @@
 ///
 /// @param other KWordWrap*
 ///
-KWordWrap* k_wordwrap_new(void* other);
+KWordWrap* k_wordwrap_new(const void* other);
 
 /// [Upstream resources](https://api.kde.org/kwordwrap.html#formatText)
 ///
@@ -23,45 +23,45 @@ KWordWrap* k_wordwrap_new(void* other);
 /// @param flags int
 /// @param str const char*
 ///
-KWordWrap* k_wordwrap_format_text(void* fm, void* r, int flags, const char* str);
+KWordWrap* k_wordwrap_format_text(void* fm, const void* r, int flags, const char* str);
 
 /// [Upstream resources](https://api.kde.org/kwordwrap.html#boundingRect)
 ///
-/// @param self KWordWrap*
+/// @param self const KWordWrap*
 ///
-QRect* k_wordwrap_bounding_rect(void* self);
+QRect* k_wordwrap_bounding_rect(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwordwrap.html#wrappedString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KWordWrap*
+/// @param self const KWordWrap*
 ///
-const char* k_wordwrap_wrapped_string(void* self);
+const char* k_wordwrap_wrapped_string(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwordwrap.html#truncatedString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KWordWrap*
+/// @param self const KWordWrap*
 ///
-const char* k_wordwrap_truncated_string(void* self);
+const char* k_wordwrap_truncated_string(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwordwrap.html#drawText)
 ///
-/// @param self KWordWrap*
+/// @param self const KWordWrap*
 /// @param painter QPainter*
 /// @param x int
 /// @param y int
 ///
-void k_wordwrap_draw_text(void* self, void* painter, int x, int y);
+void k_wordwrap_draw_text(const void* self, void* painter, int x, int y);
 
 /// [Upstream resources](https://api.kde.org/kwordwrap.html#operator-eq)
 ///
 /// @param self KWordWrap*
 /// @param other KWordWrap*
 ///
-void k_wordwrap_operator_assign(void* self, void* other);
+void k_wordwrap_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/kwordwrap.html#drawFadeoutText)
 ///
@@ -91,26 +91,26 @@ void k_wordwrap_draw_truncate_text(void* p, int x, int y, int maxW, const char* 
 /// @param str const char*
 /// @param lenVal int
 ///
-KWordWrap* k_wordwrap_format_text5(void* fm, void* r, int flags, const char* str, int lenVal);
+KWordWrap* k_wordwrap_format_text5(void* fm, const void* r, int flags, const char* str, int lenVal);
 
 /// [Upstream resources](https://api.kde.org/kwordwrap.html#truncatedString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KWordWrap*
+/// @param self const KWordWrap*
 /// @param dots bool
 ///
-const char* k_wordwrap_truncated_string1(void* self, bool dots);
+const char* k_wordwrap_truncated_string1(const void* self, bool dots);
 
 /// [Upstream resources](https://api.kde.org/kwordwrap.html#drawText)
 ///
-/// @param self KWordWrap*
+/// @param self const KWordWrap*
 /// @param painter QPainter*
 /// @param x int
 /// @param y int
 /// @param flags int
 ///
-void k_wordwrap_draw_text4(void* self, void* painter, int x, int y, int flags);
+void k_wordwrap_draw_text4(const void* self, void* painter, int x, int y, int flags);
 
 /// [Upstream resources](https://api.kde.org/kwordwrap.html#dtor.KWordWrap)
 ///

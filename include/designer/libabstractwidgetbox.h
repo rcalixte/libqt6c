@@ -33,26 +33,26 @@ QDesignerWidgetBoxInterface* q_designerwidgetboxinterface_new3(void* parent, int
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-const QMetaObject* q_designerwidgetboxinterface_meta_object(void* self);
+const QMetaObject* q_designerwidgetboxinterface_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerWidgetBoxInterface*
-/// @param callback const QMetaObject* func()
+/// @param self const QDesignerWidgetBoxInterface*
+/// @param callback const QMetaObject* func(const QDesignerWidgetBoxInterface* self)
 ///
-void q_designerwidgetboxinterface_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_designerwidgetboxinterface_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-const QMetaObject* q_designerwidgetboxinterface_super_meta_object(void* self);
+const QMetaObject* q_designerwidgetboxinterface_super_meta_object(const void* self);
 
 /// @param self QDesignerWidgetBoxInterface*
 /// @param param1 const char*
@@ -106,60 +106,49 @@ const char* q_designerwidgetboxinterface_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#categoryCount)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @warning This method must be implemented with `q_designerwidgetboxinterface_on_category_count` before it can be called.
 ///
-int32_t q_designerwidgetboxinterface_category_count(void* self);
+/// @param self const QDesignerWidgetBoxInterface*
+///
+int32_t q_designerwidgetboxinterface_category_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#categoryCount)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerWidgetBoxInterface*
-/// @param callback int32_t func()
+/// @param self const QDesignerWidgetBoxInterface*
+/// @param callback int32_t func(const QDesignerWidgetBoxInterface* self)
 ///
-void q_designerwidgetboxinterface_on_category_count(void* self, int32_t (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#categoryCount)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerWidgetBoxInterface*
-///
-int32_t q_designerwidgetboxinterface_super_category_count(void* self);
+void q_designerwidgetboxinterface_on_category_count(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#category)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @warning This method must be implemented with `q_designerwidgetboxinterface_on_category` before it can be called.
+///
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param cat_idx int
 ///
-QDesignerWidgetBoxInterface__Category* q_designerwidgetboxinterface_category(void* self, int cat_idx);
+QDesignerWidgetBoxInterface__Category* q_designerwidgetboxinterface_category(const void* self, int cat_idx);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#category)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerWidgetBoxInterface*
-/// @param callback QDesignerWidgetBoxInterface__Category* func(QDesignerWidgetBoxInterface* self, int cat_idx)
+/// @param self const QDesignerWidgetBoxInterface*
+/// @param callback QDesignerWidgetBoxInterface__Category* func(const QDesignerWidgetBoxInterface* self, int cat_idx)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_designerwidgetboxinterface_on_category(void* self, QDesignerWidgetBoxInterface__Category* (*callback)(void*, int));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#category)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerWidgetBoxInterface*
-/// @param cat_idx int
-///
-QDesignerWidgetBoxInterface__Category* q_designerwidgetboxinterface_super_category(void* self, int cat_idx);
+void q_designerwidgetboxinterface_on_category(const void* self, QDesignerWidgetBoxInterface__Category* (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#addCategory)
+///
+/// @warning This method must be implemented with `q_designerwidgetboxinterface_on_add_category` before it can be called.
 ///
 /// @param self QDesignerWidgetBoxInterface*
 /// @param cat QDesignerWidgetBoxInterface__Category*
 ///
-void q_designerwidgetboxinterface_add_category(void* self, void* cat);
+void q_designerwidgetboxinterface_add_category(void* self, const void* cat);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#addCategory)
 ///
@@ -168,18 +157,11 @@ void q_designerwidgetboxinterface_add_category(void* self, void* cat);
 /// @param self QDesignerWidgetBoxInterface*
 /// @param callback void func(QDesignerWidgetBoxInterface* self, QDesignerWidgetBoxInterface__Category* cat)
 ///
-void q_designerwidgetboxinterface_on_add_category(void* self, void (*callback)(void*, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#addCategory)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerWidgetBoxInterface*
-/// @param cat QDesignerWidgetBoxInterface__Category*
-///
-void q_designerwidgetboxinterface_super_add_category(void* self, void* cat);
+void q_designerwidgetboxinterface_on_add_category(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#removeCategory)
+///
+/// @warning This method must be implemented with `q_designerwidgetboxinterface_on_remove_category` before it can be called.
 ///
 /// @param self QDesignerWidgetBoxInterface*
 /// @param cat_idx int
@@ -195,76 +177,54 @@ void q_designerwidgetboxinterface_remove_category(void* self, int cat_idx);
 ///
 void q_designerwidgetboxinterface_on_remove_category(void* self, void (*callback)(void*, int));
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#removeCategory)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerWidgetBoxInterface*
-/// @param cat_idx int
-///
-void q_designerwidgetboxinterface_super_remove_category(void* self, int cat_idx);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#widgetCount)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @warning This method must be implemented with `q_designerwidgetboxinterface_on_widget_count` before it can be called.
+///
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param cat_idx int
 ///
-int32_t q_designerwidgetboxinterface_widget_count(void* self, int cat_idx);
+int32_t q_designerwidgetboxinterface_widget_count(const void* self, int cat_idx);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#widgetCount)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerWidgetBoxInterface*
-/// @param callback int32_t func(QDesignerWidgetBoxInterface* self, int cat_idx)
+/// @param self const QDesignerWidgetBoxInterface*
+/// @param callback int32_t func(const QDesignerWidgetBoxInterface* self, int cat_idx)
 ///
-void q_designerwidgetboxinterface_on_widget_count(void* self, int32_t (*callback)(void*, int));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#widgetCount)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerWidgetBoxInterface*
-/// @param cat_idx int
-///
-int32_t q_designerwidgetboxinterface_super_widget_count(void* self, int cat_idx);
+void q_designerwidgetboxinterface_on_widget_count(const void* self, int32_t (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#widget)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @warning This method must be implemented with `q_designerwidgetboxinterface_on_widget` before it can be called.
+///
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param cat_idx int
 /// @param wgt_idx int
 ///
-QDesignerWidgetBoxInterface__Widget* q_designerwidgetboxinterface_widget(void* self, int cat_idx, int wgt_idx);
+QDesignerWidgetBoxInterface__Widget* q_designerwidgetboxinterface_widget(const void* self, int cat_idx, int wgt_idx);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#widget)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerWidgetBoxInterface*
-/// @param callback QDesignerWidgetBoxInterface__Widget* func(QDesignerWidgetBoxInterface* self, int cat_idx, int wgt_idx)
+/// @param self const QDesignerWidgetBoxInterface*
+/// @param callback QDesignerWidgetBoxInterface__Widget* func(const QDesignerWidgetBoxInterface* self, int cat_idx, int wgt_idx)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_designerwidgetboxinterface_on_widget(void* self, QDesignerWidgetBoxInterface__Widget* (*callback)(void*, int, int));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#widget)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerWidgetBoxInterface*
-/// @param cat_idx int
-/// @param wgt_idx int
-///
-QDesignerWidgetBoxInterface__Widget* q_designerwidgetboxinterface_super_widget(void* self, int cat_idx, int wgt_idx);
+void q_designerwidgetboxinterface_on_widget(const void* self, QDesignerWidgetBoxInterface__Widget* (*callback)(const void*, int, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#addWidget)
+///
+/// @warning This method must be implemented with `q_designerwidgetboxinterface_on_add_widget` before it can be called.
 ///
 /// @param self QDesignerWidgetBoxInterface*
 /// @param cat_idx int
 /// @param wgt QDesignerWidgetBoxInterface__Widget*
 ///
-void q_designerwidgetboxinterface_add_widget(void* self, int cat_idx, void* wgt);
+void q_designerwidgetboxinterface_add_widget(void* self, int cat_idx, const void* wgt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#addWidget)
 ///
@@ -273,19 +233,11 @@ void q_designerwidgetboxinterface_add_widget(void* self, int cat_idx, void* wgt)
 /// @param self QDesignerWidgetBoxInterface*
 /// @param callback void func(QDesignerWidgetBoxInterface* self, int cat_idx, QDesignerWidgetBoxInterface__Widget* wgt)
 ///
-void q_designerwidgetboxinterface_on_add_widget(void* self, void (*callback)(void*, int, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#addWidget)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerWidgetBoxInterface*
-/// @param cat_idx int
-/// @param wgt QDesignerWidgetBoxInterface__Widget*
-///
-void q_designerwidgetboxinterface_super_add_widget(void* self, int cat_idx, void* wgt);
+void q_designerwidgetboxinterface_on_add_widget(void* self, void (*callback)(void*, int, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#removeWidget)
+///
+/// @warning This method must be implemented with `q_designerwidgetboxinterface_on_remove_widget` before it can be called.
 ///
 /// @param self QDesignerWidgetBoxInterface*
 /// @param cat_idx int
@@ -302,16 +254,6 @@ void q_designerwidgetboxinterface_remove_widget(void* self, int cat_idx, int wgt
 ///
 void q_designerwidgetboxinterface_on_remove_widget(void* self, void (*callback)(void*, int, int));
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#removeWidget)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerWidgetBoxInterface*
-/// @param cat_idx int
-/// @param wgt_idx int
-///
-void q_designerwidgetboxinterface_super_remove_widget(void* self, int cat_idx, int wgt_idx);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#findOrInsertCategory)
 ///
 /// @param self QDesignerWidgetBoxInterface*
@@ -321,11 +263,13 @@ int32_t q_designerwidgetboxinterface_find_or_insert_category(void* self, const c
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#dropWidgets)
 ///
+/// @warning This method must be implemented with `q_designerwidgetboxinterface_on_drop_widgets` before it can be called.
+///
 /// @param self QDesignerWidgetBoxInterface*
 /// @param item_list libqt_list of QDesignerDnDItemInterface*
 /// @param global_mouse_pos QPoint*
 ///
-void q_designerwidgetboxinterface_drop_widgets(void* self, libqt_list item_list, void* global_mouse_pos);
+void q_designerwidgetboxinterface_drop_widgets(void* self, libqt_list item_list, const void* global_mouse_pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#dropWidgets)
 ///
@@ -334,19 +278,11 @@ void q_designerwidgetboxinterface_drop_widgets(void* self, libqt_list item_list,
 /// @param self QDesignerWidgetBoxInterface*
 /// @param callback void func(QDesignerWidgetBoxInterface* self, libqt_list of QDesignerDnDItemInterface* item_list, QPoint* global_mouse_pos)
 ///
-void q_designerwidgetboxinterface_on_drop_widgets(void* self, void (*callback)(void*, libqt_list, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#dropWidgets)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerWidgetBoxInterface*
-/// @param item_list libqt_list of QDesignerDnDItemInterface*
-/// @param global_mouse_pos QPoint*
-///
-void q_designerwidgetboxinterface_super_drop_widgets(void* self, libqt_list item_list, void* global_mouse_pos);
+void q_designerwidgetboxinterface_on_drop_widgets(void* self, void (*callback)(void*, libqt_list, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#setFileName)
+///
+/// @warning This method must be implemented with `q_designerwidgetboxinterface_on_set_file_name` before it can be called.
 ///
 /// @param self QDesignerWidgetBoxInterface*
 /// @param file_name const char*
@@ -362,41 +298,28 @@ void q_designerwidgetboxinterface_set_file_name(void* self, const char* file_nam
 ///
 void q_designerwidgetboxinterface_on_set_file_name(void* self, void (*callback)(void*, const char*));
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#setFileName)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerWidgetBoxInterface*
-/// @param file_name const char*
-///
-void q_designerwidgetboxinterface_super_set_file_name(void* self, const char* file_name);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#fileName)
+///
+/// @warning This method must be implemented with `q_designerwidgetboxinterface_on_file_name` before it can be called.
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-const char* q_designerwidgetboxinterface_file_name(void* self);
+const char* q_designerwidgetboxinterface_file_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#fileName)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerWidgetBoxInterface*
-/// @param callback const char* func()
+/// @param self const QDesignerWidgetBoxInterface*
+/// @param callback const char* func(const QDesignerWidgetBoxInterface* self)
 ///
-void q_designerwidgetboxinterface_on_file_name(void* self, const char* (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#fileName)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerWidgetBoxInterface*
-///
-const char* q_designerwidgetboxinterface_super_file_name(void* self);
+void q_designerwidgetboxinterface_on_file_name(const void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#load)
+///
+/// @warning This method must be implemented with `q_designerwidgetboxinterface_on_load` before it can be called.
 ///
 /// @param self QDesignerWidgetBoxInterface*
 ///
@@ -407,19 +330,13 @@ bool q_designerwidgetboxinterface_load(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QDesignerWidgetBoxInterface*
-/// @param callback bool func()
+/// @param callback bool func(QDesignerWidgetBoxInterface* self)
 ///
-void q_designerwidgetboxinterface_on_load(void* self, bool (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#load)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerWidgetBoxInterface*
-///
-bool q_designerwidgetboxinterface_super_load(void* self);
+void q_designerwidgetboxinterface_on_load(void* self, bool (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#save)
+///
+/// @warning This method must be implemented with `q_designerwidgetboxinterface_on_save` before it can be called.
 ///
 /// @param self QDesignerWidgetBoxInterface*
 ///
@@ -430,17 +347,9 @@ bool q_designerwidgetboxinterface_save(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QDesignerWidgetBoxInterface*
-/// @param callback bool func()
+/// @param callback bool func(QDesignerWidgetBoxInterface* self)
 ///
-void q_designerwidgetboxinterface_on_save(void* self, bool (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#save)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerWidgetBoxInterface*
-///
-bool q_designerwidgetboxinterface_super_save(void* self);
+void q_designerwidgetboxinterface_on_save(void* self, bool (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -481,9 +390,9 @@ QDesignerWidgetBoxInterface* q_designerwidgetboxinterface_from_q_paint_device(vo
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-uintptr_t q_designerwidgetboxinterface_win_id(void* self);
+uintptr_t q_designerwidgetboxinterface_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -497,25 +406,25 @@ void q_designerwidgetboxinterface_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-uintptr_t q_designerwidgetboxinterface_internal_win_id(void* self);
+uintptr_t q_designerwidgetboxinterface_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-uintptr_t q_designerwidgetboxinterface_effective_win_id(void* self);
+uintptr_t q_designerwidgetboxinterface_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QStyle* q_designerwidgetboxinterface_style(void* self);
+QStyle* q_designerwidgetboxinterface_style(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -530,35 +439,35 @@ void q_designerwidgetboxinterface_set_style(void* self, void* style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-bool q_designerwidgetboxinterface_is_top_level(void* self);
+bool q_designerwidgetboxinterface_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-bool q_designerwidgetboxinterface_is_window(void* self);
+bool q_designerwidgetboxinterface_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-bool q_designerwidgetboxinterface_is_modal(void* self);
+bool q_designerwidgetboxinterface_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t q_designerwidgetboxinterface_window_modality(void* self);
+int32_t q_designerwidgetboxinterface_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -573,18 +482,18 @@ void q_designerwidgetboxinterface_set_window_modality(void* self, int32_t window
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-bool q_designerwidgetboxinterface_is_enabled(void* self);
+bool q_designerwidgetboxinterface_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param param1 QWidget*
 ///
-bool q_designerwidgetboxinterface_is_enabled_to(void* self, void* param1);
+bool q_designerwidgetboxinterface_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -617,153 +526,153 @@ void q_designerwidgetboxinterface_set_window_modified(void* self, bool windowMod
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QRect* q_designerwidgetboxinterface_frame_geometry(void* self);
+QRect* q_designerwidgetboxinterface_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-const QRect* q_designerwidgetboxinterface_geometry(void* self);
+const QRect* q_designerwidgetboxinterface_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QRect* q_designerwidgetboxinterface_normal_geometry(void* self);
+QRect* q_designerwidgetboxinterface_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-int32_t q_designerwidgetboxinterface_x(void* self);
+int32_t q_designerwidgetboxinterface_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-int32_t q_designerwidgetboxinterface_y(void* self);
+int32_t q_designerwidgetboxinterface_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QPoint* q_designerwidgetboxinterface_pos(void* self);
+QPoint* q_designerwidgetboxinterface_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QSize* q_designerwidgetboxinterface_frame_size(void* self);
+QSize* q_designerwidgetboxinterface_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QSize* q_designerwidgetboxinterface_size(void* self);
+QSize* q_designerwidgetboxinterface_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-int32_t q_designerwidgetboxinterface_width(void* self);
+int32_t q_designerwidgetboxinterface_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-int32_t q_designerwidgetboxinterface_height(void* self);
+int32_t q_designerwidgetboxinterface_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QRect* q_designerwidgetboxinterface_rect(void* self);
+QRect* q_designerwidgetboxinterface_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QRect* q_designerwidgetboxinterface_children_rect(void* self);
+QRect* q_designerwidgetboxinterface_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QRegion* q_designerwidgetboxinterface_children_region(void* self);
+QRegion* q_designerwidgetboxinterface_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QSize* q_designerwidgetboxinterface_minimum_size(void* self);
+QSize* q_designerwidgetboxinterface_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QSize* q_designerwidgetboxinterface_maximum_size(void* self);
+QSize* q_designerwidgetboxinterface_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-int32_t q_designerwidgetboxinterface_minimum_width(void* self);
+int32_t q_designerwidgetboxinterface_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-int32_t q_designerwidgetboxinterface_minimum_height(void* self);
+int32_t q_designerwidgetboxinterface_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-int32_t q_designerwidgetboxinterface_maximum_width(void* self);
+int32_t q_designerwidgetboxinterface_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-int32_t q_designerwidgetboxinterface_maximum_height(void* self);
+int32_t q_designerwidgetboxinterface_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -772,7 +681,7 @@ int32_t q_designerwidgetboxinterface_maximum_height(void* self);
 /// @param self QDesignerWidgetBoxInterface*
 /// @param minimumSize QSize*
 ///
-void q_designerwidgetboxinterface_set_minimum_size(void* self, void* minimumSize);
+void q_designerwidgetboxinterface_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -791,7 +700,7 @@ void q_designerwidgetboxinterface_set_minimum_size2(void* self, int minw, int mi
 /// @param self QDesignerWidgetBoxInterface*
 /// @param maximumSize QSize*
 ///
-void q_designerwidgetboxinterface_set_maximum_size(void* self, void* maximumSize);
+void q_designerwidgetboxinterface_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -843,9 +752,9 @@ void q_designerwidgetboxinterface_set_maximum_height(void* self, int maxh);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QSize* q_designerwidgetboxinterface_size_increment(void* self);
+QSize* q_designerwidgetboxinterface_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -854,7 +763,7 @@ QSize* q_designerwidgetboxinterface_size_increment(void* self);
 /// @param self QDesignerWidgetBoxInterface*
 /// @param sizeIncrement QSize*
 ///
-void q_designerwidgetboxinterface_set_size_increment(void* self, void* sizeIncrement);
+void q_designerwidgetboxinterface_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -870,9 +779,9 @@ void q_designerwidgetboxinterface_set_size_increment2(void* self, int w, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QSize* q_designerwidgetboxinterface_base_size(void* self);
+QSize* q_designerwidgetboxinterface_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -881,7 +790,7 @@ QSize* q_designerwidgetboxinterface_base_size(void* self);
 /// @param self QDesignerWidgetBoxInterface*
 /// @param baseSize QSize*
 ///
-void q_designerwidgetboxinterface_set_base_size(void* self, void* baseSize);
+void q_designerwidgetboxinterface_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -900,7 +809,7 @@ void q_designerwidgetboxinterface_set_base_size2(void* self, int basew, int base
 /// @param self QDesignerWidgetBoxInterface*
 /// @param fixedSize QSize*
 ///
-void q_designerwidgetboxinterface_set_fixed_size(void* self, void* fixedSize);
+void q_designerwidgetboxinterface_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -934,145 +843,145 @@ void q_designerwidgetboxinterface_set_fixed_height(void* self, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param param1 QPointF*
 ///
-QPointF* q_designerwidgetboxinterface_map_to_global(void* self, void* param1);
+QPointF* q_designerwidgetboxinterface_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param param1 QPoint*
 ///
-QPoint* q_designerwidgetboxinterface_map_to_global2(void* self, void* param1);
+QPoint* q_designerwidgetboxinterface_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param param1 QPointF*
 ///
-QPointF* q_designerwidgetboxinterface_map_from_global(void* self, void* param1);
+QPointF* q_designerwidgetboxinterface_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param param1 QPoint*
 ///
-QPoint* q_designerwidgetboxinterface_map_from_global2(void* self, void* param1);
+QPoint* q_designerwidgetboxinterface_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param param1 QPointF*
 ///
-QPointF* q_designerwidgetboxinterface_map_to_parent(void* self, void* param1);
+QPointF* q_designerwidgetboxinterface_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param param1 QPoint*
 ///
-QPoint* q_designerwidgetboxinterface_map_to_parent2(void* self, void* param1);
+QPoint* q_designerwidgetboxinterface_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param param1 QPointF*
 ///
-QPointF* q_designerwidgetboxinterface_map_from_parent(void* self, void* param1);
+QPointF* q_designerwidgetboxinterface_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param param1 QPoint*
 ///
-QPoint* q_designerwidgetboxinterface_map_from_parent2(void* self, void* param1);
+QPoint* q_designerwidgetboxinterface_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* q_designerwidgetboxinterface_map_to(void* self, void* param1, void* param2);
+QPointF* q_designerwidgetboxinterface_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* q_designerwidgetboxinterface_map_to2(void* self, void* param1, void* param2);
+QPoint* q_designerwidgetboxinterface_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* q_designerwidgetboxinterface_map_from(void* self, void* param1, void* param2);
+QPointF* q_designerwidgetboxinterface_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* q_designerwidgetboxinterface_map_from2(void* self, void* param1, void* param2);
+QPoint* q_designerwidgetboxinterface_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QWidget* q_designerwidgetboxinterface_window(void* self);
+QWidget* q_designerwidgetboxinterface_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QWidget* q_designerwidgetboxinterface_native_parent_widget(void* self);
+QWidget* q_designerwidgetboxinterface_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QWidget* q_designerwidgetboxinterface_top_level_widget(void* self);
+QWidget* q_designerwidgetboxinterface_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-const QPalette* q_designerwidgetboxinterface_palette(void* self);
+const QPalette* q_designerwidgetboxinterface_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1081,7 +990,7 @@ const QPalette* q_designerwidgetboxinterface_palette(void* self);
 /// @param self QDesignerWidgetBoxInterface*
 /// @param palette QPalette*
 ///
-void q_designerwidgetboxinterface_set_palette(void* self, void* palette);
+void q_designerwidgetboxinterface_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -1096,11 +1005,11 @@ void q_designerwidgetboxinterface_set_background_role(void* self, int32_t backgr
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t q_designerwidgetboxinterface_background_role(void* self);
+int32_t q_designerwidgetboxinterface_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1115,19 +1024,19 @@ void q_designerwidgetboxinterface_set_foreground_role(void* self, int32_t foregr
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t q_designerwidgetboxinterface_foreground_role(void* self);
+int32_t q_designerwidgetboxinterface_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-const QFont* q_designerwidgetboxinterface_font(void* self);
+const QFont* q_designerwidgetboxinterface_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1136,31 +1045,31 @@ const QFont* q_designerwidgetboxinterface_font(void* self);
 /// @param self QDesignerWidgetBoxInterface*
 /// @param font QFont*
 ///
-void q_designerwidgetboxinterface_set_font(void* self, void* font);
+void q_designerwidgetboxinterface_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QFontMetrics* q_designerwidgetboxinterface_font_metrics(void* self);
+QFontMetrics* q_designerwidgetboxinterface_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QFontInfo* q_designerwidgetboxinterface_font_info(void* self);
+QFontInfo* q_designerwidgetboxinterface_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QCursor* q_designerwidgetboxinterface_cursor(void* self);
+QCursor* q_designerwidgetboxinterface_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1169,7 +1078,7 @@ QCursor* q_designerwidgetboxinterface_cursor(void* self);
 /// @param self QDesignerWidgetBoxInterface*
 /// @param cursor QCursor*
 ///
-void q_designerwidgetboxinterface_set_cursor(void* self, void* cursor);
+void q_designerwidgetboxinterface_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -1192,17 +1101,17 @@ void q_designerwidgetboxinterface_set_mouse_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-bool q_designerwidgetboxinterface_has_mouse_tracking(void* self);
+bool q_designerwidgetboxinterface_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-bool q_designerwidgetboxinterface_under_mouse(void* self);
+bool q_designerwidgetboxinterface_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1217,9 +1126,9 @@ void q_designerwidgetboxinterface_set_tablet_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-bool q_designerwidgetboxinterface_has_tablet_tracking(void* self);
+bool q_designerwidgetboxinterface_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1228,7 +1137,7 @@ bool q_designerwidgetboxinterface_has_tablet_tracking(void* self);
 /// @param self QDesignerWidgetBoxInterface*
 /// @param mask QBitmap*
 ///
-void q_designerwidgetboxinterface_set_mask(void* self, void* mask);
+void q_designerwidgetboxinterface_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -1237,15 +1146,15 @@ void q_designerwidgetboxinterface_set_mask(void* self, void* mask);
 /// @param self QDesignerWidgetBoxInterface*
 /// @param mask QRegion*
 ///
-void q_designerwidgetboxinterface_set_mask2(void* self, void* mask);
+void q_designerwidgetboxinterface_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QRegion* q_designerwidgetboxinterface_mask(void* self);
+QRegion* q_designerwidgetboxinterface_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1285,9 +1194,9 @@ QPixmap* q_designerwidgetboxinterface_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QGraphicsEffect* q_designerwidgetboxinterface_graphics_effect(void* self);
+QGraphicsEffect* q_designerwidgetboxinterface_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1340,9 +1249,9 @@ void q_designerwidgetboxinterface_set_style_sheet(void* self, const char* styleS
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-const char* q_designerwidgetboxinterface_style_sheet(void* self);
+const char* q_designerwidgetboxinterface_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1350,9 +1259,9 @@ const char* q_designerwidgetboxinterface_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-const char* q_designerwidgetboxinterface_window_title(void* self);
+const char* q_designerwidgetboxinterface_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1361,15 +1270,15 @@ const char* q_designerwidgetboxinterface_window_title(void* self);
 /// @param self QDesignerWidgetBoxInterface*
 /// @param icon QIcon*
 ///
-void q_designerwidgetboxinterface_set_window_icon(void* self, void* icon);
+void q_designerwidgetboxinterface_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QIcon* q_designerwidgetboxinterface_window_icon(void* self);
+QIcon* q_designerwidgetboxinterface_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1386,9 +1295,9 @@ void q_designerwidgetboxinterface_set_window_icon_text(void* self, const char* w
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-const char* q_designerwidgetboxinterface_window_icon_text(void* self);
+const char* q_designerwidgetboxinterface_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1405,9 +1314,9 @@ void q_designerwidgetboxinterface_set_window_role(void* self, const char* window
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-const char* q_designerwidgetboxinterface_window_role(void* self);
+const char* q_designerwidgetboxinterface_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1424,9 +1333,9 @@ void q_designerwidgetboxinterface_set_window_file_path(void* self, const char* f
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-const char* q_designerwidgetboxinterface_window_file_path(void* self);
+const char* q_designerwidgetboxinterface_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1441,17 +1350,17 @@ void q_designerwidgetboxinterface_set_window_opacity(void* self, double level);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-double q_designerwidgetboxinterface_window_opacity(void* self);
+double q_designerwidgetboxinterface_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-bool q_designerwidgetboxinterface_is_window_modified(void* self);
+bool q_designerwidgetboxinterface_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1468,9 +1377,9 @@ void q_designerwidgetboxinterface_set_tool_tip(void* self, const char* toolTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-const char* q_designerwidgetboxinterface_tool_tip(void* self);
+const char* q_designerwidgetboxinterface_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1485,9 +1394,9 @@ void q_designerwidgetboxinterface_set_tool_tip_duration(void* self, int msec);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-int32_t q_designerwidgetboxinterface_tool_tip_duration(void* self);
+int32_t q_designerwidgetboxinterface_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1504,9 +1413,9 @@ void q_designerwidgetboxinterface_set_status_tip(void* self, const char* statusT
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-const char* q_designerwidgetboxinterface_status_tip(void* self);
+const char* q_designerwidgetboxinterface_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1523,9 +1432,9 @@ void q_designerwidgetboxinterface_set_whats_this(void* self, const char* whatsTh
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-const char* q_designerwidgetboxinterface_whats_this(void* self);
+const char* q_designerwidgetboxinterface_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1533,9 +1442,9 @@ const char* q_designerwidgetboxinterface_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-const char* q_designerwidgetboxinterface_accessible_name(void* self);
+const char* q_designerwidgetboxinterface_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1552,9 +1461,9 @@ void q_designerwidgetboxinterface_set_accessible_name(void* self, const char* na
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-const char* q_designerwidgetboxinterface_accessible_description(void* self);
+const char* q_designerwidgetboxinterface_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1578,11 +1487,11 @@ void q_designerwidgetboxinterface_set_layout_direction(void* self, int32_t direc
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_designerwidgetboxinterface_layout_direction(void* self);
+int32_t q_designerwidgetboxinterface_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1599,15 +1508,15 @@ void q_designerwidgetboxinterface_unset_layout_direction(void* self);
 /// @param self QDesignerWidgetBoxInterface*
 /// @param locale QLocale*
 ///
-void q_designerwidgetboxinterface_set_locale(void* self, void* locale);
+void q_designerwidgetboxinterface_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QLocale* q_designerwidgetboxinterface_locale(void* self);
+QLocale* q_designerwidgetboxinterface_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1621,17 +1530,17 @@ void q_designerwidgetboxinterface_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-bool q_designerwidgetboxinterface_is_right_to_left(void* self);
+bool q_designerwidgetboxinterface_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-bool q_designerwidgetboxinterface_is_left_to_right(void* self);
+bool q_designerwidgetboxinterface_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1645,9 +1554,9 @@ void q_designerwidgetboxinterface_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-bool q_designerwidgetboxinterface_is_active_window(void* self);
+bool q_designerwidgetboxinterface_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1678,11 +1587,11 @@ void q_designerwidgetboxinterface_set_focus2(void* self, int32_t reason);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t q_designerwidgetboxinterface_focus_policy(void* self);
+int32_t q_designerwidgetboxinterface_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1697,9 +1606,9 @@ void q_designerwidgetboxinterface_set_focus_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-bool q_designerwidgetboxinterface_has_focus(void* self);
+bool q_designerwidgetboxinterface_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1723,19 +1632,19 @@ void q_designerwidgetboxinterface_set_focus_proxy(void* self, void* focusProxy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QWidget* q_designerwidgetboxinterface_focus_proxy(void* self);
+QWidget* q_designerwidgetboxinterface_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t q_designerwidgetboxinterface_context_menu_policy(void* self);
+int32_t q_designerwidgetboxinterface_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1761,7 +1670,7 @@ void q_designerwidgetboxinterface_grab_mouse(void* self);
 /// @param self QDesignerWidgetBoxInterface*
 /// @param param1 QCursor*
 ///
-void q_designerwidgetboxinterface_grab_mouse2(void* self, void* param1);
+void q_designerwidgetboxinterface_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1794,7 +1703,7 @@ void q_designerwidgetboxinterface_release_keyboard(void* self);
 /// @param self QDesignerWidgetBoxInterface*
 /// @param key QKeySequence*
 ///
-int32_t q_designerwidgetboxinterface_grab_shortcut(void* self, void* key);
+int32_t q_designerwidgetboxinterface_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -1839,9 +1748,9 @@ QWidget* q_designerwidgetboxinterface_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-bool q_designerwidgetboxinterface_updates_enabled(void* self);
+bool q_designerwidgetboxinterface_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1856,9 +1765,9 @@ void q_designerwidgetboxinterface_set_updates_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QGraphicsProxyWidget* q_designerwidgetboxinterface_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* q_designerwidgetboxinterface_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1895,7 +1804,7 @@ void q_designerwidgetboxinterface_update2(void* self, int x, int y, int w, int h
 /// @param self QDesignerWidgetBoxInterface*
 /// @param param1 QRect*
 ///
-void q_designerwidgetboxinterface_update3(void* self, void* param1);
+void q_designerwidgetboxinterface_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1904,7 +1813,7 @@ void q_designerwidgetboxinterface_update3(void* self, void* param1);
 /// @param self QDesignerWidgetBoxInterface*
 /// @param param1 QRegion*
 ///
-void q_designerwidgetboxinterface_update4(void* self, void* param1);
+void q_designerwidgetboxinterface_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1925,7 +1834,7 @@ void q_designerwidgetboxinterface_repaint2(void* self, int x, int y, int w, int 
 /// @param self QDesignerWidgetBoxInterface*
 /// @param param1 QRect*
 ///
-void q_designerwidgetboxinterface_repaint3(void* self, void* param1);
+void q_designerwidgetboxinterface_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1934,7 +1843,7 @@ void q_designerwidgetboxinterface_repaint3(void* self, void* param1);
 /// @param self QDesignerWidgetBoxInterface*
 /// @param param1 QRegion*
 ///
-void q_designerwidgetboxinterface_repaint4(void* self, void* param1);
+void q_designerwidgetboxinterface_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2043,7 +1952,7 @@ void q_designerwidgetboxinterface_move(void* self, int x, int y);
 /// @param self QDesignerWidgetBoxInterface*
 /// @param param1 QPoint*
 ///
-void q_designerwidgetboxinterface_move2(void* self, void* param1);
+void q_designerwidgetboxinterface_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2062,7 +1971,7 @@ void q_designerwidgetboxinterface_resize(void* self, int w, int h);
 /// @param self QDesignerWidgetBoxInterface*
 /// @param param1 QSize*
 ///
-void q_designerwidgetboxinterface_resize2(void* self, void* param1);
+void q_designerwidgetboxinterface_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2083,7 +1992,7 @@ void q_designerwidgetboxinterface_set_geometry(void* self, int x, int y, int w, 
 /// @param self QDesignerWidgetBoxInterface*
 /// @param geometry QRect*
 ///
-void q_designerwidgetboxinterface_set_geometry2(void* self, void* geometry);
+void q_designerwidgetboxinterface_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -2091,9 +2000,9 @@ void q_designerwidgetboxinterface_set_geometry2(void* self, void* geometry);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-char* q_designerwidgetboxinterface_save_geometry(void* self);
+char* q_designerwidgetboxinterface_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2116,60 +2025,60 @@ void q_designerwidgetboxinterface_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-bool q_designerwidgetboxinterface_is_visible(void* self);
+bool q_designerwidgetboxinterface_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param param1 QWidget*
 ///
-bool q_designerwidgetboxinterface_is_visible_to(void* self, void* param1);
+bool q_designerwidgetboxinterface_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-bool q_designerwidgetboxinterface_is_hidden(void* self);
+bool q_designerwidgetboxinterface_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-bool q_designerwidgetboxinterface_is_minimized(void* self);
+bool q_designerwidgetboxinterface_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-bool q_designerwidgetboxinterface_is_maximized(void* self);
+bool q_designerwidgetboxinterface_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-bool q_designerwidgetboxinterface_is_full_screen(void* self);
+bool q_designerwidgetboxinterface_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t q_designerwidgetboxinterface_window_state(void* self);
+int32_t q_designerwidgetboxinterface_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2193,9 +2102,9 @@ void q_designerwidgetboxinterface_override_window_state(void* self, int32_t stat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QSizePolicy* q_designerwidgetboxinterface_size_policy(void* self);
+QSizePolicy* q_designerwidgetboxinterface_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2220,9 +2129,9 @@ void q_designerwidgetboxinterface_set_size_policy2(void* self, int32_t horizonta
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QRegion* q_designerwidgetboxinterface_visible_region(void* self);
+QRegion* q_designerwidgetboxinterface_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2243,31 +2152,31 @@ void q_designerwidgetboxinterface_set_contents_margins(void* self, int left, int
 /// @param self QDesignerWidgetBoxInterface*
 /// @param margins QMargins*
 ///
-void q_designerwidgetboxinterface_set_contents_margins2(void* self, void* margins);
+void q_designerwidgetboxinterface_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QMargins* q_designerwidgetboxinterface_contents_margins(void* self);
+QMargins* q_designerwidgetboxinterface_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QRect* q_designerwidgetboxinterface_contents_rect(void* self);
+QRect* q_designerwidgetboxinterface_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QLayout* q_designerwidgetboxinterface_layout(void* self);
+QLayout* q_designerwidgetboxinterface_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2324,39 +2233,39 @@ void q_designerwidgetboxinterface_scroll(void* self, int dx, int dy);
 /// @param dy int
 /// @param param3 QRect*
 ///
-void q_designerwidgetboxinterface_scroll2(void* self, int dx, int dy, void* param3);
+void q_designerwidgetboxinterface_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QWidget* q_designerwidgetboxinterface_focus_widget(void* self);
+QWidget* q_designerwidgetboxinterface_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QWidget* q_designerwidgetboxinterface_next_in_focus_chain(void* self);
+QWidget* q_designerwidgetboxinterface_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QWidget* q_designerwidgetboxinterface_previous_in_focus_chain(void* self);
+QWidget* q_designerwidgetboxinterface_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-bool q_designerwidgetboxinterface_accept_drops(void* self);
+bool q_designerwidgetboxinterface_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2418,11 +2327,11 @@ void q_designerwidgetboxinterface_remove_action(void* self, void* action);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list q_designerwidgetboxinterface_actions(void* self);
+libqt_list q_designerwidgetboxinterface_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2441,7 +2350,7 @@ QAction* q_designerwidgetboxinterface_add_action2(void* self, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* q_designerwidgetboxinterface_add_action3(void* self, void* icon, const char* text);
+QAction* q_designerwidgetboxinterface_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -2451,7 +2360,7 @@ QAction* q_designerwidgetboxinterface_add_action3(void* self, void* icon, const 
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* q_designerwidgetboxinterface_add_action4(void* self, const char* text, void* shortcut);
+QAction* q_designerwidgetboxinterface_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -2462,15 +2371,15 @@ QAction* q_designerwidgetboxinterface_add_action4(void* self, const char* text, 
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* q_designerwidgetboxinterface_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* q_designerwidgetboxinterface_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QWidget* q_designerwidgetboxinterface_parent_widget(void* self);
+QWidget* q_designerwidgetboxinterface_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2485,11 +2394,11 @@ void q_designerwidgetboxinterface_set_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t q_designerwidgetboxinterface_window_flags(void* self);
+int32_t q_designerwidgetboxinterface_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2513,11 +2422,11 @@ void q_designerwidgetboxinterface_override_window_flags(void* self, int32_t type
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t q_designerwidgetboxinterface_window_type(void* self);
+int32_t q_designerwidgetboxinterface_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2531,29 +2440,29 @@ QWidget* q_designerwidgetboxinterface_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param x int
 /// @param y int
 ///
-QWidget* q_designerwidgetboxinterface_child_at(void* self, int x, int y);
+QWidget* q_designerwidgetboxinterface_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param p QPoint*
 ///
-QWidget* q_designerwidgetboxinterface_child_at2(void* self, void* p);
+QWidget* q_designerwidgetboxinterface_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param p QPointF*
 ///
-QWidget* q_designerwidgetboxinterface_child_at3(void* self, void* p);
+QWidget* q_designerwidgetboxinterface_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -2568,35 +2477,35 @@ void q_designerwidgetboxinterface_set_attribute(void* self, int32_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool q_designerwidgetboxinterface_test_attribute(void* self, int32_t param1);
+bool q_designerwidgetboxinterface_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-void q_designerwidgetboxinterface_ensure_polished(void* self);
+void q_designerwidgetboxinterface_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param child QWidget*
 ///
-bool q_designerwidgetboxinterface_is_ancestor_of(void* self, void* child);
+bool q_designerwidgetboxinterface_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-bool q_designerwidgetboxinterface_auto_fill_background(void* self);
+bool q_designerwidgetboxinterface_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2611,25 +2520,25 @@ void q_designerwidgetboxinterface_set_auto_fill_background(void* self, bool enab
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QBackingStore* q_designerwidgetboxinterface_backing_store(void* self);
+QBackingStore* q_designerwidgetboxinterface_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QWindow* q_designerwidgetboxinterface_window_handle(void* self);
+QWindow* q_designerwidgetboxinterface_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QScreen* q_designerwidgetboxinterface_screen(void* self);
+QScreen* q_designerwidgetboxinterface_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2673,7 +2582,7 @@ void q_designerwidgetboxinterface_on_window_title_changed(void* self, void (*cal
 /// @param self QDesignerWidgetBoxInterface*
 /// @param icon QIcon*
 ///
-void q_designerwidgetboxinterface_window_icon_changed(void* self, void* icon);
+void q_designerwidgetboxinterface_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -2682,7 +2591,7 @@ void q_designerwidgetboxinterface_window_icon_changed(void* self, void* icon);
 /// @param self QDesignerWidgetBoxInterface*
 /// @param callback void func(QDesignerWidgetBoxInterface* self, QIcon* icon)
 ///
-void q_designerwidgetboxinterface_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void q_designerwidgetboxinterface_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -2709,7 +2618,7 @@ void q_designerwidgetboxinterface_on_window_icon_text_changed(void* self, void (
 /// @param self QDesignerWidgetBoxInterface*
 /// @param pos QPoint*
 ///
-void q_designerwidgetboxinterface_custom_context_menu_requested(void* self, void* pos);
+void q_designerwidgetboxinterface_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -2718,17 +2627,17 @@ void q_designerwidgetboxinterface_custom_context_menu_requested(void* self, void
 /// @param self QDesignerWidgetBoxInterface*
 /// @param callback void func(QDesignerWidgetBoxInterface* self, QPoint* pos)
 ///
-void q_designerwidgetboxinterface_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void q_designerwidgetboxinterface_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t q_designerwidgetboxinterface_input_method_hints(void* self);
+int32_t q_designerwidgetboxinterface_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2747,7 +2656,7 @@ void q_designerwidgetboxinterface_set_input_method_hints(void* self, int32_t hin
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void q_designerwidgetboxinterface_render22(void* self, void* target, void* targetOffset);
+void q_designerwidgetboxinterface_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -2758,7 +2667,7 @@ void q_designerwidgetboxinterface_render22(void* self, void* target, void* targe
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void q_designerwidgetboxinterface_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void q_designerwidgetboxinterface_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -2770,7 +2679,7 @@ void q_designerwidgetboxinterface_render3(void* self, void* target, void* target
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void q_designerwidgetboxinterface_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void q_designerwidgetboxinterface_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2780,7 +2689,7 @@ void q_designerwidgetboxinterface_render4(void* self, void* target, void* target
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void q_designerwidgetboxinterface_render23(void* self, void* painter, void* targetOffset);
+void q_designerwidgetboxinterface_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -2791,7 +2700,7 @@ void q_designerwidgetboxinterface_render23(void* self, void* painter, void* targ
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void q_designerwidgetboxinterface_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void q_designerwidgetboxinterface_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -2803,7 +2712,7 @@ void q_designerwidgetboxinterface_render32(void* self, void* painter, void* targ
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void q_designerwidgetboxinterface_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void q_designerwidgetboxinterface_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2812,7 +2721,7 @@ void q_designerwidgetboxinterface_render42(void* self, void* painter, void* targ
 /// @param self QDesignerWidgetBoxInterface*
 /// @param rectangle QRect*
 ///
-QPixmap* q_designerwidgetboxinterface_grab1(void* self, void* rectangle);
+QPixmap* q_designerwidgetboxinterface_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -2832,7 +2741,7 @@ void q_designerwidgetboxinterface_grab_gesture2(void* self, int32_t type, int32_
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t q_designerwidgetboxinterface_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t q_designerwidgetboxinterface_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -2899,9 +2808,9 @@ QWidget* q_designerwidgetboxinterface_create_window_container3(void* window, voi
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-const char* q_designerwidgetboxinterface_object_name(void* self);
+const char* q_designerwidgetboxinterface_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2916,33 +2825,33 @@ void q_designerwidgetboxinterface_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-bool q_designerwidgetboxinterface_is_widget_type(void* self);
+bool q_designerwidgetboxinterface_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-bool q_designerwidgetboxinterface_is_window_type(void* self);
+bool q_designerwidgetboxinterface_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-bool q_designerwidgetboxinterface_is_quick_item_type(void* self);
+bool q_designerwidgetboxinterface_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-bool q_designerwidgetboxinterface_signals_blocked(void* self);
+bool q_designerwidgetboxinterface_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2957,9 +2866,9 @@ bool q_designerwidgetboxinterface_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QThread* q_designerwidgetboxinterface_thread(void* self);
+QThread* q_designerwidgetboxinterface_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3010,11 +2919,11 @@ void q_designerwidgetboxinterface_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_designerwidgetboxinterface_children(void* self);
+libqt_list q_designerwidgetboxinterface_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3043,7 +2952,7 @@ void q_designerwidgetboxinterface_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_designerwidgetboxinterface_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_designerwidgetboxinterface_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3054,18 +2963,18 @@ QMetaObject__Connection* q_designerwidgetboxinterface_connect(void* sender, cons
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_designerwidgetboxinterface_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_designerwidgetboxinterface_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_designerwidgetboxinterface_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_designerwidgetboxinterface_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3076,7 +2985,7 @@ QMetaObject__Connection* q_designerwidgetboxinterface_connect3(void* self, void*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_designerwidgetboxinterface_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_designerwidgetboxinterface_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3087,24 +2996,24 @@ bool q_designerwidgetboxinterface_disconnect(void* sender, const char* signal, v
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_designerwidgetboxinterface_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_designerwidgetboxinterface_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-bool q_designerwidgetboxinterface_disconnect3(void* self);
+bool q_designerwidgetboxinterface_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param receiver QObject*
 ///
-bool q_designerwidgetboxinterface_disconnect4(void* self, void* receiver);
+bool q_designerwidgetboxinterface_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -3112,23 +3021,23 @@ bool q_designerwidgetboxinterface_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_designerwidgetboxinterface_disconnect5(void* param1);
+bool q_designerwidgetboxinterface_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-void q_designerwidgetboxinterface_dump_object_tree(void* self);
+void q_designerwidgetboxinterface_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-void q_designerwidgetboxinterface_dump_object_info(void* self);
+void q_designerwidgetboxinterface_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3138,16 +3047,16 @@ void q_designerwidgetboxinterface_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_designerwidgetboxinterface_set_property(void* self, const char* name, void* value);
+bool q_designerwidgetboxinterface_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param name const char*
 ///
-QVariant* q_designerwidgetboxinterface_property(void* self, const char* name);
+QVariant* q_designerwidgetboxinterface_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -3155,9 +3064,9 @@ QVariant* q_designerwidgetboxinterface_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-const char** q_designerwidgetboxinterface_dynamic_property_names(void* self);
+const char** q_designerwidgetboxinterface_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3171,9 +3080,9 @@ QBindingStorage* q_designerwidgetboxinterface_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-const QBindingStorage* q_designerwidgetboxinterface_binding_storage2(void* self);
+const QBindingStorage* q_designerwidgetboxinterface_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3196,18 +3105,18 @@ void q_designerwidgetboxinterface_on_destroyed(void* self, void (*callback)(void
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QObject* q_designerwidgetboxinterface_parent(void* self);
+QObject* q_designerwidgetboxinterface_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param classname const char*
 ///
-bool q_designerwidgetboxinterface_inherits(void* self, const char* classname);
+bool q_designerwidgetboxinterface_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -3247,7 +3156,7 @@ int32_t q_designerwidgetboxinterface_start_timer23(void* self, int64_t time, int
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_designerwidgetboxinterface_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_designerwidgetboxinterface_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -3259,59 +3168,59 @@ QMetaObject__Connection* q_designerwidgetboxinterface_connect5(void* sender, con
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_designerwidgetboxinterface_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_designerwidgetboxinterface_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_designerwidgetboxinterface_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_designerwidgetboxinterface_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param signal const char*
 ///
-bool q_designerwidgetboxinterface_disconnect1(void* self, const char* signal);
+bool q_designerwidgetboxinterface_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDesignerWidgetBoxInterface*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_designerwidgetboxinterface_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_designerwidgetboxinterface_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_designerwidgetboxinterface_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_designerwidgetboxinterface_disconnect23(void* self, void* receiver, const char* member);
+bool q_designerwidgetboxinterface_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QDesignerWidgetBoxInterface*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_designerwidgetboxinterface_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3335,89 +3244,89 @@ void q_designerwidgetboxinterface_on_destroyed1(void* self, void (*callback)(voi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-bool q_designerwidgetboxinterface_painting_active(void* self);
+bool q_designerwidgetboxinterface_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-int32_t q_designerwidgetboxinterface_width_m_m(void* self);
+int32_t q_designerwidgetboxinterface_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-int32_t q_designerwidgetboxinterface_height_m_m(void* self);
+int32_t q_designerwidgetboxinterface_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-int32_t q_designerwidgetboxinterface_logical_dpi_x(void* self);
+int32_t q_designerwidgetboxinterface_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-int32_t q_designerwidgetboxinterface_logical_dpi_y(void* self);
+int32_t q_designerwidgetboxinterface_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-int32_t q_designerwidgetboxinterface_physical_dpi_x(void* self);
+int32_t q_designerwidgetboxinterface_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-int32_t q_designerwidgetboxinterface_physical_dpi_y(void* self);
+int32_t q_designerwidgetboxinterface_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-double q_designerwidgetboxinterface_device_pixel_ratio(void* self);
+double q_designerwidgetboxinterface_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-double q_designerwidgetboxinterface_device_pixel_ratio_f(void* self);
+double q_designerwidgetboxinterface_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-int32_t q_designerwidgetboxinterface_color_count(void* self);
+int32_t q_designerwidgetboxinterface_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-int32_t q_designerwidgetboxinterface_depth(void* self);
+int32_t q_designerwidgetboxinterface_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -3440,9 +3349,9 @@ int32_t q_designerwidgetboxinterface_encode_metric_f(int32_t metric, double valu
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-int32_t q_designerwidgetboxinterface_dev_type(void* self);
+int32_t q_designerwidgetboxinterface_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3450,9 +3359,9 @@ int32_t q_designerwidgetboxinterface_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-int32_t q_designerwidgetboxinterface_super_dev_type(void* self);
+int32_t q_designerwidgetboxinterface_super_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3460,10 +3369,10 @@ int32_t q_designerwidgetboxinterface_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
-/// @param callback int32_t func()
+/// @param self const QDesignerWidgetBoxInterface*
+/// @param callback int32_t func(QDesignerWidgetBoxInterface* self)
 ///
-void q_designerwidgetboxinterface_on_dev_type(void* self, int32_t (*callback)());
+void q_designerwidgetboxinterface_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3504,9 +3413,9 @@ void q_designerwidgetboxinterface_on_set_visible(void* self, void (*callback)(vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QSize* q_designerwidgetboxinterface_size_hint(void* self);
+QSize* q_designerwidgetboxinterface_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3514,9 +3423,9 @@ QSize* q_designerwidgetboxinterface_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QSize* q_designerwidgetboxinterface_super_size_hint(void* self);
+QSize* q_designerwidgetboxinterface_super_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3524,12 +3433,12 @@ QSize* q_designerwidgetboxinterface_super_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
-/// @param callback QSize* func()
+/// @param self const QDesignerWidgetBoxInterface*
+/// @param callback QSize* func(QDesignerWidgetBoxInterface* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_designerwidgetboxinterface_on_size_hint(void* self, QSize* (*callback)());
+void q_designerwidgetboxinterface_on_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3537,9 +3446,9 @@ void q_designerwidgetboxinterface_on_size_hint(void* self, QSize* (*callback)())
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QSize* q_designerwidgetboxinterface_minimum_size_hint(void* self);
+QSize* q_designerwidgetboxinterface_minimum_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3547,9 +3456,9 @@ QSize* q_designerwidgetboxinterface_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QSize* q_designerwidgetboxinterface_super_minimum_size_hint(void* self);
+QSize* q_designerwidgetboxinterface_super_minimum_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3557,12 +3466,12 @@ QSize* q_designerwidgetboxinterface_super_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
-/// @param callback QSize* func()
+/// @param self const QDesignerWidgetBoxInterface*
+/// @param callback QSize* func(QDesignerWidgetBoxInterface* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_designerwidgetboxinterface_on_minimum_size_hint(void* self, QSize* (*callback)());
+void q_designerwidgetboxinterface_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3570,10 +3479,10 @@ void q_designerwidgetboxinterface_on_minimum_size_hint(void* self, QSize* (*call
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param param1 int
 ///
-int32_t q_designerwidgetboxinterface_height_for_width(void* self, int param1);
+int32_t q_designerwidgetboxinterface_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -3581,10 +3490,10 @@ int32_t q_designerwidgetboxinterface_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param param1 int
 ///
-int32_t q_designerwidgetboxinterface_super_height_for_width(void* self, int param1);
+int32_t q_designerwidgetboxinterface_super_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -3592,10 +3501,10 @@ int32_t q_designerwidgetboxinterface_super_height_for_width(void* self, int para
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param callback int32_t func(QDesignerWidgetBoxInterface* self, int param1)
 ///
-void q_designerwidgetboxinterface_on_height_for_width(void* self, int32_t (*callback)(void*, int));
+void q_designerwidgetboxinterface_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -3603,9 +3512,9 @@ void q_designerwidgetboxinterface_on_height_for_width(void* self, int32_t (*call
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-bool q_designerwidgetboxinterface_has_height_for_width(void* self);
+bool q_designerwidgetboxinterface_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3613,9 +3522,9 @@ bool q_designerwidgetboxinterface_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-bool q_designerwidgetboxinterface_super_has_height_for_width(void* self);
+bool q_designerwidgetboxinterface_super_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3623,10 +3532,10 @@ bool q_designerwidgetboxinterface_super_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
-/// @param callback bool func()
+/// @param self const QDesignerWidgetBoxInterface*
+/// @param callback bool func(QDesignerWidgetBoxInterface* self)
 ///
-void q_designerwidgetboxinterface_on_has_height_for_width(void* self, bool (*callback)());
+void q_designerwidgetboxinterface_on_has_height_for_width(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3634,9 +3543,9 @@ void q_designerwidgetboxinterface_on_has_height_for_width(void* self, bool (*cal
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QPaintEngine* q_designerwidgetboxinterface_paint_engine(void* self);
+QPaintEngine* q_designerwidgetboxinterface_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3644,9 +3553,9 @@ QPaintEngine* q_designerwidgetboxinterface_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QPaintEngine* q_designerwidgetboxinterface_super_paint_engine(void* self);
+QPaintEngine* q_designerwidgetboxinterface_super_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3654,10 +3563,10 @@ QPaintEngine* q_designerwidgetboxinterface_super_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
-/// @param callback QPaintEngine* func()
+/// @param self const QDesignerWidgetBoxInterface*
+/// @param callback QPaintEngine* func(QDesignerWidgetBoxInterface* self)
 ///
-void q_designerwidgetboxinterface_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void q_designerwidgetboxinterface_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4560,10 +4469,10 @@ void q_designerwidgetboxinterface_on_change_event(void* self, void (*callback)(v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_designerwidgetboxinterface_metric(void* self, int32_t param1);
+int32_t q_designerwidgetboxinterface_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4571,10 +4480,10 @@ int32_t q_designerwidgetboxinterface_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_designerwidgetboxinterface_super_metric(void* self, int32_t param1);
+int32_t q_designerwidgetboxinterface_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4582,10 +4491,10 @@ int32_t q_designerwidgetboxinterface_super_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param callback int32_t func(QDesignerWidgetBoxInterface* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_designerwidgetboxinterface_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void q_designerwidgetboxinterface_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4593,10 +4502,10 @@ void q_designerwidgetboxinterface_on_metric(void* self, int32_t (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param painter QPainter*
 ///
-void q_designerwidgetboxinterface_init_painter(void* self, void* painter);
+void q_designerwidgetboxinterface_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4604,10 +4513,10 @@ void q_designerwidgetboxinterface_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param painter QPainter*
 ///
-void q_designerwidgetboxinterface_super_init_painter(void* self, void* painter);
+void q_designerwidgetboxinterface_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4615,10 +4524,10 @@ void q_designerwidgetboxinterface_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param callback void func(QDesignerWidgetBoxInterface* self, QPainter* painter)
 ///
-void q_designerwidgetboxinterface_on_init_painter(void* self, void (*callback)(void*, void*));
+void q_designerwidgetboxinterface_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4626,10 +4535,10 @@ void q_designerwidgetboxinterface_on_init_painter(void* self, void (*callback)(v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_designerwidgetboxinterface_redirected(void* self, void* offset);
+QPaintDevice* q_designerwidgetboxinterface_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4637,10 +4546,10 @@ QPaintDevice* q_designerwidgetboxinterface_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_designerwidgetboxinterface_super_redirected(void* self, void* offset);
+QPaintDevice* q_designerwidgetboxinterface_super_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4648,10 +4557,10 @@ QPaintDevice* q_designerwidgetboxinterface_super_redirected(void* self, void* of
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param callback QPaintDevice* func(QDesignerWidgetBoxInterface* self, QPoint* offset)
 ///
-void q_designerwidgetboxinterface_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void q_designerwidgetboxinterface_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4659,9 +4568,9 @@ void q_designerwidgetboxinterface_on_redirected(void* self, QPaintDevice* (*call
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QPainter* q_designerwidgetboxinterface_shared_painter(void* self);
+QPainter* q_designerwidgetboxinterface_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4669,9 +4578,9 @@ QPainter* q_designerwidgetboxinterface_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QPainter* q_designerwidgetboxinterface_super_shared_painter(void* self);
+QPainter* q_designerwidgetboxinterface_super_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4679,10 +4588,10 @@ QPainter* q_designerwidgetboxinterface_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
-/// @param callback QPainter* func()
+/// @param self const QDesignerWidgetBoxInterface*
+/// @param callback QPainter* func(QDesignerWidgetBoxInterface* self)
 ///
-void q_designerwidgetboxinterface_on_shared_painter(void* self, QPainter* (*callback)());
+void q_designerwidgetboxinterface_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4723,10 +4632,10 @@ void q_designerwidgetboxinterface_on_input_method_event(void* self, void (*callb
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_designerwidgetboxinterface_input_method_query(void* self, int32_t param1);
+QVariant* q_designerwidgetboxinterface_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4734,10 +4643,10 @@ QVariant* q_designerwidgetboxinterface_input_method_query(void* self, int32_t pa
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_designerwidgetboxinterface_super_input_method_query(void* self, int32_t param1);
+QVariant* q_designerwidgetboxinterface_super_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4745,12 +4654,12 @@ QVariant* q_designerwidgetboxinterface_super_input_method_query(void* self, int3
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param callback QVariant* func(QDesignerWidgetBoxInterface* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_designerwidgetboxinterface_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void q_designerwidgetboxinterface_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4928,7 +4837,7 @@ void q_designerwidgetboxinterface_on_custom_event(void* self, void (*callback)(v
 /// @param self QDesignerWidgetBoxInterface*
 /// @param signal QMetaMethod*
 ///
-void q_designerwidgetboxinterface_connect_notify(void* self, void* signal);
+void q_designerwidgetboxinterface_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4939,7 +4848,7 @@ void q_designerwidgetboxinterface_connect_notify(void* self, void* signal);
 /// @param self QDesignerWidgetBoxInterface*
 /// @param signal QMetaMethod*
 ///
-void q_designerwidgetboxinterface_super_connect_notify(void* self, void* signal);
+void q_designerwidgetboxinterface_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4950,7 +4859,7 @@ void q_designerwidgetboxinterface_super_connect_notify(void* self, void* signal)
 /// @param self QDesignerWidgetBoxInterface*
 /// @param callback void func(QDesignerWidgetBoxInterface* self, QMetaMethod* signal)
 ///
-void q_designerwidgetboxinterface_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_designerwidgetboxinterface_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -4961,7 +4870,7 @@ void q_designerwidgetboxinterface_on_connect_notify(void* self, void (*callback)
 /// @param self QDesignerWidgetBoxInterface*
 /// @param signal QMetaMethod*
 ///
-void q_designerwidgetboxinterface_disconnect_notify(void* self, void* signal);
+void q_designerwidgetboxinterface_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4972,7 +4881,7 @@ void q_designerwidgetboxinterface_disconnect_notify(void* self, void* signal);
 /// @param self QDesignerWidgetBoxInterface*
 /// @param signal QMetaMethod*
 ///
-void q_designerwidgetboxinterface_super_disconnect_notify(void* self, void* signal);
+void q_designerwidgetboxinterface_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4983,7 +4892,7 @@ void q_designerwidgetboxinterface_super_disconnect_notify(void* self, void* sign
 /// @param self QDesignerWidgetBoxInterface*
 /// @param callback void func(QDesignerWidgetBoxInterface* self, QMetaMethod* signal)
 ///
-void q_designerwidgetboxinterface_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_designerwidgetboxinterface_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -5012,9 +4921,9 @@ void q_designerwidgetboxinterface_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDesignerWidgetBoxInterface*
-/// @param callback void func()
+/// @param callback void func(QDesignerWidgetBoxInterface* self)
 ///
-void q_designerwidgetboxinterface_on_update_micro_focus(void* self, void (*callback)());
+void q_designerwidgetboxinterface_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5043,9 +4952,9 @@ void q_designerwidgetboxinterface_super_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDesignerWidgetBoxInterface*
-/// @param callback void func()
+/// @param callback void func(QDesignerWidgetBoxInterface* self)
 ///
-void q_designerwidgetboxinterface_on_create(void* self, void (*callback)());
+void q_designerwidgetboxinterface_on_create(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5074,9 +4983,9 @@ void q_designerwidgetboxinterface_super_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDesignerWidgetBoxInterface*
-/// @param callback void func()
+/// @param callback void func(QDesignerWidgetBoxInterface* self)
 ///
-void q_designerwidgetboxinterface_on_destroy(void* self, void (*callback)());
+void q_designerwidgetboxinterface_on_destroy(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5105,9 +5014,9 @@ bool q_designerwidgetboxinterface_super_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDesignerWidgetBoxInterface*
-/// @param callback bool func()
+/// @param callback bool func(QDesignerWidgetBoxInterface* self)
 ///
-void q_designerwidgetboxinterface_on_focus_next_child(void* self, bool (*callback)());
+void q_designerwidgetboxinterface_on_focus_next_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5136,9 +5045,9 @@ bool q_designerwidgetboxinterface_super_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDesignerWidgetBoxInterface*
-/// @param callback bool func()
+/// @param callback bool func(QDesignerWidgetBoxInterface* self)
 ///
-void q_designerwidgetboxinterface_on_focus_previous_child(void* self, bool (*callback)());
+void q_designerwidgetboxinterface_on_focus_previous_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -5146,9 +5055,9 @@ void q_designerwidgetboxinterface_on_focus_previous_child(void* self, bool (*cal
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QObject* q_designerwidgetboxinterface_sender(void* self);
+QObject* q_designerwidgetboxinterface_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5156,9 +5065,9 @@ QObject* q_designerwidgetboxinterface_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QObject* q_designerwidgetboxinterface_super_sender(void* self);
+QObject* q_designerwidgetboxinterface_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5166,10 +5075,10 @@ QObject* q_designerwidgetboxinterface_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
-/// @param callback QObject* func()
+/// @param self const QDesignerWidgetBoxInterface*
+/// @param callback QObject* func(QDesignerWidgetBoxInterface* self)
 ///
-void q_designerwidgetboxinterface_on_sender(void* self, QObject* (*callback)());
+void q_designerwidgetboxinterface_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5177,9 +5086,9 @@ void q_designerwidgetboxinterface_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-int32_t q_designerwidgetboxinterface_sender_signal_index(void* self);
+int32_t q_designerwidgetboxinterface_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5187,9 +5096,9 @@ int32_t q_designerwidgetboxinterface_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-int32_t q_designerwidgetboxinterface_super_sender_signal_index(void* self);
+int32_t q_designerwidgetboxinterface_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5197,10 +5106,10 @@ int32_t q_designerwidgetboxinterface_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
-/// @param callback int32_t func()
+/// @param self const QDesignerWidgetBoxInterface*
+/// @param callback int32_t func(QDesignerWidgetBoxInterface* self)
 ///
-void q_designerwidgetboxinterface_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_designerwidgetboxinterface_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5208,10 +5117,10 @@ void q_designerwidgetboxinterface_on_sender_signal_index(void* self, int32_t (*c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param signal const char*
 ///
-int32_t q_designerwidgetboxinterface_receivers(void* self, const char* signal);
+int32_t q_designerwidgetboxinterface_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5219,10 +5128,10 @@ int32_t q_designerwidgetboxinterface_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param signal const char*
 ///
-int32_t q_designerwidgetboxinterface_super_receivers(void* self, const char* signal);
+int32_t q_designerwidgetboxinterface_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5230,10 +5139,10 @@ int32_t q_designerwidgetboxinterface_super_receivers(void* self, const char* sig
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param callback int32_t func(QDesignerWidgetBoxInterface* self, const char* signal)
 ///
-void q_designerwidgetboxinterface_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_designerwidgetboxinterface_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5241,10 +5150,10 @@ void q_designerwidgetboxinterface_on_receivers(void* self, int32_t (*callback)(v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param signal QMetaMethod*
 ///
-bool q_designerwidgetboxinterface_is_signal_connected(void* self, void* signal);
+bool q_designerwidgetboxinterface_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5252,10 +5161,10 @@ bool q_designerwidgetboxinterface_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param signal QMetaMethod*
 ///
-bool q_designerwidgetboxinterface_super_is_signal_connected(void* self, void* signal);
+bool q_designerwidgetboxinterface_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5263,10 +5172,10 @@ bool q_designerwidgetboxinterface_super_is_signal_connected(void* self, void* si
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param callback bool func(QDesignerWidgetBoxInterface* self, QMetaMethod* signal)
 ///
-void q_designerwidgetboxinterface_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_designerwidgetboxinterface_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5274,11 +5183,11 @@ void q_designerwidgetboxinterface_on_is_signal_connected(void* self, bool (*call
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_designerwidgetboxinterface_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_designerwidgetboxinterface_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5286,11 +5195,11 @@ double q_designerwidgetboxinterface_get_decoded_metric_f(void* self, int32_t met
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_designerwidgetboxinterface_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_designerwidgetboxinterface_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5298,10 +5207,10 @@ double q_designerwidgetboxinterface_super_get_decoded_metric_f(void* self, int32
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 /// @param callback double func(QDesignerWidgetBoxInterface* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_designerwidgetboxinterface_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void q_designerwidgetboxinterface_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///
@@ -5334,7 +5243,7 @@ QDesignerWidgetBoxInterface__Widget* q_designerwidgetboxinterface__widget_new();
 ///
 /// @param w QDesignerWidgetBoxInterface__Widget*
 ///
-QDesignerWidgetBoxInterface__Widget* q_designerwidgetboxinterface__widget_new2(void* w);
+QDesignerWidgetBoxInterface__Widget* q_designerwidgetboxinterface__widget_new2(const void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface-widget.html)
 
@@ -5379,15 +5288,15 @@ QDesignerWidgetBoxInterface__Widget* q_designerwidgetboxinterface__widget_new6(c
 /// @param self QDesignerWidgetBoxInterface__Widget*
 /// @param w QDesignerWidgetBoxInterface__Widget*
 ///
-void q_designerwidgetboxinterface__widget_operator_assign(void* self, void* w);
+void q_designerwidgetboxinterface__widget_operator_assign(void* self, const void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface-widget.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerWidgetBoxInterface__Widget*
+/// @param self const QDesignerWidgetBoxInterface__Widget*
 ///
-const char* q_designerwidgetboxinterface__widget_name(void* self);
+const char* q_designerwidgetboxinterface__widget_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface-widget.html#setName)
 ///
@@ -5400,9 +5309,9 @@ void q_designerwidgetboxinterface__widget_set_name(void* self, const char* aname
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerWidgetBoxInterface__Widget*
+/// @param self const QDesignerWidgetBoxInterface__Widget*
 ///
-const char* q_designerwidgetboxinterface__widget_dom_xml(void* self);
+const char* q_designerwidgetboxinterface__widget_dom_xml(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface-widget.html#setDomXml)
 ///
@@ -5415,9 +5324,9 @@ void q_designerwidgetboxinterface__widget_set_dom_xml(void* self, const char* xm
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerWidgetBoxInterface__Widget*
+/// @param self const QDesignerWidgetBoxInterface__Widget*
 ///
-const char* q_designerwidgetboxinterface__widget_icon_name(void* self);
+const char* q_designerwidgetboxinterface__widget_icon_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface-widget.html#setIconName)
 ///
@@ -5428,11 +5337,11 @@ void q_designerwidgetboxinterface__widget_set_icon_name(void* self, const char* 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface-widget.html#type)
 ///
-/// @param self QDesignerWidgetBoxInterface__Widget*
+/// @param self const QDesignerWidgetBoxInterface__Widget*
 ///
 /// @return enum QDesignerWidgetBoxInterface__Widget__Type
 ///
-int32_t q_designerwidgetboxinterface__widget_type(void* self);
+int32_t q_designerwidgetboxinterface__widget_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface-widget.html#setType)
 ///
@@ -5443,9 +5352,9 @@ void q_designerwidgetboxinterface__widget_set_type(void* self, int32_t atype);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface-widget.html#isNull)
 ///
-/// @param self QDesignerWidgetBoxInterface__Widget*
+/// @param self const QDesignerWidgetBoxInterface__Widget*
 ///
-bool q_designerwidgetboxinterface__widget_is_null(void* self);
+bool q_designerwidgetboxinterface__widget_is_null(const void* self);
 
 /// Delete this object from C++ memory.
 ///
@@ -5465,7 +5374,7 @@ QDesignerWidgetBoxInterface__Category* q_designerwidgetboxinterface__category_ne
 ///
 /// @param param1 QDesignerWidgetBoxInterface__Category*
 ///
-QDesignerWidgetBoxInterface__Category* q_designerwidgetboxinterface__category_new2(void* param1);
+QDesignerWidgetBoxInterface__Category* q_designerwidgetboxinterface__category_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface-category.html)
 
@@ -5488,9 +5397,9 @@ QDesignerWidgetBoxInterface__Category* q_designerwidgetboxinterface__category_ne
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerWidgetBoxInterface__Category*
+/// @param self const QDesignerWidgetBoxInterface__Category*
 ///
-const char* q_designerwidgetboxinterface__category_name(void* self);
+const char* q_designerwidgetboxinterface__category_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface-category.html#setName)
 ///
@@ -5501,16 +5410,16 @@ void q_designerwidgetboxinterface__category_set_name(void* self, const char* ana
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface-category.html#widgetCount)
 ///
-/// @param self QDesignerWidgetBoxInterface__Category*
+/// @param self const QDesignerWidgetBoxInterface__Category*
 ///
-int32_t q_designerwidgetboxinterface__category_widget_count(void* self);
+int32_t q_designerwidgetboxinterface__category_widget_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface-category.html#widget)
 ///
-/// @param self QDesignerWidgetBoxInterface__Category*
+/// @param self const QDesignerWidgetBoxInterface__Category*
 /// @param idx int
 ///
-QDesignerWidgetBoxInterface__Widget* q_designerwidgetboxinterface__category_widget(void* self, int idx);
+QDesignerWidgetBoxInterface__Widget* q_designerwidgetboxinterface__category_widget(const void* self, int idx);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface-category.html#removeWidget)
 ///
@@ -5524,15 +5433,15 @@ void q_designerwidgetboxinterface__category_remove_widget(void* self, int idx);
 /// @param self QDesignerWidgetBoxInterface__Category*
 /// @param awidget QDesignerWidgetBoxInterface__Widget*
 ///
-void q_designerwidgetboxinterface__category_add_widget(void* self, void* awidget);
+void q_designerwidgetboxinterface__category_add_widget(void* self, const void* awidget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface-category.html#type)
 ///
-/// @param self QDesignerWidgetBoxInterface__Category*
+/// @param self const QDesignerWidgetBoxInterface__Category*
 ///
 /// @return enum QDesignerWidgetBoxInterface__Category__Type
 ///
-int32_t q_designerwidgetboxinterface__category_type(void* self);
+int32_t q_designerwidgetboxinterface__category_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface-category.html#setType)
 ///
@@ -5543,16 +5452,16 @@ void q_designerwidgetboxinterface__category_set_type(void* self, int32_t atype);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface-category.html#isNull)
 ///
-/// @param self QDesignerWidgetBoxInterface__Category*
+/// @param self const QDesignerWidgetBoxInterface__Category*
 ///
-bool q_designerwidgetboxinterface__category_is_null(void* self);
+bool q_designerwidgetboxinterface__category_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface-category.html#operator-eq)
 ///
 /// @param self QDesignerWidgetBoxInterface__Category*
 /// @param param1 QDesignerWidgetBoxInterface__Category*
 ///
-void q_designerwidgetboxinterface__category_operator_assign(void* self, void* param1);
+void q_designerwidgetboxinterface__category_operator_assign(void* self, const void* param1);
 
 /// Delete this object from C++ memory.
 ///

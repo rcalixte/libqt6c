@@ -22,7 +22,7 @@ QChar* k_charsets_from_entity2(const char* str, int* lenVal) {
     return KCharsets_FromEntity2(qstring(str), lenVal);
 }
 
-const char* k_charsets_to_entity(void* ch) {
+const char* k_charsets_to_entity(const void* ch) {
     libqt_string _str = KCharsets_ToEntity((QChar*)ch);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -36,7 +36,7 @@ const char* k_charsets_resolve_entities(const char* text) {
     return _ret;
 }
 
-const char** k_charsets_available_encoding_names(void* self) {
+const char** k_charsets_available_encoding_names(const void* self) {
     libqt_list _arr = KCharsets_AvailableEncodingNames((KCharsets*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -53,7 +53,7 @@ const char** k_charsets_available_encoding_names(void* self) {
     return _ret;
 }
 
-const char** k_charsets_descriptive_encoding_names(void* self) {
+const char** k_charsets_descriptive_encoding_names(const void* self) {
     libqt_list _arr = KCharsets_DescriptiveEncodingNames((KCharsets*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -70,7 +70,7 @@ const char** k_charsets_descriptive_encoding_names(void* self) {
     return _ret;
 }
 
-libqt_list /* of const char** */ k_charsets_encodings_by_script(void* self) {
+libqt_list /* of const char** */ k_charsets_encodings_by_script(const void* self) {
     libqt_list _arr = KCharsets_EncodingsByScript((KCharsets*)self);
     libqt_list* _strlist = (libqt_list*)_arr.data.ptr;
     const char*** _data = (const char***)malloc(sizeof(const char**) * _arr.len);
@@ -100,14 +100,14 @@ libqt_list /* of const char** */ k_charsets_encodings_by_script(void* self) {
     return _out;
 }
 
-const char* k_charsets_description_for_encoding(void* self, const char* encoding) {
+const char* k_charsets_description_for_encoding(const void* self, const char* encoding) {
     libqt_string _str = KCharsets_DescriptionForEncoding((KCharsets*)self, qstring(encoding));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_charsets_encoding_for_name(void* self, const char* descriptiveName) {
+const char* k_charsets_encoding_for_name(const void* self, const char* descriptiveName) {
     libqt_string _str = KCharsets_EncodingForName((KCharsets*)self, qstring(descriptiveName));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

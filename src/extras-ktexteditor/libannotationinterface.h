@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KTextEditor__AnnotationModel*
+/// @param self const KTextEditor__AnnotationModel*
 ///
-const QMetaObject* k_texteditor__annotationmodel_meta_object(void* self);
+const QMetaObject* k_texteditor__annotationmodel_meta_object(const void* self);
 
 /// @param self KTextEditor__AnnotationModel*
 /// @param param1 const char*
@@ -35,14 +35,6 @@ int32_t k_texteditor__annotationmodel_metacall(void* self, int32_t param1, int p
 /// @param s const char*
 ///
 const char* k_texteditor__annotationmodel_tr(const char* s);
-
-/// [Upstream resources](https://api.kde.org/ktexteditor-annotationmodel.html#data)
-///
-/// @param self KTextEditor__AnnotationModel*
-/// @param line int
-/// @param role enum Qt__ItemDataRole
-///
-QVariant* k_texteditor__annotationmodel_data(void* self, int line, int32_t role);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-annotationmodel.html#reset)
 ///
@@ -115,9 +107,9 @@ bool k_texteditor__annotationmodel_event_filter(void* self, void* watched, void*
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KTextEditor__AnnotationModel*
+/// @param self const KTextEditor__AnnotationModel*
 ///
-const char* k_texteditor__annotationmodel_object_name(void* self);
+const char* k_texteditor__annotationmodel_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -132,33 +124,33 @@ void k_texteditor__annotationmodel_set_object_name(void* self, const char* name)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KTextEditor__AnnotationModel*
+/// @param self const KTextEditor__AnnotationModel*
 ///
-bool k_texteditor__annotationmodel_is_widget_type(void* self);
+bool k_texteditor__annotationmodel_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KTextEditor__AnnotationModel*
+/// @param self const KTextEditor__AnnotationModel*
 ///
-bool k_texteditor__annotationmodel_is_window_type(void* self);
+bool k_texteditor__annotationmodel_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KTextEditor__AnnotationModel*
+/// @param self const KTextEditor__AnnotationModel*
 ///
-bool k_texteditor__annotationmodel_is_quick_item_type(void* self);
+bool k_texteditor__annotationmodel_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KTextEditor__AnnotationModel*
+/// @param self const KTextEditor__AnnotationModel*
 ///
-bool k_texteditor__annotationmodel_signals_blocked(void* self);
+bool k_texteditor__annotationmodel_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -173,9 +165,9 @@ bool k_texteditor__annotationmodel_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KTextEditor__AnnotationModel*
+/// @param self const KTextEditor__AnnotationModel*
 ///
-QThread* k_texteditor__annotationmodel_thread(void* self);
+QThread* k_texteditor__annotationmodel_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -226,11 +218,11 @@ void k_texteditor__annotationmodel_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KTextEditor__AnnotationModel*
+/// @param self const KTextEditor__AnnotationModel*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_texteditor__annotationmodel_children(void* self);
+libqt_list k_texteditor__annotationmodel_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -268,7 +260,7 @@ void k_texteditor__annotationmodel_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_texteditor__annotationmodel_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_texteditor__annotationmodel_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -279,18 +271,18 @@ QMetaObject__Connection* k_texteditor__annotationmodel_connect(void* sender, con
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_texteditor__annotationmodel_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_texteditor__annotationmodel_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KTextEditor__AnnotationModel*
+/// @param self const KTextEditor__AnnotationModel*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_texteditor__annotationmodel_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_texteditor__annotationmodel_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -301,7 +293,7 @@ QMetaObject__Connection* k_texteditor__annotationmodel_connect3(void* self, void
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_texteditor__annotationmodel_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_texteditor__annotationmodel_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -312,24 +304,24 @@ bool k_texteditor__annotationmodel_disconnect(void* sender, const char* signal, 
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_texteditor__annotationmodel_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_texteditor__annotationmodel_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KTextEditor__AnnotationModel*
+/// @param self const KTextEditor__AnnotationModel*
 ///
-bool k_texteditor__annotationmodel_disconnect3(void* self);
+bool k_texteditor__annotationmodel_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KTextEditor__AnnotationModel*
+/// @param self const KTextEditor__AnnotationModel*
 /// @param receiver QObject*
 ///
-bool k_texteditor__annotationmodel_disconnect4(void* self, void* receiver);
+bool k_texteditor__annotationmodel_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -337,23 +329,23 @@ bool k_texteditor__annotationmodel_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_texteditor__annotationmodel_disconnect5(void* param1);
+bool k_texteditor__annotationmodel_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KTextEditor__AnnotationModel*
+/// @param self const KTextEditor__AnnotationModel*
 ///
-void k_texteditor__annotationmodel_dump_object_tree(void* self);
+void k_texteditor__annotationmodel_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KTextEditor__AnnotationModel*
+/// @param self const KTextEditor__AnnotationModel*
 ///
-void k_texteditor__annotationmodel_dump_object_info(void* self);
+void k_texteditor__annotationmodel_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -363,16 +355,16 @@ void k_texteditor__annotationmodel_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_texteditor__annotationmodel_set_property(void* self, const char* name, void* value);
+bool k_texteditor__annotationmodel_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KTextEditor__AnnotationModel*
+/// @param self const KTextEditor__AnnotationModel*
 /// @param name const char*
 ///
-QVariant* k_texteditor__annotationmodel_property(void* self, const char* name);
+QVariant* k_texteditor__annotationmodel_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -380,9 +372,9 @@ QVariant* k_texteditor__annotationmodel_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KTextEditor__AnnotationModel*
+/// @param self const KTextEditor__AnnotationModel*
 ///
-const char** k_texteditor__annotationmodel_dynamic_property_names(void* self);
+const char** k_texteditor__annotationmodel_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -396,9 +388,9 @@ QBindingStorage* k_texteditor__annotationmodel_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KTextEditor__AnnotationModel*
+/// @param self const KTextEditor__AnnotationModel*
 ///
-const QBindingStorage* k_texteditor__annotationmodel_binding_storage2(void* self);
+const QBindingStorage* k_texteditor__annotationmodel_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -421,18 +413,18 @@ void k_texteditor__annotationmodel_on_destroyed(void* self, void (*callback)(voi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KTextEditor__AnnotationModel*
+/// @param self const KTextEditor__AnnotationModel*
 ///
-QObject* k_texteditor__annotationmodel_parent(void* self);
+QObject* k_texteditor__annotationmodel_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KTextEditor__AnnotationModel*
+/// @param self const KTextEditor__AnnotationModel*
 /// @param classname const char*
 ///
-bool k_texteditor__annotationmodel_inherits(void* self, const char* classname);
+bool k_texteditor__annotationmodel_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -472,7 +464,7 @@ int32_t k_texteditor__annotationmodel_start_timer23(void* self, int64_t time, in
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_texteditor__annotationmodel_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_texteditor__annotationmodel_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -484,59 +476,59 @@ QMetaObject__Connection* k_texteditor__annotationmodel_connect5(void* sender, co
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_texteditor__annotationmodel_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_texteditor__annotationmodel_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KTextEditor__AnnotationModel*
+/// @param self const KTextEditor__AnnotationModel*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_texteditor__annotationmodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_texteditor__annotationmodel_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KTextEditor__AnnotationModel*
+/// @param self const KTextEditor__AnnotationModel*
 /// @param signal const char*
 ///
-bool k_texteditor__annotationmodel_disconnect1(void* self, const char* signal);
+bool k_texteditor__annotationmodel_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KTextEditor__AnnotationModel*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_texteditor__annotationmodel_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KTextEditor__AnnotationModel*
+/// @param self const KTextEditor__AnnotationModel*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_texteditor__annotationmodel_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_texteditor__annotationmodel_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KTextEditor__AnnotationModel*
+/// @param self const KTextEditor__AnnotationModel*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_texteditor__annotationmodel_disconnect23(void* self, void* receiver, const char* member);
+bool k_texteditor__annotationmodel_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KTextEditor__AnnotationModel*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_texteditor__annotationmodel_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

@@ -20,84 +20,84 @@ Accounts__Application* q_accounts__application_new();
 ///
 /// @param other Accounts__Application*
 ///
-Accounts__Application* q_accounts__application_new2(void* other);
+Accounts__Application* q_accounts__application_new2(const void* other);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Application.html)
 ///
 /// @param self Accounts__Application*
 /// @param other Accounts__Application*
 ///
-void q_accounts__application_operator_assign(void* self, void* other);
+void q_accounts__application_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Application.html)
 ///
-/// @param self Accounts__Application*
+/// @param self const Accounts__Application*
 ///
-bool q_accounts__application_is_valid(void* self);
-
-/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Application.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self Accounts__Application*
-///
-const char* q_accounts__application_name(void* self);
+bool q_accounts__application_is_valid(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Application.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Accounts__Application*
+/// @param self const Accounts__Application*
 ///
-const char* q_accounts__application_display_name(void* self);
+const char* q_accounts__application_name(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Application.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Accounts__Application*
+/// @param self const Accounts__Application*
 ///
-const char* q_accounts__application_description(void* self);
+const char* q_accounts__application_display_name(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Application.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Accounts__Application*
+/// @param self const Accounts__Application*
 ///
-const char* q_accounts__application_icon_name(void* self);
+const char* q_accounts__application_description(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Application.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Accounts__Application*
+/// @param self const Accounts__Application*
 ///
-const char* q_accounts__application_desktop_file_path(void* self);
+const char* q_accounts__application_icon_name(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Application.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Accounts__Application*
+/// @param self const Accounts__Application*
 ///
-const char* q_accounts__application_tr_catalog(void* self);
+const char* q_accounts__application_desktop_file_path(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Application.html)
 ///
-/// @param self Accounts__Application*
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const Accounts__Application*
+///
+const char* q_accounts__application_tr_catalog(const void* self);
+
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Application.html)
+///
+/// @param self const Accounts__Application*
 /// @param service Accounts__Service*
 ///
-bool q_accounts__application_supports_service(void* self, void* service);
+bool q_accounts__application_supports_service(const void* self, const void* service);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Application.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Accounts__Application*
+/// @param self const Accounts__Application*
 /// @param service Accounts__Service*
 ///
-const char* q_accounts__application_service_usage(void* self, void* service);
+const char* q_accounts__application_service_usage(const void* self, const void* service);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Application.html)
 ///

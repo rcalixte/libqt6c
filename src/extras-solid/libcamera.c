@@ -6,7 +6,7 @@
 #include "libcamera.hpp"
 #include "libcamera.h"
 
-const QMetaObject* k_solid__camera_meta_object(void* self) {
+const QMetaObject* k_solid__camera_meta_object(const void* self) {
     return Solid__Camera_MetaObject((Solid__Camera*)self);
 }
 
@@ -29,7 +29,7 @@ int32_t k_solid__camera_device_interface_type() {
     return Solid__Camera_DeviceInterfaceType();
 }
 
-const char** k_solid__camera_supported_protocols(void* self) {
+const char** k_solid__camera_supported_protocols(const void* self) {
     libqt_list _arr = Solid__Camera_SupportedProtocols((Solid__Camera*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -46,7 +46,7 @@ const char** k_solid__camera_supported_protocols(void* self) {
     return _ret;
 }
 
-const char** k_solid__camera_supported_drivers(void* self) {
+const char** k_solid__camera_supported_drivers(const void* self) {
     libqt_list _arr = Solid__Camera_SupportedDrivers((Solid__Camera*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -63,7 +63,7 @@ const char** k_solid__camera_supported_drivers(void* self) {
     return _ret;
 }
 
-QVariant* k_solid__camera_driver_handle(void* self, const char* driver) {
+QVariant* k_solid__camera_driver_handle(const void* self, const char* driver) {
     return Solid__Camera_DriverHandle((Solid__Camera*)self, qstring(driver));
 }
 
@@ -81,7 +81,7 @@ const char* k_solid__camera_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-const char** k_solid__camera_supported_drivers1(void* self, const char* protocol) {
+const char** k_solid__camera_supported_drivers1(const void* self, const char* protocol) {
     libqt_list _arr = Solid__Camera_SupportedDrivers1((Solid__Camera*)self, qstring(protocol));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -98,7 +98,7 @@ const char** k_solid__camera_supported_drivers1(void* self, const char* protocol
     return _ret;
 }
 
-bool k_solid__camera_is_valid(void* self) {
+bool k_solid__camera_is_valid(const void* self) {
     return Solid__DeviceInterface_IsValid((Solid__DeviceInterface*)self);
 }
 
@@ -128,7 +128,7 @@ bool k_solid__camera_event_filter(void* self, void* watched, void* event) {
     return QObject_EventFilter((QObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
-const char* k_solid__camera_object_name(void* self) {
+const char* k_solid__camera_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -139,19 +139,19 @@ void k_solid__camera_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_solid__camera_is_widget_type(void* self) {
+bool k_solid__camera_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_solid__camera_is_window_type(void* self) {
+bool k_solid__camera_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_solid__camera_is_quick_item_type(void* self) {
+bool k_solid__camera_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_solid__camera_signals_blocked(void* self) {
+bool k_solid__camera_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -159,7 +159,7 @@ bool k_solid__camera_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_solid__camera_thread(void* self) {
+QThread* k_solid__camera_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -183,7 +183,7 @@ void k_solid__camera_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_solid__camera_children(void* self) {
+libqt_list /* of QObject* */ k_solid__camera_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -200,55 +200,55 @@ void k_solid__camera_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_solid__camera_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_solid__camera_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_solid__camera_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_solid__camera_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_solid__camera_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_solid__camera_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_solid__camera_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_solid__camera_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_solid__camera_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_solid__camera_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_solid__camera_disconnect3(void* self) {
+bool k_solid__camera_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_solid__camera_disconnect4(void* self, void* receiver) {
+bool k_solid__camera_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_solid__camera_disconnect5(void* param1) {
+bool k_solid__camera_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_solid__camera_dump_object_tree(void* self) {
+void k_solid__camera_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_solid__camera_dump_object_info(void* self) {
+void k_solid__camera_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_solid__camera_set_property(void* self, const char* name, void* value) {
+bool k_solid__camera_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_solid__camera_property(void* self, const char* name) {
+QVariant* k_solid__camera_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_solid__camera_dynamic_property_names(void* self) {
+const char** k_solid__camera_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -269,7 +269,7 @@ QBindingStorage* k_solid__camera_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_solid__camera_binding_storage2(void* self) {
+const QBindingStorage* k_solid__camera_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -281,11 +281,11 @@ void k_solid__camera_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_solid__camera_parent(void* self) {
+QObject* k_solid__camera_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_solid__camera_inherits(void* self, const char* classname) {
+bool k_solid__camera_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -301,31 +301,31 @@ int32_t k_solid__camera_start_timer23(void* self, int64_t time, int32_t timerTyp
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_solid__camera_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_solid__camera_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_solid__camera_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_solid__camera_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_solid__camera_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_solid__camera_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_solid__camera_disconnect1(void* self, const char* signal) {
+bool k_solid__camera_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_solid__camera_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_solid__camera_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_solid__camera_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_solid__camera_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_solid__camera_disconnect23(void* self, void* receiver, const char* member) {
+bool k_solid__camera_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 

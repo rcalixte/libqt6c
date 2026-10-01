@@ -14,7 +14,7 @@
 ///
 /// @param other QKeyCombination*
 ///
-QKeyCombination* q_keycombination_new(void* other);
+QKeyCombination* q_keycombination_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html)
 
@@ -52,7 +52,7 @@ QKeyCombination* q_keycombination_new5(int32_t modifiers);
 ///
 /// @param param1 QKeyCombination*
 ///
-QKeyCombination* q_keycombination_new6(void* param1);
+QKeyCombination* q_keycombination_new6(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html)
 
@@ -96,19 +96,19 @@ void q_keycombination_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html#keyboardModifiers)
 ///
-/// @param self QKeyCombination*
+/// @param self const QKeyCombination*
 ///
 /// @return flag of enum Qt__KeyboardModifier
 ///
-int32_t q_keycombination_keyboard_modifiers(void* self);
+int32_t q_keycombination_keyboard_modifiers(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html#key)
 ///
-/// @param self QKeyCombination*
+/// @param self const QKeyCombination*
 ///
 /// @return enum Qt__Key
 ///
-int32_t q_keycombination_key(void* self);
+int32_t q_keycombination_key(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html#fromCombined)
 ///
@@ -118,15 +118,15 @@ QKeyCombination* q_keycombination_from_combined(int combined);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html#toCombined)
 ///
-/// @param self QKeyCombination*
+/// @param self const QKeyCombination*
 ///
-int32_t q_keycombination_to_combined(void* self);
+int32_t q_keycombination_to_combined(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html#operator-int)
 ///
-/// @param self QKeyCombination*
+/// @param self const QKeyCombination*
 ///
-int32_t q_keycombination_to_int(void* self);
+int32_t q_keycombination_to_int(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html#dtor.QKeyCombination)
 ///

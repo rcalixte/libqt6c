@@ -20,7 +20,7 @@ QElapsedTimer* q_elapsedtimer_new();
 ///
 /// @param other QElapsedTimer*
 ///
-QElapsedTimer* q_elapsedtimer_new2(void* other);
+QElapsedTimer* q_elapsedtimer_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qelapsedtimer.html)
 
@@ -74,48 +74,48 @@ void q_elapsedtimer_invalidate(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qelapsedtimer.html#isValid)
 ///
-/// @param self QElapsedTimer*
+/// @param self const QElapsedTimer*
 ///
-bool q_elapsedtimer_is_valid(void* self);
+bool q_elapsedtimer_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qelapsedtimer.html#nsecsElapsed)
 ///
-/// @param self QElapsedTimer*
+/// @param self const QElapsedTimer*
 ///
-int64_t q_elapsedtimer_nsecs_elapsed(void* self);
+int64_t q_elapsedtimer_nsecs_elapsed(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qelapsedtimer.html#elapsed)
 ///
-/// @param self QElapsedTimer*
+/// @param self const QElapsedTimer*
 ///
-int64_t q_elapsedtimer_elapsed(void* self);
+int64_t q_elapsedtimer_elapsed(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qelapsedtimer.html#hasExpired)
 ///
-/// @param self QElapsedTimer*
+/// @param self const QElapsedTimer*
 /// @param timeout int64_t
 ///
-bool q_elapsedtimer_has_expired(void* self, int64_t timeout);
+bool q_elapsedtimer_has_expired(const void* self, int64_t timeout);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qelapsedtimer.html#msecsSinceReference)
 ///
-/// @param self QElapsedTimer*
+/// @param self const QElapsedTimer*
 ///
-int64_t q_elapsedtimer_msecs_since_reference(void* self);
+int64_t q_elapsedtimer_msecs_since_reference(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qelapsedtimer.html#msecsTo)
 ///
-/// @param self QElapsedTimer*
+/// @param self const QElapsedTimer*
 /// @param other QElapsedTimer*
 ///
-int64_t q_elapsedtimer_msecs_to(void* self, void* other);
+int64_t q_elapsedtimer_msecs_to(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qelapsedtimer.html#secsTo)
 ///
-/// @param self QElapsedTimer*
+/// @param self const QElapsedTimer*
 /// @param other QElapsedTimer*
 ///
-int64_t q_elapsedtimer_secs_to(void* self, void* other);
+int64_t q_elapsedtimer_secs_to(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qelapsedtimer.html#dtor.QElapsedTimer)
 ///

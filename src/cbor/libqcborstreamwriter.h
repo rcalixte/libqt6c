@@ -25,9 +25,9 @@ void q_cborstreamwriter_set_device(void* self, void* device);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamwriter.html#device)
 ///
-/// @param self QCborStreamWriter*
+/// @param self const QCborStreamWriter*
 ///
-QIODevice* q_cborstreamwriter_device(void* self);
+QIODevice* q_cborstreamwriter_device(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamwriter.html#append)
 ///

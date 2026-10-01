@@ -18,26 +18,26 @@ KListOpenFilesJob* k_listopenfilesjob_new(const char* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-const QMetaObject* k_listopenfilesjob_meta_object(void* self);
+const QMetaObject* k_listopenfilesjob_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KListOpenFilesJob*
-/// @param callback const QMetaObject* func()
+/// @param self const KListOpenFilesJob*
+/// @param callback const QMetaObject* func(const KListOpenFilesJob* self)
 ///
-void k_listopenfilesjob_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_listopenfilesjob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-const QMetaObject* k_listopenfilesjob_super_meta_object(void* self);
+const QMetaObject* k_listopenfilesjob_super_meta_object(const void* self);
 
 /// @param self KListOpenFilesJob*
 /// @param param1 const char*
@@ -100,9 +100,9 @@ void k_listopenfilesjob_start(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void func()
+/// @param callback void func(KListOpenFilesJob* self)
 ///
-void k_listopenfilesjob_on_start(void* self, void (*callback)());
+void k_listopenfilesjob_on_start(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/klistopenfilesjob.html#start)
 ///
@@ -114,11 +114,11 @@ void k_listopenfilesjob_super_start(void* self);
 
 /// [Upstream resources](https://api.kde.org/klistopenfilesjob.html#processInfoList)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
 /// @return libqt_list of KProcessList__KProcessInfo*
 ///
-libqt_list k_listopenfilesjob_process_info_list(void* self);
+libqt_list k_listopenfilesjob_process_info_list(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -152,27 +152,27 @@ void k_listopenfilesjob_set_ui_delegate(void* self, void* delegate);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#uiDelegate)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-KJobUiDelegate* k_listopenfilesjob_ui_delegate(void* self);
+KJobUiDelegate* k_listopenfilesjob_ui_delegate(const void* self);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#capabilities)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
 /// @return flag of enum KJob__Capability
 ///
-int32_t k_listopenfilesjob_capabilities(void* self);
+int32_t k_listopenfilesjob_capabilities(const void* self);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#isSuspended)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-bool k_listopenfilesjob_is_suspended(void* self);
+bool k_listopenfilesjob_is_suspended(const void* self);
 
 /// Inherited from KJob
 ///
@@ -210,9 +210,9 @@ bool k_listopenfilesjob_exec(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#error)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-int32_t k_listopenfilesjob_error(void* self);
+int32_t k_listopenfilesjob_error(const void* self);
 
 /// Inherited from KJob
 ///
@@ -220,35 +220,35 @@ int32_t k_listopenfilesjob_error(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-const char* k_listopenfilesjob_error_text(void* self);
+const char* k_listopenfilesjob_error_text(const void* self);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#processedAmount)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 /// @param unit enum KJob__Unit
 ///
-uintptr_t k_listopenfilesjob_processed_amount(void* self, int32_t unit);
+uintptr_t k_listopenfilesjob_processed_amount(const void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#totalAmount)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 /// @param unit enum KJob__Unit
 ///
-uintptr_t k_listopenfilesjob_total_amount(void* self, int32_t unit);
+uintptr_t k_listopenfilesjob_total_amount(const void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#percent)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-uintptr_t k_listopenfilesjob_percent(void* self);
+uintptr_t k_listopenfilesjob_percent(const void* self);
 
 /// Inherited from KJob
 ///
@@ -263,9 +263,9 @@ void k_listopenfilesjob_set_auto_delete(void* self, bool autodelete);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#isAutoDelete)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-bool k_listopenfilesjob_is_auto_delete(void* self);
+bool k_listopenfilesjob_is_auto_delete(const void* self);
 
 /// Inherited from KJob
 ///
@@ -279,25 +279,25 @@ void k_listopenfilesjob_set_finished_notification_hidden(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#isFinishedNotificationHidden)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-bool k_listopenfilesjob_is_finished_notification_hidden(void* self);
+bool k_listopenfilesjob_is_finished_notification_hidden(const void* self);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#isStartedWithExec)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-bool k_listopenfilesjob_is_started_with_exec(void* self);
+bool k_listopenfilesjob_is_started_with_exec(const void* self);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#elapsedTime)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-int64_t k_listopenfilesjob_elapsed_time(void* self);
+int64_t k_listopenfilesjob_elapsed_time(const void* self);
 
 /// Inherited from KJob
 ///
@@ -418,9 +418,9 @@ void k_listopenfilesjob_set_finished_notification_hidden1(void* self, bool hide)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-const char* k_listopenfilesjob_object_name(void* self);
+const char* k_listopenfilesjob_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -435,33 +435,33 @@ void k_listopenfilesjob_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-bool k_listopenfilesjob_is_widget_type(void* self);
+bool k_listopenfilesjob_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-bool k_listopenfilesjob_is_window_type(void* self);
+bool k_listopenfilesjob_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-bool k_listopenfilesjob_is_quick_item_type(void* self);
+bool k_listopenfilesjob_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-bool k_listopenfilesjob_signals_blocked(void* self);
+bool k_listopenfilesjob_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -476,9 +476,9 @@ bool k_listopenfilesjob_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-QThread* k_listopenfilesjob_thread(void* self);
+QThread* k_listopenfilesjob_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -529,11 +529,11 @@ void k_listopenfilesjob_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_listopenfilesjob_children(void* self);
+libqt_list k_listopenfilesjob_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -571,7 +571,7 @@ void k_listopenfilesjob_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_listopenfilesjob_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_listopenfilesjob_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -582,18 +582,18 @@ QMetaObject__Connection* k_listopenfilesjob_connect(void* sender, const char* si
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_listopenfilesjob_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_listopenfilesjob_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_listopenfilesjob_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_listopenfilesjob_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -604,7 +604,7 @@ QMetaObject__Connection* k_listopenfilesjob_connect3(void* self, void* sender, c
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_listopenfilesjob_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_listopenfilesjob_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -615,24 +615,24 @@ bool k_listopenfilesjob_disconnect(void* sender, const char* signal, void* recei
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_listopenfilesjob_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_listopenfilesjob_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-bool k_listopenfilesjob_disconnect3(void* self);
+bool k_listopenfilesjob_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 /// @param receiver QObject*
 ///
-bool k_listopenfilesjob_disconnect4(void* self, void* receiver);
+bool k_listopenfilesjob_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -640,23 +640,23 @@ bool k_listopenfilesjob_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_listopenfilesjob_disconnect5(void* param1);
+bool k_listopenfilesjob_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-void k_listopenfilesjob_dump_object_tree(void* self);
+void k_listopenfilesjob_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-void k_listopenfilesjob_dump_object_info(void* self);
+void k_listopenfilesjob_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -666,16 +666,16 @@ void k_listopenfilesjob_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_listopenfilesjob_set_property(void* self, const char* name, void* value);
+bool k_listopenfilesjob_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 /// @param name const char*
 ///
-QVariant* k_listopenfilesjob_property(void* self, const char* name);
+QVariant* k_listopenfilesjob_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -683,9 +683,9 @@ QVariant* k_listopenfilesjob_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-const char** k_listopenfilesjob_dynamic_property_names(void* self);
+const char** k_listopenfilesjob_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -699,9 +699,9 @@ QBindingStorage* k_listopenfilesjob_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-const QBindingStorage* k_listopenfilesjob_binding_storage2(void* self);
+const QBindingStorage* k_listopenfilesjob_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -724,18 +724,18 @@ void k_listopenfilesjob_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-QObject* k_listopenfilesjob_parent(void* self);
+QObject* k_listopenfilesjob_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 /// @param classname const char*
 ///
-bool k_listopenfilesjob_inherits(void* self, const char* classname);
+bool k_listopenfilesjob_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -775,7 +775,7 @@ int32_t k_listopenfilesjob_start_timer23(void* self, int64_t time, int32_t timer
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_listopenfilesjob_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_listopenfilesjob_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -787,59 +787,59 @@ QMetaObject__Connection* k_listopenfilesjob_connect5(void* sender, const char* s
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_listopenfilesjob_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_listopenfilesjob_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_listopenfilesjob_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_listopenfilesjob_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 /// @param signal const char*
 ///
-bool k_listopenfilesjob_disconnect1(void* self, const char* signal);
+bool k_listopenfilesjob_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KListOpenFilesJob*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_listopenfilesjob_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_listopenfilesjob_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_listopenfilesjob_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_listopenfilesjob_disconnect23(void* self, void* receiver, const char* member);
+bool k_listopenfilesjob_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KListOpenFilesJob*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_listopenfilesjob_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -886,9 +886,9 @@ bool k_listopenfilesjob_super_do_kill(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback bool func()
+/// @param callback bool func(KListOpenFilesJob* self)
 ///
-void k_listopenfilesjob_on_do_kill(void* self, bool (*callback)());
+void k_listopenfilesjob_on_do_kill(void* self, bool (*callback)(void*));
 
 /// Inherited from KJob
 ///
@@ -917,9 +917,9 @@ bool k_listopenfilesjob_super_do_suspend(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback bool func()
+/// @param callback bool func(KListOpenFilesJob* self)
 ///
-void k_listopenfilesjob_on_do_suspend(void* self, bool (*callback)());
+void k_listopenfilesjob_on_do_suspend(void* self, bool (*callback)(void*));
 
 /// Inherited from KJob
 ///
@@ -948,9 +948,9 @@ bool k_listopenfilesjob_super_do_resume(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback bool func()
+/// @param callback bool func(KListOpenFilesJob* self)
 ///
-void k_listopenfilesjob_on_do_resume(void* self, bool (*callback)());
+void k_listopenfilesjob_on_do_resume(void* self, bool (*callback)(void*));
 
 /// Inherited from KJob
 ///
@@ -960,9 +960,9 @@ void k_listopenfilesjob_on_do_resume(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-const char* k_listopenfilesjob_error_string(void* self);
+const char* k_listopenfilesjob_error_string(const void* self);
 
 /// Inherited from KJob
 ///
@@ -972,9 +972,9 @@ const char* k_listopenfilesjob_error_string(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-const char* k_listopenfilesjob_super_error_string(void* self);
+const char* k_listopenfilesjob_super_error_string(const void* self);
 
 /// Inherited from KJob
 ///
@@ -982,10 +982,10 @@ const char* k_listopenfilesjob_super_error_string(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KListOpenFilesJob*
-/// @param callback const char* func()
+/// @param self const KListOpenFilesJob*
+/// @param callback const char* func(KListOpenFilesJob* self)
 ///
-void k_listopenfilesjob_on_error_string(void* self, const char* (*callback)());
+void k_listopenfilesjob_on_error_string(const void* self, const char* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1163,7 +1163,7 @@ void k_listopenfilesjob_on_custom_event(void* self, void (*callback)(void*, void
 /// @param self KListOpenFilesJob*
 /// @param signal QMetaMethod*
 ///
-void k_listopenfilesjob_connect_notify(void* self, void* signal);
+void k_listopenfilesjob_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1174,7 +1174,7 @@ void k_listopenfilesjob_connect_notify(void* self, void* signal);
 /// @param self KListOpenFilesJob*
 /// @param signal QMetaMethod*
 ///
-void k_listopenfilesjob_super_connect_notify(void* self, void* signal);
+void k_listopenfilesjob_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1185,7 +1185,7 @@ void k_listopenfilesjob_super_connect_notify(void* self, void* signal);
 /// @param self KListOpenFilesJob*
 /// @param callback void func(KListOpenFilesJob* self, QMetaMethod* signal)
 ///
-void k_listopenfilesjob_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_listopenfilesjob_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1196,7 +1196,7 @@ void k_listopenfilesjob_on_connect_notify(void* self, void (*callback)(void*, vo
 /// @param self KListOpenFilesJob*
 /// @param signal QMetaMethod*
 ///
-void k_listopenfilesjob_disconnect_notify(void* self, void* signal);
+void k_listopenfilesjob_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1207,7 +1207,7 @@ void k_listopenfilesjob_disconnect_notify(void* self, void* signal);
 /// @param self KListOpenFilesJob*
 /// @param signal QMetaMethod*
 ///
-void k_listopenfilesjob_super_disconnect_notify(void* self, void* signal);
+void k_listopenfilesjob_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1218,7 +1218,7 @@ void k_listopenfilesjob_super_disconnect_notify(void* self, void* signal);
 /// @param self KListOpenFilesJob*
 /// @param callback void func(KListOpenFilesJob* self, QMetaMethod* signal)
 ///
-void k_listopenfilesjob_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_listopenfilesjob_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from KJob
 ///
@@ -1259,9 +1259,9 @@ void k_listopenfilesjob_on_set_capabilities(void* self, void (*callback)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-bool k_listopenfilesjob_is_finished(void* self);
+bool k_listopenfilesjob_is_finished(const void* self);
 
 /// Inherited from KJob
 ///
@@ -1269,9 +1269,9 @@ bool k_listopenfilesjob_is_finished(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-bool k_listopenfilesjob_super_is_finished(void* self);
+bool k_listopenfilesjob_super_is_finished(const void* self);
 
 /// Inherited from KJob
 ///
@@ -1279,10 +1279,10 @@ bool k_listopenfilesjob_super_is_finished(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KListOpenFilesJob*
-/// @param callback bool func()
+/// @param self const KListOpenFilesJob*
+/// @param callback bool func(KListOpenFilesJob* self)
 ///
-void k_listopenfilesjob_on_is_finished(void* self, bool (*callback)());
+void k_listopenfilesjob_on_is_finished(const void* self, bool (*callback)(const void*));
 
 /// Inherited from KJob
 ///
@@ -1513,9 +1513,9 @@ void k_listopenfilesjob_super_emit_result(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void func()
+/// @param callback void func(KListOpenFilesJob* self)
 ///
-void k_listopenfilesjob_on_emit_result(void* self, void (*callback)());
+void k_listopenfilesjob_on_emit_result(void* self, void (*callback)(void*));
 
 /// Inherited from KJob
 ///
@@ -1612,9 +1612,9 @@ void k_listopenfilesjob_super_start_elapsed_timer(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void func()
+/// @param callback void func(KListOpenFilesJob* self)
 ///
-void k_listopenfilesjob_on_start_elapsed_timer(void* self, void (*callback)());
+void k_listopenfilesjob_on_start_elapsed_timer(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -1622,9 +1622,9 @@ void k_listopenfilesjob_on_start_elapsed_timer(void* self, void (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-QObject* k_listopenfilesjob_sender(void* self);
+QObject* k_listopenfilesjob_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1632,9 +1632,9 @@ QObject* k_listopenfilesjob_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-QObject* k_listopenfilesjob_super_sender(void* self);
+QObject* k_listopenfilesjob_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1642,10 +1642,10 @@ QObject* k_listopenfilesjob_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KListOpenFilesJob*
-/// @param callback QObject* func()
+/// @param self const KListOpenFilesJob*
+/// @param callback QObject* func(KListOpenFilesJob* self)
 ///
-void k_listopenfilesjob_on_sender(void* self, QObject* (*callback)());
+void k_listopenfilesjob_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1653,9 +1653,9 @@ void k_listopenfilesjob_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-int32_t k_listopenfilesjob_sender_signal_index(void* self);
+int32_t k_listopenfilesjob_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1663,9 +1663,9 @@ int32_t k_listopenfilesjob_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 ///
-int32_t k_listopenfilesjob_super_sender_signal_index(void* self);
+int32_t k_listopenfilesjob_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1673,10 +1673,10 @@ int32_t k_listopenfilesjob_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KListOpenFilesJob*
-/// @param callback int32_t func()
+/// @param self const KListOpenFilesJob*
+/// @param callback int32_t func(KListOpenFilesJob* self)
 ///
-void k_listopenfilesjob_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_listopenfilesjob_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1684,10 +1684,10 @@ void k_listopenfilesjob_on_sender_signal_index(void* self, int32_t (*callback)()
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 /// @param signal const char*
 ///
-int32_t k_listopenfilesjob_receivers(void* self, const char* signal);
+int32_t k_listopenfilesjob_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1695,10 +1695,10 @@ int32_t k_listopenfilesjob_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 /// @param signal const char*
 ///
-int32_t k_listopenfilesjob_super_receivers(void* self, const char* signal);
+int32_t k_listopenfilesjob_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1706,10 +1706,10 @@ int32_t k_listopenfilesjob_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 /// @param callback int32_t func(KListOpenFilesJob* self, const char* signal)
 ///
-void k_listopenfilesjob_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_listopenfilesjob_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1717,10 +1717,10 @@ void k_listopenfilesjob_on_receivers(void* self, int32_t (*callback)(void*, cons
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 /// @param signal QMetaMethod*
 ///
-bool k_listopenfilesjob_is_signal_connected(void* self, void* signal);
+bool k_listopenfilesjob_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1728,10 +1728,10 @@ bool k_listopenfilesjob_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 /// @param signal QMetaMethod*
 ///
-bool k_listopenfilesjob_super_is_signal_connected(void* self, void* signal);
+bool k_listopenfilesjob_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1739,10 +1739,10 @@ bool k_listopenfilesjob_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KListOpenFilesJob*
+/// @param self const KListOpenFilesJob*
 /// @param callback bool func(KListOpenFilesJob* self, QMetaMethod* signal)
 ///
-void k_listopenfilesjob_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_listopenfilesjob_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from KJob
 ///

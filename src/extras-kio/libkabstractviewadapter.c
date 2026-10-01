@@ -13,64 +13,44 @@ KAbstractViewAdapter* k_abstractviewadapter_new(void* parent) {
     return KAbstractViewAdapter_New((QObject*)parent);
 }
 
-QAbstractItemModel* k_abstractviewadapter_model(void* self) {
+QAbstractItemModel* k_abstractviewadapter_model(const void* self) {
     return KAbstractViewAdapter_Model((KAbstractViewAdapter*)self);
 }
 
-void k_abstractviewadapter_on_model(void* self, QAbstractItemModel* (*callback)()) {
+void k_abstractviewadapter_on_model(const void* self, QAbstractItemModel* (*callback)(const void*)) {
     KAbstractViewAdapter_OnModel((KAbstractViewAdapter*)self, (intptr_t)callback);
 }
 
-QAbstractItemModel* k_abstractviewadapter_super_model(void* self) {
-    return KAbstractViewAdapter_SuperModel((KAbstractViewAdapter*)self);
-}
-
-QSize* k_abstractviewadapter_icon_size(void* self) {
+QSize* k_abstractviewadapter_icon_size(const void* self) {
     return KAbstractViewAdapter_IconSize((KAbstractViewAdapter*)self);
 }
 
-void k_abstractviewadapter_on_icon_size(void* self, QSize* (*callback)()) {
+void k_abstractviewadapter_on_icon_size(const void* self, QSize* (*callback)(const void*)) {
     KAbstractViewAdapter_OnIconSize((KAbstractViewAdapter*)self, (intptr_t)callback);
 }
 
-QSize* k_abstractviewadapter_super_icon_size(void* self) {
-    return KAbstractViewAdapter_SuperIconSize((KAbstractViewAdapter*)self);
-}
-
-QPalette* k_abstractviewadapter_palette(void* self) {
+QPalette* k_abstractviewadapter_palette(const void* self) {
     return KAbstractViewAdapter_Palette((KAbstractViewAdapter*)self);
 }
 
-void k_abstractviewadapter_on_palette(void* self, QPalette* (*callback)()) {
+void k_abstractviewadapter_on_palette(const void* self, QPalette* (*callback)(const void*)) {
     KAbstractViewAdapter_OnPalette((KAbstractViewAdapter*)self, (intptr_t)callback);
 }
 
-QPalette* k_abstractviewadapter_super_palette(void* self) {
-    return KAbstractViewAdapter_SuperPalette((KAbstractViewAdapter*)self);
-}
-
-QRect* k_abstractviewadapter_visible_area(void* self) {
+QRect* k_abstractviewadapter_visible_area(const void* self) {
     return KAbstractViewAdapter_VisibleArea((KAbstractViewAdapter*)self);
 }
 
-void k_abstractviewadapter_on_visible_area(void* self, QRect* (*callback)()) {
+void k_abstractviewadapter_on_visible_area(const void* self, QRect* (*callback)(const void*)) {
     KAbstractViewAdapter_OnVisibleArea((KAbstractViewAdapter*)self, (intptr_t)callback);
 }
 
-QRect* k_abstractviewadapter_super_visible_area(void* self) {
-    return KAbstractViewAdapter_SuperVisibleArea((KAbstractViewAdapter*)self);
-}
-
-QRect* k_abstractviewadapter_visual_rect(void* self, void* index) {
+QRect* k_abstractviewadapter_visual_rect(const void* self, const void* index) {
     return KAbstractViewAdapter_VisualRect((KAbstractViewAdapter*)self, (QModelIndex*)index);
 }
 
-void k_abstractviewadapter_on_visual_rect(void* self, QRect* (*callback)(void*, void*)) {
+void k_abstractviewadapter_on_visual_rect(const void* self, QRect* (*callback)(const void*, const void*)) {
     KAbstractViewAdapter_OnVisualRect((KAbstractViewAdapter*)self, (intptr_t)callback);
-}
-
-QRect* k_abstractviewadapter_super_visual_rect(void* self, void* index) {
-    return KAbstractViewAdapter_SuperVisualRect((KAbstractViewAdapter*)self, (QModelIndex*)index);
 }
 
 void k_abstractviewadapter_connect(void* self, int32_t signal, void* receiver, const char* slot) {
@@ -81,10 +61,6 @@ void k_abstractviewadapter_on_connect(void* self, void (*callback)(void*, int32_
     KAbstractViewAdapter_OnConnect((KAbstractViewAdapter*)self, (intptr_t)callback);
 }
 
-void k_abstractviewadapter_super_connect(void* self, int32_t signal, void* receiver, const char* slot) {
-    KAbstractViewAdapter_SuperConnect((KAbstractViewAdapter*)self, signal, (QObject*)receiver, slot);
-}
-
 const char* k_abstractviewadapter_tr(const char* s) {
     libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
@@ -92,7 +68,7 @@ const char* k_abstractviewadapter_tr(const char* s) {
     return _ret;
 }
 
-const char* k_abstractviewadapter_object_name(void* self) {
+const char* k_abstractviewadapter_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -103,19 +79,19 @@ void k_abstractviewadapter_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_abstractviewadapter_is_widget_type(void* self) {
+bool k_abstractviewadapter_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_abstractviewadapter_is_window_type(void* self) {
+bool k_abstractviewadapter_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_abstractviewadapter_is_quick_item_type(void* self) {
+bool k_abstractviewadapter_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_abstractviewadapter_signals_blocked(void* self) {
+bool k_abstractviewadapter_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -123,7 +99,7 @@ bool k_abstractviewadapter_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_abstractviewadapter_thread(void* self) {
+QThread* k_abstractviewadapter_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -147,7 +123,7 @@ void k_abstractviewadapter_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_abstractviewadapter_children(void* self) {
+libqt_list /* of QObject* */ k_abstractviewadapter_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -164,51 +140,51 @@ void k_abstractviewadapter_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_abstractviewadapter_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_abstractviewadapter_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_abstractviewadapter_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_abstractviewadapter_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_abstractviewadapter_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_abstractviewadapter_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_abstractviewadapter_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_abstractviewadapter_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_abstractviewadapter_disconnect3(void* self) {
+bool k_abstractviewadapter_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_abstractviewadapter_disconnect4(void* self, void* receiver) {
+bool k_abstractviewadapter_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_abstractviewadapter_disconnect5(void* param1) {
+bool k_abstractviewadapter_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_abstractviewadapter_dump_object_tree(void* self) {
+void k_abstractviewadapter_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_abstractviewadapter_dump_object_info(void* self) {
+void k_abstractviewadapter_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_abstractviewadapter_set_property(void* self, const char* name, void* value) {
+bool k_abstractviewadapter_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_abstractviewadapter_property(void* self, const char* name) {
+QVariant* k_abstractviewadapter_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_abstractviewadapter_dynamic_property_names(void* self) {
+const char** k_abstractviewadapter_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -229,7 +205,7 @@ QBindingStorage* k_abstractviewadapter_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_abstractviewadapter_binding_storage2(void* self) {
+const QBindingStorage* k_abstractviewadapter_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -241,11 +217,11 @@ void k_abstractviewadapter_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_abstractviewadapter_parent(void* self) {
+QObject* k_abstractviewadapter_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_abstractviewadapter_inherits(void* self, const char* classname) {
+bool k_abstractviewadapter_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -275,31 +251,31 @@ int32_t k_abstractviewadapter_start_timer23(void* self, int64_t time, int32_t ti
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_abstractviewadapter_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_abstractviewadapter_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_abstractviewadapter_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_abstractviewadapter_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_abstractviewadapter_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_abstractviewadapter_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_abstractviewadapter_disconnect1(void* self, const char* signal) {
+bool k_abstractviewadapter_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_abstractviewadapter_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_abstractviewadapter_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_abstractviewadapter_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_abstractviewadapter_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_abstractviewadapter_disconnect23(void* self, void* receiver, const char* member) {
+bool k_abstractviewadapter_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -311,16 +287,16 @@ void k_abstractviewadapter_on_destroyed1(void* self, void (*callback)(void*, voi
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_abstractviewadapter_meta_object(void* self) {
+const QMetaObject* k_abstractviewadapter_meta_object(const void* self) {
     return KAbstractViewAdapter_MetaObject((KAbstractViewAdapter*)self);
 }
 
-const QMetaObject* k_abstractviewadapter_super_meta_object(void* self) {
+const QMetaObject* k_abstractviewadapter_super_meta_object(const void* self) {
     return KAbstractViewAdapter_SuperMetaObject((KAbstractViewAdapter*)self);
 }
 
-void k_abstractviewadapter_on_meta_object(void* self, const QMetaObject* (*callback)()) {
-    KAbstractViewAdapter_OnMetaObject((KAbstractViewAdapter*)self, (intptr_t)callback);
+void k_abstractviewadapter_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+    KAbstractViewAdapter_OnMetaObject((const KAbstractViewAdapter*)self, (intptr_t)callback);
 }
 
 void* k_abstractviewadapter_metacast(void* self, const char* param1) {
@@ -407,76 +383,44 @@ void k_abstractviewadapter_on_custom_event(void* self, void (*callback)(void*, v
     KAbstractViewAdapter_OnCustomEvent((KAbstractViewAdapter*)self, (intptr_t)callback);
 }
 
-void k_abstractviewadapter_connect_notify(void* self, void* signal) {
+void k_abstractviewadapter_connect_notify(void* self, const void* signal) {
     KAbstractViewAdapter_ConnectNotify((KAbstractViewAdapter*)self, (QMetaMethod*)signal);
 }
 
-void k_abstractviewadapter_super_connect_notify(void* self, void* signal) {
+void k_abstractviewadapter_super_connect_notify(void* self, const void* signal) {
     KAbstractViewAdapter_SuperConnectNotify((KAbstractViewAdapter*)self, (QMetaMethod*)signal);
 }
 
-void k_abstractviewadapter_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_abstractviewadapter_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     KAbstractViewAdapter_OnConnectNotify((KAbstractViewAdapter*)self, (intptr_t)callback);
 }
 
-void k_abstractviewadapter_disconnect_notify(void* self, void* signal) {
+void k_abstractviewadapter_disconnect_notify(void* self, const void* signal) {
     KAbstractViewAdapter_DisconnectNotify((KAbstractViewAdapter*)self, (QMetaMethod*)signal);
 }
 
-void k_abstractviewadapter_super_disconnect_notify(void* self, void* signal) {
+void k_abstractviewadapter_super_disconnect_notify(void* self, const void* signal) {
     KAbstractViewAdapter_SuperDisconnectNotify((KAbstractViewAdapter*)self, (QMetaMethod*)signal);
 }
 
-void k_abstractviewadapter_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_abstractviewadapter_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     KAbstractViewAdapter_OnDisconnectNotify((KAbstractViewAdapter*)self, (intptr_t)callback);
 }
 
-QObject* k_abstractviewadapter_sender(void* self) {
+QObject* k_abstractviewadapter_sender(const void* self) {
     return KAbstractViewAdapter_Sender((KAbstractViewAdapter*)self);
 }
 
-QObject* k_abstractviewadapter_super_sender(void* self) {
-    return KAbstractViewAdapter_SuperSender((KAbstractViewAdapter*)self);
-}
-
-void k_abstractviewadapter_on_sender(void* self, QObject* (*callback)()) {
-    KAbstractViewAdapter_OnSender((KAbstractViewAdapter*)self, (intptr_t)callback);
-}
-
-int32_t k_abstractviewadapter_sender_signal_index(void* self) {
+int32_t k_abstractviewadapter_sender_signal_index(const void* self) {
     return KAbstractViewAdapter_SenderSignalIndex((KAbstractViewAdapter*)self);
 }
 
-int32_t k_abstractviewadapter_super_sender_signal_index(void* self) {
-    return KAbstractViewAdapter_SuperSenderSignalIndex((KAbstractViewAdapter*)self);
-}
-
-void k_abstractviewadapter_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    KAbstractViewAdapter_OnSenderSignalIndex((KAbstractViewAdapter*)self, (intptr_t)callback);
-}
-
-int32_t k_abstractviewadapter_receivers(void* self, const char* signal) {
+int32_t k_abstractviewadapter_receivers(const void* self, const char* signal) {
     return KAbstractViewAdapter_Receivers((KAbstractViewAdapter*)self, signal);
 }
 
-int32_t k_abstractviewadapter_super_receivers(void* self, const char* signal) {
-    return KAbstractViewAdapter_SuperReceivers((KAbstractViewAdapter*)self, signal);
-}
-
-void k_abstractviewadapter_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    KAbstractViewAdapter_OnReceivers((KAbstractViewAdapter*)self, (intptr_t)callback);
-}
-
-bool k_abstractviewadapter_is_signal_connected(void* self, void* signal) {
+bool k_abstractviewadapter_is_signal_connected(const void* self, const void* signal) {
     return KAbstractViewAdapter_IsSignalConnected((KAbstractViewAdapter*)self, (QMetaMethod*)signal);
-}
-
-bool k_abstractviewadapter_super_is_signal_connected(void* self, void* signal) {
-    return KAbstractViewAdapter_SuperIsSignalConnected((KAbstractViewAdapter*)self, (QMetaMethod*)signal);
-}
-
-void k_abstractviewadapter_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    KAbstractViewAdapter_OnIsSignalConnected((KAbstractViewAdapter*)self, (intptr_t)callback);
 }
 
 void k_abstractviewadapter_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

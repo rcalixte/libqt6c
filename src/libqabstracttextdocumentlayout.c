@@ -20,15 +20,15 @@ QAbstractTextDocumentLayout* q_abstracttextdocumentlayout_new(void* doc) {
     return QAbstractTextDocumentLayout_New((QTextDocument*)doc);
 }
 
-const QMetaObject* q_abstracttextdocumentlayout_meta_object(void* self) {
+const QMetaObject* q_abstracttextdocumentlayout_meta_object(const void* self) {
     return QAbstractTextDocumentLayout_MetaObject((QAbstractTextDocumentLayout*)self);
 }
 
-void q_abstracttextdocumentlayout_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_abstracttextdocumentlayout_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QAbstractTextDocumentLayout_OnMetaObject((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_abstracttextdocumentlayout_super_meta_object(void* self) {
+const QMetaObject* q_abstracttextdocumentlayout_super_meta_object(const void* self) {
     return QAbstractTextDocumentLayout_SuperMetaObject((QAbstractTextDocumentLayout*)self);
 }
 
@@ -63,109 +63,85 @@ const char* q_abstracttextdocumentlayout_tr(const char* s) {
     return _ret;
 }
 
-void q_abstracttextdocumentlayout_draw(void* self, void* painter, void* context) {
+void q_abstracttextdocumentlayout_draw(void* self, void* painter, const void* context) {
     QAbstractTextDocumentLayout_Draw((QAbstractTextDocumentLayout*)self, (QPainter*)painter, (QAbstractTextDocumentLayout__PaintContext*)context);
 }
 
-void q_abstracttextdocumentlayout_on_draw(void* self, void (*callback)(void*, void*, void*)) {
+void q_abstracttextdocumentlayout_on_draw(void* self, void (*callback)(void*, void*, const void*)) {
     QAbstractTextDocumentLayout_OnDraw((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
 }
 
-void q_abstracttextdocumentlayout_super_draw(void* self, void* painter, void* context) {
-    QAbstractTextDocumentLayout_SuperDraw((QAbstractTextDocumentLayout*)self, (QPainter*)painter, (QAbstractTextDocumentLayout__PaintContext*)context);
-}
-
-int32_t q_abstracttextdocumentlayout_hit_test(void* self, void* point, int32_t accuracy) {
+int32_t q_abstracttextdocumentlayout_hit_test(const void* self, const void* point, int32_t accuracy) {
     return QAbstractTextDocumentLayout_HitTest((QAbstractTextDocumentLayout*)self, (QPointF*)point, accuracy);
 }
 
-void q_abstracttextdocumentlayout_on_hit_test(void* self, int32_t (*callback)(void*, void*, int32_t)) {
+void q_abstracttextdocumentlayout_on_hit_test(const void* self, int32_t (*callback)(const void*, const void*, int32_t)) {
     QAbstractTextDocumentLayout_OnHitTest((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
 }
 
-int32_t q_abstracttextdocumentlayout_super_hit_test(void* self, void* point, int32_t accuracy) {
-    return QAbstractTextDocumentLayout_SuperHitTest((QAbstractTextDocumentLayout*)self, (QPointF*)point, accuracy);
-}
-
-const char* q_abstracttextdocumentlayout_anchor_at(void* self, void* pos) {
+const char* q_abstracttextdocumentlayout_anchor_at(const void* self, const void* pos) {
     libqt_string _str = QAbstractTextDocumentLayout_AnchorAt((QAbstractTextDocumentLayout*)self, (QPointF*)pos);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_abstracttextdocumentlayout_image_at(void* self, void* pos) {
+const char* q_abstracttextdocumentlayout_image_at(const void* self, const void* pos) {
     libqt_string _str = QAbstractTextDocumentLayout_ImageAt((QAbstractTextDocumentLayout*)self, (QPointF*)pos);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QTextFormat* q_abstracttextdocumentlayout_format_at(void* self, void* pos) {
+QTextFormat* q_abstracttextdocumentlayout_format_at(const void* self, const void* pos) {
     return QAbstractTextDocumentLayout_FormatAt((QAbstractTextDocumentLayout*)self, (QPointF*)pos);
 }
 
-QTextBlock* q_abstracttextdocumentlayout_block_with_marker_at(void* self, void* pos) {
+QTextBlock* q_abstracttextdocumentlayout_block_with_marker_at(const void* self, const void* pos) {
     return QAbstractTextDocumentLayout_BlockWithMarkerAt((QAbstractTextDocumentLayout*)self, (QPointF*)pos);
 }
 
-int32_t q_abstracttextdocumentlayout_page_count(void* self) {
+int32_t q_abstracttextdocumentlayout_page_count(const void* self) {
     return QAbstractTextDocumentLayout_PageCount((QAbstractTextDocumentLayout*)self);
 }
 
-void q_abstracttextdocumentlayout_on_page_count(void* self, int32_t (*callback)()) {
+void q_abstracttextdocumentlayout_on_page_count(const void* self, int32_t (*callback)(const void*)) {
     QAbstractTextDocumentLayout_OnPageCount((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
 }
 
-int32_t q_abstracttextdocumentlayout_super_page_count(void* self) {
-    return QAbstractTextDocumentLayout_SuperPageCount((QAbstractTextDocumentLayout*)self);
-}
-
-QSizeF* q_abstracttextdocumentlayout_document_size(void* self) {
+QSizeF* q_abstracttextdocumentlayout_document_size(const void* self) {
     return QAbstractTextDocumentLayout_DocumentSize((QAbstractTextDocumentLayout*)self);
 }
 
-void q_abstracttextdocumentlayout_on_document_size(void* self, QSizeF* (*callback)()) {
+void q_abstracttextdocumentlayout_on_document_size(const void* self, QSizeF* (*callback)(const void*)) {
     QAbstractTextDocumentLayout_OnDocumentSize((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
 }
 
-QSizeF* q_abstracttextdocumentlayout_super_document_size(void* self) {
-    return QAbstractTextDocumentLayout_SuperDocumentSize((QAbstractTextDocumentLayout*)self);
-}
-
-QRectF* q_abstracttextdocumentlayout_frame_bounding_rect(void* self, void* frame) {
+QRectF* q_abstracttextdocumentlayout_frame_bounding_rect(const void* self, void* frame) {
     return QAbstractTextDocumentLayout_FrameBoundingRect((QAbstractTextDocumentLayout*)self, (QTextFrame*)frame);
 }
 
-void q_abstracttextdocumentlayout_on_frame_bounding_rect(void* self, QRectF* (*callback)(void*, void*)) {
+void q_abstracttextdocumentlayout_on_frame_bounding_rect(const void* self, QRectF* (*callback)(const void*, void*)) {
     QAbstractTextDocumentLayout_OnFrameBoundingRect((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
 }
 
-QRectF* q_abstracttextdocumentlayout_super_frame_bounding_rect(void* self, void* frame) {
-    return QAbstractTextDocumentLayout_SuperFrameBoundingRect((QAbstractTextDocumentLayout*)self, (QTextFrame*)frame);
-}
-
-QRectF* q_abstracttextdocumentlayout_block_bounding_rect(void* self, void* block) {
+QRectF* q_abstracttextdocumentlayout_block_bounding_rect(const void* self, const void* block) {
     return QAbstractTextDocumentLayout_BlockBoundingRect((QAbstractTextDocumentLayout*)self, (QTextBlock*)block);
 }
 
-void q_abstracttextdocumentlayout_on_block_bounding_rect(void* self, QRectF* (*callback)(void*, void*)) {
+void q_abstracttextdocumentlayout_on_block_bounding_rect(const void* self, QRectF* (*callback)(const void*, const void*)) {
     QAbstractTextDocumentLayout_OnBlockBoundingRect((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
-}
-
-QRectF* q_abstracttextdocumentlayout_super_block_bounding_rect(void* self, void* block) {
-    return QAbstractTextDocumentLayout_SuperBlockBoundingRect((QAbstractTextDocumentLayout*)self, (QTextBlock*)block);
 }
 
 void q_abstracttextdocumentlayout_set_paint_device(void* self, void* device) {
     QAbstractTextDocumentLayout_SetPaintDevice((QAbstractTextDocumentLayout*)self, (QPaintDevice*)device);
 }
 
-QPaintDevice* q_abstracttextdocumentlayout_paint_device(void* self) {
+QPaintDevice* q_abstracttextdocumentlayout_paint_device(const void* self) {
     return QAbstractTextDocumentLayout_PaintDevice((QAbstractTextDocumentLayout*)self);
 }
 
-QTextDocument* q_abstracttextdocumentlayout_document(void* self) {
+QTextDocument* q_abstracttextdocumentlayout_document(const void* self) {
     return QAbstractTextDocumentLayout_Document((QAbstractTextDocumentLayout*)self);
 }
 
@@ -177,7 +153,7 @@ void q_abstracttextdocumentlayout_unregister_handler(void* self, int objectType)
     QAbstractTextDocumentLayout_UnregisterHandler((QAbstractTextDocumentLayout*)self, objectType);
 }
 
-QTextObjectInterface* q_abstracttextdocumentlayout_handler_for_object(void* self, int objectType) {
+QTextObjectInterface* q_abstracttextdocumentlayout_handler_for_object(const void* self, int objectType) {
     return QAbstractTextDocumentLayout_HandlerForObject((QAbstractTextDocumentLayout*)self, objectType);
 }
 
@@ -189,19 +165,19 @@ void q_abstracttextdocumentlayout_on_update(void* self, void (*callback)(void*))
     QAbstractTextDocumentLayout_Connect_Update((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
 }
 
-void q_abstracttextdocumentlayout_update_block(void* self, void* block) {
+void q_abstracttextdocumentlayout_update_block(void* self, const void* block) {
     QAbstractTextDocumentLayout_UpdateBlock((QAbstractTextDocumentLayout*)self, (QTextBlock*)block);
 }
 
-void q_abstracttextdocumentlayout_on_update_block(void* self, void (*callback)(void*, void*)) {
+void q_abstracttextdocumentlayout_on_update_block(void* self, void (*callback)(void*, const void*)) {
     QAbstractTextDocumentLayout_Connect_UpdateBlock((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
 }
 
-void q_abstracttextdocumentlayout_document_size_changed(void* self, void* newSize) {
+void q_abstracttextdocumentlayout_document_size_changed(void* self, const void* newSize) {
     QAbstractTextDocumentLayout_DocumentSizeChanged((QAbstractTextDocumentLayout*)self, (QSizeF*)newSize);
 }
 
-void q_abstracttextdocumentlayout_on_document_size_changed(void* self, void (*callback)(void*, void*)) {
+void q_abstracttextdocumentlayout_on_document_size_changed(void* self, void (*callback)(void*, const void*)) {
     QAbstractTextDocumentLayout_Connect_DocumentSizeChanged((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
 }
 
@@ -221,43 +197,39 @@ void q_abstracttextdocumentlayout_on_document_changed(void* self, void (*callbac
     QAbstractTextDocumentLayout_OnDocumentChanged((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
 }
 
-void q_abstracttextdocumentlayout_super_document_changed(void* self, int from, int charsRemoved, int charsAdded) {
-    QAbstractTextDocumentLayout_SuperDocumentChanged((QAbstractTextDocumentLayout*)self, from, charsRemoved, charsAdded);
-}
-
-void q_abstracttextdocumentlayout_resize_inline_object(void* self, void* item, int posInDocument, void* format) {
+void q_abstracttextdocumentlayout_resize_inline_object(void* self, void* item, int posInDocument, const void* format) {
     QAbstractTextDocumentLayout_ResizeInlineObject((QAbstractTextDocumentLayout*)self, (QTextInlineObject*)item, posInDocument, (QTextFormat*)format);
 }
 
-void q_abstracttextdocumentlayout_on_resize_inline_object(void* self, void (*callback)(void*, void*, int, void*)) {
+void q_abstracttextdocumentlayout_on_resize_inline_object(void* self, void (*callback)(void*, void*, int, const void*)) {
     QAbstractTextDocumentLayout_OnResizeInlineObject((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
 }
 
-void q_abstracttextdocumentlayout_super_resize_inline_object(void* self, void* item, int posInDocument, void* format) {
+void q_abstracttextdocumentlayout_super_resize_inline_object(void* self, void* item, int posInDocument, const void* format) {
     QAbstractTextDocumentLayout_SuperResizeInlineObject((QAbstractTextDocumentLayout*)self, (QTextInlineObject*)item, posInDocument, (QTextFormat*)format);
 }
 
-void q_abstracttextdocumentlayout_position_inline_object(void* self, void* item, int posInDocument, void* format) {
+void q_abstracttextdocumentlayout_position_inline_object(void* self, void* item, int posInDocument, const void* format) {
     QAbstractTextDocumentLayout_PositionInlineObject((QAbstractTextDocumentLayout*)self, (QTextInlineObject*)item, posInDocument, (QTextFormat*)format);
 }
 
-void q_abstracttextdocumentlayout_on_position_inline_object(void* self, void (*callback)(void*, void*, int, void*)) {
+void q_abstracttextdocumentlayout_on_position_inline_object(void* self, void (*callback)(void*, void*, int, const void*)) {
     QAbstractTextDocumentLayout_OnPositionInlineObject((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
 }
 
-void q_abstracttextdocumentlayout_super_position_inline_object(void* self, void* item, int posInDocument, void* format) {
+void q_abstracttextdocumentlayout_super_position_inline_object(void* self, void* item, int posInDocument, const void* format) {
     QAbstractTextDocumentLayout_SuperPositionInlineObject((QAbstractTextDocumentLayout*)self, (QTextInlineObject*)item, posInDocument, (QTextFormat*)format);
 }
 
-void q_abstracttextdocumentlayout_draw_inline_object(void* self, void* painter, void* rect, void* object, int posInDocument, void* format) {
+void q_abstracttextdocumentlayout_draw_inline_object(void* self, void* painter, const void* rect, void* object, int posInDocument, const void* format) {
     QAbstractTextDocumentLayout_DrawInlineObject((QAbstractTextDocumentLayout*)self, (QPainter*)painter, (QRectF*)rect, (QTextInlineObject*)object, posInDocument, (QTextFormat*)format);
 }
 
-void q_abstracttextdocumentlayout_on_draw_inline_object(void* self, void (*callback)(void*, void*, void*, void*, int, void*)) {
+void q_abstracttextdocumentlayout_on_draw_inline_object(void* self, void (*callback)(void*, void*, const void*, void*, int, const void*)) {
     QAbstractTextDocumentLayout_OnDrawInlineObject((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
 }
 
-void q_abstracttextdocumentlayout_super_draw_inline_object(void* self, void* painter, void* rect, void* object, int posInDocument, void* format) {
+void q_abstracttextdocumentlayout_super_draw_inline_object(void* self, void* painter, const void* rect, void* object, int posInDocument, const void* format) {
     QAbstractTextDocumentLayout_SuperDrawInlineObject((QAbstractTextDocumentLayout*)self, (QPainter*)painter, (QRectF*)rect, (QTextInlineObject*)object, posInDocument, (QTextFormat*)format);
 }
 
@@ -265,24 +237,8 @@ int32_t q_abstracttextdocumentlayout_format_index(void* self, int pos) {
     return QAbstractTextDocumentLayout_FormatIndex((QAbstractTextDocumentLayout*)self, pos);
 }
 
-void q_abstracttextdocumentlayout_on_format_index(void* self, int32_t (*callback)(void*, int)) {
-    QAbstractTextDocumentLayout_OnFormatIndex((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
-}
-
-int32_t q_abstracttextdocumentlayout_super_format_index(void* self, int pos) {
-    return QAbstractTextDocumentLayout_SuperFormatIndex((QAbstractTextDocumentLayout*)self, pos);
-}
-
 QTextCharFormat* q_abstracttextdocumentlayout_format(void* self, int pos) {
     return QAbstractTextDocumentLayout_Format((QAbstractTextDocumentLayout*)self, pos);
-}
-
-void q_abstracttextdocumentlayout_on_format(void* self, QTextCharFormat* (*callback)(void*, int)) {
-    QAbstractTextDocumentLayout_OnFormat((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
-}
-
-QTextCharFormat* q_abstracttextdocumentlayout_super_format(void* self, int pos) {
-    return QAbstractTextDocumentLayout_SuperFormat((QAbstractTextDocumentLayout*)self, pos);
 }
 
 const char* q_abstracttextdocumentlayout_tr2(const char* s, const char* c) {
@@ -303,15 +259,15 @@ void q_abstracttextdocumentlayout_unregister_handler2(void* self, int objectType
     QAbstractTextDocumentLayout_UnregisterHandler2((QAbstractTextDocumentLayout*)self, objectType, (QObject*)component);
 }
 
-void q_abstracttextdocumentlayout_update1(void* self, void* param1) {
+void q_abstracttextdocumentlayout_update1(void* self, const void* param1) {
     QAbstractTextDocumentLayout_Update1((QAbstractTextDocumentLayout*)self, (QRectF*)param1);
 }
 
-void q_abstracttextdocumentlayout_on_update1(void* self, void (*callback)(void*, void*)) {
+void q_abstracttextdocumentlayout_on_update1(void* self, void (*callback)(void*, const void*)) {
     QAbstractTextDocumentLayout_Connect_Update1((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
 }
 
-const char* q_abstracttextdocumentlayout_object_name(void* self) {
+const char* q_abstracttextdocumentlayout_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -322,19 +278,19 @@ void q_abstracttextdocumentlayout_set_object_name(void* self, const char* name) 
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_abstracttextdocumentlayout_is_widget_type(void* self) {
+bool q_abstracttextdocumentlayout_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_abstracttextdocumentlayout_is_window_type(void* self) {
+bool q_abstracttextdocumentlayout_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_abstracttextdocumentlayout_is_quick_item_type(void* self) {
+bool q_abstracttextdocumentlayout_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_abstracttextdocumentlayout_signals_blocked(void* self) {
+bool q_abstracttextdocumentlayout_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -342,7 +298,7 @@ bool q_abstracttextdocumentlayout_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_abstracttextdocumentlayout_thread(void* self) {
+QThread* q_abstracttextdocumentlayout_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -366,7 +322,7 @@ void q_abstracttextdocumentlayout_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_abstracttextdocumentlayout_children(void* self) {
+libqt_list /* of QObject* */ q_abstracttextdocumentlayout_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -383,55 +339,55 @@ void q_abstracttextdocumentlayout_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_abstracttextdocumentlayout_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_abstracttextdocumentlayout_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_abstracttextdocumentlayout_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_abstracttextdocumentlayout_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_abstracttextdocumentlayout_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_abstracttextdocumentlayout_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_abstracttextdocumentlayout_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_abstracttextdocumentlayout_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_abstracttextdocumentlayout_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_abstracttextdocumentlayout_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_abstracttextdocumentlayout_disconnect3(void* self) {
+bool q_abstracttextdocumentlayout_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_abstracttextdocumentlayout_disconnect4(void* self, void* receiver) {
+bool q_abstracttextdocumentlayout_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_abstracttextdocumentlayout_disconnect5(void* param1) {
+bool q_abstracttextdocumentlayout_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_abstracttextdocumentlayout_dump_object_tree(void* self) {
+void q_abstracttextdocumentlayout_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_abstracttextdocumentlayout_dump_object_info(void* self) {
+void q_abstracttextdocumentlayout_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_abstracttextdocumentlayout_set_property(void* self, const char* name, void* value) {
+bool q_abstracttextdocumentlayout_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_abstracttextdocumentlayout_property(void* self, const char* name) {
+QVariant* q_abstracttextdocumentlayout_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_abstracttextdocumentlayout_dynamic_property_names(void* self) {
+const char** q_abstracttextdocumentlayout_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -452,7 +408,7 @@ QBindingStorage* q_abstracttextdocumentlayout_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_abstracttextdocumentlayout_binding_storage2(void* self) {
+const QBindingStorage* q_abstracttextdocumentlayout_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -464,11 +420,11 @@ void q_abstracttextdocumentlayout_on_destroyed(void* self, void (*callback)(void
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_abstracttextdocumentlayout_parent(void* self) {
+QObject* q_abstracttextdocumentlayout_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_abstracttextdocumentlayout_inherits(void* self, const char* classname) {
+bool q_abstracttextdocumentlayout_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -484,31 +440,31 @@ int32_t q_abstracttextdocumentlayout_start_timer23(void* self, int64_t time, int
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_abstracttextdocumentlayout_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_abstracttextdocumentlayout_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_abstracttextdocumentlayout_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_abstracttextdocumentlayout_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_abstracttextdocumentlayout_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_abstracttextdocumentlayout_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_abstracttextdocumentlayout_disconnect1(void* self, const char* signal) {
+bool q_abstracttextdocumentlayout_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_abstracttextdocumentlayout_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_abstracttextdocumentlayout_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_abstracttextdocumentlayout_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_abstracttextdocumentlayout_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_abstracttextdocumentlayout_disconnect23(void* self, void* receiver, const char* member) {
+bool q_abstracttextdocumentlayout_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -580,76 +536,44 @@ void q_abstracttextdocumentlayout_on_custom_event(void* self, void (*callback)(v
     QAbstractTextDocumentLayout_OnCustomEvent((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
 }
 
-void q_abstracttextdocumentlayout_connect_notify(void* self, void* signal) {
+void q_abstracttextdocumentlayout_connect_notify(void* self, const void* signal) {
     QAbstractTextDocumentLayout_ConnectNotify((QAbstractTextDocumentLayout*)self, (QMetaMethod*)signal);
 }
 
-void q_abstracttextdocumentlayout_super_connect_notify(void* self, void* signal) {
+void q_abstracttextdocumentlayout_super_connect_notify(void* self, const void* signal) {
     QAbstractTextDocumentLayout_SuperConnectNotify((QAbstractTextDocumentLayout*)self, (QMetaMethod*)signal);
 }
 
-void q_abstracttextdocumentlayout_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_abstracttextdocumentlayout_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QAbstractTextDocumentLayout_OnConnectNotify((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
 }
 
-void q_abstracttextdocumentlayout_disconnect_notify(void* self, void* signal) {
+void q_abstracttextdocumentlayout_disconnect_notify(void* self, const void* signal) {
     QAbstractTextDocumentLayout_DisconnectNotify((QAbstractTextDocumentLayout*)self, (QMetaMethod*)signal);
 }
 
-void q_abstracttextdocumentlayout_super_disconnect_notify(void* self, void* signal) {
+void q_abstracttextdocumentlayout_super_disconnect_notify(void* self, const void* signal) {
     QAbstractTextDocumentLayout_SuperDisconnectNotify((QAbstractTextDocumentLayout*)self, (QMetaMethod*)signal);
 }
 
-void q_abstracttextdocumentlayout_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_abstracttextdocumentlayout_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QAbstractTextDocumentLayout_OnDisconnectNotify((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
 }
 
-QObject* q_abstracttextdocumentlayout_sender(void* self) {
+QObject* q_abstracttextdocumentlayout_sender(const void* self) {
     return QAbstractTextDocumentLayout_Sender((QAbstractTextDocumentLayout*)self);
 }
 
-QObject* q_abstracttextdocumentlayout_super_sender(void* self) {
-    return QAbstractTextDocumentLayout_SuperSender((QAbstractTextDocumentLayout*)self);
-}
-
-void q_abstracttextdocumentlayout_on_sender(void* self, QObject* (*callback)()) {
-    QAbstractTextDocumentLayout_OnSender((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
-}
-
-int32_t q_abstracttextdocumentlayout_sender_signal_index(void* self) {
+int32_t q_abstracttextdocumentlayout_sender_signal_index(const void* self) {
     return QAbstractTextDocumentLayout_SenderSignalIndex((QAbstractTextDocumentLayout*)self);
 }
 
-int32_t q_abstracttextdocumentlayout_super_sender_signal_index(void* self) {
-    return QAbstractTextDocumentLayout_SuperSenderSignalIndex((QAbstractTextDocumentLayout*)self);
-}
-
-void q_abstracttextdocumentlayout_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QAbstractTextDocumentLayout_OnSenderSignalIndex((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
-}
-
-int32_t q_abstracttextdocumentlayout_receivers(void* self, const char* signal) {
+int32_t q_abstracttextdocumentlayout_receivers(const void* self, const char* signal) {
     return QAbstractTextDocumentLayout_Receivers((QAbstractTextDocumentLayout*)self, signal);
 }
 
-int32_t q_abstracttextdocumentlayout_super_receivers(void* self, const char* signal) {
-    return QAbstractTextDocumentLayout_SuperReceivers((QAbstractTextDocumentLayout*)self, signal);
-}
-
-void q_abstracttextdocumentlayout_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QAbstractTextDocumentLayout_OnReceivers((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
-}
-
-bool q_abstracttextdocumentlayout_is_signal_connected(void* self, void* signal) {
+bool q_abstracttextdocumentlayout_is_signal_connected(const void* self, const void* signal) {
     return QAbstractTextDocumentLayout_IsSignalConnected((QAbstractTextDocumentLayout*)self, (QMetaMethod*)signal);
-}
-
-bool q_abstracttextdocumentlayout_super_is_signal_connected(void* self, void* signal) {
-    return QAbstractTextDocumentLayout_SuperIsSignalConnected((QAbstractTextDocumentLayout*)self, (QMetaMethod*)signal);
-}
-
-void q_abstracttextdocumentlayout_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QAbstractTextDocumentLayout_OnIsSignalConnected((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
 }
 
 void q_abstracttextdocumentlayout_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
@@ -660,15 +584,15 @@ void q_abstracttextdocumentlayout_delete(void* self) {
     QAbstractTextDocumentLayout_Delete((QAbstractTextDocumentLayout*)(self));
 }
 
-QSizeF* q_textobjectinterface_intrinsic_size(void* self, void* doc, int posInDocument, void* format) {
+QSizeF* q_textobjectinterface_intrinsic_size(void* self, void* doc, int posInDocument, const void* format) {
     return QTextObjectInterface_IntrinsicSize((QTextObjectInterface*)self, (QTextDocument*)doc, posInDocument, (QTextFormat*)format);
 }
 
-void q_textobjectinterface_draw_object(void* self, void* painter, void* rect, void* doc, int posInDocument, void* format) {
+void q_textobjectinterface_draw_object(void* self, void* painter, const void* rect, void* doc, int posInDocument, const void* format) {
     QTextObjectInterface_DrawObject((QTextObjectInterface*)self, (QPainter*)painter, (QRectF*)rect, (QTextDocument*)doc, posInDocument, (QTextFormat*)format);
 }
 
-void q_textobjectinterface_operator_assign(void* self, void* param1) {
+void q_textobjectinterface_operator_assign(void* self, const void* param1) {
     QTextObjectInterface_OperatorAssign((QTextObjectInterface*)self, (QTextObjectInterface*)param1);
 }
 
@@ -680,11 +604,11 @@ QAbstractTextDocumentLayout__Selection* q_abstracttextdocumentlayout__selection_
     return QAbstractTextDocumentLayout__Selection_New();
 }
 
-QAbstractTextDocumentLayout__Selection* q_abstracttextdocumentlayout__selection_new2(void* param1) {
+QAbstractTextDocumentLayout__Selection* q_abstracttextdocumentlayout__selection_new2(const void* param1) {
     return QAbstractTextDocumentLayout__Selection_New2((QAbstractTextDocumentLayout__Selection*)param1);
 }
 
-QTextCursor* q_abstracttextdocumentlayout__selection_cursor(void* self) {
+QTextCursor* q_abstracttextdocumentlayout__selection_cursor(const void* self) {
     return QAbstractTextDocumentLayout__Selection_Cursor((QAbstractTextDocumentLayout__Selection*)self);
 }
 
@@ -692,7 +616,7 @@ void q_abstracttextdocumentlayout__selection_set_cursor(void* self, void* cursor
     QAbstractTextDocumentLayout__Selection_SetCursor((QAbstractTextDocumentLayout__Selection*)self, (QTextCursor*)cursor);
 }
 
-QTextCharFormat* q_abstracttextdocumentlayout__selection_format(void* self) {
+QTextCharFormat* q_abstracttextdocumentlayout__selection_format(const void* self) {
     return QAbstractTextDocumentLayout__Selection_Format((QAbstractTextDocumentLayout__Selection*)self);
 }
 
@@ -700,7 +624,7 @@ void q_abstracttextdocumentlayout__selection_set_format(void* self, void* format
     QAbstractTextDocumentLayout__Selection_SetFormat((QAbstractTextDocumentLayout__Selection*)self, (QTextCharFormat*)format);
 }
 
-void q_abstracttextdocumentlayout__selection_operator_assign(void* self, void* param1) {
+void q_abstracttextdocumentlayout__selection_operator_assign(void* self, const void* param1) {
     QAbstractTextDocumentLayout__Selection_OperatorAssign((QAbstractTextDocumentLayout__Selection*)self, (QAbstractTextDocumentLayout__Selection*)param1);
 }
 
@@ -712,11 +636,11 @@ QAbstractTextDocumentLayout__PaintContext* q_abstracttextdocumentlayout__paintco
     return QAbstractTextDocumentLayout__PaintContext_New();
 }
 
-QAbstractTextDocumentLayout__PaintContext* q_abstracttextdocumentlayout__paintcontext_new2(void* param1) {
+QAbstractTextDocumentLayout__PaintContext* q_abstracttextdocumentlayout__paintcontext_new2(const void* param1) {
     return QAbstractTextDocumentLayout__PaintContext_New2((QAbstractTextDocumentLayout__PaintContext*)param1);
 }
 
-int32_t q_abstracttextdocumentlayout__paintcontext_cursor_position(void* self) {
+int32_t q_abstracttextdocumentlayout__paintcontext_cursor_position(const void* self) {
     return QAbstractTextDocumentLayout__PaintContext_CursorPosition((QAbstractTextDocumentLayout__PaintContext*)self);
 }
 
@@ -724,7 +648,7 @@ void q_abstracttextdocumentlayout__paintcontext_set_cursor_position(void* self, 
     QAbstractTextDocumentLayout__PaintContext_SetCursorPosition((QAbstractTextDocumentLayout__PaintContext*)self, cursorPosition);
 }
 
-QPalette* q_abstracttextdocumentlayout__paintcontext_palette(void* self) {
+QPalette* q_abstracttextdocumentlayout__paintcontext_palette(const void* self) {
     return QAbstractTextDocumentLayout__PaintContext_Palette((QAbstractTextDocumentLayout__PaintContext*)self);
 }
 
@@ -732,7 +656,7 @@ void q_abstracttextdocumentlayout__paintcontext_set_palette(void* self, void* pa
     QAbstractTextDocumentLayout__PaintContext_SetPalette((QAbstractTextDocumentLayout__PaintContext*)self, (QPalette*)palette);
 }
 
-QRectF* q_abstracttextdocumentlayout__paintcontext_clip(void* self) {
+QRectF* q_abstracttextdocumentlayout__paintcontext_clip(const void* self) {
     return QAbstractTextDocumentLayout__PaintContext_Clip((QAbstractTextDocumentLayout__PaintContext*)self);
 }
 
@@ -740,7 +664,7 @@ void q_abstracttextdocumentlayout__paintcontext_set_clip(void* self, void* clip)
     QAbstractTextDocumentLayout__PaintContext_SetClip((QAbstractTextDocumentLayout__PaintContext*)self, (QRectF*)clip);
 }
 
-libqt_list /* of QAbstractTextDocumentLayout__Selection* */ q_abstracttextdocumentlayout__paintcontext_selections(void* self) {
+libqt_list /* of QAbstractTextDocumentLayout__Selection* */ q_abstracttextdocumentlayout__paintcontext_selections(const void* self) {
     libqt_list selections_arr = QAbstractTextDocumentLayout__PaintContext_Selections((QAbstractTextDocumentLayout__PaintContext*)self);
     return selections_arr;
 }
@@ -749,7 +673,7 @@ void q_abstracttextdocumentlayout__paintcontext_set_selections(void* self, libqt
     QAbstractTextDocumentLayout__PaintContext_SetSelections((QAbstractTextDocumentLayout__PaintContext*)self, selections);
 }
 
-void q_abstracttextdocumentlayout__paintcontext_operator_assign(void* self, void* param1) {
+void q_abstracttextdocumentlayout__paintcontext_operator_assign(void* self, const void* param1) {
     QAbstractTextDocumentLayout__PaintContext_OperatorAssign((QAbstractTextDocumentLayout__PaintContext*)self, (QAbstractTextDocumentLayout__PaintContext*)param1);
 }
 

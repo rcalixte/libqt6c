@@ -24,26 +24,26 @@ QPieSeries* q_pieseries_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-const QMetaObject* q_pieseries_meta_object(void* self);
+const QMetaObject* q_pieseries_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QPieSeries*
-/// @param callback const QMetaObject* func()
+/// @param self const QPieSeries*
+/// @param callback const QMetaObject* func(const QPieSeries* self)
 ///
-void q_pieseries_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_pieseries_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-const QMetaObject* q_pieseries_super_meta_object(void* self);
+const QMetaObject* q_pieseries_super_meta_object(const void* self);
 
 /// @param self QPieSeries*
 /// @param param1 const char*
@@ -97,30 +97,30 @@ const char* q_pieseries_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#type)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
 /// @return enum QAbstractSeries__SeriesType
 ///
-int32_t q_pieseries_type(void* self);
+int32_t q_pieseries_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#type)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QPieSeries*
-/// @param callback int32_t func()
+/// @param self const QPieSeries*
+/// @param callback int32_t func(const QPieSeries* self)
 ///
-void q_pieseries_on_type(void* self, int32_t (*callback)());
+void q_pieseries_on_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#type)
 ///
 /// Base class method implementation
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
 /// @return enum QAbstractSeries__SeriesType
 ///
-int32_t q_pieseries_super_type(void* self);
+int32_t q_pieseries_super_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#append)
 ///
@@ -181,29 +181,29 @@ void q_pieseries_clear(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#slices)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
 /// @return libqt_list of QPieSlice*
 ///
-libqt_list q_pieseries_slices(void* self);
+libqt_list q_pieseries_slices(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#count)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-int32_t q_pieseries_count(void* self);
+int32_t q_pieseries_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#isEmpty)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-bool q_pieseries_is_empty(void* self);
+bool q_pieseries_is_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#sum)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-double q_pieseries_sum(void* self);
+double q_pieseries_sum(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#setHoleSize)
 ///
@@ -214,9 +214,9 @@ void q_pieseries_set_hole_size(void* self, double holeSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#holeSize)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-double q_pieseries_hole_size(void* self);
+double q_pieseries_hole_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#setHorizontalPosition)
 ///
@@ -227,9 +227,9 @@ void q_pieseries_set_horizontal_position(void* self, double relativePosition);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#horizontalPosition)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-double q_pieseries_horizontal_position(void* self);
+double q_pieseries_horizontal_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#setVerticalPosition)
 ///
@@ -240,9 +240,9 @@ void q_pieseries_set_vertical_position(void* self, double relativePosition);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#verticalPosition)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-double q_pieseries_vertical_position(void* self);
+double q_pieseries_vertical_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#setPieSize)
 ///
@@ -253,9 +253,9 @@ void q_pieseries_set_pie_size(void* self, double relativeSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#pieSize)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-double q_pieseries_pie_size(void* self);
+double q_pieseries_pie_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#setPieStartAngle)
 ///
@@ -266,9 +266,9 @@ void q_pieseries_set_pie_start_angle(void* self, double startAngle);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#pieStartAngle)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-double q_pieseries_pie_start_angle(void* self);
+double q_pieseries_pie_start_angle(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#setPieEndAngle)
 ///
@@ -279,9 +279,9 @@ void q_pieseries_set_pie_end_angle(void* self, double endAngle);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#pieEndAngle)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-double q_pieseries_pie_end_angle(void* self);
+double q_pieseries_pie_end_angle(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#setLabelsVisible)
 ///
@@ -462,9 +462,9 @@ void q_pieseries_set_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-const char* q_pieseries_name(void* self);
+const char* q_pieseries_name(const void* self);
 
 /// Inherited from QAbstractSeries
 ///
@@ -478,17 +478,17 @@ void q_pieseries_set_visible(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#isVisible)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-bool q_pieseries_is_visible(void* self);
+bool q_pieseries_is_visible(const void* self);
 
 /// Inherited from QAbstractSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#opacity)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-double q_pieseries_opacity(void* self);
+double q_pieseries_opacity(const void* self);
 
 /// Inherited from QAbstractSeries
 ///
@@ -511,17 +511,17 @@ void q_pieseries_set_use_open_g_l(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGL)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-bool q_pieseries_use_open_g_l(void* self);
+bool q_pieseries_use_open_g_l(const void* self);
 
 /// Inherited from QAbstractSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#chart)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-QChart* q_pieseries_chart(void* self);
+QChart* q_pieseries_chart(const void* self);
 
 /// Inherited from QAbstractSeries
 ///
@@ -659,9 +659,9 @@ void q_pieseries_set_use_open_g_l1(void* self, bool enable);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-const char* q_pieseries_object_name(void* self);
+const char* q_pieseries_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -676,33 +676,33 @@ void q_pieseries_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-bool q_pieseries_is_widget_type(void* self);
+bool q_pieseries_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-bool q_pieseries_is_window_type(void* self);
+bool q_pieseries_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-bool q_pieseries_is_quick_item_type(void* self);
+bool q_pieseries_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-bool q_pieseries_signals_blocked(void* self);
+bool q_pieseries_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -717,9 +717,9 @@ bool q_pieseries_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-QThread* q_pieseries_thread(void* self);
+QThread* q_pieseries_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -770,11 +770,11 @@ void q_pieseries_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_pieseries_children(void* self);
+libqt_list q_pieseries_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -812,7 +812,7 @@ void q_pieseries_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_pieseries_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_pieseries_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -823,18 +823,18 @@ QMetaObject__Connection* q_pieseries_connect(void* sender, const char* signal, v
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_pieseries_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_pieseries_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_pieseries_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_pieseries_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -845,7 +845,7 @@ QMetaObject__Connection* q_pieseries_connect3(void* self, void* sender, const ch
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_pieseries_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_pieseries_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -856,24 +856,24 @@ bool q_pieseries_disconnect(void* sender, const char* signal, void* receiver, co
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_pieseries_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_pieseries_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-bool q_pieseries_disconnect3(void* self);
+bool q_pieseries_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 /// @param receiver QObject*
 ///
-bool q_pieseries_disconnect4(void* self, void* receiver);
+bool q_pieseries_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -881,23 +881,23 @@ bool q_pieseries_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_pieseries_disconnect5(void* param1);
+bool q_pieseries_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-void q_pieseries_dump_object_tree(void* self);
+void q_pieseries_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-void q_pieseries_dump_object_info(void* self);
+void q_pieseries_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -907,16 +907,16 @@ void q_pieseries_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_pieseries_set_property(void* self, const char* name, void* value);
+bool q_pieseries_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 /// @param name const char*
 ///
-QVariant* q_pieseries_property(void* self, const char* name);
+QVariant* q_pieseries_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -924,9 +924,9 @@ QVariant* q_pieseries_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-const char** q_pieseries_dynamic_property_names(void* self);
+const char** q_pieseries_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -940,9 +940,9 @@ QBindingStorage* q_pieseries_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-const QBindingStorage* q_pieseries_binding_storage2(void* self);
+const QBindingStorage* q_pieseries_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -965,18 +965,18 @@ void q_pieseries_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-QObject* q_pieseries_parent(void* self);
+QObject* q_pieseries_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 /// @param classname const char*
 ///
-bool q_pieseries_inherits(void* self, const char* classname);
+bool q_pieseries_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1016,7 +1016,7 @@ int32_t q_pieseries_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_pieseries_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_pieseries_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1028,59 +1028,59 @@ QMetaObject__Connection* q_pieseries_connect5(void* sender, const char* signal, 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_pieseries_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_pieseries_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_pieseries_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_pieseries_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 /// @param signal const char*
 ///
-bool q_pieseries_disconnect1(void* self, const char* signal);
+bool q_pieseries_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPieSeries*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_pieseries_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_pieseries_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_pieseries_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_pieseries_disconnect23(void* self, void* receiver, const char* member);
+bool q_pieseries_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QPieSeries*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_pieseries_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1276,7 +1276,7 @@ void q_pieseries_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QPieSeries*
 /// @param signal QMetaMethod*
 ///
-void q_pieseries_connect_notify(void* self, void* signal);
+void q_pieseries_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1287,7 +1287,7 @@ void q_pieseries_connect_notify(void* self, void* signal);
 /// @param self QPieSeries*
 /// @param signal QMetaMethod*
 ///
-void q_pieseries_super_connect_notify(void* self, void* signal);
+void q_pieseries_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1298,7 +1298,7 @@ void q_pieseries_super_connect_notify(void* self, void* signal);
 /// @param self QPieSeries*
 /// @param callback void func(QPieSeries* self, QMetaMethod* signal)
 ///
-void q_pieseries_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_pieseries_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1309,7 +1309,7 @@ void q_pieseries_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QPieSeries*
 /// @param signal QMetaMethod*
 ///
-void q_pieseries_disconnect_notify(void* self, void* signal);
+void q_pieseries_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1320,7 +1320,7 @@ void q_pieseries_disconnect_notify(void* self, void* signal);
 /// @param self QPieSeries*
 /// @param signal QMetaMethod*
 ///
-void q_pieseries_super_disconnect_notify(void* self, void* signal);
+void q_pieseries_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1331,7 +1331,7 @@ void q_pieseries_super_disconnect_notify(void* self, void* signal);
 /// @param self QPieSeries*
 /// @param callback void func(QPieSeries* self, QMetaMethod* signal)
 ///
-void q_pieseries_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_pieseries_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1339,9 +1339,9 @@ void q_pieseries_on_disconnect_notify(void* self, void (*callback)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-QObject* q_pieseries_sender(void* self);
+QObject* q_pieseries_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1349,9 +1349,9 @@ QObject* q_pieseries_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-QObject* q_pieseries_super_sender(void* self);
+QObject* q_pieseries_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1359,10 +1359,10 @@ QObject* q_pieseries_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPieSeries*
-/// @param callback QObject* func()
+/// @param self const QPieSeries*
+/// @param callback QObject* func(QPieSeries* self)
 ///
-void q_pieseries_on_sender(void* self, QObject* (*callback)());
+void q_pieseries_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1370,9 +1370,9 @@ void q_pieseries_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-int32_t q_pieseries_sender_signal_index(void* self);
+int32_t q_pieseries_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1380,9 +1380,9 @@ int32_t q_pieseries_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 ///
-int32_t q_pieseries_super_sender_signal_index(void* self);
+int32_t q_pieseries_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1390,10 +1390,10 @@ int32_t q_pieseries_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPieSeries*
-/// @param callback int32_t func()
+/// @param self const QPieSeries*
+/// @param callback int32_t func(QPieSeries* self)
 ///
-void q_pieseries_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_pieseries_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1401,10 +1401,10 @@ void q_pieseries_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 /// @param signal const char*
 ///
-int32_t q_pieseries_receivers(void* self, const char* signal);
+int32_t q_pieseries_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1412,10 +1412,10 @@ int32_t q_pieseries_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 /// @param signal const char*
 ///
-int32_t q_pieseries_super_receivers(void* self, const char* signal);
+int32_t q_pieseries_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1423,10 +1423,10 @@ int32_t q_pieseries_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 /// @param callback int32_t func(QPieSeries* self, const char* signal)
 ///
-void q_pieseries_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_pieseries_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1434,10 +1434,10 @@ void q_pieseries_on_receivers(void* self, int32_t (*callback)(void*, const char*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 /// @param signal QMetaMethod*
 ///
-bool q_pieseries_is_signal_connected(void* self, void* signal);
+bool q_pieseries_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1445,10 +1445,10 @@ bool q_pieseries_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 /// @param signal QMetaMethod*
 ///
-bool q_pieseries_super_is_signal_connected(void* self, void* signal);
+bool q_pieseries_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1456,10 +1456,10 @@ bool q_pieseries_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPieSeries*
+/// @param self const QPieSeries*
 /// @param callback bool func(QPieSeries* self, QMetaMethod* signal)
 ///
-void q_pieseries_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_pieseries_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

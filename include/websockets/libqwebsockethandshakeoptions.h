@@ -20,14 +20,14 @@ QWebSocketHandshakeOptions* q_websockethandshakeoptions_new();
 ///
 /// @param other QWebSocketHandshakeOptions*
 ///
-QWebSocketHandshakeOptions* q_websockethandshakeoptions_new2(void* other);
+QWebSocketHandshakeOptions* q_websockethandshakeoptions_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsockethandshakeoptions.html#operator-eq)
 ///
 /// @param self QWebSocketHandshakeOptions*
 /// @param other QWebSocketHandshakeOptions*
 ///
-void q_websockethandshakeoptions_operator_assign(void* self, void* other);
+void q_websockethandshakeoptions_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsockethandshakeoptions.html#swap)
 ///
@@ -40,9 +40,9 @@ void q_websockethandshakeoptions_swap(void* self, void* other);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QWebSocketHandshakeOptions*
+/// @param self const QWebSocketHandshakeOptions*
 ///
-const char** q_websockethandshakeoptions_subprotocols(void* self);
+const char** q_websockethandshakeoptions_subprotocols(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsockethandshakeoptions.html#setSubprotocols)
 ///

@@ -7,7 +7,7 @@ QHostInfo* q_hostinfo_new() {
     return QHostInfo_New();
 }
 
-QHostInfo* q_hostinfo_new2(void* d) {
+QHostInfo* q_hostinfo_new2(const void* d) {
     return QHostInfo_New2((QHostInfo*)d);
 }
 
@@ -15,7 +15,7 @@ QHostInfo* q_hostinfo_new3(int lookupId) {
     return QHostInfo_New3(lookupId);
 }
 
-void q_hostinfo_operator_assign(void* self, void* d) {
+void q_hostinfo_operator_assign(void* self, const void* d) {
     QHostInfo_OperatorAssign((QHostInfo*)self, (QHostInfo*)d);
 }
 
@@ -23,7 +23,7 @@ void q_hostinfo_swap(void* self, void* other) {
     QHostInfo_Swap((QHostInfo*)self, (QHostInfo*)other);
 }
 
-const char* q_hostinfo_host_name(void* self) {
+const char* q_hostinfo_host_name(const void* self) {
     libqt_string _str = QHostInfo_HostName((QHostInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -34,7 +34,7 @@ void q_hostinfo_set_host_name(void* self, const char* name) {
     QHostInfo_SetHostName((QHostInfo*)self, qstring(name));
 }
 
-libqt_list /* of QHostAddress* */ q_hostinfo_addresses(void* self) {
+libqt_list /* of QHostAddress* */ q_hostinfo_addresses(const void* self) {
     libqt_list _arr = QHostInfo_Addresses((QHostInfo*)self);
     return _arr;
 }
@@ -43,7 +43,7 @@ void q_hostinfo_set_addresses(void* self, libqt_list /* of QHostAddress* */ addr
     QHostInfo_SetAddresses((QHostInfo*)self, addresses);
 }
 
-int32_t q_hostinfo_error(void* self) {
+int32_t q_hostinfo_error(const void* self) {
     return QHostInfo_Error((QHostInfo*)self);
 }
 
@@ -51,7 +51,7 @@ void q_hostinfo_set_error(void* self, int32_t error) {
     QHostInfo_SetError((QHostInfo*)self, error);
 }
 
-const char* q_hostinfo_error_string(void* self) {
+const char* q_hostinfo_error_string(const void* self) {
     libqt_string _str = QHostInfo_ErrorString((QHostInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -66,11 +66,11 @@ void q_hostinfo_set_lookup_id(void* self, int id) {
     QHostInfo_SetLookupId((QHostInfo*)self, id);
 }
 
-int32_t q_hostinfo_lookup_id(void* self) {
+int32_t q_hostinfo_lookup_id(const void* self) {
     return QHostInfo_LookupId((QHostInfo*)self);
 }
 
-int32_t q_hostinfo_lookup_host(const char* name, void* receiver, const char* member) {
+int32_t q_hostinfo_lookup_host(const char* name, const void* receiver, const char* member) {
     return QHostInfo_LookupHost(qstring(name), (QObject*)receiver, member);
 }
 

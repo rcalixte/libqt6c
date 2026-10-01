@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#isValid)
 ///
-/// @param self QStringConverter*
+/// @param self const QStringConverter*
 ///
-bool q_stringconverter_is_valid(void* self);
+bool q_stringconverter_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#resetState)
 ///
@@ -24,17 +24,17 @@ void q_stringconverter_reset_state(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#hasError)
 ///
-/// @param self QStringConverter*
+/// @param self const QStringConverter*
 ///
-bool q_stringconverter_has_error(void* self);
+bool q_stringconverter_has_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QStringConverter*
+/// @param self const QStringConverter*
 ///
-const char* q_stringconverter_name(void* self);
+const char* q_stringconverter_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#encodingForName)
 ///

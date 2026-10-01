@@ -15,31 +15,31 @@
 #include "libkaboutapplicationdialog.hpp"
 #include "libkaboutapplicationdialog.h"
 
-KAboutApplicationDialog* k_aboutapplicationdialog_new(void* aboutData, int32_t opts) {
+KAboutApplicationDialog* k_aboutapplicationdialog_new(const void* aboutData, int32_t opts) {
     return KAboutApplicationDialog_New((KAboutData*)aboutData, opts);
 }
 
-KAboutApplicationDialog* k_aboutapplicationdialog_new2(void* aboutData) {
+KAboutApplicationDialog* k_aboutapplicationdialog_new2(const void* aboutData) {
     return KAboutApplicationDialog_New2((KAboutData*)aboutData);
 }
 
-KAboutApplicationDialog* k_aboutapplicationdialog_new3(void* aboutData, int32_t opts, void* parent) {
+KAboutApplicationDialog* k_aboutapplicationdialog_new3(const void* aboutData, int32_t opts, void* parent) {
     return KAboutApplicationDialog_New3((KAboutData*)aboutData, opts, (QWidget*)parent);
 }
 
-KAboutApplicationDialog* k_aboutapplicationdialog_new4(void* aboutData, void* parent) {
+KAboutApplicationDialog* k_aboutapplicationdialog_new4(const void* aboutData, void* parent) {
     return KAboutApplicationDialog_New4((KAboutData*)aboutData, (QWidget*)parent);
 }
 
-const QMetaObject* k_aboutapplicationdialog_meta_object(void* self) {
+const QMetaObject* k_aboutapplicationdialog_meta_object(const void* self) {
     return KAboutApplicationDialog_MetaObject((KAboutApplicationDialog*)self);
 }
 
-void k_aboutapplicationdialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_aboutapplicationdialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     KAboutApplicationDialog_OnMetaObject((KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_aboutapplicationdialog_super_meta_object(void* self) {
+const QMetaObject* k_aboutapplicationdialog_super_meta_object(const void* self) {
     return KAboutApplicationDialog_SuperMetaObject((KAboutApplicationDialog*)self);
 }
 
@@ -88,7 +88,7 @@ const char* k_aboutapplicationdialog_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-int32_t k_aboutapplicationdialog_result(void* self) {
+int32_t k_aboutapplicationdialog_result(const void* self) {
     return QDialog_Result((QDialog*)self);
 }
 
@@ -96,7 +96,7 @@ void k_aboutapplicationdialog_set_size_grip_enabled(void* self, bool sizeGripEna
     QDialog_SetSizeGripEnabled((QDialog*)self, sizeGripEnabled);
 }
 
-bool k_aboutapplicationdialog_is_size_grip_enabled(void* self) {
+bool k_aboutapplicationdialog_is_size_grip_enabled(const void* self) {
     return QDialog_IsSizeGripEnabled((QDialog*)self);
 }
 
@@ -140,7 +140,7 @@ KAboutApplicationDialog* k_aboutapplicationdialog_from_q_paint_device(void* _qpa
     return (KAboutApplicationDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
-uintptr_t k_aboutapplicationdialog_win_id(void* self) {
+uintptr_t k_aboutapplicationdialog_win_id(const void* self) {
     return QWidget_WinId((QWidget*)self);
 }
 
@@ -148,15 +148,15 @@ void k_aboutapplicationdialog_create_win_id(void* self) {
     QWidget_CreateWinId((QWidget*)self);
 }
 
-uintptr_t k_aboutapplicationdialog_internal_win_id(void* self) {
+uintptr_t k_aboutapplicationdialog_internal_win_id(const void* self) {
     return QWidget_InternalWinId((QWidget*)self);
 }
 
-uintptr_t k_aboutapplicationdialog_effective_win_id(void* self) {
+uintptr_t k_aboutapplicationdialog_effective_win_id(const void* self) {
     return QWidget_EffectiveWinId((QWidget*)self);
 }
 
-QStyle* k_aboutapplicationdialog_style(void* self) {
+QStyle* k_aboutapplicationdialog_style(const void* self) {
     return QWidget_Style((QWidget*)self);
 }
 
@@ -164,19 +164,19 @@ void k_aboutapplicationdialog_set_style(void* self, void* style) {
     QWidget_SetStyle((QWidget*)self, (QStyle*)style);
 }
 
-bool k_aboutapplicationdialog_is_top_level(void* self) {
+bool k_aboutapplicationdialog_is_top_level(const void* self) {
     return QWidget_IsTopLevel((QWidget*)self);
 }
 
-bool k_aboutapplicationdialog_is_window(void* self) {
+bool k_aboutapplicationdialog_is_window(const void* self) {
     return QWidget_IsWindow((QWidget*)self);
 }
 
-bool k_aboutapplicationdialog_is_modal(void* self) {
+bool k_aboutapplicationdialog_is_modal(const void* self) {
     return QWidget_IsModal((QWidget*)self);
 }
 
-int32_t k_aboutapplicationdialog_window_modality(void* self) {
+int32_t k_aboutapplicationdialog_window_modality(const void* self) {
     return QWidget_WindowModality((QWidget*)self);
 }
 
@@ -184,11 +184,11 @@ void k_aboutapplicationdialog_set_window_modality(void* self, int32_t windowModa
     QWidget_SetWindowModality((QWidget*)self, windowModality);
 }
 
-bool k_aboutapplicationdialog_is_enabled(void* self) {
+bool k_aboutapplicationdialog_is_enabled(const void* self) {
     return QWidget_IsEnabled((QWidget*)self);
 }
 
-bool k_aboutapplicationdialog_is_enabled_to(void* self, void* param1) {
+bool k_aboutapplicationdialog_is_enabled_to(const void* self, const void* param1) {
     return QWidget_IsEnabledTo((QWidget*)self, (QWidget*)param1);
 }
 
@@ -204,83 +204,83 @@ void k_aboutapplicationdialog_set_window_modified(void* self, bool windowModifie
     QWidget_SetWindowModified((QWidget*)self, windowModified);
 }
 
-QRect* k_aboutapplicationdialog_frame_geometry(void* self) {
+QRect* k_aboutapplicationdialog_frame_geometry(const void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-const QRect* k_aboutapplicationdialog_geometry(void* self) {
+const QRect* k_aboutapplicationdialog_geometry(const void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
-QRect* k_aboutapplicationdialog_normal_geometry(void* self) {
+QRect* k_aboutapplicationdialog_normal_geometry(const void* self) {
     return QWidget_NormalGeometry((QWidget*)self);
 }
 
-int32_t k_aboutapplicationdialog_x(void* self) {
+int32_t k_aboutapplicationdialog_x(const void* self) {
     return QWidget_X((QWidget*)self);
 }
 
-int32_t k_aboutapplicationdialog_y(void* self) {
+int32_t k_aboutapplicationdialog_y(const void* self) {
     return QWidget_Y((QWidget*)self);
 }
 
-QPoint* k_aboutapplicationdialog_pos(void* self) {
+QPoint* k_aboutapplicationdialog_pos(const void* self) {
     return QWidget_Pos((QWidget*)self);
 }
 
-QSize* k_aboutapplicationdialog_frame_size(void* self) {
+QSize* k_aboutapplicationdialog_frame_size(const void* self) {
     return QWidget_FrameSize((QWidget*)self);
 }
 
-QSize* k_aboutapplicationdialog_size(void* self) {
+QSize* k_aboutapplicationdialog_size(const void* self) {
     return QWidget_Size((QWidget*)self);
 }
 
-int32_t k_aboutapplicationdialog_width(void* self) {
+int32_t k_aboutapplicationdialog_width(const void* self) {
     return QWidget_Width((QWidget*)self);
 }
 
-int32_t k_aboutapplicationdialog_height(void* self) {
+int32_t k_aboutapplicationdialog_height(const void* self) {
     return QWidget_Height((QWidget*)self);
 }
 
-QRect* k_aboutapplicationdialog_rect(void* self) {
+QRect* k_aboutapplicationdialog_rect(const void* self) {
     return QWidget_Rect((QWidget*)self);
 }
 
-QRect* k_aboutapplicationdialog_children_rect(void* self) {
+QRect* k_aboutapplicationdialog_children_rect(const void* self) {
     return QWidget_ChildrenRect((QWidget*)self);
 }
 
-QRegion* k_aboutapplicationdialog_children_region(void* self) {
+QRegion* k_aboutapplicationdialog_children_region(const void* self) {
     return QWidget_ChildrenRegion((QWidget*)self);
 }
 
-QSize* k_aboutapplicationdialog_minimum_size(void* self) {
+QSize* k_aboutapplicationdialog_minimum_size(const void* self) {
     return QWidget_MinimumSize((QWidget*)self);
 }
 
-QSize* k_aboutapplicationdialog_maximum_size(void* self) {
+QSize* k_aboutapplicationdialog_maximum_size(const void* self) {
     return QWidget_MaximumSize((QWidget*)self);
 }
 
-int32_t k_aboutapplicationdialog_minimum_width(void* self) {
+int32_t k_aboutapplicationdialog_minimum_width(const void* self) {
     return QWidget_MinimumWidth((QWidget*)self);
 }
 
-int32_t k_aboutapplicationdialog_minimum_height(void* self) {
+int32_t k_aboutapplicationdialog_minimum_height(const void* self) {
     return QWidget_MinimumHeight((QWidget*)self);
 }
 
-int32_t k_aboutapplicationdialog_maximum_width(void* self) {
+int32_t k_aboutapplicationdialog_maximum_width(const void* self) {
     return QWidget_MaximumWidth((QWidget*)self);
 }
 
-int32_t k_aboutapplicationdialog_maximum_height(void* self) {
+int32_t k_aboutapplicationdialog_maximum_height(const void* self) {
     return QWidget_MaximumHeight((QWidget*)self);
 }
 
-void k_aboutapplicationdialog_set_minimum_size(void* self, void* minimumSize) {
+void k_aboutapplicationdialog_set_minimum_size(void* self, const void* minimumSize) {
     QWidget_SetMinimumSize((QWidget*)self, (QSize*)minimumSize);
 }
 
@@ -288,7 +288,7 @@ void k_aboutapplicationdialog_set_minimum_size2(void* self, int minw, int minh) 
     QWidget_SetMinimumSize2((QWidget*)self, minw, minh);
 }
 
-void k_aboutapplicationdialog_set_maximum_size(void* self, void* maximumSize) {
+void k_aboutapplicationdialog_set_maximum_size(void* self, const void* maximumSize) {
     QWidget_SetMaximumSize((QWidget*)self, (QSize*)maximumSize);
 }
 
@@ -312,11 +312,11 @@ void k_aboutapplicationdialog_set_maximum_height(void* self, int maxh) {
     QWidget_SetMaximumHeight((QWidget*)self, maxh);
 }
 
-QSize* k_aboutapplicationdialog_size_increment(void* self) {
+QSize* k_aboutapplicationdialog_size_increment(const void* self) {
     return QWidget_SizeIncrement((QWidget*)self);
 }
 
-void k_aboutapplicationdialog_set_size_increment(void* self, void* sizeIncrement) {
+void k_aboutapplicationdialog_set_size_increment(void* self, const void* sizeIncrement) {
     QWidget_SetSizeIncrement((QWidget*)self, (QSize*)sizeIncrement);
 }
 
@@ -324,11 +324,11 @@ void k_aboutapplicationdialog_set_size_increment2(void* self, int w, int h) {
     QWidget_SetSizeIncrement2((QWidget*)self, w, h);
 }
 
-QSize* k_aboutapplicationdialog_base_size(void* self) {
+QSize* k_aboutapplicationdialog_base_size(const void* self) {
     return QWidget_BaseSize((QWidget*)self);
 }
 
-void k_aboutapplicationdialog_set_base_size(void* self, void* baseSize) {
+void k_aboutapplicationdialog_set_base_size(void* self, const void* baseSize) {
     QWidget_SetBaseSize((QWidget*)self, (QSize*)baseSize);
 }
 
@@ -336,7 +336,7 @@ void k_aboutapplicationdialog_set_base_size2(void* self, int basew, int baseh) {
     QWidget_SetBaseSize2((QWidget*)self, basew, baseh);
 }
 
-void k_aboutapplicationdialog_set_fixed_size(void* self, void* fixedSize) {
+void k_aboutapplicationdialog_set_fixed_size(void* self, const void* fixedSize) {
     QWidget_SetFixedSize((QWidget*)self, (QSize*)fixedSize);
 }
 
@@ -352,71 +352,71 @@ void k_aboutapplicationdialog_set_fixed_height(void* self, int h) {
     QWidget_SetFixedHeight((QWidget*)self, h);
 }
 
-QPointF* k_aboutapplicationdialog_map_to_global(void* self, void* param1) {
+QPointF* k_aboutapplicationdialog_map_to_global(const void* self, const void* param1) {
     return QWidget_MapToGlobal((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* k_aboutapplicationdialog_map_to_global2(void* self, void* param1) {
+QPoint* k_aboutapplicationdialog_map_to_global2(const void* self, const void* param1) {
     return QWidget_MapToGlobal2((QWidget*)self, (QPoint*)param1);
 }
 
-QPointF* k_aboutapplicationdialog_map_from_global(void* self, void* param1) {
+QPointF* k_aboutapplicationdialog_map_from_global(const void* self, const void* param1) {
     return QWidget_MapFromGlobal((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* k_aboutapplicationdialog_map_from_global2(void* self, void* param1) {
+QPoint* k_aboutapplicationdialog_map_from_global2(const void* self, const void* param1) {
     return QWidget_MapFromGlobal2((QWidget*)self, (QPoint*)param1);
 }
 
-QPointF* k_aboutapplicationdialog_map_to_parent(void* self, void* param1) {
+QPointF* k_aboutapplicationdialog_map_to_parent(const void* self, const void* param1) {
     return QWidget_MapToParent((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* k_aboutapplicationdialog_map_to_parent2(void* self, void* param1) {
+QPoint* k_aboutapplicationdialog_map_to_parent2(const void* self, const void* param1) {
     return QWidget_MapToParent2((QWidget*)self, (QPoint*)param1);
 }
 
-QPointF* k_aboutapplicationdialog_map_from_parent(void* self, void* param1) {
+QPointF* k_aboutapplicationdialog_map_from_parent(const void* self, const void* param1) {
     return QWidget_MapFromParent((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* k_aboutapplicationdialog_map_from_parent2(void* self, void* param1) {
+QPoint* k_aboutapplicationdialog_map_from_parent2(const void* self, const void* param1) {
     return QWidget_MapFromParent2((QWidget*)self, (QPoint*)param1);
 }
 
-QPointF* k_aboutapplicationdialog_map_to(void* self, void* param1, void* param2) {
+QPointF* k_aboutapplicationdialog_map_to(const void* self, const void* param1, const void* param2) {
     return QWidget_MapTo((QWidget*)self, (QWidget*)param1, (QPointF*)param2);
 }
 
-QPoint* k_aboutapplicationdialog_map_to2(void* self, void* param1, void* param2) {
+QPoint* k_aboutapplicationdialog_map_to2(const void* self, const void* param1, const void* param2) {
     return QWidget_MapTo2((QWidget*)self, (QWidget*)param1, (QPoint*)param2);
 }
 
-QPointF* k_aboutapplicationdialog_map_from(void* self, void* param1, void* param2) {
+QPointF* k_aboutapplicationdialog_map_from(const void* self, const void* param1, const void* param2) {
     return QWidget_MapFrom((QWidget*)self, (QWidget*)param1, (QPointF*)param2);
 }
 
-QPoint* k_aboutapplicationdialog_map_from2(void* self, void* param1, void* param2) {
+QPoint* k_aboutapplicationdialog_map_from2(const void* self, const void* param1, const void* param2) {
     return QWidget_MapFrom2((QWidget*)self, (QWidget*)param1, (QPoint*)param2);
 }
 
-QWidget* k_aboutapplicationdialog_window(void* self) {
+QWidget* k_aboutapplicationdialog_window(const void* self) {
     return QWidget_Window((QWidget*)self);
 }
 
-QWidget* k_aboutapplicationdialog_native_parent_widget(void* self) {
+QWidget* k_aboutapplicationdialog_native_parent_widget(const void* self) {
     return QWidget_NativeParentWidget((QWidget*)self);
 }
 
-QWidget* k_aboutapplicationdialog_top_level_widget(void* self) {
+QWidget* k_aboutapplicationdialog_top_level_widget(const void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-const QPalette* k_aboutapplicationdialog_palette(void* self) {
+const QPalette* k_aboutapplicationdialog_palette(const void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
-void k_aboutapplicationdialog_set_palette(void* self, void* palette) {
+void k_aboutapplicationdialog_set_palette(void* self, const void* palette) {
     QWidget_SetPalette((QWidget*)self, (QPalette*)palette);
 }
 
@@ -424,7 +424,7 @@ void k_aboutapplicationdialog_set_background_role(void* self, int32_t background
     QWidget_SetBackgroundRole((QWidget*)self, backgroundRole);
 }
 
-int32_t k_aboutapplicationdialog_background_role(void* self) {
+int32_t k_aboutapplicationdialog_background_role(const void* self) {
     return QWidget_BackgroundRole((QWidget*)self);
 }
 
@@ -432,31 +432,31 @@ void k_aboutapplicationdialog_set_foreground_role(void* self, int32_t foreground
     QWidget_SetForegroundRole((QWidget*)self, foregroundRole);
 }
 
-int32_t k_aboutapplicationdialog_foreground_role(void* self) {
+int32_t k_aboutapplicationdialog_foreground_role(const void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-const QFont* k_aboutapplicationdialog_font(void* self) {
+const QFont* k_aboutapplicationdialog_font(const void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
-void k_aboutapplicationdialog_set_font(void* self, void* font) {
+void k_aboutapplicationdialog_set_font(void* self, const void* font) {
     QWidget_SetFont((QWidget*)self, (QFont*)font);
 }
 
-QFontMetrics* k_aboutapplicationdialog_font_metrics(void* self) {
+QFontMetrics* k_aboutapplicationdialog_font_metrics(const void* self) {
     return QWidget_FontMetrics((QWidget*)self);
 }
 
-QFontInfo* k_aboutapplicationdialog_font_info(void* self) {
+QFontInfo* k_aboutapplicationdialog_font_info(const void* self) {
     return QWidget_FontInfo((QWidget*)self);
 }
 
-QCursor* k_aboutapplicationdialog_cursor(void* self) {
+QCursor* k_aboutapplicationdialog_cursor(const void* self) {
     return QWidget_Cursor((QWidget*)self);
 }
 
-void k_aboutapplicationdialog_set_cursor(void* self, void* cursor) {
+void k_aboutapplicationdialog_set_cursor(void* self, const void* cursor) {
     QWidget_SetCursor((QWidget*)self, (QCursor*)cursor);
 }
 
@@ -468,11 +468,11 @@ void k_aboutapplicationdialog_set_mouse_tracking(void* self, bool enable) {
     QWidget_SetMouseTracking((QWidget*)self, enable);
 }
 
-bool k_aboutapplicationdialog_has_mouse_tracking(void* self) {
+bool k_aboutapplicationdialog_has_mouse_tracking(const void* self) {
     return QWidget_HasMouseTracking((QWidget*)self);
 }
 
-bool k_aboutapplicationdialog_under_mouse(void* self) {
+bool k_aboutapplicationdialog_under_mouse(const void* self) {
     return QWidget_UnderMouse((QWidget*)self);
 }
 
@@ -480,19 +480,19 @@ void k_aboutapplicationdialog_set_tablet_tracking(void* self, bool enable) {
     QWidget_SetTabletTracking((QWidget*)self, enable);
 }
 
-bool k_aboutapplicationdialog_has_tablet_tracking(void* self) {
+bool k_aboutapplicationdialog_has_tablet_tracking(const void* self) {
     return QWidget_HasTabletTracking((QWidget*)self);
 }
 
-void k_aboutapplicationdialog_set_mask(void* self, void* mask) {
+void k_aboutapplicationdialog_set_mask(void* self, const void* mask) {
     QWidget_SetMask((QWidget*)self, (QBitmap*)mask);
 }
 
-void k_aboutapplicationdialog_set_mask2(void* self, void* mask) {
+void k_aboutapplicationdialog_set_mask2(void* self, const void* mask) {
     QWidget_SetMask2((QWidget*)self, (QRegion*)mask);
 }
 
-QRegion* k_aboutapplicationdialog_mask(void* self) {
+QRegion* k_aboutapplicationdialog_mask(const void* self) {
     return QWidget_Mask((QWidget*)self);
 }
 
@@ -512,7 +512,7 @@ QPixmap* k_aboutapplicationdialog_grab(void* self) {
     return QWidget_Grab((QWidget*)self);
 }
 
-QGraphicsEffect* k_aboutapplicationdialog_graphics_effect(void* self) {
+QGraphicsEffect* k_aboutapplicationdialog_graphics_effect(const void* self) {
     return QWidget_GraphicsEffect((QWidget*)self);
 }
 
@@ -536,25 +536,25 @@ void k_aboutapplicationdialog_set_style_sheet(void* self, const char* styleSheet
     QWidget_SetStyleSheet((QWidget*)self, qstring(styleSheet));
 }
 
-const char* k_aboutapplicationdialog_style_sheet(void* self) {
+const char* k_aboutapplicationdialog_style_sheet(const void* self) {
     libqt_string _str = QWidget_StyleSheet((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_aboutapplicationdialog_window_title(void* self) {
+const char* k_aboutapplicationdialog_window_title(const void* self) {
     libqt_string _str = QWidget_WindowTitle((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_aboutapplicationdialog_set_window_icon(void* self, void* icon) {
+void k_aboutapplicationdialog_set_window_icon(void* self, const void* icon) {
     QWidget_SetWindowIcon((QWidget*)self, (QIcon*)icon);
 }
 
-QIcon* k_aboutapplicationdialog_window_icon(void* self) {
+QIcon* k_aboutapplicationdialog_window_icon(const void* self) {
     return QWidget_WindowIcon((QWidget*)self);
 }
 
@@ -562,7 +562,7 @@ void k_aboutapplicationdialog_set_window_icon_text(void* self, const char* windo
     QWidget_SetWindowIconText((QWidget*)self, qstring(windowIconText));
 }
 
-const char* k_aboutapplicationdialog_window_icon_text(void* self) {
+const char* k_aboutapplicationdialog_window_icon_text(const void* self) {
     libqt_string _str = QWidget_WindowIconText((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -573,7 +573,7 @@ void k_aboutapplicationdialog_set_window_role(void* self, const char* windowRole
     QWidget_SetWindowRole((QWidget*)self, qstring(windowRole));
 }
 
-const char* k_aboutapplicationdialog_window_role(void* self) {
+const char* k_aboutapplicationdialog_window_role(const void* self) {
     libqt_string _str = QWidget_WindowRole((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -584,7 +584,7 @@ void k_aboutapplicationdialog_set_window_file_path(void* self, const char* fileP
     QWidget_SetWindowFilePath((QWidget*)self, qstring(filePath));
 }
 
-const char* k_aboutapplicationdialog_window_file_path(void* self) {
+const char* k_aboutapplicationdialog_window_file_path(const void* self) {
     libqt_string _str = QWidget_WindowFilePath((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -595,11 +595,11 @@ void k_aboutapplicationdialog_set_window_opacity(void* self, double level) {
     QWidget_SetWindowOpacity((QWidget*)self, level);
 }
 
-double k_aboutapplicationdialog_window_opacity(void* self) {
+double k_aboutapplicationdialog_window_opacity(const void* self) {
     return QWidget_WindowOpacity((QWidget*)self);
 }
 
-bool k_aboutapplicationdialog_is_window_modified(void* self) {
+bool k_aboutapplicationdialog_is_window_modified(const void* self) {
     return QWidget_IsWindowModified((QWidget*)self);
 }
 
@@ -607,7 +607,7 @@ void k_aboutapplicationdialog_set_tool_tip(void* self, const char* toolTip) {
     QWidget_SetToolTip((QWidget*)self, qstring(toolTip));
 }
 
-const char* k_aboutapplicationdialog_tool_tip(void* self) {
+const char* k_aboutapplicationdialog_tool_tip(const void* self) {
     libqt_string _str = QWidget_ToolTip((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -618,7 +618,7 @@ void k_aboutapplicationdialog_set_tool_tip_duration(void* self, int msec) {
     QWidget_SetToolTipDuration((QWidget*)self, msec);
 }
 
-int32_t k_aboutapplicationdialog_tool_tip_duration(void* self) {
+int32_t k_aboutapplicationdialog_tool_tip_duration(const void* self) {
     return QWidget_ToolTipDuration((QWidget*)self);
 }
 
@@ -626,7 +626,7 @@ void k_aboutapplicationdialog_set_status_tip(void* self, const char* statusTip) 
     QWidget_SetStatusTip((QWidget*)self, qstring(statusTip));
 }
 
-const char* k_aboutapplicationdialog_status_tip(void* self) {
+const char* k_aboutapplicationdialog_status_tip(const void* self) {
     libqt_string _str = QWidget_StatusTip((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -637,14 +637,14 @@ void k_aboutapplicationdialog_set_whats_this(void* self, const char* whatsThis) 
     QWidget_SetWhatsThis((QWidget*)self, qstring(whatsThis));
 }
 
-const char* k_aboutapplicationdialog_whats_this(void* self) {
+const char* k_aboutapplicationdialog_whats_this(const void* self) {
     libqt_string _str = QWidget_WhatsThis((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_aboutapplicationdialog_accessible_name(void* self) {
+const char* k_aboutapplicationdialog_accessible_name(const void* self) {
     libqt_string _str = QWidget_AccessibleName((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -655,7 +655,7 @@ void k_aboutapplicationdialog_set_accessible_name(void* self, const char* name) 
     QWidget_SetAccessibleName((QWidget*)self, qstring(name));
 }
 
-const char* k_aboutapplicationdialog_accessible_description(void* self) {
+const char* k_aboutapplicationdialog_accessible_description(const void* self) {
     libqt_string _str = QWidget_AccessibleDescription((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -670,7 +670,7 @@ void k_aboutapplicationdialog_set_layout_direction(void* self, int32_t direction
     QWidget_SetLayoutDirection((QWidget*)self, direction);
 }
 
-int32_t k_aboutapplicationdialog_layout_direction(void* self) {
+int32_t k_aboutapplicationdialog_layout_direction(const void* self) {
     return QWidget_LayoutDirection((QWidget*)self);
 }
 
@@ -678,11 +678,11 @@ void k_aboutapplicationdialog_unset_layout_direction(void* self) {
     QWidget_UnsetLayoutDirection((QWidget*)self);
 }
 
-void k_aboutapplicationdialog_set_locale(void* self, void* locale) {
+void k_aboutapplicationdialog_set_locale(void* self, const void* locale) {
     QWidget_SetLocale((QWidget*)self, (QLocale*)locale);
 }
 
-QLocale* k_aboutapplicationdialog_locale(void* self) {
+QLocale* k_aboutapplicationdialog_locale(const void* self) {
     return QWidget_Locale((QWidget*)self);
 }
 
@@ -690,11 +690,11 @@ void k_aboutapplicationdialog_unset_locale(void* self) {
     QWidget_UnsetLocale((QWidget*)self);
 }
 
-bool k_aboutapplicationdialog_is_right_to_left(void* self) {
+bool k_aboutapplicationdialog_is_right_to_left(const void* self) {
     return QWidget_IsRightToLeft((QWidget*)self);
 }
 
-bool k_aboutapplicationdialog_is_left_to_right(void* self) {
+bool k_aboutapplicationdialog_is_left_to_right(const void* self) {
     return QWidget_IsLeftToRight((QWidget*)self);
 }
 
@@ -702,7 +702,7 @@ void k_aboutapplicationdialog_set_focus(void* self) {
     QWidget_SetFocus((QWidget*)self);
 }
 
-bool k_aboutapplicationdialog_is_active_window(void* self) {
+bool k_aboutapplicationdialog_is_active_window(const void* self) {
     return QWidget_IsActiveWindow((QWidget*)self);
 }
 
@@ -718,7 +718,7 @@ void k_aboutapplicationdialog_set_focus2(void* self, int32_t reason) {
     QWidget_SetFocus2((QWidget*)self, reason);
 }
 
-int32_t k_aboutapplicationdialog_focus_policy(void* self) {
+int32_t k_aboutapplicationdialog_focus_policy(const void* self) {
     return QWidget_FocusPolicy((QWidget*)self);
 }
 
@@ -726,7 +726,7 @@ void k_aboutapplicationdialog_set_focus_policy(void* self, int32_t policy) {
     QWidget_SetFocusPolicy((QWidget*)self, policy);
 }
 
-bool k_aboutapplicationdialog_has_focus(void* self) {
+bool k_aboutapplicationdialog_has_focus(const void* self) {
     return QWidget_HasFocus((QWidget*)self);
 }
 
@@ -738,11 +738,11 @@ void k_aboutapplicationdialog_set_focus_proxy(void* self, void* focusProxy) {
     QWidget_SetFocusProxy((QWidget*)self, (QWidget*)focusProxy);
 }
 
-QWidget* k_aboutapplicationdialog_focus_proxy(void* self) {
+QWidget* k_aboutapplicationdialog_focus_proxy(const void* self) {
     return QWidget_FocusProxy((QWidget*)self);
 }
 
-int32_t k_aboutapplicationdialog_context_menu_policy(void* self) {
+int32_t k_aboutapplicationdialog_context_menu_policy(const void* self) {
     return QWidget_ContextMenuPolicy((QWidget*)self);
 }
 
@@ -754,7 +754,7 @@ void k_aboutapplicationdialog_grab_mouse(void* self) {
     QWidget_GrabMouse((QWidget*)self);
 }
 
-void k_aboutapplicationdialog_grab_mouse2(void* self, void* param1) {
+void k_aboutapplicationdialog_grab_mouse2(void* self, const void* param1) {
     QWidget_GrabMouse2((QWidget*)self, (QCursor*)param1);
 }
 
@@ -770,7 +770,7 @@ void k_aboutapplicationdialog_release_keyboard(void* self) {
     QWidget_ReleaseKeyboard((QWidget*)self);
 }
 
-int32_t k_aboutapplicationdialog_grab_shortcut(void* self, void* key) {
+int32_t k_aboutapplicationdialog_grab_shortcut(void* self, const void* key) {
     return QWidget_GrabShortcut((QWidget*)self, (QKeySequence*)key);
 }
 
@@ -794,7 +794,7 @@ QWidget* k_aboutapplicationdialog_keyboard_grabber() {
     return QWidget_KeyboardGrabber();
 }
 
-bool k_aboutapplicationdialog_updates_enabled(void* self) {
+bool k_aboutapplicationdialog_updates_enabled(const void* self) {
     return QWidget_UpdatesEnabled((QWidget*)self);
 }
 
@@ -802,7 +802,7 @@ void k_aboutapplicationdialog_set_updates_enabled(void* self, bool enable) {
     QWidget_SetUpdatesEnabled((QWidget*)self, enable);
 }
 
-QGraphicsProxyWidget* k_aboutapplicationdialog_graphics_proxy_widget(void* self) {
+QGraphicsProxyWidget* k_aboutapplicationdialog_graphics_proxy_widget(const void* self) {
     return QWidget_GraphicsProxyWidget((QWidget*)self);
 }
 
@@ -818,11 +818,11 @@ void k_aboutapplicationdialog_update2(void* self, int x, int y, int w, int h) {
     QWidget_Update2((QWidget*)self, x, y, w, h);
 }
 
-void k_aboutapplicationdialog_update3(void* self, void* param1) {
+void k_aboutapplicationdialog_update3(void* self, const void* param1) {
     QWidget_Update3((QWidget*)self, (QRect*)param1);
 }
 
-void k_aboutapplicationdialog_update4(void* self, void* param1) {
+void k_aboutapplicationdialog_update4(void* self, const void* param1) {
     QWidget_Update4((QWidget*)self, (QRegion*)param1);
 }
 
@@ -830,11 +830,11 @@ void k_aboutapplicationdialog_repaint2(void* self, int x, int y, int w, int h) {
     QWidget_Repaint2((QWidget*)self, x, y, w, h);
 }
 
-void k_aboutapplicationdialog_repaint3(void* self, void* param1) {
+void k_aboutapplicationdialog_repaint3(void* self, const void* param1) {
     QWidget_Repaint3((QWidget*)self, (QRect*)param1);
 }
 
-void k_aboutapplicationdialog_repaint4(void* self, void* param1) {
+void k_aboutapplicationdialog_repaint4(void* self, const void* param1) {
     QWidget_Repaint4((QWidget*)self, (QRegion*)param1);
 }
 
@@ -886,7 +886,7 @@ void k_aboutapplicationdialog_move(void* self, int x, int y) {
     QWidget_Move((QWidget*)self, x, y);
 }
 
-void k_aboutapplicationdialog_move2(void* self, void* param1) {
+void k_aboutapplicationdialog_move2(void* self, const void* param1) {
     QWidget_Move2((QWidget*)self, (QPoint*)param1);
 }
 
@@ -894,7 +894,7 @@ void k_aboutapplicationdialog_resize(void* self, int w, int h) {
     QWidget_Resize((QWidget*)self, w, h);
 }
 
-void k_aboutapplicationdialog_resize2(void* self, void* param1) {
+void k_aboutapplicationdialog_resize2(void* self, const void* param1) {
     QWidget_Resize2((QWidget*)self, (QSize*)param1);
 }
 
@@ -902,11 +902,11 @@ void k_aboutapplicationdialog_set_geometry(void* self, int x, int y, int w, int 
     QWidget_SetGeometry((QWidget*)self, x, y, w, h);
 }
 
-void k_aboutapplicationdialog_set_geometry2(void* self, void* geometry) {
+void k_aboutapplicationdialog_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* k_aboutapplicationdialog_save_geometry(void* self) {
+char* k_aboutapplicationdialog_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -921,31 +921,31 @@ void k_aboutapplicationdialog_adjust_size(void* self) {
     QWidget_AdjustSize((QWidget*)self);
 }
 
-bool k_aboutapplicationdialog_is_visible(void* self) {
+bool k_aboutapplicationdialog_is_visible(const void* self) {
     return QWidget_IsVisible((QWidget*)self);
 }
 
-bool k_aboutapplicationdialog_is_visible_to(void* self, void* param1) {
+bool k_aboutapplicationdialog_is_visible_to(const void* self, const void* param1) {
     return QWidget_IsVisibleTo((QWidget*)self, (QWidget*)param1);
 }
 
-bool k_aboutapplicationdialog_is_hidden(void* self) {
+bool k_aboutapplicationdialog_is_hidden(const void* self) {
     return QWidget_IsHidden((QWidget*)self);
 }
 
-bool k_aboutapplicationdialog_is_minimized(void* self) {
+bool k_aboutapplicationdialog_is_minimized(const void* self) {
     return QWidget_IsMinimized((QWidget*)self);
 }
 
-bool k_aboutapplicationdialog_is_maximized(void* self) {
+bool k_aboutapplicationdialog_is_maximized(const void* self) {
     return QWidget_IsMaximized((QWidget*)self);
 }
 
-bool k_aboutapplicationdialog_is_full_screen(void* self) {
+bool k_aboutapplicationdialog_is_full_screen(const void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int32_t k_aboutapplicationdialog_window_state(void* self) {
+int32_t k_aboutapplicationdialog_window_state(const void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
@@ -957,7 +957,7 @@ void k_aboutapplicationdialog_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
-QSizePolicy* k_aboutapplicationdialog_size_policy(void* self) {
+QSizePolicy* k_aboutapplicationdialog_size_policy(const void* self) {
     return QWidget_SizePolicy((QWidget*)self);
 }
 
@@ -969,7 +969,7 @@ void k_aboutapplicationdialog_set_size_policy2(void* self, int32_t horizontal, i
     QWidget_SetSizePolicy2((QWidget*)self, horizontal, vertical);
 }
 
-QRegion* k_aboutapplicationdialog_visible_region(void* self) {
+QRegion* k_aboutapplicationdialog_visible_region(const void* self) {
     return QWidget_VisibleRegion((QWidget*)self);
 }
 
@@ -977,19 +977,19 @@ void k_aboutapplicationdialog_set_contents_margins(void* self, int left, int top
     QWidget_SetContentsMargins((QWidget*)self, left, top, right, bottom);
 }
 
-void k_aboutapplicationdialog_set_contents_margins2(void* self, void* margins) {
+void k_aboutapplicationdialog_set_contents_margins2(void* self, const void* margins) {
     QWidget_SetContentsMargins2((QWidget*)self, (QMargins*)margins);
 }
 
-QMargins* k_aboutapplicationdialog_contents_margins(void* self) {
+QMargins* k_aboutapplicationdialog_contents_margins(const void* self) {
     return QWidget_ContentsMargins((QWidget*)self);
 }
 
-QRect* k_aboutapplicationdialog_contents_rect(void* self) {
+QRect* k_aboutapplicationdialog_contents_rect(const void* self) {
     return QWidget_ContentsRect((QWidget*)self);
 }
 
-QLayout* k_aboutapplicationdialog_layout(void* self) {
+QLayout* k_aboutapplicationdialog_layout(const void* self) {
     return QWidget_Layout((QWidget*)self);
 }
 
@@ -1013,23 +1013,23 @@ void k_aboutapplicationdialog_scroll(void* self, int dx, int dy) {
     QWidget_Scroll((QWidget*)self, dx, dy);
 }
 
-void k_aboutapplicationdialog_scroll2(void* self, int dx, int dy, void* param3) {
+void k_aboutapplicationdialog_scroll2(void* self, int dx, int dy, const void* param3) {
     QWidget_Scroll2((QWidget*)self, dx, dy, (QRect*)param3);
 }
 
-QWidget* k_aboutapplicationdialog_focus_widget(void* self) {
+QWidget* k_aboutapplicationdialog_focus_widget(const void* self) {
     return QWidget_FocusWidget((QWidget*)self);
 }
 
-QWidget* k_aboutapplicationdialog_next_in_focus_chain(void* self) {
+QWidget* k_aboutapplicationdialog_next_in_focus_chain(const void* self) {
     return QWidget_NextInFocusChain((QWidget*)self);
 }
 
-QWidget* k_aboutapplicationdialog_previous_in_focus_chain(void* self) {
+QWidget* k_aboutapplicationdialog_previous_in_focus_chain(const void* self) {
     return QWidget_PreviousInFocusChain((QWidget*)self);
 }
 
-bool k_aboutapplicationdialog_accept_drops(void* self) {
+bool k_aboutapplicationdialog_accept_drops(const void* self) {
     return QWidget_AcceptDrops((QWidget*)self);
 }
 
@@ -1057,7 +1057,7 @@ void k_aboutapplicationdialog_remove_action(void* self, void* action) {
     QWidget_RemoveAction((QWidget*)self, (QAction*)action);
 }
 
-libqt_list /* of QAction* */ k_aboutapplicationdialog_actions(void* self) {
+libqt_list /* of QAction* */ k_aboutapplicationdialog_actions(const void* self) {
     libqt_list _arr = QWidget_Actions((QWidget*)self);
     return _arr;
 }
@@ -1066,19 +1066,19 @@ QAction* k_aboutapplicationdialog_add_action2(void* self, const char* text) {
     return QWidget_AddAction2((QWidget*)self, qstring(text));
 }
 
-QAction* k_aboutapplicationdialog_add_action3(void* self, void* icon, const char* text) {
+QAction* k_aboutapplicationdialog_add_action3(void* self, const void* icon, const char* text) {
     return QWidget_AddAction3((QWidget*)self, (QIcon*)icon, qstring(text));
 }
 
-QAction* k_aboutapplicationdialog_add_action4(void* self, const char* text, void* shortcut) {
+QAction* k_aboutapplicationdialog_add_action4(void* self, const char* text, const void* shortcut) {
     return QWidget_AddAction4((QWidget*)self, qstring(text), (QKeySequence*)shortcut);
 }
 
-QAction* k_aboutapplicationdialog_add_action5(void* self, void* icon, const char* text, void* shortcut) {
+QAction* k_aboutapplicationdialog_add_action5(void* self, const void* icon, const char* text, const void* shortcut) {
     return QWidget_AddAction5((QWidget*)self, (QIcon*)icon, qstring(text), (QKeySequence*)shortcut);
 }
 
-QWidget* k_aboutapplicationdialog_parent_widget(void* self) {
+QWidget* k_aboutapplicationdialog_parent_widget(const void* self) {
     return QWidget_ParentWidget((QWidget*)self);
 }
 
@@ -1086,7 +1086,7 @@ void k_aboutapplicationdialog_set_window_flags(void* self, int32_t type) {
     QWidget_SetWindowFlags((QWidget*)self, type);
 }
 
-int32_t k_aboutapplicationdialog_window_flags(void* self) {
+int32_t k_aboutapplicationdialog_window_flags(const void* self) {
     return QWidget_WindowFlags((QWidget*)self);
 }
 
@@ -1098,7 +1098,7 @@ void k_aboutapplicationdialog_override_window_flags(void* self, int32_t type) {
     QWidget_OverrideWindowFlags((QWidget*)self, type);
 }
 
-int32_t k_aboutapplicationdialog_window_type(void* self) {
+int32_t k_aboutapplicationdialog_window_type(const void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
@@ -1106,15 +1106,15 @@ QWidget* k_aboutapplicationdialog_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 
-QWidget* k_aboutapplicationdialog_child_at(void* self, int x, int y) {
+QWidget* k_aboutapplicationdialog_child_at(const void* self, int x, int y) {
     return QWidget_ChildAt((QWidget*)self, x, y);
 }
 
-QWidget* k_aboutapplicationdialog_child_at2(void* self, void* p) {
+QWidget* k_aboutapplicationdialog_child_at2(const void* self, const void* p) {
     return QWidget_ChildAt2((QWidget*)self, (QPoint*)p);
 }
 
-QWidget* k_aboutapplicationdialog_child_at3(void* self, void* p) {
+QWidget* k_aboutapplicationdialog_child_at3(const void* self, const void* p) {
     return QWidget_ChildAt3((QWidget*)self, (QPointF*)p);
 }
 
@@ -1122,19 +1122,19 @@ void k_aboutapplicationdialog_set_attribute(void* self, int32_t param1) {
     QWidget_SetAttribute((QWidget*)self, param1);
 }
 
-bool k_aboutapplicationdialog_test_attribute(void* self, int32_t param1) {
+bool k_aboutapplicationdialog_test_attribute(const void* self, int32_t param1) {
     return QWidget_TestAttribute((QWidget*)self, param1);
 }
 
-void k_aboutapplicationdialog_ensure_polished(void* self) {
+void k_aboutapplicationdialog_ensure_polished(const void* self) {
     QWidget_EnsurePolished((QWidget*)self);
 }
 
-bool k_aboutapplicationdialog_is_ancestor_of(void* self, void* child) {
+bool k_aboutapplicationdialog_is_ancestor_of(const void* self, const void* child) {
     return QWidget_IsAncestorOf((QWidget*)self, (QWidget*)child);
 }
 
-bool k_aboutapplicationdialog_auto_fill_background(void* self) {
+bool k_aboutapplicationdialog_auto_fill_background(const void* self) {
     return QWidget_AutoFillBackground((QWidget*)self);
 }
 
@@ -1142,15 +1142,15 @@ void k_aboutapplicationdialog_set_auto_fill_background(void* self, bool enabled)
     QWidget_SetAutoFillBackground((QWidget*)self, enabled);
 }
 
-QBackingStore* k_aboutapplicationdialog_backing_store(void* self) {
+QBackingStore* k_aboutapplicationdialog_backing_store(const void* self) {
     return QWidget_BackingStore((QWidget*)self);
 }
 
-QWindow* k_aboutapplicationdialog_window_handle(void* self) {
+QWindow* k_aboutapplicationdialog_window_handle(const void* self) {
     return QWidget_WindowHandle((QWidget*)self);
 }
 
-QScreen* k_aboutapplicationdialog_screen(void* self) {
+QScreen* k_aboutapplicationdialog_screen(const void* self) {
     return QWidget_Screen((QWidget*)self);
 }
 
@@ -1170,11 +1170,11 @@ void k_aboutapplicationdialog_on_window_title_changed(void* self, void (*callbac
     QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
-void k_aboutapplicationdialog_window_icon_changed(void* self, void* icon) {
+void k_aboutapplicationdialog_window_icon_changed(void* self, const void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void k_aboutapplicationdialog_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+void k_aboutapplicationdialog_on_window_icon_changed(void* self, void (*callback)(void*, const void*)) {
     QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
@@ -1186,15 +1186,15 @@ void k_aboutapplicationdialog_on_window_icon_text_changed(void* self, void (*cal
     QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
-void k_aboutapplicationdialog_custom_context_menu_requested(void* self, void* pos) {
+void k_aboutapplicationdialog_custom_context_menu_requested(void* self, const void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void k_aboutapplicationdialog_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+void k_aboutapplicationdialog_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*)) {
     QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
-int32_t k_aboutapplicationdialog_input_method_hints(void* self) {
+int32_t k_aboutapplicationdialog_input_method_hints(const void* self) {
     return QWidget_InputMethodHints((QWidget*)self);
 }
 
@@ -1202,31 +1202,31 @@ void k_aboutapplicationdialog_set_input_method_hints(void* self, int32_t hints) 
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
-void k_aboutapplicationdialog_render22(void* self, void* target, void* targetOffset) {
+void k_aboutapplicationdialog_render22(void* self, void* target, const void* targetOffset) {
     QWidget_Render22((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset);
 }
 
-void k_aboutapplicationdialog_render3(void* self, void* target, void* targetOffset, void* sourceRegion) {
+void k_aboutapplicationdialog_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion) {
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_aboutapplicationdialog_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
+void k_aboutapplicationdialog_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
-void k_aboutapplicationdialog_render23(void* self, void* painter, void* targetOffset) {
+void k_aboutapplicationdialog_render23(void* self, void* painter, const void* targetOffset) {
     QWidget_Render23((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset);
 }
 
-void k_aboutapplicationdialog_render32(void* self, void* painter, void* targetOffset, void* sourceRegion) {
+void k_aboutapplicationdialog_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion) {
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_aboutapplicationdialog_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
+void k_aboutapplicationdialog_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
-QPixmap* k_aboutapplicationdialog_grab1(void* self, void* rectangle) {
+QPixmap* k_aboutapplicationdialog_grab1(void* self, const void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
@@ -1234,7 +1234,7 @@ void k_aboutapplicationdialog_grab_gesture2(void* self, int32_t type, int32_t fl
     QWidget_GrabGesture2((QWidget*)self, type, flags);
 }
 
-int32_t k_aboutapplicationdialog_grab_shortcut2(void* self, void* key, int32_t context) {
+int32_t k_aboutapplicationdialog_grab_shortcut2(void* self, const void* key, int32_t context) {
     return QWidget_GrabShortcut2((QWidget*)self, (QKeySequence*)key, context);
 }
 
@@ -1262,7 +1262,7 @@ QWidget* k_aboutapplicationdialog_create_window_container3(void* window, void* p
     return QWidget_CreateWindowContainer3((QWindow*)window, (QWidget*)parent, flags);
 }
 
-const char* k_aboutapplicationdialog_object_name(void* self) {
+const char* k_aboutapplicationdialog_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1273,19 +1273,19 @@ void k_aboutapplicationdialog_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_aboutapplicationdialog_is_widget_type(void* self) {
+bool k_aboutapplicationdialog_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_aboutapplicationdialog_is_window_type(void* self) {
+bool k_aboutapplicationdialog_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_aboutapplicationdialog_is_quick_item_type(void* self) {
+bool k_aboutapplicationdialog_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_aboutapplicationdialog_signals_blocked(void* self) {
+bool k_aboutapplicationdialog_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -1293,7 +1293,7 @@ bool k_aboutapplicationdialog_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_aboutapplicationdialog_thread(void* self) {
+QThread* k_aboutapplicationdialog_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -1317,7 +1317,7 @@ void k_aboutapplicationdialog_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_aboutapplicationdialog_children(void* self) {
+libqt_list /* of QObject* */ k_aboutapplicationdialog_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1330,55 +1330,55 @@ void k_aboutapplicationdialog_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_aboutapplicationdialog_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_aboutapplicationdialog_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_aboutapplicationdialog_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_aboutapplicationdialog_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_aboutapplicationdialog_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_aboutapplicationdialog_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_aboutapplicationdialog_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_aboutapplicationdialog_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_aboutapplicationdialog_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_aboutapplicationdialog_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_aboutapplicationdialog_disconnect3(void* self) {
+bool k_aboutapplicationdialog_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_aboutapplicationdialog_disconnect4(void* self, void* receiver) {
+bool k_aboutapplicationdialog_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_aboutapplicationdialog_disconnect5(void* param1) {
+bool k_aboutapplicationdialog_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_aboutapplicationdialog_dump_object_tree(void* self) {
+void k_aboutapplicationdialog_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_aboutapplicationdialog_dump_object_info(void* self) {
+void k_aboutapplicationdialog_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_aboutapplicationdialog_set_property(void* self, const char* name, void* value) {
+bool k_aboutapplicationdialog_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_aboutapplicationdialog_property(void* self, const char* name) {
+QVariant* k_aboutapplicationdialog_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_aboutapplicationdialog_dynamic_property_names(void* self) {
+const char** k_aboutapplicationdialog_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -1399,7 +1399,7 @@ QBindingStorage* k_aboutapplicationdialog_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_aboutapplicationdialog_binding_storage2(void* self) {
+const QBindingStorage* k_aboutapplicationdialog_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -1411,11 +1411,11 @@ void k_aboutapplicationdialog_on_destroyed(void* self, void (*callback)(void*)) 
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_aboutapplicationdialog_parent(void* self) {
+QObject* k_aboutapplicationdialog_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_aboutapplicationdialog_inherits(void* self, const char* classname) {
+bool k_aboutapplicationdialog_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -1431,31 +1431,31 @@ int32_t k_aboutapplicationdialog_start_timer23(void* self, int64_t time, int32_t
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_aboutapplicationdialog_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_aboutapplicationdialog_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_aboutapplicationdialog_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_aboutapplicationdialog_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_aboutapplicationdialog_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_aboutapplicationdialog_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_aboutapplicationdialog_disconnect1(void* self, const char* signal) {
+bool k_aboutapplicationdialog_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_aboutapplicationdialog_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_aboutapplicationdialog_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_aboutapplicationdialog_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_aboutapplicationdialog_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_aboutapplicationdialog_disconnect23(void* self, void* receiver, const char* member) {
+bool k_aboutapplicationdialog_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -1467,47 +1467,47 @@ void k_aboutapplicationdialog_on_destroyed1(void* self, void (*callback)(void*, 
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-bool k_aboutapplicationdialog_painting_active(void* self) {
+bool k_aboutapplicationdialog_painting_active(const void* self) {
     return QPaintDevice_PaintingActive(k_aboutapplicationdialog_as_q_paint_device(self));
 }
 
-int32_t k_aboutapplicationdialog_width_m_m(void* self) {
+int32_t k_aboutapplicationdialog_width_m_m(const void* self) {
     return QPaintDevice_WidthMM(k_aboutapplicationdialog_as_q_paint_device(self));
 }
 
-int32_t k_aboutapplicationdialog_height_m_m(void* self) {
+int32_t k_aboutapplicationdialog_height_m_m(const void* self) {
     return QPaintDevice_HeightMM(k_aboutapplicationdialog_as_q_paint_device(self));
 }
 
-int32_t k_aboutapplicationdialog_logical_dpi_x(void* self) {
+int32_t k_aboutapplicationdialog_logical_dpi_x(const void* self) {
     return QPaintDevice_LogicalDpiX(k_aboutapplicationdialog_as_q_paint_device(self));
 }
 
-int32_t k_aboutapplicationdialog_logical_dpi_y(void* self) {
+int32_t k_aboutapplicationdialog_logical_dpi_y(const void* self) {
     return QPaintDevice_LogicalDpiY(k_aboutapplicationdialog_as_q_paint_device(self));
 }
 
-int32_t k_aboutapplicationdialog_physical_dpi_x(void* self) {
+int32_t k_aboutapplicationdialog_physical_dpi_x(const void* self) {
     return QPaintDevice_PhysicalDpiX(k_aboutapplicationdialog_as_q_paint_device(self));
 }
 
-int32_t k_aboutapplicationdialog_physical_dpi_y(void* self) {
+int32_t k_aboutapplicationdialog_physical_dpi_y(const void* self) {
     return QPaintDevice_PhysicalDpiY(k_aboutapplicationdialog_as_q_paint_device(self));
 }
 
-double k_aboutapplicationdialog_device_pixel_ratio(void* self) {
+double k_aboutapplicationdialog_device_pixel_ratio(const void* self) {
     return QPaintDevice_DevicePixelRatio(k_aboutapplicationdialog_as_q_paint_device(self));
 }
 
-double k_aboutapplicationdialog_device_pixel_ratio_f(void* self) {
+double k_aboutapplicationdialog_device_pixel_ratio_f(const void* self) {
     return QPaintDevice_DevicePixelRatioF(k_aboutapplicationdialog_as_q_paint_device(self));
 }
 
-int32_t k_aboutapplicationdialog_color_count(void* self) {
+int32_t k_aboutapplicationdialog_color_count(const void* self) {
     return QPaintDevice_ColorCount(k_aboutapplicationdialog_as_q_paint_device(self));
 }
 
-int32_t k_aboutapplicationdialog_depth(void* self) {
+int32_t k_aboutapplicationdialog_depth(const void* self) {
     return QPaintDevice_Depth(k_aboutapplicationdialog_as_q_paint_device(self));
 }
 
@@ -1531,28 +1531,28 @@ void k_aboutapplicationdialog_on_set_visible(void* self, void (*callback)(void*,
     KAboutApplicationDialog_OnSetVisible((KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
-QSize* k_aboutapplicationdialog_size_hint(void* self) {
+QSize* k_aboutapplicationdialog_size_hint(const void* self) {
     return KAboutApplicationDialog_SizeHint((KAboutApplicationDialog*)self);
 }
 
-QSize* k_aboutapplicationdialog_super_size_hint(void* self) {
+QSize* k_aboutapplicationdialog_super_size_hint(const void* self) {
     return KAboutApplicationDialog_SuperSizeHint((KAboutApplicationDialog*)self);
 }
 
-void k_aboutapplicationdialog_on_size_hint(void* self, QSize* (*callback)()) {
-    KAboutApplicationDialog_OnSizeHint((KAboutApplicationDialog*)self, (intptr_t)callback);
+void k_aboutapplicationdialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+    KAboutApplicationDialog_OnSizeHint((const KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
-QSize* k_aboutapplicationdialog_minimum_size_hint(void* self) {
+QSize* k_aboutapplicationdialog_minimum_size_hint(const void* self) {
     return KAboutApplicationDialog_MinimumSizeHint((KAboutApplicationDialog*)self);
 }
 
-QSize* k_aboutapplicationdialog_super_minimum_size_hint(void* self) {
+QSize* k_aboutapplicationdialog_super_minimum_size_hint(const void* self) {
     return KAboutApplicationDialog_SuperMinimumSizeHint((KAboutApplicationDialog*)self);
 }
 
-void k_aboutapplicationdialog_on_minimum_size_hint(void* self, QSize* (*callback)()) {
-    KAboutApplicationDialog_OnMinimumSizeHint((KAboutApplicationDialog*)self, (intptr_t)callback);
+void k_aboutapplicationdialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
+    KAboutApplicationDialog_OnMinimumSizeHint((const KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
 void k_aboutapplicationdialog_open(void* self) {
@@ -1563,7 +1563,7 @@ void k_aboutapplicationdialog_super_open(void* self) {
     KAboutApplicationDialog_SuperOpen((KAboutApplicationDialog*)self);
 }
 
-void k_aboutapplicationdialog_on_open(void* self, void (*callback)()) {
+void k_aboutapplicationdialog_on_open(void* self, void (*callback)(void*)) {
     KAboutApplicationDialog_OnOpen((KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
@@ -1575,7 +1575,7 @@ int32_t k_aboutapplicationdialog_super_exec(void* self) {
     return KAboutApplicationDialog_SuperExec((KAboutApplicationDialog*)self);
 }
 
-void k_aboutapplicationdialog_on_exec(void* self, int32_t (*callback)()) {
+void k_aboutapplicationdialog_on_exec(void* self, int32_t (*callback)(void*)) {
     KAboutApplicationDialog_OnExec((KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
@@ -1599,7 +1599,7 @@ void k_aboutapplicationdialog_super_accept(void* self) {
     KAboutApplicationDialog_SuperAccept((KAboutApplicationDialog*)self);
 }
 
-void k_aboutapplicationdialog_on_accept(void* self, void (*callback)()) {
+void k_aboutapplicationdialog_on_accept(void* self, void (*callback)(void*)) {
     KAboutApplicationDialog_OnAccept((KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
@@ -1611,7 +1611,7 @@ void k_aboutapplicationdialog_super_reject(void* self) {
     KAboutApplicationDialog_SuperReject((KAboutApplicationDialog*)self);
 }
 
-void k_aboutapplicationdialog_on_reject(void* self, void (*callback)()) {
+void k_aboutapplicationdialog_on_reject(void* self, void (*callback)(void*)) {
     KAboutApplicationDialog_OnReject((KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
@@ -1687,52 +1687,52 @@ void k_aboutapplicationdialog_on_event_filter(void* self, bool (*callback)(void*
     KAboutApplicationDialog_OnEventFilter((KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
-int32_t k_aboutapplicationdialog_dev_type(void* self) {
+int32_t k_aboutapplicationdialog_dev_type(const void* self) {
     return KAboutApplicationDialog_DevType((KAboutApplicationDialog*)self);
 }
 
-int32_t k_aboutapplicationdialog_super_dev_type(void* self) {
+int32_t k_aboutapplicationdialog_super_dev_type(const void* self) {
     return KAboutApplicationDialog_SuperDevType((KAboutApplicationDialog*)self);
 }
 
-void k_aboutapplicationdialog_on_dev_type(void* self, int32_t (*callback)()) {
-    KAboutApplicationDialog_OnDevType((KAboutApplicationDialog*)self, (intptr_t)callback);
+void k_aboutapplicationdialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
+    KAboutApplicationDialog_OnDevType((const KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
-int32_t k_aboutapplicationdialog_height_for_width(void* self, int param1) {
+int32_t k_aboutapplicationdialog_height_for_width(const void* self, int param1) {
     return KAboutApplicationDialog_HeightForWidth((KAboutApplicationDialog*)self, param1);
 }
 
-int32_t k_aboutapplicationdialog_super_height_for_width(void* self, int param1) {
+int32_t k_aboutapplicationdialog_super_height_for_width(const void* self, int param1) {
     return KAboutApplicationDialog_SuperHeightForWidth((KAboutApplicationDialog*)self, param1);
 }
 
-void k_aboutapplicationdialog_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
-    KAboutApplicationDialog_OnHeightForWidth((KAboutApplicationDialog*)self, (intptr_t)callback);
+void k_aboutapplicationdialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
+    KAboutApplicationDialog_OnHeightForWidth((const KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
-bool k_aboutapplicationdialog_has_height_for_width(void* self) {
+bool k_aboutapplicationdialog_has_height_for_width(const void* self) {
     return KAboutApplicationDialog_HasHeightForWidth((KAboutApplicationDialog*)self);
 }
 
-bool k_aboutapplicationdialog_super_has_height_for_width(void* self) {
+bool k_aboutapplicationdialog_super_has_height_for_width(const void* self) {
     return KAboutApplicationDialog_SuperHasHeightForWidth((KAboutApplicationDialog*)self);
 }
 
-void k_aboutapplicationdialog_on_has_height_for_width(void* self, bool (*callback)()) {
-    KAboutApplicationDialog_OnHasHeightForWidth((KAboutApplicationDialog*)self, (intptr_t)callback);
+void k_aboutapplicationdialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
+    KAboutApplicationDialog_OnHasHeightForWidth((const KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
-QPaintEngine* k_aboutapplicationdialog_paint_engine(void* self) {
+QPaintEngine* k_aboutapplicationdialog_paint_engine(const void* self) {
     return KAboutApplicationDialog_PaintEngine((KAboutApplicationDialog*)self);
 }
 
-QPaintEngine* k_aboutapplicationdialog_super_paint_engine(void* self) {
+QPaintEngine* k_aboutapplicationdialog_super_paint_engine(const void* self) {
     return KAboutApplicationDialog_SuperPaintEngine((KAboutApplicationDialog*)self);
 }
 
-void k_aboutapplicationdialog_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
-    KAboutApplicationDialog_OnPaintEngine((KAboutApplicationDialog*)self, (intptr_t)callback);
+void k_aboutapplicationdialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
+    KAboutApplicationDialog_OnPaintEngine((const KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
 bool k_aboutapplicationdialog_event(void* self, void* event) {
@@ -1999,52 +1999,52 @@ void k_aboutapplicationdialog_on_change_event(void* self, void (*callback)(void*
     KAboutApplicationDialog_OnChangeEvent((KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
-int32_t k_aboutapplicationdialog_metric(void* self, int32_t param1) {
+int32_t k_aboutapplicationdialog_metric(const void* self, int32_t param1) {
     return KAboutApplicationDialog_Metric((KAboutApplicationDialog*)self, param1);
 }
 
-int32_t k_aboutapplicationdialog_super_metric(void* self, int32_t param1) {
+int32_t k_aboutapplicationdialog_super_metric(const void* self, int32_t param1) {
     return KAboutApplicationDialog_SuperMetric((KAboutApplicationDialog*)self, param1);
 }
 
-void k_aboutapplicationdialog_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
-    KAboutApplicationDialog_OnMetric((KAboutApplicationDialog*)self, (intptr_t)callback);
+void k_aboutapplicationdialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
+    KAboutApplicationDialog_OnMetric((const KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
-void k_aboutapplicationdialog_init_painter(void* self, void* painter) {
+void k_aboutapplicationdialog_init_painter(const void* self, void* painter) {
     KAboutApplicationDialog_InitPainter((KAboutApplicationDialog*)self, (QPainter*)painter);
 }
 
-void k_aboutapplicationdialog_super_init_painter(void* self, void* painter) {
+void k_aboutapplicationdialog_super_init_painter(const void* self, void* painter) {
     KAboutApplicationDialog_SuperInitPainter((KAboutApplicationDialog*)self, (QPainter*)painter);
 }
 
-void k_aboutapplicationdialog_on_init_painter(void* self, void (*callback)(void*, void*)) {
-    KAboutApplicationDialog_OnInitPainter((KAboutApplicationDialog*)self, (intptr_t)callback);
+void k_aboutapplicationdialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
+    KAboutApplicationDialog_OnInitPainter((const KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_aboutapplicationdialog_redirected(void* self, void* offset) {
+QPaintDevice* k_aboutapplicationdialog_redirected(const void* self, void* offset) {
     return KAboutApplicationDialog_Redirected((KAboutApplicationDialog*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_aboutapplicationdialog_super_redirected(void* self, void* offset) {
+QPaintDevice* k_aboutapplicationdialog_super_redirected(const void* self, void* offset) {
     return KAboutApplicationDialog_SuperRedirected((KAboutApplicationDialog*)self, (QPoint*)offset);
 }
 
-void k_aboutapplicationdialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
-    KAboutApplicationDialog_OnRedirected((KAboutApplicationDialog*)self, (intptr_t)callback);
+void k_aboutapplicationdialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KAboutApplicationDialog_OnRedirected((const KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
-QPainter* k_aboutapplicationdialog_shared_painter(void* self) {
+QPainter* k_aboutapplicationdialog_shared_painter(const void* self) {
     return KAboutApplicationDialog_SharedPainter((KAboutApplicationDialog*)self);
 }
 
-QPainter* k_aboutapplicationdialog_super_shared_painter(void* self) {
+QPainter* k_aboutapplicationdialog_super_shared_painter(const void* self) {
     return KAboutApplicationDialog_SuperSharedPainter((KAboutApplicationDialog*)self);
 }
 
-void k_aboutapplicationdialog_on_shared_painter(void* self, QPainter* (*callback)()) {
-    KAboutApplicationDialog_OnSharedPainter((KAboutApplicationDialog*)self, (intptr_t)callback);
+void k_aboutapplicationdialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
+    KAboutApplicationDialog_OnSharedPainter((const KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
 void k_aboutapplicationdialog_input_method_event(void* self, void* param1) {
@@ -2059,16 +2059,16 @@ void k_aboutapplicationdialog_on_input_method_event(void* self, void (*callback)
     KAboutApplicationDialog_OnInputMethodEvent((KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
-QVariant* k_aboutapplicationdialog_input_method_query(void* self, int32_t param1) {
+QVariant* k_aboutapplicationdialog_input_method_query(const void* self, int32_t param1) {
     return KAboutApplicationDialog_InputMethodQuery((KAboutApplicationDialog*)self, param1);
 }
 
-QVariant* k_aboutapplicationdialog_super_input_method_query(void* self, int32_t param1) {
+QVariant* k_aboutapplicationdialog_super_input_method_query(const void* self, int32_t param1) {
     return KAboutApplicationDialog_SuperInputMethodQuery((KAboutApplicationDialog*)self, param1);
 }
 
-void k_aboutapplicationdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
-    KAboutApplicationDialog_OnInputMethodQuery((KAboutApplicationDialog*)self, (intptr_t)callback);
+void k_aboutapplicationdialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KAboutApplicationDialog_OnInputMethodQuery((const KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
 bool k_aboutapplicationdialog_focus_next_prev_child(void* self, bool next) {
@@ -2119,27 +2119,27 @@ void k_aboutapplicationdialog_on_custom_event(void* self, void (*callback)(void*
     KAboutApplicationDialog_OnCustomEvent((KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
-void k_aboutapplicationdialog_connect_notify(void* self, void* signal) {
+void k_aboutapplicationdialog_connect_notify(void* self, const void* signal) {
     KAboutApplicationDialog_ConnectNotify((KAboutApplicationDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_aboutapplicationdialog_super_connect_notify(void* self, void* signal) {
+void k_aboutapplicationdialog_super_connect_notify(void* self, const void* signal) {
     KAboutApplicationDialog_SuperConnectNotify((KAboutApplicationDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_aboutapplicationdialog_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_aboutapplicationdialog_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     KAboutApplicationDialog_OnConnectNotify((KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
-void k_aboutapplicationdialog_disconnect_notify(void* self, void* signal) {
+void k_aboutapplicationdialog_disconnect_notify(void* self, const void* signal) {
     KAboutApplicationDialog_DisconnectNotify((KAboutApplicationDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_aboutapplicationdialog_super_disconnect_notify(void* self, void* signal) {
+void k_aboutapplicationdialog_super_disconnect_notify(void* self, const void* signal) {
     KAboutApplicationDialog_SuperDisconnectNotify((KAboutApplicationDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_aboutapplicationdialog_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_aboutapplicationdialog_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     KAboutApplicationDialog_OnDisconnectNotify((KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
@@ -2147,132 +2147,44 @@ void k_aboutapplicationdialog_adjust_position(void* self, void* param1) {
     KAboutApplicationDialog_AdjustPosition((KAboutApplicationDialog*)self, (QWidget*)param1);
 }
 
-void k_aboutapplicationdialog_super_adjust_position(void* self, void* param1) {
-    KAboutApplicationDialog_SuperAdjustPosition((KAboutApplicationDialog*)self, (QWidget*)param1);
-}
-
-void k_aboutapplicationdialog_on_adjust_position(void* self, void (*callback)(void*, void*)) {
-    KAboutApplicationDialog_OnAdjustPosition((KAboutApplicationDialog*)self, (intptr_t)callback);
-}
-
 void k_aboutapplicationdialog_update_micro_focus(void* self) {
     KAboutApplicationDialog_UpdateMicroFocus((KAboutApplicationDialog*)self);
-}
-
-void k_aboutapplicationdialog_super_update_micro_focus(void* self) {
-    KAboutApplicationDialog_SuperUpdateMicroFocus((KAboutApplicationDialog*)self);
-}
-
-void k_aboutapplicationdialog_on_update_micro_focus(void* self, void (*callback)()) {
-    KAboutApplicationDialog_OnUpdateMicroFocus((KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
 void k_aboutapplicationdialog_create(void* self) {
     KAboutApplicationDialog_Create((KAboutApplicationDialog*)self);
 }
 
-void k_aboutapplicationdialog_super_create(void* self) {
-    KAboutApplicationDialog_SuperCreate((KAboutApplicationDialog*)self);
-}
-
-void k_aboutapplicationdialog_on_create(void* self, void (*callback)()) {
-    KAboutApplicationDialog_OnCreate((KAboutApplicationDialog*)self, (intptr_t)callback);
-}
-
 void k_aboutapplicationdialog_destroy(void* self) {
     KAboutApplicationDialog_Destroy((KAboutApplicationDialog*)self);
-}
-
-void k_aboutapplicationdialog_super_destroy(void* self) {
-    KAboutApplicationDialog_SuperDestroy((KAboutApplicationDialog*)self);
-}
-
-void k_aboutapplicationdialog_on_destroy(void* self, void (*callback)()) {
-    KAboutApplicationDialog_OnDestroy((KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
 bool k_aboutapplicationdialog_focus_next_child(void* self) {
     return KAboutApplicationDialog_FocusNextChild((KAboutApplicationDialog*)self);
 }
 
-bool k_aboutapplicationdialog_super_focus_next_child(void* self) {
-    return KAboutApplicationDialog_SuperFocusNextChild((KAboutApplicationDialog*)self);
-}
-
-void k_aboutapplicationdialog_on_focus_next_child(void* self, bool (*callback)()) {
-    KAboutApplicationDialog_OnFocusNextChild((KAboutApplicationDialog*)self, (intptr_t)callback);
-}
-
 bool k_aboutapplicationdialog_focus_previous_child(void* self) {
     return KAboutApplicationDialog_FocusPreviousChild((KAboutApplicationDialog*)self);
 }
 
-bool k_aboutapplicationdialog_super_focus_previous_child(void* self) {
-    return KAboutApplicationDialog_SuperFocusPreviousChild((KAboutApplicationDialog*)self);
-}
-
-void k_aboutapplicationdialog_on_focus_previous_child(void* self, bool (*callback)()) {
-    KAboutApplicationDialog_OnFocusPreviousChild((KAboutApplicationDialog*)self, (intptr_t)callback);
-}
-
-QObject* k_aboutapplicationdialog_sender(void* self) {
+QObject* k_aboutapplicationdialog_sender(const void* self) {
     return KAboutApplicationDialog_Sender((KAboutApplicationDialog*)self);
 }
 
-QObject* k_aboutapplicationdialog_super_sender(void* self) {
-    return KAboutApplicationDialog_SuperSender((KAboutApplicationDialog*)self);
-}
-
-void k_aboutapplicationdialog_on_sender(void* self, QObject* (*callback)()) {
-    KAboutApplicationDialog_OnSender((KAboutApplicationDialog*)self, (intptr_t)callback);
-}
-
-int32_t k_aboutapplicationdialog_sender_signal_index(void* self) {
+int32_t k_aboutapplicationdialog_sender_signal_index(const void* self) {
     return KAboutApplicationDialog_SenderSignalIndex((KAboutApplicationDialog*)self);
 }
 
-int32_t k_aboutapplicationdialog_super_sender_signal_index(void* self) {
-    return KAboutApplicationDialog_SuperSenderSignalIndex((KAboutApplicationDialog*)self);
-}
-
-void k_aboutapplicationdialog_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    KAboutApplicationDialog_OnSenderSignalIndex((KAboutApplicationDialog*)self, (intptr_t)callback);
-}
-
-int32_t k_aboutapplicationdialog_receivers(void* self, const char* signal) {
+int32_t k_aboutapplicationdialog_receivers(const void* self, const char* signal) {
     return KAboutApplicationDialog_Receivers((KAboutApplicationDialog*)self, signal);
 }
 
-int32_t k_aboutapplicationdialog_super_receivers(void* self, const char* signal) {
-    return KAboutApplicationDialog_SuperReceivers((KAboutApplicationDialog*)self, signal);
-}
-
-void k_aboutapplicationdialog_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    KAboutApplicationDialog_OnReceivers((KAboutApplicationDialog*)self, (intptr_t)callback);
-}
-
-bool k_aboutapplicationdialog_is_signal_connected(void* self, void* signal) {
+bool k_aboutapplicationdialog_is_signal_connected(const void* self, const void* signal) {
     return KAboutApplicationDialog_IsSignalConnected((KAboutApplicationDialog*)self, (QMetaMethod*)signal);
 }
 
-bool k_aboutapplicationdialog_super_is_signal_connected(void* self, void* signal) {
-    return KAboutApplicationDialog_SuperIsSignalConnected((KAboutApplicationDialog*)self, (QMetaMethod*)signal);
-}
-
-void k_aboutapplicationdialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    KAboutApplicationDialog_OnIsSignalConnected((KAboutApplicationDialog*)self, (intptr_t)callback);
-}
-
-double k_aboutapplicationdialog_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+double k_aboutapplicationdialog_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB) {
     return KAboutApplicationDialog_GetDecodedMetricF((KAboutApplicationDialog*)self, metricA, metricB);
-}
-
-double k_aboutapplicationdialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KAboutApplicationDialog_SuperGetDecodedMetricF((KAboutApplicationDialog*)self, metricA, metricB);
-}
-
-void k_aboutapplicationdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {
-    KAboutApplicationDialog_OnGetDecodedMetricF((KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
 void k_aboutapplicationdialog_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

@@ -20,7 +20,7 @@ QTextDocumentFragment* q_textdocumentfragment_new();
 ///
 /// @param document QTextDocument*
 ///
-QTextDocumentFragment* q_textdocumentfragment_new2(void* document);
+QTextDocumentFragment* q_textdocumentfragment_new2(const void* document);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentfragment.html)
 
@@ -28,7 +28,7 @@ QTextDocumentFragment* q_textdocumentfragment_new2(void* document);
 ///
 /// @param range QTextCursor*
 ///
-QTextDocumentFragment* q_textdocumentfragment_new3(void* range);
+QTextDocumentFragment* q_textdocumentfragment_new3(const void* range);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentfragment.html)
 
@@ -36,52 +36,52 @@ QTextDocumentFragment* q_textdocumentfragment_new3(void* range);
 ///
 /// @param rhs QTextDocumentFragment*
 ///
-QTextDocumentFragment* q_textdocumentfragment_new4(void* rhs);
+QTextDocumentFragment* q_textdocumentfragment_new4(const void* rhs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentfragment.html#operator-eq)
 ///
 /// @param self QTextDocumentFragment*
 /// @param rhs QTextDocumentFragment*
 ///
-void q_textdocumentfragment_operator_assign(void* self, void* rhs);
+void q_textdocumentfragment_operator_assign(void* self, const void* rhs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentfragment.html#isEmpty)
 ///
-/// @param self QTextDocumentFragment*
+/// @param self const QTextDocumentFragment*
 ///
-bool q_textdocumentfragment_is_empty(void* self);
+bool q_textdocumentfragment_is_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentfragment.html#toPlainText)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextDocumentFragment*
+/// @param self const QTextDocumentFragment*
 ///
-const char* q_textdocumentfragment_to_plain_text(void* self);
+const char* q_textdocumentfragment_to_plain_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentfragment.html#toRawText)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextDocumentFragment*
+/// @param self const QTextDocumentFragment*
 ///
-const char* q_textdocumentfragment_to_raw_text(void* self);
+const char* q_textdocumentfragment_to_raw_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentfragment.html#toHtml)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextDocumentFragment*
+/// @param self const QTextDocumentFragment*
 ///
-const char* q_textdocumentfragment_to_html(void* self);
+const char* q_textdocumentfragment_to_html(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentfragment.html#toMarkdown)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextDocumentFragment*
+/// @param self const QTextDocumentFragment*
 ///
-const char* q_textdocumentfragment_to_markdown(void* self);
+const char* q_textdocumentfragment_to_markdown(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentfragment.html#fromPlainText)
 ///
@@ -105,17 +105,17 @@ QTextDocumentFragment* q_textdocumentfragment_from_markdown(const char* markdown
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextDocumentFragment*
+/// @param self const QTextDocumentFragment*
 /// @param features flag of enum QTextDocument__MarkdownFeature
 ///
-const char* q_textdocumentfragment_to_markdown1(void* self, int32_t features);
+const char* q_textdocumentfragment_to_markdown1(const void* self, int32_t features);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentfragment.html#fromHtml)
 ///
 /// @param html const char*
 /// @param resourceProvider QTextDocument*
 ///
-QTextDocumentFragment* q_textdocumentfragment_from_html2(const char* html, void* resourceProvider);
+QTextDocumentFragment* q_textdocumentfragment_from_html2(const char* html, const void* resourceProvider);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentfragment.html#fromMarkdown)
 ///

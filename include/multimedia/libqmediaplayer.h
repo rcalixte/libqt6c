@@ -24,26 +24,26 @@ QMediaPlayer* q_mediaplayer_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-const QMetaObject* q_mediaplayer_meta_object(void* self);
+const QMetaObject* q_mediaplayer_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QMediaPlayer*
-/// @param callback const QMetaObject* func()
+/// @param self const QMediaPlayer*
+/// @param callback const QMetaObject* func(const QMediaPlayer* self)
 ///
-void q_mediaplayer_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_mediaplayer_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-const QMetaObject* q_mediaplayer_super_meta_object(void* self);
+const QMetaObject* q_mediaplayer_super_meta_object(const void* self);
 
 /// @param self QMediaPlayer*
 /// @param param1 const char*
@@ -97,45 +97,45 @@ const char* q_mediaplayer_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#audioTracks)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
 /// @return libqt_list of QMediaMetaData*
 ///
-libqt_list q_mediaplayer_audio_tracks(void* self);
+libqt_list q_mediaplayer_audio_tracks(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#videoTracks)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
 /// @return libqt_list of QMediaMetaData*
 ///
-libqt_list q_mediaplayer_video_tracks(void* self);
+libqt_list q_mediaplayer_video_tracks(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#subtitleTracks)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
 /// @return libqt_list of QMediaMetaData*
 ///
-libqt_list q_mediaplayer_subtitle_tracks(void* self);
+libqt_list q_mediaplayer_subtitle_tracks(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#activeAudioTrack)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-int32_t q_mediaplayer_active_audio_track(void* self);
+int32_t q_mediaplayer_active_audio_track(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#activeVideoTrack)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-int32_t q_mediaplayer_active_video_track(void* self);
+int32_t q_mediaplayer_active_video_track(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#activeSubtitleTrack)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-int32_t q_mediaplayer_active_subtitle_track(void* self);
+int32_t q_mediaplayer_active_subtitle_track(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#setActiveAudioTrack)
 ///
@@ -167,9 +167,9 @@ void q_mediaplayer_set_audio_buffer_output(void* self, void* output);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#audioBufferOutput)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-QAudioBufferOutput* q_mediaplayer_audio_buffer_output(void* self);
+QAudioBufferOutput* q_mediaplayer_audio_buffer_output(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#setAudioOutput)
 ///
@@ -180,9 +180,9 @@ void q_mediaplayer_set_audio_output(void* self, void* output);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#audioOutput)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-QAudioOutput* q_mediaplayer_audio_output(void* self);
+QAudioOutput* q_mediaplayer_audio_output(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#setVideoOutput)
 ///
@@ -193,9 +193,9 @@ void q_mediaplayer_set_video_output(void* self, void* videoOutput);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#videoOutput)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-QObject* q_mediaplayer_video_output(void* self);
+QObject* q_mediaplayer_video_output(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#setVideoSink)
 ///
@@ -206,97 +206,97 @@ void q_mediaplayer_set_video_sink(void* self, void* sink);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#videoSink)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-QVideoSink* q_mediaplayer_video_sink(void* self);
+QVideoSink* q_mediaplayer_video_sink(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#source)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-QUrl* q_mediaplayer_source(void* self);
+QUrl* q_mediaplayer_source(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#sourceDevice)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-const QIODevice* q_mediaplayer_source_device(void* self);
+const QIODevice* q_mediaplayer_source_device(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#playbackState)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
 /// @return enum QMediaPlayer__PlaybackState
 ///
-int32_t q_mediaplayer_playback_state(void* self);
+int32_t q_mediaplayer_playback_state(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#mediaStatus)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
 /// @return enum QMediaPlayer__MediaStatus
 ///
-int32_t q_mediaplayer_media_status(void* self);
+int32_t q_mediaplayer_media_status(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#duration)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-int64_t q_mediaplayer_duration(void* self);
+int64_t q_mediaplayer_duration(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#position)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-int64_t q_mediaplayer_position(void* self);
+int64_t q_mediaplayer_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#hasAudio)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-bool q_mediaplayer_has_audio(void* self);
+bool q_mediaplayer_has_audio(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#hasVideo)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-bool q_mediaplayer_has_video(void* self);
+bool q_mediaplayer_has_video(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#bufferProgress)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-float q_mediaplayer_buffer_progress(void* self);
+float q_mediaplayer_buffer_progress(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#bufferedTimeRange)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-QMediaTimeRange* q_mediaplayer_buffered_time_range(void* self);
+QMediaTimeRange* q_mediaplayer_buffered_time_range(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#isSeekable)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-bool q_mediaplayer_is_seekable(void* self);
+bool q_mediaplayer_is_seekable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#playbackRate)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-double q_mediaplayer_playback_rate(void* self);
+double q_mediaplayer_playback_rate(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#isPlaying)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-bool q_mediaplayer_is_playing(void* self);
+bool q_mediaplayer_is_playing(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#loops)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-int32_t q_mediaplayer_loops(void* self);
+int32_t q_mediaplayer_loops(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#setLoops)
 ///
@@ -307,31 +307,31 @@ void q_mediaplayer_set_loops(void* self, int loops);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#error)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
 /// @return enum QMediaPlayer__Error
 ///
-int32_t q_mediaplayer_error(void* self);
+int32_t q_mediaplayer_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#errorString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-const char* q_mediaplayer_error_string(void* self);
+const char* q_mediaplayer_error_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#isAvailable)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-bool q_mediaplayer_is_available(void* self);
+bool q_mediaplayer_is_available(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#metaData)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-QMediaMetaData* q_mediaplayer_meta_data(void* self);
+QMediaMetaData* q_mediaplayer_meta_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#play)
 ///
@@ -370,7 +370,7 @@ void q_mediaplayer_set_playback_rate(void* self, double rate);
 /// @param self QMediaPlayer*
 /// @param source QUrl*
 ///
-void q_mediaplayer_set_source(void* self, void* source);
+void q_mediaplayer_set_source(void* self, const void* source);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#setSourceDevice)
 ///
@@ -384,14 +384,14 @@ void q_mediaplayer_set_source_device(void* self, void* device);
 /// @param self QMediaPlayer*
 /// @param media QUrl*
 ///
-void q_mediaplayer_source_changed(void* self, void* media);
+void q_mediaplayer_source_changed(void* self, const void* media);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#sourceChanged)
 ///
 /// @param self QMediaPlayer*
 /// @param callback void func(QMediaPlayer* self, QUrl* media)
 ///
-void q_mediaplayer_on_source_changed(void* self, void (*callback)(void*, void*));
+void q_mediaplayer_on_source_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#playbackStateChanged)
 ///
@@ -677,7 +677,7 @@ const char* q_mediaplayer_tr3(const char* s, const char* c, int n);
 /// @param device QIODevice*
 /// @param sourceUrl QUrl*
 ///
-void q_mediaplayer_set_source_device2(void* self, void* device, void* sourceUrl);
+void q_mediaplayer_set_source_device2(void* self, void* device, const void* sourceUrl);
 
 /// Inherited from QObject
 ///
@@ -685,9 +685,9 @@ void q_mediaplayer_set_source_device2(void* self, void* device, void* sourceUrl)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-const char* q_mediaplayer_object_name(void* self);
+const char* q_mediaplayer_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -702,33 +702,33 @@ void q_mediaplayer_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-bool q_mediaplayer_is_widget_type(void* self);
+bool q_mediaplayer_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-bool q_mediaplayer_is_window_type(void* self);
+bool q_mediaplayer_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-bool q_mediaplayer_is_quick_item_type(void* self);
+bool q_mediaplayer_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-bool q_mediaplayer_signals_blocked(void* self);
+bool q_mediaplayer_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -743,9 +743,9 @@ bool q_mediaplayer_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-QThread* q_mediaplayer_thread(void* self);
+QThread* q_mediaplayer_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -796,11 +796,11 @@ void q_mediaplayer_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_mediaplayer_children(void* self);
+libqt_list q_mediaplayer_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -838,7 +838,7 @@ void q_mediaplayer_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_mediaplayer_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_mediaplayer_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -849,18 +849,18 @@ QMetaObject__Connection* q_mediaplayer_connect(void* sender, const char* signal,
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_mediaplayer_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_mediaplayer_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_mediaplayer_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_mediaplayer_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -871,7 +871,7 @@ QMetaObject__Connection* q_mediaplayer_connect3(void* self, void* sender, const 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_mediaplayer_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_mediaplayer_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -882,24 +882,24 @@ bool q_mediaplayer_disconnect(void* sender, const char* signal, void* receiver, 
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_mediaplayer_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_mediaplayer_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-bool q_mediaplayer_disconnect3(void* self);
+bool q_mediaplayer_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 /// @param receiver QObject*
 ///
-bool q_mediaplayer_disconnect4(void* self, void* receiver);
+bool q_mediaplayer_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -907,23 +907,23 @@ bool q_mediaplayer_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_mediaplayer_disconnect5(void* param1);
+bool q_mediaplayer_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-void q_mediaplayer_dump_object_tree(void* self);
+void q_mediaplayer_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-void q_mediaplayer_dump_object_info(void* self);
+void q_mediaplayer_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -933,16 +933,16 @@ void q_mediaplayer_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_mediaplayer_set_property(void* self, const char* name, void* value);
+bool q_mediaplayer_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 /// @param name const char*
 ///
-QVariant* q_mediaplayer_property(void* self, const char* name);
+QVariant* q_mediaplayer_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -950,9 +950,9 @@ QVariant* q_mediaplayer_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-const char** q_mediaplayer_dynamic_property_names(void* self);
+const char** q_mediaplayer_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -966,9 +966,9 @@ QBindingStorage* q_mediaplayer_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-const QBindingStorage* q_mediaplayer_binding_storage2(void* self);
+const QBindingStorage* q_mediaplayer_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -991,18 +991,18 @@ void q_mediaplayer_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-QObject* q_mediaplayer_parent(void* self);
+QObject* q_mediaplayer_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 /// @param classname const char*
 ///
-bool q_mediaplayer_inherits(void* self, const char* classname);
+bool q_mediaplayer_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1042,7 +1042,7 @@ int32_t q_mediaplayer_start_timer23(void* self, int64_t time, int32_t timerType)
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_mediaplayer_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_mediaplayer_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1054,59 +1054,59 @@ QMetaObject__Connection* q_mediaplayer_connect5(void* sender, const char* signal
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_mediaplayer_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_mediaplayer_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_mediaplayer_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_mediaplayer_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 /// @param signal const char*
 ///
-bool q_mediaplayer_disconnect1(void* self, const char* signal);
+bool q_mediaplayer_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QMediaPlayer*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_mediaplayer_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_mediaplayer_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_mediaplayer_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_mediaplayer_disconnect23(void* self, void* receiver, const char* member);
+bool q_mediaplayer_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QMediaPlayer*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_mediaplayer_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1302,7 +1302,7 @@ void q_mediaplayer_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QMediaPlayer*
 /// @param signal QMetaMethod*
 ///
-void q_mediaplayer_connect_notify(void* self, void* signal);
+void q_mediaplayer_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1313,7 +1313,7 @@ void q_mediaplayer_connect_notify(void* self, void* signal);
 /// @param self QMediaPlayer*
 /// @param signal QMetaMethod*
 ///
-void q_mediaplayer_super_connect_notify(void* self, void* signal);
+void q_mediaplayer_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1324,7 +1324,7 @@ void q_mediaplayer_super_connect_notify(void* self, void* signal);
 /// @param self QMediaPlayer*
 /// @param callback void func(QMediaPlayer* self, QMetaMethod* signal)
 ///
-void q_mediaplayer_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_mediaplayer_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1335,7 +1335,7 @@ void q_mediaplayer_on_connect_notify(void* self, void (*callback)(void*, void*))
 /// @param self QMediaPlayer*
 /// @param signal QMetaMethod*
 ///
-void q_mediaplayer_disconnect_notify(void* self, void* signal);
+void q_mediaplayer_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1346,7 +1346,7 @@ void q_mediaplayer_disconnect_notify(void* self, void* signal);
 /// @param self QMediaPlayer*
 /// @param signal QMetaMethod*
 ///
-void q_mediaplayer_super_disconnect_notify(void* self, void* signal);
+void q_mediaplayer_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1357,7 +1357,7 @@ void q_mediaplayer_super_disconnect_notify(void* self, void* signal);
 /// @param self QMediaPlayer*
 /// @param callback void func(QMediaPlayer* self, QMetaMethod* signal)
 ///
-void q_mediaplayer_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_mediaplayer_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1365,9 +1365,9 @@ void q_mediaplayer_on_disconnect_notify(void* self, void (*callback)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-QObject* q_mediaplayer_sender(void* self);
+QObject* q_mediaplayer_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1375,9 +1375,9 @@ QObject* q_mediaplayer_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-QObject* q_mediaplayer_super_sender(void* self);
+QObject* q_mediaplayer_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1385,10 +1385,10 @@ QObject* q_mediaplayer_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QMediaPlayer*
-/// @param callback QObject* func()
+/// @param self const QMediaPlayer*
+/// @param callback QObject* func(QMediaPlayer* self)
 ///
-void q_mediaplayer_on_sender(void* self, QObject* (*callback)());
+void q_mediaplayer_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1396,9 +1396,9 @@ void q_mediaplayer_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-int32_t q_mediaplayer_sender_signal_index(void* self);
+int32_t q_mediaplayer_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1406,9 +1406,9 @@ int32_t q_mediaplayer_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 ///
-int32_t q_mediaplayer_super_sender_signal_index(void* self);
+int32_t q_mediaplayer_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1416,10 +1416,10 @@ int32_t q_mediaplayer_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QMediaPlayer*
-/// @param callback int32_t func()
+/// @param self const QMediaPlayer*
+/// @param callback int32_t func(QMediaPlayer* self)
 ///
-void q_mediaplayer_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_mediaplayer_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1427,10 +1427,10 @@ void q_mediaplayer_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 /// @param signal const char*
 ///
-int32_t q_mediaplayer_receivers(void* self, const char* signal);
+int32_t q_mediaplayer_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1438,10 +1438,10 @@ int32_t q_mediaplayer_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 /// @param signal const char*
 ///
-int32_t q_mediaplayer_super_receivers(void* self, const char* signal);
+int32_t q_mediaplayer_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1449,10 +1449,10 @@ int32_t q_mediaplayer_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 /// @param callback int32_t func(QMediaPlayer* self, const char* signal)
 ///
-void q_mediaplayer_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_mediaplayer_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1460,10 +1460,10 @@ void q_mediaplayer_on_receivers(void* self, int32_t (*callback)(void*, const cha
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 /// @param signal QMetaMethod*
 ///
-bool q_mediaplayer_is_signal_connected(void* self, void* signal);
+bool q_mediaplayer_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1471,10 +1471,10 @@ bool q_mediaplayer_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 /// @param signal QMetaMethod*
 ///
-bool q_mediaplayer_super_is_signal_connected(void* self, void* signal);
+bool q_mediaplayer_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1482,10 +1482,10 @@ bool q_mediaplayer_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QMediaPlayer*
+/// @param self const QMediaPlayer*
 /// @param callback bool func(QMediaPlayer* self, QMetaMethod* signal)
 ///
-void q_mediaplayer_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_mediaplayer_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

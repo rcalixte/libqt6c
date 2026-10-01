@@ -2,7 +2,7 @@
 #include "libqlibraryinfo.hpp"
 #include "libqlibraryinfo.h"
 
-QLibraryInfo* q_libraryinfo_new(void* other) {
+QLibraryInfo* q_libraryinfo_new(const void* other) {
     return QLibraryInfo_New((QLibraryInfo*)other);
 }
 

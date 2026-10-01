@@ -14,7 +14,7 @@
 ///
 /// @param other QColor*
 ///
-QColor* q_color_new(void* other);
+QColor* q_color_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html)
 
@@ -122,7 +122,7 @@ QColor* q_color_new13(int32_t spec, uint16_t a1, uint16_t a2, uint16_t a3, uint1
 ///
 /// @param param1 QColor*
 ///
-QColor* q_color_new14(void* param1);
+QColor* q_color_new14(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html)
 
@@ -177,17 +177,17 @@ void q_color_operator_assign(void* self, int32_t color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#isValid)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-bool q_color_is_valid(void* self);
+bool q_color_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-const char* q_color_name(void* self);
+const char* q_color_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#setNamedColor)
 ///
@@ -218,17 +218,17 @@ const char** q_color_color_names();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#spec)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
 /// @return enum QColor__Spec
 ///
-int32_t q_color_spec(void* self);
+int32_t q_color_spec(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#alpha)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-int32_t q_color_alpha(void* self);
+int32_t q_color_alpha(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#setAlpha)
 ///
@@ -239,9 +239,9 @@ void q_color_set_alpha(void* self, int alpha);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#alphaF)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-float q_color_alpha_f(void* self);
+float q_color_alpha_f(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#setAlphaF)
 ///
@@ -252,21 +252,21 @@ void q_color_set_alpha_f(void* self, float alpha);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#red)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-int32_t q_color_red(void* self);
+int32_t q_color_red(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#green)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-int32_t q_color_green(void* self);
+int32_t q_color_green(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#blue)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-int32_t q_color_blue(void* self);
+int32_t q_color_blue(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#setRed)
 ///
@@ -291,21 +291,21 @@ void q_color_set_blue(void* self, int blue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#redF)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-float q_color_red_f(void* self);
+float q_color_red_f(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#greenF)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-float q_color_green_f(void* self);
+float q_color_green_f(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#blueF)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-float q_color_blue_f(void* self);
+float q_color_blue_f(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#setRedF)
 ///
@@ -330,12 +330,12 @@ void q_color_set_blue_f(void* self, float blue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#getRgb)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 /// @param r int*
 /// @param g int*
 /// @param b int*
 ///
-void q_color_get_rgb(void* self, int* r, int* g, int* b);
+void q_color_get_rgb(const void* self, int* r, int* g, int* b);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#setRgb)
 ///
@@ -348,12 +348,12 @@ void q_color_set_rgb(void* self, int r, int g, int b);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#getRgbF)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 /// @param r float*
 /// @param g float*
 /// @param b float*
 ///
-void q_color_get_rgb_f(void* self, float* r, float* g, float* b);
+void q_color_get_rgb_f(const void* self, float* r, float* g, float* b);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#setRgbF)
 ///
@@ -366,9 +366,9 @@ void q_color_set_rgb_f(void* self, float r, float g, float b);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#rgba64)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-QRgba64* q_color_rgba64(void* self);
+QRgba64* q_color_rgba64(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#setRgba64)
 ///
@@ -379,9 +379,9 @@ void q_color_set_rgba64(void* self, void* rgba);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#rgba)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-uint32_t q_color_rgba(void* self);
+uint32_t q_color_rgba(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#setRgba)
 ///
@@ -392,9 +392,9 @@ void q_color_set_rgba(void* self, uint32_t rgba);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#rgb)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-uint32_t q_color_rgb(void* self);
+uint32_t q_color_rgb(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#setRgb)
 ///
@@ -405,72 +405,72 @@ void q_color_set_rgb2(void* self, uint32_t rgb);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#hue)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-int32_t q_color_hue(void* self);
+int32_t q_color_hue(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#saturation)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-int32_t q_color_saturation(void* self);
+int32_t q_color_saturation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#hsvHue)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-int32_t q_color_hsv_hue(void* self);
+int32_t q_color_hsv_hue(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#hsvSaturation)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-int32_t q_color_hsv_saturation(void* self);
+int32_t q_color_hsv_saturation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#value)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-int32_t q_color_value(void* self);
+int32_t q_color_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#hueF)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-float q_color_hue_f(void* self);
+float q_color_hue_f(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#saturationF)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-float q_color_saturation_f(void* self);
+float q_color_saturation_f(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#hsvHueF)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-float q_color_hsv_hue_f(void* self);
+float q_color_hsv_hue_f(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#hsvSaturationF)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-float q_color_hsv_saturation_f(void* self);
+float q_color_hsv_saturation_f(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#valueF)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-float q_color_value_f(void* self);
+float q_color_value_f(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#getHsv)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 /// @param h int*
 /// @param s int*
 /// @param v int*
 ///
-void q_color_get_hsv(void* self, int* h, int* s, int* v);
+void q_color_get_hsv(const void* self, int* h, int* s, int* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#setHsv)
 ///
@@ -483,12 +483,12 @@ void q_color_set_hsv(void* self, int h, int s, int v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#getHsvF)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 /// @param h float*
 /// @param s float*
 /// @param v float*
 ///
-void q_color_get_hsv_f(void* self, float* h, float* s, float* v);
+void q_color_get_hsv_f(const void* self, float* h, float* s, float* v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#setHsvF)
 ///
@@ -501,61 +501,61 @@ void q_color_set_hsv_f(void* self, float h, float s, float v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#cyan)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-int32_t q_color_cyan(void* self);
+int32_t q_color_cyan(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#magenta)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-int32_t q_color_magenta(void* self);
+int32_t q_color_magenta(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#yellow)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-int32_t q_color_yellow(void* self);
+int32_t q_color_yellow(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#black)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-int32_t q_color_black(void* self);
+int32_t q_color_black(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#cyanF)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-float q_color_cyan_f(void* self);
+float q_color_cyan_f(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#magentaF)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-float q_color_magenta_f(void* self);
+float q_color_magenta_f(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#yellowF)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-float q_color_yellow_f(void* self);
+float q_color_yellow_f(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#blackF)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-float q_color_black_f(void* self);
+float q_color_black_f(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#getCmyk)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 /// @param c int*
 /// @param m int*
 /// @param y int*
 /// @param k int*
 ///
-void q_color_get_cmyk(void* self, int* c, int* m, int* y, int* k);
+void q_color_get_cmyk(const void* self, int* c, int* m, int* y, int* k);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#setCmyk)
 ///
@@ -569,13 +569,13 @@ void q_color_set_cmyk(void* self, int c, int m, int y, int k);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#getCmykF)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 /// @param c float*
 /// @param m float*
 /// @param y float*
 /// @param k float*
 ///
-void q_color_get_cmyk_f(void* self, float* c, float* m, float* y, float* k);
+void q_color_get_cmyk_f(const void* self, float* c, float* m, float* y, float* k);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#setCmykF)
 ///
@@ -589,48 +589,48 @@ void q_color_set_cmyk_f(void* self, float c, float m, float y, float k);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#hslHue)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-int32_t q_color_hsl_hue(void* self);
+int32_t q_color_hsl_hue(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#hslSaturation)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-int32_t q_color_hsl_saturation(void* self);
+int32_t q_color_hsl_saturation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#lightness)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-int32_t q_color_lightness(void* self);
+int32_t q_color_lightness(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#hslHueF)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-float q_color_hsl_hue_f(void* self);
+float q_color_hsl_hue_f(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#hslSaturationF)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-float q_color_hsl_saturation_f(void* self);
+float q_color_hsl_saturation_f(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#lightnessF)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-float q_color_lightness_f(void* self);
+float q_color_lightness_f(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#getHsl)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 /// @param h int*
 /// @param s int*
 /// @param l int*
 ///
-void q_color_get_hsl(void* self, int* h, int* s, int* l);
+void q_color_get_hsl(const void* self, int* h, int* s, int* l);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#setHsl)
 ///
@@ -643,12 +643,12 @@ void q_color_set_hsl(void* self, int h, int s, int l);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#getHslF)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 /// @param h float*
 /// @param s float*
 /// @param l float*
 ///
-void q_color_get_hsl_f(void* self, float* h, float* s, float* l);
+void q_color_get_hsl_f(const void* self, float* h, float* s, float* l);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#setHslF)
 ///
@@ -661,40 +661,40 @@ void q_color_set_hsl_f(void* self, float h, float s, float l);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#toRgb)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-QColor* q_color_to_rgb(void* self);
+QColor* q_color_to_rgb(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#toHsv)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-QColor* q_color_to_hsv(void* self);
+QColor* q_color_to_hsv(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#toCmyk)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-QColor* q_color_to_cmyk(void* self);
+QColor* q_color_to_cmyk(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#toHsl)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-QColor* q_color_to_hsl(void* self);
+QColor* q_color_to_hsl(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#toExtendedRgb)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-QColor* q_color_to_extended_rgb(void* self);
+QColor* q_color_to_extended_rgb(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#convertTo)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 /// @param colorSpec enum QColor__Spec
 ///
-QColor* q_color_convert_to(void* self, int32_t colorSpec);
+QColor* q_color_convert_to(const void* self, int32_t colorSpec);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#fromRgb)
 ///
@@ -790,35 +790,35 @@ QColor* q_color_from_hsl_f(float h, float s, float l);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#lighter)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-QColor* q_color_lighter(void* self);
+QColor* q_color_lighter(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#darker)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-QColor* q_color_darker(void* self);
+QColor* q_color_darker(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#operator-eq-eq)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 /// @param c QColor*
 ///
-bool q_color_operator_equal(void* self, void* c);
+bool q_color_operator_equal(const void* self, const void* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#operator-not-eq)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 /// @param c QColor*
 ///
-bool q_color_operator_not_equal(void* self, void* c);
+bool q_color_operator_not_equal(const void* self, const void* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#operator-QVariant)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 ///
-QVariant* q_color_to_q_variant(void* self);
+QVariant* q_color_to_q_variant(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#isValidColor)
 ///
@@ -848,20 +848,20 @@ bool q_color_is_valid_color_name(const char* param1);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QColor*
+/// @param self const QColor*
 /// @param format enum QColor__NameFormat
 ///
-const char* q_color_name1(void* self, int32_t format);
+const char* q_color_name1(const void* self, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#getRgb)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 /// @param r int*
 /// @param g int*
 /// @param b int*
 /// @param a int*
 ///
-void q_color_get_rgb4(void* self, int* r, int* g, int* b, int* a);
+void q_color_get_rgb4(const void* self, int* r, int* g, int* b, int* a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#setRgb)
 ///
@@ -875,13 +875,13 @@ void q_color_set_rgb4(void* self, int r, int g, int b, int a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#getRgbF)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 /// @param r float*
 /// @param g float*
 /// @param b float*
 /// @param a float*
 ///
-void q_color_get_rgb_f4(void* self, float* r, float* g, float* b, float* a);
+void q_color_get_rgb_f4(const void* self, float* r, float* g, float* b, float* a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#setRgbF)
 ///
@@ -895,13 +895,13 @@ void q_color_set_rgb_f4(void* self, float r, float g, float b, float a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#getHsv)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 /// @param h int*
 /// @param s int*
 /// @param v int*
 /// @param a int*
 ///
-void q_color_get_hsv4(void* self, int* h, int* s, int* v, int* a);
+void q_color_get_hsv4(const void* self, int* h, int* s, int* v, int* a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#setHsv)
 ///
@@ -915,13 +915,13 @@ void q_color_set_hsv4(void* self, int h, int s, int v, int a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#getHsvF)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 /// @param h float*
 /// @param s float*
 /// @param v float*
 /// @param a float*
 ///
-void q_color_get_hsv_f4(void* self, float* h, float* s, float* v, float* a);
+void q_color_get_hsv_f4(const void* self, float* h, float* s, float* v, float* a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#setHsvF)
 ///
@@ -935,14 +935,14 @@ void q_color_set_hsv_f4(void* self, float h, float s, float v, float a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#getCmyk)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 /// @param c int*
 /// @param m int*
 /// @param y int*
 /// @param k int*
 /// @param a int*
 ///
-void q_color_get_cmyk5(void* self, int* c, int* m, int* y, int* k, int* a);
+void q_color_get_cmyk5(const void* self, int* c, int* m, int* y, int* k, int* a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#setCmyk)
 ///
@@ -957,14 +957,14 @@ void q_color_set_cmyk5(void* self, int c, int m, int y, int k, int a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#getCmykF)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 /// @param c float*
 /// @param m float*
 /// @param y float*
 /// @param k float*
 /// @param a float*
 ///
-void q_color_get_cmyk_f5(void* self, float* c, float* m, float* y, float* k, float* a);
+void q_color_get_cmyk_f5(const void* self, float* c, float* m, float* y, float* k, float* a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#setCmykF)
 ///
@@ -979,13 +979,13 @@ void q_color_set_cmyk_f5(void* self, float c, float m, float y, float k, float a
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#getHsl)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 /// @param h int*
 /// @param s int*
 /// @param l int*
 /// @param a int*
 ///
-void q_color_get_hsl4(void* self, int* h, int* s, int* l, int* a);
+void q_color_get_hsl4(const void* self, int* h, int* s, int* l, int* a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#setHsl)
 ///
@@ -999,13 +999,13 @@ void q_color_set_hsl4(void* self, int h, int s, int l, int a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#getHslF)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 /// @param h float*
 /// @param s float*
 /// @param l float*
 /// @param a float*
 ///
-void q_color_get_hsl_f4(void* self, float* h, float* s, float* l, float* a);
+void q_color_get_hsl_f4(const void* self, float* h, float* s, float* l, float* a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#setHslF)
 ///
@@ -1102,17 +1102,17 @@ QColor* q_color_from_hsl_f4(float h, float s, float l, float a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#lighter)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 /// @param f int
 ///
-QColor* q_color_lighter1(void* self, int f);
+QColor* q_color_lighter1(const void* self, int f);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#darker)
 ///
-/// @param self QColor*
+/// @param self const QColor*
 /// @param f int
 ///
-QColor* q_color_darker1(void* self, int f);
+QColor* q_color_darker1(const void* self, int f);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#dtor.QColor)
 ///

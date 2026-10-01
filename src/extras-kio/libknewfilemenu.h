@@ -18,26 +18,26 @@ KNewFileMenu* k_newfilemenu_new(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-const QMetaObject* k_newfilemenu_meta_object(void* self);
+const QMetaObject* k_newfilemenu_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KNewFileMenu*
-/// @param callback const QMetaObject* func()
+/// @param self const KNewFileMenu*
+/// @param callback const QMetaObject* func(const KNewFileMenu* self)
 ///
-void k_newfilemenu_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_newfilemenu_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-const QMetaObject* k_newfilemenu_super_meta_object(void* self);
+const QMetaObject* k_newfilemenu_super_meta_object(const void* self);
 
 /// @param self KNewFileMenu*
 /// @param param1 const char*
@@ -91,9 +91,9 @@ const char* k_newfilemenu_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/knewfilemenu.html#isModal)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-bool k_newfilemenu_is_modal(void* self);
+bool k_newfilemenu_is_modal(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knewfilemenu.html#setModal)
 ///
@@ -114,13 +114,13 @@ void k_newfilemenu_set_parent_widget(void* self, void* parentWidget);
 /// @param self KNewFileMenu*
 /// @param directory QUrl*
 ///
-void k_newfilemenu_set_working_directory(void* self, void* directory);
+void k_newfilemenu_set_working_directory(void* self, const void* directory);
 
 /// [Upstream resources](https://api.kde.org/knewfilemenu.html#workingDirectory)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-QUrl* k_newfilemenu_working_directory(void* self);
+QUrl* k_newfilemenu_working_directory(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knewfilemenu.html#setSupportedMimeTypes)
 ///
@@ -133,9 +133,9 @@ void k_newfilemenu_set_supported_mime_types(void* self, const char* mime[static 
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-const char** k_newfilemenu_supported_mime_types(void* self);
+const char** k_newfilemenu_supported_mime_types(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knewfilemenu.html#setSelectDirWhenAlreadyExist)
 ///
@@ -200,98 +200,98 @@ void k_newfilemenu_create_file(void* self);
 /// @param self KNewFileMenu*
 /// @param url QUrl*
 ///
-void k_newfilemenu_file_creation_started(void* self, void* url);
+void k_newfilemenu_file_creation_started(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/knewfilemenu.html#fileCreationStarted)
 ///
 /// @param self KNewFileMenu*
 /// @param callback void func(KNewFileMenu* self, QUrl* url)
 ///
-void k_newfilemenu_on_file_creation_started(void* self, void (*callback)(void*, void*));
+void k_newfilemenu_on_file_creation_started(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/knewfilemenu.html#fileCreated)
 ///
 /// @param self KNewFileMenu*
 /// @param url QUrl*
 ///
-void k_newfilemenu_file_created(void* self, void* url);
+void k_newfilemenu_file_created(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/knewfilemenu.html#fileCreated)
 ///
 /// @param self KNewFileMenu*
 /// @param callback void func(KNewFileMenu* self, QUrl* url)
 ///
-void k_newfilemenu_on_file_created(void* self, void (*callback)(void*, void*));
+void k_newfilemenu_on_file_created(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/knewfilemenu.html#fileCreationRejected)
 ///
 /// @param self KNewFileMenu*
 /// @param url QUrl*
 ///
-void k_newfilemenu_file_creation_rejected(void* self, void* url);
+void k_newfilemenu_file_creation_rejected(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/knewfilemenu.html#fileCreationRejected)
 ///
 /// @param self KNewFileMenu*
 /// @param callback void func(KNewFileMenu* self, QUrl* url)
 ///
-void k_newfilemenu_on_file_creation_rejected(void* self, void (*callback)(void*, void*));
+void k_newfilemenu_on_file_creation_rejected(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/knewfilemenu.html#directoryCreationStarted)
 ///
 /// @param self KNewFileMenu*
 /// @param url QUrl*
 ///
-void k_newfilemenu_directory_creation_started(void* self, void* url);
+void k_newfilemenu_directory_creation_started(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/knewfilemenu.html#directoryCreationStarted)
 ///
 /// @param self KNewFileMenu*
 /// @param callback void func(KNewFileMenu* self, QUrl* url)
 ///
-void k_newfilemenu_on_directory_creation_started(void* self, void (*callback)(void*, void*));
+void k_newfilemenu_on_directory_creation_started(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/knewfilemenu.html#directoryCreated)
 ///
 /// @param self KNewFileMenu*
 /// @param url QUrl*
 ///
-void k_newfilemenu_directory_created(void* self, void* url);
+void k_newfilemenu_directory_created(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/knewfilemenu.html#directoryCreated)
 ///
 /// @param self KNewFileMenu*
 /// @param callback void func(KNewFileMenu* self, QUrl* url)
 ///
-void k_newfilemenu_on_directory_created(void* self, void (*callback)(void*, void*));
+void k_newfilemenu_on_directory_created(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/knewfilemenu.html#directoryCreationRejected)
 ///
 /// @param self KNewFileMenu*
 /// @param url QUrl*
 ///
-void k_newfilemenu_directory_creation_rejected(void* self, void* url);
+void k_newfilemenu_directory_creation_rejected(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/knewfilemenu.html#directoryCreationRejected)
 ///
 /// @param self KNewFileMenu*
 /// @param callback void func(KNewFileMenu* self, QUrl* url)
 ///
-void k_newfilemenu_on_directory_creation_rejected(void* self, void (*callback)(void*, void*));
+void k_newfilemenu_on_directory_creation_rejected(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/knewfilemenu.html#selectExistingDir)
 ///
 /// @param self KNewFileMenu*
 /// @param url QUrl*
 ///
-void k_newfilemenu_select_existing_dir(void* self, void* url);
+void k_newfilemenu_select_existing_dir(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/knewfilemenu.html#selectExistingDir)
 ///
 /// @param self KNewFileMenu*
 /// @param callback void func(KNewFileMenu* self, QUrl* url)
 ///
-void k_newfilemenu_on_select_existing_dir(void* self, void (*callback)(void*, void*));
+void k_newfilemenu_on_select_existing_dir(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/knewfilemenu.html#slotResult)
 ///
@@ -386,11 +386,11 @@ void k_newfilemenu_remove_action(void* self, void* action);
 ///
 /// [Upstream resources](https://api.kde.org/kactionmenu.html#popupMode)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
 /// @return enum QToolButton__ToolButtonPopupMode
 ///
-int32_t k_newfilemenu_popup_mode(void* self);
+int32_t k_newfilemenu_popup_mode(const void* self);
 
 /// Inherited from KActionMenu
 ///
@@ -414,9 +414,9 @@ void k_newfilemenu_set_default_widget(void* self, void* w);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#defaultWidget)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-QWidget* k_newfilemenu_default_widget(void* self);
+QWidget* k_newfilemenu_default_widget(const void* self);
 
 /// Inherited from QWidgetAction
 ///
@@ -440,11 +440,11 @@ void k_newfilemenu_release_widget(void* self, void* widget);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#associatedObjects)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_newfilemenu_associated_objects(void* self);
+libqt_list k_newfilemenu_associated_objects(const void* self);
 
 /// Inherited from QAction
 ///
@@ -459,9 +459,9 @@ void k_newfilemenu_set_action_group(void* self, void* group);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#actionGroup)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-QActionGroup* k_newfilemenu_action_group(void* self);
+QActionGroup* k_newfilemenu_action_group(const void* self);
 
 /// Inherited from QAction
 ///
@@ -470,15 +470,15 @@ QActionGroup* k_newfilemenu_action_group(void* self);
 /// @param self KNewFileMenu*
 /// @param icon QIcon*
 ///
-void k_newfilemenu_set_icon(void* self, void* icon);
+void k_newfilemenu_set_icon(void* self, const void* icon);
 
 /// Inherited from QAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#icon)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-QIcon* k_newfilemenu_icon(void* self);
+QIcon* k_newfilemenu_icon(const void* self);
 
 /// Inherited from QAction
 ///
@@ -495,9 +495,9 @@ void k_newfilemenu_set_text(void* self, const char* text);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-const char* k_newfilemenu_text(void* self);
+const char* k_newfilemenu_text(const void* self);
 
 /// Inherited from QAction
 ///
@@ -514,9 +514,9 @@ void k_newfilemenu_set_icon_text(void* self, const char* text);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-const char* k_newfilemenu_icon_text(void* self);
+const char* k_newfilemenu_icon_text(const void* self);
 
 /// Inherited from QAction
 ///
@@ -533,9 +533,9 @@ void k_newfilemenu_set_tool_tip(void* self, const char* tip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-const char* k_newfilemenu_tool_tip(void* self);
+const char* k_newfilemenu_tool_tip(const void* self);
 
 /// Inherited from QAction
 ///
@@ -552,9 +552,9 @@ void k_newfilemenu_set_status_tip(void* self, const char* statusTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-const char* k_newfilemenu_status_tip(void* self);
+const char* k_newfilemenu_status_tip(const void* self);
 
 /// Inherited from QAction
 ///
@@ -571,9 +571,9 @@ void k_newfilemenu_set_whats_this(void* self, const char* what);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-const char* k_newfilemenu_whats_this(void* self);
+const char* k_newfilemenu_whats_this(const void* self);
 
 /// Inherited from QAction
 ///
@@ -588,11 +588,11 @@ void k_newfilemenu_set_priority(void* self, int32_t priority);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#priority)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
 /// @return enum QAction__Priority
 ///
-int32_t k_newfilemenu_priority(void* self);
+int32_t k_newfilemenu_priority(const void* self);
 
 /// Inherited from QAction
 ///
@@ -607,9 +607,9 @@ void k_newfilemenu_set_separator(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isSeparator)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-bool k_newfilemenu_is_separator(void* self);
+bool k_newfilemenu_is_separator(const void* self);
 
 /// Inherited from QAction
 ///
@@ -618,15 +618,15 @@ bool k_newfilemenu_is_separator(void* self);
 /// @param self KNewFileMenu*
 /// @param shortcut QKeySequence*
 ///
-void k_newfilemenu_set_shortcut(void* self, void* shortcut);
+void k_newfilemenu_set_shortcut(void* self, const void* shortcut);
 
 /// Inherited from QAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#shortcut)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-QKeySequence* k_newfilemenu_shortcut(void* self);
+QKeySequence* k_newfilemenu_shortcut(const void* self);
 
 /// Inherited from QAction
 ///
@@ -650,11 +650,11 @@ void k_newfilemenu_set_shortcuts2(void* self, int32_t shortcuts);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#shortcuts)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
 /// @return libqt_list of QKeySequence*
 ///
-libqt_list k_newfilemenu_shortcuts(void* self);
+libqt_list k_newfilemenu_shortcuts(const void* self);
 
 /// Inherited from QAction
 ///
@@ -669,11 +669,11 @@ void k_newfilemenu_set_shortcut_context(void* self, int32_t context);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#shortcutContext)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
 /// @return enum Qt__ShortcutContext
 ///
-int32_t k_newfilemenu_shortcut_context(void* self);
+int32_t k_newfilemenu_shortcut_context(const void* self);
 
 /// Inherited from QAction
 ///
@@ -688,9 +688,9 @@ void k_newfilemenu_set_auto_repeat(void* self, bool autoRepeat);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#autoRepeat)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-bool k_newfilemenu_auto_repeat(void* self);
+bool k_newfilemenu_auto_repeat(const void* self);
 
 /// Inherited from QAction
 ///
@@ -699,15 +699,15 @@ bool k_newfilemenu_auto_repeat(void* self);
 /// @param self KNewFileMenu*
 /// @param font QFont*
 ///
-void k_newfilemenu_set_font(void* self, void* font);
+void k_newfilemenu_set_font(void* self, const void* font);
 
 /// Inherited from QAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#font)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-QFont* k_newfilemenu_font(void* self);
+QFont* k_newfilemenu_font(const void* self);
 
 /// Inherited from QAction
 ///
@@ -722,17 +722,17 @@ void k_newfilemenu_set_checkable(void* self, bool checkable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isCheckable)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-bool k_newfilemenu_is_checkable(void* self);
+bool k_newfilemenu_is_checkable(const void* self);
 
 /// Inherited from QAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#data)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-QVariant* k_newfilemenu_data(void* self);
+QVariant* k_newfilemenu_data(const void* self);
 
 /// Inherited from QAction
 ///
@@ -741,31 +741,31 @@ QVariant* k_newfilemenu_data(void* self);
 /// @param self KNewFileMenu*
 /// @param var QVariant*
 ///
-void k_newfilemenu_set_data(void* self, void* var);
+void k_newfilemenu_set_data(void* self, const void* var);
 
 /// Inherited from QAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isChecked)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-bool k_newfilemenu_is_checked(void* self);
+bool k_newfilemenu_is_checked(const void* self);
 
 /// Inherited from QAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isEnabled)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-bool k_newfilemenu_is_enabled(void* self);
+bool k_newfilemenu_is_enabled(const void* self);
 
 /// Inherited from QAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isVisible)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-bool k_newfilemenu_is_visible(void* self);
+bool k_newfilemenu_is_visible(const void* self);
 
 /// Inherited from QAction
 ///
@@ -789,11 +789,11 @@ void k_newfilemenu_set_menu_role(void* self, int32_t menuRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#menuRole)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
 /// @return enum QAction__MenuRole
 ///
-int32_t k_newfilemenu_menu_role(void* self);
+int32_t k_newfilemenu_menu_role(const void* self);
 
 /// Inherited from QAction
 ///
@@ -808,9 +808,9 @@ void k_newfilemenu_set_icon_visible_in_menu(void* self, bool visible);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isIconVisibleInMenu)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-bool k_newfilemenu_is_icon_visible_in_menu(void* self);
+bool k_newfilemenu_is_icon_visible_in_menu(const void* self);
 
 /// Inherited from QAction
 ///
@@ -825,9 +825,9 @@ void k_newfilemenu_set_shortcut_visible_in_context_menu(void* self, bool show);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isShortcutVisibleInContextMenu)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-bool k_newfilemenu_is_shortcut_visible_in_context_menu(void* self);
+bool k_newfilemenu_is_shortcut_visible_in_context_menu(const void* self);
 
 /// Inherited from QAction
 ///
@@ -1060,9 +1060,9 @@ void k_newfilemenu_on_triggered1(void* self, void (*callback)(void*, bool));
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-const char* k_newfilemenu_object_name(void* self);
+const char* k_newfilemenu_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1077,33 +1077,33 @@ void k_newfilemenu_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-bool k_newfilemenu_is_widget_type(void* self);
+bool k_newfilemenu_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-bool k_newfilemenu_is_window_type(void* self);
+bool k_newfilemenu_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-bool k_newfilemenu_is_quick_item_type(void* self);
+bool k_newfilemenu_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-bool k_newfilemenu_signals_blocked(void* self);
+bool k_newfilemenu_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1118,9 +1118,9 @@ bool k_newfilemenu_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-QThread* k_newfilemenu_thread(void* self);
+QThread* k_newfilemenu_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1171,11 +1171,11 @@ void k_newfilemenu_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_newfilemenu_children(void* self);
+libqt_list k_newfilemenu_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1213,7 +1213,7 @@ void k_newfilemenu_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_newfilemenu_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_newfilemenu_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1224,18 +1224,18 @@ QMetaObject__Connection* k_newfilemenu_connect(void* sender, const char* signal,
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_newfilemenu_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_newfilemenu_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_newfilemenu_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_newfilemenu_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1246,7 +1246,7 @@ QMetaObject__Connection* k_newfilemenu_connect3(void* self, void* sender, const 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_newfilemenu_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_newfilemenu_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1257,24 +1257,24 @@ bool k_newfilemenu_disconnect(void* sender, const char* signal, void* receiver, 
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_newfilemenu_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_newfilemenu_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-bool k_newfilemenu_disconnect3(void* self);
+bool k_newfilemenu_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 /// @param receiver QObject*
 ///
-bool k_newfilemenu_disconnect4(void* self, void* receiver);
+bool k_newfilemenu_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1282,23 +1282,23 @@ bool k_newfilemenu_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_newfilemenu_disconnect5(void* param1);
+bool k_newfilemenu_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-void k_newfilemenu_dump_object_tree(void* self);
+void k_newfilemenu_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-void k_newfilemenu_dump_object_info(void* self);
+void k_newfilemenu_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1308,16 +1308,16 @@ void k_newfilemenu_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_newfilemenu_set_property(void* self, const char* name, void* value);
+bool k_newfilemenu_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 /// @param name const char*
 ///
-QVariant* k_newfilemenu_property(void* self, const char* name);
+QVariant* k_newfilemenu_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1325,9 +1325,9 @@ QVariant* k_newfilemenu_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-const char** k_newfilemenu_dynamic_property_names(void* self);
+const char** k_newfilemenu_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1341,9 +1341,9 @@ QBindingStorage* k_newfilemenu_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-const QBindingStorage* k_newfilemenu_binding_storage2(void* self);
+const QBindingStorage* k_newfilemenu_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1366,18 +1366,18 @@ void k_newfilemenu_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-QObject* k_newfilemenu_parent(void* self);
+QObject* k_newfilemenu_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 /// @param classname const char*
 ///
-bool k_newfilemenu_inherits(void* self, const char* classname);
+bool k_newfilemenu_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1417,7 +1417,7 @@ int32_t k_newfilemenu_start_timer23(void* self, int64_t time, int32_t timerType)
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_newfilemenu_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_newfilemenu_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1429,59 +1429,59 @@ QMetaObject__Connection* k_newfilemenu_connect5(void* sender, const char* signal
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_newfilemenu_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_newfilemenu_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_newfilemenu_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_newfilemenu_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 /// @param signal const char*
 ///
-bool k_newfilemenu_disconnect1(void* self, const char* signal);
+bool k_newfilemenu_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KNewFileMenu*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_newfilemenu_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_newfilemenu_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_newfilemenu_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_newfilemenu_disconnect23(void* self, void* receiver, const char* member);
+bool k_newfilemenu_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KNewFileMenu*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_newfilemenu_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1743,7 +1743,7 @@ void k_newfilemenu_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self KNewFileMenu*
 /// @param signal QMetaMethod*
 ///
-void k_newfilemenu_connect_notify(void* self, void* signal);
+void k_newfilemenu_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1754,7 +1754,7 @@ void k_newfilemenu_connect_notify(void* self, void* signal);
 /// @param self KNewFileMenu*
 /// @param signal QMetaMethod*
 ///
-void k_newfilemenu_super_connect_notify(void* self, void* signal);
+void k_newfilemenu_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1765,7 +1765,7 @@ void k_newfilemenu_super_connect_notify(void* self, void* signal);
 /// @param self KNewFileMenu*
 /// @param callback void func(KNewFileMenu* self, QMetaMethod* signal)
 ///
-void k_newfilemenu_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_newfilemenu_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1776,7 +1776,7 @@ void k_newfilemenu_on_connect_notify(void* self, void (*callback)(void*, void*))
 /// @param self KNewFileMenu*
 /// @param signal QMetaMethod*
 ///
-void k_newfilemenu_disconnect_notify(void* self, void* signal);
+void k_newfilemenu_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1787,7 +1787,7 @@ void k_newfilemenu_disconnect_notify(void* self, void* signal);
 /// @param self KNewFileMenu*
 /// @param signal QMetaMethod*
 ///
-void k_newfilemenu_super_disconnect_notify(void* self, void* signal);
+void k_newfilemenu_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1798,7 +1798,7 @@ void k_newfilemenu_super_disconnect_notify(void* self, void* signal);
 /// @param self KNewFileMenu*
 /// @param callback void func(KNewFileMenu* self, QMetaMethod* signal)
 ///
-void k_newfilemenu_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_newfilemenu_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidgetAction
 ///
@@ -1806,11 +1806,11 @@ void k_newfilemenu_on_disconnect_notify(void* self, void (*callback)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
 /// @return libqt_list of QWidget*
 ///
-libqt_list k_newfilemenu_created_widgets(void* self);
+libqt_list k_newfilemenu_created_widgets(const void* self);
 
 /// Inherited from QWidgetAction
 ///
@@ -1818,11 +1818,11 @@ libqt_list k_newfilemenu_created_widgets(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
 /// @return libqt_list of QWidget*
 ///
-libqt_list k_newfilemenu_super_created_widgets(void* self);
+libqt_list k_newfilemenu_super_created_widgets(const void* self);
 
 /// Inherited from QWidgetAction
 ///
@@ -1830,10 +1830,10 @@ libqt_list k_newfilemenu_super_created_widgets(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNewFileMenu*
-/// @param callback libqt_list of QWidget* func()
+/// @param self const KNewFileMenu*
+/// @param callback libqt_list of QWidget* func(KNewFileMenu* self)
 ///
-void k_newfilemenu_on_created_widgets(void* self, libqt_list (*callback)());
+void k_newfilemenu_on_created_widgets(const void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1841,9 +1841,9 @@ void k_newfilemenu_on_created_widgets(void* self, libqt_list (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-QObject* k_newfilemenu_sender(void* self);
+QObject* k_newfilemenu_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1851,9 +1851,9 @@ QObject* k_newfilemenu_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-QObject* k_newfilemenu_super_sender(void* self);
+QObject* k_newfilemenu_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1861,10 +1861,10 @@ QObject* k_newfilemenu_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNewFileMenu*
-/// @param callback QObject* func()
+/// @param self const KNewFileMenu*
+/// @param callback QObject* func(KNewFileMenu* self)
 ///
-void k_newfilemenu_on_sender(void* self, QObject* (*callback)());
+void k_newfilemenu_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1872,9 +1872,9 @@ void k_newfilemenu_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-int32_t k_newfilemenu_sender_signal_index(void* self);
+int32_t k_newfilemenu_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1882,9 +1882,9 @@ int32_t k_newfilemenu_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 ///
-int32_t k_newfilemenu_super_sender_signal_index(void* self);
+int32_t k_newfilemenu_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1892,10 +1892,10 @@ int32_t k_newfilemenu_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNewFileMenu*
-/// @param callback int32_t func()
+/// @param self const KNewFileMenu*
+/// @param callback int32_t func(KNewFileMenu* self)
 ///
-void k_newfilemenu_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_newfilemenu_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1903,10 +1903,10 @@ void k_newfilemenu_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 /// @param signal const char*
 ///
-int32_t k_newfilemenu_receivers(void* self, const char* signal);
+int32_t k_newfilemenu_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1914,10 +1914,10 @@ int32_t k_newfilemenu_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 /// @param signal const char*
 ///
-int32_t k_newfilemenu_super_receivers(void* self, const char* signal);
+int32_t k_newfilemenu_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1925,10 +1925,10 @@ int32_t k_newfilemenu_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 /// @param callback int32_t func(KNewFileMenu* self, const char* signal)
 ///
-void k_newfilemenu_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_newfilemenu_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1936,10 +1936,10 @@ void k_newfilemenu_on_receivers(void* self, int32_t (*callback)(void*, const cha
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 /// @param signal QMetaMethod*
 ///
-bool k_newfilemenu_is_signal_connected(void* self, void* signal);
+bool k_newfilemenu_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1947,10 +1947,10 @@ bool k_newfilemenu_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 /// @param signal QMetaMethod*
 ///
-bool k_newfilemenu_super_is_signal_connected(void* self, void* signal);
+bool k_newfilemenu_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1958,10 +1958,10 @@ bool k_newfilemenu_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNewFileMenu*
+/// @param self const KNewFileMenu*
 /// @param callback bool func(KNewFileMenu* self, QMetaMethod* signal)
 ///
-void k_newfilemenu_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_newfilemenu_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

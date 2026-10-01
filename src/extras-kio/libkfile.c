@@ -1,7 +1,7 @@
 #include "libkfile.hpp"
 #include "libkfile.h"
 
-KFile* k_file_new(void* other) {
+KFile* k_file_new(const void* other) {
     return KFile_New((KFile*)other);
 }
 

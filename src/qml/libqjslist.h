@@ -14,7 +14,7 @@
 ///
 /// @param other QJSListIndexClamp*
 ///
-QJSListIndexClamp* q_jslistindexclamp_new(void* other);
+QJSListIndexClamp* q_jslistindexclamp_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjslistindexclamp.html)
 
@@ -30,7 +30,7 @@ QJSListIndexClamp* q_jslistindexclamp_new2(void* other);
 ///
 /// @param param1 QJSListIndexClamp*
 ///
-QJSListIndexClamp* q_jslistindexclamp_new3(void* param1);
+QJSListIndexClamp* q_jslistindexclamp_new3(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjslistindexclamp.html)
 
@@ -64,7 +64,7 @@ intptr_t q_jslistindexclamp_clamp(intptr_t start, intptr_t max);
 /// @param self QJSListIndexClamp*
 /// @param param1 QJSListIndexClamp*
 ///
-void q_jslistindexclamp_operator_assign(void* self, void* param1);
+void q_jslistindexclamp_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjslistindexclamp.html#clamp)
 ///
@@ -86,9 +86,9 @@ void q_jslistindexclamp_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjslistforiniterator.html#hasNext)
 ///
-/// @param self QJSListForInIterator*
+/// @param self const QJSListForInIterator*
 ///
-bool q_jslistforiniterator_has_next(void* self);
+bool q_jslistforiniterator_has_next(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjslistforiniterator.html#next)
 ///

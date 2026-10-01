@@ -14,34 +14,34 @@
 ///
 /// @param param1 KIO__WorkerResult*
 ///
-KIO__WorkerResult* k_io__workerresult_new(void* param1);
+KIO__WorkerResult* k_io__workerresult_new(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kio-workerresult.html#operator-eq)
 ///
 /// @param self KIO__WorkerResult*
 /// @param param1 KIO__WorkerResult*
 ///
-void k_io__workerresult_operator_assign(void* self, void* param1);
+void k_io__workerresult_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kio-workerresult.html#success)
 ///
-/// @param self KIO__WorkerResult*
+/// @param self const KIO__WorkerResult*
 ///
-bool k_io__workerresult_success(void* self);
+bool k_io__workerresult_success(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-workerresult.html#error)
 ///
-/// @param self KIO__WorkerResult*
+/// @param self const KIO__WorkerResult*
 ///
-int32_t k_io__workerresult_error(void* self);
+int32_t k_io__workerresult_error(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-workerresult.html#errorString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__WorkerResult*
+/// @param self const KIO__WorkerResult*
 ///
-const char* k_io__workerresult_error_string(void* self);
+const char* k_io__workerresult_error_string(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-workerresult.html#fail)
 ///
@@ -118,7 +118,7 @@ void k_io__workerbase_worker_status(void* self, const char* host, bool connected
 /// @param self KIO__WorkerBase*
 /// @param _entry KIO__UDSEntry*
 ///
-void k_io__workerbase_stat_entry(void* self, void* _entry);
+void k_io__workerbase_stat_entry(void* self, const void* _entry);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#listEntries)
 ///
@@ -187,7 +187,7 @@ void k_io__workerbase_speed(void* self, uintptr_t _bytes_per_second);
 /// @param self KIO__WorkerBase*
 /// @param _url QUrl*
 ///
-void k_io__workerbase_redirection(void* self, void* _url);
+void k_io__workerbase_redirection(void* self, const void* _url);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#errorPage)
 ///
@@ -249,25 +249,25 @@ void k_io__workerbase_set_meta_data(void* self, const char* key, const char* val
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#hasMetaData)
 ///
-/// @param self KIO__WorkerBase*
+/// @param self const KIO__WorkerBase*
 /// @param key const char*
 ///
-bool k_io__workerbase_has_meta_data(void* self, const char* key);
+bool k_io__workerbase_has_meta_data(const void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#metaData)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__WorkerBase*
+/// @param self const KIO__WorkerBase*
 /// @param key const char*
 ///
-const char* k_io__workerbase_meta_data(void* self, const char* key);
+const char* k_io__workerbase_meta_data(const void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#allMetaData)
 ///
-/// @param self KIO__WorkerBase*
+/// @param self const KIO__WorkerBase*
 ///
-KIO__MetaData* k_io__workerbase_all_meta_data(void* self);
+KIO__MetaData* k_io__workerbase_all_meta_data(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#mapConfig)
 ///
@@ -283,36 +283,36 @@ KIO__MetaData* k_io__workerbase_all_meta_data(void* self);
 /// free(map.values);
 /// ```
 ///
-/// @param self KIO__WorkerBase*
+/// @param self const KIO__WorkerBase*
 ///
 /// @return libqt_map of const char* to QVariant*
 ///
-libqt_map k_io__workerbase_map_config(void* self);
+libqt_map k_io__workerbase_map_config(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#configValue)
 ///
-/// @param self KIO__WorkerBase*
+/// @param self const KIO__WorkerBase*
 /// @param key const char*
 /// @param defaultValue bool
 ///
-bool k_io__workerbase_config_value(void* self, const char* key, bool defaultValue);
+bool k_io__workerbase_config_value(const void* self, const char* key, bool defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#configValue)
 ///
-/// @param self KIO__WorkerBase*
+/// @param self const KIO__WorkerBase*
 /// @param key const char*
 /// @param defaultValue int
 ///
-int32_t k_io__workerbase_config_value2(void* self, const char* key, int defaultValue);
+int32_t k_io__workerbase_config_value2(const void* self, const char* key, int defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#configValue)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__WorkerBase*
+/// @param self const KIO__WorkerBase*
 /// @param key const char*
 ///
-const char* k_io__workerbase_config_value3(void* self, const char* key);
+const char* k_io__workerbase_config_value3(const void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#config)
 ///
@@ -337,9 +337,9 @@ void k_io__workerbase_app_connection_made(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KIO__WorkerBase*
-/// @param callback void func()
+/// @param callback void func(KIO__WorkerBase* self)
 ///
-void k_io__workerbase_on_app_connection_made(void* self, void (*callback)());
+void k_io__workerbase_on_app_connection_made(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#appConnectionMade)
 ///
@@ -391,11 +391,11 @@ KIO__WorkerResult* k_io__workerbase_open_connection(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KIO__WorkerBase*
-/// @param callback KIO__WorkerResult* func()
+/// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_io__workerbase_on_open_connection(void* self, KIO__WorkerResult* (*callback)());
+void k_io__workerbase_on_open_connection(void* self, KIO__WorkerResult* (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#openConnection)
 ///
@@ -416,9 +416,9 @@ void k_io__workerbase_close_connection(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KIO__WorkerBase*
-/// @param callback void func()
+/// @param callback void func(KIO__WorkerBase* self)
 ///
-void k_io__workerbase_on_close_connection(void* self, void (*callback)());
+void k_io__workerbase_on_close_connection(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#closeConnection)
 ///
@@ -433,7 +433,7 @@ void k_io__workerbase_super_close_connection(void* self);
 /// @param self KIO__WorkerBase*
 /// @param url QUrl*
 ///
-KIO__WorkerResult* k_io__workerbase_get(void* self, void* url);
+KIO__WorkerResult* k_io__workerbase_get(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#get)
 ///
@@ -444,7 +444,7 @@ KIO__WorkerResult* k_io__workerbase_get(void* self, void* url);
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_io__workerbase_on_get(void* self, KIO__WorkerResult* (*callback)(void*, void*));
+void k_io__workerbase_on_get(void* self, KIO__WorkerResult* (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#get)
 ///
@@ -453,7 +453,7 @@ void k_io__workerbase_on_get(void* self, KIO__WorkerResult* (*callback)(void*, v
 /// @param self KIO__WorkerBase*
 /// @param url QUrl*
 ///
-KIO__WorkerResult* k_io__workerbase_super_get(void* self, void* url);
+KIO__WorkerResult* k_io__workerbase_super_get(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#open)
 ///
@@ -461,7 +461,7 @@ KIO__WorkerResult* k_io__workerbase_super_get(void* self, void* url);
 /// @param url QUrl*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 ///
-KIO__WorkerResult* k_io__workerbase_open(void* self, void* url, int32_t mode);
+KIO__WorkerResult* k_io__workerbase_open(void* self, const void* url, int32_t mode);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#open)
 ///
@@ -472,7 +472,7 @@ KIO__WorkerResult* k_io__workerbase_open(void* self, void* url, int32_t mode);
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_io__workerbase_on_open(void* self, KIO__WorkerResult* (*callback)(void*, void*, int32_t));
+void k_io__workerbase_on_open(void* self, KIO__WorkerResult* (*callback)(void*, const void*, int32_t));
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#open)
 ///
@@ -482,7 +482,7 @@ void k_io__workerbase_on_open(void* self, KIO__WorkerResult* (*callback)(void*, 
 /// @param url QUrl*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 ///
-KIO__WorkerResult* k_io__workerbase_super_open(void* self, void* url, int32_t mode);
+KIO__WorkerResult* k_io__workerbase_super_open(void* self, const void* url, int32_t mode);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#read)
 ///
@@ -603,11 +603,11 @@ KIO__WorkerResult* k_io__workerbase_close(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KIO__WorkerBase*
-/// @param callback KIO__WorkerResult* func()
+/// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_io__workerbase_on_close(void* self, KIO__WorkerResult* (*callback)());
+void k_io__workerbase_on_close(void* self, KIO__WorkerResult* (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#close)
 ///
@@ -624,7 +624,7 @@ KIO__WorkerResult* k_io__workerbase_super_close(void* self);
 /// @param permissions int
 /// @param flags flag of enum KIO__JobFlag
 ///
-KIO__WorkerResult* k_io__workerbase_put(void* self, void* url, int permissions, int32_t flags);
+KIO__WorkerResult* k_io__workerbase_put(void* self, const void* url, int permissions, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#put)
 ///
@@ -635,7 +635,7 @@ KIO__WorkerResult* k_io__workerbase_put(void* self, void* url, int permissions, 
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_io__workerbase_on_put(void* self, KIO__WorkerResult* (*callback)(void*, void*, int, int32_t));
+void k_io__workerbase_on_put(void* self, KIO__WorkerResult* (*callback)(void*, const void*, int, int32_t));
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#put)
 ///
@@ -646,14 +646,14 @@ void k_io__workerbase_on_put(void* self, KIO__WorkerResult* (*callback)(void*, v
 /// @param permissions int
 /// @param flags flag of enum KIO__JobFlag
 ///
-KIO__WorkerResult* k_io__workerbase_super_put(void* self, void* url, int permissions, int32_t flags);
+KIO__WorkerResult* k_io__workerbase_super_put(void* self, const void* url, int permissions, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#stat)
 ///
 /// @param self KIO__WorkerBase*
 /// @param url QUrl*
 ///
-KIO__WorkerResult* k_io__workerbase_stat(void* self, void* url);
+KIO__WorkerResult* k_io__workerbase_stat(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#stat)
 ///
@@ -664,7 +664,7 @@ KIO__WorkerResult* k_io__workerbase_stat(void* self, void* url);
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_io__workerbase_on_stat(void* self, KIO__WorkerResult* (*callback)(void*, void*));
+void k_io__workerbase_on_stat(void* self, KIO__WorkerResult* (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#stat)
 ///
@@ -673,14 +673,14 @@ void k_io__workerbase_on_stat(void* self, KIO__WorkerResult* (*callback)(void*, 
 /// @param self KIO__WorkerBase*
 /// @param url QUrl*
 ///
-KIO__WorkerResult* k_io__workerbase_super_stat(void* self, void* url);
+KIO__WorkerResult* k_io__workerbase_super_stat(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#mimetype)
 ///
 /// @param self KIO__WorkerBase*
 /// @param url QUrl*
 ///
-KIO__WorkerResult* k_io__workerbase_mimetype(void* self, void* url);
+KIO__WorkerResult* k_io__workerbase_mimetype(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#mimetype)
 ///
@@ -691,7 +691,7 @@ KIO__WorkerResult* k_io__workerbase_mimetype(void* self, void* url);
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_io__workerbase_on_mimetype(void* self, KIO__WorkerResult* (*callback)(void*, void*));
+void k_io__workerbase_on_mimetype(void* self, KIO__WorkerResult* (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#mimetype)
 ///
@@ -700,14 +700,14 @@ void k_io__workerbase_on_mimetype(void* self, KIO__WorkerResult* (*callback)(voi
 /// @param self KIO__WorkerBase*
 /// @param url QUrl*
 ///
-KIO__WorkerResult* k_io__workerbase_super_mimetype(void* self, void* url);
+KIO__WorkerResult* k_io__workerbase_super_mimetype(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#listDir)
 ///
 /// @param self KIO__WorkerBase*
 /// @param url QUrl*
 ///
-KIO__WorkerResult* k_io__workerbase_list_dir(void* self, void* url);
+KIO__WorkerResult* k_io__workerbase_list_dir(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#listDir)
 ///
@@ -718,7 +718,7 @@ KIO__WorkerResult* k_io__workerbase_list_dir(void* self, void* url);
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_io__workerbase_on_list_dir(void* self, KIO__WorkerResult* (*callback)(void*, void*));
+void k_io__workerbase_on_list_dir(void* self, KIO__WorkerResult* (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#listDir)
 ///
@@ -727,7 +727,7 @@ void k_io__workerbase_on_list_dir(void* self, KIO__WorkerResult* (*callback)(voi
 /// @param self KIO__WorkerBase*
 /// @param url QUrl*
 ///
-KIO__WorkerResult* k_io__workerbase_super_list_dir(void* self, void* url);
+KIO__WorkerResult* k_io__workerbase_super_list_dir(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#mkdir)
 ///
@@ -735,7 +735,7 @@ KIO__WorkerResult* k_io__workerbase_super_list_dir(void* self, void* url);
 /// @param url QUrl*
 /// @param permissions int
 ///
-KIO__WorkerResult* k_io__workerbase_mkdir(void* self, void* url, int permissions);
+KIO__WorkerResult* k_io__workerbase_mkdir(void* self, const void* url, int permissions);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#mkdir)
 ///
@@ -746,7 +746,7 @@ KIO__WorkerResult* k_io__workerbase_mkdir(void* self, void* url, int permissions
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_io__workerbase_on_mkdir(void* self, KIO__WorkerResult* (*callback)(void*, void*, int));
+void k_io__workerbase_on_mkdir(void* self, KIO__WorkerResult* (*callback)(void*, const void*, int));
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#mkdir)
 ///
@@ -756,7 +756,7 @@ void k_io__workerbase_on_mkdir(void* self, KIO__WorkerResult* (*callback)(void*,
 /// @param url QUrl*
 /// @param permissions int
 ///
-KIO__WorkerResult* k_io__workerbase_super_mkdir(void* self, void* url, int permissions);
+KIO__WorkerResult* k_io__workerbase_super_mkdir(void* self, const void* url, int permissions);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#rename)
 ///
@@ -765,7 +765,7 @@ KIO__WorkerResult* k_io__workerbase_super_mkdir(void* self, void* url, int permi
 /// @param dest QUrl*
 /// @param flags flag of enum KIO__JobFlag
 ///
-KIO__WorkerResult* k_io__workerbase_rename(void* self, void* src, void* dest, int32_t flags);
+KIO__WorkerResult* k_io__workerbase_rename(void* self, const void* src, const void* dest, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#rename)
 ///
@@ -776,7 +776,7 @@ KIO__WorkerResult* k_io__workerbase_rename(void* self, void* src, void* dest, in
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_io__workerbase_on_rename(void* self, KIO__WorkerResult* (*callback)(void*, void*, void*, int32_t));
+void k_io__workerbase_on_rename(void* self, KIO__WorkerResult* (*callback)(void*, const void*, const void*, int32_t));
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#rename)
 ///
@@ -787,7 +787,7 @@ void k_io__workerbase_on_rename(void* self, KIO__WorkerResult* (*callback)(void*
 /// @param dest QUrl*
 /// @param flags flag of enum KIO__JobFlag
 ///
-KIO__WorkerResult* k_io__workerbase_super_rename(void* self, void* src, void* dest, int32_t flags);
+KIO__WorkerResult* k_io__workerbase_super_rename(void* self, const void* src, const void* dest, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#symlink)
 ///
@@ -796,7 +796,7 @@ KIO__WorkerResult* k_io__workerbase_super_rename(void* self, void* src, void* de
 /// @param dest QUrl*
 /// @param flags flag of enum KIO__JobFlag
 ///
-KIO__WorkerResult* k_io__workerbase_symlink(void* self, const char* target, void* dest, int32_t flags);
+KIO__WorkerResult* k_io__workerbase_symlink(void* self, const char* target, const void* dest, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#symlink)
 ///
@@ -807,7 +807,7 @@ KIO__WorkerResult* k_io__workerbase_symlink(void* self, const char* target, void
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_io__workerbase_on_symlink(void* self, KIO__WorkerResult* (*callback)(void*, const char*, void*, int32_t));
+void k_io__workerbase_on_symlink(void* self, KIO__WorkerResult* (*callback)(void*, const char*, const void*, int32_t));
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#symlink)
 ///
@@ -818,7 +818,7 @@ void k_io__workerbase_on_symlink(void* self, KIO__WorkerResult* (*callback)(void
 /// @param dest QUrl*
 /// @param flags flag of enum KIO__JobFlag
 ///
-KIO__WorkerResult* k_io__workerbase_super_symlink(void* self, const char* target, void* dest, int32_t flags);
+KIO__WorkerResult* k_io__workerbase_super_symlink(void* self, const char* target, const void* dest, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#chmod)
 ///
@@ -826,7 +826,7 @@ KIO__WorkerResult* k_io__workerbase_super_symlink(void* self, const char* target
 /// @param url QUrl*
 /// @param permissions int
 ///
-KIO__WorkerResult* k_io__workerbase_chmod(void* self, void* url, int permissions);
+KIO__WorkerResult* k_io__workerbase_chmod(void* self, const void* url, int permissions);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#chmod)
 ///
@@ -837,7 +837,7 @@ KIO__WorkerResult* k_io__workerbase_chmod(void* self, void* url, int permissions
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_io__workerbase_on_chmod(void* self, KIO__WorkerResult* (*callback)(void*, void*, int));
+void k_io__workerbase_on_chmod(void* self, KIO__WorkerResult* (*callback)(void*, const void*, int));
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#chmod)
 ///
@@ -847,7 +847,7 @@ void k_io__workerbase_on_chmod(void* self, KIO__WorkerResult* (*callback)(void*,
 /// @param url QUrl*
 /// @param permissions int
 ///
-KIO__WorkerResult* k_io__workerbase_super_chmod(void* self, void* url, int permissions);
+KIO__WorkerResult* k_io__workerbase_super_chmod(void* self, const void* url, int permissions);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#chown)
 ///
@@ -856,7 +856,7 @@ KIO__WorkerResult* k_io__workerbase_super_chmod(void* self, void* url, int permi
 /// @param owner const char*
 /// @param group const char*
 ///
-KIO__WorkerResult* k_io__workerbase_chown(void* self, void* url, const char* owner, const char* group);
+KIO__WorkerResult* k_io__workerbase_chown(void* self, const void* url, const char* owner, const char* group);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#chown)
 ///
@@ -867,7 +867,7 @@ KIO__WorkerResult* k_io__workerbase_chown(void* self, void* url, const char* own
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_io__workerbase_on_chown(void* self, KIO__WorkerResult* (*callback)(void*, void*, const char*, const char*));
+void k_io__workerbase_on_chown(void* self, KIO__WorkerResult* (*callback)(void*, const void*, const char*, const char*));
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#chown)
 ///
@@ -878,7 +878,7 @@ void k_io__workerbase_on_chown(void* self, KIO__WorkerResult* (*callback)(void*,
 /// @param owner const char*
 /// @param group const char*
 ///
-KIO__WorkerResult* k_io__workerbase_super_chown(void* self, void* url, const char* owner, const char* group);
+KIO__WorkerResult* k_io__workerbase_super_chown(void* self, const void* url, const char* owner, const char* group);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#setModificationTime)
 ///
@@ -886,7 +886,7 @@ KIO__WorkerResult* k_io__workerbase_super_chown(void* self, void* url, const cha
 /// @param url QUrl*
 /// @param mtime QDateTime*
 ///
-KIO__WorkerResult* k_io__workerbase_set_modification_time(void* self, void* url, void* mtime);
+KIO__WorkerResult* k_io__workerbase_set_modification_time(void* self, const void* url, const void* mtime);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#setModificationTime)
 ///
@@ -897,7 +897,7 @@ KIO__WorkerResult* k_io__workerbase_set_modification_time(void* self, void* url,
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_io__workerbase_on_set_modification_time(void* self, KIO__WorkerResult* (*callback)(void*, void*, void*));
+void k_io__workerbase_on_set_modification_time(void* self, KIO__WorkerResult* (*callback)(void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#setModificationTime)
 ///
@@ -907,7 +907,7 @@ void k_io__workerbase_on_set_modification_time(void* self, KIO__WorkerResult* (*
 /// @param url QUrl*
 /// @param mtime QDateTime*
 ///
-KIO__WorkerResult* k_io__workerbase_super_set_modification_time(void* self, void* url, void* mtime);
+KIO__WorkerResult* k_io__workerbase_super_set_modification_time(void* self, const void* url, const void* mtime);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#copy)
 ///
@@ -917,7 +917,7 @@ KIO__WorkerResult* k_io__workerbase_super_set_modification_time(void* self, void
 /// @param permissions int
 /// @param flags flag of enum KIO__JobFlag
 ///
-KIO__WorkerResult* k_io__workerbase_copy(void* self, void* src, void* dest, int permissions, int32_t flags);
+KIO__WorkerResult* k_io__workerbase_copy(void* self, const void* src, const void* dest, int permissions, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#copy)
 ///
@@ -928,7 +928,7 @@ KIO__WorkerResult* k_io__workerbase_copy(void* self, void* src, void* dest, int 
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_io__workerbase_on_copy(void* self, KIO__WorkerResult* (*callback)(void*, void*, void*, int, int32_t));
+void k_io__workerbase_on_copy(void* self, KIO__WorkerResult* (*callback)(void*, const void*, const void*, int, int32_t));
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#copy)
 ///
@@ -940,7 +940,7 @@ void k_io__workerbase_on_copy(void* self, KIO__WorkerResult* (*callback)(void*, 
 /// @param permissions int
 /// @param flags flag of enum KIO__JobFlag
 ///
-KIO__WorkerResult* k_io__workerbase_super_copy(void* self, void* src, void* dest, int permissions, int32_t flags);
+KIO__WorkerResult* k_io__workerbase_super_copy(void* self, const void* src, const void* dest, int permissions, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#del)
 ///
@@ -948,7 +948,7 @@ KIO__WorkerResult* k_io__workerbase_super_copy(void* self, void* src, void* dest
 /// @param url QUrl*
 /// @param isfile bool
 ///
-KIO__WorkerResult* k_io__workerbase_del(void* self, void* url, bool isfile);
+KIO__WorkerResult* k_io__workerbase_del(void* self, const void* url, bool isfile);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#del)
 ///
@@ -959,7 +959,7 @@ KIO__WorkerResult* k_io__workerbase_del(void* self, void* url, bool isfile);
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_io__workerbase_on_del(void* self, KIO__WorkerResult* (*callback)(void*, void*, bool));
+void k_io__workerbase_on_del(void* self, KIO__WorkerResult* (*callback)(void*, const void*, bool));
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#del)
 ///
@@ -969,7 +969,7 @@ void k_io__workerbase_on_del(void* self, KIO__WorkerResult* (*callback)(void*, v
 /// @param url QUrl*
 /// @param isfile bool
 ///
-KIO__WorkerResult* k_io__workerbase_super_del(void* self, void* url, bool isfile);
+KIO__WorkerResult* k_io__workerbase_super_del(void* self, const void* url, bool isfile);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#special)
 ///
@@ -1003,7 +1003,7 @@ KIO__WorkerResult* k_io__workerbase_super_special(void* self, char* data);
 /// @param self KIO__WorkerBase*
 /// @param url QUrl*
 ///
-KIO__WorkerResult* k_io__workerbase_file_system_free_space(void* self, void* url);
+KIO__WorkerResult* k_io__workerbase_file_system_free_space(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#fileSystemFreeSpace)
 ///
@@ -1014,7 +1014,7 @@ KIO__WorkerResult* k_io__workerbase_file_system_free_space(void* self, void* url
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_io__workerbase_on_file_system_free_space(void* self, KIO__WorkerResult* (*callback)(void*, void*));
+void k_io__workerbase_on_file_system_free_space(void* self, KIO__WorkerResult* (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#fileSystemFreeSpace)
 ///
@@ -1023,7 +1023,7 @@ void k_io__workerbase_on_file_system_free_space(void* self, KIO__WorkerResult* (
 /// @param self KIO__WorkerBase*
 /// @param url QUrl*
 ///
-KIO__WorkerResult* k_io__workerbase_super_file_system_free_space(void* self, void* url);
+KIO__WorkerResult* k_io__workerbase_super_file_system_free_space(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#worker_status)
 ///
@@ -1036,9 +1036,9 @@ void k_io__workerbase_worker_status2(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KIO__WorkerBase*
-/// @param callback void func()
+/// @param callback void func(KIO__WorkerBase* self)
 ///
-void k_io__workerbase_on_worker_status2(void* self, void (*callback)());
+void k_io__workerbase_on_worker_status2(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#worker_status)
 ///
@@ -1059,9 +1059,9 @@ void k_io__workerbase_reparse_configuration(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KIO__WorkerBase*
-/// @param callback void func()
+/// @param callback void func(KIO__WorkerBase* self)
 ///
-void k_io__workerbase_on_reparse_configuration(void* self, void (*callback)());
+void k_io__workerbase_on_reparse_configuration(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#reparseConfiguration)
 ///
@@ -1114,7 +1114,7 @@ int32_t k_io__workerbase_read_data(void* self, char* buffer);
 /// @param self KIO__WorkerBase*
 /// @param entry KIO__UDSEntry*
 ///
-void k_io__workerbase_list_entry(void* self, void* entry);
+void k_io__workerbase_list_entry(void* self, const void* entry);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#connectWorker)
 ///
@@ -1148,7 +1148,7 @@ bool k_io__workerbase_check_cached_authentication(void* self, void* info);
 /// @param self KIO__WorkerBase*
 /// @param info KIO__AuthInfo*
 ///
-bool k_io__workerbase_cache_authentication(void* self, void* info);
+bool k_io__workerbase_cache_authentication(void* self, const void* info);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#waitForAnswer)
 ///
@@ -1173,9 +1173,9 @@ void k_io__workerbase_send_and_keep_meta_data(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#wasKilled)
 ///
-/// @param self KIO__WorkerBase*
+/// @param self const KIO__WorkerBase*
 ///
-bool k_io__workerbase_was_killed(void* self);
+bool k_io__workerbase_was_killed(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#lookupHost)
 ///
@@ -1212,7 +1212,7 @@ void k_io__workerbase_add_temporary_authorization(void* self, const char* action
 /// @param self KIO__WorkerBase*
 /// @param metaData KIO__MetaData*
 ///
-void k_io__workerbase_set_incoming_meta_data(void* self, void* metaData);
+void k_io__workerbase_set_incoming_meta_data(void* self, const void* metaData);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#messageBox)
 ///
@@ -1290,11 +1290,11 @@ int32_t k_io__workerbase_message_box6(void* self, const char* text, int32_t type
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__WorkerBase*
+/// @param self const KIO__WorkerBase*
 /// @param key const char*
 /// @param defaultValue const char*
 ///
-const char* k_io__workerbase_config_value22(void* self, const char* key, const char* defaultValue);
+const char* k_io__workerbase_config_value22(const void* self, const char* key, const char* defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#setTimeoutSpecialCommand)
 ///

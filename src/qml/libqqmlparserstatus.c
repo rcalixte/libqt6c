@@ -9,27 +9,19 @@ void q_qmlparserstatus_class_begin(void* self) {
     QQmlParserStatus_ClassBegin((QQmlParserStatus*)self);
 }
 
-void q_qmlparserstatus_on_class_begin(void* self, void (*callback)()) {
+void q_qmlparserstatus_on_class_begin(void* self, void (*callback)(void*)) {
     QQmlParserStatus_OnClassBegin((QQmlParserStatus*)self, (intptr_t)callback);
-}
-
-void q_qmlparserstatus_super_class_begin(void* self) {
-    QQmlParserStatus_SuperClassBegin((QQmlParserStatus*)self);
 }
 
 void q_qmlparserstatus_component_complete(void* self) {
     QQmlParserStatus_ComponentComplete((QQmlParserStatus*)self);
 }
 
-void q_qmlparserstatus_on_component_complete(void* self, void (*callback)()) {
+void q_qmlparserstatus_on_component_complete(void* self, void (*callback)(void*)) {
     QQmlParserStatus_OnComponentComplete((QQmlParserStatus*)self, (intptr_t)callback);
 }
 
-void q_qmlparserstatus_super_component_complete(void* self) {
-    QQmlParserStatus_SuperComponentComplete((QQmlParserStatus*)self);
-}
-
-void q_qmlparserstatus_operator_assign(void* self, void* param1) {
+void q_qmlparserstatus_operator_assign(void* self, const void* param1) {
     QQmlParserStatus_OperatorAssign((QQmlParserStatus*)self, (QQmlParserStatus*)param1);
 }
 

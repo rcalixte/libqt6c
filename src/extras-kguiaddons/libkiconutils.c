@@ -2,11 +2,11 @@
 #include "libkiconutils.hpp"
 #include "libkiconutils.h"
 
-QIcon* k_iconutils_add_overlay(void* icon, void* overlay, int32_t position) {
+QIcon* k_iconutils_add_overlay(const void* icon, const void* overlay, int32_t position) {
     return KIconUtils_AddOverlay((QIcon*)icon, (QIcon*)overlay, position);
 }
 
-QIcon* k_iconutils_add_overlays(void* icon, libqt_map /* of enum Qt__Corner to QIcon* */ overlays) {
+QIcon* k_iconutils_add_overlays(const void* icon, libqt_map /* of enum Qt__Corner to QIcon* */ overlays) {
     // Convert libqt_map to QHash<Qt::Corner,QIcon>
     libqt_map overlays_ret;
     overlays_ret.len = overlays.len;
@@ -35,7 +35,7 @@ QIcon* k_iconutils_add_overlays(void* icon, libqt_map /* of enum Qt__Corner to Q
     return _out;
 }
 
-QIcon* k_iconutils_add_overlays2(void* icon, const char* overlays[static 1]) {
+QIcon* k_iconutils_add_overlays2(const void* icon, const char* overlays[static 1]) {
     size_t overlays_len = libqt_strv_length(overlays);
     libqt_string* overlays_qstr = (libqt_string*)malloc(overlays_len * sizeof(libqt_string));
     if (overlays_qstr == NULL) {

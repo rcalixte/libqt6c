@@ -9,7 +9,7 @@ KSharedDataCache* k_shareddatacache_new2(const char* cacheName, uint32_t default
     return KSharedDataCache_New2(qstring(cacheName), defaultCacheSize, expectedItemSize);
 }
 
-int32_t k_shareddatacache_eviction_policy(void* self) {
+int32_t k_shareddatacache_eviction_policy(const void* self) {
     return KSharedDataCache_EvictionPolicy((KSharedDataCache*)self);
 }
 
@@ -29,19 +29,19 @@ void k_shareddatacache_delete_cache(const char* cacheName) {
     KSharedDataCache_DeleteCache(qstring(cacheName));
 }
 
-bool k_shareddatacache_contains(void* self, const char* key) {
+bool k_shareddatacache_contains(const void* self, const char* key) {
     return KSharedDataCache_Contains((KSharedDataCache*)self, qstring(key));
 }
 
-uint32_t k_shareddatacache_total_size(void* self) {
+uint32_t k_shareddatacache_total_size(const void* self) {
     return KSharedDataCache_TotalSize((KSharedDataCache*)self);
 }
 
-uint32_t k_shareddatacache_free_size(void* self) {
+uint32_t k_shareddatacache_free_size(const void* self) {
     return KSharedDataCache_FreeSize((KSharedDataCache*)self);
 }
 
-uint32_t k_shareddatacache_timestamp(void* self) {
+uint32_t k_shareddatacache_timestamp(const void* self) {
     return KSharedDataCache_Timestamp((KSharedDataCache*)self);
 }
 

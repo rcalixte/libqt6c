@@ -20,52 +20,52 @@ Attica__Config* k_attica__config_new();
 ///
 /// @param other Attica__Config*
 ///
-Attica__Config* k_attica__config_new2(void* other);
+Attica__Config* k_attica__config_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-config.html#operator-eq)
 ///
 /// @param self Attica__Config*
 /// @param other Attica__Config*
 ///
-void k_attica__config_operator_assign(void* self, void* other);
+void k_attica__config_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-config.html#contact)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Config*
+/// @param self const Attica__Config*
 ///
-const char* k_attica__config_contact(void* self);
+const char* k_attica__config_contact(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-config.html#host)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Config*
+/// @param self const Attica__Config*
 ///
-const char* k_attica__config_host(void* self);
+const char* k_attica__config_host(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-config.html#version)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Config*
+/// @param self const Attica__Config*
 ///
-const char* k_attica__config_version(void* self);
+const char* k_attica__config_version(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-config.html#ssl)
 ///
-/// @param self Attica__Config*
+/// @param self const Attica__Config*
 ///
-bool k_attica__config_ssl(void* self);
+bool k_attica__config_ssl(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-config.html#website)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Config*
+/// @param self const Attica__Config*
 ///
-const char* k_attica__config_website(void* self);
+const char* k_attica__config_website(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-config.html#setContact)
 ///
@@ -104,9 +104,9 @@ void k_attica__config_set_website(void* self, const char* website);
 
 /// [Upstream resources](https://api.kde.org/attica-config.html#isValid)
 ///
-/// @param self Attica__Config*
+/// @param self const Attica__Config*
 ///
-bool k_attica__config_is_valid(void* self);
+bool k_attica__config_is_valid(const void* self);
 
 /// Delete this object from C++ memory.
 ///

@@ -53,7 +53,7 @@ void QUiLoader_SetTranslationEnabled(QUiLoader* self, bool enabled);
 bool QUiLoader_IsTranslationEnabled(const QUiLoader* self);
 libqt_string QUiLoader_ErrorString(const QUiLoader* self);
 QWidget* QUiLoader_Load2(QUiLoader* self, QIODevice* device, QWidget* parentWidget);
-void QUiLoader_OnMetaObject(const QUiLoader* self, intptr_t slot);
+void QUiLoader_OnMetaObject(QUiLoader* self, intptr_t slot);
 QMetaObject* QUiLoader_SuperMetaObject(const QUiLoader* self);
 void QUiLoader_OnMetacast(QUiLoader* self, intptr_t slot);
 void* QUiLoader_SuperMetacast(QUiLoader* self, const char* param1);
@@ -89,17 +89,9 @@ void QUiLoader_DisconnectNotify(QUiLoader* self, const QMetaMethod* signal);
 void QUiLoader_OnDisconnectNotify(QUiLoader* self, intptr_t slot);
 void QUiLoader_SuperDisconnectNotify(QUiLoader* self, const QMetaMethod* signal);
 QObject* QUiLoader_Sender(const QUiLoader* self);
-void QUiLoader_OnSender(const QUiLoader* self, intptr_t slot);
-QObject* QUiLoader_SuperSender(const QUiLoader* self);
 int QUiLoader_SenderSignalIndex(const QUiLoader* self);
-void QUiLoader_OnSenderSignalIndex(const QUiLoader* self, intptr_t slot);
-int QUiLoader_SuperSenderSignalIndex(const QUiLoader* self);
 int QUiLoader_Receivers(const QUiLoader* self, const char* signal);
-void QUiLoader_OnReceivers(const QUiLoader* self, intptr_t slot);
-int QUiLoader_SuperReceivers(const QUiLoader* self, const char* signal);
 bool QUiLoader_IsSignalConnected(const QUiLoader* self, const QMetaMethod* signal);
-void QUiLoader_OnIsSignalConnected(const QUiLoader* self, intptr_t slot);
-bool QUiLoader_SuperIsSignalConnected(const QUiLoader* self, const QMetaMethod* signal);
 void QUiLoader_Delete(QUiLoader* self);
 
 #ifdef __cplusplus

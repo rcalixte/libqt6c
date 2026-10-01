@@ -35,43 +35,43 @@ bool k_archive_close(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KArchive*
+/// @param self const KArchive*
 ///
-const char* k_archive_error_string(void* self);
+const char* k_archive_error_string(const void* self);
 
 /// [Upstream resources](https://api.kde.org/karchive.html#isOpen)
 ///
-/// @param self KArchive*
+/// @param self const KArchive*
 ///
-bool k_archive_is_open(void* self);
+bool k_archive_is_open(const void* self);
 
 /// [Upstream resources](https://api.kde.org/karchive.html#mode)
 ///
-/// @param self KArchive*
+/// @param self const KArchive*
 ///
 /// @return flag of enum QIODeviceBase__OpenModeFlag
 ///
-int32_t k_archive_mode(void* self);
+int32_t k_archive_mode(const void* self);
 
 /// [Upstream resources](https://api.kde.org/karchive.html#device)
 ///
-/// @param self KArchive*
+/// @param self const KArchive*
 ///
-QIODevice* k_archive_device(void* self);
+QIODevice* k_archive_device(const void* self);
 
 /// [Upstream resources](https://api.kde.org/karchive.html#fileName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KArchive*
+/// @param self const KArchive*
 ///
-const char* k_archive_file_name(void* self);
+const char* k_archive_file_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/karchive.html#directory)
 ///
-/// @param self KArchive*
+/// @param self const KArchive*
 ///
-const KArchiveDirectory* k_archive_directory(void* self);
+const KArchiveDirectory* k_archive_directory(const void* self);
 
 /// [Upstream resources](https://api.kde.org/karchive.html#addLocalFile)
 ///
@@ -199,7 +199,7 @@ bool k_archive_write_dir4(void* self, const char* name, const char* user, const 
 /// @param perm mode_t
 /// @param atime QDateTime*
 ///
-bool k_archive_write_dir5(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime);
+bool k_archive_write_dir5(void* self, const char* name, const char* user, const char* group, mode_t perm, const void* atime);
 
 /// [Upstream resources](https://api.kde.org/karchive.html#writeDir)
 ///
@@ -211,7 +211,7 @@ bool k_archive_write_dir5(void* self, const char* name, const char* user, const 
 /// @param atime QDateTime*
 /// @param mtime QDateTime*
 ///
-bool k_archive_write_dir6(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime);
+bool k_archive_write_dir6(void* self, const char* name, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime);
 
 /// [Upstream resources](https://api.kde.org/karchive.html#writeDir)
 ///
@@ -224,7 +224,7 @@ bool k_archive_write_dir6(void* self, const char* name, const char* user, const 
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_archive_write_dir7(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_archive_write_dir7(void* self, const char* name, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime, const void* ctime);
 
 /// [Upstream resources](https://api.kde.org/karchive.html#writeSymLink)
 ///
@@ -266,7 +266,7 @@ bool k_archive_write_sym_link5(void* self, const char* name, const char* target,
 /// @param perm mode_t
 /// @param atime QDateTime*
 ///
-bool k_archive_write_sym_link6(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime);
+bool k_archive_write_sym_link6(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, const void* atime);
 
 /// [Upstream resources](https://api.kde.org/karchive.html#writeSymLink)
 ///
@@ -279,7 +279,7 @@ bool k_archive_write_sym_link6(void* self, const char* name, const char* target,
 /// @param atime QDateTime*
 /// @param mtime QDateTime*
 ///
-bool k_archive_write_sym_link7(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime);
+bool k_archive_write_sym_link7(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime);
 
 /// [Upstream resources](https://api.kde.org/karchive.html#writeSymLink)
 ///
@@ -293,7 +293,7 @@ bool k_archive_write_sym_link7(void* self, const char* name, const char* target,
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_archive_write_sym_link8(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_archive_write_sym_link8(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime, const void* ctime);
 
 /// [Upstream resources](https://api.kde.org/karchive.html#writeFile)
 ///
@@ -335,7 +335,7 @@ bool k_archive_write_file5(void* self, const char* name, char* data, mode_t perm
 /// @param group const char*
 /// @param atime QDateTime*
 ///
-bool k_archive_write_file6(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, void* atime);
+bool k_archive_write_file6(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, const void* atime);
 
 /// [Upstream resources](https://api.kde.org/karchive.html#writeFile)
 ///
@@ -348,7 +348,7 @@ bool k_archive_write_file6(void* self, const char* name, char* data, mode_t perm
 /// @param atime QDateTime*
 /// @param mtime QDateTime*
 ///
-bool k_archive_write_file7(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, void* atime, void* mtime);
+bool k_archive_write_file7(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, const void* atime, const void* mtime);
 
 /// [Upstream resources](https://api.kde.org/karchive.html#writeFile)
 ///
@@ -362,7 +362,7 @@ bool k_archive_write_file7(void* self, const char* name, char* data, mode_t perm
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_archive_write_file8(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, void* atime, void* mtime, void* ctime);
+bool k_archive_write_file8(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, const void* atime, const void* mtime, const void* ctime);
 
 /// [Upstream resources](https://api.kde.org/karchive.html#prepareWriting)
 ///
@@ -385,7 +385,7 @@ bool k_archive_prepare_writing5(void* self, const char* name, const char* user, 
 /// @param perm mode_t
 /// @param atime QDateTime*
 ///
-bool k_archive_prepare_writing6(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime);
+bool k_archive_prepare_writing6(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, const void* atime);
 
 /// [Upstream resources](https://api.kde.org/karchive.html#prepareWriting)
 ///
@@ -398,7 +398,7 @@ bool k_archive_prepare_writing6(void* self, const char* name, const char* user, 
 /// @param atime QDateTime*
 /// @param mtime QDateTime*
 ///
-bool k_archive_prepare_writing7(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime);
+bool k_archive_prepare_writing7(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, const void* atime, const void* mtime);
 
 /// [Upstream resources](https://api.kde.org/karchive.html#prepareWriting)
 ///
@@ -412,7 +412,7 @@ bool k_archive_prepare_writing7(void* self, const char* name, const char* user, 
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_archive_prepare_writing8(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_archive_prepare_writing8(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, const void* atime, const void* mtime, const void* ctime);
 
 /// [Upstream resources](https://api.kde.org/karchive.html#dtor.KArchive)
 ///

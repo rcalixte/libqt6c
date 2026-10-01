@@ -9,11 +9,11 @@ QOpenGLBuffer* q_openglbuffer_new2(int32_t type) {
     return QOpenGLBuffer_New2(type);
 }
 
-QOpenGLBuffer* q_openglbuffer_new3(void* other) {
+QOpenGLBuffer* q_openglbuffer_new3(const void* other) {
     return QOpenGLBuffer_New3((QOpenGLBuffer*)other);
 }
 
-void q_openglbuffer_operator_assign(void* self, void* other) {
+void q_openglbuffer_operator_assign(void* self, const void* other) {
     QOpenGLBuffer_OperatorAssign((QOpenGLBuffer*)self, (QOpenGLBuffer*)other);
 }
 
@@ -21,11 +21,11 @@ void q_openglbuffer_swap(void* self, void* other) {
     QOpenGLBuffer_Swap((QOpenGLBuffer*)self, (QOpenGLBuffer*)other);
 }
 
-int32_t q_openglbuffer_type(void* self) {
+int32_t q_openglbuffer_type(const void* self) {
     return QOpenGLBuffer_Type((QOpenGLBuffer*)self);
 }
 
-int32_t q_openglbuffer_usage_pattern(void* self) {
+int32_t q_openglbuffer_usage_pattern(const void* self) {
     return QOpenGLBuffer_UsagePattern((QOpenGLBuffer*)self);
 }
 
@@ -37,7 +37,7 @@ bool q_openglbuffer_create(void* self) {
     return QOpenGLBuffer_Create((QOpenGLBuffer*)self);
 }
 
-bool q_openglbuffer_is_created(void* self) {
+bool q_openglbuffer_is_created(const void* self) {
     return QOpenGLBuffer_IsCreated((QOpenGLBuffer*)self);
 }
 
@@ -57,11 +57,11 @@ void q_openglbuffer_release2(int32_t type) {
     QOpenGLBuffer_Release2(type);
 }
 
-uint32_t q_openglbuffer_buffer_id(void* self) {
+uint32_t q_openglbuffer_buffer_id(const void* self) {
     return QOpenGLBuffer_BufferId((QOpenGLBuffer*)self);
 }
 
-int32_t q_openglbuffer_size(void* self) {
+int32_t q_openglbuffer_size(const void* self) {
     return QOpenGLBuffer_Size((QOpenGLBuffer*)self);
 }
 

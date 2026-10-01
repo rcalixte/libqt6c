@@ -223,7 +223,7 @@ QUrl* k_emailaddress_encode_mailto_url(const char* mailbox);
 ///
 /// @param mailtoUrl QUrl*
 ///
-const char* k_emailaddress_decode_mailto_url(void* mailtoUrl);
+const char* k_emailaddress_decode_mailto_url(const void* mailtoUrl);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#public-types)
 

@@ -11,7 +11,7 @@ QOpenGLExtraFunctions* q_openglextrafunctions_new2(void* context) {
     return QOpenGLExtraFunctions_New2((QOpenGLContext*)context);
 }
 
-QOpenGLExtraFunctions* q_openglextrafunctions_new3(void* param1) {
+QOpenGLExtraFunctions* q_openglextrafunctions_new3(const void* param1) {
     return QOpenGLExtraFunctions_New3((QOpenGLExtraFunctions*)param1);
 }
 
@@ -819,11 +819,11 @@ void q_openglextrafunctions_gl_tex_storage3_d_multisample(void* self, uint32_t t
     QOpenGLExtraFunctions_GlTexStorage3DMultisample((QOpenGLExtraFunctions*)self, target, samples, internalformat, width, height, depth, fixedsamplelocations);
 }
 
-int32_t q_openglextrafunctions_open_g_l_features(void* self) {
+int32_t q_openglextrafunctions_open_g_l_features(const void* self) {
     return QOpenGLFunctions_OpenGLFeatures((QOpenGLFunctions*)self);
 }
 
-bool q_openglextrafunctions_has_open_g_l_feature(void* self, int32_t feature) {
+bool q_openglextrafunctions_has_open_g_l_feature(const void* self, int32_t feature) {
     return QOpenGLFunctions_HasOpenGLFeature((QOpenGLFunctions*)self, feature);
 }
 

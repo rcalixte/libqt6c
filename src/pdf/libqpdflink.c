@@ -8,11 +8,11 @@ QPdfLink* q_pdflink_new() {
     return QPdfLink_New();
 }
 
-QPdfLink* q_pdflink_new2(void* other) {
+QPdfLink* q_pdflink_new2(const void* other) {
     return QPdfLink_New2((QPdfLink*)other);
 }
 
-void q_pdflink_operator_assign(void* self, void* other) {
+void q_pdflink_operator_assign(void* self, const void* other) {
     QPdfLink_OperatorAssign((QPdfLink*)self, (QPdfLink*)other);
 }
 
@@ -20,57 +20,57 @@ void q_pdflink_swap(void* self, void* other) {
     QPdfLink_Swap((QPdfLink*)self, (QPdfLink*)other);
 }
 
-bool q_pdflink_is_valid(void* self) {
+bool q_pdflink_is_valid(const void* self) {
     return QPdfLink_IsValid((QPdfLink*)self);
 }
 
-int32_t q_pdflink_page(void* self) {
+int32_t q_pdflink_page(const void* self) {
     return QPdfLink_Page((QPdfLink*)self);
 }
 
-QPointF* q_pdflink_location(void* self) {
+QPointF* q_pdflink_location(const void* self) {
     return QPdfLink_Location((QPdfLink*)self);
 }
 
-double q_pdflink_zoom(void* self) {
+double q_pdflink_zoom(const void* self) {
     return QPdfLink_Zoom((QPdfLink*)self);
 }
 
-QUrl* q_pdflink_url(void* self) {
+QUrl* q_pdflink_url(const void* self) {
     return QPdfLink_Url((QPdfLink*)self);
 }
 
-const char* q_pdflink_context_before(void* self) {
+const char* q_pdflink_context_before(const void* self) {
     libqt_string _str = QPdfLink_ContextBefore((QPdfLink*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_pdflink_context_after(void* self) {
+const char* q_pdflink_context_after(const void* self) {
     libqt_string _str = QPdfLink_ContextAfter((QPdfLink*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-libqt_list /* of QRectF* */ q_pdflink_rectangles(void* self) {
+libqt_list /* of QRectF* */ q_pdflink_rectangles(const void* self) {
     libqt_list _arr = QPdfLink_Rectangles((QPdfLink*)self);
     return _arr;
 }
 
-const char* q_pdflink_to_string(void* self) {
+const char* q_pdflink_to_string(const void* self) {
     libqt_string _str = QPdfLink_ToString((QPdfLink*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_pdflink_copy_to_clipboard(void* self) {
+void q_pdflink_copy_to_clipboard(const void* self) {
     QPdfLink_CopyToClipboard((QPdfLink*)self);
 }
 
-void q_pdflink_copy_to_clipboard1(void* self, int32_t mode) {
+void q_pdflink_copy_to_clipboard1(const void* self, int32_t mode) {
     QPdfLink_CopyToClipboard1((QPdfLink*)self, mode);
 }
 

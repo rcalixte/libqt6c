@@ -27,9 +27,9 @@ QMessageLogContext* q_messagelogcontext_new2(const char* fileName, int lineNumbe
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessagelogcontext.html#version-var)
 ///
-/// @param self QMessageLogContext*
+/// @param self const QMessageLogContext*
 ///
-int32_t q_messagelogcontext_version(void* self);
+int32_t q_messagelogcontext_version(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessagelogcontext.html#version-var)
 ///
@@ -40,9 +40,9 @@ void q_messagelogcontext_set_version(void* self, int version);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessagelogcontext.html#line-var)
 ///
-/// @param self QMessageLogContext*
+/// @param self const QMessageLogContext*
 ///
-int32_t q_messagelogcontext_line(void* self);
+int32_t q_messagelogcontext_line(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessagelogcontext.html#line-var)
 ///
@@ -55,9 +55,9 @@ void q_messagelogcontext_set_line(void* self, int line);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QMessageLogContext*
+/// @param self const QMessageLogContext*
 ///
-const char* q_messagelogcontext_file(void* self);
+const char* q_messagelogcontext_file(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessagelogcontext.html#file-var)
 ///
@@ -70,9 +70,9 @@ void q_messagelogcontext_set_file(void* self, const char* file);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QMessageLogContext*
+/// @param self const QMessageLogContext*
 ///
-const char* q_messagelogcontext_function(void* self);
+const char* q_messagelogcontext_function(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessagelogcontext.html#function-var)
 ///
@@ -85,9 +85,9 @@ void q_messagelogcontext_set_function(void* self, const char* function);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QMessageLogContext*
+/// @param self const QMessageLogContext*
 ///
-const char* q_messagelogcontext_category(void* self);
+const char* q_messagelogcontext_category(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessagelogcontext.html#category-var)
 ///
@@ -133,109 +133,109 @@ QMessageLogger* q_messagelogger_new3(const char* file, int line, const char* fun
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessagelogger.html#debug)
 ///
-/// @param self QMessageLogger*
+/// @param self const QMessageLogger*
 ///
-QDebug* q_messagelogger_debug(void* self);
+QDebug* q_messagelogger_debug(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessagelogger.html#debug)
 ///
-/// @param self QMessageLogger*
+/// @param self const QMessageLogger*
 /// @param cat QLoggingCategory*
 ///
-QDebug* q_messagelogger_debug2(void* self, void* cat);
+QDebug* q_messagelogger_debug2(const void* self, const void* cat);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessagelogger.html#debug)
 ///
-/// @param self QMessageLogger*
+/// @param self const QMessageLogger*
 /// @param catFunc QLoggingCategory* func()
 ///
-QDebug* q_messagelogger_debug3(void* self, QLoggingCategory* (*catFunc)());
+QDebug* q_messagelogger_debug3(const void* self, QLoggingCategory* (*catFunc)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessagelogger.html#info)
 ///
-/// @param self QMessageLogger*
+/// @param self const QMessageLogger*
 ///
-QDebug* q_messagelogger_info(void* self);
+QDebug* q_messagelogger_info(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessagelogger.html#info)
 ///
-/// @param self QMessageLogger*
+/// @param self const QMessageLogger*
 /// @param cat QLoggingCategory*
 ///
-QDebug* q_messagelogger_info2(void* self, void* cat);
+QDebug* q_messagelogger_info2(const void* self, const void* cat);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessagelogger.html#info)
 ///
-/// @param self QMessageLogger*
+/// @param self const QMessageLogger*
 /// @param catFunc QLoggingCategory* func()
 ///
-QDebug* q_messagelogger_info3(void* self, QLoggingCategory* (*catFunc)());
+QDebug* q_messagelogger_info3(const void* self, QLoggingCategory* (*catFunc)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessagelogger.html#warning)
 ///
-/// @param self QMessageLogger*
+/// @param self const QMessageLogger*
 ///
-QDebug* q_messagelogger_warning(void* self);
+QDebug* q_messagelogger_warning(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessagelogger.html#warning)
 ///
-/// @param self QMessageLogger*
+/// @param self const QMessageLogger*
 /// @param cat QLoggingCategory*
 ///
-QDebug* q_messagelogger_warning2(void* self, void* cat);
+QDebug* q_messagelogger_warning2(const void* self, const void* cat);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessagelogger.html#warning)
 ///
-/// @param self QMessageLogger*
+/// @param self const QMessageLogger*
 /// @param catFunc QLoggingCategory* func()
 ///
-QDebug* q_messagelogger_warning3(void* self, QLoggingCategory* (*catFunc)());
+QDebug* q_messagelogger_warning3(const void* self, QLoggingCategory* (*catFunc)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessagelogger.html#critical)
 ///
-/// @param self QMessageLogger*
+/// @param self const QMessageLogger*
 ///
-QDebug* q_messagelogger_critical(void* self);
+QDebug* q_messagelogger_critical(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessagelogger.html#critical)
 ///
-/// @param self QMessageLogger*
+/// @param self const QMessageLogger*
 /// @param cat QLoggingCategory*
 ///
-QDebug* q_messagelogger_critical2(void* self, void* cat);
+QDebug* q_messagelogger_critical2(const void* self, const void* cat);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessagelogger.html#critical)
 ///
-/// @param self QMessageLogger*
+/// @param self const QMessageLogger*
 /// @param catFunc QLoggingCategory* func()
 ///
-QDebug* q_messagelogger_critical3(void* self, QLoggingCategory* (*catFunc)());
+QDebug* q_messagelogger_critical3(const void* self, QLoggingCategory* (*catFunc)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessagelogger.html#fatal)
 ///
-/// @param self QMessageLogger*
+/// @param self const QMessageLogger*
 ///
-QDebug* q_messagelogger_fatal(void* self);
+QDebug* q_messagelogger_fatal(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessagelogger.html#fatal)
 ///
-/// @param self QMessageLogger*
+/// @param self const QMessageLogger*
 /// @param cat QLoggingCategory*
 ///
-QDebug* q_messagelogger_fatal2(void* self, void* cat);
+QDebug* q_messagelogger_fatal2(const void* self, const void* cat);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessagelogger.html#fatal)
 ///
-/// @param self QMessageLogger*
+/// @param self const QMessageLogger*
 /// @param catFunc QLoggingCategory* func()
 ///
-QDebug* q_messagelogger_fatal3(void* self, QLoggingCategory* (*catFunc)());
+QDebug* q_messagelogger_fatal3(const void* self, QLoggingCategory* (*catFunc)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessagelogger.html#noDebug)
 ///
-/// @param self QMessageLogger*
+/// @param self const QMessageLogger*
 ///
-QNoDebug* q_messagelogger_no_debug(void* self);
+QNoDebug* q_messagelogger_no_debug(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessagelogger.html#dtor.QMessageLogger)
 ///

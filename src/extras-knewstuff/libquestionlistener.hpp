@@ -37,14 +37,13 @@ QMetaObject* KNSCore__QuestionListener_MetaObject(const KNSCore__QuestionListene
 void* KNSCore__QuestionListener_Metacast(KNSCore__QuestionListener* self, const char* param1);
 int KNSCore__QuestionListener_Metacall(KNSCore__QuestionListener* self, int param1, int param2, void** param3);
 void KNSCore__QuestionListener_AskQuestion(KNSCore__QuestionListener* self, KNSCore__Question* question);
-void KNSCore__QuestionListener_OnMetaObject(const KNSCore__QuestionListener* self, intptr_t slot);
+void KNSCore__QuestionListener_OnMetaObject(KNSCore__QuestionListener* self, intptr_t slot);
 QMetaObject* KNSCore__QuestionListener_SuperMetaObject(const KNSCore__QuestionListener* self);
 void KNSCore__QuestionListener_OnMetacast(KNSCore__QuestionListener* self, intptr_t slot);
 void* KNSCore__QuestionListener_SuperMetacast(KNSCore__QuestionListener* self, const char* param1);
 void KNSCore__QuestionListener_OnMetacall(KNSCore__QuestionListener* self, intptr_t slot);
 int KNSCore__QuestionListener_SuperMetacall(KNSCore__QuestionListener* self, int param1, int param2, void** param3);
 void KNSCore__QuestionListener_OnAskQuestion(KNSCore__QuestionListener* self, intptr_t slot);
-void KNSCore__QuestionListener_SuperAskQuestion(KNSCore__QuestionListener* self, KNSCore__Question* question);
 bool KNSCore__QuestionListener_Event(KNSCore__QuestionListener* self, QEvent* event);
 void KNSCore__QuestionListener_OnEvent(KNSCore__QuestionListener* self, intptr_t slot);
 bool KNSCore__QuestionListener_SuperEvent(KNSCore__QuestionListener* self, QEvent* event);
@@ -67,17 +66,9 @@ void KNSCore__QuestionListener_DisconnectNotify(KNSCore__QuestionListener* self,
 void KNSCore__QuestionListener_OnDisconnectNotify(KNSCore__QuestionListener* self, intptr_t slot);
 void KNSCore__QuestionListener_SuperDisconnectNotify(KNSCore__QuestionListener* self, const QMetaMethod* signal);
 QObject* KNSCore__QuestionListener_Sender(const KNSCore__QuestionListener* self);
-void KNSCore__QuestionListener_OnSender(const KNSCore__QuestionListener* self, intptr_t slot);
-QObject* KNSCore__QuestionListener_SuperSender(const KNSCore__QuestionListener* self);
 int KNSCore__QuestionListener_SenderSignalIndex(const KNSCore__QuestionListener* self);
-void KNSCore__QuestionListener_OnSenderSignalIndex(const KNSCore__QuestionListener* self, intptr_t slot);
-int KNSCore__QuestionListener_SuperSenderSignalIndex(const KNSCore__QuestionListener* self);
 int KNSCore__QuestionListener_Receivers(const KNSCore__QuestionListener* self, const char* signal);
-void KNSCore__QuestionListener_OnReceivers(const KNSCore__QuestionListener* self, intptr_t slot);
-int KNSCore__QuestionListener_SuperReceivers(const KNSCore__QuestionListener* self, const char* signal);
 bool KNSCore__QuestionListener_IsSignalConnected(const KNSCore__QuestionListener* self, const QMetaMethod* signal);
-void KNSCore__QuestionListener_OnIsSignalConnected(const KNSCore__QuestionListener* self, intptr_t slot);
-bool KNSCore__QuestionListener_SuperIsSignalConnected(const KNSCore__QuestionListener* self, const QMetaMethod* signal);
 void KNSCore__QuestionListener_Delete(KNSCore__QuestionListener* self);
 
 #ifdef __cplusplus

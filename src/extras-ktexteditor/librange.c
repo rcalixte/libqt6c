@@ -7,7 +7,7 @@ KTextEditor__Range* k_texteditor__range_new() {
     return KTextEditor__Range_New();
 }
 
-KTextEditor__Range* k_texteditor__range_new2(void* other) {
+KTextEditor__Range* k_texteditor__range_new2(const void* other) {
     return KTextEditor__Range_New2((KTextEditor__Range*)other);
 }
 
@@ -31,7 +31,7 @@ KTextEditor__Range* k_texteditor__range_new7(int startLine, int startColumn, int
     return KTextEditor__Range_New7(startLine, startColumn, endLine, endColumn);
 }
 
-KTextEditor__Range* k_texteditor__range_new8(void* param1) {
+KTextEditor__Range* k_texteditor__range_new8(const void* param1) {
     return KTextEditor__Range_New8((KTextEditor__Range*)param1);
 }
 
@@ -43,7 +43,7 @@ void k_texteditor__range_move_assign(void* self, void* other) {
     KTextEditor__Range_MoveAssign((KTextEditor__Range*)self, (KTextEditor__Range*)other);
 }
 
-bool k_texteditor__range_is_valid(void* self) {
+bool k_texteditor__range_is_valid(const void* self) {
     return KTextEditor__Range_IsValid((KTextEditor__Range*)self);
 }
 
@@ -51,7 +51,7 @@ KTextEditor__Range* k_texteditor__range_invalid() {
     return KTextEditor__Range_Invalid();
 }
 
-const char* k_texteditor__range_to_string(void* self) {
+const char* k_texteditor__range_to_string(const void* self) {
     libqt_string _str = KTextEditor__Range_ToString((KTextEditor__Range*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -62,15 +62,15 @@ KTextEditor__Range* k_texteditor__range_from_string(const char* str) {
     return KTextEditor__Range_FromString(qstring(str));
 }
 
-KTextEditor__Cursor* k_texteditor__range_start(void* self) {
+KTextEditor__Cursor* k_texteditor__range_start(const void* self) {
     return KTextEditor__Range_Start((KTextEditor__Range*)self);
 }
 
-KTextEditor__Cursor* k_texteditor__range_end(void* self) {
+KTextEditor__Cursor* k_texteditor__range_end(const void* self) {
     return KTextEditor__Range_End((KTextEditor__Range*)self);
 }
 
-KTextEditor__LineRange* k_texteditor__range_to_line_range(void* self) {
+KTextEditor__LineRange* k_texteditor__range_to_line_range(const void* self) {
     return KTextEditor__Range_ToLineRange((KTextEditor__Range*)self);
 }
 
@@ -106,59 +106,59 @@ bool k_texteditor__range_confine_to_range(void* self, void* range) {
     return KTextEditor__Range_ConfineToRange((KTextEditor__Range*)self, (KTextEditor__Range*)range);
 }
 
-bool k_texteditor__range_on_single_line(void* self) {
+bool k_texteditor__range_on_single_line(const void* self) {
     return KTextEditor__Range_OnSingleLine((KTextEditor__Range*)self);
 }
 
-int32_t k_texteditor__range_number_of_lines(void* self) {
+int32_t k_texteditor__range_number_of_lines(const void* self) {
     return KTextEditor__Range_NumberOfLines((KTextEditor__Range*)self);
 }
 
-int32_t k_texteditor__range_column_width(void* self) {
+int32_t k_texteditor__range_column_width(const void* self) {
     return KTextEditor__Range_ColumnWidth((KTextEditor__Range*)self);
 }
 
-bool k_texteditor__range_is_empty(void* self) {
+bool k_texteditor__range_is_empty(const void* self) {
     return KTextEditor__Range_IsEmpty((KTextEditor__Range*)self);
 }
 
-bool k_texteditor__range_contains(void* self, void* range) {
+bool k_texteditor__range_contains(const void* self, void* range) {
     return KTextEditor__Range_Contains((KTextEditor__Range*)self, (KTextEditor__Range*)range);
 }
 
-bool k_texteditor__range_contains2(void* self, void* cursor) {
+bool k_texteditor__range_contains2(const void* self, void* cursor) {
     return KTextEditor__Range_Contains2((KTextEditor__Range*)self, (KTextEditor__Cursor*)cursor);
 }
 
-bool k_texteditor__range_contains_line(void* self, int line) {
+bool k_texteditor__range_contains_line(const void* self, int line) {
     return KTextEditor__Range_ContainsLine((KTextEditor__Range*)self, line);
 }
 
-bool k_texteditor__range_contains_column(void* self, int column) {
+bool k_texteditor__range_contains_column(const void* self, int column) {
     return KTextEditor__Range_ContainsColumn((KTextEditor__Range*)self, column);
 }
 
-bool k_texteditor__range_overlaps(void* self, void* range) {
+bool k_texteditor__range_overlaps(const void* self, void* range) {
     return KTextEditor__Range_Overlaps((KTextEditor__Range*)self, (KTextEditor__Range*)range);
 }
 
-bool k_texteditor__range_overlaps_line(void* self, int line) {
+bool k_texteditor__range_overlaps_line(const void* self, int line) {
     return KTextEditor__Range_OverlapsLine((KTextEditor__Range*)self, line);
 }
 
-bool k_texteditor__range_overlaps_column(void* self, int column) {
+bool k_texteditor__range_overlaps_column(const void* self, int column) {
     return KTextEditor__Range_OverlapsColumn((KTextEditor__Range*)self, column);
 }
 
-bool k_texteditor__range_boundary_at_cursor(void* self, void* cursor) {
+bool k_texteditor__range_boundary_at_cursor(const void* self, void* cursor) {
     return KTextEditor__Range_BoundaryAtCursor((KTextEditor__Range*)self, (KTextEditor__Cursor*)cursor);
 }
 
-KTextEditor__Range* k_texteditor__range_intersect(void* self, void* range) {
+KTextEditor__Range* k_texteditor__range_intersect(const void* self, void* range) {
     return KTextEditor__Range_Intersect((KTextEditor__Range*)self, (KTextEditor__Range*)range);
 }
 
-KTextEditor__Range* k_texteditor__range_encompass(void* self, void* range) {
+KTextEditor__Range* k_texteditor__range_encompass(const void* self, void* range) {
     return KTextEditor__Range_Encompass((KTextEditor__Range*)self, (KTextEditor__Range*)range);
 }
 

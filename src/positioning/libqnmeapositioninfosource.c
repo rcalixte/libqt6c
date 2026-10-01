@@ -17,15 +17,15 @@ QNmeaPositionInfoSource* q_nmeapositioninfosource_new2(int32_t updateMode, void*
     return QNmeaPositionInfoSource_New2(updateMode, (QObject*)parent);
 }
 
-const QMetaObject* q_nmeapositioninfosource_meta_object(void* self) {
+const QMetaObject* q_nmeapositioninfosource_meta_object(const void* self) {
     return QNmeaPositionInfoSource_MetaObject((QNmeaPositionInfoSource*)self);
 }
 
-void q_nmeapositioninfosource_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_nmeapositioninfosource_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QNmeaPositionInfoSource_OnMetaObject((QNmeaPositionInfoSource*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_nmeapositioninfosource_super_meta_object(void* self) {
+const QMetaObject* q_nmeapositioninfosource_super_meta_object(const void* self) {
     return QNmeaPositionInfoSource_SuperMetaObject((QNmeaPositionInfoSource*)self);
 }
 
@@ -64,11 +64,11 @@ void q_nmeapositioninfosource_set_user_equivalent_range_error(void* self, double
     QNmeaPositionInfoSource_SetUserEquivalentRangeError((QNmeaPositionInfoSource*)self, uere);
 }
 
-double q_nmeapositioninfosource_user_equivalent_range_error(void* self) {
+double q_nmeapositioninfosource_user_equivalent_range_error(const void* self) {
     return QNmeaPositionInfoSource_UserEquivalentRangeError((QNmeaPositionInfoSource*)self);
 }
 
-int32_t q_nmeapositioninfosource_update_mode(void* self) {
+int32_t q_nmeapositioninfosource_update_mode(const void* self) {
     return QNmeaPositionInfoSource_UpdateMode((QNmeaPositionInfoSource*)self);
 }
 
@@ -76,7 +76,7 @@ void q_nmeapositioninfosource_set_device(void* self, void* source) {
     QNmeaPositionInfoSource_SetDevice((QNmeaPositionInfoSource*)self, (QIODevice*)source);
 }
 
-QIODevice* q_nmeapositioninfosource_device(void* self) {
+QIODevice* q_nmeapositioninfosource_device(const void* self) {
     return QNmeaPositionInfoSource_Device((QNmeaPositionInfoSource*)self);
 }
 
@@ -92,51 +92,51 @@ void q_nmeapositioninfosource_super_set_update_interval(void* self, int msec) {
     QNmeaPositionInfoSource_SuperSetUpdateInterval((QNmeaPositionInfoSource*)self, msec);
 }
 
-QGeoPositionInfo* q_nmeapositioninfosource_last_known_position(void* self, bool fromSatellitePositioningMethodsOnly) {
+QGeoPositionInfo* q_nmeapositioninfosource_last_known_position(const void* self, bool fromSatellitePositioningMethodsOnly) {
     return QNmeaPositionInfoSource_LastKnownPosition((QNmeaPositionInfoSource*)self, fromSatellitePositioningMethodsOnly);
 }
 
-void q_nmeapositioninfosource_on_last_known_position(void* self, QGeoPositionInfo* (*callback)(void*, bool)) {
+void q_nmeapositioninfosource_on_last_known_position(const void* self, QGeoPositionInfo* (*callback)(const void*, bool)) {
     QNmeaPositionInfoSource_OnLastKnownPosition((QNmeaPositionInfoSource*)self, (intptr_t)callback);
 }
 
-QGeoPositionInfo* q_nmeapositioninfosource_super_last_known_position(void* self, bool fromSatellitePositioningMethodsOnly) {
+QGeoPositionInfo* q_nmeapositioninfosource_super_last_known_position(const void* self, bool fromSatellitePositioningMethodsOnly) {
     return QNmeaPositionInfoSource_SuperLastKnownPosition((QNmeaPositionInfoSource*)self, fromSatellitePositioningMethodsOnly);
 }
 
-int32_t q_nmeapositioninfosource_supported_positioning_methods(void* self) {
+int32_t q_nmeapositioninfosource_supported_positioning_methods(const void* self) {
     return QNmeaPositionInfoSource_SupportedPositioningMethods((QNmeaPositionInfoSource*)self);
 }
 
-void q_nmeapositioninfosource_on_supported_positioning_methods(void* self, int32_t (*callback)()) {
+void q_nmeapositioninfosource_on_supported_positioning_methods(const void* self, int32_t (*callback)(const void*)) {
     QNmeaPositionInfoSource_OnSupportedPositioningMethods((QNmeaPositionInfoSource*)self, (intptr_t)callback);
 }
 
-int32_t q_nmeapositioninfosource_super_supported_positioning_methods(void* self) {
+int32_t q_nmeapositioninfosource_super_supported_positioning_methods(const void* self) {
     return QNmeaPositionInfoSource_SuperSupportedPositioningMethods((QNmeaPositionInfoSource*)self);
 }
 
-int32_t q_nmeapositioninfosource_minimum_update_interval(void* self) {
+int32_t q_nmeapositioninfosource_minimum_update_interval(const void* self) {
     return QNmeaPositionInfoSource_MinimumUpdateInterval((QNmeaPositionInfoSource*)self);
 }
 
-void q_nmeapositioninfosource_on_minimum_update_interval(void* self, int32_t (*callback)()) {
+void q_nmeapositioninfosource_on_minimum_update_interval(const void* self, int32_t (*callback)(const void*)) {
     QNmeaPositionInfoSource_OnMinimumUpdateInterval((QNmeaPositionInfoSource*)self, (intptr_t)callback);
 }
 
-int32_t q_nmeapositioninfosource_super_minimum_update_interval(void* self) {
+int32_t q_nmeapositioninfosource_super_minimum_update_interval(const void* self) {
     return QNmeaPositionInfoSource_SuperMinimumUpdateInterval((QNmeaPositionInfoSource*)self);
 }
 
-int32_t q_nmeapositioninfosource_error(void* self) {
+int32_t q_nmeapositioninfosource_error(const void* self) {
     return QNmeaPositionInfoSource_Error((QNmeaPositionInfoSource*)self);
 }
 
-void q_nmeapositioninfosource_on_error(void* self, int32_t (*callback)()) {
+void q_nmeapositioninfosource_on_error(const void* self, int32_t (*callback)(const void*)) {
     QNmeaPositionInfoSource_OnError((QNmeaPositionInfoSource*)self, (intptr_t)callback);
 }
 
-int32_t q_nmeapositioninfosource_super_error(void* self) {
+int32_t q_nmeapositioninfosource_super_error(const void* self) {
     return QNmeaPositionInfoSource_SuperError((QNmeaPositionInfoSource*)self);
 }
 
@@ -144,7 +144,7 @@ void q_nmeapositioninfosource_start_updates(void* self) {
     QNmeaPositionInfoSource_StartUpdates((QNmeaPositionInfoSource*)self);
 }
 
-void q_nmeapositioninfosource_on_start_updates(void* self, void (*callback)()) {
+void q_nmeapositioninfosource_on_start_updates(void* self, void (*callback)(void*)) {
     QNmeaPositionInfoSource_OnStartUpdates((QNmeaPositionInfoSource*)self, (intptr_t)callback);
 }
 
@@ -156,7 +156,7 @@ void q_nmeapositioninfosource_stop_updates(void* self) {
     QNmeaPositionInfoSource_StopUpdates((QNmeaPositionInfoSource*)self);
 }
 
-void q_nmeapositioninfosource_on_stop_updates(void* self, void (*callback)()) {
+void q_nmeapositioninfosource_on_stop_updates(void* self, void (*callback)(void*)) {
     QNmeaPositionInfoSource_OnStopUpdates((QNmeaPositionInfoSource*)self, (intptr_t)callback);
 }
 
@@ -192,24 +192,8 @@ bool q_nmeapositioninfosource_parse_pos_info_from_nmea_data2(void* self, char* d
     return QNmeaPositionInfoSource_ParsePosInfoFromNmeaData2((QNmeaPositionInfoSource*)self, qstring(data), (QGeoPositionInfo*)posInfo, (bool*)hasFix);
 }
 
-void q_nmeapositioninfosource_on_parse_pos_info_from_nmea_data2(void* self, bool (*callback)(void*, char*, void*, bool*)) {
-    QNmeaPositionInfoSource_OnParsePosInfoFromNmeaData2((QNmeaPositionInfoSource*)self, (intptr_t)callback);
-}
-
-bool q_nmeapositioninfosource_super_parse_pos_info_from_nmea_data2(void* self, char* data, void* posInfo, bool* hasFix) {
-    return QNmeaPositionInfoSource_SuperParsePosInfoFromNmeaData2((QNmeaPositionInfoSource*)self, qstring(data), (QGeoPositionInfo*)posInfo, (bool*)hasFix);
-}
-
 void q_nmeapositioninfosource_set_error(void* self, int32_t positionError) {
     QNmeaPositionInfoSource_SetError((QNmeaPositionInfoSource*)self, positionError);
-}
-
-void q_nmeapositioninfosource_on_set_error(void* self, void (*callback)(void*, int32_t)) {
-    QNmeaPositionInfoSource_OnSetError((QNmeaPositionInfoSource*)self, (intptr_t)callback);
-}
-
-void q_nmeapositioninfosource_super_set_error(void* self, int32_t positionError) {
-    QNmeaPositionInfoSource_SuperSetError((QNmeaPositionInfoSource*)self, positionError);
 }
 
 const char* q_nmeapositioninfosource_tr2(const char* s, const char* c) {
@@ -226,15 +210,15 @@ const char* q_nmeapositioninfosource_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-int32_t q_nmeapositioninfosource_update_interval(void* self) {
+int32_t q_nmeapositioninfosource_update_interval(const void* self) {
     return QGeoPositionInfoSource_UpdateInterval((QGeoPositionInfoSource*)self);
 }
 
-int32_t q_nmeapositioninfosource_preferred_positioning_methods(void* self) {
+int32_t q_nmeapositioninfosource_preferred_positioning_methods(const void* self) {
     return QGeoPositionInfoSource_PreferredPositioningMethods((QGeoPositionInfoSource*)self);
 }
 
-const char* q_nmeapositioninfosource_source_name(void* self) {
+const char* q_nmeapositioninfosource_source_name(const void* self) {
     libqt_string _str = QGeoPositionInfoSource_SourceName((QGeoPositionInfoSource*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -324,11 +308,11 @@ const char** q_nmeapositioninfosource_available_sources() {
     return _ret;
 }
 
-void q_nmeapositioninfosource_position_updated(void* self, void* update) {
+void q_nmeapositioninfosource_position_updated(void* self, const void* update) {
     QGeoPositionInfoSource_PositionUpdated((QGeoPositionInfoSource*)self, (QGeoPositionInfo*)update);
 }
 
-void q_nmeapositioninfosource_on_position_updated(void* self, void (*callback)(void*, void*)) {
+void q_nmeapositioninfosource_on_position_updated(void* self, void (*callback)(void*, const void*)) {
     QGeoPositionInfoSource_Connect_PositionUpdated((QGeoPositionInfoSource*)self, (intptr_t)callback);
 }
 
@@ -348,7 +332,7 @@ void q_nmeapositioninfosource_on_supported_positioning_methods_changed(void* sel
     QGeoPositionInfoSource_Connect_SupportedPositioningMethodsChanged((QGeoPositionInfoSource*)self, (intptr_t)callback);
 }
 
-const char* q_nmeapositioninfosource_object_name(void* self) {
+const char* q_nmeapositioninfosource_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -359,19 +343,19 @@ void q_nmeapositioninfosource_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_nmeapositioninfosource_is_widget_type(void* self) {
+bool q_nmeapositioninfosource_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_nmeapositioninfosource_is_window_type(void* self) {
+bool q_nmeapositioninfosource_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_nmeapositioninfosource_is_quick_item_type(void* self) {
+bool q_nmeapositioninfosource_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_nmeapositioninfosource_signals_blocked(void* self) {
+bool q_nmeapositioninfosource_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -379,7 +363,7 @@ bool q_nmeapositioninfosource_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_nmeapositioninfosource_thread(void* self) {
+QThread* q_nmeapositioninfosource_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -403,7 +387,7 @@ void q_nmeapositioninfosource_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_nmeapositioninfosource_children(void* self) {
+libqt_list /* of QObject* */ q_nmeapositioninfosource_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -420,55 +404,55 @@ void q_nmeapositioninfosource_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_nmeapositioninfosource_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_nmeapositioninfosource_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_nmeapositioninfosource_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_nmeapositioninfosource_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_nmeapositioninfosource_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_nmeapositioninfosource_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_nmeapositioninfosource_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_nmeapositioninfosource_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_nmeapositioninfosource_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_nmeapositioninfosource_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_nmeapositioninfosource_disconnect3(void* self) {
+bool q_nmeapositioninfosource_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_nmeapositioninfosource_disconnect4(void* self, void* receiver) {
+bool q_nmeapositioninfosource_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_nmeapositioninfosource_disconnect5(void* param1) {
+bool q_nmeapositioninfosource_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_nmeapositioninfosource_dump_object_tree(void* self) {
+void q_nmeapositioninfosource_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_nmeapositioninfosource_dump_object_info(void* self) {
+void q_nmeapositioninfosource_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_nmeapositioninfosource_set_property(void* self, const char* name, void* value) {
+bool q_nmeapositioninfosource_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_nmeapositioninfosource_property(void* self, const char* name) {
+QVariant* q_nmeapositioninfosource_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_nmeapositioninfosource_dynamic_property_names(void* self) {
+const char** q_nmeapositioninfosource_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -489,7 +473,7 @@ QBindingStorage* q_nmeapositioninfosource_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_nmeapositioninfosource_binding_storage2(void* self) {
+const QBindingStorage* q_nmeapositioninfosource_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -501,11 +485,11 @@ void q_nmeapositioninfosource_on_destroyed(void* self, void (*callback)(void*)) 
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_nmeapositioninfosource_parent(void* self) {
+QObject* q_nmeapositioninfosource_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_nmeapositioninfosource_inherits(void* self, const char* classname) {
+bool q_nmeapositioninfosource_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -521,31 +505,31 @@ int32_t q_nmeapositioninfosource_start_timer23(void* self, int64_t time, int32_t
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_nmeapositioninfosource_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_nmeapositioninfosource_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_nmeapositioninfosource_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_nmeapositioninfosource_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_nmeapositioninfosource_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_nmeapositioninfosource_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_nmeapositioninfosource_disconnect1(void* self, const char* signal) {
+bool q_nmeapositioninfosource_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_nmeapositioninfosource_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_nmeapositioninfosource_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_nmeapositioninfosource_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_nmeapositioninfosource_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_nmeapositioninfosource_disconnect23(void* self, void* receiver, const char* member) {
+bool q_nmeapositioninfosource_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -569,28 +553,28 @@ void q_nmeapositioninfosource_on_set_preferred_positioning_methods(void* self, v
     QNmeaPositionInfoSource_OnSetPreferredPositioningMethods((QNmeaPositionInfoSource*)self, (intptr_t)callback);
 }
 
-bool q_nmeapositioninfosource_set_backend_property(void* self, const char* name, void* value) {
+bool q_nmeapositioninfosource_set_backend_property(void* self, const char* name, const void* value) {
     return QNmeaPositionInfoSource_SetBackendProperty((QNmeaPositionInfoSource*)self, qstring(name), (QVariant*)value);
 }
 
-bool q_nmeapositioninfosource_super_set_backend_property(void* self, const char* name, void* value) {
+bool q_nmeapositioninfosource_super_set_backend_property(void* self, const char* name, const void* value) {
     return QNmeaPositionInfoSource_SuperSetBackendProperty((QNmeaPositionInfoSource*)self, qstring(name), (QVariant*)value);
 }
 
-void q_nmeapositioninfosource_on_set_backend_property(void* self, bool (*callback)(void*, const char*, void*)) {
+void q_nmeapositioninfosource_on_set_backend_property(void* self, bool (*callback)(void*, const char*, const void*)) {
     QNmeaPositionInfoSource_OnSetBackendProperty((QNmeaPositionInfoSource*)self, (intptr_t)callback);
 }
 
-QVariant* q_nmeapositioninfosource_backend_property(void* self, const char* name) {
+QVariant* q_nmeapositioninfosource_backend_property(const void* self, const char* name) {
     return QNmeaPositionInfoSource_BackendProperty((QNmeaPositionInfoSource*)self, qstring(name));
 }
 
-QVariant* q_nmeapositioninfosource_super_backend_property(void* self, const char* name) {
+QVariant* q_nmeapositioninfosource_super_backend_property(const void* self, const char* name) {
     return QNmeaPositionInfoSource_SuperBackendProperty((QNmeaPositionInfoSource*)self, qstring(name));
 }
 
-void q_nmeapositioninfosource_on_backend_property(void* self, QVariant* (*callback)(void*, const char*)) {
-    QNmeaPositionInfoSource_OnBackendProperty((QNmeaPositionInfoSource*)self, (intptr_t)callback);
+void q_nmeapositioninfosource_on_backend_property(const void* self, QVariant* (*callback)(const void*, const char*)) {
+    QNmeaPositionInfoSource_OnBackendProperty((const QNmeaPositionInfoSource*)self, (intptr_t)callback);
 }
 
 bool q_nmeapositioninfosource_event(void* self, void* event) {
@@ -653,76 +637,44 @@ void q_nmeapositioninfosource_on_custom_event(void* self, void (*callback)(void*
     QNmeaPositionInfoSource_OnCustomEvent((QNmeaPositionInfoSource*)self, (intptr_t)callback);
 }
 
-void q_nmeapositioninfosource_connect_notify(void* self, void* signal) {
+void q_nmeapositioninfosource_connect_notify(void* self, const void* signal) {
     QNmeaPositionInfoSource_ConnectNotify((QNmeaPositionInfoSource*)self, (QMetaMethod*)signal);
 }
 
-void q_nmeapositioninfosource_super_connect_notify(void* self, void* signal) {
+void q_nmeapositioninfosource_super_connect_notify(void* self, const void* signal) {
     QNmeaPositionInfoSource_SuperConnectNotify((QNmeaPositionInfoSource*)self, (QMetaMethod*)signal);
 }
 
-void q_nmeapositioninfosource_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_nmeapositioninfosource_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QNmeaPositionInfoSource_OnConnectNotify((QNmeaPositionInfoSource*)self, (intptr_t)callback);
 }
 
-void q_nmeapositioninfosource_disconnect_notify(void* self, void* signal) {
+void q_nmeapositioninfosource_disconnect_notify(void* self, const void* signal) {
     QNmeaPositionInfoSource_DisconnectNotify((QNmeaPositionInfoSource*)self, (QMetaMethod*)signal);
 }
 
-void q_nmeapositioninfosource_super_disconnect_notify(void* self, void* signal) {
+void q_nmeapositioninfosource_super_disconnect_notify(void* self, const void* signal) {
     QNmeaPositionInfoSource_SuperDisconnectNotify((QNmeaPositionInfoSource*)self, (QMetaMethod*)signal);
 }
 
-void q_nmeapositioninfosource_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_nmeapositioninfosource_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QNmeaPositionInfoSource_OnDisconnectNotify((QNmeaPositionInfoSource*)self, (intptr_t)callback);
 }
 
-QObject* q_nmeapositioninfosource_sender(void* self) {
+QObject* q_nmeapositioninfosource_sender(const void* self) {
     return QNmeaPositionInfoSource_Sender((QNmeaPositionInfoSource*)self);
 }
 
-QObject* q_nmeapositioninfosource_super_sender(void* self) {
-    return QNmeaPositionInfoSource_SuperSender((QNmeaPositionInfoSource*)self);
-}
-
-void q_nmeapositioninfosource_on_sender(void* self, QObject* (*callback)()) {
-    QNmeaPositionInfoSource_OnSender((QNmeaPositionInfoSource*)self, (intptr_t)callback);
-}
-
-int32_t q_nmeapositioninfosource_sender_signal_index(void* self) {
+int32_t q_nmeapositioninfosource_sender_signal_index(const void* self) {
     return QNmeaPositionInfoSource_SenderSignalIndex((QNmeaPositionInfoSource*)self);
 }
 
-int32_t q_nmeapositioninfosource_super_sender_signal_index(void* self) {
-    return QNmeaPositionInfoSource_SuperSenderSignalIndex((QNmeaPositionInfoSource*)self);
-}
-
-void q_nmeapositioninfosource_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QNmeaPositionInfoSource_OnSenderSignalIndex((QNmeaPositionInfoSource*)self, (intptr_t)callback);
-}
-
-int32_t q_nmeapositioninfosource_receivers(void* self, const char* signal) {
+int32_t q_nmeapositioninfosource_receivers(const void* self, const char* signal) {
     return QNmeaPositionInfoSource_Receivers((QNmeaPositionInfoSource*)self, signal);
 }
 
-int32_t q_nmeapositioninfosource_super_receivers(void* self, const char* signal) {
-    return QNmeaPositionInfoSource_SuperReceivers((QNmeaPositionInfoSource*)self, signal);
-}
-
-void q_nmeapositioninfosource_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QNmeaPositionInfoSource_OnReceivers((QNmeaPositionInfoSource*)self, (intptr_t)callback);
-}
-
-bool q_nmeapositioninfosource_is_signal_connected(void* self, void* signal) {
+bool q_nmeapositioninfosource_is_signal_connected(const void* self, const void* signal) {
     return QNmeaPositionInfoSource_IsSignalConnected((QNmeaPositionInfoSource*)self, (QMetaMethod*)signal);
-}
-
-bool q_nmeapositioninfosource_super_is_signal_connected(void* self, void* signal) {
-    return QNmeaPositionInfoSource_SuperIsSignalConnected((QNmeaPositionInfoSource*)self, (QMetaMethod*)signal);
-}
-
-void q_nmeapositioninfosource_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QNmeaPositionInfoSource_OnIsSignalConnected((QNmeaPositionInfoSource*)self, (intptr_t)callback);
 }
 
 void q_nmeapositioninfosource_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

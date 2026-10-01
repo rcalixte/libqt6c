@@ -24,26 +24,26 @@ TextCustomEditor__TextEditFindBarBase* k_textcustomeditor__texteditfindbarbase_n
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-const QMetaObject* k_textcustomeditor__texteditfindbarbase_meta_object(void* self);
+const QMetaObject* k_textcustomeditor__texteditfindbarbase_meta_object(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
-/// @param callback const QMetaObject* func()
+/// @param self const TextCustomEditor__TextEditFindBarBase*
+/// @param callback const QMetaObject* func(const TextCustomEditor__TextEditFindBarBase* self)
 ///
-void k_textcustomeditor__texteditfindbarbase_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_textcustomeditor__texteditfindbarbase_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
 ///
 /// Base class method implementation
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-const QMetaObject* k_textcustomeditor__texteditfindbarbase_super_meta_object(void* self);
+const QMetaObject* k_textcustomeditor__texteditfindbarbase_super_meta_object(const void* self);
 
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param param1 const char*
@@ -99,9 +99,9 @@ const char* k_textcustomeditor__texteditfindbarbase_tr(const char* s);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-const char* k_textcustomeditor__texteditfindbarbase_text(void* self);
+const char* k_textcustomeditor__texteditfindbarbase_text(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
 ///
@@ -164,51 +164,41 @@ void k_textcustomeditor__texteditfindbarbase_on_hide_find_bar(void* self, void (
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @warning This method must be implemented with `k_textcustomeditor__texteditfindbarbase_on_view_is_read_only` before it can be called.
 ///
-bool k_textcustomeditor__texteditfindbarbase_view_is_read_only(void* self);
+/// @param self const TextCustomEditor__TextEditFindBarBase*
+///
+bool k_textcustomeditor__texteditfindbarbase_view_is_read_only(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
-/// @param callback bool func()
+/// @param self const TextCustomEditor__TextEditFindBarBase*
+/// @param callback bool func(const TextCustomEditor__TextEditFindBarBase* self)
 ///
-void k_textcustomeditor__texteditfindbarbase_on_view_is_read_only(void* self, bool (*callback)());
+void k_textcustomeditor__texteditfindbarbase_on_view_is_read_only(const void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
 ///
-/// Base class method implementation
+/// @warning This method must be implemented with `k_textcustomeditor__texteditfindbarbase_on_document_is_empty` before it can be called.
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-bool k_textcustomeditor__texteditfindbarbase_super_view_is_read_only(void* self);
-
-/// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
-///
-/// @param self TextCustomEditor__TextEditFindBarBase*
-///
-bool k_textcustomeditor__texteditfindbarbase_document_is_empty(void* self);
+bool k_textcustomeditor__texteditfindbarbase_document_is_empty(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
-/// @param callback bool func()
+/// @param self const TextCustomEditor__TextEditFindBarBase*
+/// @param callback bool func(const TextCustomEditor__TextEditFindBarBase* self)
 ///
-void k_textcustomeditor__texteditfindbarbase_on_document_is_empty(void* self, bool (*callback)());
+void k_textcustomeditor__texteditfindbarbase_on_document_is_empty(const void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
 ///
-/// Base class method implementation
-///
-/// @param self TextCustomEditor__TextEditFindBarBase*
-///
-bool k_textcustomeditor__texteditfindbarbase_super_document_is_empty(void* self);
-
-/// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
+/// @warning This method must be implemented with `k_textcustomeditor__texteditfindbarbase_on_search_in_document` before it can be called.
 ///
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param text const char*
@@ -227,21 +217,13 @@ void k_textcustomeditor__texteditfindbarbase_on_search_in_document(void* self, b
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
 ///
-/// Base class method implementation
-///
-/// @param self TextCustomEditor__TextEditFindBarBase*
-/// @param text const char*
-/// @param searchOptions flag of enum TextCustomEditor__TextEditFindBarBase__FindFlag
-///
-bool k_textcustomeditor__texteditfindbarbase_super_search_in_document(void* self, const char* text, int32_t searchOptions);
-
-/// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
+/// @warning This method must be implemented with `k_textcustomeditor__texteditfindbarbase_on_search_in_document2` before it can be called.
 ///
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param regExp QRegularExpression*
 /// @param searchOptions flag of enum TextCustomEditor__TextEditFindBarBase__FindFlag
 ///
-bool k_textcustomeditor__texteditfindbarbase_search_in_document2(void* self, void* regExp, int32_t searchOptions);
+bool k_textcustomeditor__texteditfindbarbase_search_in_document2(void* self, const void* regExp, int32_t searchOptions);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
 ///
@@ -250,19 +232,11 @@ bool k_textcustomeditor__texteditfindbarbase_search_in_document2(void* self, voi
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param callback bool func(TextCustomEditor__TextEditFindBarBase* self, QRegularExpression* regExp, flag of enum TextCustomEditor__TextEditFindBarBase__FindFlag searchOptions)
 ///
-void k_textcustomeditor__texteditfindbarbase_on_search_in_document2(void* self, bool (*callback)(void*, void*, int32_t));
+void k_textcustomeditor__texteditfindbarbase_on_search_in_document2(void* self, bool (*callback)(void*, const void*, int32_t));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
 ///
-/// Base class method implementation
-///
-/// @param self TextCustomEditor__TextEditFindBarBase*
-/// @param regExp QRegularExpression*
-/// @param searchOptions flag of enum TextCustomEditor__TextEditFindBarBase__FindFlag
-///
-bool k_textcustomeditor__texteditfindbarbase_super_search_in_document2(void* self, void* regExp, int32_t searchOptions);
-
-/// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
+/// @warning This method must be implemented with `k_textcustomeditor__texteditfindbarbase_on_auto_search_move_cursor` before it can be called.
 ///
 /// @param self TextCustomEditor__TextEditFindBarBase*
 ///
@@ -273,17 +247,9 @@ void k_textcustomeditor__texteditfindbarbase_auto_search_move_cursor(void* self)
 /// Allows for overriding the related default method
 ///
 /// @param self TextCustomEditor__TextEditFindBarBase*
-/// @param callback void func()
+/// @param callback void func(TextCustomEditor__TextEditFindBarBase* self)
 ///
-void k_textcustomeditor__texteditfindbarbase_on_auto_search_move_cursor(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
-///
-/// Base class method implementation
-///
-/// @param self TextCustomEditor__TextEditFindBarBase*
-///
-void k_textcustomeditor__texteditfindbarbase_super_auto_search_move_cursor(void* self);
+void k_textcustomeditor__texteditfindbarbase_on_auto_search_move_cursor(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
 ///
@@ -318,47 +284,11 @@ void k_textcustomeditor__texteditfindbarbase_clear_selections(void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
 ///
-/// Allows for overriding the related default method
-///
-/// @param self TextCustomEditor__TextEditFindBarBase*
-/// @param callback void func()
-///
-void k_textcustomeditor__texteditfindbarbase_on_clear_selections(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
-///
-/// Base class method implementation
-///
-/// @param self TextCustomEditor__TextEditFindBarBase*
-///
-void k_textcustomeditor__texteditfindbarbase_super_clear_selections(void* self);
-
-/// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
-///
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param backward bool
 /// @param isAutoSearch bool
 ///
 bool k_textcustomeditor__texteditfindbarbase_search_text(void* self, bool backward, bool isAutoSearch);
-
-/// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
-///
-/// Allows for overriding the related default method
-///
-/// @param self TextCustomEditor__TextEditFindBarBase*
-/// @param callback bool func(TextCustomEditor__TextEditFindBarBase* self, bool backward, bool isAutoSearch)
-///
-void k_textcustomeditor__texteditfindbarbase_on_search_text(void* self, bool (*callback)(void*, bool, bool));
-
-/// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
-///
-/// Base class method implementation
-///
-/// @param self TextCustomEditor__TextEditFindBarBase*
-/// @param backward bool
-/// @param isAutoSearch bool
-///
-bool k_textcustomeditor__texteditfindbarbase_super_search_text(void* self, bool backward, bool isAutoSearch);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
 ///
@@ -369,50 +299,12 @@ void k_textcustomeditor__texteditfindbarbase_set_found_match(void* self, bool ma
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
 ///
-/// Allows for overriding the related default method
-///
-/// @param self TextCustomEditor__TextEditFindBarBase*
-/// @param callback void func(TextCustomEditor__TextEditFindBarBase* self, bool match)
-///
-void k_textcustomeditor__texteditfindbarbase_on_set_found_match(void* self, void (*callback)(void*, bool));
-
-/// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
-///
-/// Base class method implementation
-///
-/// @param self TextCustomEditor__TextEditFindBarBase*
-/// @param match bool
-///
-void k_textcustomeditor__texteditfindbarbase_super_set_found_match(void* self, bool match);
-
-/// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
-///
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param backward bool
 /// @param isAutoSearch bool
 /// @param found bool
 ///
 void k_textcustomeditor__texteditfindbarbase_message_info(void* self, bool backward, bool isAutoSearch, bool found);
-
-/// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
-///
-/// Allows for overriding the related default method
-///
-/// @param self TextCustomEditor__TextEditFindBarBase*
-/// @param callback void func(TextCustomEditor__TextEditFindBarBase* self, bool backward, bool isAutoSearch, bool found)
-///
-void k_textcustomeditor__texteditfindbarbase_on_message_info(void* self, void (*callback)(void*, bool, bool, bool));
-
-/// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
-///
-/// Base class method implementation
-///
-/// @param self TextCustomEditor__TextEditFindBarBase*
-/// @param backward bool
-/// @param isAutoSearch bool
-/// @param found bool
-///
-void k_textcustomeditor__texteditfindbarbase_super_message_info(void* self, bool backward, bool isAutoSearch, bool found);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
 ///
@@ -435,6 +327,8 @@ void k_textcustomeditor__texteditfindbarbase_auto_search(void* self, const char*
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
 ///
+/// @warning This method must be implemented with `k_textcustomeditor__texteditfindbarbase_on_slot_search_text` before it can be called.
+///
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param backward bool
 /// @param isAutoSearch bool
@@ -449,16 +343,6 @@ void k_textcustomeditor__texteditfindbarbase_slot_search_text(void* self, bool b
 /// @param callback void func(TextCustomEditor__TextEditFindBarBase* self, bool backward, bool isAutoSearch)
 ///
 void k_textcustomeditor__texteditfindbarbase_on_slot_search_text(void* self, void (*callback)(void*, bool, bool));
-
-/// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
-///
-/// Base class method implementation
-///
-/// @param self TextCustomEditor__TextEditFindBarBase*
-/// @param backward bool
-/// @param isAutoSearch bool
-///
-void k_textcustomeditor__texteditfindbarbase_super_slot_search_text(void* self, bool backward, bool isAutoSearch);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
 ///
@@ -505,9 +389,9 @@ TextCustomEditor__TextEditFindBarBase* k_textcustomeditor__texteditfindbarbase_f
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-uintptr_t k_textcustomeditor__texteditfindbarbase_win_id(void* self);
+uintptr_t k_textcustomeditor__texteditfindbarbase_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -521,25 +405,25 @@ void k_textcustomeditor__texteditfindbarbase_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-uintptr_t k_textcustomeditor__texteditfindbarbase_internal_win_id(void* self);
+uintptr_t k_textcustomeditor__texteditfindbarbase_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-uintptr_t k_textcustomeditor__texteditfindbarbase_effective_win_id(void* self);
+uintptr_t k_textcustomeditor__texteditfindbarbase_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QStyle* k_textcustomeditor__texteditfindbarbase_style(void* self);
+QStyle* k_textcustomeditor__texteditfindbarbase_style(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -554,35 +438,35 @@ void k_textcustomeditor__texteditfindbarbase_set_style(void* self, void* style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-bool k_textcustomeditor__texteditfindbarbase_is_top_level(void* self);
+bool k_textcustomeditor__texteditfindbarbase_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-bool k_textcustomeditor__texteditfindbarbase_is_window(void* self);
+bool k_textcustomeditor__texteditfindbarbase_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-bool k_textcustomeditor__texteditfindbarbase_is_modal(void* self);
+bool k_textcustomeditor__texteditfindbarbase_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_window_modality(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -597,18 +481,18 @@ void k_textcustomeditor__texteditfindbarbase_set_window_modality(void* self, int
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-bool k_textcustomeditor__texteditfindbarbase_is_enabled(void* self);
+bool k_textcustomeditor__texteditfindbarbase_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param param1 QWidget*
 ///
-bool k_textcustomeditor__texteditfindbarbase_is_enabled_to(void* self, void* param1);
+bool k_textcustomeditor__texteditfindbarbase_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -641,153 +525,153 @@ void k_textcustomeditor__texteditfindbarbase_set_window_modified(void* self, boo
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QRect* k_textcustomeditor__texteditfindbarbase_frame_geometry(void* self);
+QRect* k_textcustomeditor__texteditfindbarbase_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-const QRect* k_textcustomeditor__texteditfindbarbase_geometry(void* self);
+const QRect* k_textcustomeditor__texteditfindbarbase_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QRect* k_textcustomeditor__texteditfindbarbase_normal_geometry(void* self);
+QRect* k_textcustomeditor__texteditfindbarbase_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_x(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_y(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QPoint* k_textcustomeditor__texteditfindbarbase_pos(void* self);
+QPoint* k_textcustomeditor__texteditfindbarbase_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QSize* k_textcustomeditor__texteditfindbarbase_frame_size(void* self);
+QSize* k_textcustomeditor__texteditfindbarbase_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QSize* k_textcustomeditor__texteditfindbarbase_size(void* self);
+QSize* k_textcustomeditor__texteditfindbarbase_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_width(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_height(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QRect* k_textcustomeditor__texteditfindbarbase_rect(void* self);
+QRect* k_textcustomeditor__texteditfindbarbase_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QRect* k_textcustomeditor__texteditfindbarbase_children_rect(void* self);
+QRect* k_textcustomeditor__texteditfindbarbase_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QRegion* k_textcustomeditor__texteditfindbarbase_children_region(void* self);
+QRegion* k_textcustomeditor__texteditfindbarbase_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QSize* k_textcustomeditor__texteditfindbarbase_minimum_size(void* self);
+QSize* k_textcustomeditor__texteditfindbarbase_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QSize* k_textcustomeditor__texteditfindbarbase_maximum_size(void* self);
+QSize* k_textcustomeditor__texteditfindbarbase_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_minimum_width(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_minimum_height(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_maximum_width(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_maximum_height(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -796,7 +680,7 @@ int32_t k_textcustomeditor__texteditfindbarbase_maximum_height(void* self);
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param minimumSize QSize*
 ///
-void k_textcustomeditor__texteditfindbarbase_set_minimum_size(void* self, void* minimumSize);
+void k_textcustomeditor__texteditfindbarbase_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -815,7 +699,7 @@ void k_textcustomeditor__texteditfindbarbase_set_minimum_size2(void* self, int m
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param maximumSize QSize*
 ///
-void k_textcustomeditor__texteditfindbarbase_set_maximum_size(void* self, void* maximumSize);
+void k_textcustomeditor__texteditfindbarbase_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -867,9 +751,9 @@ void k_textcustomeditor__texteditfindbarbase_set_maximum_height(void* self, int 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QSize* k_textcustomeditor__texteditfindbarbase_size_increment(void* self);
+QSize* k_textcustomeditor__texteditfindbarbase_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -878,7 +762,7 @@ QSize* k_textcustomeditor__texteditfindbarbase_size_increment(void* self);
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param sizeIncrement QSize*
 ///
-void k_textcustomeditor__texteditfindbarbase_set_size_increment(void* self, void* sizeIncrement);
+void k_textcustomeditor__texteditfindbarbase_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -894,9 +778,9 @@ void k_textcustomeditor__texteditfindbarbase_set_size_increment2(void* self, int
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QSize* k_textcustomeditor__texteditfindbarbase_base_size(void* self);
+QSize* k_textcustomeditor__texteditfindbarbase_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -905,7 +789,7 @@ QSize* k_textcustomeditor__texteditfindbarbase_base_size(void* self);
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param baseSize QSize*
 ///
-void k_textcustomeditor__texteditfindbarbase_set_base_size(void* self, void* baseSize);
+void k_textcustomeditor__texteditfindbarbase_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -924,7 +808,7 @@ void k_textcustomeditor__texteditfindbarbase_set_base_size2(void* self, int base
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param fixedSize QSize*
 ///
-void k_textcustomeditor__texteditfindbarbase_set_fixed_size(void* self, void* fixedSize);
+void k_textcustomeditor__texteditfindbarbase_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -958,145 +842,145 @@ void k_textcustomeditor__texteditfindbarbase_set_fixed_height(void* self, int h)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param param1 QPointF*
 ///
-QPointF* k_textcustomeditor__texteditfindbarbase_map_to_global(void* self, void* param1);
+QPointF* k_textcustomeditor__texteditfindbarbase_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param param1 QPoint*
 ///
-QPoint* k_textcustomeditor__texteditfindbarbase_map_to_global2(void* self, void* param1);
+QPoint* k_textcustomeditor__texteditfindbarbase_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param param1 QPointF*
 ///
-QPointF* k_textcustomeditor__texteditfindbarbase_map_from_global(void* self, void* param1);
+QPointF* k_textcustomeditor__texteditfindbarbase_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param param1 QPoint*
 ///
-QPoint* k_textcustomeditor__texteditfindbarbase_map_from_global2(void* self, void* param1);
+QPoint* k_textcustomeditor__texteditfindbarbase_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param param1 QPointF*
 ///
-QPointF* k_textcustomeditor__texteditfindbarbase_map_to_parent(void* self, void* param1);
+QPointF* k_textcustomeditor__texteditfindbarbase_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param param1 QPoint*
 ///
-QPoint* k_textcustomeditor__texteditfindbarbase_map_to_parent2(void* self, void* param1);
+QPoint* k_textcustomeditor__texteditfindbarbase_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param param1 QPointF*
 ///
-QPointF* k_textcustomeditor__texteditfindbarbase_map_from_parent(void* self, void* param1);
+QPointF* k_textcustomeditor__texteditfindbarbase_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param param1 QPoint*
 ///
-QPoint* k_textcustomeditor__texteditfindbarbase_map_from_parent2(void* self, void* param1);
+QPoint* k_textcustomeditor__texteditfindbarbase_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_textcustomeditor__texteditfindbarbase_map_to(void* self, void* param1, void* param2);
+QPointF* k_textcustomeditor__texteditfindbarbase_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_textcustomeditor__texteditfindbarbase_map_to2(void* self, void* param1, void* param2);
+QPoint* k_textcustomeditor__texteditfindbarbase_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_textcustomeditor__texteditfindbarbase_map_from(void* self, void* param1, void* param2);
+QPointF* k_textcustomeditor__texteditfindbarbase_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_textcustomeditor__texteditfindbarbase_map_from2(void* self, void* param1, void* param2);
+QPoint* k_textcustomeditor__texteditfindbarbase_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QWidget* k_textcustomeditor__texteditfindbarbase_window(void* self);
+QWidget* k_textcustomeditor__texteditfindbarbase_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QWidget* k_textcustomeditor__texteditfindbarbase_native_parent_widget(void* self);
+QWidget* k_textcustomeditor__texteditfindbarbase_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QWidget* k_textcustomeditor__texteditfindbarbase_top_level_widget(void* self);
+QWidget* k_textcustomeditor__texteditfindbarbase_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-const QPalette* k_textcustomeditor__texteditfindbarbase_palette(void* self);
+const QPalette* k_textcustomeditor__texteditfindbarbase_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1105,7 +989,7 @@ const QPalette* k_textcustomeditor__texteditfindbarbase_palette(void* self);
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param palette QPalette*
 ///
-void k_textcustomeditor__texteditfindbarbase_set_palette(void* self, void* palette);
+void k_textcustomeditor__texteditfindbarbase_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -1120,11 +1004,11 @@ void k_textcustomeditor__texteditfindbarbase_set_background_role(void* self, int
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_background_role(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1139,19 +1023,19 @@ void k_textcustomeditor__texteditfindbarbase_set_foreground_role(void* self, int
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_foreground_role(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-const QFont* k_textcustomeditor__texteditfindbarbase_font(void* self);
+const QFont* k_textcustomeditor__texteditfindbarbase_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1160,31 +1044,31 @@ const QFont* k_textcustomeditor__texteditfindbarbase_font(void* self);
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param font QFont*
 ///
-void k_textcustomeditor__texteditfindbarbase_set_font(void* self, void* font);
+void k_textcustomeditor__texteditfindbarbase_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QFontMetrics* k_textcustomeditor__texteditfindbarbase_font_metrics(void* self);
+QFontMetrics* k_textcustomeditor__texteditfindbarbase_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QFontInfo* k_textcustomeditor__texteditfindbarbase_font_info(void* self);
+QFontInfo* k_textcustomeditor__texteditfindbarbase_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QCursor* k_textcustomeditor__texteditfindbarbase_cursor(void* self);
+QCursor* k_textcustomeditor__texteditfindbarbase_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1193,7 +1077,7 @@ QCursor* k_textcustomeditor__texteditfindbarbase_cursor(void* self);
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param cursor QCursor*
 ///
-void k_textcustomeditor__texteditfindbarbase_set_cursor(void* self, void* cursor);
+void k_textcustomeditor__texteditfindbarbase_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -1216,17 +1100,17 @@ void k_textcustomeditor__texteditfindbarbase_set_mouse_tracking(void* self, bool
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-bool k_textcustomeditor__texteditfindbarbase_has_mouse_tracking(void* self);
+bool k_textcustomeditor__texteditfindbarbase_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-bool k_textcustomeditor__texteditfindbarbase_under_mouse(void* self);
+bool k_textcustomeditor__texteditfindbarbase_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1241,9 +1125,9 @@ void k_textcustomeditor__texteditfindbarbase_set_tablet_tracking(void* self, boo
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-bool k_textcustomeditor__texteditfindbarbase_has_tablet_tracking(void* self);
+bool k_textcustomeditor__texteditfindbarbase_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1252,7 +1136,7 @@ bool k_textcustomeditor__texteditfindbarbase_has_tablet_tracking(void* self);
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param mask QBitmap*
 ///
-void k_textcustomeditor__texteditfindbarbase_set_mask(void* self, void* mask);
+void k_textcustomeditor__texteditfindbarbase_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -1261,15 +1145,15 @@ void k_textcustomeditor__texteditfindbarbase_set_mask(void* self, void* mask);
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param mask QRegion*
 ///
-void k_textcustomeditor__texteditfindbarbase_set_mask2(void* self, void* mask);
+void k_textcustomeditor__texteditfindbarbase_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QRegion* k_textcustomeditor__texteditfindbarbase_mask(void* self);
+QRegion* k_textcustomeditor__texteditfindbarbase_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1309,9 +1193,9 @@ QPixmap* k_textcustomeditor__texteditfindbarbase_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QGraphicsEffect* k_textcustomeditor__texteditfindbarbase_graphics_effect(void* self);
+QGraphicsEffect* k_textcustomeditor__texteditfindbarbase_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1364,9 +1248,9 @@ void k_textcustomeditor__texteditfindbarbase_set_style_sheet(void* self, const c
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-const char* k_textcustomeditor__texteditfindbarbase_style_sheet(void* self);
+const char* k_textcustomeditor__texteditfindbarbase_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1374,9 +1258,9 @@ const char* k_textcustomeditor__texteditfindbarbase_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-const char* k_textcustomeditor__texteditfindbarbase_window_title(void* self);
+const char* k_textcustomeditor__texteditfindbarbase_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1385,15 +1269,15 @@ const char* k_textcustomeditor__texteditfindbarbase_window_title(void* self);
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param icon QIcon*
 ///
-void k_textcustomeditor__texteditfindbarbase_set_window_icon(void* self, void* icon);
+void k_textcustomeditor__texteditfindbarbase_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QIcon* k_textcustomeditor__texteditfindbarbase_window_icon(void* self);
+QIcon* k_textcustomeditor__texteditfindbarbase_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1410,9 +1294,9 @@ void k_textcustomeditor__texteditfindbarbase_set_window_icon_text(void* self, co
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-const char* k_textcustomeditor__texteditfindbarbase_window_icon_text(void* self);
+const char* k_textcustomeditor__texteditfindbarbase_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1429,9 +1313,9 @@ void k_textcustomeditor__texteditfindbarbase_set_window_role(void* self, const c
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-const char* k_textcustomeditor__texteditfindbarbase_window_role(void* self);
+const char* k_textcustomeditor__texteditfindbarbase_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1448,9 +1332,9 @@ void k_textcustomeditor__texteditfindbarbase_set_window_file_path(void* self, co
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-const char* k_textcustomeditor__texteditfindbarbase_window_file_path(void* self);
+const char* k_textcustomeditor__texteditfindbarbase_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1465,17 +1349,17 @@ void k_textcustomeditor__texteditfindbarbase_set_window_opacity(void* self, doub
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-double k_textcustomeditor__texteditfindbarbase_window_opacity(void* self);
+double k_textcustomeditor__texteditfindbarbase_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-bool k_textcustomeditor__texteditfindbarbase_is_window_modified(void* self);
+bool k_textcustomeditor__texteditfindbarbase_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1492,9 +1376,9 @@ void k_textcustomeditor__texteditfindbarbase_set_tool_tip(void* self, const char
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-const char* k_textcustomeditor__texteditfindbarbase_tool_tip(void* self);
+const char* k_textcustomeditor__texteditfindbarbase_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1509,9 +1393,9 @@ void k_textcustomeditor__texteditfindbarbase_set_tool_tip_duration(void* self, i
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_tool_tip_duration(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1528,9 +1412,9 @@ void k_textcustomeditor__texteditfindbarbase_set_status_tip(void* self, const ch
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-const char* k_textcustomeditor__texteditfindbarbase_status_tip(void* self);
+const char* k_textcustomeditor__texteditfindbarbase_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1547,9 +1431,9 @@ void k_textcustomeditor__texteditfindbarbase_set_whats_this(void* self, const ch
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-const char* k_textcustomeditor__texteditfindbarbase_whats_this(void* self);
+const char* k_textcustomeditor__texteditfindbarbase_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1557,9 +1441,9 @@ const char* k_textcustomeditor__texteditfindbarbase_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-const char* k_textcustomeditor__texteditfindbarbase_accessible_name(void* self);
+const char* k_textcustomeditor__texteditfindbarbase_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1576,9 +1460,9 @@ void k_textcustomeditor__texteditfindbarbase_set_accessible_name(void* self, con
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-const char* k_textcustomeditor__texteditfindbarbase_accessible_description(void* self);
+const char* k_textcustomeditor__texteditfindbarbase_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1602,11 +1486,11 @@ void k_textcustomeditor__texteditfindbarbase_set_layout_direction(void* self, in
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_layout_direction(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1623,15 +1507,15 @@ void k_textcustomeditor__texteditfindbarbase_unset_layout_direction(void* self);
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param locale QLocale*
 ///
-void k_textcustomeditor__texteditfindbarbase_set_locale(void* self, void* locale);
+void k_textcustomeditor__texteditfindbarbase_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QLocale* k_textcustomeditor__texteditfindbarbase_locale(void* self);
+QLocale* k_textcustomeditor__texteditfindbarbase_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1645,17 +1529,17 @@ void k_textcustomeditor__texteditfindbarbase_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-bool k_textcustomeditor__texteditfindbarbase_is_right_to_left(void* self);
+bool k_textcustomeditor__texteditfindbarbase_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-bool k_textcustomeditor__texteditfindbarbase_is_left_to_right(void* self);
+bool k_textcustomeditor__texteditfindbarbase_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1669,9 +1553,9 @@ void k_textcustomeditor__texteditfindbarbase_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-bool k_textcustomeditor__texteditfindbarbase_is_active_window(void* self);
+bool k_textcustomeditor__texteditfindbarbase_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1702,11 +1586,11 @@ void k_textcustomeditor__texteditfindbarbase_set_focus2(void* self, int32_t reas
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_focus_policy(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1721,9 +1605,9 @@ void k_textcustomeditor__texteditfindbarbase_set_focus_policy(void* self, int32_
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-bool k_textcustomeditor__texteditfindbarbase_has_focus(void* self);
+bool k_textcustomeditor__texteditfindbarbase_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1747,19 +1631,19 @@ void k_textcustomeditor__texteditfindbarbase_set_focus_proxy(void* self, void* f
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QWidget* k_textcustomeditor__texteditfindbarbase_focus_proxy(void* self);
+QWidget* k_textcustomeditor__texteditfindbarbase_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_context_menu_policy(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1785,7 +1669,7 @@ void k_textcustomeditor__texteditfindbarbase_grab_mouse(void* self);
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param param1 QCursor*
 ///
-void k_textcustomeditor__texteditfindbarbase_grab_mouse2(void* self, void* param1);
+void k_textcustomeditor__texteditfindbarbase_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1818,7 +1702,7 @@ void k_textcustomeditor__texteditfindbarbase_release_keyboard(void* self);
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param key QKeySequence*
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_grab_shortcut(void* self, void* key);
+int32_t k_textcustomeditor__texteditfindbarbase_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -1863,9 +1747,9 @@ QWidget* k_textcustomeditor__texteditfindbarbase_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-bool k_textcustomeditor__texteditfindbarbase_updates_enabled(void* self);
+bool k_textcustomeditor__texteditfindbarbase_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1880,9 +1764,9 @@ void k_textcustomeditor__texteditfindbarbase_set_updates_enabled(void* self, boo
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QGraphicsProxyWidget* k_textcustomeditor__texteditfindbarbase_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* k_textcustomeditor__texteditfindbarbase_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1919,7 +1803,7 @@ void k_textcustomeditor__texteditfindbarbase_update2(void* self, int x, int y, i
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param param1 QRect*
 ///
-void k_textcustomeditor__texteditfindbarbase_update3(void* self, void* param1);
+void k_textcustomeditor__texteditfindbarbase_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1928,7 +1812,7 @@ void k_textcustomeditor__texteditfindbarbase_update3(void* self, void* param1);
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param param1 QRegion*
 ///
-void k_textcustomeditor__texteditfindbarbase_update4(void* self, void* param1);
+void k_textcustomeditor__texteditfindbarbase_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1949,7 +1833,7 @@ void k_textcustomeditor__texteditfindbarbase_repaint2(void* self, int x, int y, 
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param param1 QRect*
 ///
-void k_textcustomeditor__texteditfindbarbase_repaint3(void* self, void* param1);
+void k_textcustomeditor__texteditfindbarbase_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1958,7 +1842,7 @@ void k_textcustomeditor__texteditfindbarbase_repaint3(void* self, void* param1);
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param param1 QRegion*
 ///
-void k_textcustomeditor__texteditfindbarbase_repaint4(void* self, void* param1);
+void k_textcustomeditor__texteditfindbarbase_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2067,7 +1951,7 @@ void k_textcustomeditor__texteditfindbarbase_move(void* self, int x, int y);
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param param1 QPoint*
 ///
-void k_textcustomeditor__texteditfindbarbase_move2(void* self, void* param1);
+void k_textcustomeditor__texteditfindbarbase_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2086,7 +1970,7 @@ void k_textcustomeditor__texteditfindbarbase_resize(void* self, int w, int h);
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param param1 QSize*
 ///
-void k_textcustomeditor__texteditfindbarbase_resize2(void* self, void* param1);
+void k_textcustomeditor__texteditfindbarbase_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2107,7 +1991,7 @@ void k_textcustomeditor__texteditfindbarbase_set_geometry(void* self, int x, int
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param geometry QRect*
 ///
-void k_textcustomeditor__texteditfindbarbase_set_geometry2(void* self, void* geometry);
+void k_textcustomeditor__texteditfindbarbase_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -2115,9 +1999,9 @@ void k_textcustomeditor__texteditfindbarbase_set_geometry2(void* self, void* geo
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-char* k_textcustomeditor__texteditfindbarbase_save_geometry(void* self);
+char* k_textcustomeditor__texteditfindbarbase_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2140,60 +2024,60 @@ void k_textcustomeditor__texteditfindbarbase_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-bool k_textcustomeditor__texteditfindbarbase_is_visible(void* self);
+bool k_textcustomeditor__texteditfindbarbase_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param param1 QWidget*
 ///
-bool k_textcustomeditor__texteditfindbarbase_is_visible_to(void* self, void* param1);
+bool k_textcustomeditor__texteditfindbarbase_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-bool k_textcustomeditor__texteditfindbarbase_is_hidden(void* self);
+bool k_textcustomeditor__texteditfindbarbase_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-bool k_textcustomeditor__texteditfindbarbase_is_minimized(void* self);
+bool k_textcustomeditor__texteditfindbarbase_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-bool k_textcustomeditor__texteditfindbarbase_is_maximized(void* self);
+bool k_textcustomeditor__texteditfindbarbase_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-bool k_textcustomeditor__texteditfindbarbase_is_full_screen(void* self);
+bool k_textcustomeditor__texteditfindbarbase_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_window_state(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2217,9 +2101,9 @@ void k_textcustomeditor__texteditfindbarbase_override_window_state(void* self, i
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QSizePolicy* k_textcustomeditor__texteditfindbarbase_size_policy(void* self);
+QSizePolicy* k_textcustomeditor__texteditfindbarbase_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2244,9 +2128,9 @@ void k_textcustomeditor__texteditfindbarbase_set_size_policy2(void* self, int32_
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QRegion* k_textcustomeditor__texteditfindbarbase_visible_region(void* self);
+QRegion* k_textcustomeditor__texteditfindbarbase_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2267,31 +2151,31 @@ void k_textcustomeditor__texteditfindbarbase_set_contents_margins(void* self, in
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param margins QMargins*
 ///
-void k_textcustomeditor__texteditfindbarbase_set_contents_margins2(void* self, void* margins);
+void k_textcustomeditor__texteditfindbarbase_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QMargins* k_textcustomeditor__texteditfindbarbase_contents_margins(void* self);
+QMargins* k_textcustomeditor__texteditfindbarbase_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QRect* k_textcustomeditor__texteditfindbarbase_contents_rect(void* self);
+QRect* k_textcustomeditor__texteditfindbarbase_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QLayout* k_textcustomeditor__texteditfindbarbase_layout(void* self);
+QLayout* k_textcustomeditor__texteditfindbarbase_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2348,39 +2232,39 @@ void k_textcustomeditor__texteditfindbarbase_scroll(void* self, int dx, int dy);
 /// @param dy int
 /// @param param3 QRect*
 ///
-void k_textcustomeditor__texteditfindbarbase_scroll2(void* self, int dx, int dy, void* param3);
+void k_textcustomeditor__texteditfindbarbase_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QWidget* k_textcustomeditor__texteditfindbarbase_focus_widget(void* self);
+QWidget* k_textcustomeditor__texteditfindbarbase_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QWidget* k_textcustomeditor__texteditfindbarbase_next_in_focus_chain(void* self);
+QWidget* k_textcustomeditor__texteditfindbarbase_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QWidget* k_textcustomeditor__texteditfindbarbase_previous_in_focus_chain(void* self);
+QWidget* k_textcustomeditor__texteditfindbarbase_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-bool k_textcustomeditor__texteditfindbarbase_accept_drops(void* self);
+bool k_textcustomeditor__texteditfindbarbase_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2442,11 +2326,11 @@ void k_textcustomeditor__texteditfindbarbase_remove_action(void* self, void* act
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list k_textcustomeditor__texteditfindbarbase_actions(void* self);
+libqt_list k_textcustomeditor__texteditfindbarbase_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2465,7 +2349,7 @@ QAction* k_textcustomeditor__texteditfindbarbase_add_action2(void* self, const c
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* k_textcustomeditor__texteditfindbarbase_add_action3(void* self, void* icon, const char* text);
+QAction* k_textcustomeditor__texteditfindbarbase_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -2475,7 +2359,7 @@ QAction* k_textcustomeditor__texteditfindbarbase_add_action3(void* self, void* i
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_textcustomeditor__texteditfindbarbase_add_action4(void* self, const char* text, void* shortcut);
+QAction* k_textcustomeditor__texteditfindbarbase_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -2486,15 +2370,15 @@ QAction* k_textcustomeditor__texteditfindbarbase_add_action4(void* self, const c
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_textcustomeditor__texteditfindbarbase_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* k_textcustomeditor__texteditfindbarbase_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QWidget* k_textcustomeditor__texteditfindbarbase_parent_widget(void* self);
+QWidget* k_textcustomeditor__texteditfindbarbase_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2509,11 +2393,11 @@ void k_textcustomeditor__texteditfindbarbase_set_window_flags(void* self, int32_
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_window_flags(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2537,11 +2421,11 @@ void k_textcustomeditor__texteditfindbarbase_override_window_flags(void* self, i
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_window_type(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2555,29 +2439,29 @@ QWidget* k_textcustomeditor__texteditfindbarbase_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param x int
 /// @param y int
 ///
-QWidget* k_textcustomeditor__texteditfindbarbase_child_at(void* self, int x, int y);
+QWidget* k_textcustomeditor__texteditfindbarbase_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param p QPoint*
 ///
-QWidget* k_textcustomeditor__texteditfindbarbase_child_at2(void* self, void* p);
+QWidget* k_textcustomeditor__texteditfindbarbase_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param p QPointF*
 ///
-QWidget* k_textcustomeditor__texteditfindbarbase_child_at3(void* self, void* p);
+QWidget* k_textcustomeditor__texteditfindbarbase_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -2592,35 +2476,35 @@ void k_textcustomeditor__texteditfindbarbase_set_attribute(void* self, int32_t p
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool k_textcustomeditor__texteditfindbarbase_test_attribute(void* self, int32_t param1);
+bool k_textcustomeditor__texteditfindbarbase_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-void k_textcustomeditor__texteditfindbarbase_ensure_polished(void* self);
+void k_textcustomeditor__texteditfindbarbase_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param child QWidget*
 ///
-bool k_textcustomeditor__texteditfindbarbase_is_ancestor_of(void* self, void* child);
+bool k_textcustomeditor__texteditfindbarbase_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-bool k_textcustomeditor__texteditfindbarbase_auto_fill_background(void* self);
+bool k_textcustomeditor__texteditfindbarbase_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2635,25 +2519,25 @@ void k_textcustomeditor__texteditfindbarbase_set_auto_fill_background(void* self
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QBackingStore* k_textcustomeditor__texteditfindbarbase_backing_store(void* self);
+QBackingStore* k_textcustomeditor__texteditfindbarbase_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QWindow* k_textcustomeditor__texteditfindbarbase_window_handle(void* self);
+QWindow* k_textcustomeditor__texteditfindbarbase_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QScreen* k_textcustomeditor__texteditfindbarbase_screen(void* self);
+QScreen* k_textcustomeditor__texteditfindbarbase_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2697,7 +2581,7 @@ void k_textcustomeditor__texteditfindbarbase_on_window_title_changed(void* self,
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param icon QIcon*
 ///
-void k_textcustomeditor__texteditfindbarbase_window_icon_changed(void* self, void* icon);
+void k_textcustomeditor__texteditfindbarbase_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -2706,7 +2590,7 @@ void k_textcustomeditor__texteditfindbarbase_window_icon_changed(void* self, voi
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param callback void func(TextCustomEditor__TextEditFindBarBase* self, QIcon* icon)
 ///
-void k_textcustomeditor__texteditfindbarbase_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void k_textcustomeditor__texteditfindbarbase_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -2733,7 +2617,7 @@ void k_textcustomeditor__texteditfindbarbase_on_window_icon_text_changed(void* s
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param pos QPoint*
 ///
-void k_textcustomeditor__texteditfindbarbase_custom_context_menu_requested(void* self, void* pos);
+void k_textcustomeditor__texteditfindbarbase_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -2742,17 +2626,17 @@ void k_textcustomeditor__texteditfindbarbase_custom_context_menu_requested(void*
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param callback void func(TextCustomEditor__TextEditFindBarBase* self, QPoint* pos)
 ///
-void k_textcustomeditor__texteditfindbarbase_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void k_textcustomeditor__texteditfindbarbase_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_input_method_hints(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2771,7 +2655,7 @@ void k_textcustomeditor__texteditfindbarbase_set_input_method_hints(void* self, 
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void k_textcustomeditor__texteditfindbarbase_render22(void* self, void* target, void* targetOffset);
+void k_textcustomeditor__texteditfindbarbase_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -2782,7 +2666,7 @@ void k_textcustomeditor__texteditfindbarbase_render22(void* self, void* target, 
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_textcustomeditor__texteditfindbarbase_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void k_textcustomeditor__texteditfindbarbase_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -2794,7 +2678,7 @@ void k_textcustomeditor__texteditfindbarbase_render3(void* self, void* target, v
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_textcustomeditor__texteditfindbarbase_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_textcustomeditor__texteditfindbarbase_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2804,7 +2688,7 @@ void k_textcustomeditor__texteditfindbarbase_render4(void* self, void* target, v
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void k_textcustomeditor__texteditfindbarbase_render23(void* self, void* painter, void* targetOffset);
+void k_textcustomeditor__texteditfindbarbase_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -2815,7 +2699,7 @@ void k_textcustomeditor__texteditfindbarbase_render23(void* self, void* painter,
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_textcustomeditor__texteditfindbarbase_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void k_textcustomeditor__texteditfindbarbase_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -2827,7 +2711,7 @@ void k_textcustomeditor__texteditfindbarbase_render32(void* self, void* painter,
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_textcustomeditor__texteditfindbarbase_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_textcustomeditor__texteditfindbarbase_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2836,7 +2720,7 @@ void k_textcustomeditor__texteditfindbarbase_render42(void* self, void* painter,
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param rectangle QRect*
 ///
-QPixmap* k_textcustomeditor__texteditfindbarbase_grab1(void* self, void* rectangle);
+QPixmap* k_textcustomeditor__texteditfindbarbase_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -2856,7 +2740,7 @@ void k_textcustomeditor__texteditfindbarbase_grab_gesture2(void* self, int32_t t
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t k_textcustomeditor__texteditfindbarbase_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -2923,9 +2807,9 @@ QWidget* k_textcustomeditor__texteditfindbarbase_create_window_container3(void* 
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-const char* k_textcustomeditor__texteditfindbarbase_object_name(void* self);
+const char* k_textcustomeditor__texteditfindbarbase_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2940,33 +2824,33 @@ void k_textcustomeditor__texteditfindbarbase_set_object_name(void* self, const c
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-bool k_textcustomeditor__texteditfindbarbase_is_widget_type(void* self);
+bool k_textcustomeditor__texteditfindbarbase_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-bool k_textcustomeditor__texteditfindbarbase_is_window_type(void* self);
+bool k_textcustomeditor__texteditfindbarbase_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-bool k_textcustomeditor__texteditfindbarbase_is_quick_item_type(void* self);
+bool k_textcustomeditor__texteditfindbarbase_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-bool k_textcustomeditor__texteditfindbarbase_signals_blocked(void* self);
+bool k_textcustomeditor__texteditfindbarbase_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2981,9 +2865,9 @@ bool k_textcustomeditor__texteditfindbarbase_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QThread* k_textcustomeditor__texteditfindbarbase_thread(void* self);
+QThread* k_textcustomeditor__texteditfindbarbase_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3034,11 +2918,11 @@ void k_textcustomeditor__texteditfindbarbase_kill_timer2(void* self, int32_t id)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_textcustomeditor__texteditfindbarbase_children(void* self);
+libqt_list k_textcustomeditor__texteditfindbarbase_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3067,7 +2951,7 @@ void k_textcustomeditor__texteditfindbarbase_remove_event_filter(void* self, voi
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_textcustomeditor__texteditfindbarbase_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_textcustomeditor__texteditfindbarbase_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3078,18 +2962,18 @@ QMetaObject__Connection* k_textcustomeditor__texteditfindbarbase_connect(void* s
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_textcustomeditor__texteditfindbarbase_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_textcustomeditor__texteditfindbarbase_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_textcustomeditor__texteditfindbarbase_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_textcustomeditor__texteditfindbarbase_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3100,7 +2984,7 @@ QMetaObject__Connection* k_textcustomeditor__texteditfindbarbase_connect3(void* 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_textcustomeditor__texteditfindbarbase_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_textcustomeditor__texteditfindbarbase_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3111,24 +2995,24 @@ bool k_textcustomeditor__texteditfindbarbase_disconnect(void* sender, const char
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_textcustomeditor__texteditfindbarbase_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_textcustomeditor__texteditfindbarbase_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-bool k_textcustomeditor__texteditfindbarbase_disconnect3(void* self);
+bool k_textcustomeditor__texteditfindbarbase_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param receiver QObject*
 ///
-bool k_textcustomeditor__texteditfindbarbase_disconnect4(void* self, void* receiver);
+bool k_textcustomeditor__texteditfindbarbase_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -3136,23 +3020,23 @@ bool k_textcustomeditor__texteditfindbarbase_disconnect4(void* self, void* recei
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_textcustomeditor__texteditfindbarbase_disconnect5(void* param1);
+bool k_textcustomeditor__texteditfindbarbase_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-void k_textcustomeditor__texteditfindbarbase_dump_object_tree(void* self);
+void k_textcustomeditor__texteditfindbarbase_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-void k_textcustomeditor__texteditfindbarbase_dump_object_info(void* self);
+void k_textcustomeditor__texteditfindbarbase_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3162,16 +3046,16 @@ void k_textcustomeditor__texteditfindbarbase_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_textcustomeditor__texteditfindbarbase_set_property(void* self, const char* name, void* value);
+bool k_textcustomeditor__texteditfindbarbase_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param name const char*
 ///
-QVariant* k_textcustomeditor__texteditfindbarbase_property(void* self, const char* name);
+QVariant* k_textcustomeditor__texteditfindbarbase_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -3179,9 +3063,9 @@ QVariant* k_textcustomeditor__texteditfindbarbase_property(void* self, const cha
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-const char** k_textcustomeditor__texteditfindbarbase_dynamic_property_names(void* self);
+const char** k_textcustomeditor__texteditfindbarbase_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3195,9 +3079,9 @@ QBindingStorage* k_textcustomeditor__texteditfindbarbase_binding_storage(void* s
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-const QBindingStorage* k_textcustomeditor__texteditfindbarbase_binding_storage2(void* self);
+const QBindingStorage* k_textcustomeditor__texteditfindbarbase_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3220,18 +3104,18 @@ void k_textcustomeditor__texteditfindbarbase_on_destroyed(void* self, void (*cal
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QObject* k_textcustomeditor__texteditfindbarbase_parent(void* self);
+QObject* k_textcustomeditor__texteditfindbarbase_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param classname const char*
 ///
-bool k_textcustomeditor__texteditfindbarbase_inherits(void* self, const char* classname);
+bool k_textcustomeditor__texteditfindbarbase_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -3271,7 +3155,7 @@ int32_t k_textcustomeditor__texteditfindbarbase_start_timer23(void* self, int64_
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_textcustomeditor__texteditfindbarbase_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_textcustomeditor__texteditfindbarbase_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -3283,59 +3167,59 @@ QMetaObject__Connection* k_textcustomeditor__texteditfindbarbase_connect5(void* 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_textcustomeditor__texteditfindbarbase_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_textcustomeditor__texteditfindbarbase_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_textcustomeditor__texteditfindbarbase_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_textcustomeditor__texteditfindbarbase_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param signal const char*
 ///
-bool k_textcustomeditor__texteditfindbarbase_disconnect1(void* self, const char* signal);
+bool k_textcustomeditor__texteditfindbarbase_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_textcustomeditor__texteditfindbarbase_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_textcustomeditor__texteditfindbarbase_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_textcustomeditor__texteditfindbarbase_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_textcustomeditor__texteditfindbarbase_disconnect23(void* self, void* receiver, const char* member);
+bool k_textcustomeditor__texteditfindbarbase_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const TextCustomEditor__TextEditFindBarBase*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_textcustomeditor__texteditfindbarbase_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3359,89 +3243,89 @@ void k_textcustomeditor__texteditfindbarbase_on_destroyed1(void* self, void (*ca
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-bool k_textcustomeditor__texteditfindbarbase_painting_active(void* self);
+bool k_textcustomeditor__texteditfindbarbase_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_width_m_m(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_height_m_m(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_logical_dpi_x(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_logical_dpi_y(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_physical_dpi_x(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_physical_dpi_y(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-double k_textcustomeditor__texteditfindbarbase_device_pixel_ratio(void* self);
+double k_textcustomeditor__texteditfindbarbase_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-double k_textcustomeditor__texteditfindbarbase_device_pixel_ratio_f(void* self);
+double k_textcustomeditor__texteditfindbarbase_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_color_count(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_depth(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -3464,9 +3348,9 @@ int32_t k_textcustomeditor__texteditfindbarbase_encode_metric_f(int32_t metric, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_dev_type(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3474,9 +3358,9 @@ int32_t k_textcustomeditor__texteditfindbarbase_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_super_dev_type(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_super_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3484,10 +3368,10 @@ int32_t k_textcustomeditor__texteditfindbarbase_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
-/// @param callback int32_t func()
+/// @param self const TextCustomEditor__TextEditFindBarBase*
+/// @param callback int32_t func(TextCustomEditor__TextEditFindBarBase* self)
 ///
-void k_textcustomeditor__texteditfindbarbase_on_dev_type(void* self, int32_t (*callback)());
+void k_textcustomeditor__texteditfindbarbase_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3528,9 +3412,9 @@ void k_textcustomeditor__texteditfindbarbase_on_set_visible(void* self, void (*c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QSize* k_textcustomeditor__texteditfindbarbase_size_hint(void* self);
+QSize* k_textcustomeditor__texteditfindbarbase_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3538,9 +3422,9 @@ QSize* k_textcustomeditor__texteditfindbarbase_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QSize* k_textcustomeditor__texteditfindbarbase_super_size_hint(void* self);
+QSize* k_textcustomeditor__texteditfindbarbase_super_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3548,12 +3432,12 @@ QSize* k_textcustomeditor__texteditfindbarbase_super_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
-/// @param callback QSize* func()
+/// @param self const TextCustomEditor__TextEditFindBarBase*
+/// @param callback QSize* func(TextCustomEditor__TextEditFindBarBase* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textcustomeditor__texteditfindbarbase_on_size_hint(void* self, QSize* (*callback)());
+void k_textcustomeditor__texteditfindbarbase_on_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3561,9 +3445,9 @@ void k_textcustomeditor__texteditfindbarbase_on_size_hint(void* self, QSize* (*c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QSize* k_textcustomeditor__texteditfindbarbase_minimum_size_hint(void* self);
+QSize* k_textcustomeditor__texteditfindbarbase_minimum_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3571,9 +3455,9 @@ QSize* k_textcustomeditor__texteditfindbarbase_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QSize* k_textcustomeditor__texteditfindbarbase_super_minimum_size_hint(void* self);
+QSize* k_textcustomeditor__texteditfindbarbase_super_minimum_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3581,12 +3465,12 @@ QSize* k_textcustomeditor__texteditfindbarbase_super_minimum_size_hint(void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
-/// @param callback QSize* func()
+/// @param self const TextCustomEditor__TextEditFindBarBase*
+/// @param callback QSize* func(TextCustomEditor__TextEditFindBarBase* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textcustomeditor__texteditfindbarbase_on_minimum_size_hint(void* self, QSize* (*callback)());
+void k_textcustomeditor__texteditfindbarbase_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3594,10 +3478,10 @@ void k_textcustomeditor__texteditfindbarbase_on_minimum_size_hint(void* self, QS
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param param1 int
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_height_for_width(void* self, int param1);
+int32_t k_textcustomeditor__texteditfindbarbase_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -3605,10 +3489,10 @@ int32_t k_textcustomeditor__texteditfindbarbase_height_for_width(void* self, int
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param param1 int
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_super_height_for_width(void* self, int param1);
+int32_t k_textcustomeditor__texteditfindbarbase_super_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -3616,10 +3500,10 @@ int32_t k_textcustomeditor__texteditfindbarbase_super_height_for_width(void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param callback int32_t func(TextCustomEditor__TextEditFindBarBase* self, int param1)
 ///
-void k_textcustomeditor__texteditfindbarbase_on_height_for_width(void* self, int32_t (*callback)(void*, int));
+void k_textcustomeditor__texteditfindbarbase_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -3627,9 +3511,9 @@ void k_textcustomeditor__texteditfindbarbase_on_height_for_width(void* self, int
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-bool k_textcustomeditor__texteditfindbarbase_has_height_for_width(void* self);
+bool k_textcustomeditor__texteditfindbarbase_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3637,9 +3521,9 @@ bool k_textcustomeditor__texteditfindbarbase_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-bool k_textcustomeditor__texteditfindbarbase_super_has_height_for_width(void* self);
+bool k_textcustomeditor__texteditfindbarbase_super_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3647,10 +3531,10 @@ bool k_textcustomeditor__texteditfindbarbase_super_has_height_for_width(void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
-/// @param callback bool func()
+/// @param self const TextCustomEditor__TextEditFindBarBase*
+/// @param callback bool func(TextCustomEditor__TextEditFindBarBase* self)
 ///
-void k_textcustomeditor__texteditfindbarbase_on_has_height_for_width(void* self, bool (*callback)());
+void k_textcustomeditor__texteditfindbarbase_on_has_height_for_width(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3658,9 +3542,9 @@ void k_textcustomeditor__texteditfindbarbase_on_has_height_for_width(void* self,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QPaintEngine* k_textcustomeditor__texteditfindbarbase_paint_engine(void* self);
+QPaintEngine* k_textcustomeditor__texteditfindbarbase_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3668,9 +3552,9 @@ QPaintEngine* k_textcustomeditor__texteditfindbarbase_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QPaintEngine* k_textcustomeditor__texteditfindbarbase_super_paint_engine(void* self);
+QPaintEngine* k_textcustomeditor__texteditfindbarbase_super_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3678,10 +3562,10 @@ QPaintEngine* k_textcustomeditor__texteditfindbarbase_super_paint_engine(void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
-/// @param callback QPaintEngine* func()
+/// @param self const TextCustomEditor__TextEditFindBarBase*
+/// @param callback QPaintEngine* func(TextCustomEditor__TextEditFindBarBase* self)
 ///
-void k_textcustomeditor__texteditfindbarbase_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void k_textcustomeditor__texteditfindbarbase_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4551,10 +4435,10 @@ void k_textcustomeditor__texteditfindbarbase_on_change_event(void* self, void (*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_metric(void* self, int32_t param1);
+int32_t k_textcustomeditor__texteditfindbarbase_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4562,10 +4446,10 @@ int32_t k_textcustomeditor__texteditfindbarbase_metric(void* self, int32_t param
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_super_metric(void* self, int32_t param1);
+int32_t k_textcustomeditor__texteditfindbarbase_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4573,10 +4457,10 @@ int32_t k_textcustomeditor__texteditfindbarbase_super_metric(void* self, int32_t
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param callback int32_t func(TextCustomEditor__TextEditFindBarBase* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_textcustomeditor__texteditfindbarbase_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void k_textcustomeditor__texteditfindbarbase_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4584,10 +4468,10 @@ void k_textcustomeditor__texteditfindbarbase_on_metric(void* self, int32_t (*cal
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param painter QPainter*
 ///
-void k_textcustomeditor__texteditfindbarbase_init_painter(void* self, void* painter);
+void k_textcustomeditor__texteditfindbarbase_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4595,10 +4479,10 @@ void k_textcustomeditor__texteditfindbarbase_init_painter(void* self, void* pain
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param painter QPainter*
 ///
-void k_textcustomeditor__texteditfindbarbase_super_init_painter(void* self, void* painter);
+void k_textcustomeditor__texteditfindbarbase_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4606,10 +4490,10 @@ void k_textcustomeditor__texteditfindbarbase_super_init_painter(void* self, void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param callback void func(TextCustomEditor__TextEditFindBarBase* self, QPainter* painter)
 ///
-void k_textcustomeditor__texteditfindbarbase_on_init_painter(void* self, void (*callback)(void*, void*));
+void k_textcustomeditor__texteditfindbarbase_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4617,10 +4501,10 @@ void k_textcustomeditor__texteditfindbarbase_on_init_painter(void* self, void (*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_textcustomeditor__texteditfindbarbase_redirected(void* self, void* offset);
+QPaintDevice* k_textcustomeditor__texteditfindbarbase_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4628,10 +4512,10 @@ QPaintDevice* k_textcustomeditor__texteditfindbarbase_redirected(void* self, voi
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_textcustomeditor__texteditfindbarbase_super_redirected(void* self, void* offset);
+QPaintDevice* k_textcustomeditor__texteditfindbarbase_super_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4639,10 +4523,10 @@ QPaintDevice* k_textcustomeditor__texteditfindbarbase_super_redirected(void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param callback QPaintDevice* func(TextCustomEditor__TextEditFindBarBase* self, QPoint* offset)
 ///
-void k_textcustomeditor__texteditfindbarbase_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void k_textcustomeditor__texteditfindbarbase_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4650,9 +4534,9 @@ void k_textcustomeditor__texteditfindbarbase_on_redirected(void* self, QPaintDev
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QPainter* k_textcustomeditor__texteditfindbarbase_shared_painter(void* self);
+QPainter* k_textcustomeditor__texteditfindbarbase_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4660,9 +4544,9 @@ QPainter* k_textcustomeditor__texteditfindbarbase_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QPainter* k_textcustomeditor__texteditfindbarbase_super_shared_painter(void* self);
+QPainter* k_textcustomeditor__texteditfindbarbase_super_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4670,10 +4554,10 @@ QPainter* k_textcustomeditor__texteditfindbarbase_super_shared_painter(void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
-/// @param callback QPainter* func()
+/// @param self const TextCustomEditor__TextEditFindBarBase*
+/// @param callback QPainter* func(TextCustomEditor__TextEditFindBarBase* self)
 ///
-void k_textcustomeditor__texteditfindbarbase_on_shared_painter(void* self, QPainter* (*callback)());
+void k_textcustomeditor__texteditfindbarbase_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4714,10 +4598,10 @@ void k_textcustomeditor__texteditfindbarbase_on_input_method_event(void* self, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_textcustomeditor__texteditfindbarbase_input_method_query(void* self, int32_t param1);
+QVariant* k_textcustomeditor__texteditfindbarbase_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4725,10 +4609,10 @@ QVariant* k_textcustomeditor__texteditfindbarbase_input_method_query(void* self,
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_textcustomeditor__texteditfindbarbase_super_input_method_query(void* self, int32_t param1);
+QVariant* k_textcustomeditor__texteditfindbarbase_super_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4736,12 +4620,12 @@ QVariant* k_textcustomeditor__texteditfindbarbase_super_input_method_query(void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param callback QVariant* func(TextCustomEditor__TextEditFindBarBase* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textcustomeditor__texteditfindbarbase_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void k_textcustomeditor__texteditfindbarbase_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4919,7 +4803,7 @@ void k_textcustomeditor__texteditfindbarbase_on_custom_event(void* self, void (*
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param signal QMetaMethod*
 ///
-void k_textcustomeditor__texteditfindbarbase_connect_notify(void* self, void* signal);
+void k_textcustomeditor__texteditfindbarbase_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4930,7 +4814,7 @@ void k_textcustomeditor__texteditfindbarbase_connect_notify(void* self, void* si
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param signal QMetaMethod*
 ///
-void k_textcustomeditor__texteditfindbarbase_super_connect_notify(void* self, void* signal);
+void k_textcustomeditor__texteditfindbarbase_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4941,7 +4825,7 @@ void k_textcustomeditor__texteditfindbarbase_super_connect_notify(void* self, vo
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param callback void func(TextCustomEditor__TextEditFindBarBase* self, QMetaMethod* signal)
 ///
-void k_textcustomeditor__texteditfindbarbase_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_textcustomeditor__texteditfindbarbase_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -4952,7 +4836,7 @@ void k_textcustomeditor__texteditfindbarbase_on_connect_notify(void* self, void 
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param signal QMetaMethod*
 ///
-void k_textcustomeditor__texteditfindbarbase_disconnect_notify(void* self, void* signal);
+void k_textcustomeditor__texteditfindbarbase_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4963,7 +4847,7 @@ void k_textcustomeditor__texteditfindbarbase_disconnect_notify(void* self, void*
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param signal QMetaMethod*
 ///
-void k_textcustomeditor__texteditfindbarbase_super_disconnect_notify(void* self, void* signal);
+void k_textcustomeditor__texteditfindbarbase_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4974,7 +4858,7 @@ void k_textcustomeditor__texteditfindbarbase_super_disconnect_notify(void* self,
 /// @param self TextCustomEditor__TextEditFindBarBase*
 /// @param callback void func(TextCustomEditor__TextEditFindBarBase* self, QMetaMethod* signal)
 ///
-void k_textcustomeditor__texteditfindbarbase_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_textcustomeditor__texteditfindbarbase_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -5003,9 +4887,9 @@ void k_textcustomeditor__texteditfindbarbase_super_update_micro_focus(void* self
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextCustomEditor__TextEditFindBarBase*
-/// @param callback void func()
+/// @param callback void func(TextCustomEditor__TextEditFindBarBase* self)
 ///
-void k_textcustomeditor__texteditfindbarbase_on_update_micro_focus(void* self, void (*callback)());
+void k_textcustomeditor__texteditfindbarbase_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5034,9 +4918,9 @@ void k_textcustomeditor__texteditfindbarbase_super_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextCustomEditor__TextEditFindBarBase*
-/// @param callback void func()
+/// @param callback void func(TextCustomEditor__TextEditFindBarBase* self)
 ///
-void k_textcustomeditor__texteditfindbarbase_on_create(void* self, void (*callback)());
+void k_textcustomeditor__texteditfindbarbase_on_create(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5065,9 +4949,9 @@ void k_textcustomeditor__texteditfindbarbase_super_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextCustomEditor__TextEditFindBarBase*
-/// @param callback void func()
+/// @param callback void func(TextCustomEditor__TextEditFindBarBase* self)
 ///
-void k_textcustomeditor__texteditfindbarbase_on_destroy(void* self, void (*callback)());
+void k_textcustomeditor__texteditfindbarbase_on_destroy(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5096,9 +4980,9 @@ bool k_textcustomeditor__texteditfindbarbase_super_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextCustomEditor__TextEditFindBarBase*
-/// @param callback bool func()
+/// @param callback bool func(TextCustomEditor__TextEditFindBarBase* self)
 ///
-void k_textcustomeditor__texteditfindbarbase_on_focus_next_child(void* self, bool (*callback)());
+void k_textcustomeditor__texteditfindbarbase_on_focus_next_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5127,9 +5011,9 @@ bool k_textcustomeditor__texteditfindbarbase_super_focus_previous_child(void* se
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextCustomEditor__TextEditFindBarBase*
-/// @param callback bool func()
+/// @param callback bool func(TextCustomEditor__TextEditFindBarBase* self)
 ///
-void k_textcustomeditor__texteditfindbarbase_on_focus_previous_child(void* self, bool (*callback)());
+void k_textcustomeditor__texteditfindbarbase_on_focus_previous_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -5137,9 +5021,9 @@ void k_textcustomeditor__texteditfindbarbase_on_focus_previous_child(void* self,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QObject* k_textcustomeditor__texteditfindbarbase_sender(void* self);
+QObject* k_textcustomeditor__texteditfindbarbase_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5147,9 +5031,9 @@ QObject* k_textcustomeditor__texteditfindbarbase_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-QObject* k_textcustomeditor__texteditfindbarbase_super_sender(void* self);
+QObject* k_textcustomeditor__texteditfindbarbase_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5157,10 +5041,10 @@ QObject* k_textcustomeditor__texteditfindbarbase_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
-/// @param callback QObject* func()
+/// @param self const TextCustomEditor__TextEditFindBarBase*
+/// @param callback QObject* func(TextCustomEditor__TextEditFindBarBase* self)
 ///
-void k_textcustomeditor__texteditfindbarbase_on_sender(void* self, QObject* (*callback)());
+void k_textcustomeditor__texteditfindbarbase_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5168,9 +5052,9 @@ void k_textcustomeditor__texteditfindbarbase_on_sender(void* self, QObject* (*ca
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_sender_signal_index(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5178,9 +5062,9 @@ int32_t k_textcustomeditor__texteditfindbarbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_super_sender_signal_index(void* self);
+int32_t k_textcustomeditor__texteditfindbarbase_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5188,10 +5072,10 @@ int32_t k_textcustomeditor__texteditfindbarbase_super_sender_signal_index(void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
-/// @param callback int32_t func()
+/// @param self const TextCustomEditor__TextEditFindBarBase*
+/// @param callback int32_t func(TextCustomEditor__TextEditFindBarBase* self)
 ///
-void k_textcustomeditor__texteditfindbarbase_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_textcustomeditor__texteditfindbarbase_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5199,10 +5083,10 @@ void k_textcustomeditor__texteditfindbarbase_on_sender_signal_index(void* self, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param signal const char*
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_receivers(void* self, const char* signal);
+int32_t k_textcustomeditor__texteditfindbarbase_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5210,10 +5094,10 @@ int32_t k_textcustomeditor__texteditfindbarbase_receivers(void* self, const char
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param signal const char*
 ///
-int32_t k_textcustomeditor__texteditfindbarbase_super_receivers(void* self, const char* signal);
+int32_t k_textcustomeditor__texteditfindbarbase_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5221,10 +5105,10 @@ int32_t k_textcustomeditor__texteditfindbarbase_super_receivers(void* self, cons
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param callback int32_t func(TextCustomEditor__TextEditFindBarBase* self, const char* signal)
 ///
-void k_textcustomeditor__texteditfindbarbase_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_textcustomeditor__texteditfindbarbase_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5232,10 +5116,10 @@ void k_textcustomeditor__texteditfindbarbase_on_receivers(void* self, int32_t (*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param signal QMetaMethod*
 ///
-bool k_textcustomeditor__texteditfindbarbase_is_signal_connected(void* self, void* signal);
+bool k_textcustomeditor__texteditfindbarbase_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5243,10 +5127,10 @@ bool k_textcustomeditor__texteditfindbarbase_is_signal_connected(void* self, voi
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param signal QMetaMethod*
 ///
-bool k_textcustomeditor__texteditfindbarbase_super_is_signal_connected(void* self, void* signal);
+bool k_textcustomeditor__texteditfindbarbase_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5254,10 +5138,10 @@ bool k_textcustomeditor__texteditfindbarbase_super_is_signal_connected(void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param callback bool func(TextCustomEditor__TextEditFindBarBase* self, QMetaMethod* signal)
 ///
-void k_textcustomeditor__texteditfindbarbase_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_textcustomeditor__texteditfindbarbase_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5265,11 +5149,11 @@ void k_textcustomeditor__texteditfindbarbase_on_is_signal_connected(void* self, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_textcustomeditor__texteditfindbarbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_textcustomeditor__texteditfindbarbase_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5277,11 +5161,11 @@ double k_textcustomeditor__texteditfindbarbase_get_decoded_metric_f(void* self, 
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_textcustomeditor__texteditfindbarbase_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_textcustomeditor__texteditfindbarbase_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5289,10 +5173,10 @@ double k_textcustomeditor__texteditfindbarbase_super_get_decoded_metric_f(void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextCustomEditor__TextEditFindBarBase*
+/// @param self const TextCustomEditor__TextEditFindBarBase*
 /// @param callback double func(TextCustomEditor__TextEditFindBarBase* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_textcustomeditor__texteditfindbarbase_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void k_textcustomeditor__texteditfindbarbase_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

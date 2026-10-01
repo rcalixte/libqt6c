@@ -1,7 +1,7 @@
 #include "libqjslist.hpp"
 #include "libqjslist.h"
 
-QJSListIndexClamp* q_jslistindexclamp_new(void* other) {
+QJSListIndexClamp* q_jslistindexclamp_new(const void* other) {
     return QJSListIndexClamp_New((QJSListIndexClamp*)other);
 }
 
@@ -9,7 +9,7 @@ QJSListIndexClamp* q_jslistindexclamp_new2(void* other) {
     return QJSListIndexClamp_New2((QJSListIndexClamp*)other);
 }
 
-QJSListIndexClamp* q_jslistindexclamp_new3(void* param1) {
+QJSListIndexClamp* q_jslistindexclamp_new3(const void* param1) {
     return QJSListIndexClamp_New3((QJSListIndexClamp*)param1);
 }
 
@@ -29,7 +29,7 @@ intptr_t q_jslistindexclamp_clamp(intptr_t start, intptr_t max) {
     return QJSListIndexClamp_Clamp(start, max);
 }
 
-void q_jslistindexclamp_operator_assign(void* self, void* param1) {
+void q_jslistindexclamp_operator_assign(void* self, const void* param1) {
     QJSListIndexClamp_OperatorAssign((QJSListIndexClamp*)self, (QJSListIndexClamp*)param1);
 }
 
@@ -41,7 +41,7 @@ void q_jslistindexclamp_delete(void* self) {
     QJSListIndexClamp_Delete((QJSListIndexClamp*)(self));
 }
 
-bool q_jslistforiniterator_has_next(void* self) {
+bool q_jslistforiniterator_has_next(const void* self) {
     return QJSListForInIterator_HasNext((QJSListForInIterator*)self);
 }
 

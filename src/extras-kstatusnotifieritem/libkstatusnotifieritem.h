@@ -41,26 +41,26 @@ KStatusNotifierItem* k_statusnotifieritem_new4(const char* id, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-const QMetaObject* k_statusnotifieritem_meta_object(void* self);
+const QMetaObject* k_statusnotifieritem_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KStatusNotifierItem*
-/// @param callback const QMetaObject* func()
+/// @param self const KStatusNotifierItem*
+/// @param callback const QMetaObject* func(const KStatusNotifierItem* self)
 ///
-void k_statusnotifieritem_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_statusnotifieritem_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-const QMetaObject* k_statusnotifieritem_super_meta_object(void* self);
+const QMetaObject* k_statusnotifieritem_super_meta_object(const void* self);
 
 /// @param self KStatusNotifierItem*
 /// @param param1 const char*
@@ -116,9 +116,9 @@ const char* k_statusnotifieritem_tr(const char* s);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-const char* k_statusnotifieritem_id(void* self);
+const char* k_statusnotifieritem_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#setCategory)
 ///
@@ -129,11 +129,11 @@ void k_statusnotifieritem_set_category(void* self, int32_t category);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#category)
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
 /// @return enum KStatusNotifierItem__ItemCategory
 ///
-int32_t k_statusnotifieritem_category(void* self);
+int32_t k_statusnotifieritem_category(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#setTitle)
 ///
@@ -146,9 +146,9 @@ void k_statusnotifieritem_set_title(void* self, const char* title);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-const char* k_statusnotifieritem_title(void* self);
+const char* k_statusnotifieritem_title(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#setStatus)
 ///
@@ -159,11 +159,11 @@ void k_statusnotifieritem_set_status(void* self, int32_t status);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#status)
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
 /// @return enum KStatusNotifierItem__ItemStatus
 ///
-int32_t k_statusnotifieritem_status(void* self);
+int32_t k_statusnotifieritem_status(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#setIconByName)
 ///
@@ -176,22 +176,22 @@ void k_statusnotifieritem_set_icon_by_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-const char* k_statusnotifieritem_icon_name(void* self);
+const char* k_statusnotifieritem_icon_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#setIconByPixmap)
 ///
 /// @param self KStatusNotifierItem*
 /// @param icon QIcon*
 ///
-void k_statusnotifieritem_set_icon_by_pixmap(void* self, void* icon);
+void k_statusnotifieritem_set_icon_by_pixmap(void* self, const void* icon);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#iconPixmap)
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-QIcon* k_statusnotifieritem_icon_pixmap(void* self);
+QIcon* k_statusnotifieritem_icon_pixmap(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#setOverlayIconByName)
 ///
@@ -204,22 +204,22 @@ void k_statusnotifieritem_set_overlay_icon_by_name(void* self, const char* name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-const char* k_statusnotifieritem_overlay_icon_name(void* self);
+const char* k_statusnotifieritem_overlay_icon_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#setOverlayIconByPixmap)
 ///
 /// @param self KStatusNotifierItem*
 /// @param icon QIcon*
 ///
-void k_statusnotifieritem_set_overlay_icon_by_pixmap(void* self, void* icon);
+void k_statusnotifieritem_set_overlay_icon_by_pixmap(void* self, const void* icon);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#overlayIconPixmap)
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-QIcon* k_statusnotifieritem_overlay_icon_pixmap(void* self);
+QIcon* k_statusnotifieritem_overlay_icon_pixmap(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#setAttentionIconByName)
 ///
@@ -232,22 +232,22 @@ void k_statusnotifieritem_set_attention_icon_by_name(void* self, const char* nam
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-const char* k_statusnotifieritem_attention_icon_name(void* self);
+const char* k_statusnotifieritem_attention_icon_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#setAttentionIconByPixmap)
 ///
 /// @param self KStatusNotifierItem*
 /// @param icon QIcon*
 ///
-void k_statusnotifieritem_set_attention_icon_by_pixmap(void* self, void* icon);
+void k_statusnotifieritem_set_attention_icon_by_pixmap(void* self, const void* icon);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#attentionIconPixmap)
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-QIcon* k_statusnotifieritem_attention_icon_pixmap(void* self);
+QIcon* k_statusnotifieritem_attention_icon_pixmap(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#setAttentionMovieByName)
 ///
@@ -260,9 +260,9 @@ void k_statusnotifieritem_set_attention_movie_by_name(void* self, const char* na
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-const char* k_statusnotifieritem_attention_movie_name(void* self);
+const char* k_statusnotifieritem_attention_movie_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#setToolTip)
 ///
@@ -280,7 +280,7 @@ void k_statusnotifieritem_set_tool_tip(void* self, const char* iconName, const c
 /// @param title const char*
 /// @param subTitle const char*
 ///
-void k_statusnotifieritem_set_tool_tip2(void* self, void* icon, const char* title, const char* subTitle);
+void k_statusnotifieritem_set_tool_tip2(void* self, const void* icon, const char* title, const char* subTitle);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#setToolTipIconByName)
 ///
@@ -293,22 +293,22 @@ void k_statusnotifieritem_set_tool_tip_icon_by_name(void* self, const char* name
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-const char* k_statusnotifieritem_tool_tip_icon_name(void* self);
+const char* k_statusnotifieritem_tool_tip_icon_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#setToolTipIconByPixmap)
 ///
 /// @param self KStatusNotifierItem*
 /// @param icon QIcon*
 ///
-void k_statusnotifieritem_set_tool_tip_icon_by_pixmap(void* self, void* icon);
+void k_statusnotifieritem_set_tool_tip_icon_by_pixmap(void* self, const void* icon);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#toolTipIconPixmap)
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-QIcon* k_statusnotifieritem_tool_tip_icon_pixmap(void* self);
+QIcon* k_statusnotifieritem_tool_tip_icon_pixmap(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#setToolTipTitle)
 ///
@@ -321,9 +321,9 @@ void k_statusnotifieritem_set_tool_tip_title(void* self, const char* title);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-const char* k_statusnotifieritem_tool_tip_title(void* self);
+const char* k_statusnotifieritem_tool_tip_title(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#setToolTipSubTitle)
 ///
@@ -336,9 +336,9 @@ void k_statusnotifieritem_set_tool_tip_sub_title(void* self, const char* subTitl
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-const char* k_statusnotifieritem_tool_tip_sub_title(void* self);
+const char* k_statusnotifieritem_tool_tip_sub_title(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#setContextMenu)
 ///
@@ -349,9 +349,9 @@ void k_statusnotifieritem_set_context_menu(void* self, void* menu);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#contextMenu)
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-QMenu* k_statusnotifieritem_context_menu(void* self);
+QMenu* k_statusnotifieritem_context_menu(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#setAssociatedWindow)
 ///
@@ -362,17 +362,17 @@ void k_statusnotifieritem_set_associated_window(void* self, void* window);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#associatedWindow)
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-QWindow* k_statusnotifieritem_associated_window(void* self);
+QWindow* k_statusnotifieritem_associated_window(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#actionCollection)
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list k_statusnotifieritem_action_collection(void* self);
+libqt_list k_statusnotifieritem_action_collection(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#addAction)
 ///
@@ -391,10 +391,10 @@ void k_statusnotifieritem_remove_action(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#action)
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 /// @param name const char*
 ///
-QAction* k_statusnotifieritem_action(void* self, const char* name);
+QAction* k_statusnotifieritem_action(const void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#setStandardActionsEnabled)
 ///
@@ -405,9 +405,9 @@ void k_statusnotifieritem_set_standard_actions_enabled(void* self, bool enabled)
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#standardActionsEnabled)
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-bool k_statusnotifieritem_standard_actions_enabled(void* self);
+bool k_statusnotifieritem_standard_actions_enabled(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#showMessage)
 ///
@@ -422,9 +422,9 @@ void k_statusnotifieritem_show_message(void* self, const char* title, const char
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-const char* k_statusnotifieritem_provided_token(void* self);
+const char* k_statusnotifieritem_provided_token(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#abortQuit)
 ///
@@ -437,7 +437,7 @@ void k_statusnotifieritem_abort_quit(void* self);
 /// @param self KStatusNotifierItem*
 /// @param pos QPoint*
 ///
-void k_statusnotifieritem_activate(void* self, void* pos);
+void k_statusnotifieritem_activate(void* self, const void* pos);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#activate)
 ///
@@ -446,7 +446,7 @@ void k_statusnotifieritem_activate(void* self, void* pos);
 /// @param self KStatusNotifierItem*
 /// @param callback void func(KStatusNotifierItem* self, QPoint* pos)
 ///
-void k_statusnotifieritem_on_activate(void* self, void (*callback)(void*, void*));
+void k_statusnotifieritem_on_activate(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#activate)
 ///
@@ -455,7 +455,7 @@ void k_statusnotifieritem_on_activate(void* self, void (*callback)(void*, void*)
 /// @param self KStatusNotifierItem*
 /// @param pos QPoint*
 ///
-void k_statusnotifieritem_super_activate(void* self, void* pos);
+void k_statusnotifieritem_super_activate(void* self, const void* pos);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#hideAssociatedWindow)
 ///
@@ -484,28 +484,28 @@ void k_statusnotifieritem_on_scroll_requested(void* self, void (*callback)(void*
 /// @param active bool
 /// @param pos QPoint*
 ///
-void k_statusnotifieritem_activate_requested(void* self, bool active, void* pos);
+void k_statusnotifieritem_activate_requested(void* self, bool active, const void* pos);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#activateRequested)
 ///
 /// @param self KStatusNotifierItem*
 /// @param callback void func(KStatusNotifierItem* self, bool active, QPoint* pos)
 ///
-void k_statusnotifieritem_on_activate_requested(void* self, void (*callback)(void*, bool, void*));
+void k_statusnotifieritem_on_activate_requested(void* self, void (*callback)(void*, bool, const void*));
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#secondaryActivateRequested)
 ///
 /// @param self KStatusNotifierItem*
 /// @param pos QPoint*
 ///
-void k_statusnotifieritem_secondary_activate_requested(void* self, void* pos);
+void k_statusnotifieritem_secondary_activate_requested(void* self, const void* pos);
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#secondaryActivateRequested)
 ///
 /// @param self KStatusNotifierItem*
 /// @param callback void func(KStatusNotifierItem* self, QPoint* pos)
 ///
-void k_statusnotifieritem_on_secondary_activate_requested(void* self, void (*callback)(void*, void*));
+void k_statusnotifieritem_on_secondary_activate_requested(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#quitRequested)
 ///
@@ -582,9 +582,9 @@ void k_statusnotifieritem_show_message4(void* self, const char* title, const cha
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-const char* k_statusnotifieritem_object_name(void* self);
+const char* k_statusnotifieritem_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -599,33 +599,33 @@ void k_statusnotifieritem_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-bool k_statusnotifieritem_is_widget_type(void* self);
+bool k_statusnotifieritem_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-bool k_statusnotifieritem_is_window_type(void* self);
+bool k_statusnotifieritem_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-bool k_statusnotifieritem_is_quick_item_type(void* self);
+bool k_statusnotifieritem_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-bool k_statusnotifieritem_signals_blocked(void* self);
+bool k_statusnotifieritem_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -640,9 +640,9 @@ bool k_statusnotifieritem_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-QThread* k_statusnotifieritem_thread(void* self);
+QThread* k_statusnotifieritem_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -693,11 +693,11 @@ void k_statusnotifieritem_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_statusnotifieritem_children(void* self);
+libqt_list k_statusnotifieritem_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -735,7 +735,7 @@ void k_statusnotifieritem_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_statusnotifieritem_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_statusnotifieritem_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -746,18 +746,18 @@ QMetaObject__Connection* k_statusnotifieritem_connect(void* sender, const char* 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_statusnotifieritem_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_statusnotifieritem_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_statusnotifieritem_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_statusnotifieritem_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -768,7 +768,7 @@ QMetaObject__Connection* k_statusnotifieritem_connect3(void* self, void* sender,
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_statusnotifieritem_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_statusnotifieritem_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -779,24 +779,24 @@ bool k_statusnotifieritem_disconnect(void* sender, const char* signal, void* rec
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_statusnotifieritem_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_statusnotifieritem_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-bool k_statusnotifieritem_disconnect3(void* self);
+bool k_statusnotifieritem_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 /// @param receiver QObject*
 ///
-bool k_statusnotifieritem_disconnect4(void* self, void* receiver);
+bool k_statusnotifieritem_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -804,23 +804,23 @@ bool k_statusnotifieritem_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_statusnotifieritem_disconnect5(void* param1);
+bool k_statusnotifieritem_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-void k_statusnotifieritem_dump_object_tree(void* self);
+void k_statusnotifieritem_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-void k_statusnotifieritem_dump_object_info(void* self);
+void k_statusnotifieritem_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -830,16 +830,16 @@ void k_statusnotifieritem_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_statusnotifieritem_set_property(void* self, const char* name, void* value);
+bool k_statusnotifieritem_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 /// @param name const char*
 ///
-QVariant* k_statusnotifieritem_property(void* self, const char* name);
+QVariant* k_statusnotifieritem_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -847,9 +847,9 @@ QVariant* k_statusnotifieritem_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-const char** k_statusnotifieritem_dynamic_property_names(void* self);
+const char** k_statusnotifieritem_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -863,9 +863,9 @@ QBindingStorage* k_statusnotifieritem_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-const QBindingStorage* k_statusnotifieritem_binding_storage2(void* self);
+const QBindingStorage* k_statusnotifieritem_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -888,18 +888,18 @@ void k_statusnotifieritem_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-QObject* k_statusnotifieritem_parent(void* self);
+QObject* k_statusnotifieritem_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 /// @param classname const char*
 ///
-bool k_statusnotifieritem_inherits(void* self, const char* classname);
+bool k_statusnotifieritem_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -939,7 +939,7 @@ int32_t k_statusnotifieritem_start_timer23(void* self, int64_t time, int32_t tim
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_statusnotifieritem_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_statusnotifieritem_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -951,59 +951,59 @@ QMetaObject__Connection* k_statusnotifieritem_connect5(void* sender, const char*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_statusnotifieritem_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_statusnotifieritem_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_statusnotifieritem_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_statusnotifieritem_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 /// @param signal const char*
 ///
-bool k_statusnotifieritem_disconnect1(void* self, const char* signal);
+bool k_statusnotifieritem_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KStatusNotifierItem*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_statusnotifieritem_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_statusnotifieritem_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_statusnotifieritem_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_statusnotifieritem_disconnect23(void* self, void* receiver, const char* member);
+bool k_statusnotifieritem_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KStatusNotifierItem*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_statusnotifieritem_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1164,7 +1164,7 @@ void k_statusnotifieritem_on_custom_event(void* self, void (*callback)(void*, vo
 /// @param self KStatusNotifierItem*
 /// @param signal QMetaMethod*
 ///
-void k_statusnotifieritem_connect_notify(void* self, void* signal);
+void k_statusnotifieritem_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1175,7 +1175,7 @@ void k_statusnotifieritem_connect_notify(void* self, void* signal);
 /// @param self KStatusNotifierItem*
 /// @param signal QMetaMethod*
 ///
-void k_statusnotifieritem_super_connect_notify(void* self, void* signal);
+void k_statusnotifieritem_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1186,7 +1186,7 @@ void k_statusnotifieritem_super_connect_notify(void* self, void* signal);
 /// @param self KStatusNotifierItem*
 /// @param callback void func(KStatusNotifierItem* self, QMetaMethod* signal)
 ///
-void k_statusnotifieritem_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_statusnotifieritem_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1197,7 +1197,7 @@ void k_statusnotifieritem_on_connect_notify(void* self, void (*callback)(void*, 
 /// @param self KStatusNotifierItem*
 /// @param signal QMetaMethod*
 ///
-void k_statusnotifieritem_disconnect_notify(void* self, void* signal);
+void k_statusnotifieritem_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1208,7 +1208,7 @@ void k_statusnotifieritem_disconnect_notify(void* self, void* signal);
 /// @param self KStatusNotifierItem*
 /// @param signal QMetaMethod*
 ///
-void k_statusnotifieritem_super_disconnect_notify(void* self, void* signal);
+void k_statusnotifieritem_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1219,7 +1219,7 @@ void k_statusnotifieritem_super_disconnect_notify(void* self, void* signal);
 /// @param self KStatusNotifierItem*
 /// @param callback void func(KStatusNotifierItem* self, QMetaMethod* signal)
 ///
-void k_statusnotifieritem_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_statusnotifieritem_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1227,9 +1227,9 @@ void k_statusnotifieritem_on_disconnect_notify(void* self, void (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-QObject* k_statusnotifieritem_sender(void* self);
+QObject* k_statusnotifieritem_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1237,9 +1237,9 @@ QObject* k_statusnotifieritem_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-QObject* k_statusnotifieritem_super_sender(void* self);
+QObject* k_statusnotifieritem_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1247,10 +1247,10 @@ QObject* k_statusnotifieritem_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KStatusNotifierItem*
-/// @param callback QObject* func()
+/// @param self const KStatusNotifierItem*
+/// @param callback QObject* func(KStatusNotifierItem* self)
 ///
-void k_statusnotifieritem_on_sender(void* self, QObject* (*callback)());
+void k_statusnotifieritem_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1258,9 +1258,9 @@ void k_statusnotifieritem_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-int32_t k_statusnotifieritem_sender_signal_index(void* self);
+int32_t k_statusnotifieritem_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1268,9 +1268,9 @@ int32_t k_statusnotifieritem_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 ///
-int32_t k_statusnotifieritem_super_sender_signal_index(void* self);
+int32_t k_statusnotifieritem_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1278,10 +1278,10 @@ int32_t k_statusnotifieritem_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KStatusNotifierItem*
-/// @param callback int32_t func()
+/// @param self const KStatusNotifierItem*
+/// @param callback int32_t func(KStatusNotifierItem* self)
 ///
-void k_statusnotifieritem_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_statusnotifieritem_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1289,10 +1289,10 @@ void k_statusnotifieritem_on_sender_signal_index(void* self, int32_t (*callback)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 /// @param signal const char*
 ///
-int32_t k_statusnotifieritem_receivers(void* self, const char* signal);
+int32_t k_statusnotifieritem_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1300,10 +1300,10 @@ int32_t k_statusnotifieritem_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 /// @param signal const char*
 ///
-int32_t k_statusnotifieritem_super_receivers(void* self, const char* signal);
+int32_t k_statusnotifieritem_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1311,10 +1311,10 @@ int32_t k_statusnotifieritem_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 /// @param callback int32_t func(KStatusNotifierItem* self, const char* signal)
 ///
-void k_statusnotifieritem_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_statusnotifieritem_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1322,10 +1322,10 @@ void k_statusnotifieritem_on_receivers(void* self, int32_t (*callback)(void*, co
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 /// @param signal QMetaMethod*
 ///
-bool k_statusnotifieritem_is_signal_connected(void* self, void* signal);
+bool k_statusnotifieritem_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1333,10 +1333,10 @@ bool k_statusnotifieritem_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 /// @param signal QMetaMethod*
 ///
-bool k_statusnotifieritem_super_is_signal_connected(void* self, void* signal);
+bool k_statusnotifieritem_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1344,10 +1344,10 @@ bool k_statusnotifieritem_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KStatusNotifierItem*
+/// @param self const KStatusNotifierItem*
 /// @param callback bool func(KStatusNotifierItem* self, QMetaMethod* signal)
 ///
-void k_statusnotifieritem_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_statusnotifieritem_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

@@ -45,7 +45,7 @@ const char** k_urlmimedata_mime_data_types();
 ///
 /// @return libqt_list of QUrl*
 ///
-libqt_list k_urlmimedata_urls_from_mime_data(void* mimeData, int32_t decodeOptions, libqt_map* metaData);
+libqt_list k_urlmimedata_urls_from_mime_data(const void* mimeData, int32_t decodeOptions, libqt_map* metaData);
 
 /// [Upstream resources](https://api.kde.org/kurlmimedata.html#public-types)
 

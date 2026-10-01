@@ -21,15 +21,15 @@ KNSCore__EngineBase* k_nscore__enginebase_new2(void* parent) {
     return KNSCore__EngineBase_New2((QObject*)parent);
 }
 
-const QMetaObject* k_nscore__enginebase_meta_object(void* self) {
+const QMetaObject* k_nscore__enginebase_meta_object(const void* self) {
     return KNSCore__EngineBase_MetaObject((KNSCore__EngineBase*)self);
 }
 
-void k_nscore__enginebase_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_nscore__enginebase_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     KNSCore__EngineBase_OnMetaObject((KNSCore__EngineBase*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_nscore__enginebase_super_meta_object(void* self) {
+const QMetaObject* k_nscore__enginebase_super_meta_object(const void* self) {
     return KNSCore__EngineBase_SuperMetaObject((KNSCore__EngineBase*)self);
 }
 
@@ -93,14 +93,14 @@ bool k_nscore__enginebase_super_init(void* self, const char* configfile) {
     return KNSCore__EngineBase_SuperInit((KNSCore__EngineBase*)self, qstring(configfile));
 }
 
-const char* k_nscore__enginebase_name(void* self) {
+const char* k_nscore__enginebase_name(const void* self) {
     libqt_string _str = KNSCore__EngineBase_Name((KNSCore__EngineBase*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_nscore__enginebase_use_label(void* self) {
+const char* k_nscore__enginebase_use_label(const void* self) {
     libqt_string _str = KNSCore__EngineBase_UseLabel((KNSCore__EngineBase*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -111,7 +111,7 @@ void k_nscore__enginebase_use_label_changed(void* self) {
     KNSCore__EngineBase_UseLabelChanged((KNSCore__EngineBase*)self);
 }
 
-bool k_nscore__enginebase_upload_enabled(void* self) {
+bool k_nscore__enginebase_upload_enabled(const void* self) {
     return KNSCore__EngineBase_UploadEnabled((KNSCore__EngineBase*)self);
 }
 
@@ -119,7 +119,7 @@ void k_nscore__enginebase_upload_enabled_changed(void* self) {
     KNSCore__EngineBase_UploadEnabledChanged((KNSCore__EngineBase*)self);
 }
 
-const char** k_nscore__enginebase_categories(void* self) {
+const char** k_nscore__enginebase_categories(const void* self) {
     libqt_list _arr = KNSCore__EngineBase_Categories((KNSCore__EngineBase*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -156,7 +156,7 @@ libqt_list /* of KNSCore__SearchPreset* */ k_nscore__enginebase_search_presets2(
     return _arr;
 }
 
-libqt_list /* of Attica__Provider* */ k_nscore__enginebase_attica_providers(void* self) {
+libqt_list /* of Attica__Provider* */ k_nscore__enginebase_attica_providers(const void* self) {
     libqt_list _arr = KNSCore__EngineBase_AtticaProviders((KNSCore__EngineBase*)self);
     return _arr;
 }
@@ -175,7 +175,7 @@ void k_nscore__enginebase_set_tag_filter(void* self, const char* filter[static 1
     free(filter_qstr);
 }
 
-const char** k_nscore__enginebase_tag_filter(void* self) {
+const char** k_nscore__enginebase_tag_filter(const void* self) {
     libqt_list _arr = KNSCore__EngineBase_TagFilter((KNSCore__EngineBase*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -210,7 +210,7 @@ void k_nscore__enginebase_set_download_tag_filter(void* self, const char* filter
     free(filter_qstr);
 }
 
-const char** k_nscore__enginebase_download_tag_filter(void* self) {
+const char** k_nscore__enginebase_download_tag_filter(const void* self) {
     libqt_list _arr = KNSCore__EngineBase_DownloadTagFilter((KNSCore__EngineBase*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -231,23 +231,23 @@ void k_nscore__enginebase_add_download_tag_filter(void* self, const char* filter
     KNSCore__EngineBase_AddDownloadTagFilter((KNSCore__EngineBase*)self, qstring(filter));
 }
 
-bool k_nscore__enginebase_user_can_vote(void* self, void* entry) {
+bool k_nscore__enginebase_user_can_vote(void* self, const void* entry) {
     return KNSCore__EngineBase_UserCanVote((KNSCore__EngineBase*)self, (KNSCore__Entry*)entry);
 }
 
-void k_nscore__enginebase_vote(void* self, void* entry, uint32_t rating) {
+void k_nscore__enginebase_vote(void* self, const void* entry, uint32_t rating) {
     KNSCore__EngineBase_Vote((KNSCore__EngineBase*)self, (KNSCore__Entry*)entry, rating);
 }
 
-bool k_nscore__enginebase_user_can_become_fan(void* self, void* entry) {
+bool k_nscore__enginebase_user_can_become_fan(void* self, const void* entry) {
     return KNSCore__EngineBase_UserCanBecomeFan((KNSCore__EngineBase*)self, (KNSCore__Entry*)entry);
 }
 
-void k_nscore__enginebase_become_fan(void* self, void* entry) {
+void k_nscore__enginebase_become_fan(void* self, const void* entry) {
     KNSCore__EngineBase_BecomeFan((KNSCore__EngineBase*)self, (KNSCore__Entry*)entry);
 }
 
-const char** k_nscore__enginebase_provider_i_ds(void* self) {
+const char** k_nscore__enginebase_provider_i_ds(const void* self) {
     libqt_list _arr = KNSCore__EngineBase_ProviderIDs((KNSCore__EngineBase*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -264,19 +264,19 @@ const char** k_nscore__enginebase_provider_i_ds(void* self) {
     return _ret;
 }
 
-bool k_nscore__enginebase_has_adoption_command(void* self) {
+bool k_nscore__enginebase_has_adoption_command(const void* self) {
     return KNSCore__EngineBase_HasAdoptionCommand((KNSCore__EngineBase*)self);
 }
 
-KNSCore__ResultsStream* k_nscore__enginebase_search(void* self, void* request) {
+KNSCore__ResultsStream* k_nscore__enginebase_search(void* self, const void* request) {
     return KNSCore__EngineBase_Search((KNSCore__EngineBase*)self, (KNSCore__Provider__SearchRequest*)request);
 }
 
-KNSCore__ResultsStream* k_nscore__enginebase_search2(void* self, void* request) {
+KNSCore__ResultsStream* k_nscore__enginebase_search2(void* self, const void* request) {
     return KNSCore__EngineBase_Search2((KNSCore__EngineBase*)self, (KNSCore__SearchRequest*)request);
 }
 
-int32_t k_nscore__enginebase_content_warning_type(void* self) {
+int32_t k_nscore__enginebase_content_warning_type(const void* self) {
     return KNSCore__EngineBase_ContentWarningType((KNSCore__EngineBase*)self);
 }
 
@@ -300,11 +300,11 @@ void k_nscore__enginebase_on_signal_providers_loaded(void* self, void (*callback
     KNSCore__EngineBase_Connect_SignalProvidersLoaded((KNSCore__EngineBase*)self, (intptr_t)callback);
 }
 
-void k_nscore__enginebase_signal_error_code(void* self, int32_t errorCode, const char* message, void* metadata) {
+void k_nscore__enginebase_signal_error_code(void* self, int32_t errorCode, const char* message, const void* metadata) {
     KNSCore__EngineBase_SignalErrorCode((KNSCore__EngineBase*)self, errorCode, qstring(message), (QVariant*)metadata);
 }
 
-void k_nscore__enginebase_on_signal_error_code(void* self, void (*callback)(void*, int32_t, const char*, void*)) {
+void k_nscore__enginebase_on_signal_error_code(void* self, void (*callback)(void*, int32_t, const char*, const void*)) {
     KNSCore__EngineBase_Connect_SignalErrorCode((KNSCore__EngineBase*)self, (intptr_t)callback);
 }
 
@@ -368,7 +368,7 @@ void k_nscore__enginebase_update_status(void* self) {
     KNSCore__EngineBase_UpdateStatus((KNSCore__EngineBase*)self);
 }
 
-void k_nscore__enginebase_on_update_status(void* self, void (*callback)()) {
+void k_nscore__enginebase_on_update_status(void* self, void (*callback)(void*)) {
     KNSCore__EngineBase_OnUpdateStatus((KNSCore__EngineBase*)self, (intptr_t)callback);
 }
 
@@ -390,7 +390,7 @@ const char* k_nscore__enginebase_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-const char* k_nscore__enginebase_object_name(void* self) {
+const char* k_nscore__enginebase_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -401,19 +401,19 @@ void k_nscore__enginebase_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_nscore__enginebase_is_widget_type(void* self) {
+bool k_nscore__enginebase_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_nscore__enginebase_is_window_type(void* self) {
+bool k_nscore__enginebase_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_nscore__enginebase_is_quick_item_type(void* self) {
+bool k_nscore__enginebase_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_nscore__enginebase_signals_blocked(void* self) {
+bool k_nscore__enginebase_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -421,7 +421,7 @@ bool k_nscore__enginebase_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_nscore__enginebase_thread(void* self) {
+QThread* k_nscore__enginebase_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -445,7 +445,7 @@ void k_nscore__enginebase_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_nscore__enginebase_children(void* self) {
+libqt_list /* of QObject* */ k_nscore__enginebase_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -462,55 +462,55 @@ void k_nscore__enginebase_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_nscore__enginebase_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_nscore__enginebase_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_nscore__enginebase_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_nscore__enginebase_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_nscore__enginebase_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_nscore__enginebase_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_nscore__enginebase_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_nscore__enginebase_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_nscore__enginebase_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_nscore__enginebase_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_nscore__enginebase_disconnect3(void* self) {
+bool k_nscore__enginebase_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_nscore__enginebase_disconnect4(void* self, void* receiver) {
+bool k_nscore__enginebase_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_nscore__enginebase_disconnect5(void* param1) {
+bool k_nscore__enginebase_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_nscore__enginebase_dump_object_tree(void* self) {
+void k_nscore__enginebase_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_nscore__enginebase_dump_object_info(void* self) {
+void k_nscore__enginebase_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_nscore__enginebase_set_property(void* self, const char* name, void* value) {
+bool k_nscore__enginebase_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_nscore__enginebase_property(void* self, const char* name) {
+QVariant* k_nscore__enginebase_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_nscore__enginebase_dynamic_property_names(void* self) {
+const char** k_nscore__enginebase_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -531,7 +531,7 @@ QBindingStorage* k_nscore__enginebase_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_nscore__enginebase_binding_storage2(void* self) {
+const QBindingStorage* k_nscore__enginebase_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -543,11 +543,11 @@ void k_nscore__enginebase_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_nscore__enginebase_parent(void* self) {
+QObject* k_nscore__enginebase_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_nscore__enginebase_inherits(void* self, const char* classname) {
+bool k_nscore__enginebase_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -563,31 +563,31 @@ int32_t k_nscore__enginebase_start_timer23(void* self, int64_t time, int32_t tim
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_nscore__enginebase_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_nscore__enginebase_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_nscore__enginebase_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_nscore__enginebase_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_nscore__enginebase_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_nscore__enginebase_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_nscore__enginebase_disconnect1(void* self, const char* signal) {
+bool k_nscore__enginebase_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_nscore__enginebase_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_nscore__enginebase_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_nscore__enginebase_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_nscore__enginebase_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_nscore__enginebase_disconnect23(void* self, void* receiver, const char* member) {
+bool k_nscore__enginebase_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -659,76 +659,44 @@ void k_nscore__enginebase_on_custom_event(void* self, void (*callback)(void*, vo
     KNSCore__EngineBase_OnCustomEvent((KNSCore__EngineBase*)self, (intptr_t)callback);
 }
 
-void k_nscore__enginebase_connect_notify(void* self, void* signal) {
+void k_nscore__enginebase_connect_notify(void* self, const void* signal) {
     KNSCore__EngineBase_ConnectNotify((KNSCore__EngineBase*)self, (QMetaMethod*)signal);
 }
 
-void k_nscore__enginebase_super_connect_notify(void* self, void* signal) {
+void k_nscore__enginebase_super_connect_notify(void* self, const void* signal) {
     KNSCore__EngineBase_SuperConnectNotify((KNSCore__EngineBase*)self, (QMetaMethod*)signal);
 }
 
-void k_nscore__enginebase_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_nscore__enginebase_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     KNSCore__EngineBase_OnConnectNotify((KNSCore__EngineBase*)self, (intptr_t)callback);
 }
 
-void k_nscore__enginebase_disconnect_notify(void* self, void* signal) {
+void k_nscore__enginebase_disconnect_notify(void* self, const void* signal) {
     KNSCore__EngineBase_DisconnectNotify((KNSCore__EngineBase*)self, (QMetaMethod*)signal);
 }
 
-void k_nscore__enginebase_super_disconnect_notify(void* self, void* signal) {
+void k_nscore__enginebase_super_disconnect_notify(void* self, const void* signal) {
     KNSCore__EngineBase_SuperDisconnectNotify((KNSCore__EngineBase*)self, (QMetaMethod*)signal);
 }
 
-void k_nscore__enginebase_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_nscore__enginebase_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     KNSCore__EngineBase_OnDisconnectNotify((KNSCore__EngineBase*)self, (intptr_t)callback);
 }
 
-QObject* k_nscore__enginebase_sender(void* self) {
+QObject* k_nscore__enginebase_sender(const void* self) {
     return KNSCore__EngineBase_Sender((KNSCore__EngineBase*)self);
 }
 
-QObject* k_nscore__enginebase_super_sender(void* self) {
-    return KNSCore__EngineBase_SuperSender((KNSCore__EngineBase*)self);
-}
-
-void k_nscore__enginebase_on_sender(void* self, QObject* (*callback)()) {
-    KNSCore__EngineBase_OnSender((KNSCore__EngineBase*)self, (intptr_t)callback);
-}
-
-int32_t k_nscore__enginebase_sender_signal_index(void* self) {
+int32_t k_nscore__enginebase_sender_signal_index(const void* self) {
     return KNSCore__EngineBase_SenderSignalIndex((KNSCore__EngineBase*)self);
 }
 
-int32_t k_nscore__enginebase_super_sender_signal_index(void* self) {
-    return KNSCore__EngineBase_SuperSenderSignalIndex((KNSCore__EngineBase*)self);
-}
-
-void k_nscore__enginebase_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    KNSCore__EngineBase_OnSenderSignalIndex((KNSCore__EngineBase*)self, (intptr_t)callback);
-}
-
-int32_t k_nscore__enginebase_receivers(void* self, const char* signal) {
+int32_t k_nscore__enginebase_receivers(const void* self, const char* signal) {
     return KNSCore__EngineBase_Receivers((KNSCore__EngineBase*)self, signal);
 }
 
-int32_t k_nscore__enginebase_super_receivers(void* self, const char* signal) {
-    return KNSCore__EngineBase_SuperReceivers((KNSCore__EngineBase*)self, signal);
-}
-
-void k_nscore__enginebase_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    KNSCore__EngineBase_OnReceivers((KNSCore__EngineBase*)self, (intptr_t)callback);
-}
-
-bool k_nscore__enginebase_is_signal_connected(void* self, void* signal) {
+bool k_nscore__enginebase_is_signal_connected(const void* self, const void* signal) {
     return KNSCore__EngineBase_IsSignalConnected((KNSCore__EngineBase*)self, (QMetaMethod*)signal);
-}
-
-bool k_nscore__enginebase_super_is_signal_connected(void* self, void* signal) {
-    return KNSCore__EngineBase_SuperIsSignalConnected((KNSCore__EngineBase*)self, (QMetaMethod*)signal);
-}
-
-void k_nscore__enginebase_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    KNSCore__EngineBase_OnIsSignalConnected((KNSCore__EngineBase*)self, (intptr_t)callback);
 }
 
 void k_nscore__enginebase_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

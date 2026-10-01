@@ -25,7 +25,7 @@ void q_textstream_set_encoding(void* self, int32_t encoding) {
     QTextStream_SetEncoding((QTextStream*)self, encoding);
 }
 
-int32_t q_textstream_encoding(void* self) {
+int32_t q_textstream_encoding(const void* self) {
     return QTextStream_Encoding((QTextStream*)self);
 }
 
@@ -33,7 +33,7 @@ void q_textstream_set_auto_detect_unicode(void* self, bool enabled) {
     QTextStream_SetAutoDetectUnicode((QTextStream*)self, enabled);
 }
 
-bool q_textstream_auto_detect_unicode(void* self) {
+bool q_textstream_auto_detect_unicode(const void* self) {
     return QTextStream_AutoDetectUnicode((QTextStream*)self);
 }
 
@@ -41,15 +41,15 @@ void q_textstream_set_generate_byte_order_mark(void* self, bool generate) {
     QTextStream_SetGenerateByteOrderMark((QTextStream*)self, generate);
 }
 
-bool q_textstream_generate_byte_order_mark(void* self) {
+bool q_textstream_generate_byte_order_mark(const void* self) {
     return QTextStream_GenerateByteOrderMark((QTextStream*)self);
 }
 
-void q_textstream_set_locale(void* self, void* locale) {
+void q_textstream_set_locale(void* self, const void* locale) {
     QTextStream_SetLocale((QTextStream*)self, (QLocale*)locale);
 }
 
-QLocale* q_textstream_locale(void* self) {
+QLocale* q_textstream_locale(const void* self) {
     return QTextStream_Locale((QTextStream*)self);
 }
 
@@ -57,18 +57,18 @@ void q_textstream_set_device(void* self, void* device) {
     QTextStream_SetDevice((QTextStream*)self, (QIODevice*)device);
 }
 
-QIODevice* q_textstream_device(void* self) {
+QIODevice* q_textstream_device(const void* self) {
     return QTextStream_Device((QTextStream*)self);
 }
 
-const char* q_textstream_string(void* self) {
+const char* q_textstream_string(const void* self) {
     libqt_string _str = QTextStream_String((QTextStream*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t q_textstream_status(void* self) {
+int32_t q_textstream_status(const void* self) {
     return QTextStream_Status((QTextStream*)self);
 }
 
@@ -80,7 +80,7 @@ void q_textstream_reset_status(void* self) {
     QTextStream_ResetStatus((QTextStream*)self);
 }
 
-bool q_textstream_at_end(void* self) {
+bool q_textstream_at_end(const void* self) {
     return QTextStream_AtEnd((QTextStream*)self);
 }
 
@@ -96,7 +96,7 @@ bool q_textstream_seek(void* self, int64_t pos) {
     return QTextStream_Seek((QTextStream*)self, pos);
 }
 
-int64_t q_textstream_pos(void* self) {
+int64_t q_textstream_pos(const void* self) {
     return QTextStream_Pos((QTextStream*)self);
 }
 
@@ -129,7 +129,7 @@ void q_textstream_set_field_alignment(void* self, int32_t alignment) {
     QTextStream_SetFieldAlignment((QTextStream*)self, alignment);
 }
 
-int32_t q_textstream_field_alignment(void* self) {
+int32_t q_textstream_field_alignment(const void* self) {
     return QTextStream_FieldAlignment((QTextStream*)self);
 }
 
@@ -137,7 +137,7 @@ void q_textstream_set_pad_char(void* self, void* ch) {
     QTextStream_SetPadChar((QTextStream*)self, (QChar*)ch);
 }
 
-QChar* q_textstream_pad_char(void* self) {
+QChar* q_textstream_pad_char(const void* self) {
     return QTextStream_PadChar((QTextStream*)self);
 }
 
@@ -145,7 +145,7 @@ void q_textstream_set_field_width(void* self, int width) {
     QTextStream_SetFieldWidth((QTextStream*)self, width);
 }
 
-int32_t q_textstream_field_width(void* self) {
+int32_t q_textstream_field_width(const void* self) {
     return QTextStream_FieldWidth((QTextStream*)self);
 }
 
@@ -153,7 +153,7 @@ void q_textstream_set_number_flags(void* self, int32_t flags) {
     QTextStream_SetNumberFlags((QTextStream*)self, flags);
 }
 
-int32_t q_textstream_number_flags(void* self) {
+int32_t q_textstream_number_flags(const void* self) {
     return QTextStream_NumberFlags((QTextStream*)self);
 }
 
@@ -161,7 +161,7 @@ void q_textstream_set_integer_base(void* self, int base) {
     QTextStream_SetIntegerBase((QTextStream*)self, base);
 }
 
-int32_t q_textstream_integer_base(void* self) {
+int32_t q_textstream_integer_base(const void* self) {
     return QTextStream_IntegerBase((QTextStream*)self);
 }
 
@@ -169,7 +169,7 @@ void q_textstream_set_real_number_notation(void* self, int32_t notation) {
     QTextStream_SetRealNumberNotation((QTextStream*)self, notation);
 }
 
-int32_t q_textstream_real_number_notation(void* self) {
+int32_t q_textstream_real_number_notation(const void* self) {
     return QTextStream_RealNumberNotation((QTextStream*)self);
 }
 
@@ -177,7 +177,7 @@ void q_textstream_set_real_number_precision(void* self, int precision) {
     QTextStream_SetRealNumberPrecision((QTextStream*)self, precision);
 }
 
-int32_t q_textstream_real_number_precision(void* self) {
+int32_t q_textstream_real_number_precision(const void* self) {
     return QTextStream_RealNumberPrecision((QTextStream*)self);
 }
 

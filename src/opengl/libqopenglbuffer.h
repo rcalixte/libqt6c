@@ -28,14 +28,14 @@ QOpenGLBuffer* q_openglbuffer_new2(int32_t type);
 ///
 /// @param other QOpenGLBuffer*
 ///
-QOpenGLBuffer* q_openglbuffer_new3(void* other);
+QOpenGLBuffer* q_openglbuffer_new3(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglbuffer.html#operator-eq)
 ///
 /// @param self QOpenGLBuffer*
 /// @param other QOpenGLBuffer*
 ///
-void q_openglbuffer_operator_assign(void* self, void* other);
+void q_openglbuffer_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglbuffer.html#swap)
 ///
@@ -46,19 +46,19 @@ void q_openglbuffer_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglbuffer.html#type)
 ///
-/// @param self QOpenGLBuffer*
+/// @param self const QOpenGLBuffer*
 ///
 /// @return enum QOpenGLBuffer__Type
 ///
-int32_t q_openglbuffer_type(void* self);
+int32_t q_openglbuffer_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglbuffer.html#usagePattern)
 ///
-/// @param self QOpenGLBuffer*
+/// @param self const QOpenGLBuffer*
 ///
 /// @return enum QOpenGLBuffer__UsagePattern
 ///
-int32_t q_openglbuffer_usage_pattern(void* self);
+int32_t q_openglbuffer_usage_pattern(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglbuffer.html#setUsagePattern)
 ///
@@ -75,9 +75,9 @@ bool q_openglbuffer_create(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglbuffer.html#isCreated)
 ///
-/// @param self QOpenGLBuffer*
+/// @param self const QOpenGLBuffer*
 ///
-bool q_openglbuffer_is_created(void* self);
+bool q_openglbuffer_is_created(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglbuffer.html#destroy)
 ///
@@ -105,15 +105,15 @@ void q_openglbuffer_release2(int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglbuffer.html#bufferId)
 ///
-/// @param self QOpenGLBuffer*
+/// @param self const QOpenGLBuffer*
 ///
-uint32_t q_openglbuffer_buffer_id(void* self);
+uint32_t q_openglbuffer_buffer_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglbuffer.html#size)
 ///
-/// @param self QOpenGLBuffer*
+/// @param self const QOpenGLBuffer*
 ///
-int32_t q_openglbuffer_size(void* self);
+int32_t q_openglbuffer_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglbuffer.html#read)
 ///

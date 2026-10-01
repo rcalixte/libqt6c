@@ -20,7 +20,7 @@ Solid__Device* k_solid__device_new();
 ///
 /// @param device Solid__Device*
 ///
-Solid__Device* k_solid__device_new2(void* device);
+Solid__Device* k_solid__device_new2(const void* device);
 
 /// [Upstream resources](https://api.kde.org/solid-device.html)
 
@@ -50,7 +50,7 @@ libqt_list k_solid__device_list_from_type(int32_t* type);
 ///
 /// @return libqt_list of Solid__Device*
 ///
-libqt_list k_solid__device_list_from_query(void* predicate);
+libqt_list k_solid__device_list_from_query(const void* predicate);
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#listFromQuery)
 ///
@@ -71,90 +71,90 @@ Solid__Device* k_solid__device_storage_access_from_path(const char* path);
 /// @param self Solid__Device*
 /// @param device Solid__Device*
 ///
-void k_solid__device_operator_assign(void* self, void* device);
+void k_solid__device_operator_assign(void* self, const void* device);
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#isValid)
 ///
-/// @param self Solid__Device*
+/// @param self const Solid__Device*
 ///
-bool k_solid__device_is_valid(void* self);
+bool k_solid__device_is_valid(const void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#udi)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Solid__Device*
+/// @param self const Solid__Device*
 ///
-const char* k_solid__device_udi(void* self);
+const char* k_solid__device_udi(const void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#parentUdi)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Solid__Device*
+/// @param self const Solid__Device*
 ///
-const char* k_solid__device_parent_udi(void* self);
+const char* k_solid__device_parent_udi(const void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#parent)
 ///
-/// @param self Solid__Device*
+/// @param self const Solid__Device*
 ///
-Solid__Device* k_solid__device_parent(void* self);
+Solid__Device* k_solid__device_parent(const void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#vendor)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Solid__Device*
+/// @param self const Solid__Device*
 ///
-const char* k_solid__device_vendor(void* self);
+const char* k_solid__device_vendor(const void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#product)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Solid__Device*
+/// @param self const Solid__Device*
 ///
-const char* k_solid__device_product(void* self);
+const char* k_solid__device_product(const void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#icon)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Solid__Device*
+/// @param self const Solid__Device*
 ///
-const char* k_solid__device_icon(void* self);
+const char* k_solid__device_icon(const void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#emblems)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Solid__Device*
+/// @param self const Solid__Device*
 ///
-const char** k_solid__device_emblems(void* self);
+const char** k_solid__device_emblems(const void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#displayName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Solid__Device*
+/// @param self const Solid__Device*
 ///
-const char* k_solid__device_display_name(void* self);
+const char* k_solid__device_display_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#description)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Solid__Device*
+/// @param self const Solid__Device*
 ///
-const char* k_solid__device_description(void* self);
+const char* k_solid__device_description(const void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#isDeviceInterface)
 ///
-/// @param self Solid__Device*
+/// @param self const Solid__Device*
 /// @param type enum Solid__DeviceInterface__Type*
 ///
-bool k_solid__device_is_device_interface(void* self, int32_t* type);
+bool k_solid__device_is_device_interface(const void* self, int32_t* type);
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#asDeviceInterface)
 ///
@@ -165,10 +165,10 @@ Solid__DeviceInterface* k_solid__device_as_device_interface(void* self, int32_t*
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#asDeviceInterface)
 ///
-/// @param self Solid__Device*
+/// @param self const Solid__Device*
 /// @param type enum Solid__DeviceInterface__Type*
 ///
-const Solid__DeviceInterface* k_solid__device_as_device_interface2(void* self, int32_t* type);
+const Solid__DeviceInterface* k_solid__device_as_device_interface2(const void* self, int32_t* type);
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#listFromType)
 ///
@@ -186,7 +186,7 @@ libqt_list k_solid__device_list_from_type2(int32_t* type, const char* parentUdi)
 ///
 /// @return libqt_list of Solid__Device*
 ///
-libqt_list k_solid__device_list_from_query22(void* predicate, const char* parentUdi);
+libqt_list k_solid__device_list_from_query22(const void* predicate, const char* parentUdi);
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#listFromQuery)
 ///

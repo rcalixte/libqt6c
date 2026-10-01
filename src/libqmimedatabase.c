@@ -9,60 +9,60 @@ QMimeDatabase* q_mimedatabase_new() {
     return QMimeDatabase_New();
 }
 
-QMimeType* q_mimedatabase_mime_type_for_name(void* self, const char* nameOrAlias) {
+QMimeType* q_mimedatabase_mime_type_for_name(const void* self, const char* nameOrAlias) {
     return QMimeDatabase_MimeTypeForName((QMimeDatabase*)self, qstring(nameOrAlias));
 }
 
-QMimeType* q_mimedatabase_mime_type_for_file(void* self, const char* fileName) {
+QMimeType* q_mimedatabase_mime_type_for_file(const void* self, const char* fileName) {
     return QMimeDatabase_MimeTypeForFile((QMimeDatabase*)self, qstring(fileName));
 }
 
-QMimeType* q_mimedatabase_mime_type_for_file2(void* self, void* fileInfo) {
+QMimeType* q_mimedatabase_mime_type_for_file2(const void* self, const void* fileInfo) {
     return QMimeDatabase_MimeTypeForFile2((QMimeDatabase*)self, (QFileInfo*)fileInfo);
 }
 
-libqt_list /* of QMimeType* */ q_mimedatabase_mime_types_for_file_name(void* self, const char* fileName) {
+libqt_list /* of QMimeType* */ q_mimedatabase_mime_types_for_file_name(const void* self, const char* fileName) {
     libqt_list _arr = QMimeDatabase_MimeTypesForFileName((QMimeDatabase*)self, qstring(fileName));
     return _arr;
 }
 
-QMimeType* q_mimedatabase_mime_type_for_data(void* self, char* data) {
+QMimeType* q_mimedatabase_mime_type_for_data(const void* self, char* data) {
     return QMimeDatabase_MimeTypeForData((QMimeDatabase*)self, qstring(data));
 }
 
-QMimeType* q_mimedatabase_mime_type_for_data2(void* self, void* device) {
+QMimeType* q_mimedatabase_mime_type_for_data2(const void* self, void* device) {
     return QMimeDatabase_MimeTypeForData2((QMimeDatabase*)self, (QIODevice*)device);
 }
 
-QMimeType* q_mimedatabase_mime_type_for_url(void* self, void* url) {
+QMimeType* q_mimedatabase_mime_type_for_url(const void* self, const void* url) {
     return QMimeDatabase_MimeTypeForUrl((QMimeDatabase*)self, (QUrl*)url);
 }
 
-QMimeType* q_mimedatabase_mime_type_for_file_name_and_data(void* self, const char* fileName, void* device) {
+QMimeType* q_mimedatabase_mime_type_for_file_name_and_data(const void* self, const char* fileName, void* device) {
     return QMimeDatabase_MimeTypeForFileNameAndData((QMimeDatabase*)self, qstring(fileName), (QIODevice*)device);
 }
 
-QMimeType* q_mimedatabase_mime_type_for_file_name_and_data2(void* self, const char* fileName, char* data) {
+QMimeType* q_mimedatabase_mime_type_for_file_name_and_data2(const void* self, const char* fileName, char* data) {
     return QMimeDatabase_MimeTypeForFileNameAndData2((QMimeDatabase*)self, qstring(fileName), qstring(data));
 }
 
-const char* q_mimedatabase_suffix_for_file_name(void* self, const char* fileName) {
+const char* q_mimedatabase_suffix_for_file_name(const void* self, const char* fileName) {
     libqt_string _str = QMimeDatabase_SuffixForFileName((QMimeDatabase*)self, qstring(fileName));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-libqt_list /* of QMimeType* */ q_mimedatabase_all_mime_types(void* self) {
+libqt_list /* of QMimeType* */ q_mimedatabase_all_mime_types(const void* self) {
     libqt_list _arr = QMimeDatabase_AllMimeTypes((QMimeDatabase*)self);
     return _arr;
 }
 
-QMimeType* q_mimedatabase_mime_type_for_file22(void* self, const char* fileName, int32_t mode) {
+QMimeType* q_mimedatabase_mime_type_for_file22(const void* self, const char* fileName, int32_t mode) {
     return QMimeDatabase_MimeTypeForFile22((QMimeDatabase*)self, qstring(fileName), mode);
 }
 
-QMimeType* q_mimedatabase_mime_type_for_file23(void* self, void* fileInfo, int32_t mode) {
+QMimeType* q_mimedatabase_mime_type_for_file23(const void* self, const void* fileInfo, int32_t mode) {
     return QMimeDatabase_MimeTypeForFile23((QMimeDatabase*)self, (QFileInfo*)fileInfo, mode);
 }
 

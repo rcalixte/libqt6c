@@ -15,7 +15,7 @@
 /// @param key QGeoSatelliteInfo*
 /// @param seed size_t
 ///
-size_t q_qgeosatelliteinfo_h_q_hash(void* key, size_t seed);
+size_t q_qgeosatelliteinfo_h_q_hash(const void* key, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfo.html)
 
@@ -29,14 +29,14 @@ QGeoSatelliteInfo* q_geosatelliteinfo_new();
 ///
 /// @param other QGeoSatelliteInfo*
 ///
-QGeoSatelliteInfo* q_geosatelliteinfo_new2(void* other);
+QGeoSatelliteInfo* q_geosatelliteinfo_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfo.html#operator-eq)
 ///
 /// @param self QGeoSatelliteInfo*
 /// @param other QGeoSatelliteInfo*
 ///
-void q_geosatelliteinfo_operator_assign(void* self, void* other);
+void q_geosatelliteinfo_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfo.html#swap)
 ///
@@ -54,11 +54,11 @@ void q_geosatelliteinfo_set_satellite_system(void* self, int32_t system);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfo.html#satelliteSystem)
 ///
-/// @param self QGeoSatelliteInfo*
+/// @param self const QGeoSatelliteInfo*
 ///
 /// @return enum QGeoSatelliteInfo__SatelliteSystem
 ///
-int32_t q_geosatelliteinfo_satellite_system(void* self);
+int32_t q_geosatelliteinfo_satellite_system(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfo.html#setSatelliteIdentifier)
 ///
@@ -69,9 +69,9 @@ void q_geosatelliteinfo_set_satellite_identifier(void* self, int satId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfo.html#satelliteIdentifier)
 ///
-/// @param self QGeoSatelliteInfo*
+/// @param self const QGeoSatelliteInfo*
 ///
-int32_t q_geosatelliteinfo_satellite_identifier(void* self);
+int32_t q_geosatelliteinfo_satellite_identifier(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfo.html#setSignalStrength)
 ///
@@ -82,9 +82,9 @@ void q_geosatelliteinfo_set_signal_strength(void* self, int signalStrength);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfo.html#signalStrength)
 ///
-/// @param self QGeoSatelliteInfo*
+/// @param self const QGeoSatelliteInfo*
 ///
-int32_t q_geosatelliteinfo_signal_strength(void* self);
+int32_t q_geosatelliteinfo_signal_strength(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfo.html#setAttribute)
 ///
@@ -96,10 +96,10 @@ void q_geosatelliteinfo_set_attribute(void* self, int32_t attribute, double valu
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfo.html#attribute)
 ///
-/// @param self QGeoSatelliteInfo*
+/// @param self const QGeoSatelliteInfo*
 /// @param attribute enum QGeoSatelliteInfo__Attribute
 ///
-double q_geosatelliteinfo_attribute(void* self, int32_t attribute);
+double q_geosatelliteinfo_attribute(const void* self, int32_t attribute);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfo.html#removeAttribute)
 ///
@@ -110,10 +110,10 @@ void q_geosatelliteinfo_remove_attribute(void* self, int32_t attribute);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfo.html#hasAttribute)
 ///
-/// @param self QGeoSatelliteInfo*
+/// @param self const QGeoSatelliteInfo*
 /// @param attribute enum QGeoSatelliteInfo__Attribute
 ///
-bool q_geosatelliteinfo_has_attribute(void* self, int32_t attribute);
+bool q_geosatelliteinfo_has_attribute(const void* self, int32_t attribute);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfo.html#detach)
 ///

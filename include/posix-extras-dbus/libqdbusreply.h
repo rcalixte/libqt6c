@@ -16,5 +16,5 @@
 /// @param error QDBusError*
 /// @param data QVariant*
 ///
-void q_qdbusreply_h_q_d_bus_reply_fill(void* reply, void* error, void* data);
+void q_qdbusreply_h_q_d_bus_reply_fill(const void* reply, void* error, void* data);
 #endif

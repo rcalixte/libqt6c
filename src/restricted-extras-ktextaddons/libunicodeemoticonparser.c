@@ -7,7 +7,7 @@ TextEmoticonsCore__UnicodeEmoticonParser* k_textemoticonscore__unicodeemoticonpa
     return TextEmoticonsCore__UnicodeEmoticonParser_New();
 }
 
-libqt_list /* of TextEmoticonsCore__UnicodeEmoticon* */ k_textemoticonscore__unicodeemoticonparser_parse(void* self, void* o) {
+libqt_list /* of TextEmoticonsCore__UnicodeEmoticon* */ k_textemoticonscore__unicodeemoticonparser_parse(const void* self, const void* o) {
     libqt_list _arr = TextEmoticonsCore__UnicodeEmoticonParser_Parse((TextEmoticonsCore__UnicodeEmoticonParser*)self, (QJsonObject*)o);
     return _arr;
 }

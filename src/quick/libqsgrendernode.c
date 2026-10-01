@@ -9,15 +9,15 @@ QSGRenderNode* q_sgrendernode_new() {
     return QSGRenderNode_New();
 }
 
-int32_t q_sgrendernode_changed_states(void* self) {
+int32_t q_sgrendernode_changed_states(const void* self) {
     return QSGRenderNode_ChangedStates((QSGRenderNode*)self);
 }
 
-void q_sgrendernode_on_changed_states(void* self, int32_t (*callback)()) {
+void q_sgrendernode_on_changed_states(const void* self, int32_t (*callback)(const void*)) {
     QSGRenderNode_OnChangedStates((QSGRenderNode*)self, (intptr_t)callback);
 }
 
-int32_t q_sgrendernode_super_changed_states(void* self) {
+int32_t q_sgrendernode_super_changed_states(const void* self) {
     return QSGRenderNode_SuperChangedStates((QSGRenderNode*)self);
 }
 
@@ -25,7 +25,7 @@ void q_sgrendernode_prepare(void* self) {
     QSGRenderNode_Prepare((QSGRenderNode*)self);
 }
 
-void q_sgrendernode_on_prepare(void* self, void (*callback)()) {
+void q_sgrendernode_on_prepare(void* self, void (*callback)(void*)) {
     QSGRenderNode_OnPrepare((QSGRenderNode*)self, (intptr_t)callback);
 }
 
@@ -33,23 +33,19 @@ void q_sgrendernode_super_prepare(void* self) {
     QSGRenderNode_SuperPrepare((QSGRenderNode*)self);
 }
 
-void q_sgrendernode_render(void* self, void* state) {
+void q_sgrendernode_render(void* self, const void* state) {
     QSGRenderNode_Render((QSGRenderNode*)self, (QSGRenderNode__RenderState*)state);
 }
 
-void q_sgrendernode_on_render(void* self, void (*callback)(void*, void*)) {
+void q_sgrendernode_on_render(void* self, void (*callback)(void*, const void*)) {
     QSGRenderNode_OnRender((QSGRenderNode*)self, (intptr_t)callback);
-}
-
-void q_sgrendernode_super_render(void* self, void* state) {
-    QSGRenderNode_SuperRender((QSGRenderNode*)self, (QSGRenderNode__RenderState*)state);
 }
 
 void q_sgrendernode_release_resources(void* self) {
     QSGRenderNode_ReleaseResources((QSGRenderNode*)self);
 }
 
-void q_sgrendernode_on_release_resources(void* self, void (*callback)()) {
+void q_sgrendernode_on_release_resources(void* self, void (*callback)(void*)) {
     QSGRenderNode_OnReleaseResources((QSGRenderNode*)self, (intptr_t)callback);
 }
 
@@ -57,51 +53,51 @@ void q_sgrendernode_super_release_resources(void* self) {
     QSGRenderNode_SuperReleaseResources((QSGRenderNode*)self);
 }
 
-int32_t q_sgrendernode_flags(void* self) {
+int32_t q_sgrendernode_flags(const void* self) {
     return QSGRenderNode_Flags((QSGRenderNode*)self);
 }
 
-void q_sgrendernode_on_flags(void* self, int32_t (*callback)()) {
+void q_sgrendernode_on_flags(const void* self, int32_t (*callback)(const void*)) {
     QSGRenderNode_OnFlags((QSGRenderNode*)self, (intptr_t)callback);
 }
 
-int32_t q_sgrendernode_super_flags(void* self) {
+int32_t q_sgrendernode_super_flags(const void* self) {
     return QSGRenderNode_SuperFlags((QSGRenderNode*)self);
 }
 
-QRectF* q_sgrendernode_rect(void* self) {
+QRectF* q_sgrendernode_rect(const void* self) {
     return QSGRenderNode_Rect((QSGRenderNode*)self);
 }
 
-void q_sgrendernode_on_rect(void* self, QRectF* (*callback)()) {
+void q_sgrendernode_on_rect(const void* self, QRectF* (*callback)(const void*)) {
     QSGRenderNode_OnRect((QSGRenderNode*)self, (intptr_t)callback);
 }
 
-QRectF* q_sgrendernode_super_rect(void* self) {
+QRectF* q_sgrendernode_super_rect(const void* self) {
     return QSGRenderNode_SuperRect((QSGRenderNode*)self);
 }
 
-const QMatrix4x4* q_sgrendernode_projection_matrix(void* self) {
+const QMatrix4x4* q_sgrendernode_projection_matrix(const void* self) {
     return QSGRenderNode_ProjectionMatrix((QSGRenderNode*)self);
 }
 
-const QMatrix4x4* q_sgrendernode_projection_matrix2(void* self, intptr_t index) {
+const QMatrix4x4* q_sgrendernode_projection_matrix2(const void* self, intptr_t index) {
     return QSGRenderNode_ProjectionMatrix2((QSGRenderNode*)self, index);
 }
 
-const QMatrix4x4* q_sgrendernode_matrix(void* self) {
+const QMatrix4x4* q_sgrendernode_matrix(const void* self) {
     return QSGRenderNode_Matrix((QSGRenderNode*)self);
 }
 
-const QSGClipNode* q_sgrendernode_clip_list(void* self) {
+const QSGClipNode* q_sgrendernode_clip_list(const void* self) {
     return QSGRenderNode_ClipList((QSGRenderNode*)self);
 }
 
-double q_sgrendernode_inherited_opacity(void* self) {
+double q_sgrendernode_inherited_opacity(const void* self) {
     return QSGRenderNode_InheritedOpacity((QSGRenderNode*)self);
 }
 
-QSGNode* q_sgrendernode_parent(void* self) {
+QSGNode* q_sgrendernode_parent(const void* self) {
     return QSGNode_Parent((QSGNode*)self);
 }
 
@@ -133,31 +129,31 @@ void q_sgrendernode_reparent_child_nodes_to(void* self, void* newParent) {
     QSGNode_ReparentChildNodesTo((QSGNode*)self, (QSGNode*)newParent);
 }
 
-int32_t q_sgrendernode_child_count(void* self) {
+int32_t q_sgrendernode_child_count(const void* self) {
     return QSGNode_ChildCount((QSGNode*)self);
 }
 
-QSGNode* q_sgrendernode_child_at_index(void* self, int i) {
+QSGNode* q_sgrendernode_child_at_index(const void* self, int i) {
     return QSGNode_ChildAtIndex((QSGNode*)self, i);
 }
 
-QSGNode* q_sgrendernode_first_child(void* self) {
+QSGNode* q_sgrendernode_first_child(const void* self) {
     return QSGNode_FirstChild((QSGNode*)self);
 }
 
-QSGNode* q_sgrendernode_last_child(void* self) {
+QSGNode* q_sgrendernode_last_child(const void* self) {
     return QSGNode_LastChild((QSGNode*)self);
 }
 
-QSGNode* q_sgrendernode_next_sibling(void* self) {
+QSGNode* q_sgrendernode_next_sibling(const void* self) {
     return QSGNode_NextSibling((QSGNode*)self);
 }
 
-QSGNode* q_sgrendernode_previous_sibling(void* self) {
+QSGNode* q_sgrendernode_previous_sibling(const void* self) {
     return QSGNode_PreviousSibling((QSGNode*)self);
 }
 
-int32_t q_sgrendernode_type(void* self) {
+int32_t q_sgrendernode_type(const void* self) {
     return QSGNode_Type((QSGNode*)self);
 }
 
@@ -169,7 +165,7 @@ void q_sgrendernode_mark_dirty(void* self, int32_t bits) {
     QSGNode_MarkDirty((QSGNode*)self, bits);
 }
 
-int32_t q_sgrendernode_dirty_state(void* self) {
+int32_t q_sgrendernode_dirty_state(const void* self) {
     return QSGNode_DirtyState((QSGNode*)self);
 }
 
@@ -189,16 +185,16 @@ void q_sgrendernode_set_flags2(void* self, int32_t param1, bool param2) {
     QSGNode_SetFlags2((QSGNode*)self, param1, param2);
 }
 
-bool q_sgrendernode_is_subtree_blocked(void* self) {
+bool q_sgrendernode_is_subtree_blocked(const void* self) {
     return QSGRenderNode_IsSubtreeBlocked((QSGRenderNode*)self);
 }
 
-bool q_sgrendernode_super_is_subtree_blocked(void* self) {
+bool q_sgrendernode_super_is_subtree_blocked(const void* self) {
     return QSGRenderNode_SuperIsSubtreeBlocked((QSGRenderNode*)self);
 }
 
-void q_sgrendernode_on_is_subtree_blocked(void* self, bool (*callback)()) {
-    QSGRenderNode_OnIsSubtreeBlocked((QSGRenderNode*)self, (intptr_t)callback);
+void q_sgrendernode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*)) {
+    QSGRenderNode_OnIsSubtreeBlocked((const QSGRenderNode*)self, (intptr_t)callback);
 }
 
 void q_sgrendernode_preprocess(void* self) {
@@ -209,7 +205,7 @@ void q_sgrendernode_super_preprocess(void* self) {
     QSGRenderNode_SuperPreprocess((QSGRenderNode*)self);
 }
 
-void q_sgrendernode_on_preprocess(void* self, void (*callback)()) {
+void q_sgrendernode_on_preprocess(void* self, void (*callback)(void*)) {
     QSGRenderNode_OnPreprocess((QSGRenderNode*)self, (intptr_t)callback);
 }
 
@@ -217,35 +213,11 @@ void q_sgrendernode_delete(void* self) {
     QSGRenderNode_Delete((QSGRenderNode*)(self));
 }
 
-const QMatrix4x4* q_sgrendernode__renderstate_projection_matrix(void* self) {
-    return QSGRenderNode__RenderState_ProjectionMatrix((QSGRenderNode__RenderState*)self);
-}
-
-QRect* q_sgrendernode__renderstate_scissor_rect(void* self) {
-    return QSGRenderNode__RenderState_ScissorRect((QSGRenderNode__RenderState*)self);
-}
-
-bool q_sgrendernode__renderstate_scissor_enabled(void* self) {
-    return QSGRenderNode__RenderState_ScissorEnabled((QSGRenderNode__RenderState*)self);
-}
-
-int32_t q_sgrendernode__renderstate_stencil_value(void* self) {
-    return QSGRenderNode__RenderState_StencilValue((QSGRenderNode__RenderState*)self);
-}
-
-bool q_sgrendernode__renderstate_stencil_enabled(void* self) {
-    return QSGRenderNode__RenderState_StencilEnabled((QSGRenderNode__RenderState*)self);
-}
-
-const QRegion* q_sgrendernode__renderstate_clip_region(void* self) {
-    return QSGRenderNode__RenderState_ClipRegion((QSGRenderNode__RenderState*)self);
-}
-
-void* q_sgrendernode__renderstate_get(void* self, const char* state) {
+void* q_sgrendernode__renderstate_get(const void* self, const char* state) {
     return QSGRenderNode__RenderState_Get((QSGRenderNode__RenderState*)self, state);
 }
 
-void q_sgrendernode__renderstate_operator_assign(void* self, void* param1) {
+void q_sgrendernode__renderstate_operator_assign(void* self, const void* param1) {
     QSGRenderNode__RenderState_OperatorAssign((QSGRenderNode__RenderState*)self, (QSGRenderNode__RenderState*)param1);
 }
 

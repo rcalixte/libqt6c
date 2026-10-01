@@ -57,33 +57,33 @@ int32_t k_encodingprober_feed2(void* self, const char* data, intptr_t lenVal);
 
 /// [Upstream resources](https://api.kde.org/kencodingprober.html#state)
 ///
-/// @param self KEncodingProber*
+/// @param self const KEncodingProber*
 ///
 /// @return enum KEncodingProber__ProberState
 ///
-int32_t k_encodingprober_state(void* self);
+int32_t k_encodingprober_state(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kencodingprober.html#encoding)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KEncodingProber*
+/// @param self const KEncodingProber*
 ///
-char* k_encodingprober_encoding(void* self);
+char* k_encodingprober_encoding(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kencodingprober.html#confidence)
 ///
-/// @param self KEncodingProber*
+/// @param self const KEncodingProber*
 ///
-float k_encodingprober_confidence(void* self);
+float k_encodingprober_confidence(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kencodingprober.html#proberType)
 ///
-/// @param self KEncodingProber*
+/// @param self const KEncodingProber*
 ///
 /// @return enum KEncodingProber__ProberType
 ///
-int32_t k_encodingprober_prober_type(void* self);
+int32_t k_encodingprober_prober_type(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kencodingprober.html#setProberType)
 ///

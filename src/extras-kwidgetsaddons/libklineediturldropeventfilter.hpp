@@ -30,7 +30,7 @@ QMetaObject* KLineEditUrlDropEventFilter_MetaObject(const KLineEditUrlDropEventF
 void* KLineEditUrlDropEventFilter_Metacast(KLineEditUrlDropEventFilter* self, const char* param1);
 int KLineEditUrlDropEventFilter_Metacall(KLineEditUrlDropEventFilter* self, int param1, int param2, void** param3);
 bool KLineEditUrlDropEventFilter_EventFilter(KLineEditUrlDropEventFilter* self, QObject* object, QEvent* event);
-void KLineEditUrlDropEventFilter_OnMetaObject(const KLineEditUrlDropEventFilter* self, intptr_t slot);
+void KLineEditUrlDropEventFilter_OnMetaObject(KLineEditUrlDropEventFilter* self, intptr_t slot);
 QMetaObject* KLineEditUrlDropEventFilter_SuperMetaObject(const KLineEditUrlDropEventFilter* self);
 void KLineEditUrlDropEventFilter_OnMetacast(KLineEditUrlDropEventFilter* self, intptr_t slot);
 void* KLineEditUrlDropEventFilter_SuperMetacast(KLineEditUrlDropEventFilter* self, const char* param1);
@@ -57,17 +57,9 @@ void KLineEditUrlDropEventFilter_DisconnectNotify(KLineEditUrlDropEventFilter* s
 void KLineEditUrlDropEventFilter_OnDisconnectNotify(KLineEditUrlDropEventFilter* self, intptr_t slot);
 void KLineEditUrlDropEventFilter_SuperDisconnectNotify(KLineEditUrlDropEventFilter* self, const QMetaMethod* signal);
 QObject* KLineEditUrlDropEventFilter_Sender(const KLineEditUrlDropEventFilter* self);
-void KLineEditUrlDropEventFilter_OnSender(const KLineEditUrlDropEventFilter* self, intptr_t slot);
-QObject* KLineEditUrlDropEventFilter_SuperSender(const KLineEditUrlDropEventFilter* self);
 int KLineEditUrlDropEventFilter_SenderSignalIndex(const KLineEditUrlDropEventFilter* self);
-void KLineEditUrlDropEventFilter_OnSenderSignalIndex(const KLineEditUrlDropEventFilter* self, intptr_t slot);
-int KLineEditUrlDropEventFilter_SuperSenderSignalIndex(const KLineEditUrlDropEventFilter* self);
 int KLineEditUrlDropEventFilter_Receivers(const KLineEditUrlDropEventFilter* self, const char* signal);
-void KLineEditUrlDropEventFilter_OnReceivers(const KLineEditUrlDropEventFilter* self, intptr_t slot);
-int KLineEditUrlDropEventFilter_SuperReceivers(const KLineEditUrlDropEventFilter* self, const char* signal);
 bool KLineEditUrlDropEventFilter_IsSignalConnected(const KLineEditUrlDropEventFilter* self, const QMetaMethod* signal);
-void KLineEditUrlDropEventFilter_OnIsSignalConnected(const KLineEditUrlDropEventFilter* self, intptr_t slot);
-bool KLineEditUrlDropEventFilter_SuperIsSignalConnected(const KLineEditUrlDropEventFilter* self, const QMetaMethod* signal);
 void KLineEditUrlDropEventFilter_Delete(KLineEditUrlDropEventFilter* self);
 
 #ifdef __cplusplus

@@ -70,15 +70,15 @@ QGeoRoutingManagerEngine* q_georoutingmanagerengine_new2(libqt_map /* of const c
     return _out;
 }
 
-const QMetaObject* q_georoutingmanagerengine_meta_object(void* self) {
+const QMetaObject* q_georoutingmanagerengine_meta_object(const void* self) {
     return QGeoRoutingManagerEngine_MetaObject((QGeoRoutingManagerEngine*)self);
 }
 
-void q_georoutingmanagerengine_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_georoutingmanagerengine_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QGeoRoutingManagerEngine_OnMetaObject((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_georoutingmanagerengine_super_meta_object(void* self) {
+const QMetaObject* q_georoutingmanagerengine_super_meta_object(const void* self) {
     return QGeoRoutingManagerEngine_SuperMetaObject((QGeoRoutingManagerEngine*)self);
 }
 
@@ -113,70 +113,66 @@ const char* q_georoutingmanagerengine_tr(const char* s) {
     return _ret;
 }
 
-const char* q_georoutingmanagerengine_manager_name(void* self) {
+const char* q_georoutingmanagerengine_manager_name(const void* self) {
     libqt_string _str = QGeoRoutingManagerEngine_ManagerName((QGeoRoutingManagerEngine*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t q_georoutingmanagerengine_manager_version(void* self) {
+int32_t q_georoutingmanagerengine_manager_version(const void* self) {
     return QGeoRoutingManagerEngine_ManagerVersion((QGeoRoutingManagerEngine*)self);
 }
 
-QGeoRouteReply* q_georoutingmanagerengine_calculate_route(void* self, void* request) {
+QGeoRouteReply* q_georoutingmanagerengine_calculate_route(void* self, const void* request) {
     return QGeoRoutingManagerEngine_CalculateRoute((QGeoRoutingManagerEngine*)self, (QGeoRouteRequest*)request);
 }
 
-void q_georoutingmanagerengine_on_calculate_route(void* self, QGeoRouteReply* (*callback)(void*, void*)) {
+void q_georoutingmanagerengine_on_calculate_route(void* self, QGeoRouteReply* (*callback)(void*, const void*)) {
     QGeoRoutingManagerEngine_OnCalculateRoute((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
 }
 
-QGeoRouteReply* q_georoutingmanagerengine_super_calculate_route(void* self, void* request) {
-    return QGeoRoutingManagerEngine_SuperCalculateRoute((QGeoRoutingManagerEngine*)self, (QGeoRouteRequest*)request);
-}
-
-QGeoRouteReply* q_georoutingmanagerengine_update_route(void* self, void* route, void* position) {
+QGeoRouteReply* q_georoutingmanagerengine_update_route(void* self, const void* route, const void* position) {
     return QGeoRoutingManagerEngine_UpdateRoute((QGeoRoutingManagerEngine*)self, (QGeoRoute*)route, (QGeoCoordinate*)position);
 }
 
-void q_georoutingmanagerengine_on_update_route(void* self, QGeoRouteReply* (*callback)(void*, void*, void*)) {
+void q_georoutingmanagerengine_on_update_route(void* self, QGeoRouteReply* (*callback)(void*, const void*, const void*)) {
     QGeoRoutingManagerEngine_OnUpdateRoute((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
 }
 
-QGeoRouteReply* q_georoutingmanagerengine_super_update_route(void* self, void* route, void* position) {
+QGeoRouteReply* q_georoutingmanagerengine_super_update_route(void* self, const void* route, const void* position) {
     return QGeoRoutingManagerEngine_SuperUpdateRoute((QGeoRoutingManagerEngine*)self, (QGeoRoute*)route, (QGeoCoordinate*)position);
 }
 
-int32_t q_georoutingmanagerengine_supported_travel_modes(void* self) {
+int32_t q_georoutingmanagerengine_supported_travel_modes(const void* self) {
     return QGeoRoutingManagerEngine_SupportedTravelModes((QGeoRoutingManagerEngine*)self);
 }
 
-int32_t q_georoutingmanagerengine_supported_feature_types(void* self) {
+int32_t q_georoutingmanagerengine_supported_feature_types(const void* self) {
     return QGeoRoutingManagerEngine_SupportedFeatureTypes((QGeoRoutingManagerEngine*)self);
 }
 
-int32_t q_georoutingmanagerengine_supported_feature_weights(void* self) {
+int32_t q_georoutingmanagerengine_supported_feature_weights(const void* self) {
     return QGeoRoutingManagerEngine_SupportedFeatureWeights((QGeoRoutingManagerEngine*)self);
 }
 
-int32_t q_georoutingmanagerengine_supported_route_optimizations(void* self) {
+int32_t q_georoutingmanagerengine_supported_route_optimizations(const void* self) {
     return QGeoRoutingManagerEngine_SupportedRouteOptimizations((QGeoRoutingManagerEngine*)self);
 }
 
-int32_t q_georoutingmanagerengine_supported_segment_details(void* self) {
+int32_t q_georoutingmanagerengine_supported_segment_details(const void* self) {
     return QGeoRoutingManagerEngine_SupportedSegmentDetails((QGeoRoutingManagerEngine*)self);
 }
 
-int32_t q_georoutingmanagerengine_supported_maneuver_details(void* self) {
+int32_t q_georoutingmanagerengine_supported_maneuver_details(const void* self) {
     return QGeoRoutingManagerEngine_SupportedManeuverDetails((QGeoRoutingManagerEngine*)self);
 }
 
-void q_georoutingmanagerengine_set_locale(void* self, void* locale) {
+void q_georoutingmanagerengine_set_locale(void* self, const void* locale) {
     QGeoRoutingManagerEngine_SetLocale((QGeoRoutingManagerEngine*)self, (QLocale*)locale);
 }
 
-QLocale* q_georoutingmanagerengine_locale(void* self) {
+QLocale* q_georoutingmanagerengine_locale(const void* self) {
     return QGeoRoutingManagerEngine_Locale((QGeoRoutingManagerEngine*)self);
 }
 
@@ -184,7 +180,7 @@ void q_georoutingmanagerengine_set_measurement_system(void* self, int32_t system
     QGeoRoutingManagerEngine_SetMeasurementSystem((QGeoRoutingManagerEngine*)self, system);
 }
 
-int32_t q_georoutingmanagerengine_measurement_system(void* self) {
+int32_t q_georoutingmanagerengine_measurement_system(const void* self) {
     return QGeoRoutingManagerEngine_MeasurementSystem((QGeoRoutingManagerEngine*)self);
 }
 
@@ -208,72 +204,24 @@ void q_georoutingmanagerengine_set_supported_travel_modes(void* self, int32_t tr
     QGeoRoutingManagerEngine_SetSupportedTravelModes((QGeoRoutingManagerEngine*)self, travelModes);
 }
 
-void q_georoutingmanagerengine_on_set_supported_travel_modes(void* self, void (*callback)(void*, int32_t)) {
-    QGeoRoutingManagerEngine_OnSetSupportedTravelModes((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
-}
-
-void q_georoutingmanagerengine_super_set_supported_travel_modes(void* self, int32_t travelModes) {
-    QGeoRoutingManagerEngine_SuperSetSupportedTravelModes((QGeoRoutingManagerEngine*)self, travelModes);
-}
-
 void q_georoutingmanagerengine_set_supported_feature_types(void* self, int32_t featureTypes) {
     QGeoRoutingManagerEngine_SetSupportedFeatureTypes((QGeoRoutingManagerEngine*)self, featureTypes);
-}
-
-void q_georoutingmanagerengine_on_set_supported_feature_types(void* self, void (*callback)(void*, int32_t)) {
-    QGeoRoutingManagerEngine_OnSetSupportedFeatureTypes((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
-}
-
-void q_georoutingmanagerengine_super_set_supported_feature_types(void* self, int32_t featureTypes) {
-    QGeoRoutingManagerEngine_SuperSetSupportedFeatureTypes((QGeoRoutingManagerEngine*)self, featureTypes);
 }
 
 void q_georoutingmanagerengine_set_supported_feature_weights(void* self, int32_t featureWeights) {
     QGeoRoutingManagerEngine_SetSupportedFeatureWeights((QGeoRoutingManagerEngine*)self, featureWeights);
 }
 
-void q_georoutingmanagerengine_on_set_supported_feature_weights(void* self, void (*callback)(void*, int32_t)) {
-    QGeoRoutingManagerEngine_OnSetSupportedFeatureWeights((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
-}
-
-void q_georoutingmanagerengine_super_set_supported_feature_weights(void* self, int32_t featureWeights) {
-    QGeoRoutingManagerEngine_SuperSetSupportedFeatureWeights((QGeoRoutingManagerEngine*)self, featureWeights);
-}
-
 void q_georoutingmanagerengine_set_supported_route_optimizations(void* self, int32_t optimizations) {
     QGeoRoutingManagerEngine_SetSupportedRouteOptimizations((QGeoRoutingManagerEngine*)self, optimizations);
-}
-
-void q_georoutingmanagerengine_on_set_supported_route_optimizations(void* self, void (*callback)(void*, int32_t)) {
-    QGeoRoutingManagerEngine_OnSetSupportedRouteOptimizations((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
-}
-
-void q_georoutingmanagerengine_super_set_supported_route_optimizations(void* self, int32_t optimizations) {
-    QGeoRoutingManagerEngine_SuperSetSupportedRouteOptimizations((QGeoRoutingManagerEngine*)self, optimizations);
 }
 
 void q_georoutingmanagerengine_set_supported_segment_details(void* self, int32_t segmentDetails) {
     QGeoRoutingManagerEngine_SetSupportedSegmentDetails((QGeoRoutingManagerEngine*)self, segmentDetails);
 }
 
-void q_georoutingmanagerengine_on_set_supported_segment_details(void* self, void (*callback)(void*, int32_t)) {
-    QGeoRoutingManagerEngine_OnSetSupportedSegmentDetails((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
-}
-
-void q_georoutingmanagerengine_super_set_supported_segment_details(void* self, int32_t segmentDetails) {
-    QGeoRoutingManagerEngine_SuperSetSupportedSegmentDetails((QGeoRoutingManagerEngine*)self, segmentDetails);
-}
-
 void q_georoutingmanagerengine_set_supported_maneuver_details(void* self, int32_t maneuverDetails) {
     QGeoRoutingManagerEngine_SetSupportedManeuverDetails((QGeoRoutingManagerEngine*)self, maneuverDetails);
-}
-
-void q_georoutingmanagerengine_on_set_supported_maneuver_details(void* self, void (*callback)(void*, int32_t)) {
-    QGeoRoutingManagerEngine_OnSetSupportedManeuverDetails((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
-}
-
-void q_georoutingmanagerengine_super_set_supported_maneuver_details(void* self, int32_t maneuverDetails) {
-    QGeoRoutingManagerEngine_SuperSetSupportedManeuverDetails((QGeoRoutingManagerEngine*)self, maneuverDetails);
 }
 
 const char* q_georoutingmanagerengine_tr2(const char* s, const char* c) {
@@ -298,7 +246,7 @@ void q_georoutingmanagerengine_on_error_occurred3(void* self, void (*callback)(v
     QGeoRoutingManagerEngine_Connect_ErrorOccurred3((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
 }
 
-const char* q_georoutingmanagerengine_object_name(void* self) {
+const char* q_georoutingmanagerengine_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -309,19 +257,19 @@ void q_georoutingmanagerengine_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_georoutingmanagerengine_is_widget_type(void* self) {
+bool q_georoutingmanagerengine_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_georoutingmanagerengine_is_window_type(void* self) {
+bool q_georoutingmanagerengine_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_georoutingmanagerengine_is_quick_item_type(void* self) {
+bool q_georoutingmanagerengine_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_georoutingmanagerengine_signals_blocked(void* self) {
+bool q_georoutingmanagerengine_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -329,7 +277,7 @@ bool q_georoutingmanagerengine_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_georoutingmanagerengine_thread(void* self) {
+QThread* q_georoutingmanagerengine_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -353,7 +301,7 @@ void q_georoutingmanagerengine_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_georoutingmanagerengine_children(void* self) {
+libqt_list /* of QObject* */ q_georoutingmanagerengine_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -370,55 +318,55 @@ void q_georoutingmanagerengine_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_georoutingmanagerengine_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_georoutingmanagerengine_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_georoutingmanagerengine_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_georoutingmanagerengine_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_georoutingmanagerengine_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_georoutingmanagerengine_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_georoutingmanagerengine_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_georoutingmanagerengine_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_georoutingmanagerengine_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_georoutingmanagerengine_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_georoutingmanagerengine_disconnect3(void* self) {
+bool q_georoutingmanagerengine_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_georoutingmanagerengine_disconnect4(void* self, void* receiver) {
+bool q_georoutingmanagerengine_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_georoutingmanagerengine_disconnect5(void* param1) {
+bool q_georoutingmanagerengine_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_georoutingmanagerengine_dump_object_tree(void* self) {
+void q_georoutingmanagerengine_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_georoutingmanagerengine_dump_object_info(void* self) {
+void q_georoutingmanagerengine_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_georoutingmanagerengine_set_property(void* self, const char* name, void* value) {
+bool q_georoutingmanagerengine_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_georoutingmanagerengine_property(void* self, const char* name) {
+QVariant* q_georoutingmanagerengine_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_georoutingmanagerengine_dynamic_property_names(void* self) {
+const char** q_georoutingmanagerengine_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -439,7 +387,7 @@ QBindingStorage* q_georoutingmanagerengine_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_georoutingmanagerengine_binding_storage2(void* self) {
+const QBindingStorage* q_georoutingmanagerengine_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -451,11 +399,11 @@ void q_georoutingmanagerengine_on_destroyed(void* self, void (*callback)(void*))
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_georoutingmanagerengine_parent(void* self) {
+QObject* q_georoutingmanagerengine_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_georoutingmanagerengine_inherits(void* self, const char* classname) {
+bool q_georoutingmanagerengine_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -471,31 +419,31 @@ int32_t q_georoutingmanagerengine_start_timer23(void* self, int64_t time, int32_
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_georoutingmanagerengine_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_georoutingmanagerengine_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_georoutingmanagerengine_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_georoutingmanagerengine_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_georoutingmanagerengine_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_georoutingmanagerengine_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_georoutingmanagerengine_disconnect1(void* self, const char* signal) {
+bool q_georoutingmanagerengine_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_georoutingmanagerengine_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_georoutingmanagerengine_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_georoutingmanagerengine_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_georoutingmanagerengine_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_georoutingmanagerengine_disconnect23(void* self, void* receiver, const char* member) {
+bool q_georoutingmanagerengine_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -567,76 +515,44 @@ void q_georoutingmanagerengine_on_custom_event(void* self, void (*callback)(void
     QGeoRoutingManagerEngine_OnCustomEvent((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
 }
 
-void q_georoutingmanagerengine_connect_notify(void* self, void* signal) {
+void q_georoutingmanagerengine_connect_notify(void* self, const void* signal) {
     QGeoRoutingManagerEngine_ConnectNotify((QGeoRoutingManagerEngine*)self, (QMetaMethod*)signal);
 }
 
-void q_georoutingmanagerengine_super_connect_notify(void* self, void* signal) {
+void q_georoutingmanagerengine_super_connect_notify(void* self, const void* signal) {
     QGeoRoutingManagerEngine_SuperConnectNotify((QGeoRoutingManagerEngine*)self, (QMetaMethod*)signal);
 }
 
-void q_georoutingmanagerengine_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_georoutingmanagerengine_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QGeoRoutingManagerEngine_OnConnectNotify((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
 }
 
-void q_georoutingmanagerengine_disconnect_notify(void* self, void* signal) {
+void q_georoutingmanagerengine_disconnect_notify(void* self, const void* signal) {
     QGeoRoutingManagerEngine_DisconnectNotify((QGeoRoutingManagerEngine*)self, (QMetaMethod*)signal);
 }
 
-void q_georoutingmanagerengine_super_disconnect_notify(void* self, void* signal) {
+void q_georoutingmanagerengine_super_disconnect_notify(void* self, const void* signal) {
     QGeoRoutingManagerEngine_SuperDisconnectNotify((QGeoRoutingManagerEngine*)self, (QMetaMethod*)signal);
 }
 
-void q_georoutingmanagerengine_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_georoutingmanagerengine_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QGeoRoutingManagerEngine_OnDisconnectNotify((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
 }
 
-QObject* q_georoutingmanagerengine_sender(void* self) {
+QObject* q_georoutingmanagerengine_sender(const void* self) {
     return QGeoRoutingManagerEngine_Sender((QGeoRoutingManagerEngine*)self);
 }
 
-QObject* q_georoutingmanagerengine_super_sender(void* self) {
-    return QGeoRoutingManagerEngine_SuperSender((QGeoRoutingManagerEngine*)self);
-}
-
-void q_georoutingmanagerengine_on_sender(void* self, QObject* (*callback)()) {
-    QGeoRoutingManagerEngine_OnSender((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
-}
-
-int32_t q_georoutingmanagerengine_sender_signal_index(void* self) {
+int32_t q_georoutingmanagerengine_sender_signal_index(const void* self) {
     return QGeoRoutingManagerEngine_SenderSignalIndex((QGeoRoutingManagerEngine*)self);
 }
 
-int32_t q_georoutingmanagerengine_super_sender_signal_index(void* self) {
-    return QGeoRoutingManagerEngine_SuperSenderSignalIndex((QGeoRoutingManagerEngine*)self);
-}
-
-void q_georoutingmanagerengine_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QGeoRoutingManagerEngine_OnSenderSignalIndex((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
-}
-
-int32_t q_georoutingmanagerengine_receivers(void* self, const char* signal) {
+int32_t q_georoutingmanagerengine_receivers(const void* self, const char* signal) {
     return QGeoRoutingManagerEngine_Receivers((QGeoRoutingManagerEngine*)self, signal);
 }
 
-int32_t q_georoutingmanagerengine_super_receivers(void* self, const char* signal) {
-    return QGeoRoutingManagerEngine_SuperReceivers((QGeoRoutingManagerEngine*)self, signal);
-}
-
-void q_georoutingmanagerengine_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QGeoRoutingManagerEngine_OnReceivers((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
-}
-
-bool q_georoutingmanagerengine_is_signal_connected(void* self, void* signal) {
+bool q_georoutingmanagerengine_is_signal_connected(const void* self, const void* signal) {
     return QGeoRoutingManagerEngine_IsSignalConnected((QGeoRoutingManagerEngine*)self, (QMetaMethod*)signal);
-}
-
-bool q_georoutingmanagerengine_super_is_signal_connected(void* self, void* signal) {
-    return QGeoRoutingManagerEngine_SuperIsSignalConnected((QGeoRoutingManagerEngine*)self, (QMetaMethod*)signal);
-}
-
-void q_georoutingmanagerengine_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QGeoRoutingManagerEngine_OnIsSignalConnected((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
 }
 
 void q_georoutingmanagerengine_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

@@ -14,7 +14,7 @@
 ///
 /// @param other QFontDatabase*
 ///
-QFontDatabase* q_fontdatabase_new(void* other);
+QFontDatabase* q_fontdatabase_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html)
 
@@ -101,7 +101,7 @@ libqt_list q_fontdatabase_smooth_sizes(const char* family, const char* style);
 ///
 /// @param font QFont*
 ///
-const char* q_fontdatabase_style_string(void* font);
+const char* q_fontdatabase_style_string(const void* font);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#styleString)
 ///
@@ -109,7 +109,7 @@ const char* q_fontdatabase_style_string(void* font);
 ///
 /// @param fontInfo QFontInfo*
 ///
-const char* q_fontdatabase_style_string2(void* fontInfo);
+const char* q_fontdatabase_style_string2(const void* fontInfo);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#font)
 ///

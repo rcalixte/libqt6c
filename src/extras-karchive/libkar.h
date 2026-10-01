@@ -30,7 +30,7 @@ KAr* k_ar_new2(void* dev);
 ///
 /// @param param1 KAr*
 ///
-KAr* k_ar_new3(void* param1);
+KAr* k_ar_new3(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -52,7 +52,7 @@ const char* k_ar_tr(const char* sourceText);
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_ar_do_prepare_writing(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_ar_do_prepare_writing(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, const void* atime, const void* mtime, const void* ctime);
 
 /// [Upstream resources](https://api.kde.org/kar.html#doPrepareWriting)
 ///
@@ -61,7 +61,7 @@ bool k_ar_do_prepare_writing(void* self, const char* name, const char* user, con
 /// @param self KAr*
 /// @param callback bool func(KAr* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, QDateTime* atime, QDateTime* mtime, QDateTime* ctime)
 ///
-void k_ar_on_do_prepare_writing(void* self, bool (*callback)(void*, const char*, const char*, const char*, int64_t, mode_t, void*, void*, void*));
+void k_ar_on_do_prepare_writing(void* self, bool (*callback)(void*, const char*, const char*, const char*, int64_t, mode_t, const void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kar.html#doPrepareWriting)
 ///
@@ -77,7 +77,7 @@ void k_ar_on_do_prepare_writing(void* self, bool (*callback)(void*, const char*,
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_ar_super_do_prepare_writing(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_ar_super_do_prepare_writing(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, const void* atime, const void* mtime, const void* ctime);
 
 /// [Upstream resources](https://api.kde.org/kar.html#doFinishWriting)
 ///
@@ -115,7 +115,7 @@ bool k_ar_super_do_finish_writing(void* self, int64_t size);
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_ar_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_ar_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime, const void* ctime);
 
 /// [Upstream resources](https://api.kde.org/kar.html#doWriteDir)
 ///
@@ -124,7 +124,7 @@ bool k_ar_do_write_dir(void* self, const char* name, const char* user, const cha
 /// @param self KAr*
 /// @param callback bool func(KAr* self, const char* name, const char* user, const char* group, mode_t perm, QDateTime* atime, QDateTime* mtime, QDateTime* ctime)
 ///
-void k_ar_on_do_write_dir(void* self, bool (*callback)(void*, const char*, const char*, const char*, mode_t, void*, void*, void*));
+void k_ar_on_do_write_dir(void* self, bool (*callback)(void*, const char*, const char*, const char*, mode_t, const void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kar.html#doWriteDir)
 ///
@@ -139,7 +139,7 @@ void k_ar_on_do_write_dir(void* self, bool (*callback)(void*, const char*, const
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_ar_super_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_ar_super_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime, const void* ctime);
 
 /// [Upstream resources](https://api.kde.org/kar.html#doWriteSymLink)
 ///
@@ -153,7 +153,7 @@ bool k_ar_super_do_write_dir(void* self, const char* name, const char* user, con
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_ar_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_ar_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime, const void* ctime);
 
 /// [Upstream resources](https://api.kde.org/kar.html#doWriteSymLink)
 ///
@@ -162,7 +162,7 @@ bool k_ar_do_write_sym_link(void* self, const char* name, const char* target, co
 /// @param self KAr*
 /// @param callback bool func(KAr* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, QDateTime* atime, QDateTime* mtime, QDateTime* ctime)
 ///
-void k_ar_on_do_write_sym_link(void* self, bool (*callback)(void*, const char*, const char*, const char*, const char*, mode_t, void*, void*, void*));
+void k_ar_on_do_write_sym_link(void* self, bool (*callback)(void*, const char*, const char*, const char*, const char*, mode_t, const void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kar.html#doWriteSymLink)
 ///
@@ -178,7 +178,7 @@ void k_ar_on_do_write_sym_link(void* self, bool (*callback)(void*, const char*, 
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_ar_super_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_ar_super_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime, const void* ctime);
 
 /// [Upstream resources](https://api.kde.org/kar.html#openArchive)
 ///
@@ -216,9 +216,9 @@ bool k_ar_close_archive(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KAr*
-/// @param callback bool func()
+/// @param callback bool func(KAr* self)
 ///
-void k_ar_on_close_archive(void* self, bool (*callback)());
+void k_ar_on_close_archive(void* self, bool (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kar.html#closeArchive)
 ///
@@ -280,35 +280,35 @@ const char* k_ar_tr3(const char* sourceText, const char* disambiguation, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAr*
+/// @param self const KAr*
 ///
-const char* k_ar_error_string(void* self);
+const char* k_ar_error_string(const void* self);
 
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#isOpen)
 ///
-/// @param self KAr*
+/// @param self const KAr*
 ///
-bool k_ar_is_open(void* self);
+bool k_ar_is_open(const void* self);
 
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#mode)
 ///
-/// @param self KAr*
+/// @param self const KAr*
 ///
 /// @return flag of enum QIODeviceBase__OpenModeFlag
 ///
-int32_t k_ar_mode(void* self);
+int32_t k_ar_mode(const void* self);
 
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#device)
 ///
-/// @param self KAr*
+/// @param self const KAr*
 ///
-QIODevice* k_ar_device(void* self);
+QIODevice* k_ar_device(const void* self);
 
 /// Inherited from KArchive
 ///
@@ -316,17 +316,17 @@ QIODevice* k_ar_device(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAr*
+/// @param self const KAr*
 ///
-const char* k_ar_file_name(void* self);
+const char* k_ar_file_name(const void* self);
 
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#directory)
 ///
-/// @param self KAr*
+/// @param self const KAr*
 ///
-const KArchiveDirectory* k_ar_directory(void* self);
+const KArchiveDirectory* k_ar_directory(const void* self);
 
 /// Inherited from KArchive
 ///
@@ -461,7 +461,7 @@ bool k_ar_write_dir4(void* self, const char* name, const char* user, const char*
 /// @param perm mode_t
 /// @param atime QDateTime*
 ///
-bool k_ar_write_dir5(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime);
+bool k_ar_write_dir5(void* self, const char* name, const char* user, const char* group, mode_t perm, const void* atime);
 
 /// Inherited from KArchive
 ///
@@ -475,7 +475,7 @@ bool k_ar_write_dir5(void* self, const char* name, const char* user, const char*
 /// @param atime QDateTime*
 /// @param mtime QDateTime*
 ///
-bool k_ar_write_dir6(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime);
+bool k_ar_write_dir6(void* self, const char* name, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime);
 
 /// Inherited from KArchive
 ///
@@ -490,7 +490,7 @@ bool k_ar_write_dir6(void* self, const char* name, const char* user, const char*
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_ar_write_dir7(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_ar_write_dir7(void* self, const char* name, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime, const void* ctime);
 
 /// Inherited from KArchive
 ///
@@ -540,7 +540,7 @@ bool k_ar_write_sym_link5(void* self, const char* name, const char* target, cons
 /// @param perm mode_t
 /// @param atime QDateTime*
 ///
-bool k_ar_write_sym_link6(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime);
+bool k_ar_write_sym_link6(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, const void* atime);
 
 /// Inherited from KArchive
 ///
@@ -555,7 +555,7 @@ bool k_ar_write_sym_link6(void* self, const char* name, const char* target, cons
 /// @param atime QDateTime*
 /// @param mtime QDateTime*
 ///
-bool k_ar_write_sym_link7(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime);
+bool k_ar_write_sym_link7(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime);
 
 /// Inherited from KArchive
 ///
@@ -571,7 +571,7 @@ bool k_ar_write_sym_link7(void* self, const char* name, const char* target, cons
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_ar_write_sym_link8(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_ar_write_sym_link8(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime, const void* ctime);
 
 /// Inherited from KArchive
 ///
@@ -621,7 +621,7 @@ bool k_ar_write_file5(void* self, const char* name, char* data, mode_t perm, con
 /// @param group const char*
 /// @param atime QDateTime*
 ///
-bool k_ar_write_file6(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, void* atime);
+bool k_ar_write_file6(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, const void* atime);
 
 /// Inherited from KArchive
 ///
@@ -636,7 +636,7 @@ bool k_ar_write_file6(void* self, const char* name, char* data, mode_t perm, con
 /// @param atime QDateTime*
 /// @param mtime QDateTime*
 ///
-bool k_ar_write_file7(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, void* atime, void* mtime);
+bool k_ar_write_file7(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, const void* atime, const void* mtime);
 
 /// Inherited from KArchive
 ///
@@ -652,7 +652,7 @@ bool k_ar_write_file7(void* self, const char* name, char* data, mode_t perm, con
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_ar_write_file8(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, void* atime, void* mtime, void* ctime);
+bool k_ar_write_file8(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, const void* atime, const void* mtime, const void* ctime);
 
 /// Inherited from KArchive
 ///
@@ -679,7 +679,7 @@ bool k_ar_prepare_writing5(void* self, const char* name, const char* user, const
 /// @param perm mode_t
 /// @param atime QDateTime*
 ///
-bool k_ar_prepare_writing6(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime);
+bool k_ar_prepare_writing6(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, const void* atime);
 
 /// Inherited from KArchive
 ///
@@ -694,7 +694,7 @@ bool k_ar_prepare_writing6(void* self, const char* name, const char* user, const
 /// @param atime QDateTime*
 /// @param mtime QDateTime*
 ///
-bool k_ar_prepare_writing7(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime);
+bool k_ar_prepare_writing7(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, const void* atime, const void* mtime);
 
 /// Inherited from KArchive
 ///
@@ -710,7 +710,7 @@ bool k_ar_prepare_writing7(void* self, const char* name, const char* user, const
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_ar_prepare_writing8(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_ar_prepare_writing8(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, const void* atime, const void* mtime, const void* ctime);
 
 /// Inherited from KArchive
 ///
@@ -772,9 +772,9 @@ bool k_ar_super_close(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAr*
-/// @param callback bool func()
+/// @param callback bool func(KAr* self)
 ///
-void k_ar_on_close(void* self, bool (*callback)());
+void k_ar_on_close(void* self, bool (*callback)(void*));
 
 /// Inherited from KArchive
 ///
@@ -803,9 +803,9 @@ KArchiveDirectory* k_ar_super_root_dir(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAr*
-/// @param callback KArchiveDirectory* func()
+/// @param callback KArchiveDirectory* func(KAr* self)
 ///
-void k_ar_on_root_dir(void* self, KArchiveDirectory* (*callback)());
+void k_ar_on_root_dir(void* self, KArchiveDirectory* (*callback)(void*));
 
 /// Inherited from KArchive
 ///

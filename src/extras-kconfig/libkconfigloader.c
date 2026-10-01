@@ -15,7 +15,7 @@ KConfigLoader* k_configloader_new(const char* configFile, void* xml) {
     return KConfigLoader_New(qstring(configFile), (QIODevice*)xml);
 }
 
-KConfigLoader* k_configloader_new2(void* config, void* xml) {
+KConfigLoader* k_configloader_new2(const void* config, void* xml) {
     return KConfigLoader_New2((KConfigGroup*)config, (QIODevice*)xml);
 }
 
@@ -23,27 +23,27 @@ KConfigLoader* k_configloader_new3(const char* configFile, void* xml, void* pare
     return KConfigLoader_New3(qstring(configFile), (QIODevice*)xml, (QObject*)parent);
 }
 
-KConfigLoader* k_configloader_new4(void* config, void* xml, void* parent) {
+KConfigLoader* k_configloader_new4(const void* config, void* xml, void* parent) {
     return KConfigLoader_New4((KConfigGroup*)config, (QIODevice*)xml, (QObject*)parent);
 }
 
-KConfigSkeletonItem* k_configloader_find_item(void* self, const char* group, const char* key) {
+KConfigSkeletonItem* k_configloader_find_item(const void* self, const char* group, const char* key) {
     return KConfigLoader_FindItem((KConfigLoader*)self, qstring(group), qstring(key));
 }
 
-KConfigSkeletonItem* k_configloader_find_item_by_name(void* self, const char* name) {
+KConfigSkeletonItem* k_configloader_find_item_by_name(const void* self, const char* name) {
     return KConfigLoader_FindItemByName((KConfigLoader*)self, qstring(name));
 }
 
-QVariant* k_configloader_property(void* self, const char* name) {
+QVariant* k_configloader_property(const void* self, const char* name) {
     return KConfigLoader_Property((KConfigLoader*)self, qstring(name));
 }
 
-bool k_configloader_has_group(void* self, const char* group) {
+bool k_configloader_has_group(const void* self, const char* group) {
     return KConfigLoader_HasGroup((KConfigLoader*)self, qstring(group));
 }
 
-const char** k_configloader_group_list(void* self) {
+const char** k_configloader_group_list(const void* self) {
     libqt_list _arr = KConfigLoader_GroupList((KConfigLoader*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -64,7 +64,7 @@ bool k_configloader_usr_save(void* self) {
     return KConfigLoader_UsrSave((KConfigLoader*)self);
 }
 
-void k_configloader_on_usr_save(void* self, bool (*callback)()) {
+void k_configloader_on_usr_save(void* self, bool (*callback)(void*)) {
     KConfigLoader_OnUsrSave((KConfigLoader*)self, (intptr_t)callback);
 }
 
@@ -101,19 +101,19 @@ const char* k_configloader_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-KConfigSkeleton__ItemColor* k_configloader_add_item_color3(void* self, const char* name, void* reference, void* defaultValue) {
+KConfigSkeleton__ItemColor* k_configloader_add_item_color3(void* self, const char* name, void* reference, const void* defaultValue) {
     return KConfigSkeleton_AddItemColor3((KConfigSkeleton*)self, qstring(name), (QColor*)reference, (QColor*)defaultValue);
 }
 
-KConfigSkeleton__ItemColor* k_configloader_add_item_color4(void* self, const char* name, void* reference, void* defaultValue, const char* key) {
+KConfigSkeleton__ItemColor* k_configloader_add_item_color4(void* self, const char* name, void* reference, const void* defaultValue, const char* key) {
     return KConfigSkeleton_AddItemColor4((KConfigSkeleton*)self, qstring(name), (QColor*)reference, (QColor*)defaultValue, qstring(key));
 }
 
-KConfigSkeleton__ItemFont* k_configloader_add_item_font3(void* self, const char* name, void* reference, void* defaultValue) {
+KConfigSkeleton__ItemFont* k_configloader_add_item_font3(void* self, const char* name, void* reference, const void* defaultValue) {
     return KConfigSkeleton_AddItemFont3((KConfigSkeleton*)self, qstring(name), (QFont*)reference, (QFont*)defaultValue);
 }
 
-KConfigSkeleton__ItemFont* k_configloader_add_item_font4(void* self, const char* name, void* reference, void* defaultValue, const char* key) {
+KConfigSkeleton__ItemFont* k_configloader_add_item_font4(void* self, const char* name, void* reference, const void* defaultValue, const char* key) {
     return KConfigSkeleton_AddItemFont4((KConfigSkeleton*)self, qstring(name), (QFont*)reference, (QFont*)defaultValue, qstring(key));
 }
 
@@ -125,11 +125,11 @@ void k_configloader_read(void* self) {
     KCoreConfigSkeleton_Read((KCoreConfigSkeleton*)self);
 }
 
-bool k_configloader_is_defaults(void* self) {
+bool k_configloader_is_defaults(const void* self) {
     return KCoreConfigSkeleton_IsDefaults((KCoreConfigSkeleton*)self);
 }
 
-bool k_configloader_is_save_needed(void* self) {
+bool k_configloader_is_save_needed(const void* self) {
     return KCoreConfigSkeleton_IsSaveNeeded((KCoreConfigSkeleton*)self);
 }
 
@@ -137,7 +137,7 @@ void k_configloader_set_current_group(void* self, const char* group) {
     KCoreConfigSkeleton_SetCurrentGroup((KCoreConfigSkeleton*)self, qstring(group));
 }
 
-const char* k_configloader_current_group(void* self) {
+const char* k_configloader_current_group(const void* self) {
     libqt_string _str = KCoreConfigSkeleton_CurrentGroup((KCoreConfigSkeleton*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -239,11 +239,11 @@ KConfig* k_configloader_config(void* self) {
     return KCoreConfigSkeleton_Config((KCoreConfigSkeleton*)self);
 }
 
-const KConfig* k_configloader_config2(void* self) {
+const KConfig* k_configloader_config2(const void* self) {
     return KCoreConfigSkeleton_Config2((KCoreConfigSkeleton*)self);
 }
 
-libqt_list /* of KConfigSkeletonItem* */ k_configloader_items(void* self) {
+libqt_list /* of KConfigSkeletonItem* */ k_configloader_items(const void* self) {
     libqt_list _arr = KCoreConfigSkeleton_Items((KCoreConfigSkeleton*)self);
     return _arr;
 }
@@ -256,7 +256,7 @@ void k_configloader_clear_items(void* self) {
     KCoreConfigSkeleton_ClearItems((KCoreConfigSkeleton*)self);
 }
 
-bool k_configloader_is_immutable(void* self, const char* name) {
+bool k_configloader_is_immutable(const void* self, const char* name) {
     return KCoreConfigSkeleton_IsImmutable((KCoreConfigSkeleton*)self, qstring(name));
 }
 
@@ -300,11 +300,11 @@ KCoreConfigSkeleton__ItemPath* k_configloader_add_item_path4(void* self, const c
     return KCoreConfigSkeleton_AddItemPath4((KCoreConfigSkeleton*)self, qstring(name), qstring(reference), qstring(defaultValue), qstring(key));
 }
 
-KCoreConfigSkeleton__ItemProperty* k_configloader_add_item_property3(void* self, const char* name, void* reference, void* defaultValue) {
+KCoreConfigSkeleton__ItemProperty* k_configloader_add_item_property3(void* self, const char* name, void* reference, const void* defaultValue) {
     return KCoreConfigSkeleton_AddItemProperty3((KCoreConfigSkeleton*)self, qstring(name), (QVariant*)reference, (QVariant*)defaultValue);
 }
 
-KCoreConfigSkeleton__ItemProperty* k_configloader_add_item_property4(void* self, const char* name, void* reference, void* defaultValue, const char* key) {
+KCoreConfigSkeleton__ItemProperty* k_configloader_add_item_property4(void* self, const char* name, void* reference, const void* defaultValue, const char* key) {
     return KCoreConfigSkeleton_AddItemProperty4((KCoreConfigSkeleton*)self, qstring(name), (QVariant*)reference, (QVariant*)defaultValue, qstring(key));
 }
 
@@ -356,59 +356,59 @@ KCoreConfigSkeleton__ItemDouble* k_configloader_add_item_double4(void* self, con
     return KCoreConfigSkeleton_AddItemDouble4((KCoreConfigSkeleton*)self, qstring(name), reference, defaultValue, qstring(key));
 }
 
-KCoreConfigSkeleton__ItemRect* k_configloader_add_item_rect3(void* self, const char* name, void* reference, void* defaultValue) {
+KCoreConfigSkeleton__ItemRect* k_configloader_add_item_rect3(void* self, const char* name, void* reference, const void* defaultValue) {
     return KCoreConfigSkeleton_AddItemRect3((KCoreConfigSkeleton*)self, qstring(name), (QRect*)reference, (QRect*)defaultValue);
 }
 
-KCoreConfigSkeleton__ItemRect* k_configloader_add_item_rect4(void* self, const char* name, void* reference, void* defaultValue, const char* key) {
+KCoreConfigSkeleton__ItemRect* k_configloader_add_item_rect4(void* self, const char* name, void* reference, const void* defaultValue, const char* key) {
     return KCoreConfigSkeleton_AddItemRect4((KCoreConfigSkeleton*)self, qstring(name), (QRect*)reference, (QRect*)defaultValue, qstring(key));
 }
 
-KCoreConfigSkeleton__ItemRectF* k_configloader_add_item_rect_f3(void* self, const char* name, void* reference, void* defaultValue) {
+KCoreConfigSkeleton__ItemRectF* k_configloader_add_item_rect_f3(void* self, const char* name, void* reference, const void* defaultValue) {
     return KCoreConfigSkeleton_AddItemRectF3((KCoreConfigSkeleton*)self, qstring(name), (QRectF*)reference, (QRectF*)defaultValue);
 }
 
-KCoreConfigSkeleton__ItemRectF* k_configloader_add_item_rect_f4(void* self, const char* name, void* reference, void* defaultValue, const char* key) {
+KCoreConfigSkeleton__ItemRectF* k_configloader_add_item_rect_f4(void* self, const char* name, void* reference, const void* defaultValue, const char* key) {
     return KCoreConfigSkeleton_AddItemRectF4((KCoreConfigSkeleton*)self, qstring(name), (QRectF*)reference, (QRectF*)defaultValue, qstring(key));
 }
 
-KCoreConfigSkeleton__ItemPoint* k_configloader_add_item_point3(void* self, const char* name, void* reference, void* defaultValue) {
+KCoreConfigSkeleton__ItemPoint* k_configloader_add_item_point3(void* self, const char* name, void* reference, const void* defaultValue) {
     return KCoreConfigSkeleton_AddItemPoint3((KCoreConfigSkeleton*)self, qstring(name), (QPoint*)reference, (QPoint*)defaultValue);
 }
 
-KCoreConfigSkeleton__ItemPoint* k_configloader_add_item_point4(void* self, const char* name, void* reference, void* defaultValue, const char* key) {
+KCoreConfigSkeleton__ItemPoint* k_configloader_add_item_point4(void* self, const char* name, void* reference, const void* defaultValue, const char* key) {
     return KCoreConfigSkeleton_AddItemPoint4((KCoreConfigSkeleton*)self, qstring(name), (QPoint*)reference, (QPoint*)defaultValue, qstring(key));
 }
 
-KCoreConfigSkeleton__ItemPointF* k_configloader_add_item_point_f3(void* self, const char* name, void* reference, void* defaultValue) {
+KCoreConfigSkeleton__ItemPointF* k_configloader_add_item_point_f3(void* self, const char* name, void* reference, const void* defaultValue) {
     return KCoreConfigSkeleton_AddItemPointF3((KCoreConfigSkeleton*)self, qstring(name), (QPointF*)reference, (QPointF*)defaultValue);
 }
 
-KCoreConfigSkeleton__ItemPointF* k_configloader_add_item_point_f4(void* self, const char* name, void* reference, void* defaultValue, const char* key) {
+KCoreConfigSkeleton__ItemPointF* k_configloader_add_item_point_f4(void* self, const char* name, void* reference, const void* defaultValue, const char* key) {
     return KCoreConfigSkeleton_AddItemPointF4((KCoreConfigSkeleton*)self, qstring(name), (QPointF*)reference, (QPointF*)defaultValue, qstring(key));
 }
 
-KCoreConfigSkeleton__ItemSize* k_configloader_add_item_size3(void* self, const char* name, void* reference, void* defaultValue) {
+KCoreConfigSkeleton__ItemSize* k_configloader_add_item_size3(void* self, const char* name, void* reference, const void* defaultValue) {
     return KCoreConfigSkeleton_AddItemSize3((KCoreConfigSkeleton*)self, qstring(name), (QSize*)reference, (QSize*)defaultValue);
 }
 
-KCoreConfigSkeleton__ItemSize* k_configloader_add_item_size4(void* self, const char* name, void* reference, void* defaultValue, const char* key) {
+KCoreConfigSkeleton__ItemSize* k_configloader_add_item_size4(void* self, const char* name, void* reference, const void* defaultValue, const char* key) {
     return KCoreConfigSkeleton_AddItemSize4((KCoreConfigSkeleton*)self, qstring(name), (QSize*)reference, (QSize*)defaultValue, qstring(key));
 }
 
-KCoreConfigSkeleton__ItemSizeF* k_configloader_add_item_size_f3(void* self, const char* name, void* reference, void* defaultValue) {
+KCoreConfigSkeleton__ItemSizeF* k_configloader_add_item_size_f3(void* self, const char* name, void* reference, const void* defaultValue) {
     return KCoreConfigSkeleton_AddItemSizeF3((KCoreConfigSkeleton*)self, qstring(name), (QSizeF*)reference, (QSizeF*)defaultValue);
 }
 
-KCoreConfigSkeleton__ItemSizeF* k_configloader_add_item_size_f4(void* self, const char* name, void* reference, void* defaultValue, const char* key) {
+KCoreConfigSkeleton__ItemSizeF* k_configloader_add_item_size_f4(void* self, const char* name, void* reference, const void* defaultValue, const char* key) {
     return KCoreConfigSkeleton_AddItemSizeF4((KCoreConfigSkeleton*)self, qstring(name), (QSizeF*)reference, (QSizeF*)defaultValue, qstring(key));
 }
 
-KCoreConfigSkeleton__ItemDateTime* k_configloader_add_item_date_time3(void* self, const char* name, void* reference, void* defaultValue) {
+KCoreConfigSkeleton__ItemDateTime* k_configloader_add_item_date_time3(void* self, const char* name, void* reference, const void* defaultValue) {
     return KCoreConfigSkeleton_AddItemDateTime3((KCoreConfigSkeleton*)self, qstring(name), (QDateTime*)reference, (QDateTime*)defaultValue);
 }
 
-KCoreConfigSkeleton__ItemDateTime* k_configloader_add_item_date_time4(void* self, const char* name, void* reference, void* defaultValue, const char* key) {
+KCoreConfigSkeleton__ItemDateTime* k_configloader_add_item_date_time4(void* self, const char* name, void* reference, const void* defaultValue, const char* key) {
     return KCoreConfigSkeleton_AddItemDateTime4((KCoreConfigSkeleton*)self, qstring(name), (QDateTime*)reference, (QDateTime*)defaultValue, qstring(key));
 }
 
@@ -470,7 +470,7 @@ KCoreConfigSkeleton__ItemIntList* k_configloader_add_item_int_list4(void* self, 
     return KCoreConfigSkeleton_AddItemIntList4((KCoreConfigSkeleton*)self, qstring(name), reference, defaultValue, qstring(key));
 }
 
-const char* k_configloader_object_name(void* self) {
+const char* k_configloader_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -481,19 +481,19 @@ void k_configloader_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_configloader_is_widget_type(void* self) {
+bool k_configloader_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_configloader_is_window_type(void* self) {
+bool k_configloader_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_configloader_is_quick_item_type(void* self) {
+bool k_configloader_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_configloader_signals_blocked(void* self) {
+bool k_configloader_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -501,7 +501,7 @@ bool k_configloader_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_configloader_thread(void* self) {
+QThread* k_configloader_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -525,7 +525,7 @@ void k_configloader_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_configloader_children(void* self) {
+libqt_list /* of QObject* */ k_configloader_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -542,51 +542,51 @@ void k_configloader_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_configloader_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_configloader_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_configloader_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_configloader_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_configloader_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_configloader_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_configloader_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_configloader_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_configloader_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_configloader_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_configloader_disconnect3(void* self) {
+bool k_configloader_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_configloader_disconnect4(void* self, void* receiver) {
+bool k_configloader_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_configloader_disconnect5(void* param1) {
+bool k_configloader_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_configloader_dump_object_tree(void* self) {
+void k_configloader_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_configloader_dump_object_info(void* self) {
+void k_configloader_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_configloader_set_property(void* self, const char* name, void* value) {
+bool k_configloader_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-const char** k_configloader_dynamic_property_names(void* self) {
+const char** k_configloader_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -607,7 +607,7 @@ QBindingStorage* k_configloader_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_configloader_binding_storage2(void* self) {
+const QBindingStorage* k_configloader_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -619,11 +619,11 @@ void k_configloader_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_configloader_parent(void* self) {
+QObject* k_configloader_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_configloader_inherits(void* self, const char* classname) {
+bool k_configloader_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -639,31 +639,31 @@ int32_t k_configloader_start_timer23(void* self, int64_t time, int32_t timerType
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_configloader_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_configloader_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_configloader_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_configloader_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_configloader_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_configloader_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_configloader_disconnect1(void* self, const char* signal) {
+bool k_configloader_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_configloader_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_configloader_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_configloader_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_configloader_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_configloader_disconnect23(void* self, void* receiver, const char* member) {
+bool k_configloader_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -675,16 +675,16 @@ void k_configloader_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_configloader_meta_object(void* self) {
+const QMetaObject* k_configloader_meta_object(const void* self) {
     return KConfigLoader_MetaObject((KConfigLoader*)self);
 }
 
-const QMetaObject* k_configloader_super_meta_object(void* self) {
+const QMetaObject* k_configloader_super_meta_object(const void* self) {
     return KConfigLoader_SuperMetaObject((KConfigLoader*)self);
 }
 
-void k_configloader_on_meta_object(void* self, const QMetaObject* (*callback)()) {
-    KConfigLoader_OnMetaObject((KConfigLoader*)self, (intptr_t)callback);
+void k_configloader_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+    KConfigLoader_OnMetaObject((const KConfigLoader*)self, (intptr_t)callback);
 }
 
 void* k_configloader_metacast(void* self, const char* param1) {
@@ -719,7 +719,7 @@ void k_configloader_super_set_defaults(void* self) {
     KConfigLoader_SuperSetDefaults((KConfigLoader*)self);
 }
 
-void k_configloader_on_set_defaults(void* self, void (*callback)()) {
+void k_configloader_on_set_defaults(void* self, void (*callback)(void*)) {
     KConfigLoader_OnSetDefaults((KConfigLoader*)self, (intptr_t)callback);
 }
 
@@ -755,7 +755,7 @@ void k_configloader_super_usr_set_defaults(void* self) {
     KConfigLoader_SuperUsrSetDefaults((KConfigLoader*)self);
 }
 
-void k_configloader_on_usr_set_defaults(void* self, void (*callback)()) {
+void k_configloader_on_usr_set_defaults(void* self, void (*callback)(void*)) {
     KConfigLoader_OnUsrSetDefaults((KConfigLoader*)self, (intptr_t)callback);
 }
 
@@ -767,7 +767,7 @@ void k_configloader_super_usr_read(void* self) {
     KConfigLoader_SuperUsrRead((KConfigLoader*)self);
 }
 
-void k_configloader_on_usr_read(void* self, void (*callback)()) {
+void k_configloader_on_usr_read(void* self, void (*callback)(void*)) {
     KConfigLoader_OnUsrRead((KConfigLoader*)self, (intptr_t)callback);
 }
 
@@ -831,76 +831,44 @@ void k_configloader_on_custom_event(void* self, void (*callback)(void*, void*)) 
     KConfigLoader_OnCustomEvent((KConfigLoader*)self, (intptr_t)callback);
 }
 
-void k_configloader_connect_notify(void* self, void* signal) {
+void k_configloader_connect_notify(void* self, const void* signal) {
     KConfigLoader_ConnectNotify((KConfigLoader*)self, (QMetaMethod*)signal);
 }
 
-void k_configloader_super_connect_notify(void* self, void* signal) {
+void k_configloader_super_connect_notify(void* self, const void* signal) {
     KConfigLoader_SuperConnectNotify((KConfigLoader*)self, (QMetaMethod*)signal);
 }
 
-void k_configloader_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_configloader_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     KConfigLoader_OnConnectNotify((KConfigLoader*)self, (intptr_t)callback);
 }
 
-void k_configloader_disconnect_notify(void* self, void* signal) {
+void k_configloader_disconnect_notify(void* self, const void* signal) {
     KConfigLoader_DisconnectNotify((KConfigLoader*)self, (QMetaMethod*)signal);
 }
 
-void k_configloader_super_disconnect_notify(void* self, void* signal) {
+void k_configloader_super_disconnect_notify(void* self, const void* signal) {
     KConfigLoader_SuperDisconnectNotify((KConfigLoader*)self, (QMetaMethod*)signal);
 }
 
-void k_configloader_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_configloader_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     KConfigLoader_OnDisconnectNotify((KConfigLoader*)self, (intptr_t)callback);
 }
 
-QObject* k_configloader_sender(void* self) {
+QObject* k_configloader_sender(const void* self) {
     return KConfigLoader_Sender((KConfigLoader*)self);
 }
 
-QObject* k_configloader_super_sender(void* self) {
-    return KConfigLoader_SuperSender((KConfigLoader*)self);
-}
-
-void k_configloader_on_sender(void* self, QObject* (*callback)()) {
-    KConfigLoader_OnSender((KConfigLoader*)self, (intptr_t)callback);
-}
-
-int32_t k_configloader_sender_signal_index(void* self) {
+int32_t k_configloader_sender_signal_index(const void* self) {
     return KConfigLoader_SenderSignalIndex((KConfigLoader*)self);
 }
 
-int32_t k_configloader_super_sender_signal_index(void* self) {
-    return KConfigLoader_SuperSenderSignalIndex((KConfigLoader*)self);
-}
-
-void k_configloader_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    KConfigLoader_OnSenderSignalIndex((KConfigLoader*)self, (intptr_t)callback);
-}
-
-int32_t k_configloader_receivers(void* self, const char* signal) {
+int32_t k_configloader_receivers(const void* self, const char* signal) {
     return KConfigLoader_Receivers((KConfigLoader*)self, signal);
 }
 
-int32_t k_configloader_super_receivers(void* self, const char* signal) {
-    return KConfigLoader_SuperReceivers((KConfigLoader*)self, signal);
-}
-
-void k_configloader_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    KConfigLoader_OnReceivers((KConfigLoader*)self, (intptr_t)callback);
-}
-
-bool k_configloader_is_signal_connected(void* self, void* signal) {
+bool k_configloader_is_signal_connected(const void* self, const void* signal) {
     return KConfigLoader_IsSignalConnected((KConfigLoader*)self, (QMetaMethod*)signal);
-}
-
-bool k_configloader_super_is_signal_connected(void* self, void* signal) {
-    return KConfigLoader_SuperIsSignalConnected((KConfigLoader*)self, (QMetaMethod*)signal);
-}
-
-void k_configloader_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    KConfigLoader_OnIsSignalConnected((KConfigLoader*)self, (intptr_t)callback);
 }
 
 void k_configloader_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

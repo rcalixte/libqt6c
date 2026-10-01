@@ -33,26 +33,26 @@ KConfigSkeleton* k_configskeleton_new3(const char* configname, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 ///
-const QMetaObject* k_configskeleton_meta_object(void* self);
+const QMetaObject* k_configskeleton_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KConfigSkeleton*
-/// @param callback const QMetaObject* func()
+/// @param self const KConfigSkeleton*
+/// @param callback const QMetaObject* func(const KConfigSkeleton* self)
 ///
-void k_configskeleton_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_configskeleton_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 ///
-const QMetaObject* k_configskeleton_super_meta_object(void* self);
+const QMetaObject* k_configskeleton_super_meta_object(const void* self);
 
 /// @param self KConfigSkeleton*
 /// @param param1 const char*
@@ -146,7 +146,7 @@ const char* k_configskeleton_tr3(const char* s, const char* c, int n);
 /// @param reference QColor*
 /// @param defaultValue QColor*
 ///
-KConfigSkeleton__ItemColor* k_configskeleton_add_item_color3(void* self, const char* name, void* reference, void* defaultValue);
+KConfigSkeleton__ItemColor* k_configskeleton_add_item_color3(void* self, const char* name, void* reference, const void* defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeleton.html#addItemColor)
 ///
@@ -156,7 +156,7 @@ KConfigSkeleton__ItemColor* k_configskeleton_add_item_color3(void* self, const c
 /// @param defaultValue QColor*
 /// @param key const char*
 ///
-KConfigSkeleton__ItemColor* k_configskeleton_add_item_color4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+KConfigSkeleton__ItemColor* k_configskeleton_add_item_color4(void* self, const char* name, void* reference, const void* defaultValue, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeleton.html#addItemFont)
 ///
@@ -165,7 +165,7 @@ KConfigSkeleton__ItemColor* k_configskeleton_add_item_color4(void* self, const c
 /// @param reference QFont*
 /// @param defaultValue QFont*
 ///
-KConfigSkeleton__ItemFont* k_configskeleton_add_item_font3(void* self, const char* name, void* reference, void* defaultValue);
+KConfigSkeleton__ItemFont* k_configskeleton_add_item_font3(void* self, const char* name, void* reference, const void* defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeleton.html#addItemFont)
 ///
@@ -175,7 +175,7 @@ KConfigSkeleton__ItemFont* k_configskeleton_add_item_font3(void* self, const cha
 /// @param defaultValue QFont*
 /// @param key const char*
 ///
-KConfigSkeleton__ItemFont* k_configskeleton_add_item_font4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+KConfigSkeleton__ItemFont* k_configskeleton_add_item_font4(void* self, const char* name, void* reference, const void* defaultValue, const char* key);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -197,17 +197,17 @@ void k_configskeleton_read(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#isDefaults)
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 ///
-bool k_configskeleton_is_defaults(void* self);
+bool k_configskeleton_is_defaults(const void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#isSaveNeeded)
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 ///
-bool k_configskeleton_is_save_needed(void* self);
+bool k_configskeleton_is_save_needed(const void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -224,9 +224,9 @@ void k_configskeleton_set_current_group(void* self, const char* group);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 ///
-const char* k_configskeleton_current_group(void* self);
+const char* k_configskeleton_current_group(const void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -439,19 +439,19 @@ KConfig* k_configskeleton_config(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#config)
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 ///
-const KConfig* k_configskeleton_config2(void* self);
+const KConfig* k_configskeleton_config2(const void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#items)
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 ///
 /// @return libqt_list of KConfigSkeletonItem*
 ///
-libqt_list k_configskeleton_items(void* self);
+libqt_list k_configskeleton_items(const void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -474,19 +474,19 @@ void k_configskeleton_clear_items(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#isImmutable)
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 /// @param name const char*
 ///
-bool k_configskeleton_is_immutable(void* self, const char* name);
+bool k_configskeleton_is_immutable(const void* self, const char* name);
 
 /// Inherited from KCoreConfigSkeleton
 ///
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#findItem)
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 /// @param name const char*
 ///
-KConfigSkeletonItem* k_configskeleton_find_item(void* self, const char* name);
+KConfigSkeletonItem* k_configskeleton_find_item(const void* self, const char* name);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -601,7 +601,7 @@ KCoreConfigSkeleton__ItemPath* k_configskeleton_add_item_path4(void* self, const
 /// @param reference QVariant*
 /// @param defaultValue QVariant*
 ///
-KCoreConfigSkeleton__ItemProperty* k_configskeleton_add_item_property3(void* self, const char* name, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemProperty* k_configskeleton_add_item_property3(void* self, const char* name, void* reference, const void* defaultValue);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -613,7 +613,7 @@ KCoreConfigSkeleton__ItemProperty* k_configskeleton_add_item_property3(void* sel
 /// @param defaultValue QVariant*
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemProperty* k_configskeleton_add_item_property4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+KCoreConfigSkeleton__ItemProperty* k_configskeleton_add_item_property4(void* self, const char* name, void* reference, const void* defaultValue, const char* key);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -762,7 +762,7 @@ KCoreConfigSkeleton__ItemDouble* k_configskeleton_add_item_double4(void* self, c
 /// @param reference QRect*
 /// @param defaultValue QRect*
 ///
-KCoreConfigSkeleton__ItemRect* k_configskeleton_add_item_rect3(void* self, const char* name, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemRect* k_configskeleton_add_item_rect3(void* self, const char* name, void* reference, const void* defaultValue);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -774,7 +774,7 @@ KCoreConfigSkeleton__ItemRect* k_configskeleton_add_item_rect3(void* self, const
 /// @param defaultValue QRect*
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemRect* k_configskeleton_add_item_rect4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+KCoreConfigSkeleton__ItemRect* k_configskeleton_add_item_rect4(void* self, const char* name, void* reference, const void* defaultValue, const char* key);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -785,7 +785,7 @@ KCoreConfigSkeleton__ItemRect* k_configskeleton_add_item_rect4(void* self, const
 /// @param reference QRectF*
 /// @param defaultValue QRectF*
 ///
-KCoreConfigSkeleton__ItemRectF* k_configskeleton_add_item_rect_f3(void* self, const char* name, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemRectF* k_configskeleton_add_item_rect_f3(void* self, const char* name, void* reference, const void* defaultValue);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -797,7 +797,7 @@ KCoreConfigSkeleton__ItemRectF* k_configskeleton_add_item_rect_f3(void* self, co
 /// @param defaultValue QRectF*
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemRectF* k_configskeleton_add_item_rect_f4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+KCoreConfigSkeleton__ItemRectF* k_configskeleton_add_item_rect_f4(void* self, const char* name, void* reference, const void* defaultValue, const char* key);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -808,7 +808,7 @@ KCoreConfigSkeleton__ItemRectF* k_configskeleton_add_item_rect_f4(void* self, co
 /// @param reference QPoint*
 /// @param defaultValue QPoint*
 ///
-KCoreConfigSkeleton__ItemPoint* k_configskeleton_add_item_point3(void* self, const char* name, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemPoint* k_configskeleton_add_item_point3(void* self, const char* name, void* reference, const void* defaultValue);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -820,7 +820,7 @@ KCoreConfigSkeleton__ItemPoint* k_configskeleton_add_item_point3(void* self, con
 /// @param defaultValue QPoint*
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemPoint* k_configskeleton_add_item_point4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+KCoreConfigSkeleton__ItemPoint* k_configskeleton_add_item_point4(void* self, const char* name, void* reference, const void* defaultValue, const char* key);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -831,7 +831,7 @@ KCoreConfigSkeleton__ItemPoint* k_configskeleton_add_item_point4(void* self, con
 /// @param reference QPointF*
 /// @param defaultValue QPointF*
 ///
-KCoreConfigSkeleton__ItemPointF* k_configskeleton_add_item_point_f3(void* self, const char* name, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemPointF* k_configskeleton_add_item_point_f3(void* self, const char* name, void* reference, const void* defaultValue);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -843,7 +843,7 @@ KCoreConfigSkeleton__ItemPointF* k_configskeleton_add_item_point_f3(void* self, 
 /// @param defaultValue QPointF*
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemPointF* k_configskeleton_add_item_point_f4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+KCoreConfigSkeleton__ItemPointF* k_configskeleton_add_item_point_f4(void* self, const char* name, void* reference, const void* defaultValue, const char* key);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -854,7 +854,7 @@ KCoreConfigSkeleton__ItemPointF* k_configskeleton_add_item_point_f4(void* self, 
 /// @param reference QSize*
 /// @param defaultValue QSize*
 ///
-KCoreConfigSkeleton__ItemSize* k_configskeleton_add_item_size3(void* self, const char* name, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemSize* k_configskeleton_add_item_size3(void* self, const char* name, void* reference, const void* defaultValue);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -866,7 +866,7 @@ KCoreConfigSkeleton__ItemSize* k_configskeleton_add_item_size3(void* self, const
 /// @param defaultValue QSize*
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemSize* k_configskeleton_add_item_size4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+KCoreConfigSkeleton__ItemSize* k_configskeleton_add_item_size4(void* self, const char* name, void* reference, const void* defaultValue, const char* key);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -877,7 +877,7 @@ KCoreConfigSkeleton__ItemSize* k_configskeleton_add_item_size4(void* self, const
 /// @param reference QSizeF*
 /// @param defaultValue QSizeF*
 ///
-KCoreConfigSkeleton__ItemSizeF* k_configskeleton_add_item_size_f3(void* self, const char* name, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemSizeF* k_configskeleton_add_item_size_f3(void* self, const char* name, void* reference, const void* defaultValue);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -889,7 +889,7 @@ KCoreConfigSkeleton__ItemSizeF* k_configskeleton_add_item_size_f3(void* self, co
 /// @param defaultValue QSizeF*
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemSizeF* k_configskeleton_add_item_size_f4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+KCoreConfigSkeleton__ItemSizeF* k_configskeleton_add_item_size_f4(void* self, const char* name, void* reference, const void* defaultValue, const char* key);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -900,7 +900,7 @@ KCoreConfigSkeleton__ItemSizeF* k_configskeleton_add_item_size_f4(void* self, co
 /// @param reference QDateTime*
 /// @param defaultValue QDateTime*
 ///
-KCoreConfigSkeleton__ItemDateTime* k_configskeleton_add_item_date_time3(void* self, const char* name, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemDateTime* k_configskeleton_add_item_date_time3(void* self, const char* name, void* reference, const void* defaultValue);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -912,7 +912,7 @@ KCoreConfigSkeleton__ItemDateTime* k_configskeleton_add_item_date_time3(void* se
 /// @param defaultValue QDateTime*
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemDateTime* k_configskeleton_add_item_date_time4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+KCoreConfigSkeleton__ItemDateTime* k_configskeleton_add_item_date_time4(void* self, const char* name, void* reference, const void* defaultValue, const char* key);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -966,9 +966,9 @@ KCoreConfigSkeleton__ItemIntList* k_configskeleton_add_item_int_list4(void* self
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 ///
-const char* k_configskeleton_object_name(void* self);
+const char* k_configskeleton_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -983,33 +983,33 @@ void k_configskeleton_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 ///
-bool k_configskeleton_is_widget_type(void* self);
+bool k_configskeleton_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 ///
-bool k_configskeleton_is_window_type(void* self);
+bool k_configskeleton_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 ///
-bool k_configskeleton_is_quick_item_type(void* self);
+bool k_configskeleton_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 ///
-bool k_configskeleton_signals_blocked(void* self);
+bool k_configskeleton_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1024,9 +1024,9 @@ bool k_configskeleton_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 ///
-QThread* k_configskeleton_thread(void* self);
+QThread* k_configskeleton_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1077,11 +1077,11 @@ void k_configskeleton_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_configskeleton_children(void* self);
+libqt_list k_configskeleton_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1119,7 +1119,7 @@ void k_configskeleton_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_configskeleton_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_configskeleton_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1130,18 +1130,18 @@ QMetaObject__Connection* k_configskeleton_connect(void* sender, const char* sign
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_configskeleton_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_configskeleton_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_configskeleton_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_configskeleton_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1152,7 +1152,7 @@ QMetaObject__Connection* k_configskeleton_connect3(void* self, void* sender, con
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_configskeleton_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_configskeleton_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1163,24 +1163,24 @@ bool k_configskeleton_disconnect(void* sender, const char* signal, void* receive
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_configskeleton_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_configskeleton_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 ///
-bool k_configskeleton_disconnect3(void* self);
+bool k_configskeleton_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 /// @param receiver QObject*
 ///
-bool k_configskeleton_disconnect4(void* self, void* receiver);
+bool k_configskeleton_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1188,23 +1188,23 @@ bool k_configskeleton_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_configskeleton_disconnect5(void* param1);
+bool k_configskeleton_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 ///
-void k_configskeleton_dump_object_tree(void* self);
+void k_configskeleton_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 ///
-void k_configskeleton_dump_object_info(void* self);
+void k_configskeleton_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1214,16 +1214,16 @@ void k_configskeleton_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_configskeleton_set_property(void* self, const char* name, void* value);
+bool k_configskeleton_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 /// @param name const char*
 ///
-QVariant* k_configskeleton_property(void* self, const char* name);
+QVariant* k_configskeleton_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1231,9 +1231,9 @@ QVariant* k_configskeleton_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 ///
-const char** k_configskeleton_dynamic_property_names(void* self);
+const char** k_configskeleton_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1247,9 +1247,9 @@ QBindingStorage* k_configskeleton_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 ///
-const QBindingStorage* k_configskeleton_binding_storage2(void* self);
+const QBindingStorage* k_configskeleton_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1272,18 +1272,18 @@ void k_configskeleton_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 ///
-QObject* k_configskeleton_parent(void* self);
+QObject* k_configskeleton_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 /// @param classname const char*
 ///
-bool k_configskeleton_inherits(void* self, const char* classname);
+bool k_configskeleton_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1323,7 +1323,7 @@ int32_t k_configskeleton_start_timer23(void* self, int64_t time, int32_t timerTy
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_configskeleton_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_configskeleton_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1335,59 +1335,59 @@ QMetaObject__Connection* k_configskeleton_connect5(void* sender, const char* sig
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_configskeleton_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_configskeleton_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_configskeleton_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_configskeleton_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 /// @param signal const char*
 ///
-bool k_configskeleton_disconnect1(void* self, const char* signal);
+bool k_configskeleton_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KConfigSkeleton*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_configskeleton_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_configskeleton_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_configskeleton_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_configskeleton_disconnect23(void* self, void* receiver, const char* member);
+bool k_configskeleton_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KConfigSkeleton*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_configskeleton_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1434,9 +1434,9 @@ void k_configskeleton_super_set_defaults(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigSkeleton*
-/// @param callback void func()
+/// @param callback void func(KConfigSkeleton* self)
 ///
-void k_configskeleton_on_set_defaults(void* self, void (*callback)());
+void k_configskeleton_on_set_defaults(void* self, void (*callback)(void*));
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -1531,9 +1531,9 @@ void k_configskeleton_super_usr_set_defaults(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigSkeleton*
-/// @param callback void func()
+/// @param callback void func(KConfigSkeleton* self)
 ///
-void k_configskeleton_on_usr_set_defaults(void* self, void (*callback)());
+void k_configskeleton_on_usr_set_defaults(void* self, void (*callback)(void*));
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -1562,9 +1562,9 @@ void k_configskeleton_super_usr_read(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigSkeleton*
-/// @param callback void func()
+/// @param callback void func(KConfigSkeleton* self)
 ///
-void k_configskeleton_on_usr_read(void* self, void (*callback)());
+void k_configskeleton_on_usr_read(void* self, void (*callback)(void*));
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -1593,9 +1593,9 @@ bool k_configskeleton_super_usr_save(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigSkeleton*
-/// @param callback bool func()
+/// @param callback bool func(KConfigSkeleton* self)
 ///
-void k_configskeleton_on_usr_save(void* self, bool (*callback)());
+void k_configskeleton_on_usr_save(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -1773,7 +1773,7 @@ void k_configskeleton_on_custom_event(void* self, void (*callback)(void*, void*)
 /// @param self KConfigSkeleton*
 /// @param signal QMetaMethod*
 ///
-void k_configskeleton_connect_notify(void* self, void* signal);
+void k_configskeleton_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1784,7 +1784,7 @@ void k_configskeleton_connect_notify(void* self, void* signal);
 /// @param self KConfigSkeleton*
 /// @param signal QMetaMethod*
 ///
-void k_configskeleton_super_connect_notify(void* self, void* signal);
+void k_configskeleton_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1795,7 +1795,7 @@ void k_configskeleton_super_connect_notify(void* self, void* signal);
 /// @param self KConfigSkeleton*
 /// @param callback void func(KConfigSkeleton* self, QMetaMethod* signal)
 ///
-void k_configskeleton_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_configskeleton_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1806,7 +1806,7 @@ void k_configskeleton_on_connect_notify(void* self, void (*callback)(void*, void
 /// @param self KConfigSkeleton*
 /// @param signal QMetaMethod*
 ///
-void k_configskeleton_disconnect_notify(void* self, void* signal);
+void k_configskeleton_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1817,7 +1817,7 @@ void k_configskeleton_disconnect_notify(void* self, void* signal);
 /// @param self KConfigSkeleton*
 /// @param signal QMetaMethod*
 ///
-void k_configskeleton_super_disconnect_notify(void* self, void* signal);
+void k_configskeleton_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1828,7 +1828,7 @@ void k_configskeleton_super_disconnect_notify(void* self, void* signal);
 /// @param self KConfigSkeleton*
 /// @param callback void func(KConfigSkeleton* self, QMetaMethod* signal)
 ///
-void k_configskeleton_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_configskeleton_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1836,9 +1836,9 @@ void k_configskeleton_on_disconnect_notify(void* self, void (*callback)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 ///
-QObject* k_configskeleton_sender(void* self);
+QObject* k_configskeleton_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1846,9 +1846,9 @@ QObject* k_configskeleton_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 ///
-QObject* k_configskeleton_super_sender(void* self);
+QObject* k_configskeleton_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1856,10 +1856,10 @@ QObject* k_configskeleton_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KConfigSkeleton*
-/// @param callback QObject* func()
+/// @param self const KConfigSkeleton*
+/// @param callback QObject* func(KConfigSkeleton* self)
 ///
-void k_configskeleton_on_sender(void* self, QObject* (*callback)());
+void k_configskeleton_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1867,9 +1867,9 @@ void k_configskeleton_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 ///
-int32_t k_configskeleton_sender_signal_index(void* self);
+int32_t k_configskeleton_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1877,9 +1877,9 @@ int32_t k_configskeleton_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 ///
-int32_t k_configskeleton_super_sender_signal_index(void* self);
+int32_t k_configskeleton_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1887,10 +1887,10 @@ int32_t k_configskeleton_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KConfigSkeleton*
-/// @param callback int32_t func()
+/// @param self const KConfigSkeleton*
+/// @param callback int32_t func(KConfigSkeleton* self)
 ///
-void k_configskeleton_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_configskeleton_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1898,10 +1898,10 @@ void k_configskeleton_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 /// @param signal const char*
 ///
-int32_t k_configskeleton_receivers(void* self, const char* signal);
+int32_t k_configskeleton_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1909,10 +1909,10 @@ int32_t k_configskeleton_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 /// @param signal const char*
 ///
-int32_t k_configskeleton_super_receivers(void* self, const char* signal);
+int32_t k_configskeleton_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1920,10 +1920,10 @@ int32_t k_configskeleton_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 /// @param callback int32_t func(KConfigSkeleton* self, const char* signal)
 ///
-void k_configskeleton_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_configskeleton_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1931,10 +1931,10 @@ void k_configskeleton_on_receivers(void* self, int32_t (*callback)(void*, const 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 /// @param signal QMetaMethod*
 ///
-bool k_configskeleton_is_signal_connected(void* self, void* signal);
+bool k_configskeleton_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1942,10 +1942,10 @@ bool k_configskeleton_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 /// @param signal QMetaMethod*
 ///
-bool k_configskeleton_super_is_signal_connected(void* self, void* signal);
+bool k_configskeleton_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1953,10 +1953,10 @@ bool k_configskeleton_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KConfigSkeleton*
+/// @param self const KConfigSkeleton*
 /// @param callback bool func(KConfigSkeleton* self, QMetaMethod* signal)
 ///
-void k_configskeleton_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_configskeleton_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1996,7 +1996,7 @@ KConfigSkeleton__ItemColor* k_configskeleton__itemcolor_new(const char* _group, 
 /// @param reference QColor*
 /// @param defaultValue QColor*
 ///
-KConfigSkeleton__ItemColor* k_configskeleton__itemcolor_new2(const char* _group, const char* _key, void* reference, void* defaultValue);
+KConfigSkeleton__ItemColor* k_configskeleton__itemcolor_new2(const char* _group, const char* _key, void* reference, const void* defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeleton-itemcolor.html#readConfig)
 ///
@@ -2028,7 +2028,7 @@ void k_configskeleton__itemcolor_super_read_config(void* self, void* config);
 /// @param self KConfigSkeleton__ItemColor*
 /// @param p QVariant*
 ///
-void k_configskeleton__itemcolor_set_property(void* self, void* p);
+void k_configskeleton__itemcolor_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeleton-itemcolor.html#setProperty)
 ///
@@ -2037,7 +2037,7 @@ void k_configskeleton__itemcolor_set_property(void* self, void* p);
 /// @param self KConfigSkeleton__ItemColor*
 /// @param callback void func(KConfigSkeleton__ItemColor* self, QVariant* p)
 ///
-void k_configskeleton__itemcolor_on_set_property(void* self, void (*callback)(void*, void*));
+void k_configskeleton__itemcolor_on_set_property(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kconfigskeleton-itemcolor.html#setProperty)
 ///
@@ -2046,57 +2046,57 @@ void k_configskeleton__itemcolor_on_set_property(void* self, void (*callback)(vo
 /// @param self KConfigSkeleton__ItemColor*
 /// @param p QVariant*
 ///
-void k_configskeleton__itemcolor_super_set_property(void* self, void* p);
+void k_configskeleton__itemcolor_super_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeleton-itemcolor.html#isEqual)
 ///
-/// @param self KConfigSkeleton__ItemColor*
+/// @param self const KConfigSkeleton__ItemColor*
 /// @param p QVariant*
 ///
-bool k_configskeleton__itemcolor_is_equal(void* self, void* p);
+bool k_configskeleton__itemcolor_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeleton-itemcolor.html#isEqual)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KConfigSkeleton__ItemColor*
-/// @param callback bool func(KConfigSkeleton__ItemColor* self, QVariant* p)
+/// @param self const KConfigSkeleton__ItemColor*
+/// @param callback bool func(const KConfigSkeleton__ItemColor* self, QVariant* p)
 ///
-void k_configskeleton__itemcolor_on_is_equal(void* self, bool (*callback)(void*, void*));
+void k_configskeleton__itemcolor_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kconfigskeleton-itemcolor.html#isEqual)
 ///
 /// Base class method implementation
 ///
-/// @param self KConfigSkeleton__ItemColor*
+/// @param self const KConfigSkeleton__ItemColor*
 /// @param p QVariant*
 ///
-bool k_configskeleton__itemcolor_super_is_equal(void* self, void* p);
+bool k_configskeleton__itemcolor_super_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeleton-itemcolor.html#property)
 ///
-/// @param self KConfigSkeleton__ItemColor*
+/// @param self const KConfigSkeleton__ItemColor*
 ///
-QVariant* k_configskeleton__itemcolor_property(void* self);
+QVariant* k_configskeleton__itemcolor_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeleton-itemcolor.html#property)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KConfigSkeleton__ItemColor*
-/// @param callback QVariant* func()
+/// @param self const KConfigSkeleton__ItemColor*
+/// @param callback QVariant* func(const KConfigSkeleton__ItemColor* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_configskeleton__itemcolor_on_property(void* self, QVariant* (*callback)());
+void k_configskeleton__itemcolor_on_property(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kconfigskeleton-itemcolor.html#property)
 ///
 /// Base class method implementation
 ///
-/// @param self KConfigSkeleton__ItemColor*
+/// @param self const KConfigSkeleton__ItemColor*
 ///
-QVariant* k_configskeleton__itemcolor_super_property(void* self);
+QVariant* k_configskeleton__itemcolor_super_property(const void* self);
 
 /// Delete this object from C++ memory.
 ///
@@ -2123,7 +2123,7 @@ KConfigSkeleton__ItemFont* k_configskeleton__itemfont_new(const char* _group, co
 /// @param reference QFont*
 /// @param defaultValue QFont*
 ///
-KConfigSkeleton__ItemFont* k_configskeleton__itemfont_new2(const char* _group, const char* _key, void* reference, void* defaultValue);
+KConfigSkeleton__ItemFont* k_configskeleton__itemfont_new2(const char* _group, const char* _key, void* reference, const void* defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeleton-itemfont.html#readConfig)
 ///
@@ -2155,7 +2155,7 @@ void k_configskeleton__itemfont_super_read_config(void* self, void* config);
 /// @param self KConfigSkeleton__ItemFont*
 /// @param p QVariant*
 ///
-void k_configskeleton__itemfont_set_property(void* self, void* p);
+void k_configskeleton__itemfont_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeleton-itemfont.html#setProperty)
 ///
@@ -2164,7 +2164,7 @@ void k_configskeleton__itemfont_set_property(void* self, void* p);
 /// @param self KConfigSkeleton__ItemFont*
 /// @param callback void func(KConfigSkeleton__ItemFont* self, QVariant* p)
 ///
-void k_configskeleton__itemfont_on_set_property(void* self, void (*callback)(void*, void*));
+void k_configskeleton__itemfont_on_set_property(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kconfigskeleton-itemfont.html#setProperty)
 ///
@@ -2173,57 +2173,57 @@ void k_configskeleton__itemfont_on_set_property(void* self, void (*callback)(voi
 /// @param self KConfigSkeleton__ItemFont*
 /// @param p QVariant*
 ///
-void k_configskeleton__itemfont_super_set_property(void* self, void* p);
+void k_configskeleton__itemfont_super_set_property(void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeleton-itemfont.html#isEqual)
 ///
-/// @param self KConfigSkeleton__ItemFont*
+/// @param self const KConfigSkeleton__ItemFont*
 /// @param p QVariant*
 ///
-bool k_configskeleton__itemfont_is_equal(void* self, void* p);
+bool k_configskeleton__itemfont_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeleton-itemfont.html#isEqual)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KConfigSkeleton__ItemFont*
-/// @param callback bool func(KConfigSkeleton__ItemFont* self, QVariant* p)
+/// @param self const KConfigSkeleton__ItemFont*
+/// @param callback bool func(const KConfigSkeleton__ItemFont* self, QVariant* p)
 ///
-void k_configskeleton__itemfont_on_is_equal(void* self, bool (*callback)(void*, void*));
+void k_configskeleton__itemfont_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kconfigskeleton-itemfont.html#isEqual)
 ///
 /// Base class method implementation
 ///
-/// @param self KConfigSkeleton__ItemFont*
+/// @param self const KConfigSkeleton__ItemFont*
 /// @param p QVariant*
 ///
-bool k_configskeleton__itemfont_super_is_equal(void* self, void* p);
+bool k_configskeleton__itemfont_super_is_equal(const void* self, const void* p);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeleton-itemfont.html#property)
 ///
-/// @param self KConfigSkeleton__ItemFont*
+/// @param self const KConfigSkeleton__ItemFont*
 ///
-QVariant* k_configskeleton__itemfont_property(void* self);
+QVariant* k_configskeleton__itemfont_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfigskeleton-itemfont.html#property)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KConfigSkeleton__ItemFont*
-/// @param callback QVariant* func()
+/// @param self const KConfigSkeleton__ItemFont*
+/// @param callback QVariant* func(const KConfigSkeleton__ItemFont* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_configskeleton__itemfont_on_property(void* self, QVariant* (*callback)());
+void k_configskeleton__itemfont_on_property(const void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kconfigskeleton-itemfont.html#property)
 ///
 /// Base class method implementation
 ///
-/// @param self KConfigSkeleton__ItemFont*
+/// @param self const KConfigSkeleton__ItemFont*
 ///
-QVariant* k_configskeleton__itemfont_super_property(void* self);
+QVariant* k_configskeleton__itemfont_super_property(const void* self);
 
 /// Delete this object from C++ memory.
 ///

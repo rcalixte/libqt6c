@@ -20,36 +20,36 @@ QDomImplementation* q_domimplementation_new();
 ///
 /// @param implementation QDomImplementation*
 ///
-QDomImplementation* q_domimplementation_new2(void* implementation);
+QDomImplementation* q_domimplementation_new2(const void* implementation);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomimplementation.html#operator-eq)
 ///
 /// @param self QDomImplementation*
 /// @param other QDomImplementation*
 ///
-void q_domimplementation_operator_assign(void* self, void* other);
+void q_domimplementation_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomimplementation.html#operator-eq-eq)
 ///
-/// @param self QDomImplementation*
+/// @param self const QDomImplementation*
 /// @param other QDomImplementation*
 ///
-bool q_domimplementation_operator_equal(void* self, void* other);
+bool q_domimplementation_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomimplementation.html#operator-not-eq)
 ///
-/// @param self QDomImplementation*
+/// @param self const QDomImplementation*
 /// @param other QDomImplementation*
 ///
-bool q_domimplementation_operator_not_equal(void* self, void* other);
+bool q_domimplementation_operator_not_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomimplementation.html#hasFeature)
 ///
-/// @param self QDomImplementation*
+/// @param self const QDomImplementation*
 /// @param feature const char*
 /// @param version const char*
 ///
-bool q_domimplementation_has_feature(void* self, const char* feature, const char* version);
+bool q_domimplementation_has_feature(const void* self, const char* feature, const char* version);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomimplementation.html#createDocumentType)
 ///
@@ -67,7 +67,7 @@ QDomDocumentType* q_domimplementation_create_document_type(void* self, const cha
 /// @param qName const char*
 /// @param doctype QDomDocumentType*
 ///
-QDomDocument* q_domimplementation_create_document(void* self, const char* nsURI, const char* qName, void* doctype);
+QDomDocument* q_domimplementation_create_document(void* self, const char* nsURI, const char* qName, const void* doctype);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomimplementation.html#invalidDataPolicy)
 ///
@@ -107,28 +107,28 @@ QDomNode* q_domnode_new();
 ///
 /// @param node QDomNode*
 ///
-QDomNode* q_domnode_new2(void* node);
+QDomNode* q_domnode_new2(const void* node);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#operator-eq)
 ///
 /// @param self QDomNode*
 /// @param other QDomNode*
 ///
-void q_domnode_operator_assign(void* self, void* other);
+void q_domnode_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#operator-eq-eq)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 /// @param other QDomNode*
 ///
-bool q_domnode_operator_equal(void* self, void* other);
+bool q_domnode_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#operator-not-eq)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 /// @param other QDomNode*
 ///
-bool q_domnode_operator_not_equal(void* self, void* other);
+bool q_domnode_operator_not_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#insertBefore)
 ///
@@ -136,7 +136,7 @@ bool q_domnode_operator_not_equal(void* self, void* other);
 /// @param newChild QDomNode*
 /// @param refChild QDomNode*
 ///
-QDomNode* q_domnode_insert_before(void* self, void* newChild, void* refChild);
+QDomNode* q_domnode_insert_before(void* self, const void* newChild, const void* refChild);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#insertAfter)
 ///
@@ -144,7 +144,7 @@ QDomNode* q_domnode_insert_before(void* self, void* newChild, void* refChild);
 /// @param newChild QDomNode*
 /// @param refChild QDomNode*
 ///
-QDomNode* q_domnode_insert_after(void* self, void* newChild, void* refChild);
+QDomNode* q_domnode_insert_after(void* self, const void* newChild, const void* refChild);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#replaceChild)
 ///
@@ -152,33 +152,33 @@ QDomNode* q_domnode_insert_after(void* self, void* newChild, void* refChild);
 /// @param newChild QDomNode*
 /// @param oldChild QDomNode*
 ///
-QDomNode* q_domnode_replace_child(void* self, void* newChild, void* oldChild);
+QDomNode* q_domnode_replace_child(void* self, const void* newChild, const void* oldChild);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#removeChild)
 ///
 /// @param self QDomNode*
 /// @param oldChild QDomNode*
 ///
-QDomNode* q_domnode_remove_child(void* self, void* oldChild);
+QDomNode* q_domnode_remove_child(void* self, const void* oldChild);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#appendChild)
 ///
 /// @param self QDomNode*
 /// @param newChild QDomNode*
 ///
-QDomNode* q_domnode_append_child(void* self, void* newChild);
+QDomNode* q_domnode_append_child(void* self, const void* newChild);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#hasChildNodes)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-bool q_domnode_has_child_nodes(void* self);
+bool q_domnode_has_child_nodes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#cloneNode)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-QDomNode* q_domnode_clone_node(void* self);
+QDomNode* q_domnode_clone_node(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#normalize)
 ///
@@ -188,105 +188,105 @@ void q_domnode_normalize(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isSupported)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 /// @param feature const char*
 /// @param version const char*
 ///
-bool q_domnode_is_supported(void* self, const char* feature, const char* version);
+bool q_domnode_is_supported(const void* self, const char* feature, const char* version);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-const char* q_domnode_node_name(void* self);
+const char* q_domnode_node_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeType)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
 /// @return enum QDomNode__NodeType
 ///
-int32_t q_domnode_node_type(void* self);
+int32_t q_domnode_node_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#parentNode)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-QDomNode* q_domnode_parent_node(void* self);
+QDomNode* q_domnode_parent_node(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#childNodes)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-QDomNodeList* q_domnode_child_nodes(void* self);
+QDomNodeList* q_domnode_child_nodes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChild)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-QDomNode* q_domnode_first_child(void* self);
+QDomNode* q_domnode_first_child(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChild)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-QDomNode* q_domnode_last_child(void* self);
+QDomNode* q_domnode_last_child(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSibling)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-QDomNode* q_domnode_previous_sibling(void* self);
+QDomNode* q_domnode_previous_sibling(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSibling)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-QDomNode* q_domnode_next_sibling(void* self);
+QDomNode* q_domnode_next_sibling(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#attributes)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-QDomNamedNodeMap* q_domnode_attributes(void* self);
+QDomNamedNodeMap* q_domnode_attributes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#ownerDocument)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-QDomDocument* q_domnode_owner_document(void* self);
+QDomDocument* q_domnode_owner_document(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#namespaceURI)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-const char* q_domnode_namespace_u_r_i(void* self);
+const char* q_domnode_namespace_u_r_i(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#localName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-const char* q_domnode_local_name(void* self);
+const char* q_domnode_local_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#hasAttributes)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-bool q_domnode_has_attributes(void* self);
+bool q_domnode_has_attributes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeValue)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-const char* q_domnode_node_value(void* self);
+const char* q_domnode_node_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#setNodeValue)
 ///
@@ -299,9 +299,9 @@ void q_domnode_set_node_value(void* self, const char* value);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-const char* q_domnode_prefix(void* self);
+const char* q_domnode_prefix(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#setPrefix)
 ///
@@ -312,94 +312,94 @@ void q_domnode_set_prefix(void* self, const char* pre);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isAttr)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-bool q_domnode_is_attr(void* self);
+bool q_domnode_is_attr(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isCDATASection)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-bool q_domnode_is_c_d_a_t_a_section(void* self);
+bool q_domnode_is_c_d_a_t_a_section(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocumentFragment)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-bool q_domnode_is_document_fragment(void* self);
+bool q_domnode_is_document_fragment(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocument)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-bool q_domnode_is_document(void* self);
+bool q_domnode_is_document(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocumentType)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-bool q_domnode_is_document_type(void* self);
+bool q_domnode_is_document_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isElement)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-bool q_domnode_is_element(void* self);
+bool q_domnode_is_element(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isEntityReference)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-bool q_domnode_is_entity_reference(void* self);
+bool q_domnode_is_entity_reference(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isText)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-bool q_domnode_is_text(void* self);
+bool q_domnode_is_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isEntity)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-bool q_domnode_is_entity(void* self);
+bool q_domnode_is_entity(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isNotation)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-bool q_domnode_is_notation(void* self);
+bool q_domnode_is_notation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isProcessingInstruction)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-bool q_domnode_is_processing_instruction(void* self);
+bool q_domnode_is_processing_instruction(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isCharacterData)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-bool q_domnode_is_character_data(void* self);
+bool q_domnode_is_character_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isComment)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-bool q_domnode_is_comment(void* self);
+bool q_domnode_is_comment(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#namedItem)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 /// @param name const char*
 ///
-QDomNode* q_domnode_named_item(void* self, const char* name);
+QDomNode* q_domnode_named_item(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isNull)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-bool q_domnode_is_null(void* self);
+bool q_domnode_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#clear)
 ///
@@ -409,201 +409,201 @@ void q_domnode_clear(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toAttr)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-QDomAttr* q_domnode_to_attr(void* self);
+QDomAttr* q_domnode_to_attr(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toCDATASection)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-QDomCDATASection* q_domnode_to_c_d_a_t_a_section(void* self);
+QDomCDATASection* q_domnode_to_c_d_a_t_a_section(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocumentFragment)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-QDomDocumentFragment* q_domnode_to_document_fragment(void* self);
+QDomDocumentFragment* q_domnode_to_document_fragment(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocument)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-QDomDocument* q_domnode_to_document(void* self);
+QDomDocument* q_domnode_to_document(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocumentType)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-QDomDocumentType* q_domnode_to_document_type(void* self);
+QDomDocumentType* q_domnode_to_document_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toElement)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-QDomElement* q_domnode_to_element(void* self);
+QDomElement* q_domnode_to_element(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toEntityReference)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-QDomEntityReference* q_domnode_to_entity_reference(void* self);
+QDomEntityReference* q_domnode_to_entity_reference(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toText)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-QDomText* q_domnode_to_text(void* self);
+QDomText* q_domnode_to_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toEntity)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-QDomEntity* q_domnode_to_entity(void* self);
+QDomEntity* q_domnode_to_entity(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toNotation)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-QDomNotation* q_domnode_to_notation(void* self);
+QDomNotation* q_domnode_to_notation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toProcessingInstruction)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-QDomProcessingInstruction* q_domnode_to_processing_instruction(void* self);
+QDomProcessingInstruction* q_domnode_to_processing_instruction(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toCharacterData)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-QDomCharacterData* q_domnode_to_character_data(void* self);
+QDomCharacterData* q_domnode_to_character_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toComment)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-QDomComment* q_domnode_to_comment(void* self);
+QDomComment* q_domnode_to_comment(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#save)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 /// @param param1 QTextStream*
 /// @param param2 int
 ///
-void q_domnode_save(void* self, void* param1, int param2);
+void q_domnode_save(const void* self, void* param1, int param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-QDomElement* q_domnode_first_child_element(void* self);
+QDomElement* q_domnode_first_child_element(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-QDomElement* q_domnode_last_child_element(void* self);
+QDomElement* q_domnode_last_child_element(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-QDomElement* q_domnode_previous_sibling_element(void* self);
+QDomElement* q_domnode_previous_sibling_element(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-QDomElement* q_domnode_next_sibling_element(void* self);
+QDomElement* q_domnode_next_sibling_element(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lineNumber)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-int32_t q_domnode_line_number(void* self);
+int32_t q_domnode_line_number(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#columnNumber)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 ///
-int32_t q_domnode_column_number(void* self);
+int32_t q_domnode_column_number(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#cloneNode)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 /// @param deep bool
 ///
-QDomNode* q_domnode_clone_node1(void* self, bool deep);
+QDomNode* q_domnode_clone_node1(const void* self, bool deep);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#save)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 /// @param param1 QTextStream*
 /// @param param2 int
 /// @param param3 enum QDomNode__EncodingPolicy
 ///
-void q_domnode_save3(void* self, void* param1, int param2, int32_t param3);
+void q_domnode_save3(const void* self, void* param1, int param2, int32_t param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 /// @param tagName const char*
 ///
-QDomElement* q_domnode_first_child_element1(void* self, const char* tagName);
+QDomElement* q_domnode_first_child_element1(const void* self, const char* tagName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domnode_first_child_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domnode_first_child_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 /// @param tagName const char*
 ///
-QDomElement* q_domnode_last_child_element1(void* self, const char* tagName);
+QDomElement* q_domnode_last_child_element1(const void* self, const char* tagName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domnode_last_child_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domnode_last_child_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 /// @param tagName const char*
 ///
-QDomElement* q_domnode_previous_sibling_element1(void* self, const char* tagName);
+QDomElement* q_domnode_previous_sibling_element1(const void* self, const char* tagName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domnode_previous_sibling_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domnode_previous_sibling_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 /// @param taName const char*
 ///
-QDomElement* q_domnode_next_sibling_element1(void* self, const char* taName);
+QDomElement* q_domnode_next_sibling_element1(const void* self, const char* taName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomNode*
+/// @param self const QDomNode*
 /// @param taName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domnode_next_sibling_element2(void* self, const char* taName, const char* namespaceURI);
+QDomElement* q_domnode_next_sibling_element2(const void* self, const char* taName, const char* namespaceURI);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#dtor.QDomNode)
 ///
@@ -625,66 +625,66 @@ QDomNodeList* q_domnodelist_new();
 ///
 /// @param nodeList QDomNodeList*
 ///
-QDomNodeList* q_domnodelist_new2(void* nodeList);
+QDomNodeList* q_domnodelist_new2(const void* nodeList);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnodelist.html#operator-eq)
 ///
 /// @param self QDomNodeList*
 /// @param other QDomNodeList*
 ///
-void q_domnodelist_operator_assign(void* self, void* other);
+void q_domnodelist_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnodelist.html#operator-eq-eq)
 ///
-/// @param self QDomNodeList*
+/// @param self const QDomNodeList*
 /// @param other QDomNodeList*
 ///
-bool q_domnodelist_operator_equal(void* self, void* other);
+bool q_domnodelist_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnodelist.html#operator-not-eq)
 ///
-/// @param self QDomNodeList*
+/// @param self const QDomNodeList*
 /// @param other QDomNodeList*
 ///
-bool q_domnodelist_operator_not_equal(void* self, void* other);
+bool q_domnodelist_operator_not_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnodelist.html#item)
 ///
-/// @param self QDomNodeList*
+/// @param self const QDomNodeList*
 /// @param index int
 ///
-QDomNode* q_domnodelist_item(void* self, int index);
+QDomNode* q_domnodelist_item(const void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnodelist.html#at)
 ///
-/// @param self QDomNodeList*
+/// @param self const QDomNodeList*
 /// @param index int
 ///
-QDomNode* q_domnodelist_at(void* self, int index);
+QDomNode* q_domnodelist_at(const void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnodelist.html#length)
 ///
-/// @param self QDomNodeList*
+/// @param self const QDomNodeList*
 ///
-int32_t q_domnodelist_length(void* self);
+int32_t q_domnodelist_length(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnodelist.html#count)
 ///
-/// @param self QDomNodeList*
+/// @param self const QDomNodeList*
 ///
-int32_t q_domnodelist_count(void* self);
+int32_t q_domnodelist_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnodelist.html#size)
 ///
-/// @param self QDomNodeList*
+/// @param self const QDomNodeList*
 ///
-int32_t q_domnodelist_size(void* self);
+int32_t q_domnodelist_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnodelist.html#isEmpty)
 ///
-/// @param self QDomNodeList*
+/// @param self const QDomNodeList*
 ///
-bool q_domnodelist_is_empty(void* self);
+bool q_domnodelist_is_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnodelist.html#dtor.QDomNodeList)
 ///
@@ -706,84 +706,84 @@ QDomDocumentType* q_domdocumenttype_new();
 ///
 /// @param documentType QDomDocumentType*
 ///
-QDomDocumentType* q_domdocumenttype_new2(void* documentType);
+QDomDocumentType* q_domdocumenttype_new2(const void* documentType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocumenttype.html#operator-eq)
 ///
 /// @param self QDomDocumentType*
 /// @param other QDomDocumentType*
 ///
-void q_domdocumenttype_operator_assign(void* self, void* other);
+void q_domdocumenttype_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocumenttype.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-const char* q_domdocumenttype_name(void* self);
+const char* q_domdocumenttype_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocumenttype.html#entities)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-QDomNamedNodeMap* q_domdocumenttype_entities(void* self);
+QDomNamedNodeMap* q_domdocumenttype_entities(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocumenttype.html#notations)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-QDomNamedNodeMap* q_domdocumenttype_notations(void* self);
+QDomNamedNodeMap* q_domdocumenttype_notations(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocumenttype.html#publicId)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-const char* q_domdocumenttype_public_id(void* self);
+const char* q_domdocumenttype_public_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocumenttype.html#systemId)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-const char* q_domdocumenttype_system_id(void* self);
+const char* q_domdocumenttype_system_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocumenttype.html#internalSubset)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-const char* q_domdocumenttype_internal_subset(void* self);
+const char* q_domdocumenttype_internal_subset(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocumenttype.html#nodeType)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
 /// @return enum QDomNode__NodeType
 ///
-int32_t q_domdocumenttype_node_type(void* self);
+int32_t q_domdocumenttype_node_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#operator-eq-eq)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 /// @param other QDomNode*
 ///
-bool q_domdocumenttype_operator_equal(void* self, void* other);
+bool q_domdocumenttype_operator_equal(const void* self, const void* other);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#operator-not-eq)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 /// @param other QDomNode*
 ///
-bool q_domdocumenttype_operator_not_equal(void* self, void* other);
+bool q_domdocumenttype_operator_not_equal(const void* self, const void* other);
 
 /// Inherited from QDomNode
 ///
@@ -793,7 +793,7 @@ bool q_domdocumenttype_operator_not_equal(void* self, void* other);
 /// @param newChild QDomNode*
 /// @param refChild QDomNode*
 ///
-QDomNode* q_domdocumenttype_insert_before(void* self, void* newChild, void* refChild);
+QDomNode* q_domdocumenttype_insert_before(void* self, const void* newChild, const void* refChild);
 
 /// Inherited from QDomNode
 ///
@@ -803,7 +803,7 @@ QDomNode* q_domdocumenttype_insert_before(void* self, void* newChild, void* refC
 /// @param newChild QDomNode*
 /// @param refChild QDomNode*
 ///
-QDomNode* q_domdocumenttype_insert_after(void* self, void* newChild, void* refChild);
+QDomNode* q_domdocumenttype_insert_after(void* self, const void* newChild, const void* refChild);
 
 /// Inherited from QDomNode
 ///
@@ -813,7 +813,7 @@ QDomNode* q_domdocumenttype_insert_after(void* self, void* newChild, void* refCh
 /// @param newChild QDomNode*
 /// @param oldChild QDomNode*
 ///
-QDomNode* q_domdocumenttype_replace_child(void* self, void* newChild, void* oldChild);
+QDomNode* q_domdocumenttype_replace_child(void* self, const void* newChild, const void* oldChild);
 
 /// Inherited from QDomNode
 ///
@@ -822,7 +822,7 @@ QDomNode* q_domdocumenttype_replace_child(void* self, void* newChild, void* oldC
 /// @param self QDomDocumentType*
 /// @param oldChild QDomNode*
 ///
-QDomNode* q_domdocumenttype_remove_child(void* self, void* oldChild);
+QDomNode* q_domdocumenttype_remove_child(void* self, const void* oldChild);
 
 /// Inherited from QDomNode
 ///
@@ -831,23 +831,23 @@ QDomNode* q_domdocumenttype_remove_child(void* self, void* oldChild);
 /// @param self QDomDocumentType*
 /// @param newChild QDomNode*
 ///
-QDomNode* q_domdocumenttype_append_child(void* self, void* newChild);
+QDomNode* q_domdocumenttype_append_child(void* self, const void* newChild);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#hasChildNodes)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-bool q_domdocumenttype_has_child_nodes(void* self);
+bool q_domdocumenttype_has_child_nodes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#cloneNode)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-QDomNode* q_domdocumenttype_clone_node(void* self);
+QDomNode* q_domdocumenttype_clone_node(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -861,11 +861,11 @@ void q_domdocumenttype_normalize(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isSupported)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 /// @param feature const char*
 /// @param version const char*
 ///
-bool q_domdocumenttype_is_supported(void* self, const char* feature, const char* version);
+bool q_domdocumenttype_is_supported(const void* self, const char* feature, const char* version);
 
 /// Inherited from QDomNode
 ///
@@ -873,73 +873,73 @@ bool q_domdocumenttype_is_supported(void* self, const char* feature, const char*
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-const char* q_domdocumenttype_node_name(void* self);
+const char* q_domdocumenttype_node_name(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#parentNode)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-QDomNode* q_domdocumenttype_parent_node(void* self);
+QDomNode* q_domdocumenttype_parent_node(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#childNodes)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-QDomNodeList* q_domdocumenttype_child_nodes(void* self);
+QDomNodeList* q_domdocumenttype_child_nodes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChild)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-QDomNode* q_domdocumenttype_first_child(void* self);
+QDomNode* q_domdocumenttype_first_child(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChild)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-QDomNode* q_domdocumenttype_last_child(void* self);
+QDomNode* q_domdocumenttype_last_child(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSibling)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-QDomNode* q_domdocumenttype_previous_sibling(void* self);
+QDomNode* q_domdocumenttype_previous_sibling(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSibling)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-QDomNode* q_domdocumenttype_next_sibling(void* self);
+QDomNode* q_domdocumenttype_next_sibling(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#attributes)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-QDomNamedNodeMap* q_domdocumenttype_attributes(void* self);
+QDomNamedNodeMap* q_domdocumenttype_attributes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#ownerDocument)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-QDomDocument* q_domdocumenttype_owner_document(void* self);
+QDomDocument* q_domdocumenttype_owner_document(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -947,9 +947,9 @@ QDomDocument* q_domdocumenttype_owner_document(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-const char* q_domdocumenttype_namespace_u_r_i(void* self);
+const char* q_domdocumenttype_namespace_u_r_i(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -957,17 +957,17 @@ const char* q_domdocumenttype_namespace_u_r_i(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-const char* q_domdocumenttype_local_name(void* self);
+const char* q_domdocumenttype_local_name(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#hasAttributes)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-bool q_domdocumenttype_has_attributes(void* self);
+bool q_domdocumenttype_has_attributes(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -975,9 +975,9 @@ bool q_domdocumenttype_has_attributes(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-const char* q_domdocumenttype_node_value(void* self);
+const char* q_domdocumenttype_node_value(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -994,9 +994,9 @@ void q_domdocumenttype_set_node_value(void* self, const char* value);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-const char* q_domdocumenttype_prefix(void* self);
+const char* q_domdocumenttype_prefix(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -1011,122 +1011,122 @@ void q_domdocumenttype_set_prefix(void* self, const char* pre);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isAttr)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-bool q_domdocumenttype_is_attr(void* self);
+bool q_domdocumenttype_is_attr(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isCDATASection)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-bool q_domdocumenttype_is_c_d_a_t_a_section(void* self);
+bool q_domdocumenttype_is_c_d_a_t_a_section(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocumentFragment)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-bool q_domdocumenttype_is_document_fragment(void* self);
+bool q_domdocumenttype_is_document_fragment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocument)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-bool q_domdocumenttype_is_document(void* self);
+bool q_domdocumenttype_is_document(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocumentType)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-bool q_domdocumenttype_is_document_type(void* self);
+bool q_domdocumenttype_is_document_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isElement)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-bool q_domdocumenttype_is_element(void* self);
+bool q_domdocumenttype_is_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isEntityReference)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-bool q_domdocumenttype_is_entity_reference(void* self);
+bool q_domdocumenttype_is_entity_reference(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isText)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-bool q_domdocumenttype_is_text(void* self);
+bool q_domdocumenttype_is_text(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isEntity)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-bool q_domdocumenttype_is_entity(void* self);
+bool q_domdocumenttype_is_entity(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isNotation)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-bool q_domdocumenttype_is_notation(void* self);
+bool q_domdocumenttype_is_notation(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isProcessingInstruction)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-bool q_domdocumenttype_is_processing_instruction(void* self);
+bool q_domdocumenttype_is_processing_instruction(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isCharacterData)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-bool q_domdocumenttype_is_character_data(void* self);
+bool q_domdocumenttype_is_character_data(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isComment)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-bool q_domdocumenttype_is_comment(void* self);
+bool q_domdocumenttype_is_comment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#namedItem)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 /// @param name const char*
 ///
-QDomNode* q_domdocumenttype_named_item(void* self, const char* name);
+QDomNode* q_domdocumenttype_named_item(const void* self, const char* name);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isNull)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-bool q_domdocumenttype_is_null(void* self);
+bool q_domdocumenttype_is_null(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -1140,259 +1140,259 @@ void q_domdocumenttype_clear(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toAttr)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-QDomAttr* q_domdocumenttype_to_attr(void* self);
+QDomAttr* q_domdocumenttype_to_attr(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toCDATASection)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-QDomCDATASection* q_domdocumenttype_to_c_d_a_t_a_section(void* self);
+QDomCDATASection* q_domdocumenttype_to_c_d_a_t_a_section(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocumentFragment)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-QDomDocumentFragment* q_domdocumenttype_to_document_fragment(void* self);
+QDomDocumentFragment* q_domdocumenttype_to_document_fragment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocument)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-QDomDocument* q_domdocumenttype_to_document(void* self);
+QDomDocument* q_domdocumenttype_to_document(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocumentType)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-QDomDocumentType* q_domdocumenttype_to_document_type(void* self);
+QDomDocumentType* q_domdocumenttype_to_document_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toElement)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-QDomElement* q_domdocumenttype_to_element(void* self);
+QDomElement* q_domdocumenttype_to_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toEntityReference)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-QDomEntityReference* q_domdocumenttype_to_entity_reference(void* self);
+QDomEntityReference* q_domdocumenttype_to_entity_reference(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toText)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-QDomText* q_domdocumenttype_to_text(void* self);
+QDomText* q_domdocumenttype_to_text(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toEntity)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-QDomEntity* q_domdocumenttype_to_entity(void* self);
+QDomEntity* q_domdocumenttype_to_entity(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toNotation)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-QDomNotation* q_domdocumenttype_to_notation(void* self);
+QDomNotation* q_domdocumenttype_to_notation(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toProcessingInstruction)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-QDomProcessingInstruction* q_domdocumenttype_to_processing_instruction(void* self);
+QDomProcessingInstruction* q_domdocumenttype_to_processing_instruction(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toCharacterData)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-QDomCharacterData* q_domdocumenttype_to_character_data(void* self);
+QDomCharacterData* q_domdocumenttype_to_character_data(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toComment)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-QDomComment* q_domdocumenttype_to_comment(void* self);
+QDomComment* q_domdocumenttype_to_comment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#save)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 /// @param param1 QTextStream*
 /// @param param2 int
 ///
-void q_domdocumenttype_save(void* self, void* param1, int param2);
+void q_domdocumenttype_save(const void* self, void* param1, int param2);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-QDomElement* q_domdocumenttype_first_child_element(void* self);
+QDomElement* q_domdocumenttype_first_child_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-QDomElement* q_domdocumenttype_last_child_element(void* self);
+QDomElement* q_domdocumenttype_last_child_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-QDomElement* q_domdocumenttype_previous_sibling_element(void* self);
+QDomElement* q_domdocumenttype_previous_sibling_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-QDomElement* q_domdocumenttype_next_sibling_element(void* self);
+QDomElement* q_domdocumenttype_next_sibling_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lineNumber)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-int32_t q_domdocumenttype_line_number(void* self);
+int32_t q_domdocumenttype_line_number(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#columnNumber)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 ///
-int32_t q_domdocumenttype_column_number(void* self);
+int32_t q_domdocumenttype_column_number(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#cloneNode)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 /// @param deep bool
 ///
-QDomNode* q_domdocumenttype_clone_node1(void* self, bool deep);
+QDomNode* q_domdocumenttype_clone_node1(const void* self, bool deep);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#save)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 /// @param param1 QTextStream*
 /// @param param2 int
 /// @param param3 enum QDomNode__EncodingPolicy
 ///
-void q_domdocumenttype_save3(void* self, void* param1, int param2, int32_t param3);
+void q_domdocumenttype_save3(const void* self, void* param1, int param2, int32_t param3);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 /// @param tagName const char*
 ///
-QDomElement* q_domdocumenttype_first_child_element1(void* self, const char* tagName);
+QDomElement* q_domdocumenttype_first_child_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domdocumenttype_first_child_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domdocumenttype_first_child_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 /// @param tagName const char*
 ///
-QDomElement* q_domdocumenttype_last_child_element1(void* self, const char* tagName);
+QDomElement* q_domdocumenttype_last_child_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domdocumenttype_last_child_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domdocumenttype_last_child_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 /// @param tagName const char*
 ///
-QDomElement* q_domdocumenttype_previous_sibling_element1(void* self, const char* tagName);
+QDomElement* q_domdocumenttype_previous_sibling_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domdocumenttype_previous_sibling_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domdocumenttype_previous_sibling_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 /// @param taName const char*
 ///
-QDomElement* q_domdocumenttype_next_sibling_element1(void* self, const char* taName);
+QDomElement* q_domdocumenttype_next_sibling_element1(const void* self, const char* taName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomDocumentType*
+/// @param self const QDomDocumentType*
 /// @param taName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domdocumenttype_next_sibling_element2(void* self, const char* taName, const char* namespaceURI);
+QDomElement* q_domdocumenttype_next_sibling_element2(const void* self, const char* taName, const char* namespaceURI);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocumenttype.html#dtor.QDomDocumentType)
 ///
@@ -1422,7 +1422,7 @@ QDomDocument* q_domdocument_new2(const char* name);
 ///
 /// @param doctype QDomDocumentType*
 ///
-QDomDocument* q_domdocument_new3(void* doctype);
+QDomDocument* q_domdocument_new3(const void* doctype);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument.html)
 
@@ -1430,14 +1430,14 @@ QDomDocument* q_domdocument_new3(void* doctype);
 ///
 /// @param document QDomDocument*
 ///
-QDomDocument* q_domdocument_new4(void* document);
+QDomDocument* q_domdocument_new4(const void* document);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument.html#operator-eq)
 ///
 /// @param self QDomDocument*
 /// @param other QDomDocument*
 ///
-void q_domdocument_operator_assign(void* self, void* other);
+void q_domdocument_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument.html#createElement)
 ///
@@ -1497,10 +1497,10 @@ QDomEntityReference* q_domdocument_create_entity_reference(void* self, const cha
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument.html#elementsByTagName)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 /// @param tagname const char*
 ///
-QDomNodeList* q_domdocument_elements_by_tag_name(void* self, const char* tagname);
+QDomNodeList* q_domdocument_elements_by_tag_name(const void* self, const char* tagname);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument.html#importNode)
 ///
@@ -1508,7 +1508,7 @@ QDomNodeList* q_domdocument_elements_by_tag_name(void* self, const char* tagname
 /// @param importedNode QDomNode*
 /// @param deep bool
 ///
-QDomNode* q_domdocument_import_node(void* self, void* importedNode, bool deep);
+QDomNode* q_domdocument_import_node(void* self, const void* importedNode, bool deep);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument.html#createElementNS)
 ///
@@ -1543,29 +1543,29 @@ QDomElement* q_domdocument_element_by_id(void* self, const char* elementId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument.html#doctype)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-QDomDocumentType* q_domdocument_doctype(void* self);
+QDomDocumentType* q_domdocument_doctype(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument.html#implementation)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-QDomImplementation* q_domdocument_implementation(void* self);
+QDomImplementation* q_domdocument_implementation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument.html#documentElement)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-QDomElement* q_domdocument_document_element(void* self);
+QDomElement* q_domdocument_document_element(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument.html#nodeType)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
 /// @return enum QDomNode__NodeType
 ///
-int32_t q_domdocument_node_type(void* self);
+int32_t q_domdocument_node_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument.html#setContent)
 ///
@@ -1624,17 +1624,17 @@ QDomDocument__ParseResult* q_domdocument_set_content10(void* self, void* reader)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-const char* q_domdocument_to_string(void* self);
+const char* q_domdocument_to_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument.html#toByteArray)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-char* q_domdocument_to_byte_array(void* self);
+char* q_domdocument_to_byte_array(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument.html#setContent)
 ///
@@ -1664,37 +1664,37 @@ QDomDocument__ParseResult* q_domdocument_set_content24(void* self, void* reader,
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 /// @param indent int
 ///
-const char* q_domdocument_to_string1(void* self, int indent);
+const char* q_domdocument_to_string1(const void* self, int indent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument.html#toByteArray)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 /// @param indent int
 ///
-char* q_domdocument_to_byte_array1(void* self, int indent);
+char* q_domdocument_to_byte_array1(const void* self, int indent);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#operator-eq-eq)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 /// @param other QDomNode*
 ///
-bool q_domdocument_operator_equal(void* self, void* other);
+bool q_domdocument_operator_equal(const void* self, const void* other);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#operator-not-eq)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 /// @param other QDomNode*
 ///
-bool q_domdocument_operator_not_equal(void* self, void* other);
+bool q_domdocument_operator_not_equal(const void* self, const void* other);
 
 /// Inherited from QDomNode
 ///
@@ -1704,7 +1704,7 @@ bool q_domdocument_operator_not_equal(void* self, void* other);
 /// @param newChild QDomNode*
 /// @param refChild QDomNode*
 ///
-QDomNode* q_domdocument_insert_before(void* self, void* newChild, void* refChild);
+QDomNode* q_domdocument_insert_before(void* self, const void* newChild, const void* refChild);
 
 /// Inherited from QDomNode
 ///
@@ -1714,7 +1714,7 @@ QDomNode* q_domdocument_insert_before(void* self, void* newChild, void* refChild
 /// @param newChild QDomNode*
 /// @param refChild QDomNode*
 ///
-QDomNode* q_domdocument_insert_after(void* self, void* newChild, void* refChild);
+QDomNode* q_domdocument_insert_after(void* self, const void* newChild, const void* refChild);
 
 /// Inherited from QDomNode
 ///
@@ -1724,7 +1724,7 @@ QDomNode* q_domdocument_insert_after(void* self, void* newChild, void* refChild)
 /// @param newChild QDomNode*
 /// @param oldChild QDomNode*
 ///
-QDomNode* q_domdocument_replace_child(void* self, void* newChild, void* oldChild);
+QDomNode* q_domdocument_replace_child(void* self, const void* newChild, const void* oldChild);
 
 /// Inherited from QDomNode
 ///
@@ -1733,7 +1733,7 @@ QDomNode* q_domdocument_replace_child(void* self, void* newChild, void* oldChild
 /// @param self QDomDocument*
 /// @param oldChild QDomNode*
 ///
-QDomNode* q_domdocument_remove_child(void* self, void* oldChild);
+QDomNode* q_domdocument_remove_child(void* self, const void* oldChild);
 
 /// Inherited from QDomNode
 ///
@@ -1742,23 +1742,23 @@ QDomNode* q_domdocument_remove_child(void* self, void* oldChild);
 /// @param self QDomDocument*
 /// @param newChild QDomNode*
 ///
-QDomNode* q_domdocument_append_child(void* self, void* newChild);
+QDomNode* q_domdocument_append_child(void* self, const void* newChild);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#hasChildNodes)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-bool q_domdocument_has_child_nodes(void* self);
+bool q_domdocument_has_child_nodes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#cloneNode)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-QDomNode* q_domdocument_clone_node(void* self);
+QDomNode* q_domdocument_clone_node(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -1772,11 +1772,11 @@ void q_domdocument_normalize(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isSupported)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 /// @param feature const char*
 /// @param version const char*
 ///
-bool q_domdocument_is_supported(void* self, const char* feature, const char* version);
+bool q_domdocument_is_supported(const void* self, const char* feature, const char* version);
 
 /// Inherited from QDomNode
 ///
@@ -1784,73 +1784,73 @@ bool q_domdocument_is_supported(void* self, const char* feature, const char* ver
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-const char* q_domdocument_node_name(void* self);
+const char* q_domdocument_node_name(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#parentNode)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-QDomNode* q_domdocument_parent_node(void* self);
+QDomNode* q_domdocument_parent_node(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#childNodes)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-QDomNodeList* q_domdocument_child_nodes(void* self);
+QDomNodeList* q_domdocument_child_nodes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChild)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-QDomNode* q_domdocument_first_child(void* self);
+QDomNode* q_domdocument_first_child(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChild)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-QDomNode* q_domdocument_last_child(void* self);
+QDomNode* q_domdocument_last_child(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSibling)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-QDomNode* q_domdocument_previous_sibling(void* self);
+QDomNode* q_domdocument_previous_sibling(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSibling)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-QDomNode* q_domdocument_next_sibling(void* self);
+QDomNode* q_domdocument_next_sibling(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#attributes)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-QDomNamedNodeMap* q_domdocument_attributes(void* self);
+QDomNamedNodeMap* q_domdocument_attributes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#ownerDocument)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-QDomDocument* q_domdocument_owner_document(void* self);
+QDomDocument* q_domdocument_owner_document(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -1858,9 +1858,9 @@ QDomDocument* q_domdocument_owner_document(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-const char* q_domdocument_namespace_u_r_i(void* self);
+const char* q_domdocument_namespace_u_r_i(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -1868,17 +1868,17 @@ const char* q_domdocument_namespace_u_r_i(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-const char* q_domdocument_local_name(void* self);
+const char* q_domdocument_local_name(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#hasAttributes)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-bool q_domdocument_has_attributes(void* self);
+bool q_domdocument_has_attributes(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -1886,9 +1886,9 @@ bool q_domdocument_has_attributes(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-const char* q_domdocument_node_value(void* self);
+const char* q_domdocument_node_value(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -1905,9 +1905,9 @@ void q_domdocument_set_node_value(void* self, const char* value);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-const char* q_domdocument_prefix(void* self);
+const char* q_domdocument_prefix(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -1922,122 +1922,122 @@ void q_domdocument_set_prefix(void* self, const char* pre);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isAttr)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-bool q_domdocument_is_attr(void* self);
+bool q_domdocument_is_attr(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isCDATASection)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-bool q_domdocument_is_c_d_a_t_a_section(void* self);
+bool q_domdocument_is_c_d_a_t_a_section(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocumentFragment)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-bool q_domdocument_is_document_fragment(void* self);
+bool q_domdocument_is_document_fragment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocument)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-bool q_domdocument_is_document(void* self);
+bool q_domdocument_is_document(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocumentType)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-bool q_domdocument_is_document_type(void* self);
+bool q_domdocument_is_document_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isElement)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-bool q_domdocument_is_element(void* self);
+bool q_domdocument_is_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isEntityReference)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-bool q_domdocument_is_entity_reference(void* self);
+bool q_domdocument_is_entity_reference(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isText)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-bool q_domdocument_is_text(void* self);
+bool q_domdocument_is_text(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isEntity)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-bool q_domdocument_is_entity(void* self);
+bool q_domdocument_is_entity(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isNotation)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-bool q_domdocument_is_notation(void* self);
+bool q_domdocument_is_notation(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isProcessingInstruction)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-bool q_domdocument_is_processing_instruction(void* self);
+bool q_domdocument_is_processing_instruction(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isCharacterData)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-bool q_domdocument_is_character_data(void* self);
+bool q_domdocument_is_character_data(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isComment)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-bool q_domdocument_is_comment(void* self);
+bool q_domdocument_is_comment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#namedItem)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 /// @param name const char*
 ///
-QDomNode* q_domdocument_named_item(void* self, const char* name);
+QDomNode* q_domdocument_named_item(const void* self, const char* name);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isNull)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-bool q_domdocument_is_null(void* self);
+bool q_domdocument_is_null(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -2051,259 +2051,259 @@ void q_domdocument_clear(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toAttr)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-QDomAttr* q_domdocument_to_attr(void* self);
+QDomAttr* q_domdocument_to_attr(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toCDATASection)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-QDomCDATASection* q_domdocument_to_c_d_a_t_a_section(void* self);
+QDomCDATASection* q_domdocument_to_c_d_a_t_a_section(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocumentFragment)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-QDomDocumentFragment* q_domdocument_to_document_fragment(void* self);
+QDomDocumentFragment* q_domdocument_to_document_fragment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocument)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-QDomDocument* q_domdocument_to_document(void* self);
+QDomDocument* q_domdocument_to_document(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocumentType)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-QDomDocumentType* q_domdocument_to_document_type(void* self);
+QDomDocumentType* q_domdocument_to_document_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toElement)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-QDomElement* q_domdocument_to_element(void* self);
+QDomElement* q_domdocument_to_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toEntityReference)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-QDomEntityReference* q_domdocument_to_entity_reference(void* self);
+QDomEntityReference* q_domdocument_to_entity_reference(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toText)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-QDomText* q_domdocument_to_text(void* self);
+QDomText* q_domdocument_to_text(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toEntity)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-QDomEntity* q_domdocument_to_entity(void* self);
+QDomEntity* q_domdocument_to_entity(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toNotation)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-QDomNotation* q_domdocument_to_notation(void* self);
+QDomNotation* q_domdocument_to_notation(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toProcessingInstruction)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-QDomProcessingInstruction* q_domdocument_to_processing_instruction(void* self);
+QDomProcessingInstruction* q_domdocument_to_processing_instruction(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toCharacterData)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-QDomCharacterData* q_domdocument_to_character_data(void* self);
+QDomCharacterData* q_domdocument_to_character_data(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toComment)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-QDomComment* q_domdocument_to_comment(void* self);
+QDomComment* q_domdocument_to_comment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#save)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 /// @param param1 QTextStream*
 /// @param param2 int
 ///
-void q_domdocument_save(void* self, void* param1, int param2);
+void q_domdocument_save(const void* self, void* param1, int param2);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-QDomElement* q_domdocument_first_child_element(void* self);
+QDomElement* q_domdocument_first_child_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-QDomElement* q_domdocument_last_child_element(void* self);
+QDomElement* q_domdocument_last_child_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-QDomElement* q_domdocument_previous_sibling_element(void* self);
+QDomElement* q_domdocument_previous_sibling_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-QDomElement* q_domdocument_next_sibling_element(void* self);
+QDomElement* q_domdocument_next_sibling_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lineNumber)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-int32_t q_domdocument_line_number(void* self);
+int32_t q_domdocument_line_number(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#columnNumber)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 ///
-int32_t q_domdocument_column_number(void* self);
+int32_t q_domdocument_column_number(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#cloneNode)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 /// @param deep bool
 ///
-QDomNode* q_domdocument_clone_node1(void* self, bool deep);
+QDomNode* q_domdocument_clone_node1(const void* self, bool deep);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#save)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 /// @param param1 QTextStream*
 /// @param param2 int
 /// @param param3 enum QDomNode__EncodingPolicy
 ///
-void q_domdocument_save3(void* self, void* param1, int param2, int32_t param3);
+void q_domdocument_save3(const void* self, void* param1, int param2, int32_t param3);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 /// @param tagName const char*
 ///
-QDomElement* q_domdocument_first_child_element1(void* self, const char* tagName);
+QDomElement* q_domdocument_first_child_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domdocument_first_child_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domdocument_first_child_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 /// @param tagName const char*
 ///
-QDomElement* q_domdocument_last_child_element1(void* self, const char* tagName);
+QDomElement* q_domdocument_last_child_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domdocument_last_child_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domdocument_last_child_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 /// @param tagName const char*
 ///
-QDomElement* q_domdocument_previous_sibling_element1(void* self, const char* tagName);
+QDomElement* q_domdocument_previous_sibling_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domdocument_previous_sibling_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domdocument_previous_sibling_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 /// @param taName const char*
 ///
-QDomElement* q_domdocument_next_sibling_element1(void* self, const char* taName);
+QDomElement* q_domdocument_next_sibling_element1(const void* self, const char* taName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomDocument*
+/// @param self const QDomDocument*
 /// @param taName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domdocument_next_sibling_element2(void* self, const char* taName, const char* namespaceURI);
+QDomElement* q_domdocument_next_sibling_element2(const void* self, const char* taName, const char* namespaceURI);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument.html#dtor.QDomDocument)
 ///
@@ -2325,42 +2325,42 @@ QDomNamedNodeMap* q_domnamednodemap_new();
 ///
 /// @param namedNodeMap QDomNamedNodeMap*
 ///
-QDomNamedNodeMap* q_domnamednodemap_new2(void* namedNodeMap);
+QDomNamedNodeMap* q_domnamednodemap_new2(const void* namedNodeMap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnamednodemap.html#operator-eq)
 ///
 /// @param self QDomNamedNodeMap*
 /// @param other QDomNamedNodeMap*
 ///
-void q_domnamednodemap_operator_assign(void* self, void* other);
+void q_domnamednodemap_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnamednodemap.html#operator-eq-eq)
 ///
-/// @param self QDomNamedNodeMap*
+/// @param self const QDomNamedNodeMap*
 /// @param other QDomNamedNodeMap*
 ///
-bool q_domnamednodemap_operator_equal(void* self, void* other);
+bool q_domnamednodemap_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnamednodemap.html#operator-not-eq)
 ///
-/// @param self QDomNamedNodeMap*
+/// @param self const QDomNamedNodeMap*
 /// @param other QDomNamedNodeMap*
 ///
-bool q_domnamednodemap_operator_not_equal(void* self, void* other);
+bool q_domnamednodemap_operator_not_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnamednodemap.html#namedItem)
 ///
-/// @param self QDomNamedNodeMap*
+/// @param self const QDomNamedNodeMap*
 /// @param name const char*
 ///
-QDomNode* q_domnamednodemap_named_item(void* self, const char* name);
+QDomNode* q_domnamednodemap_named_item(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnamednodemap.html#setNamedItem)
 ///
 /// @param self QDomNamedNodeMap*
 /// @param newNode QDomNode*
 ///
-QDomNode* q_domnamednodemap_set_named_item(void* self, void* newNode);
+QDomNode* q_domnamednodemap_set_named_item(void* self, const void* newNode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnamednodemap.html#removeNamedItem)
 ///
@@ -2371,25 +2371,25 @@ QDomNode* q_domnamednodemap_remove_named_item(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnamednodemap.html#item)
 ///
-/// @param self QDomNamedNodeMap*
+/// @param self const QDomNamedNodeMap*
 /// @param index int
 ///
-QDomNode* q_domnamednodemap_item(void* self, int index);
+QDomNode* q_domnamednodemap_item(const void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnamednodemap.html#namedItemNS)
 ///
-/// @param self QDomNamedNodeMap*
+/// @param self const QDomNamedNodeMap*
 /// @param nsURI const char*
 /// @param localName const char*
 ///
-QDomNode* q_domnamednodemap_named_item_n_s(void* self, const char* nsURI, const char* localName);
+QDomNode* q_domnamednodemap_named_item_n_s(const void* self, const char* nsURI, const char* localName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnamednodemap.html#setNamedItemNS)
 ///
 /// @param self QDomNamedNodeMap*
 /// @param newNode QDomNode*
 ///
-QDomNode* q_domnamednodemap_set_named_item_n_s(void* self, void* newNode);
+QDomNode* q_domnamednodemap_set_named_item_n_s(void* self, const void* newNode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnamednodemap.html#removeNamedItemNS)
 ///
@@ -2401,34 +2401,34 @@ QDomNode* q_domnamednodemap_remove_named_item_n_s(void* self, const char* nsURI,
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnamednodemap.html#length)
 ///
-/// @param self QDomNamedNodeMap*
+/// @param self const QDomNamedNodeMap*
 ///
-int32_t q_domnamednodemap_length(void* self);
+int32_t q_domnamednodemap_length(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnamednodemap.html#count)
 ///
-/// @param self QDomNamedNodeMap*
+/// @param self const QDomNamedNodeMap*
 ///
-int32_t q_domnamednodemap_count(void* self);
+int32_t q_domnamednodemap_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnamednodemap.html#size)
 ///
-/// @param self QDomNamedNodeMap*
+/// @param self const QDomNamedNodeMap*
 ///
-int32_t q_domnamednodemap_size(void* self);
+int32_t q_domnamednodemap_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnamednodemap.html#isEmpty)
 ///
-/// @param self QDomNamedNodeMap*
+/// @param self const QDomNamedNodeMap*
 ///
-bool q_domnamednodemap_is_empty(void* self);
+bool q_domnamednodemap_is_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnamednodemap.html#contains)
 ///
-/// @param self QDomNamedNodeMap*
+/// @param self const QDomNamedNodeMap*
 /// @param name const char*
 ///
-bool q_domnamednodemap_contains(void* self, const char* name);
+bool q_domnamednodemap_contains(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnamednodemap.html#dtor.QDomNamedNodeMap)
 ///
@@ -2450,40 +2450,40 @@ QDomDocumentFragment* q_domdocumentfragment_new();
 ///
 /// @param documentFragment QDomDocumentFragment*
 ///
-QDomDocumentFragment* q_domdocumentfragment_new2(void* documentFragment);
+QDomDocumentFragment* q_domdocumentfragment_new2(const void* documentFragment);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocumentfragment.html#operator-eq)
 ///
 /// @param self QDomDocumentFragment*
 /// @param other QDomDocumentFragment*
 ///
-void q_domdocumentfragment_operator_assign(void* self, void* other);
+void q_domdocumentfragment_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocumentfragment.html#nodeType)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
 /// @return enum QDomNode__NodeType
 ///
-int32_t q_domdocumentfragment_node_type(void* self);
+int32_t q_domdocumentfragment_node_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#operator-eq-eq)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 /// @param other QDomNode*
 ///
-bool q_domdocumentfragment_operator_equal(void* self, void* other);
+bool q_domdocumentfragment_operator_equal(const void* self, const void* other);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#operator-not-eq)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 /// @param other QDomNode*
 ///
-bool q_domdocumentfragment_operator_not_equal(void* self, void* other);
+bool q_domdocumentfragment_operator_not_equal(const void* self, const void* other);
 
 /// Inherited from QDomNode
 ///
@@ -2493,7 +2493,7 @@ bool q_domdocumentfragment_operator_not_equal(void* self, void* other);
 /// @param newChild QDomNode*
 /// @param refChild QDomNode*
 ///
-QDomNode* q_domdocumentfragment_insert_before(void* self, void* newChild, void* refChild);
+QDomNode* q_domdocumentfragment_insert_before(void* self, const void* newChild, const void* refChild);
 
 /// Inherited from QDomNode
 ///
@@ -2503,7 +2503,7 @@ QDomNode* q_domdocumentfragment_insert_before(void* self, void* newChild, void* 
 /// @param newChild QDomNode*
 /// @param refChild QDomNode*
 ///
-QDomNode* q_domdocumentfragment_insert_after(void* self, void* newChild, void* refChild);
+QDomNode* q_domdocumentfragment_insert_after(void* self, const void* newChild, const void* refChild);
 
 /// Inherited from QDomNode
 ///
@@ -2513,7 +2513,7 @@ QDomNode* q_domdocumentfragment_insert_after(void* self, void* newChild, void* r
 /// @param newChild QDomNode*
 /// @param oldChild QDomNode*
 ///
-QDomNode* q_domdocumentfragment_replace_child(void* self, void* newChild, void* oldChild);
+QDomNode* q_domdocumentfragment_replace_child(void* self, const void* newChild, const void* oldChild);
 
 /// Inherited from QDomNode
 ///
@@ -2522,7 +2522,7 @@ QDomNode* q_domdocumentfragment_replace_child(void* self, void* newChild, void* 
 /// @param self QDomDocumentFragment*
 /// @param oldChild QDomNode*
 ///
-QDomNode* q_domdocumentfragment_remove_child(void* self, void* oldChild);
+QDomNode* q_domdocumentfragment_remove_child(void* self, const void* oldChild);
 
 /// Inherited from QDomNode
 ///
@@ -2531,23 +2531,23 @@ QDomNode* q_domdocumentfragment_remove_child(void* self, void* oldChild);
 /// @param self QDomDocumentFragment*
 /// @param newChild QDomNode*
 ///
-QDomNode* q_domdocumentfragment_append_child(void* self, void* newChild);
+QDomNode* q_domdocumentfragment_append_child(void* self, const void* newChild);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#hasChildNodes)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-bool q_domdocumentfragment_has_child_nodes(void* self);
+bool q_domdocumentfragment_has_child_nodes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#cloneNode)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-QDomNode* q_domdocumentfragment_clone_node(void* self);
+QDomNode* q_domdocumentfragment_clone_node(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -2561,11 +2561,11 @@ void q_domdocumentfragment_normalize(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isSupported)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 /// @param feature const char*
 /// @param version const char*
 ///
-bool q_domdocumentfragment_is_supported(void* self, const char* feature, const char* version);
+bool q_domdocumentfragment_is_supported(const void* self, const char* feature, const char* version);
 
 /// Inherited from QDomNode
 ///
@@ -2573,73 +2573,73 @@ bool q_domdocumentfragment_is_supported(void* self, const char* feature, const c
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-const char* q_domdocumentfragment_node_name(void* self);
+const char* q_domdocumentfragment_node_name(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#parentNode)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-QDomNode* q_domdocumentfragment_parent_node(void* self);
+QDomNode* q_domdocumentfragment_parent_node(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#childNodes)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-QDomNodeList* q_domdocumentfragment_child_nodes(void* self);
+QDomNodeList* q_domdocumentfragment_child_nodes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChild)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-QDomNode* q_domdocumentfragment_first_child(void* self);
+QDomNode* q_domdocumentfragment_first_child(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChild)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-QDomNode* q_domdocumentfragment_last_child(void* self);
+QDomNode* q_domdocumentfragment_last_child(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSibling)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-QDomNode* q_domdocumentfragment_previous_sibling(void* self);
+QDomNode* q_domdocumentfragment_previous_sibling(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSibling)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-QDomNode* q_domdocumentfragment_next_sibling(void* self);
+QDomNode* q_domdocumentfragment_next_sibling(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#attributes)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-QDomNamedNodeMap* q_domdocumentfragment_attributes(void* self);
+QDomNamedNodeMap* q_domdocumentfragment_attributes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#ownerDocument)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-QDomDocument* q_domdocumentfragment_owner_document(void* self);
+QDomDocument* q_domdocumentfragment_owner_document(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -2647,9 +2647,9 @@ QDomDocument* q_domdocumentfragment_owner_document(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-const char* q_domdocumentfragment_namespace_u_r_i(void* self);
+const char* q_domdocumentfragment_namespace_u_r_i(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -2657,17 +2657,17 @@ const char* q_domdocumentfragment_namespace_u_r_i(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-const char* q_domdocumentfragment_local_name(void* self);
+const char* q_domdocumentfragment_local_name(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#hasAttributes)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-bool q_domdocumentfragment_has_attributes(void* self);
+bool q_domdocumentfragment_has_attributes(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -2675,9 +2675,9 @@ bool q_domdocumentfragment_has_attributes(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-const char* q_domdocumentfragment_node_value(void* self);
+const char* q_domdocumentfragment_node_value(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -2694,9 +2694,9 @@ void q_domdocumentfragment_set_node_value(void* self, const char* value);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-const char* q_domdocumentfragment_prefix(void* self);
+const char* q_domdocumentfragment_prefix(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -2711,122 +2711,122 @@ void q_domdocumentfragment_set_prefix(void* self, const char* pre);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isAttr)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-bool q_domdocumentfragment_is_attr(void* self);
+bool q_domdocumentfragment_is_attr(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isCDATASection)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-bool q_domdocumentfragment_is_c_d_a_t_a_section(void* self);
+bool q_domdocumentfragment_is_c_d_a_t_a_section(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocumentFragment)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-bool q_domdocumentfragment_is_document_fragment(void* self);
+bool q_domdocumentfragment_is_document_fragment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocument)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-bool q_domdocumentfragment_is_document(void* self);
+bool q_domdocumentfragment_is_document(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocumentType)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-bool q_domdocumentfragment_is_document_type(void* self);
+bool q_domdocumentfragment_is_document_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isElement)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-bool q_domdocumentfragment_is_element(void* self);
+bool q_domdocumentfragment_is_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isEntityReference)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-bool q_domdocumentfragment_is_entity_reference(void* self);
+bool q_domdocumentfragment_is_entity_reference(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isText)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-bool q_domdocumentfragment_is_text(void* self);
+bool q_domdocumentfragment_is_text(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isEntity)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-bool q_domdocumentfragment_is_entity(void* self);
+bool q_domdocumentfragment_is_entity(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isNotation)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-bool q_domdocumentfragment_is_notation(void* self);
+bool q_domdocumentfragment_is_notation(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isProcessingInstruction)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-bool q_domdocumentfragment_is_processing_instruction(void* self);
+bool q_domdocumentfragment_is_processing_instruction(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isCharacterData)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-bool q_domdocumentfragment_is_character_data(void* self);
+bool q_domdocumentfragment_is_character_data(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isComment)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-bool q_domdocumentfragment_is_comment(void* self);
+bool q_domdocumentfragment_is_comment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#namedItem)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 /// @param name const char*
 ///
-QDomNode* q_domdocumentfragment_named_item(void* self, const char* name);
+QDomNode* q_domdocumentfragment_named_item(const void* self, const char* name);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isNull)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-bool q_domdocumentfragment_is_null(void* self);
+bool q_domdocumentfragment_is_null(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -2840,259 +2840,259 @@ void q_domdocumentfragment_clear(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toAttr)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-QDomAttr* q_domdocumentfragment_to_attr(void* self);
+QDomAttr* q_domdocumentfragment_to_attr(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toCDATASection)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-QDomCDATASection* q_domdocumentfragment_to_c_d_a_t_a_section(void* self);
+QDomCDATASection* q_domdocumentfragment_to_c_d_a_t_a_section(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocumentFragment)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-QDomDocumentFragment* q_domdocumentfragment_to_document_fragment(void* self);
+QDomDocumentFragment* q_domdocumentfragment_to_document_fragment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocument)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-QDomDocument* q_domdocumentfragment_to_document(void* self);
+QDomDocument* q_domdocumentfragment_to_document(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocumentType)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-QDomDocumentType* q_domdocumentfragment_to_document_type(void* self);
+QDomDocumentType* q_domdocumentfragment_to_document_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toElement)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-QDomElement* q_domdocumentfragment_to_element(void* self);
+QDomElement* q_domdocumentfragment_to_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toEntityReference)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-QDomEntityReference* q_domdocumentfragment_to_entity_reference(void* self);
+QDomEntityReference* q_domdocumentfragment_to_entity_reference(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toText)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-QDomText* q_domdocumentfragment_to_text(void* self);
+QDomText* q_domdocumentfragment_to_text(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toEntity)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-QDomEntity* q_domdocumentfragment_to_entity(void* self);
+QDomEntity* q_domdocumentfragment_to_entity(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toNotation)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-QDomNotation* q_domdocumentfragment_to_notation(void* self);
+QDomNotation* q_domdocumentfragment_to_notation(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toProcessingInstruction)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-QDomProcessingInstruction* q_domdocumentfragment_to_processing_instruction(void* self);
+QDomProcessingInstruction* q_domdocumentfragment_to_processing_instruction(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toCharacterData)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-QDomCharacterData* q_domdocumentfragment_to_character_data(void* self);
+QDomCharacterData* q_domdocumentfragment_to_character_data(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toComment)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-QDomComment* q_domdocumentfragment_to_comment(void* self);
+QDomComment* q_domdocumentfragment_to_comment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#save)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 /// @param param1 QTextStream*
 /// @param param2 int
 ///
-void q_domdocumentfragment_save(void* self, void* param1, int param2);
+void q_domdocumentfragment_save(const void* self, void* param1, int param2);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-QDomElement* q_domdocumentfragment_first_child_element(void* self);
+QDomElement* q_domdocumentfragment_first_child_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-QDomElement* q_domdocumentfragment_last_child_element(void* self);
+QDomElement* q_domdocumentfragment_last_child_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-QDomElement* q_domdocumentfragment_previous_sibling_element(void* self);
+QDomElement* q_domdocumentfragment_previous_sibling_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-QDomElement* q_domdocumentfragment_next_sibling_element(void* self);
+QDomElement* q_domdocumentfragment_next_sibling_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lineNumber)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-int32_t q_domdocumentfragment_line_number(void* self);
+int32_t q_domdocumentfragment_line_number(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#columnNumber)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 ///
-int32_t q_domdocumentfragment_column_number(void* self);
+int32_t q_domdocumentfragment_column_number(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#cloneNode)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 /// @param deep bool
 ///
-QDomNode* q_domdocumentfragment_clone_node1(void* self, bool deep);
+QDomNode* q_domdocumentfragment_clone_node1(const void* self, bool deep);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#save)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 /// @param param1 QTextStream*
 /// @param param2 int
 /// @param param3 enum QDomNode__EncodingPolicy
 ///
-void q_domdocumentfragment_save3(void* self, void* param1, int param2, int32_t param3);
+void q_domdocumentfragment_save3(const void* self, void* param1, int param2, int32_t param3);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 /// @param tagName const char*
 ///
-QDomElement* q_domdocumentfragment_first_child_element1(void* self, const char* tagName);
+QDomElement* q_domdocumentfragment_first_child_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domdocumentfragment_first_child_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domdocumentfragment_first_child_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 /// @param tagName const char*
 ///
-QDomElement* q_domdocumentfragment_last_child_element1(void* self, const char* tagName);
+QDomElement* q_domdocumentfragment_last_child_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domdocumentfragment_last_child_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domdocumentfragment_last_child_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 /// @param tagName const char*
 ///
-QDomElement* q_domdocumentfragment_previous_sibling_element1(void* self, const char* tagName);
+QDomElement* q_domdocumentfragment_previous_sibling_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domdocumentfragment_previous_sibling_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domdocumentfragment_previous_sibling_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 /// @param taName const char*
 ///
-QDomElement* q_domdocumentfragment_next_sibling_element1(void* self, const char* taName);
+QDomElement* q_domdocumentfragment_next_sibling_element1(const void* self, const char* taName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomDocumentFragment*
+/// @param self const QDomDocumentFragment*
 /// @param taName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domdocumentfragment_next_sibling_element2(void* self, const char* taName, const char* namespaceURI);
+QDomElement* q_domdocumentfragment_next_sibling_element2(const void* self, const char* taName, const char* namespaceURI);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocumentfragment.html#dtor.QDomDocumentFragment)
 ///
@@ -3114,14 +3114,14 @@ QDomCharacterData* q_domcharacterdata_new();
 ///
 /// @param characterData QDomCharacterData*
 ///
-QDomCharacterData* q_domcharacterdata_new2(void* characterData);
+QDomCharacterData* q_domcharacterdata_new2(const void* characterData);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#operator-eq)
 ///
 /// @param self QDomCharacterData*
 /// @param other QDomCharacterData*
 ///
-void q_domcharacterdata_operator_assign(void* self, void* other);
+void q_domcharacterdata_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#substringData)
 ///
@@ -3167,17 +3167,17 @@ void q_domcharacterdata_replace_data(void* self, uintptr_t offset, uintptr_t cou
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#length)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-int32_t q_domcharacterdata_length(void* self);
+int32_t q_domcharacterdata_length(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#data)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-const char* q_domcharacterdata_data(void* self);
+const char* q_domcharacterdata_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#setData)
 ///
@@ -3188,29 +3188,29 @@ void q_domcharacterdata_set_data(void* self, const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#nodeType)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
 /// @return enum QDomNode__NodeType
 ///
-int32_t q_domcharacterdata_node_type(void* self);
+int32_t q_domcharacterdata_node_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#operator-eq-eq)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 /// @param other QDomNode*
 ///
-bool q_domcharacterdata_operator_equal(void* self, void* other);
+bool q_domcharacterdata_operator_equal(const void* self, const void* other);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#operator-not-eq)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 /// @param other QDomNode*
 ///
-bool q_domcharacterdata_operator_not_equal(void* self, void* other);
+bool q_domcharacterdata_operator_not_equal(const void* self, const void* other);
 
 /// Inherited from QDomNode
 ///
@@ -3220,7 +3220,7 @@ bool q_domcharacterdata_operator_not_equal(void* self, void* other);
 /// @param newChild QDomNode*
 /// @param refChild QDomNode*
 ///
-QDomNode* q_domcharacterdata_insert_before(void* self, void* newChild, void* refChild);
+QDomNode* q_domcharacterdata_insert_before(void* self, const void* newChild, const void* refChild);
 
 /// Inherited from QDomNode
 ///
@@ -3230,7 +3230,7 @@ QDomNode* q_domcharacterdata_insert_before(void* self, void* newChild, void* ref
 /// @param newChild QDomNode*
 /// @param refChild QDomNode*
 ///
-QDomNode* q_domcharacterdata_insert_after(void* self, void* newChild, void* refChild);
+QDomNode* q_domcharacterdata_insert_after(void* self, const void* newChild, const void* refChild);
 
 /// Inherited from QDomNode
 ///
@@ -3240,7 +3240,7 @@ QDomNode* q_domcharacterdata_insert_after(void* self, void* newChild, void* refC
 /// @param newChild QDomNode*
 /// @param oldChild QDomNode*
 ///
-QDomNode* q_domcharacterdata_replace_child(void* self, void* newChild, void* oldChild);
+QDomNode* q_domcharacterdata_replace_child(void* self, const void* newChild, const void* oldChild);
 
 /// Inherited from QDomNode
 ///
@@ -3249,7 +3249,7 @@ QDomNode* q_domcharacterdata_replace_child(void* self, void* newChild, void* old
 /// @param self QDomCharacterData*
 /// @param oldChild QDomNode*
 ///
-QDomNode* q_domcharacterdata_remove_child(void* self, void* oldChild);
+QDomNode* q_domcharacterdata_remove_child(void* self, const void* oldChild);
 
 /// Inherited from QDomNode
 ///
@@ -3258,23 +3258,23 @@ QDomNode* q_domcharacterdata_remove_child(void* self, void* oldChild);
 /// @param self QDomCharacterData*
 /// @param newChild QDomNode*
 ///
-QDomNode* q_domcharacterdata_append_child(void* self, void* newChild);
+QDomNode* q_domcharacterdata_append_child(void* self, const void* newChild);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#hasChildNodes)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-bool q_domcharacterdata_has_child_nodes(void* self);
+bool q_domcharacterdata_has_child_nodes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#cloneNode)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-QDomNode* q_domcharacterdata_clone_node(void* self);
+QDomNode* q_domcharacterdata_clone_node(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -3288,11 +3288,11 @@ void q_domcharacterdata_normalize(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isSupported)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 /// @param feature const char*
 /// @param version const char*
 ///
-bool q_domcharacterdata_is_supported(void* self, const char* feature, const char* version);
+bool q_domcharacterdata_is_supported(const void* self, const char* feature, const char* version);
 
 /// Inherited from QDomNode
 ///
@@ -3300,73 +3300,73 @@ bool q_domcharacterdata_is_supported(void* self, const char* feature, const char
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-const char* q_domcharacterdata_node_name(void* self);
+const char* q_domcharacterdata_node_name(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#parentNode)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-QDomNode* q_domcharacterdata_parent_node(void* self);
+QDomNode* q_domcharacterdata_parent_node(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#childNodes)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-QDomNodeList* q_domcharacterdata_child_nodes(void* self);
+QDomNodeList* q_domcharacterdata_child_nodes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChild)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-QDomNode* q_domcharacterdata_first_child(void* self);
+QDomNode* q_domcharacterdata_first_child(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChild)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-QDomNode* q_domcharacterdata_last_child(void* self);
+QDomNode* q_domcharacterdata_last_child(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSibling)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-QDomNode* q_domcharacterdata_previous_sibling(void* self);
+QDomNode* q_domcharacterdata_previous_sibling(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSibling)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-QDomNode* q_domcharacterdata_next_sibling(void* self);
+QDomNode* q_domcharacterdata_next_sibling(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#attributes)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-QDomNamedNodeMap* q_domcharacterdata_attributes(void* self);
+QDomNamedNodeMap* q_domcharacterdata_attributes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#ownerDocument)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-QDomDocument* q_domcharacterdata_owner_document(void* self);
+QDomDocument* q_domcharacterdata_owner_document(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -3374,9 +3374,9 @@ QDomDocument* q_domcharacterdata_owner_document(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-const char* q_domcharacterdata_namespace_u_r_i(void* self);
+const char* q_domcharacterdata_namespace_u_r_i(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -3384,17 +3384,17 @@ const char* q_domcharacterdata_namespace_u_r_i(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-const char* q_domcharacterdata_local_name(void* self);
+const char* q_domcharacterdata_local_name(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#hasAttributes)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-bool q_domcharacterdata_has_attributes(void* self);
+bool q_domcharacterdata_has_attributes(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -3402,9 +3402,9 @@ bool q_domcharacterdata_has_attributes(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-const char* q_domcharacterdata_node_value(void* self);
+const char* q_domcharacterdata_node_value(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -3421,9 +3421,9 @@ void q_domcharacterdata_set_node_value(void* self, const char* value);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-const char* q_domcharacterdata_prefix(void* self);
+const char* q_domcharacterdata_prefix(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -3438,122 +3438,122 @@ void q_domcharacterdata_set_prefix(void* self, const char* pre);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isAttr)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-bool q_domcharacterdata_is_attr(void* self);
+bool q_domcharacterdata_is_attr(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isCDATASection)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-bool q_domcharacterdata_is_c_d_a_t_a_section(void* self);
+bool q_domcharacterdata_is_c_d_a_t_a_section(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocumentFragment)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-bool q_domcharacterdata_is_document_fragment(void* self);
+bool q_domcharacterdata_is_document_fragment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocument)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-bool q_domcharacterdata_is_document(void* self);
+bool q_domcharacterdata_is_document(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocumentType)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-bool q_domcharacterdata_is_document_type(void* self);
+bool q_domcharacterdata_is_document_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isElement)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-bool q_domcharacterdata_is_element(void* self);
+bool q_domcharacterdata_is_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isEntityReference)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-bool q_domcharacterdata_is_entity_reference(void* self);
+bool q_domcharacterdata_is_entity_reference(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isText)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-bool q_domcharacterdata_is_text(void* self);
+bool q_domcharacterdata_is_text(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isEntity)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-bool q_domcharacterdata_is_entity(void* self);
+bool q_domcharacterdata_is_entity(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isNotation)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-bool q_domcharacterdata_is_notation(void* self);
+bool q_domcharacterdata_is_notation(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isProcessingInstruction)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-bool q_domcharacterdata_is_processing_instruction(void* self);
+bool q_domcharacterdata_is_processing_instruction(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isCharacterData)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-bool q_domcharacterdata_is_character_data(void* self);
+bool q_domcharacterdata_is_character_data(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isComment)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-bool q_domcharacterdata_is_comment(void* self);
+bool q_domcharacterdata_is_comment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#namedItem)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 /// @param name const char*
 ///
-QDomNode* q_domcharacterdata_named_item(void* self, const char* name);
+QDomNode* q_domcharacterdata_named_item(const void* self, const char* name);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isNull)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-bool q_domcharacterdata_is_null(void* self);
+bool q_domcharacterdata_is_null(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -3567,259 +3567,259 @@ void q_domcharacterdata_clear(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toAttr)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-QDomAttr* q_domcharacterdata_to_attr(void* self);
+QDomAttr* q_domcharacterdata_to_attr(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toCDATASection)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-QDomCDATASection* q_domcharacterdata_to_c_d_a_t_a_section(void* self);
+QDomCDATASection* q_domcharacterdata_to_c_d_a_t_a_section(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocumentFragment)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-QDomDocumentFragment* q_domcharacterdata_to_document_fragment(void* self);
+QDomDocumentFragment* q_domcharacterdata_to_document_fragment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocument)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-QDomDocument* q_domcharacterdata_to_document(void* self);
+QDomDocument* q_domcharacterdata_to_document(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocumentType)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-QDomDocumentType* q_domcharacterdata_to_document_type(void* self);
+QDomDocumentType* q_domcharacterdata_to_document_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toElement)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-QDomElement* q_domcharacterdata_to_element(void* self);
+QDomElement* q_domcharacterdata_to_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toEntityReference)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-QDomEntityReference* q_domcharacterdata_to_entity_reference(void* self);
+QDomEntityReference* q_domcharacterdata_to_entity_reference(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toText)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-QDomText* q_domcharacterdata_to_text(void* self);
+QDomText* q_domcharacterdata_to_text(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toEntity)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-QDomEntity* q_domcharacterdata_to_entity(void* self);
+QDomEntity* q_domcharacterdata_to_entity(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toNotation)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-QDomNotation* q_domcharacterdata_to_notation(void* self);
+QDomNotation* q_domcharacterdata_to_notation(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toProcessingInstruction)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-QDomProcessingInstruction* q_domcharacterdata_to_processing_instruction(void* self);
+QDomProcessingInstruction* q_domcharacterdata_to_processing_instruction(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toCharacterData)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-QDomCharacterData* q_domcharacterdata_to_character_data(void* self);
+QDomCharacterData* q_domcharacterdata_to_character_data(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toComment)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-QDomComment* q_domcharacterdata_to_comment(void* self);
+QDomComment* q_domcharacterdata_to_comment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#save)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 /// @param param1 QTextStream*
 /// @param param2 int
 ///
-void q_domcharacterdata_save(void* self, void* param1, int param2);
+void q_domcharacterdata_save(const void* self, void* param1, int param2);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-QDomElement* q_domcharacterdata_first_child_element(void* self);
+QDomElement* q_domcharacterdata_first_child_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-QDomElement* q_domcharacterdata_last_child_element(void* self);
+QDomElement* q_domcharacterdata_last_child_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-QDomElement* q_domcharacterdata_previous_sibling_element(void* self);
+QDomElement* q_domcharacterdata_previous_sibling_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-QDomElement* q_domcharacterdata_next_sibling_element(void* self);
+QDomElement* q_domcharacterdata_next_sibling_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lineNumber)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-int32_t q_domcharacterdata_line_number(void* self);
+int32_t q_domcharacterdata_line_number(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#columnNumber)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 ///
-int32_t q_domcharacterdata_column_number(void* self);
+int32_t q_domcharacterdata_column_number(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#cloneNode)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 /// @param deep bool
 ///
-QDomNode* q_domcharacterdata_clone_node1(void* self, bool deep);
+QDomNode* q_domcharacterdata_clone_node1(const void* self, bool deep);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#save)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 /// @param param1 QTextStream*
 /// @param param2 int
 /// @param param3 enum QDomNode__EncodingPolicy
 ///
-void q_domcharacterdata_save3(void* self, void* param1, int param2, int32_t param3);
+void q_domcharacterdata_save3(const void* self, void* param1, int param2, int32_t param3);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 /// @param tagName const char*
 ///
-QDomElement* q_domcharacterdata_first_child_element1(void* self, const char* tagName);
+QDomElement* q_domcharacterdata_first_child_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domcharacterdata_first_child_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domcharacterdata_first_child_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 /// @param tagName const char*
 ///
-QDomElement* q_domcharacterdata_last_child_element1(void* self, const char* tagName);
+QDomElement* q_domcharacterdata_last_child_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domcharacterdata_last_child_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domcharacterdata_last_child_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 /// @param tagName const char*
 ///
-QDomElement* q_domcharacterdata_previous_sibling_element1(void* self, const char* tagName);
+QDomElement* q_domcharacterdata_previous_sibling_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domcharacterdata_previous_sibling_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domcharacterdata_previous_sibling_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 /// @param taName const char*
 ///
-QDomElement* q_domcharacterdata_next_sibling_element1(void* self, const char* taName);
+QDomElement* q_domcharacterdata_next_sibling_element1(const void* self, const char* taName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomCharacterData*
+/// @param self const QDomCharacterData*
 /// @param taName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domcharacterdata_next_sibling_element2(void* self, const char* taName, const char* namespaceURI);
+QDomElement* q_domcharacterdata_next_sibling_element2(const void* self, const char* taName, const char* namespaceURI);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#dtor.QDomCharacterData)
 ///
@@ -3841,42 +3841,42 @@ QDomAttr* q_domattr_new();
 ///
 /// @param attr QDomAttr*
 ///
-QDomAttr* q_domattr_new2(void* attr);
+QDomAttr* q_domattr_new2(const void* attr);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomattr.html#operator-eq)
 ///
 /// @param self QDomAttr*
 /// @param other QDomAttr*
 ///
-void q_domattr_operator_assign(void* self, void* other);
+void q_domattr_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomattr.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-const char* q_domattr_name(void* self);
+const char* q_domattr_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomattr.html#specified)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-bool q_domattr_specified(void* self);
+bool q_domattr_specified(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomattr.html#ownerElement)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-QDomElement* q_domattr_owner_element(void* self);
+QDomElement* q_domattr_owner_element(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomattr.html#value)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-const char* q_domattr_value(void* self);
+const char* q_domattr_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomattr.html#setValue)
 ///
@@ -3887,29 +3887,29 @@ void q_domattr_set_value(void* self, const char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomattr.html#nodeType)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
 /// @return enum QDomNode__NodeType
 ///
-int32_t q_domattr_node_type(void* self);
+int32_t q_domattr_node_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#operator-eq-eq)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 /// @param other QDomNode*
 ///
-bool q_domattr_operator_equal(void* self, void* other);
+bool q_domattr_operator_equal(const void* self, const void* other);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#operator-not-eq)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 /// @param other QDomNode*
 ///
-bool q_domattr_operator_not_equal(void* self, void* other);
+bool q_domattr_operator_not_equal(const void* self, const void* other);
 
 /// Inherited from QDomNode
 ///
@@ -3919,7 +3919,7 @@ bool q_domattr_operator_not_equal(void* self, void* other);
 /// @param newChild QDomNode*
 /// @param refChild QDomNode*
 ///
-QDomNode* q_domattr_insert_before(void* self, void* newChild, void* refChild);
+QDomNode* q_domattr_insert_before(void* self, const void* newChild, const void* refChild);
 
 /// Inherited from QDomNode
 ///
@@ -3929,7 +3929,7 @@ QDomNode* q_domattr_insert_before(void* self, void* newChild, void* refChild);
 /// @param newChild QDomNode*
 /// @param refChild QDomNode*
 ///
-QDomNode* q_domattr_insert_after(void* self, void* newChild, void* refChild);
+QDomNode* q_domattr_insert_after(void* self, const void* newChild, const void* refChild);
 
 /// Inherited from QDomNode
 ///
@@ -3939,7 +3939,7 @@ QDomNode* q_domattr_insert_after(void* self, void* newChild, void* refChild);
 /// @param newChild QDomNode*
 /// @param oldChild QDomNode*
 ///
-QDomNode* q_domattr_replace_child(void* self, void* newChild, void* oldChild);
+QDomNode* q_domattr_replace_child(void* self, const void* newChild, const void* oldChild);
 
 /// Inherited from QDomNode
 ///
@@ -3948,7 +3948,7 @@ QDomNode* q_domattr_replace_child(void* self, void* newChild, void* oldChild);
 /// @param self QDomAttr*
 /// @param oldChild QDomNode*
 ///
-QDomNode* q_domattr_remove_child(void* self, void* oldChild);
+QDomNode* q_domattr_remove_child(void* self, const void* oldChild);
 
 /// Inherited from QDomNode
 ///
@@ -3957,23 +3957,23 @@ QDomNode* q_domattr_remove_child(void* self, void* oldChild);
 /// @param self QDomAttr*
 /// @param newChild QDomNode*
 ///
-QDomNode* q_domattr_append_child(void* self, void* newChild);
+QDomNode* q_domattr_append_child(void* self, const void* newChild);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#hasChildNodes)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-bool q_domattr_has_child_nodes(void* self);
+bool q_domattr_has_child_nodes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#cloneNode)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-QDomNode* q_domattr_clone_node(void* self);
+QDomNode* q_domattr_clone_node(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -3987,11 +3987,11 @@ void q_domattr_normalize(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isSupported)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 /// @param feature const char*
 /// @param version const char*
 ///
-bool q_domattr_is_supported(void* self, const char* feature, const char* version);
+bool q_domattr_is_supported(const void* self, const char* feature, const char* version);
 
 /// Inherited from QDomNode
 ///
@@ -3999,73 +3999,73 @@ bool q_domattr_is_supported(void* self, const char* feature, const char* version
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-const char* q_domattr_node_name(void* self);
+const char* q_domattr_node_name(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#parentNode)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-QDomNode* q_domattr_parent_node(void* self);
+QDomNode* q_domattr_parent_node(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#childNodes)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-QDomNodeList* q_domattr_child_nodes(void* self);
+QDomNodeList* q_domattr_child_nodes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChild)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-QDomNode* q_domattr_first_child(void* self);
+QDomNode* q_domattr_first_child(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChild)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-QDomNode* q_domattr_last_child(void* self);
+QDomNode* q_domattr_last_child(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSibling)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-QDomNode* q_domattr_previous_sibling(void* self);
+QDomNode* q_domattr_previous_sibling(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSibling)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-QDomNode* q_domattr_next_sibling(void* self);
+QDomNode* q_domattr_next_sibling(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#attributes)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-QDomNamedNodeMap* q_domattr_attributes(void* self);
+QDomNamedNodeMap* q_domattr_attributes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#ownerDocument)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-QDomDocument* q_domattr_owner_document(void* self);
+QDomDocument* q_domattr_owner_document(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -4073,9 +4073,9 @@ QDomDocument* q_domattr_owner_document(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-const char* q_domattr_namespace_u_r_i(void* self);
+const char* q_domattr_namespace_u_r_i(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -4083,17 +4083,17 @@ const char* q_domattr_namespace_u_r_i(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-const char* q_domattr_local_name(void* self);
+const char* q_domattr_local_name(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#hasAttributes)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-bool q_domattr_has_attributes(void* self);
+bool q_domattr_has_attributes(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -4101,9 +4101,9 @@ bool q_domattr_has_attributes(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-const char* q_domattr_node_value(void* self);
+const char* q_domattr_node_value(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -4120,9 +4120,9 @@ void q_domattr_set_node_value(void* self, const char* value);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-const char* q_domattr_prefix(void* self);
+const char* q_domattr_prefix(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -4137,122 +4137,122 @@ void q_domattr_set_prefix(void* self, const char* pre);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isAttr)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-bool q_domattr_is_attr(void* self);
+bool q_domattr_is_attr(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isCDATASection)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-bool q_domattr_is_c_d_a_t_a_section(void* self);
+bool q_domattr_is_c_d_a_t_a_section(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocumentFragment)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-bool q_domattr_is_document_fragment(void* self);
+bool q_domattr_is_document_fragment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocument)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-bool q_domattr_is_document(void* self);
+bool q_domattr_is_document(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocumentType)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-bool q_domattr_is_document_type(void* self);
+bool q_domattr_is_document_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isElement)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-bool q_domattr_is_element(void* self);
+bool q_domattr_is_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isEntityReference)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-bool q_domattr_is_entity_reference(void* self);
+bool q_domattr_is_entity_reference(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isText)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-bool q_domattr_is_text(void* self);
+bool q_domattr_is_text(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isEntity)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-bool q_domattr_is_entity(void* self);
+bool q_domattr_is_entity(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isNotation)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-bool q_domattr_is_notation(void* self);
+bool q_domattr_is_notation(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isProcessingInstruction)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-bool q_domattr_is_processing_instruction(void* self);
+bool q_domattr_is_processing_instruction(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isCharacterData)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-bool q_domattr_is_character_data(void* self);
+bool q_domattr_is_character_data(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isComment)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-bool q_domattr_is_comment(void* self);
+bool q_domattr_is_comment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#namedItem)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 /// @param name const char*
 ///
-QDomNode* q_domattr_named_item(void* self, const char* name);
+QDomNode* q_domattr_named_item(const void* self, const char* name);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isNull)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-bool q_domattr_is_null(void* self);
+bool q_domattr_is_null(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -4266,259 +4266,259 @@ void q_domattr_clear(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toAttr)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-QDomAttr* q_domattr_to_attr(void* self);
+QDomAttr* q_domattr_to_attr(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toCDATASection)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-QDomCDATASection* q_domattr_to_c_d_a_t_a_section(void* self);
+QDomCDATASection* q_domattr_to_c_d_a_t_a_section(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocumentFragment)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-QDomDocumentFragment* q_domattr_to_document_fragment(void* self);
+QDomDocumentFragment* q_domattr_to_document_fragment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocument)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-QDomDocument* q_domattr_to_document(void* self);
+QDomDocument* q_domattr_to_document(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocumentType)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-QDomDocumentType* q_domattr_to_document_type(void* self);
+QDomDocumentType* q_domattr_to_document_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toElement)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-QDomElement* q_domattr_to_element(void* self);
+QDomElement* q_domattr_to_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toEntityReference)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-QDomEntityReference* q_domattr_to_entity_reference(void* self);
+QDomEntityReference* q_domattr_to_entity_reference(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toText)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-QDomText* q_domattr_to_text(void* self);
+QDomText* q_domattr_to_text(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toEntity)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-QDomEntity* q_domattr_to_entity(void* self);
+QDomEntity* q_domattr_to_entity(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toNotation)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-QDomNotation* q_domattr_to_notation(void* self);
+QDomNotation* q_domattr_to_notation(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toProcessingInstruction)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-QDomProcessingInstruction* q_domattr_to_processing_instruction(void* self);
+QDomProcessingInstruction* q_domattr_to_processing_instruction(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toCharacterData)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-QDomCharacterData* q_domattr_to_character_data(void* self);
+QDomCharacterData* q_domattr_to_character_data(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toComment)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-QDomComment* q_domattr_to_comment(void* self);
+QDomComment* q_domattr_to_comment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#save)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 /// @param param1 QTextStream*
 /// @param param2 int
 ///
-void q_domattr_save(void* self, void* param1, int param2);
+void q_domattr_save(const void* self, void* param1, int param2);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-QDomElement* q_domattr_first_child_element(void* self);
+QDomElement* q_domattr_first_child_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-QDomElement* q_domattr_last_child_element(void* self);
+QDomElement* q_domattr_last_child_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-QDomElement* q_domattr_previous_sibling_element(void* self);
+QDomElement* q_domattr_previous_sibling_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-QDomElement* q_domattr_next_sibling_element(void* self);
+QDomElement* q_domattr_next_sibling_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lineNumber)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-int32_t q_domattr_line_number(void* self);
+int32_t q_domattr_line_number(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#columnNumber)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 ///
-int32_t q_domattr_column_number(void* self);
+int32_t q_domattr_column_number(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#cloneNode)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 /// @param deep bool
 ///
-QDomNode* q_domattr_clone_node1(void* self, bool deep);
+QDomNode* q_domattr_clone_node1(const void* self, bool deep);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#save)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 /// @param param1 QTextStream*
 /// @param param2 int
 /// @param param3 enum QDomNode__EncodingPolicy
 ///
-void q_domattr_save3(void* self, void* param1, int param2, int32_t param3);
+void q_domattr_save3(const void* self, void* param1, int param2, int32_t param3);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 /// @param tagName const char*
 ///
-QDomElement* q_domattr_first_child_element1(void* self, const char* tagName);
+QDomElement* q_domattr_first_child_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domattr_first_child_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domattr_first_child_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 /// @param tagName const char*
 ///
-QDomElement* q_domattr_last_child_element1(void* self, const char* tagName);
+QDomElement* q_domattr_last_child_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domattr_last_child_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domattr_last_child_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 /// @param tagName const char*
 ///
-QDomElement* q_domattr_previous_sibling_element1(void* self, const char* tagName);
+QDomElement* q_domattr_previous_sibling_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domattr_previous_sibling_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domattr_previous_sibling_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 /// @param taName const char*
 ///
-QDomElement* q_domattr_next_sibling_element1(void* self, const char* taName);
+QDomElement* q_domattr_next_sibling_element1(const void* self, const char* taName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomAttr*
+/// @param self const QDomAttr*
 /// @param taName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domattr_next_sibling_element2(void* self, const char* taName, const char* namespaceURI);
+QDomElement* q_domattr_next_sibling_element2(const void* self, const char* taName, const char* namespaceURI);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomattr.html#dtor.QDomAttr)
 ///
@@ -4540,23 +4540,23 @@ QDomElement* q_domelement_new();
 ///
 /// @param element QDomElement*
 ///
-QDomElement* q_domelement_new2(void* element);
+QDomElement* q_domelement_new2(const void* element);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomelement.html#operator-eq)
 ///
 /// @param self QDomElement*
 /// @param other QDomElement*
 ///
-void q_domelement_operator_assign(void* self, void* other);
+void q_domelement_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomelement.html#attribute)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 /// @param name const char*
 ///
-const char* q_domelement_attribute(void* self, const char* name);
+const char* q_domelement_attribute(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomelement.html#setAttribute)
 ///
@@ -4633,38 +4633,38 @@ QDomAttr* q_domelement_attribute_node(void* self, const char* name);
 /// @param self QDomElement*
 /// @param newAttr QDomAttr*
 ///
-QDomAttr* q_domelement_set_attribute_node(void* self, void* newAttr);
+QDomAttr* q_domelement_set_attribute_node(void* self, const void* newAttr);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomelement.html#removeAttributeNode)
 ///
 /// @param self QDomElement*
 /// @param oldAttr QDomAttr*
 ///
-QDomAttr* q_domelement_remove_attribute_node(void* self, void* oldAttr);
+QDomAttr* q_domelement_remove_attribute_node(void* self, const void* oldAttr);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomelement.html#elementsByTagName)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 /// @param tagname const char*
 ///
-QDomNodeList* q_domelement_elements_by_tag_name(void* self, const char* tagname);
+QDomNodeList* q_domelement_elements_by_tag_name(const void* self, const char* tagname);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomelement.html#hasAttribute)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 /// @param name const char*
 ///
-bool q_domelement_has_attribute(void* self, const char* name);
+bool q_domelement_has_attribute(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomelement.html#attributeNS)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 /// @param nsURI const char*
 /// @param localName const char*
 ///
-const char* q_domelement_attribute_n_s(void* self, const char* nsURI, const char* localName);
+const char* q_domelement_attribute_n_s(const void* self, const char* nsURI, const char* localName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomelement.html#setAttributeNS)
 ///
@@ -4741,31 +4741,31 @@ QDomAttr* q_domelement_attribute_node_n_s(void* self, const char* nsURI, const c
 /// @param self QDomElement*
 /// @param newAttr QDomAttr*
 ///
-QDomAttr* q_domelement_set_attribute_node_n_s(void* self, void* newAttr);
+QDomAttr* q_domelement_set_attribute_node_n_s(void* self, const void* newAttr);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomelement.html#elementsByTagNameNS)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 /// @param nsURI const char*
 /// @param localName const char*
 ///
-QDomNodeList* q_domelement_elements_by_tag_name_n_s(void* self, const char* nsURI, const char* localName);
+QDomNodeList* q_domelement_elements_by_tag_name_n_s(const void* self, const char* nsURI, const char* localName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomelement.html#hasAttributeNS)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 /// @param nsURI const char*
 /// @param localName const char*
 ///
-bool q_domelement_has_attribute_n_s(void* self, const char* nsURI, const char* localName);
+bool q_domelement_has_attribute_n_s(const void* self, const char* nsURI, const char* localName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomelement.html#tagName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-const char* q_domelement_tag_name(void* self);
+const char* q_domelement_tag_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomelement.html#setTagName)
 ///
@@ -4776,64 +4776,64 @@ void q_domelement_set_tag_name(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomelement.html#attributes)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-QDomNamedNodeMap* q_domelement_attributes(void* self);
+QDomNamedNodeMap* q_domelement_attributes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomelement.html#nodeType)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
 /// @return enum QDomNode__NodeType
 ///
-int32_t q_domelement_node_type(void* self);
+int32_t q_domelement_node_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomelement.html#text)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-const char* q_domelement_text(void* self);
+const char* q_domelement_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomelement.html#attribute)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 /// @param name const char*
 /// @param defValue const char*
 ///
-const char* q_domelement_attribute2(void* self, const char* name, const char* defValue);
+const char* q_domelement_attribute2(const void* self, const char* name, const char* defValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomelement.html#attributeNS)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 /// @param nsURI const char*
 /// @param localName const char*
 /// @param defValue const char*
 ///
-const char* q_domelement_attribute_n_s3(void* self, const char* nsURI, const char* localName, const char* defValue);
+const char* q_domelement_attribute_n_s3(const void* self, const char* nsURI, const char* localName, const char* defValue);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#operator-eq-eq)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 /// @param other QDomNode*
 ///
-bool q_domelement_operator_equal(void* self, void* other);
+bool q_domelement_operator_equal(const void* self, const void* other);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#operator-not-eq)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 /// @param other QDomNode*
 ///
-bool q_domelement_operator_not_equal(void* self, void* other);
+bool q_domelement_operator_not_equal(const void* self, const void* other);
 
 /// Inherited from QDomNode
 ///
@@ -4843,7 +4843,7 @@ bool q_domelement_operator_not_equal(void* self, void* other);
 /// @param newChild QDomNode*
 /// @param refChild QDomNode*
 ///
-QDomNode* q_domelement_insert_before(void* self, void* newChild, void* refChild);
+QDomNode* q_domelement_insert_before(void* self, const void* newChild, const void* refChild);
 
 /// Inherited from QDomNode
 ///
@@ -4853,7 +4853,7 @@ QDomNode* q_domelement_insert_before(void* self, void* newChild, void* refChild)
 /// @param newChild QDomNode*
 /// @param refChild QDomNode*
 ///
-QDomNode* q_domelement_insert_after(void* self, void* newChild, void* refChild);
+QDomNode* q_domelement_insert_after(void* self, const void* newChild, const void* refChild);
 
 /// Inherited from QDomNode
 ///
@@ -4863,7 +4863,7 @@ QDomNode* q_domelement_insert_after(void* self, void* newChild, void* refChild);
 /// @param newChild QDomNode*
 /// @param oldChild QDomNode*
 ///
-QDomNode* q_domelement_replace_child(void* self, void* newChild, void* oldChild);
+QDomNode* q_domelement_replace_child(void* self, const void* newChild, const void* oldChild);
 
 /// Inherited from QDomNode
 ///
@@ -4872,7 +4872,7 @@ QDomNode* q_domelement_replace_child(void* self, void* newChild, void* oldChild)
 /// @param self QDomElement*
 /// @param oldChild QDomNode*
 ///
-QDomNode* q_domelement_remove_child(void* self, void* oldChild);
+QDomNode* q_domelement_remove_child(void* self, const void* oldChild);
 
 /// Inherited from QDomNode
 ///
@@ -4881,23 +4881,23 @@ QDomNode* q_domelement_remove_child(void* self, void* oldChild);
 /// @param self QDomElement*
 /// @param newChild QDomNode*
 ///
-QDomNode* q_domelement_append_child(void* self, void* newChild);
+QDomNode* q_domelement_append_child(void* self, const void* newChild);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#hasChildNodes)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-bool q_domelement_has_child_nodes(void* self);
+bool q_domelement_has_child_nodes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#cloneNode)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-QDomNode* q_domelement_clone_node(void* self);
+QDomNode* q_domelement_clone_node(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -4911,11 +4911,11 @@ void q_domelement_normalize(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isSupported)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 /// @param feature const char*
 /// @param version const char*
 ///
-bool q_domelement_is_supported(void* self, const char* feature, const char* version);
+bool q_domelement_is_supported(const void* self, const char* feature, const char* version);
 
 /// Inherited from QDomNode
 ///
@@ -4923,65 +4923,65 @@ bool q_domelement_is_supported(void* self, const char* feature, const char* vers
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-const char* q_domelement_node_name(void* self);
+const char* q_domelement_node_name(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#parentNode)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-QDomNode* q_domelement_parent_node(void* self);
+QDomNode* q_domelement_parent_node(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#childNodes)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-QDomNodeList* q_domelement_child_nodes(void* self);
+QDomNodeList* q_domelement_child_nodes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChild)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-QDomNode* q_domelement_first_child(void* self);
+QDomNode* q_domelement_first_child(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChild)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-QDomNode* q_domelement_last_child(void* self);
+QDomNode* q_domelement_last_child(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSibling)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-QDomNode* q_domelement_previous_sibling(void* self);
+QDomNode* q_domelement_previous_sibling(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSibling)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-QDomNode* q_domelement_next_sibling(void* self);
+QDomNode* q_domelement_next_sibling(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#ownerDocument)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-QDomDocument* q_domelement_owner_document(void* self);
+QDomDocument* q_domelement_owner_document(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -4989,9 +4989,9 @@ QDomDocument* q_domelement_owner_document(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-const char* q_domelement_namespace_u_r_i(void* self);
+const char* q_domelement_namespace_u_r_i(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -4999,17 +4999,17 @@ const char* q_domelement_namespace_u_r_i(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-const char* q_domelement_local_name(void* self);
+const char* q_domelement_local_name(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#hasAttributes)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-bool q_domelement_has_attributes(void* self);
+bool q_domelement_has_attributes(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -5017,9 +5017,9 @@ bool q_domelement_has_attributes(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-const char* q_domelement_node_value(void* self);
+const char* q_domelement_node_value(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -5036,9 +5036,9 @@ void q_domelement_set_node_value(void* self, const char* value);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-const char* q_domelement_prefix(void* self);
+const char* q_domelement_prefix(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -5053,122 +5053,122 @@ void q_domelement_set_prefix(void* self, const char* pre);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isAttr)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-bool q_domelement_is_attr(void* self);
+bool q_domelement_is_attr(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isCDATASection)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-bool q_domelement_is_c_d_a_t_a_section(void* self);
+bool q_domelement_is_c_d_a_t_a_section(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocumentFragment)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-bool q_domelement_is_document_fragment(void* self);
+bool q_domelement_is_document_fragment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocument)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-bool q_domelement_is_document(void* self);
+bool q_domelement_is_document(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocumentType)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-bool q_domelement_is_document_type(void* self);
+bool q_domelement_is_document_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isElement)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-bool q_domelement_is_element(void* self);
+bool q_domelement_is_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isEntityReference)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-bool q_domelement_is_entity_reference(void* self);
+bool q_domelement_is_entity_reference(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isText)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-bool q_domelement_is_text(void* self);
+bool q_domelement_is_text(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isEntity)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-bool q_domelement_is_entity(void* self);
+bool q_domelement_is_entity(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isNotation)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-bool q_domelement_is_notation(void* self);
+bool q_domelement_is_notation(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isProcessingInstruction)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-bool q_domelement_is_processing_instruction(void* self);
+bool q_domelement_is_processing_instruction(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isCharacterData)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-bool q_domelement_is_character_data(void* self);
+bool q_domelement_is_character_data(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isComment)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-bool q_domelement_is_comment(void* self);
+bool q_domelement_is_comment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#namedItem)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 /// @param name const char*
 ///
-QDomNode* q_domelement_named_item(void* self, const char* name);
+QDomNode* q_domelement_named_item(const void* self, const char* name);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isNull)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-bool q_domelement_is_null(void* self);
+bool q_domelement_is_null(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -5182,259 +5182,259 @@ void q_domelement_clear(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toAttr)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-QDomAttr* q_domelement_to_attr(void* self);
+QDomAttr* q_domelement_to_attr(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toCDATASection)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-QDomCDATASection* q_domelement_to_c_d_a_t_a_section(void* self);
+QDomCDATASection* q_domelement_to_c_d_a_t_a_section(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocumentFragment)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-QDomDocumentFragment* q_domelement_to_document_fragment(void* self);
+QDomDocumentFragment* q_domelement_to_document_fragment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocument)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-QDomDocument* q_domelement_to_document(void* self);
+QDomDocument* q_domelement_to_document(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocumentType)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-QDomDocumentType* q_domelement_to_document_type(void* self);
+QDomDocumentType* q_domelement_to_document_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toElement)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-QDomElement* q_domelement_to_element(void* self);
+QDomElement* q_domelement_to_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toEntityReference)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-QDomEntityReference* q_domelement_to_entity_reference(void* self);
+QDomEntityReference* q_domelement_to_entity_reference(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toText)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-QDomText* q_domelement_to_text(void* self);
+QDomText* q_domelement_to_text(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toEntity)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-QDomEntity* q_domelement_to_entity(void* self);
+QDomEntity* q_domelement_to_entity(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toNotation)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-QDomNotation* q_domelement_to_notation(void* self);
+QDomNotation* q_domelement_to_notation(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toProcessingInstruction)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-QDomProcessingInstruction* q_domelement_to_processing_instruction(void* self);
+QDomProcessingInstruction* q_domelement_to_processing_instruction(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toCharacterData)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-QDomCharacterData* q_domelement_to_character_data(void* self);
+QDomCharacterData* q_domelement_to_character_data(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toComment)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-QDomComment* q_domelement_to_comment(void* self);
+QDomComment* q_domelement_to_comment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#save)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 /// @param param1 QTextStream*
 /// @param param2 int
 ///
-void q_domelement_save(void* self, void* param1, int param2);
+void q_domelement_save(const void* self, void* param1, int param2);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-QDomElement* q_domelement_first_child_element(void* self);
+QDomElement* q_domelement_first_child_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-QDomElement* q_domelement_last_child_element(void* self);
+QDomElement* q_domelement_last_child_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-QDomElement* q_domelement_previous_sibling_element(void* self);
+QDomElement* q_domelement_previous_sibling_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-QDomElement* q_domelement_next_sibling_element(void* self);
+QDomElement* q_domelement_next_sibling_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lineNumber)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-int32_t q_domelement_line_number(void* self);
+int32_t q_domelement_line_number(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#columnNumber)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 ///
-int32_t q_domelement_column_number(void* self);
+int32_t q_domelement_column_number(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#cloneNode)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 /// @param deep bool
 ///
-QDomNode* q_domelement_clone_node1(void* self, bool deep);
+QDomNode* q_domelement_clone_node1(const void* self, bool deep);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#save)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 /// @param param1 QTextStream*
 /// @param param2 int
 /// @param param3 enum QDomNode__EncodingPolicy
 ///
-void q_domelement_save3(void* self, void* param1, int param2, int32_t param3);
+void q_domelement_save3(const void* self, void* param1, int param2, int32_t param3);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 /// @param tagName const char*
 ///
-QDomElement* q_domelement_first_child_element1(void* self, const char* tagName);
+QDomElement* q_domelement_first_child_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domelement_first_child_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domelement_first_child_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 /// @param tagName const char*
 ///
-QDomElement* q_domelement_last_child_element1(void* self, const char* tagName);
+QDomElement* q_domelement_last_child_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domelement_last_child_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domelement_last_child_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 /// @param tagName const char*
 ///
-QDomElement* q_domelement_previous_sibling_element1(void* self, const char* tagName);
+QDomElement* q_domelement_previous_sibling_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domelement_previous_sibling_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domelement_previous_sibling_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 /// @param taName const char*
 ///
-QDomElement* q_domelement_next_sibling_element1(void* self, const char* taName);
+QDomElement* q_domelement_next_sibling_element1(const void* self, const char* taName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomElement*
+/// @param self const QDomElement*
 /// @param taName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domelement_next_sibling_element2(void* self, const char* taName, const char* namespaceURI);
+QDomElement* q_domelement_next_sibling_element2(const void* self, const char* taName, const char* namespaceURI);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomelement.html#dtor.QDomElement)
 ///
@@ -5456,14 +5456,14 @@ QDomText* q_domtext_new();
 ///
 /// @param text QDomText*
 ///
-QDomText* q_domtext_new2(void* text);
+QDomText* q_domtext_new2(const void* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomtext.html#operator-eq)
 ///
 /// @param self QDomText*
 /// @param other QDomText*
 ///
-void q_domtext_operator_assign(void* self, void* other);
+void q_domtext_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomtext.html#splitText)
 ///
@@ -5474,11 +5474,11 @@ QDomText* q_domtext_split_text(void* self, int offset);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomtext.html#nodeType)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
 /// @return enum QDomNode__NodeType
 ///
-int32_t q_domtext_node_type(void* self);
+int32_t q_domtext_node_type(const void* self);
 
 /// Inherited from QDomCharacterData
 ///
@@ -5536,9 +5536,9 @@ void q_domtext_replace_data(void* self, uintptr_t offset, uintptr_t count, const
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#length)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-int32_t q_domtext_length(void* self);
+int32_t q_domtext_length(const void* self);
 
 /// Inherited from QDomCharacterData
 ///
@@ -5546,9 +5546,9 @@ int32_t q_domtext_length(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-const char* q_domtext_data(void* self);
+const char* q_domtext_data(const void* self);
 
 /// Inherited from QDomCharacterData
 ///
@@ -5563,19 +5563,19 @@ void q_domtext_set_data(void* self, const char* data);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#operator-eq-eq)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 /// @param other QDomNode*
 ///
-bool q_domtext_operator_equal(void* self, void* other);
+bool q_domtext_operator_equal(const void* self, const void* other);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#operator-not-eq)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 /// @param other QDomNode*
 ///
-bool q_domtext_operator_not_equal(void* self, void* other);
+bool q_domtext_operator_not_equal(const void* self, const void* other);
 
 /// Inherited from QDomNode
 ///
@@ -5585,7 +5585,7 @@ bool q_domtext_operator_not_equal(void* self, void* other);
 /// @param newChild QDomNode*
 /// @param refChild QDomNode*
 ///
-QDomNode* q_domtext_insert_before(void* self, void* newChild, void* refChild);
+QDomNode* q_domtext_insert_before(void* self, const void* newChild, const void* refChild);
 
 /// Inherited from QDomNode
 ///
@@ -5595,7 +5595,7 @@ QDomNode* q_domtext_insert_before(void* self, void* newChild, void* refChild);
 /// @param newChild QDomNode*
 /// @param refChild QDomNode*
 ///
-QDomNode* q_domtext_insert_after(void* self, void* newChild, void* refChild);
+QDomNode* q_domtext_insert_after(void* self, const void* newChild, const void* refChild);
 
 /// Inherited from QDomNode
 ///
@@ -5605,7 +5605,7 @@ QDomNode* q_domtext_insert_after(void* self, void* newChild, void* refChild);
 /// @param newChild QDomNode*
 /// @param oldChild QDomNode*
 ///
-QDomNode* q_domtext_replace_child(void* self, void* newChild, void* oldChild);
+QDomNode* q_domtext_replace_child(void* self, const void* newChild, const void* oldChild);
 
 /// Inherited from QDomNode
 ///
@@ -5614,7 +5614,7 @@ QDomNode* q_domtext_replace_child(void* self, void* newChild, void* oldChild);
 /// @param self QDomText*
 /// @param oldChild QDomNode*
 ///
-QDomNode* q_domtext_remove_child(void* self, void* oldChild);
+QDomNode* q_domtext_remove_child(void* self, const void* oldChild);
 
 /// Inherited from QDomNode
 ///
@@ -5623,23 +5623,23 @@ QDomNode* q_domtext_remove_child(void* self, void* oldChild);
 /// @param self QDomText*
 /// @param newChild QDomNode*
 ///
-QDomNode* q_domtext_append_child(void* self, void* newChild);
+QDomNode* q_domtext_append_child(void* self, const void* newChild);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#hasChildNodes)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-bool q_domtext_has_child_nodes(void* self);
+bool q_domtext_has_child_nodes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#cloneNode)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-QDomNode* q_domtext_clone_node(void* self);
+QDomNode* q_domtext_clone_node(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -5653,11 +5653,11 @@ void q_domtext_normalize(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isSupported)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 /// @param feature const char*
 /// @param version const char*
 ///
-bool q_domtext_is_supported(void* self, const char* feature, const char* version);
+bool q_domtext_is_supported(const void* self, const char* feature, const char* version);
 
 /// Inherited from QDomNode
 ///
@@ -5665,73 +5665,73 @@ bool q_domtext_is_supported(void* self, const char* feature, const char* version
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-const char* q_domtext_node_name(void* self);
+const char* q_domtext_node_name(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#parentNode)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-QDomNode* q_domtext_parent_node(void* self);
+QDomNode* q_domtext_parent_node(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#childNodes)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-QDomNodeList* q_domtext_child_nodes(void* self);
+QDomNodeList* q_domtext_child_nodes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChild)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-QDomNode* q_domtext_first_child(void* self);
+QDomNode* q_domtext_first_child(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChild)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-QDomNode* q_domtext_last_child(void* self);
+QDomNode* q_domtext_last_child(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSibling)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-QDomNode* q_domtext_previous_sibling(void* self);
+QDomNode* q_domtext_previous_sibling(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSibling)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-QDomNode* q_domtext_next_sibling(void* self);
+QDomNode* q_domtext_next_sibling(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#attributes)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-QDomNamedNodeMap* q_domtext_attributes(void* self);
+QDomNamedNodeMap* q_domtext_attributes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#ownerDocument)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-QDomDocument* q_domtext_owner_document(void* self);
+QDomDocument* q_domtext_owner_document(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -5739,9 +5739,9 @@ QDomDocument* q_domtext_owner_document(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-const char* q_domtext_namespace_u_r_i(void* self);
+const char* q_domtext_namespace_u_r_i(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -5749,17 +5749,17 @@ const char* q_domtext_namespace_u_r_i(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-const char* q_domtext_local_name(void* self);
+const char* q_domtext_local_name(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#hasAttributes)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-bool q_domtext_has_attributes(void* self);
+bool q_domtext_has_attributes(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -5767,9 +5767,9 @@ bool q_domtext_has_attributes(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-const char* q_domtext_node_value(void* self);
+const char* q_domtext_node_value(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -5786,9 +5786,9 @@ void q_domtext_set_node_value(void* self, const char* value);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-const char* q_domtext_prefix(void* self);
+const char* q_domtext_prefix(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -5803,122 +5803,122 @@ void q_domtext_set_prefix(void* self, const char* pre);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isAttr)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-bool q_domtext_is_attr(void* self);
+bool q_domtext_is_attr(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isCDATASection)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-bool q_domtext_is_c_d_a_t_a_section(void* self);
+bool q_domtext_is_c_d_a_t_a_section(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocumentFragment)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-bool q_domtext_is_document_fragment(void* self);
+bool q_domtext_is_document_fragment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocument)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-bool q_domtext_is_document(void* self);
+bool q_domtext_is_document(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocumentType)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-bool q_domtext_is_document_type(void* self);
+bool q_domtext_is_document_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isElement)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-bool q_domtext_is_element(void* self);
+bool q_domtext_is_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isEntityReference)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-bool q_domtext_is_entity_reference(void* self);
+bool q_domtext_is_entity_reference(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isText)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-bool q_domtext_is_text(void* self);
+bool q_domtext_is_text(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isEntity)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-bool q_domtext_is_entity(void* self);
+bool q_domtext_is_entity(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isNotation)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-bool q_domtext_is_notation(void* self);
+bool q_domtext_is_notation(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isProcessingInstruction)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-bool q_domtext_is_processing_instruction(void* self);
+bool q_domtext_is_processing_instruction(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isCharacterData)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-bool q_domtext_is_character_data(void* self);
+bool q_domtext_is_character_data(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isComment)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-bool q_domtext_is_comment(void* self);
+bool q_domtext_is_comment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#namedItem)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 /// @param name const char*
 ///
-QDomNode* q_domtext_named_item(void* self, const char* name);
+QDomNode* q_domtext_named_item(const void* self, const char* name);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isNull)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-bool q_domtext_is_null(void* self);
+bool q_domtext_is_null(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -5932,259 +5932,259 @@ void q_domtext_clear(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toAttr)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-QDomAttr* q_domtext_to_attr(void* self);
+QDomAttr* q_domtext_to_attr(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toCDATASection)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-QDomCDATASection* q_domtext_to_c_d_a_t_a_section(void* self);
+QDomCDATASection* q_domtext_to_c_d_a_t_a_section(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocumentFragment)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-QDomDocumentFragment* q_domtext_to_document_fragment(void* self);
+QDomDocumentFragment* q_domtext_to_document_fragment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocument)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-QDomDocument* q_domtext_to_document(void* self);
+QDomDocument* q_domtext_to_document(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocumentType)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-QDomDocumentType* q_domtext_to_document_type(void* self);
+QDomDocumentType* q_domtext_to_document_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toElement)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-QDomElement* q_domtext_to_element(void* self);
+QDomElement* q_domtext_to_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toEntityReference)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-QDomEntityReference* q_domtext_to_entity_reference(void* self);
+QDomEntityReference* q_domtext_to_entity_reference(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toText)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-QDomText* q_domtext_to_text(void* self);
+QDomText* q_domtext_to_text(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toEntity)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-QDomEntity* q_domtext_to_entity(void* self);
+QDomEntity* q_domtext_to_entity(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toNotation)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-QDomNotation* q_domtext_to_notation(void* self);
+QDomNotation* q_domtext_to_notation(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toProcessingInstruction)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-QDomProcessingInstruction* q_domtext_to_processing_instruction(void* self);
+QDomProcessingInstruction* q_domtext_to_processing_instruction(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toCharacterData)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-QDomCharacterData* q_domtext_to_character_data(void* self);
+QDomCharacterData* q_domtext_to_character_data(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toComment)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-QDomComment* q_domtext_to_comment(void* self);
+QDomComment* q_domtext_to_comment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#save)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 /// @param param1 QTextStream*
 /// @param param2 int
 ///
-void q_domtext_save(void* self, void* param1, int param2);
+void q_domtext_save(const void* self, void* param1, int param2);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-QDomElement* q_domtext_first_child_element(void* self);
+QDomElement* q_domtext_first_child_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-QDomElement* q_domtext_last_child_element(void* self);
+QDomElement* q_domtext_last_child_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-QDomElement* q_domtext_previous_sibling_element(void* self);
+QDomElement* q_domtext_previous_sibling_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-QDomElement* q_domtext_next_sibling_element(void* self);
+QDomElement* q_domtext_next_sibling_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lineNumber)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-int32_t q_domtext_line_number(void* self);
+int32_t q_domtext_line_number(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#columnNumber)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 ///
-int32_t q_domtext_column_number(void* self);
+int32_t q_domtext_column_number(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#cloneNode)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 /// @param deep bool
 ///
-QDomNode* q_domtext_clone_node1(void* self, bool deep);
+QDomNode* q_domtext_clone_node1(const void* self, bool deep);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#save)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 /// @param param1 QTextStream*
 /// @param param2 int
 /// @param param3 enum QDomNode__EncodingPolicy
 ///
-void q_domtext_save3(void* self, void* param1, int param2, int32_t param3);
+void q_domtext_save3(const void* self, void* param1, int param2, int32_t param3);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 /// @param tagName const char*
 ///
-QDomElement* q_domtext_first_child_element1(void* self, const char* tagName);
+QDomElement* q_domtext_first_child_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domtext_first_child_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domtext_first_child_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 /// @param tagName const char*
 ///
-QDomElement* q_domtext_last_child_element1(void* self, const char* tagName);
+QDomElement* q_domtext_last_child_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domtext_last_child_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domtext_last_child_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 /// @param tagName const char*
 ///
-QDomElement* q_domtext_previous_sibling_element1(void* self, const char* tagName);
+QDomElement* q_domtext_previous_sibling_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domtext_previous_sibling_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domtext_previous_sibling_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 /// @param taName const char*
 ///
-QDomElement* q_domtext_next_sibling_element1(void* self, const char* taName);
+QDomElement* q_domtext_next_sibling_element1(const void* self, const char* taName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomText*
+/// @param self const QDomText*
 /// @param taName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domtext_next_sibling_element2(void* self, const char* taName, const char* namespaceURI);
+QDomElement* q_domtext_next_sibling_element2(const void* self, const char* taName, const char* namespaceURI);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomtext.html#dtor.QDomText)
 ///
@@ -6206,22 +6206,22 @@ QDomComment* q_domcomment_new();
 ///
 /// @param comment QDomComment*
 ///
-QDomComment* q_domcomment_new2(void* comment);
+QDomComment* q_domcomment_new2(const void* comment);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcomment.html#operator-eq)
 ///
 /// @param self QDomComment*
 /// @param other QDomComment*
 ///
-void q_domcomment_operator_assign(void* self, void* other);
+void q_domcomment_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcomment.html#nodeType)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
 /// @return enum QDomNode__NodeType
 ///
-int32_t q_domcomment_node_type(void* self);
+int32_t q_domcomment_node_type(const void* self);
 
 /// Inherited from QDomCharacterData
 ///
@@ -6279,9 +6279,9 @@ void q_domcomment_replace_data(void* self, uintptr_t offset, uintptr_t count, co
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#length)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-int32_t q_domcomment_length(void* self);
+int32_t q_domcomment_length(const void* self);
 
 /// Inherited from QDomCharacterData
 ///
@@ -6289,9 +6289,9 @@ int32_t q_domcomment_length(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-const char* q_domcomment_data(void* self);
+const char* q_domcomment_data(const void* self);
 
 /// Inherited from QDomCharacterData
 ///
@@ -6306,19 +6306,19 @@ void q_domcomment_set_data(void* self, const char* data);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#operator-eq-eq)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 /// @param other QDomNode*
 ///
-bool q_domcomment_operator_equal(void* self, void* other);
+bool q_domcomment_operator_equal(const void* self, const void* other);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#operator-not-eq)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 /// @param other QDomNode*
 ///
-bool q_domcomment_operator_not_equal(void* self, void* other);
+bool q_domcomment_operator_not_equal(const void* self, const void* other);
 
 /// Inherited from QDomNode
 ///
@@ -6328,7 +6328,7 @@ bool q_domcomment_operator_not_equal(void* self, void* other);
 /// @param newChild QDomNode*
 /// @param refChild QDomNode*
 ///
-QDomNode* q_domcomment_insert_before(void* self, void* newChild, void* refChild);
+QDomNode* q_domcomment_insert_before(void* self, const void* newChild, const void* refChild);
 
 /// Inherited from QDomNode
 ///
@@ -6338,7 +6338,7 @@ QDomNode* q_domcomment_insert_before(void* self, void* newChild, void* refChild)
 /// @param newChild QDomNode*
 /// @param refChild QDomNode*
 ///
-QDomNode* q_domcomment_insert_after(void* self, void* newChild, void* refChild);
+QDomNode* q_domcomment_insert_after(void* self, const void* newChild, const void* refChild);
 
 /// Inherited from QDomNode
 ///
@@ -6348,7 +6348,7 @@ QDomNode* q_domcomment_insert_after(void* self, void* newChild, void* refChild);
 /// @param newChild QDomNode*
 /// @param oldChild QDomNode*
 ///
-QDomNode* q_domcomment_replace_child(void* self, void* newChild, void* oldChild);
+QDomNode* q_domcomment_replace_child(void* self, const void* newChild, const void* oldChild);
 
 /// Inherited from QDomNode
 ///
@@ -6357,7 +6357,7 @@ QDomNode* q_domcomment_replace_child(void* self, void* newChild, void* oldChild)
 /// @param self QDomComment*
 /// @param oldChild QDomNode*
 ///
-QDomNode* q_domcomment_remove_child(void* self, void* oldChild);
+QDomNode* q_domcomment_remove_child(void* self, const void* oldChild);
 
 /// Inherited from QDomNode
 ///
@@ -6366,23 +6366,23 @@ QDomNode* q_domcomment_remove_child(void* self, void* oldChild);
 /// @param self QDomComment*
 /// @param newChild QDomNode*
 ///
-QDomNode* q_domcomment_append_child(void* self, void* newChild);
+QDomNode* q_domcomment_append_child(void* self, const void* newChild);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#hasChildNodes)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-bool q_domcomment_has_child_nodes(void* self);
+bool q_domcomment_has_child_nodes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#cloneNode)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-QDomNode* q_domcomment_clone_node(void* self);
+QDomNode* q_domcomment_clone_node(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -6396,11 +6396,11 @@ void q_domcomment_normalize(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isSupported)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 /// @param feature const char*
 /// @param version const char*
 ///
-bool q_domcomment_is_supported(void* self, const char* feature, const char* version);
+bool q_domcomment_is_supported(const void* self, const char* feature, const char* version);
 
 /// Inherited from QDomNode
 ///
@@ -6408,73 +6408,73 @@ bool q_domcomment_is_supported(void* self, const char* feature, const char* vers
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-const char* q_domcomment_node_name(void* self);
+const char* q_domcomment_node_name(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#parentNode)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-QDomNode* q_domcomment_parent_node(void* self);
+QDomNode* q_domcomment_parent_node(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#childNodes)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-QDomNodeList* q_domcomment_child_nodes(void* self);
+QDomNodeList* q_domcomment_child_nodes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChild)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-QDomNode* q_domcomment_first_child(void* self);
+QDomNode* q_domcomment_first_child(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChild)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-QDomNode* q_domcomment_last_child(void* self);
+QDomNode* q_domcomment_last_child(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSibling)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-QDomNode* q_domcomment_previous_sibling(void* self);
+QDomNode* q_domcomment_previous_sibling(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSibling)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-QDomNode* q_domcomment_next_sibling(void* self);
+QDomNode* q_domcomment_next_sibling(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#attributes)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-QDomNamedNodeMap* q_domcomment_attributes(void* self);
+QDomNamedNodeMap* q_domcomment_attributes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#ownerDocument)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-QDomDocument* q_domcomment_owner_document(void* self);
+QDomDocument* q_domcomment_owner_document(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -6482,9 +6482,9 @@ QDomDocument* q_domcomment_owner_document(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-const char* q_domcomment_namespace_u_r_i(void* self);
+const char* q_domcomment_namespace_u_r_i(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -6492,17 +6492,17 @@ const char* q_domcomment_namespace_u_r_i(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-const char* q_domcomment_local_name(void* self);
+const char* q_domcomment_local_name(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#hasAttributes)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-bool q_domcomment_has_attributes(void* self);
+bool q_domcomment_has_attributes(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -6510,9 +6510,9 @@ bool q_domcomment_has_attributes(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-const char* q_domcomment_node_value(void* self);
+const char* q_domcomment_node_value(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -6529,9 +6529,9 @@ void q_domcomment_set_node_value(void* self, const char* value);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-const char* q_domcomment_prefix(void* self);
+const char* q_domcomment_prefix(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -6546,122 +6546,122 @@ void q_domcomment_set_prefix(void* self, const char* pre);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isAttr)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-bool q_domcomment_is_attr(void* self);
+bool q_domcomment_is_attr(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isCDATASection)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-bool q_domcomment_is_c_d_a_t_a_section(void* self);
+bool q_domcomment_is_c_d_a_t_a_section(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocumentFragment)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-bool q_domcomment_is_document_fragment(void* self);
+bool q_domcomment_is_document_fragment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocument)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-bool q_domcomment_is_document(void* self);
+bool q_domcomment_is_document(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocumentType)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-bool q_domcomment_is_document_type(void* self);
+bool q_domcomment_is_document_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isElement)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-bool q_domcomment_is_element(void* self);
+bool q_domcomment_is_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isEntityReference)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-bool q_domcomment_is_entity_reference(void* self);
+bool q_domcomment_is_entity_reference(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isText)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-bool q_domcomment_is_text(void* self);
+bool q_domcomment_is_text(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isEntity)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-bool q_domcomment_is_entity(void* self);
+bool q_domcomment_is_entity(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isNotation)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-bool q_domcomment_is_notation(void* self);
+bool q_domcomment_is_notation(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isProcessingInstruction)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-bool q_domcomment_is_processing_instruction(void* self);
+bool q_domcomment_is_processing_instruction(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isCharacterData)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-bool q_domcomment_is_character_data(void* self);
+bool q_domcomment_is_character_data(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isComment)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-bool q_domcomment_is_comment(void* self);
+bool q_domcomment_is_comment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#namedItem)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 /// @param name const char*
 ///
-QDomNode* q_domcomment_named_item(void* self, const char* name);
+QDomNode* q_domcomment_named_item(const void* self, const char* name);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isNull)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-bool q_domcomment_is_null(void* self);
+bool q_domcomment_is_null(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -6675,259 +6675,259 @@ void q_domcomment_clear(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toAttr)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-QDomAttr* q_domcomment_to_attr(void* self);
+QDomAttr* q_domcomment_to_attr(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toCDATASection)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-QDomCDATASection* q_domcomment_to_c_d_a_t_a_section(void* self);
+QDomCDATASection* q_domcomment_to_c_d_a_t_a_section(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocumentFragment)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-QDomDocumentFragment* q_domcomment_to_document_fragment(void* self);
+QDomDocumentFragment* q_domcomment_to_document_fragment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocument)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-QDomDocument* q_domcomment_to_document(void* self);
+QDomDocument* q_domcomment_to_document(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocumentType)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-QDomDocumentType* q_domcomment_to_document_type(void* self);
+QDomDocumentType* q_domcomment_to_document_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toElement)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-QDomElement* q_domcomment_to_element(void* self);
+QDomElement* q_domcomment_to_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toEntityReference)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-QDomEntityReference* q_domcomment_to_entity_reference(void* self);
+QDomEntityReference* q_domcomment_to_entity_reference(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toText)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-QDomText* q_domcomment_to_text(void* self);
+QDomText* q_domcomment_to_text(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toEntity)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-QDomEntity* q_domcomment_to_entity(void* self);
+QDomEntity* q_domcomment_to_entity(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toNotation)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-QDomNotation* q_domcomment_to_notation(void* self);
+QDomNotation* q_domcomment_to_notation(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toProcessingInstruction)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-QDomProcessingInstruction* q_domcomment_to_processing_instruction(void* self);
+QDomProcessingInstruction* q_domcomment_to_processing_instruction(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toCharacterData)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-QDomCharacterData* q_domcomment_to_character_data(void* self);
+QDomCharacterData* q_domcomment_to_character_data(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toComment)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-QDomComment* q_domcomment_to_comment(void* self);
+QDomComment* q_domcomment_to_comment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#save)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 /// @param param1 QTextStream*
 /// @param param2 int
 ///
-void q_domcomment_save(void* self, void* param1, int param2);
+void q_domcomment_save(const void* self, void* param1, int param2);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-QDomElement* q_domcomment_first_child_element(void* self);
+QDomElement* q_domcomment_first_child_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-QDomElement* q_domcomment_last_child_element(void* self);
+QDomElement* q_domcomment_last_child_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-QDomElement* q_domcomment_previous_sibling_element(void* self);
+QDomElement* q_domcomment_previous_sibling_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-QDomElement* q_domcomment_next_sibling_element(void* self);
+QDomElement* q_domcomment_next_sibling_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lineNumber)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-int32_t q_domcomment_line_number(void* self);
+int32_t q_domcomment_line_number(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#columnNumber)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 ///
-int32_t q_domcomment_column_number(void* self);
+int32_t q_domcomment_column_number(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#cloneNode)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 /// @param deep bool
 ///
-QDomNode* q_domcomment_clone_node1(void* self, bool deep);
+QDomNode* q_domcomment_clone_node1(const void* self, bool deep);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#save)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 /// @param param1 QTextStream*
 /// @param param2 int
 /// @param param3 enum QDomNode__EncodingPolicy
 ///
-void q_domcomment_save3(void* self, void* param1, int param2, int32_t param3);
+void q_domcomment_save3(const void* self, void* param1, int param2, int32_t param3);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 /// @param tagName const char*
 ///
-QDomElement* q_domcomment_first_child_element1(void* self, const char* tagName);
+QDomElement* q_domcomment_first_child_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domcomment_first_child_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domcomment_first_child_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 /// @param tagName const char*
 ///
-QDomElement* q_domcomment_last_child_element1(void* self, const char* tagName);
+QDomElement* q_domcomment_last_child_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domcomment_last_child_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domcomment_last_child_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 /// @param tagName const char*
 ///
-QDomElement* q_domcomment_previous_sibling_element1(void* self, const char* tagName);
+QDomElement* q_domcomment_previous_sibling_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domcomment_previous_sibling_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domcomment_previous_sibling_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 /// @param taName const char*
 ///
-QDomElement* q_domcomment_next_sibling_element1(void* self, const char* taName);
+QDomElement* q_domcomment_next_sibling_element1(const void* self, const char* taName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomComment*
+/// @param self const QDomComment*
 /// @param taName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domcomment_next_sibling_element2(void* self, const char* taName, const char* namespaceURI);
+QDomElement* q_domcomment_next_sibling_element2(const void* self, const char* taName, const char* namespaceURI);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcomment.html#dtor.QDomComment)
 ///
@@ -6949,22 +6949,22 @@ QDomCDATASection* q_domcdatasection_new();
 ///
 /// @param cdataSection QDomCDATASection*
 ///
-QDomCDATASection* q_domcdatasection_new2(void* cdataSection);
+QDomCDATASection* q_domcdatasection_new2(const void* cdataSection);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcdatasection.html#operator-eq)
 ///
 /// @param self QDomCDATASection*
 /// @param other QDomCDATASection*
 ///
-void q_domcdatasection_operator_assign(void* self, void* other);
+void q_domcdatasection_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcdatasection.html#nodeType)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
 /// @return enum QDomNode__NodeType
 ///
-int32_t q_domcdatasection_node_type(void* self);
+int32_t q_domcdatasection_node_type(const void* self);
 
 /// Inherited from QDomText
 ///
@@ -7031,9 +7031,9 @@ void q_domcdatasection_replace_data(void* self, uintptr_t offset, uintptr_t coun
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#length)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-int32_t q_domcdatasection_length(void* self);
+int32_t q_domcdatasection_length(const void* self);
 
 /// Inherited from QDomCharacterData
 ///
@@ -7041,9 +7041,9 @@ int32_t q_domcdatasection_length(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-const char* q_domcdatasection_data(void* self);
+const char* q_domcdatasection_data(const void* self);
 
 /// Inherited from QDomCharacterData
 ///
@@ -7058,19 +7058,19 @@ void q_domcdatasection_set_data(void* self, const char* data);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#operator-eq-eq)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 /// @param other QDomNode*
 ///
-bool q_domcdatasection_operator_equal(void* self, void* other);
+bool q_domcdatasection_operator_equal(const void* self, const void* other);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#operator-not-eq)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 /// @param other QDomNode*
 ///
-bool q_domcdatasection_operator_not_equal(void* self, void* other);
+bool q_domcdatasection_operator_not_equal(const void* self, const void* other);
 
 /// Inherited from QDomNode
 ///
@@ -7080,7 +7080,7 @@ bool q_domcdatasection_operator_not_equal(void* self, void* other);
 /// @param newChild QDomNode*
 /// @param refChild QDomNode*
 ///
-QDomNode* q_domcdatasection_insert_before(void* self, void* newChild, void* refChild);
+QDomNode* q_domcdatasection_insert_before(void* self, const void* newChild, const void* refChild);
 
 /// Inherited from QDomNode
 ///
@@ -7090,7 +7090,7 @@ QDomNode* q_domcdatasection_insert_before(void* self, void* newChild, void* refC
 /// @param newChild QDomNode*
 /// @param refChild QDomNode*
 ///
-QDomNode* q_domcdatasection_insert_after(void* self, void* newChild, void* refChild);
+QDomNode* q_domcdatasection_insert_after(void* self, const void* newChild, const void* refChild);
 
 /// Inherited from QDomNode
 ///
@@ -7100,7 +7100,7 @@ QDomNode* q_domcdatasection_insert_after(void* self, void* newChild, void* refCh
 /// @param newChild QDomNode*
 /// @param oldChild QDomNode*
 ///
-QDomNode* q_domcdatasection_replace_child(void* self, void* newChild, void* oldChild);
+QDomNode* q_domcdatasection_replace_child(void* self, const void* newChild, const void* oldChild);
 
 /// Inherited from QDomNode
 ///
@@ -7109,7 +7109,7 @@ QDomNode* q_domcdatasection_replace_child(void* self, void* newChild, void* oldC
 /// @param self QDomCDATASection*
 /// @param oldChild QDomNode*
 ///
-QDomNode* q_domcdatasection_remove_child(void* self, void* oldChild);
+QDomNode* q_domcdatasection_remove_child(void* self, const void* oldChild);
 
 /// Inherited from QDomNode
 ///
@@ -7118,23 +7118,23 @@ QDomNode* q_domcdatasection_remove_child(void* self, void* oldChild);
 /// @param self QDomCDATASection*
 /// @param newChild QDomNode*
 ///
-QDomNode* q_domcdatasection_append_child(void* self, void* newChild);
+QDomNode* q_domcdatasection_append_child(void* self, const void* newChild);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#hasChildNodes)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-bool q_domcdatasection_has_child_nodes(void* self);
+bool q_domcdatasection_has_child_nodes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#cloneNode)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-QDomNode* q_domcdatasection_clone_node(void* self);
+QDomNode* q_domcdatasection_clone_node(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -7148,11 +7148,11 @@ void q_domcdatasection_normalize(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isSupported)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 /// @param feature const char*
 /// @param version const char*
 ///
-bool q_domcdatasection_is_supported(void* self, const char* feature, const char* version);
+bool q_domcdatasection_is_supported(const void* self, const char* feature, const char* version);
 
 /// Inherited from QDomNode
 ///
@@ -7160,73 +7160,73 @@ bool q_domcdatasection_is_supported(void* self, const char* feature, const char*
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-const char* q_domcdatasection_node_name(void* self);
+const char* q_domcdatasection_node_name(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#parentNode)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-QDomNode* q_domcdatasection_parent_node(void* self);
+QDomNode* q_domcdatasection_parent_node(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#childNodes)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-QDomNodeList* q_domcdatasection_child_nodes(void* self);
+QDomNodeList* q_domcdatasection_child_nodes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChild)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-QDomNode* q_domcdatasection_first_child(void* self);
+QDomNode* q_domcdatasection_first_child(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChild)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-QDomNode* q_domcdatasection_last_child(void* self);
+QDomNode* q_domcdatasection_last_child(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSibling)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-QDomNode* q_domcdatasection_previous_sibling(void* self);
+QDomNode* q_domcdatasection_previous_sibling(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSibling)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-QDomNode* q_domcdatasection_next_sibling(void* self);
+QDomNode* q_domcdatasection_next_sibling(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#attributes)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-QDomNamedNodeMap* q_domcdatasection_attributes(void* self);
+QDomNamedNodeMap* q_domcdatasection_attributes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#ownerDocument)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-QDomDocument* q_domcdatasection_owner_document(void* self);
+QDomDocument* q_domcdatasection_owner_document(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -7234,9 +7234,9 @@ QDomDocument* q_domcdatasection_owner_document(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-const char* q_domcdatasection_namespace_u_r_i(void* self);
+const char* q_domcdatasection_namespace_u_r_i(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -7244,17 +7244,17 @@ const char* q_domcdatasection_namespace_u_r_i(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-const char* q_domcdatasection_local_name(void* self);
+const char* q_domcdatasection_local_name(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#hasAttributes)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-bool q_domcdatasection_has_attributes(void* self);
+bool q_domcdatasection_has_attributes(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -7262,9 +7262,9 @@ bool q_domcdatasection_has_attributes(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-const char* q_domcdatasection_node_value(void* self);
+const char* q_domcdatasection_node_value(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -7281,9 +7281,9 @@ void q_domcdatasection_set_node_value(void* self, const char* value);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-const char* q_domcdatasection_prefix(void* self);
+const char* q_domcdatasection_prefix(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -7298,122 +7298,122 @@ void q_domcdatasection_set_prefix(void* self, const char* pre);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isAttr)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-bool q_domcdatasection_is_attr(void* self);
+bool q_domcdatasection_is_attr(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isCDATASection)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-bool q_domcdatasection_is_c_d_a_t_a_section(void* self);
+bool q_domcdatasection_is_c_d_a_t_a_section(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocumentFragment)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-bool q_domcdatasection_is_document_fragment(void* self);
+bool q_domcdatasection_is_document_fragment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocument)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-bool q_domcdatasection_is_document(void* self);
+bool q_domcdatasection_is_document(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocumentType)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-bool q_domcdatasection_is_document_type(void* self);
+bool q_domcdatasection_is_document_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isElement)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-bool q_domcdatasection_is_element(void* self);
+bool q_domcdatasection_is_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isEntityReference)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-bool q_domcdatasection_is_entity_reference(void* self);
+bool q_domcdatasection_is_entity_reference(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isText)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-bool q_domcdatasection_is_text(void* self);
+bool q_domcdatasection_is_text(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isEntity)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-bool q_domcdatasection_is_entity(void* self);
+bool q_domcdatasection_is_entity(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isNotation)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-bool q_domcdatasection_is_notation(void* self);
+bool q_domcdatasection_is_notation(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isProcessingInstruction)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-bool q_domcdatasection_is_processing_instruction(void* self);
+bool q_domcdatasection_is_processing_instruction(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isCharacterData)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-bool q_domcdatasection_is_character_data(void* self);
+bool q_domcdatasection_is_character_data(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isComment)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-bool q_domcdatasection_is_comment(void* self);
+bool q_domcdatasection_is_comment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#namedItem)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 /// @param name const char*
 ///
-QDomNode* q_domcdatasection_named_item(void* self, const char* name);
+QDomNode* q_domcdatasection_named_item(const void* self, const char* name);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isNull)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-bool q_domcdatasection_is_null(void* self);
+bool q_domcdatasection_is_null(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -7427,259 +7427,259 @@ void q_domcdatasection_clear(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toAttr)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-QDomAttr* q_domcdatasection_to_attr(void* self);
+QDomAttr* q_domcdatasection_to_attr(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toCDATASection)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-QDomCDATASection* q_domcdatasection_to_c_d_a_t_a_section(void* self);
+QDomCDATASection* q_domcdatasection_to_c_d_a_t_a_section(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocumentFragment)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-QDomDocumentFragment* q_domcdatasection_to_document_fragment(void* self);
+QDomDocumentFragment* q_domcdatasection_to_document_fragment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocument)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-QDomDocument* q_domcdatasection_to_document(void* self);
+QDomDocument* q_domcdatasection_to_document(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocumentType)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-QDomDocumentType* q_domcdatasection_to_document_type(void* self);
+QDomDocumentType* q_domcdatasection_to_document_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toElement)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-QDomElement* q_domcdatasection_to_element(void* self);
+QDomElement* q_domcdatasection_to_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toEntityReference)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-QDomEntityReference* q_domcdatasection_to_entity_reference(void* self);
+QDomEntityReference* q_domcdatasection_to_entity_reference(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toText)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-QDomText* q_domcdatasection_to_text(void* self);
+QDomText* q_domcdatasection_to_text(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toEntity)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-QDomEntity* q_domcdatasection_to_entity(void* self);
+QDomEntity* q_domcdatasection_to_entity(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toNotation)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-QDomNotation* q_domcdatasection_to_notation(void* self);
+QDomNotation* q_domcdatasection_to_notation(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toProcessingInstruction)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-QDomProcessingInstruction* q_domcdatasection_to_processing_instruction(void* self);
+QDomProcessingInstruction* q_domcdatasection_to_processing_instruction(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toCharacterData)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-QDomCharacterData* q_domcdatasection_to_character_data(void* self);
+QDomCharacterData* q_domcdatasection_to_character_data(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toComment)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-QDomComment* q_domcdatasection_to_comment(void* self);
+QDomComment* q_domcdatasection_to_comment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#save)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 /// @param param1 QTextStream*
 /// @param param2 int
 ///
-void q_domcdatasection_save(void* self, void* param1, int param2);
+void q_domcdatasection_save(const void* self, void* param1, int param2);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-QDomElement* q_domcdatasection_first_child_element(void* self);
+QDomElement* q_domcdatasection_first_child_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-QDomElement* q_domcdatasection_last_child_element(void* self);
+QDomElement* q_domcdatasection_last_child_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-QDomElement* q_domcdatasection_previous_sibling_element(void* self);
+QDomElement* q_domcdatasection_previous_sibling_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-QDomElement* q_domcdatasection_next_sibling_element(void* self);
+QDomElement* q_domcdatasection_next_sibling_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lineNumber)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-int32_t q_domcdatasection_line_number(void* self);
+int32_t q_domcdatasection_line_number(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#columnNumber)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 ///
-int32_t q_domcdatasection_column_number(void* self);
+int32_t q_domcdatasection_column_number(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#cloneNode)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 /// @param deep bool
 ///
-QDomNode* q_domcdatasection_clone_node1(void* self, bool deep);
+QDomNode* q_domcdatasection_clone_node1(const void* self, bool deep);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#save)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 /// @param param1 QTextStream*
 /// @param param2 int
 /// @param param3 enum QDomNode__EncodingPolicy
 ///
-void q_domcdatasection_save3(void* self, void* param1, int param2, int32_t param3);
+void q_domcdatasection_save3(const void* self, void* param1, int param2, int32_t param3);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 /// @param tagName const char*
 ///
-QDomElement* q_domcdatasection_first_child_element1(void* self, const char* tagName);
+QDomElement* q_domcdatasection_first_child_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domcdatasection_first_child_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domcdatasection_first_child_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 /// @param tagName const char*
 ///
-QDomElement* q_domcdatasection_last_child_element1(void* self, const char* tagName);
+QDomElement* q_domcdatasection_last_child_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domcdatasection_last_child_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domcdatasection_last_child_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 /// @param tagName const char*
 ///
-QDomElement* q_domcdatasection_previous_sibling_element1(void* self, const char* tagName);
+QDomElement* q_domcdatasection_previous_sibling_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domcdatasection_previous_sibling_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domcdatasection_previous_sibling_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 /// @param taName const char*
 ///
-QDomElement* q_domcdatasection_next_sibling_element1(void* self, const char* taName);
+QDomElement* q_domcdatasection_next_sibling_element1(const void* self, const char* taName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomCDATASection*
+/// @param self const QDomCDATASection*
 /// @param taName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domcdatasection_next_sibling_element2(void* self, const char* taName, const char* namespaceURI);
+QDomElement* q_domcdatasection_next_sibling_element2(const void* self, const char* taName, const char* namespaceURI);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcdatasection.html#dtor.QDomCDATASection)
 ///
@@ -7701,56 +7701,56 @@ QDomNotation* q_domnotation_new();
 ///
 /// @param notation QDomNotation*
 ///
-QDomNotation* q_domnotation_new2(void* notation);
+QDomNotation* q_domnotation_new2(const void* notation);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnotation.html#operator-eq)
 ///
 /// @param self QDomNotation*
 /// @param other QDomNotation*
 ///
-void q_domnotation_operator_assign(void* self, void* other);
+void q_domnotation_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnotation.html#publicId)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-const char* q_domnotation_public_id(void* self);
+const char* q_domnotation_public_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnotation.html#systemId)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-const char* q_domnotation_system_id(void* self);
+const char* q_domnotation_system_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnotation.html#nodeType)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
 /// @return enum QDomNode__NodeType
 ///
-int32_t q_domnotation_node_type(void* self);
+int32_t q_domnotation_node_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#operator-eq-eq)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 /// @param other QDomNode*
 ///
-bool q_domnotation_operator_equal(void* self, void* other);
+bool q_domnotation_operator_equal(const void* self, const void* other);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#operator-not-eq)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 /// @param other QDomNode*
 ///
-bool q_domnotation_operator_not_equal(void* self, void* other);
+bool q_domnotation_operator_not_equal(const void* self, const void* other);
 
 /// Inherited from QDomNode
 ///
@@ -7760,7 +7760,7 @@ bool q_domnotation_operator_not_equal(void* self, void* other);
 /// @param newChild QDomNode*
 /// @param refChild QDomNode*
 ///
-QDomNode* q_domnotation_insert_before(void* self, void* newChild, void* refChild);
+QDomNode* q_domnotation_insert_before(void* self, const void* newChild, const void* refChild);
 
 /// Inherited from QDomNode
 ///
@@ -7770,7 +7770,7 @@ QDomNode* q_domnotation_insert_before(void* self, void* newChild, void* refChild
 /// @param newChild QDomNode*
 /// @param refChild QDomNode*
 ///
-QDomNode* q_domnotation_insert_after(void* self, void* newChild, void* refChild);
+QDomNode* q_domnotation_insert_after(void* self, const void* newChild, const void* refChild);
 
 /// Inherited from QDomNode
 ///
@@ -7780,7 +7780,7 @@ QDomNode* q_domnotation_insert_after(void* self, void* newChild, void* refChild)
 /// @param newChild QDomNode*
 /// @param oldChild QDomNode*
 ///
-QDomNode* q_domnotation_replace_child(void* self, void* newChild, void* oldChild);
+QDomNode* q_domnotation_replace_child(void* self, const void* newChild, const void* oldChild);
 
 /// Inherited from QDomNode
 ///
@@ -7789,7 +7789,7 @@ QDomNode* q_domnotation_replace_child(void* self, void* newChild, void* oldChild
 /// @param self QDomNotation*
 /// @param oldChild QDomNode*
 ///
-QDomNode* q_domnotation_remove_child(void* self, void* oldChild);
+QDomNode* q_domnotation_remove_child(void* self, const void* oldChild);
 
 /// Inherited from QDomNode
 ///
@@ -7798,23 +7798,23 @@ QDomNode* q_domnotation_remove_child(void* self, void* oldChild);
 /// @param self QDomNotation*
 /// @param newChild QDomNode*
 ///
-QDomNode* q_domnotation_append_child(void* self, void* newChild);
+QDomNode* q_domnotation_append_child(void* self, const void* newChild);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#hasChildNodes)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-bool q_domnotation_has_child_nodes(void* self);
+bool q_domnotation_has_child_nodes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#cloneNode)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-QDomNode* q_domnotation_clone_node(void* self);
+QDomNode* q_domnotation_clone_node(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -7828,11 +7828,11 @@ void q_domnotation_normalize(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isSupported)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 /// @param feature const char*
 /// @param version const char*
 ///
-bool q_domnotation_is_supported(void* self, const char* feature, const char* version);
+bool q_domnotation_is_supported(const void* self, const char* feature, const char* version);
 
 /// Inherited from QDomNode
 ///
@@ -7840,73 +7840,73 @@ bool q_domnotation_is_supported(void* self, const char* feature, const char* ver
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-const char* q_domnotation_node_name(void* self);
+const char* q_domnotation_node_name(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#parentNode)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-QDomNode* q_domnotation_parent_node(void* self);
+QDomNode* q_domnotation_parent_node(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#childNodes)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-QDomNodeList* q_domnotation_child_nodes(void* self);
+QDomNodeList* q_domnotation_child_nodes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChild)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-QDomNode* q_domnotation_first_child(void* self);
+QDomNode* q_domnotation_first_child(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChild)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-QDomNode* q_domnotation_last_child(void* self);
+QDomNode* q_domnotation_last_child(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSibling)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-QDomNode* q_domnotation_previous_sibling(void* self);
+QDomNode* q_domnotation_previous_sibling(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSibling)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-QDomNode* q_domnotation_next_sibling(void* self);
+QDomNode* q_domnotation_next_sibling(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#attributes)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-QDomNamedNodeMap* q_domnotation_attributes(void* self);
+QDomNamedNodeMap* q_domnotation_attributes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#ownerDocument)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-QDomDocument* q_domnotation_owner_document(void* self);
+QDomDocument* q_domnotation_owner_document(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -7914,9 +7914,9 @@ QDomDocument* q_domnotation_owner_document(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-const char* q_domnotation_namespace_u_r_i(void* self);
+const char* q_domnotation_namespace_u_r_i(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -7924,17 +7924,17 @@ const char* q_domnotation_namespace_u_r_i(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-const char* q_domnotation_local_name(void* self);
+const char* q_domnotation_local_name(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#hasAttributes)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-bool q_domnotation_has_attributes(void* self);
+bool q_domnotation_has_attributes(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -7942,9 +7942,9 @@ bool q_domnotation_has_attributes(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-const char* q_domnotation_node_value(void* self);
+const char* q_domnotation_node_value(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -7961,9 +7961,9 @@ void q_domnotation_set_node_value(void* self, const char* value);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-const char* q_domnotation_prefix(void* self);
+const char* q_domnotation_prefix(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -7978,122 +7978,122 @@ void q_domnotation_set_prefix(void* self, const char* pre);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isAttr)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-bool q_domnotation_is_attr(void* self);
+bool q_domnotation_is_attr(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isCDATASection)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-bool q_domnotation_is_c_d_a_t_a_section(void* self);
+bool q_domnotation_is_c_d_a_t_a_section(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocumentFragment)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-bool q_domnotation_is_document_fragment(void* self);
+bool q_domnotation_is_document_fragment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocument)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-bool q_domnotation_is_document(void* self);
+bool q_domnotation_is_document(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocumentType)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-bool q_domnotation_is_document_type(void* self);
+bool q_domnotation_is_document_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isElement)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-bool q_domnotation_is_element(void* self);
+bool q_domnotation_is_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isEntityReference)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-bool q_domnotation_is_entity_reference(void* self);
+bool q_domnotation_is_entity_reference(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isText)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-bool q_domnotation_is_text(void* self);
+bool q_domnotation_is_text(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isEntity)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-bool q_domnotation_is_entity(void* self);
+bool q_domnotation_is_entity(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isNotation)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-bool q_domnotation_is_notation(void* self);
+bool q_domnotation_is_notation(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isProcessingInstruction)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-bool q_domnotation_is_processing_instruction(void* self);
+bool q_domnotation_is_processing_instruction(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isCharacterData)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-bool q_domnotation_is_character_data(void* self);
+bool q_domnotation_is_character_data(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isComment)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-bool q_domnotation_is_comment(void* self);
+bool q_domnotation_is_comment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#namedItem)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 /// @param name const char*
 ///
-QDomNode* q_domnotation_named_item(void* self, const char* name);
+QDomNode* q_domnotation_named_item(const void* self, const char* name);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isNull)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-bool q_domnotation_is_null(void* self);
+bool q_domnotation_is_null(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -8107,259 +8107,259 @@ void q_domnotation_clear(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toAttr)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-QDomAttr* q_domnotation_to_attr(void* self);
+QDomAttr* q_domnotation_to_attr(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toCDATASection)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-QDomCDATASection* q_domnotation_to_c_d_a_t_a_section(void* self);
+QDomCDATASection* q_domnotation_to_c_d_a_t_a_section(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocumentFragment)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-QDomDocumentFragment* q_domnotation_to_document_fragment(void* self);
+QDomDocumentFragment* q_domnotation_to_document_fragment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocument)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-QDomDocument* q_domnotation_to_document(void* self);
+QDomDocument* q_domnotation_to_document(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocumentType)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-QDomDocumentType* q_domnotation_to_document_type(void* self);
+QDomDocumentType* q_domnotation_to_document_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toElement)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-QDomElement* q_domnotation_to_element(void* self);
+QDomElement* q_domnotation_to_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toEntityReference)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-QDomEntityReference* q_domnotation_to_entity_reference(void* self);
+QDomEntityReference* q_domnotation_to_entity_reference(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toText)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-QDomText* q_domnotation_to_text(void* self);
+QDomText* q_domnotation_to_text(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toEntity)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-QDomEntity* q_domnotation_to_entity(void* self);
+QDomEntity* q_domnotation_to_entity(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toNotation)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-QDomNotation* q_domnotation_to_notation(void* self);
+QDomNotation* q_domnotation_to_notation(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toProcessingInstruction)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-QDomProcessingInstruction* q_domnotation_to_processing_instruction(void* self);
+QDomProcessingInstruction* q_domnotation_to_processing_instruction(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toCharacterData)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-QDomCharacterData* q_domnotation_to_character_data(void* self);
+QDomCharacterData* q_domnotation_to_character_data(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toComment)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-QDomComment* q_domnotation_to_comment(void* self);
+QDomComment* q_domnotation_to_comment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#save)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 /// @param param1 QTextStream*
 /// @param param2 int
 ///
-void q_domnotation_save(void* self, void* param1, int param2);
+void q_domnotation_save(const void* self, void* param1, int param2);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-QDomElement* q_domnotation_first_child_element(void* self);
+QDomElement* q_domnotation_first_child_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-QDomElement* q_domnotation_last_child_element(void* self);
+QDomElement* q_domnotation_last_child_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-QDomElement* q_domnotation_previous_sibling_element(void* self);
+QDomElement* q_domnotation_previous_sibling_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-QDomElement* q_domnotation_next_sibling_element(void* self);
+QDomElement* q_domnotation_next_sibling_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lineNumber)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-int32_t q_domnotation_line_number(void* self);
+int32_t q_domnotation_line_number(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#columnNumber)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 ///
-int32_t q_domnotation_column_number(void* self);
+int32_t q_domnotation_column_number(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#cloneNode)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 /// @param deep bool
 ///
-QDomNode* q_domnotation_clone_node1(void* self, bool deep);
+QDomNode* q_domnotation_clone_node1(const void* self, bool deep);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#save)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 /// @param param1 QTextStream*
 /// @param param2 int
 /// @param param3 enum QDomNode__EncodingPolicy
 ///
-void q_domnotation_save3(void* self, void* param1, int param2, int32_t param3);
+void q_domnotation_save3(const void* self, void* param1, int param2, int32_t param3);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 /// @param tagName const char*
 ///
-QDomElement* q_domnotation_first_child_element1(void* self, const char* tagName);
+QDomElement* q_domnotation_first_child_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domnotation_first_child_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domnotation_first_child_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 /// @param tagName const char*
 ///
-QDomElement* q_domnotation_last_child_element1(void* self, const char* tagName);
+QDomElement* q_domnotation_last_child_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domnotation_last_child_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domnotation_last_child_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 /// @param tagName const char*
 ///
-QDomElement* q_domnotation_previous_sibling_element1(void* self, const char* tagName);
+QDomElement* q_domnotation_previous_sibling_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domnotation_previous_sibling_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domnotation_previous_sibling_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 /// @param taName const char*
 ///
-QDomElement* q_domnotation_next_sibling_element1(void* self, const char* taName);
+QDomElement* q_domnotation_next_sibling_element1(const void* self, const char* taName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomNotation*
+/// @param self const QDomNotation*
 /// @param taName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domnotation_next_sibling_element2(void* self, const char* taName, const char* namespaceURI);
+QDomElement* q_domnotation_next_sibling_element2(const void* self, const char* taName, const char* namespaceURI);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnotation.html#dtor.QDomNotation)
 ///
@@ -8381,64 +8381,64 @@ QDomEntity* q_domentity_new();
 ///
 /// @param entity QDomEntity*
 ///
-QDomEntity* q_domentity_new2(void* entity);
+QDomEntity* q_domentity_new2(const void* entity);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomentity.html#operator-eq)
 ///
 /// @param self QDomEntity*
 /// @param other QDomEntity*
 ///
-void q_domentity_operator_assign(void* self, void* other);
+void q_domentity_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomentity.html#publicId)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-const char* q_domentity_public_id(void* self);
+const char* q_domentity_public_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomentity.html#systemId)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-const char* q_domentity_system_id(void* self);
+const char* q_domentity_system_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomentity.html#notationName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-const char* q_domentity_notation_name(void* self);
+const char* q_domentity_notation_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomentity.html#nodeType)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
 /// @return enum QDomNode__NodeType
 ///
-int32_t q_domentity_node_type(void* self);
+int32_t q_domentity_node_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#operator-eq-eq)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 /// @param other QDomNode*
 ///
-bool q_domentity_operator_equal(void* self, void* other);
+bool q_domentity_operator_equal(const void* self, const void* other);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#operator-not-eq)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 /// @param other QDomNode*
 ///
-bool q_domentity_operator_not_equal(void* self, void* other);
+bool q_domentity_operator_not_equal(const void* self, const void* other);
 
 /// Inherited from QDomNode
 ///
@@ -8448,7 +8448,7 @@ bool q_domentity_operator_not_equal(void* self, void* other);
 /// @param newChild QDomNode*
 /// @param refChild QDomNode*
 ///
-QDomNode* q_domentity_insert_before(void* self, void* newChild, void* refChild);
+QDomNode* q_domentity_insert_before(void* self, const void* newChild, const void* refChild);
 
 /// Inherited from QDomNode
 ///
@@ -8458,7 +8458,7 @@ QDomNode* q_domentity_insert_before(void* self, void* newChild, void* refChild);
 /// @param newChild QDomNode*
 /// @param refChild QDomNode*
 ///
-QDomNode* q_domentity_insert_after(void* self, void* newChild, void* refChild);
+QDomNode* q_domentity_insert_after(void* self, const void* newChild, const void* refChild);
 
 /// Inherited from QDomNode
 ///
@@ -8468,7 +8468,7 @@ QDomNode* q_domentity_insert_after(void* self, void* newChild, void* refChild);
 /// @param newChild QDomNode*
 /// @param oldChild QDomNode*
 ///
-QDomNode* q_domentity_replace_child(void* self, void* newChild, void* oldChild);
+QDomNode* q_domentity_replace_child(void* self, const void* newChild, const void* oldChild);
 
 /// Inherited from QDomNode
 ///
@@ -8477,7 +8477,7 @@ QDomNode* q_domentity_replace_child(void* self, void* newChild, void* oldChild);
 /// @param self QDomEntity*
 /// @param oldChild QDomNode*
 ///
-QDomNode* q_domentity_remove_child(void* self, void* oldChild);
+QDomNode* q_domentity_remove_child(void* self, const void* oldChild);
 
 /// Inherited from QDomNode
 ///
@@ -8486,23 +8486,23 @@ QDomNode* q_domentity_remove_child(void* self, void* oldChild);
 /// @param self QDomEntity*
 /// @param newChild QDomNode*
 ///
-QDomNode* q_domentity_append_child(void* self, void* newChild);
+QDomNode* q_domentity_append_child(void* self, const void* newChild);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#hasChildNodes)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-bool q_domentity_has_child_nodes(void* self);
+bool q_domentity_has_child_nodes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#cloneNode)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-QDomNode* q_domentity_clone_node(void* self);
+QDomNode* q_domentity_clone_node(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -8516,11 +8516,11 @@ void q_domentity_normalize(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isSupported)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 /// @param feature const char*
 /// @param version const char*
 ///
-bool q_domentity_is_supported(void* self, const char* feature, const char* version);
+bool q_domentity_is_supported(const void* self, const char* feature, const char* version);
 
 /// Inherited from QDomNode
 ///
@@ -8528,73 +8528,73 @@ bool q_domentity_is_supported(void* self, const char* feature, const char* versi
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-const char* q_domentity_node_name(void* self);
+const char* q_domentity_node_name(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#parentNode)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-QDomNode* q_domentity_parent_node(void* self);
+QDomNode* q_domentity_parent_node(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#childNodes)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-QDomNodeList* q_domentity_child_nodes(void* self);
+QDomNodeList* q_domentity_child_nodes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChild)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-QDomNode* q_domentity_first_child(void* self);
+QDomNode* q_domentity_first_child(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChild)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-QDomNode* q_domentity_last_child(void* self);
+QDomNode* q_domentity_last_child(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSibling)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-QDomNode* q_domentity_previous_sibling(void* self);
+QDomNode* q_domentity_previous_sibling(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSibling)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-QDomNode* q_domentity_next_sibling(void* self);
+QDomNode* q_domentity_next_sibling(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#attributes)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-QDomNamedNodeMap* q_domentity_attributes(void* self);
+QDomNamedNodeMap* q_domentity_attributes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#ownerDocument)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-QDomDocument* q_domentity_owner_document(void* self);
+QDomDocument* q_domentity_owner_document(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -8602,9 +8602,9 @@ QDomDocument* q_domentity_owner_document(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-const char* q_domentity_namespace_u_r_i(void* self);
+const char* q_domentity_namespace_u_r_i(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -8612,17 +8612,17 @@ const char* q_domentity_namespace_u_r_i(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-const char* q_domentity_local_name(void* self);
+const char* q_domentity_local_name(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#hasAttributes)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-bool q_domentity_has_attributes(void* self);
+bool q_domentity_has_attributes(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -8630,9 +8630,9 @@ bool q_domentity_has_attributes(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-const char* q_domentity_node_value(void* self);
+const char* q_domentity_node_value(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -8649,9 +8649,9 @@ void q_domentity_set_node_value(void* self, const char* value);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-const char* q_domentity_prefix(void* self);
+const char* q_domentity_prefix(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -8666,122 +8666,122 @@ void q_domentity_set_prefix(void* self, const char* pre);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isAttr)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-bool q_domentity_is_attr(void* self);
+bool q_domentity_is_attr(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isCDATASection)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-bool q_domentity_is_c_d_a_t_a_section(void* self);
+bool q_domentity_is_c_d_a_t_a_section(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocumentFragment)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-bool q_domentity_is_document_fragment(void* self);
+bool q_domentity_is_document_fragment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocument)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-bool q_domentity_is_document(void* self);
+bool q_domentity_is_document(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocumentType)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-bool q_domentity_is_document_type(void* self);
+bool q_domentity_is_document_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isElement)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-bool q_domentity_is_element(void* self);
+bool q_domentity_is_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isEntityReference)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-bool q_domentity_is_entity_reference(void* self);
+bool q_domentity_is_entity_reference(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isText)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-bool q_domentity_is_text(void* self);
+bool q_domentity_is_text(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isEntity)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-bool q_domentity_is_entity(void* self);
+bool q_domentity_is_entity(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isNotation)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-bool q_domentity_is_notation(void* self);
+bool q_domentity_is_notation(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isProcessingInstruction)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-bool q_domentity_is_processing_instruction(void* self);
+bool q_domentity_is_processing_instruction(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isCharacterData)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-bool q_domentity_is_character_data(void* self);
+bool q_domentity_is_character_data(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isComment)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-bool q_domentity_is_comment(void* self);
+bool q_domentity_is_comment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#namedItem)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 /// @param name const char*
 ///
-QDomNode* q_domentity_named_item(void* self, const char* name);
+QDomNode* q_domentity_named_item(const void* self, const char* name);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isNull)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-bool q_domentity_is_null(void* self);
+bool q_domentity_is_null(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -8795,259 +8795,259 @@ void q_domentity_clear(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toAttr)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-QDomAttr* q_domentity_to_attr(void* self);
+QDomAttr* q_domentity_to_attr(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toCDATASection)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-QDomCDATASection* q_domentity_to_c_d_a_t_a_section(void* self);
+QDomCDATASection* q_domentity_to_c_d_a_t_a_section(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocumentFragment)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-QDomDocumentFragment* q_domentity_to_document_fragment(void* self);
+QDomDocumentFragment* q_domentity_to_document_fragment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocument)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-QDomDocument* q_domentity_to_document(void* self);
+QDomDocument* q_domentity_to_document(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocumentType)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-QDomDocumentType* q_domentity_to_document_type(void* self);
+QDomDocumentType* q_domentity_to_document_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toElement)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-QDomElement* q_domentity_to_element(void* self);
+QDomElement* q_domentity_to_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toEntityReference)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-QDomEntityReference* q_domentity_to_entity_reference(void* self);
+QDomEntityReference* q_domentity_to_entity_reference(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toText)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-QDomText* q_domentity_to_text(void* self);
+QDomText* q_domentity_to_text(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toEntity)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-QDomEntity* q_domentity_to_entity(void* self);
+QDomEntity* q_domentity_to_entity(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toNotation)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-QDomNotation* q_domentity_to_notation(void* self);
+QDomNotation* q_domentity_to_notation(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toProcessingInstruction)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-QDomProcessingInstruction* q_domentity_to_processing_instruction(void* self);
+QDomProcessingInstruction* q_domentity_to_processing_instruction(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toCharacterData)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-QDomCharacterData* q_domentity_to_character_data(void* self);
+QDomCharacterData* q_domentity_to_character_data(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toComment)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-QDomComment* q_domentity_to_comment(void* self);
+QDomComment* q_domentity_to_comment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#save)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 /// @param param1 QTextStream*
 /// @param param2 int
 ///
-void q_domentity_save(void* self, void* param1, int param2);
+void q_domentity_save(const void* self, void* param1, int param2);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-QDomElement* q_domentity_first_child_element(void* self);
+QDomElement* q_domentity_first_child_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-QDomElement* q_domentity_last_child_element(void* self);
+QDomElement* q_domentity_last_child_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-QDomElement* q_domentity_previous_sibling_element(void* self);
+QDomElement* q_domentity_previous_sibling_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-QDomElement* q_domentity_next_sibling_element(void* self);
+QDomElement* q_domentity_next_sibling_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lineNumber)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-int32_t q_domentity_line_number(void* self);
+int32_t q_domentity_line_number(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#columnNumber)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 ///
-int32_t q_domentity_column_number(void* self);
+int32_t q_domentity_column_number(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#cloneNode)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 /// @param deep bool
 ///
-QDomNode* q_domentity_clone_node1(void* self, bool deep);
+QDomNode* q_domentity_clone_node1(const void* self, bool deep);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#save)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 /// @param param1 QTextStream*
 /// @param param2 int
 /// @param param3 enum QDomNode__EncodingPolicy
 ///
-void q_domentity_save3(void* self, void* param1, int param2, int32_t param3);
+void q_domentity_save3(const void* self, void* param1, int param2, int32_t param3);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 /// @param tagName const char*
 ///
-QDomElement* q_domentity_first_child_element1(void* self, const char* tagName);
+QDomElement* q_domentity_first_child_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domentity_first_child_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domentity_first_child_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 /// @param tagName const char*
 ///
-QDomElement* q_domentity_last_child_element1(void* self, const char* tagName);
+QDomElement* q_domentity_last_child_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domentity_last_child_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domentity_last_child_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 /// @param tagName const char*
 ///
-QDomElement* q_domentity_previous_sibling_element1(void* self, const char* tagName);
+QDomElement* q_domentity_previous_sibling_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domentity_previous_sibling_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domentity_previous_sibling_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 /// @param taName const char*
 ///
-QDomElement* q_domentity_next_sibling_element1(void* self, const char* taName);
+QDomElement* q_domentity_next_sibling_element1(const void* self, const char* taName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomEntity*
+/// @param self const QDomEntity*
 /// @param taName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domentity_next_sibling_element2(void* self, const char* taName, const char* namespaceURI);
+QDomElement* q_domentity_next_sibling_element2(const void* self, const char* taName, const char* namespaceURI);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomentity.html#dtor.QDomEntity)
 ///
@@ -9069,40 +9069,40 @@ QDomEntityReference* q_domentityreference_new();
 ///
 /// @param entityReference QDomEntityReference*
 ///
-QDomEntityReference* q_domentityreference_new2(void* entityReference);
+QDomEntityReference* q_domentityreference_new2(const void* entityReference);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomentityreference.html#operator-eq)
 ///
 /// @param self QDomEntityReference*
 /// @param other QDomEntityReference*
 ///
-void q_domentityreference_operator_assign(void* self, void* other);
+void q_domentityreference_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomentityreference.html#nodeType)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
 /// @return enum QDomNode__NodeType
 ///
-int32_t q_domentityreference_node_type(void* self);
+int32_t q_domentityreference_node_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#operator-eq-eq)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 /// @param other QDomNode*
 ///
-bool q_domentityreference_operator_equal(void* self, void* other);
+bool q_domentityreference_operator_equal(const void* self, const void* other);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#operator-not-eq)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 /// @param other QDomNode*
 ///
-bool q_domentityreference_operator_not_equal(void* self, void* other);
+bool q_domentityreference_operator_not_equal(const void* self, const void* other);
 
 /// Inherited from QDomNode
 ///
@@ -9112,7 +9112,7 @@ bool q_domentityreference_operator_not_equal(void* self, void* other);
 /// @param newChild QDomNode*
 /// @param refChild QDomNode*
 ///
-QDomNode* q_domentityreference_insert_before(void* self, void* newChild, void* refChild);
+QDomNode* q_domentityreference_insert_before(void* self, const void* newChild, const void* refChild);
 
 /// Inherited from QDomNode
 ///
@@ -9122,7 +9122,7 @@ QDomNode* q_domentityreference_insert_before(void* self, void* newChild, void* r
 /// @param newChild QDomNode*
 /// @param refChild QDomNode*
 ///
-QDomNode* q_domentityreference_insert_after(void* self, void* newChild, void* refChild);
+QDomNode* q_domentityreference_insert_after(void* self, const void* newChild, const void* refChild);
 
 /// Inherited from QDomNode
 ///
@@ -9132,7 +9132,7 @@ QDomNode* q_domentityreference_insert_after(void* self, void* newChild, void* re
 /// @param newChild QDomNode*
 /// @param oldChild QDomNode*
 ///
-QDomNode* q_domentityreference_replace_child(void* self, void* newChild, void* oldChild);
+QDomNode* q_domentityreference_replace_child(void* self, const void* newChild, const void* oldChild);
 
 /// Inherited from QDomNode
 ///
@@ -9141,7 +9141,7 @@ QDomNode* q_domentityreference_replace_child(void* self, void* newChild, void* o
 /// @param self QDomEntityReference*
 /// @param oldChild QDomNode*
 ///
-QDomNode* q_domentityreference_remove_child(void* self, void* oldChild);
+QDomNode* q_domentityreference_remove_child(void* self, const void* oldChild);
 
 /// Inherited from QDomNode
 ///
@@ -9150,23 +9150,23 @@ QDomNode* q_domentityreference_remove_child(void* self, void* oldChild);
 /// @param self QDomEntityReference*
 /// @param newChild QDomNode*
 ///
-QDomNode* q_domentityreference_append_child(void* self, void* newChild);
+QDomNode* q_domentityreference_append_child(void* self, const void* newChild);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#hasChildNodes)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-bool q_domentityreference_has_child_nodes(void* self);
+bool q_domentityreference_has_child_nodes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#cloneNode)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-QDomNode* q_domentityreference_clone_node(void* self);
+QDomNode* q_domentityreference_clone_node(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -9180,11 +9180,11 @@ void q_domentityreference_normalize(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isSupported)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 /// @param feature const char*
 /// @param version const char*
 ///
-bool q_domentityreference_is_supported(void* self, const char* feature, const char* version);
+bool q_domentityreference_is_supported(const void* self, const char* feature, const char* version);
 
 /// Inherited from QDomNode
 ///
@@ -9192,73 +9192,73 @@ bool q_domentityreference_is_supported(void* self, const char* feature, const ch
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-const char* q_domentityreference_node_name(void* self);
+const char* q_domentityreference_node_name(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#parentNode)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-QDomNode* q_domentityreference_parent_node(void* self);
+QDomNode* q_domentityreference_parent_node(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#childNodes)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-QDomNodeList* q_domentityreference_child_nodes(void* self);
+QDomNodeList* q_domentityreference_child_nodes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChild)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-QDomNode* q_domentityreference_first_child(void* self);
+QDomNode* q_domentityreference_first_child(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChild)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-QDomNode* q_domentityreference_last_child(void* self);
+QDomNode* q_domentityreference_last_child(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSibling)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-QDomNode* q_domentityreference_previous_sibling(void* self);
+QDomNode* q_domentityreference_previous_sibling(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSibling)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-QDomNode* q_domentityreference_next_sibling(void* self);
+QDomNode* q_domentityreference_next_sibling(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#attributes)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-QDomNamedNodeMap* q_domentityreference_attributes(void* self);
+QDomNamedNodeMap* q_domentityreference_attributes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#ownerDocument)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-QDomDocument* q_domentityreference_owner_document(void* self);
+QDomDocument* q_domentityreference_owner_document(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -9266,9 +9266,9 @@ QDomDocument* q_domentityreference_owner_document(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-const char* q_domentityreference_namespace_u_r_i(void* self);
+const char* q_domentityreference_namespace_u_r_i(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -9276,17 +9276,17 @@ const char* q_domentityreference_namespace_u_r_i(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-const char* q_domentityreference_local_name(void* self);
+const char* q_domentityreference_local_name(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#hasAttributes)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-bool q_domentityreference_has_attributes(void* self);
+bool q_domentityreference_has_attributes(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -9294,9 +9294,9 @@ bool q_domentityreference_has_attributes(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-const char* q_domentityreference_node_value(void* self);
+const char* q_domentityreference_node_value(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -9313,9 +9313,9 @@ void q_domentityreference_set_node_value(void* self, const char* value);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-const char* q_domentityreference_prefix(void* self);
+const char* q_domentityreference_prefix(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -9330,122 +9330,122 @@ void q_domentityreference_set_prefix(void* self, const char* pre);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isAttr)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-bool q_domentityreference_is_attr(void* self);
+bool q_domentityreference_is_attr(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isCDATASection)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-bool q_domentityreference_is_c_d_a_t_a_section(void* self);
+bool q_domentityreference_is_c_d_a_t_a_section(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocumentFragment)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-bool q_domentityreference_is_document_fragment(void* self);
+bool q_domentityreference_is_document_fragment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocument)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-bool q_domentityreference_is_document(void* self);
+bool q_domentityreference_is_document(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocumentType)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-bool q_domentityreference_is_document_type(void* self);
+bool q_domentityreference_is_document_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isElement)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-bool q_domentityreference_is_element(void* self);
+bool q_domentityreference_is_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isEntityReference)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-bool q_domentityreference_is_entity_reference(void* self);
+bool q_domentityreference_is_entity_reference(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isText)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-bool q_domentityreference_is_text(void* self);
+bool q_domentityreference_is_text(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isEntity)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-bool q_domentityreference_is_entity(void* self);
+bool q_domentityreference_is_entity(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isNotation)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-bool q_domentityreference_is_notation(void* self);
+bool q_domentityreference_is_notation(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isProcessingInstruction)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-bool q_domentityreference_is_processing_instruction(void* self);
+bool q_domentityreference_is_processing_instruction(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isCharacterData)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-bool q_domentityreference_is_character_data(void* self);
+bool q_domentityreference_is_character_data(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isComment)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-bool q_domentityreference_is_comment(void* self);
+bool q_domentityreference_is_comment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#namedItem)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 /// @param name const char*
 ///
-QDomNode* q_domentityreference_named_item(void* self, const char* name);
+QDomNode* q_domentityreference_named_item(const void* self, const char* name);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isNull)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-bool q_domentityreference_is_null(void* self);
+bool q_domentityreference_is_null(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -9459,259 +9459,259 @@ void q_domentityreference_clear(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toAttr)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-QDomAttr* q_domentityreference_to_attr(void* self);
+QDomAttr* q_domentityreference_to_attr(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toCDATASection)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-QDomCDATASection* q_domentityreference_to_c_d_a_t_a_section(void* self);
+QDomCDATASection* q_domentityreference_to_c_d_a_t_a_section(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocumentFragment)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-QDomDocumentFragment* q_domentityreference_to_document_fragment(void* self);
+QDomDocumentFragment* q_domentityreference_to_document_fragment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocument)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-QDomDocument* q_domentityreference_to_document(void* self);
+QDomDocument* q_domentityreference_to_document(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocumentType)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-QDomDocumentType* q_domentityreference_to_document_type(void* self);
+QDomDocumentType* q_domentityreference_to_document_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toElement)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-QDomElement* q_domentityreference_to_element(void* self);
+QDomElement* q_domentityreference_to_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toEntityReference)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-QDomEntityReference* q_domentityreference_to_entity_reference(void* self);
+QDomEntityReference* q_domentityreference_to_entity_reference(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toText)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-QDomText* q_domentityreference_to_text(void* self);
+QDomText* q_domentityreference_to_text(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toEntity)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-QDomEntity* q_domentityreference_to_entity(void* self);
+QDomEntity* q_domentityreference_to_entity(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toNotation)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-QDomNotation* q_domentityreference_to_notation(void* self);
+QDomNotation* q_domentityreference_to_notation(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toProcessingInstruction)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-QDomProcessingInstruction* q_domentityreference_to_processing_instruction(void* self);
+QDomProcessingInstruction* q_domentityreference_to_processing_instruction(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toCharacterData)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-QDomCharacterData* q_domentityreference_to_character_data(void* self);
+QDomCharacterData* q_domentityreference_to_character_data(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toComment)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-QDomComment* q_domentityreference_to_comment(void* self);
+QDomComment* q_domentityreference_to_comment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#save)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 /// @param param1 QTextStream*
 /// @param param2 int
 ///
-void q_domentityreference_save(void* self, void* param1, int param2);
+void q_domentityreference_save(const void* self, void* param1, int param2);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-QDomElement* q_domentityreference_first_child_element(void* self);
+QDomElement* q_domentityreference_first_child_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-QDomElement* q_domentityreference_last_child_element(void* self);
+QDomElement* q_domentityreference_last_child_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-QDomElement* q_domentityreference_previous_sibling_element(void* self);
+QDomElement* q_domentityreference_previous_sibling_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-QDomElement* q_domentityreference_next_sibling_element(void* self);
+QDomElement* q_domentityreference_next_sibling_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lineNumber)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-int32_t q_domentityreference_line_number(void* self);
+int32_t q_domentityreference_line_number(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#columnNumber)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 ///
-int32_t q_domentityreference_column_number(void* self);
+int32_t q_domentityreference_column_number(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#cloneNode)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 /// @param deep bool
 ///
-QDomNode* q_domentityreference_clone_node1(void* self, bool deep);
+QDomNode* q_domentityreference_clone_node1(const void* self, bool deep);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#save)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 /// @param param1 QTextStream*
 /// @param param2 int
 /// @param param3 enum QDomNode__EncodingPolicy
 ///
-void q_domentityreference_save3(void* self, void* param1, int param2, int32_t param3);
+void q_domentityreference_save3(const void* self, void* param1, int param2, int32_t param3);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 /// @param tagName const char*
 ///
-QDomElement* q_domentityreference_first_child_element1(void* self, const char* tagName);
+QDomElement* q_domentityreference_first_child_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domentityreference_first_child_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domentityreference_first_child_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 /// @param tagName const char*
 ///
-QDomElement* q_domentityreference_last_child_element1(void* self, const char* tagName);
+QDomElement* q_domentityreference_last_child_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domentityreference_last_child_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domentityreference_last_child_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 /// @param tagName const char*
 ///
-QDomElement* q_domentityreference_previous_sibling_element1(void* self, const char* tagName);
+QDomElement* q_domentityreference_previous_sibling_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domentityreference_previous_sibling_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domentityreference_previous_sibling_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 /// @param taName const char*
 ///
-QDomElement* q_domentityreference_next_sibling_element1(void* self, const char* taName);
+QDomElement* q_domentityreference_next_sibling_element1(const void* self, const char* taName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomEntityReference*
+/// @param self const QDomEntityReference*
 /// @param taName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domentityreference_next_sibling_element2(void* self, const char* taName, const char* namespaceURI);
+QDomElement* q_domentityreference_next_sibling_element2(const void* self, const char* taName, const char* namespaceURI);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomentityreference.html#dtor.QDomEntityReference)
 ///
@@ -9733,30 +9733,30 @@ QDomProcessingInstruction* q_domprocessinginstruction_new();
 ///
 /// @param processingInstruction QDomProcessingInstruction*
 ///
-QDomProcessingInstruction* q_domprocessinginstruction_new2(void* processingInstruction);
+QDomProcessingInstruction* q_domprocessinginstruction_new2(const void* processingInstruction);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomprocessinginstruction.html#operator-eq)
 ///
 /// @param self QDomProcessingInstruction*
 /// @param other QDomProcessingInstruction*
 ///
-void q_domprocessinginstruction_operator_assign(void* self, void* other);
+void q_domprocessinginstruction_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomprocessinginstruction.html#target)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-const char* q_domprocessinginstruction_target(void* self);
+const char* q_domprocessinginstruction_target(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomprocessinginstruction.html#data)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-const char* q_domprocessinginstruction_data(void* self);
+const char* q_domprocessinginstruction_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomprocessinginstruction.html#setData)
 ///
@@ -9767,29 +9767,29 @@ void q_domprocessinginstruction_set_data(void* self, const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomprocessinginstruction.html#nodeType)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
 /// @return enum QDomNode__NodeType
 ///
-int32_t q_domprocessinginstruction_node_type(void* self);
+int32_t q_domprocessinginstruction_node_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#operator-eq-eq)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 /// @param other QDomNode*
 ///
-bool q_domprocessinginstruction_operator_equal(void* self, void* other);
+bool q_domprocessinginstruction_operator_equal(const void* self, const void* other);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#operator-not-eq)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 /// @param other QDomNode*
 ///
-bool q_domprocessinginstruction_operator_not_equal(void* self, void* other);
+bool q_domprocessinginstruction_operator_not_equal(const void* self, const void* other);
 
 /// Inherited from QDomNode
 ///
@@ -9799,7 +9799,7 @@ bool q_domprocessinginstruction_operator_not_equal(void* self, void* other);
 /// @param newChild QDomNode*
 /// @param refChild QDomNode*
 ///
-QDomNode* q_domprocessinginstruction_insert_before(void* self, void* newChild, void* refChild);
+QDomNode* q_domprocessinginstruction_insert_before(void* self, const void* newChild, const void* refChild);
 
 /// Inherited from QDomNode
 ///
@@ -9809,7 +9809,7 @@ QDomNode* q_domprocessinginstruction_insert_before(void* self, void* newChild, v
 /// @param newChild QDomNode*
 /// @param refChild QDomNode*
 ///
-QDomNode* q_domprocessinginstruction_insert_after(void* self, void* newChild, void* refChild);
+QDomNode* q_domprocessinginstruction_insert_after(void* self, const void* newChild, const void* refChild);
 
 /// Inherited from QDomNode
 ///
@@ -9819,7 +9819,7 @@ QDomNode* q_domprocessinginstruction_insert_after(void* self, void* newChild, vo
 /// @param newChild QDomNode*
 /// @param oldChild QDomNode*
 ///
-QDomNode* q_domprocessinginstruction_replace_child(void* self, void* newChild, void* oldChild);
+QDomNode* q_domprocessinginstruction_replace_child(void* self, const void* newChild, const void* oldChild);
 
 /// Inherited from QDomNode
 ///
@@ -9828,7 +9828,7 @@ QDomNode* q_domprocessinginstruction_replace_child(void* self, void* newChild, v
 /// @param self QDomProcessingInstruction*
 /// @param oldChild QDomNode*
 ///
-QDomNode* q_domprocessinginstruction_remove_child(void* self, void* oldChild);
+QDomNode* q_domprocessinginstruction_remove_child(void* self, const void* oldChild);
 
 /// Inherited from QDomNode
 ///
@@ -9837,23 +9837,23 @@ QDomNode* q_domprocessinginstruction_remove_child(void* self, void* oldChild);
 /// @param self QDomProcessingInstruction*
 /// @param newChild QDomNode*
 ///
-QDomNode* q_domprocessinginstruction_append_child(void* self, void* newChild);
+QDomNode* q_domprocessinginstruction_append_child(void* self, const void* newChild);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#hasChildNodes)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-bool q_domprocessinginstruction_has_child_nodes(void* self);
+bool q_domprocessinginstruction_has_child_nodes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#cloneNode)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-QDomNode* q_domprocessinginstruction_clone_node(void* self);
+QDomNode* q_domprocessinginstruction_clone_node(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -9867,11 +9867,11 @@ void q_domprocessinginstruction_normalize(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isSupported)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 /// @param feature const char*
 /// @param version const char*
 ///
-bool q_domprocessinginstruction_is_supported(void* self, const char* feature, const char* version);
+bool q_domprocessinginstruction_is_supported(const void* self, const char* feature, const char* version);
 
 /// Inherited from QDomNode
 ///
@@ -9879,73 +9879,73 @@ bool q_domprocessinginstruction_is_supported(void* self, const char* feature, co
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-const char* q_domprocessinginstruction_node_name(void* self);
+const char* q_domprocessinginstruction_node_name(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#parentNode)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-QDomNode* q_domprocessinginstruction_parent_node(void* self);
+QDomNode* q_domprocessinginstruction_parent_node(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#childNodes)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-QDomNodeList* q_domprocessinginstruction_child_nodes(void* self);
+QDomNodeList* q_domprocessinginstruction_child_nodes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChild)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-QDomNode* q_domprocessinginstruction_first_child(void* self);
+QDomNode* q_domprocessinginstruction_first_child(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChild)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-QDomNode* q_domprocessinginstruction_last_child(void* self);
+QDomNode* q_domprocessinginstruction_last_child(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSibling)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-QDomNode* q_domprocessinginstruction_previous_sibling(void* self);
+QDomNode* q_domprocessinginstruction_previous_sibling(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSibling)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-QDomNode* q_domprocessinginstruction_next_sibling(void* self);
+QDomNode* q_domprocessinginstruction_next_sibling(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#attributes)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-QDomNamedNodeMap* q_domprocessinginstruction_attributes(void* self);
+QDomNamedNodeMap* q_domprocessinginstruction_attributes(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#ownerDocument)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-QDomDocument* q_domprocessinginstruction_owner_document(void* self);
+QDomDocument* q_domprocessinginstruction_owner_document(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -9953,9 +9953,9 @@ QDomDocument* q_domprocessinginstruction_owner_document(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-const char* q_domprocessinginstruction_namespace_u_r_i(void* self);
+const char* q_domprocessinginstruction_namespace_u_r_i(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -9963,17 +9963,17 @@ const char* q_domprocessinginstruction_namespace_u_r_i(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-const char* q_domprocessinginstruction_local_name(void* self);
+const char* q_domprocessinginstruction_local_name(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#hasAttributes)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-bool q_domprocessinginstruction_has_attributes(void* self);
+bool q_domprocessinginstruction_has_attributes(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -9981,9 +9981,9 @@ bool q_domprocessinginstruction_has_attributes(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-const char* q_domprocessinginstruction_node_value(void* self);
+const char* q_domprocessinginstruction_node_value(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -10000,9 +10000,9 @@ void q_domprocessinginstruction_set_node_value(void* self, const char* value);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-const char* q_domprocessinginstruction_prefix(void* self);
+const char* q_domprocessinginstruction_prefix(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -10017,122 +10017,122 @@ void q_domprocessinginstruction_set_prefix(void* self, const char* pre);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isAttr)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-bool q_domprocessinginstruction_is_attr(void* self);
+bool q_domprocessinginstruction_is_attr(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isCDATASection)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-bool q_domprocessinginstruction_is_c_d_a_t_a_section(void* self);
+bool q_domprocessinginstruction_is_c_d_a_t_a_section(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocumentFragment)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-bool q_domprocessinginstruction_is_document_fragment(void* self);
+bool q_domprocessinginstruction_is_document_fragment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocument)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-bool q_domprocessinginstruction_is_document(void* self);
+bool q_domprocessinginstruction_is_document(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isDocumentType)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-bool q_domprocessinginstruction_is_document_type(void* self);
+bool q_domprocessinginstruction_is_document_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isElement)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-bool q_domprocessinginstruction_is_element(void* self);
+bool q_domprocessinginstruction_is_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isEntityReference)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-bool q_domprocessinginstruction_is_entity_reference(void* self);
+bool q_domprocessinginstruction_is_entity_reference(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isText)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-bool q_domprocessinginstruction_is_text(void* self);
+bool q_domprocessinginstruction_is_text(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isEntity)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-bool q_domprocessinginstruction_is_entity(void* self);
+bool q_domprocessinginstruction_is_entity(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isNotation)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-bool q_domprocessinginstruction_is_notation(void* self);
+bool q_domprocessinginstruction_is_notation(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isProcessingInstruction)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-bool q_domprocessinginstruction_is_processing_instruction(void* self);
+bool q_domprocessinginstruction_is_processing_instruction(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isCharacterData)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-bool q_domprocessinginstruction_is_character_data(void* self);
+bool q_domprocessinginstruction_is_character_data(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isComment)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-bool q_domprocessinginstruction_is_comment(void* self);
+bool q_domprocessinginstruction_is_comment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#namedItem)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 /// @param name const char*
 ///
-QDomNode* q_domprocessinginstruction_named_item(void* self, const char* name);
+QDomNode* q_domprocessinginstruction_named_item(const void* self, const char* name);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#isNull)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-bool q_domprocessinginstruction_is_null(void* self);
+bool q_domprocessinginstruction_is_null(const void* self);
 
 /// Inherited from QDomNode
 ///
@@ -10146,259 +10146,259 @@ void q_domprocessinginstruction_clear(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toAttr)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-QDomAttr* q_domprocessinginstruction_to_attr(void* self);
+QDomAttr* q_domprocessinginstruction_to_attr(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toCDATASection)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-QDomCDATASection* q_domprocessinginstruction_to_c_d_a_t_a_section(void* self);
+QDomCDATASection* q_domprocessinginstruction_to_c_d_a_t_a_section(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocumentFragment)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-QDomDocumentFragment* q_domprocessinginstruction_to_document_fragment(void* self);
+QDomDocumentFragment* q_domprocessinginstruction_to_document_fragment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocument)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-QDomDocument* q_domprocessinginstruction_to_document(void* self);
+QDomDocument* q_domprocessinginstruction_to_document(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toDocumentType)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-QDomDocumentType* q_domprocessinginstruction_to_document_type(void* self);
+QDomDocumentType* q_domprocessinginstruction_to_document_type(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toElement)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-QDomElement* q_domprocessinginstruction_to_element(void* self);
+QDomElement* q_domprocessinginstruction_to_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toEntityReference)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-QDomEntityReference* q_domprocessinginstruction_to_entity_reference(void* self);
+QDomEntityReference* q_domprocessinginstruction_to_entity_reference(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toText)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-QDomText* q_domprocessinginstruction_to_text(void* self);
+QDomText* q_domprocessinginstruction_to_text(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toEntity)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-QDomEntity* q_domprocessinginstruction_to_entity(void* self);
+QDomEntity* q_domprocessinginstruction_to_entity(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toNotation)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-QDomNotation* q_domprocessinginstruction_to_notation(void* self);
+QDomNotation* q_domprocessinginstruction_to_notation(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toProcessingInstruction)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-QDomProcessingInstruction* q_domprocessinginstruction_to_processing_instruction(void* self);
+QDomProcessingInstruction* q_domprocessinginstruction_to_processing_instruction(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toCharacterData)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-QDomCharacterData* q_domprocessinginstruction_to_character_data(void* self);
+QDomCharacterData* q_domprocessinginstruction_to_character_data(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#toComment)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-QDomComment* q_domprocessinginstruction_to_comment(void* self);
+QDomComment* q_domprocessinginstruction_to_comment(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#save)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 /// @param param1 QTextStream*
 /// @param param2 int
 ///
-void q_domprocessinginstruction_save(void* self, void* param1, int param2);
+void q_domprocessinginstruction_save(const void* self, void* param1, int param2);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-QDomElement* q_domprocessinginstruction_first_child_element(void* self);
+QDomElement* q_domprocessinginstruction_first_child_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-QDomElement* q_domprocessinginstruction_last_child_element(void* self);
+QDomElement* q_domprocessinginstruction_last_child_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-QDomElement* q_domprocessinginstruction_previous_sibling_element(void* self);
+QDomElement* q_domprocessinginstruction_previous_sibling_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-QDomElement* q_domprocessinginstruction_next_sibling_element(void* self);
+QDomElement* q_domprocessinginstruction_next_sibling_element(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lineNumber)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-int32_t q_domprocessinginstruction_line_number(void* self);
+int32_t q_domprocessinginstruction_line_number(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#columnNumber)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 ///
-int32_t q_domprocessinginstruction_column_number(void* self);
+int32_t q_domprocessinginstruction_column_number(const void* self);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#cloneNode)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 /// @param deep bool
 ///
-QDomNode* q_domprocessinginstruction_clone_node1(void* self, bool deep);
+QDomNode* q_domprocessinginstruction_clone_node1(const void* self, bool deep);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#save)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 /// @param param1 QTextStream*
 /// @param param2 int
 /// @param param3 enum QDomNode__EncodingPolicy
 ///
-void q_domprocessinginstruction_save3(void* self, void* param1, int param2, int32_t param3);
+void q_domprocessinginstruction_save3(const void* self, void* param1, int param2, int32_t param3);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 /// @param tagName const char*
 ///
-QDomElement* q_domprocessinginstruction_first_child_element1(void* self, const char* tagName);
+QDomElement* q_domprocessinginstruction_first_child_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#firstChildElement)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domprocessinginstruction_first_child_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domprocessinginstruction_first_child_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 /// @param tagName const char*
 ///
-QDomElement* q_domprocessinginstruction_last_child_element1(void* self, const char* tagName);
+QDomElement* q_domprocessinginstruction_last_child_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#lastChildElement)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domprocessinginstruction_last_child_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domprocessinginstruction_last_child_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 /// @param tagName const char*
 ///
-QDomElement* q_domprocessinginstruction_previous_sibling_element1(void* self, const char* tagName);
+QDomElement* q_domprocessinginstruction_previous_sibling_element1(const void* self, const char* tagName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#previousSiblingElement)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 /// @param tagName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domprocessinginstruction_previous_sibling_element2(void* self, const char* tagName, const char* namespaceURI);
+QDomElement* q_domprocessinginstruction_previous_sibling_element2(const void* self, const char* tagName, const char* namespaceURI);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 /// @param taName const char*
 ///
-QDomElement* q_domprocessinginstruction_next_sibling_element1(void* self, const char* taName);
+QDomElement* q_domprocessinginstruction_next_sibling_element1(const void* self, const char* taName);
 
 /// Inherited from QDomNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nextSiblingElement)
 ///
-/// @param self QDomProcessingInstruction*
+/// @param self const QDomProcessingInstruction*
 /// @param taName const char*
 /// @param namespaceURI const char*
 ///
-QDomElement* q_domprocessinginstruction_next_sibling_element2(void* self, const char* taName, const char* namespaceURI);
+QDomElement* q_domprocessinginstruction_next_sibling_element2(const void* self, const char* taName, const char* namespaceURI);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomprocessinginstruction.html#dtor.QDomProcessingInstruction)
 ///
@@ -10420,15 +10420,15 @@ QDomDocument__ParseResult* q_domdocument__parseresult_new();
 ///
 /// @param param1 QDomDocument__ParseResult*
 ///
-QDomDocument__ParseResult* q_domdocument__parseresult_new2(void* param1);
+QDomDocument__ParseResult* q_domdocument__parseresult_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument-parseresult.html#errorMessage-var)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDomDocument__ParseResult*
+/// @param self const QDomDocument__ParseResult*
 ///
-const char* q_domdocument__parseresult_error_message(void* self);
+const char* q_domdocument__parseresult_error_message(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument-parseresult.html#errorMessage-var)
 ///
@@ -10439,9 +10439,9 @@ void q_domdocument__parseresult_set_error_message(void* self, const char* errorM
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument-parseresult.html#errorLine-var)
 ///
-/// @param self QDomDocument__ParseResult*
+/// @param self const QDomDocument__ParseResult*
 ///
-intptr_t q_domdocument__parseresult_error_line(void* self);
+intptr_t q_domdocument__parseresult_error_line(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument-parseresult.html#errorLine-var)
 ///
@@ -10452,9 +10452,9 @@ void q_domdocument__parseresult_set_error_line(void* self, intptr_t errorLine);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument-parseresult.html#errorColumn-var)
 ///
-/// @param self QDomDocument__ParseResult*
+/// @param self const QDomDocument__ParseResult*
 ///
-intptr_t q_domdocument__parseresult_error_column(void* self);
+intptr_t q_domdocument__parseresult_error_column(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument-parseresult.html#errorColumn-var)
 ///
@@ -10465,16 +10465,16 @@ void q_domdocument__parseresult_set_error_column(void* self, intptr_t errorColum
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument-parseresult.html#operator-bool)
 ///
-/// @param self QDomDocument__ParseResult*
+/// @param self const QDomDocument__ParseResult*
 ///
-bool q_domdocument__parseresult_to_bool(void* self);
+bool q_domdocument__parseresult_to_bool(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument-parseresult.html#operator-eq)
 ///
 /// @param self QDomDocument__ParseResult*
 /// @param param1 QDomDocument__ParseResult*
 ///
-void q_domdocument__parseresult_operator_assign(void* self, void* param1);
+void q_domdocument__parseresult_operator_assign(void* self, const void* param1);
 
 /// Delete this object from C++ memory.
 ///

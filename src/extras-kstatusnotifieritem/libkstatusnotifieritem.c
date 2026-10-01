@@ -26,15 +26,15 @@ KStatusNotifierItem* k_statusnotifieritem_new4(const char* id, void* parent) {
     return KStatusNotifierItem_New4(qstring(id), (QObject*)parent);
 }
 
-const QMetaObject* k_statusnotifieritem_meta_object(void* self) {
+const QMetaObject* k_statusnotifieritem_meta_object(const void* self) {
     return KStatusNotifierItem_MetaObject((KStatusNotifierItem*)self);
 }
 
-void k_statusnotifieritem_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_statusnotifieritem_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     KStatusNotifierItem_OnMetaObject((KStatusNotifierItem*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_statusnotifieritem_super_meta_object(void* self) {
+const QMetaObject* k_statusnotifieritem_super_meta_object(const void* self) {
     return KStatusNotifierItem_SuperMetaObject((KStatusNotifierItem*)self);
 }
 
@@ -69,7 +69,7 @@ const char* k_statusnotifieritem_tr(const char* s) {
     return _ret;
 }
 
-const char* k_statusnotifieritem_id(void* self) {
+const char* k_statusnotifieritem_id(const void* self) {
     libqt_string _str = KStatusNotifierItem_Id((KStatusNotifierItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -80,7 +80,7 @@ void k_statusnotifieritem_set_category(void* self, int32_t category) {
     KStatusNotifierItem_SetCategory((KStatusNotifierItem*)self, category);
 }
 
-int32_t k_statusnotifieritem_category(void* self) {
+int32_t k_statusnotifieritem_category(const void* self) {
     return KStatusNotifierItem_Category((KStatusNotifierItem*)self);
 }
 
@@ -88,7 +88,7 @@ void k_statusnotifieritem_set_title(void* self, const char* title) {
     KStatusNotifierItem_SetTitle((KStatusNotifierItem*)self, qstring(title));
 }
 
-const char* k_statusnotifieritem_title(void* self) {
+const char* k_statusnotifieritem_title(const void* self) {
     libqt_string _str = KStatusNotifierItem_Title((KStatusNotifierItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -99,7 +99,7 @@ void k_statusnotifieritem_set_status(void* self, int32_t status) {
     KStatusNotifierItem_SetStatus((KStatusNotifierItem*)self, status);
 }
 
-int32_t k_statusnotifieritem_status(void* self) {
+int32_t k_statusnotifieritem_status(const void* self) {
     return KStatusNotifierItem_Status((KStatusNotifierItem*)self);
 }
 
@@ -107,18 +107,18 @@ void k_statusnotifieritem_set_icon_by_name(void* self, const char* name) {
     KStatusNotifierItem_SetIconByName((KStatusNotifierItem*)self, qstring(name));
 }
 
-const char* k_statusnotifieritem_icon_name(void* self) {
+const char* k_statusnotifieritem_icon_name(const void* self) {
     libqt_string _str = KStatusNotifierItem_IconName((KStatusNotifierItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_statusnotifieritem_set_icon_by_pixmap(void* self, void* icon) {
+void k_statusnotifieritem_set_icon_by_pixmap(void* self, const void* icon) {
     KStatusNotifierItem_SetIconByPixmap((KStatusNotifierItem*)self, (QIcon*)icon);
 }
 
-QIcon* k_statusnotifieritem_icon_pixmap(void* self) {
+QIcon* k_statusnotifieritem_icon_pixmap(const void* self) {
     return KStatusNotifierItem_IconPixmap((KStatusNotifierItem*)self);
 }
 
@@ -126,18 +126,18 @@ void k_statusnotifieritem_set_overlay_icon_by_name(void* self, const char* name)
     KStatusNotifierItem_SetOverlayIconByName((KStatusNotifierItem*)self, qstring(name));
 }
 
-const char* k_statusnotifieritem_overlay_icon_name(void* self) {
+const char* k_statusnotifieritem_overlay_icon_name(const void* self) {
     libqt_string _str = KStatusNotifierItem_OverlayIconName((KStatusNotifierItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_statusnotifieritem_set_overlay_icon_by_pixmap(void* self, void* icon) {
+void k_statusnotifieritem_set_overlay_icon_by_pixmap(void* self, const void* icon) {
     KStatusNotifierItem_SetOverlayIconByPixmap((KStatusNotifierItem*)self, (QIcon*)icon);
 }
 
-QIcon* k_statusnotifieritem_overlay_icon_pixmap(void* self) {
+QIcon* k_statusnotifieritem_overlay_icon_pixmap(const void* self) {
     return KStatusNotifierItem_OverlayIconPixmap((KStatusNotifierItem*)self);
 }
 
@@ -145,18 +145,18 @@ void k_statusnotifieritem_set_attention_icon_by_name(void* self, const char* nam
     KStatusNotifierItem_SetAttentionIconByName((KStatusNotifierItem*)self, qstring(name));
 }
 
-const char* k_statusnotifieritem_attention_icon_name(void* self) {
+const char* k_statusnotifieritem_attention_icon_name(const void* self) {
     libqt_string _str = KStatusNotifierItem_AttentionIconName((KStatusNotifierItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_statusnotifieritem_set_attention_icon_by_pixmap(void* self, void* icon) {
+void k_statusnotifieritem_set_attention_icon_by_pixmap(void* self, const void* icon) {
     KStatusNotifierItem_SetAttentionIconByPixmap((KStatusNotifierItem*)self, (QIcon*)icon);
 }
 
-QIcon* k_statusnotifieritem_attention_icon_pixmap(void* self) {
+QIcon* k_statusnotifieritem_attention_icon_pixmap(const void* self) {
     return KStatusNotifierItem_AttentionIconPixmap((KStatusNotifierItem*)self);
 }
 
@@ -164,7 +164,7 @@ void k_statusnotifieritem_set_attention_movie_by_name(void* self, const char* na
     KStatusNotifierItem_SetAttentionMovieByName((KStatusNotifierItem*)self, qstring(name));
 }
 
-const char* k_statusnotifieritem_attention_movie_name(void* self) {
+const char* k_statusnotifieritem_attention_movie_name(const void* self) {
     libqt_string _str = KStatusNotifierItem_AttentionMovieName((KStatusNotifierItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -175,7 +175,7 @@ void k_statusnotifieritem_set_tool_tip(void* self, const char* iconName, const c
     KStatusNotifierItem_SetToolTip((KStatusNotifierItem*)self, qstring(iconName), qstring(title), qstring(subTitle));
 }
 
-void k_statusnotifieritem_set_tool_tip2(void* self, void* icon, const char* title, const char* subTitle) {
+void k_statusnotifieritem_set_tool_tip2(void* self, const void* icon, const char* title, const char* subTitle) {
     KStatusNotifierItem_SetToolTip2((KStatusNotifierItem*)self, (QIcon*)icon, qstring(title), qstring(subTitle));
 }
 
@@ -183,18 +183,18 @@ void k_statusnotifieritem_set_tool_tip_icon_by_name(void* self, const char* name
     KStatusNotifierItem_SetToolTipIconByName((KStatusNotifierItem*)self, qstring(name));
 }
 
-const char* k_statusnotifieritem_tool_tip_icon_name(void* self) {
+const char* k_statusnotifieritem_tool_tip_icon_name(const void* self) {
     libqt_string _str = KStatusNotifierItem_ToolTipIconName((KStatusNotifierItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_statusnotifieritem_set_tool_tip_icon_by_pixmap(void* self, void* icon) {
+void k_statusnotifieritem_set_tool_tip_icon_by_pixmap(void* self, const void* icon) {
     KStatusNotifierItem_SetToolTipIconByPixmap((KStatusNotifierItem*)self, (QIcon*)icon);
 }
 
-QIcon* k_statusnotifieritem_tool_tip_icon_pixmap(void* self) {
+QIcon* k_statusnotifieritem_tool_tip_icon_pixmap(const void* self) {
     return KStatusNotifierItem_ToolTipIconPixmap((KStatusNotifierItem*)self);
 }
 
@@ -202,7 +202,7 @@ void k_statusnotifieritem_set_tool_tip_title(void* self, const char* title) {
     KStatusNotifierItem_SetToolTipTitle((KStatusNotifierItem*)self, qstring(title));
 }
 
-const char* k_statusnotifieritem_tool_tip_title(void* self) {
+const char* k_statusnotifieritem_tool_tip_title(const void* self) {
     libqt_string _str = KStatusNotifierItem_ToolTipTitle((KStatusNotifierItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -213,7 +213,7 @@ void k_statusnotifieritem_set_tool_tip_sub_title(void* self, const char* subTitl
     KStatusNotifierItem_SetToolTipSubTitle((KStatusNotifierItem*)self, qstring(subTitle));
 }
 
-const char* k_statusnotifieritem_tool_tip_sub_title(void* self) {
+const char* k_statusnotifieritem_tool_tip_sub_title(const void* self) {
     libqt_string _str = KStatusNotifierItem_ToolTipSubTitle((KStatusNotifierItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -224,7 +224,7 @@ void k_statusnotifieritem_set_context_menu(void* self, void* menu) {
     KStatusNotifierItem_SetContextMenu((KStatusNotifierItem*)self, (QMenu*)menu);
 }
 
-QMenu* k_statusnotifieritem_context_menu(void* self) {
+QMenu* k_statusnotifieritem_context_menu(const void* self) {
     return KStatusNotifierItem_ContextMenu((KStatusNotifierItem*)self);
 }
 
@@ -232,11 +232,11 @@ void k_statusnotifieritem_set_associated_window(void* self, void* window) {
     KStatusNotifierItem_SetAssociatedWindow((KStatusNotifierItem*)self, (QWindow*)window);
 }
 
-QWindow* k_statusnotifieritem_associated_window(void* self) {
+QWindow* k_statusnotifieritem_associated_window(const void* self) {
     return KStatusNotifierItem_AssociatedWindow((KStatusNotifierItem*)self);
 }
 
-libqt_list /* of QAction* */ k_statusnotifieritem_action_collection(void* self) {
+libqt_list /* of QAction* */ k_statusnotifieritem_action_collection(const void* self) {
     libqt_list _arr = KStatusNotifierItem_ActionCollection((KStatusNotifierItem*)self);
     return _arr;
 }
@@ -249,7 +249,7 @@ void k_statusnotifieritem_remove_action(void* self, const char* name) {
     KStatusNotifierItem_RemoveAction((KStatusNotifierItem*)self, qstring(name));
 }
 
-QAction* k_statusnotifieritem_action(void* self, const char* name) {
+QAction* k_statusnotifieritem_action(const void* self, const char* name) {
     return KStatusNotifierItem_Action((KStatusNotifierItem*)self, qstring(name));
 }
 
@@ -257,7 +257,7 @@ void k_statusnotifieritem_set_standard_actions_enabled(void* self, bool enabled)
     KStatusNotifierItem_SetStandardActionsEnabled((KStatusNotifierItem*)self, enabled);
 }
 
-bool k_statusnotifieritem_standard_actions_enabled(void* self) {
+bool k_statusnotifieritem_standard_actions_enabled(const void* self) {
     return KStatusNotifierItem_StandardActionsEnabled((KStatusNotifierItem*)self);
 }
 
@@ -265,7 +265,7 @@ void k_statusnotifieritem_show_message(void* self, const char* title, const char
     KStatusNotifierItem_ShowMessage((KStatusNotifierItem*)self, qstring(title), qstring(message), qstring(icon));
 }
 
-const char* k_statusnotifieritem_provided_token(void* self) {
+const char* k_statusnotifieritem_provided_token(const void* self) {
     libqt_string _str = KStatusNotifierItem_ProvidedToken((KStatusNotifierItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -276,15 +276,15 @@ void k_statusnotifieritem_abort_quit(void* self) {
     KStatusNotifierItem_AbortQuit((KStatusNotifierItem*)self);
 }
 
-void k_statusnotifieritem_activate(void* self, void* pos) {
+void k_statusnotifieritem_activate(void* self, const void* pos) {
     KStatusNotifierItem_Activate((KStatusNotifierItem*)self, (QPoint*)pos);
 }
 
-void k_statusnotifieritem_on_activate(void* self, void (*callback)(void*, void*)) {
+void k_statusnotifieritem_on_activate(void* self, void (*callback)(void*, const void*)) {
     KStatusNotifierItem_OnActivate((KStatusNotifierItem*)self, (intptr_t)callback);
 }
 
-void k_statusnotifieritem_super_activate(void* self, void* pos) {
+void k_statusnotifieritem_super_activate(void* self, const void* pos) {
     KStatusNotifierItem_SuperActivate((KStatusNotifierItem*)self, (QPoint*)pos);
 }
 
@@ -300,19 +300,19 @@ void k_statusnotifieritem_on_scroll_requested(void* self, void (*callback)(void*
     KStatusNotifierItem_Connect_ScrollRequested((KStatusNotifierItem*)self, (intptr_t)callback);
 }
 
-void k_statusnotifieritem_activate_requested(void* self, bool active, void* pos) {
+void k_statusnotifieritem_activate_requested(void* self, bool active, const void* pos) {
     KStatusNotifierItem_ActivateRequested((KStatusNotifierItem*)self, active, (QPoint*)pos);
 }
 
-void k_statusnotifieritem_on_activate_requested(void* self, void (*callback)(void*, bool, void*)) {
+void k_statusnotifieritem_on_activate_requested(void* self, void (*callback)(void*, bool, const void*)) {
     KStatusNotifierItem_Connect_ActivateRequested((KStatusNotifierItem*)self, (intptr_t)callback);
 }
 
-void k_statusnotifieritem_secondary_activate_requested(void* self, void* pos) {
+void k_statusnotifieritem_secondary_activate_requested(void* self, const void* pos) {
     KStatusNotifierItem_SecondaryActivateRequested((KStatusNotifierItem*)self, (QPoint*)pos);
 }
 
-void k_statusnotifieritem_on_secondary_activate_requested(void* self, void (*callback)(void*, void*)) {
+void k_statusnotifieritem_on_secondary_activate_requested(void* self, void (*callback)(void*, const void*)) {
     KStatusNotifierItem_Connect_SecondaryActivateRequested((KStatusNotifierItem*)self, (intptr_t)callback);
 }
 
@@ -354,7 +354,7 @@ void k_statusnotifieritem_show_message4(void* self, const char* title, const cha
     KStatusNotifierItem_ShowMessage4((KStatusNotifierItem*)self, qstring(title), qstring(message), qstring(icon), timeout);
 }
 
-const char* k_statusnotifieritem_object_name(void* self) {
+const char* k_statusnotifieritem_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -365,19 +365,19 @@ void k_statusnotifieritem_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_statusnotifieritem_is_widget_type(void* self) {
+bool k_statusnotifieritem_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_statusnotifieritem_is_window_type(void* self) {
+bool k_statusnotifieritem_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_statusnotifieritem_is_quick_item_type(void* self) {
+bool k_statusnotifieritem_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_statusnotifieritem_signals_blocked(void* self) {
+bool k_statusnotifieritem_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -385,7 +385,7 @@ bool k_statusnotifieritem_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_statusnotifieritem_thread(void* self) {
+QThread* k_statusnotifieritem_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -409,7 +409,7 @@ void k_statusnotifieritem_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_statusnotifieritem_children(void* self) {
+libqt_list /* of QObject* */ k_statusnotifieritem_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -426,55 +426,55 @@ void k_statusnotifieritem_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_statusnotifieritem_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_statusnotifieritem_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_statusnotifieritem_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_statusnotifieritem_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_statusnotifieritem_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_statusnotifieritem_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_statusnotifieritem_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_statusnotifieritem_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_statusnotifieritem_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_statusnotifieritem_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_statusnotifieritem_disconnect3(void* self) {
+bool k_statusnotifieritem_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_statusnotifieritem_disconnect4(void* self, void* receiver) {
+bool k_statusnotifieritem_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_statusnotifieritem_disconnect5(void* param1) {
+bool k_statusnotifieritem_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_statusnotifieritem_dump_object_tree(void* self) {
+void k_statusnotifieritem_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_statusnotifieritem_dump_object_info(void* self) {
+void k_statusnotifieritem_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_statusnotifieritem_set_property(void* self, const char* name, void* value) {
+bool k_statusnotifieritem_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_statusnotifieritem_property(void* self, const char* name) {
+QVariant* k_statusnotifieritem_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_statusnotifieritem_dynamic_property_names(void* self) {
+const char** k_statusnotifieritem_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -495,7 +495,7 @@ QBindingStorage* k_statusnotifieritem_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_statusnotifieritem_binding_storage2(void* self) {
+const QBindingStorage* k_statusnotifieritem_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -507,11 +507,11 @@ void k_statusnotifieritem_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_statusnotifieritem_parent(void* self) {
+QObject* k_statusnotifieritem_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_statusnotifieritem_inherits(void* self, const char* classname) {
+bool k_statusnotifieritem_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -527,31 +527,31 @@ int32_t k_statusnotifieritem_start_timer23(void* self, int64_t time, int32_t tim
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_statusnotifieritem_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_statusnotifieritem_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_statusnotifieritem_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_statusnotifieritem_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_statusnotifieritem_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_statusnotifieritem_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_statusnotifieritem_disconnect1(void* self, const char* signal) {
+bool k_statusnotifieritem_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_statusnotifieritem_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_statusnotifieritem_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_statusnotifieritem_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_statusnotifieritem_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_statusnotifieritem_disconnect23(void* self, void* receiver, const char* member) {
+bool k_statusnotifieritem_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -611,76 +611,44 @@ void k_statusnotifieritem_on_custom_event(void* self, void (*callback)(void*, vo
     KStatusNotifierItem_OnCustomEvent((KStatusNotifierItem*)self, (intptr_t)callback);
 }
 
-void k_statusnotifieritem_connect_notify(void* self, void* signal) {
+void k_statusnotifieritem_connect_notify(void* self, const void* signal) {
     KStatusNotifierItem_ConnectNotify((KStatusNotifierItem*)self, (QMetaMethod*)signal);
 }
 
-void k_statusnotifieritem_super_connect_notify(void* self, void* signal) {
+void k_statusnotifieritem_super_connect_notify(void* self, const void* signal) {
     KStatusNotifierItem_SuperConnectNotify((KStatusNotifierItem*)self, (QMetaMethod*)signal);
 }
 
-void k_statusnotifieritem_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_statusnotifieritem_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     KStatusNotifierItem_OnConnectNotify((KStatusNotifierItem*)self, (intptr_t)callback);
 }
 
-void k_statusnotifieritem_disconnect_notify(void* self, void* signal) {
+void k_statusnotifieritem_disconnect_notify(void* self, const void* signal) {
     KStatusNotifierItem_DisconnectNotify((KStatusNotifierItem*)self, (QMetaMethod*)signal);
 }
 
-void k_statusnotifieritem_super_disconnect_notify(void* self, void* signal) {
+void k_statusnotifieritem_super_disconnect_notify(void* self, const void* signal) {
     KStatusNotifierItem_SuperDisconnectNotify((KStatusNotifierItem*)self, (QMetaMethod*)signal);
 }
 
-void k_statusnotifieritem_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_statusnotifieritem_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     KStatusNotifierItem_OnDisconnectNotify((KStatusNotifierItem*)self, (intptr_t)callback);
 }
 
-QObject* k_statusnotifieritem_sender(void* self) {
+QObject* k_statusnotifieritem_sender(const void* self) {
     return KStatusNotifierItem_Sender((KStatusNotifierItem*)self);
 }
 
-QObject* k_statusnotifieritem_super_sender(void* self) {
-    return KStatusNotifierItem_SuperSender((KStatusNotifierItem*)self);
-}
-
-void k_statusnotifieritem_on_sender(void* self, QObject* (*callback)()) {
-    KStatusNotifierItem_OnSender((KStatusNotifierItem*)self, (intptr_t)callback);
-}
-
-int32_t k_statusnotifieritem_sender_signal_index(void* self) {
+int32_t k_statusnotifieritem_sender_signal_index(const void* self) {
     return KStatusNotifierItem_SenderSignalIndex((KStatusNotifierItem*)self);
 }
 
-int32_t k_statusnotifieritem_super_sender_signal_index(void* self) {
-    return KStatusNotifierItem_SuperSenderSignalIndex((KStatusNotifierItem*)self);
-}
-
-void k_statusnotifieritem_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    KStatusNotifierItem_OnSenderSignalIndex((KStatusNotifierItem*)self, (intptr_t)callback);
-}
-
-int32_t k_statusnotifieritem_receivers(void* self, const char* signal) {
+int32_t k_statusnotifieritem_receivers(const void* self, const char* signal) {
     return KStatusNotifierItem_Receivers((KStatusNotifierItem*)self, signal);
 }
 
-int32_t k_statusnotifieritem_super_receivers(void* self, const char* signal) {
-    return KStatusNotifierItem_SuperReceivers((KStatusNotifierItem*)self, signal);
-}
-
-void k_statusnotifieritem_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    KStatusNotifierItem_OnReceivers((KStatusNotifierItem*)self, (intptr_t)callback);
-}
-
-bool k_statusnotifieritem_is_signal_connected(void* self, void* signal) {
+bool k_statusnotifieritem_is_signal_connected(const void* self, const void* signal) {
     return KStatusNotifierItem_IsSignalConnected((KStatusNotifierItem*)self, (QMetaMethod*)signal);
-}
-
-bool k_statusnotifieritem_super_is_signal_connected(void* self, void* signal) {
-    return KStatusNotifierItem_SuperIsSignalConnected((KStatusNotifierItem*)self, (QMetaMethod*)signal);
-}
-
-void k_statusnotifieritem_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    KStatusNotifierItem_OnIsSignalConnected((KStatusNotifierItem*)self, (intptr_t)callback);
 }
 
 void k_statusnotifieritem_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

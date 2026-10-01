@@ -26,7 +26,7 @@ void k_macroexpanderbase_set_escape_char(void* self, void* c) {
     KMacroExpanderBase_SetEscapeChar((KMacroExpanderBase*)self, (QChar*)c);
 }
 
-QChar* k_macroexpanderbase_escape_char(void* self) {
+QChar* k_macroexpanderbase_escape_char(const void* self) {
     return KMacroExpanderBase_EscapeChar((KMacroExpanderBase*)self);
 }
 
@@ -189,19 +189,6 @@ void k_wordmacroexpander_on_expand_macro(void* self, bool (*callback)(void*, con
     KWordMacroExpander_OnExpandMacro((KWordMacroExpander*)self, (intptr_t)callback);
 }
 
-bool k_wordmacroexpander_super_expand_macro(void* self, const char* str, const char* ret[static 1]) {
-    size_t ret_len = libqt_strv_length(ret);
-    libqt_string* ret_qstr = (libqt_string*)malloc(ret_len * sizeof(libqt_string));
-    if (ret_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_wordmacroexpander_expand_macro\n");
-        abort();
-    }
-    for (size_t i = 0; i < ret_len; ++i)
-        ret_qstr[i] = qstring(ret[i]);
-    libqt_list ret_list = qlist(ret_qstr, ret_len);
-    return KWordMacroExpander_SuperExpandMacro((KWordMacroExpander*)self, qstring(str), ret_list);
-}
-
 void k_wordmacroexpander_expand_macros(void* self, const char* str) {
     KMacroExpanderBase_ExpandMacros((KMacroExpanderBase*)self, qstring(str));
 }
@@ -218,7 +205,7 @@ void k_wordmacroexpander_set_escape_char(void* self, void* c) {
     KMacroExpanderBase_SetEscapeChar((KMacroExpanderBase*)self, (QChar*)c);
 }
 
-QChar* k_wordmacroexpander_escape_char(void* self) {
+QChar* k_wordmacroexpander_escape_char(const void* self) {
     return KMacroExpanderBase_EscapeChar((KMacroExpanderBase*)self);
 }
 
@@ -317,19 +304,6 @@ void k_charmacroexpander_on_expand_macro(void* self, bool (*callback)(void*, voi
     KCharMacroExpander_OnExpandMacro((KCharMacroExpander*)self, (intptr_t)callback);
 }
 
-bool k_charmacroexpander_super_expand_macro(void* self, void* chr, const char* ret[static 1]) {
-    size_t ret_len = libqt_strv_length(ret);
-    libqt_string* ret_qstr = (libqt_string*)malloc(ret_len * sizeof(libqt_string));
-    if (ret_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_charmacroexpander_expand_macro\n");
-        abort();
-    }
-    for (size_t i = 0; i < ret_len; ++i)
-        ret_qstr[i] = qstring(ret[i]);
-    libqt_list ret_list = qlist(ret_qstr, ret_len);
-    return KCharMacroExpander_SuperExpandMacro((KCharMacroExpander*)self, (QChar*)chr, ret_list);
-}
-
 void k_charmacroexpander_expand_macros(void* self, const char* str) {
     KMacroExpanderBase_ExpandMacros((KMacroExpanderBase*)self, qstring(str));
 }
@@ -346,7 +320,7 @@ void k_charmacroexpander_set_escape_char(void* self, void* c) {
     KMacroExpanderBase_SetEscapeChar((KMacroExpanderBase*)self, (QChar*)c);
 }
 
-QChar* k_charmacroexpander_escape_char(void* self) {
+QChar* k_charmacroexpander_escape_char(const void* self) {
     return KMacroExpanderBase_EscapeChar((KMacroExpanderBase*)self);
 }
 

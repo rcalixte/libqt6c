@@ -5,15 +5,15 @@
 #include "libkarchivedirectory.hpp"
 #include "libkarchivedirectory.h"
 
-KArchiveDirectory* k_archivedirectory_new(void* archive, const char* name, int access, void* date, const char* user, const char* group, const char* symlink) {
+KArchiveDirectory* k_archivedirectory_new(void* archive, const char* name, int access, const void* date, const char* user, const char* group, const char* symlink) {
     return KArchiveDirectory_New((KArchive*)archive, qstring(name), access, (QDateTime*)date, qstring(user), qstring(group), qstring(symlink));
 }
 
-KArchiveDirectory* k_archivedirectory_new2(void* param1) {
+KArchiveDirectory* k_archivedirectory_new2(const void* param1) {
     return KArchiveDirectory_New2((KArchiveDirectory*)param1);
 }
 
-const char** k_archivedirectory_entries(void* self) {
+const char** k_archivedirectory_entries(const void* self) {
     libqt_list _arr = KArchiveDirectory_Entries((KArchiveDirectory*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -30,11 +30,11 @@ const char** k_archivedirectory_entries(void* self) {
     return _ret;
 }
 
-const KArchiveEntry* k_archivedirectory_entry(void* self, const char* name) {
+const KArchiveEntry* k_archivedirectory_entry(const void* self, const char* name) {
     return KArchiveDirectory_Entry((KArchiveDirectory*)self, qstring(name));
 }
 
-const KArchiveFile* k_archivedirectory_file(void* self, const char* name) {
+const KArchiveFile* k_archivedirectory_file(const void* self, const char* name) {
     return KArchiveDirectory_File((KArchiveDirectory*)self, qstring(name));
 }
 
@@ -54,19 +54,19 @@ bool k_archivedirectory_remove_entry_v2(void* self, void* param1) {
     return KArchiveDirectory_RemoveEntryV2((KArchiveDirectory*)self, (KArchiveEntry*)param1);
 }
 
-bool k_archivedirectory_is_directory(void* self) {
+bool k_archivedirectory_is_directory(const void* self) {
     return KArchiveDirectory_IsDirectory((KArchiveDirectory*)self);
 }
 
-void k_archivedirectory_on_is_directory(void* self, bool (*callback)()) {
+void k_archivedirectory_on_is_directory(const void* self, bool (*callback)(const void*)) {
     KArchiveDirectory_OnIsDirectory((KArchiveDirectory*)self, (intptr_t)callback);
 }
 
-bool k_archivedirectory_super_is_directory(void* self) {
+bool k_archivedirectory_super_is_directory(const void* self) {
     return KArchiveDirectory_SuperIsDirectory((KArchiveDirectory*)self);
 }
 
-bool k_archivedirectory_copy_to(void* self, const char* dest) {
+bool k_archivedirectory_copy_to(const void* self, const char* dest) {
     return KArchiveDirectory_CopyTo((KArchiveDirectory*)self, qstring(dest));
 }
 
@@ -82,68 +82,60 @@ void k_archivedirectory_super_virtual_hook(void* self, int id, void* data) {
     KArchiveDirectory_SuperVirtualHook((KArchiveDirectory*)self, id, data);
 }
 
-bool k_archivedirectory_copy_to2(void* self, const char* dest, bool recursive) {
+bool k_archivedirectory_copy_to2(const void* self, const char* dest, bool recursive) {
     return KArchiveDirectory_CopyTo2((KArchiveDirectory*)self, qstring(dest), recursive);
 }
 
-QDateTime* k_archivedirectory_date(void* self) {
+QDateTime* k_archivedirectory_date(const void* self) {
     return KArchiveEntry_Date((KArchiveEntry*)self);
 }
 
-const char* k_archivedirectory_name(void* self) {
+const char* k_archivedirectory_name(const void* self) {
     libqt_string _str = KArchiveEntry_Name((KArchiveEntry*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-mode_t k_archivedirectory_permissions(void* self) {
+mode_t k_archivedirectory_permissions(const void* self) {
     return (int)KArchiveEntry_Permissions((KArchiveEntry*)self);
 }
 
-const char* k_archivedirectory_user(void* self) {
+const char* k_archivedirectory_user(const void* self) {
     libqt_string _str = KArchiveEntry_User((KArchiveEntry*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_archivedirectory_group(void* self) {
+const char* k_archivedirectory_group(const void* self) {
     libqt_string _str = KArchiveEntry_Group((KArchiveEntry*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_archivedirectory_sym_link_target(void* self) {
+const char* k_archivedirectory_sym_link_target(const void* self) {
     libqt_string _str = KArchiveEntry_SymLinkTarget((KArchiveEntry*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_archivedirectory_is_file(void* self) {
+bool k_archivedirectory_is_file(const void* self) {
     return KArchiveDirectory_IsFile((KArchiveDirectory*)self);
 }
 
-bool k_archivedirectory_super_is_file(void* self) {
+bool k_archivedirectory_super_is_file(const void* self) {
     return KArchiveDirectory_SuperIsFile((KArchiveDirectory*)self);
 }
 
-void k_archivedirectory_on_is_file(void* self, bool (*callback)()) {
-    KArchiveDirectory_OnIsFile((KArchiveDirectory*)self, (intptr_t)callback);
+void k_archivedirectory_on_is_file(const void* self, bool (*callback)(const void*)) {
+    KArchiveDirectory_OnIsFile((const KArchiveDirectory*)self, (intptr_t)callback);
 }
 
-KArchive* k_archivedirectory_archive(void* self) {
+KArchive* k_archivedirectory_archive(const void* self) {
     return KArchiveDirectory_Archive((KArchiveDirectory*)self);
-}
-
-KArchive* k_archivedirectory_super_archive(void* self) {
-    return KArchiveDirectory_SuperArchive((KArchiveDirectory*)self);
-}
-
-void k_archivedirectory_on_archive(void* self, KArchive* (*callback)()) {
-    KArchiveDirectory_OnArchive((KArchiveDirectory*)self, (intptr_t)callback);
 }
 
 void k_archivedirectory_delete(void* self) {

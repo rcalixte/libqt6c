@@ -15,7 +15,7 @@
 /// @param response QOcspResponse*
 /// @param seed size_t
 ///
-size_t q_qocspresponse_h_q_hash(void* response, size_t seed);
+size_t q_qocspresponse_h_q_hash(const void* response, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qocspresponse.html)
 
@@ -29,42 +29,42 @@ QOcspResponse* q_ocspresponse_new();
 ///
 /// @param other QOcspResponse*
 ///
-QOcspResponse* q_ocspresponse_new2(void* other);
+QOcspResponse* q_ocspresponse_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qocspresponse.html#operator-eq)
 ///
 /// @param self QOcspResponse*
 /// @param other QOcspResponse*
 ///
-void q_ocspresponse_operator_assign(void* self, void* other);
+void q_ocspresponse_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qocspresponse.html#certificateStatus)
 ///
-/// @param self QOcspResponse*
+/// @param self const QOcspResponse*
 ///
 /// @return enum QOcspResponse__QOcspCertificateStatus
 ///
-int32_t q_ocspresponse_certificate_status(void* self);
+int32_t q_ocspresponse_certificate_status(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qocspresponse.html#revocationReason)
 ///
-/// @param self QOcspResponse*
+/// @param self const QOcspResponse*
 ///
 /// @return enum QOcspResponse__QOcspRevocationReason
 ///
-int32_t q_ocspresponse_revocation_reason(void* self);
+int32_t q_ocspresponse_revocation_reason(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qocspresponse.html#responder)
 ///
-/// @param self QOcspResponse*
+/// @param self const QOcspResponse*
 ///
-QSslCertificate* q_ocspresponse_responder(void* self);
+QSslCertificate* q_ocspresponse_responder(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qocspresponse.html#subject)
 ///
-/// @param self QOcspResponse*
+/// @param self const QOcspResponse*
 ///
-QSslCertificate* q_ocspresponse_subject(void* self);
+QSslCertificate* q_ocspresponse_subject(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qocspresponse.html#swap)
 ///

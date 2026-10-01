@@ -55,9 +55,9 @@ void q_sciprinter_super_format_page(void* self, void* painter, bool drawing, voi
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-int32_t q_sciprinter_magnification(void* self);
+int32_t q_sciprinter_magnification(const void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
 ///
@@ -146,11 +146,11 @@ int32_t q_sciprinter_super_print_range2(void* self, void* qsb, int from, int to)
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
 /// @return enum QsciScintilla__WrapMode
 ///
-int32_t q_sciprinter_wrap_mode(void* self);
+int32_t q_sciprinter_wrap_mode(const void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
 ///
@@ -190,11 +190,11 @@ void q_sciprinter_set_output_format(void* self, int32_t format);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#outputFormat)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
 /// @return enum QPrinter__OutputFormat
 ///
-int32_t q_sciprinter_output_format(void* self);
+int32_t q_sciprinter_output_format(const void* self);
 
 /// Inherited from QPrinter
 ///
@@ -209,11 +209,11 @@ void q_sciprinter_set_pdf_version(void* self, int32_t version);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#pdfVersion)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
 /// @return enum QPagedPaintDevice__PdfVersion
 ///
-int32_t q_sciprinter_pdf_version(void* self);
+int32_t q_sciprinter_pdf_version(const void* self);
 
 /// Inherited from QPrinter
 ///
@@ -230,17 +230,17 @@ void q_sciprinter_set_printer_name(void* self, const char* printerName);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-const char* q_sciprinter_printer_name(void* self);
+const char* q_sciprinter_printer_name(const void* self);
 
 /// Inherited from QPrinter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#isValid)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-bool q_sciprinter_is_valid(void* self);
+bool q_sciprinter_is_valid(const void* self);
 
 /// Inherited from QPrinter
 ///
@@ -257,9 +257,9 @@ void q_sciprinter_set_output_file_name(void* self, const char* outputFileName);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-const char* q_sciprinter_output_file_name(void* self);
+const char* q_sciprinter_output_file_name(const void* self);
 
 /// Inherited from QPrinter
 ///
@@ -276,9 +276,9 @@ void q_sciprinter_set_print_program(void* self, const char* printProgram);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-const char* q_sciprinter_print_program(void* self);
+const char* q_sciprinter_print_program(const void* self);
 
 /// Inherited from QPrinter
 ///
@@ -295,9 +295,9 @@ void q_sciprinter_set_doc_name(void* self, const char* docName);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-const char* q_sciprinter_doc_name(void* self);
+const char* q_sciprinter_doc_name(const void* self);
 
 /// Inherited from QPrinter
 ///
@@ -314,9 +314,9 @@ void q_sciprinter_set_creator(void* self, const char* creator);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-const char* q_sciprinter_creator(void* self);
+const char* q_sciprinter_creator(const void* self);
 
 /// Inherited from QPrinter
 ///
@@ -331,11 +331,11 @@ void q_sciprinter_set_page_order(void* self, int32_t pageOrder);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#pageOrder)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
 /// @return enum QPrinter__PageOrder
 ///
-int32_t q_sciprinter_page_order(void* self);
+int32_t q_sciprinter_page_order(const void* self);
 
 /// Inherited from QPrinter
 ///
@@ -350,9 +350,9 @@ void q_sciprinter_set_resolution(void* self, int resolution);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#resolution)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-int32_t q_sciprinter_resolution(void* self);
+int32_t q_sciprinter_resolution(const void* self);
 
 /// Inherited from QPrinter
 ///
@@ -367,11 +367,11 @@ void q_sciprinter_set_color_mode(void* self, int32_t colorMode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#colorMode)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
 /// @return enum QPrinter__ColorMode
 ///
-int32_t q_sciprinter_color_mode(void* self);
+int32_t q_sciprinter_color_mode(const void* self);
 
 /// Inherited from QPrinter
 ///
@@ -386,9 +386,9 @@ void q_sciprinter_set_collate_copies(void* self, bool collate);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#collateCopies)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-bool q_sciprinter_collate_copies(void* self);
+bool q_sciprinter_collate_copies(const void* self);
 
 /// Inherited from QPrinter
 ///
@@ -403,9 +403,9 @@ void q_sciprinter_set_full_page(void* self, bool fullPage);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#fullPage)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-bool q_sciprinter_full_page(void* self);
+bool q_sciprinter_full_page(const void* self);
 
 /// Inherited from QPrinter
 ///
@@ -420,17 +420,17 @@ void q_sciprinter_set_copy_count(void* self, int copyCount);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#copyCount)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-int32_t q_sciprinter_copy_count(void* self);
+int32_t q_sciprinter_copy_count(const void* self);
 
 /// Inherited from QPrinter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#supportsMultipleCopies)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-bool q_sciprinter_supports_multiple_copies(void* self);
+bool q_sciprinter_supports_multiple_copies(const void* self);
 
 /// Inherited from QPrinter
 ///
@@ -445,11 +445,11 @@ void q_sciprinter_set_paper_source(void* self, int32_t paperSource);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#paperSource)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
 /// @return enum QPrinter__PaperSource
 ///
-int32_t q_sciprinter_paper_source(void* self);
+int32_t q_sciprinter_paper_source(const void* self);
 
 /// Inherited from QPrinter
 ///
@@ -464,21 +464,21 @@ void q_sciprinter_set_duplex(void* self, int32_t duplex);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#duplex)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
 /// @return enum QPrinter__DuplexMode
 ///
-int32_t q_sciprinter_duplex(void* self);
+int32_t q_sciprinter_duplex(const void* self);
 
 /// Inherited from QPrinter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#supportedResolutions)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
 /// @return libqt_list of int
 ///
-libqt_list q_sciprinter_supported_resolutions(void* self);
+libqt_list q_sciprinter_supported_resolutions(const void* self);
 
 /// Inherited from QPrinter
 ///
@@ -493,27 +493,27 @@ void q_sciprinter_set_font_embedding_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#fontEmbeddingEnabled)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-bool q_sciprinter_font_embedding_enabled(void* self);
+bool q_sciprinter_font_embedding_enabled(const void* self);
 
 /// Inherited from QPrinter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#paperRect)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 /// @param param1 enum QPrinter__Unit
 ///
-QRectF* q_sciprinter_paper_rect(void* self, int32_t param1);
+QRectF* q_sciprinter_paper_rect(const void* self, int32_t param1);
 
 /// Inherited from QPrinter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#pageRect)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 /// @param param1 enum QPrinter__Unit
 ///
-QRectF* q_sciprinter_page_rect(void* self, int32_t param1);
+QRectF* q_sciprinter_page_rect(const void* self, int32_t param1);
 
 /// Inherited from QPrinter
 ///
@@ -521,9 +521,9 @@ QRectF* q_sciprinter_page_rect(void* self, int32_t param1);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-const char* q_sciprinter_printer_selection_option(void* self);
+const char* q_sciprinter_printer_selection_option(const void* self);
 
 /// Inherited from QPrinter
 ///
@@ -546,19 +546,19 @@ bool q_sciprinter_abort(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#printerState)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
 /// @return enum QPrinter__PrinterState
 ///
-int32_t q_sciprinter_printer_state(void* self);
+int32_t q_sciprinter_printer_state(const void* self);
 
 /// Inherited from QPrinter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#printEngine)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-QPrintEngine* q_sciprinter_print_engine(void* self);
+QPrintEngine* q_sciprinter_print_engine(const void* self);
 
 /// Inherited from QPrinter
 ///
@@ -574,17 +574,17 @@ void q_sciprinter_set_from_to(void* self, int fromPage, int toPage);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#fromPage)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-int32_t q_sciprinter_from_page(void* self);
+int32_t q_sciprinter_from_page(const void* self);
 
 /// Inherited from QPrinter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#toPage)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-int32_t q_sciprinter_to_page(void* self);
+int32_t q_sciprinter_to_page(const void* self);
 
 /// Inherited from QPrinter
 ///
@@ -599,121 +599,121 @@ void q_sciprinter_set_print_range(void* self, int32_t range);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagedpaintdevice.html#pageLayout)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-QPageLayout* q_sciprinter_page_layout(void* self);
+QPageLayout* q_sciprinter_page_layout(const void* self);
 
 /// Inherited from QPagedPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagedpaintdevice.html#pageRanges)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-QPageRanges* q_sciprinter_page_ranges(void* self);
+QPageRanges* q_sciprinter_page_ranges(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-bool q_sciprinter_painting_active(void* self);
+bool q_sciprinter_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#width)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-int32_t q_sciprinter_width(void* self);
+int32_t q_sciprinter_width(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#height)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-int32_t q_sciprinter_height(void* self);
+int32_t q_sciprinter_height(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-int32_t q_sciprinter_width_m_m(void* self);
+int32_t q_sciprinter_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-int32_t q_sciprinter_height_m_m(void* self);
+int32_t q_sciprinter_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-int32_t q_sciprinter_logical_dpi_x(void* self);
+int32_t q_sciprinter_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-int32_t q_sciprinter_logical_dpi_y(void* self);
+int32_t q_sciprinter_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-int32_t q_sciprinter_physical_dpi_x(void* self);
+int32_t q_sciprinter_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-int32_t q_sciprinter_physical_dpi_y(void* self);
+int32_t q_sciprinter_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-double q_sciprinter_device_pixel_ratio(void* self);
+double q_sciprinter_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-double q_sciprinter_device_pixel_ratio_f(void* self);
+double q_sciprinter_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-int32_t q_sciprinter_color_count(void* self);
+int32_t q_sciprinter_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-int32_t q_sciprinter_depth(void* self);
+int32_t q_sciprinter_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -736,9 +736,9 @@ int32_t q_sciprinter_encode_metric_f(int32_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-int32_t q_sciprinter_dev_type(void* self);
+int32_t q_sciprinter_dev_type(const void* self);
 
 /// Inherited from QPrinter
 ///
@@ -746,9 +746,9 @@ int32_t q_sciprinter_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-int32_t q_sciprinter_super_dev_type(void* self);
+int32_t q_sciprinter_super_dev_type(const void* self);
 
 /// Inherited from QPrinter
 ///
@@ -756,10 +756,10 @@ int32_t q_sciprinter_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciPrinter*
-/// @param callback int32_t func()
+/// @param self const QsciPrinter*
+/// @param callback int32_t func(QsciPrinter* self)
 ///
-void q_sciprinter_on_dev_type(void* self, int32_t (*callback)());
+void q_sciprinter_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QPrinter
 ///
@@ -788,9 +788,9 @@ bool q_sciprinter_super_new_page(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciPrinter*
-/// @param callback bool func()
+/// @param callback bool func(QsciPrinter* self)
 ///
-void q_sciprinter_on_new_page(void* self, bool (*callback)());
+void q_sciprinter_on_new_page(void* self, bool (*callback)(void*));
 
 /// Inherited from QPrinter
 ///
@@ -798,9 +798,9 @@ void q_sciprinter_on_new_page(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-QPaintEngine* q_sciprinter_paint_engine(void* self);
+QPaintEngine* q_sciprinter_paint_engine(const void* self);
 
 /// Inherited from QPrinter
 ///
@@ -808,9 +808,9 @@ QPaintEngine* q_sciprinter_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-QPaintEngine* q_sciprinter_super_paint_engine(void* self);
+QPaintEngine* q_sciprinter_super_paint_engine(const void* self);
 
 /// Inherited from QPrinter
 ///
@@ -818,10 +818,10 @@ QPaintEngine* q_sciprinter_super_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciPrinter*
-/// @param callback QPaintEngine* func()
+/// @param self const QsciPrinter*
+/// @param callback QPaintEngine* func(QsciPrinter* self)
 ///
-void q_sciprinter_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void q_sciprinter_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QPrinter
 ///
@@ -829,10 +829,10 @@ void q_sciprinter_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_sciprinter_metric(void* self, int32_t param1);
+int32_t q_sciprinter_metric(const void* self, int32_t param1);
 
 /// Inherited from QPrinter
 ///
@@ -840,10 +840,10 @@ int32_t q_sciprinter_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_sciprinter_super_metric(void* self, int32_t param1);
+int32_t q_sciprinter_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QPrinter
 ///
@@ -851,10 +851,10 @@ int32_t q_sciprinter_super_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 /// @param callback int32_t func(QsciPrinter* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_sciprinter_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void q_sciprinter_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -865,7 +865,7 @@ void q_sciprinter_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 /// @param self QsciPrinter*
 /// @param pageLayout QPageLayout*
 ///
-bool q_sciprinter_set_page_layout(void* self, void* pageLayout);
+bool q_sciprinter_set_page_layout(void* self, const void* pageLayout);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -876,7 +876,7 @@ bool q_sciprinter_set_page_layout(void* self, void* pageLayout);
 /// @param self QsciPrinter*
 /// @param pageLayout QPageLayout*
 ///
-bool q_sciprinter_super_set_page_layout(void* self, void* pageLayout);
+bool q_sciprinter_super_set_page_layout(void* self, const void* pageLayout);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -887,7 +887,7 @@ bool q_sciprinter_super_set_page_layout(void* self, void* pageLayout);
 /// @param self QsciPrinter*
 /// @param callback bool func(QsciPrinter* self, QPageLayout* pageLayout)
 ///
-void q_sciprinter_on_set_page_layout(void* self, bool (*callback)(void*, void*));
+void q_sciprinter_on_set_page_layout(void* self, bool (*callback)(void*, const void*));
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -898,7 +898,7 @@ void q_sciprinter_on_set_page_layout(void* self, bool (*callback)(void*, void*))
 /// @param self QsciPrinter*
 /// @param pageSize QPageSize*
 ///
-bool q_sciprinter_set_page_size(void* self, void* pageSize);
+bool q_sciprinter_set_page_size(void* self, const void* pageSize);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -909,7 +909,7 @@ bool q_sciprinter_set_page_size(void* self, void* pageSize);
 /// @param self QsciPrinter*
 /// @param pageSize QPageSize*
 ///
-bool q_sciprinter_super_set_page_size(void* self, void* pageSize);
+bool q_sciprinter_super_set_page_size(void* self, const void* pageSize);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -920,7 +920,7 @@ bool q_sciprinter_super_set_page_size(void* self, void* pageSize);
 /// @param self QsciPrinter*
 /// @param callback bool func(QsciPrinter* self, QPageSize* pageSize)
 ///
-void q_sciprinter_on_set_page_size(void* self, bool (*callback)(void*, void*));
+void q_sciprinter_on_set_page_size(void* self, bool (*callback)(void*, const void*));
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -965,7 +965,7 @@ void q_sciprinter_on_set_page_orientation(void* self, bool (*callback)(void*, in
 /// @param margins QMarginsF*
 /// @param units enum QPageLayout__Unit
 ///
-bool q_sciprinter_set_page_margins(void* self, void* margins, int32_t units);
+bool q_sciprinter_set_page_margins(void* self, const void* margins, int32_t units);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -977,7 +977,7 @@ bool q_sciprinter_set_page_margins(void* self, void* margins, int32_t units);
 /// @param margins QMarginsF*
 /// @param units enum QPageLayout__Unit
 ///
-bool q_sciprinter_super_set_page_margins(void* self, void* margins, int32_t units);
+bool q_sciprinter_super_set_page_margins(void* self, const void* margins, int32_t units);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -988,7 +988,7 @@ bool q_sciprinter_super_set_page_margins(void* self, void* margins, int32_t unit
 /// @param self QsciPrinter*
 /// @param callback bool func(QsciPrinter* self, QMarginsF* margins, enum QPageLayout__Unit units)
 ///
-void q_sciprinter_on_set_page_margins(void* self, bool (*callback)(void*, void*, int32_t));
+void q_sciprinter_on_set_page_margins(void* self, bool (*callback)(void*, const void*, int32_t));
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -999,7 +999,7 @@ void q_sciprinter_on_set_page_margins(void* self, bool (*callback)(void*, void*,
 /// @param self QsciPrinter*
 /// @param ranges QPageRanges*
 ///
-void q_sciprinter_set_page_ranges(void* self, void* ranges);
+void q_sciprinter_set_page_ranges(void* self, const void* ranges);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -1010,7 +1010,7 @@ void q_sciprinter_set_page_ranges(void* self, void* ranges);
 /// @param self QsciPrinter*
 /// @param ranges QPageRanges*
 ///
-void q_sciprinter_super_set_page_ranges(void* self, void* ranges);
+void q_sciprinter_super_set_page_ranges(void* self, const void* ranges);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -1021,7 +1021,7 @@ void q_sciprinter_super_set_page_ranges(void* self, void* ranges);
 /// @param self QsciPrinter*
 /// @param callback void func(QsciPrinter* self, QPageRanges* ranges)
 ///
-void q_sciprinter_on_set_page_ranges(void* self, void (*callback)(void*, void*));
+void q_sciprinter_on_set_page_ranges(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -1029,10 +1029,10 @@ void q_sciprinter_on_set_page_ranges(void* self, void (*callback)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 /// @param painter QPainter*
 ///
-void q_sciprinter_init_painter(void* self, void* painter);
+void q_sciprinter_init_painter(const void* self, void* painter);
 
 /// Inherited from QPaintDevice
 ///
@@ -1040,10 +1040,10 @@ void q_sciprinter_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 /// @param painter QPainter*
 ///
-void q_sciprinter_super_init_painter(void* self, void* painter);
+void q_sciprinter_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QPaintDevice
 ///
@@ -1051,10 +1051,10 @@ void q_sciprinter_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 /// @param callback void func(QsciPrinter* self, QPainter* painter)
 ///
-void q_sciprinter_on_init_painter(void* self, void (*callback)(void*, void*));
+void q_sciprinter_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -1062,10 +1062,10 @@ void q_sciprinter_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_sciprinter_redirected(void* self, void* offset);
+QPaintDevice* q_sciprinter_redirected(const void* self, void* offset);
 
 /// Inherited from QPaintDevice
 ///
@@ -1073,10 +1073,10 @@ QPaintDevice* q_sciprinter_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_sciprinter_super_redirected(void* self, void* offset);
+QPaintDevice* q_sciprinter_super_redirected(const void* self, void* offset);
 
 /// Inherited from QPaintDevice
 ///
@@ -1084,10 +1084,10 @@ QPaintDevice* q_sciprinter_super_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 /// @param callback QPaintDevice* func(QsciPrinter* self, QPoint* offset)
 ///
-void q_sciprinter_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void q_sciprinter_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -1095,9 +1095,9 @@ void q_sciprinter_on_redirected(void* self, QPaintDevice* (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-QPainter* q_sciprinter_shared_painter(void* self);
+QPainter* q_sciprinter_shared_painter(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -1105,9 +1105,9 @@ QPainter* q_sciprinter_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 ///
-QPainter* q_sciprinter_super_shared_painter(void* self);
+QPainter* q_sciprinter_super_shared_painter(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -1115,10 +1115,10 @@ QPainter* q_sciprinter_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciPrinter*
-/// @param callback QPainter* func()
+/// @param self const QsciPrinter*
+/// @param callback QPainter* func(QsciPrinter* self)
 ///
-void q_sciprinter_on_shared_painter(void* self, QPainter* (*callback)());
+void q_sciprinter_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QPrinter
 ///
@@ -1161,11 +1161,11 @@ void q_sciprinter_on_set_engines(void* self, void (*callback)(void*, void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_sciprinter_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_sciprinter_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -1173,11 +1173,11 @@ double q_sciprinter_get_decoded_metric_f(void* self, int32_t metricA, int32_t me
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_sciprinter_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_sciprinter_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -1185,10 +1185,10 @@ double q_sciprinter_super_get_decoded_metric_f(void* self, int32_t metricA, int3
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QsciPrinter*
+/// @param self const QsciPrinter*
 /// @param callback double func(QsciPrinter* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_sciprinter_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void q_sciprinter_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
 ///

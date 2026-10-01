@@ -24,51 +24,51 @@ QGraphicsItem* q_graphicsitem_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scene)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-QGraphicsScene* q_graphicsitem_scene(void* self);
+QGraphicsScene* q_graphicsitem_scene(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentItem)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-QGraphicsItem* q_graphicsitem_parent_item(void* self);
+QGraphicsItem* q_graphicsitem_parent_item(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#topLevelItem)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-QGraphicsItem* q_graphicsitem_top_level_item(void* self);
+QGraphicsItem* q_graphicsitem_top_level_item(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentObject)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-QGraphicsObject* q_graphicsitem_parent_object(void* self);
+QGraphicsObject* q_graphicsitem_parent_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentWidget)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-QGraphicsWidget* q_graphicsitem_parent_widget(void* self);
+QGraphicsWidget* q_graphicsitem_parent_widget(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#topLevelWidget)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-QGraphicsWidget* q_graphicsitem_top_level_widget(void* self);
+QGraphicsWidget* q_graphicsitem_top_level_widget(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#window)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-QGraphicsWidget* q_graphicsitem_window(void* self);
+QGraphicsWidget* q_graphicsitem_window(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#panel)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-QGraphicsItem* q_graphicsitem_panel(void* self);
+QGraphicsItem* q_graphicsitem_panel(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setParentItem)
 ///
@@ -79,29 +79,29 @@ void q_graphicsitem_set_parent_item(void* self, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#childItems)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsitem_child_items(void* self);
+libqt_list q_graphicsitem_child_items(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isWidget)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-bool q_graphicsitem_is_widget(void* self);
+bool q_graphicsitem_is_widget(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isWindow)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-bool q_graphicsitem_is_window(void* self);
+bool q_graphicsitem_is_window(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isPanel)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-bool q_graphicsitem_is_panel(void* self);
+bool q_graphicsitem_is_panel(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#toGraphicsObject)
 ///
@@ -111,15 +111,15 @@ QGraphicsObject* q_graphicsitem_to_graphics_object(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#toGraphicsObject)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-const QGraphicsObject* q_graphicsitem_to_graphics_object2(void* self);
+const QGraphicsObject* q_graphicsitem_to_graphics_object2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#group)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-QGraphicsItemGroup* q_graphicsitem_group(void* self);
+QGraphicsItemGroup* q_graphicsitem_group(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setGroup)
 ///
@@ -130,11 +130,11 @@ void q_graphicsitem_set_group(void* self, void* group);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#flags)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
 /// @return flag of enum QGraphicsItem__GraphicsItemFlag
 ///
-int32_t q_graphicsitem_flags(void* self);
+int32_t q_graphicsitem_flags(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setFlag)
 ///
@@ -152,11 +152,11 @@ void q_graphicsitem_set_flags(void* self, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#cacheMode)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
 /// @return enum QGraphicsItem__CacheMode
 ///
-int32_t q_graphicsitem_cache_mode(void* self);
+int32_t q_graphicsitem_cache_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setCacheMode)
 ///
@@ -167,11 +167,11 @@ void q_graphicsitem_set_cache_mode(void* self, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#panelModality)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
 /// @return enum QGraphicsItem__PanelModality
 ///
-int32_t q_graphicsitem_panel_modality(void* self);
+int32_t q_graphicsitem_panel_modality(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setPanelModality)
 ///
@@ -182,17 +182,17 @@ void q_graphicsitem_set_panel_modality(void* self, int32_t panelModality);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-bool q_graphicsitem_is_blocked_by_modal_panel(void* self);
+bool q_graphicsitem_is_blocked_by_modal_panel(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#toolTip)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-const char* q_graphicsitem_tool_tip(void* self);
+const char* q_graphicsitem_tool_tip(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setToolTip)
 ///
@@ -203,22 +203,22 @@ void q_graphicsitem_set_tool_tip(void* self, const char* toolTip);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#cursor)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-QCursor* q_graphicsitem_cursor(void* self);
+QCursor* q_graphicsitem_cursor(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setCursor)
 ///
 /// @param self QGraphicsItem*
 /// @param cursor QCursor*
 ///
-void q_graphicsitem_set_cursor(void* self, void* cursor);
+void q_graphicsitem_set_cursor(void* self, const void* cursor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hasCursor)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-bool q_graphicsitem_has_cursor(void* self);
+bool q_graphicsitem_has_cursor(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#unsetCursor)
 ///
@@ -228,16 +228,16 @@ void q_graphicsitem_unset_cursor(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isVisible)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-bool q_graphicsitem_is_visible(void* self);
+bool q_graphicsitem_is_visible(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isVisibleTo)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param parent QGraphicsItem*
 ///
-bool q_graphicsitem_is_visible_to(void* self, void* parent);
+bool q_graphicsitem_is_visible_to(const void* self, const void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setVisible)
 ///
@@ -260,9 +260,9 @@ void q_graphicsitem_show(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isEnabled)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-bool q_graphicsitem_is_enabled(void* self);
+bool q_graphicsitem_is_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setEnabled)
 ///
@@ -273,9 +273,9 @@ void q_graphicsitem_set_enabled(void* self, bool enabled);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isSelected)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-bool q_graphicsitem_is_selected(void* self);
+bool q_graphicsitem_is_selected(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setSelected)
 ///
@@ -286,9 +286,9 @@ void q_graphicsitem_set_selected(void* self, bool selected);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptDrops)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-bool q_graphicsitem_accept_drops(void* self);
+bool q_graphicsitem_accept_drops(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setAcceptDrops)
 ///
@@ -299,15 +299,15 @@ void q_graphicsitem_set_accept_drops(void* self, bool on);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#opacity)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-double q_graphicsitem_opacity(void* self);
+double q_graphicsitem_opacity(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#effectiveOpacity)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-double q_graphicsitem_effective_opacity(void* self);
+double q_graphicsitem_effective_opacity(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setOpacity)
 ///
@@ -318,9 +318,9 @@ void q_graphicsitem_set_opacity(void* self, double opacity);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#graphicsEffect)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-QGraphicsEffect* q_graphicsitem_graphics_effect(void* self);
+QGraphicsEffect* q_graphicsitem_graphics_effect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setGraphicsEffect)
 ///
@@ -331,11 +331,11 @@ void q_graphicsitem_set_graphics_effect(void* self, void* effect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptedMouseButtons)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
 /// @return flag of enum Qt__MouseButton
 ///
-int32_t q_graphicsitem_accepted_mouse_buttons(void* self);
+int32_t q_graphicsitem_accepted_mouse_buttons(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setAcceptedMouseButtons)
 ///
@@ -346,9 +346,9 @@ void q_graphicsitem_set_accepted_mouse_buttons(void* self, int32_t buttons);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptHoverEvents)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-bool q_graphicsitem_accept_hover_events(void* self);
+bool q_graphicsitem_accept_hover_events(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setAcceptHoverEvents)
 ///
@@ -359,9 +359,9 @@ void q_graphicsitem_set_accept_hover_events(void* self, bool enabled);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptTouchEvents)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-bool q_graphicsitem_accept_touch_events(void* self);
+bool q_graphicsitem_accept_touch_events(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setAcceptTouchEvents)
 ///
@@ -372,9 +372,9 @@ void q_graphicsitem_set_accept_touch_events(void* self, bool enabled);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#filtersChildEvents)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-bool q_graphicsitem_filters_child_events(void* self);
+bool q_graphicsitem_filters_child_events(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setFiltersChildEvents)
 ///
@@ -385,9 +385,9 @@ void q_graphicsitem_set_filters_child_events(void* self, bool enabled);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#handlesChildEvents)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-bool q_graphicsitem_handles_child_events(void* self);
+bool q_graphicsitem_handles_child_events(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setHandlesChildEvents)
 ///
@@ -398,9 +398,9 @@ void q_graphicsitem_set_handles_child_events(void* self, bool enabled);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isActive)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-bool q_graphicsitem_is_active(void* self);
+bool q_graphicsitem_is_active(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setActive)
 ///
@@ -411,9 +411,9 @@ void q_graphicsitem_set_active(void* self, bool active);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hasFocus)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-bool q_graphicsitem_has_focus(void* self);
+bool q_graphicsitem_has_focus(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setFocus)
 ///
@@ -429,9 +429,9 @@ void q_graphicsitem_clear_focus(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusProxy)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-QGraphicsItem* q_graphicsitem_focus_proxy(void* self);
+QGraphicsItem* q_graphicsitem_focus_proxy(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setFocusProxy)
 ///
@@ -442,15 +442,15 @@ void q_graphicsitem_set_focus_proxy(void* self, void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusItem)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-QGraphicsItem* q_graphicsitem_focus_item(void* self);
+QGraphicsItem* q_graphicsitem_focus_item(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusScopeItem)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-QGraphicsItem* q_graphicsitem_focus_scope_item(void* self);
+QGraphicsItem* q_graphicsitem_focus_scope_item(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#grabMouse)
 ///
@@ -478,15 +478,15 @@ void q_graphicsitem_ungrab_keyboard(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#pos)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-QPointF* q_graphicsitem_pos(void* self);
+QPointF* q_graphicsitem_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#x)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-double q_graphicsitem_x(void* self);
+double q_graphicsitem_x(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setX)
 ///
@@ -497,9 +497,9 @@ void q_graphicsitem_set_x(void* self, double x);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#y)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-double q_graphicsitem_y(void* self);
+double q_graphicsitem_y(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setY)
 ///
@@ -510,16 +510,16 @@ void q_graphicsitem_set_y(void* self, double y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scenePos)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-QPointF* q_graphicsitem_scene_pos(void* self);
+QPointF* q_graphicsitem_scene_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setPos)
 ///
 /// @param self QGraphicsItem*
 /// @param pos QPointF*
 ///
-void q_graphicsitem_set_pos(void* self, void* pos);
+void q_graphicsitem_set_pos(void* self, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setPos)
 ///
@@ -555,36 +555,36 @@ void q_graphicsitem_ensure_visible2(void* self, double x, double y, double w, do
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transform)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-QTransform* q_graphicsitem_transform(void* self);
+QTransform* q_graphicsitem_transform(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneTransform)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-QTransform* q_graphicsitem_scene_transform(void* self);
+QTransform* q_graphicsitem_scene_transform(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#deviceTransform)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param viewportTransform QTransform*
 ///
-QTransform* q_graphicsitem_device_transform(void* self, void* viewportTransform);
+QTransform* q_graphicsitem_device_transform(const void* self, const void* viewportTransform);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemTransform)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param other QGraphicsItem*
 ///
-QTransform* q_graphicsitem_item_transform(void* self, void* other);
+QTransform* q_graphicsitem_item_transform(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setTransform)
 ///
 /// @param self QGraphicsItem*
 /// @param matrix QTransform*
 ///
-void q_graphicsitem_set_transform(void* self, void* matrix);
+void q_graphicsitem_set_transform(void* self, const void* matrix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#resetTransform)
 ///
@@ -601,9 +601,9 @@ void q_graphicsitem_set_rotation(void* self, double angle);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#rotation)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-double q_graphicsitem_rotation(void* self);
+double q_graphicsitem_rotation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setScale)
 ///
@@ -614,17 +614,17 @@ void q_graphicsitem_set_scale(void* self, double scale);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scale)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-double q_graphicsitem_scale(void* self);
+double q_graphicsitem_scale(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transformations)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
 /// @return libqt_list of QGraphicsTransform*
 ///
-libqt_list q_graphicsitem_transformations(void* self);
+libqt_list q_graphicsitem_transformations(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setTransformations)
 ///
@@ -635,16 +635,16 @@ void q_graphicsitem_set_transformations(void* self, libqt_list transformations);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transformOriginPoint)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-QPointF* q_graphicsitem_transform_origin_point(void* self);
+QPointF* q_graphicsitem_transform_origin_point(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setTransformOriginPoint)
 ///
 /// @param self QGraphicsItem*
 /// @param origin QPointF*
 ///
-void q_graphicsitem_set_transform_origin_point(void* self, void* origin);
+void q_graphicsitem_set_transform_origin_point(void* self, const void* origin);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setTransformOriginPoint)
 ///
@@ -681,9 +681,9 @@ void q_graphicsitem_super_advance(void* self, int phase);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#zValue)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-double q_graphicsitem_z_value(void* self);
+double q_graphicsitem_z_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setZValue)
 ///
@@ -697,247 +697,241 @@ void q_graphicsitem_set_z_value(void* self, double z);
 /// @param self QGraphicsItem*
 /// @param sibling QGraphicsItem*
 ///
-void q_graphicsitem_stack_before(void* self, void* sibling);
+void q_graphicsitem_stack_before(void* self, const void* sibling);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRect)
 ///
-/// @param self QGraphicsItem*
+/// @warning This method must be implemented with `q_graphicsitem_on_bounding_rect` before it can be called.
 ///
-QRectF* q_graphicsitem_bounding_rect(void* self);
+/// @param self const QGraphicsItem*
+///
+QRectF* q_graphicsitem_bounding_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRect)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsItem*
-/// @param callback QRectF* func()
+/// @param self const QGraphicsItem*
+/// @param callback QRectF* func(const QGraphicsItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsitem_on_bounding_rect(void* self, QRectF* (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRect)
-///
-/// Base class method implementation
-///
-/// @param self QGraphicsItem*
-///
-QRectF* q_graphicsitem_super_bounding_rect(void* self);
+void q_graphicsitem_on_bounding_rect(const void* self, QRectF* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#childrenBoundingRect)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-QRectF* q_graphicsitem_children_bounding_rect(void* self);
+QRectF* q_graphicsitem_children_bounding_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneBoundingRect)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-QRectF* q_graphicsitem_scene_bounding_rect(void* self);
+QRectF* q_graphicsitem_scene_bounding_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#shape)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-QPainterPath* q_graphicsitem_shape(void* self);
+QPainterPath* q_graphicsitem_shape(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#shape)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsItem*
-/// @param callback QPainterPath* func()
+/// @param self const QGraphicsItem*
+/// @param callback QPainterPath* func(const QGraphicsItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsitem_on_shape(void* self, QPainterPath* (*callback)());
+void q_graphicsitem_on_shape(const void* self, QPainterPath* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#shape)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-QPainterPath* q_graphicsitem_super_shape(void* self);
+QPainterPath* q_graphicsitem_super_shape(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isClipped)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-bool q_graphicsitem_is_clipped(void* self);
+bool q_graphicsitem_is_clipped(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#clipPath)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-QPainterPath* q_graphicsitem_clip_path(void* self);
+QPainterPath* q_graphicsitem_clip_path(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#contains)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param point QPointF*
 ///
-bool q_graphicsitem_contains(void* self, void* point);
+bool q_graphicsitem_contains(const void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#contains)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsItem*
-/// @param callback bool func(QGraphicsItem* self, QPointF* point)
+/// @param self const QGraphicsItem*
+/// @param callback bool func(const QGraphicsItem* self, QPointF* point)
 ///
-void q_graphicsitem_on_contains(void* self, bool (*callback)(void*, void*));
+void q_graphicsitem_on_contains(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#contains)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param point QPointF*
 ///
-bool q_graphicsitem_super_contains(void* self, void* point);
+bool q_graphicsitem_super_contains(const void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithItem)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicsitem_collides_with_item(void* self, void* other, int32_t mode);
+bool q_graphicsitem_collides_with_item(const void* self, const void* other, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithItem)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsItem*
-/// @param callback bool func(QGraphicsItem* self, QGraphicsItem* other, enum Qt__ItemSelectionMode mode)
+/// @param self const QGraphicsItem*
+/// @param callback bool func(const QGraphicsItem* self, QGraphicsItem* other, enum Qt__ItemSelectionMode mode)
 ///
-void q_graphicsitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
+void q_graphicsitem_on_collides_with_item(const void* self, bool (*callback)(const void*, const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithItem)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicsitem_super_collides_with_item(void* self, void* other, int32_t mode);
+bool q_graphicsitem_super_collides_with_item(const void* self, const void* other, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithPath)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicsitem_collides_with_path(void* self, void* path, int32_t mode);
+bool q_graphicsitem_collides_with_path(const void* self, const void* path, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithPath)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsItem*
-/// @param callback bool func(QGraphicsItem* self, QPainterPath* path, enum Qt__ItemSelectionMode mode)
+/// @param self const QGraphicsItem*
+/// @param callback bool func(const QGraphicsItem* self, QPainterPath* path, enum Qt__ItemSelectionMode mode)
 ///
-void q_graphicsitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
+void q_graphicsitem_on_collides_with_path(const void* self, bool (*callback)(const void*, const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithPath)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicsitem_super_collides_with_path(void* self, void* path, int32_t mode);
+bool q_graphicsitem_super_collides_with_path(const void* self, const void* path, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsitem_colliding_items(void* self);
+libqt_list q_graphicsitem_colliding_items(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-bool q_graphicsitem_is_obscured(void* self);
+bool q_graphicsitem_is_obscured(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-bool q_graphicsitem_is_obscured2(void* self, double x, double y, double w, double h);
+bool q_graphicsitem_is_obscured2(const void* self, double x, double y, double w, double h);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscuredBy)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param item QGraphicsItem*
 ///
-bool q_graphicsitem_is_obscured_by(void* self, void* item);
+bool q_graphicsitem_is_obscured_by(const void* self, const void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscuredBy)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsItem*
-/// @param callback bool func(QGraphicsItem* self, QGraphicsItem* item)
+/// @param self const QGraphicsItem*
+/// @param callback bool func(const QGraphicsItem* self, QGraphicsItem* item)
 ///
-void q_graphicsitem_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
+void q_graphicsitem_on_is_obscured_by(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscuredBy)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param item QGraphicsItem*
 ///
-bool q_graphicsitem_super_is_obscured_by(void* self, void* item);
+bool q_graphicsitem_super_is_obscured_by(const void* self, const void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#opaqueArea)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-QPainterPath* q_graphicsitem_opaque_area(void* self);
+QPainterPath* q_graphicsitem_opaque_area(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#opaqueArea)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsItem*
-/// @param callback QPainterPath* func()
+/// @param self const QGraphicsItem*
+/// @param callback QPainterPath* func(const QGraphicsItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsitem_on_opaque_area(void* self, QPainterPath* (*callback)());
+void q_graphicsitem_on_opaque_area(const void* self, QPainterPath* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#opaqueArea)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-QPainterPath* q_graphicsitem_super_opaque_area(void* self);
+QPainterPath* q_graphicsitem_super_opaque_area(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRegion)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param itemToDeviceTransform QTransform*
 ///
-QRegion* q_graphicsitem_bounding_region(void* self, void* itemToDeviceTransform);
+QRegion* q_graphicsitem_bounding_region(const void* self, const void* itemToDeviceTransform);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRegionGranularity)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-double q_graphicsitem_bounding_region_granularity(void* self);
+double q_graphicsitem_bounding_region_granularity(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setBoundingRegionGranularity)
 ///
@@ -948,12 +942,14 @@ void q_graphicsitem_set_bounding_region_granularity(void* self, double granulari
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#paint)
 ///
+/// @warning This method must be implemented with `q_graphicsitem_on_paint` before it can be called.
+///
 /// @param self QGraphicsItem*
 /// @param painter QPainter*
 /// @param option QStyleOptionGraphicsItem*
 /// @param widget QWidget*
 ///
-void q_graphicsitem_paint(void* self, void* painter, void* option, void* widget);
+void q_graphicsitem_paint(void* self, void* painter, const void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#paint)
 ///
@@ -962,18 +958,7 @@ void q_graphicsitem_paint(void* self, void* painter, void* option, void* widget)
 /// @param self QGraphicsItem*
 /// @param callback void func(QGraphicsItem* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget)
 ///
-void q_graphicsitem_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#paint)
-///
-/// Base class method implementation
-///
-/// @param self QGraphicsItem*
-/// @param painter QPainter*
-/// @param option QStyleOptionGraphicsItem*
-/// @param widget QWidget*
-///
-void q_graphicsitem_super_paint(void* self, void* painter, void* option, void* widget);
+void q_graphicsitem_on_paint(void* self, void (*callback)(void*, void*, const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#update)
 ///
@@ -1001,424 +986,424 @@ void q_graphicsitem_scroll(void* self, double dx, double dy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param item QGraphicsItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicsitem_map_to_item(void* self, void* item, void* point);
+QPointF* q_graphicsitem_map_to_item(const void* self, const void* item, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicsitem_map_to_parent(void* self, void* point);
+QPointF* q_graphicsitem_map_to_parent(const void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicsitem_map_to_scene(void* self, void* point);
+QPointF* q_graphicsitem_map_to_scene(const void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicsitem_map_to_item2(void* self, void* item, void* rect);
+QPolygonF* q_graphicsitem_map_to_item2(const void* self, const void* item, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicsitem_map_to_parent2(void* self, void* rect);
+QPolygonF* q_graphicsitem_map_to_parent2(const void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicsitem_map_to_scene2(void* self, void* rect);
+QPolygonF* q_graphicsitem_map_to_scene2(const void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsitem_map_rect_to_item(void* self, void* item, void* rect);
+QRectF* q_graphicsitem_map_rect_to_item(const void* self, const void* item, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToParent)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsitem_map_rect_to_parent(void* self, void* rect);
+QRectF* q_graphicsitem_map_rect_to_parent(const void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToScene)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsitem_map_rect_to_scene(void* self, void* rect);
+QRectF* q_graphicsitem_map_rect_to_scene(const void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param item QGraphicsItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicsitem_map_to_item3(void* self, void* item, void* polygon);
+QPolygonF* q_graphicsitem_map_to_item3(const void* self, const void* item, const void* polygon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicsitem_map_to_parent3(void* self, void* polygon);
+QPolygonF* q_graphicsitem_map_to_parent3(const void* self, const void* polygon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicsitem_map_to_scene3(void* self, void* polygon);
+QPolygonF* q_graphicsitem_map_to_scene3(const void* self, const void* polygon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param item QGraphicsItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicsitem_map_to_item4(void* self, void* item, void* path);
+QPainterPath* q_graphicsitem_map_to_item4(const void* self, const void* item, const void* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicsitem_map_to_parent4(void* self, void* path);
+QPainterPath* q_graphicsitem_map_to_parent4(const void* self, const void* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicsitem_map_to_scene4(void* self, void* path);
+QPainterPath* q_graphicsitem_map_to_scene4(const void* self, const void* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param item QGraphicsItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicsitem_map_from_item(void* self, void* item, void* point);
+QPointF* q_graphicsitem_map_from_item(const void* self, const void* item, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicsitem_map_from_parent(void* self, void* point);
+QPointF* q_graphicsitem_map_from_parent(const void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicsitem_map_from_scene(void* self, void* point);
+QPointF* q_graphicsitem_map_from_scene(const void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicsitem_map_from_item2(void* self, void* item, void* rect);
+QPolygonF* q_graphicsitem_map_from_item2(const void* self, const void* item, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicsitem_map_from_parent2(void* self, void* rect);
+QPolygonF* q_graphicsitem_map_from_parent2(const void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicsitem_map_from_scene2(void* self, void* rect);
+QPolygonF* q_graphicsitem_map_from_scene2(const void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsitem_map_rect_from_item(void* self, void* item, void* rect);
+QRectF* q_graphicsitem_map_rect_from_item(const void* self, const void* item, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromParent)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsitem_map_rect_from_parent(void* self, void* rect);
+QRectF* q_graphicsitem_map_rect_from_parent(const void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromScene)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsitem_map_rect_from_scene(void* self, void* rect);
+QRectF* q_graphicsitem_map_rect_from_scene(const void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param item QGraphicsItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicsitem_map_from_item3(void* self, void* item, void* polygon);
+QPolygonF* q_graphicsitem_map_from_item3(const void* self, const void* item, const void* polygon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicsitem_map_from_parent3(void* self, void* polygon);
+QPolygonF* q_graphicsitem_map_from_parent3(const void* self, const void* polygon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicsitem_map_from_scene3(void* self, void* polygon);
+QPolygonF* q_graphicsitem_map_from_scene3(const void* self, const void* polygon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param item QGraphicsItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicsitem_map_from_item4(void* self, void* item, void* path);
+QPainterPath* q_graphicsitem_map_from_item4(const void* self, const void* item, const void* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicsitem_map_from_parent4(void* self, void* path);
+QPainterPath* q_graphicsitem_map_from_parent4(const void* self, const void* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicsitem_map_from_scene4(void* self, void* path);
+QPainterPath* q_graphicsitem_map_from_scene4(const void* self, const void* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicsitem_map_to_item5(void* self, void* item, double x, double y);
+QPointF* q_graphicsitem_map_to_item5(const void* self, const void* item, double x, double y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicsitem_map_to_parent5(void* self, double x, double y);
+QPointF* q_graphicsitem_map_to_parent5(const void* self, double x, double y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicsitem_map_to_scene5(void* self, double x, double y);
+QPointF* q_graphicsitem_map_to_scene5(const void* self, double x, double y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicsitem_map_to_item6(void* self, void* item, double x, double y, double w, double h);
+QPolygonF* q_graphicsitem_map_to_item6(const void* self, const void* item, double x, double y, double w, double h);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicsitem_map_to_parent6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicsitem_map_to_parent6(const void* self, double x, double y, double w, double h);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicsitem_map_to_scene6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicsitem_map_to_scene6(const void* self, double x, double y, double w, double h);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicsitem_map_rect_to_item2(void* self, void* item, double x, double y, double w, double h);
+QRectF* q_graphicsitem_map_rect_to_item2(const void* self, const void* item, double x, double y, double w, double h);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToParent)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicsitem_map_rect_to_parent2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicsitem_map_rect_to_parent2(const void* self, double x, double y, double w, double h);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToScene)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicsitem_map_rect_to_scene2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicsitem_map_rect_to_scene2(const void* self, double x, double y, double w, double h);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicsitem_map_from_item5(void* self, void* item, double x, double y);
+QPointF* q_graphicsitem_map_from_item5(const void* self, const void* item, double x, double y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicsitem_map_from_parent5(void* self, double x, double y);
+QPointF* q_graphicsitem_map_from_parent5(const void* self, double x, double y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicsitem_map_from_scene5(void* self, double x, double y);
+QPointF* q_graphicsitem_map_from_scene5(const void* self, double x, double y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicsitem_map_from_item6(void* self, void* item, double x, double y, double w, double h);
+QPolygonF* q_graphicsitem_map_from_item6(const void* self, const void* item, double x, double y, double w, double h);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicsitem_map_from_parent6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicsitem_map_from_parent6(const void* self, double x, double y, double w, double h);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicsitem_map_from_scene6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicsitem_map_from_scene6(const void* self, double x, double y, double w, double h);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicsitem_map_rect_from_item2(void* self, void* item, double x, double y, double w, double h);
+QRectF* q_graphicsitem_map_rect_from_item2(const void* self, const void* item, double x, double y, double w, double h);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromParent)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicsitem_map_rect_from_parent2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicsitem_map_rect_from_parent2(const void* self, double x, double y, double w, double h);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromScene)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicsitem_map_rect_from_scene2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicsitem_map_rect_from_scene2(const void* self, double x, double y, double w, double h);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isAncestorOf)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param child QGraphicsItem*
 ///
-bool q_graphicsitem_is_ancestor_of(void* self, void* child);
+bool q_graphicsitem_is_ancestor_of(const void* self, const void* child);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#commonAncestorItem)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param other QGraphicsItem*
 ///
-QGraphicsItem* q_graphicsitem_common_ancestor_item(void* self, void* other);
+QGraphicsItem* q_graphicsitem_common_ancestor_item(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isUnderMouse)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-bool q_graphicsitem_is_under_mouse(void* self);
+bool q_graphicsitem_is_under_mouse(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#data)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param key int
 ///
-QVariant* q_graphicsitem_data(void* self, int key);
+QVariant* q_graphicsitem_data(const void* self, int key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setData)
 ///
@@ -1426,15 +1411,15 @@ QVariant* q_graphicsitem_data(void* self, int key);
 /// @param key int
 /// @param value QVariant*
 ///
-void q_graphicsitem_set_data(void* self, int key, void* value);
+void q_graphicsitem_set_data(void* self, int key, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodHints)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t q_graphicsitem_input_method_hints(void* self);
+int32_t q_graphicsitem_input_method_hints(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setInputMethodHints)
 ///
@@ -1445,26 +1430,26 @@ void q_graphicsitem_set_input_method_hints(void* self, int32_t hints);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#type)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-int32_t q_graphicsitem_type(void* self);
+int32_t q_graphicsitem_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#type)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsItem*
-/// @param callback int32_t func()
+/// @param self const QGraphicsItem*
+/// @param callback int32_t func(const QGraphicsItem* self)
 ///
-void q_graphicsitem_on_type(void* self, int32_t (*callback)());
+void q_graphicsitem_on_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#type)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 ///
-int32_t q_graphicsitem_super_type(void* self);
+int32_t q_graphicsitem_super_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#installSceneEventFilter)
 ///
@@ -1485,23 +1470,6 @@ void q_graphicsitem_remove_scene_event_filter(void* self, void* filterItem);
 /// @param self QGraphicsItem*
 ///
 void q_graphicsitem_update_micro_focus(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#updateMicroFocus)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QGraphicsItem*
-/// @param callback void func()
-///
-void q_graphicsitem_on_update_micro_focus(void* self, void (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#updateMicroFocus)
-///
-/// Base class method implementation
-///
-/// @param self QGraphicsItem*
-///
-void q_graphicsitem_super_update_micro_focus(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneEventFilter)
 ///
@@ -2007,30 +1975,30 @@ void q_graphicsitem_super_input_method_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodQuery)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_graphicsitem_input_method_query(void* self, int32_t query);
+QVariant* q_graphicsitem_input_method_query(const void* self, int32_t query);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodQuery)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsItem*
-/// @param callback QVariant* func(QGraphicsItem* self, enum Qt__InputMethodQuery query)
+/// @param self const QGraphicsItem*
+/// @param callback QVariant* func(const QGraphicsItem* self, enum Qt__InputMethodQuery query)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void q_graphicsitem_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodQuery)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_graphicsitem_super_input_method_query(void* self, int32_t query);
+QVariant* q_graphicsitem_super_input_method_query(const void* self, int32_t query);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemChange)
 ///
@@ -2038,7 +2006,7 @@ QVariant* q_graphicsitem_super_input_method_query(void* self, int32_t query);
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
 ///
-QVariant* q_graphicsitem_item_change(void* self, int32_t change, void* value);
+QVariant* q_graphicsitem_item_change(void* self, int32_t change, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemChange)
 ///
@@ -2049,7 +2017,7 @@ QVariant* q_graphicsitem_item_change(void* self, int32_t change, void* value);
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
+void q_graphicsitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemChange)
 ///
@@ -2059,32 +2027,32 @@ void q_graphicsitem_on_item_change(void* self, QVariant* (*callback)(void*, int3
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
 ///
-QVariant* q_graphicsitem_super_item_change(void* self, int32_t change, void* value);
+QVariant* q_graphicsitem_super_item_change(void* self, int32_t change, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#supportsExtension)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_graphicsitem_supports_extension(void* self, int32_t extension);
+bool q_graphicsitem_supports_extension(const void* self, int32_t extension);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#supportsExtension)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsItem*
-/// @param callback bool func(QGraphicsItem* self, enum QGraphicsItem__Extension extension)
+/// @param self const QGraphicsItem*
+/// @param callback bool func(const QGraphicsItem* self, enum QGraphicsItem__Extension extension)
 ///
-void q_graphicsitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t));
+void q_graphicsitem_on_supports_extension(const void* self, bool (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#supportsExtension)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_graphicsitem_super_supports_extension(void* self, int32_t extension);
+bool q_graphicsitem_super_supports_extension(const void* self, int32_t extension);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setExtension)
 ///
@@ -2092,7 +2060,7 @@ bool q_graphicsitem_super_supports_extension(void* self, int32_t extension);
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_graphicsitem_set_extension(void* self, int32_t extension, void* variant);
+void q_graphicsitem_set_extension(void* self, int32_t extension, const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setExtension)
 ///
@@ -2101,7 +2069,7 @@ void q_graphicsitem_set_extension(void* self, int32_t extension, void* variant);
 /// @param self QGraphicsItem*
 /// @param callback void func(QGraphicsItem* self, enum QGraphicsItem__Extension extension, QVariant* variant)
 ///
-void q_graphicsitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*));
+void q_graphicsitem_on_set_extension(void* self, void (*callback)(void*, int32_t, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setExtension)
 ///
@@ -2111,34 +2079,34 @@ void q_graphicsitem_on_set_extension(void* self, void (*callback)(void*, int32_t
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_graphicsitem_super_set_extension(void* self, int32_t extension, void* variant);
+void q_graphicsitem_super_set_extension(void* self, int32_t extension, const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#extension)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param variant QVariant*
 ///
-QVariant* q_graphicsitem_extension(void* self, void* variant);
+QVariant* q_graphicsitem_extension(const void* self, const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#extension)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsItem*
-/// @param callback QVariant* func(QGraphicsItem* self, QVariant* variant)
+/// @param self const QGraphicsItem*
+/// @param callback QVariant* func(const QGraphicsItem* self, QVariant* variant)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
+void q_graphicsitem_on_extension(const void* self, QVariant* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#extension)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param variant QVariant*
 ///
-QVariant* q_graphicsitem_super_extension(void* self, void* variant);
+QVariant* q_graphicsitem_super_extension(const void* self, const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#addToIndex)
 ///
@@ -2146,68 +2114,17 @@ QVariant* q_graphicsitem_super_extension(void* self, void* variant);
 ///
 void q_graphicsitem_add_to_index(void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#addToIndex)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QGraphicsItem*
-/// @param callback void func()
-///
-void q_graphicsitem_on_add_to_index(void* self, void (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#addToIndex)
-///
-/// Base class method implementation
-///
-/// @param self QGraphicsItem*
-///
-void q_graphicsitem_super_add_to_index(void* self);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#removeFromIndex)
 ///
 /// @param self QGraphicsItem*
 ///
 void q_graphicsitem_remove_from_index(void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#removeFromIndex)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QGraphicsItem*
-/// @param callback void func()
-///
-void q_graphicsitem_on_remove_from_index(void* self, void (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#removeFromIndex)
-///
-/// Base class method implementation
-///
-/// @param self QGraphicsItem*
-///
-void q_graphicsitem_super_remove_from_index(void* self);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#prepareGeometryChange)
 ///
 /// @param self QGraphicsItem*
 ///
 void q_graphicsitem_prepare_geometry_change(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#prepareGeometryChange)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QGraphicsItem*
-/// @param callback void func()
-///
-void q_graphicsitem_on_prepare_geometry_change(void* self, void (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#prepareGeometryChange)
-///
-/// Base class method implementation
-///
-/// @param self QGraphicsItem*
-///
-void q_graphicsitem_super_prepare_geometry_change(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setFlag)
 ///
@@ -2223,14 +2140,14 @@ void q_graphicsitem_set_flag2(void* self, int32_t flag, bool enabled);
 /// @param mode enum QGraphicsItem__CacheMode
 /// @param cacheSize QSize*
 ///
-void q_graphicsitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
+void q_graphicsitem_set_cache_mode2(void* self, int32_t mode, const void* cacheSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param blockingPanel QGraphicsItem**
 ///
-bool q_graphicsitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel);
+bool q_graphicsitem_is_blocked_by_modal_panel1(const void* self, void** blockingPanel);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setFocus)
 ///
@@ -2244,7 +2161,7 @@ void q_graphicsitem_set_focus1(void* self, int32_t focusReason);
 /// @param self QGraphicsItem*
 /// @param rect QRectF*
 ///
-void q_graphicsitem_ensure_visible1(void* self, void* rect);
+void q_graphicsitem_ensure_visible1(void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#ensureVisible)
 ///
@@ -2252,7 +2169,7 @@ void q_graphicsitem_ensure_visible1(void* self, void* rect);
 /// @param rect QRectF*
 /// @param xmargin int
 ///
-void q_graphicsitem_ensure_visible22(void* self, void* rect, int xmargin);
+void q_graphicsitem_ensure_visible22(void* self, const void* rect, int xmargin);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#ensureVisible)
 ///
@@ -2261,7 +2178,7 @@ void q_graphicsitem_ensure_visible22(void* self, void* rect, int xmargin);
 /// @param xmargin int
 /// @param ymargin int
 ///
-void q_graphicsitem_ensure_visible3(void* self, void* rect, int xmargin, int ymargin);
+void q_graphicsitem_ensure_visible3(void* self, const void* rect, int xmargin, int ymargin);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#ensureVisible)
 ///
@@ -2288,11 +2205,11 @@ void q_graphicsitem_ensure_visible6(void* self, double x, double y, double w, do
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemTransform)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param other QGraphicsItem*
 /// @param ok bool*
 ///
-QTransform* q_graphicsitem_item_transform2(void* self, void* other, bool* ok);
+QTransform* q_graphicsitem_item_transform2(const void* self, const void* other, bool* ok);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setTransform)
 ///
@@ -2300,30 +2217,30 @@ QTransform* q_graphicsitem_item_transform2(void* self, void* other, bool* ok);
 /// @param matrix QTransform*
 /// @param combine bool
 ///
-void q_graphicsitem_set_transform2(void* self, void* matrix, bool combine);
+void q_graphicsitem_set_transform2(void* self, const void* matrix, bool combine);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsitem_colliding_items1(void* self, int32_t mode);
+libqt_list q_graphicsitem_colliding_items1(const void* self, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsItem*
+/// @param self const QGraphicsItem*
 /// @param rect QRectF*
 ///
-bool q_graphicsitem_is_obscured1(void* self, void* rect);
+bool q_graphicsitem_is_obscured1(const void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#update)
 ///
 /// @param self QGraphicsItem*
 /// @param rect QRectF*
 ///
-void q_graphicsitem_update1(void* self, void* rect);
+void q_graphicsitem_update1(void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scroll)
 ///
@@ -2332,7 +2249,7 @@ void q_graphicsitem_update1(void* self, void* rect);
 /// @param dy double
 /// @param rect QRectF*
 ///
-void q_graphicsitem_scroll3(void* self, double dx, double dy, void* rect);
+void q_graphicsitem_scroll3(void* self, double dx, double dy, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#dtor.QGraphicsItem)
 ///
@@ -2370,26 +2287,26 @@ QGraphicsObject* q_graphicsobject_from_q_graphics_item(void* _qgraphicsitem);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-const QMetaObject* q_graphicsobject_meta_object(void* self);
+const QMetaObject* q_graphicsobject_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsObject*
-/// @param callback const QMetaObject* func()
+/// @param self const QGraphicsObject*
+/// @param callback const QMetaObject* func(const QGraphicsObject* self)
 ///
-void q_graphicsobject_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_graphicsobject_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-const QMetaObject* q_graphicsobject_super_meta_object(void* self);
+const QMetaObject* q_graphicsobject_super_meta_object(const void* self);
 
 /// @param self QGraphicsObject*
 /// @param param1 const char*
@@ -2460,23 +2377,6 @@ void q_graphicsobject_ungrab_gesture(void* self, int32_t type);
 /// @param self QGraphicsObject*
 ///
 void q_graphicsobject_update_micro_focus(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsobject.html#updateMicroFocus)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QGraphicsObject*
-/// @param callback void func()
-///
-void q_graphicsobject_on_update_micro_focus(void* self, void (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsobject.html#updateMicroFocus)
-///
-/// Base class method implementation
-///
-/// @param self QGraphicsObject*
-///
-void q_graphicsobject_super_update_micro_focus(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsobject.html#parentChanged)
 ///
@@ -2692,9 +2592,9 @@ void q_graphicsobject_grab_gesture2(void* self, int32_t type, int32_t flags);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-const char* q_graphicsobject_object_name(void* self);
+const char* q_graphicsobject_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2709,33 +2609,33 @@ void q_graphicsobject_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-bool q_graphicsobject_is_widget_type(void* self);
+bool q_graphicsobject_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-bool q_graphicsobject_is_window_type(void* self);
+bool q_graphicsobject_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-bool q_graphicsobject_is_quick_item_type(void* self);
+bool q_graphicsobject_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-bool q_graphicsobject_signals_blocked(void* self);
+bool q_graphicsobject_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2750,9 +2650,9 @@ bool q_graphicsobject_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-QThread* q_graphicsobject_thread(void* self);
+QThread* q_graphicsobject_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2803,11 +2703,11 @@ void q_graphicsobject_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_graphicsobject_children(void* self);
+libqt_list q_graphicsobject_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2845,7 +2745,7 @@ void q_graphicsobject_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_graphicsobject_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_graphicsobject_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2856,18 +2756,18 @@ QMetaObject__Connection* q_graphicsobject_connect(void* sender, const char* sign
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_graphicsobject_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_graphicsobject_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_graphicsobject_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_graphicsobject_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2878,7 +2778,7 @@ QMetaObject__Connection* q_graphicsobject_connect3(void* self, void* sender, con
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_graphicsobject_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_graphicsobject_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2889,24 +2789,24 @@ bool q_graphicsobject_disconnect(void* sender, const char* signal, void* receive
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_graphicsobject_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_graphicsobject_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-bool q_graphicsobject_disconnect3(void* self);
+bool q_graphicsobject_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param receiver QObject*
 ///
-bool q_graphicsobject_disconnect4(void* self, void* receiver);
+bool q_graphicsobject_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -2914,23 +2814,23 @@ bool q_graphicsobject_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_graphicsobject_disconnect5(void* param1);
+bool q_graphicsobject_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-void q_graphicsobject_dump_object_tree(void* self);
+void q_graphicsobject_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-void q_graphicsobject_dump_object_info(void* self);
+void q_graphicsobject_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2940,16 +2840,16 @@ void q_graphicsobject_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_graphicsobject_set_property(void* self, const char* name, void* value);
+bool q_graphicsobject_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param name const char*
 ///
-QVariant* q_graphicsobject_property(void* self, const char* name);
+QVariant* q_graphicsobject_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -2957,9 +2857,9 @@ QVariant* q_graphicsobject_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-const char** q_graphicsobject_dynamic_property_names(void* self);
+const char** q_graphicsobject_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2973,9 +2873,9 @@ QBindingStorage* q_graphicsobject_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-const QBindingStorage* q_graphicsobject_binding_storage2(void* self);
+const QBindingStorage* q_graphicsobject_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2998,18 +2898,18 @@ void q_graphicsobject_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-QObject* q_graphicsobject_parent(void* self);
+QObject* q_graphicsobject_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param classname const char*
 ///
-bool q_graphicsobject_inherits(void* self, const char* classname);
+bool q_graphicsobject_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -3049,7 +2949,7 @@ int32_t q_graphicsobject_start_timer23(void* self, int64_t time, int32_t timerTy
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_graphicsobject_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_graphicsobject_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -3061,59 +2961,59 @@ QMetaObject__Connection* q_graphicsobject_connect5(void* sender, const char* sig
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_graphicsobject_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_graphicsobject_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_graphicsobject_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_graphicsobject_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param signal const char*
 ///
-bool q_graphicsobject_disconnect1(void* self, const char* signal);
+bool q_graphicsobject_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsObject*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_graphicsobject_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_graphicsobject_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_graphicsobject_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_graphicsobject_disconnect23(void* self, void* receiver, const char* member);
+bool q_graphicsobject_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QGraphicsObject*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_graphicsobject_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3137,65 +3037,65 @@ void q_graphicsobject_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scene)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-QGraphicsScene* q_graphicsobject_scene(void* self);
+QGraphicsScene* q_graphicsobject_scene(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentItem)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-QGraphicsItem* q_graphicsobject_parent_item(void* self);
+QGraphicsItem* q_graphicsobject_parent_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#topLevelItem)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-QGraphicsItem* q_graphicsobject_top_level_item(void* self);
+QGraphicsItem* q_graphicsobject_top_level_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentObject)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-QGraphicsObject* q_graphicsobject_parent_object(void* self);
+QGraphicsObject* q_graphicsobject_parent_object(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentWidget)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-QGraphicsWidget* q_graphicsobject_parent_widget(void* self);
+QGraphicsWidget* q_graphicsobject_parent_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#topLevelWidget)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-QGraphicsWidget* q_graphicsobject_top_level_widget(void* self);
+QGraphicsWidget* q_graphicsobject_top_level_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#window)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-QGraphicsWidget* q_graphicsobject_window(void* self);
+QGraphicsWidget* q_graphicsobject_window(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#panel)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-QGraphicsItem* q_graphicsobject_panel(void* self);
+QGraphicsItem* q_graphicsobject_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3210,35 +3110,35 @@ void q_graphicsobject_set_parent_item(void* self, void* parent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#childItems)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsobject_child_items(void* self);
+libqt_list q_graphicsobject_child_items(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isWidget)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-bool q_graphicsobject_is_widget(void* self);
+bool q_graphicsobject_is_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isWindow)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-bool q_graphicsobject_is_window(void* self);
+bool q_graphicsobject_is_window(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isPanel)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-bool q_graphicsobject_is_panel(void* self);
+bool q_graphicsobject_is_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3252,17 +3152,17 @@ QGraphicsObject* q_graphicsobject_to_graphics_object(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#toGraphicsObject)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-const QGraphicsObject* q_graphicsobject_to_graphics_object2(void* self);
+const QGraphicsObject* q_graphicsobject_to_graphics_object2(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#group)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-QGraphicsItemGroup* q_graphicsobject_group(void* self);
+QGraphicsItemGroup* q_graphicsobject_group(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3277,11 +3177,11 @@ void q_graphicsobject_set_group(void* self, void* group);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#flags)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
 /// @return flag of enum QGraphicsItem__GraphicsItemFlag
 ///
-int32_t q_graphicsobject_flags(void* self);
+int32_t q_graphicsobject_flags(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3305,11 +3205,11 @@ void q_graphicsobject_set_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#cacheMode)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
 /// @return enum QGraphicsItem__CacheMode
 ///
-int32_t q_graphicsobject_cache_mode(void* self);
+int32_t q_graphicsobject_cache_mode(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3324,11 +3224,11 @@ void q_graphicsobject_set_cache_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#panelModality)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
 /// @return enum QGraphicsItem__PanelModality
 ///
-int32_t q_graphicsobject_panel_modality(void* self);
+int32_t q_graphicsobject_panel_modality(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3343,9 +3243,9 @@ void q_graphicsobject_set_panel_modality(void* self, int32_t panelModality);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-bool q_graphicsobject_is_blocked_by_modal_panel(void* self);
+bool q_graphicsobject_is_blocked_by_modal_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3353,9 +3253,9 @@ bool q_graphicsobject_is_blocked_by_modal_panel(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-const char* q_graphicsobject_tool_tip(void* self);
+const char* q_graphicsobject_tool_tip(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3370,9 +3270,9 @@ void q_graphicsobject_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#cursor)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-QCursor* q_graphicsobject_cursor(void* self);
+QCursor* q_graphicsobject_cursor(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3381,15 +3281,15 @@ QCursor* q_graphicsobject_cursor(void* self);
 /// @param self QGraphicsObject*
 /// @param cursor QCursor*
 ///
-void q_graphicsobject_set_cursor(void* self, void* cursor);
+void q_graphicsobject_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hasCursor)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-bool q_graphicsobject_has_cursor(void* self);
+bool q_graphicsobject_has_cursor(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3403,18 +3303,18 @@ void q_graphicsobject_unset_cursor(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isVisible)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-bool q_graphicsobject_is_visible(void* self);
+bool q_graphicsobject_is_visible(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isVisibleTo)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param parent QGraphicsItem*
 ///
-bool q_graphicsobject_is_visible_to(void* self, void* parent);
+bool q_graphicsobject_is_visible_to(const void* self, const void* parent);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3445,9 +3345,9 @@ void q_graphicsobject_show(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isEnabled)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-bool q_graphicsobject_is_enabled(void* self);
+bool q_graphicsobject_is_enabled(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3462,9 +3362,9 @@ void q_graphicsobject_set_enabled(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isSelected)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-bool q_graphicsobject_is_selected(void* self);
+bool q_graphicsobject_is_selected(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3479,9 +3379,9 @@ void q_graphicsobject_set_selected(void* self, bool selected);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptDrops)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-bool q_graphicsobject_accept_drops(void* self);
+bool q_graphicsobject_accept_drops(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3496,17 +3396,17 @@ void q_graphicsobject_set_accept_drops(void* self, bool on);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#opacity)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-double q_graphicsobject_opacity(void* self);
+double q_graphicsobject_opacity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#effectiveOpacity)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-double q_graphicsobject_effective_opacity(void* self);
+double q_graphicsobject_effective_opacity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3521,9 +3421,9 @@ void q_graphicsobject_set_opacity(void* self, double opacity);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#graphicsEffect)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-QGraphicsEffect* q_graphicsobject_graphics_effect(void* self);
+QGraphicsEffect* q_graphicsobject_graphics_effect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3538,11 +3438,11 @@ void q_graphicsobject_set_graphics_effect(void* self, void* effect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptedMouseButtons)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
 /// @return flag of enum Qt__MouseButton
 ///
-int32_t q_graphicsobject_accepted_mouse_buttons(void* self);
+int32_t q_graphicsobject_accepted_mouse_buttons(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3557,9 +3457,9 @@ void q_graphicsobject_set_accepted_mouse_buttons(void* self, int32_t buttons);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptHoverEvents)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-bool q_graphicsobject_accept_hover_events(void* self);
+bool q_graphicsobject_accept_hover_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3574,9 +3474,9 @@ void q_graphicsobject_set_accept_hover_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptTouchEvents)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-bool q_graphicsobject_accept_touch_events(void* self);
+bool q_graphicsobject_accept_touch_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3591,9 +3491,9 @@ void q_graphicsobject_set_accept_touch_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#filtersChildEvents)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-bool q_graphicsobject_filters_child_events(void* self);
+bool q_graphicsobject_filters_child_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3608,9 +3508,9 @@ void q_graphicsobject_set_filters_child_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#handlesChildEvents)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-bool q_graphicsobject_handles_child_events(void* self);
+bool q_graphicsobject_handles_child_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3625,9 +3525,9 @@ void q_graphicsobject_set_handles_child_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isActive)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-bool q_graphicsobject_is_active(void* self);
+bool q_graphicsobject_is_active(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3642,9 +3542,9 @@ void q_graphicsobject_set_active(void* self, bool active);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hasFocus)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-bool q_graphicsobject_has_focus(void* self);
+bool q_graphicsobject_has_focus(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3666,9 +3566,9 @@ void q_graphicsobject_clear_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusProxy)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-QGraphicsItem* q_graphicsobject_focus_proxy(void* self);
+QGraphicsItem* q_graphicsobject_focus_proxy(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3683,17 +3583,17 @@ void q_graphicsobject_set_focus_proxy(void* self, void* item);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusItem)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-QGraphicsItem* q_graphicsobject_focus_item(void* self);
+QGraphicsItem* q_graphicsobject_focus_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusScopeItem)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-QGraphicsItem* q_graphicsobject_focus_scope_item(void* self);
+QGraphicsItem* q_graphicsobject_focus_scope_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3731,17 +3631,17 @@ void q_graphicsobject_ungrab_keyboard(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#pos)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-QPointF* q_graphicsobject_pos(void* self);
+QPointF* q_graphicsobject_pos(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#x)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-double q_graphicsobject_x(void* self);
+double q_graphicsobject_x(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3756,9 +3656,9 @@ void q_graphicsobject_set_x(void* self, double x);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#y)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-double q_graphicsobject_y(void* self);
+double q_graphicsobject_y(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3773,9 +3673,9 @@ void q_graphicsobject_set_y(void* self, double y);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scenePos)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-QPointF* q_graphicsobject_scene_pos(void* self);
+QPointF* q_graphicsobject_scene_pos(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3784,7 +3684,7 @@ QPointF* q_graphicsobject_scene_pos(void* self);
 /// @param self QGraphicsObject*
 /// @param pos QPointF*
 ///
-void q_graphicsobject_set_pos(void* self, void* pos);
+void q_graphicsobject_set_pos(void* self, const void* pos);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3830,35 +3730,35 @@ void q_graphicsobject_ensure_visible2(void* self, double x, double y, double w, 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transform)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-QTransform* q_graphicsobject_transform(void* self);
+QTransform* q_graphicsobject_transform(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneTransform)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-QTransform* q_graphicsobject_scene_transform(void* self);
+QTransform* q_graphicsobject_scene_transform(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#deviceTransform)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param viewportTransform QTransform*
 ///
-QTransform* q_graphicsobject_device_transform(void* self, void* viewportTransform);
+QTransform* q_graphicsobject_device_transform(const void* self, const void* viewportTransform);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemTransform)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param other QGraphicsItem*
 ///
-QTransform* q_graphicsobject_item_transform(void* self, void* other);
+QTransform* q_graphicsobject_item_transform(const void* self, const void* other);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3867,7 +3767,7 @@ QTransform* q_graphicsobject_item_transform(void* self, void* other);
 /// @param self QGraphicsObject*
 /// @param matrix QTransform*
 ///
-void q_graphicsobject_set_transform(void* self, void* matrix);
+void q_graphicsobject_set_transform(void* self, const void* matrix);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3890,9 +3790,9 @@ void q_graphicsobject_set_rotation(void* self, double angle);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#rotation)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-double q_graphicsobject_rotation(void* self);
+double q_graphicsobject_rotation(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3907,19 +3807,19 @@ void q_graphicsobject_set_scale(void* self, double scale);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scale)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-double q_graphicsobject_scale(void* self);
+double q_graphicsobject_scale(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transformations)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
 /// @return libqt_list of QGraphicsTransform*
 ///
-libqt_list q_graphicsobject_transformations(void* self);
+libqt_list q_graphicsobject_transformations(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3934,9 +3834,9 @@ void q_graphicsobject_set_transformations(void* self, libqt_list transformations
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transformOriginPoint)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-QPointF* q_graphicsobject_transform_origin_point(void* self);
+QPointF* q_graphicsobject_transform_origin_point(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3945,7 +3845,7 @@ QPointF* q_graphicsobject_transform_origin_point(void* self);
 /// @param self QGraphicsObject*
 /// @param origin QPointF*
 ///
-void q_graphicsobject_set_transform_origin_point(void* self, void* origin);
+void q_graphicsobject_set_transform_origin_point(void* self, const void* origin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3961,9 +3861,9 @@ void q_graphicsobject_set_transform_origin_point2(void* self, double ax, double 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#zValue)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-double q_graphicsobject_z_value(void* self);
+double q_graphicsobject_z_value(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3981,86 +3881,86 @@ void q_graphicsobject_set_z_value(void* self, double z);
 /// @param self QGraphicsObject*
 /// @param sibling QGraphicsItem*
 ///
-void q_graphicsobject_stack_before(void* self, void* sibling);
+void q_graphicsobject_stack_before(void* self, const void* sibling);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#childrenBoundingRect)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-QRectF* q_graphicsobject_children_bounding_rect(void* self);
+QRectF* q_graphicsobject_children_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneBoundingRect)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-QRectF* q_graphicsobject_scene_bounding_rect(void* self);
+QRectF* q_graphicsobject_scene_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isClipped)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-bool q_graphicsobject_is_clipped(void* self);
+bool q_graphicsobject_is_clipped(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#clipPath)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-QPainterPath* q_graphicsobject_clip_path(void* self);
+QPainterPath* q_graphicsobject_clip_path(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsobject_colliding_items(void* self);
+libqt_list q_graphicsobject_colliding_items(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-bool q_graphicsobject_is_obscured(void* self);
+bool q_graphicsobject_is_obscured(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-bool q_graphicsobject_is_obscured2(void* self, double x, double y, double w, double h);
+bool q_graphicsobject_is_obscured2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRegion)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param itemToDeviceTransform QTransform*
 ///
-QRegion* q_graphicsobject_bounding_region(void* self, void* itemToDeviceTransform);
+QRegion* q_graphicsobject_bounding_region(const void* self, const void* itemToDeviceTransform);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRegionGranularity)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-double q_graphicsobject_bounding_region_granularity(void* self);
+double q_graphicsobject_bounding_region_granularity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -4105,526 +4005,526 @@ void q_graphicsobject_scroll(void* self, double dx, double dy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param item QGraphicsItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicsobject_map_to_item(void* self, void* item, void* point);
+QPointF* q_graphicsobject_map_to_item(const void* self, const void* item, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param point QPointF*
 ///
-QPointF* q_graphicsobject_map_to_parent(void* self, void* point);
+QPointF* q_graphicsobject_map_to_parent(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param point QPointF*
 ///
-QPointF* q_graphicsobject_map_to_scene(void* self, void* point);
+QPointF* q_graphicsobject_map_to_scene(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicsobject_map_to_item2(void* self, void* item, void* rect);
+QPolygonF* q_graphicsobject_map_to_item2(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicsobject_map_to_parent2(void* self, void* rect);
+QPolygonF* q_graphicsobject_map_to_parent2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicsobject_map_to_scene2(void* self, void* rect);
+QPolygonF* q_graphicsobject_map_to_scene2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsobject_map_rect_to_item(void* self, void* item, void* rect);
+QRectF* q_graphicsobject_map_rect_to_item(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToParent)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsobject_map_rect_to_parent(void* self, void* rect);
+QRectF* q_graphicsobject_map_rect_to_parent(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToScene)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsobject_map_rect_to_scene(void* self, void* rect);
+QRectF* q_graphicsobject_map_rect_to_scene(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param item QGraphicsItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicsobject_map_to_item3(void* self, void* item, void* polygon);
+QPolygonF* q_graphicsobject_map_to_item3(const void* self, const void* item, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicsobject_map_to_parent3(void* self, void* polygon);
+QPolygonF* q_graphicsobject_map_to_parent3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicsobject_map_to_scene3(void* self, void* polygon);
+QPolygonF* q_graphicsobject_map_to_scene3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param item QGraphicsItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicsobject_map_to_item4(void* self, void* item, void* path);
+QPainterPath* q_graphicsobject_map_to_item4(const void* self, const void* item, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicsobject_map_to_parent4(void* self, void* path);
+QPainterPath* q_graphicsobject_map_to_parent4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicsobject_map_to_scene4(void* self, void* path);
+QPainterPath* q_graphicsobject_map_to_scene4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param item QGraphicsItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicsobject_map_from_item(void* self, void* item, void* point);
+QPointF* q_graphicsobject_map_from_item(const void* self, const void* item, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param point QPointF*
 ///
-QPointF* q_graphicsobject_map_from_parent(void* self, void* point);
+QPointF* q_graphicsobject_map_from_parent(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param point QPointF*
 ///
-QPointF* q_graphicsobject_map_from_scene(void* self, void* point);
+QPointF* q_graphicsobject_map_from_scene(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicsobject_map_from_item2(void* self, void* item, void* rect);
+QPolygonF* q_graphicsobject_map_from_item2(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicsobject_map_from_parent2(void* self, void* rect);
+QPolygonF* q_graphicsobject_map_from_parent2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicsobject_map_from_scene2(void* self, void* rect);
+QPolygonF* q_graphicsobject_map_from_scene2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsobject_map_rect_from_item(void* self, void* item, void* rect);
+QRectF* q_graphicsobject_map_rect_from_item(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromParent)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsobject_map_rect_from_parent(void* self, void* rect);
+QRectF* q_graphicsobject_map_rect_from_parent(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromScene)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsobject_map_rect_from_scene(void* self, void* rect);
+QRectF* q_graphicsobject_map_rect_from_scene(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param item QGraphicsItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicsobject_map_from_item3(void* self, void* item, void* polygon);
+QPolygonF* q_graphicsobject_map_from_item3(const void* self, const void* item, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicsobject_map_from_parent3(void* self, void* polygon);
+QPolygonF* q_graphicsobject_map_from_parent3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicsobject_map_from_scene3(void* self, void* polygon);
+QPolygonF* q_graphicsobject_map_from_scene3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param item QGraphicsItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicsobject_map_from_item4(void* self, void* item, void* path);
+QPainterPath* q_graphicsobject_map_from_item4(const void* self, const void* item, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicsobject_map_from_parent4(void* self, void* path);
+QPainterPath* q_graphicsobject_map_from_parent4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicsobject_map_from_scene4(void* self, void* path);
+QPainterPath* q_graphicsobject_map_from_scene4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicsobject_map_to_item5(void* self, void* item, double x, double y);
+QPointF* q_graphicsobject_map_to_item5(const void* self, const void* item, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicsobject_map_to_parent5(void* self, double x, double y);
+QPointF* q_graphicsobject_map_to_parent5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicsobject_map_to_scene5(void* self, double x, double y);
+QPointF* q_graphicsobject_map_to_scene5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicsobject_map_to_item6(void* self, void* item, double x, double y, double w, double h);
+QPolygonF* q_graphicsobject_map_to_item6(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicsobject_map_to_parent6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicsobject_map_to_parent6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicsobject_map_to_scene6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicsobject_map_to_scene6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicsobject_map_rect_to_item2(void* self, void* item, double x, double y, double w, double h);
+QRectF* q_graphicsobject_map_rect_to_item2(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToParent)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicsobject_map_rect_to_parent2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicsobject_map_rect_to_parent2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToScene)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicsobject_map_rect_to_scene2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicsobject_map_rect_to_scene2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicsobject_map_from_item5(void* self, void* item, double x, double y);
+QPointF* q_graphicsobject_map_from_item5(const void* self, const void* item, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicsobject_map_from_parent5(void* self, double x, double y);
+QPointF* q_graphicsobject_map_from_parent5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicsobject_map_from_scene5(void* self, double x, double y);
+QPointF* q_graphicsobject_map_from_scene5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicsobject_map_from_item6(void* self, void* item, double x, double y, double w, double h);
+QPolygonF* q_graphicsobject_map_from_item6(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicsobject_map_from_parent6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicsobject_map_from_parent6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicsobject_map_from_scene6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicsobject_map_from_scene6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicsobject_map_rect_from_item2(void* self, void* item, double x, double y, double w, double h);
+QRectF* q_graphicsobject_map_rect_from_item2(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromParent)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicsobject_map_rect_from_parent2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicsobject_map_rect_from_parent2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromScene)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicsobject_map_rect_from_scene2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicsobject_map_rect_from_scene2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isAncestorOf)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param child QGraphicsItem*
 ///
-bool q_graphicsobject_is_ancestor_of(void* self, void* child);
+bool q_graphicsobject_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#commonAncestorItem)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param other QGraphicsItem*
 ///
-QGraphicsItem* q_graphicsobject_common_ancestor_item(void* self, void* other);
+QGraphicsItem* q_graphicsobject_common_ancestor_item(const void* self, const void* other);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isUnderMouse)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-bool q_graphicsobject_is_under_mouse(void* self);
+bool q_graphicsobject_is_under_mouse(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#data)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param key int
 ///
-QVariant* q_graphicsobject_data(void* self, int key);
+QVariant* q_graphicsobject_data(const void* self, int key);
 
 /// Inherited from QGraphicsItem
 ///
@@ -4634,17 +4534,17 @@ QVariant* q_graphicsobject_data(void* self, int key);
 /// @param key int
 /// @param value QVariant*
 ///
-void q_graphicsobject_set_data(void* self, int key, void* value);
+void q_graphicsobject_set_data(void* self, int key, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodHints)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t q_graphicsobject_input_method_hints(void* self);
+int32_t q_graphicsobject_input_method_hints(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -4691,16 +4591,16 @@ void q_graphicsobject_set_flag2(void* self, int32_t flag, bool enabled);
 /// @param mode enum QGraphicsItem__CacheMode
 /// @param cacheSize QSize*
 ///
-void q_graphicsobject_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
+void q_graphicsobject_set_cache_mode2(void* self, int32_t mode, const void* cacheSize);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param blockingPanel QGraphicsItem**
 ///
-bool q_graphicsobject_is_blocked_by_modal_panel1(void* self, void** blockingPanel);
+bool q_graphicsobject_is_blocked_by_modal_panel1(const void* self, void** blockingPanel);
 
 /// Inherited from QGraphicsItem
 ///
@@ -4718,7 +4618,7 @@ void q_graphicsobject_set_focus1(void* self, int32_t focusReason);
 /// @param self QGraphicsObject*
 /// @param rect QRectF*
 ///
-void q_graphicsobject_ensure_visible1(void* self, void* rect);
+void q_graphicsobject_ensure_visible1(void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -4728,7 +4628,7 @@ void q_graphicsobject_ensure_visible1(void* self, void* rect);
 /// @param rect QRectF*
 /// @param xmargin int
 ///
-void q_graphicsobject_ensure_visible22(void* self, void* rect, int xmargin);
+void q_graphicsobject_ensure_visible22(void* self, const void* rect, int xmargin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -4739,7 +4639,7 @@ void q_graphicsobject_ensure_visible22(void* self, void* rect, int xmargin);
 /// @param xmargin int
 /// @param ymargin int
 ///
-void q_graphicsobject_ensure_visible3(void* self, void* rect, int xmargin, int ymargin);
+void q_graphicsobject_ensure_visible3(void* self, const void* rect, int xmargin, int ymargin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -4772,11 +4672,11 @@ void q_graphicsobject_ensure_visible6(void* self, double x, double y, double w, 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemTransform)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param other QGraphicsItem*
 /// @param ok bool*
 ///
-QTransform* q_graphicsobject_item_transform2(void* self, void* other, bool* ok);
+QTransform* q_graphicsobject_item_transform2(const void* self, const void* other, bool* ok);
 
 /// Inherited from QGraphicsItem
 ///
@@ -4786,27 +4686,27 @@ QTransform* q_graphicsobject_item_transform2(void* self, void* other, bool* ok);
 /// @param matrix QTransform*
 /// @param combine bool
 ///
-void q_graphicsobject_set_transform2(void* self, void* matrix, bool combine);
+void q_graphicsobject_set_transform2(void* self, const void* matrix, bool combine);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param mode enum Qt__ItemSelectionMode
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsobject_colliding_items1(void* self, int32_t mode);
+libqt_list q_graphicsobject_colliding_items1(const void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param rect QRectF*
 ///
-bool q_graphicsobject_is_obscured1(void* self, void* rect);
+bool q_graphicsobject_is_obscured1(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -4815,7 +4715,7 @@ bool q_graphicsobject_is_obscured1(void* self, void* rect);
 /// @param self QGraphicsObject*
 /// @param rect QRectF*
 ///
-void q_graphicsobject_update1(void* self, void* rect);
+void q_graphicsobject_update1(void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -4826,7 +4726,7 @@ void q_graphicsobject_update1(void* self, void* rect);
 /// @param dy double
 /// @param rect QRectF*
 ///
-void q_graphicsobject_scroll3(void* self, double dx, double dy, void* rect);
+void q_graphicsobject_scroll3(void* self, double dx, double dy, const void* rect);
 
 /// Inherited from QObject
 ///
@@ -4971,7 +4871,7 @@ void q_graphicsobject_on_custom_event(void* self, void (*callback)(void*, void*)
 /// @param self QGraphicsObject*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsobject_connect_notify(void* self, void* signal);
+void q_graphicsobject_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4982,7 +4882,7 @@ void q_graphicsobject_connect_notify(void* self, void* signal);
 /// @param self QGraphicsObject*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsobject_super_connect_notify(void* self, void* signal);
+void q_graphicsobject_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4993,7 +4893,7 @@ void q_graphicsobject_super_connect_notify(void* self, void* signal);
 /// @param self QGraphicsObject*
 /// @param callback void func(QGraphicsObject* self, QMetaMethod* signal)
 ///
-void q_graphicsobject_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_graphicsobject_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -5004,7 +4904,7 @@ void q_graphicsobject_on_connect_notify(void* self, void (*callback)(void*, void
 /// @param self QGraphicsObject*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsobject_disconnect_notify(void* self, void* signal);
+void q_graphicsobject_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5015,7 +4915,7 @@ void q_graphicsobject_disconnect_notify(void* self, void* signal);
 /// @param self QGraphicsObject*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsobject_super_disconnect_notify(void* self, void* signal);
+void q_graphicsobject_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5026,7 +4926,7 @@ void q_graphicsobject_super_disconnect_notify(void* self, void* signal);
 /// @param self QGraphicsObject*
 /// @param callback void func(QGraphicsObject* self, QMetaMethod* signal)
 ///
-void q_graphicsobject_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_graphicsobject_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -5067,19 +4967,11 @@ void q_graphicsobject_on_advance(void* self, void (*callback)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsObject*
-///
-QRectF* q_graphicsobject_bounding_rect(void* self);
 
-/// Inherited from QGraphicsItem
+/// @warning This method must be implemented with `q_graphicsobject_on_bounding_rect` before it can be called.
+////// @param self const QGraphicsObject*
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRect)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self QGraphicsObject*
-///
-QRectF* q_graphicsobject_super_bounding_rect(void* self);
+QRectF* q_graphicsobject_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5087,12 +4979,12 @@ QRectF* q_graphicsobject_super_bounding_rect(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsObject*
-/// @param callback QRectF* func()
+/// @param self const QGraphicsObject*
+/// @param callback QRectF* func(QGraphicsObject* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsobject_on_bounding_rect(void* self, QRectF* (*callback)());
+void q_graphicsobject_on_bounding_rect(const void* self, QRectF* (*callback)(const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -5100,9 +4992,9 @@ void q_graphicsobject_on_bounding_rect(void* self, QRectF* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-QPainterPath* q_graphicsobject_shape(void* self);
+QPainterPath* q_graphicsobject_shape(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5110,9 +5002,9 @@ QPainterPath* q_graphicsobject_shape(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-QPainterPath* q_graphicsobject_super_shape(void* self);
+QPainterPath* q_graphicsobject_super_shape(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5120,12 +5012,12 @@ QPainterPath* q_graphicsobject_super_shape(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsObject*
-/// @param callback QPainterPath* func()
+/// @param self const QGraphicsObject*
+/// @param callback QPainterPath* func(QGraphicsObject* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsobject_on_shape(void* self, QPainterPath* (*callback)());
+void q_graphicsobject_on_shape(const void* self, QPainterPath* (*callback)(const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -5133,10 +5025,10 @@ void q_graphicsobject_on_shape(void* self, QPainterPath* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param point QPointF*
 ///
-bool q_graphicsobject_contains(void* self, void* point);
+bool q_graphicsobject_contains(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5144,10 +5036,10 @@ bool q_graphicsobject_contains(void* self, void* point);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param point QPointF*
 ///
-bool q_graphicsobject_super_contains(void* self, void* point);
+bool q_graphicsobject_super_contains(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5155,10 +5047,10 @@ bool q_graphicsobject_super_contains(void* self, void* point);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param callback bool func(QGraphicsObject* self, QPointF* point)
 ///
-void q_graphicsobject_on_contains(void* self, bool (*callback)(void*, void*));
+void q_graphicsobject_on_contains(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -5166,11 +5058,11 @@ void q_graphicsobject_on_contains(void* self, bool (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicsobject_collides_with_item(void* self, void* other, int32_t mode);
+bool q_graphicsobject_collides_with_item(const void* self, const void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5178,11 +5070,11 @@ bool q_graphicsobject_collides_with_item(void* self, void* other, int32_t mode);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicsobject_super_collides_with_item(void* self, void* other, int32_t mode);
+bool q_graphicsobject_super_collides_with_item(const void* self, const void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5190,10 +5082,10 @@ bool q_graphicsobject_super_collides_with_item(void* self, void* other, int32_t 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param callback bool func(QGraphicsObject* self, QGraphicsItem* other, enum Qt__ItemSelectionMode mode)
 ///
-void q_graphicsobject_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
+void q_graphicsobject_on_collides_with_item(const void* self, bool (*callback)(const void*, const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -5201,11 +5093,11 @@ void q_graphicsobject_on_collides_with_item(void* self, bool (*callback)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicsobject_collides_with_path(void* self, void* path, int32_t mode);
+bool q_graphicsobject_collides_with_path(const void* self, const void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5213,11 +5105,11 @@ bool q_graphicsobject_collides_with_path(void* self, void* path, int32_t mode);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicsobject_super_collides_with_path(void* self, void* path, int32_t mode);
+bool q_graphicsobject_super_collides_with_path(const void* self, const void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5225,10 +5117,10 @@ bool q_graphicsobject_super_collides_with_path(void* self, void* path, int32_t m
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param callback bool func(QGraphicsObject* self, QPainterPath* path, enum Qt__ItemSelectionMode mode)
 ///
-void q_graphicsobject_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
+void q_graphicsobject_on_collides_with_path(const void* self, bool (*callback)(const void*, const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -5236,10 +5128,10 @@ void q_graphicsobject_on_collides_with_path(void* self, bool (*callback)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param item QGraphicsItem*
 ///
-bool q_graphicsobject_is_obscured_by(void* self, void* item);
+bool q_graphicsobject_is_obscured_by(const void* self, const void* item);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5247,10 +5139,10 @@ bool q_graphicsobject_is_obscured_by(void* self, void* item);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param item QGraphicsItem*
 ///
-bool q_graphicsobject_super_is_obscured_by(void* self, void* item);
+bool q_graphicsobject_super_is_obscured_by(const void* self, const void* item);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5258,10 +5150,10 @@ bool q_graphicsobject_super_is_obscured_by(void* self, void* item);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param callback bool func(QGraphicsObject* self, QGraphicsItem* item)
 ///
-void q_graphicsobject_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
+void q_graphicsobject_on_is_obscured_by(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -5269,9 +5161,9 @@ void q_graphicsobject_on_is_obscured_by(void* self, bool (*callback)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-QPainterPath* q_graphicsobject_opaque_area(void* self);
+QPainterPath* q_graphicsobject_opaque_area(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5279,9 +5171,9 @@ QPainterPath* q_graphicsobject_opaque_area(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-QPainterPath* q_graphicsobject_super_opaque_area(void* self);
+QPainterPath* q_graphicsobject_super_opaque_area(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5289,12 +5181,12 @@ QPainterPath* q_graphicsobject_super_opaque_area(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsObject*
-/// @param callback QPainterPath* func()
+/// @param self const QGraphicsObject*
+/// @param callback QPainterPath* func(QGraphicsObject* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsobject_on_opaque_area(void* self, QPainterPath* (*callback)());
+void q_graphicsobject_on_opaque_area(const void* self, QPainterPath* (*callback)(const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -5302,25 +5194,14 @@ void q_graphicsobject_on_opaque_area(void* self, QPainterPath* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsObject*
-/// @param painter QPainter*
-/// @param option QStyleOptionGraphicsItem*
-/// @param widget QWidget*
-///
-void q_graphicsobject_paint(void* self, void* painter, void* option, void* widget);
 
-/// Inherited from QGraphicsItem
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#paint)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self QGraphicsObject*
+/// @warning This method must be implemented with `q_graphicsobject_on_paint` before it can be called.
+////// @param self QGraphicsObject*
 /// @param painter QPainter*
 /// @param option QStyleOptionGraphicsItem*
 /// @param widget QWidget*
 ///
-void q_graphicsobject_super_paint(void* self, void* painter, void* option, void* widget);
+void q_graphicsobject_paint(void* self, void* painter, const void* option, void* widget);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5331,7 +5212,7 @@ void q_graphicsobject_super_paint(void* self, void* painter, void* option, void*
 /// @param self QGraphicsObject*
 /// @param callback void func(QGraphicsObject* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget)
 ///
-void q_graphicsobject_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
+void q_graphicsobject_on_paint(void* self, void (*callback)(void*, void*, const void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -5339,9 +5220,9 @@ void q_graphicsobject_on_paint(void* self, void (*callback)(void*, void*, void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-int32_t q_graphicsobject_type(void* self);
+int32_t q_graphicsobject_type(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5349,9 +5230,9 @@ int32_t q_graphicsobject_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-int32_t q_graphicsobject_super_type(void* self);
+int32_t q_graphicsobject_super_type(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5359,10 +5240,10 @@ int32_t q_graphicsobject_super_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsObject*
-/// @param callback int32_t func()
+/// @param self const QGraphicsObject*
+/// @param callback int32_t func(QGraphicsObject* self)
 ///
-void q_graphicsobject_on_type(void* self, int32_t (*callback)());
+void q_graphicsobject_on_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -6032,10 +5913,10 @@ void q_graphicsobject_on_input_method_event(void* self, void (*callback)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_graphicsobject_input_method_query(void* self, int32_t query);
+QVariant* q_graphicsobject_input_method_query(const void* self, int32_t query);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6043,10 +5924,10 @@ QVariant* q_graphicsobject_input_method_query(void* self, int32_t query);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_graphicsobject_super_input_method_query(void* self, int32_t query);
+QVariant* q_graphicsobject_super_input_method_query(const void* self, int32_t query);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6054,12 +5935,12 @@ QVariant* q_graphicsobject_super_input_method_query(void* self, int32_t query);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param callback QVariant* func(QGraphicsObject* self, enum Qt__InputMethodQuery query)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsobject_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void q_graphicsobject_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -6071,7 +5952,7 @@ void q_graphicsobject_on_input_method_query(void* self, QVariant* (*callback)(vo
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
 ///
-QVariant* q_graphicsobject_item_change(void* self, int32_t change, void* value);
+QVariant* q_graphicsobject_item_change(void* self, int32_t change, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6083,7 +5964,7 @@ QVariant* q_graphicsobject_item_change(void* self, int32_t change, void* value);
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
 ///
-QVariant* q_graphicsobject_super_item_change(void* self, int32_t change, void* value);
+QVariant* q_graphicsobject_super_item_change(void* self, int32_t change, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6096,7 +5977,7 @@ QVariant* q_graphicsobject_super_item_change(void* self, int32_t change, void* v
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsobject_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
+void q_graphicsobject_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -6104,10 +5985,10 @@ void q_graphicsobject_on_item_change(void* self, QVariant* (*callback)(void*, in
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_graphicsobject_supports_extension(void* self, int32_t extension);
+bool q_graphicsobject_supports_extension(const void* self, int32_t extension);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6115,10 +5996,10 @@ bool q_graphicsobject_supports_extension(void* self, int32_t extension);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_graphicsobject_super_supports_extension(void* self, int32_t extension);
+bool q_graphicsobject_super_supports_extension(const void* self, int32_t extension);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6126,10 +6007,10 @@ bool q_graphicsobject_super_supports_extension(void* self, int32_t extension);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param callback bool func(QGraphicsObject* self, enum QGraphicsItem__Extension extension)
 ///
-void q_graphicsobject_on_supports_extension(void* self, bool (*callback)(void*, int32_t));
+void q_graphicsobject_on_supports_extension(const void* self, bool (*callback)(const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -6141,7 +6022,7 @@ void q_graphicsobject_on_supports_extension(void* self, bool (*callback)(void*, 
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_graphicsobject_set_extension(void* self, int32_t extension, void* variant);
+void q_graphicsobject_set_extension(void* self, int32_t extension, const void* variant);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6153,7 +6034,7 @@ void q_graphicsobject_set_extension(void* self, int32_t extension, void* variant
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_graphicsobject_super_set_extension(void* self, int32_t extension, void* variant);
+void q_graphicsobject_super_set_extension(void* self, int32_t extension, const void* variant);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6164,7 +6045,7 @@ void q_graphicsobject_super_set_extension(void* self, int32_t extension, void* v
 /// @param self QGraphicsObject*
 /// @param callback void func(QGraphicsObject* self, enum QGraphicsItem__Extension extension, QVariant* variant)
 ///
-void q_graphicsobject_on_set_extension(void* self, void (*callback)(void*, int32_t, void*));
+void q_graphicsobject_on_set_extension(void* self, void (*callback)(void*, int32_t, const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -6172,10 +6053,10 @@ void q_graphicsobject_on_set_extension(void* self, void (*callback)(void*, int32
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param variant QVariant*
 ///
-QVariant* q_graphicsobject_extension(void* self, void* variant);
+QVariant* q_graphicsobject_extension(const void* self, const void* variant);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6183,10 +6064,10 @@ QVariant* q_graphicsobject_extension(void* self, void* variant);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param variant QVariant*
 ///
-QVariant* q_graphicsobject_super_extension(void* self, void* variant);
+QVariant* q_graphicsobject_super_extension(const void* self, const void* variant);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6194,12 +6075,12 @@ QVariant* q_graphicsobject_super_extension(void* self, void* variant);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param callback QVariant* func(QGraphicsObject* self, QVariant* variant)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsobject_on_extension(void* self, QVariant* (*callback)(void*, void*));
+void q_graphicsobject_on_extension(const void* self, QVariant* (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -6207,9 +6088,9 @@ void q_graphicsobject_on_extension(void* self, QVariant* (*callback)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-QObject* q_graphicsobject_sender(void* self);
+QObject* q_graphicsobject_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6217,9 +6098,9 @@ QObject* q_graphicsobject_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-QObject* q_graphicsobject_super_sender(void* self);
+QObject* q_graphicsobject_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6227,10 +6108,10 @@ QObject* q_graphicsobject_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsObject*
-/// @param callback QObject* func()
+/// @param self const QGraphicsObject*
+/// @param callback QObject* func(QGraphicsObject* self)
 ///
-void q_graphicsobject_on_sender(void* self, QObject* (*callback)());
+void q_graphicsobject_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6238,9 +6119,9 @@ void q_graphicsobject_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-int32_t q_graphicsobject_sender_signal_index(void* self);
+int32_t q_graphicsobject_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6248,9 +6129,9 @@ int32_t q_graphicsobject_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 ///
-int32_t q_graphicsobject_super_sender_signal_index(void* self);
+int32_t q_graphicsobject_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6258,10 +6139,10 @@ int32_t q_graphicsobject_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsObject*
-/// @param callback int32_t func()
+/// @param self const QGraphicsObject*
+/// @param callback int32_t func(QGraphicsObject* self)
 ///
-void q_graphicsobject_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_graphicsobject_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6269,10 +6150,10 @@ void q_graphicsobject_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param signal const char*
 ///
-int32_t q_graphicsobject_receivers(void* self, const char* signal);
+int32_t q_graphicsobject_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -6280,10 +6161,10 @@ int32_t q_graphicsobject_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param signal const char*
 ///
-int32_t q_graphicsobject_super_receivers(void* self, const char* signal);
+int32_t q_graphicsobject_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -6291,10 +6172,10 @@ int32_t q_graphicsobject_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param callback int32_t func(QGraphicsObject* self, const char* signal)
 ///
-void q_graphicsobject_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_graphicsobject_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -6302,10 +6183,10 @@ void q_graphicsobject_on_receivers(void* self, int32_t (*callback)(void*, const 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param signal QMetaMethod*
 ///
-bool q_graphicsobject_is_signal_connected(void* self, void* signal);
+bool q_graphicsobject_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6313,10 +6194,10 @@ bool q_graphicsobject_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param signal QMetaMethod*
 ///
-bool q_graphicsobject_super_is_signal_connected(void* self, void* signal);
+bool q_graphicsobject_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6324,10 +6205,10 @@ bool q_graphicsobject_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsObject*
+/// @param self const QGraphicsObject*
 /// @param callback bool func(QGraphicsObject* self, QMetaMethod* signal)
 ///
-void q_graphicsobject_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_graphicsobject_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -6356,9 +6237,9 @@ void q_graphicsobject_super_add_to_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsObject*
-/// @param callback void func()
+/// @param callback void func(QGraphicsObject* self)
 ///
-void q_graphicsobject_on_add_to_index(void* self, void (*callback)());
+void q_graphicsobject_on_add_to_index(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -6387,9 +6268,9 @@ void q_graphicsobject_super_remove_from_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsObject*
-/// @param callback void func()
+/// @param callback void func(QGraphicsObject* self)
 ///
-void q_graphicsobject_on_remove_from_index(void* self, void (*callback)());
+void q_graphicsobject_on_remove_from_index(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -6418,9 +6299,9 @@ void q_graphicsobject_super_prepare_geometry_change(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsObject*
-/// @param callback void func()
+/// @param callback void func(QGraphicsObject* self)
 ///
-void q_graphicsobject_on_prepare_geometry_change(void* self, void (*callback)());
+void q_graphicsobject_on_prepare_geometry_change(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -6457,143 +6338,143 @@ QAbstractGraphicsShapeItem* q_abstractgraphicsshapeitem_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractgraphicsshapeitem.html#pen)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-QPen* q_abstractgraphicsshapeitem_pen(void* self);
+QPen* q_abstractgraphicsshapeitem_pen(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractgraphicsshapeitem.html#setPen)
 ///
 /// @param self QAbstractGraphicsShapeItem*
 /// @param pen QPen*
 ///
-void q_abstractgraphicsshapeitem_set_pen(void* self, void* pen);
+void q_abstractgraphicsshapeitem_set_pen(void* self, const void* pen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractgraphicsshapeitem.html#brush)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-QBrush* q_abstractgraphicsshapeitem_brush(void* self);
+QBrush* q_abstractgraphicsshapeitem_brush(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractgraphicsshapeitem.html#setBrush)
 ///
 /// @param self QAbstractGraphicsShapeItem*
 /// @param brush QBrush*
 ///
-void q_abstractgraphicsshapeitem_set_brush(void* self, void* brush);
+void q_abstractgraphicsshapeitem_set_brush(void* self, const void* brush);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractgraphicsshapeitem.html#isObscuredBy)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param item QGraphicsItem*
 ///
-bool q_abstractgraphicsshapeitem_is_obscured_by(void* self, void* item);
+bool q_abstractgraphicsshapeitem_is_obscured_by(const void* self, const void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractgraphicsshapeitem.html#isObscuredBy)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAbstractGraphicsShapeItem*
-/// @param callback bool func(QAbstractGraphicsShapeItem* self, QGraphicsItem* item)
+/// @param self const QAbstractGraphicsShapeItem*
+/// @param callback bool func(const QAbstractGraphicsShapeItem* self, QGraphicsItem* item)
 ///
-void q_abstractgraphicsshapeitem_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
+void q_abstractgraphicsshapeitem_on_is_obscured_by(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractgraphicsshapeitem.html#isObscuredBy)
 ///
 /// Base class method implementation
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param item QGraphicsItem*
 ///
-bool q_abstractgraphicsshapeitem_super_is_obscured_by(void* self, void* item);
+bool q_abstractgraphicsshapeitem_super_is_obscured_by(const void* self, const void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractgraphicsshapeitem.html#opaqueArea)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-QPainterPath* q_abstractgraphicsshapeitem_opaque_area(void* self);
+QPainterPath* q_abstractgraphicsshapeitem_opaque_area(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractgraphicsshapeitem.html#opaqueArea)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAbstractGraphicsShapeItem*
-/// @param callback QPainterPath* func()
+/// @param self const QAbstractGraphicsShapeItem*
+/// @param callback QPainterPath* func(const QAbstractGraphicsShapeItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractgraphicsshapeitem_on_opaque_area(void* self, QPainterPath* (*callback)());
+void q_abstractgraphicsshapeitem_on_opaque_area(const void* self, QPainterPath* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractgraphicsshapeitem.html#opaqueArea)
 ///
 /// Base class method implementation
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-QPainterPath* q_abstractgraphicsshapeitem_super_opaque_area(void* self);
+QPainterPath* q_abstractgraphicsshapeitem_super_opaque_area(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scene)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-QGraphicsScene* q_abstractgraphicsshapeitem_scene(void* self);
+QGraphicsScene* q_abstractgraphicsshapeitem_scene(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentItem)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-QGraphicsItem* q_abstractgraphicsshapeitem_parent_item(void* self);
+QGraphicsItem* q_abstractgraphicsshapeitem_parent_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#topLevelItem)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-QGraphicsItem* q_abstractgraphicsshapeitem_top_level_item(void* self);
+QGraphicsItem* q_abstractgraphicsshapeitem_top_level_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentObject)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-QGraphicsObject* q_abstractgraphicsshapeitem_parent_object(void* self);
+QGraphicsObject* q_abstractgraphicsshapeitem_parent_object(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentWidget)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-QGraphicsWidget* q_abstractgraphicsshapeitem_parent_widget(void* self);
+QGraphicsWidget* q_abstractgraphicsshapeitem_parent_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#topLevelWidget)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-QGraphicsWidget* q_abstractgraphicsshapeitem_top_level_widget(void* self);
+QGraphicsWidget* q_abstractgraphicsshapeitem_top_level_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#window)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-QGraphicsWidget* q_abstractgraphicsshapeitem_window(void* self);
+QGraphicsWidget* q_abstractgraphicsshapeitem_window(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#panel)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-QGraphicsItem* q_abstractgraphicsshapeitem_panel(void* self);
+QGraphicsItem* q_abstractgraphicsshapeitem_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6608,35 +6489,35 @@ void q_abstractgraphicsshapeitem_set_parent_item(void* self, void* parent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#childItems)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_abstractgraphicsshapeitem_child_items(void* self);
+libqt_list q_abstractgraphicsshapeitem_child_items(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isWidget)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-bool q_abstractgraphicsshapeitem_is_widget(void* self);
+bool q_abstractgraphicsshapeitem_is_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isWindow)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-bool q_abstractgraphicsshapeitem_is_window(void* self);
+bool q_abstractgraphicsshapeitem_is_window(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isPanel)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-bool q_abstractgraphicsshapeitem_is_panel(void* self);
+bool q_abstractgraphicsshapeitem_is_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6650,17 +6531,17 @@ QGraphicsObject* q_abstractgraphicsshapeitem_to_graphics_object(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#toGraphicsObject)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-const QGraphicsObject* q_abstractgraphicsshapeitem_to_graphics_object2(void* self);
+const QGraphicsObject* q_abstractgraphicsshapeitem_to_graphics_object2(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#group)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-QGraphicsItemGroup* q_abstractgraphicsshapeitem_group(void* self);
+QGraphicsItemGroup* q_abstractgraphicsshapeitem_group(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6675,11 +6556,11 @@ void q_abstractgraphicsshapeitem_set_group(void* self, void* group);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#flags)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
 /// @return flag of enum QGraphicsItem__GraphicsItemFlag
 ///
-int32_t q_abstractgraphicsshapeitem_flags(void* self);
+int32_t q_abstractgraphicsshapeitem_flags(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6703,11 +6584,11 @@ void q_abstractgraphicsshapeitem_set_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#cacheMode)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
 /// @return enum QGraphicsItem__CacheMode
 ///
-int32_t q_abstractgraphicsshapeitem_cache_mode(void* self);
+int32_t q_abstractgraphicsshapeitem_cache_mode(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6722,11 +6603,11 @@ void q_abstractgraphicsshapeitem_set_cache_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#panelModality)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
 /// @return enum QGraphicsItem__PanelModality
 ///
-int32_t q_abstractgraphicsshapeitem_panel_modality(void* self);
+int32_t q_abstractgraphicsshapeitem_panel_modality(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6741,9 +6622,9 @@ void q_abstractgraphicsshapeitem_set_panel_modality(void* self, int32_t panelMod
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-bool q_abstractgraphicsshapeitem_is_blocked_by_modal_panel(void* self);
+bool q_abstractgraphicsshapeitem_is_blocked_by_modal_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6751,9 +6632,9 @@ bool q_abstractgraphicsshapeitem_is_blocked_by_modal_panel(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-const char* q_abstractgraphicsshapeitem_tool_tip(void* self);
+const char* q_abstractgraphicsshapeitem_tool_tip(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6768,9 +6649,9 @@ void q_abstractgraphicsshapeitem_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#cursor)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-QCursor* q_abstractgraphicsshapeitem_cursor(void* self);
+QCursor* q_abstractgraphicsshapeitem_cursor(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6779,15 +6660,15 @@ QCursor* q_abstractgraphicsshapeitem_cursor(void* self);
 /// @param self QAbstractGraphicsShapeItem*
 /// @param cursor QCursor*
 ///
-void q_abstractgraphicsshapeitem_set_cursor(void* self, void* cursor);
+void q_abstractgraphicsshapeitem_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hasCursor)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-bool q_abstractgraphicsshapeitem_has_cursor(void* self);
+bool q_abstractgraphicsshapeitem_has_cursor(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6801,18 +6682,18 @@ void q_abstractgraphicsshapeitem_unset_cursor(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isVisible)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-bool q_abstractgraphicsshapeitem_is_visible(void* self);
+bool q_abstractgraphicsshapeitem_is_visible(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isVisibleTo)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param parent QGraphicsItem*
 ///
-bool q_abstractgraphicsshapeitem_is_visible_to(void* self, void* parent);
+bool q_abstractgraphicsshapeitem_is_visible_to(const void* self, const void* parent);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6843,9 +6724,9 @@ void q_abstractgraphicsshapeitem_show(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isEnabled)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-bool q_abstractgraphicsshapeitem_is_enabled(void* self);
+bool q_abstractgraphicsshapeitem_is_enabled(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6860,9 +6741,9 @@ void q_abstractgraphicsshapeitem_set_enabled(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isSelected)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-bool q_abstractgraphicsshapeitem_is_selected(void* self);
+bool q_abstractgraphicsshapeitem_is_selected(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6877,9 +6758,9 @@ void q_abstractgraphicsshapeitem_set_selected(void* self, bool selected);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptDrops)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-bool q_abstractgraphicsshapeitem_accept_drops(void* self);
+bool q_abstractgraphicsshapeitem_accept_drops(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6894,17 +6775,17 @@ void q_abstractgraphicsshapeitem_set_accept_drops(void* self, bool on);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#opacity)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-double q_abstractgraphicsshapeitem_opacity(void* self);
+double q_abstractgraphicsshapeitem_opacity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#effectiveOpacity)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-double q_abstractgraphicsshapeitem_effective_opacity(void* self);
+double q_abstractgraphicsshapeitem_effective_opacity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6919,9 +6800,9 @@ void q_abstractgraphicsshapeitem_set_opacity(void* self, double opacity);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#graphicsEffect)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-QGraphicsEffect* q_abstractgraphicsshapeitem_graphics_effect(void* self);
+QGraphicsEffect* q_abstractgraphicsshapeitem_graphics_effect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6936,11 +6817,11 @@ void q_abstractgraphicsshapeitem_set_graphics_effect(void* self, void* effect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptedMouseButtons)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
 /// @return flag of enum Qt__MouseButton
 ///
-int32_t q_abstractgraphicsshapeitem_accepted_mouse_buttons(void* self);
+int32_t q_abstractgraphicsshapeitem_accepted_mouse_buttons(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6955,9 +6836,9 @@ void q_abstractgraphicsshapeitem_set_accepted_mouse_buttons(void* self, int32_t 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptHoverEvents)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-bool q_abstractgraphicsshapeitem_accept_hover_events(void* self);
+bool q_abstractgraphicsshapeitem_accept_hover_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6972,9 +6853,9 @@ void q_abstractgraphicsshapeitem_set_accept_hover_events(void* self, bool enable
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptTouchEvents)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-bool q_abstractgraphicsshapeitem_accept_touch_events(void* self);
+bool q_abstractgraphicsshapeitem_accept_touch_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6989,9 +6870,9 @@ void q_abstractgraphicsshapeitem_set_accept_touch_events(void* self, bool enable
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#filtersChildEvents)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-bool q_abstractgraphicsshapeitem_filters_child_events(void* self);
+bool q_abstractgraphicsshapeitem_filters_child_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -7006,9 +6887,9 @@ void q_abstractgraphicsshapeitem_set_filters_child_events(void* self, bool enabl
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#handlesChildEvents)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-bool q_abstractgraphicsshapeitem_handles_child_events(void* self);
+bool q_abstractgraphicsshapeitem_handles_child_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -7023,9 +6904,9 @@ void q_abstractgraphicsshapeitem_set_handles_child_events(void* self, bool enabl
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isActive)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-bool q_abstractgraphicsshapeitem_is_active(void* self);
+bool q_abstractgraphicsshapeitem_is_active(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -7040,9 +6921,9 @@ void q_abstractgraphicsshapeitem_set_active(void* self, bool active);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hasFocus)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-bool q_abstractgraphicsshapeitem_has_focus(void* self);
+bool q_abstractgraphicsshapeitem_has_focus(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -7064,9 +6945,9 @@ void q_abstractgraphicsshapeitem_clear_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusProxy)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-QGraphicsItem* q_abstractgraphicsshapeitem_focus_proxy(void* self);
+QGraphicsItem* q_abstractgraphicsshapeitem_focus_proxy(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -7081,17 +6962,17 @@ void q_abstractgraphicsshapeitem_set_focus_proxy(void* self, void* item);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusItem)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-QGraphicsItem* q_abstractgraphicsshapeitem_focus_item(void* self);
+QGraphicsItem* q_abstractgraphicsshapeitem_focus_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusScopeItem)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-QGraphicsItem* q_abstractgraphicsshapeitem_focus_scope_item(void* self);
+QGraphicsItem* q_abstractgraphicsshapeitem_focus_scope_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -7129,17 +7010,17 @@ void q_abstractgraphicsshapeitem_ungrab_keyboard(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#pos)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-QPointF* q_abstractgraphicsshapeitem_pos(void* self);
+QPointF* q_abstractgraphicsshapeitem_pos(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#x)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-double q_abstractgraphicsshapeitem_x(void* self);
+double q_abstractgraphicsshapeitem_x(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -7154,9 +7035,9 @@ void q_abstractgraphicsshapeitem_set_x(void* self, double x);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#y)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-double q_abstractgraphicsshapeitem_y(void* self);
+double q_abstractgraphicsshapeitem_y(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -7171,9 +7052,9 @@ void q_abstractgraphicsshapeitem_set_y(void* self, double y);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scenePos)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-QPointF* q_abstractgraphicsshapeitem_scene_pos(void* self);
+QPointF* q_abstractgraphicsshapeitem_scene_pos(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -7182,7 +7063,7 @@ QPointF* q_abstractgraphicsshapeitem_scene_pos(void* self);
 /// @param self QAbstractGraphicsShapeItem*
 /// @param pos QPointF*
 ///
-void q_abstractgraphicsshapeitem_set_pos(void* self, void* pos);
+void q_abstractgraphicsshapeitem_set_pos(void* self, const void* pos);
 
 /// Inherited from QGraphicsItem
 ///
@@ -7228,35 +7109,35 @@ void q_abstractgraphicsshapeitem_ensure_visible2(void* self, double x, double y,
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transform)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-QTransform* q_abstractgraphicsshapeitem_transform(void* self);
+QTransform* q_abstractgraphicsshapeitem_transform(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneTransform)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-QTransform* q_abstractgraphicsshapeitem_scene_transform(void* self);
+QTransform* q_abstractgraphicsshapeitem_scene_transform(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#deviceTransform)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param viewportTransform QTransform*
 ///
-QTransform* q_abstractgraphicsshapeitem_device_transform(void* self, void* viewportTransform);
+QTransform* q_abstractgraphicsshapeitem_device_transform(const void* self, const void* viewportTransform);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemTransform)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param other QGraphicsItem*
 ///
-QTransform* q_abstractgraphicsshapeitem_item_transform(void* self, void* other);
+QTransform* q_abstractgraphicsshapeitem_item_transform(const void* self, const void* other);
 
 /// Inherited from QGraphicsItem
 ///
@@ -7265,7 +7146,7 @@ QTransform* q_abstractgraphicsshapeitem_item_transform(void* self, void* other);
 /// @param self QAbstractGraphicsShapeItem*
 /// @param matrix QTransform*
 ///
-void q_abstractgraphicsshapeitem_set_transform(void* self, void* matrix);
+void q_abstractgraphicsshapeitem_set_transform(void* self, const void* matrix);
 
 /// Inherited from QGraphicsItem
 ///
@@ -7288,9 +7169,9 @@ void q_abstractgraphicsshapeitem_set_rotation(void* self, double angle);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#rotation)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-double q_abstractgraphicsshapeitem_rotation(void* self);
+double q_abstractgraphicsshapeitem_rotation(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -7305,19 +7186,19 @@ void q_abstractgraphicsshapeitem_set_scale(void* self, double scale);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scale)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-double q_abstractgraphicsshapeitem_scale(void* self);
+double q_abstractgraphicsshapeitem_scale(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transformations)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
 /// @return libqt_list of QGraphicsTransform*
 ///
-libqt_list q_abstractgraphicsshapeitem_transformations(void* self);
+libqt_list q_abstractgraphicsshapeitem_transformations(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -7332,9 +7213,9 @@ void q_abstractgraphicsshapeitem_set_transformations(void* self, libqt_list tran
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transformOriginPoint)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-QPointF* q_abstractgraphicsshapeitem_transform_origin_point(void* self);
+QPointF* q_abstractgraphicsshapeitem_transform_origin_point(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -7343,7 +7224,7 @@ QPointF* q_abstractgraphicsshapeitem_transform_origin_point(void* self);
 /// @param self QAbstractGraphicsShapeItem*
 /// @param origin QPointF*
 ///
-void q_abstractgraphicsshapeitem_set_transform_origin_point(void* self, void* origin);
+void q_abstractgraphicsshapeitem_set_transform_origin_point(void* self, const void* origin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -7359,9 +7240,9 @@ void q_abstractgraphicsshapeitem_set_transform_origin_point2(void* self, double 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#zValue)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-double q_abstractgraphicsshapeitem_z_value(void* self);
+double q_abstractgraphicsshapeitem_z_value(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -7379,86 +7260,86 @@ void q_abstractgraphicsshapeitem_set_z_value(void* self, double z);
 /// @param self QAbstractGraphicsShapeItem*
 /// @param sibling QGraphicsItem*
 ///
-void q_abstractgraphicsshapeitem_stack_before(void* self, void* sibling);
+void q_abstractgraphicsshapeitem_stack_before(void* self, const void* sibling);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#childrenBoundingRect)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-QRectF* q_abstractgraphicsshapeitem_children_bounding_rect(void* self);
+QRectF* q_abstractgraphicsshapeitem_children_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneBoundingRect)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-QRectF* q_abstractgraphicsshapeitem_scene_bounding_rect(void* self);
+QRectF* q_abstractgraphicsshapeitem_scene_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isClipped)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-bool q_abstractgraphicsshapeitem_is_clipped(void* self);
+bool q_abstractgraphicsshapeitem_is_clipped(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#clipPath)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-QPainterPath* q_abstractgraphicsshapeitem_clip_path(void* self);
+QPainterPath* q_abstractgraphicsshapeitem_clip_path(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_abstractgraphicsshapeitem_colliding_items(void* self);
+libqt_list q_abstractgraphicsshapeitem_colliding_items(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-bool q_abstractgraphicsshapeitem_is_obscured(void* self);
+bool q_abstractgraphicsshapeitem_is_obscured(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-bool q_abstractgraphicsshapeitem_is_obscured2(void* self, double x, double y, double w, double h);
+bool q_abstractgraphicsshapeitem_is_obscured2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRegion)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param itemToDeviceTransform QTransform*
 ///
-QRegion* q_abstractgraphicsshapeitem_bounding_region(void* self, void* itemToDeviceTransform);
+QRegion* q_abstractgraphicsshapeitem_bounding_region(const void* self, const void* itemToDeviceTransform);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRegionGranularity)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-double q_abstractgraphicsshapeitem_bounding_region_granularity(void* self);
+double q_abstractgraphicsshapeitem_bounding_region_granularity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -7503,526 +7384,526 @@ void q_abstractgraphicsshapeitem_scroll(void* self, double dx, double dy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param item QGraphicsItem*
 /// @param point QPointF*
 ///
-QPointF* q_abstractgraphicsshapeitem_map_to_item(void* self, void* item, void* point);
+QPointF* q_abstractgraphicsshapeitem_map_to_item(const void* self, const void* item, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param point QPointF*
 ///
-QPointF* q_abstractgraphicsshapeitem_map_to_parent(void* self, void* point);
+QPointF* q_abstractgraphicsshapeitem_map_to_parent(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param point QPointF*
 ///
-QPointF* q_abstractgraphicsshapeitem_map_to_scene(void* self, void* point);
+QPointF* q_abstractgraphicsshapeitem_map_to_scene(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_abstractgraphicsshapeitem_map_to_item2(void* self, void* item, void* rect);
+QPolygonF* q_abstractgraphicsshapeitem_map_to_item2(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_abstractgraphicsshapeitem_map_to_parent2(void* self, void* rect);
+QPolygonF* q_abstractgraphicsshapeitem_map_to_parent2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_abstractgraphicsshapeitem_map_to_scene2(void* self, void* rect);
+QPolygonF* q_abstractgraphicsshapeitem_map_to_scene2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QRectF* q_abstractgraphicsshapeitem_map_rect_to_item(void* self, void* item, void* rect);
+QRectF* q_abstractgraphicsshapeitem_map_rect_to_item(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToParent)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param rect QRectF*
 ///
-QRectF* q_abstractgraphicsshapeitem_map_rect_to_parent(void* self, void* rect);
+QRectF* q_abstractgraphicsshapeitem_map_rect_to_parent(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToScene)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param rect QRectF*
 ///
-QRectF* q_abstractgraphicsshapeitem_map_rect_to_scene(void* self, void* rect);
+QRectF* q_abstractgraphicsshapeitem_map_rect_to_scene(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param item QGraphicsItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_abstractgraphicsshapeitem_map_to_item3(void* self, void* item, void* polygon);
+QPolygonF* q_abstractgraphicsshapeitem_map_to_item3(const void* self, const void* item, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_abstractgraphicsshapeitem_map_to_parent3(void* self, void* polygon);
+QPolygonF* q_abstractgraphicsshapeitem_map_to_parent3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_abstractgraphicsshapeitem_map_to_scene3(void* self, void* polygon);
+QPolygonF* q_abstractgraphicsshapeitem_map_to_scene3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param item QGraphicsItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_abstractgraphicsshapeitem_map_to_item4(void* self, void* item, void* path);
+QPainterPath* q_abstractgraphicsshapeitem_map_to_item4(const void* self, const void* item, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_abstractgraphicsshapeitem_map_to_parent4(void* self, void* path);
+QPainterPath* q_abstractgraphicsshapeitem_map_to_parent4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_abstractgraphicsshapeitem_map_to_scene4(void* self, void* path);
+QPainterPath* q_abstractgraphicsshapeitem_map_to_scene4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param item QGraphicsItem*
 /// @param point QPointF*
 ///
-QPointF* q_abstractgraphicsshapeitem_map_from_item(void* self, void* item, void* point);
+QPointF* q_abstractgraphicsshapeitem_map_from_item(const void* self, const void* item, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param point QPointF*
 ///
-QPointF* q_abstractgraphicsshapeitem_map_from_parent(void* self, void* point);
+QPointF* q_abstractgraphicsshapeitem_map_from_parent(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param point QPointF*
 ///
-QPointF* q_abstractgraphicsshapeitem_map_from_scene(void* self, void* point);
+QPointF* q_abstractgraphicsshapeitem_map_from_scene(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_abstractgraphicsshapeitem_map_from_item2(void* self, void* item, void* rect);
+QPolygonF* q_abstractgraphicsshapeitem_map_from_item2(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_abstractgraphicsshapeitem_map_from_parent2(void* self, void* rect);
+QPolygonF* q_abstractgraphicsshapeitem_map_from_parent2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_abstractgraphicsshapeitem_map_from_scene2(void* self, void* rect);
+QPolygonF* q_abstractgraphicsshapeitem_map_from_scene2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QRectF* q_abstractgraphicsshapeitem_map_rect_from_item(void* self, void* item, void* rect);
+QRectF* q_abstractgraphicsshapeitem_map_rect_from_item(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromParent)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param rect QRectF*
 ///
-QRectF* q_abstractgraphicsshapeitem_map_rect_from_parent(void* self, void* rect);
+QRectF* q_abstractgraphicsshapeitem_map_rect_from_parent(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromScene)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param rect QRectF*
 ///
-QRectF* q_abstractgraphicsshapeitem_map_rect_from_scene(void* self, void* rect);
+QRectF* q_abstractgraphicsshapeitem_map_rect_from_scene(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param item QGraphicsItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_abstractgraphicsshapeitem_map_from_item3(void* self, void* item, void* polygon);
+QPolygonF* q_abstractgraphicsshapeitem_map_from_item3(const void* self, const void* item, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_abstractgraphicsshapeitem_map_from_parent3(void* self, void* polygon);
+QPolygonF* q_abstractgraphicsshapeitem_map_from_parent3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_abstractgraphicsshapeitem_map_from_scene3(void* self, void* polygon);
+QPolygonF* q_abstractgraphicsshapeitem_map_from_scene3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param item QGraphicsItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_abstractgraphicsshapeitem_map_from_item4(void* self, void* item, void* path);
+QPainterPath* q_abstractgraphicsshapeitem_map_from_item4(const void* self, const void* item, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_abstractgraphicsshapeitem_map_from_parent4(void* self, void* path);
+QPainterPath* q_abstractgraphicsshapeitem_map_from_parent4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_abstractgraphicsshapeitem_map_from_scene4(void* self, void* path);
+QPainterPath* q_abstractgraphicsshapeitem_map_from_scene4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_abstractgraphicsshapeitem_map_to_item5(void* self, void* item, double x, double y);
+QPointF* q_abstractgraphicsshapeitem_map_to_item5(const void* self, const void* item, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_abstractgraphicsshapeitem_map_to_parent5(void* self, double x, double y);
+QPointF* q_abstractgraphicsshapeitem_map_to_parent5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_abstractgraphicsshapeitem_map_to_scene5(void* self, double x, double y);
+QPointF* q_abstractgraphicsshapeitem_map_to_scene5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_abstractgraphicsshapeitem_map_to_item6(void* self, void* item, double x, double y, double w, double h);
+QPolygonF* q_abstractgraphicsshapeitem_map_to_item6(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_abstractgraphicsshapeitem_map_to_parent6(void* self, double x, double y, double w, double h);
+QPolygonF* q_abstractgraphicsshapeitem_map_to_parent6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_abstractgraphicsshapeitem_map_to_scene6(void* self, double x, double y, double w, double h);
+QPolygonF* q_abstractgraphicsshapeitem_map_to_scene6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_abstractgraphicsshapeitem_map_rect_to_item2(void* self, void* item, double x, double y, double w, double h);
+QRectF* q_abstractgraphicsshapeitem_map_rect_to_item2(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToParent)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_abstractgraphicsshapeitem_map_rect_to_parent2(void* self, double x, double y, double w, double h);
+QRectF* q_abstractgraphicsshapeitem_map_rect_to_parent2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToScene)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_abstractgraphicsshapeitem_map_rect_to_scene2(void* self, double x, double y, double w, double h);
+QRectF* q_abstractgraphicsshapeitem_map_rect_to_scene2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_abstractgraphicsshapeitem_map_from_item5(void* self, void* item, double x, double y);
+QPointF* q_abstractgraphicsshapeitem_map_from_item5(const void* self, const void* item, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_abstractgraphicsshapeitem_map_from_parent5(void* self, double x, double y);
+QPointF* q_abstractgraphicsshapeitem_map_from_parent5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_abstractgraphicsshapeitem_map_from_scene5(void* self, double x, double y);
+QPointF* q_abstractgraphicsshapeitem_map_from_scene5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_abstractgraphicsshapeitem_map_from_item6(void* self, void* item, double x, double y, double w, double h);
+QPolygonF* q_abstractgraphicsshapeitem_map_from_item6(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_abstractgraphicsshapeitem_map_from_parent6(void* self, double x, double y, double w, double h);
+QPolygonF* q_abstractgraphicsshapeitem_map_from_parent6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_abstractgraphicsshapeitem_map_from_scene6(void* self, double x, double y, double w, double h);
+QPolygonF* q_abstractgraphicsshapeitem_map_from_scene6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_abstractgraphicsshapeitem_map_rect_from_item2(void* self, void* item, double x, double y, double w, double h);
+QRectF* q_abstractgraphicsshapeitem_map_rect_from_item2(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromParent)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_abstractgraphicsshapeitem_map_rect_from_parent2(void* self, double x, double y, double w, double h);
+QRectF* q_abstractgraphicsshapeitem_map_rect_from_parent2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromScene)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_abstractgraphicsshapeitem_map_rect_from_scene2(void* self, double x, double y, double w, double h);
+QRectF* q_abstractgraphicsshapeitem_map_rect_from_scene2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isAncestorOf)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param child QGraphicsItem*
 ///
-bool q_abstractgraphicsshapeitem_is_ancestor_of(void* self, void* child);
+bool q_abstractgraphicsshapeitem_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#commonAncestorItem)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param other QGraphicsItem*
 ///
-QGraphicsItem* q_abstractgraphicsshapeitem_common_ancestor_item(void* self, void* other);
+QGraphicsItem* q_abstractgraphicsshapeitem_common_ancestor_item(const void* self, const void* other);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isUnderMouse)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-bool q_abstractgraphicsshapeitem_is_under_mouse(void* self);
+bool q_abstractgraphicsshapeitem_is_under_mouse(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#data)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param key int
 ///
-QVariant* q_abstractgraphicsshapeitem_data(void* self, int key);
+QVariant* q_abstractgraphicsshapeitem_data(const void* self, int key);
 
 /// Inherited from QGraphicsItem
 ///
@@ -8032,17 +7913,17 @@ QVariant* q_abstractgraphicsshapeitem_data(void* self, int key);
 /// @param key int
 /// @param value QVariant*
 ///
-void q_abstractgraphicsshapeitem_set_data(void* self, int key, void* value);
+void q_abstractgraphicsshapeitem_set_data(void* self, int key, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodHints)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t q_abstractgraphicsshapeitem_input_method_hints(void* self);
+int32_t q_abstractgraphicsshapeitem_input_method_hints(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -8089,16 +7970,16 @@ void q_abstractgraphicsshapeitem_set_flag2(void* self, int32_t flag, bool enable
 /// @param mode enum QGraphicsItem__CacheMode
 /// @param cacheSize QSize*
 ///
-void q_abstractgraphicsshapeitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
+void q_abstractgraphicsshapeitem_set_cache_mode2(void* self, int32_t mode, const void* cacheSize);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param blockingPanel QGraphicsItem**
 ///
-bool q_abstractgraphicsshapeitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel);
+bool q_abstractgraphicsshapeitem_is_blocked_by_modal_panel1(const void* self, void** blockingPanel);
 
 /// Inherited from QGraphicsItem
 ///
@@ -8116,7 +7997,7 @@ void q_abstractgraphicsshapeitem_set_focus1(void* self, int32_t focusReason);
 /// @param self QAbstractGraphicsShapeItem*
 /// @param rect QRectF*
 ///
-void q_abstractgraphicsshapeitem_ensure_visible1(void* self, void* rect);
+void q_abstractgraphicsshapeitem_ensure_visible1(void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -8126,7 +8007,7 @@ void q_abstractgraphicsshapeitem_ensure_visible1(void* self, void* rect);
 /// @param rect QRectF*
 /// @param xmargin int
 ///
-void q_abstractgraphicsshapeitem_ensure_visible22(void* self, void* rect, int xmargin);
+void q_abstractgraphicsshapeitem_ensure_visible22(void* self, const void* rect, int xmargin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -8137,7 +8018,7 @@ void q_abstractgraphicsshapeitem_ensure_visible22(void* self, void* rect, int xm
 /// @param xmargin int
 /// @param ymargin int
 ///
-void q_abstractgraphicsshapeitem_ensure_visible3(void* self, void* rect, int xmargin, int ymargin);
+void q_abstractgraphicsshapeitem_ensure_visible3(void* self, const void* rect, int xmargin, int ymargin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -8170,11 +8051,11 @@ void q_abstractgraphicsshapeitem_ensure_visible6(void* self, double x, double y,
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemTransform)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param other QGraphicsItem*
 /// @param ok bool*
 ///
-QTransform* q_abstractgraphicsshapeitem_item_transform2(void* self, void* other, bool* ok);
+QTransform* q_abstractgraphicsshapeitem_item_transform2(const void* self, const void* other, bool* ok);
 
 /// Inherited from QGraphicsItem
 ///
@@ -8184,27 +8065,27 @@ QTransform* q_abstractgraphicsshapeitem_item_transform2(void* self, void* other,
 /// @param matrix QTransform*
 /// @param combine bool
 ///
-void q_abstractgraphicsshapeitem_set_transform2(void* self, void* matrix, bool combine);
+void q_abstractgraphicsshapeitem_set_transform2(void* self, const void* matrix, bool combine);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_abstractgraphicsshapeitem_colliding_items1(void* self, int32_t mode);
+libqt_list q_abstractgraphicsshapeitem_colliding_items1(const void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param rect QRectF*
 ///
-bool q_abstractgraphicsshapeitem_is_obscured1(void* self, void* rect);
+bool q_abstractgraphicsshapeitem_is_obscured1(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -8213,7 +8094,7 @@ bool q_abstractgraphicsshapeitem_is_obscured1(void* self, void* rect);
 /// @param self QAbstractGraphicsShapeItem*
 /// @param rect QRectF*
 ///
-void q_abstractgraphicsshapeitem_update1(void* self, void* rect);
+void q_abstractgraphicsshapeitem_update1(void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -8224,7 +8105,7 @@ void q_abstractgraphicsshapeitem_update1(void* self, void* rect);
 /// @param dy double
 /// @param rect QRectF*
 ///
-void q_abstractgraphicsshapeitem_scroll3(void* self, double dx, double dy, void* rect);
+void q_abstractgraphicsshapeitem_scroll3(void* self, double dx, double dy, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -8265,19 +8146,11 @@ void q_abstractgraphicsshapeitem_on_advance(void* self, void (*callback)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAbstractGraphicsShapeItem*
-///
-QRectF* q_abstractgraphicsshapeitem_bounding_rect(void* self);
 
-/// Inherited from QGraphicsItem
+/// @warning This method must be implemented with `q_abstractgraphicsshapeitem_on_bounding_rect` before it can be called.
+////// @param self const QAbstractGraphicsShapeItem*
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRect)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self QAbstractGraphicsShapeItem*
-///
-QRectF* q_abstractgraphicsshapeitem_super_bounding_rect(void* self);
+QRectF* q_abstractgraphicsshapeitem_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -8285,12 +8158,12 @@ QRectF* q_abstractgraphicsshapeitem_super_bounding_rect(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAbstractGraphicsShapeItem*
-/// @param callback QRectF* func()
+/// @param self const QAbstractGraphicsShapeItem*
+/// @param callback QRectF* func(QAbstractGraphicsShapeItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractgraphicsshapeitem_on_bounding_rect(void* self, QRectF* (*callback)());
+void q_abstractgraphicsshapeitem_on_bounding_rect(const void* self, QRectF* (*callback)(const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -8298,9 +8171,9 @@ void q_abstractgraphicsshapeitem_on_bounding_rect(void* self, QRectF* (*callback
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-QPainterPath* q_abstractgraphicsshapeitem_shape(void* self);
+QPainterPath* q_abstractgraphicsshapeitem_shape(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -8308,9 +8181,9 @@ QPainterPath* q_abstractgraphicsshapeitem_shape(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-QPainterPath* q_abstractgraphicsshapeitem_super_shape(void* self);
+QPainterPath* q_abstractgraphicsshapeitem_super_shape(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -8318,12 +8191,12 @@ QPainterPath* q_abstractgraphicsshapeitem_super_shape(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAbstractGraphicsShapeItem*
-/// @param callback QPainterPath* func()
+/// @param self const QAbstractGraphicsShapeItem*
+/// @param callback QPainterPath* func(QAbstractGraphicsShapeItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractgraphicsshapeitem_on_shape(void* self, QPainterPath* (*callback)());
+void q_abstractgraphicsshapeitem_on_shape(const void* self, QPainterPath* (*callback)(const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -8331,10 +8204,10 @@ void q_abstractgraphicsshapeitem_on_shape(void* self, QPainterPath* (*callback)(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param point QPointF*
 ///
-bool q_abstractgraphicsshapeitem_contains(void* self, void* point);
+bool q_abstractgraphicsshapeitem_contains(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
@@ -8342,10 +8215,10 @@ bool q_abstractgraphicsshapeitem_contains(void* self, void* point);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param point QPointF*
 ///
-bool q_abstractgraphicsshapeitem_super_contains(void* self, void* point);
+bool q_abstractgraphicsshapeitem_super_contains(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
@@ -8353,10 +8226,10 @@ bool q_abstractgraphicsshapeitem_super_contains(void* self, void* point);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param callback bool func(QAbstractGraphicsShapeItem* self, QPointF* point)
 ///
-void q_abstractgraphicsshapeitem_on_contains(void* self, bool (*callback)(void*, void*));
+void q_abstractgraphicsshapeitem_on_contains(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -8364,11 +8237,11 @@ void q_abstractgraphicsshapeitem_on_contains(void* self, bool (*callback)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_abstractgraphicsshapeitem_collides_with_item(void* self, void* other, int32_t mode);
+bool q_abstractgraphicsshapeitem_collides_with_item(const void* self, const void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -8376,11 +8249,11 @@ bool q_abstractgraphicsshapeitem_collides_with_item(void* self, void* other, int
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_abstractgraphicsshapeitem_super_collides_with_item(void* self, void* other, int32_t mode);
+bool q_abstractgraphicsshapeitem_super_collides_with_item(const void* self, const void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -8388,10 +8261,10 @@ bool q_abstractgraphicsshapeitem_super_collides_with_item(void* self, void* othe
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param callback bool func(QAbstractGraphicsShapeItem* self, QGraphicsItem* other, enum Qt__ItemSelectionMode mode)
 ///
-void q_abstractgraphicsshapeitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
+void q_abstractgraphicsshapeitem_on_collides_with_item(const void* self, bool (*callback)(const void*, const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -8399,11 +8272,11 @@ void q_abstractgraphicsshapeitem_on_collides_with_item(void* self, bool (*callba
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_abstractgraphicsshapeitem_collides_with_path(void* self, void* path, int32_t mode);
+bool q_abstractgraphicsshapeitem_collides_with_path(const void* self, const void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -8411,11 +8284,11 @@ bool q_abstractgraphicsshapeitem_collides_with_path(void* self, void* path, int3
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_abstractgraphicsshapeitem_super_collides_with_path(void* self, void* path, int32_t mode);
+bool q_abstractgraphicsshapeitem_super_collides_with_path(const void* self, const void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -8423,10 +8296,10 @@ bool q_abstractgraphicsshapeitem_super_collides_with_path(void* self, void* path
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param callback bool func(QAbstractGraphicsShapeItem* self, QPainterPath* path, enum Qt__ItemSelectionMode mode)
 ///
-void q_abstractgraphicsshapeitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
+void q_abstractgraphicsshapeitem_on_collides_with_path(const void* self, bool (*callback)(const void*, const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -8434,25 +8307,14 @@ void q_abstractgraphicsshapeitem_on_collides_with_path(void* self, bool (*callba
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAbstractGraphicsShapeItem*
-/// @param painter QPainter*
-/// @param option QStyleOptionGraphicsItem*
-/// @param widget QWidget*
-///
-void q_abstractgraphicsshapeitem_paint(void* self, void* painter, void* option, void* widget);
 
-/// Inherited from QGraphicsItem
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#paint)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self QAbstractGraphicsShapeItem*
+/// @warning This method must be implemented with `q_abstractgraphicsshapeitem_on_paint` before it can be called.
+////// @param self QAbstractGraphicsShapeItem*
 /// @param painter QPainter*
 /// @param option QStyleOptionGraphicsItem*
 /// @param widget QWidget*
 ///
-void q_abstractgraphicsshapeitem_super_paint(void* self, void* painter, void* option, void* widget);
+void q_abstractgraphicsshapeitem_paint(void* self, void* painter, const void* option, void* widget);
 
 /// Inherited from QGraphicsItem
 ///
@@ -8463,7 +8325,7 @@ void q_abstractgraphicsshapeitem_super_paint(void* self, void* painter, void* op
 /// @param self QAbstractGraphicsShapeItem*
 /// @param callback void func(QAbstractGraphicsShapeItem* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget)
 ///
-void q_abstractgraphicsshapeitem_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
+void q_abstractgraphicsshapeitem_on_paint(void* self, void (*callback)(void*, void*, const void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -8471,9 +8333,9 @@ void q_abstractgraphicsshapeitem_on_paint(void* self, void (*callback)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-int32_t q_abstractgraphicsshapeitem_type(void* self);
+int32_t q_abstractgraphicsshapeitem_type(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -8481,9 +8343,9 @@ int32_t q_abstractgraphicsshapeitem_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 ///
-int32_t q_abstractgraphicsshapeitem_super_type(void* self);
+int32_t q_abstractgraphicsshapeitem_super_type(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -8491,10 +8353,10 @@ int32_t q_abstractgraphicsshapeitem_super_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAbstractGraphicsShapeItem*
-/// @param callback int32_t func()
+/// @param self const QAbstractGraphicsShapeItem*
+/// @param callback int32_t func(QAbstractGraphicsShapeItem* self)
 ///
-void q_abstractgraphicsshapeitem_on_type(void* self, int32_t (*callback)());
+void q_abstractgraphicsshapeitem_on_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -9164,10 +9026,10 @@ void q_abstractgraphicsshapeitem_on_input_method_event(void* self, void (*callba
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_abstractgraphicsshapeitem_input_method_query(void* self, int32_t query);
+QVariant* q_abstractgraphicsshapeitem_input_method_query(const void* self, int32_t query);
 
 /// Inherited from QGraphicsItem
 ///
@@ -9175,10 +9037,10 @@ QVariant* q_abstractgraphicsshapeitem_input_method_query(void* self, int32_t que
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_abstractgraphicsshapeitem_super_input_method_query(void* self, int32_t query);
+QVariant* q_abstractgraphicsshapeitem_super_input_method_query(const void* self, int32_t query);
 
 /// Inherited from QGraphicsItem
 ///
@@ -9186,12 +9048,12 @@ QVariant* q_abstractgraphicsshapeitem_super_input_method_query(void* self, int32
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param callback QVariant* func(QAbstractGraphicsShapeItem* self, enum Qt__InputMethodQuery query)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractgraphicsshapeitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void q_abstractgraphicsshapeitem_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -9203,7 +9065,7 @@ void q_abstractgraphicsshapeitem_on_input_method_query(void* self, QVariant* (*c
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
 ///
-QVariant* q_abstractgraphicsshapeitem_item_change(void* self, int32_t change, void* value);
+QVariant* q_abstractgraphicsshapeitem_item_change(void* self, int32_t change, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -9215,7 +9077,7 @@ QVariant* q_abstractgraphicsshapeitem_item_change(void* self, int32_t change, vo
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
 ///
-QVariant* q_abstractgraphicsshapeitem_super_item_change(void* self, int32_t change, void* value);
+QVariant* q_abstractgraphicsshapeitem_super_item_change(void* self, int32_t change, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -9228,7 +9090,7 @@ QVariant* q_abstractgraphicsshapeitem_super_item_change(void* self, int32_t chan
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractgraphicsshapeitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
+void q_abstractgraphicsshapeitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -9236,10 +9098,10 @@ void q_abstractgraphicsshapeitem_on_item_change(void* self, QVariant* (*callback
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_abstractgraphicsshapeitem_supports_extension(void* self, int32_t extension);
+bool q_abstractgraphicsshapeitem_supports_extension(const void* self, int32_t extension);
 
 /// Inherited from QGraphicsItem
 ///
@@ -9247,10 +9109,10 @@ bool q_abstractgraphicsshapeitem_supports_extension(void* self, int32_t extensio
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_abstractgraphicsshapeitem_super_supports_extension(void* self, int32_t extension);
+bool q_abstractgraphicsshapeitem_super_supports_extension(const void* self, int32_t extension);
 
 /// Inherited from QGraphicsItem
 ///
@@ -9258,10 +9120,10 @@ bool q_abstractgraphicsshapeitem_super_supports_extension(void* self, int32_t ex
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param callback bool func(QAbstractGraphicsShapeItem* self, enum QGraphicsItem__Extension extension)
 ///
-void q_abstractgraphicsshapeitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t));
+void q_abstractgraphicsshapeitem_on_supports_extension(const void* self, bool (*callback)(const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -9273,7 +9135,7 @@ void q_abstractgraphicsshapeitem_on_supports_extension(void* self, bool (*callba
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_abstractgraphicsshapeitem_set_extension(void* self, int32_t extension, void* variant);
+void q_abstractgraphicsshapeitem_set_extension(void* self, int32_t extension, const void* variant);
 
 /// Inherited from QGraphicsItem
 ///
@@ -9285,7 +9147,7 @@ void q_abstractgraphicsshapeitem_set_extension(void* self, int32_t extension, vo
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_abstractgraphicsshapeitem_super_set_extension(void* self, int32_t extension, void* variant);
+void q_abstractgraphicsshapeitem_super_set_extension(void* self, int32_t extension, const void* variant);
 
 /// Inherited from QGraphicsItem
 ///
@@ -9296,7 +9158,7 @@ void q_abstractgraphicsshapeitem_super_set_extension(void* self, int32_t extensi
 /// @param self QAbstractGraphicsShapeItem*
 /// @param callback void func(QAbstractGraphicsShapeItem* self, enum QGraphicsItem__Extension extension, QVariant* variant)
 ///
-void q_abstractgraphicsshapeitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*));
+void q_abstractgraphicsshapeitem_on_set_extension(void* self, void (*callback)(void*, int32_t, const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -9304,10 +9166,10 @@ void q_abstractgraphicsshapeitem_on_set_extension(void* self, void (*callback)(v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param variant QVariant*
 ///
-QVariant* q_abstractgraphicsshapeitem_extension(void* self, void* variant);
+QVariant* q_abstractgraphicsshapeitem_extension(const void* self, const void* variant);
 
 /// Inherited from QGraphicsItem
 ///
@@ -9315,10 +9177,10 @@ QVariant* q_abstractgraphicsshapeitem_extension(void* self, void* variant);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param variant QVariant*
 ///
-QVariant* q_abstractgraphicsshapeitem_super_extension(void* self, void* variant);
+QVariant* q_abstractgraphicsshapeitem_super_extension(const void* self, const void* variant);
 
 /// Inherited from QGraphicsItem
 ///
@@ -9326,12 +9188,12 @@ QVariant* q_abstractgraphicsshapeitem_super_extension(void* self, void* variant)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAbstractGraphicsShapeItem*
+/// @param self const QAbstractGraphicsShapeItem*
 /// @param callback QVariant* func(QAbstractGraphicsShapeItem* self, QVariant* variant)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractgraphicsshapeitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
+void q_abstractgraphicsshapeitem_on_extension(const void* self, QVariant* (*callback)(const void*, const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -9360,9 +9222,9 @@ void q_abstractgraphicsshapeitem_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractGraphicsShapeItem*
-/// @param callback void func()
+/// @param callback void func(QAbstractGraphicsShapeItem* self)
 ///
-void q_abstractgraphicsshapeitem_on_update_micro_focus(void* self, void (*callback)());
+void q_abstractgraphicsshapeitem_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -9391,9 +9253,9 @@ void q_abstractgraphicsshapeitem_super_add_to_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractGraphicsShapeItem*
-/// @param callback void func()
+/// @param callback void func(QAbstractGraphicsShapeItem* self)
 ///
-void q_abstractgraphicsshapeitem_on_add_to_index(void* self, void (*callback)());
+void q_abstractgraphicsshapeitem_on_add_to_index(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -9422,9 +9284,9 @@ void q_abstractgraphicsshapeitem_super_remove_from_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractGraphicsShapeItem*
-/// @param callback void func()
+/// @param callback void func(QAbstractGraphicsShapeItem* self)
 ///
-void q_abstractgraphicsshapeitem_on_remove_from_index(void* self, void (*callback)());
+void q_abstractgraphicsshapeitem_on_remove_from_index(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -9453,9 +9315,9 @@ void q_abstractgraphicsshapeitem_super_prepare_geometry_change(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractGraphicsShapeItem*
-/// @param callback void func()
+/// @param callback void func(QAbstractGraphicsShapeItem* self)
 ///
-void q_abstractgraphicsshapeitem_on_prepare_geometry_change(void* self, void (*callback)());
+void q_abstractgraphicsshapeitem_on_prepare_geometry_change(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractgraphicsshapeitem.html#dtor.QAbstractGraphicsShapeItem)
 ///
@@ -9477,7 +9339,7 @@ QGraphicsPathItem* q_graphicspathitem_new();
 ///
 /// @param path QPainterPath*
 ///
-QGraphicsPathItem* q_graphicspathitem_new2(void* path);
+QGraphicsPathItem* q_graphicspathitem_new2(const void* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html)
 
@@ -9494,95 +9356,95 @@ QGraphicsPathItem* q_graphicspathitem_new3(void* parent);
 /// @param path QPainterPath*
 /// @param parent QGraphicsItem*
 ///
-QGraphicsPathItem* q_graphicspathitem_new4(void* path, void* parent);
+QGraphicsPathItem* q_graphicspathitem_new4(const void* path, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#path)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QPainterPath* q_graphicspathitem_path(void* self);
+QPainterPath* q_graphicspathitem_path(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#setPath)
 ///
 /// @param self QGraphicsPathItem*
 /// @param path QPainterPath*
 ///
-void q_graphicspathitem_set_path(void* self, void* path);
+void q_graphicspathitem_set_path(void* self, const void* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#boundingRect)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QRectF* q_graphicspathitem_bounding_rect(void* self);
+QRectF* q_graphicspathitem_bounding_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#boundingRect)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsPathItem*
-/// @param callback QRectF* func()
+/// @param self const QGraphicsPathItem*
+/// @param callback QRectF* func(const QGraphicsPathItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicspathitem_on_bounding_rect(void* self, QRectF* (*callback)());
+void q_graphicspathitem_on_bounding_rect(const void* self, QRectF* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#boundingRect)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QRectF* q_graphicspathitem_super_bounding_rect(void* self);
+QRectF* q_graphicspathitem_super_bounding_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#shape)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QPainterPath* q_graphicspathitem_shape(void* self);
+QPainterPath* q_graphicspathitem_shape(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#shape)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsPathItem*
-/// @param callback QPainterPath* func()
+/// @param self const QGraphicsPathItem*
+/// @param callback QPainterPath* func(const QGraphicsPathItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicspathitem_on_shape(void* self, QPainterPath* (*callback)());
+void q_graphicspathitem_on_shape(const void* self, QPainterPath* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#shape)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QPainterPath* q_graphicspathitem_super_shape(void* self);
+QPainterPath* q_graphicspathitem_super_shape(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#contains)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param point QPointF*
 ///
-bool q_graphicspathitem_contains(void* self, void* point);
+bool q_graphicspathitem_contains(const void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#contains)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsPathItem*
-/// @param callback bool func(QGraphicsPathItem* self, QPointF* point)
+/// @param self const QGraphicsPathItem*
+/// @param callback bool func(const QGraphicsPathItem* self, QPointF* point)
 ///
-void q_graphicspathitem_on_contains(void* self, bool (*callback)(void*, void*));
+void q_graphicspathitem_on_contains(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#contains)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param point QPointF*
 ///
-bool q_graphicspathitem_super_contains(void* self, void* point);
+bool q_graphicspathitem_super_contains(const void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#paint)
 ///
@@ -9591,7 +9453,7 @@ bool q_graphicspathitem_super_contains(void* self, void* point);
 /// @param option QStyleOptionGraphicsItem*
 /// @param widget QWidget*
 ///
-void q_graphicspathitem_paint(void* self, void* painter, void* option, void* widget);
+void q_graphicspathitem_paint(void* self, void* painter, const void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#paint)
 ///
@@ -9600,7 +9462,7 @@ void q_graphicspathitem_paint(void* self, void* painter, void* option, void* wid
 /// @param self QGraphicsPathItem*
 /// @param callback void func(QGraphicsPathItem* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget)
 ///
-void q_graphicspathitem_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
+void q_graphicspathitem_on_paint(void* self, void (*callback)(void*, void*, const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#paint)
 ///
@@ -9611,105 +9473,105 @@ void q_graphicspathitem_on_paint(void* self, void (*callback)(void*, void*, void
 /// @param option QStyleOptionGraphicsItem*
 /// @param widget QWidget*
 ///
-void q_graphicspathitem_super_paint(void* self, void* painter, void* option, void* widget);
+void q_graphicspathitem_super_paint(void* self, void* painter, const void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#isObscuredBy)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param item QGraphicsItem*
 ///
-bool q_graphicspathitem_is_obscured_by(void* self, void* item);
+bool q_graphicspathitem_is_obscured_by(const void* self, const void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#isObscuredBy)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsPathItem*
-/// @param callback bool func(QGraphicsPathItem* self, QGraphicsItem* item)
+/// @param self const QGraphicsPathItem*
+/// @param callback bool func(const QGraphicsPathItem* self, QGraphicsItem* item)
 ///
-void q_graphicspathitem_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
+void q_graphicspathitem_on_is_obscured_by(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#isObscuredBy)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param item QGraphicsItem*
 ///
-bool q_graphicspathitem_super_is_obscured_by(void* self, void* item);
+bool q_graphicspathitem_super_is_obscured_by(const void* self, const void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#opaqueArea)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QPainterPath* q_graphicspathitem_opaque_area(void* self);
+QPainterPath* q_graphicspathitem_opaque_area(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#opaqueArea)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsPathItem*
-/// @param callback QPainterPath* func()
+/// @param self const QGraphicsPathItem*
+/// @param callback QPainterPath* func(const QGraphicsPathItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicspathitem_on_opaque_area(void* self, QPainterPath* (*callback)());
+void q_graphicspathitem_on_opaque_area(const void* self, QPainterPath* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#opaqueArea)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QPainterPath* q_graphicspathitem_super_opaque_area(void* self);
+QPainterPath* q_graphicspathitem_super_opaque_area(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#type)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-int32_t q_graphicspathitem_type(void* self);
+int32_t q_graphicspathitem_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#type)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsPathItem*
-/// @param callback int32_t func()
+/// @param self const QGraphicsPathItem*
+/// @param callback int32_t func(const QGraphicsPathItem* self)
 ///
-void q_graphicspathitem_on_type(void* self, int32_t (*callback)());
+void q_graphicspathitem_on_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#type)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-int32_t q_graphicspathitem_super_type(void* self);
+int32_t q_graphicspathitem_super_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#supportsExtension)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_graphicspathitem_supports_extension(void* self, int32_t extension);
+bool q_graphicspathitem_supports_extension(const void* self, int32_t extension);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#supportsExtension)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsPathItem*
-/// @param callback bool func(QGraphicsPathItem* self, enum QGraphicsItem__Extension extension)
+/// @param self const QGraphicsPathItem*
+/// @param callback bool func(const QGraphicsPathItem* self, enum QGraphicsItem__Extension extension)
 ///
-void q_graphicspathitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t));
+void q_graphicspathitem_on_supports_extension(const void* self, bool (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#supportsExtension)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_graphicspathitem_super_supports_extension(void* self, int32_t extension);
+bool q_graphicspathitem_super_supports_extension(const void* self, int32_t extension);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#setExtension)
 ///
@@ -9717,7 +9579,7 @@ bool q_graphicspathitem_super_supports_extension(void* self, int32_t extension);
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_graphicspathitem_set_extension(void* self, int32_t extension, void* variant);
+void q_graphicspathitem_set_extension(void* self, int32_t extension, const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#setExtension)
 ///
@@ -9726,7 +9588,7 @@ void q_graphicspathitem_set_extension(void* self, int32_t extension, void* varia
 /// @param self QGraphicsPathItem*
 /// @param callback void func(QGraphicsPathItem* self, enum QGraphicsItem__Extension extension, QVariant* variant)
 ///
-void q_graphicspathitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*));
+void q_graphicspathitem_on_set_extension(void* self, void (*callback)(void*, int32_t, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#setExtension)
 ///
@@ -9736,42 +9598,42 @@ void q_graphicspathitem_on_set_extension(void* self, void (*callback)(void*, int
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_graphicspathitem_super_set_extension(void* self, int32_t extension, void* variant);
+void q_graphicspathitem_super_set_extension(void* self, int32_t extension, const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#extension)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param variant QVariant*
 ///
-QVariant* q_graphicspathitem_extension(void* self, void* variant);
+QVariant* q_graphicspathitem_extension(const void* self, const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#extension)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsPathItem*
-/// @param callback QVariant* func(QGraphicsPathItem* self, QVariant* variant)
+/// @param self const QGraphicsPathItem*
+/// @param callback QVariant* func(const QGraphicsPathItem* self, QVariant* variant)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicspathitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
+void q_graphicspathitem_on_extension(const void* self, QVariant* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#extension)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param variant QVariant*
 ///
-QVariant* q_graphicspathitem_super_extension(void* self, void* variant);
+QVariant* q_graphicspathitem_super_extension(const void* self, const void* variant);
 
 /// Inherited from QAbstractGraphicsShapeItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractgraphicsshapeitem.html#pen)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QPen* q_graphicspathitem_pen(void* self);
+QPen* q_graphicspathitem_pen(const void* self);
 
 /// Inherited from QAbstractGraphicsShapeItem
 ///
@@ -9780,15 +9642,15 @@ QPen* q_graphicspathitem_pen(void* self);
 /// @param self QGraphicsPathItem*
 /// @param pen QPen*
 ///
-void q_graphicspathitem_set_pen(void* self, void* pen);
+void q_graphicspathitem_set_pen(void* self, const void* pen);
 
 /// Inherited from QAbstractGraphicsShapeItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractgraphicsshapeitem.html#brush)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QBrush* q_graphicspathitem_brush(void* self);
+QBrush* q_graphicspathitem_brush(const void* self);
 
 /// Inherited from QAbstractGraphicsShapeItem
 ///
@@ -9797,71 +9659,71 @@ QBrush* q_graphicspathitem_brush(void* self);
 /// @param self QGraphicsPathItem*
 /// @param brush QBrush*
 ///
-void q_graphicspathitem_set_brush(void* self, void* brush);
+void q_graphicspathitem_set_brush(void* self, const void* brush);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scene)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QGraphicsScene* q_graphicspathitem_scene(void* self);
+QGraphicsScene* q_graphicspathitem_scene(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentItem)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QGraphicsItem* q_graphicspathitem_parent_item(void* self);
+QGraphicsItem* q_graphicspathitem_parent_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#topLevelItem)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QGraphicsItem* q_graphicspathitem_top_level_item(void* self);
+QGraphicsItem* q_graphicspathitem_top_level_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentObject)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QGraphicsObject* q_graphicspathitem_parent_object(void* self);
+QGraphicsObject* q_graphicspathitem_parent_object(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentWidget)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QGraphicsWidget* q_graphicspathitem_parent_widget(void* self);
+QGraphicsWidget* q_graphicspathitem_parent_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#topLevelWidget)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QGraphicsWidget* q_graphicspathitem_top_level_widget(void* self);
+QGraphicsWidget* q_graphicspathitem_top_level_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#window)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QGraphicsWidget* q_graphicspathitem_window(void* self);
+QGraphicsWidget* q_graphicspathitem_window(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#panel)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QGraphicsItem* q_graphicspathitem_panel(void* self);
+QGraphicsItem* q_graphicspathitem_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -9876,35 +9738,35 @@ void q_graphicspathitem_set_parent_item(void* self, void* parent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#childItems)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicspathitem_child_items(void* self);
+libqt_list q_graphicspathitem_child_items(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isWidget)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-bool q_graphicspathitem_is_widget(void* self);
+bool q_graphicspathitem_is_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isWindow)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-bool q_graphicspathitem_is_window(void* self);
+bool q_graphicspathitem_is_window(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isPanel)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-bool q_graphicspathitem_is_panel(void* self);
+bool q_graphicspathitem_is_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -9918,17 +9780,17 @@ QGraphicsObject* q_graphicspathitem_to_graphics_object(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#toGraphicsObject)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-const QGraphicsObject* q_graphicspathitem_to_graphics_object2(void* self);
+const QGraphicsObject* q_graphicspathitem_to_graphics_object2(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#group)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QGraphicsItemGroup* q_graphicspathitem_group(void* self);
+QGraphicsItemGroup* q_graphicspathitem_group(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -9943,11 +9805,11 @@ void q_graphicspathitem_set_group(void* self, void* group);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#flags)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
 /// @return flag of enum QGraphicsItem__GraphicsItemFlag
 ///
-int32_t q_graphicspathitem_flags(void* self);
+int32_t q_graphicspathitem_flags(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -9971,11 +9833,11 @@ void q_graphicspathitem_set_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#cacheMode)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
 /// @return enum QGraphicsItem__CacheMode
 ///
-int32_t q_graphicspathitem_cache_mode(void* self);
+int32_t q_graphicspathitem_cache_mode(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -9990,11 +9852,11 @@ void q_graphicspathitem_set_cache_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#panelModality)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
 /// @return enum QGraphicsItem__PanelModality
 ///
-int32_t q_graphicspathitem_panel_modality(void* self);
+int32_t q_graphicspathitem_panel_modality(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10009,9 +9871,9 @@ void q_graphicspathitem_set_panel_modality(void* self, int32_t panelModality);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-bool q_graphicspathitem_is_blocked_by_modal_panel(void* self);
+bool q_graphicspathitem_is_blocked_by_modal_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10019,9 +9881,9 @@ bool q_graphicspathitem_is_blocked_by_modal_panel(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-const char* q_graphicspathitem_tool_tip(void* self);
+const char* q_graphicspathitem_tool_tip(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10036,9 +9898,9 @@ void q_graphicspathitem_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#cursor)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QCursor* q_graphicspathitem_cursor(void* self);
+QCursor* q_graphicspathitem_cursor(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10047,15 +9909,15 @@ QCursor* q_graphicspathitem_cursor(void* self);
 /// @param self QGraphicsPathItem*
 /// @param cursor QCursor*
 ///
-void q_graphicspathitem_set_cursor(void* self, void* cursor);
+void q_graphicspathitem_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hasCursor)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-bool q_graphicspathitem_has_cursor(void* self);
+bool q_graphicspathitem_has_cursor(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10069,18 +9931,18 @@ void q_graphicspathitem_unset_cursor(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isVisible)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-bool q_graphicspathitem_is_visible(void* self);
+bool q_graphicspathitem_is_visible(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isVisibleTo)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param parent QGraphicsItem*
 ///
-bool q_graphicspathitem_is_visible_to(void* self, void* parent);
+bool q_graphicspathitem_is_visible_to(const void* self, const void* parent);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10111,9 +9973,9 @@ void q_graphicspathitem_show(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isEnabled)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-bool q_graphicspathitem_is_enabled(void* self);
+bool q_graphicspathitem_is_enabled(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10128,9 +9990,9 @@ void q_graphicspathitem_set_enabled(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isSelected)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-bool q_graphicspathitem_is_selected(void* self);
+bool q_graphicspathitem_is_selected(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10145,9 +10007,9 @@ void q_graphicspathitem_set_selected(void* self, bool selected);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptDrops)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-bool q_graphicspathitem_accept_drops(void* self);
+bool q_graphicspathitem_accept_drops(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10162,17 +10024,17 @@ void q_graphicspathitem_set_accept_drops(void* self, bool on);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#opacity)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-double q_graphicspathitem_opacity(void* self);
+double q_graphicspathitem_opacity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#effectiveOpacity)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-double q_graphicspathitem_effective_opacity(void* self);
+double q_graphicspathitem_effective_opacity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10187,9 +10049,9 @@ void q_graphicspathitem_set_opacity(void* self, double opacity);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#graphicsEffect)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QGraphicsEffect* q_graphicspathitem_graphics_effect(void* self);
+QGraphicsEffect* q_graphicspathitem_graphics_effect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10204,11 +10066,11 @@ void q_graphicspathitem_set_graphics_effect(void* self, void* effect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptedMouseButtons)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
 /// @return flag of enum Qt__MouseButton
 ///
-int32_t q_graphicspathitem_accepted_mouse_buttons(void* self);
+int32_t q_graphicspathitem_accepted_mouse_buttons(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10223,9 +10085,9 @@ void q_graphicspathitem_set_accepted_mouse_buttons(void* self, int32_t buttons);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptHoverEvents)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-bool q_graphicspathitem_accept_hover_events(void* self);
+bool q_graphicspathitem_accept_hover_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10240,9 +10102,9 @@ void q_graphicspathitem_set_accept_hover_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptTouchEvents)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-bool q_graphicspathitem_accept_touch_events(void* self);
+bool q_graphicspathitem_accept_touch_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10257,9 +10119,9 @@ void q_graphicspathitem_set_accept_touch_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#filtersChildEvents)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-bool q_graphicspathitem_filters_child_events(void* self);
+bool q_graphicspathitem_filters_child_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10274,9 +10136,9 @@ void q_graphicspathitem_set_filters_child_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#handlesChildEvents)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-bool q_graphicspathitem_handles_child_events(void* self);
+bool q_graphicspathitem_handles_child_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10291,9 +10153,9 @@ void q_graphicspathitem_set_handles_child_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isActive)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-bool q_graphicspathitem_is_active(void* self);
+bool q_graphicspathitem_is_active(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10308,9 +10170,9 @@ void q_graphicspathitem_set_active(void* self, bool active);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hasFocus)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-bool q_graphicspathitem_has_focus(void* self);
+bool q_graphicspathitem_has_focus(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10332,9 +10194,9 @@ void q_graphicspathitem_clear_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusProxy)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QGraphicsItem* q_graphicspathitem_focus_proxy(void* self);
+QGraphicsItem* q_graphicspathitem_focus_proxy(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10349,17 +10211,17 @@ void q_graphicspathitem_set_focus_proxy(void* self, void* item);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusItem)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QGraphicsItem* q_graphicspathitem_focus_item(void* self);
+QGraphicsItem* q_graphicspathitem_focus_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusScopeItem)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QGraphicsItem* q_graphicspathitem_focus_scope_item(void* self);
+QGraphicsItem* q_graphicspathitem_focus_scope_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10397,17 +10259,17 @@ void q_graphicspathitem_ungrab_keyboard(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#pos)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QPointF* q_graphicspathitem_pos(void* self);
+QPointF* q_graphicspathitem_pos(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#x)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-double q_graphicspathitem_x(void* self);
+double q_graphicspathitem_x(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10422,9 +10284,9 @@ void q_graphicspathitem_set_x(void* self, double x);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#y)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-double q_graphicspathitem_y(void* self);
+double q_graphicspathitem_y(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10439,9 +10301,9 @@ void q_graphicspathitem_set_y(void* self, double y);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scenePos)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QPointF* q_graphicspathitem_scene_pos(void* self);
+QPointF* q_graphicspathitem_scene_pos(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10450,7 +10312,7 @@ QPointF* q_graphicspathitem_scene_pos(void* self);
 /// @param self QGraphicsPathItem*
 /// @param pos QPointF*
 ///
-void q_graphicspathitem_set_pos(void* self, void* pos);
+void q_graphicspathitem_set_pos(void* self, const void* pos);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10496,35 +10358,35 @@ void q_graphicspathitem_ensure_visible2(void* self, double x, double y, double w
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transform)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QTransform* q_graphicspathitem_transform(void* self);
+QTransform* q_graphicspathitem_transform(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneTransform)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QTransform* q_graphicspathitem_scene_transform(void* self);
+QTransform* q_graphicspathitem_scene_transform(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#deviceTransform)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param viewportTransform QTransform*
 ///
-QTransform* q_graphicspathitem_device_transform(void* self, void* viewportTransform);
+QTransform* q_graphicspathitem_device_transform(const void* self, const void* viewportTransform);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemTransform)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param other QGraphicsItem*
 ///
-QTransform* q_graphicspathitem_item_transform(void* self, void* other);
+QTransform* q_graphicspathitem_item_transform(const void* self, const void* other);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10533,7 +10395,7 @@ QTransform* q_graphicspathitem_item_transform(void* self, void* other);
 /// @param self QGraphicsPathItem*
 /// @param matrix QTransform*
 ///
-void q_graphicspathitem_set_transform(void* self, void* matrix);
+void q_graphicspathitem_set_transform(void* self, const void* matrix);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10556,9 +10418,9 @@ void q_graphicspathitem_set_rotation(void* self, double angle);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#rotation)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-double q_graphicspathitem_rotation(void* self);
+double q_graphicspathitem_rotation(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10573,19 +10435,19 @@ void q_graphicspathitem_set_scale(void* self, double scale);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scale)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-double q_graphicspathitem_scale(void* self);
+double q_graphicspathitem_scale(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transformations)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
 /// @return libqt_list of QGraphicsTransform*
 ///
-libqt_list q_graphicspathitem_transformations(void* self);
+libqt_list q_graphicspathitem_transformations(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10600,9 +10462,9 @@ void q_graphicspathitem_set_transformations(void* self, libqt_list transformatio
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transformOriginPoint)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QPointF* q_graphicspathitem_transform_origin_point(void* self);
+QPointF* q_graphicspathitem_transform_origin_point(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10611,7 +10473,7 @@ QPointF* q_graphicspathitem_transform_origin_point(void* self);
 /// @param self QGraphicsPathItem*
 /// @param origin QPointF*
 ///
-void q_graphicspathitem_set_transform_origin_point(void* self, void* origin);
+void q_graphicspathitem_set_transform_origin_point(void* self, const void* origin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10627,9 +10489,9 @@ void q_graphicspathitem_set_transform_origin_point2(void* self, double ax, doubl
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#zValue)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-double q_graphicspathitem_z_value(void* self);
+double q_graphicspathitem_z_value(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10647,86 +10509,86 @@ void q_graphicspathitem_set_z_value(void* self, double z);
 /// @param self QGraphicsPathItem*
 /// @param sibling QGraphicsItem*
 ///
-void q_graphicspathitem_stack_before(void* self, void* sibling);
+void q_graphicspathitem_stack_before(void* self, const void* sibling);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#childrenBoundingRect)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QRectF* q_graphicspathitem_children_bounding_rect(void* self);
+QRectF* q_graphicspathitem_children_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneBoundingRect)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QRectF* q_graphicspathitem_scene_bounding_rect(void* self);
+QRectF* q_graphicspathitem_scene_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isClipped)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-bool q_graphicspathitem_is_clipped(void* self);
+bool q_graphicspathitem_is_clipped(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#clipPath)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-QPainterPath* q_graphicspathitem_clip_path(void* self);
+QPainterPath* q_graphicspathitem_clip_path(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicspathitem_colliding_items(void* self);
+libqt_list q_graphicspathitem_colliding_items(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-bool q_graphicspathitem_is_obscured(void* self);
+bool q_graphicspathitem_is_obscured(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-bool q_graphicspathitem_is_obscured2(void* self, double x, double y, double w, double h);
+bool q_graphicspathitem_is_obscured2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRegion)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param itemToDeviceTransform QTransform*
 ///
-QRegion* q_graphicspathitem_bounding_region(void* self, void* itemToDeviceTransform);
+QRegion* q_graphicspathitem_bounding_region(const void* self, const void* itemToDeviceTransform);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRegionGranularity)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-double q_graphicspathitem_bounding_region_granularity(void* self);
+double q_graphicspathitem_bounding_region_granularity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10771,526 +10633,526 @@ void q_graphicspathitem_scroll(void* self, double dx, double dy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param item QGraphicsItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicspathitem_map_to_item(void* self, void* item, void* point);
+QPointF* q_graphicspathitem_map_to_item(const void* self, const void* item, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicspathitem_map_to_parent(void* self, void* point);
+QPointF* q_graphicspathitem_map_to_parent(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicspathitem_map_to_scene(void* self, void* point);
+QPointF* q_graphicspathitem_map_to_scene(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicspathitem_map_to_item2(void* self, void* item, void* rect);
+QPolygonF* q_graphicspathitem_map_to_item2(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicspathitem_map_to_parent2(void* self, void* rect);
+QPolygonF* q_graphicspathitem_map_to_parent2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicspathitem_map_to_scene2(void* self, void* rect);
+QPolygonF* q_graphicspathitem_map_to_scene2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicspathitem_map_rect_to_item(void* self, void* item, void* rect);
+QRectF* q_graphicspathitem_map_rect_to_item(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToParent)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicspathitem_map_rect_to_parent(void* self, void* rect);
+QRectF* q_graphicspathitem_map_rect_to_parent(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToScene)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicspathitem_map_rect_to_scene(void* self, void* rect);
+QRectF* q_graphicspathitem_map_rect_to_scene(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param item QGraphicsItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicspathitem_map_to_item3(void* self, void* item, void* polygon);
+QPolygonF* q_graphicspathitem_map_to_item3(const void* self, const void* item, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicspathitem_map_to_parent3(void* self, void* polygon);
+QPolygonF* q_graphicspathitem_map_to_parent3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicspathitem_map_to_scene3(void* self, void* polygon);
+QPolygonF* q_graphicspathitem_map_to_scene3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param item QGraphicsItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicspathitem_map_to_item4(void* self, void* item, void* path);
+QPainterPath* q_graphicspathitem_map_to_item4(const void* self, const void* item, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicspathitem_map_to_parent4(void* self, void* path);
+QPainterPath* q_graphicspathitem_map_to_parent4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicspathitem_map_to_scene4(void* self, void* path);
+QPainterPath* q_graphicspathitem_map_to_scene4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param item QGraphicsItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicspathitem_map_from_item(void* self, void* item, void* point);
+QPointF* q_graphicspathitem_map_from_item(const void* self, const void* item, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicspathitem_map_from_parent(void* self, void* point);
+QPointF* q_graphicspathitem_map_from_parent(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicspathitem_map_from_scene(void* self, void* point);
+QPointF* q_graphicspathitem_map_from_scene(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicspathitem_map_from_item2(void* self, void* item, void* rect);
+QPolygonF* q_graphicspathitem_map_from_item2(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicspathitem_map_from_parent2(void* self, void* rect);
+QPolygonF* q_graphicspathitem_map_from_parent2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicspathitem_map_from_scene2(void* self, void* rect);
+QPolygonF* q_graphicspathitem_map_from_scene2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicspathitem_map_rect_from_item(void* self, void* item, void* rect);
+QRectF* q_graphicspathitem_map_rect_from_item(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromParent)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicspathitem_map_rect_from_parent(void* self, void* rect);
+QRectF* q_graphicspathitem_map_rect_from_parent(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromScene)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicspathitem_map_rect_from_scene(void* self, void* rect);
+QRectF* q_graphicspathitem_map_rect_from_scene(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param item QGraphicsItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicspathitem_map_from_item3(void* self, void* item, void* polygon);
+QPolygonF* q_graphicspathitem_map_from_item3(const void* self, const void* item, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicspathitem_map_from_parent3(void* self, void* polygon);
+QPolygonF* q_graphicspathitem_map_from_parent3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicspathitem_map_from_scene3(void* self, void* polygon);
+QPolygonF* q_graphicspathitem_map_from_scene3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param item QGraphicsItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicspathitem_map_from_item4(void* self, void* item, void* path);
+QPainterPath* q_graphicspathitem_map_from_item4(const void* self, const void* item, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicspathitem_map_from_parent4(void* self, void* path);
+QPainterPath* q_graphicspathitem_map_from_parent4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicspathitem_map_from_scene4(void* self, void* path);
+QPainterPath* q_graphicspathitem_map_from_scene4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicspathitem_map_to_item5(void* self, void* item, double x, double y);
+QPointF* q_graphicspathitem_map_to_item5(const void* self, const void* item, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicspathitem_map_to_parent5(void* self, double x, double y);
+QPointF* q_graphicspathitem_map_to_parent5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicspathitem_map_to_scene5(void* self, double x, double y);
+QPointF* q_graphicspathitem_map_to_scene5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicspathitem_map_to_item6(void* self, void* item, double x, double y, double w, double h);
+QPolygonF* q_graphicspathitem_map_to_item6(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicspathitem_map_to_parent6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicspathitem_map_to_parent6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicspathitem_map_to_scene6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicspathitem_map_to_scene6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicspathitem_map_rect_to_item2(void* self, void* item, double x, double y, double w, double h);
+QRectF* q_graphicspathitem_map_rect_to_item2(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToParent)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicspathitem_map_rect_to_parent2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicspathitem_map_rect_to_parent2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToScene)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicspathitem_map_rect_to_scene2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicspathitem_map_rect_to_scene2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicspathitem_map_from_item5(void* self, void* item, double x, double y);
+QPointF* q_graphicspathitem_map_from_item5(const void* self, const void* item, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicspathitem_map_from_parent5(void* self, double x, double y);
+QPointF* q_graphicspathitem_map_from_parent5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicspathitem_map_from_scene5(void* self, double x, double y);
+QPointF* q_graphicspathitem_map_from_scene5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicspathitem_map_from_item6(void* self, void* item, double x, double y, double w, double h);
+QPolygonF* q_graphicspathitem_map_from_item6(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicspathitem_map_from_parent6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicspathitem_map_from_parent6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicspathitem_map_from_scene6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicspathitem_map_from_scene6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicspathitem_map_rect_from_item2(void* self, void* item, double x, double y, double w, double h);
+QRectF* q_graphicspathitem_map_rect_from_item2(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromParent)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicspathitem_map_rect_from_parent2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicspathitem_map_rect_from_parent2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromScene)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicspathitem_map_rect_from_scene2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicspathitem_map_rect_from_scene2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isAncestorOf)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param child QGraphicsItem*
 ///
-bool q_graphicspathitem_is_ancestor_of(void* self, void* child);
+bool q_graphicspathitem_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#commonAncestorItem)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param other QGraphicsItem*
 ///
-QGraphicsItem* q_graphicspathitem_common_ancestor_item(void* self, void* other);
+QGraphicsItem* q_graphicspathitem_common_ancestor_item(const void* self, const void* other);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isUnderMouse)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
-bool q_graphicspathitem_is_under_mouse(void* self);
+bool q_graphicspathitem_is_under_mouse(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#data)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param key int
 ///
-QVariant* q_graphicspathitem_data(void* self, int key);
+QVariant* q_graphicspathitem_data(const void* self, int key);
 
 /// Inherited from QGraphicsItem
 ///
@@ -11300,17 +11162,17 @@ QVariant* q_graphicspathitem_data(void* self, int key);
 /// @param key int
 /// @param value QVariant*
 ///
-void q_graphicspathitem_set_data(void* self, int key, void* value);
+void q_graphicspathitem_set_data(void* self, int key, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodHints)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t q_graphicspathitem_input_method_hints(void* self);
+int32_t q_graphicspathitem_input_method_hints(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -11357,16 +11219,16 @@ void q_graphicspathitem_set_flag2(void* self, int32_t flag, bool enabled);
 /// @param mode enum QGraphicsItem__CacheMode
 /// @param cacheSize QSize*
 ///
-void q_graphicspathitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
+void q_graphicspathitem_set_cache_mode2(void* self, int32_t mode, const void* cacheSize);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param blockingPanel QGraphicsItem**
 ///
-bool q_graphicspathitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel);
+bool q_graphicspathitem_is_blocked_by_modal_panel1(const void* self, void** blockingPanel);
 
 /// Inherited from QGraphicsItem
 ///
@@ -11384,7 +11246,7 @@ void q_graphicspathitem_set_focus1(void* self, int32_t focusReason);
 /// @param self QGraphicsPathItem*
 /// @param rect QRectF*
 ///
-void q_graphicspathitem_ensure_visible1(void* self, void* rect);
+void q_graphicspathitem_ensure_visible1(void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -11394,7 +11256,7 @@ void q_graphicspathitem_ensure_visible1(void* self, void* rect);
 /// @param rect QRectF*
 /// @param xmargin int
 ///
-void q_graphicspathitem_ensure_visible22(void* self, void* rect, int xmargin);
+void q_graphicspathitem_ensure_visible22(void* self, const void* rect, int xmargin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -11405,7 +11267,7 @@ void q_graphicspathitem_ensure_visible22(void* self, void* rect, int xmargin);
 /// @param xmargin int
 /// @param ymargin int
 ///
-void q_graphicspathitem_ensure_visible3(void* self, void* rect, int xmargin, int ymargin);
+void q_graphicspathitem_ensure_visible3(void* self, const void* rect, int xmargin, int ymargin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -11438,11 +11300,11 @@ void q_graphicspathitem_ensure_visible6(void* self, double x, double y, double w
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemTransform)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param other QGraphicsItem*
 /// @param ok bool*
 ///
-QTransform* q_graphicspathitem_item_transform2(void* self, void* other, bool* ok);
+QTransform* q_graphicspathitem_item_transform2(const void* self, const void* other, bool* ok);
 
 /// Inherited from QGraphicsItem
 ///
@@ -11452,27 +11314,27 @@ QTransform* q_graphicspathitem_item_transform2(void* self, void* other, bool* ok
 /// @param matrix QTransform*
 /// @param combine bool
 ///
-void q_graphicspathitem_set_transform2(void* self, void* matrix, bool combine);
+void q_graphicspathitem_set_transform2(void* self, const void* matrix, bool combine);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicspathitem_colliding_items1(void* self, int32_t mode);
+libqt_list q_graphicspathitem_colliding_items1(const void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param rect QRectF*
 ///
-bool q_graphicspathitem_is_obscured1(void* self, void* rect);
+bool q_graphicspathitem_is_obscured1(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -11481,7 +11343,7 @@ bool q_graphicspathitem_is_obscured1(void* self, void* rect);
 /// @param self QGraphicsPathItem*
 /// @param rect QRectF*
 ///
-void q_graphicspathitem_update1(void* self, void* rect);
+void q_graphicspathitem_update1(void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -11492,7 +11354,7 @@ void q_graphicspathitem_update1(void* self, void* rect);
 /// @param dy double
 /// @param rect QRectF*
 ///
-void q_graphicspathitem_scroll3(void* self, double dx, double dy, void* rect);
+void q_graphicspathitem_scroll3(void* self, double dx, double dy, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -11533,11 +11395,11 @@ void q_graphicspathitem_on_advance(void* self, void (*callback)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicspathitem_collides_with_item(void* self, void* other, int32_t mode);
+bool q_graphicspathitem_collides_with_item(const void* self, const void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -11545,11 +11407,11 @@ bool q_graphicspathitem_collides_with_item(void* self, void* other, int32_t mode
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicspathitem_super_collides_with_item(void* self, void* other, int32_t mode);
+bool q_graphicspathitem_super_collides_with_item(const void* self, const void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -11557,10 +11419,10 @@ bool q_graphicspathitem_super_collides_with_item(void* self, void* other, int32_
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param callback bool func(QGraphicsPathItem* self, QGraphicsItem* other, enum Qt__ItemSelectionMode mode)
 ///
-void q_graphicspathitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
+void q_graphicspathitem_on_collides_with_item(const void* self, bool (*callback)(const void*, const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -11568,11 +11430,11 @@ void q_graphicspathitem_on_collides_with_item(void* self, bool (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicspathitem_collides_with_path(void* self, void* path, int32_t mode);
+bool q_graphicspathitem_collides_with_path(const void* self, const void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -11580,11 +11442,11 @@ bool q_graphicspathitem_collides_with_path(void* self, void* path, int32_t mode)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicspathitem_super_collides_with_path(void* self, void* path, int32_t mode);
+bool q_graphicspathitem_super_collides_with_path(const void* self, const void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -11592,10 +11454,10 @@ bool q_graphicspathitem_super_collides_with_path(void* self, void* path, int32_t
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param callback bool func(QGraphicsPathItem* self, QPainterPath* path, enum Qt__ItemSelectionMode mode)
 ///
-void q_graphicspathitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
+void q_graphicspathitem_on_collides_with_path(const void* self, bool (*callback)(const void*, const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -12265,10 +12127,10 @@ void q_graphicspathitem_on_input_method_event(void* self, void (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_graphicspathitem_input_method_query(void* self, int32_t query);
+QVariant* q_graphicspathitem_input_method_query(const void* self, int32_t query);
 
 /// Inherited from QGraphicsItem
 ///
@@ -12276,10 +12138,10 @@ QVariant* q_graphicspathitem_input_method_query(void* self, int32_t query);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_graphicspathitem_super_input_method_query(void* self, int32_t query);
+QVariant* q_graphicspathitem_super_input_method_query(const void* self, int32_t query);
 
 /// Inherited from QGraphicsItem
 ///
@@ -12287,12 +12149,12 @@ QVariant* q_graphicspathitem_super_input_method_query(void* self, int32_t query)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsPathItem*
+/// @param self const QGraphicsPathItem*
 /// @param callback QVariant* func(QGraphicsPathItem* self, enum Qt__InputMethodQuery query)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicspathitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void q_graphicspathitem_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -12304,7 +12166,7 @@ void q_graphicspathitem_on_input_method_query(void* self, QVariant* (*callback)(
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
 ///
-QVariant* q_graphicspathitem_item_change(void* self, int32_t change, void* value);
+QVariant* q_graphicspathitem_item_change(void* self, int32_t change, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -12316,7 +12178,7 @@ QVariant* q_graphicspathitem_item_change(void* self, int32_t change, void* value
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
 ///
-QVariant* q_graphicspathitem_super_item_change(void* self, int32_t change, void* value);
+QVariant* q_graphicspathitem_super_item_change(void* self, int32_t change, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -12329,7 +12191,7 @@ QVariant* q_graphicspathitem_super_item_change(void* self, int32_t change, void*
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicspathitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
+void q_graphicspathitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -12358,9 +12220,9 @@ void q_graphicspathitem_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsPathItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsPathItem* self)
 ///
-void q_graphicspathitem_on_update_micro_focus(void* self, void (*callback)());
+void q_graphicspathitem_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -12389,9 +12251,9 @@ void q_graphicspathitem_super_add_to_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsPathItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsPathItem* self)
 ///
-void q_graphicspathitem_on_add_to_index(void* self, void (*callback)());
+void q_graphicspathitem_on_add_to_index(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -12420,9 +12282,9 @@ void q_graphicspathitem_super_remove_from_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsPathItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsPathItem* self)
 ///
-void q_graphicspathitem_on_remove_from_index(void* self, void (*callback)());
+void q_graphicspathitem_on_remove_from_index(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -12451,9 +12313,9 @@ void q_graphicspathitem_super_prepare_geometry_change(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsPathItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsPathItem* self)
 ///
-void q_graphicspathitem_on_prepare_geometry_change(void* self, void (*callback)());
+void q_graphicspathitem_on_prepare_geometry_change(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#dtor.QGraphicsPathItem)
 ///
@@ -12475,7 +12337,7 @@ QGraphicsRectItem* q_graphicsrectitem_new();
 ///
 /// @param rect QRectF*
 ///
-QGraphicsRectItem* q_graphicsrectitem_new2(void* rect);
+QGraphicsRectItem* q_graphicsrectitem_new2(const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html)
 
@@ -12503,7 +12365,7 @@ QGraphicsRectItem* q_graphicsrectitem_new4(void* parent);
 /// @param rect QRectF*
 /// @param parent QGraphicsItem*
 ///
-QGraphicsRectItem* q_graphicsrectitem_new5(void* rect, void* parent);
+QGraphicsRectItem* q_graphicsrectitem_new5(const void* rect, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html)
 
@@ -12519,16 +12381,16 @@ QGraphicsRectItem* q_graphicsrectitem_new6(double x, double y, double w, double 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#rect)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QRectF* q_graphicsrectitem_rect(void* self);
+QRectF* q_graphicsrectitem_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#setRect)
 ///
 /// @param self QGraphicsRectItem*
 /// @param rect QRectF*
 ///
-void q_graphicsrectitem_set_rect(void* self, void* rect);
+void q_graphicsrectitem_set_rect(void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#setRect)
 ///
@@ -12542,78 +12404,78 @@ void q_graphicsrectitem_set_rect2(void* self, double x, double y, double w, doub
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#boundingRect)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QRectF* q_graphicsrectitem_bounding_rect(void* self);
+QRectF* q_graphicsrectitem_bounding_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#boundingRect)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsRectItem*
-/// @param callback QRectF* func()
+/// @param self const QGraphicsRectItem*
+/// @param callback QRectF* func(const QGraphicsRectItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsrectitem_on_bounding_rect(void* self, QRectF* (*callback)());
+void q_graphicsrectitem_on_bounding_rect(const void* self, QRectF* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#boundingRect)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QRectF* q_graphicsrectitem_super_bounding_rect(void* self);
+QRectF* q_graphicsrectitem_super_bounding_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#shape)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QPainterPath* q_graphicsrectitem_shape(void* self);
+QPainterPath* q_graphicsrectitem_shape(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#shape)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsRectItem*
-/// @param callback QPainterPath* func()
+/// @param self const QGraphicsRectItem*
+/// @param callback QPainterPath* func(const QGraphicsRectItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsrectitem_on_shape(void* self, QPainterPath* (*callback)());
+void q_graphicsrectitem_on_shape(const void* self, QPainterPath* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#shape)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QPainterPath* q_graphicsrectitem_super_shape(void* self);
+QPainterPath* q_graphicsrectitem_super_shape(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#contains)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param point QPointF*
 ///
-bool q_graphicsrectitem_contains(void* self, void* point);
+bool q_graphicsrectitem_contains(const void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#contains)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsRectItem*
-/// @param callback bool func(QGraphicsRectItem* self, QPointF* point)
+/// @param self const QGraphicsRectItem*
+/// @param callback bool func(const QGraphicsRectItem* self, QPointF* point)
 ///
-void q_graphicsrectitem_on_contains(void* self, bool (*callback)(void*, void*));
+void q_graphicsrectitem_on_contains(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#contains)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param point QPointF*
 ///
-bool q_graphicsrectitem_super_contains(void* self, void* point);
+bool q_graphicsrectitem_super_contains(const void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#paint)
 ///
@@ -12622,7 +12484,7 @@ bool q_graphicsrectitem_super_contains(void* self, void* point);
 /// @param option QStyleOptionGraphicsItem*
 /// @param widget QWidget*
 ///
-void q_graphicsrectitem_paint(void* self, void* painter, void* option, void* widget);
+void q_graphicsrectitem_paint(void* self, void* painter, const void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#paint)
 ///
@@ -12631,7 +12493,7 @@ void q_graphicsrectitem_paint(void* self, void* painter, void* option, void* wid
 /// @param self QGraphicsRectItem*
 /// @param callback void func(QGraphicsRectItem* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget)
 ///
-void q_graphicsrectitem_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
+void q_graphicsrectitem_on_paint(void* self, void (*callback)(void*, void*, const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#paint)
 ///
@@ -12642,105 +12504,105 @@ void q_graphicsrectitem_on_paint(void* self, void (*callback)(void*, void*, void
 /// @param option QStyleOptionGraphicsItem*
 /// @param widget QWidget*
 ///
-void q_graphicsrectitem_super_paint(void* self, void* painter, void* option, void* widget);
+void q_graphicsrectitem_super_paint(void* self, void* painter, const void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#isObscuredBy)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param item QGraphicsItem*
 ///
-bool q_graphicsrectitem_is_obscured_by(void* self, void* item);
+bool q_graphicsrectitem_is_obscured_by(const void* self, const void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#isObscuredBy)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsRectItem*
-/// @param callback bool func(QGraphicsRectItem* self, QGraphicsItem* item)
+/// @param self const QGraphicsRectItem*
+/// @param callback bool func(const QGraphicsRectItem* self, QGraphicsItem* item)
 ///
-void q_graphicsrectitem_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
+void q_graphicsrectitem_on_is_obscured_by(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#isObscuredBy)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param item QGraphicsItem*
 ///
-bool q_graphicsrectitem_super_is_obscured_by(void* self, void* item);
+bool q_graphicsrectitem_super_is_obscured_by(const void* self, const void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#opaqueArea)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QPainterPath* q_graphicsrectitem_opaque_area(void* self);
+QPainterPath* q_graphicsrectitem_opaque_area(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#opaqueArea)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsRectItem*
-/// @param callback QPainterPath* func()
+/// @param self const QGraphicsRectItem*
+/// @param callback QPainterPath* func(const QGraphicsRectItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsrectitem_on_opaque_area(void* self, QPainterPath* (*callback)());
+void q_graphicsrectitem_on_opaque_area(const void* self, QPainterPath* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#opaqueArea)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QPainterPath* q_graphicsrectitem_super_opaque_area(void* self);
+QPainterPath* q_graphicsrectitem_super_opaque_area(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#type)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-int32_t q_graphicsrectitem_type(void* self);
+int32_t q_graphicsrectitem_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#type)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsRectItem*
-/// @param callback int32_t func()
+/// @param self const QGraphicsRectItem*
+/// @param callback int32_t func(const QGraphicsRectItem* self)
 ///
-void q_graphicsrectitem_on_type(void* self, int32_t (*callback)());
+void q_graphicsrectitem_on_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#type)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-int32_t q_graphicsrectitem_super_type(void* self);
+int32_t q_graphicsrectitem_super_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#supportsExtension)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_graphicsrectitem_supports_extension(void* self, int32_t extension);
+bool q_graphicsrectitem_supports_extension(const void* self, int32_t extension);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#supportsExtension)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsRectItem*
-/// @param callback bool func(QGraphicsRectItem* self, enum QGraphicsItem__Extension extension)
+/// @param self const QGraphicsRectItem*
+/// @param callback bool func(const QGraphicsRectItem* self, enum QGraphicsItem__Extension extension)
 ///
-void q_graphicsrectitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t));
+void q_graphicsrectitem_on_supports_extension(const void* self, bool (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#supportsExtension)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_graphicsrectitem_super_supports_extension(void* self, int32_t extension);
+bool q_graphicsrectitem_super_supports_extension(const void* self, int32_t extension);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#setExtension)
 ///
@@ -12748,7 +12610,7 @@ bool q_graphicsrectitem_super_supports_extension(void* self, int32_t extension);
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_graphicsrectitem_set_extension(void* self, int32_t extension, void* variant);
+void q_graphicsrectitem_set_extension(void* self, int32_t extension, const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#setExtension)
 ///
@@ -12757,7 +12619,7 @@ void q_graphicsrectitem_set_extension(void* self, int32_t extension, void* varia
 /// @param self QGraphicsRectItem*
 /// @param callback void func(QGraphicsRectItem* self, enum QGraphicsItem__Extension extension, QVariant* variant)
 ///
-void q_graphicsrectitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*));
+void q_graphicsrectitem_on_set_extension(void* self, void (*callback)(void*, int32_t, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#setExtension)
 ///
@@ -12767,42 +12629,42 @@ void q_graphicsrectitem_on_set_extension(void* self, void (*callback)(void*, int
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_graphicsrectitem_super_set_extension(void* self, int32_t extension, void* variant);
+void q_graphicsrectitem_super_set_extension(void* self, int32_t extension, const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#extension)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param variant QVariant*
 ///
-QVariant* q_graphicsrectitem_extension(void* self, void* variant);
+QVariant* q_graphicsrectitem_extension(const void* self, const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#extension)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsRectItem*
-/// @param callback QVariant* func(QGraphicsRectItem* self, QVariant* variant)
+/// @param self const QGraphicsRectItem*
+/// @param callback QVariant* func(const QGraphicsRectItem* self, QVariant* variant)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsrectitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
+void q_graphicsrectitem_on_extension(const void* self, QVariant* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#extension)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param variant QVariant*
 ///
-QVariant* q_graphicsrectitem_super_extension(void* self, void* variant);
+QVariant* q_graphicsrectitem_super_extension(const void* self, const void* variant);
 
 /// Inherited from QAbstractGraphicsShapeItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractgraphicsshapeitem.html#pen)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QPen* q_graphicsrectitem_pen(void* self);
+QPen* q_graphicsrectitem_pen(const void* self);
 
 /// Inherited from QAbstractGraphicsShapeItem
 ///
@@ -12811,15 +12673,15 @@ QPen* q_graphicsrectitem_pen(void* self);
 /// @param self QGraphicsRectItem*
 /// @param pen QPen*
 ///
-void q_graphicsrectitem_set_pen(void* self, void* pen);
+void q_graphicsrectitem_set_pen(void* self, const void* pen);
 
 /// Inherited from QAbstractGraphicsShapeItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractgraphicsshapeitem.html#brush)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QBrush* q_graphicsrectitem_brush(void* self);
+QBrush* q_graphicsrectitem_brush(const void* self);
 
 /// Inherited from QAbstractGraphicsShapeItem
 ///
@@ -12828,71 +12690,71 @@ QBrush* q_graphicsrectitem_brush(void* self);
 /// @param self QGraphicsRectItem*
 /// @param brush QBrush*
 ///
-void q_graphicsrectitem_set_brush(void* self, void* brush);
+void q_graphicsrectitem_set_brush(void* self, const void* brush);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scene)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QGraphicsScene* q_graphicsrectitem_scene(void* self);
+QGraphicsScene* q_graphicsrectitem_scene(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentItem)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QGraphicsItem* q_graphicsrectitem_parent_item(void* self);
+QGraphicsItem* q_graphicsrectitem_parent_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#topLevelItem)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QGraphicsItem* q_graphicsrectitem_top_level_item(void* self);
+QGraphicsItem* q_graphicsrectitem_top_level_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentObject)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QGraphicsObject* q_graphicsrectitem_parent_object(void* self);
+QGraphicsObject* q_graphicsrectitem_parent_object(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentWidget)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QGraphicsWidget* q_graphicsrectitem_parent_widget(void* self);
+QGraphicsWidget* q_graphicsrectitem_parent_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#topLevelWidget)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QGraphicsWidget* q_graphicsrectitem_top_level_widget(void* self);
+QGraphicsWidget* q_graphicsrectitem_top_level_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#window)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QGraphicsWidget* q_graphicsrectitem_window(void* self);
+QGraphicsWidget* q_graphicsrectitem_window(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#panel)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QGraphicsItem* q_graphicsrectitem_panel(void* self);
+QGraphicsItem* q_graphicsrectitem_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -12907,35 +12769,35 @@ void q_graphicsrectitem_set_parent_item(void* self, void* parent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#childItems)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsrectitem_child_items(void* self);
+libqt_list q_graphicsrectitem_child_items(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isWidget)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-bool q_graphicsrectitem_is_widget(void* self);
+bool q_graphicsrectitem_is_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isWindow)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-bool q_graphicsrectitem_is_window(void* self);
+bool q_graphicsrectitem_is_window(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isPanel)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-bool q_graphicsrectitem_is_panel(void* self);
+bool q_graphicsrectitem_is_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -12949,17 +12811,17 @@ QGraphicsObject* q_graphicsrectitem_to_graphics_object(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#toGraphicsObject)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-const QGraphicsObject* q_graphicsrectitem_to_graphics_object2(void* self);
+const QGraphicsObject* q_graphicsrectitem_to_graphics_object2(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#group)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QGraphicsItemGroup* q_graphicsrectitem_group(void* self);
+QGraphicsItemGroup* q_graphicsrectitem_group(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -12974,11 +12836,11 @@ void q_graphicsrectitem_set_group(void* self, void* group);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#flags)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
 /// @return flag of enum QGraphicsItem__GraphicsItemFlag
 ///
-int32_t q_graphicsrectitem_flags(void* self);
+int32_t q_graphicsrectitem_flags(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13002,11 +12864,11 @@ void q_graphicsrectitem_set_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#cacheMode)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
 /// @return enum QGraphicsItem__CacheMode
 ///
-int32_t q_graphicsrectitem_cache_mode(void* self);
+int32_t q_graphicsrectitem_cache_mode(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13021,11 +12883,11 @@ void q_graphicsrectitem_set_cache_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#panelModality)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
 /// @return enum QGraphicsItem__PanelModality
 ///
-int32_t q_graphicsrectitem_panel_modality(void* self);
+int32_t q_graphicsrectitem_panel_modality(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13040,9 +12902,9 @@ void q_graphicsrectitem_set_panel_modality(void* self, int32_t panelModality);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-bool q_graphicsrectitem_is_blocked_by_modal_panel(void* self);
+bool q_graphicsrectitem_is_blocked_by_modal_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13050,9 +12912,9 @@ bool q_graphicsrectitem_is_blocked_by_modal_panel(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-const char* q_graphicsrectitem_tool_tip(void* self);
+const char* q_graphicsrectitem_tool_tip(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13067,9 +12929,9 @@ void q_graphicsrectitem_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#cursor)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QCursor* q_graphicsrectitem_cursor(void* self);
+QCursor* q_graphicsrectitem_cursor(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13078,15 +12940,15 @@ QCursor* q_graphicsrectitem_cursor(void* self);
 /// @param self QGraphicsRectItem*
 /// @param cursor QCursor*
 ///
-void q_graphicsrectitem_set_cursor(void* self, void* cursor);
+void q_graphicsrectitem_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hasCursor)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-bool q_graphicsrectitem_has_cursor(void* self);
+bool q_graphicsrectitem_has_cursor(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13100,18 +12962,18 @@ void q_graphicsrectitem_unset_cursor(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isVisible)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-bool q_graphicsrectitem_is_visible(void* self);
+bool q_graphicsrectitem_is_visible(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isVisibleTo)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param parent QGraphicsItem*
 ///
-bool q_graphicsrectitem_is_visible_to(void* self, void* parent);
+bool q_graphicsrectitem_is_visible_to(const void* self, const void* parent);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13142,9 +13004,9 @@ void q_graphicsrectitem_show(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isEnabled)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-bool q_graphicsrectitem_is_enabled(void* self);
+bool q_graphicsrectitem_is_enabled(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13159,9 +13021,9 @@ void q_graphicsrectitem_set_enabled(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isSelected)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-bool q_graphicsrectitem_is_selected(void* self);
+bool q_graphicsrectitem_is_selected(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13176,9 +13038,9 @@ void q_graphicsrectitem_set_selected(void* self, bool selected);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptDrops)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-bool q_graphicsrectitem_accept_drops(void* self);
+bool q_graphicsrectitem_accept_drops(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13193,17 +13055,17 @@ void q_graphicsrectitem_set_accept_drops(void* self, bool on);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#opacity)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-double q_graphicsrectitem_opacity(void* self);
+double q_graphicsrectitem_opacity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#effectiveOpacity)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-double q_graphicsrectitem_effective_opacity(void* self);
+double q_graphicsrectitem_effective_opacity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13218,9 +13080,9 @@ void q_graphicsrectitem_set_opacity(void* self, double opacity);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#graphicsEffect)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QGraphicsEffect* q_graphicsrectitem_graphics_effect(void* self);
+QGraphicsEffect* q_graphicsrectitem_graphics_effect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13235,11 +13097,11 @@ void q_graphicsrectitem_set_graphics_effect(void* self, void* effect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptedMouseButtons)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
 /// @return flag of enum Qt__MouseButton
 ///
-int32_t q_graphicsrectitem_accepted_mouse_buttons(void* self);
+int32_t q_graphicsrectitem_accepted_mouse_buttons(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13254,9 +13116,9 @@ void q_graphicsrectitem_set_accepted_mouse_buttons(void* self, int32_t buttons);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptHoverEvents)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-bool q_graphicsrectitem_accept_hover_events(void* self);
+bool q_graphicsrectitem_accept_hover_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13271,9 +13133,9 @@ void q_graphicsrectitem_set_accept_hover_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptTouchEvents)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-bool q_graphicsrectitem_accept_touch_events(void* self);
+bool q_graphicsrectitem_accept_touch_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13288,9 +13150,9 @@ void q_graphicsrectitem_set_accept_touch_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#filtersChildEvents)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-bool q_graphicsrectitem_filters_child_events(void* self);
+bool q_graphicsrectitem_filters_child_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13305,9 +13167,9 @@ void q_graphicsrectitem_set_filters_child_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#handlesChildEvents)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-bool q_graphicsrectitem_handles_child_events(void* self);
+bool q_graphicsrectitem_handles_child_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13322,9 +13184,9 @@ void q_graphicsrectitem_set_handles_child_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isActive)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-bool q_graphicsrectitem_is_active(void* self);
+bool q_graphicsrectitem_is_active(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13339,9 +13201,9 @@ void q_graphicsrectitem_set_active(void* self, bool active);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hasFocus)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-bool q_graphicsrectitem_has_focus(void* self);
+bool q_graphicsrectitem_has_focus(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13363,9 +13225,9 @@ void q_graphicsrectitem_clear_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusProxy)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QGraphicsItem* q_graphicsrectitem_focus_proxy(void* self);
+QGraphicsItem* q_graphicsrectitem_focus_proxy(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13380,17 +13242,17 @@ void q_graphicsrectitem_set_focus_proxy(void* self, void* item);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusItem)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QGraphicsItem* q_graphicsrectitem_focus_item(void* self);
+QGraphicsItem* q_graphicsrectitem_focus_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusScopeItem)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QGraphicsItem* q_graphicsrectitem_focus_scope_item(void* self);
+QGraphicsItem* q_graphicsrectitem_focus_scope_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13428,17 +13290,17 @@ void q_graphicsrectitem_ungrab_keyboard(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#pos)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QPointF* q_graphicsrectitem_pos(void* self);
+QPointF* q_graphicsrectitem_pos(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#x)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-double q_graphicsrectitem_x(void* self);
+double q_graphicsrectitem_x(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13453,9 +13315,9 @@ void q_graphicsrectitem_set_x(void* self, double x);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#y)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-double q_graphicsrectitem_y(void* self);
+double q_graphicsrectitem_y(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13470,9 +13332,9 @@ void q_graphicsrectitem_set_y(void* self, double y);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scenePos)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QPointF* q_graphicsrectitem_scene_pos(void* self);
+QPointF* q_graphicsrectitem_scene_pos(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13481,7 +13343,7 @@ QPointF* q_graphicsrectitem_scene_pos(void* self);
 /// @param self QGraphicsRectItem*
 /// @param pos QPointF*
 ///
-void q_graphicsrectitem_set_pos(void* self, void* pos);
+void q_graphicsrectitem_set_pos(void* self, const void* pos);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13527,35 +13389,35 @@ void q_graphicsrectitem_ensure_visible2(void* self, double x, double y, double w
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transform)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QTransform* q_graphicsrectitem_transform(void* self);
+QTransform* q_graphicsrectitem_transform(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneTransform)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QTransform* q_graphicsrectitem_scene_transform(void* self);
+QTransform* q_graphicsrectitem_scene_transform(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#deviceTransform)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param viewportTransform QTransform*
 ///
-QTransform* q_graphicsrectitem_device_transform(void* self, void* viewportTransform);
+QTransform* q_graphicsrectitem_device_transform(const void* self, const void* viewportTransform);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemTransform)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param other QGraphicsItem*
 ///
-QTransform* q_graphicsrectitem_item_transform(void* self, void* other);
+QTransform* q_graphicsrectitem_item_transform(const void* self, const void* other);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13564,7 +13426,7 @@ QTransform* q_graphicsrectitem_item_transform(void* self, void* other);
 /// @param self QGraphicsRectItem*
 /// @param matrix QTransform*
 ///
-void q_graphicsrectitem_set_transform(void* self, void* matrix);
+void q_graphicsrectitem_set_transform(void* self, const void* matrix);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13587,9 +13449,9 @@ void q_graphicsrectitem_set_rotation(void* self, double angle);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#rotation)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-double q_graphicsrectitem_rotation(void* self);
+double q_graphicsrectitem_rotation(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13604,19 +13466,19 @@ void q_graphicsrectitem_set_scale(void* self, double scale);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scale)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-double q_graphicsrectitem_scale(void* self);
+double q_graphicsrectitem_scale(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transformations)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
 /// @return libqt_list of QGraphicsTransform*
 ///
-libqt_list q_graphicsrectitem_transformations(void* self);
+libqt_list q_graphicsrectitem_transformations(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13631,9 +13493,9 @@ void q_graphicsrectitem_set_transformations(void* self, libqt_list transformatio
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transformOriginPoint)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QPointF* q_graphicsrectitem_transform_origin_point(void* self);
+QPointF* q_graphicsrectitem_transform_origin_point(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13642,7 +13504,7 @@ QPointF* q_graphicsrectitem_transform_origin_point(void* self);
 /// @param self QGraphicsRectItem*
 /// @param origin QPointF*
 ///
-void q_graphicsrectitem_set_transform_origin_point(void* self, void* origin);
+void q_graphicsrectitem_set_transform_origin_point(void* self, const void* origin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13658,9 +13520,9 @@ void q_graphicsrectitem_set_transform_origin_point2(void* self, double ax, doubl
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#zValue)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-double q_graphicsrectitem_z_value(void* self);
+double q_graphicsrectitem_z_value(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13678,86 +13540,86 @@ void q_graphicsrectitem_set_z_value(void* self, double z);
 /// @param self QGraphicsRectItem*
 /// @param sibling QGraphicsItem*
 ///
-void q_graphicsrectitem_stack_before(void* self, void* sibling);
+void q_graphicsrectitem_stack_before(void* self, const void* sibling);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#childrenBoundingRect)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QRectF* q_graphicsrectitem_children_bounding_rect(void* self);
+QRectF* q_graphicsrectitem_children_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneBoundingRect)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QRectF* q_graphicsrectitem_scene_bounding_rect(void* self);
+QRectF* q_graphicsrectitem_scene_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isClipped)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-bool q_graphicsrectitem_is_clipped(void* self);
+bool q_graphicsrectitem_is_clipped(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#clipPath)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-QPainterPath* q_graphicsrectitem_clip_path(void* self);
+QPainterPath* q_graphicsrectitem_clip_path(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsrectitem_colliding_items(void* self);
+libqt_list q_graphicsrectitem_colliding_items(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-bool q_graphicsrectitem_is_obscured(void* self);
+bool q_graphicsrectitem_is_obscured(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-bool q_graphicsrectitem_is_obscured2(void* self, double x, double y, double w, double h);
+bool q_graphicsrectitem_is_obscured2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRegion)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param itemToDeviceTransform QTransform*
 ///
-QRegion* q_graphicsrectitem_bounding_region(void* self, void* itemToDeviceTransform);
+QRegion* q_graphicsrectitem_bounding_region(const void* self, const void* itemToDeviceTransform);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRegionGranularity)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-double q_graphicsrectitem_bounding_region_granularity(void* self);
+double q_graphicsrectitem_bounding_region_granularity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13802,526 +13664,526 @@ void q_graphicsrectitem_scroll(void* self, double dx, double dy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param item QGraphicsItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicsrectitem_map_to_item(void* self, void* item, void* point);
+QPointF* q_graphicsrectitem_map_to_item(const void* self, const void* item, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicsrectitem_map_to_parent(void* self, void* point);
+QPointF* q_graphicsrectitem_map_to_parent(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicsrectitem_map_to_scene(void* self, void* point);
+QPointF* q_graphicsrectitem_map_to_scene(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicsrectitem_map_to_item2(void* self, void* item, void* rect);
+QPolygonF* q_graphicsrectitem_map_to_item2(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicsrectitem_map_to_parent2(void* self, void* rect);
+QPolygonF* q_graphicsrectitem_map_to_parent2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicsrectitem_map_to_scene2(void* self, void* rect);
+QPolygonF* q_graphicsrectitem_map_to_scene2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsrectitem_map_rect_to_item(void* self, void* item, void* rect);
+QRectF* q_graphicsrectitem_map_rect_to_item(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToParent)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsrectitem_map_rect_to_parent(void* self, void* rect);
+QRectF* q_graphicsrectitem_map_rect_to_parent(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToScene)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsrectitem_map_rect_to_scene(void* self, void* rect);
+QRectF* q_graphicsrectitem_map_rect_to_scene(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param item QGraphicsItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicsrectitem_map_to_item3(void* self, void* item, void* polygon);
+QPolygonF* q_graphicsrectitem_map_to_item3(const void* self, const void* item, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicsrectitem_map_to_parent3(void* self, void* polygon);
+QPolygonF* q_graphicsrectitem_map_to_parent3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicsrectitem_map_to_scene3(void* self, void* polygon);
+QPolygonF* q_graphicsrectitem_map_to_scene3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param item QGraphicsItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicsrectitem_map_to_item4(void* self, void* item, void* path);
+QPainterPath* q_graphicsrectitem_map_to_item4(const void* self, const void* item, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicsrectitem_map_to_parent4(void* self, void* path);
+QPainterPath* q_graphicsrectitem_map_to_parent4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicsrectitem_map_to_scene4(void* self, void* path);
+QPainterPath* q_graphicsrectitem_map_to_scene4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param item QGraphicsItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicsrectitem_map_from_item(void* self, void* item, void* point);
+QPointF* q_graphicsrectitem_map_from_item(const void* self, const void* item, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicsrectitem_map_from_parent(void* self, void* point);
+QPointF* q_graphicsrectitem_map_from_parent(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicsrectitem_map_from_scene(void* self, void* point);
+QPointF* q_graphicsrectitem_map_from_scene(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicsrectitem_map_from_item2(void* self, void* item, void* rect);
+QPolygonF* q_graphicsrectitem_map_from_item2(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicsrectitem_map_from_parent2(void* self, void* rect);
+QPolygonF* q_graphicsrectitem_map_from_parent2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicsrectitem_map_from_scene2(void* self, void* rect);
+QPolygonF* q_graphicsrectitem_map_from_scene2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsrectitem_map_rect_from_item(void* self, void* item, void* rect);
+QRectF* q_graphicsrectitem_map_rect_from_item(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromParent)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsrectitem_map_rect_from_parent(void* self, void* rect);
+QRectF* q_graphicsrectitem_map_rect_from_parent(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromScene)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsrectitem_map_rect_from_scene(void* self, void* rect);
+QRectF* q_graphicsrectitem_map_rect_from_scene(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param item QGraphicsItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicsrectitem_map_from_item3(void* self, void* item, void* polygon);
+QPolygonF* q_graphicsrectitem_map_from_item3(const void* self, const void* item, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicsrectitem_map_from_parent3(void* self, void* polygon);
+QPolygonF* q_graphicsrectitem_map_from_parent3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicsrectitem_map_from_scene3(void* self, void* polygon);
+QPolygonF* q_graphicsrectitem_map_from_scene3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param item QGraphicsItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicsrectitem_map_from_item4(void* self, void* item, void* path);
+QPainterPath* q_graphicsrectitem_map_from_item4(const void* self, const void* item, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicsrectitem_map_from_parent4(void* self, void* path);
+QPainterPath* q_graphicsrectitem_map_from_parent4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicsrectitem_map_from_scene4(void* self, void* path);
+QPainterPath* q_graphicsrectitem_map_from_scene4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicsrectitem_map_to_item5(void* self, void* item, double x, double y);
+QPointF* q_graphicsrectitem_map_to_item5(const void* self, const void* item, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicsrectitem_map_to_parent5(void* self, double x, double y);
+QPointF* q_graphicsrectitem_map_to_parent5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicsrectitem_map_to_scene5(void* self, double x, double y);
+QPointF* q_graphicsrectitem_map_to_scene5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicsrectitem_map_to_item6(void* self, void* item, double x, double y, double w, double h);
+QPolygonF* q_graphicsrectitem_map_to_item6(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicsrectitem_map_to_parent6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicsrectitem_map_to_parent6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicsrectitem_map_to_scene6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicsrectitem_map_to_scene6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicsrectitem_map_rect_to_item2(void* self, void* item, double x, double y, double w, double h);
+QRectF* q_graphicsrectitem_map_rect_to_item2(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToParent)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicsrectitem_map_rect_to_parent2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicsrectitem_map_rect_to_parent2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToScene)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicsrectitem_map_rect_to_scene2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicsrectitem_map_rect_to_scene2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicsrectitem_map_from_item5(void* self, void* item, double x, double y);
+QPointF* q_graphicsrectitem_map_from_item5(const void* self, const void* item, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicsrectitem_map_from_parent5(void* self, double x, double y);
+QPointF* q_graphicsrectitem_map_from_parent5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicsrectitem_map_from_scene5(void* self, double x, double y);
+QPointF* q_graphicsrectitem_map_from_scene5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicsrectitem_map_from_item6(void* self, void* item, double x, double y, double w, double h);
+QPolygonF* q_graphicsrectitem_map_from_item6(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicsrectitem_map_from_parent6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicsrectitem_map_from_parent6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicsrectitem_map_from_scene6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicsrectitem_map_from_scene6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicsrectitem_map_rect_from_item2(void* self, void* item, double x, double y, double w, double h);
+QRectF* q_graphicsrectitem_map_rect_from_item2(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromParent)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicsrectitem_map_rect_from_parent2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicsrectitem_map_rect_from_parent2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromScene)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicsrectitem_map_rect_from_scene2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicsrectitem_map_rect_from_scene2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isAncestorOf)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param child QGraphicsItem*
 ///
-bool q_graphicsrectitem_is_ancestor_of(void* self, void* child);
+bool q_graphicsrectitem_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#commonAncestorItem)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param other QGraphicsItem*
 ///
-QGraphicsItem* q_graphicsrectitem_common_ancestor_item(void* self, void* other);
+QGraphicsItem* q_graphicsrectitem_common_ancestor_item(const void* self, const void* other);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isUnderMouse)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
-bool q_graphicsrectitem_is_under_mouse(void* self);
+bool q_graphicsrectitem_is_under_mouse(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#data)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param key int
 ///
-QVariant* q_graphicsrectitem_data(void* self, int key);
+QVariant* q_graphicsrectitem_data(const void* self, int key);
 
 /// Inherited from QGraphicsItem
 ///
@@ -14331,17 +14193,17 @@ QVariant* q_graphicsrectitem_data(void* self, int key);
 /// @param key int
 /// @param value QVariant*
 ///
-void q_graphicsrectitem_set_data(void* self, int key, void* value);
+void q_graphicsrectitem_set_data(void* self, int key, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodHints)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t q_graphicsrectitem_input_method_hints(void* self);
+int32_t q_graphicsrectitem_input_method_hints(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -14388,16 +14250,16 @@ void q_graphicsrectitem_set_flag2(void* self, int32_t flag, bool enabled);
 /// @param mode enum QGraphicsItem__CacheMode
 /// @param cacheSize QSize*
 ///
-void q_graphicsrectitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
+void q_graphicsrectitem_set_cache_mode2(void* self, int32_t mode, const void* cacheSize);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param blockingPanel QGraphicsItem**
 ///
-bool q_graphicsrectitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel);
+bool q_graphicsrectitem_is_blocked_by_modal_panel1(const void* self, void** blockingPanel);
 
 /// Inherited from QGraphicsItem
 ///
@@ -14415,7 +14277,7 @@ void q_graphicsrectitem_set_focus1(void* self, int32_t focusReason);
 /// @param self QGraphicsRectItem*
 /// @param rect QRectF*
 ///
-void q_graphicsrectitem_ensure_visible1(void* self, void* rect);
+void q_graphicsrectitem_ensure_visible1(void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -14425,7 +14287,7 @@ void q_graphicsrectitem_ensure_visible1(void* self, void* rect);
 /// @param rect QRectF*
 /// @param xmargin int
 ///
-void q_graphicsrectitem_ensure_visible22(void* self, void* rect, int xmargin);
+void q_graphicsrectitem_ensure_visible22(void* self, const void* rect, int xmargin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -14436,7 +14298,7 @@ void q_graphicsrectitem_ensure_visible22(void* self, void* rect, int xmargin);
 /// @param xmargin int
 /// @param ymargin int
 ///
-void q_graphicsrectitem_ensure_visible3(void* self, void* rect, int xmargin, int ymargin);
+void q_graphicsrectitem_ensure_visible3(void* self, const void* rect, int xmargin, int ymargin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -14469,11 +14331,11 @@ void q_graphicsrectitem_ensure_visible6(void* self, double x, double y, double w
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemTransform)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param other QGraphicsItem*
 /// @param ok bool*
 ///
-QTransform* q_graphicsrectitem_item_transform2(void* self, void* other, bool* ok);
+QTransform* q_graphicsrectitem_item_transform2(const void* self, const void* other, bool* ok);
 
 /// Inherited from QGraphicsItem
 ///
@@ -14483,27 +14345,27 @@ QTransform* q_graphicsrectitem_item_transform2(void* self, void* other, bool* ok
 /// @param matrix QTransform*
 /// @param combine bool
 ///
-void q_graphicsrectitem_set_transform2(void* self, void* matrix, bool combine);
+void q_graphicsrectitem_set_transform2(void* self, const void* matrix, bool combine);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsrectitem_colliding_items1(void* self, int32_t mode);
+libqt_list q_graphicsrectitem_colliding_items1(const void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param rect QRectF*
 ///
-bool q_graphicsrectitem_is_obscured1(void* self, void* rect);
+bool q_graphicsrectitem_is_obscured1(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -14512,7 +14374,7 @@ bool q_graphicsrectitem_is_obscured1(void* self, void* rect);
 /// @param self QGraphicsRectItem*
 /// @param rect QRectF*
 ///
-void q_graphicsrectitem_update1(void* self, void* rect);
+void q_graphicsrectitem_update1(void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -14523,7 +14385,7 @@ void q_graphicsrectitem_update1(void* self, void* rect);
 /// @param dy double
 /// @param rect QRectF*
 ///
-void q_graphicsrectitem_scroll3(void* self, double dx, double dy, void* rect);
+void q_graphicsrectitem_scroll3(void* self, double dx, double dy, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -14564,11 +14426,11 @@ void q_graphicsrectitem_on_advance(void* self, void (*callback)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicsrectitem_collides_with_item(void* self, void* other, int32_t mode);
+bool q_graphicsrectitem_collides_with_item(const void* self, const void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -14576,11 +14438,11 @@ bool q_graphicsrectitem_collides_with_item(void* self, void* other, int32_t mode
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicsrectitem_super_collides_with_item(void* self, void* other, int32_t mode);
+bool q_graphicsrectitem_super_collides_with_item(const void* self, const void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -14588,10 +14450,10 @@ bool q_graphicsrectitem_super_collides_with_item(void* self, void* other, int32_
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param callback bool func(QGraphicsRectItem* self, QGraphicsItem* other, enum Qt__ItemSelectionMode mode)
 ///
-void q_graphicsrectitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
+void q_graphicsrectitem_on_collides_with_item(const void* self, bool (*callback)(const void*, const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -14599,11 +14461,11 @@ void q_graphicsrectitem_on_collides_with_item(void* self, bool (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicsrectitem_collides_with_path(void* self, void* path, int32_t mode);
+bool q_graphicsrectitem_collides_with_path(const void* self, const void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -14611,11 +14473,11 @@ bool q_graphicsrectitem_collides_with_path(void* self, void* path, int32_t mode)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicsrectitem_super_collides_with_path(void* self, void* path, int32_t mode);
+bool q_graphicsrectitem_super_collides_with_path(const void* self, const void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -14623,10 +14485,10 @@ bool q_graphicsrectitem_super_collides_with_path(void* self, void* path, int32_t
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param callback bool func(QGraphicsRectItem* self, QPainterPath* path, enum Qt__ItemSelectionMode mode)
 ///
-void q_graphicsrectitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
+void q_graphicsrectitem_on_collides_with_path(const void* self, bool (*callback)(const void*, const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -15296,10 +15158,10 @@ void q_graphicsrectitem_on_input_method_event(void* self, void (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_graphicsrectitem_input_method_query(void* self, int32_t query);
+QVariant* q_graphicsrectitem_input_method_query(const void* self, int32_t query);
 
 /// Inherited from QGraphicsItem
 ///
@@ -15307,10 +15169,10 @@ QVariant* q_graphicsrectitem_input_method_query(void* self, int32_t query);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_graphicsrectitem_super_input_method_query(void* self, int32_t query);
+QVariant* q_graphicsrectitem_super_input_method_query(const void* self, int32_t query);
 
 /// Inherited from QGraphicsItem
 ///
@@ -15318,12 +15180,12 @@ QVariant* q_graphicsrectitem_super_input_method_query(void* self, int32_t query)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsRectItem*
+/// @param self const QGraphicsRectItem*
 /// @param callback QVariant* func(QGraphicsRectItem* self, enum Qt__InputMethodQuery query)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsrectitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void q_graphicsrectitem_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -15335,7 +15197,7 @@ void q_graphicsrectitem_on_input_method_query(void* self, QVariant* (*callback)(
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
 ///
-QVariant* q_graphicsrectitem_item_change(void* self, int32_t change, void* value);
+QVariant* q_graphicsrectitem_item_change(void* self, int32_t change, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -15347,7 +15209,7 @@ QVariant* q_graphicsrectitem_item_change(void* self, int32_t change, void* value
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
 ///
-QVariant* q_graphicsrectitem_super_item_change(void* self, int32_t change, void* value);
+QVariant* q_graphicsrectitem_super_item_change(void* self, int32_t change, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -15360,7 +15222,7 @@ QVariant* q_graphicsrectitem_super_item_change(void* self, int32_t change, void*
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsrectitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
+void q_graphicsrectitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -15389,9 +15251,9 @@ void q_graphicsrectitem_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsRectItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsRectItem* self)
 ///
-void q_graphicsrectitem_on_update_micro_focus(void* self, void (*callback)());
+void q_graphicsrectitem_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -15420,9 +15282,9 @@ void q_graphicsrectitem_super_add_to_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsRectItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsRectItem* self)
 ///
-void q_graphicsrectitem_on_add_to_index(void* self, void (*callback)());
+void q_graphicsrectitem_on_add_to_index(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -15451,9 +15313,9 @@ void q_graphicsrectitem_super_remove_from_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsRectItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsRectItem* self)
 ///
-void q_graphicsrectitem_on_remove_from_index(void* self, void (*callback)());
+void q_graphicsrectitem_on_remove_from_index(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -15482,9 +15344,9 @@ void q_graphicsrectitem_super_prepare_geometry_change(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsRectItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsRectItem* self)
 ///
-void q_graphicsrectitem_on_prepare_geometry_change(void* self, void (*callback)());
+void q_graphicsrectitem_on_prepare_geometry_change(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#dtor.QGraphicsRectItem)
 ///
@@ -15506,7 +15368,7 @@ QGraphicsEllipseItem* q_graphicsellipseitem_new();
 ///
 /// @param rect QRectF*
 ///
-QGraphicsEllipseItem* q_graphicsellipseitem_new2(void* rect);
+QGraphicsEllipseItem* q_graphicsellipseitem_new2(const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html)
 
@@ -15534,7 +15396,7 @@ QGraphicsEllipseItem* q_graphicsellipseitem_new4(void* parent);
 /// @param rect QRectF*
 /// @param parent QGraphicsItem*
 ///
-QGraphicsEllipseItem* q_graphicsellipseitem_new5(void* rect, void* parent);
+QGraphicsEllipseItem* q_graphicsellipseitem_new5(const void* rect, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html)
 
@@ -15550,16 +15412,16 @@ QGraphicsEllipseItem* q_graphicsellipseitem_new6(double x, double y, double w, d
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#rect)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QRectF* q_graphicsellipseitem_rect(void* self);
+QRectF* q_graphicsellipseitem_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#setRect)
 ///
 /// @param self QGraphicsEllipseItem*
 /// @param rect QRectF*
 ///
-void q_graphicsellipseitem_set_rect(void* self, void* rect);
+void q_graphicsellipseitem_set_rect(void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#setRect)
 ///
@@ -15573,9 +15435,9 @@ void q_graphicsellipseitem_set_rect2(void* self, double x, double y, double w, d
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#startAngle)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-int32_t q_graphicsellipseitem_start_angle(void* self);
+int32_t q_graphicsellipseitem_start_angle(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#setStartAngle)
 ///
@@ -15586,9 +15448,9 @@ void q_graphicsellipseitem_set_start_angle(void* self, int angle);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#spanAngle)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-int32_t q_graphicsellipseitem_span_angle(void* self);
+int32_t q_graphicsellipseitem_span_angle(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#setSpanAngle)
 ///
@@ -15599,78 +15461,78 @@ void q_graphicsellipseitem_set_span_angle(void* self, int angle);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#boundingRect)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QRectF* q_graphicsellipseitem_bounding_rect(void* self);
+QRectF* q_graphicsellipseitem_bounding_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#boundingRect)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsEllipseItem*
-/// @param callback QRectF* func()
+/// @param self const QGraphicsEllipseItem*
+/// @param callback QRectF* func(const QGraphicsEllipseItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsellipseitem_on_bounding_rect(void* self, QRectF* (*callback)());
+void q_graphicsellipseitem_on_bounding_rect(const void* self, QRectF* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#boundingRect)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QRectF* q_graphicsellipseitem_super_bounding_rect(void* self);
+QRectF* q_graphicsellipseitem_super_bounding_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#shape)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QPainterPath* q_graphicsellipseitem_shape(void* self);
+QPainterPath* q_graphicsellipseitem_shape(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#shape)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsEllipseItem*
-/// @param callback QPainterPath* func()
+/// @param self const QGraphicsEllipseItem*
+/// @param callback QPainterPath* func(const QGraphicsEllipseItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsellipseitem_on_shape(void* self, QPainterPath* (*callback)());
+void q_graphicsellipseitem_on_shape(const void* self, QPainterPath* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#shape)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QPainterPath* q_graphicsellipseitem_super_shape(void* self);
+QPainterPath* q_graphicsellipseitem_super_shape(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#contains)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param point QPointF*
 ///
-bool q_graphicsellipseitem_contains(void* self, void* point);
+bool q_graphicsellipseitem_contains(const void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#contains)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsEllipseItem*
-/// @param callback bool func(QGraphicsEllipseItem* self, QPointF* point)
+/// @param self const QGraphicsEllipseItem*
+/// @param callback bool func(const QGraphicsEllipseItem* self, QPointF* point)
 ///
-void q_graphicsellipseitem_on_contains(void* self, bool (*callback)(void*, void*));
+void q_graphicsellipseitem_on_contains(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#contains)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param point QPointF*
 ///
-bool q_graphicsellipseitem_super_contains(void* self, void* point);
+bool q_graphicsellipseitem_super_contains(const void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#paint)
 ///
@@ -15679,7 +15541,7 @@ bool q_graphicsellipseitem_super_contains(void* self, void* point);
 /// @param option QStyleOptionGraphicsItem*
 /// @param widget QWidget*
 ///
-void q_graphicsellipseitem_paint(void* self, void* painter, void* option, void* widget);
+void q_graphicsellipseitem_paint(void* self, void* painter, const void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#paint)
 ///
@@ -15688,7 +15550,7 @@ void q_graphicsellipseitem_paint(void* self, void* painter, void* option, void* 
 /// @param self QGraphicsEllipseItem*
 /// @param callback void func(QGraphicsEllipseItem* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget)
 ///
-void q_graphicsellipseitem_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
+void q_graphicsellipseitem_on_paint(void* self, void (*callback)(void*, void*, const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#paint)
 ///
@@ -15699,105 +15561,105 @@ void q_graphicsellipseitem_on_paint(void* self, void (*callback)(void*, void*, v
 /// @param option QStyleOptionGraphicsItem*
 /// @param widget QWidget*
 ///
-void q_graphicsellipseitem_super_paint(void* self, void* painter, void* option, void* widget);
+void q_graphicsellipseitem_super_paint(void* self, void* painter, const void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#isObscuredBy)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param item QGraphicsItem*
 ///
-bool q_graphicsellipseitem_is_obscured_by(void* self, void* item);
+bool q_graphicsellipseitem_is_obscured_by(const void* self, const void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#isObscuredBy)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsEllipseItem*
-/// @param callback bool func(QGraphicsEllipseItem* self, QGraphicsItem* item)
+/// @param self const QGraphicsEllipseItem*
+/// @param callback bool func(const QGraphicsEllipseItem* self, QGraphicsItem* item)
 ///
-void q_graphicsellipseitem_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
+void q_graphicsellipseitem_on_is_obscured_by(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#isObscuredBy)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param item QGraphicsItem*
 ///
-bool q_graphicsellipseitem_super_is_obscured_by(void* self, void* item);
+bool q_graphicsellipseitem_super_is_obscured_by(const void* self, const void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#opaqueArea)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QPainterPath* q_graphicsellipseitem_opaque_area(void* self);
+QPainterPath* q_graphicsellipseitem_opaque_area(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#opaqueArea)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsEllipseItem*
-/// @param callback QPainterPath* func()
+/// @param self const QGraphicsEllipseItem*
+/// @param callback QPainterPath* func(const QGraphicsEllipseItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsellipseitem_on_opaque_area(void* self, QPainterPath* (*callback)());
+void q_graphicsellipseitem_on_opaque_area(const void* self, QPainterPath* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#opaqueArea)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QPainterPath* q_graphicsellipseitem_super_opaque_area(void* self);
+QPainterPath* q_graphicsellipseitem_super_opaque_area(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#type)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-int32_t q_graphicsellipseitem_type(void* self);
+int32_t q_graphicsellipseitem_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#type)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsEllipseItem*
-/// @param callback int32_t func()
+/// @param self const QGraphicsEllipseItem*
+/// @param callback int32_t func(const QGraphicsEllipseItem* self)
 ///
-void q_graphicsellipseitem_on_type(void* self, int32_t (*callback)());
+void q_graphicsellipseitem_on_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#type)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-int32_t q_graphicsellipseitem_super_type(void* self);
+int32_t q_graphicsellipseitem_super_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#supportsExtension)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_graphicsellipseitem_supports_extension(void* self, int32_t extension);
+bool q_graphicsellipseitem_supports_extension(const void* self, int32_t extension);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#supportsExtension)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsEllipseItem*
-/// @param callback bool func(QGraphicsEllipseItem* self, enum QGraphicsItem__Extension extension)
+/// @param self const QGraphicsEllipseItem*
+/// @param callback bool func(const QGraphicsEllipseItem* self, enum QGraphicsItem__Extension extension)
 ///
-void q_graphicsellipseitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t));
+void q_graphicsellipseitem_on_supports_extension(const void* self, bool (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#supportsExtension)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_graphicsellipseitem_super_supports_extension(void* self, int32_t extension);
+bool q_graphicsellipseitem_super_supports_extension(const void* self, int32_t extension);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#setExtension)
 ///
@@ -15805,7 +15667,7 @@ bool q_graphicsellipseitem_super_supports_extension(void* self, int32_t extensio
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_graphicsellipseitem_set_extension(void* self, int32_t extension, void* variant);
+void q_graphicsellipseitem_set_extension(void* self, int32_t extension, const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#setExtension)
 ///
@@ -15814,7 +15676,7 @@ void q_graphicsellipseitem_set_extension(void* self, int32_t extension, void* va
 /// @param self QGraphicsEllipseItem*
 /// @param callback void func(QGraphicsEllipseItem* self, enum QGraphicsItem__Extension extension, QVariant* variant)
 ///
-void q_graphicsellipseitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*));
+void q_graphicsellipseitem_on_set_extension(void* self, void (*callback)(void*, int32_t, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#setExtension)
 ///
@@ -15824,42 +15686,42 @@ void q_graphicsellipseitem_on_set_extension(void* self, void (*callback)(void*, 
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_graphicsellipseitem_super_set_extension(void* self, int32_t extension, void* variant);
+void q_graphicsellipseitem_super_set_extension(void* self, int32_t extension, const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#extension)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param variant QVariant*
 ///
-QVariant* q_graphicsellipseitem_extension(void* self, void* variant);
+QVariant* q_graphicsellipseitem_extension(const void* self, const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#extension)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsEllipseItem*
-/// @param callback QVariant* func(QGraphicsEllipseItem* self, QVariant* variant)
+/// @param self const QGraphicsEllipseItem*
+/// @param callback QVariant* func(const QGraphicsEllipseItem* self, QVariant* variant)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsellipseitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
+void q_graphicsellipseitem_on_extension(const void* self, QVariant* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#extension)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param variant QVariant*
 ///
-QVariant* q_graphicsellipseitem_super_extension(void* self, void* variant);
+QVariant* q_graphicsellipseitem_super_extension(const void* self, const void* variant);
 
 /// Inherited from QAbstractGraphicsShapeItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractgraphicsshapeitem.html#pen)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QPen* q_graphicsellipseitem_pen(void* self);
+QPen* q_graphicsellipseitem_pen(const void* self);
 
 /// Inherited from QAbstractGraphicsShapeItem
 ///
@@ -15868,15 +15730,15 @@ QPen* q_graphicsellipseitem_pen(void* self);
 /// @param self QGraphicsEllipseItem*
 /// @param pen QPen*
 ///
-void q_graphicsellipseitem_set_pen(void* self, void* pen);
+void q_graphicsellipseitem_set_pen(void* self, const void* pen);
 
 /// Inherited from QAbstractGraphicsShapeItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractgraphicsshapeitem.html#brush)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QBrush* q_graphicsellipseitem_brush(void* self);
+QBrush* q_graphicsellipseitem_brush(const void* self);
 
 /// Inherited from QAbstractGraphicsShapeItem
 ///
@@ -15885,71 +15747,71 @@ QBrush* q_graphicsellipseitem_brush(void* self);
 /// @param self QGraphicsEllipseItem*
 /// @param brush QBrush*
 ///
-void q_graphicsellipseitem_set_brush(void* self, void* brush);
+void q_graphicsellipseitem_set_brush(void* self, const void* brush);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scene)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QGraphicsScene* q_graphicsellipseitem_scene(void* self);
+QGraphicsScene* q_graphicsellipseitem_scene(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentItem)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QGraphicsItem* q_graphicsellipseitem_parent_item(void* self);
+QGraphicsItem* q_graphicsellipseitem_parent_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#topLevelItem)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QGraphicsItem* q_graphicsellipseitem_top_level_item(void* self);
+QGraphicsItem* q_graphicsellipseitem_top_level_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentObject)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QGraphicsObject* q_graphicsellipseitem_parent_object(void* self);
+QGraphicsObject* q_graphicsellipseitem_parent_object(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentWidget)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QGraphicsWidget* q_graphicsellipseitem_parent_widget(void* self);
+QGraphicsWidget* q_graphicsellipseitem_parent_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#topLevelWidget)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QGraphicsWidget* q_graphicsellipseitem_top_level_widget(void* self);
+QGraphicsWidget* q_graphicsellipseitem_top_level_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#window)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QGraphicsWidget* q_graphicsellipseitem_window(void* self);
+QGraphicsWidget* q_graphicsellipseitem_window(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#panel)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QGraphicsItem* q_graphicsellipseitem_panel(void* self);
+QGraphicsItem* q_graphicsellipseitem_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -15964,35 +15826,35 @@ void q_graphicsellipseitem_set_parent_item(void* self, void* parent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#childItems)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsellipseitem_child_items(void* self);
+libqt_list q_graphicsellipseitem_child_items(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isWidget)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-bool q_graphicsellipseitem_is_widget(void* self);
+bool q_graphicsellipseitem_is_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isWindow)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-bool q_graphicsellipseitem_is_window(void* self);
+bool q_graphicsellipseitem_is_window(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isPanel)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-bool q_graphicsellipseitem_is_panel(void* self);
+bool q_graphicsellipseitem_is_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16006,17 +15868,17 @@ QGraphicsObject* q_graphicsellipseitem_to_graphics_object(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#toGraphicsObject)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-const QGraphicsObject* q_graphicsellipseitem_to_graphics_object2(void* self);
+const QGraphicsObject* q_graphicsellipseitem_to_graphics_object2(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#group)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QGraphicsItemGroup* q_graphicsellipseitem_group(void* self);
+QGraphicsItemGroup* q_graphicsellipseitem_group(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16031,11 +15893,11 @@ void q_graphicsellipseitem_set_group(void* self, void* group);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#flags)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
 /// @return flag of enum QGraphicsItem__GraphicsItemFlag
 ///
-int32_t q_graphicsellipseitem_flags(void* self);
+int32_t q_graphicsellipseitem_flags(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16059,11 +15921,11 @@ void q_graphicsellipseitem_set_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#cacheMode)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
 /// @return enum QGraphicsItem__CacheMode
 ///
-int32_t q_graphicsellipseitem_cache_mode(void* self);
+int32_t q_graphicsellipseitem_cache_mode(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16078,11 +15940,11 @@ void q_graphicsellipseitem_set_cache_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#panelModality)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
 /// @return enum QGraphicsItem__PanelModality
 ///
-int32_t q_graphicsellipseitem_panel_modality(void* self);
+int32_t q_graphicsellipseitem_panel_modality(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16097,9 +15959,9 @@ void q_graphicsellipseitem_set_panel_modality(void* self, int32_t panelModality)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-bool q_graphicsellipseitem_is_blocked_by_modal_panel(void* self);
+bool q_graphicsellipseitem_is_blocked_by_modal_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16107,9 +15969,9 @@ bool q_graphicsellipseitem_is_blocked_by_modal_panel(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-const char* q_graphicsellipseitem_tool_tip(void* self);
+const char* q_graphicsellipseitem_tool_tip(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16124,9 +15986,9 @@ void q_graphicsellipseitem_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#cursor)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QCursor* q_graphicsellipseitem_cursor(void* self);
+QCursor* q_graphicsellipseitem_cursor(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16135,15 +15997,15 @@ QCursor* q_graphicsellipseitem_cursor(void* self);
 /// @param self QGraphicsEllipseItem*
 /// @param cursor QCursor*
 ///
-void q_graphicsellipseitem_set_cursor(void* self, void* cursor);
+void q_graphicsellipseitem_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hasCursor)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-bool q_graphicsellipseitem_has_cursor(void* self);
+bool q_graphicsellipseitem_has_cursor(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16157,18 +16019,18 @@ void q_graphicsellipseitem_unset_cursor(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isVisible)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-bool q_graphicsellipseitem_is_visible(void* self);
+bool q_graphicsellipseitem_is_visible(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isVisibleTo)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param parent QGraphicsItem*
 ///
-bool q_graphicsellipseitem_is_visible_to(void* self, void* parent);
+bool q_graphicsellipseitem_is_visible_to(const void* self, const void* parent);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16199,9 +16061,9 @@ void q_graphicsellipseitem_show(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isEnabled)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-bool q_graphicsellipseitem_is_enabled(void* self);
+bool q_graphicsellipseitem_is_enabled(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16216,9 +16078,9 @@ void q_graphicsellipseitem_set_enabled(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isSelected)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-bool q_graphicsellipseitem_is_selected(void* self);
+bool q_graphicsellipseitem_is_selected(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16233,9 +16095,9 @@ void q_graphicsellipseitem_set_selected(void* self, bool selected);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptDrops)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-bool q_graphicsellipseitem_accept_drops(void* self);
+bool q_graphicsellipseitem_accept_drops(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16250,17 +16112,17 @@ void q_graphicsellipseitem_set_accept_drops(void* self, bool on);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#opacity)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-double q_graphicsellipseitem_opacity(void* self);
+double q_graphicsellipseitem_opacity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#effectiveOpacity)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-double q_graphicsellipseitem_effective_opacity(void* self);
+double q_graphicsellipseitem_effective_opacity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16275,9 +16137,9 @@ void q_graphicsellipseitem_set_opacity(void* self, double opacity);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#graphicsEffect)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QGraphicsEffect* q_graphicsellipseitem_graphics_effect(void* self);
+QGraphicsEffect* q_graphicsellipseitem_graphics_effect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16292,11 +16154,11 @@ void q_graphicsellipseitem_set_graphics_effect(void* self, void* effect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptedMouseButtons)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
 /// @return flag of enum Qt__MouseButton
 ///
-int32_t q_graphicsellipseitem_accepted_mouse_buttons(void* self);
+int32_t q_graphicsellipseitem_accepted_mouse_buttons(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16311,9 +16173,9 @@ void q_graphicsellipseitem_set_accepted_mouse_buttons(void* self, int32_t button
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptHoverEvents)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-bool q_graphicsellipseitem_accept_hover_events(void* self);
+bool q_graphicsellipseitem_accept_hover_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16328,9 +16190,9 @@ void q_graphicsellipseitem_set_accept_hover_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptTouchEvents)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-bool q_graphicsellipseitem_accept_touch_events(void* self);
+bool q_graphicsellipseitem_accept_touch_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16345,9 +16207,9 @@ void q_graphicsellipseitem_set_accept_touch_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#filtersChildEvents)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-bool q_graphicsellipseitem_filters_child_events(void* self);
+bool q_graphicsellipseitem_filters_child_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16362,9 +16224,9 @@ void q_graphicsellipseitem_set_filters_child_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#handlesChildEvents)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-bool q_graphicsellipseitem_handles_child_events(void* self);
+bool q_graphicsellipseitem_handles_child_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16379,9 +16241,9 @@ void q_graphicsellipseitem_set_handles_child_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isActive)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-bool q_graphicsellipseitem_is_active(void* self);
+bool q_graphicsellipseitem_is_active(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16396,9 +16258,9 @@ void q_graphicsellipseitem_set_active(void* self, bool active);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hasFocus)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-bool q_graphicsellipseitem_has_focus(void* self);
+bool q_graphicsellipseitem_has_focus(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16420,9 +16282,9 @@ void q_graphicsellipseitem_clear_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusProxy)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QGraphicsItem* q_graphicsellipseitem_focus_proxy(void* self);
+QGraphicsItem* q_graphicsellipseitem_focus_proxy(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16437,17 +16299,17 @@ void q_graphicsellipseitem_set_focus_proxy(void* self, void* item);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusItem)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QGraphicsItem* q_graphicsellipseitem_focus_item(void* self);
+QGraphicsItem* q_graphicsellipseitem_focus_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusScopeItem)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QGraphicsItem* q_graphicsellipseitem_focus_scope_item(void* self);
+QGraphicsItem* q_graphicsellipseitem_focus_scope_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16485,17 +16347,17 @@ void q_graphicsellipseitem_ungrab_keyboard(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#pos)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QPointF* q_graphicsellipseitem_pos(void* self);
+QPointF* q_graphicsellipseitem_pos(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#x)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-double q_graphicsellipseitem_x(void* self);
+double q_graphicsellipseitem_x(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16510,9 +16372,9 @@ void q_graphicsellipseitem_set_x(void* self, double x);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#y)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-double q_graphicsellipseitem_y(void* self);
+double q_graphicsellipseitem_y(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16527,9 +16389,9 @@ void q_graphicsellipseitem_set_y(void* self, double y);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scenePos)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QPointF* q_graphicsellipseitem_scene_pos(void* self);
+QPointF* q_graphicsellipseitem_scene_pos(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16538,7 +16400,7 @@ QPointF* q_graphicsellipseitem_scene_pos(void* self);
 /// @param self QGraphicsEllipseItem*
 /// @param pos QPointF*
 ///
-void q_graphicsellipseitem_set_pos(void* self, void* pos);
+void q_graphicsellipseitem_set_pos(void* self, const void* pos);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16584,35 +16446,35 @@ void q_graphicsellipseitem_ensure_visible2(void* self, double x, double y, doubl
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transform)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QTransform* q_graphicsellipseitem_transform(void* self);
+QTransform* q_graphicsellipseitem_transform(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneTransform)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QTransform* q_graphicsellipseitem_scene_transform(void* self);
+QTransform* q_graphicsellipseitem_scene_transform(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#deviceTransform)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param viewportTransform QTransform*
 ///
-QTransform* q_graphicsellipseitem_device_transform(void* self, void* viewportTransform);
+QTransform* q_graphicsellipseitem_device_transform(const void* self, const void* viewportTransform);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemTransform)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param other QGraphicsItem*
 ///
-QTransform* q_graphicsellipseitem_item_transform(void* self, void* other);
+QTransform* q_graphicsellipseitem_item_transform(const void* self, const void* other);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16621,7 +16483,7 @@ QTransform* q_graphicsellipseitem_item_transform(void* self, void* other);
 /// @param self QGraphicsEllipseItem*
 /// @param matrix QTransform*
 ///
-void q_graphicsellipseitem_set_transform(void* self, void* matrix);
+void q_graphicsellipseitem_set_transform(void* self, const void* matrix);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16644,9 +16506,9 @@ void q_graphicsellipseitem_set_rotation(void* self, double angle);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#rotation)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-double q_graphicsellipseitem_rotation(void* self);
+double q_graphicsellipseitem_rotation(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16661,19 +16523,19 @@ void q_graphicsellipseitem_set_scale(void* self, double scale);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scale)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-double q_graphicsellipseitem_scale(void* self);
+double q_graphicsellipseitem_scale(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transformations)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
 /// @return libqt_list of QGraphicsTransform*
 ///
-libqt_list q_graphicsellipseitem_transformations(void* self);
+libqt_list q_graphicsellipseitem_transformations(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16688,9 +16550,9 @@ void q_graphicsellipseitem_set_transformations(void* self, libqt_list transforma
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transformOriginPoint)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QPointF* q_graphicsellipseitem_transform_origin_point(void* self);
+QPointF* q_graphicsellipseitem_transform_origin_point(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16699,7 +16561,7 @@ QPointF* q_graphicsellipseitem_transform_origin_point(void* self);
 /// @param self QGraphicsEllipseItem*
 /// @param origin QPointF*
 ///
-void q_graphicsellipseitem_set_transform_origin_point(void* self, void* origin);
+void q_graphicsellipseitem_set_transform_origin_point(void* self, const void* origin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16715,9 +16577,9 @@ void q_graphicsellipseitem_set_transform_origin_point2(void* self, double ax, do
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#zValue)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-double q_graphicsellipseitem_z_value(void* self);
+double q_graphicsellipseitem_z_value(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16735,86 +16597,86 @@ void q_graphicsellipseitem_set_z_value(void* self, double z);
 /// @param self QGraphicsEllipseItem*
 /// @param sibling QGraphicsItem*
 ///
-void q_graphicsellipseitem_stack_before(void* self, void* sibling);
+void q_graphicsellipseitem_stack_before(void* self, const void* sibling);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#childrenBoundingRect)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QRectF* q_graphicsellipseitem_children_bounding_rect(void* self);
+QRectF* q_graphicsellipseitem_children_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneBoundingRect)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QRectF* q_graphicsellipseitem_scene_bounding_rect(void* self);
+QRectF* q_graphicsellipseitem_scene_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isClipped)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-bool q_graphicsellipseitem_is_clipped(void* self);
+bool q_graphicsellipseitem_is_clipped(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#clipPath)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-QPainterPath* q_graphicsellipseitem_clip_path(void* self);
+QPainterPath* q_graphicsellipseitem_clip_path(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsellipseitem_colliding_items(void* self);
+libqt_list q_graphicsellipseitem_colliding_items(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-bool q_graphicsellipseitem_is_obscured(void* self);
+bool q_graphicsellipseitem_is_obscured(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-bool q_graphicsellipseitem_is_obscured2(void* self, double x, double y, double w, double h);
+bool q_graphicsellipseitem_is_obscured2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRegion)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param itemToDeviceTransform QTransform*
 ///
-QRegion* q_graphicsellipseitem_bounding_region(void* self, void* itemToDeviceTransform);
+QRegion* q_graphicsellipseitem_bounding_region(const void* self, const void* itemToDeviceTransform);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRegionGranularity)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-double q_graphicsellipseitem_bounding_region_granularity(void* self);
+double q_graphicsellipseitem_bounding_region_granularity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16859,526 +16721,526 @@ void q_graphicsellipseitem_scroll(void* self, double dx, double dy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param item QGraphicsItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicsellipseitem_map_to_item(void* self, void* item, void* point);
+QPointF* q_graphicsellipseitem_map_to_item(const void* self, const void* item, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicsellipseitem_map_to_parent(void* self, void* point);
+QPointF* q_graphicsellipseitem_map_to_parent(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicsellipseitem_map_to_scene(void* self, void* point);
+QPointF* q_graphicsellipseitem_map_to_scene(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicsellipseitem_map_to_item2(void* self, void* item, void* rect);
+QPolygonF* q_graphicsellipseitem_map_to_item2(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicsellipseitem_map_to_parent2(void* self, void* rect);
+QPolygonF* q_graphicsellipseitem_map_to_parent2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicsellipseitem_map_to_scene2(void* self, void* rect);
+QPolygonF* q_graphicsellipseitem_map_to_scene2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsellipseitem_map_rect_to_item(void* self, void* item, void* rect);
+QRectF* q_graphicsellipseitem_map_rect_to_item(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToParent)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsellipseitem_map_rect_to_parent(void* self, void* rect);
+QRectF* q_graphicsellipseitem_map_rect_to_parent(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToScene)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsellipseitem_map_rect_to_scene(void* self, void* rect);
+QRectF* q_graphicsellipseitem_map_rect_to_scene(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param item QGraphicsItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicsellipseitem_map_to_item3(void* self, void* item, void* polygon);
+QPolygonF* q_graphicsellipseitem_map_to_item3(const void* self, const void* item, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicsellipseitem_map_to_parent3(void* self, void* polygon);
+QPolygonF* q_graphicsellipseitem_map_to_parent3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicsellipseitem_map_to_scene3(void* self, void* polygon);
+QPolygonF* q_graphicsellipseitem_map_to_scene3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param item QGraphicsItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicsellipseitem_map_to_item4(void* self, void* item, void* path);
+QPainterPath* q_graphicsellipseitem_map_to_item4(const void* self, const void* item, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicsellipseitem_map_to_parent4(void* self, void* path);
+QPainterPath* q_graphicsellipseitem_map_to_parent4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicsellipseitem_map_to_scene4(void* self, void* path);
+QPainterPath* q_graphicsellipseitem_map_to_scene4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param item QGraphicsItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicsellipseitem_map_from_item(void* self, void* item, void* point);
+QPointF* q_graphicsellipseitem_map_from_item(const void* self, const void* item, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicsellipseitem_map_from_parent(void* self, void* point);
+QPointF* q_graphicsellipseitem_map_from_parent(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicsellipseitem_map_from_scene(void* self, void* point);
+QPointF* q_graphicsellipseitem_map_from_scene(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicsellipseitem_map_from_item2(void* self, void* item, void* rect);
+QPolygonF* q_graphicsellipseitem_map_from_item2(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicsellipseitem_map_from_parent2(void* self, void* rect);
+QPolygonF* q_graphicsellipseitem_map_from_parent2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicsellipseitem_map_from_scene2(void* self, void* rect);
+QPolygonF* q_graphicsellipseitem_map_from_scene2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsellipseitem_map_rect_from_item(void* self, void* item, void* rect);
+QRectF* q_graphicsellipseitem_map_rect_from_item(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromParent)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsellipseitem_map_rect_from_parent(void* self, void* rect);
+QRectF* q_graphicsellipseitem_map_rect_from_parent(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromScene)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsellipseitem_map_rect_from_scene(void* self, void* rect);
+QRectF* q_graphicsellipseitem_map_rect_from_scene(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param item QGraphicsItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicsellipseitem_map_from_item3(void* self, void* item, void* polygon);
+QPolygonF* q_graphicsellipseitem_map_from_item3(const void* self, const void* item, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicsellipseitem_map_from_parent3(void* self, void* polygon);
+QPolygonF* q_graphicsellipseitem_map_from_parent3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicsellipseitem_map_from_scene3(void* self, void* polygon);
+QPolygonF* q_graphicsellipseitem_map_from_scene3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param item QGraphicsItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicsellipseitem_map_from_item4(void* self, void* item, void* path);
+QPainterPath* q_graphicsellipseitem_map_from_item4(const void* self, const void* item, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicsellipseitem_map_from_parent4(void* self, void* path);
+QPainterPath* q_graphicsellipseitem_map_from_parent4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicsellipseitem_map_from_scene4(void* self, void* path);
+QPainterPath* q_graphicsellipseitem_map_from_scene4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicsellipseitem_map_to_item5(void* self, void* item, double x, double y);
+QPointF* q_graphicsellipseitem_map_to_item5(const void* self, const void* item, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicsellipseitem_map_to_parent5(void* self, double x, double y);
+QPointF* q_graphicsellipseitem_map_to_parent5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicsellipseitem_map_to_scene5(void* self, double x, double y);
+QPointF* q_graphicsellipseitem_map_to_scene5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicsellipseitem_map_to_item6(void* self, void* item, double x, double y, double w, double h);
+QPolygonF* q_graphicsellipseitem_map_to_item6(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicsellipseitem_map_to_parent6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicsellipseitem_map_to_parent6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicsellipseitem_map_to_scene6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicsellipseitem_map_to_scene6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicsellipseitem_map_rect_to_item2(void* self, void* item, double x, double y, double w, double h);
+QRectF* q_graphicsellipseitem_map_rect_to_item2(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToParent)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicsellipseitem_map_rect_to_parent2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicsellipseitem_map_rect_to_parent2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToScene)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicsellipseitem_map_rect_to_scene2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicsellipseitem_map_rect_to_scene2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicsellipseitem_map_from_item5(void* self, void* item, double x, double y);
+QPointF* q_graphicsellipseitem_map_from_item5(const void* self, const void* item, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicsellipseitem_map_from_parent5(void* self, double x, double y);
+QPointF* q_graphicsellipseitem_map_from_parent5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicsellipseitem_map_from_scene5(void* self, double x, double y);
+QPointF* q_graphicsellipseitem_map_from_scene5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicsellipseitem_map_from_item6(void* self, void* item, double x, double y, double w, double h);
+QPolygonF* q_graphicsellipseitem_map_from_item6(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicsellipseitem_map_from_parent6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicsellipseitem_map_from_parent6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicsellipseitem_map_from_scene6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicsellipseitem_map_from_scene6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicsellipseitem_map_rect_from_item2(void* self, void* item, double x, double y, double w, double h);
+QRectF* q_graphicsellipseitem_map_rect_from_item2(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromParent)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicsellipseitem_map_rect_from_parent2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicsellipseitem_map_rect_from_parent2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromScene)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicsellipseitem_map_rect_from_scene2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicsellipseitem_map_rect_from_scene2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isAncestorOf)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param child QGraphicsItem*
 ///
-bool q_graphicsellipseitem_is_ancestor_of(void* self, void* child);
+bool q_graphicsellipseitem_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#commonAncestorItem)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param other QGraphicsItem*
 ///
-QGraphicsItem* q_graphicsellipseitem_common_ancestor_item(void* self, void* other);
+QGraphicsItem* q_graphicsellipseitem_common_ancestor_item(const void* self, const void* other);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isUnderMouse)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
-bool q_graphicsellipseitem_is_under_mouse(void* self);
+bool q_graphicsellipseitem_is_under_mouse(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#data)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param key int
 ///
-QVariant* q_graphicsellipseitem_data(void* self, int key);
+QVariant* q_graphicsellipseitem_data(const void* self, int key);
 
 /// Inherited from QGraphicsItem
 ///
@@ -17388,17 +17250,17 @@ QVariant* q_graphicsellipseitem_data(void* self, int key);
 /// @param key int
 /// @param value QVariant*
 ///
-void q_graphicsellipseitem_set_data(void* self, int key, void* value);
+void q_graphicsellipseitem_set_data(void* self, int key, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodHints)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t q_graphicsellipseitem_input_method_hints(void* self);
+int32_t q_graphicsellipseitem_input_method_hints(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -17445,16 +17307,16 @@ void q_graphicsellipseitem_set_flag2(void* self, int32_t flag, bool enabled);
 /// @param mode enum QGraphicsItem__CacheMode
 /// @param cacheSize QSize*
 ///
-void q_graphicsellipseitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
+void q_graphicsellipseitem_set_cache_mode2(void* self, int32_t mode, const void* cacheSize);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param blockingPanel QGraphicsItem**
 ///
-bool q_graphicsellipseitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel);
+bool q_graphicsellipseitem_is_blocked_by_modal_panel1(const void* self, void** blockingPanel);
 
 /// Inherited from QGraphicsItem
 ///
@@ -17472,7 +17334,7 @@ void q_graphicsellipseitem_set_focus1(void* self, int32_t focusReason);
 /// @param self QGraphicsEllipseItem*
 /// @param rect QRectF*
 ///
-void q_graphicsellipseitem_ensure_visible1(void* self, void* rect);
+void q_graphicsellipseitem_ensure_visible1(void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -17482,7 +17344,7 @@ void q_graphicsellipseitem_ensure_visible1(void* self, void* rect);
 /// @param rect QRectF*
 /// @param xmargin int
 ///
-void q_graphicsellipseitem_ensure_visible22(void* self, void* rect, int xmargin);
+void q_graphicsellipseitem_ensure_visible22(void* self, const void* rect, int xmargin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -17493,7 +17355,7 @@ void q_graphicsellipseitem_ensure_visible22(void* self, void* rect, int xmargin)
 /// @param xmargin int
 /// @param ymargin int
 ///
-void q_graphicsellipseitem_ensure_visible3(void* self, void* rect, int xmargin, int ymargin);
+void q_graphicsellipseitem_ensure_visible3(void* self, const void* rect, int xmargin, int ymargin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -17526,11 +17388,11 @@ void q_graphicsellipseitem_ensure_visible6(void* self, double x, double y, doubl
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemTransform)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param other QGraphicsItem*
 /// @param ok bool*
 ///
-QTransform* q_graphicsellipseitem_item_transform2(void* self, void* other, bool* ok);
+QTransform* q_graphicsellipseitem_item_transform2(const void* self, const void* other, bool* ok);
 
 /// Inherited from QGraphicsItem
 ///
@@ -17540,27 +17402,27 @@ QTransform* q_graphicsellipseitem_item_transform2(void* self, void* other, bool*
 /// @param matrix QTransform*
 /// @param combine bool
 ///
-void q_graphicsellipseitem_set_transform2(void* self, void* matrix, bool combine);
+void q_graphicsellipseitem_set_transform2(void* self, const void* matrix, bool combine);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsellipseitem_colliding_items1(void* self, int32_t mode);
+libqt_list q_graphicsellipseitem_colliding_items1(const void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param rect QRectF*
 ///
-bool q_graphicsellipseitem_is_obscured1(void* self, void* rect);
+bool q_graphicsellipseitem_is_obscured1(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -17569,7 +17431,7 @@ bool q_graphicsellipseitem_is_obscured1(void* self, void* rect);
 /// @param self QGraphicsEllipseItem*
 /// @param rect QRectF*
 ///
-void q_graphicsellipseitem_update1(void* self, void* rect);
+void q_graphicsellipseitem_update1(void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -17580,7 +17442,7 @@ void q_graphicsellipseitem_update1(void* self, void* rect);
 /// @param dy double
 /// @param rect QRectF*
 ///
-void q_graphicsellipseitem_scroll3(void* self, double dx, double dy, void* rect);
+void q_graphicsellipseitem_scroll3(void* self, double dx, double dy, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -17621,11 +17483,11 @@ void q_graphicsellipseitem_on_advance(void* self, void (*callback)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicsellipseitem_collides_with_item(void* self, void* other, int32_t mode);
+bool q_graphicsellipseitem_collides_with_item(const void* self, const void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -17633,11 +17495,11 @@ bool q_graphicsellipseitem_collides_with_item(void* self, void* other, int32_t m
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicsellipseitem_super_collides_with_item(void* self, void* other, int32_t mode);
+bool q_graphicsellipseitem_super_collides_with_item(const void* self, const void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -17645,10 +17507,10 @@ bool q_graphicsellipseitem_super_collides_with_item(void* self, void* other, int
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param callback bool func(QGraphicsEllipseItem* self, QGraphicsItem* other, enum Qt__ItemSelectionMode mode)
 ///
-void q_graphicsellipseitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
+void q_graphicsellipseitem_on_collides_with_item(const void* self, bool (*callback)(const void*, const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -17656,11 +17518,11 @@ void q_graphicsellipseitem_on_collides_with_item(void* self, bool (*callback)(vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicsellipseitem_collides_with_path(void* self, void* path, int32_t mode);
+bool q_graphicsellipseitem_collides_with_path(const void* self, const void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -17668,11 +17530,11 @@ bool q_graphicsellipseitem_collides_with_path(void* self, void* path, int32_t mo
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicsellipseitem_super_collides_with_path(void* self, void* path, int32_t mode);
+bool q_graphicsellipseitem_super_collides_with_path(const void* self, const void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -17680,10 +17542,10 @@ bool q_graphicsellipseitem_super_collides_with_path(void* self, void* path, int3
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param callback bool func(QGraphicsEllipseItem* self, QPainterPath* path, enum Qt__ItemSelectionMode mode)
 ///
-void q_graphicsellipseitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
+void q_graphicsellipseitem_on_collides_with_path(const void* self, bool (*callback)(const void*, const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -18353,10 +18215,10 @@ void q_graphicsellipseitem_on_input_method_event(void* self, void (*callback)(vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_graphicsellipseitem_input_method_query(void* self, int32_t query);
+QVariant* q_graphicsellipseitem_input_method_query(const void* self, int32_t query);
 
 /// Inherited from QGraphicsItem
 ///
@@ -18364,10 +18226,10 @@ QVariant* q_graphicsellipseitem_input_method_query(void* self, int32_t query);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_graphicsellipseitem_super_input_method_query(void* self, int32_t query);
+QVariant* q_graphicsellipseitem_super_input_method_query(const void* self, int32_t query);
 
 /// Inherited from QGraphicsItem
 ///
@@ -18375,12 +18237,12 @@ QVariant* q_graphicsellipseitem_super_input_method_query(void* self, int32_t que
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsEllipseItem*
+/// @param self const QGraphicsEllipseItem*
 /// @param callback QVariant* func(QGraphicsEllipseItem* self, enum Qt__InputMethodQuery query)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsellipseitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void q_graphicsellipseitem_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -18392,7 +18254,7 @@ void q_graphicsellipseitem_on_input_method_query(void* self, QVariant* (*callbac
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
 ///
-QVariant* q_graphicsellipseitem_item_change(void* self, int32_t change, void* value);
+QVariant* q_graphicsellipseitem_item_change(void* self, int32_t change, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -18404,7 +18266,7 @@ QVariant* q_graphicsellipseitem_item_change(void* self, int32_t change, void* va
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
 ///
-QVariant* q_graphicsellipseitem_super_item_change(void* self, int32_t change, void* value);
+QVariant* q_graphicsellipseitem_super_item_change(void* self, int32_t change, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -18417,7 +18279,7 @@ QVariant* q_graphicsellipseitem_super_item_change(void* self, int32_t change, vo
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsellipseitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
+void q_graphicsellipseitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -18446,9 +18308,9 @@ void q_graphicsellipseitem_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsEllipseItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsEllipseItem* self)
 ///
-void q_graphicsellipseitem_on_update_micro_focus(void* self, void (*callback)());
+void q_graphicsellipseitem_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -18477,9 +18339,9 @@ void q_graphicsellipseitem_super_add_to_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsEllipseItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsEllipseItem* self)
 ///
-void q_graphicsellipseitem_on_add_to_index(void* self, void (*callback)());
+void q_graphicsellipseitem_on_add_to_index(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -18508,9 +18370,9 @@ void q_graphicsellipseitem_super_remove_from_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsEllipseItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsEllipseItem* self)
 ///
-void q_graphicsellipseitem_on_remove_from_index(void* self, void (*callback)());
+void q_graphicsellipseitem_on_remove_from_index(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -18539,9 +18401,9 @@ void q_graphicsellipseitem_super_prepare_geometry_change(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsEllipseItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsEllipseItem* self)
 ///
-void q_graphicsellipseitem_on_prepare_geometry_change(void* self, void (*callback)());
+void q_graphicsellipseitem_on_prepare_geometry_change(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#dtor.QGraphicsEllipseItem)
 ///
@@ -18563,7 +18425,7 @@ QGraphicsPolygonItem* q_graphicspolygonitem_new();
 ///
 /// @param polygon QPolygonF*
 ///
-QGraphicsPolygonItem* q_graphicspolygonitem_new2(void* polygon);
+QGraphicsPolygonItem* q_graphicspolygonitem_new2(const void* polygon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html)
 
@@ -18580,28 +18442,28 @@ QGraphicsPolygonItem* q_graphicspolygonitem_new3(void* parent);
 /// @param polygon QPolygonF*
 /// @param parent QGraphicsItem*
 ///
-QGraphicsPolygonItem* q_graphicspolygonitem_new4(void* polygon, void* parent);
+QGraphicsPolygonItem* q_graphicspolygonitem_new4(const void* polygon, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#polygon)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QPolygonF* q_graphicspolygonitem_polygon(void* self);
+QPolygonF* q_graphicspolygonitem_polygon(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#setPolygon)
 ///
 /// @param self QGraphicsPolygonItem*
 /// @param polygon QPolygonF*
 ///
-void q_graphicspolygonitem_set_polygon(void* self, void* polygon);
+void q_graphicspolygonitem_set_polygon(void* self, const void* polygon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#fillRule)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
 /// @return enum Qt__FillRule
 ///
-int32_t q_graphicspolygonitem_fill_rule(void* self);
+int32_t q_graphicspolygonitem_fill_rule(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#setFillRule)
 ///
@@ -18612,78 +18474,78 @@ void q_graphicspolygonitem_set_fill_rule(void* self, int32_t rule);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#boundingRect)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QRectF* q_graphicspolygonitem_bounding_rect(void* self);
+QRectF* q_graphicspolygonitem_bounding_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#boundingRect)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsPolygonItem*
-/// @param callback QRectF* func()
+/// @param self const QGraphicsPolygonItem*
+/// @param callback QRectF* func(const QGraphicsPolygonItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicspolygonitem_on_bounding_rect(void* self, QRectF* (*callback)());
+void q_graphicspolygonitem_on_bounding_rect(const void* self, QRectF* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#boundingRect)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QRectF* q_graphicspolygonitem_super_bounding_rect(void* self);
+QRectF* q_graphicspolygonitem_super_bounding_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#shape)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QPainterPath* q_graphicspolygonitem_shape(void* self);
+QPainterPath* q_graphicspolygonitem_shape(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#shape)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsPolygonItem*
-/// @param callback QPainterPath* func()
+/// @param self const QGraphicsPolygonItem*
+/// @param callback QPainterPath* func(const QGraphicsPolygonItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicspolygonitem_on_shape(void* self, QPainterPath* (*callback)());
+void q_graphicspolygonitem_on_shape(const void* self, QPainterPath* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#shape)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QPainterPath* q_graphicspolygonitem_super_shape(void* self);
+QPainterPath* q_graphicspolygonitem_super_shape(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#contains)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param point QPointF*
 ///
-bool q_graphicspolygonitem_contains(void* self, void* point);
+bool q_graphicspolygonitem_contains(const void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#contains)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsPolygonItem*
-/// @param callback bool func(QGraphicsPolygonItem* self, QPointF* point)
+/// @param self const QGraphicsPolygonItem*
+/// @param callback bool func(const QGraphicsPolygonItem* self, QPointF* point)
 ///
-void q_graphicspolygonitem_on_contains(void* self, bool (*callback)(void*, void*));
+void q_graphicspolygonitem_on_contains(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#contains)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param point QPointF*
 ///
-bool q_graphicspolygonitem_super_contains(void* self, void* point);
+bool q_graphicspolygonitem_super_contains(const void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#paint)
 ///
@@ -18692,7 +18554,7 @@ bool q_graphicspolygonitem_super_contains(void* self, void* point);
 /// @param option QStyleOptionGraphicsItem*
 /// @param widget QWidget*
 ///
-void q_graphicspolygonitem_paint(void* self, void* painter, void* option, void* widget);
+void q_graphicspolygonitem_paint(void* self, void* painter, const void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#paint)
 ///
@@ -18701,7 +18563,7 @@ void q_graphicspolygonitem_paint(void* self, void* painter, void* option, void* 
 /// @param self QGraphicsPolygonItem*
 /// @param callback void func(QGraphicsPolygonItem* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget)
 ///
-void q_graphicspolygonitem_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
+void q_graphicspolygonitem_on_paint(void* self, void (*callback)(void*, void*, const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#paint)
 ///
@@ -18712,105 +18574,105 @@ void q_graphicspolygonitem_on_paint(void* self, void (*callback)(void*, void*, v
 /// @param option QStyleOptionGraphicsItem*
 /// @param widget QWidget*
 ///
-void q_graphicspolygonitem_super_paint(void* self, void* painter, void* option, void* widget);
+void q_graphicspolygonitem_super_paint(void* self, void* painter, const void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#isObscuredBy)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param item QGraphicsItem*
 ///
-bool q_graphicspolygonitem_is_obscured_by(void* self, void* item);
+bool q_graphicspolygonitem_is_obscured_by(const void* self, const void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#isObscuredBy)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsPolygonItem*
-/// @param callback bool func(QGraphicsPolygonItem* self, QGraphicsItem* item)
+/// @param self const QGraphicsPolygonItem*
+/// @param callback bool func(const QGraphicsPolygonItem* self, QGraphicsItem* item)
 ///
-void q_graphicspolygonitem_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
+void q_graphicspolygonitem_on_is_obscured_by(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#isObscuredBy)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param item QGraphicsItem*
 ///
-bool q_graphicspolygonitem_super_is_obscured_by(void* self, void* item);
+bool q_graphicspolygonitem_super_is_obscured_by(const void* self, const void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#opaqueArea)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QPainterPath* q_graphicspolygonitem_opaque_area(void* self);
+QPainterPath* q_graphicspolygonitem_opaque_area(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#opaqueArea)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsPolygonItem*
-/// @param callback QPainterPath* func()
+/// @param self const QGraphicsPolygonItem*
+/// @param callback QPainterPath* func(const QGraphicsPolygonItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicspolygonitem_on_opaque_area(void* self, QPainterPath* (*callback)());
+void q_graphicspolygonitem_on_opaque_area(const void* self, QPainterPath* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#opaqueArea)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QPainterPath* q_graphicspolygonitem_super_opaque_area(void* self);
+QPainterPath* q_graphicspolygonitem_super_opaque_area(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#type)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-int32_t q_graphicspolygonitem_type(void* self);
+int32_t q_graphicspolygonitem_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#type)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsPolygonItem*
-/// @param callback int32_t func()
+/// @param self const QGraphicsPolygonItem*
+/// @param callback int32_t func(const QGraphicsPolygonItem* self)
 ///
-void q_graphicspolygonitem_on_type(void* self, int32_t (*callback)());
+void q_graphicspolygonitem_on_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#type)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-int32_t q_graphicspolygonitem_super_type(void* self);
+int32_t q_graphicspolygonitem_super_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#supportsExtension)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_graphicspolygonitem_supports_extension(void* self, int32_t extension);
+bool q_graphicspolygonitem_supports_extension(const void* self, int32_t extension);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#supportsExtension)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsPolygonItem*
-/// @param callback bool func(QGraphicsPolygonItem* self, enum QGraphicsItem__Extension extension)
+/// @param self const QGraphicsPolygonItem*
+/// @param callback bool func(const QGraphicsPolygonItem* self, enum QGraphicsItem__Extension extension)
 ///
-void q_graphicspolygonitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t));
+void q_graphicspolygonitem_on_supports_extension(const void* self, bool (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#supportsExtension)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_graphicspolygonitem_super_supports_extension(void* self, int32_t extension);
+bool q_graphicspolygonitem_super_supports_extension(const void* self, int32_t extension);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#setExtension)
 ///
@@ -18818,7 +18680,7 @@ bool q_graphicspolygonitem_super_supports_extension(void* self, int32_t extensio
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_graphicspolygonitem_set_extension(void* self, int32_t extension, void* variant);
+void q_graphicspolygonitem_set_extension(void* self, int32_t extension, const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#setExtension)
 ///
@@ -18827,7 +18689,7 @@ void q_graphicspolygonitem_set_extension(void* self, int32_t extension, void* va
 /// @param self QGraphicsPolygonItem*
 /// @param callback void func(QGraphicsPolygonItem* self, enum QGraphicsItem__Extension extension, QVariant* variant)
 ///
-void q_graphicspolygonitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*));
+void q_graphicspolygonitem_on_set_extension(void* self, void (*callback)(void*, int32_t, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#setExtension)
 ///
@@ -18837,42 +18699,42 @@ void q_graphicspolygonitem_on_set_extension(void* self, void (*callback)(void*, 
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_graphicspolygonitem_super_set_extension(void* self, int32_t extension, void* variant);
+void q_graphicspolygonitem_super_set_extension(void* self, int32_t extension, const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#extension)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param variant QVariant*
 ///
-QVariant* q_graphicspolygonitem_extension(void* self, void* variant);
+QVariant* q_graphicspolygonitem_extension(const void* self, const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#extension)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsPolygonItem*
-/// @param callback QVariant* func(QGraphicsPolygonItem* self, QVariant* variant)
+/// @param self const QGraphicsPolygonItem*
+/// @param callback QVariant* func(const QGraphicsPolygonItem* self, QVariant* variant)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicspolygonitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
+void q_graphicspolygonitem_on_extension(const void* self, QVariant* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#extension)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param variant QVariant*
 ///
-QVariant* q_graphicspolygonitem_super_extension(void* self, void* variant);
+QVariant* q_graphicspolygonitem_super_extension(const void* self, const void* variant);
 
 /// Inherited from QAbstractGraphicsShapeItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractgraphicsshapeitem.html#pen)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QPen* q_graphicspolygonitem_pen(void* self);
+QPen* q_graphicspolygonitem_pen(const void* self);
 
 /// Inherited from QAbstractGraphicsShapeItem
 ///
@@ -18881,15 +18743,15 @@ QPen* q_graphicspolygonitem_pen(void* self);
 /// @param self QGraphicsPolygonItem*
 /// @param pen QPen*
 ///
-void q_graphicspolygonitem_set_pen(void* self, void* pen);
+void q_graphicspolygonitem_set_pen(void* self, const void* pen);
 
 /// Inherited from QAbstractGraphicsShapeItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractgraphicsshapeitem.html#brush)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QBrush* q_graphicspolygonitem_brush(void* self);
+QBrush* q_graphicspolygonitem_brush(const void* self);
 
 /// Inherited from QAbstractGraphicsShapeItem
 ///
@@ -18898,71 +18760,71 @@ QBrush* q_graphicspolygonitem_brush(void* self);
 /// @param self QGraphicsPolygonItem*
 /// @param brush QBrush*
 ///
-void q_graphicspolygonitem_set_brush(void* self, void* brush);
+void q_graphicspolygonitem_set_brush(void* self, const void* brush);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scene)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QGraphicsScene* q_graphicspolygonitem_scene(void* self);
+QGraphicsScene* q_graphicspolygonitem_scene(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentItem)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QGraphicsItem* q_graphicspolygonitem_parent_item(void* self);
+QGraphicsItem* q_graphicspolygonitem_parent_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#topLevelItem)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QGraphicsItem* q_graphicspolygonitem_top_level_item(void* self);
+QGraphicsItem* q_graphicspolygonitem_top_level_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentObject)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QGraphicsObject* q_graphicspolygonitem_parent_object(void* self);
+QGraphicsObject* q_graphicspolygonitem_parent_object(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentWidget)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QGraphicsWidget* q_graphicspolygonitem_parent_widget(void* self);
+QGraphicsWidget* q_graphicspolygonitem_parent_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#topLevelWidget)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QGraphicsWidget* q_graphicspolygonitem_top_level_widget(void* self);
+QGraphicsWidget* q_graphicspolygonitem_top_level_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#window)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QGraphicsWidget* q_graphicspolygonitem_window(void* self);
+QGraphicsWidget* q_graphicspolygonitem_window(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#panel)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QGraphicsItem* q_graphicspolygonitem_panel(void* self);
+QGraphicsItem* q_graphicspolygonitem_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -18977,35 +18839,35 @@ void q_graphicspolygonitem_set_parent_item(void* self, void* parent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#childItems)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicspolygonitem_child_items(void* self);
+libqt_list q_graphicspolygonitem_child_items(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isWidget)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-bool q_graphicspolygonitem_is_widget(void* self);
+bool q_graphicspolygonitem_is_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isWindow)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-bool q_graphicspolygonitem_is_window(void* self);
+bool q_graphicspolygonitem_is_window(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isPanel)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-bool q_graphicspolygonitem_is_panel(void* self);
+bool q_graphicspolygonitem_is_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19019,17 +18881,17 @@ QGraphicsObject* q_graphicspolygonitem_to_graphics_object(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#toGraphicsObject)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-const QGraphicsObject* q_graphicspolygonitem_to_graphics_object2(void* self);
+const QGraphicsObject* q_graphicspolygonitem_to_graphics_object2(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#group)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QGraphicsItemGroup* q_graphicspolygonitem_group(void* self);
+QGraphicsItemGroup* q_graphicspolygonitem_group(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19044,11 +18906,11 @@ void q_graphicspolygonitem_set_group(void* self, void* group);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#flags)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
 /// @return flag of enum QGraphicsItem__GraphicsItemFlag
 ///
-int32_t q_graphicspolygonitem_flags(void* self);
+int32_t q_graphicspolygonitem_flags(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19072,11 +18934,11 @@ void q_graphicspolygonitem_set_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#cacheMode)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
 /// @return enum QGraphicsItem__CacheMode
 ///
-int32_t q_graphicspolygonitem_cache_mode(void* self);
+int32_t q_graphicspolygonitem_cache_mode(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19091,11 +18953,11 @@ void q_graphicspolygonitem_set_cache_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#panelModality)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
 /// @return enum QGraphicsItem__PanelModality
 ///
-int32_t q_graphicspolygonitem_panel_modality(void* self);
+int32_t q_graphicspolygonitem_panel_modality(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19110,9 +18972,9 @@ void q_graphicspolygonitem_set_panel_modality(void* self, int32_t panelModality)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-bool q_graphicspolygonitem_is_blocked_by_modal_panel(void* self);
+bool q_graphicspolygonitem_is_blocked_by_modal_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19120,9 +18982,9 @@ bool q_graphicspolygonitem_is_blocked_by_modal_panel(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-const char* q_graphicspolygonitem_tool_tip(void* self);
+const char* q_graphicspolygonitem_tool_tip(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19137,9 +18999,9 @@ void q_graphicspolygonitem_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#cursor)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QCursor* q_graphicspolygonitem_cursor(void* self);
+QCursor* q_graphicspolygonitem_cursor(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19148,15 +19010,15 @@ QCursor* q_graphicspolygonitem_cursor(void* self);
 /// @param self QGraphicsPolygonItem*
 /// @param cursor QCursor*
 ///
-void q_graphicspolygonitem_set_cursor(void* self, void* cursor);
+void q_graphicspolygonitem_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hasCursor)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-bool q_graphicspolygonitem_has_cursor(void* self);
+bool q_graphicspolygonitem_has_cursor(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19170,18 +19032,18 @@ void q_graphicspolygonitem_unset_cursor(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isVisible)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-bool q_graphicspolygonitem_is_visible(void* self);
+bool q_graphicspolygonitem_is_visible(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isVisibleTo)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param parent QGraphicsItem*
 ///
-bool q_graphicspolygonitem_is_visible_to(void* self, void* parent);
+bool q_graphicspolygonitem_is_visible_to(const void* self, const void* parent);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19212,9 +19074,9 @@ void q_graphicspolygonitem_show(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isEnabled)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-bool q_graphicspolygonitem_is_enabled(void* self);
+bool q_graphicspolygonitem_is_enabled(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19229,9 +19091,9 @@ void q_graphicspolygonitem_set_enabled(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isSelected)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-bool q_graphicspolygonitem_is_selected(void* self);
+bool q_graphicspolygonitem_is_selected(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19246,9 +19108,9 @@ void q_graphicspolygonitem_set_selected(void* self, bool selected);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptDrops)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-bool q_graphicspolygonitem_accept_drops(void* self);
+bool q_graphicspolygonitem_accept_drops(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19263,17 +19125,17 @@ void q_graphicspolygonitem_set_accept_drops(void* self, bool on);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#opacity)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-double q_graphicspolygonitem_opacity(void* self);
+double q_graphicspolygonitem_opacity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#effectiveOpacity)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-double q_graphicspolygonitem_effective_opacity(void* self);
+double q_graphicspolygonitem_effective_opacity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19288,9 +19150,9 @@ void q_graphicspolygonitem_set_opacity(void* self, double opacity);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#graphicsEffect)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QGraphicsEffect* q_graphicspolygonitem_graphics_effect(void* self);
+QGraphicsEffect* q_graphicspolygonitem_graphics_effect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19305,11 +19167,11 @@ void q_graphicspolygonitem_set_graphics_effect(void* self, void* effect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptedMouseButtons)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
 /// @return flag of enum Qt__MouseButton
 ///
-int32_t q_graphicspolygonitem_accepted_mouse_buttons(void* self);
+int32_t q_graphicspolygonitem_accepted_mouse_buttons(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19324,9 +19186,9 @@ void q_graphicspolygonitem_set_accepted_mouse_buttons(void* self, int32_t button
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptHoverEvents)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-bool q_graphicspolygonitem_accept_hover_events(void* self);
+bool q_graphicspolygonitem_accept_hover_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19341,9 +19203,9 @@ void q_graphicspolygonitem_set_accept_hover_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptTouchEvents)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-bool q_graphicspolygonitem_accept_touch_events(void* self);
+bool q_graphicspolygonitem_accept_touch_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19358,9 +19220,9 @@ void q_graphicspolygonitem_set_accept_touch_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#filtersChildEvents)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-bool q_graphicspolygonitem_filters_child_events(void* self);
+bool q_graphicspolygonitem_filters_child_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19375,9 +19237,9 @@ void q_graphicspolygonitem_set_filters_child_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#handlesChildEvents)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-bool q_graphicspolygonitem_handles_child_events(void* self);
+bool q_graphicspolygonitem_handles_child_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19392,9 +19254,9 @@ void q_graphicspolygonitem_set_handles_child_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isActive)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-bool q_graphicspolygonitem_is_active(void* self);
+bool q_graphicspolygonitem_is_active(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19409,9 +19271,9 @@ void q_graphicspolygonitem_set_active(void* self, bool active);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hasFocus)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-bool q_graphicspolygonitem_has_focus(void* self);
+bool q_graphicspolygonitem_has_focus(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19433,9 +19295,9 @@ void q_graphicspolygonitem_clear_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusProxy)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QGraphicsItem* q_graphicspolygonitem_focus_proxy(void* self);
+QGraphicsItem* q_graphicspolygonitem_focus_proxy(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19450,17 +19312,17 @@ void q_graphicspolygonitem_set_focus_proxy(void* self, void* item);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusItem)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QGraphicsItem* q_graphicspolygonitem_focus_item(void* self);
+QGraphicsItem* q_graphicspolygonitem_focus_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusScopeItem)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QGraphicsItem* q_graphicspolygonitem_focus_scope_item(void* self);
+QGraphicsItem* q_graphicspolygonitem_focus_scope_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19498,17 +19360,17 @@ void q_graphicspolygonitem_ungrab_keyboard(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#pos)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QPointF* q_graphicspolygonitem_pos(void* self);
+QPointF* q_graphicspolygonitem_pos(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#x)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-double q_graphicspolygonitem_x(void* self);
+double q_graphicspolygonitem_x(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19523,9 +19385,9 @@ void q_graphicspolygonitem_set_x(void* self, double x);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#y)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-double q_graphicspolygonitem_y(void* self);
+double q_graphicspolygonitem_y(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19540,9 +19402,9 @@ void q_graphicspolygonitem_set_y(void* self, double y);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scenePos)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QPointF* q_graphicspolygonitem_scene_pos(void* self);
+QPointF* q_graphicspolygonitem_scene_pos(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19551,7 +19413,7 @@ QPointF* q_graphicspolygonitem_scene_pos(void* self);
 /// @param self QGraphicsPolygonItem*
 /// @param pos QPointF*
 ///
-void q_graphicspolygonitem_set_pos(void* self, void* pos);
+void q_graphicspolygonitem_set_pos(void* self, const void* pos);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19597,35 +19459,35 @@ void q_graphicspolygonitem_ensure_visible2(void* self, double x, double y, doubl
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transform)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QTransform* q_graphicspolygonitem_transform(void* self);
+QTransform* q_graphicspolygonitem_transform(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneTransform)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QTransform* q_graphicspolygonitem_scene_transform(void* self);
+QTransform* q_graphicspolygonitem_scene_transform(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#deviceTransform)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param viewportTransform QTransform*
 ///
-QTransform* q_graphicspolygonitem_device_transform(void* self, void* viewportTransform);
+QTransform* q_graphicspolygonitem_device_transform(const void* self, const void* viewportTransform);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemTransform)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param other QGraphicsItem*
 ///
-QTransform* q_graphicspolygonitem_item_transform(void* self, void* other);
+QTransform* q_graphicspolygonitem_item_transform(const void* self, const void* other);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19634,7 +19496,7 @@ QTransform* q_graphicspolygonitem_item_transform(void* self, void* other);
 /// @param self QGraphicsPolygonItem*
 /// @param matrix QTransform*
 ///
-void q_graphicspolygonitem_set_transform(void* self, void* matrix);
+void q_graphicspolygonitem_set_transform(void* self, const void* matrix);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19657,9 +19519,9 @@ void q_graphicspolygonitem_set_rotation(void* self, double angle);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#rotation)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-double q_graphicspolygonitem_rotation(void* self);
+double q_graphicspolygonitem_rotation(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19674,19 +19536,19 @@ void q_graphicspolygonitem_set_scale(void* self, double scale);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scale)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-double q_graphicspolygonitem_scale(void* self);
+double q_graphicspolygonitem_scale(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transformations)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
 /// @return libqt_list of QGraphicsTransform*
 ///
-libqt_list q_graphicspolygonitem_transformations(void* self);
+libqt_list q_graphicspolygonitem_transformations(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19701,9 +19563,9 @@ void q_graphicspolygonitem_set_transformations(void* self, libqt_list transforma
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transformOriginPoint)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QPointF* q_graphicspolygonitem_transform_origin_point(void* self);
+QPointF* q_graphicspolygonitem_transform_origin_point(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19712,7 +19574,7 @@ QPointF* q_graphicspolygonitem_transform_origin_point(void* self);
 /// @param self QGraphicsPolygonItem*
 /// @param origin QPointF*
 ///
-void q_graphicspolygonitem_set_transform_origin_point(void* self, void* origin);
+void q_graphicspolygonitem_set_transform_origin_point(void* self, const void* origin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19728,9 +19590,9 @@ void q_graphicspolygonitem_set_transform_origin_point2(void* self, double ax, do
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#zValue)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-double q_graphicspolygonitem_z_value(void* self);
+double q_graphicspolygonitem_z_value(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19748,86 +19610,86 @@ void q_graphicspolygonitem_set_z_value(void* self, double z);
 /// @param self QGraphicsPolygonItem*
 /// @param sibling QGraphicsItem*
 ///
-void q_graphicspolygonitem_stack_before(void* self, void* sibling);
+void q_graphicspolygonitem_stack_before(void* self, const void* sibling);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#childrenBoundingRect)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QRectF* q_graphicspolygonitem_children_bounding_rect(void* self);
+QRectF* q_graphicspolygonitem_children_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneBoundingRect)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QRectF* q_graphicspolygonitem_scene_bounding_rect(void* self);
+QRectF* q_graphicspolygonitem_scene_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isClipped)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-bool q_graphicspolygonitem_is_clipped(void* self);
+bool q_graphicspolygonitem_is_clipped(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#clipPath)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-QPainterPath* q_graphicspolygonitem_clip_path(void* self);
+QPainterPath* q_graphicspolygonitem_clip_path(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicspolygonitem_colliding_items(void* self);
+libqt_list q_graphicspolygonitem_colliding_items(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-bool q_graphicspolygonitem_is_obscured(void* self);
+bool q_graphicspolygonitem_is_obscured(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-bool q_graphicspolygonitem_is_obscured2(void* self, double x, double y, double w, double h);
+bool q_graphicspolygonitem_is_obscured2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRegion)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param itemToDeviceTransform QTransform*
 ///
-QRegion* q_graphicspolygonitem_bounding_region(void* self, void* itemToDeviceTransform);
+QRegion* q_graphicspolygonitem_bounding_region(const void* self, const void* itemToDeviceTransform);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRegionGranularity)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-double q_graphicspolygonitem_bounding_region_granularity(void* self);
+double q_graphicspolygonitem_bounding_region_granularity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19872,526 +19734,526 @@ void q_graphicspolygonitem_scroll(void* self, double dx, double dy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param item QGraphicsItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicspolygonitem_map_to_item(void* self, void* item, void* point);
+QPointF* q_graphicspolygonitem_map_to_item(const void* self, const void* item, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicspolygonitem_map_to_parent(void* self, void* point);
+QPointF* q_graphicspolygonitem_map_to_parent(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicspolygonitem_map_to_scene(void* self, void* point);
+QPointF* q_graphicspolygonitem_map_to_scene(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicspolygonitem_map_to_item2(void* self, void* item, void* rect);
+QPolygonF* q_graphicspolygonitem_map_to_item2(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicspolygonitem_map_to_parent2(void* self, void* rect);
+QPolygonF* q_graphicspolygonitem_map_to_parent2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicspolygonitem_map_to_scene2(void* self, void* rect);
+QPolygonF* q_graphicspolygonitem_map_to_scene2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicspolygonitem_map_rect_to_item(void* self, void* item, void* rect);
+QRectF* q_graphicspolygonitem_map_rect_to_item(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToParent)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicspolygonitem_map_rect_to_parent(void* self, void* rect);
+QRectF* q_graphicspolygonitem_map_rect_to_parent(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToScene)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicspolygonitem_map_rect_to_scene(void* self, void* rect);
+QRectF* q_graphicspolygonitem_map_rect_to_scene(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param item QGraphicsItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicspolygonitem_map_to_item3(void* self, void* item, void* polygon);
+QPolygonF* q_graphicspolygonitem_map_to_item3(const void* self, const void* item, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicspolygonitem_map_to_parent3(void* self, void* polygon);
+QPolygonF* q_graphicspolygonitem_map_to_parent3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicspolygonitem_map_to_scene3(void* self, void* polygon);
+QPolygonF* q_graphicspolygonitem_map_to_scene3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param item QGraphicsItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicspolygonitem_map_to_item4(void* self, void* item, void* path);
+QPainterPath* q_graphicspolygonitem_map_to_item4(const void* self, const void* item, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicspolygonitem_map_to_parent4(void* self, void* path);
+QPainterPath* q_graphicspolygonitem_map_to_parent4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicspolygonitem_map_to_scene4(void* self, void* path);
+QPainterPath* q_graphicspolygonitem_map_to_scene4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param item QGraphicsItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicspolygonitem_map_from_item(void* self, void* item, void* point);
+QPointF* q_graphicspolygonitem_map_from_item(const void* self, const void* item, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicspolygonitem_map_from_parent(void* self, void* point);
+QPointF* q_graphicspolygonitem_map_from_parent(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicspolygonitem_map_from_scene(void* self, void* point);
+QPointF* q_graphicspolygonitem_map_from_scene(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicspolygonitem_map_from_item2(void* self, void* item, void* rect);
+QPolygonF* q_graphicspolygonitem_map_from_item2(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicspolygonitem_map_from_parent2(void* self, void* rect);
+QPolygonF* q_graphicspolygonitem_map_from_parent2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicspolygonitem_map_from_scene2(void* self, void* rect);
+QPolygonF* q_graphicspolygonitem_map_from_scene2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicspolygonitem_map_rect_from_item(void* self, void* item, void* rect);
+QRectF* q_graphicspolygonitem_map_rect_from_item(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromParent)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicspolygonitem_map_rect_from_parent(void* self, void* rect);
+QRectF* q_graphicspolygonitem_map_rect_from_parent(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromScene)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicspolygonitem_map_rect_from_scene(void* self, void* rect);
+QRectF* q_graphicspolygonitem_map_rect_from_scene(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param item QGraphicsItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicspolygonitem_map_from_item3(void* self, void* item, void* polygon);
+QPolygonF* q_graphicspolygonitem_map_from_item3(const void* self, const void* item, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicspolygonitem_map_from_parent3(void* self, void* polygon);
+QPolygonF* q_graphicspolygonitem_map_from_parent3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicspolygonitem_map_from_scene3(void* self, void* polygon);
+QPolygonF* q_graphicspolygonitem_map_from_scene3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param item QGraphicsItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicspolygonitem_map_from_item4(void* self, void* item, void* path);
+QPainterPath* q_graphicspolygonitem_map_from_item4(const void* self, const void* item, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicspolygonitem_map_from_parent4(void* self, void* path);
+QPainterPath* q_graphicspolygonitem_map_from_parent4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicspolygonitem_map_from_scene4(void* self, void* path);
+QPainterPath* q_graphicspolygonitem_map_from_scene4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicspolygonitem_map_to_item5(void* self, void* item, double x, double y);
+QPointF* q_graphicspolygonitem_map_to_item5(const void* self, const void* item, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicspolygonitem_map_to_parent5(void* self, double x, double y);
+QPointF* q_graphicspolygonitem_map_to_parent5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicspolygonitem_map_to_scene5(void* self, double x, double y);
+QPointF* q_graphicspolygonitem_map_to_scene5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicspolygonitem_map_to_item6(void* self, void* item, double x, double y, double w, double h);
+QPolygonF* q_graphicspolygonitem_map_to_item6(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicspolygonitem_map_to_parent6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicspolygonitem_map_to_parent6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicspolygonitem_map_to_scene6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicspolygonitem_map_to_scene6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicspolygonitem_map_rect_to_item2(void* self, void* item, double x, double y, double w, double h);
+QRectF* q_graphicspolygonitem_map_rect_to_item2(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToParent)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicspolygonitem_map_rect_to_parent2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicspolygonitem_map_rect_to_parent2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToScene)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicspolygonitem_map_rect_to_scene2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicspolygonitem_map_rect_to_scene2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicspolygonitem_map_from_item5(void* self, void* item, double x, double y);
+QPointF* q_graphicspolygonitem_map_from_item5(const void* self, const void* item, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicspolygonitem_map_from_parent5(void* self, double x, double y);
+QPointF* q_graphicspolygonitem_map_from_parent5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicspolygonitem_map_from_scene5(void* self, double x, double y);
+QPointF* q_graphicspolygonitem_map_from_scene5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicspolygonitem_map_from_item6(void* self, void* item, double x, double y, double w, double h);
+QPolygonF* q_graphicspolygonitem_map_from_item6(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicspolygonitem_map_from_parent6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicspolygonitem_map_from_parent6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicspolygonitem_map_from_scene6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicspolygonitem_map_from_scene6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicspolygonitem_map_rect_from_item2(void* self, void* item, double x, double y, double w, double h);
+QRectF* q_graphicspolygonitem_map_rect_from_item2(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromParent)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicspolygonitem_map_rect_from_parent2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicspolygonitem_map_rect_from_parent2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromScene)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicspolygonitem_map_rect_from_scene2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicspolygonitem_map_rect_from_scene2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isAncestorOf)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param child QGraphicsItem*
 ///
-bool q_graphicspolygonitem_is_ancestor_of(void* self, void* child);
+bool q_graphicspolygonitem_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#commonAncestorItem)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param other QGraphicsItem*
 ///
-QGraphicsItem* q_graphicspolygonitem_common_ancestor_item(void* self, void* other);
+QGraphicsItem* q_graphicspolygonitem_common_ancestor_item(const void* self, const void* other);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isUnderMouse)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
-bool q_graphicspolygonitem_is_under_mouse(void* self);
+bool q_graphicspolygonitem_is_under_mouse(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#data)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param key int
 ///
-QVariant* q_graphicspolygonitem_data(void* self, int key);
+QVariant* q_graphicspolygonitem_data(const void* self, int key);
 
 /// Inherited from QGraphicsItem
 ///
@@ -20401,17 +20263,17 @@ QVariant* q_graphicspolygonitem_data(void* self, int key);
 /// @param key int
 /// @param value QVariant*
 ///
-void q_graphicspolygonitem_set_data(void* self, int key, void* value);
+void q_graphicspolygonitem_set_data(void* self, int key, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodHints)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t q_graphicspolygonitem_input_method_hints(void* self);
+int32_t q_graphicspolygonitem_input_method_hints(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -20458,16 +20320,16 @@ void q_graphicspolygonitem_set_flag2(void* self, int32_t flag, bool enabled);
 /// @param mode enum QGraphicsItem__CacheMode
 /// @param cacheSize QSize*
 ///
-void q_graphicspolygonitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
+void q_graphicspolygonitem_set_cache_mode2(void* self, int32_t mode, const void* cacheSize);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param blockingPanel QGraphicsItem**
 ///
-bool q_graphicspolygonitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel);
+bool q_graphicspolygonitem_is_blocked_by_modal_panel1(const void* self, void** blockingPanel);
 
 /// Inherited from QGraphicsItem
 ///
@@ -20485,7 +20347,7 @@ void q_graphicspolygonitem_set_focus1(void* self, int32_t focusReason);
 /// @param self QGraphicsPolygonItem*
 /// @param rect QRectF*
 ///
-void q_graphicspolygonitem_ensure_visible1(void* self, void* rect);
+void q_graphicspolygonitem_ensure_visible1(void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -20495,7 +20357,7 @@ void q_graphicspolygonitem_ensure_visible1(void* self, void* rect);
 /// @param rect QRectF*
 /// @param xmargin int
 ///
-void q_graphicspolygonitem_ensure_visible22(void* self, void* rect, int xmargin);
+void q_graphicspolygonitem_ensure_visible22(void* self, const void* rect, int xmargin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -20506,7 +20368,7 @@ void q_graphicspolygonitem_ensure_visible22(void* self, void* rect, int xmargin)
 /// @param xmargin int
 /// @param ymargin int
 ///
-void q_graphicspolygonitem_ensure_visible3(void* self, void* rect, int xmargin, int ymargin);
+void q_graphicspolygonitem_ensure_visible3(void* self, const void* rect, int xmargin, int ymargin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -20539,11 +20401,11 @@ void q_graphicspolygonitem_ensure_visible6(void* self, double x, double y, doubl
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemTransform)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param other QGraphicsItem*
 /// @param ok bool*
 ///
-QTransform* q_graphicspolygonitem_item_transform2(void* self, void* other, bool* ok);
+QTransform* q_graphicspolygonitem_item_transform2(const void* self, const void* other, bool* ok);
 
 /// Inherited from QGraphicsItem
 ///
@@ -20553,27 +20415,27 @@ QTransform* q_graphicspolygonitem_item_transform2(void* self, void* other, bool*
 /// @param matrix QTransform*
 /// @param combine bool
 ///
-void q_graphicspolygonitem_set_transform2(void* self, void* matrix, bool combine);
+void q_graphicspolygonitem_set_transform2(void* self, const void* matrix, bool combine);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicspolygonitem_colliding_items1(void* self, int32_t mode);
+libqt_list q_graphicspolygonitem_colliding_items1(const void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param rect QRectF*
 ///
-bool q_graphicspolygonitem_is_obscured1(void* self, void* rect);
+bool q_graphicspolygonitem_is_obscured1(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -20582,7 +20444,7 @@ bool q_graphicspolygonitem_is_obscured1(void* self, void* rect);
 /// @param self QGraphicsPolygonItem*
 /// @param rect QRectF*
 ///
-void q_graphicspolygonitem_update1(void* self, void* rect);
+void q_graphicspolygonitem_update1(void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -20593,7 +20455,7 @@ void q_graphicspolygonitem_update1(void* self, void* rect);
 /// @param dy double
 /// @param rect QRectF*
 ///
-void q_graphicspolygonitem_scroll3(void* self, double dx, double dy, void* rect);
+void q_graphicspolygonitem_scroll3(void* self, double dx, double dy, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -20634,11 +20496,11 @@ void q_graphicspolygonitem_on_advance(void* self, void (*callback)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicspolygonitem_collides_with_item(void* self, void* other, int32_t mode);
+bool q_graphicspolygonitem_collides_with_item(const void* self, const void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -20646,11 +20508,11 @@ bool q_graphicspolygonitem_collides_with_item(void* self, void* other, int32_t m
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicspolygonitem_super_collides_with_item(void* self, void* other, int32_t mode);
+bool q_graphicspolygonitem_super_collides_with_item(const void* self, const void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -20658,10 +20520,10 @@ bool q_graphicspolygonitem_super_collides_with_item(void* self, void* other, int
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param callback bool func(QGraphicsPolygonItem* self, QGraphicsItem* other, enum Qt__ItemSelectionMode mode)
 ///
-void q_graphicspolygonitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
+void q_graphicspolygonitem_on_collides_with_item(const void* self, bool (*callback)(const void*, const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -20669,11 +20531,11 @@ void q_graphicspolygonitem_on_collides_with_item(void* self, bool (*callback)(vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicspolygonitem_collides_with_path(void* self, void* path, int32_t mode);
+bool q_graphicspolygonitem_collides_with_path(const void* self, const void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -20681,11 +20543,11 @@ bool q_graphicspolygonitem_collides_with_path(void* self, void* path, int32_t mo
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicspolygonitem_super_collides_with_path(void* self, void* path, int32_t mode);
+bool q_graphicspolygonitem_super_collides_with_path(const void* self, const void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -20693,10 +20555,10 @@ bool q_graphicspolygonitem_super_collides_with_path(void* self, void* path, int3
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param callback bool func(QGraphicsPolygonItem* self, QPainterPath* path, enum Qt__ItemSelectionMode mode)
 ///
-void q_graphicspolygonitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
+void q_graphicspolygonitem_on_collides_with_path(const void* self, bool (*callback)(const void*, const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -21366,10 +21228,10 @@ void q_graphicspolygonitem_on_input_method_event(void* self, void (*callback)(vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_graphicspolygonitem_input_method_query(void* self, int32_t query);
+QVariant* q_graphicspolygonitem_input_method_query(const void* self, int32_t query);
 
 /// Inherited from QGraphicsItem
 ///
@@ -21377,10 +21239,10 @@ QVariant* q_graphicspolygonitem_input_method_query(void* self, int32_t query);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_graphicspolygonitem_super_input_method_query(void* self, int32_t query);
+QVariant* q_graphicspolygonitem_super_input_method_query(const void* self, int32_t query);
 
 /// Inherited from QGraphicsItem
 ///
@@ -21388,12 +21250,12 @@ QVariant* q_graphicspolygonitem_super_input_method_query(void* self, int32_t que
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsPolygonItem*
+/// @param self const QGraphicsPolygonItem*
 /// @param callback QVariant* func(QGraphicsPolygonItem* self, enum Qt__InputMethodQuery query)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicspolygonitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void q_graphicspolygonitem_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -21405,7 +21267,7 @@ void q_graphicspolygonitem_on_input_method_query(void* self, QVariant* (*callbac
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
 ///
-QVariant* q_graphicspolygonitem_item_change(void* self, int32_t change, void* value);
+QVariant* q_graphicspolygonitem_item_change(void* self, int32_t change, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -21417,7 +21279,7 @@ QVariant* q_graphicspolygonitem_item_change(void* self, int32_t change, void* va
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
 ///
-QVariant* q_graphicspolygonitem_super_item_change(void* self, int32_t change, void* value);
+QVariant* q_graphicspolygonitem_super_item_change(void* self, int32_t change, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -21430,7 +21292,7 @@ QVariant* q_graphicspolygonitem_super_item_change(void* self, int32_t change, vo
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicspolygonitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
+void q_graphicspolygonitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -21459,9 +21321,9 @@ void q_graphicspolygonitem_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsPolygonItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsPolygonItem* self)
 ///
-void q_graphicspolygonitem_on_update_micro_focus(void* self, void (*callback)());
+void q_graphicspolygonitem_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -21490,9 +21352,9 @@ void q_graphicspolygonitem_super_add_to_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsPolygonItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsPolygonItem* self)
 ///
-void q_graphicspolygonitem_on_add_to_index(void* self, void (*callback)());
+void q_graphicspolygonitem_on_add_to_index(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -21521,9 +21383,9 @@ void q_graphicspolygonitem_super_remove_from_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsPolygonItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsPolygonItem* self)
 ///
-void q_graphicspolygonitem_on_remove_from_index(void* self, void (*callback)());
+void q_graphicspolygonitem_on_remove_from_index(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -21552,9 +21414,9 @@ void q_graphicspolygonitem_super_prepare_geometry_change(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsPolygonItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsPolygonItem* self)
 ///
-void q_graphicspolygonitem_on_prepare_geometry_change(void* self, void (*callback)());
+void q_graphicspolygonitem_on_prepare_geometry_change(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#dtor.QGraphicsPolygonItem)
 ///
@@ -21576,7 +21438,7 @@ QGraphicsLineItem* q_graphicslineitem_new();
 ///
 /// @param line QLineF*
 ///
-QGraphicsLineItem* q_graphicslineitem_new2(void* line);
+QGraphicsLineItem* q_graphicslineitem_new2(const void* line);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html)
 
@@ -21604,7 +21466,7 @@ QGraphicsLineItem* q_graphicslineitem_new4(void* parent);
 /// @param line QLineF*
 /// @param parent QGraphicsItem*
 ///
-QGraphicsLineItem* q_graphicslineitem_new5(void* line, void* parent);
+QGraphicsLineItem* q_graphicslineitem_new5(const void* line, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html)
 
@@ -21620,29 +21482,29 @@ QGraphicsLineItem* q_graphicslineitem_new6(double x1, double y1, double x2, doub
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#pen)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-QPen* q_graphicslineitem_pen(void* self);
+QPen* q_graphicslineitem_pen(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#setPen)
 ///
 /// @param self QGraphicsLineItem*
 /// @param pen QPen*
 ///
-void q_graphicslineitem_set_pen(void* self, void* pen);
+void q_graphicslineitem_set_pen(void* self, const void* pen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#line)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-QLineF* q_graphicslineitem_line(void* self);
+QLineF* q_graphicslineitem_line(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#setLine)
 ///
 /// @param self QGraphicsLineItem*
 /// @param line QLineF*
 ///
-void q_graphicslineitem_set_line(void* self, void* line);
+void q_graphicslineitem_set_line(void* self, const void* line);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#setLine)
 ///
@@ -21656,78 +21518,78 @@ void q_graphicslineitem_set_line2(void* self, double x1, double y1, double x2, d
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#boundingRect)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-QRectF* q_graphicslineitem_bounding_rect(void* self);
+QRectF* q_graphicslineitem_bounding_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#boundingRect)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsLineItem*
-/// @param callback QRectF* func()
+/// @param self const QGraphicsLineItem*
+/// @param callback QRectF* func(const QGraphicsLineItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicslineitem_on_bounding_rect(void* self, QRectF* (*callback)());
+void q_graphicslineitem_on_bounding_rect(const void* self, QRectF* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#boundingRect)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-QRectF* q_graphicslineitem_super_bounding_rect(void* self);
+QRectF* q_graphicslineitem_super_bounding_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#shape)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-QPainterPath* q_graphicslineitem_shape(void* self);
+QPainterPath* q_graphicslineitem_shape(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#shape)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsLineItem*
-/// @param callback QPainterPath* func()
+/// @param self const QGraphicsLineItem*
+/// @param callback QPainterPath* func(const QGraphicsLineItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicslineitem_on_shape(void* self, QPainterPath* (*callback)());
+void q_graphicslineitem_on_shape(const void* self, QPainterPath* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#shape)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-QPainterPath* q_graphicslineitem_super_shape(void* self);
+QPainterPath* q_graphicslineitem_super_shape(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#contains)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param point QPointF*
 ///
-bool q_graphicslineitem_contains(void* self, void* point);
+bool q_graphicslineitem_contains(const void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#contains)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsLineItem*
-/// @param callback bool func(QGraphicsLineItem* self, QPointF* point)
+/// @param self const QGraphicsLineItem*
+/// @param callback bool func(const QGraphicsLineItem* self, QPointF* point)
 ///
-void q_graphicslineitem_on_contains(void* self, bool (*callback)(void*, void*));
+void q_graphicslineitem_on_contains(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#contains)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param point QPointF*
 ///
-bool q_graphicslineitem_super_contains(void* self, void* point);
+bool q_graphicslineitem_super_contains(const void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#paint)
 ///
@@ -21736,7 +21598,7 @@ bool q_graphicslineitem_super_contains(void* self, void* point);
 /// @param option QStyleOptionGraphicsItem*
 /// @param widget QWidget*
 ///
-void q_graphicslineitem_paint(void* self, void* painter, void* option, void* widget);
+void q_graphicslineitem_paint(void* self, void* painter, const void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#paint)
 ///
@@ -21745,7 +21607,7 @@ void q_graphicslineitem_paint(void* self, void* painter, void* option, void* wid
 /// @param self QGraphicsLineItem*
 /// @param callback void func(QGraphicsLineItem* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget)
 ///
-void q_graphicslineitem_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
+void q_graphicslineitem_on_paint(void* self, void (*callback)(void*, void*, const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#paint)
 ///
@@ -21756,105 +21618,105 @@ void q_graphicslineitem_on_paint(void* self, void (*callback)(void*, void*, void
 /// @param option QStyleOptionGraphicsItem*
 /// @param widget QWidget*
 ///
-void q_graphicslineitem_super_paint(void* self, void* painter, void* option, void* widget);
+void q_graphicslineitem_super_paint(void* self, void* painter, const void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#isObscuredBy)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param item QGraphicsItem*
 ///
-bool q_graphicslineitem_is_obscured_by(void* self, void* item);
+bool q_graphicslineitem_is_obscured_by(const void* self, const void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#isObscuredBy)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsLineItem*
-/// @param callback bool func(QGraphicsLineItem* self, QGraphicsItem* item)
+/// @param self const QGraphicsLineItem*
+/// @param callback bool func(const QGraphicsLineItem* self, QGraphicsItem* item)
 ///
-void q_graphicslineitem_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
+void q_graphicslineitem_on_is_obscured_by(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#isObscuredBy)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param item QGraphicsItem*
 ///
-bool q_graphicslineitem_super_is_obscured_by(void* self, void* item);
+bool q_graphicslineitem_super_is_obscured_by(const void* self, const void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#opaqueArea)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-QPainterPath* q_graphicslineitem_opaque_area(void* self);
+QPainterPath* q_graphicslineitem_opaque_area(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#opaqueArea)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsLineItem*
-/// @param callback QPainterPath* func()
+/// @param self const QGraphicsLineItem*
+/// @param callback QPainterPath* func(const QGraphicsLineItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicslineitem_on_opaque_area(void* self, QPainterPath* (*callback)());
+void q_graphicslineitem_on_opaque_area(const void* self, QPainterPath* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#opaqueArea)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-QPainterPath* q_graphicslineitem_super_opaque_area(void* self);
+QPainterPath* q_graphicslineitem_super_opaque_area(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#type)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-int32_t q_graphicslineitem_type(void* self);
+int32_t q_graphicslineitem_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#type)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsLineItem*
-/// @param callback int32_t func()
+/// @param self const QGraphicsLineItem*
+/// @param callback int32_t func(const QGraphicsLineItem* self)
 ///
-void q_graphicslineitem_on_type(void* self, int32_t (*callback)());
+void q_graphicslineitem_on_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#type)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-int32_t q_graphicslineitem_super_type(void* self);
+int32_t q_graphicslineitem_super_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#supportsExtension)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_graphicslineitem_supports_extension(void* self, int32_t extension);
+bool q_graphicslineitem_supports_extension(const void* self, int32_t extension);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#supportsExtension)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsLineItem*
-/// @param callback bool func(QGraphicsLineItem* self, enum QGraphicsItem__Extension extension)
+/// @param self const QGraphicsLineItem*
+/// @param callback bool func(const QGraphicsLineItem* self, enum QGraphicsItem__Extension extension)
 ///
-void q_graphicslineitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t));
+void q_graphicslineitem_on_supports_extension(const void* self, bool (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#supportsExtension)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_graphicslineitem_super_supports_extension(void* self, int32_t extension);
+bool q_graphicslineitem_super_supports_extension(const void* self, int32_t extension);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#setExtension)
 ///
@@ -21862,7 +21724,7 @@ bool q_graphicslineitem_super_supports_extension(void* self, int32_t extension);
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_graphicslineitem_set_extension(void* self, int32_t extension, void* variant);
+void q_graphicslineitem_set_extension(void* self, int32_t extension, const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#setExtension)
 ///
@@ -21871,7 +21733,7 @@ void q_graphicslineitem_set_extension(void* self, int32_t extension, void* varia
 /// @param self QGraphicsLineItem*
 /// @param callback void func(QGraphicsLineItem* self, enum QGraphicsItem__Extension extension, QVariant* variant)
 ///
-void q_graphicslineitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*));
+void q_graphicslineitem_on_set_extension(void* self, void (*callback)(void*, int32_t, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#setExtension)
 ///
@@ -21881,98 +21743,98 @@ void q_graphicslineitem_on_set_extension(void* self, void (*callback)(void*, int
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_graphicslineitem_super_set_extension(void* self, int32_t extension, void* variant);
+void q_graphicslineitem_super_set_extension(void* self, int32_t extension, const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#extension)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param variant QVariant*
 ///
-QVariant* q_graphicslineitem_extension(void* self, void* variant);
+QVariant* q_graphicslineitem_extension(const void* self, const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#extension)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsLineItem*
-/// @param callback QVariant* func(QGraphicsLineItem* self, QVariant* variant)
+/// @param self const QGraphicsLineItem*
+/// @param callback QVariant* func(const QGraphicsLineItem* self, QVariant* variant)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicslineitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
+void q_graphicslineitem_on_extension(const void* self, QVariant* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#extension)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param variant QVariant*
 ///
-QVariant* q_graphicslineitem_super_extension(void* self, void* variant);
+QVariant* q_graphicslineitem_super_extension(const void* self, const void* variant);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scene)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-QGraphicsScene* q_graphicslineitem_scene(void* self);
+QGraphicsScene* q_graphicslineitem_scene(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentItem)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-QGraphicsItem* q_graphicslineitem_parent_item(void* self);
+QGraphicsItem* q_graphicslineitem_parent_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#topLevelItem)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-QGraphicsItem* q_graphicslineitem_top_level_item(void* self);
+QGraphicsItem* q_graphicslineitem_top_level_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentObject)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-QGraphicsObject* q_graphicslineitem_parent_object(void* self);
+QGraphicsObject* q_graphicslineitem_parent_object(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentWidget)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-QGraphicsWidget* q_graphicslineitem_parent_widget(void* self);
+QGraphicsWidget* q_graphicslineitem_parent_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#topLevelWidget)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-QGraphicsWidget* q_graphicslineitem_top_level_widget(void* self);
+QGraphicsWidget* q_graphicslineitem_top_level_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#window)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-QGraphicsWidget* q_graphicslineitem_window(void* self);
+QGraphicsWidget* q_graphicslineitem_window(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#panel)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-QGraphicsItem* q_graphicslineitem_panel(void* self);
+QGraphicsItem* q_graphicslineitem_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -21987,35 +21849,35 @@ void q_graphicslineitem_set_parent_item(void* self, void* parent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#childItems)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicslineitem_child_items(void* self);
+libqt_list q_graphicslineitem_child_items(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isWidget)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-bool q_graphicslineitem_is_widget(void* self);
+bool q_graphicslineitem_is_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isWindow)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-bool q_graphicslineitem_is_window(void* self);
+bool q_graphicslineitem_is_window(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isPanel)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-bool q_graphicslineitem_is_panel(void* self);
+bool q_graphicslineitem_is_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22029,17 +21891,17 @@ QGraphicsObject* q_graphicslineitem_to_graphics_object(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#toGraphicsObject)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-const QGraphicsObject* q_graphicslineitem_to_graphics_object2(void* self);
+const QGraphicsObject* q_graphicslineitem_to_graphics_object2(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#group)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-QGraphicsItemGroup* q_graphicslineitem_group(void* self);
+QGraphicsItemGroup* q_graphicslineitem_group(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22054,11 +21916,11 @@ void q_graphicslineitem_set_group(void* self, void* group);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#flags)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
 /// @return flag of enum QGraphicsItem__GraphicsItemFlag
 ///
-int32_t q_graphicslineitem_flags(void* self);
+int32_t q_graphicslineitem_flags(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22082,11 +21944,11 @@ void q_graphicslineitem_set_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#cacheMode)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
 /// @return enum QGraphicsItem__CacheMode
 ///
-int32_t q_graphicslineitem_cache_mode(void* self);
+int32_t q_graphicslineitem_cache_mode(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22101,11 +21963,11 @@ void q_graphicslineitem_set_cache_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#panelModality)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
 /// @return enum QGraphicsItem__PanelModality
 ///
-int32_t q_graphicslineitem_panel_modality(void* self);
+int32_t q_graphicslineitem_panel_modality(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22120,9 +21982,9 @@ void q_graphicslineitem_set_panel_modality(void* self, int32_t panelModality);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-bool q_graphicslineitem_is_blocked_by_modal_panel(void* self);
+bool q_graphicslineitem_is_blocked_by_modal_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22130,9 +21992,9 @@ bool q_graphicslineitem_is_blocked_by_modal_panel(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-const char* q_graphicslineitem_tool_tip(void* self);
+const char* q_graphicslineitem_tool_tip(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22147,9 +22009,9 @@ void q_graphicslineitem_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#cursor)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-QCursor* q_graphicslineitem_cursor(void* self);
+QCursor* q_graphicslineitem_cursor(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22158,15 +22020,15 @@ QCursor* q_graphicslineitem_cursor(void* self);
 /// @param self QGraphicsLineItem*
 /// @param cursor QCursor*
 ///
-void q_graphicslineitem_set_cursor(void* self, void* cursor);
+void q_graphicslineitem_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hasCursor)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-bool q_graphicslineitem_has_cursor(void* self);
+bool q_graphicslineitem_has_cursor(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22180,18 +22042,18 @@ void q_graphicslineitem_unset_cursor(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isVisible)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-bool q_graphicslineitem_is_visible(void* self);
+bool q_graphicslineitem_is_visible(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isVisibleTo)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param parent QGraphicsItem*
 ///
-bool q_graphicslineitem_is_visible_to(void* self, void* parent);
+bool q_graphicslineitem_is_visible_to(const void* self, const void* parent);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22222,9 +22084,9 @@ void q_graphicslineitem_show(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isEnabled)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-bool q_graphicslineitem_is_enabled(void* self);
+bool q_graphicslineitem_is_enabled(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22239,9 +22101,9 @@ void q_graphicslineitem_set_enabled(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isSelected)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-bool q_graphicslineitem_is_selected(void* self);
+bool q_graphicslineitem_is_selected(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22256,9 +22118,9 @@ void q_graphicslineitem_set_selected(void* self, bool selected);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptDrops)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-bool q_graphicslineitem_accept_drops(void* self);
+bool q_graphicslineitem_accept_drops(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22273,17 +22135,17 @@ void q_graphicslineitem_set_accept_drops(void* self, bool on);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#opacity)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-double q_graphicslineitem_opacity(void* self);
+double q_graphicslineitem_opacity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#effectiveOpacity)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-double q_graphicslineitem_effective_opacity(void* self);
+double q_graphicslineitem_effective_opacity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22298,9 +22160,9 @@ void q_graphicslineitem_set_opacity(void* self, double opacity);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#graphicsEffect)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-QGraphicsEffect* q_graphicslineitem_graphics_effect(void* self);
+QGraphicsEffect* q_graphicslineitem_graphics_effect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22315,11 +22177,11 @@ void q_graphicslineitem_set_graphics_effect(void* self, void* effect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptedMouseButtons)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
 /// @return flag of enum Qt__MouseButton
 ///
-int32_t q_graphicslineitem_accepted_mouse_buttons(void* self);
+int32_t q_graphicslineitem_accepted_mouse_buttons(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22334,9 +22196,9 @@ void q_graphicslineitem_set_accepted_mouse_buttons(void* self, int32_t buttons);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptHoverEvents)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-bool q_graphicslineitem_accept_hover_events(void* self);
+bool q_graphicslineitem_accept_hover_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22351,9 +22213,9 @@ void q_graphicslineitem_set_accept_hover_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptTouchEvents)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-bool q_graphicslineitem_accept_touch_events(void* self);
+bool q_graphicslineitem_accept_touch_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22368,9 +22230,9 @@ void q_graphicslineitem_set_accept_touch_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#filtersChildEvents)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-bool q_graphicslineitem_filters_child_events(void* self);
+bool q_graphicslineitem_filters_child_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22385,9 +22247,9 @@ void q_graphicslineitem_set_filters_child_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#handlesChildEvents)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-bool q_graphicslineitem_handles_child_events(void* self);
+bool q_graphicslineitem_handles_child_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22402,9 +22264,9 @@ void q_graphicslineitem_set_handles_child_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isActive)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-bool q_graphicslineitem_is_active(void* self);
+bool q_graphicslineitem_is_active(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22419,9 +22281,9 @@ void q_graphicslineitem_set_active(void* self, bool active);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hasFocus)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-bool q_graphicslineitem_has_focus(void* self);
+bool q_graphicslineitem_has_focus(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22443,9 +22305,9 @@ void q_graphicslineitem_clear_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusProxy)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-QGraphicsItem* q_graphicslineitem_focus_proxy(void* self);
+QGraphicsItem* q_graphicslineitem_focus_proxy(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22460,17 +22322,17 @@ void q_graphicslineitem_set_focus_proxy(void* self, void* item);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusItem)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-QGraphicsItem* q_graphicslineitem_focus_item(void* self);
+QGraphicsItem* q_graphicslineitem_focus_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusScopeItem)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-QGraphicsItem* q_graphicslineitem_focus_scope_item(void* self);
+QGraphicsItem* q_graphicslineitem_focus_scope_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22508,17 +22370,17 @@ void q_graphicslineitem_ungrab_keyboard(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#pos)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-QPointF* q_graphicslineitem_pos(void* self);
+QPointF* q_graphicslineitem_pos(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#x)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-double q_graphicslineitem_x(void* self);
+double q_graphicslineitem_x(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22533,9 +22395,9 @@ void q_graphicslineitem_set_x(void* self, double x);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#y)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-double q_graphicslineitem_y(void* self);
+double q_graphicslineitem_y(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22550,9 +22412,9 @@ void q_graphicslineitem_set_y(void* self, double y);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scenePos)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-QPointF* q_graphicslineitem_scene_pos(void* self);
+QPointF* q_graphicslineitem_scene_pos(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22561,7 +22423,7 @@ QPointF* q_graphicslineitem_scene_pos(void* self);
 /// @param self QGraphicsLineItem*
 /// @param pos QPointF*
 ///
-void q_graphicslineitem_set_pos(void* self, void* pos);
+void q_graphicslineitem_set_pos(void* self, const void* pos);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22607,35 +22469,35 @@ void q_graphicslineitem_ensure_visible2(void* self, double x, double y, double w
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transform)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-QTransform* q_graphicslineitem_transform(void* self);
+QTransform* q_graphicslineitem_transform(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneTransform)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-QTransform* q_graphicslineitem_scene_transform(void* self);
+QTransform* q_graphicslineitem_scene_transform(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#deviceTransform)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param viewportTransform QTransform*
 ///
-QTransform* q_graphicslineitem_device_transform(void* self, void* viewportTransform);
+QTransform* q_graphicslineitem_device_transform(const void* self, const void* viewportTransform);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemTransform)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param other QGraphicsItem*
 ///
-QTransform* q_graphicslineitem_item_transform(void* self, void* other);
+QTransform* q_graphicslineitem_item_transform(const void* self, const void* other);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22644,7 +22506,7 @@ QTransform* q_graphicslineitem_item_transform(void* self, void* other);
 /// @param self QGraphicsLineItem*
 /// @param matrix QTransform*
 ///
-void q_graphicslineitem_set_transform(void* self, void* matrix);
+void q_graphicslineitem_set_transform(void* self, const void* matrix);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22667,9 +22529,9 @@ void q_graphicslineitem_set_rotation(void* self, double angle);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#rotation)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-double q_graphicslineitem_rotation(void* self);
+double q_graphicslineitem_rotation(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22684,19 +22546,19 @@ void q_graphicslineitem_set_scale(void* self, double scale);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scale)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-double q_graphicslineitem_scale(void* self);
+double q_graphicslineitem_scale(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transformations)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
 /// @return libqt_list of QGraphicsTransform*
 ///
-libqt_list q_graphicslineitem_transformations(void* self);
+libqt_list q_graphicslineitem_transformations(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22711,9 +22573,9 @@ void q_graphicslineitem_set_transformations(void* self, libqt_list transformatio
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transformOriginPoint)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-QPointF* q_graphicslineitem_transform_origin_point(void* self);
+QPointF* q_graphicslineitem_transform_origin_point(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22722,7 +22584,7 @@ QPointF* q_graphicslineitem_transform_origin_point(void* self);
 /// @param self QGraphicsLineItem*
 /// @param origin QPointF*
 ///
-void q_graphicslineitem_set_transform_origin_point(void* self, void* origin);
+void q_graphicslineitem_set_transform_origin_point(void* self, const void* origin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22738,9 +22600,9 @@ void q_graphicslineitem_set_transform_origin_point2(void* self, double ax, doubl
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#zValue)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-double q_graphicslineitem_z_value(void* self);
+double q_graphicslineitem_z_value(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22758,86 +22620,86 @@ void q_graphicslineitem_set_z_value(void* self, double z);
 /// @param self QGraphicsLineItem*
 /// @param sibling QGraphicsItem*
 ///
-void q_graphicslineitem_stack_before(void* self, void* sibling);
+void q_graphicslineitem_stack_before(void* self, const void* sibling);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#childrenBoundingRect)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-QRectF* q_graphicslineitem_children_bounding_rect(void* self);
+QRectF* q_graphicslineitem_children_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneBoundingRect)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-QRectF* q_graphicslineitem_scene_bounding_rect(void* self);
+QRectF* q_graphicslineitem_scene_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isClipped)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-bool q_graphicslineitem_is_clipped(void* self);
+bool q_graphicslineitem_is_clipped(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#clipPath)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-QPainterPath* q_graphicslineitem_clip_path(void* self);
+QPainterPath* q_graphicslineitem_clip_path(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicslineitem_colliding_items(void* self);
+libqt_list q_graphicslineitem_colliding_items(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-bool q_graphicslineitem_is_obscured(void* self);
+bool q_graphicslineitem_is_obscured(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-bool q_graphicslineitem_is_obscured2(void* self, double x, double y, double w, double h);
+bool q_graphicslineitem_is_obscured2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRegion)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param itemToDeviceTransform QTransform*
 ///
-QRegion* q_graphicslineitem_bounding_region(void* self, void* itemToDeviceTransform);
+QRegion* q_graphicslineitem_bounding_region(const void* self, const void* itemToDeviceTransform);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRegionGranularity)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-double q_graphicslineitem_bounding_region_granularity(void* self);
+double q_graphicslineitem_bounding_region_granularity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22882,526 +22744,526 @@ void q_graphicslineitem_scroll(void* self, double dx, double dy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param item QGraphicsItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicslineitem_map_to_item(void* self, void* item, void* point);
+QPointF* q_graphicslineitem_map_to_item(const void* self, const void* item, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicslineitem_map_to_parent(void* self, void* point);
+QPointF* q_graphicslineitem_map_to_parent(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicslineitem_map_to_scene(void* self, void* point);
+QPointF* q_graphicslineitem_map_to_scene(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicslineitem_map_to_item2(void* self, void* item, void* rect);
+QPolygonF* q_graphicslineitem_map_to_item2(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicslineitem_map_to_parent2(void* self, void* rect);
+QPolygonF* q_graphicslineitem_map_to_parent2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicslineitem_map_to_scene2(void* self, void* rect);
+QPolygonF* q_graphicslineitem_map_to_scene2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicslineitem_map_rect_to_item(void* self, void* item, void* rect);
+QRectF* q_graphicslineitem_map_rect_to_item(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToParent)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicslineitem_map_rect_to_parent(void* self, void* rect);
+QRectF* q_graphicslineitem_map_rect_to_parent(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToScene)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicslineitem_map_rect_to_scene(void* self, void* rect);
+QRectF* q_graphicslineitem_map_rect_to_scene(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param item QGraphicsItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicslineitem_map_to_item3(void* self, void* item, void* polygon);
+QPolygonF* q_graphicslineitem_map_to_item3(const void* self, const void* item, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicslineitem_map_to_parent3(void* self, void* polygon);
+QPolygonF* q_graphicslineitem_map_to_parent3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicslineitem_map_to_scene3(void* self, void* polygon);
+QPolygonF* q_graphicslineitem_map_to_scene3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param item QGraphicsItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicslineitem_map_to_item4(void* self, void* item, void* path);
+QPainterPath* q_graphicslineitem_map_to_item4(const void* self, const void* item, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicslineitem_map_to_parent4(void* self, void* path);
+QPainterPath* q_graphicslineitem_map_to_parent4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicslineitem_map_to_scene4(void* self, void* path);
+QPainterPath* q_graphicslineitem_map_to_scene4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param item QGraphicsItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicslineitem_map_from_item(void* self, void* item, void* point);
+QPointF* q_graphicslineitem_map_from_item(const void* self, const void* item, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicslineitem_map_from_parent(void* self, void* point);
+QPointF* q_graphicslineitem_map_from_parent(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicslineitem_map_from_scene(void* self, void* point);
+QPointF* q_graphicslineitem_map_from_scene(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicslineitem_map_from_item2(void* self, void* item, void* rect);
+QPolygonF* q_graphicslineitem_map_from_item2(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicslineitem_map_from_parent2(void* self, void* rect);
+QPolygonF* q_graphicslineitem_map_from_parent2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicslineitem_map_from_scene2(void* self, void* rect);
+QPolygonF* q_graphicslineitem_map_from_scene2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicslineitem_map_rect_from_item(void* self, void* item, void* rect);
+QRectF* q_graphicslineitem_map_rect_from_item(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromParent)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicslineitem_map_rect_from_parent(void* self, void* rect);
+QRectF* q_graphicslineitem_map_rect_from_parent(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromScene)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicslineitem_map_rect_from_scene(void* self, void* rect);
+QRectF* q_graphicslineitem_map_rect_from_scene(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param item QGraphicsItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicslineitem_map_from_item3(void* self, void* item, void* polygon);
+QPolygonF* q_graphicslineitem_map_from_item3(const void* self, const void* item, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicslineitem_map_from_parent3(void* self, void* polygon);
+QPolygonF* q_graphicslineitem_map_from_parent3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicslineitem_map_from_scene3(void* self, void* polygon);
+QPolygonF* q_graphicslineitem_map_from_scene3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param item QGraphicsItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicslineitem_map_from_item4(void* self, void* item, void* path);
+QPainterPath* q_graphicslineitem_map_from_item4(const void* self, const void* item, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicslineitem_map_from_parent4(void* self, void* path);
+QPainterPath* q_graphicslineitem_map_from_parent4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicslineitem_map_from_scene4(void* self, void* path);
+QPainterPath* q_graphicslineitem_map_from_scene4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicslineitem_map_to_item5(void* self, void* item, double x, double y);
+QPointF* q_graphicslineitem_map_to_item5(const void* self, const void* item, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicslineitem_map_to_parent5(void* self, double x, double y);
+QPointF* q_graphicslineitem_map_to_parent5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicslineitem_map_to_scene5(void* self, double x, double y);
+QPointF* q_graphicslineitem_map_to_scene5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicslineitem_map_to_item6(void* self, void* item, double x, double y, double w, double h);
+QPolygonF* q_graphicslineitem_map_to_item6(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicslineitem_map_to_parent6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicslineitem_map_to_parent6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicslineitem_map_to_scene6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicslineitem_map_to_scene6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicslineitem_map_rect_to_item2(void* self, void* item, double x, double y, double w, double h);
+QRectF* q_graphicslineitem_map_rect_to_item2(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToParent)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicslineitem_map_rect_to_parent2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicslineitem_map_rect_to_parent2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToScene)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicslineitem_map_rect_to_scene2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicslineitem_map_rect_to_scene2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicslineitem_map_from_item5(void* self, void* item, double x, double y);
+QPointF* q_graphicslineitem_map_from_item5(const void* self, const void* item, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicslineitem_map_from_parent5(void* self, double x, double y);
+QPointF* q_graphicslineitem_map_from_parent5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicslineitem_map_from_scene5(void* self, double x, double y);
+QPointF* q_graphicslineitem_map_from_scene5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicslineitem_map_from_item6(void* self, void* item, double x, double y, double w, double h);
+QPolygonF* q_graphicslineitem_map_from_item6(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicslineitem_map_from_parent6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicslineitem_map_from_parent6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicslineitem_map_from_scene6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicslineitem_map_from_scene6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicslineitem_map_rect_from_item2(void* self, void* item, double x, double y, double w, double h);
+QRectF* q_graphicslineitem_map_rect_from_item2(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromParent)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicslineitem_map_rect_from_parent2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicslineitem_map_rect_from_parent2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromScene)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicslineitem_map_rect_from_scene2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicslineitem_map_rect_from_scene2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isAncestorOf)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param child QGraphicsItem*
 ///
-bool q_graphicslineitem_is_ancestor_of(void* self, void* child);
+bool q_graphicslineitem_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#commonAncestorItem)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param other QGraphicsItem*
 ///
-QGraphicsItem* q_graphicslineitem_common_ancestor_item(void* self, void* other);
+QGraphicsItem* q_graphicslineitem_common_ancestor_item(const void* self, const void* other);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isUnderMouse)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
-bool q_graphicslineitem_is_under_mouse(void* self);
+bool q_graphicslineitem_is_under_mouse(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#data)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param key int
 ///
-QVariant* q_graphicslineitem_data(void* self, int key);
+QVariant* q_graphicslineitem_data(const void* self, int key);
 
 /// Inherited from QGraphicsItem
 ///
@@ -23411,17 +23273,17 @@ QVariant* q_graphicslineitem_data(void* self, int key);
 /// @param key int
 /// @param value QVariant*
 ///
-void q_graphicslineitem_set_data(void* self, int key, void* value);
+void q_graphicslineitem_set_data(void* self, int key, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodHints)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t q_graphicslineitem_input_method_hints(void* self);
+int32_t q_graphicslineitem_input_method_hints(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -23468,16 +23330,16 @@ void q_graphicslineitem_set_flag2(void* self, int32_t flag, bool enabled);
 /// @param mode enum QGraphicsItem__CacheMode
 /// @param cacheSize QSize*
 ///
-void q_graphicslineitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
+void q_graphicslineitem_set_cache_mode2(void* self, int32_t mode, const void* cacheSize);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param blockingPanel QGraphicsItem**
 ///
-bool q_graphicslineitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel);
+bool q_graphicslineitem_is_blocked_by_modal_panel1(const void* self, void** blockingPanel);
 
 /// Inherited from QGraphicsItem
 ///
@@ -23495,7 +23357,7 @@ void q_graphicslineitem_set_focus1(void* self, int32_t focusReason);
 /// @param self QGraphicsLineItem*
 /// @param rect QRectF*
 ///
-void q_graphicslineitem_ensure_visible1(void* self, void* rect);
+void q_graphicslineitem_ensure_visible1(void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -23505,7 +23367,7 @@ void q_graphicslineitem_ensure_visible1(void* self, void* rect);
 /// @param rect QRectF*
 /// @param xmargin int
 ///
-void q_graphicslineitem_ensure_visible22(void* self, void* rect, int xmargin);
+void q_graphicslineitem_ensure_visible22(void* self, const void* rect, int xmargin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -23516,7 +23378,7 @@ void q_graphicslineitem_ensure_visible22(void* self, void* rect, int xmargin);
 /// @param xmargin int
 /// @param ymargin int
 ///
-void q_graphicslineitem_ensure_visible3(void* self, void* rect, int xmargin, int ymargin);
+void q_graphicslineitem_ensure_visible3(void* self, const void* rect, int xmargin, int ymargin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -23549,11 +23411,11 @@ void q_graphicslineitem_ensure_visible6(void* self, double x, double y, double w
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemTransform)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param other QGraphicsItem*
 /// @param ok bool*
 ///
-QTransform* q_graphicslineitem_item_transform2(void* self, void* other, bool* ok);
+QTransform* q_graphicslineitem_item_transform2(const void* self, const void* other, bool* ok);
 
 /// Inherited from QGraphicsItem
 ///
@@ -23563,27 +23425,27 @@ QTransform* q_graphicslineitem_item_transform2(void* self, void* other, bool* ok
 /// @param matrix QTransform*
 /// @param combine bool
 ///
-void q_graphicslineitem_set_transform2(void* self, void* matrix, bool combine);
+void q_graphicslineitem_set_transform2(void* self, const void* matrix, bool combine);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicslineitem_colliding_items1(void* self, int32_t mode);
+libqt_list q_graphicslineitem_colliding_items1(const void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param rect QRectF*
 ///
-bool q_graphicslineitem_is_obscured1(void* self, void* rect);
+bool q_graphicslineitem_is_obscured1(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -23592,7 +23454,7 @@ bool q_graphicslineitem_is_obscured1(void* self, void* rect);
 /// @param self QGraphicsLineItem*
 /// @param rect QRectF*
 ///
-void q_graphicslineitem_update1(void* self, void* rect);
+void q_graphicslineitem_update1(void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -23603,7 +23465,7 @@ void q_graphicslineitem_update1(void* self, void* rect);
 /// @param dy double
 /// @param rect QRectF*
 ///
-void q_graphicslineitem_scroll3(void* self, double dx, double dy, void* rect);
+void q_graphicslineitem_scroll3(void* self, double dx, double dy, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -23644,11 +23506,11 @@ void q_graphicslineitem_on_advance(void* self, void (*callback)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicslineitem_collides_with_item(void* self, void* other, int32_t mode);
+bool q_graphicslineitem_collides_with_item(const void* self, const void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -23656,11 +23518,11 @@ bool q_graphicslineitem_collides_with_item(void* self, void* other, int32_t mode
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicslineitem_super_collides_with_item(void* self, void* other, int32_t mode);
+bool q_graphicslineitem_super_collides_with_item(const void* self, const void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -23668,10 +23530,10 @@ bool q_graphicslineitem_super_collides_with_item(void* self, void* other, int32_
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param callback bool func(QGraphicsLineItem* self, QGraphicsItem* other, enum Qt__ItemSelectionMode mode)
 ///
-void q_graphicslineitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
+void q_graphicslineitem_on_collides_with_item(const void* self, bool (*callback)(const void*, const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -23679,11 +23541,11 @@ void q_graphicslineitem_on_collides_with_item(void* self, bool (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicslineitem_collides_with_path(void* self, void* path, int32_t mode);
+bool q_graphicslineitem_collides_with_path(const void* self, const void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -23691,11 +23553,11 @@ bool q_graphicslineitem_collides_with_path(void* self, void* path, int32_t mode)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicslineitem_super_collides_with_path(void* self, void* path, int32_t mode);
+bool q_graphicslineitem_super_collides_with_path(const void* self, const void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -23703,10 +23565,10 @@ bool q_graphicslineitem_super_collides_with_path(void* self, void* path, int32_t
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param callback bool func(QGraphicsLineItem* self, QPainterPath* path, enum Qt__ItemSelectionMode mode)
 ///
-void q_graphicslineitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
+void q_graphicslineitem_on_collides_with_path(const void* self, bool (*callback)(const void*, const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -24376,10 +24238,10 @@ void q_graphicslineitem_on_input_method_event(void* self, void (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_graphicslineitem_input_method_query(void* self, int32_t query);
+QVariant* q_graphicslineitem_input_method_query(const void* self, int32_t query);
 
 /// Inherited from QGraphicsItem
 ///
@@ -24387,10 +24249,10 @@ QVariant* q_graphicslineitem_input_method_query(void* self, int32_t query);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_graphicslineitem_super_input_method_query(void* self, int32_t query);
+QVariant* q_graphicslineitem_super_input_method_query(const void* self, int32_t query);
 
 /// Inherited from QGraphicsItem
 ///
@@ -24398,12 +24260,12 @@ QVariant* q_graphicslineitem_super_input_method_query(void* self, int32_t query)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsLineItem*
+/// @param self const QGraphicsLineItem*
 /// @param callback QVariant* func(QGraphicsLineItem* self, enum Qt__InputMethodQuery query)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicslineitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void q_graphicslineitem_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -24415,7 +24277,7 @@ void q_graphicslineitem_on_input_method_query(void* self, QVariant* (*callback)(
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
 ///
-QVariant* q_graphicslineitem_item_change(void* self, int32_t change, void* value);
+QVariant* q_graphicslineitem_item_change(void* self, int32_t change, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -24427,7 +24289,7 @@ QVariant* q_graphicslineitem_item_change(void* self, int32_t change, void* value
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
 ///
-QVariant* q_graphicslineitem_super_item_change(void* self, int32_t change, void* value);
+QVariant* q_graphicslineitem_super_item_change(void* self, int32_t change, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -24440,7 +24302,7 @@ QVariant* q_graphicslineitem_super_item_change(void* self, int32_t change, void*
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicslineitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
+void q_graphicslineitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -24469,9 +24331,9 @@ void q_graphicslineitem_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsLineItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsLineItem* self)
 ///
-void q_graphicslineitem_on_update_micro_focus(void* self, void (*callback)());
+void q_graphicslineitem_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -24500,9 +24362,9 @@ void q_graphicslineitem_super_add_to_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsLineItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsLineItem* self)
 ///
-void q_graphicslineitem_on_add_to_index(void* self, void (*callback)());
+void q_graphicslineitem_on_add_to_index(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -24531,9 +24393,9 @@ void q_graphicslineitem_super_remove_from_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsLineItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsLineItem* self)
 ///
-void q_graphicslineitem_on_remove_from_index(void* self, void (*callback)());
+void q_graphicslineitem_on_remove_from_index(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -24562,9 +24424,9 @@ void q_graphicslineitem_super_prepare_geometry_change(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsLineItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsLineItem* self)
 ///
-void q_graphicslineitem_on_prepare_geometry_change(void* self, void (*callback)());
+void q_graphicslineitem_on_prepare_geometry_change(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#dtor.QGraphicsLineItem)
 ///
@@ -24586,7 +24448,7 @@ QGraphicsPixmapItem* q_graphicspixmapitem_new();
 ///
 /// @param pixmap QPixmap*
 ///
-QGraphicsPixmapItem* q_graphicspixmapitem_new2(void* pixmap);
+QGraphicsPixmapItem* q_graphicspixmapitem_new2(const void* pixmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html)
 
@@ -24603,28 +24465,28 @@ QGraphicsPixmapItem* q_graphicspixmapitem_new3(void* parent);
 /// @param pixmap QPixmap*
 /// @param parent QGraphicsItem*
 ///
-QGraphicsPixmapItem* q_graphicspixmapitem_new4(void* pixmap, void* parent);
+QGraphicsPixmapItem* q_graphicspixmapitem_new4(const void* pixmap, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#pixmap)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-QPixmap* q_graphicspixmapitem_pixmap(void* self);
+QPixmap* q_graphicspixmapitem_pixmap(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#setPixmap)
 ///
 /// @param self QGraphicsPixmapItem*
 /// @param pixmap QPixmap*
 ///
-void q_graphicspixmapitem_set_pixmap(void* self, void* pixmap);
+void q_graphicspixmapitem_set_pixmap(void* self, const void* pixmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#transformationMode)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
 /// @return enum Qt__TransformationMode
 ///
-int32_t q_graphicspixmapitem_transformation_mode(void* self);
+int32_t q_graphicspixmapitem_transformation_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#setTransformationMode)
 ///
@@ -24635,16 +24497,16 @@ void q_graphicspixmapitem_set_transformation_mode(void* self, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#offset)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-QPointF* q_graphicspixmapitem_offset(void* self);
+QPointF* q_graphicspixmapitem_offset(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#setOffset)
 ///
 /// @param self QGraphicsPixmapItem*
 /// @param offset QPointF*
 ///
-void q_graphicspixmapitem_set_offset(void* self, void* offset);
+void q_graphicspixmapitem_set_offset(void* self, const void* offset);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#setOffset)
 ///
@@ -24656,78 +24518,78 @@ void q_graphicspixmapitem_set_offset2(void* self, double x, double y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#boundingRect)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-QRectF* q_graphicspixmapitem_bounding_rect(void* self);
+QRectF* q_graphicspixmapitem_bounding_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#boundingRect)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsPixmapItem*
-/// @param callback QRectF* func()
+/// @param self const QGraphicsPixmapItem*
+/// @param callback QRectF* func(const QGraphicsPixmapItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicspixmapitem_on_bounding_rect(void* self, QRectF* (*callback)());
+void q_graphicspixmapitem_on_bounding_rect(const void* self, QRectF* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#boundingRect)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-QRectF* q_graphicspixmapitem_super_bounding_rect(void* self);
+QRectF* q_graphicspixmapitem_super_bounding_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#shape)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-QPainterPath* q_graphicspixmapitem_shape(void* self);
+QPainterPath* q_graphicspixmapitem_shape(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#shape)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsPixmapItem*
-/// @param callback QPainterPath* func()
+/// @param self const QGraphicsPixmapItem*
+/// @param callback QPainterPath* func(const QGraphicsPixmapItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicspixmapitem_on_shape(void* self, QPainterPath* (*callback)());
+void q_graphicspixmapitem_on_shape(const void* self, QPainterPath* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#shape)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-QPainterPath* q_graphicspixmapitem_super_shape(void* self);
+QPainterPath* q_graphicspixmapitem_super_shape(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#contains)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param point QPointF*
 ///
-bool q_graphicspixmapitem_contains(void* self, void* point);
+bool q_graphicspixmapitem_contains(const void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#contains)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsPixmapItem*
-/// @param callback bool func(QGraphicsPixmapItem* self, QPointF* point)
+/// @param self const QGraphicsPixmapItem*
+/// @param callback bool func(const QGraphicsPixmapItem* self, QPointF* point)
 ///
-void q_graphicspixmapitem_on_contains(void* self, bool (*callback)(void*, void*));
+void q_graphicspixmapitem_on_contains(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#contains)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param point QPointF*
 ///
-bool q_graphicspixmapitem_super_contains(void* self, void* point);
+bool q_graphicspixmapitem_super_contains(const void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#paint)
 ///
@@ -24736,7 +24598,7 @@ bool q_graphicspixmapitem_super_contains(void* self, void* point);
 /// @param option QStyleOptionGraphicsItem*
 /// @param widget QWidget*
 ///
-void q_graphicspixmapitem_paint(void* self, void* painter, void* option, void* widget);
+void q_graphicspixmapitem_paint(void* self, void* painter, const void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#paint)
 ///
@@ -24745,7 +24607,7 @@ void q_graphicspixmapitem_paint(void* self, void* painter, void* option, void* w
 /// @param self QGraphicsPixmapItem*
 /// @param callback void func(QGraphicsPixmapItem* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget)
 ///
-void q_graphicspixmapitem_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
+void q_graphicspixmapitem_on_paint(void* self, void (*callback)(void*, void*, const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#paint)
 ///
@@ -24756,88 +24618,88 @@ void q_graphicspixmapitem_on_paint(void* self, void (*callback)(void*, void*, vo
 /// @param option QStyleOptionGraphicsItem*
 /// @param widget QWidget*
 ///
-void q_graphicspixmapitem_super_paint(void* self, void* painter, void* option, void* widget);
+void q_graphicspixmapitem_super_paint(void* self, void* painter, const void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#isObscuredBy)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param item QGraphicsItem*
 ///
-bool q_graphicspixmapitem_is_obscured_by(void* self, void* item);
+bool q_graphicspixmapitem_is_obscured_by(const void* self, const void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#isObscuredBy)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsPixmapItem*
-/// @param callback bool func(QGraphicsPixmapItem* self, QGraphicsItem* item)
+/// @param self const QGraphicsPixmapItem*
+/// @param callback bool func(const QGraphicsPixmapItem* self, QGraphicsItem* item)
 ///
-void q_graphicspixmapitem_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
+void q_graphicspixmapitem_on_is_obscured_by(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#isObscuredBy)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param item QGraphicsItem*
 ///
-bool q_graphicspixmapitem_super_is_obscured_by(void* self, void* item);
+bool q_graphicspixmapitem_super_is_obscured_by(const void* self, const void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#opaqueArea)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-QPainterPath* q_graphicspixmapitem_opaque_area(void* self);
+QPainterPath* q_graphicspixmapitem_opaque_area(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#opaqueArea)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsPixmapItem*
-/// @param callback QPainterPath* func()
+/// @param self const QGraphicsPixmapItem*
+/// @param callback QPainterPath* func(const QGraphicsPixmapItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicspixmapitem_on_opaque_area(void* self, QPainterPath* (*callback)());
+void q_graphicspixmapitem_on_opaque_area(const void* self, QPainterPath* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#opaqueArea)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-QPainterPath* q_graphicspixmapitem_super_opaque_area(void* self);
+QPainterPath* q_graphicspixmapitem_super_opaque_area(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#type)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-int32_t q_graphicspixmapitem_type(void* self);
+int32_t q_graphicspixmapitem_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#type)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsPixmapItem*
-/// @param callback int32_t func()
+/// @param self const QGraphicsPixmapItem*
+/// @param callback int32_t func(const QGraphicsPixmapItem* self)
 ///
-void q_graphicspixmapitem_on_type(void* self, int32_t (*callback)());
+void q_graphicspixmapitem_on_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#type)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-int32_t q_graphicspixmapitem_super_type(void* self);
+int32_t q_graphicspixmapitem_super_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#shapeMode)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
 /// @return enum QGraphicsPixmapItem__ShapeMode
 ///
-int32_t q_graphicspixmapitem_shape_mode(void* self);
+int32_t q_graphicspixmapitem_shape_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#setShapeMode)
 ///
@@ -24848,28 +24710,28 @@ void q_graphicspixmapitem_set_shape_mode(void* self, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#supportsExtension)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_graphicspixmapitem_supports_extension(void* self, int32_t extension);
+bool q_graphicspixmapitem_supports_extension(const void* self, int32_t extension);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#supportsExtension)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsPixmapItem*
-/// @param callback bool func(QGraphicsPixmapItem* self, enum QGraphicsItem__Extension extension)
+/// @param self const QGraphicsPixmapItem*
+/// @param callback bool func(const QGraphicsPixmapItem* self, enum QGraphicsItem__Extension extension)
 ///
-void q_graphicspixmapitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t));
+void q_graphicspixmapitem_on_supports_extension(const void* self, bool (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#supportsExtension)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_graphicspixmapitem_super_supports_extension(void* self, int32_t extension);
+bool q_graphicspixmapitem_super_supports_extension(const void* self, int32_t extension);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#setExtension)
 ///
@@ -24877,7 +24739,7 @@ bool q_graphicspixmapitem_super_supports_extension(void* self, int32_t extension
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_graphicspixmapitem_set_extension(void* self, int32_t extension, void* variant);
+void q_graphicspixmapitem_set_extension(void* self, int32_t extension, const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#setExtension)
 ///
@@ -24886,7 +24748,7 @@ void q_graphicspixmapitem_set_extension(void* self, int32_t extension, void* var
 /// @param self QGraphicsPixmapItem*
 /// @param callback void func(QGraphicsPixmapItem* self, enum QGraphicsItem__Extension extension, QVariant* variant)
 ///
-void q_graphicspixmapitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*));
+void q_graphicspixmapitem_on_set_extension(void* self, void (*callback)(void*, int32_t, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#setExtension)
 ///
@@ -24896,98 +24758,98 @@ void q_graphicspixmapitem_on_set_extension(void* self, void (*callback)(void*, i
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_graphicspixmapitem_super_set_extension(void* self, int32_t extension, void* variant);
+void q_graphicspixmapitem_super_set_extension(void* self, int32_t extension, const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#extension)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param variant QVariant*
 ///
-QVariant* q_graphicspixmapitem_extension(void* self, void* variant);
+QVariant* q_graphicspixmapitem_extension(const void* self, const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#extension)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsPixmapItem*
-/// @param callback QVariant* func(QGraphicsPixmapItem* self, QVariant* variant)
+/// @param self const QGraphicsPixmapItem*
+/// @param callback QVariant* func(const QGraphicsPixmapItem* self, QVariant* variant)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicspixmapitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
+void q_graphicspixmapitem_on_extension(const void* self, QVariant* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#extension)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param variant QVariant*
 ///
-QVariant* q_graphicspixmapitem_super_extension(void* self, void* variant);
+QVariant* q_graphicspixmapitem_super_extension(const void* self, const void* variant);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scene)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-QGraphicsScene* q_graphicspixmapitem_scene(void* self);
+QGraphicsScene* q_graphicspixmapitem_scene(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentItem)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-QGraphicsItem* q_graphicspixmapitem_parent_item(void* self);
+QGraphicsItem* q_graphicspixmapitem_parent_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#topLevelItem)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-QGraphicsItem* q_graphicspixmapitem_top_level_item(void* self);
+QGraphicsItem* q_graphicspixmapitem_top_level_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentObject)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-QGraphicsObject* q_graphicspixmapitem_parent_object(void* self);
+QGraphicsObject* q_graphicspixmapitem_parent_object(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentWidget)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-QGraphicsWidget* q_graphicspixmapitem_parent_widget(void* self);
+QGraphicsWidget* q_graphicspixmapitem_parent_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#topLevelWidget)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-QGraphicsWidget* q_graphicspixmapitem_top_level_widget(void* self);
+QGraphicsWidget* q_graphicspixmapitem_top_level_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#window)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-QGraphicsWidget* q_graphicspixmapitem_window(void* self);
+QGraphicsWidget* q_graphicspixmapitem_window(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#panel)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-QGraphicsItem* q_graphicspixmapitem_panel(void* self);
+QGraphicsItem* q_graphicspixmapitem_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25002,35 +24864,35 @@ void q_graphicspixmapitem_set_parent_item(void* self, void* parent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#childItems)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicspixmapitem_child_items(void* self);
+libqt_list q_graphicspixmapitem_child_items(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isWidget)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-bool q_graphicspixmapitem_is_widget(void* self);
+bool q_graphicspixmapitem_is_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isWindow)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-bool q_graphicspixmapitem_is_window(void* self);
+bool q_graphicspixmapitem_is_window(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isPanel)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-bool q_graphicspixmapitem_is_panel(void* self);
+bool q_graphicspixmapitem_is_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25044,17 +24906,17 @@ QGraphicsObject* q_graphicspixmapitem_to_graphics_object(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#toGraphicsObject)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-const QGraphicsObject* q_graphicspixmapitem_to_graphics_object2(void* self);
+const QGraphicsObject* q_graphicspixmapitem_to_graphics_object2(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#group)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-QGraphicsItemGroup* q_graphicspixmapitem_group(void* self);
+QGraphicsItemGroup* q_graphicspixmapitem_group(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25069,11 +24931,11 @@ void q_graphicspixmapitem_set_group(void* self, void* group);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#flags)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
 /// @return flag of enum QGraphicsItem__GraphicsItemFlag
 ///
-int32_t q_graphicspixmapitem_flags(void* self);
+int32_t q_graphicspixmapitem_flags(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25097,11 +24959,11 @@ void q_graphicspixmapitem_set_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#cacheMode)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
 /// @return enum QGraphicsItem__CacheMode
 ///
-int32_t q_graphicspixmapitem_cache_mode(void* self);
+int32_t q_graphicspixmapitem_cache_mode(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25116,11 +24978,11 @@ void q_graphicspixmapitem_set_cache_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#panelModality)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
 /// @return enum QGraphicsItem__PanelModality
 ///
-int32_t q_graphicspixmapitem_panel_modality(void* self);
+int32_t q_graphicspixmapitem_panel_modality(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25135,9 +24997,9 @@ void q_graphicspixmapitem_set_panel_modality(void* self, int32_t panelModality);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-bool q_graphicspixmapitem_is_blocked_by_modal_panel(void* self);
+bool q_graphicspixmapitem_is_blocked_by_modal_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25145,9 +25007,9 @@ bool q_graphicspixmapitem_is_blocked_by_modal_panel(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-const char* q_graphicspixmapitem_tool_tip(void* self);
+const char* q_graphicspixmapitem_tool_tip(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25162,9 +25024,9 @@ void q_graphicspixmapitem_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#cursor)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-QCursor* q_graphicspixmapitem_cursor(void* self);
+QCursor* q_graphicspixmapitem_cursor(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25173,15 +25035,15 @@ QCursor* q_graphicspixmapitem_cursor(void* self);
 /// @param self QGraphicsPixmapItem*
 /// @param cursor QCursor*
 ///
-void q_graphicspixmapitem_set_cursor(void* self, void* cursor);
+void q_graphicspixmapitem_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hasCursor)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-bool q_graphicspixmapitem_has_cursor(void* self);
+bool q_graphicspixmapitem_has_cursor(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25195,18 +25057,18 @@ void q_graphicspixmapitem_unset_cursor(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isVisible)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-bool q_graphicspixmapitem_is_visible(void* self);
+bool q_graphicspixmapitem_is_visible(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isVisibleTo)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param parent QGraphicsItem*
 ///
-bool q_graphicspixmapitem_is_visible_to(void* self, void* parent);
+bool q_graphicspixmapitem_is_visible_to(const void* self, const void* parent);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25237,9 +25099,9 @@ void q_graphicspixmapitem_show(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isEnabled)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-bool q_graphicspixmapitem_is_enabled(void* self);
+bool q_graphicspixmapitem_is_enabled(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25254,9 +25116,9 @@ void q_graphicspixmapitem_set_enabled(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isSelected)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-bool q_graphicspixmapitem_is_selected(void* self);
+bool q_graphicspixmapitem_is_selected(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25271,9 +25133,9 @@ void q_graphicspixmapitem_set_selected(void* self, bool selected);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptDrops)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-bool q_graphicspixmapitem_accept_drops(void* self);
+bool q_graphicspixmapitem_accept_drops(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25288,17 +25150,17 @@ void q_graphicspixmapitem_set_accept_drops(void* self, bool on);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#opacity)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-double q_graphicspixmapitem_opacity(void* self);
+double q_graphicspixmapitem_opacity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#effectiveOpacity)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-double q_graphicspixmapitem_effective_opacity(void* self);
+double q_graphicspixmapitem_effective_opacity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25313,9 +25175,9 @@ void q_graphicspixmapitem_set_opacity(void* self, double opacity);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#graphicsEffect)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-QGraphicsEffect* q_graphicspixmapitem_graphics_effect(void* self);
+QGraphicsEffect* q_graphicspixmapitem_graphics_effect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25330,11 +25192,11 @@ void q_graphicspixmapitem_set_graphics_effect(void* self, void* effect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptedMouseButtons)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
 /// @return flag of enum Qt__MouseButton
 ///
-int32_t q_graphicspixmapitem_accepted_mouse_buttons(void* self);
+int32_t q_graphicspixmapitem_accepted_mouse_buttons(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25349,9 +25211,9 @@ void q_graphicspixmapitem_set_accepted_mouse_buttons(void* self, int32_t buttons
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptHoverEvents)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-bool q_graphicspixmapitem_accept_hover_events(void* self);
+bool q_graphicspixmapitem_accept_hover_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25366,9 +25228,9 @@ void q_graphicspixmapitem_set_accept_hover_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptTouchEvents)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-bool q_graphicspixmapitem_accept_touch_events(void* self);
+bool q_graphicspixmapitem_accept_touch_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25383,9 +25245,9 @@ void q_graphicspixmapitem_set_accept_touch_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#filtersChildEvents)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-bool q_graphicspixmapitem_filters_child_events(void* self);
+bool q_graphicspixmapitem_filters_child_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25400,9 +25262,9 @@ void q_graphicspixmapitem_set_filters_child_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#handlesChildEvents)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-bool q_graphicspixmapitem_handles_child_events(void* self);
+bool q_graphicspixmapitem_handles_child_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25417,9 +25279,9 @@ void q_graphicspixmapitem_set_handles_child_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isActive)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-bool q_graphicspixmapitem_is_active(void* self);
+bool q_graphicspixmapitem_is_active(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25434,9 +25296,9 @@ void q_graphicspixmapitem_set_active(void* self, bool active);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hasFocus)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-bool q_graphicspixmapitem_has_focus(void* self);
+bool q_graphicspixmapitem_has_focus(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25458,9 +25320,9 @@ void q_graphicspixmapitem_clear_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusProxy)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-QGraphicsItem* q_graphicspixmapitem_focus_proxy(void* self);
+QGraphicsItem* q_graphicspixmapitem_focus_proxy(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25475,17 +25337,17 @@ void q_graphicspixmapitem_set_focus_proxy(void* self, void* item);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusItem)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-QGraphicsItem* q_graphicspixmapitem_focus_item(void* self);
+QGraphicsItem* q_graphicspixmapitem_focus_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusScopeItem)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-QGraphicsItem* q_graphicspixmapitem_focus_scope_item(void* self);
+QGraphicsItem* q_graphicspixmapitem_focus_scope_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25523,17 +25385,17 @@ void q_graphicspixmapitem_ungrab_keyboard(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#pos)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-QPointF* q_graphicspixmapitem_pos(void* self);
+QPointF* q_graphicspixmapitem_pos(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#x)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-double q_graphicspixmapitem_x(void* self);
+double q_graphicspixmapitem_x(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25548,9 +25410,9 @@ void q_graphicspixmapitem_set_x(void* self, double x);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#y)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-double q_graphicspixmapitem_y(void* self);
+double q_graphicspixmapitem_y(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25565,9 +25427,9 @@ void q_graphicspixmapitem_set_y(void* self, double y);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scenePos)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-QPointF* q_graphicspixmapitem_scene_pos(void* self);
+QPointF* q_graphicspixmapitem_scene_pos(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25576,7 +25438,7 @@ QPointF* q_graphicspixmapitem_scene_pos(void* self);
 /// @param self QGraphicsPixmapItem*
 /// @param pos QPointF*
 ///
-void q_graphicspixmapitem_set_pos(void* self, void* pos);
+void q_graphicspixmapitem_set_pos(void* self, const void* pos);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25622,35 +25484,35 @@ void q_graphicspixmapitem_ensure_visible2(void* self, double x, double y, double
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transform)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-QTransform* q_graphicspixmapitem_transform(void* self);
+QTransform* q_graphicspixmapitem_transform(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneTransform)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-QTransform* q_graphicspixmapitem_scene_transform(void* self);
+QTransform* q_graphicspixmapitem_scene_transform(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#deviceTransform)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param viewportTransform QTransform*
 ///
-QTransform* q_graphicspixmapitem_device_transform(void* self, void* viewportTransform);
+QTransform* q_graphicspixmapitem_device_transform(const void* self, const void* viewportTransform);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemTransform)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param other QGraphicsItem*
 ///
-QTransform* q_graphicspixmapitem_item_transform(void* self, void* other);
+QTransform* q_graphicspixmapitem_item_transform(const void* self, const void* other);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25659,7 +25521,7 @@ QTransform* q_graphicspixmapitem_item_transform(void* self, void* other);
 /// @param self QGraphicsPixmapItem*
 /// @param matrix QTransform*
 ///
-void q_graphicspixmapitem_set_transform(void* self, void* matrix);
+void q_graphicspixmapitem_set_transform(void* self, const void* matrix);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25682,9 +25544,9 @@ void q_graphicspixmapitem_set_rotation(void* self, double angle);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#rotation)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-double q_graphicspixmapitem_rotation(void* self);
+double q_graphicspixmapitem_rotation(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25699,19 +25561,19 @@ void q_graphicspixmapitem_set_scale(void* self, double scale);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scale)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-double q_graphicspixmapitem_scale(void* self);
+double q_graphicspixmapitem_scale(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transformations)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
 /// @return libqt_list of QGraphicsTransform*
 ///
-libqt_list q_graphicspixmapitem_transformations(void* self);
+libqt_list q_graphicspixmapitem_transformations(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25726,9 +25588,9 @@ void q_graphicspixmapitem_set_transformations(void* self, libqt_list transformat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transformOriginPoint)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-QPointF* q_graphicspixmapitem_transform_origin_point(void* self);
+QPointF* q_graphicspixmapitem_transform_origin_point(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25737,7 +25599,7 @@ QPointF* q_graphicspixmapitem_transform_origin_point(void* self);
 /// @param self QGraphicsPixmapItem*
 /// @param origin QPointF*
 ///
-void q_graphicspixmapitem_set_transform_origin_point(void* self, void* origin);
+void q_graphicspixmapitem_set_transform_origin_point(void* self, const void* origin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25753,9 +25615,9 @@ void q_graphicspixmapitem_set_transform_origin_point2(void* self, double ax, dou
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#zValue)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-double q_graphicspixmapitem_z_value(void* self);
+double q_graphicspixmapitem_z_value(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25773,86 +25635,86 @@ void q_graphicspixmapitem_set_z_value(void* self, double z);
 /// @param self QGraphicsPixmapItem*
 /// @param sibling QGraphicsItem*
 ///
-void q_graphicspixmapitem_stack_before(void* self, void* sibling);
+void q_graphicspixmapitem_stack_before(void* self, const void* sibling);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#childrenBoundingRect)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-QRectF* q_graphicspixmapitem_children_bounding_rect(void* self);
+QRectF* q_graphicspixmapitem_children_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneBoundingRect)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-QRectF* q_graphicspixmapitem_scene_bounding_rect(void* self);
+QRectF* q_graphicspixmapitem_scene_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isClipped)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-bool q_graphicspixmapitem_is_clipped(void* self);
+bool q_graphicspixmapitem_is_clipped(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#clipPath)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-QPainterPath* q_graphicspixmapitem_clip_path(void* self);
+QPainterPath* q_graphicspixmapitem_clip_path(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicspixmapitem_colliding_items(void* self);
+libqt_list q_graphicspixmapitem_colliding_items(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-bool q_graphicspixmapitem_is_obscured(void* self);
+bool q_graphicspixmapitem_is_obscured(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-bool q_graphicspixmapitem_is_obscured2(void* self, double x, double y, double w, double h);
+bool q_graphicspixmapitem_is_obscured2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRegion)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param itemToDeviceTransform QTransform*
 ///
-QRegion* q_graphicspixmapitem_bounding_region(void* self, void* itemToDeviceTransform);
+QRegion* q_graphicspixmapitem_bounding_region(const void* self, const void* itemToDeviceTransform);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRegionGranularity)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-double q_graphicspixmapitem_bounding_region_granularity(void* self);
+double q_graphicspixmapitem_bounding_region_granularity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25897,526 +25759,526 @@ void q_graphicspixmapitem_scroll(void* self, double dx, double dy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param item QGraphicsItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicspixmapitem_map_to_item(void* self, void* item, void* point);
+QPointF* q_graphicspixmapitem_map_to_item(const void* self, const void* item, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicspixmapitem_map_to_parent(void* self, void* point);
+QPointF* q_graphicspixmapitem_map_to_parent(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicspixmapitem_map_to_scene(void* self, void* point);
+QPointF* q_graphicspixmapitem_map_to_scene(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicspixmapitem_map_to_item2(void* self, void* item, void* rect);
+QPolygonF* q_graphicspixmapitem_map_to_item2(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicspixmapitem_map_to_parent2(void* self, void* rect);
+QPolygonF* q_graphicspixmapitem_map_to_parent2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicspixmapitem_map_to_scene2(void* self, void* rect);
+QPolygonF* q_graphicspixmapitem_map_to_scene2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicspixmapitem_map_rect_to_item(void* self, void* item, void* rect);
+QRectF* q_graphicspixmapitem_map_rect_to_item(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToParent)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicspixmapitem_map_rect_to_parent(void* self, void* rect);
+QRectF* q_graphicspixmapitem_map_rect_to_parent(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToScene)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicspixmapitem_map_rect_to_scene(void* self, void* rect);
+QRectF* q_graphicspixmapitem_map_rect_to_scene(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param item QGraphicsItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicspixmapitem_map_to_item3(void* self, void* item, void* polygon);
+QPolygonF* q_graphicspixmapitem_map_to_item3(const void* self, const void* item, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicspixmapitem_map_to_parent3(void* self, void* polygon);
+QPolygonF* q_graphicspixmapitem_map_to_parent3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicspixmapitem_map_to_scene3(void* self, void* polygon);
+QPolygonF* q_graphicspixmapitem_map_to_scene3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param item QGraphicsItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicspixmapitem_map_to_item4(void* self, void* item, void* path);
+QPainterPath* q_graphicspixmapitem_map_to_item4(const void* self, const void* item, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicspixmapitem_map_to_parent4(void* self, void* path);
+QPainterPath* q_graphicspixmapitem_map_to_parent4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicspixmapitem_map_to_scene4(void* self, void* path);
+QPainterPath* q_graphicspixmapitem_map_to_scene4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param item QGraphicsItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicspixmapitem_map_from_item(void* self, void* item, void* point);
+QPointF* q_graphicspixmapitem_map_from_item(const void* self, const void* item, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicspixmapitem_map_from_parent(void* self, void* point);
+QPointF* q_graphicspixmapitem_map_from_parent(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicspixmapitem_map_from_scene(void* self, void* point);
+QPointF* q_graphicspixmapitem_map_from_scene(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicspixmapitem_map_from_item2(void* self, void* item, void* rect);
+QPolygonF* q_graphicspixmapitem_map_from_item2(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicspixmapitem_map_from_parent2(void* self, void* rect);
+QPolygonF* q_graphicspixmapitem_map_from_parent2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicspixmapitem_map_from_scene2(void* self, void* rect);
+QPolygonF* q_graphicspixmapitem_map_from_scene2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicspixmapitem_map_rect_from_item(void* self, void* item, void* rect);
+QRectF* q_graphicspixmapitem_map_rect_from_item(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromParent)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicspixmapitem_map_rect_from_parent(void* self, void* rect);
+QRectF* q_graphicspixmapitem_map_rect_from_parent(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromScene)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicspixmapitem_map_rect_from_scene(void* self, void* rect);
+QRectF* q_graphicspixmapitem_map_rect_from_scene(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param item QGraphicsItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicspixmapitem_map_from_item3(void* self, void* item, void* polygon);
+QPolygonF* q_graphicspixmapitem_map_from_item3(const void* self, const void* item, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicspixmapitem_map_from_parent3(void* self, void* polygon);
+QPolygonF* q_graphicspixmapitem_map_from_parent3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicspixmapitem_map_from_scene3(void* self, void* polygon);
+QPolygonF* q_graphicspixmapitem_map_from_scene3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param item QGraphicsItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicspixmapitem_map_from_item4(void* self, void* item, void* path);
+QPainterPath* q_graphicspixmapitem_map_from_item4(const void* self, const void* item, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicspixmapitem_map_from_parent4(void* self, void* path);
+QPainterPath* q_graphicspixmapitem_map_from_parent4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicspixmapitem_map_from_scene4(void* self, void* path);
+QPainterPath* q_graphicspixmapitem_map_from_scene4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicspixmapitem_map_to_item5(void* self, void* item, double x, double y);
+QPointF* q_graphicspixmapitem_map_to_item5(const void* self, const void* item, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicspixmapitem_map_to_parent5(void* self, double x, double y);
+QPointF* q_graphicspixmapitem_map_to_parent5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicspixmapitem_map_to_scene5(void* self, double x, double y);
+QPointF* q_graphicspixmapitem_map_to_scene5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicspixmapitem_map_to_item6(void* self, void* item, double x, double y, double w, double h);
+QPolygonF* q_graphicspixmapitem_map_to_item6(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicspixmapitem_map_to_parent6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicspixmapitem_map_to_parent6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicspixmapitem_map_to_scene6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicspixmapitem_map_to_scene6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicspixmapitem_map_rect_to_item2(void* self, void* item, double x, double y, double w, double h);
+QRectF* q_graphicspixmapitem_map_rect_to_item2(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToParent)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicspixmapitem_map_rect_to_parent2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicspixmapitem_map_rect_to_parent2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToScene)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicspixmapitem_map_rect_to_scene2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicspixmapitem_map_rect_to_scene2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicspixmapitem_map_from_item5(void* self, void* item, double x, double y);
+QPointF* q_graphicspixmapitem_map_from_item5(const void* self, const void* item, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicspixmapitem_map_from_parent5(void* self, double x, double y);
+QPointF* q_graphicspixmapitem_map_from_parent5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicspixmapitem_map_from_scene5(void* self, double x, double y);
+QPointF* q_graphicspixmapitem_map_from_scene5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicspixmapitem_map_from_item6(void* self, void* item, double x, double y, double w, double h);
+QPolygonF* q_graphicspixmapitem_map_from_item6(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicspixmapitem_map_from_parent6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicspixmapitem_map_from_parent6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicspixmapitem_map_from_scene6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicspixmapitem_map_from_scene6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicspixmapitem_map_rect_from_item2(void* self, void* item, double x, double y, double w, double h);
+QRectF* q_graphicspixmapitem_map_rect_from_item2(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromParent)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicspixmapitem_map_rect_from_parent2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicspixmapitem_map_rect_from_parent2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromScene)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicspixmapitem_map_rect_from_scene2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicspixmapitem_map_rect_from_scene2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isAncestorOf)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param child QGraphicsItem*
 ///
-bool q_graphicspixmapitem_is_ancestor_of(void* self, void* child);
+bool q_graphicspixmapitem_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#commonAncestorItem)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param other QGraphicsItem*
 ///
-QGraphicsItem* q_graphicspixmapitem_common_ancestor_item(void* self, void* other);
+QGraphicsItem* q_graphicspixmapitem_common_ancestor_item(const void* self, const void* other);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isUnderMouse)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
-bool q_graphicspixmapitem_is_under_mouse(void* self);
+bool q_graphicspixmapitem_is_under_mouse(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#data)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param key int
 ///
-QVariant* q_graphicspixmapitem_data(void* self, int key);
+QVariant* q_graphicspixmapitem_data(const void* self, int key);
 
 /// Inherited from QGraphicsItem
 ///
@@ -26426,17 +26288,17 @@ QVariant* q_graphicspixmapitem_data(void* self, int key);
 /// @param key int
 /// @param value QVariant*
 ///
-void q_graphicspixmapitem_set_data(void* self, int key, void* value);
+void q_graphicspixmapitem_set_data(void* self, int key, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodHints)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t q_graphicspixmapitem_input_method_hints(void* self);
+int32_t q_graphicspixmapitem_input_method_hints(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -26483,16 +26345,16 @@ void q_graphicspixmapitem_set_flag2(void* self, int32_t flag, bool enabled);
 /// @param mode enum QGraphicsItem__CacheMode
 /// @param cacheSize QSize*
 ///
-void q_graphicspixmapitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
+void q_graphicspixmapitem_set_cache_mode2(void* self, int32_t mode, const void* cacheSize);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param blockingPanel QGraphicsItem**
 ///
-bool q_graphicspixmapitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel);
+bool q_graphicspixmapitem_is_blocked_by_modal_panel1(const void* self, void** blockingPanel);
 
 /// Inherited from QGraphicsItem
 ///
@@ -26510,7 +26372,7 @@ void q_graphicspixmapitem_set_focus1(void* self, int32_t focusReason);
 /// @param self QGraphicsPixmapItem*
 /// @param rect QRectF*
 ///
-void q_graphicspixmapitem_ensure_visible1(void* self, void* rect);
+void q_graphicspixmapitem_ensure_visible1(void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -26520,7 +26382,7 @@ void q_graphicspixmapitem_ensure_visible1(void* self, void* rect);
 /// @param rect QRectF*
 /// @param xmargin int
 ///
-void q_graphicspixmapitem_ensure_visible22(void* self, void* rect, int xmargin);
+void q_graphicspixmapitem_ensure_visible22(void* self, const void* rect, int xmargin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -26531,7 +26393,7 @@ void q_graphicspixmapitem_ensure_visible22(void* self, void* rect, int xmargin);
 /// @param xmargin int
 /// @param ymargin int
 ///
-void q_graphicspixmapitem_ensure_visible3(void* self, void* rect, int xmargin, int ymargin);
+void q_graphicspixmapitem_ensure_visible3(void* self, const void* rect, int xmargin, int ymargin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -26564,11 +26426,11 @@ void q_graphicspixmapitem_ensure_visible6(void* self, double x, double y, double
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemTransform)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param other QGraphicsItem*
 /// @param ok bool*
 ///
-QTransform* q_graphicspixmapitem_item_transform2(void* self, void* other, bool* ok);
+QTransform* q_graphicspixmapitem_item_transform2(const void* self, const void* other, bool* ok);
 
 /// Inherited from QGraphicsItem
 ///
@@ -26578,27 +26440,27 @@ QTransform* q_graphicspixmapitem_item_transform2(void* self, void* other, bool* 
 /// @param matrix QTransform*
 /// @param combine bool
 ///
-void q_graphicspixmapitem_set_transform2(void* self, void* matrix, bool combine);
+void q_graphicspixmapitem_set_transform2(void* self, const void* matrix, bool combine);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicspixmapitem_colliding_items1(void* self, int32_t mode);
+libqt_list q_graphicspixmapitem_colliding_items1(const void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param rect QRectF*
 ///
-bool q_graphicspixmapitem_is_obscured1(void* self, void* rect);
+bool q_graphicspixmapitem_is_obscured1(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -26607,7 +26469,7 @@ bool q_graphicspixmapitem_is_obscured1(void* self, void* rect);
 /// @param self QGraphicsPixmapItem*
 /// @param rect QRectF*
 ///
-void q_graphicspixmapitem_update1(void* self, void* rect);
+void q_graphicspixmapitem_update1(void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -26618,7 +26480,7 @@ void q_graphicspixmapitem_update1(void* self, void* rect);
 /// @param dy double
 /// @param rect QRectF*
 ///
-void q_graphicspixmapitem_scroll3(void* self, double dx, double dy, void* rect);
+void q_graphicspixmapitem_scroll3(void* self, double dx, double dy, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -26659,11 +26521,11 @@ void q_graphicspixmapitem_on_advance(void* self, void (*callback)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicspixmapitem_collides_with_item(void* self, void* other, int32_t mode);
+bool q_graphicspixmapitem_collides_with_item(const void* self, const void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -26671,11 +26533,11 @@ bool q_graphicspixmapitem_collides_with_item(void* self, void* other, int32_t mo
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicspixmapitem_super_collides_with_item(void* self, void* other, int32_t mode);
+bool q_graphicspixmapitem_super_collides_with_item(const void* self, const void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -26683,10 +26545,10 @@ bool q_graphicspixmapitem_super_collides_with_item(void* self, void* other, int3
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param callback bool func(QGraphicsPixmapItem* self, QGraphicsItem* other, enum Qt__ItemSelectionMode mode)
 ///
-void q_graphicspixmapitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
+void q_graphicspixmapitem_on_collides_with_item(const void* self, bool (*callback)(const void*, const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -26694,11 +26556,11 @@ void q_graphicspixmapitem_on_collides_with_item(void* self, bool (*callback)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicspixmapitem_collides_with_path(void* self, void* path, int32_t mode);
+bool q_graphicspixmapitem_collides_with_path(const void* self, const void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -26706,11 +26568,11 @@ bool q_graphicspixmapitem_collides_with_path(void* self, void* path, int32_t mod
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicspixmapitem_super_collides_with_path(void* self, void* path, int32_t mode);
+bool q_graphicspixmapitem_super_collides_with_path(const void* self, const void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -26718,10 +26580,10 @@ bool q_graphicspixmapitem_super_collides_with_path(void* self, void* path, int32
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param callback bool func(QGraphicsPixmapItem* self, QPainterPath* path, enum Qt__ItemSelectionMode mode)
 ///
-void q_graphicspixmapitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
+void q_graphicspixmapitem_on_collides_with_path(const void* self, bool (*callback)(const void*, const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -27391,10 +27253,10 @@ void q_graphicspixmapitem_on_input_method_event(void* self, void (*callback)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_graphicspixmapitem_input_method_query(void* self, int32_t query);
+QVariant* q_graphicspixmapitem_input_method_query(const void* self, int32_t query);
 
 /// Inherited from QGraphicsItem
 ///
@@ -27402,10 +27264,10 @@ QVariant* q_graphicspixmapitem_input_method_query(void* self, int32_t query);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_graphicspixmapitem_super_input_method_query(void* self, int32_t query);
+QVariant* q_graphicspixmapitem_super_input_method_query(const void* self, int32_t query);
 
 /// Inherited from QGraphicsItem
 ///
@@ -27413,12 +27275,12 @@ QVariant* q_graphicspixmapitem_super_input_method_query(void* self, int32_t quer
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsPixmapItem*
+/// @param self const QGraphicsPixmapItem*
 /// @param callback QVariant* func(QGraphicsPixmapItem* self, enum Qt__InputMethodQuery query)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicspixmapitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void q_graphicspixmapitem_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -27430,7 +27292,7 @@ void q_graphicspixmapitem_on_input_method_query(void* self, QVariant* (*callback
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
 ///
-QVariant* q_graphicspixmapitem_item_change(void* self, int32_t change, void* value);
+QVariant* q_graphicspixmapitem_item_change(void* self, int32_t change, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -27442,7 +27304,7 @@ QVariant* q_graphicspixmapitem_item_change(void* self, int32_t change, void* val
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
 ///
-QVariant* q_graphicspixmapitem_super_item_change(void* self, int32_t change, void* value);
+QVariant* q_graphicspixmapitem_super_item_change(void* self, int32_t change, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -27455,7 +27317,7 @@ QVariant* q_graphicspixmapitem_super_item_change(void* self, int32_t change, voi
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicspixmapitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
+void q_graphicspixmapitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -27484,9 +27346,9 @@ void q_graphicspixmapitem_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsPixmapItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsPixmapItem* self)
 ///
-void q_graphicspixmapitem_on_update_micro_focus(void* self, void (*callback)());
+void q_graphicspixmapitem_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -27515,9 +27377,9 @@ void q_graphicspixmapitem_super_add_to_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsPixmapItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsPixmapItem* self)
 ///
-void q_graphicspixmapitem_on_add_to_index(void* self, void (*callback)());
+void q_graphicspixmapitem_on_add_to_index(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -27546,9 +27408,9 @@ void q_graphicspixmapitem_super_remove_from_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsPixmapItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsPixmapItem* self)
 ///
-void q_graphicspixmapitem_on_remove_from_index(void* self, void (*callback)());
+void q_graphicspixmapitem_on_remove_from_index(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -27577,9 +27439,9 @@ void q_graphicspixmapitem_super_prepare_geometry_change(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsPixmapItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsPixmapItem* self)
 ///
-void q_graphicspixmapitem_on_prepare_geometry_change(void* self, void (*callback)());
+void q_graphicspixmapitem_on_prepare_geometry_change(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#dtor.QGraphicsPixmapItem)
 ///
@@ -27622,26 +27484,26 @@ QGraphicsTextItem* q_graphicstextitem_new4(const char* text, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-const QMetaObject* q_graphicstextitem_meta_object(void* self);
+const QMetaObject* q_graphicstextitem_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsTextItem*
-/// @param callback const QMetaObject* func()
+/// @param self const QGraphicsTextItem*
+/// @param callback const QMetaObject* func(const QGraphicsTextItem* self)
 ///
-void q_graphicstextitem_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_graphicstextitem_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-const QMetaObject* q_graphicstextitem_super_meta_object(void* self);
+const QMetaObject* q_graphicstextitem_super_meta_object(const void* self);
 
 /// @param self QGraphicsTextItem*
 /// @param param1 const char*
@@ -27697,9 +27559,9 @@ const char* q_graphicstextitem_tr(const char* s);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-const char* q_graphicstextitem_to_html(void* self);
+const char* q_graphicstextitem_to_html(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#setHtml)
 ///
@@ -27712,9 +27574,9 @@ void q_graphicstextitem_set_html(void* self, const char* html);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-const char* q_graphicstextitem_to_plain_text(void* self);
+const char* q_graphicstextitem_to_plain_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#setPlainText)
 ///
@@ -27725,104 +27587,104 @@ void q_graphicstextitem_set_plain_text(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#font)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QFont* q_graphicstextitem_font(void* self);
+QFont* q_graphicstextitem_font(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#setFont)
 ///
 /// @param self QGraphicsTextItem*
 /// @param font QFont*
 ///
-void q_graphicstextitem_set_font(void* self, void* font);
+void q_graphicstextitem_set_font(void* self, const void* font);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#setDefaultTextColor)
 ///
 /// @param self QGraphicsTextItem*
 /// @param c QColor*
 ///
-void q_graphicstextitem_set_default_text_color(void* self, void* c);
+void q_graphicstextitem_set_default_text_color(void* self, const void* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#defaultTextColor)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QColor* q_graphicstextitem_default_text_color(void* self);
+QColor* q_graphicstextitem_default_text_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#boundingRect)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QRectF* q_graphicstextitem_bounding_rect(void* self);
+QRectF* q_graphicstextitem_bounding_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#boundingRect)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsTextItem*
-/// @param callback QRectF* func()
+/// @param self const QGraphicsTextItem*
+/// @param callback QRectF* func(const QGraphicsTextItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicstextitem_on_bounding_rect(void* self, QRectF* (*callback)());
+void q_graphicstextitem_on_bounding_rect(const void* self, QRectF* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#boundingRect)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QRectF* q_graphicstextitem_super_bounding_rect(void* self);
+QRectF* q_graphicstextitem_super_bounding_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#shape)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QPainterPath* q_graphicstextitem_shape(void* self);
+QPainterPath* q_graphicstextitem_shape(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#shape)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsTextItem*
-/// @param callback QPainterPath* func()
+/// @param self const QGraphicsTextItem*
+/// @param callback QPainterPath* func(const QGraphicsTextItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicstextitem_on_shape(void* self, QPainterPath* (*callback)());
+void q_graphicstextitem_on_shape(const void* self, QPainterPath* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#shape)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QPainterPath* q_graphicstextitem_super_shape(void* self);
+QPainterPath* q_graphicstextitem_super_shape(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#contains)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param point QPointF*
 ///
-bool q_graphicstextitem_contains(void* self, void* point);
+bool q_graphicstextitem_contains(const void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#contains)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsTextItem*
-/// @param callback bool func(QGraphicsTextItem* self, QPointF* point)
+/// @param self const QGraphicsTextItem*
+/// @param callback bool func(const QGraphicsTextItem* self, QPointF* point)
 ///
-void q_graphicstextitem_on_contains(void* self, bool (*callback)(void*, void*));
+void q_graphicstextitem_on_contains(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#contains)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param point QPointF*
 ///
-bool q_graphicstextitem_super_contains(void* self, void* point);
+bool q_graphicstextitem_super_contains(const void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#paint)
 ///
@@ -27831,7 +27693,7 @@ bool q_graphicstextitem_super_contains(void* self, void* point);
 /// @param option QStyleOptionGraphicsItem*
 /// @param widget QWidget*
 ///
-void q_graphicstextitem_paint(void* self, void* painter, void* option, void* widget);
+void q_graphicstextitem_paint(void* self, void* painter, const void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#paint)
 ///
@@ -27840,7 +27702,7 @@ void q_graphicstextitem_paint(void* self, void* painter, void* option, void* wid
 /// @param self QGraphicsTextItem*
 /// @param callback void func(QGraphicsTextItem* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget)
 ///
-void q_graphicstextitem_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
+void q_graphicstextitem_on_paint(void* self, void (*callback)(void*, void*, const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#paint)
 ///
@@ -27851,80 +27713,80 @@ void q_graphicstextitem_on_paint(void* self, void (*callback)(void*, void*, void
 /// @param option QStyleOptionGraphicsItem*
 /// @param widget QWidget*
 ///
-void q_graphicstextitem_super_paint(void* self, void* painter, void* option, void* widget);
+void q_graphicstextitem_super_paint(void* self, void* painter, const void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#isObscuredBy)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param item QGraphicsItem*
 ///
-bool q_graphicstextitem_is_obscured_by(void* self, void* item);
+bool q_graphicstextitem_is_obscured_by(const void* self, const void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#isObscuredBy)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsTextItem*
-/// @param callback bool func(QGraphicsTextItem* self, QGraphicsItem* item)
+/// @param self const QGraphicsTextItem*
+/// @param callback bool func(const QGraphicsTextItem* self, QGraphicsItem* item)
 ///
-void q_graphicstextitem_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
+void q_graphicstextitem_on_is_obscured_by(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#isObscuredBy)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param item QGraphicsItem*
 ///
-bool q_graphicstextitem_super_is_obscured_by(void* self, void* item);
+bool q_graphicstextitem_super_is_obscured_by(const void* self, const void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#opaqueArea)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QPainterPath* q_graphicstextitem_opaque_area(void* self);
+QPainterPath* q_graphicstextitem_opaque_area(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#opaqueArea)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsTextItem*
-/// @param callback QPainterPath* func()
+/// @param self const QGraphicsTextItem*
+/// @param callback QPainterPath* func(const QGraphicsTextItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicstextitem_on_opaque_area(void* self, QPainterPath* (*callback)());
+void q_graphicstextitem_on_opaque_area(const void* self, QPainterPath* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#opaqueArea)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QPainterPath* q_graphicstextitem_super_opaque_area(void* self);
+QPainterPath* q_graphicstextitem_super_opaque_area(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#type)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-int32_t q_graphicstextitem_type(void* self);
+int32_t q_graphicstextitem_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#type)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsTextItem*
-/// @param callback int32_t func()
+/// @param self const QGraphicsTextItem*
+/// @param callback int32_t func(const QGraphicsTextItem* self)
 ///
-void q_graphicstextitem_on_type(void* self, int32_t (*callback)());
+void q_graphicstextitem_on_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#type)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-int32_t q_graphicstextitem_super_type(void* self);
+int32_t q_graphicstextitem_super_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#setTextWidth)
 ///
@@ -27935,9 +27797,9 @@ void q_graphicstextitem_set_text_width(void* self, double width);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#textWidth)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-double q_graphicstextitem_text_width(void* self);
+double q_graphicstextitem_text_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#adjustSize)
 ///
@@ -27954,9 +27816,9 @@ void q_graphicstextitem_set_document(void* self, void* document);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#document)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QTextDocument* q_graphicstextitem_document(void* self);
+QTextDocument* q_graphicstextitem_document(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#setTextInteractionFlags)
 ///
@@ -27967,11 +27829,11 @@ void q_graphicstextitem_set_text_interaction_flags(void* self, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#textInteractionFlags)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
 /// @return flag of enum Qt__TextInteractionFlag
 ///
-int32_t q_graphicstextitem_text_interaction_flags(void* self);
+int32_t q_graphicstextitem_text_interaction_flags(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#setTabChangesFocus)
 ///
@@ -27982,9 +27844,9 @@ void q_graphicstextitem_set_tab_changes_focus(void* self, bool b);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#tabChangesFocus)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-bool q_graphicstextitem_tab_changes_focus(void* self);
+bool q_graphicstextitem_tab_changes_focus(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#setOpenExternalLinks)
 ///
@@ -27995,22 +27857,22 @@ void q_graphicstextitem_set_open_external_links(void* self, bool open);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#openExternalLinks)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-bool q_graphicstextitem_open_external_links(void* self);
+bool q_graphicstextitem_open_external_links(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#setTextCursor)
 ///
 /// @param self QGraphicsTextItem*
 /// @param cursor QTextCursor*
 ///
-void q_graphicstextitem_set_text_cursor(void* self, void* cursor);
+void q_graphicstextitem_set_text_cursor(void* self, const void* cursor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#textCursor)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QTextCursor* q_graphicstextitem_text_cursor(void* self);
+QTextCursor* q_graphicstextitem_text_cursor(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#linkActivated)
 ///
@@ -28492,55 +28354,55 @@ void q_graphicstextitem_super_hover_leave_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#inputMethodQuery)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_graphicstextitem_input_method_query(void* self, int32_t query);
+QVariant* q_graphicstextitem_input_method_query(const void* self, int32_t query);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#inputMethodQuery)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsTextItem*
-/// @param callback QVariant* func(QGraphicsTextItem* self, enum Qt__InputMethodQuery query)
+/// @param self const QGraphicsTextItem*
+/// @param callback QVariant* func(const QGraphicsTextItem* self, enum Qt__InputMethodQuery query)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicstextitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void q_graphicstextitem_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#inputMethodQuery)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_graphicstextitem_super_input_method_query(void* self, int32_t query);
+QVariant* q_graphicstextitem_super_input_method_query(const void* self, int32_t query);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#supportsExtension)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_graphicstextitem_supports_extension(void* self, int32_t extension);
+bool q_graphicstextitem_supports_extension(const void* self, int32_t extension);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#supportsExtension)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsTextItem*
-/// @param callback bool func(QGraphicsTextItem* self, enum QGraphicsItem__Extension extension)
+/// @param self const QGraphicsTextItem*
+/// @param callback bool func(const QGraphicsTextItem* self, enum QGraphicsItem__Extension extension)
 ///
-void q_graphicstextitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t));
+void q_graphicstextitem_on_supports_extension(const void* self, bool (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#supportsExtension)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_graphicstextitem_super_supports_extension(void* self, int32_t extension);
+bool q_graphicstextitem_super_supports_extension(const void* self, int32_t extension);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#setExtension)
 ///
@@ -28548,7 +28410,7 @@ bool q_graphicstextitem_super_supports_extension(void* self, int32_t extension);
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_graphicstextitem_set_extension(void* self, int32_t extension, void* variant);
+void q_graphicstextitem_set_extension(void* self, int32_t extension, const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#setExtension)
 ///
@@ -28557,7 +28419,7 @@ void q_graphicstextitem_set_extension(void* self, int32_t extension, void* varia
 /// @param self QGraphicsTextItem*
 /// @param callback void func(QGraphicsTextItem* self, enum QGraphicsItem__Extension extension, QVariant* variant)
 ///
-void q_graphicstextitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*));
+void q_graphicstextitem_on_set_extension(void* self, void (*callback)(void*, int32_t, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#setExtension)
 ///
@@ -28567,34 +28429,34 @@ void q_graphicstextitem_on_set_extension(void* self, void (*callback)(void*, int
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_graphicstextitem_super_set_extension(void* self, int32_t extension, void* variant);
+void q_graphicstextitem_super_set_extension(void* self, int32_t extension, const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#extension)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param variant QVariant*
 ///
-QVariant* q_graphicstextitem_extension(void* self, void* variant);
+QVariant* q_graphicstextitem_extension(const void* self, const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#extension)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsTextItem*
-/// @param callback QVariant* func(QGraphicsTextItem* self, QVariant* variant)
+/// @param self const QGraphicsTextItem*
+/// @param callback QVariant* func(const QGraphicsTextItem* self, QVariant* variant)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicstextitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
+void q_graphicstextitem_on_extension(const void* self, QVariant* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#extension)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param variant QVariant*
 ///
-QVariant* q_graphicstextitem_super_extension(void* self, void* variant);
+QVariant* q_graphicstextitem_super_extension(const void* self, const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -28869,9 +28731,9 @@ void q_graphicstextitem_grab_gesture2(void* self, int32_t type, int32_t flags);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-const char* q_graphicstextitem_object_name(void* self);
+const char* q_graphicstextitem_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -28886,33 +28748,33 @@ void q_graphicstextitem_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-bool q_graphicstextitem_is_widget_type(void* self);
+bool q_graphicstextitem_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-bool q_graphicstextitem_is_window_type(void* self);
+bool q_graphicstextitem_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-bool q_graphicstextitem_is_quick_item_type(void* self);
+bool q_graphicstextitem_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-bool q_graphicstextitem_signals_blocked(void* self);
+bool q_graphicstextitem_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -28927,9 +28789,9 @@ bool q_graphicstextitem_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QThread* q_graphicstextitem_thread(void* self);
+QThread* q_graphicstextitem_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -28980,11 +28842,11 @@ void q_graphicstextitem_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_graphicstextitem_children(void* self);
+libqt_list q_graphicstextitem_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -29022,7 +28884,7 @@ void q_graphicstextitem_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_graphicstextitem_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_graphicstextitem_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -29033,18 +28895,18 @@ QMetaObject__Connection* q_graphicstextitem_connect(void* sender, const char* si
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_graphicstextitem_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_graphicstextitem_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_graphicstextitem_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_graphicstextitem_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -29055,7 +28917,7 @@ QMetaObject__Connection* q_graphicstextitem_connect3(void* self, void* sender, c
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_graphicstextitem_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_graphicstextitem_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -29066,24 +28928,24 @@ bool q_graphicstextitem_disconnect(void* sender, const char* signal, void* recei
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_graphicstextitem_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_graphicstextitem_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-bool q_graphicstextitem_disconnect3(void* self);
+bool q_graphicstextitem_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param receiver QObject*
 ///
-bool q_graphicstextitem_disconnect4(void* self, void* receiver);
+bool q_graphicstextitem_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -29091,23 +28953,23 @@ bool q_graphicstextitem_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_graphicstextitem_disconnect5(void* param1);
+bool q_graphicstextitem_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-void q_graphicstextitem_dump_object_tree(void* self);
+void q_graphicstextitem_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-void q_graphicstextitem_dump_object_info(void* self);
+void q_graphicstextitem_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -29117,16 +28979,16 @@ void q_graphicstextitem_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_graphicstextitem_set_property(void* self, const char* name, void* value);
+bool q_graphicstextitem_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param name const char*
 ///
-QVariant* q_graphicstextitem_property(void* self, const char* name);
+QVariant* q_graphicstextitem_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -29134,9 +28996,9 @@ QVariant* q_graphicstextitem_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-const char** q_graphicstextitem_dynamic_property_names(void* self);
+const char** q_graphicstextitem_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -29150,9 +29012,9 @@ QBindingStorage* q_graphicstextitem_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-const QBindingStorage* q_graphicstextitem_binding_storage2(void* self);
+const QBindingStorage* q_graphicstextitem_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -29175,18 +29037,18 @@ void q_graphicstextitem_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QObject* q_graphicstextitem_parent(void* self);
+QObject* q_graphicstextitem_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param classname const char*
 ///
-bool q_graphicstextitem_inherits(void* self, const char* classname);
+bool q_graphicstextitem_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -29226,7 +29088,7 @@ int32_t q_graphicstextitem_start_timer23(void* self, int64_t time, int32_t timer
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_graphicstextitem_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_graphicstextitem_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -29238,59 +29100,59 @@ QMetaObject__Connection* q_graphicstextitem_connect5(void* sender, const char* s
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_graphicstextitem_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_graphicstextitem_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_graphicstextitem_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_graphicstextitem_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param signal const char*
 ///
-bool q_graphicstextitem_disconnect1(void* self, const char* signal);
+bool q_graphicstextitem_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsTextItem*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_graphicstextitem_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_graphicstextitem_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_graphicstextitem_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_graphicstextitem_disconnect23(void* self, void* receiver, const char* member);
+bool q_graphicstextitem_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QGraphicsTextItem*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_graphicstextitem_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -29314,65 +29176,65 @@ void q_graphicstextitem_on_destroyed1(void* self, void (*callback)(void*, void*)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scene)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QGraphicsScene* q_graphicstextitem_scene(void* self);
+QGraphicsScene* q_graphicstextitem_scene(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentItem)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QGraphicsItem* q_graphicstextitem_parent_item(void* self);
+QGraphicsItem* q_graphicstextitem_parent_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#topLevelItem)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QGraphicsItem* q_graphicstextitem_top_level_item(void* self);
+QGraphicsItem* q_graphicstextitem_top_level_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentObject)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QGraphicsObject* q_graphicstextitem_parent_object(void* self);
+QGraphicsObject* q_graphicstextitem_parent_object(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentWidget)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QGraphicsWidget* q_graphicstextitem_parent_widget(void* self);
+QGraphicsWidget* q_graphicstextitem_parent_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#topLevelWidget)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QGraphicsWidget* q_graphicstextitem_top_level_widget(void* self);
+QGraphicsWidget* q_graphicstextitem_top_level_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#window)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QGraphicsWidget* q_graphicstextitem_window(void* self);
+QGraphicsWidget* q_graphicstextitem_window(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#panel)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QGraphicsItem* q_graphicstextitem_panel(void* self);
+QGraphicsItem* q_graphicstextitem_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29387,35 +29249,35 @@ void q_graphicstextitem_set_parent_item(void* self, void* parent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#childItems)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicstextitem_child_items(void* self);
+libqt_list q_graphicstextitem_child_items(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isWidget)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-bool q_graphicstextitem_is_widget(void* self);
+bool q_graphicstextitem_is_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isWindow)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-bool q_graphicstextitem_is_window(void* self);
+bool q_graphicstextitem_is_window(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isPanel)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-bool q_graphicstextitem_is_panel(void* self);
+bool q_graphicstextitem_is_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29429,17 +29291,17 @@ QGraphicsObject* q_graphicstextitem_to_graphics_object(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#toGraphicsObject)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-const QGraphicsObject* q_graphicstextitem_to_graphics_object2(void* self);
+const QGraphicsObject* q_graphicstextitem_to_graphics_object2(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#group)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QGraphicsItemGroup* q_graphicstextitem_group(void* self);
+QGraphicsItemGroup* q_graphicstextitem_group(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29454,11 +29316,11 @@ void q_graphicstextitem_set_group(void* self, void* group);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#flags)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
 /// @return flag of enum QGraphicsItem__GraphicsItemFlag
 ///
-int32_t q_graphicstextitem_flags(void* self);
+int32_t q_graphicstextitem_flags(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29482,11 +29344,11 @@ void q_graphicstextitem_set_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#cacheMode)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
 /// @return enum QGraphicsItem__CacheMode
 ///
-int32_t q_graphicstextitem_cache_mode(void* self);
+int32_t q_graphicstextitem_cache_mode(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29501,11 +29363,11 @@ void q_graphicstextitem_set_cache_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#panelModality)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
 /// @return enum QGraphicsItem__PanelModality
 ///
-int32_t q_graphicstextitem_panel_modality(void* self);
+int32_t q_graphicstextitem_panel_modality(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29520,9 +29382,9 @@ void q_graphicstextitem_set_panel_modality(void* self, int32_t panelModality);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-bool q_graphicstextitem_is_blocked_by_modal_panel(void* self);
+bool q_graphicstextitem_is_blocked_by_modal_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29530,9 +29392,9 @@ bool q_graphicstextitem_is_blocked_by_modal_panel(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-const char* q_graphicstextitem_tool_tip(void* self);
+const char* q_graphicstextitem_tool_tip(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29547,9 +29409,9 @@ void q_graphicstextitem_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#cursor)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QCursor* q_graphicstextitem_cursor(void* self);
+QCursor* q_graphicstextitem_cursor(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29558,15 +29420,15 @@ QCursor* q_graphicstextitem_cursor(void* self);
 /// @param self QGraphicsTextItem*
 /// @param cursor QCursor*
 ///
-void q_graphicstextitem_set_cursor(void* self, void* cursor);
+void q_graphicstextitem_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hasCursor)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-bool q_graphicstextitem_has_cursor(void* self);
+bool q_graphicstextitem_has_cursor(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29580,18 +29442,18 @@ void q_graphicstextitem_unset_cursor(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isVisible)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-bool q_graphicstextitem_is_visible(void* self);
+bool q_graphicstextitem_is_visible(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isVisibleTo)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param parent QGraphicsItem*
 ///
-bool q_graphicstextitem_is_visible_to(void* self, void* parent);
+bool q_graphicstextitem_is_visible_to(const void* self, const void* parent);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29622,9 +29484,9 @@ void q_graphicstextitem_show(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isEnabled)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-bool q_graphicstextitem_is_enabled(void* self);
+bool q_graphicstextitem_is_enabled(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29639,9 +29501,9 @@ void q_graphicstextitem_set_enabled(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isSelected)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-bool q_graphicstextitem_is_selected(void* self);
+bool q_graphicstextitem_is_selected(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29656,9 +29518,9 @@ void q_graphicstextitem_set_selected(void* self, bool selected);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptDrops)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-bool q_graphicstextitem_accept_drops(void* self);
+bool q_graphicstextitem_accept_drops(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29673,17 +29535,17 @@ void q_graphicstextitem_set_accept_drops(void* self, bool on);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#opacity)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-double q_graphicstextitem_opacity(void* self);
+double q_graphicstextitem_opacity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#effectiveOpacity)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-double q_graphicstextitem_effective_opacity(void* self);
+double q_graphicstextitem_effective_opacity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29698,9 +29560,9 @@ void q_graphicstextitem_set_opacity(void* self, double opacity);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#graphicsEffect)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QGraphicsEffect* q_graphicstextitem_graphics_effect(void* self);
+QGraphicsEffect* q_graphicstextitem_graphics_effect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29715,11 +29577,11 @@ void q_graphicstextitem_set_graphics_effect(void* self, void* effect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptedMouseButtons)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
 /// @return flag of enum Qt__MouseButton
 ///
-int32_t q_graphicstextitem_accepted_mouse_buttons(void* self);
+int32_t q_graphicstextitem_accepted_mouse_buttons(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29734,9 +29596,9 @@ void q_graphicstextitem_set_accepted_mouse_buttons(void* self, int32_t buttons);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptHoverEvents)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-bool q_graphicstextitem_accept_hover_events(void* self);
+bool q_graphicstextitem_accept_hover_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29751,9 +29613,9 @@ void q_graphicstextitem_set_accept_hover_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptTouchEvents)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-bool q_graphicstextitem_accept_touch_events(void* self);
+bool q_graphicstextitem_accept_touch_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29768,9 +29630,9 @@ void q_graphicstextitem_set_accept_touch_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#filtersChildEvents)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-bool q_graphicstextitem_filters_child_events(void* self);
+bool q_graphicstextitem_filters_child_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29785,9 +29647,9 @@ void q_graphicstextitem_set_filters_child_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#handlesChildEvents)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-bool q_graphicstextitem_handles_child_events(void* self);
+bool q_graphicstextitem_handles_child_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29802,9 +29664,9 @@ void q_graphicstextitem_set_handles_child_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isActive)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-bool q_graphicstextitem_is_active(void* self);
+bool q_graphicstextitem_is_active(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29819,9 +29681,9 @@ void q_graphicstextitem_set_active(void* self, bool active);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hasFocus)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-bool q_graphicstextitem_has_focus(void* self);
+bool q_graphicstextitem_has_focus(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29843,9 +29705,9 @@ void q_graphicstextitem_clear_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusProxy)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QGraphicsItem* q_graphicstextitem_focus_proxy(void* self);
+QGraphicsItem* q_graphicstextitem_focus_proxy(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29860,17 +29722,17 @@ void q_graphicstextitem_set_focus_proxy(void* self, void* item);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusItem)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QGraphicsItem* q_graphicstextitem_focus_item(void* self);
+QGraphicsItem* q_graphicstextitem_focus_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusScopeItem)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QGraphicsItem* q_graphicstextitem_focus_scope_item(void* self);
+QGraphicsItem* q_graphicstextitem_focus_scope_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29908,17 +29770,17 @@ void q_graphicstextitem_ungrab_keyboard(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#pos)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QPointF* q_graphicstextitem_pos(void* self);
+QPointF* q_graphicstextitem_pos(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#x)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-double q_graphicstextitem_x(void* self);
+double q_graphicstextitem_x(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29933,9 +29795,9 @@ void q_graphicstextitem_set_x(void* self, double x);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#y)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-double q_graphicstextitem_y(void* self);
+double q_graphicstextitem_y(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29950,9 +29812,9 @@ void q_graphicstextitem_set_y(void* self, double y);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scenePos)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QPointF* q_graphicstextitem_scene_pos(void* self);
+QPointF* q_graphicstextitem_scene_pos(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29961,7 +29823,7 @@ QPointF* q_graphicstextitem_scene_pos(void* self);
 /// @param self QGraphicsTextItem*
 /// @param pos QPointF*
 ///
-void q_graphicstextitem_set_pos(void* self, void* pos);
+void q_graphicstextitem_set_pos(void* self, const void* pos);
 
 /// Inherited from QGraphicsItem
 ///
@@ -30007,35 +29869,35 @@ void q_graphicstextitem_ensure_visible2(void* self, double x, double y, double w
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transform)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QTransform* q_graphicstextitem_transform(void* self);
+QTransform* q_graphicstextitem_transform(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneTransform)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QTransform* q_graphicstextitem_scene_transform(void* self);
+QTransform* q_graphicstextitem_scene_transform(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#deviceTransform)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param viewportTransform QTransform*
 ///
-QTransform* q_graphicstextitem_device_transform(void* self, void* viewportTransform);
+QTransform* q_graphicstextitem_device_transform(const void* self, const void* viewportTransform);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemTransform)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param other QGraphicsItem*
 ///
-QTransform* q_graphicstextitem_item_transform(void* self, void* other);
+QTransform* q_graphicstextitem_item_transform(const void* self, const void* other);
 
 /// Inherited from QGraphicsItem
 ///
@@ -30044,7 +29906,7 @@ QTransform* q_graphicstextitem_item_transform(void* self, void* other);
 /// @param self QGraphicsTextItem*
 /// @param matrix QTransform*
 ///
-void q_graphicstextitem_set_transform(void* self, void* matrix);
+void q_graphicstextitem_set_transform(void* self, const void* matrix);
 
 /// Inherited from QGraphicsItem
 ///
@@ -30067,9 +29929,9 @@ void q_graphicstextitem_set_rotation(void* self, double angle);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#rotation)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-double q_graphicstextitem_rotation(void* self);
+double q_graphicstextitem_rotation(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -30084,19 +29946,19 @@ void q_graphicstextitem_set_scale(void* self, double scale);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scale)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-double q_graphicstextitem_scale(void* self);
+double q_graphicstextitem_scale(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transformations)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
 /// @return libqt_list of QGraphicsTransform*
 ///
-libqt_list q_graphicstextitem_transformations(void* self);
+libqt_list q_graphicstextitem_transformations(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -30111,9 +29973,9 @@ void q_graphicstextitem_set_transformations(void* self, libqt_list transformatio
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transformOriginPoint)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QPointF* q_graphicstextitem_transform_origin_point(void* self);
+QPointF* q_graphicstextitem_transform_origin_point(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -30122,7 +29984,7 @@ QPointF* q_graphicstextitem_transform_origin_point(void* self);
 /// @param self QGraphicsTextItem*
 /// @param origin QPointF*
 ///
-void q_graphicstextitem_set_transform_origin_point(void* self, void* origin);
+void q_graphicstextitem_set_transform_origin_point(void* self, const void* origin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -30138,9 +30000,9 @@ void q_graphicstextitem_set_transform_origin_point2(void* self, double ax, doubl
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#zValue)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-double q_graphicstextitem_z_value(void* self);
+double q_graphicstextitem_z_value(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -30158,86 +30020,86 @@ void q_graphicstextitem_set_z_value(void* self, double z);
 /// @param self QGraphicsTextItem*
 /// @param sibling QGraphicsItem*
 ///
-void q_graphicstextitem_stack_before(void* self, void* sibling);
+void q_graphicstextitem_stack_before(void* self, const void* sibling);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#childrenBoundingRect)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QRectF* q_graphicstextitem_children_bounding_rect(void* self);
+QRectF* q_graphicstextitem_children_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneBoundingRect)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QRectF* q_graphicstextitem_scene_bounding_rect(void* self);
+QRectF* q_graphicstextitem_scene_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isClipped)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-bool q_graphicstextitem_is_clipped(void* self);
+bool q_graphicstextitem_is_clipped(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#clipPath)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QPainterPath* q_graphicstextitem_clip_path(void* self);
+QPainterPath* q_graphicstextitem_clip_path(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicstextitem_colliding_items(void* self);
+libqt_list q_graphicstextitem_colliding_items(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-bool q_graphicstextitem_is_obscured(void* self);
+bool q_graphicstextitem_is_obscured(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-bool q_graphicstextitem_is_obscured2(void* self, double x, double y, double w, double h);
+bool q_graphicstextitem_is_obscured2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRegion)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param itemToDeviceTransform QTransform*
 ///
-QRegion* q_graphicstextitem_bounding_region(void* self, void* itemToDeviceTransform);
+QRegion* q_graphicstextitem_bounding_region(const void* self, const void* itemToDeviceTransform);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRegionGranularity)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-double q_graphicstextitem_bounding_region_granularity(void* self);
+double q_graphicstextitem_bounding_region_granularity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -30282,526 +30144,526 @@ void q_graphicstextitem_scroll(void* self, double dx, double dy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param item QGraphicsItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicstextitem_map_to_item(void* self, void* item, void* point);
+QPointF* q_graphicstextitem_map_to_item(const void* self, const void* item, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicstextitem_map_to_parent(void* self, void* point);
+QPointF* q_graphicstextitem_map_to_parent(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicstextitem_map_to_scene(void* self, void* point);
+QPointF* q_graphicstextitem_map_to_scene(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicstextitem_map_to_item2(void* self, void* item, void* rect);
+QPolygonF* q_graphicstextitem_map_to_item2(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicstextitem_map_to_parent2(void* self, void* rect);
+QPolygonF* q_graphicstextitem_map_to_parent2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicstextitem_map_to_scene2(void* self, void* rect);
+QPolygonF* q_graphicstextitem_map_to_scene2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicstextitem_map_rect_to_item(void* self, void* item, void* rect);
+QRectF* q_graphicstextitem_map_rect_to_item(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToParent)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicstextitem_map_rect_to_parent(void* self, void* rect);
+QRectF* q_graphicstextitem_map_rect_to_parent(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToScene)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicstextitem_map_rect_to_scene(void* self, void* rect);
+QRectF* q_graphicstextitem_map_rect_to_scene(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param item QGraphicsItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicstextitem_map_to_item3(void* self, void* item, void* polygon);
+QPolygonF* q_graphicstextitem_map_to_item3(const void* self, const void* item, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicstextitem_map_to_parent3(void* self, void* polygon);
+QPolygonF* q_graphicstextitem_map_to_parent3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicstextitem_map_to_scene3(void* self, void* polygon);
+QPolygonF* q_graphicstextitem_map_to_scene3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param item QGraphicsItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicstextitem_map_to_item4(void* self, void* item, void* path);
+QPainterPath* q_graphicstextitem_map_to_item4(const void* self, const void* item, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicstextitem_map_to_parent4(void* self, void* path);
+QPainterPath* q_graphicstextitem_map_to_parent4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicstextitem_map_to_scene4(void* self, void* path);
+QPainterPath* q_graphicstextitem_map_to_scene4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param item QGraphicsItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicstextitem_map_from_item(void* self, void* item, void* point);
+QPointF* q_graphicstextitem_map_from_item(const void* self, const void* item, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicstextitem_map_from_parent(void* self, void* point);
+QPointF* q_graphicstextitem_map_from_parent(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicstextitem_map_from_scene(void* self, void* point);
+QPointF* q_graphicstextitem_map_from_scene(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicstextitem_map_from_item2(void* self, void* item, void* rect);
+QPolygonF* q_graphicstextitem_map_from_item2(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicstextitem_map_from_parent2(void* self, void* rect);
+QPolygonF* q_graphicstextitem_map_from_parent2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicstextitem_map_from_scene2(void* self, void* rect);
+QPolygonF* q_graphicstextitem_map_from_scene2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicstextitem_map_rect_from_item(void* self, void* item, void* rect);
+QRectF* q_graphicstextitem_map_rect_from_item(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromParent)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicstextitem_map_rect_from_parent(void* self, void* rect);
+QRectF* q_graphicstextitem_map_rect_from_parent(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromScene)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicstextitem_map_rect_from_scene(void* self, void* rect);
+QRectF* q_graphicstextitem_map_rect_from_scene(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param item QGraphicsItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicstextitem_map_from_item3(void* self, void* item, void* polygon);
+QPolygonF* q_graphicstextitem_map_from_item3(const void* self, const void* item, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicstextitem_map_from_parent3(void* self, void* polygon);
+QPolygonF* q_graphicstextitem_map_from_parent3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicstextitem_map_from_scene3(void* self, void* polygon);
+QPolygonF* q_graphicstextitem_map_from_scene3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param item QGraphicsItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicstextitem_map_from_item4(void* self, void* item, void* path);
+QPainterPath* q_graphicstextitem_map_from_item4(const void* self, const void* item, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicstextitem_map_from_parent4(void* self, void* path);
+QPainterPath* q_graphicstextitem_map_from_parent4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicstextitem_map_from_scene4(void* self, void* path);
+QPainterPath* q_graphicstextitem_map_from_scene4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicstextitem_map_to_item5(void* self, void* item, double x, double y);
+QPointF* q_graphicstextitem_map_to_item5(const void* self, const void* item, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicstextitem_map_to_parent5(void* self, double x, double y);
+QPointF* q_graphicstextitem_map_to_parent5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicstextitem_map_to_scene5(void* self, double x, double y);
+QPointF* q_graphicstextitem_map_to_scene5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicstextitem_map_to_item6(void* self, void* item, double x, double y, double w, double h);
+QPolygonF* q_graphicstextitem_map_to_item6(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicstextitem_map_to_parent6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicstextitem_map_to_parent6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicstextitem_map_to_scene6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicstextitem_map_to_scene6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicstextitem_map_rect_to_item2(void* self, void* item, double x, double y, double w, double h);
+QRectF* q_graphicstextitem_map_rect_to_item2(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToParent)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicstextitem_map_rect_to_parent2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicstextitem_map_rect_to_parent2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToScene)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicstextitem_map_rect_to_scene2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicstextitem_map_rect_to_scene2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicstextitem_map_from_item5(void* self, void* item, double x, double y);
+QPointF* q_graphicstextitem_map_from_item5(const void* self, const void* item, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicstextitem_map_from_parent5(void* self, double x, double y);
+QPointF* q_graphicstextitem_map_from_parent5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicstextitem_map_from_scene5(void* self, double x, double y);
+QPointF* q_graphicstextitem_map_from_scene5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicstextitem_map_from_item6(void* self, void* item, double x, double y, double w, double h);
+QPolygonF* q_graphicstextitem_map_from_item6(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicstextitem_map_from_parent6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicstextitem_map_from_parent6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicstextitem_map_from_scene6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicstextitem_map_from_scene6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicstextitem_map_rect_from_item2(void* self, void* item, double x, double y, double w, double h);
+QRectF* q_graphicstextitem_map_rect_from_item2(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromParent)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicstextitem_map_rect_from_parent2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicstextitem_map_rect_from_parent2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromScene)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicstextitem_map_rect_from_scene2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicstextitem_map_rect_from_scene2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isAncestorOf)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param child QGraphicsItem*
 ///
-bool q_graphicstextitem_is_ancestor_of(void* self, void* child);
+bool q_graphicstextitem_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#commonAncestorItem)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param other QGraphicsItem*
 ///
-QGraphicsItem* q_graphicstextitem_common_ancestor_item(void* self, void* other);
+QGraphicsItem* q_graphicstextitem_common_ancestor_item(const void* self, const void* other);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isUnderMouse)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-bool q_graphicstextitem_is_under_mouse(void* self);
+bool q_graphicstextitem_is_under_mouse(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#data)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param key int
 ///
-QVariant* q_graphicstextitem_data(void* self, int key);
+QVariant* q_graphicstextitem_data(const void* self, int key);
 
 /// Inherited from QGraphicsItem
 ///
@@ -30811,17 +30673,17 @@ QVariant* q_graphicstextitem_data(void* self, int key);
 /// @param key int
 /// @param value QVariant*
 ///
-void q_graphicstextitem_set_data(void* self, int key, void* value);
+void q_graphicstextitem_set_data(void* self, int key, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodHints)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t q_graphicstextitem_input_method_hints(void* self);
+int32_t q_graphicstextitem_input_method_hints(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -30868,16 +30730,16 @@ void q_graphicstextitem_set_flag2(void* self, int32_t flag, bool enabled);
 /// @param mode enum QGraphicsItem__CacheMode
 /// @param cacheSize QSize*
 ///
-void q_graphicstextitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
+void q_graphicstextitem_set_cache_mode2(void* self, int32_t mode, const void* cacheSize);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param blockingPanel QGraphicsItem**
 ///
-bool q_graphicstextitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel);
+bool q_graphicstextitem_is_blocked_by_modal_panel1(const void* self, void** blockingPanel);
 
 /// Inherited from QGraphicsItem
 ///
@@ -30895,7 +30757,7 @@ void q_graphicstextitem_set_focus1(void* self, int32_t focusReason);
 /// @param self QGraphicsTextItem*
 /// @param rect QRectF*
 ///
-void q_graphicstextitem_ensure_visible1(void* self, void* rect);
+void q_graphicstextitem_ensure_visible1(void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -30905,7 +30767,7 @@ void q_graphicstextitem_ensure_visible1(void* self, void* rect);
 /// @param rect QRectF*
 /// @param xmargin int
 ///
-void q_graphicstextitem_ensure_visible22(void* self, void* rect, int xmargin);
+void q_graphicstextitem_ensure_visible22(void* self, const void* rect, int xmargin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -30916,7 +30778,7 @@ void q_graphicstextitem_ensure_visible22(void* self, void* rect, int xmargin);
 /// @param xmargin int
 /// @param ymargin int
 ///
-void q_graphicstextitem_ensure_visible3(void* self, void* rect, int xmargin, int ymargin);
+void q_graphicstextitem_ensure_visible3(void* self, const void* rect, int xmargin, int ymargin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -30949,11 +30811,11 @@ void q_graphicstextitem_ensure_visible6(void* self, double x, double y, double w
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemTransform)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param other QGraphicsItem*
 /// @param ok bool*
 ///
-QTransform* q_graphicstextitem_item_transform2(void* self, void* other, bool* ok);
+QTransform* q_graphicstextitem_item_transform2(const void* self, const void* other, bool* ok);
 
 /// Inherited from QGraphicsItem
 ///
@@ -30963,27 +30825,27 @@ QTransform* q_graphicstextitem_item_transform2(void* self, void* other, bool* ok
 /// @param matrix QTransform*
 /// @param combine bool
 ///
-void q_graphicstextitem_set_transform2(void* self, void* matrix, bool combine);
+void q_graphicstextitem_set_transform2(void* self, const void* matrix, bool combine);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicstextitem_colliding_items1(void* self, int32_t mode);
+libqt_list q_graphicstextitem_colliding_items1(const void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param rect QRectF*
 ///
-bool q_graphicstextitem_is_obscured1(void* self, void* rect);
+bool q_graphicstextitem_is_obscured1(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -30992,7 +30854,7 @@ bool q_graphicstextitem_is_obscured1(void* self, void* rect);
 /// @param self QGraphicsTextItem*
 /// @param rect QRectF*
 ///
-void q_graphicstextitem_update1(void* self, void* rect);
+void q_graphicstextitem_update1(void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -31003,7 +30865,7 @@ void q_graphicstextitem_update1(void* self, void* rect);
 /// @param dy double
 /// @param rect QRectF*
 ///
-void q_graphicstextitem_scroll3(void* self, double dx, double dy, void* rect);
+void q_graphicstextitem_scroll3(void* self, double dx, double dy, const void* rect);
 
 /// Inherited from QGraphicsObject
 ///
@@ -31181,7 +31043,7 @@ void q_graphicstextitem_on_custom_event(void* self, void (*callback)(void*, void
 /// @param self QGraphicsTextItem*
 /// @param signal QMetaMethod*
 ///
-void q_graphicstextitem_connect_notify(void* self, void* signal);
+void q_graphicstextitem_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -31192,7 +31054,7 @@ void q_graphicstextitem_connect_notify(void* self, void* signal);
 /// @param self QGraphicsTextItem*
 /// @param signal QMetaMethod*
 ///
-void q_graphicstextitem_super_connect_notify(void* self, void* signal);
+void q_graphicstextitem_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -31203,7 +31065,7 @@ void q_graphicstextitem_super_connect_notify(void* self, void* signal);
 /// @param self QGraphicsTextItem*
 /// @param callback void func(QGraphicsTextItem* self, QMetaMethod* signal)
 ///
-void q_graphicstextitem_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_graphicstextitem_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -31214,7 +31076,7 @@ void q_graphicstextitem_on_connect_notify(void* self, void (*callback)(void*, vo
 /// @param self QGraphicsTextItem*
 /// @param signal QMetaMethod*
 ///
-void q_graphicstextitem_disconnect_notify(void* self, void* signal);
+void q_graphicstextitem_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -31225,7 +31087,7 @@ void q_graphicstextitem_disconnect_notify(void* self, void* signal);
 /// @param self QGraphicsTextItem*
 /// @param signal QMetaMethod*
 ///
-void q_graphicstextitem_super_disconnect_notify(void* self, void* signal);
+void q_graphicstextitem_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -31236,7 +31098,7 @@ void q_graphicstextitem_super_disconnect_notify(void* self, void* signal);
 /// @param self QGraphicsTextItem*
 /// @param callback void func(QGraphicsTextItem* self, QMetaMethod* signal)
 ///
-void q_graphicstextitem_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_graphicstextitem_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -31277,11 +31139,11 @@ void q_graphicstextitem_on_advance(void* self, void (*callback)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicstextitem_collides_with_item(void* self, void* other, int32_t mode);
+bool q_graphicstextitem_collides_with_item(const void* self, const void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -31289,11 +31151,11 @@ bool q_graphicstextitem_collides_with_item(void* self, void* other, int32_t mode
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicstextitem_super_collides_with_item(void* self, void* other, int32_t mode);
+bool q_graphicstextitem_super_collides_with_item(const void* self, const void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -31301,10 +31163,10 @@ bool q_graphicstextitem_super_collides_with_item(void* self, void* other, int32_
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param callback bool func(QGraphicsTextItem* self, QGraphicsItem* other, enum Qt__ItemSelectionMode mode)
 ///
-void q_graphicstextitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
+void q_graphicstextitem_on_collides_with_item(const void* self, bool (*callback)(const void*, const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -31312,11 +31174,11 @@ void q_graphicstextitem_on_collides_with_item(void* self, bool (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicstextitem_collides_with_path(void* self, void* path, int32_t mode);
+bool q_graphicstextitem_collides_with_path(const void* self, const void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -31324,11 +31186,11 @@ bool q_graphicstextitem_collides_with_path(void* self, void* path, int32_t mode)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicstextitem_super_collides_with_path(void* self, void* path, int32_t mode);
+bool q_graphicstextitem_super_collides_with_path(const void* self, const void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -31336,10 +31198,10 @@ bool q_graphicstextitem_super_collides_with_path(void* self, void* path, int32_t
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param callback bool func(QGraphicsTextItem* self, QPainterPath* path, enum Qt__ItemSelectionMode mode)
 ///
-void q_graphicstextitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
+void q_graphicstextitem_on_collides_with_path(const void* self, bool (*callback)(const void*, const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -31419,7 +31281,7 @@ void q_graphicstextitem_on_wheel_event(void* self, void (*callback)(void*, void*
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
 ///
-QVariant* q_graphicstextitem_item_change(void* self, int32_t change, void* value);
+QVariant* q_graphicstextitem_item_change(void* self, int32_t change, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -31431,7 +31293,7 @@ QVariant* q_graphicstextitem_item_change(void* self, int32_t change, void* value
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
 ///
-QVariant* q_graphicstextitem_super_item_change(void* self, int32_t change, void* value);
+QVariant* q_graphicstextitem_super_item_change(void* self, int32_t change, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -31444,7 +31306,7 @@ QVariant* q_graphicstextitem_super_item_change(void* self, int32_t change, void*
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicstextitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
+void q_graphicstextitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, const void*));
 
 /// Inherited from QGraphicsObject
 ///
@@ -31473,9 +31335,9 @@ void q_graphicstextitem_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsTextItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsTextItem* self)
 ///
-void q_graphicstextitem_on_update_micro_focus(void* self, void (*callback)());
+void q_graphicstextitem_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -31483,9 +31345,9 @@ void q_graphicstextitem_on_update_micro_focus(void* self, void (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QObject* q_graphicstextitem_sender(void* self);
+QObject* q_graphicstextitem_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -31493,9 +31355,9 @@ QObject* q_graphicstextitem_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-QObject* q_graphicstextitem_super_sender(void* self);
+QObject* q_graphicstextitem_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -31503,10 +31365,10 @@ QObject* q_graphicstextitem_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsTextItem*
-/// @param callback QObject* func()
+/// @param self const QGraphicsTextItem*
+/// @param callback QObject* func(QGraphicsTextItem* self)
 ///
-void q_graphicstextitem_on_sender(void* self, QObject* (*callback)());
+void q_graphicstextitem_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -31514,9 +31376,9 @@ void q_graphicstextitem_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-int32_t q_graphicstextitem_sender_signal_index(void* self);
+int32_t q_graphicstextitem_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -31524,9 +31386,9 @@ int32_t q_graphicstextitem_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 ///
-int32_t q_graphicstextitem_super_sender_signal_index(void* self);
+int32_t q_graphicstextitem_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -31534,10 +31396,10 @@ int32_t q_graphicstextitem_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsTextItem*
-/// @param callback int32_t func()
+/// @param self const QGraphicsTextItem*
+/// @param callback int32_t func(QGraphicsTextItem* self)
 ///
-void q_graphicstextitem_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_graphicstextitem_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -31545,10 +31407,10 @@ void q_graphicstextitem_on_sender_signal_index(void* self, int32_t (*callback)()
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param signal const char*
 ///
-int32_t q_graphicstextitem_receivers(void* self, const char* signal);
+int32_t q_graphicstextitem_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -31556,10 +31418,10 @@ int32_t q_graphicstextitem_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param signal const char*
 ///
-int32_t q_graphicstextitem_super_receivers(void* self, const char* signal);
+int32_t q_graphicstextitem_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -31567,10 +31429,10 @@ int32_t q_graphicstextitem_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param callback int32_t func(QGraphicsTextItem* self, const char* signal)
 ///
-void q_graphicstextitem_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_graphicstextitem_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -31578,10 +31440,10 @@ void q_graphicstextitem_on_receivers(void* self, int32_t (*callback)(void*, cons
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param signal QMetaMethod*
 ///
-bool q_graphicstextitem_is_signal_connected(void* self, void* signal);
+bool q_graphicstextitem_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -31589,10 +31451,10 @@ bool q_graphicstextitem_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param signal QMetaMethod*
 ///
-bool q_graphicstextitem_super_is_signal_connected(void* self, void* signal);
+bool q_graphicstextitem_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -31600,10 +31462,10 @@ bool q_graphicstextitem_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsTextItem*
+/// @param self const QGraphicsTextItem*
 /// @param callback bool func(QGraphicsTextItem* self, QMetaMethod* signal)
 ///
-void q_graphicstextitem_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_graphicstextitem_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -31632,9 +31494,9 @@ void q_graphicstextitem_super_add_to_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsTextItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsTextItem* self)
 ///
-void q_graphicstextitem_on_add_to_index(void* self, void (*callback)());
+void q_graphicstextitem_on_add_to_index(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -31663,9 +31525,9 @@ void q_graphicstextitem_super_remove_from_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsTextItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsTextItem* self)
 ///
-void q_graphicstextitem_on_remove_from_index(void* self, void (*callback)());
+void q_graphicstextitem_on_remove_from_index(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -31694,9 +31556,9 @@ void q_graphicstextitem_super_prepare_geometry_change(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsTextItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsTextItem* self)
 ///
-void q_graphicstextitem_on_prepare_geometry_change(void* self, void (*callback)());
+void q_graphicstextitem_on_prepare_geometry_change(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -31759,97 +31621,97 @@ void q_graphicssimpletextitem_set_text(void* self, const char* text);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-const char* q_graphicssimpletextitem_text(void* self);
+const char* q_graphicssimpletextitem_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#setFont)
 ///
 /// @param self QGraphicsSimpleTextItem*
 /// @param font QFont*
 ///
-void q_graphicssimpletextitem_set_font(void* self, void* font);
+void q_graphicssimpletextitem_set_font(void* self, const void* font);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#font)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QFont* q_graphicssimpletextitem_font(void* self);
+QFont* q_graphicssimpletextitem_font(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#boundingRect)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QRectF* q_graphicssimpletextitem_bounding_rect(void* self);
+QRectF* q_graphicssimpletextitem_bounding_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#boundingRect)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsSimpleTextItem*
-/// @param callback QRectF* func()
+/// @param self const QGraphicsSimpleTextItem*
+/// @param callback QRectF* func(const QGraphicsSimpleTextItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicssimpletextitem_on_bounding_rect(void* self, QRectF* (*callback)());
+void q_graphicssimpletextitem_on_bounding_rect(const void* self, QRectF* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#boundingRect)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QRectF* q_graphicssimpletextitem_super_bounding_rect(void* self);
+QRectF* q_graphicssimpletextitem_super_bounding_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#shape)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QPainterPath* q_graphicssimpletextitem_shape(void* self);
+QPainterPath* q_graphicssimpletextitem_shape(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#shape)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsSimpleTextItem*
-/// @param callback QPainterPath* func()
+/// @param self const QGraphicsSimpleTextItem*
+/// @param callback QPainterPath* func(const QGraphicsSimpleTextItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicssimpletextitem_on_shape(void* self, QPainterPath* (*callback)());
+void q_graphicssimpletextitem_on_shape(const void* self, QPainterPath* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#shape)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QPainterPath* q_graphicssimpletextitem_super_shape(void* self);
+QPainterPath* q_graphicssimpletextitem_super_shape(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#contains)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param point QPointF*
 ///
-bool q_graphicssimpletextitem_contains(void* self, void* point);
+bool q_graphicssimpletextitem_contains(const void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#contains)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsSimpleTextItem*
-/// @param callback bool func(QGraphicsSimpleTextItem* self, QPointF* point)
+/// @param self const QGraphicsSimpleTextItem*
+/// @param callback bool func(const QGraphicsSimpleTextItem* self, QPointF* point)
 ///
-void q_graphicssimpletextitem_on_contains(void* self, bool (*callback)(void*, void*));
+void q_graphicssimpletextitem_on_contains(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#contains)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param point QPointF*
 ///
-bool q_graphicssimpletextitem_super_contains(void* self, void* point);
+bool q_graphicssimpletextitem_super_contains(const void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#paint)
 ///
@@ -31858,7 +31720,7 @@ bool q_graphicssimpletextitem_super_contains(void* self, void* point);
 /// @param option QStyleOptionGraphicsItem*
 /// @param widget QWidget*
 ///
-void q_graphicssimpletextitem_paint(void* self, void* painter, void* option, void* widget);
+void q_graphicssimpletextitem_paint(void* self, void* painter, const void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#paint)
 ///
@@ -31867,7 +31729,7 @@ void q_graphicssimpletextitem_paint(void* self, void* painter, void* option, voi
 /// @param self QGraphicsSimpleTextItem*
 /// @param callback void func(QGraphicsSimpleTextItem* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget)
 ///
-void q_graphicssimpletextitem_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
+void q_graphicssimpletextitem_on_paint(void* self, void (*callback)(void*, void*, const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#paint)
 ///
@@ -31878,105 +31740,105 @@ void q_graphicssimpletextitem_on_paint(void* self, void (*callback)(void*, void*
 /// @param option QStyleOptionGraphicsItem*
 /// @param widget QWidget*
 ///
-void q_graphicssimpletextitem_super_paint(void* self, void* painter, void* option, void* widget);
+void q_graphicssimpletextitem_super_paint(void* self, void* painter, const void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#isObscuredBy)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param item QGraphicsItem*
 ///
-bool q_graphicssimpletextitem_is_obscured_by(void* self, void* item);
+bool q_graphicssimpletextitem_is_obscured_by(const void* self, const void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#isObscuredBy)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsSimpleTextItem*
-/// @param callback bool func(QGraphicsSimpleTextItem* self, QGraphicsItem* item)
+/// @param self const QGraphicsSimpleTextItem*
+/// @param callback bool func(const QGraphicsSimpleTextItem* self, QGraphicsItem* item)
 ///
-void q_graphicssimpletextitem_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
+void q_graphicssimpletextitem_on_is_obscured_by(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#isObscuredBy)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param item QGraphicsItem*
 ///
-bool q_graphicssimpletextitem_super_is_obscured_by(void* self, void* item);
+bool q_graphicssimpletextitem_super_is_obscured_by(const void* self, const void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#opaqueArea)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QPainterPath* q_graphicssimpletextitem_opaque_area(void* self);
+QPainterPath* q_graphicssimpletextitem_opaque_area(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#opaqueArea)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsSimpleTextItem*
-/// @param callback QPainterPath* func()
+/// @param self const QGraphicsSimpleTextItem*
+/// @param callback QPainterPath* func(const QGraphicsSimpleTextItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicssimpletextitem_on_opaque_area(void* self, QPainterPath* (*callback)());
+void q_graphicssimpletextitem_on_opaque_area(const void* self, QPainterPath* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#opaqueArea)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QPainterPath* q_graphicssimpletextitem_super_opaque_area(void* self);
+QPainterPath* q_graphicssimpletextitem_super_opaque_area(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#type)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-int32_t q_graphicssimpletextitem_type(void* self);
+int32_t q_graphicssimpletextitem_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#type)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsSimpleTextItem*
-/// @param callback int32_t func()
+/// @param self const QGraphicsSimpleTextItem*
+/// @param callback int32_t func(const QGraphicsSimpleTextItem* self)
 ///
-void q_graphicssimpletextitem_on_type(void* self, int32_t (*callback)());
+void q_graphicssimpletextitem_on_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#type)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-int32_t q_graphicssimpletextitem_super_type(void* self);
+int32_t q_graphicssimpletextitem_super_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#supportsExtension)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_graphicssimpletextitem_supports_extension(void* self, int32_t extension);
+bool q_graphicssimpletextitem_supports_extension(const void* self, int32_t extension);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#supportsExtension)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsSimpleTextItem*
-/// @param callback bool func(QGraphicsSimpleTextItem* self, enum QGraphicsItem__Extension extension)
+/// @param self const QGraphicsSimpleTextItem*
+/// @param callback bool func(const QGraphicsSimpleTextItem* self, enum QGraphicsItem__Extension extension)
 ///
-void q_graphicssimpletextitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t));
+void q_graphicssimpletextitem_on_supports_extension(const void* self, bool (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#supportsExtension)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_graphicssimpletextitem_super_supports_extension(void* self, int32_t extension);
+bool q_graphicssimpletextitem_super_supports_extension(const void* self, int32_t extension);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#setExtension)
 ///
@@ -31984,7 +31846,7 @@ bool q_graphicssimpletextitem_super_supports_extension(void* self, int32_t exten
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_graphicssimpletextitem_set_extension(void* self, int32_t extension, void* variant);
+void q_graphicssimpletextitem_set_extension(void* self, int32_t extension, const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#setExtension)
 ///
@@ -31993,7 +31855,7 @@ void q_graphicssimpletextitem_set_extension(void* self, int32_t extension, void*
 /// @param self QGraphicsSimpleTextItem*
 /// @param callback void func(QGraphicsSimpleTextItem* self, enum QGraphicsItem__Extension extension, QVariant* variant)
 ///
-void q_graphicssimpletextitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*));
+void q_graphicssimpletextitem_on_set_extension(void* self, void (*callback)(void*, int32_t, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#setExtension)
 ///
@@ -32003,42 +31865,42 @@ void q_graphicssimpletextitem_on_set_extension(void* self, void (*callback)(void
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_graphicssimpletextitem_super_set_extension(void* self, int32_t extension, void* variant);
+void q_graphicssimpletextitem_super_set_extension(void* self, int32_t extension, const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#extension)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param variant QVariant*
 ///
-QVariant* q_graphicssimpletextitem_extension(void* self, void* variant);
+QVariant* q_graphicssimpletextitem_extension(const void* self, const void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#extension)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsSimpleTextItem*
-/// @param callback QVariant* func(QGraphicsSimpleTextItem* self, QVariant* variant)
+/// @param self const QGraphicsSimpleTextItem*
+/// @param callback QVariant* func(const QGraphicsSimpleTextItem* self, QVariant* variant)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicssimpletextitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
+void q_graphicssimpletextitem_on_extension(const void* self, QVariant* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#extension)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param variant QVariant*
 ///
-QVariant* q_graphicssimpletextitem_super_extension(void* self, void* variant);
+QVariant* q_graphicssimpletextitem_super_extension(const void* self, const void* variant);
 
 /// Inherited from QAbstractGraphicsShapeItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractgraphicsshapeitem.html#pen)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QPen* q_graphicssimpletextitem_pen(void* self);
+QPen* q_graphicssimpletextitem_pen(const void* self);
 
 /// Inherited from QAbstractGraphicsShapeItem
 ///
@@ -32047,15 +31909,15 @@ QPen* q_graphicssimpletextitem_pen(void* self);
 /// @param self QGraphicsSimpleTextItem*
 /// @param pen QPen*
 ///
-void q_graphicssimpletextitem_set_pen(void* self, void* pen);
+void q_graphicssimpletextitem_set_pen(void* self, const void* pen);
 
 /// Inherited from QAbstractGraphicsShapeItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractgraphicsshapeitem.html#brush)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QBrush* q_graphicssimpletextitem_brush(void* self);
+QBrush* q_graphicssimpletextitem_brush(const void* self);
 
 /// Inherited from QAbstractGraphicsShapeItem
 ///
@@ -32064,71 +31926,71 @@ QBrush* q_graphicssimpletextitem_brush(void* self);
 /// @param self QGraphicsSimpleTextItem*
 /// @param brush QBrush*
 ///
-void q_graphicssimpletextitem_set_brush(void* self, void* brush);
+void q_graphicssimpletextitem_set_brush(void* self, const void* brush);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scene)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QGraphicsScene* q_graphicssimpletextitem_scene(void* self);
+QGraphicsScene* q_graphicssimpletextitem_scene(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentItem)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QGraphicsItem* q_graphicssimpletextitem_parent_item(void* self);
+QGraphicsItem* q_graphicssimpletextitem_parent_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#topLevelItem)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QGraphicsItem* q_graphicssimpletextitem_top_level_item(void* self);
+QGraphicsItem* q_graphicssimpletextitem_top_level_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentObject)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QGraphicsObject* q_graphicssimpletextitem_parent_object(void* self);
+QGraphicsObject* q_graphicssimpletextitem_parent_object(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentWidget)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QGraphicsWidget* q_graphicssimpletextitem_parent_widget(void* self);
+QGraphicsWidget* q_graphicssimpletextitem_parent_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#topLevelWidget)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QGraphicsWidget* q_graphicssimpletextitem_top_level_widget(void* self);
+QGraphicsWidget* q_graphicssimpletextitem_top_level_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#window)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QGraphicsWidget* q_graphicssimpletextitem_window(void* self);
+QGraphicsWidget* q_graphicssimpletextitem_window(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#panel)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QGraphicsItem* q_graphicssimpletextitem_panel(void* self);
+QGraphicsItem* q_graphicssimpletextitem_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32143,35 +32005,35 @@ void q_graphicssimpletextitem_set_parent_item(void* self, void* parent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#childItems)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicssimpletextitem_child_items(void* self);
+libqt_list q_graphicssimpletextitem_child_items(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isWidget)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-bool q_graphicssimpletextitem_is_widget(void* self);
+bool q_graphicssimpletextitem_is_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isWindow)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-bool q_graphicssimpletextitem_is_window(void* self);
+bool q_graphicssimpletextitem_is_window(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isPanel)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-bool q_graphicssimpletextitem_is_panel(void* self);
+bool q_graphicssimpletextitem_is_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32185,17 +32047,17 @@ QGraphicsObject* q_graphicssimpletextitem_to_graphics_object(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#toGraphicsObject)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-const QGraphicsObject* q_graphicssimpletextitem_to_graphics_object2(void* self);
+const QGraphicsObject* q_graphicssimpletextitem_to_graphics_object2(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#group)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QGraphicsItemGroup* q_graphicssimpletextitem_group(void* self);
+QGraphicsItemGroup* q_graphicssimpletextitem_group(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32210,11 +32072,11 @@ void q_graphicssimpletextitem_set_group(void* self, void* group);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#flags)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
 /// @return flag of enum QGraphicsItem__GraphicsItemFlag
 ///
-int32_t q_graphicssimpletextitem_flags(void* self);
+int32_t q_graphicssimpletextitem_flags(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32238,11 +32100,11 @@ void q_graphicssimpletextitem_set_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#cacheMode)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
 /// @return enum QGraphicsItem__CacheMode
 ///
-int32_t q_graphicssimpletextitem_cache_mode(void* self);
+int32_t q_graphicssimpletextitem_cache_mode(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32257,11 +32119,11 @@ void q_graphicssimpletextitem_set_cache_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#panelModality)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
 /// @return enum QGraphicsItem__PanelModality
 ///
-int32_t q_graphicssimpletextitem_panel_modality(void* self);
+int32_t q_graphicssimpletextitem_panel_modality(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32276,9 +32138,9 @@ void q_graphicssimpletextitem_set_panel_modality(void* self, int32_t panelModali
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-bool q_graphicssimpletextitem_is_blocked_by_modal_panel(void* self);
+bool q_graphicssimpletextitem_is_blocked_by_modal_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32286,9 +32148,9 @@ bool q_graphicssimpletextitem_is_blocked_by_modal_panel(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-const char* q_graphicssimpletextitem_tool_tip(void* self);
+const char* q_graphicssimpletextitem_tool_tip(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32303,9 +32165,9 @@ void q_graphicssimpletextitem_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#cursor)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QCursor* q_graphicssimpletextitem_cursor(void* self);
+QCursor* q_graphicssimpletextitem_cursor(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32314,15 +32176,15 @@ QCursor* q_graphicssimpletextitem_cursor(void* self);
 /// @param self QGraphicsSimpleTextItem*
 /// @param cursor QCursor*
 ///
-void q_graphicssimpletextitem_set_cursor(void* self, void* cursor);
+void q_graphicssimpletextitem_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hasCursor)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-bool q_graphicssimpletextitem_has_cursor(void* self);
+bool q_graphicssimpletextitem_has_cursor(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32336,18 +32198,18 @@ void q_graphicssimpletextitem_unset_cursor(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isVisible)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-bool q_graphicssimpletextitem_is_visible(void* self);
+bool q_graphicssimpletextitem_is_visible(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isVisibleTo)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param parent QGraphicsItem*
 ///
-bool q_graphicssimpletextitem_is_visible_to(void* self, void* parent);
+bool q_graphicssimpletextitem_is_visible_to(const void* self, const void* parent);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32378,9 +32240,9 @@ void q_graphicssimpletextitem_show(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isEnabled)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-bool q_graphicssimpletextitem_is_enabled(void* self);
+bool q_graphicssimpletextitem_is_enabled(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32395,9 +32257,9 @@ void q_graphicssimpletextitem_set_enabled(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isSelected)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-bool q_graphicssimpletextitem_is_selected(void* self);
+bool q_graphicssimpletextitem_is_selected(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32412,9 +32274,9 @@ void q_graphicssimpletextitem_set_selected(void* self, bool selected);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptDrops)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-bool q_graphicssimpletextitem_accept_drops(void* self);
+bool q_graphicssimpletextitem_accept_drops(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32429,17 +32291,17 @@ void q_graphicssimpletextitem_set_accept_drops(void* self, bool on);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#opacity)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-double q_graphicssimpletextitem_opacity(void* self);
+double q_graphicssimpletextitem_opacity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#effectiveOpacity)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-double q_graphicssimpletextitem_effective_opacity(void* self);
+double q_graphicssimpletextitem_effective_opacity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32454,9 +32316,9 @@ void q_graphicssimpletextitem_set_opacity(void* self, double opacity);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#graphicsEffect)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QGraphicsEffect* q_graphicssimpletextitem_graphics_effect(void* self);
+QGraphicsEffect* q_graphicssimpletextitem_graphics_effect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32471,11 +32333,11 @@ void q_graphicssimpletextitem_set_graphics_effect(void* self, void* effect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptedMouseButtons)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
 /// @return flag of enum Qt__MouseButton
 ///
-int32_t q_graphicssimpletextitem_accepted_mouse_buttons(void* self);
+int32_t q_graphicssimpletextitem_accepted_mouse_buttons(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32490,9 +32352,9 @@ void q_graphicssimpletextitem_set_accepted_mouse_buttons(void* self, int32_t but
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptHoverEvents)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-bool q_graphicssimpletextitem_accept_hover_events(void* self);
+bool q_graphicssimpletextitem_accept_hover_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32507,9 +32369,9 @@ void q_graphicssimpletextitem_set_accept_hover_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptTouchEvents)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-bool q_graphicssimpletextitem_accept_touch_events(void* self);
+bool q_graphicssimpletextitem_accept_touch_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32524,9 +32386,9 @@ void q_graphicssimpletextitem_set_accept_touch_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#filtersChildEvents)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-bool q_graphicssimpletextitem_filters_child_events(void* self);
+bool q_graphicssimpletextitem_filters_child_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32541,9 +32403,9 @@ void q_graphicssimpletextitem_set_filters_child_events(void* self, bool enabled)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#handlesChildEvents)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-bool q_graphicssimpletextitem_handles_child_events(void* self);
+bool q_graphicssimpletextitem_handles_child_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32558,9 +32420,9 @@ void q_graphicssimpletextitem_set_handles_child_events(void* self, bool enabled)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isActive)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-bool q_graphicssimpletextitem_is_active(void* self);
+bool q_graphicssimpletextitem_is_active(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32575,9 +32437,9 @@ void q_graphicssimpletextitem_set_active(void* self, bool active);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hasFocus)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-bool q_graphicssimpletextitem_has_focus(void* self);
+bool q_graphicssimpletextitem_has_focus(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32599,9 +32461,9 @@ void q_graphicssimpletextitem_clear_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusProxy)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QGraphicsItem* q_graphicssimpletextitem_focus_proxy(void* self);
+QGraphicsItem* q_graphicssimpletextitem_focus_proxy(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32616,17 +32478,17 @@ void q_graphicssimpletextitem_set_focus_proxy(void* self, void* item);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusItem)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QGraphicsItem* q_graphicssimpletextitem_focus_item(void* self);
+QGraphicsItem* q_graphicssimpletextitem_focus_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusScopeItem)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QGraphicsItem* q_graphicssimpletextitem_focus_scope_item(void* self);
+QGraphicsItem* q_graphicssimpletextitem_focus_scope_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32664,17 +32526,17 @@ void q_graphicssimpletextitem_ungrab_keyboard(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#pos)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QPointF* q_graphicssimpletextitem_pos(void* self);
+QPointF* q_graphicssimpletextitem_pos(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#x)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-double q_graphicssimpletextitem_x(void* self);
+double q_graphicssimpletextitem_x(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32689,9 +32551,9 @@ void q_graphicssimpletextitem_set_x(void* self, double x);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#y)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-double q_graphicssimpletextitem_y(void* self);
+double q_graphicssimpletextitem_y(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32706,9 +32568,9 @@ void q_graphicssimpletextitem_set_y(void* self, double y);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scenePos)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QPointF* q_graphicssimpletextitem_scene_pos(void* self);
+QPointF* q_graphicssimpletextitem_scene_pos(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32717,7 +32579,7 @@ QPointF* q_graphicssimpletextitem_scene_pos(void* self);
 /// @param self QGraphicsSimpleTextItem*
 /// @param pos QPointF*
 ///
-void q_graphicssimpletextitem_set_pos(void* self, void* pos);
+void q_graphicssimpletextitem_set_pos(void* self, const void* pos);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32763,35 +32625,35 @@ void q_graphicssimpletextitem_ensure_visible2(void* self, double x, double y, do
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transform)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QTransform* q_graphicssimpletextitem_transform(void* self);
+QTransform* q_graphicssimpletextitem_transform(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneTransform)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QTransform* q_graphicssimpletextitem_scene_transform(void* self);
+QTransform* q_graphicssimpletextitem_scene_transform(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#deviceTransform)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param viewportTransform QTransform*
 ///
-QTransform* q_graphicssimpletextitem_device_transform(void* self, void* viewportTransform);
+QTransform* q_graphicssimpletextitem_device_transform(const void* self, const void* viewportTransform);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemTransform)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param other QGraphicsItem*
 ///
-QTransform* q_graphicssimpletextitem_item_transform(void* self, void* other);
+QTransform* q_graphicssimpletextitem_item_transform(const void* self, const void* other);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32800,7 +32662,7 @@ QTransform* q_graphicssimpletextitem_item_transform(void* self, void* other);
 /// @param self QGraphicsSimpleTextItem*
 /// @param matrix QTransform*
 ///
-void q_graphicssimpletextitem_set_transform(void* self, void* matrix);
+void q_graphicssimpletextitem_set_transform(void* self, const void* matrix);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32823,9 +32685,9 @@ void q_graphicssimpletextitem_set_rotation(void* self, double angle);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#rotation)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-double q_graphicssimpletextitem_rotation(void* self);
+double q_graphicssimpletextitem_rotation(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32840,19 +32702,19 @@ void q_graphicssimpletextitem_set_scale(void* self, double scale);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scale)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-double q_graphicssimpletextitem_scale(void* self);
+double q_graphicssimpletextitem_scale(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transformations)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
 /// @return libqt_list of QGraphicsTransform*
 ///
-libqt_list q_graphicssimpletextitem_transformations(void* self);
+libqt_list q_graphicssimpletextitem_transformations(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32867,9 +32729,9 @@ void q_graphicssimpletextitem_set_transformations(void* self, libqt_list transfo
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transformOriginPoint)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QPointF* q_graphicssimpletextitem_transform_origin_point(void* self);
+QPointF* q_graphicssimpletextitem_transform_origin_point(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32878,7 +32740,7 @@ QPointF* q_graphicssimpletextitem_transform_origin_point(void* self);
 /// @param self QGraphicsSimpleTextItem*
 /// @param origin QPointF*
 ///
-void q_graphicssimpletextitem_set_transform_origin_point(void* self, void* origin);
+void q_graphicssimpletextitem_set_transform_origin_point(void* self, const void* origin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32894,9 +32756,9 @@ void q_graphicssimpletextitem_set_transform_origin_point2(void* self, double ax,
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#zValue)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-double q_graphicssimpletextitem_z_value(void* self);
+double q_graphicssimpletextitem_z_value(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -32914,86 +32776,86 @@ void q_graphicssimpletextitem_set_z_value(void* self, double z);
 /// @param self QGraphicsSimpleTextItem*
 /// @param sibling QGraphicsItem*
 ///
-void q_graphicssimpletextitem_stack_before(void* self, void* sibling);
+void q_graphicssimpletextitem_stack_before(void* self, const void* sibling);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#childrenBoundingRect)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QRectF* q_graphicssimpletextitem_children_bounding_rect(void* self);
+QRectF* q_graphicssimpletextitem_children_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneBoundingRect)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QRectF* q_graphicssimpletextitem_scene_bounding_rect(void* self);
+QRectF* q_graphicssimpletextitem_scene_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isClipped)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-bool q_graphicssimpletextitem_is_clipped(void* self);
+bool q_graphicssimpletextitem_is_clipped(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#clipPath)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-QPainterPath* q_graphicssimpletextitem_clip_path(void* self);
+QPainterPath* q_graphicssimpletextitem_clip_path(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicssimpletextitem_colliding_items(void* self);
+libqt_list q_graphicssimpletextitem_colliding_items(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-bool q_graphicssimpletextitem_is_obscured(void* self);
+bool q_graphicssimpletextitem_is_obscured(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-bool q_graphicssimpletextitem_is_obscured2(void* self, double x, double y, double w, double h);
+bool q_graphicssimpletextitem_is_obscured2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRegion)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param itemToDeviceTransform QTransform*
 ///
-QRegion* q_graphicssimpletextitem_bounding_region(void* self, void* itemToDeviceTransform);
+QRegion* q_graphicssimpletextitem_bounding_region(const void* self, const void* itemToDeviceTransform);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRegionGranularity)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-double q_graphicssimpletextitem_bounding_region_granularity(void* self);
+double q_graphicssimpletextitem_bounding_region_granularity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -33038,526 +32900,526 @@ void q_graphicssimpletextitem_scroll(void* self, double dx, double dy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param item QGraphicsItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicssimpletextitem_map_to_item(void* self, void* item, void* point);
+QPointF* q_graphicssimpletextitem_map_to_item(const void* self, const void* item, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicssimpletextitem_map_to_parent(void* self, void* point);
+QPointF* q_graphicssimpletextitem_map_to_parent(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicssimpletextitem_map_to_scene(void* self, void* point);
+QPointF* q_graphicssimpletextitem_map_to_scene(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicssimpletextitem_map_to_item2(void* self, void* item, void* rect);
+QPolygonF* q_graphicssimpletextitem_map_to_item2(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicssimpletextitem_map_to_parent2(void* self, void* rect);
+QPolygonF* q_graphicssimpletextitem_map_to_parent2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicssimpletextitem_map_to_scene2(void* self, void* rect);
+QPolygonF* q_graphicssimpletextitem_map_to_scene2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicssimpletextitem_map_rect_to_item(void* self, void* item, void* rect);
+QRectF* q_graphicssimpletextitem_map_rect_to_item(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToParent)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicssimpletextitem_map_rect_to_parent(void* self, void* rect);
+QRectF* q_graphicssimpletextitem_map_rect_to_parent(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToScene)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicssimpletextitem_map_rect_to_scene(void* self, void* rect);
+QRectF* q_graphicssimpletextitem_map_rect_to_scene(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param item QGraphicsItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicssimpletextitem_map_to_item3(void* self, void* item, void* polygon);
+QPolygonF* q_graphicssimpletextitem_map_to_item3(const void* self, const void* item, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicssimpletextitem_map_to_parent3(void* self, void* polygon);
+QPolygonF* q_graphicssimpletextitem_map_to_parent3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicssimpletextitem_map_to_scene3(void* self, void* polygon);
+QPolygonF* q_graphicssimpletextitem_map_to_scene3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param item QGraphicsItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicssimpletextitem_map_to_item4(void* self, void* item, void* path);
+QPainterPath* q_graphicssimpletextitem_map_to_item4(const void* self, const void* item, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicssimpletextitem_map_to_parent4(void* self, void* path);
+QPainterPath* q_graphicssimpletextitem_map_to_parent4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicssimpletextitem_map_to_scene4(void* self, void* path);
+QPainterPath* q_graphicssimpletextitem_map_to_scene4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param item QGraphicsItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicssimpletextitem_map_from_item(void* self, void* item, void* point);
+QPointF* q_graphicssimpletextitem_map_from_item(const void* self, const void* item, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicssimpletextitem_map_from_parent(void* self, void* point);
+QPointF* q_graphicssimpletextitem_map_from_parent(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicssimpletextitem_map_from_scene(void* self, void* point);
+QPointF* q_graphicssimpletextitem_map_from_scene(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicssimpletextitem_map_from_item2(void* self, void* item, void* rect);
+QPolygonF* q_graphicssimpletextitem_map_from_item2(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicssimpletextitem_map_from_parent2(void* self, void* rect);
+QPolygonF* q_graphicssimpletextitem_map_from_parent2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicssimpletextitem_map_from_scene2(void* self, void* rect);
+QPolygonF* q_graphicssimpletextitem_map_from_scene2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicssimpletextitem_map_rect_from_item(void* self, void* item, void* rect);
+QRectF* q_graphicssimpletextitem_map_rect_from_item(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromParent)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicssimpletextitem_map_rect_from_parent(void* self, void* rect);
+QRectF* q_graphicssimpletextitem_map_rect_from_parent(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromScene)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicssimpletextitem_map_rect_from_scene(void* self, void* rect);
+QRectF* q_graphicssimpletextitem_map_rect_from_scene(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param item QGraphicsItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicssimpletextitem_map_from_item3(void* self, void* item, void* polygon);
+QPolygonF* q_graphicssimpletextitem_map_from_item3(const void* self, const void* item, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicssimpletextitem_map_from_parent3(void* self, void* polygon);
+QPolygonF* q_graphicssimpletextitem_map_from_parent3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicssimpletextitem_map_from_scene3(void* self, void* polygon);
+QPolygonF* q_graphicssimpletextitem_map_from_scene3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param item QGraphicsItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicssimpletextitem_map_from_item4(void* self, void* item, void* path);
+QPainterPath* q_graphicssimpletextitem_map_from_item4(const void* self, const void* item, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicssimpletextitem_map_from_parent4(void* self, void* path);
+QPainterPath* q_graphicssimpletextitem_map_from_parent4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicssimpletextitem_map_from_scene4(void* self, void* path);
+QPainterPath* q_graphicssimpletextitem_map_from_scene4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicssimpletextitem_map_to_item5(void* self, void* item, double x, double y);
+QPointF* q_graphicssimpletextitem_map_to_item5(const void* self, const void* item, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicssimpletextitem_map_to_parent5(void* self, double x, double y);
+QPointF* q_graphicssimpletextitem_map_to_parent5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicssimpletextitem_map_to_scene5(void* self, double x, double y);
+QPointF* q_graphicssimpletextitem_map_to_scene5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicssimpletextitem_map_to_item6(void* self, void* item, double x, double y, double w, double h);
+QPolygonF* q_graphicssimpletextitem_map_to_item6(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicssimpletextitem_map_to_parent6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicssimpletextitem_map_to_parent6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicssimpletextitem_map_to_scene6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicssimpletextitem_map_to_scene6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicssimpletextitem_map_rect_to_item2(void* self, void* item, double x, double y, double w, double h);
+QRectF* q_graphicssimpletextitem_map_rect_to_item2(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToParent)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicssimpletextitem_map_rect_to_parent2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicssimpletextitem_map_rect_to_parent2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToScene)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicssimpletextitem_map_rect_to_scene2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicssimpletextitem_map_rect_to_scene2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicssimpletextitem_map_from_item5(void* self, void* item, double x, double y);
+QPointF* q_graphicssimpletextitem_map_from_item5(const void* self, const void* item, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicssimpletextitem_map_from_parent5(void* self, double x, double y);
+QPointF* q_graphicssimpletextitem_map_from_parent5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicssimpletextitem_map_from_scene5(void* self, double x, double y);
+QPointF* q_graphicssimpletextitem_map_from_scene5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicssimpletextitem_map_from_item6(void* self, void* item, double x, double y, double w, double h);
+QPolygonF* q_graphicssimpletextitem_map_from_item6(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicssimpletextitem_map_from_parent6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicssimpletextitem_map_from_parent6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicssimpletextitem_map_from_scene6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicssimpletextitem_map_from_scene6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicssimpletextitem_map_rect_from_item2(void* self, void* item, double x, double y, double w, double h);
+QRectF* q_graphicssimpletextitem_map_rect_from_item2(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromParent)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicssimpletextitem_map_rect_from_parent2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicssimpletextitem_map_rect_from_parent2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromScene)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicssimpletextitem_map_rect_from_scene2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicssimpletextitem_map_rect_from_scene2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isAncestorOf)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param child QGraphicsItem*
 ///
-bool q_graphicssimpletextitem_is_ancestor_of(void* self, void* child);
+bool q_graphicssimpletextitem_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#commonAncestorItem)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param other QGraphicsItem*
 ///
-QGraphicsItem* q_graphicssimpletextitem_common_ancestor_item(void* self, void* other);
+QGraphicsItem* q_graphicssimpletextitem_common_ancestor_item(const void* self, const void* other);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isUnderMouse)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
-bool q_graphicssimpletextitem_is_under_mouse(void* self);
+bool q_graphicssimpletextitem_is_under_mouse(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#data)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param key int
 ///
-QVariant* q_graphicssimpletextitem_data(void* self, int key);
+QVariant* q_graphicssimpletextitem_data(const void* self, int key);
 
 /// Inherited from QGraphicsItem
 ///
@@ -33567,17 +33429,17 @@ QVariant* q_graphicssimpletextitem_data(void* self, int key);
 /// @param key int
 /// @param value QVariant*
 ///
-void q_graphicssimpletextitem_set_data(void* self, int key, void* value);
+void q_graphicssimpletextitem_set_data(void* self, int key, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodHints)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t q_graphicssimpletextitem_input_method_hints(void* self);
+int32_t q_graphicssimpletextitem_input_method_hints(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -33624,16 +33486,16 @@ void q_graphicssimpletextitem_set_flag2(void* self, int32_t flag, bool enabled);
 /// @param mode enum QGraphicsItem__CacheMode
 /// @param cacheSize QSize*
 ///
-void q_graphicssimpletextitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
+void q_graphicssimpletextitem_set_cache_mode2(void* self, int32_t mode, const void* cacheSize);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param blockingPanel QGraphicsItem**
 ///
-bool q_graphicssimpletextitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel);
+bool q_graphicssimpletextitem_is_blocked_by_modal_panel1(const void* self, void** blockingPanel);
 
 /// Inherited from QGraphicsItem
 ///
@@ -33651,7 +33513,7 @@ void q_graphicssimpletextitem_set_focus1(void* self, int32_t focusReason);
 /// @param self QGraphicsSimpleTextItem*
 /// @param rect QRectF*
 ///
-void q_graphicssimpletextitem_ensure_visible1(void* self, void* rect);
+void q_graphicssimpletextitem_ensure_visible1(void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -33661,7 +33523,7 @@ void q_graphicssimpletextitem_ensure_visible1(void* self, void* rect);
 /// @param rect QRectF*
 /// @param xmargin int
 ///
-void q_graphicssimpletextitem_ensure_visible22(void* self, void* rect, int xmargin);
+void q_graphicssimpletextitem_ensure_visible22(void* self, const void* rect, int xmargin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -33672,7 +33534,7 @@ void q_graphicssimpletextitem_ensure_visible22(void* self, void* rect, int xmarg
 /// @param xmargin int
 /// @param ymargin int
 ///
-void q_graphicssimpletextitem_ensure_visible3(void* self, void* rect, int xmargin, int ymargin);
+void q_graphicssimpletextitem_ensure_visible3(void* self, const void* rect, int xmargin, int ymargin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -33705,11 +33567,11 @@ void q_graphicssimpletextitem_ensure_visible6(void* self, double x, double y, do
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemTransform)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param other QGraphicsItem*
 /// @param ok bool*
 ///
-QTransform* q_graphicssimpletextitem_item_transform2(void* self, void* other, bool* ok);
+QTransform* q_graphicssimpletextitem_item_transform2(const void* self, const void* other, bool* ok);
 
 /// Inherited from QGraphicsItem
 ///
@@ -33719,27 +33581,27 @@ QTransform* q_graphicssimpletextitem_item_transform2(void* self, void* other, bo
 /// @param matrix QTransform*
 /// @param combine bool
 ///
-void q_graphicssimpletextitem_set_transform2(void* self, void* matrix, bool combine);
+void q_graphicssimpletextitem_set_transform2(void* self, const void* matrix, bool combine);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicssimpletextitem_colliding_items1(void* self, int32_t mode);
+libqt_list q_graphicssimpletextitem_colliding_items1(const void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param rect QRectF*
 ///
-bool q_graphicssimpletextitem_is_obscured1(void* self, void* rect);
+bool q_graphicssimpletextitem_is_obscured1(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -33748,7 +33610,7 @@ bool q_graphicssimpletextitem_is_obscured1(void* self, void* rect);
 /// @param self QGraphicsSimpleTextItem*
 /// @param rect QRectF*
 ///
-void q_graphicssimpletextitem_update1(void* self, void* rect);
+void q_graphicssimpletextitem_update1(void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -33759,7 +33621,7 @@ void q_graphicssimpletextitem_update1(void* self, void* rect);
 /// @param dy double
 /// @param rect QRectF*
 ///
-void q_graphicssimpletextitem_scroll3(void* self, double dx, double dy, void* rect);
+void q_graphicssimpletextitem_scroll3(void* self, double dx, double dy, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -33800,11 +33662,11 @@ void q_graphicssimpletextitem_on_advance(void* self, void (*callback)(void*, int
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicssimpletextitem_collides_with_item(void* self, void* other, int32_t mode);
+bool q_graphicssimpletextitem_collides_with_item(const void* self, const void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -33812,11 +33674,11 @@ bool q_graphicssimpletextitem_collides_with_item(void* self, void* other, int32_
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicssimpletextitem_super_collides_with_item(void* self, void* other, int32_t mode);
+bool q_graphicssimpletextitem_super_collides_with_item(const void* self, const void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -33824,10 +33686,10 @@ bool q_graphicssimpletextitem_super_collides_with_item(void* self, void* other, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param callback bool func(QGraphicsSimpleTextItem* self, QGraphicsItem* other, enum Qt__ItemSelectionMode mode)
 ///
-void q_graphicssimpletextitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
+void q_graphicssimpletextitem_on_collides_with_item(const void* self, bool (*callback)(const void*, const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -33835,11 +33697,11 @@ void q_graphicssimpletextitem_on_collides_with_item(void* self, bool (*callback)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicssimpletextitem_collides_with_path(void* self, void* path, int32_t mode);
+bool q_graphicssimpletextitem_collides_with_path(const void* self, const void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -33847,11 +33709,11 @@ bool q_graphicssimpletextitem_collides_with_path(void* self, void* path, int32_t
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicssimpletextitem_super_collides_with_path(void* self, void* path, int32_t mode);
+bool q_graphicssimpletextitem_super_collides_with_path(const void* self, const void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -33859,10 +33721,10 @@ bool q_graphicssimpletextitem_super_collides_with_path(void* self, void* path, i
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param callback bool func(QGraphicsSimpleTextItem* self, QPainterPath* path, enum Qt__ItemSelectionMode mode)
 ///
-void q_graphicssimpletextitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
+void q_graphicssimpletextitem_on_collides_with_path(const void* self, bool (*callback)(const void*, const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -34532,10 +34394,10 @@ void q_graphicssimpletextitem_on_input_method_event(void* self, void (*callback)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_graphicssimpletextitem_input_method_query(void* self, int32_t query);
+QVariant* q_graphicssimpletextitem_input_method_query(const void* self, int32_t query);
 
 /// Inherited from QGraphicsItem
 ///
@@ -34543,10 +34405,10 @@ QVariant* q_graphicssimpletextitem_input_method_query(void* self, int32_t query)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_graphicssimpletextitem_super_input_method_query(void* self, int32_t query);
+QVariant* q_graphicssimpletextitem_super_input_method_query(const void* self, int32_t query);
 
 /// Inherited from QGraphicsItem
 ///
@@ -34554,12 +34416,12 @@ QVariant* q_graphicssimpletextitem_super_input_method_query(void* self, int32_t 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsSimpleTextItem*
+/// @param self const QGraphicsSimpleTextItem*
 /// @param callback QVariant* func(QGraphicsSimpleTextItem* self, enum Qt__InputMethodQuery query)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicssimpletextitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void q_graphicssimpletextitem_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -34571,7 +34433,7 @@ void q_graphicssimpletextitem_on_input_method_query(void* self, QVariant* (*call
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
 ///
-QVariant* q_graphicssimpletextitem_item_change(void* self, int32_t change, void* value);
+QVariant* q_graphicssimpletextitem_item_change(void* self, int32_t change, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -34583,7 +34445,7 @@ QVariant* q_graphicssimpletextitem_item_change(void* self, int32_t change, void*
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
 ///
-QVariant* q_graphicssimpletextitem_super_item_change(void* self, int32_t change, void* value);
+QVariant* q_graphicssimpletextitem_super_item_change(void* self, int32_t change, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -34596,7 +34458,7 @@ QVariant* q_graphicssimpletextitem_super_item_change(void* self, int32_t change,
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicssimpletextitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
+void q_graphicssimpletextitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -34625,9 +34487,9 @@ void q_graphicssimpletextitem_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsSimpleTextItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsSimpleTextItem* self)
 ///
-void q_graphicssimpletextitem_on_update_micro_focus(void* self, void (*callback)());
+void q_graphicssimpletextitem_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -34656,9 +34518,9 @@ void q_graphicssimpletextitem_super_add_to_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsSimpleTextItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsSimpleTextItem* self)
 ///
-void q_graphicssimpletextitem_on_add_to_index(void* self, void (*callback)());
+void q_graphicssimpletextitem_on_add_to_index(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -34687,9 +34549,9 @@ void q_graphicssimpletextitem_super_remove_from_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsSimpleTextItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsSimpleTextItem* self)
 ///
-void q_graphicssimpletextitem_on_remove_from_index(void* self, void (*callback)());
+void q_graphicssimpletextitem_on_remove_from_index(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -34718,9 +34580,9 @@ void q_graphicssimpletextitem_super_prepare_geometry_change(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsSimpleTextItem*
-/// @param callback void func()
+/// @param callback void func(QGraphicsSimpleTextItem* self)
 ///
-void q_graphicssimpletextitem_on_prepare_geometry_change(void* self, void (*callback)());
+void q_graphicssimpletextitem_on_prepare_geometry_change(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#dtor.QGraphicsSimpleTextItem)
 ///
@@ -34760,28 +34622,28 @@ void q_graphicsitemgroup_remove_from_group(void* self, void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemgroup.html#boundingRect)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-QRectF* q_graphicsitemgroup_bounding_rect(void* self);
+QRectF* q_graphicsitemgroup_bounding_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemgroup.html#boundingRect)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsItemGroup*
-/// @param callback QRectF* func()
+/// @param self const QGraphicsItemGroup*
+/// @param callback QRectF* func(const QGraphicsItemGroup* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsitemgroup_on_bounding_rect(void* self, QRectF* (*callback)());
+void q_graphicsitemgroup_on_bounding_rect(const void* self, QRectF* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemgroup.html#boundingRect)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-QRectF* q_graphicsitemgroup_super_bounding_rect(void* self);
+QRectF* q_graphicsitemgroup_super_bounding_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemgroup.html#paint)
 ///
@@ -34790,7 +34652,7 @@ QRectF* q_graphicsitemgroup_super_bounding_rect(void* self);
 /// @param option QStyleOptionGraphicsItem*
 /// @param widget QWidget*
 ///
-void q_graphicsitemgroup_paint(void* self, void* painter, void* option, void* widget);
+void q_graphicsitemgroup_paint(void* self, void* painter, const void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemgroup.html#paint)
 ///
@@ -34799,7 +34661,7 @@ void q_graphicsitemgroup_paint(void* self, void* painter, void* option, void* wi
 /// @param self QGraphicsItemGroup*
 /// @param callback void func(QGraphicsItemGroup* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget)
 ///
-void q_graphicsitemgroup_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
+void q_graphicsitemgroup_on_paint(void* self, void (*callback)(void*, void*, const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemgroup.html#paint)
 ///
@@ -34810,144 +34672,144 @@ void q_graphicsitemgroup_on_paint(void* self, void (*callback)(void*, void*, voi
 /// @param option QStyleOptionGraphicsItem*
 /// @param widget QWidget*
 ///
-void q_graphicsitemgroup_super_paint(void* self, void* painter, void* option, void* widget);
+void q_graphicsitemgroup_super_paint(void* self, void* painter, const void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemgroup.html#isObscuredBy)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param item QGraphicsItem*
 ///
-bool q_graphicsitemgroup_is_obscured_by(void* self, void* item);
+bool q_graphicsitemgroup_is_obscured_by(const void* self, const void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemgroup.html#isObscuredBy)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsItemGroup*
-/// @param callback bool func(QGraphicsItemGroup* self, QGraphicsItem* item)
+/// @param self const QGraphicsItemGroup*
+/// @param callback bool func(const QGraphicsItemGroup* self, QGraphicsItem* item)
 ///
-void q_graphicsitemgroup_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
+void q_graphicsitemgroup_on_is_obscured_by(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemgroup.html#isObscuredBy)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param item QGraphicsItem*
 ///
-bool q_graphicsitemgroup_super_is_obscured_by(void* self, void* item);
+bool q_graphicsitemgroup_super_is_obscured_by(const void* self, const void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemgroup.html#opaqueArea)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-QPainterPath* q_graphicsitemgroup_opaque_area(void* self);
+QPainterPath* q_graphicsitemgroup_opaque_area(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemgroup.html#opaqueArea)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsItemGroup*
-/// @param callback QPainterPath* func()
+/// @param self const QGraphicsItemGroup*
+/// @param callback QPainterPath* func(const QGraphicsItemGroup* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsitemgroup_on_opaque_area(void* self, QPainterPath* (*callback)());
+void q_graphicsitemgroup_on_opaque_area(const void* self, QPainterPath* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemgroup.html#opaqueArea)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-QPainterPath* q_graphicsitemgroup_super_opaque_area(void* self);
+QPainterPath* q_graphicsitemgroup_super_opaque_area(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemgroup.html#type)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-int32_t q_graphicsitemgroup_type(void* self);
+int32_t q_graphicsitemgroup_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemgroup.html#type)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsItemGroup*
-/// @param callback int32_t func()
+/// @param self const QGraphicsItemGroup*
+/// @param callback int32_t func(const QGraphicsItemGroup* self)
 ///
-void q_graphicsitemgroup_on_type(void* self, int32_t (*callback)());
+void q_graphicsitemgroup_on_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemgroup.html#type)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-int32_t q_graphicsitemgroup_super_type(void* self);
+int32_t q_graphicsitemgroup_super_type(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scene)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-QGraphicsScene* q_graphicsitemgroup_scene(void* self);
+QGraphicsScene* q_graphicsitemgroup_scene(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentItem)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-QGraphicsItem* q_graphicsitemgroup_parent_item(void* self);
+QGraphicsItem* q_graphicsitemgroup_parent_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#topLevelItem)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-QGraphicsItem* q_graphicsitemgroup_top_level_item(void* self);
+QGraphicsItem* q_graphicsitemgroup_top_level_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentObject)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-QGraphicsObject* q_graphicsitemgroup_parent_object(void* self);
+QGraphicsObject* q_graphicsitemgroup_parent_object(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentWidget)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-QGraphicsWidget* q_graphicsitemgroup_parent_widget(void* self);
+QGraphicsWidget* q_graphicsitemgroup_parent_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#topLevelWidget)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-QGraphicsWidget* q_graphicsitemgroup_top_level_widget(void* self);
+QGraphicsWidget* q_graphicsitemgroup_top_level_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#window)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-QGraphicsWidget* q_graphicsitemgroup_window(void* self);
+QGraphicsWidget* q_graphicsitemgroup_window(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#panel)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-QGraphicsItem* q_graphicsitemgroup_panel(void* self);
+QGraphicsItem* q_graphicsitemgroup_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -34962,35 +34824,35 @@ void q_graphicsitemgroup_set_parent_item(void* self, void* parent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#childItems)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsitemgroup_child_items(void* self);
+libqt_list q_graphicsitemgroup_child_items(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isWidget)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-bool q_graphicsitemgroup_is_widget(void* self);
+bool q_graphicsitemgroup_is_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isWindow)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-bool q_graphicsitemgroup_is_window(void* self);
+bool q_graphicsitemgroup_is_window(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isPanel)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-bool q_graphicsitemgroup_is_panel(void* self);
+bool q_graphicsitemgroup_is_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35004,17 +34866,17 @@ QGraphicsObject* q_graphicsitemgroup_to_graphics_object(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#toGraphicsObject)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-const QGraphicsObject* q_graphicsitemgroup_to_graphics_object2(void* self);
+const QGraphicsObject* q_graphicsitemgroup_to_graphics_object2(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#group)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-QGraphicsItemGroup* q_graphicsitemgroup_group(void* self);
+QGraphicsItemGroup* q_graphicsitemgroup_group(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35029,11 +34891,11 @@ void q_graphicsitemgroup_set_group(void* self, void* group);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#flags)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
 /// @return flag of enum QGraphicsItem__GraphicsItemFlag
 ///
-int32_t q_graphicsitemgroup_flags(void* self);
+int32_t q_graphicsitemgroup_flags(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35057,11 +34919,11 @@ void q_graphicsitemgroup_set_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#cacheMode)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
 /// @return enum QGraphicsItem__CacheMode
 ///
-int32_t q_graphicsitemgroup_cache_mode(void* self);
+int32_t q_graphicsitemgroup_cache_mode(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35076,11 +34938,11 @@ void q_graphicsitemgroup_set_cache_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#panelModality)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
 /// @return enum QGraphicsItem__PanelModality
 ///
-int32_t q_graphicsitemgroup_panel_modality(void* self);
+int32_t q_graphicsitemgroup_panel_modality(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35095,9 +34957,9 @@ void q_graphicsitemgroup_set_panel_modality(void* self, int32_t panelModality);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-bool q_graphicsitemgroup_is_blocked_by_modal_panel(void* self);
+bool q_graphicsitemgroup_is_blocked_by_modal_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35105,9 +34967,9 @@ bool q_graphicsitemgroup_is_blocked_by_modal_panel(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-const char* q_graphicsitemgroup_tool_tip(void* self);
+const char* q_graphicsitemgroup_tool_tip(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35122,9 +34984,9 @@ void q_graphicsitemgroup_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#cursor)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-QCursor* q_graphicsitemgroup_cursor(void* self);
+QCursor* q_graphicsitemgroup_cursor(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35133,15 +34995,15 @@ QCursor* q_graphicsitemgroup_cursor(void* self);
 /// @param self QGraphicsItemGroup*
 /// @param cursor QCursor*
 ///
-void q_graphicsitemgroup_set_cursor(void* self, void* cursor);
+void q_graphicsitemgroup_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hasCursor)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-bool q_graphicsitemgroup_has_cursor(void* self);
+bool q_graphicsitemgroup_has_cursor(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35155,18 +35017,18 @@ void q_graphicsitemgroup_unset_cursor(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isVisible)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-bool q_graphicsitemgroup_is_visible(void* self);
+bool q_graphicsitemgroup_is_visible(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isVisibleTo)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param parent QGraphicsItem*
 ///
-bool q_graphicsitemgroup_is_visible_to(void* self, void* parent);
+bool q_graphicsitemgroup_is_visible_to(const void* self, const void* parent);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35197,9 +35059,9 @@ void q_graphicsitemgroup_show(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isEnabled)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-bool q_graphicsitemgroup_is_enabled(void* self);
+bool q_graphicsitemgroup_is_enabled(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35214,9 +35076,9 @@ void q_graphicsitemgroup_set_enabled(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isSelected)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-bool q_graphicsitemgroup_is_selected(void* self);
+bool q_graphicsitemgroup_is_selected(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35231,9 +35093,9 @@ void q_graphicsitemgroup_set_selected(void* self, bool selected);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptDrops)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-bool q_graphicsitemgroup_accept_drops(void* self);
+bool q_graphicsitemgroup_accept_drops(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35248,17 +35110,17 @@ void q_graphicsitemgroup_set_accept_drops(void* self, bool on);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#opacity)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-double q_graphicsitemgroup_opacity(void* self);
+double q_graphicsitemgroup_opacity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#effectiveOpacity)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-double q_graphicsitemgroup_effective_opacity(void* self);
+double q_graphicsitemgroup_effective_opacity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35273,9 +35135,9 @@ void q_graphicsitemgroup_set_opacity(void* self, double opacity);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#graphicsEffect)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-QGraphicsEffect* q_graphicsitemgroup_graphics_effect(void* self);
+QGraphicsEffect* q_graphicsitemgroup_graphics_effect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35290,11 +35152,11 @@ void q_graphicsitemgroup_set_graphics_effect(void* self, void* effect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptedMouseButtons)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
 /// @return flag of enum Qt__MouseButton
 ///
-int32_t q_graphicsitemgroup_accepted_mouse_buttons(void* self);
+int32_t q_graphicsitemgroup_accepted_mouse_buttons(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35309,9 +35171,9 @@ void q_graphicsitemgroup_set_accepted_mouse_buttons(void* self, int32_t buttons)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptHoverEvents)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-bool q_graphicsitemgroup_accept_hover_events(void* self);
+bool q_graphicsitemgroup_accept_hover_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35326,9 +35188,9 @@ void q_graphicsitemgroup_set_accept_hover_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptTouchEvents)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-bool q_graphicsitemgroup_accept_touch_events(void* self);
+bool q_graphicsitemgroup_accept_touch_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35343,9 +35205,9 @@ void q_graphicsitemgroup_set_accept_touch_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#filtersChildEvents)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-bool q_graphicsitemgroup_filters_child_events(void* self);
+bool q_graphicsitemgroup_filters_child_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35360,9 +35222,9 @@ void q_graphicsitemgroup_set_filters_child_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#handlesChildEvents)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-bool q_graphicsitemgroup_handles_child_events(void* self);
+bool q_graphicsitemgroup_handles_child_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35377,9 +35239,9 @@ void q_graphicsitemgroup_set_handles_child_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isActive)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-bool q_graphicsitemgroup_is_active(void* self);
+bool q_graphicsitemgroup_is_active(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35394,9 +35256,9 @@ void q_graphicsitemgroup_set_active(void* self, bool active);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hasFocus)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-bool q_graphicsitemgroup_has_focus(void* self);
+bool q_graphicsitemgroup_has_focus(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35418,9 +35280,9 @@ void q_graphicsitemgroup_clear_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusProxy)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-QGraphicsItem* q_graphicsitemgroup_focus_proxy(void* self);
+QGraphicsItem* q_graphicsitemgroup_focus_proxy(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35435,17 +35297,17 @@ void q_graphicsitemgroup_set_focus_proxy(void* self, void* item);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusItem)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-QGraphicsItem* q_graphicsitemgroup_focus_item(void* self);
+QGraphicsItem* q_graphicsitemgroup_focus_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusScopeItem)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-QGraphicsItem* q_graphicsitemgroup_focus_scope_item(void* self);
+QGraphicsItem* q_graphicsitemgroup_focus_scope_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35483,17 +35345,17 @@ void q_graphicsitemgroup_ungrab_keyboard(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#pos)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-QPointF* q_graphicsitemgroup_pos(void* self);
+QPointF* q_graphicsitemgroup_pos(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#x)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-double q_graphicsitemgroup_x(void* self);
+double q_graphicsitemgroup_x(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35508,9 +35370,9 @@ void q_graphicsitemgroup_set_x(void* self, double x);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#y)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-double q_graphicsitemgroup_y(void* self);
+double q_graphicsitemgroup_y(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35525,9 +35387,9 @@ void q_graphicsitemgroup_set_y(void* self, double y);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scenePos)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-QPointF* q_graphicsitemgroup_scene_pos(void* self);
+QPointF* q_graphicsitemgroup_scene_pos(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35536,7 +35398,7 @@ QPointF* q_graphicsitemgroup_scene_pos(void* self);
 /// @param self QGraphicsItemGroup*
 /// @param pos QPointF*
 ///
-void q_graphicsitemgroup_set_pos(void* self, void* pos);
+void q_graphicsitemgroup_set_pos(void* self, const void* pos);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35582,35 +35444,35 @@ void q_graphicsitemgroup_ensure_visible2(void* self, double x, double y, double 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transform)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-QTransform* q_graphicsitemgroup_transform(void* self);
+QTransform* q_graphicsitemgroup_transform(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneTransform)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-QTransform* q_graphicsitemgroup_scene_transform(void* self);
+QTransform* q_graphicsitemgroup_scene_transform(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#deviceTransform)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param viewportTransform QTransform*
 ///
-QTransform* q_graphicsitemgroup_device_transform(void* self, void* viewportTransform);
+QTransform* q_graphicsitemgroup_device_transform(const void* self, const void* viewportTransform);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemTransform)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param other QGraphicsItem*
 ///
-QTransform* q_graphicsitemgroup_item_transform(void* self, void* other);
+QTransform* q_graphicsitemgroup_item_transform(const void* self, const void* other);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35619,7 +35481,7 @@ QTransform* q_graphicsitemgroup_item_transform(void* self, void* other);
 /// @param self QGraphicsItemGroup*
 /// @param matrix QTransform*
 ///
-void q_graphicsitemgroup_set_transform(void* self, void* matrix);
+void q_graphicsitemgroup_set_transform(void* self, const void* matrix);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35642,9 +35504,9 @@ void q_graphicsitemgroup_set_rotation(void* self, double angle);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#rotation)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-double q_graphicsitemgroup_rotation(void* self);
+double q_graphicsitemgroup_rotation(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35659,19 +35521,19 @@ void q_graphicsitemgroup_set_scale(void* self, double scale);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scale)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-double q_graphicsitemgroup_scale(void* self);
+double q_graphicsitemgroup_scale(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transformations)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
 /// @return libqt_list of QGraphicsTransform*
 ///
-libqt_list q_graphicsitemgroup_transformations(void* self);
+libqt_list q_graphicsitemgroup_transformations(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35686,9 +35548,9 @@ void q_graphicsitemgroup_set_transformations(void* self, libqt_list transformati
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transformOriginPoint)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-QPointF* q_graphicsitemgroup_transform_origin_point(void* self);
+QPointF* q_graphicsitemgroup_transform_origin_point(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35697,7 +35559,7 @@ QPointF* q_graphicsitemgroup_transform_origin_point(void* self);
 /// @param self QGraphicsItemGroup*
 /// @param origin QPointF*
 ///
-void q_graphicsitemgroup_set_transform_origin_point(void* self, void* origin);
+void q_graphicsitemgroup_set_transform_origin_point(void* self, const void* origin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35713,9 +35575,9 @@ void q_graphicsitemgroup_set_transform_origin_point2(void* self, double ax, doub
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#zValue)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-double q_graphicsitemgroup_z_value(void* self);
+double q_graphicsitemgroup_z_value(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35733,86 +35595,86 @@ void q_graphicsitemgroup_set_z_value(void* self, double z);
 /// @param self QGraphicsItemGroup*
 /// @param sibling QGraphicsItem*
 ///
-void q_graphicsitemgroup_stack_before(void* self, void* sibling);
+void q_graphicsitemgroup_stack_before(void* self, const void* sibling);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#childrenBoundingRect)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-QRectF* q_graphicsitemgroup_children_bounding_rect(void* self);
+QRectF* q_graphicsitemgroup_children_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneBoundingRect)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-QRectF* q_graphicsitemgroup_scene_bounding_rect(void* self);
+QRectF* q_graphicsitemgroup_scene_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isClipped)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-bool q_graphicsitemgroup_is_clipped(void* self);
+bool q_graphicsitemgroup_is_clipped(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#clipPath)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-QPainterPath* q_graphicsitemgroup_clip_path(void* self);
+QPainterPath* q_graphicsitemgroup_clip_path(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsitemgroup_colliding_items(void* self);
+libqt_list q_graphicsitemgroup_colliding_items(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-bool q_graphicsitemgroup_is_obscured(void* self);
+bool q_graphicsitemgroup_is_obscured(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-bool q_graphicsitemgroup_is_obscured2(void* self, double x, double y, double w, double h);
+bool q_graphicsitemgroup_is_obscured2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRegion)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param itemToDeviceTransform QTransform*
 ///
-QRegion* q_graphicsitemgroup_bounding_region(void* self, void* itemToDeviceTransform);
+QRegion* q_graphicsitemgroup_bounding_region(const void* self, const void* itemToDeviceTransform);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRegionGranularity)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-double q_graphicsitemgroup_bounding_region_granularity(void* self);
+double q_graphicsitemgroup_bounding_region_granularity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -35857,526 +35719,526 @@ void q_graphicsitemgroup_scroll(void* self, double dx, double dy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param item QGraphicsItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicsitemgroup_map_to_item(void* self, void* item, void* point);
+QPointF* q_graphicsitemgroup_map_to_item(const void* self, const void* item, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param point QPointF*
 ///
-QPointF* q_graphicsitemgroup_map_to_parent(void* self, void* point);
+QPointF* q_graphicsitemgroup_map_to_parent(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param point QPointF*
 ///
-QPointF* q_graphicsitemgroup_map_to_scene(void* self, void* point);
+QPointF* q_graphicsitemgroup_map_to_scene(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicsitemgroup_map_to_item2(void* self, void* item, void* rect);
+QPolygonF* q_graphicsitemgroup_map_to_item2(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicsitemgroup_map_to_parent2(void* self, void* rect);
+QPolygonF* q_graphicsitemgroup_map_to_parent2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicsitemgroup_map_to_scene2(void* self, void* rect);
+QPolygonF* q_graphicsitemgroup_map_to_scene2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsitemgroup_map_rect_to_item(void* self, void* item, void* rect);
+QRectF* q_graphicsitemgroup_map_rect_to_item(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToParent)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsitemgroup_map_rect_to_parent(void* self, void* rect);
+QRectF* q_graphicsitemgroup_map_rect_to_parent(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToScene)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsitemgroup_map_rect_to_scene(void* self, void* rect);
+QRectF* q_graphicsitemgroup_map_rect_to_scene(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param item QGraphicsItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicsitemgroup_map_to_item3(void* self, void* item, void* polygon);
+QPolygonF* q_graphicsitemgroup_map_to_item3(const void* self, const void* item, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicsitemgroup_map_to_parent3(void* self, void* polygon);
+QPolygonF* q_graphicsitemgroup_map_to_parent3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicsitemgroup_map_to_scene3(void* self, void* polygon);
+QPolygonF* q_graphicsitemgroup_map_to_scene3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param item QGraphicsItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicsitemgroup_map_to_item4(void* self, void* item, void* path);
+QPainterPath* q_graphicsitemgroup_map_to_item4(const void* self, const void* item, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicsitemgroup_map_to_parent4(void* self, void* path);
+QPainterPath* q_graphicsitemgroup_map_to_parent4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicsitemgroup_map_to_scene4(void* self, void* path);
+QPainterPath* q_graphicsitemgroup_map_to_scene4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param item QGraphicsItem*
 /// @param point QPointF*
 ///
-QPointF* q_graphicsitemgroup_map_from_item(void* self, void* item, void* point);
+QPointF* q_graphicsitemgroup_map_from_item(const void* self, const void* item, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param point QPointF*
 ///
-QPointF* q_graphicsitemgroup_map_from_parent(void* self, void* point);
+QPointF* q_graphicsitemgroup_map_from_parent(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param point QPointF*
 ///
-QPointF* q_graphicsitemgroup_map_from_scene(void* self, void* point);
+QPointF* q_graphicsitemgroup_map_from_scene(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicsitemgroup_map_from_item2(void* self, void* item, void* rect);
+QPolygonF* q_graphicsitemgroup_map_from_item2(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicsitemgroup_map_from_parent2(void* self, void* rect);
+QPolygonF* q_graphicsitemgroup_map_from_parent2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param rect QRectF*
 ///
-QPolygonF* q_graphicsitemgroup_map_from_scene2(void* self, void* rect);
+QPolygonF* q_graphicsitemgroup_map_from_scene2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsitemgroup_map_rect_from_item(void* self, void* item, void* rect);
+QRectF* q_graphicsitemgroup_map_rect_from_item(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromParent)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsitemgroup_map_rect_from_parent(void* self, void* rect);
+QRectF* q_graphicsitemgroup_map_rect_from_parent(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromScene)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsitemgroup_map_rect_from_scene(void* self, void* rect);
+QRectF* q_graphicsitemgroup_map_rect_from_scene(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param item QGraphicsItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicsitemgroup_map_from_item3(void* self, void* item, void* polygon);
+QPolygonF* q_graphicsitemgroup_map_from_item3(const void* self, const void* item, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicsitemgroup_map_from_parent3(void* self, void* polygon);
+QPolygonF* q_graphicsitemgroup_map_from_parent3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_graphicsitemgroup_map_from_scene3(void* self, void* polygon);
+QPolygonF* q_graphicsitemgroup_map_from_scene3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param item QGraphicsItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicsitemgroup_map_from_item4(void* self, void* item, void* path);
+QPainterPath* q_graphicsitemgroup_map_from_item4(const void* self, const void* item, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicsitemgroup_map_from_parent4(void* self, void* path);
+QPainterPath* q_graphicsitemgroup_map_from_parent4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_graphicsitemgroup_map_from_scene4(void* self, void* path);
+QPainterPath* q_graphicsitemgroup_map_from_scene4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicsitemgroup_map_to_item5(void* self, void* item, double x, double y);
+QPointF* q_graphicsitemgroup_map_to_item5(const void* self, const void* item, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicsitemgroup_map_to_parent5(void* self, double x, double y);
+QPointF* q_graphicsitemgroup_map_to_parent5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicsitemgroup_map_to_scene5(void* self, double x, double y);
+QPointF* q_graphicsitemgroup_map_to_scene5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicsitemgroup_map_to_item6(void* self, void* item, double x, double y, double w, double h);
+QPolygonF* q_graphicsitemgroup_map_to_item6(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicsitemgroup_map_to_parent6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicsitemgroup_map_to_parent6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicsitemgroup_map_to_scene6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicsitemgroup_map_to_scene6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicsitemgroup_map_rect_to_item2(void* self, void* item, double x, double y, double w, double h);
+QRectF* q_graphicsitemgroup_map_rect_to_item2(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToParent)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicsitemgroup_map_rect_to_parent2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicsitemgroup_map_rect_to_parent2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToScene)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicsitemgroup_map_rect_to_scene2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicsitemgroup_map_rect_to_scene2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicsitemgroup_map_from_item5(void* self, void* item, double x, double y);
+QPointF* q_graphicsitemgroup_map_from_item5(const void* self, const void* item, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicsitemgroup_map_from_parent5(void* self, double x, double y);
+QPointF* q_graphicsitemgroup_map_from_parent5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_graphicsitemgroup_map_from_scene5(void* self, double x, double y);
+QPointF* q_graphicsitemgroup_map_from_scene5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicsitemgroup_map_from_item6(void* self, void* item, double x, double y, double w, double h);
+QPolygonF* q_graphicsitemgroup_map_from_item6(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicsitemgroup_map_from_parent6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicsitemgroup_map_from_parent6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_graphicsitemgroup_map_from_scene6(void* self, double x, double y, double w, double h);
+QPolygonF* q_graphicsitemgroup_map_from_scene6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicsitemgroup_map_rect_from_item2(void* self, void* item, double x, double y, double w, double h);
+QRectF* q_graphicsitemgroup_map_rect_from_item2(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromParent)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicsitemgroup_map_rect_from_parent2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicsitemgroup_map_rect_from_parent2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromScene)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_graphicsitemgroup_map_rect_from_scene2(void* self, double x, double y, double w, double h);
+QRectF* q_graphicsitemgroup_map_rect_from_scene2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isAncestorOf)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param child QGraphicsItem*
 ///
-bool q_graphicsitemgroup_is_ancestor_of(void* self, void* child);
+bool q_graphicsitemgroup_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#commonAncestorItem)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param other QGraphicsItem*
 ///
-QGraphicsItem* q_graphicsitemgroup_common_ancestor_item(void* self, void* other);
+QGraphicsItem* q_graphicsitemgroup_common_ancestor_item(const void* self, const void* other);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isUnderMouse)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-bool q_graphicsitemgroup_is_under_mouse(void* self);
+bool q_graphicsitemgroup_is_under_mouse(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#data)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param key int
 ///
-QVariant* q_graphicsitemgroup_data(void* self, int key);
+QVariant* q_graphicsitemgroup_data(const void* self, int key);
 
 /// Inherited from QGraphicsItem
 ///
@@ -36386,17 +36248,17 @@ QVariant* q_graphicsitemgroup_data(void* self, int key);
 /// @param key int
 /// @param value QVariant*
 ///
-void q_graphicsitemgroup_set_data(void* self, int key, void* value);
+void q_graphicsitemgroup_set_data(void* self, int key, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodHints)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t q_graphicsitemgroup_input_method_hints(void* self);
+int32_t q_graphicsitemgroup_input_method_hints(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -36443,16 +36305,16 @@ void q_graphicsitemgroup_set_flag2(void* self, int32_t flag, bool enabled);
 /// @param mode enum QGraphicsItem__CacheMode
 /// @param cacheSize QSize*
 ///
-void q_graphicsitemgroup_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
+void q_graphicsitemgroup_set_cache_mode2(void* self, int32_t mode, const void* cacheSize);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param blockingPanel QGraphicsItem**
 ///
-bool q_graphicsitemgroup_is_blocked_by_modal_panel1(void* self, void** blockingPanel);
+bool q_graphicsitemgroup_is_blocked_by_modal_panel1(const void* self, void** blockingPanel);
 
 /// Inherited from QGraphicsItem
 ///
@@ -36470,7 +36332,7 @@ void q_graphicsitemgroup_set_focus1(void* self, int32_t focusReason);
 /// @param self QGraphicsItemGroup*
 /// @param rect QRectF*
 ///
-void q_graphicsitemgroup_ensure_visible1(void* self, void* rect);
+void q_graphicsitemgroup_ensure_visible1(void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -36480,7 +36342,7 @@ void q_graphicsitemgroup_ensure_visible1(void* self, void* rect);
 /// @param rect QRectF*
 /// @param xmargin int
 ///
-void q_graphicsitemgroup_ensure_visible22(void* self, void* rect, int xmargin);
+void q_graphicsitemgroup_ensure_visible22(void* self, const void* rect, int xmargin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -36491,7 +36353,7 @@ void q_graphicsitemgroup_ensure_visible22(void* self, void* rect, int xmargin);
 /// @param xmargin int
 /// @param ymargin int
 ///
-void q_graphicsitemgroup_ensure_visible3(void* self, void* rect, int xmargin, int ymargin);
+void q_graphicsitemgroup_ensure_visible3(void* self, const void* rect, int xmargin, int ymargin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -36524,11 +36386,11 @@ void q_graphicsitemgroup_ensure_visible6(void* self, double x, double y, double 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemTransform)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param other QGraphicsItem*
 /// @param ok bool*
 ///
-QTransform* q_graphicsitemgroup_item_transform2(void* self, void* other, bool* ok);
+QTransform* q_graphicsitemgroup_item_transform2(const void* self, const void* other, bool* ok);
 
 /// Inherited from QGraphicsItem
 ///
@@ -36538,27 +36400,27 @@ QTransform* q_graphicsitemgroup_item_transform2(void* self, void* other, bool* o
 /// @param matrix QTransform*
 /// @param combine bool
 ///
-void q_graphicsitemgroup_set_transform2(void* self, void* matrix, bool combine);
+void q_graphicsitemgroup_set_transform2(void* self, const void* matrix, bool combine);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param mode enum Qt__ItemSelectionMode
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsitemgroup_colliding_items1(void* self, int32_t mode);
+libqt_list q_graphicsitemgroup_colliding_items1(const void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param rect QRectF*
 ///
-bool q_graphicsitemgroup_is_obscured1(void* self, void* rect);
+bool q_graphicsitemgroup_is_obscured1(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -36567,7 +36429,7 @@ bool q_graphicsitemgroup_is_obscured1(void* self, void* rect);
 /// @param self QGraphicsItemGroup*
 /// @param rect QRectF*
 ///
-void q_graphicsitemgroup_update1(void* self, void* rect);
+void q_graphicsitemgroup_update1(void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -36578,7 +36440,7 @@ void q_graphicsitemgroup_update1(void* self, void* rect);
 /// @param dy double
 /// @param rect QRectF*
 ///
-void q_graphicsitemgroup_scroll3(void* self, double dx, double dy, void* rect);
+void q_graphicsitemgroup_scroll3(void* self, double dx, double dy, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -36619,9 +36481,9 @@ void q_graphicsitemgroup_on_advance(void* self, void (*callback)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-QPainterPath* q_graphicsitemgroup_shape(void* self);
+QPainterPath* q_graphicsitemgroup_shape(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -36629,9 +36491,9 @@ QPainterPath* q_graphicsitemgroup_shape(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 ///
-QPainterPath* q_graphicsitemgroup_super_shape(void* self);
+QPainterPath* q_graphicsitemgroup_super_shape(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -36639,12 +36501,12 @@ QPainterPath* q_graphicsitemgroup_super_shape(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsItemGroup*
-/// @param callback QPainterPath* func()
+/// @param self const QGraphicsItemGroup*
+/// @param callback QPainterPath* func(QGraphicsItemGroup* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsitemgroup_on_shape(void* self, QPainterPath* (*callback)());
+void q_graphicsitemgroup_on_shape(const void* self, QPainterPath* (*callback)(const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -36652,10 +36514,10 @@ void q_graphicsitemgroup_on_shape(void* self, QPainterPath* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param point QPointF*
 ///
-bool q_graphicsitemgroup_contains(void* self, void* point);
+bool q_graphicsitemgroup_contains(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
@@ -36663,10 +36525,10 @@ bool q_graphicsitemgroup_contains(void* self, void* point);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param point QPointF*
 ///
-bool q_graphicsitemgroup_super_contains(void* self, void* point);
+bool q_graphicsitemgroup_super_contains(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
@@ -36674,10 +36536,10 @@ bool q_graphicsitemgroup_super_contains(void* self, void* point);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param callback bool func(QGraphicsItemGroup* self, QPointF* point)
 ///
-void q_graphicsitemgroup_on_contains(void* self, bool (*callback)(void*, void*));
+void q_graphicsitemgroup_on_contains(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -36685,11 +36547,11 @@ void q_graphicsitemgroup_on_contains(void* self, bool (*callback)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicsitemgroup_collides_with_item(void* self, void* other, int32_t mode);
+bool q_graphicsitemgroup_collides_with_item(const void* self, const void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -36697,11 +36559,11 @@ bool q_graphicsitemgroup_collides_with_item(void* self, void* other, int32_t mod
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicsitemgroup_super_collides_with_item(void* self, void* other, int32_t mode);
+bool q_graphicsitemgroup_super_collides_with_item(const void* self, const void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -36709,10 +36571,10 @@ bool q_graphicsitemgroup_super_collides_with_item(void* self, void* other, int32
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param callback bool func(QGraphicsItemGroup* self, QGraphicsItem* other, enum Qt__ItemSelectionMode mode)
 ///
-void q_graphicsitemgroup_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
+void q_graphicsitemgroup_on_collides_with_item(const void* self, bool (*callback)(const void*, const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -36720,11 +36582,11 @@ void q_graphicsitemgroup_on_collides_with_item(void* self, bool (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicsitemgroup_collides_with_path(void* self, void* path, int32_t mode);
+bool q_graphicsitemgroup_collides_with_path(const void* self, const void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -36732,11 +36594,11 @@ bool q_graphicsitemgroup_collides_with_path(void* self, void* path, int32_t mode
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_graphicsitemgroup_super_collides_with_path(void* self, void* path, int32_t mode);
+bool q_graphicsitemgroup_super_collides_with_path(const void* self, const void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -36744,10 +36606,10 @@ bool q_graphicsitemgroup_super_collides_with_path(void* self, void* path, int32_
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param callback bool func(QGraphicsItemGroup* self, QPainterPath* path, enum Qt__ItemSelectionMode mode)
 ///
-void q_graphicsitemgroup_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
+void q_graphicsitemgroup_on_collides_with_path(const void* self, bool (*callback)(const void*, const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -37417,10 +37279,10 @@ void q_graphicsitemgroup_on_input_method_event(void* self, void (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_graphicsitemgroup_input_method_query(void* self, int32_t query);
+QVariant* q_graphicsitemgroup_input_method_query(const void* self, int32_t query);
 
 /// Inherited from QGraphicsItem
 ///
@@ -37428,10 +37290,10 @@ QVariant* q_graphicsitemgroup_input_method_query(void* self, int32_t query);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_graphicsitemgroup_super_input_method_query(void* self, int32_t query);
+QVariant* q_graphicsitemgroup_super_input_method_query(const void* self, int32_t query);
 
 /// Inherited from QGraphicsItem
 ///
@@ -37439,12 +37301,12 @@ QVariant* q_graphicsitemgroup_super_input_method_query(void* self, int32_t query
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param callback QVariant* func(QGraphicsItemGroup* self, enum Qt__InputMethodQuery query)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsitemgroup_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void q_graphicsitemgroup_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -37456,7 +37318,7 @@ void q_graphicsitemgroup_on_input_method_query(void* self, QVariant* (*callback)
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
 ///
-QVariant* q_graphicsitemgroup_item_change(void* self, int32_t change, void* value);
+QVariant* q_graphicsitemgroup_item_change(void* self, int32_t change, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -37468,7 +37330,7 @@ QVariant* q_graphicsitemgroup_item_change(void* self, int32_t change, void* valu
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
 ///
-QVariant* q_graphicsitemgroup_super_item_change(void* self, int32_t change, void* value);
+QVariant* q_graphicsitemgroup_super_item_change(void* self, int32_t change, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -37481,7 +37343,7 @@ QVariant* q_graphicsitemgroup_super_item_change(void* self, int32_t change, void
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsitemgroup_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
+void q_graphicsitemgroup_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -37489,10 +37351,10 @@ void q_graphicsitemgroup_on_item_change(void* self, QVariant* (*callback)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_graphicsitemgroup_supports_extension(void* self, int32_t extension);
+bool q_graphicsitemgroup_supports_extension(const void* self, int32_t extension);
 
 /// Inherited from QGraphicsItem
 ///
@@ -37500,10 +37362,10 @@ bool q_graphicsitemgroup_supports_extension(void* self, int32_t extension);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_graphicsitemgroup_super_supports_extension(void* self, int32_t extension);
+bool q_graphicsitemgroup_super_supports_extension(const void* self, int32_t extension);
 
 /// Inherited from QGraphicsItem
 ///
@@ -37511,10 +37373,10 @@ bool q_graphicsitemgroup_super_supports_extension(void* self, int32_t extension)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param callback bool func(QGraphicsItemGroup* self, enum QGraphicsItem__Extension extension)
 ///
-void q_graphicsitemgroup_on_supports_extension(void* self, bool (*callback)(void*, int32_t));
+void q_graphicsitemgroup_on_supports_extension(const void* self, bool (*callback)(const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -37526,7 +37388,7 @@ void q_graphicsitemgroup_on_supports_extension(void* self, bool (*callback)(void
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_graphicsitemgroup_set_extension(void* self, int32_t extension, void* variant);
+void q_graphicsitemgroup_set_extension(void* self, int32_t extension, const void* variant);
 
 /// Inherited from QGraphicsItem
 ///
@@ -37538,7 +37400,7 @@ void q_graphicsitemgroup_set_extension(void* self, int32_t extension, void* vari
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_graphicsitemgroup_super_set_extension(void* self, int32_t extension, void* variant);
+void q_graphicsitemgroup_super_set_extension(void* self, int32_t extension, const void* variant);
 
 /// Inherited from QGraphicsItem
 ///
@@ -37549,7 +37411,7 @@ void q_graphicsitemgroup_super_set_extension(void* self, int32_t extension, void
 /// @param self QGraphicsItemGroup*
 /// @param callback void func(QGraphicsItemGroup* self, enum QGraphicsItem__Extension extension, QVariant* variant)
 ///
-void q_graphicsitemgroup_on_set_extension(void* self, void (*callback)(void*, int32_t, void*));
+void q_graphicsitemgroup_on_set_extension(void* self, void (*callback)(void*, int32_t, const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -37557,10 +37419,10 @@ void q_graphicsitemgroup_on_set_extension(void* self, void (*callback)(void*, in
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param variant QVariant*
 ///
-QVariant* q_graphicsitemgroup_extension(void* self, void* variant);
+QVariant* q_graphicsitemgroup_extension(const void* self, const void* variant);
 
 /// Inherited from QGraphicsItem
 ///
@@ -37568,10 +37430,10 @@ QVariant* q_graphicsitemgroup_extension(void* self, void* variant);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param variant QVariant*
 ///
-QVariant* q_graphicsitemgroup_super_extension(void* self, void* variant);
+QVariant* q_graphicsitemgroup_super_extension(const void* self, const void* variant);
 
 /// Inherited from QGraphicsItem
 ///
@@ -37579,12 +37441,12 @@ QVariant* q_graphicsitemgroup_super_extension(void* self, void* variant);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsItemGroup*
+/// @param self const QGraphicsItemGroup*
 /// @param callback QVariant* func(QGraphicsItemGroup* self, QVariant* variant)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsitemgroup_on_extension(void* self, QVariant* (*callback)(void*, void*));
+void q_graphicsitemgroup_on_extension(const void* self, QVariant* (*callback)(const void*, const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -37613,9 +37475,9 @@ void q_graphicsitemgroup_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsItemGroup*
-/// @param callback void func()
+/// @param callback void func(QGraphicsItemGroup* self)
 ///
-void q_graphicsitemgroup_on_update_micro_focus(void* self, void (*callback)());
+void q_graphicsitemgroup_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -37644,9 +37506,9 @@ void q_graphicsitemgroup_super_add_to_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsItemGroup*
-/// @param callback void func()
+/// @param callback void func(QGraphicsItemGroup* self)
 ///
-void q_graphicsitemgroup_on_add_to_index(void* self, void (*callback)());
+void q_graphicsitemgroup_on_add_to_index(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -37675,9 +37537,9 @@ void q_graphicsitemgroup_super_remove_from_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsItemGroup*
-/// @param callback void func()
+/// @param callback void func(QGraphicsItemGroup* self)
 ///
-void q_graphicsitemgroup_on_remove_from_index(void* self, void (*callback)());
+void q_graphicsitemgroup_on_remove_from_index(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -37706,9 +37568,9 @@ void q_graphicsitemgroup_super_prepare_geometry_change(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsItemGroup*
-/// @param callback void func()
+/// @param callback void func(QGraphicsItemGroup* self)
 ///
-void q_graphicsitemgroup_on_prepare_geometry_change(void* self, void (*callback)());
+void q_graphicsitemgroup_on_prepare_geometry_change(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemgroup.html#dtor.QGraphicsItemGroup)
 ///

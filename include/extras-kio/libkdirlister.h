@@ -24,26 +24,26 @@ KDirLister* k_dirlister_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
-const QMetaObject* k_dirlister_meta_object(void* self);
+const QMetaObject* k_dirlister_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KDirLister*
-/// @param callback const QMetaObject* func()
+/// @param self const KDirLister*
+/// @param callback const QMetaObject* func(const KDirLister* self)
 ///
-void k_dirlister_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_dirlister_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
-const QMetaObject* k_dirlister_super_meta_object(void* self);
+const QMetaObject* k_dirlister_super_meta_object(const void* self);
 
 /// @param self KDirLister*
 /// @param param1 const char*
@@ -97,9 +97,9 @@ const char* k_dirlister_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kdirlister.html#autoErrorHandlingEnabled)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
-bool k_dirlister_auto_error_handling_enabled(void* self);
+bool k_dirlister_auto_error_handling_enabled(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kdirlister.html#setMainWindow)
 ///
@@ -165,7 +165,7 @@ const char* k_dirlister_tr3(const char* s, const char* c, int n);
 /// @param self KDirLister*
 /// @param dirUrl QUrl*
 ///
-bool k_dirlister_open_url(void* self, void* dirUrl);
+bool k_dirlister_open_url(void* self, const void* dirUrl);
 
 /// Inherited from KCoreDirLister
 ///
@@ -182,7 +182,7 @@ void k_dirlister_stop(void* self);
 /// @param self KDirLister*
 /// @param dirUrl QUrl*
 ///
-void k_dirlister_stop2(void* self, void* dirUrl);
+void k_dirlister_stop2(void* self, const void* dirUrl);
 
 /// Inherited from KCoreDirLister
 ///
@@ -191,15 +191,15 @@ void k_dirlister_stop2(void* self, void* dirUrl);
 /// @param self KDirLister*
 /// @param dirUrl QUrl*
 ///
-void k_dirlister_forget_dirs(void* self, void* dirUrl);
+void k_dirlister_forget_dirs(void* self, const void* dirUrl);
 
 /// Inherited from KCoreDirLister
 ///
 /// [Upstream resources](https://api.kde.org/kcoredirlister.html#delayedMimeTypes)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
-bool k_dirlister_delayed_mime_types(void* self);
+bool k_dirlister_delayed_mime_types(const void* self);
 
 /// Inherited from KCoreDirLister
 ///
@@ -214,9 +214,9 @@ void k_dirlister_set_delayed_mime_types(void* self, bool delayedMimeTypes);
 ///
 /// [Upstream resources](https://api.kde.org/kcoredirlister.html#autoUpdate)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
-bool k_dirlister_auto_update(void* self);
+bool k_dirlister_auto_update(const void* self);
 
 /// Inherited from KCoreDirLister
 ///
@@ -231,9 +231,9 @@ void k_dirlister_set_auto_update(void* self, bool enable);
 ///
 /// [Upstream resources](https://api.kde.org/kcoredirlister.html#showHiddenFiles)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
-bool k_dirlister_show_hidden_files(void* self);
+bool k_dirlister_show_hidden_files(const void* self);
 
 /// Inherited from KCoreDirLister
 ///
@@ -248,9 +248,9 @@ void k_dirlister_set_show_hidden_files(void* self, bool showHiddenFiles);
 ///
 /// [Upstream resources](https://api.kde.org/kcoredirlister.html#dirOnlyMode)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
-bool k_dirlister_dir_only_mode(void* self);
+bool k_dirlister_dir_only_mode(const void* self);
 
 /// Inherited from KCoreDirLister
 ///
@@ -265,9 +265,9 @@ void k_dirlister_set_dir_only_mode(void* self, bool dirsOnly);
 ///
 /// [Upstream resources](https://api.kde.org/kcoredirlister.html#requestMimeTypeWhileListing)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
-bool k_dirlister_request_mime_type_while_listing(void* self);
+bool k_dirlister_request_mime_type_while_listing(const void* self);
 
 /// Inherited from KCoreDirLister
 ///
@@ -282,19 +282,19 @@ void k_dirlister_set_request_mime_type_while_listing(void* self, bool request);
 ///
 /// [Upstream resources](https://api.kde.org/kcoredirlister.html#url)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
-QUrl* k_dirlister_url(void* self);
+QUrl* k_dirlister_url(const void* self);
 
 /// Inherited from KCoreDirLister
 ///
 /// [Upstream resources](https://api.kde.org/kcoredirlister.html#directories)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
 /// @return libqt_list of QUrl*
 ///
-libqt_list k_dirlister_directories(void* self);
+libqt_list k_dirlister_directories(const void* self);
 
 /// Inherited from KCoreDirLister
 ///
@@ -311,41 +311,41 @@ void k_dirlister_emit_changes(void* self);
 /// @param self KDirLister*
 /// @param dirUrl QUrl*
 ///
-void k_dirlister_update_directory(void* self, void* dirUrl);
+void k_dirlister_update_directory(void* self, const void* dirUrl);
 
 /// Inherited from KCoreDirLister
 ///
 /// [Upstream resources](https://api.kde.org/kcoredirlister.html#isFinished)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
-bool k_dirlister_is_finished(void* self);
+bool k_dirlister_is_finished(const void* self);
 
 /// Inherited from KCoreDirLister
 ///
 /// [Upstream resources](https://api.kde.org/kcoredirlister.html#rootItem)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
-KFileItem* k_dirlister_root_item(void* self);
+KFileItem* k_dirlister_root_item(const void* self);
 
 /// Inherited from KCoreDirLister
 ///
 /// [Upstream resources](https://api.kde.org/kcoredirlister.html#findByUrl)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 /// @param url QUrl*
 ///
-KFileItem* k_dirlister_find_by_url(void* self, void* url);
+KFileItem* k_dirlister_find_by_url(const void* self, const void* url);
 
 /// Inherited from KCoreDirLister
 ///
 /// [Upstream resources](https://api.kde.org/kcoredirlister.html#findByName)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 /// @param name const char*
 ///
-KFileItem* k_dirlister_find_by_name(void* self, const char* name);
+KFileItem* k_dirlister_find_by_name(const void* self, const char* name);
 
 /// Inherited from KCoreDirLister
 ///
@@ -362,9 +362,9 @@ void k_dirlister_set_name_filter(void* self, const char* filter);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
-const char* k_dirlister_name_filter(void* self);
+const char* k_dirlister_name_filter(const void* self);
 
 /// Inherited from KCoreDirLister
 ///
@@ -398,26 +398,26 @@ void k_dirlister_clear_mime_filter(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
-const char** k_dirlister_mime_filters(void* self);
+const char** k_dirlister_mime_filters(const void* self);
 
 /// Inherited from KCoreDirLister
 ///
 /// [Upstream resources](https://api.kde.org/kcoredirlister.html#items)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
-KFileItemList* k_dirlister_items(void* self);
+KFileItemList* k_dirlister_items(const void* self);
 
 /// Inherited from KCoreDirLister
 ///
 /// [Upstream resources](https://api.kde.org/kcoredirlister.html#itemsForDir)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 /// @param dirUrl QUrl*
 ///
-KFileItemList* k_dirlister_items_for_dir(void* self, void* dirUrl);
+KFileItemList* k_dirlister_items_for_dir(const void* self, const void* dirUrl);
 
 /// Inherited from KCoreDirLister
 ///
@@ -425,7 +425,7 @@ KFileItemList* k_dirlister_items_for_dir(void* self, void* dirUrl);
 ///
 /// @param url QUrl*
 ///
-KFileItem* k_dirlister_cached_item_for_url(void* url);
+KFileItem* k_dirlister_cached_item_for_url(const void* url);
 
 /// Inherited from KCoreDirLister
 ///
@@ -443,7 +443,7 @@ void k_dirlister_set_auto_error_handling_enabled(void* self, bool enable);
 /// @param self KDirLister*
 /// @param dirUrl QUrl*
 ///
-void k_dirlister_started(void* self, void* dirUrl);
+void k_dirlister_started(void* self, const void* dirUrl);
 
 /// Inherited from KCoreDirLister
 ///
@@ -452,7 +452,7 @@ void k_dirlister_started(void* self, void* dirUrl);
 /// @param self KDirLister*
 /// @param callback void func(KDirLister* self, QUrl* dirUrl)
 ///
-void k_dirlister_on_started(void* self, void (*callback)(void*, void*));
+void k_dirlister_on_started(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from KCoreDirLister
 ///
@@ -478,7 +478,7 @@ void k_dirlister_on_completed(void* self, void (*callback)(void*));
 /// @param self KDirLister*
 /// @param dirUrl QUrl*
 ///
-void k_dirlister_listing_dir_completed(void* self, void* dirUrl);
+void k_dirlister_listing_dir_completed(void* self, const void* dirUrl);
 
 /// Inherited from KCoreDirLister
 ///
@@ -487,7 +487,7 @@ void k_dirlister_listing_dir_completed(void* self, void* dirUrl);
 /// @param self KDirLister*
 /// @param callback void func(KDirLister* self, QUrl* dirUrl)
 ///
-void k_dirlister_on_listing_dir_completed(void* self, void (*callback)(void*, void*));
+void k_dirlister_on_listing_dir_completed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from KCoreDirLister
 ///
@@ -513,7 +513,7 @@ void k_dirlister_on_canceled(void* self, void (*callback)(void*));
 /// @param self KDirLister*
 /// @param dirUrl QUrl*
 ///
-void k_dirlister_listing_dir_canceled(void* self, void* dirUrl);
+void k_dirlister_listing_dir_canceled(void* self, const void* dirUrl);
 
 /// Inherited from KCoreDirLister
 ///
@@ -522,7 +522,7 @@ void k_dirlister_listing_dir_canceled(void* self, void* dirUrl);
 /// @param self KDirLister*
 /// @param callback void func(KDirLister* self, QUrl* dirUrl)
 ///
-void k_dirlister_on_listing_dir_canceled(void* self, void (*callback)(void*, void*));
+void k_dirlister_on_listing_dir_canceled(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from KCoreDirLister
 ///
@@ -532,7 +532,7 @@ void k_dirlister_on_listing_dir_canceled(void* self, void (*callback)(void*, voi
 /// @param oldUrl QUrl*
 /// @param newUrl QUrl*
 ///
-void k_dirlister_redirection(void* self, void* oldUrl, void* newUrl);
+void k_dirlister_redirection(void* self, const void* oldUrl, const void* newUrl);
 
 /// Inherited from KCoreDirLister
 ///
@@ -541,7 +541,7 @@ void k_dirlister_redirection(void* self, void* oldUrl, void* newUrl);
 /// @param self KDirLister*
 /// @param callback void func(KDirLister* self, QUrl* oldUrl, QUrl* newUrl)
 ///
-void k_dirlister_on_redirection(void* self, void (*callback)(void*, void*, void*));
+void k_dirlister_on_redirection(void* self, void (*callback)(void*, const void*, const void*));
 
 /// Inherited from KCoreDirLister
 ///
@@ -567,7 +567,7 @@ void k_dirlister_on_clear(void* self, void (*callback)(void*));
 /// @param self KDirLister*
 /// @param dirUrl QUrl*
 ///
-void k_dirlister_clear_dir(void* self, void* dirUrl);
+void k_dirlister_clear_dir(void* self, const void* dirUrl);
 
 /// Inherited from KCoreDirLister
 ///
@@ -576,7 +576,7 @@ void k_dirlister_clear_dir(void* self, void* dirUrl);
 /// @param self KDirLister*
 /// @param callback void func(KDirLister* self, QUrl* dirUrl)
 ///
-void k_dirlister_on_clear_dir(void* self, void (*callback)(void*, void*));
+void k_dirlister_on_clear_dir(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from KCoreDirLister
 ///
@@ -585,7 +585,7 @@ void k_dirlister_on_clear_dir(void* self, void (*callback)(void*, void*));
 /// @param self KDirLister*
 /// @param items KFileItemList*
 ///
-void k_dirlister_new_items(void* self, void* items);
+void k_dirlister_new_items(void* self, const void* items);
 
 /// Inherited from KCoreDirLister
 ///
@@ -594,7 +594,7 @@ void k_dirlister_new_items(void* self, void* items);
 /// @param self KDirLister*
 /// @param callback void func(KDirLister* self, KFileItemList* items)
 ///
-void k_dirlister_on_new_items(void* self, void (*callback)(void*, void*));
+void k_dirlister_on_new_items(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from KCoreDirLister
 ///
@@ -604,7 +604,7 @@ void k_dirlister_on_new_items(void* self, void (*callback)(void*, void*));
 /// @param directoryUrl QUrl*
 /// @param items KFileItemList*
 ///
-void k_dirlister_items_added(void* self, void* directoryUrl, void* items);
+void k_dirlister_items_added(void* self, const void* directoryUrl, const void* items);
 
 /// Inherited from KCoreDirLister
 ///
@@ -613,7 +613,7 @@ void k_dirlister_items_added(void* self, void* directoryUrl, void* items);
 /// @param self KDirLister*
 /// @param callback void func(KDirLister* self, QUrl* directoryUrl, KFileItemList* items)
 ///
-void k_dirlister_on_items_added(void* self, void (*callback)(void*, void*, void*));
+void k_dirlister_on_items_added(void* self, void (*callback)(void*, const void*, const void*));
 
 /// Inherited from KCoreDirLister
 ///
@@ -622,7 +622,7 @@ void k_dirlister_on_items_added(void* self, void (*callback)(void*, void*, void*
 /// @param self KDirLister*
 /// @param items KFileItemList*
 ///
-void k_dirlister_items_filtered_by_mime(void* self, void* items);
+void k_dirlister_items_filtered_by_mime(void* self, const void* items);
 
 /// Inherited from KCoreDirLister
 ///
@@ -631,7 +631,7 @@ void k_dirlister_items_filtered_by_mime(void* self, void* items);
 /// @param self KDirLister*
 /// @param callback void func(KDirLister* self, KFileItemList* items)
 ///
-void k_dirlister_on_items_filtered_by_mime(void* self, void (*callback)(void*, void*));
+void k_dirlister_on_items_filtered_by_mime(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from KCoreDirLister
 ///
@@ -640,7 +640,7 @@ void k_dirlister_on_items_filtered_by_mime(void* self, void (*callback)(void*, v
 /// @param self KDirLister*
 /// @param items KFileItemList*
 ///
-void k_dirlister_items_deleted(void* self, void* items);
+void k_dirlister_items_deleted(void* self, const void* items);
 
 /// Inherited from KCoreDirLister
 ///
@@ -649,7 +649,7 @@ void k_dirlister_items_deleted(void* self, void* items);
 /// @param self KDirLister*
 /// @param callback void func(KDirLister* self, KFileItemList* items)
 ///
-void k_dirlister_on_items_deleted(void* self, void (*callback)(void*, void*));
+void k_dirlister_on_items_deleted(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from KCoreDirLister
 ///
@@ -767,26 +767,26 @@ void k_dirlister_on_job_error(void* self, void (*callback)(void*, void*));
 /// @param dirUrl QUrl*
 /// @param flags flag of enum KCoreDirLister__OpenUrlFlag
 ///
-bool k_dirlister_open_url2(void* self, void* dirUrl, int32_t flags);
+bool k_dirlister_open_url2(void* self, const void* dirUrl, int32_t flags);
 
 /// Inherited from KCoreDirLister
 ///
 /// [Upstream resources](https://api.kde.org/kcoredirlister.html#items)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 /// @param which enum KCoreDirLister__WhichItems
 ///
-KFileItemList* k_dirlister_items1(void* self, int32_t which);
+KFileItemList* k_dirlister_items1(const void* self, int32_t which);
 
 /// Inherited from KCoreDirLister
 ///
 /// [Upstream resources](https://api.kde.org/kcoredirlister.html#itemsForDir)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 /// @param dirUrl QUrl*
 /// @param which enum KCoreDirLister__WhichItems
 ///
-KFileItemList* k_dirlister_items_for_dir2(void* self, void* dirUrl, int32_t which);
+KFileItemList* k_dirlister_items_for_dir2(const void* self, const void* dirUrl, int32_t which);
 
 /// Inherited from QObject
 ///
@@ -794,9 +794,9 @@ KFileItemList* k_dirlister_items_for_dir2(void* self, void* dirUrl, int32_t whic
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
-const char* k_dirlister_object_name(void* self);
+const char* k_dirlister_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -811,33 +811,33 @@ void k_dirlister_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
-bool k_dirlister_is_widget_type(void* self);
+bool k_dirlister_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
-bool k_dirlister_is_window_type(void* self);
+bool k_dirlister_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
-bool k_dirlister_is_quick_item_type(void* self);
+bool k_dirlister_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
-bool k_dirlister_signals_blocked(void* self);
+bool k_dirlister_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -852,9 +852,9 @@ bool k_dirlister_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
-QThread* k_dirlister_thread(void* self);
+QThread* k_dirlister_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -905,11 +905,11 @@ void k_dirlister_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_dirlister_children(void* self);
+libqt_list k_dirlister_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -947,7 +947,7 @@ void k_dirlister_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_dirlister_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_dirlister_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -958,18 +958,18 @@ QMetaObject__Connection* k_dirlister_connect(void* sender, const char* signal, v
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_dirlister_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_dirlister_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_dirlister_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_dirlister_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -980,7 +980,7 @@ QMetaObject__Connection* k_dirlister_connect3(void* self, void* sender, const ch
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_dirlister_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_dirlister_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -991,24 +991,24 @@ bool k_dirlister_disconnect(void* sender, const char* signal, void* receiver, co
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_dirlister_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_dirlister_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
-bool k_dirlister_disconnect3(void* self);
+bool k_dirlister_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 /// @param receiver QObject*
 ///
-bool k_dirlister_disconnect4(void* self, void* receiver);
+bool k_dirlister_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1016,23 +1016,23 @@ bool k_dirlister_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_dirlister_disconnect5(void* param1);
+bool k_dirlister_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
-void k_dirlister_dump_object_tree(void* self);
+void k_dirlister_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
-void k_dirlister_dump_object_info(void* self);
+void k_dirlister_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1042,16 +1042,16 @@ void k_dirlister_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_dirlister_set_property(void* self, const char* name, void* value);
+bool k_dirlister_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 /// @param name const char*
 ///
-QVariant* k_dirlister_property(void* self, const char* name);
+QVariant* k_dirlister_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1059,9 +1059,9 @@ QVariant* k_dirlister_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
-const char** k_dirlister_dynamic_property_names(void* self);
+const char** k_dirlister_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1075,9 +1075,9 @@ QBindingStorage* k_dirlister_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
-const QBindingStorage* k_dirlister_binding_storage2(void* self);
+const QBindingStorage* k_dirlister_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1100,18 +1100,18 @@ void k_dirlister_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
-QObject* k_dirlister_parent(void* self);
+QObject* k_dirlister_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 /// @param classname const char*
 ///
-bool k_dirlister_inherits(void* self, const char* classname);
+bool k_dirlister_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1151,7 +1151,7 @@ int32_t k_dirlister_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_dirlister_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_dirlister_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1163,59 +1163,59 @@ QMetaObject__Connection* k_dirlister_connect5(void* sender, const char* signal, 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_dirlister_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_dirlister_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_dirlister_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_dirlister_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 /// @param signal const char*
 ///
-bool k_dirlister_disconnect1(void* self, const char* signal);
+bool k_dirlister_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KDirLister*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_dirlister_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_dirlister_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_dirlister_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_dirlister_disconnect23(void* self, void* receiver, const char* member);
+bool k_dirlister_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KDirLister*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_dirlister_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1411,7 +1411,7 @@ void k_dirlister_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self KDirLister*
 /// @param signal QMetaMethod*
 ///
-void k_dirlister_connect_notify(void* self, void* signal);
+void k_dirlister_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1422,7 +1422,7 @@ void k_dirlister_connect_notify(void* self, void* signal);
 /// @param self KDirLister*
 /// @param signal QMetaMethod*
 ///
-void k_dirlister_super_connect_notify(void* self, void* signal);
+void k_dirlister_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1433,7 +1433,7 @@ void k_dirlister_super_connect_notify(void* self, void* signal);
 /// @param self KDirLister*
 /// @param callback void func(KDirLister* self, QMetaMethod* signal)
 ///
-void k_dirlister_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_dirlister_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1444,7 +1444,7 @@ void k_dirlister_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self KDirLister*
 /// @param signal QMetaMethod*
 ///
-void k_dirlister_disconnect_notify(void* self, void* signal);
+void k_dirlister_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1455,7 +1455,7 @@ void k_dirlister_disconnect_notify(void* self, void* signal);
 /// @param self KDirLister*
 /// @param signal QMetaMethod*
 ///
-void k_dirlister_super_disconnect_notify(void* self, void* signal);
+void k_dirlister_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1466,7 +1466,7 @@ void k_dirlister_super_disconnect_notify(void* self, void* signal);
 /// @param self KDirLister*
 /// @param callback void func(KDirLister* self, QMetaMethod* signal)
 ///
-void k_dirlister_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_dirlister_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1474,9 +1474,9 @@ void k_dirlister_on_disconnect_notify(void* self, void (*callback)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
-QObject* k_dirlister_sender(void* self);
+QObject* k_dirlister_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1484,9 +1484,9 @@ QObject* k_dirlister_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
-QObject* k_dirlister_super_sender(void* self);
+QObject* k_dirlister_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1494,10 +1494,10 @@ QObject* k_dirlister_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KDirLister*
-/// @param callback QObject* func()
+/// @param self const KDirLister*
+/// @param callback QObject* func(KDirLister* self)
 ///
-void k_dirlister_on_sender(void* self, QObject* (*callback)());
+void k_dirlister_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1505,9 +1505,9 @@ void k_dirlister_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
-int32_t k_dirlister_sender_signal_index(void* self);
+int32_t k_dirlister_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1515,9 +1515,9 @@ int32_t k_dirlister_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 ///
-int32_t k_dirlister_super_sender_signal_index(void* self);
+int32_t k_dirlister_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1525,10 +1525,10 @@ int32_t k_dirlister_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KDirLister*
-/// @param callback int32_t func()
+/// @param self const KDirLister*
+/// @param callback int32_t func(KDirLister* self)
 ///
-void k_dirlister_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_dirlister_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1536,10 +1536,10 @@ void k_dirlister_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 /// @param signal const char*
 ///
-int32_t k_dirlister_receivers(void* self, const char* signal);
+int32_t k_dirlister_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1547,10 +1547,10 @@ int32_t k_dirlister_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 /// @param signal const char*
 ///
-int32_t k_dirlister_super_receivers(void* self, const char* signal);
+int32_t k_dirlister_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1558,10 +1558,10 @@ int32_t k_dirlister_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 /// @param callback int32_t func(KDirLister* self, const char* signal)
 ///
-void k_dirlister_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_dirlister_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1569,10 +1569,10 @@ void k_dirlister_on_receivers(void* self, int32_t (*callback)(void*, const char*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 /// @param signal QMetaMethod*
 ///
-bool k_dirlister_is_signal_connected(void* self, void* signal);
+bool k_dirlister_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1580,10 +1580,10 @@ bool k_dirlister_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 /// @param signal QMetaMethod*
 ///
-bool k_dirlister_super_is_signal_connected(void* self, void* signal);
+bool k_dirlister_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1591,10 +1591,10 @@ bool k_dirlister_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KDirLister*
+/// @param self const KDirLister*
 /// @param callback bool func(KDirLister* self, QMetaMethod* signal)
 ///
-void k_dirlister_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_dirlister_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

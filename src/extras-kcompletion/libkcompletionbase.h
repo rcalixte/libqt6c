@@ -74,9 +74,9 @@ void k_completionbase_super_set_handle_signals(void* self, bool handle);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#isCompletionObjectAutoDeleted)
 ///
-/// @param self KCompletionBase*
+/// @param self const KCompletionBase*
 ///
-bool k_completionbase_is_completion_object_auto_deleted(void* self);
+bool k_completionbase_is_completion_object_auto_deleted(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#setAutoDeleteCompletionObject)
 ///
@@ -94,15 +94,15 @@ void k_completionbase_set_enable_signals(void* self, bool enable);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#handleSignals)
 ///
-/// @param self KCompletionBase*
+/// @param self const KCompletionBase*
 ///
-bool k_completionbase_handle_signals(void* self);
+bool k_completionbase_handle_signals(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#emitSignals)
 ///
-/// @param self KCompletionBase*
+/// @param self const KCompletionBase*
 ///
-bool k_completionbase_emit_signals(void* self);
+bool k_completionbase_emit_signals(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#setEmitSignals)
 ///
@@ -138,11 +138,11 @@ void k_completionbase_super_set_completion_mode(void* self, int32_t mode);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#completionMode)
 ///
-/// @param self KCompletionBase*
+/// @param self const KCompletionBase*
 ///
 /// @return enum KCompletion__CompletionMode
 ///
-int32_t k_completionbase_completion_mode(void* self);
+int32_t k_completionbase_completion_mode(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#setKeyBinding)
 ///
@@ -154,12 +154,12 @@ bool k_completionbase_set_key_binding(void* self, int32_t item, libqt_list key);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#keyBinding)
 ///
-/// @param self KCompletionBase*
+/// @param self const KCompletionBase*
 /// @param item enum KCompletionBase__KeyBindingType
 ///
 /// @return libqt_list of QKeySequence*
 ///
-libqt_list k_completionbase_key_binding(void* self, int32_t item);
+libqt_list k_completionbase_key_binding(const void* self, int32_t item);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#useGlobalKeyBindings)
 ///
@@ -168,6 +168,8 @@ libqt_list k_completionbase_key_binding(void* self, int32_t item);
 void k_completionbase_use_global_key_bindings(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#setCompletedText)
+///
+/// @warning This method must be implemented with `k_completionbase_on_set_completed_text` before it can be called.
 ///
 /// @param self KCompletionBase*
 /// @param text const char*
@@ -183,16 +185,9 @@ void k_completionbase_set_completed_text(void* self, const char* text);
 ///
 void k_completionbase_on_set_completed_text(void* self, void (*callback)(void*, const char*));
 
-/// [Upstream resources](https://api.kde.org/kcompletionbase.html#setCompletedText)
-///
-/// Base class method implementation
-///
-/// @param self KCompletionBase*
-/// @param text const char*
-///
-void k_completionbase_super_set_completed_text(void* self, const char* text);
-
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#setCompletedItems)
+///
+/// @warning This method must be implemented with `k_completionbase_on_set_completed_items` before it can be called.
 ///
 /// @param self KCompletionBase*
 /// @param items const char**
@@ -209,21 +204,11 @@ void k_completionbase_set_completed_items(void* self, const char* items[static 1
 ///
 void k_completionbase_on_set_completed_items(void* self, void (*callback)(void*, const char**, bool));
 
-/// [Upstream resources](https://api.kde.org/kcompletionbase.html#setCompletedItems)
-///
-/// Base class method implementation
-///
-/// @param self KCompletionBase*
-/// @param items const char**
-/// @param autoSuggest bool
-///
-void k_completionbase_super_set_completed_items(void* self, const char* items[static 1], bool autoSuggest);
-
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#compObj)
 ///
-/// @param self KCompletionBase*
+/// @param self const KCompletionBase*
 ///
-KCompletion* k_completionbase_comp_obj(void* self);
+KCompletion* k_completionbase_comp_obj(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#keyBindingMap)
 ///
@@ -240,30 +225,11 @@ KCompletion* k_completionbase_comp_obj(void* self);
 /// free(map.values);
 /// ```
 ///
-/// @param self KCompletionBase*
+/// @param self const KCompletionBase*
 ///
 /// @return libqt_map of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence*
 ///
-libqt_map k_completionbase_key_binding_map(void* self);
-
-/// [Upstream resources](https://api.kde.org/kcompletionbase.html#keyBindingMap)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KCompletionBase*
-/// @param callback libqt_map of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* func()
-///
-void k_completionbase_on_key_binding_map(void* self, libqt_map (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kcompletionbase.html#keyBindingMap)
-///
-/// Base class method implementation
-///
-/// @param self KCompletionBase*
-///
-/// @return libqt_map of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence*
-///
-libqt_map k_completionbase_super_key_binding_map(void* self);
+libqt_map k_completionbase_key_binding_map(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#setKeyBindingMap)
 ///
@@ -272,24 +238,6 @@ libqt_map k_completionbase_super_key_binding_map(void* self);
 ///
 void k_completionbase_set_key_binding_map(void* self, libqt_map keyBindingMap);
 
-/// [Upstream resources](https://api.kde.org/kcompletionbase.html#setKeyBindingMap)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KCompletionBase*
-/// @param callback void func(KCompletionBase* self, libqt_map of enum KCompletionBase__KeyBindingType to QKeySequence** keyBindingMap)
-///
-void k_completionbase_on_set_key_binding_map(void* self, void (*callback)(void*, libqt_map));
-
-/// [Upstream resources](https://api.kde.org/kcompletionbase.html#setKeyBindingMap)
-///
-/// Base class method implementation
-///
-/// @param self KCompletionBase*
-/// @param keyBindingMap libqt_map of enum KCompletionBase__KeyBindingType to QKeySequence**
-///
-void k_completionbase_super_set_key_binding_map(void* self, libqt_map keyBindingMap);
-
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#setDelegate)
 ///
 /// @param self KCompletionBase*
@@ -297,46 +245,11 @@ void k_completionbase_super_set_key_binding_map(void* self, libqt_map keyBinding
 ///
 void k_completionbase_set_delegate(void* self, void* delegate);
 
-/// [Upstream resources](https://api.kde.org/kcompletionbase.html#setDelegate)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KCompletionBase*
-/// @param callback void func(KCompletionBase* self, KCompletionBase* delegate)
-///
-void k_completionbase_on_set_delegate(void* self, void (*callback)(void*, void*));
-
-/// [Upstream resources](https://api.kde.org/kcompletionbase.html#setDelegate)
-///
-/// Base class method implementation
-///
-/// @param self KCompletionBase*
-/// @param delegate KCompletionBase*
-///
-void k_completionbase_super_set_delegate(void* self, void* delegate);
-
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#delegate)
 ///
-/// @param self KCompletionBase*
+/// @param self const KCompletionBase*
 ///
-KCompletionBase* k_completionbase_delegate(void* self);
-
-/// [Upstream resources](https://api.kde.org/kcompletionbase.html#delegate)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KCompletionBase*
-/// @param callback KCompletionBase* func()
-///
-void k_completionbase_on_delegate(void* self, KCompletionBase* (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kcompletionbase.html#delegate)
-///
-/// Base class method implementation
-///
-/// @param self KCompletionBase*
-///
-KCompletionBase* k_completionbase_super_delegate(void* self);
+KCompletionBase* k_completionbase_delegate(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#virtual_hook)
 ///

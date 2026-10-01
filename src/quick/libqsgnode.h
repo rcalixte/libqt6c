@@ -16,9 +16,9 @@ QSGNode* q_sgnode_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#parent)
 ///
-/// @param self QSGNode*
+/// @param self const QSGNode*
 ///
-QSGNode* q_sgnode_parent(void* self);
+QSGNode* q_sgnode_parent(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#removeChildNode)
 ///
@@ -72,48 +72,48 @@ void q_sgnode_reparent_child_nodes_to(void* self, void* newParent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#childCount)
 ///
-/// @param self QSGNode*
+/// @param self const QSGNode*
 ///
-int32_t q_sgnode_child_count(void* self);
+int32_t q_sgnode_child_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#childAtIndex)
 ///
-/// @param self QSGNode*
+/// @param self const QSGNode*
 /// @param i int
 ///
-QSGNode* q_sgnode_child_at_index(void* self, int i);
+QSGNode* q_sgnode_child_at_index(const void* self, int i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#firstChild)
 ///
-/// @param self QSGNode*
+/// @param self const QSGNode*
 ///
-QSGNode* q_sgnode_first_child(void* self);
+QSGNode* q_sgnode_first_child(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#lastChild)
 ///
-/// @param self QSGNode*
+/// @param self const QSGNode*
 ///
-QSGNode* q_sgnode_last_child(void* self);
+QSGNode* q_sgnode_last_child(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#nextSibling)
 ///
-/// @param self QSGNode*
+/// @param self const QSGNode*
 ///
-QSGNode* q_sgnode_next_sibling(void* self);
+QSGNode* q_sgnode_next_sibling(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#previousSibling)
 ///
-/// @param self QSGNode*
+/// @param self const QSGNode*
 ///
-QSGNode* q_sgnode_previous_sibling(void* self);
+QSGNode* q_sgnode_previous_sibling(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#type)
 ///
-/// @param self QSGNode*
+/// @param self const QSGNode*
 ///
 /// @return enum QSGNode__NodeType
 ///
-int32_t q_sgnode_type(void* self);
+int32_t q_sgnode_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#clearDirty)
 ///
@@ -130,42 +130,42 @@ void q_sgnode_mark_dirty(void* self, int32_t bits);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#dirtyState)
 ///
-/// @param self QSGNode*
+/// @param self const QSGNode*
 ///
 /// @return flag of enum QSGNode__DirtyStateBit
 ///
-int32_t q_sgnode_dirty_state(void* self);
+int32_t q_sgnode_dirty_state(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#isSubtreeBlocked)
 ///
-/// @param self QSGNode*
+/// @param self const QSGNode*
 ///
-bool q_sgnode_is_subtree_blocked(void* self);
+bool q_sgnode_is_subtree_blocked(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#isSubtreeBlocked)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSGNode*
-/// @param callback bool func()
+/// @param self const QSGNode*
+/// @param callback bool func(const QSGNode* self)
 ///
-void q_sgnode_on_is_subtree_blocked(void* self, bool (*callback)());
+void q_sgnode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#isSubtreeBlocked)
 ///
 /// Base class method implementation
 ///
-/// @param self QSGNode*
+/// @param self const QSGNode*
 ///
-bool q_sgnode_super_is_subtree_blocked(void* self);
+bool q_sgnode_super_is_subtree_blocked(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#flags)
 ///
-/// @param self QSGNode*
+/// @param self const QSGNode*
 ///
 /// @return flag of enum QSGNode__Flag
 ///
-int32_t q_sgnode_flags(void* self);
+int32_t q_sgnode_flags(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#setFlag)
 ///
@@ -192,9 +192,9 @@ void q_sgnode_preprocess(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSGNode*
-/// @param callback void func()
+/// @param callback void func(QSGNode* self)
 ///
-void q_sgnode_on_preprocess(void* self, void (*callback)());
+void q_sgnode_on_preprocess(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#preprocess)
 ///
@@ -248,9 +248,9 @@ void q_sgbasicgeometrynode_set_geometry(void* self, void* geometry);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgbasicgeometrynode.html#geometry)
 ///
-/// @param self QSGBasicGeometryNode*
+/// @param self const QSGBasicGeometryNode*
 ///
-const QSGGeometry* q_sgbasicgeometrynode_geometry(void* self);
+const QSGGeometry* q_sgbasicgeometrynode_geometry(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgbasicgeometrynode.html#geometry)
 ///
@@ -260,37 +260,37 @@ QSGGeometry* q_sgbasicgeometrynode_geometry2(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgbasicgeometrynode.html#matrix)
 ///
-/// @param self QSGBasicGeometryNode*
+/// @param self const QSGBasicGeometryNode*
 ///
-const QMatrix4x4* q_sgbasicgeometrynode_matrix(void* self);
+const QMatrix4x4* q_sgbasicgeometrynode_matrix(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgbasicgeometrynode.html#clipList)
 ///
-/// @param self QSGBasicGeometryNode*
+/// @param self const QSGBasicGeometryNode*
 ///
-const QSGClipNode* q_sgbasicgeometrynode_clip_list(void* self);
+const QSGClipNode* q_sgbasicgeometrynode_clip_list(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgbasicgeometrynode.html#setRendererMatrix)
 ///
 /// @param self QSGBasicGeometryNode*
 /// @param m QMatrix4x4*
 ///
-void q_sgbasicgeometrynode_set_renderer_matrix(void* self, void* m);
+void q_sgbasicgeometrynode_set_renderer_matrix(void* self, const void* m);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgbasicgeometrynode.html#setRendererClipList)
 ///
 /// @param self QSGBasicGeometryNode*
 /// @param c QSGClipNode*
 ///
-void q_sgbasicgeometrynode_set_renderer_clip_list(void* self, void* c);
+void q_sgbasicgeometrynode_set_renderer_clip_list(void* self, const void* c);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#parent)
 ///
-/// @param self QSGBasicGeometryNode*
+/// @param self const QSGBasicGeometryNode*
 ///
-QSGNode* q_sgbasicgeometrynode_parent(void* self);
+QSGNode* q_sgbasicgeometrynode_parent(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -360,60 +360,60 @@ void q_sgbasicgeometrynode_reparent_child_nodes_to(void* self, void* newParent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#childCount)
 ///
-/// @param self QSGBasicGeometryNode*
+/// @param self const QSGBasicGeometryNode*
 ///
-int32_t q_sgbasicgeometrynode_child_count(void* self);
+int32_t q_sgbasicgeometrynode_child_count(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#childAtIndex)
 ///
-/// @param self QSGBasicGeometryNode*
+/// @param self const QSGBasicGeometryNode*
 /// @param i int
 ///
-QSGNode* q_sgbasicgeometrynode_child_at_index(void* self, int i);
+QSGNode* q_sgbasicgeometrynode_child_at_index(const void* self, int i);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#firstChild)
 ///
-/// @param self QSGBasicGeometryNode*
+/// @param self const QSGBasicGeometryNode*
 ///
-QSGNode* q_sgbasicgeometrynode_first_child(void* self);
+QSGNode* q_sgbasicgeometrynode_first_child(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#lastChild)
 ///
-/// @param self QSGBasicGeometryNode*
+/// @param self const QSGBasicGeometryNode*
 ///
-QSGNode* q_sgbasicgeometrynode_last_child(void* self);
+QSGNode* q_sgbasicgeometrynode_last_child(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#nextSibling)
 ///
-/// @param self QSGBasicGeometryNode*
+/// @param self const QSGBasicGeometryNode*
 ///
-QSGNode* q_sgbasicgeometrynode_next_sibling(void* self);
+QSGNode* q_sgbasicgeometrynode_next_sibling(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#previousSibling)
 ///
-/// @param self QSGBasicGeometryNode*
+/// @param self const QSGBasicGeometryNode*
 ///
-QSGNode* q_sgbasicgeometrynode_previous_sibling(void* self);
+QSGNode* q_sgbasicgeometrynode_previous_sibling(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#type)
 ///
-/// @param self QSGBasicGeometryNode*
+/// @param self const QSGBasicGeometryNode*
 ///
 /// @return enum QSGNode__NodeType
 ///
-int32_t q_sgbasicgeometrynode_type(void* self);
+int32_t q_sgbasicgeometrynode_type(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -436,29 +436,29 @@ void q_sgbasicgeometrynode_mark_dirty(void* self, int32_t bits);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#dirtyState)
 ///
-/// @param self QSGBasicGeometryNode*
+/// @param self const QSGBasicGeometryNode*
 ///
 /// @return flag of enum QSGNode__DirtyStateBit
 ///
-int32_t q_sgbasicgeometrynode_dirty_state(void* self);
+int32_t q_sgbasicgeometrynode_dirty_state(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#isSubtreeBlocked)
 ///
-/// @param self QSGBasicGeometryNode*
+/// @param self const QSGBasicGeometryNode*
 ///
-bool q_sgbasicgeometrynode_is_subtree_blocked(void* self);
+bool q_sgbasicgeometrynode_is_subtree_blocked(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#flags)
 ///
-/// @param self QSGBasicGeometryNode*
+/// @param self const QSGBasicGeometryNode*
 ///
 /// @return flag of enum QSGNode__Flag
 ///
-int32_t q_sgbasicgeometrynode_flags(void* self);
+int32_t q_sgbasicgeometrynode_flags(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -529,9 +529,9 @@ void q_sggeometrynode_set_material(void* self, void* material);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometrynode.html#material)
 ///
-/// @param self QSGGeometryNode*
+/// @param self const QSGGeometryNode*
 ///
-QSGMaterial* q_sggeometrynode_material(void* self);
+QSGMaterial* q_sggeometrynode_material(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometrynode.html#setOpaqueMaterial)
 ///
@@ -542,15 +542,15 @@ void q_sggeometrynode_set_opaque_material(void* self, void* material);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometrynode.html#opaqueMaterial)
 ///
-/// @param self QSGGeometryNode*
+/// @param self const QSGGeometryNode*
 ///
-QSGMaterial* q_sggeometrynode_opaque_material(void* self);
+QSGMaterial* q_sggeometrynode_opaque_material(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometrynode.html#activeMaterial)
 ///
-/// @param self QSGGeometryNode*
+/// @param self const QSGGeometryNode*
 ///
-QSGMaterial* q_sggeometrynode_active_material(void* self);
+QSGMaterial* q_sggeometrynode_active_material(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometrynode.html#setRenderOrder)
 ///
@@ -561,9 +561,9 @@ void q_sggeometrynode_set_render_order(void* self, int order);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometrynode.html#renderOrder)
 ///
-/// @param self QSGGeometryNode*
+/// @param self const QSGGeometryNode*
 ///
-int32_t q_sggeometrynode_render_order(void* self);
+int32_t q_sggeometrynode_render_order(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometrynode.html#setInheritedOpacity)
 ///
@@ -574,9 +574,9 @@ void q_sggeometrynode_set_inherited_opacity(void* self, double opacity);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometrynode.html#inheritedOpacity)
 ///
-/// @param self QSGGeometryNode*
+/// @param self const QSGGeometryNode*
 ///
-double q_sggeometrynode_inherited_opacity(void* self);
+double q_sggeometrynode_inherited_opacity(const void* self);
 
 /// Inherited from QSGBasicGeometryNode
 ///
@@ -591,9 +591,9 @@ void q_sggeometrynode_set_geometry(void* self, void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgbasicgeometrynode.html#geometry)
 ///
-/// @param self QSGGeometryNode*
+/// @param self const QSGGeometryNode*
 ///
-const QSGGeometry* q_sggeometrynode_geometry(void* self);
+const QSGGeometry* q_sggeometrynode_geometry(const void* self);
 
 /// Inherited from QSGBasicGeometryNode
 ///
@@ -607,17 +607,17 @@ QSGGeometry* q_sggeometrynode_geometry2(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgbasicgeometrynode.html#matrix)
 ///
-/// @param self QSGGeometryNode*
+/// @param self const QSGGeometryNode*
 ///
-const QMatrix4x4* q_sggeometrynode_matrix(void* self);
+const QMatrix4x4* q_sggeometrynode_matrix(const void* self);
 
 /// Inherited from QSGBasicGeometryNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgbasicgeometrynode.html#clipList)
 ///
-/// @param self QSGGeometryNode*
+/// @param self const QSGGeometryNode*
 ///
-const QSGClipNode* q_sggeometrynode_clip_list(void* self);
+const QSGClipNode* q_sggeometrynode_clip_list(const void* self);
 
 /// Inherited from QSGBasicGeometryNode
 ///
@@ -626,7 +626,7 @@ const QSGClipNode* q_sggeometrynode_clip_list(void* self);
 /// @param self QSGGeometryNode*
 /// @param m QMatrix4x4*
 ///
-void q_sggeometrynode_set_renderer_matrix(void* self, void* m);
+void q_sggeometrynode_set_renderer_matrix(void* self, const void* m);
 
 /// Inherited from QSGBasicGeometryNode
 ///
@@ -635,15 +635,15 @@ void q_sggeometrynode_set_renderer_matrix(void* self, void* m);
 /// @param self QSGGeometryNode*
 /// @param c QSGClipNode*
 ///
-void q_sggeometrynode_set_renderer_clip_list(void* self, void* c);
+void q_sggeometrynode_set_renderer_clip_list(void* self, const void* c);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#parent)
 ///
-/// @param self QSGGeometryNode*
+/// @param self const QSGGeometryNode*
 ///
-QSGNode* q_sggeometrynode_parent(void* self);
+QSGNode* q_sggeometrynode_parent(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -713,60 +713,60 @@ void q_sggeometrynode_reparent_child_nodes_to(void* self, void* newParent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#childCount)
 ///
-/// @param self QSGGeometryNode*
+/// @param self const QSGGeometryNode*
 ///
-int32_t q_sggeometrynode_child_count(void* self);
+int32_t q_sggeometrynode_child_count(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#childAtIndex)
 ///
-/// @param self QSGGeometryNode*
+/// @param self const QSGGeometryNode*
 /// @param i int
 ///
-QSGNode* q_sggeometrynode_child_at_index(void* self, int i);
+QSGNode* q_sggeometrynode_child_at_index(const void* self, int i);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#firstChild)
 ///
-/// @param self QSGGeometryNode*
+/// @param self const QSGGeometryNode*
 ///
-QSGNode* q_sggeometrynode_first_child(void* self);
+QSGNode* q_sggeometrynode_first_child(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#lastChild)
 ///
-/// @param self QSGGeometryNode*
+/// @param self const QSGGeometryNode*
 ///
-QSGNode* q_sggeometrynode_last_child(void* self);
+QSGNode* q_sggeometrynode_last_child(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#nextSibling)
 ///
-/// @param self QSGGeometryNode*
+/// @param self const QSGGeometryNode*
 ///
-QSGNode* q_sggeometrynode_next_sibling(void* self);
+QSGNode* q_sggeometrynode_next_sibling(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#previousSibling)
 ///
-/// @param self QSGGeometryNode*
+/// @param self const QSGGeometryNode*
 ///
-QSGNode* q_sggeometrynode_previous_sibling(void* self);
+QSGNode* q_sggeometrynode_previous_sibling(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#type)
 ///
-/// @param self QSGGeometryNode*
+/// @param self const QSGGeometryNode*
 ///
 /// @return enum QSGNode__NodeType
 ///
-int32_t q_sggeometrynode_type(void* self);
+int32_t q_sggeometrynode_type(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -789,21 +789,21 @@ void q_sggeometrynode_mark_dirty(void* self, int32_t bits);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#dirtyState)
 ///
-/// @param self QSGGeometryNode*
+/// @param self const QSGGeometryNode*
 ///
 /// @return flag of enum QSGNode__DirtyStateBit
 ///
-int32_t q_sggeometrynode_dirty_state(void* self);
+int32_t q_sggeometrynode_dirty_state(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#flags)
 ///
-/// @param self QSGGeometryNode*
+/// @param self const QSGGeometryNode*
 ///
 /// @return flag of enum QSGNode__Flag
 ///
-int32_t q_sggeometrynode_flags(void* self);
+int32_t q_sggeometrynode_flags(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -849,9 +849,9 @@ void q_sggeometrynode_set_flags2(void* self, int32_t param1, bool param2);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSGGeometryNode*
+/// @param self const QSGGeometryNode*
 ///
-bool q_sggeometrynode_is_subtree_blocked(void* self);
+bool q_sggeometrynode_is_subtree_blocked(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -859,9 +859,9 @@ bool q_sggeometrynode_is_subtree_blocked(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSGGeometryNode*
+/// @param self const QSGGeometryNode*
 ///
-bool q_sggeometrynode_super_is_subtree_blocked(void* self);
+bool q_sggeometrynode_super_is_subtree_blocked(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -869,10 +869,10 @@ bool q_sggeometrynode_super_is_subtree_blocked(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSGGeometryNode*
-/// @param callback bool func()
+/// @param self const QSGGeometryNode*
+/// @param callback bool func(QSGGeometryNode* self)
 ///
-void q_sggeometrynode_on_is_subtree_blocked(void* self, bool (*callback)());
+void q_sggeometrynode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QSGNode
 ///
@@ -901,9 +901,9 @@ void q_sggeometrynode_super_preprocess(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSGGeometryNode*
-/// @param callback void func()
+/// @param callback void func(QSGGeometryNode* self)
 ///
-void q_sggeometrynode_on_preprocess(void* self, void (*callback)());
+void q_sggeometrynode_on_preprocess(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometrynode.html#dtor.QSGGeometryNode)
 ///
@@ -928,22 +928,22 @@ void q_sgclipnode_set_is_rectangular(void* self, bool rectHint);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgclipnode.html#isRectangular)
 ///
-/// @param self QSGClipNode*
+/// @param self const QSGClipNode*
 ///
-bool q_sgclipnode_is_rectangular(void* self);
+bool q_sgclipnode_is_rectangular(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgclipnode.html#setClipRect)
 ///
 /// @param self QSGClipNode*
 /// @param clipRect QRectF*
 ///
-void q_sgclipnode_set_clip_rect(void* self, void* clipRect);
+void q_sgclipnode_set_clip_rect(void* self, const void* clipRect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgclipnode.html#clipRect)
 ///
-/// @param self QSGClipNode*
+/// @param self const QSGClipNode*
 ///
-QRectF* q_sgclipnode_clip_rect(void* self);
+QRectF* q_sgclipnode_clip_rect(const void* self);
 
 /// Inherited from QSGBasicGeometryNode
 ///
@@ -958,9 +958,9 @@ void q_sgclipnode_set_geometry(void* self, void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgbasicgeometrynode.html#geometry)
 ///
-/// @param self QSGClipNode*
+/// @param self const QSGClipNode*
 ///
-const QSGGeometry* q_sgclipnode_geometry(void* self);
+const QSGGeometry* q_sgclipnode_geometry(const void* self);
 
 /// Inherited from QSGBasicGeometryNode
 ///
@@ -974,17 +974,17 @@ QSGGeometry* q_sgclipnode_geometry2(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgbasicgeometrynode.html#matrix)
 ///
-/// @param self QSGClipNode*
+/// @param self const QSGClipNode*
 ///
-const QMatrix4x4* q_sgclipnode_matrix(void* self);
+const QMatrix4x4* q_sgclipnode_matrix(const void* self);
 
 /// Inherited from QSGBasicGeometryNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgbasicgeometrynode.html#clipList)
 ///
-/// @param self QSGClipNode*
+/// @param self const QSGClipNode*
 ///
-const QSGClipNode* q_sgclipnode_clip_list(void* self);
+const QSGClipNode* q_sgclipnode_clip_list(const void* self);
 
 /// Inherited from QSGBasicGeometryNode
 ///
@@ -993,7 +993,7 @@ const QSGClipNode* q_sgclipnode_clip_list(void* self);
 /// @param self QSGClipNode*
 /// @param m QMatrix4x4*
 ///
-void q_sgclipnode_set_renderer_matrix(void* self, void* m);
+void q_sgclipnode_set_renderer_matrix(void* self, const void* m);
 
 /// Inherited from QSGBasicGeometryNode
 ///
@@ -1002,15 +1002,15 @@ void q_sgclipnode_set_renderer_matrix(void* self, void* m);
 /// @param self QSGClipNode*
 /// @param c QSGClipNode*
 ///
-void q_sgclipnode_set_renderer_clip_list(void* self, void* c);
+void q_sgclipnode_set_renderer_clip_list(void* self, const void* c);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#parent)
 ///
-/// @param self QSGClipNode*
+/// @param self const QSGClipNode*
 ///
-QSGNode* q_sgclipnode_parent(void* self);
+QSGNode* q_sgclipnode_parent(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -1080,60 +1080,60 @@ void q_sgclipnode_reparent_child_nodes_to(void* self, void* newParent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#childCount)
 ///
-/// @param self QSGClipNode*
+/// @param self const QSGClipNode*
 ///
-int32_t q_sgclipnode_child_count(void* self);
+int32_t q_sgclipnode_child_count(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#childAtIndex)
 ///
-/// @param self QSGClipNode*
+/// @param self const QSGClipNode*
 /// @param i int
 ///
-QSGNode* q_sgclipnode_child_at_index(void* self, int i);
+QSGNode* q_sgclipnode_child_at_index(const void* self, int i);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#firstChild)
 ///
-/// @param self QSGClipNode*
+/// @param self const QSGClipNode*
 ///
-QSGNode* q_sgclipnode_first_child(void* self);
+QSGNode* q_sgclipnode_first_child(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#lastChild)
 ///
-/// @param self QSGClipNode*
+/// @param self const QSGClipNode*
 ///
-QSGNode* q_sgclipnode_last_child(void* self);
+QSGNode* q_sgclipnode_last_child(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#nextSibling)
 ///
-/// @param self QSGClipNode*
+/// @param self const QSGClipNode*
 ///
-QSGNode* q_sgclipnode_next_sibling(void* self);
+QSGNode* q_sgclipnode_next_sibling(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#previousSibling)
 ///
-/// @param self QSGClipNode*
+/// @param self const QSGClipNode*
 ///
-QSGNode* q_sgclipnode_previous_sibling(void* self);
+QSGNode* q_sgclipnode_previous_sibling(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#type)
 ///
-/// @param self QSGClipNode*
+/// @param self const QSGClipNode*
 ///
 /// @return enum QSGNode__NodeType
 ///
-int32_t q_sgclipnode_type(void* self);
+int32_t q_sgclipnode_type(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -1156,21 +1156,21 @@ void q_sgclipnode_mark_dirty(void* self, int32_t bits);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#dirtyState)
 ///
-/// @param self QSGClipNode*
+/// @param self const QSGClipNode*
 ///
 /// @return flag of enum QSGNode__DirtyStateBit
 ///
-int32_t q_sgclipnode_dirty_state(void* self);
+int32_t q_sgclipnode_dirty_state(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#flags)
 ///
-/// @param self QSGClipNode*
+/// @param self const QSGClipNode*
 ///
 /// @return flag of enum QSGNode__Flag
 ///
-int32_t q_sgclipnode_flags(void* self);
+int32_t q_sgclipnode_flags(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -1216,9 +1216,9 @@ void q_sgclipnode_set_flags2(void* self, int32_t param1, bool param2);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSGClipNode*
+/// @param self const QSGClipNode*
 ///
-bool q_sgclipnode_is_subtree_blocked(void* self);
+bool q_sgclipnode_is_subtree_blocked(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -1226,9 +1226,9 @@ bool q_sgclipnode_is_subtree_blocked(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSGClipNode*
+/// @param self const QSGClipNode*
 ///
-bool q_sgclipnode_super_is_subtree_blocked(void* self);
+bool q_sgclipnode_super_is_subtree_blocked(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -1236,10 +1236,10 @@ bool q_sgclipnode_super_is_subtree_blocked(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSGClipNode*
-/// @param callback bool func()
+/// @param self const QSGClipNode*
+/// @param callback bool func(QSGClipNode* self)
 ///
-void q_sgclipnode_on_is_subtree_blocked(void* self, bool (*callback)());
+void q_sgclipnode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QSGNode
 ///
@@ -1268,9 +1268,9 @@ void q_sgclipnode_super_preprocess(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSGClipNode*
-/// @param callback void func()
+/// @param callback void func(QSGClipNode* self)
 ///
-void q_sgclipnode_on_preprocess(void* self, void (*callback)());
+void q_sgclipnode_on_preprocess(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgclipnode.html#dtor.QSGClipNode)
 ///
@@ -1291,34 +1291,34 @@ QSGTransformNode* q_sgtransformnode_new();
 /// @param self QSGTransformNode*
 /// @param matrix QMatrix4x4*
 ///
-void q_sgtransformnode_set_matrix(void* self, void* matrix);
+void q_sgtransformnode_set_matrix(void* self, const void* matrix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtransformnode.html#matrix)
 ///
-/// @param self QSGTransformNode*
+/// @param self const QSGTransformNode*
 ///
-const QMatrix4x4* q_sgtransformnode_matrix(void* self);
+const QMatrix4x4* q_sgtransformnode_matrix(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtransformnode.html#setCombinedMatrix)
 ///
 /// @param self QSGTransformNode*
 /// @param matrix QMatrix4x4*
 ///
-void q_sgtransformnode_set_combined_matrix(void* self, void* matrix);
+void q_sgtransformnode_set_combined_matrix(void* self, const void* matrix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtransformnode.html#combinedMatrix)
 ///
-/// @param self QSGTransformNode*
+/// @param self const QSGTransformNode*
 ///
-const QMatrix4x4* q_sgtransformnode_combined_matrix(void* self);
+const QMatrix4x4* q_sgtransformnode_combined_matrix(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#parent)
 ///
-/// @param self QSGTransformNode*
+/// @param self const QSGTransformNode*
 ///
-QSGNode* q_sgtransformnode_parent(void* self);
+QSGNode* q_sgtransformnode_parent(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -1388,60 +1388,60 @@ void q_sgtransformnode_reparent_child_nodes_to(void* self, void* newParent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#childCount)
 ///
-/// @param self QSGTransformNode*
+/// @param self const QSGTransformNode*
 ///
-int32_t q_sgtransformnode_child_count(void* self);
+int32_t q_sgtransformnode_child_count(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#childAtIndex)
 ///
-/// @param self QSGTransformNode*
+/// @param self const QSGTransformNode*
 /// @param i int
 ///
-QSGNode* q_sgtransformnode_child_at_index(void* self, int i);
+QSGNode* q_sgtransformnode_child_at_index(const void* self, int i);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#firstChild)
 ///
-/// @param self QSGTransformNode*
+/// @param self const QSGTransformNode*
 ///
-QSGNode* q_sgtransformnode_first_child(void* self);
+QSGNode* q_sgtransformnode_first_child(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#lastChild)
 ///
-/// @param self QSGTransformNode*
+/// @param self const QSGTransformNode*
 ///
-QSGNode* q_sgtransformnode_last_child(void* self);
+QSGNode* q_sgtransformnode_last_child(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#nextSibling)
 ///
-/// @param self QSGTransformNode*
+/// @param self const QSGTransformNode*
 ///
-QSGNode* q_sgtransformnode_next_sibling(void* self);
+QSGNode* q_sgtransformnode_next_sibling(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#previousSibling)
 ///
-/// @param self QSGTransformNode*
+/// @param self const QSGTransformNode*
 ///
-QSGNode* q_sgtransformnode_previous_sibling(void* self);
+QSGNode* q_sgtransformnode_previous_sibling(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#type)
 ///
-/// @param self QSGTransformNode*
+/// @param self const QSGTransformNode*
 ///
 /// @return enum QSGNode__NodeType
 ///
-int32_t q_sgtransformnode_type(void* self);
+int32_t q_sgtransformnode_type(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -1464,21 +1464,21 @@ void q_sgtransformnode_mark_dirty(void* self, int32_t bits);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#dirtyState)
 ///
-/// @param self QSGTransformNode*
+/// @param self const QSGTransformNode*
 ///
 /// @return flag of enum QSGNode__DirtyStateBit
 ///
-int32_t q_sgtransformnode_dirty_state(void* self);
+int32_t q_sgtransformnode_dirty_state(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#flags)
 ///
-/// @param self QSGTransformNode*
+/// @param self const QSGTransformNode*
 ///
 /// @return flag of enum QSGNode__Flag
 ///
-int32_t q_sgtransformnode_flags(void* self);
+int32_t q_sgtransformnode_flags(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -1524,9 +1524,9 @@ void q_sgtransformnode_set_flags2(void* self, int32_t param1, bool param2);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSGTransformNode*
+/// @param self const QSGTransformNode*
 ///
-bool q_sgtransformnode_is_subtree_blocked(void* self);
+bool q_sgtransformnode_is_subtree_blocked(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -1534,9 +1534,9 @@ bool q_sgtransformnode_is_subtree_blocked(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSGTransformNode*
+/// @param self const QSGTransformNode*
 ///
-bool q_sgtransformnode_super_is_subtree_blocked(void* self);
+bool q_sgtransformnode_super_is_subtree_blocked(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -1544,10 +1544,10 @@ bool q_sgtransformnode_super_is_subtree_blocked(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSGTransformNode*
-/// @param callback bool func()
+/// @param self const QSGTransformNode*
+/// @param callback bool func(QSGTransformNode* self)
 ///
-void q_sgtransformnode_on_is_subtree_blocked(void* self, bool (*callback)());
+void q_sgtransformnode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QSGNode
 ///
@@ -1576,9 +1576,9 @@ void q_sgtransformnode_super_preprocess(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSGTransformNode*
-/// @param callback void func()
+/// @param callback void func(QSGTransformNode* self)
 ///
-void q_sgtransformnode_on_preprocess(void* self, void (*callback)());
+void q_sgtransformnode_on_preprocess(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtransformnode.html#dtor.QSGTransformNode)
 ///
@@ -1598,9 +1598,9 @@ QSGRootNode* q_sgrootnode_new();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#parent)
 ///
-/// @param self QSGRootNode*
+/// @param self const QSGRootNode*
 ///
-QSGNode* q_sgrootnode_parent(void* self);
+QSGNode* q_sgrootnode_parent(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -1670,60 +1670,60 @@ void q_sgrootnode_reparent_child_nodes_to(void* self, void* newParent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#childCount)
 ///
-/// @param self QSGRootNode*
+/// @param self const QSGRootNode*
 ///
-int32_t q_sgrootnode_child_count(void* self);
+int32_t q_sgrootnode_child_count(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#childAtIndex)
 ///
-/// @param self QSGRootNode*
+/// @param self const QSGRootNode*
 /// @param i int
 ///
-QSGNode* q_sgrootnode_child_at_index(void* self, int i);
+QSGNode* q_sgrootnode_child_at_index(const void* self, int i);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#firstChild)
 ///
-/// @param self QSGRootNode*
+/// @param self const QSGRootNode*
 ///
-QSGNode* q_sgrootnode_first_child(void* self);
+QSGNode* q_sgrootnode_first_child(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#lastChild)
 ///
-/// @param self QSGRootNode*
+/// @param self const QSGRootNode*
 ///
-QSGNode* q_sgrootnode_last_child(void* self);
+QSGNode* q_sgrootnode_last_child(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#nextSibling)
 ///
-/// @param self QSGRootNode*
+/// @param self const QSGRootNode*
 ///
-QSGNode* q_sgrootnode_next_sibling(void* self);
+QSGNode* q_sgrootnode_next_sibling(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#previousSibling)
 ///
-/// @param self QSGRootNode*
+/// @param self const QSGRootNode*
 ///
-QSGNode* q_sgrootnode_previous_sibling(void* self);
+QSGNode* q_sgrootnode_previous_sibling(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#type)
 ///
-/// @param self QSGRootNode*
+/// @param self const QSGRootNode*
 ///
 /// @return enum QSGNode__NodeType
 ///
-int32_t q_sgrootnode_type(void* self);
+int32_t q_sgrootnode_type(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -1746,21 +1746,21 @@ void q_sgrootnode_mark_dirty(void* self, int32_t bits);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#dirtyState)
 ///
-/// @param self QSGRootNode*
+/// @param self const QSGRootNode*
 ///
 /// @return flag of enum QSGNode__DirtyStateBit
 ///
-int32_t q_sgrootnode_dirty_state(void* self);
+int32_t q_sgrootnode_dirty_state(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#flags)
 ///
-/// @param self QSGRootNode*
+/// @param self const QSGRootNode*
 ///
 /// @return flag of enum QSGNode__Flag
 ///
-int32_t q_sgrootnode_flags(void* self);
+int32_t q_sgrootnode_flags(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -1806,9 +1806,9 @@ void q_sgrootnode_set_flags2(void* self, int32_t param1, bool param2);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSGRootNode*
+/// @param self const QSGRootNode*
 ///
-bool q_sgrootnode_is_subtree_blocked(void* self);
+bool q_sgrootnode_is_subtree_blocked(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -1816,9 +1816,9 @@ bool q_sgrootnode_is_subtree_blocked(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSGRootNode*
+/// @param self const QSGRootNode*
 ///
-bool q_sgrootnode_super_is_subtree_blocked(void* self);
+bool q_sgrootnode_super_is_subtree_blocked(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -1826,10 +1826,10 @@ bool q_sgrootnode_super_is_subtree_blocked(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSGRootNode*
-/// @param callback bool func()
+/// @param self const QSGRootNode*
+/// @param callback bool func(QSGRootNode* self)
 ///
-void q_sgrootnode_on_is_subtree_blocked(void* self, bool (*callback)());
+void q_sgrootnode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QSGNode
 ///
@@ -1858,9 +1858,9 @@ void q_sgrootnode_super_preprocess(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSGRootNode*
-/// @param callback void func()
+/// @param callback void func(QSGRootNode* self)
 ///
-void q_sgrootnode_on_preprocess(void* self, void (*callback)());
+void q_sgrootnode_on_preprocess(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrootnode.html#dtor.QSGRootNode)
 ///
@@ -1885,9 +1885,9 @@ void q_sgopacitynode_set_opacity(void* self, double opacity);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgopacitynode.html#opacity)
 ///
-/// @param self QSGOpacityNode*
+/// @param self const QSGOpacityNode*
 ///
-double q_sgopacitynode_opacity(void* self);
+double q_sgopacitynode_opacity(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgopacitynode.html#setCombinedOpacity)
 ///
@@ -1898,40 +1898,40 @@ void q_sgopacitynode_set_combined_opacity(void* self, double opacity);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgopacitynode.html#combinedOpacity)
 ///
-/// @param self QSGOpacityNode*
+/// @param self const QSGOpacityNode*
 ///
-double q_sgopacitynode_combined_opacity(void* self);
+double q_sgopacitynode_combined_opacity(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgopacitynode.html#isSubtreeBlocked)
 ///
-/// @param self QSGOpacityNode*
+/// @param self const QSGOpacityNode*
 ///
-bool q_sgopacitynode_is_subtree_blocked(void* self);
+bool q_sgopacitynode_is_subtree_blocked(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgopacitynode.html#isSubtreeBlocked)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSGOpacityNode*
-/// @param callback bool func()
+/// @param self const QSGOpacityNode*
+/// @param callback bool func(const QSGOpacityNode* self)
 ///
-void q_sgopacitynode_on_is_subtree_blocked(void* self, bool (*callback)());
+void q_sgopacitynode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgopacitynode.html#isSubtreeBlocked)
 ///
 /// Base class method implementation
 ///
-/// @param self QSGOpacityNode*
+/// @param self const QSGOpacityNode*
 ///
-bool q_sgopacitynode_super_is_subtree_blocked(void* self);
+bool q_sgopacitynode_super_is_subtree_blocked(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#parent)
 ///
-/// @param self QSGOpacityNode*
+/// @param self const QSGOpacityNode*
 ///
-QSGNode* q_sgopacitynode_parent(void* self);
+QSGNode* q_sgopacitynode_parent(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -2001,60 +2001,60 @@ void q_sgopacitynode_reparent_child_nodes_to(void* self, void* newParent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#childCount)
 ///
-/// @param self QSGOpacityNode*
+/// @param self const QSGOpacityNode*
 ///
-int32_t q_sgopacitynode_child_count(void* self);
+int32_t q_sgopacitynode_child_count(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#childAtIndex)
 ///
-/// @param self QSGOpacityNode*
+/// @param self const QSGOpacityNode*
 /// @param i int
 ///
-QSGNode* q_sgopacitynode_child_at_index(void* self, int i);
+QSGNode* q_sgopacitynode_child_at_index(const void* self, int i);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#firstChild)
 ///
-/// @param self QSGOpacityNode*
+/// @param self const QSGOpacityNode*
 ///
-QSGNode* q_sgopacitynode_first_child(void* self);
+QSGNode* q_sgopacitynode_first_child(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#lastChild)
 ///
-/// @param self QSGOpacityNode*
+/// @param self const QSGOpacityNode*
 ///
-QSGNode* q_sgopacitynode_last_child(void* self);
+QSGNode* q_sgopacitynode_last_child(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#nextSibling)
 ///
-/// @param self QSGOpacityNode*
+/// @param self const QSGOpacityNode*
 ///
-QSGNode* q_sgopacitynode_next_sibling(void* self);
+QSGNode* q_sgopacitynode_next_sibling(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#previousSibling)
 ///
-/// @param self QSGOpacityNode*
+/// @param self const QSGOpacityNode*
 ///
-QSGNode* q_sgopacitynode_previous_sibling(void* self);
+QSGNode* q_sgopacitynode_previous_sibling(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#type)
 ///
-/// @param self QSGOpacityNode*
+/// @param self const QSGOpacityNode*
 ///
 /// @return enum QSGNode__NodeType
 ///
-int32_t q_sgopacitynode_type(void* self);
+int32_t q_sgopacitynode_type(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -2077,21 +2077,21 @@ void q_sgopacitynode_mark_dirty(void* self, int32_t bits);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#dirtyState)
 ///
-/// @param self QSGOpacityNode*
+/// @param self const QSGOpacityNode*
 ///
 /// @return flag of enum QSGNode__DirtyStateBit
 ///
-int32_t q_sgopacitynode_dirty_state(void* self);
+int32_t q_sgopacitynode_dirty_state(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#flags)
 ///
-/// @param self QSGOpacityNode*
+/// @param self const QSGOpacityNode*
 ///
 /// @return flag of enum QSGNode__Flag
 ///
-int32_t q_sgopacitynode_flags(void* self);
+int32_t q_sgopacitynode_flags(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -2158,9 +2158,9 @@ void q_sgopacitynode_super_preprocess(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSGOpacityNode*
-/// @param callback void func()
+/// @param callback void func(QSGOpacityNode* self)
 ///
-void q_sgopacitynode_on_preprocess(void* self, void (*callback)());
+void q_sgopacitynode_on_preprocess(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgopacitynode.html#dtor.QSGOpacityNode)
 ///
@@ -2431,7 +2431,7 @@ void q_sgnodevisitor_super_visit_children(void* self, void* n);
 /// @param self QSGNodeVisitor*
 /// @param param1 QSGNodeVisitor*
 ///
-void q_sgnodevisitor_operator_assign(void* self, void* param1);
+void q_sgnodevisitor_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnodevisitor.html#dtor.QSGNodeVisitor)
 ///

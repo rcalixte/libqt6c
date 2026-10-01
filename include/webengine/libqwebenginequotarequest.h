@@ -14,7 +14,7 @@
 ///
 /// @param other QWebEngineQuotaRequest*
 ///
-QWebEngineQuotaRequest* q_webenginequotarequest_new(void* other);
+QWebEngineQuotaRequest* q_webenginequotarequest_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginequotarequest.html)
 
@@ -58,29 +58,29 @@ void q_webenginequotarequest_reject(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginequotarequest.html#origin)
 ///
-/// @param self QWebEngineQuotaRequest*
+/// @param self const QWebEngineQuotaRequest*
 ///
-QUrl* q_webenginequotarequest_origin(void* self);
+QUrl* q_webenginequotarequest_origin(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginequotarequest.html#requestedSize)
 ///
-/// @param self QWebEngineQuotaRequest*
+/// @param self const QWebEngineQuotaRequest*
 ///
-int64_t q_webenginequotarequest_requested_size(void* self);
+int64_t q_webenginequotarequest_requested_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginequotarequest.html#operator-eq-eq)
 ///
-/// @param self QWebEngineQuotaRequest*
+/// @param self const QWebEngineQuotaRequest*
 /// @param param1 QWebEngineQuotaRequest*
 ///
-bool q_webenginequotarequest_operator_equal(void* self, void* param1);
+bool q_webenginequotarequest_operator_equal(const void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginequotarequest.html#operator-not-eq)
 ///
-/// @param self QWebEngineQuotaRequest*
+/// @param self const QWebEngineQuotaRequest*
 /// @param param1 QWebEngineQuotaRequest*
 ///
-bool q_webenginequotarequest_operator_not_equal(void* self, void* param1);
+bool q_webenginequotarequest_operator_not_equal(const void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginequotarequest.html#dtor.QWebEngineQuotaRequest)
 ///

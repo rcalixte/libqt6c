@@ -1,7 +1,7 @@
 #include "libqtyperevision.hpp"
 #include "libqtyperevision.h"
 
-size_t q_qtyperevision_q_hash(void* key, size_t seed) {
+size_t q_qtyperevision_q_hash(const void* key, size_t seed) {
     return qtyperevision_QHash((QTypeRevision*)key, seed);
 }
 
@@ -9,7 +9,7 @@ QTypeRevision* q_typerevision_new() {
     return QTypeRevision_New();
 }
 
-QTypeRevision* q_typerevision_new2(void* other) {
+QTypeRevision* q_typerevision_new2(const void* other) {
     return QTypeRevision_New2((QTypeRevision*)other);
 }
 
@@ -17,7 +17,7 @@ QTypeRevision* q_typerevision_new3(void* other) {
     return QTypeRevision_New3((QTypeRevision*)other);
 }
 
-QTypeRevision* q_typerevision_new4(void* param1) {
+QTypeRevision* q_typerevision_new4(const void* param1) {
     return QTypeRevision_New4((QTypeRevision*)param1);
 }
 
@@ -33,23 +33,23 @@ QTypeRevision* q_typerevision_zero() {
     return QTypeRevision_Zero();
 }
 
-bool q_typerevision_has_major_version(void* self) {
+bool q_typerevision_has_major_version(const void* self) {
     return QTypeRevision_HasMajorVersion((QTypeRevision*)self);
 }
 
-uint8_t q_typerevision_major_version(void* self) {
+uint8_t q_typerevision_major_version(const void* self) {
     return QTypeRevision_MajorVersion((QTypeRevision*)self);
 }
 
-bool q_typerevision_has_minor_version(void* self) {
+bool q_typerevision_has_minor_version(const void* self) {
     return QTypeRevision_HasMinorVersion((QTypeRevision*)self);
 }
 
-uint8_t q_typerevision_minor_version(void* self) {
+uint8_t q_typerevision_minor_version(const void* self) {
     return QTypeRevision_MinorVersion((QTypeRevision*)self);
 }
 
-bool q_typerevision_is_valid(void* self) {
+bool q_typerevision_is_valid(const void* self) {
     return QTypeRevision_IsValid((QTypeRevision*)self);
 }
 

@@ -14,7 +14,7 @@
 ///
 /// @param other QDesignerComponents*
 ///
-QDesignerComponents* q_designercomponents_new(void* other);
+QDesignerComponents* q_designercomponents_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercomponents.html)
 

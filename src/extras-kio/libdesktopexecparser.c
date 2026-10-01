@@ -3,7 +3,7 @@
 #include "libdesktopexecparser.hpp"
 #include "libdesktopexecparser.h"
 
-KIO__DesktopExecParser* k_io__desktopexecparser_new(void* service, libqt_list /* of QUrl* */ urls) {
+KIO__DesktopExecParser* k_io__desktopexecparser_new(const void* service, libqt_list /* of QUrl* */ urls) {
     return KIO__DesktopExecParser_New((KService*)service, urls);
 }
 
@@ -15,7 +15,7 @@ void k_io__desktopexecparser_set_suggested_file_name(void* self, const char* sug
     KIO__DesktopExecParser_SetSuggestedFileName((KIO__DesktopExecParser*)self, qstring(suggestedFileName));
 }
 
-const char** k_io__desktopexecparser_resulting_arguments(void* self) {
+const char** k_io__desktopexecparser_resulting_arguments(const void* self) {
     libqt_list _arr = KIO__DesktopExecParser_ResultingArguments((KIO__DesktopExecParser*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -32,14 +32,14 @@ const char** k_io__desktopexecparser_resulting_arguments(void* self) {
     return _ret;
 }
 
-const char* k_io__desktopexecparser_error_message(void* self) {
+const char* k_io__desktopexecparser_error_message(const void* self) {
     libqt_string _str = KIO__DesktopExecParser_ErrorMessage((KIO__DesktopExecParser*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** k_io__desktopexecparser_supported_protocols(void* service) {
+const char** k_io__desktopexecparser_supported_protocols(const void* service) {
     libqt_list _arr = KIO__DesktopExecParser_SupportedProtocols((KService*)service);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -56,7 +56,7 @@ const char** k_io__desktopexecparser_supported_protocols(void* service) {
     return _ret;
 }
 
-bool k_io__desktopexecparser_is_protocol_in_supported_list(void* url, const char* supportedProtocols[static 1]) {
+bool k_io__desktopexecparser_is_protocol_in_supported_list(const void* url, const char* supportedProtocols[static 1]) {
     size_t supportedProtocols_len = libqt_strv_length(supportedProtocols);
     libqt_string* supportedProtocols_qstr = (libqt_string*)malloc(supportedProtocols_len * sizeof(libqt_string));
     if (supportedProtocols_qstr == NULL) {
@@ -71,7 +71,7 @@ bool k_io__desktopexecparser_is_protocol_in_supported_list(void* url, const char
     return _out;
 }
 
-bool k_io__desktopexecparser_has_scheme_handler(void* url) {
+bool k_io__desktopexecparser_has_scheme_handler(const void* url) {
     return KIO__DesktopExecParser_HasSchemeHandler((QUrl*)url);
 }
 

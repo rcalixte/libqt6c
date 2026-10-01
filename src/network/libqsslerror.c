@@ -10,11 +10,11 @@ QSslError* q_sslerror_new2(int32_t error) {
     return QSslError_New2(error);
 }
 
-QSslError* q_sslerror_new3(int32_t error, void* certificate) {
+QSslError* q_sslerror_new3(int32_t error, const void* certificate) {
     return QSslError_New3(error, (QSslCertificate*)certificate);
 }
 
-QSslError* q_sslerror_new4(void* other) {
+QSslError* q_sslerror_new4(const void* other) {
     return QSslError_New4((QSslError*)other);
 }
 
@@ -22,30 +22,30 @@ void q_sslerror_swap(void* self, void* other) {
     QSslError_Swap((QSslError*)self, (QSslError*)other);
 }
 
-void q_sslerror_operator_assign(void* self, void* other) {
+void q_sslerror_operator_assign(void* self, const void* other) {
     QSslError_OperatorAssign((QSslError*)self, (QSslError*)other);
 }
 
-bool q_sslerror_operator_equal(void* self, void* other) {
+bool q_sslerror_operator_equal(const void* self, const void* other) {
     return QSslError_OperatorEqual((QSslError*)self, (QSslError*)other);
 }
 
-bool q_sslerror_operator_not_equal(void* self, void* other) {
+bool q_sslerror_operator_not_equal(const void* self, const void* other) {
     return QSslError_OperatorNotEqual((QSslError*)self, (QSslError*)other);
 }
 
-int32_t q_sslerror_error(void* self) {
+int32_t q_sslerror_error(const void* self) {
     return QSslError_Error((QSslError*)self);
 }
 
-const char* q_sslerror_error_string(void* self) {
+const char* q_sslerror_error_string(const void* self) {
     libqt_string _str = QSslError_ErrorString((QSslError*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QSslCertificate* q_sslerror_certificate(void* self) {
+QSslCertificate* q_sslerror_certificate(const void* self) {
     return QSslError_Certificate((QSslError*)self);
 }
 
@@ -53,6 +53,6 @@ void q_sslerror_delete(void* self) {
     QSslError_Delete((QSslError*)(self));
 }
 
-size_t q_qsslerror_h_q_hash(void* key, size_t seed) {
+size_t q_qsslerror_h_q_hash(const void* key, size_t seed) {
     return qsslerror_h_QHash((QSslError*)key, seed);
 }

@@ -13,15 +13,15 @@ QOpenGLTimerQuery* q_opengltimerquery_new2(void* parent) {
     return QOpenGLTimerQuery_New2((QObject*)parent);
 }
 
-const QMetaObject* q_opengltimerquery_meta_object(void* self) {
+const QMetaObject* q_opengltimerquery_meta_object(const void* self) {
     return QOpenGLTimerQuery_MetaObject((QOpenGLTimerQuery*)self);
 }
 
-void q_opengltimerquery_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_opengltimerquery_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QOpenGLTimerQuery_OnMetaObject((QOpenGLTimerQuery*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_opengltimerquery_super_meta_object(void* self) {
+const QMetaObject* q_opengltimerquery_super_meta_object(const void* self) {
     return QOpenGLTimerQuery_SuperMetaObject((QOpenGLTimerQuery*)self);
 }
 
@@ -64,11 +64,11 @@ void q_opengltimerquery_destroy(void* self) {
     QOpenGLTimerQuery_Destroy((QOpenGLTimerQuery*)self);
 }
 
-bool q_opengltimerquery_is_created(void* self) {
+bool q_opengltimerquery_is_created(const void* self) {
     return QOpenGLTimerQuery_IsCreated((QOpenGLTimerQuery*)self);
 }
 
-uint32_t q_opengltimerquery_object_id(void* self) {
+uint32_t q_opengltimerquery_object_id(const void* self) {
     return QOpenGLTimerQuery_ObjectId((QOpenGLTimerQuery*)self);
 }
 
@@ -80,7 +80,7 @@ void q_opengltimerquery_end(void* self) {
     QOpenGLTimerQuery_End((QOpenGLTimerQuery*)self);
 }
 
-uint64_t q_opengltimerquery_wait_for_timestamp(void* self) {
+uint64_t q_opengltimerquery_wait_for_timestamp(const void* self) {
     return QOpenGLTimerQuery_WaitForTimestamp((QOpenGLTimerQuery*)self);
 }
 
@@ -88,11 +88,11 @@ void q_opengltimerquery_record_timestamp(void* self) {
     QOpenGLTimerQuery_RecordTimestamp((QOpenGLTimerQuery*)self);
 }
 
-bool q_opengltimerquery_is_result_available(void* self) {
+bool q_opengltimerquery_is_result_available(const void* self) {
     return QOpenGLTimerQuery_IsResultAvailable((QOpenGLTimerQuery*)self);
 }
 
-uint64_t q_opengltimerquery_wait_for_result(void* self) {
+uint64_t q_opengltimerquery_wait_for_result(const void* self) {
     return QOpenGLTimerQuery_WaitForResult((QOpenGLTimerQuery*)self);
 }
 
@@ -110,7 +110,7 @@ const char* q_opengltimerquery_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-const char* q_opengltimerquery_object_name(void* self) {
+const char* q_opengltimerquery_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -121,19 +121,19 @@ void q_opengltimerquery_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_opengltimerquery_is_widget_type(void* self) {
+bool q_opengltimerquery_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_opengltimerquery_is_window_type(void* self) {
+bool q_opengltimerquery_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_opengltimerquery_is_quick_item_type(void* self) {
+bool q_opengltimerquery_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_opengltimerquery_signals_blocked(void* self) {
+bool q_opengltimerquery_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -141,7 +141,7 @@ bool q_opengltimerquery_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_opengltimerquery_thread(void* self) {
+QThread* q_opengltimerquery_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -165,7 +165,7 @@ void q_opengltimerquery_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_opengltimerquery_children(void* self) {
+libqt_list /* of QObject* */ q_opengltimerquery_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -182,55 +182,55 @@ void q_opengltimerquery_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_opengltimerquery_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_opengltimerquery_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_opengltimerquery_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_opengltimerquery_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_opengltimerquery_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_opengltimerquery_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_opengltimerquery_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_opengltimerquery_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_opengltimerquery_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_opengltimerquery_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_opengltimerquery_disconnect3(void* self) {
+bool q_opengltimerquery_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_opengltimerquery_disconnect4(void* self, void* receiver) {
+bool q_opengltimerquery_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_opengltimerquery_disconnect5(void* param1) {
+bool q_opengltimerquery_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_opengltimerquery_dump_object_tree(void* self) {
+void q_opengltimerquery_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_opengltimerquery_dump_object_info(void* self) {
+void q_opengltimerquery_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_opengltimerquery_set_property(void* self, const char* name, void* value) {
+bool q_opengltimerquery_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_opengltimerquery_property(void* self, const char* name) {
+QVariant* q_opengltimerquery_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_opengltimerquery_dynamic_property_names(void* self) {
+const char** q_opengltimerquery_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -251,7 +251,7 @@ QBindingStorage* q_opengltimerquery_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_opengltimerquery_binding_storage2(void* self) {
+const QBindingStorage* q_opengltimerquery_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -263,11 +263,11 @@ void q_opengltimerquery_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_opengltimerquery_parent(void* self) {
+QObject* q_opengltimerquery_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_opengltimerquery_inherits(void* self, const char* classname) {
+bool q_opengltimerquery_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -283,31 +283,31 @@ int32_t q_opengltimerquery_start_timer23(void* self, int64_t time, int32_t timer
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_opengltimerquery_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_opengltimerquery_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_opengltimerquery_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_opengltimerquery_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_opengltimerquery_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_opengltimerquery_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_opengltimerquery_disconnect1(void* self, const char* signal) {
+bool q_opengltimerquery_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_opengltimerquery_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_opengltimerquery_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_opengltimerquery_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_opengltimerquery_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_opengltimerquery_disconnect23(void* self, void* receiver, const char* member) {
+bool q_opengltimerquery_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -379,76 +379,44 @@ void q_opengltimerquery_on_custom_event(void* self, void (*callback)(void*, void
     QOpenGLTimerQuery_OnCustomEvent((QOpenGLTimerQuery*)self, (intptr_t)callback);
 }
 
-void q_opengltimerquery_connect_notify(void* self, void* signal) {
+void q_opengltimerquery_connect_notify(void* self, const void* signal) {
     QOpenGLTimerQuery_ConnectNotify((QOpenGLTimerQuery*)self, (QMetaMethod*)signal);
 }
 
-void q_opengltimerquery_super_connect_notify(void* self, void* signal) {
+void q_opengltimerquery_super_connect_notify(void* self, const void* signal) {
     QOpenGLTimerQuery_SuperConnectNotify((QOpenGLTimerQuery*)self, (QMetaMethod*)signal);
 }
 
-void q_opengltimerquery_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_opengltimerquery_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QOpenGLTimerQuery_OnConnectNotify((QOpenGLTimerQuery*)self, (intptr_t)callback);
 }
 
-void q_opengltimerquery_disconnect_notify(void* self, void* signal) {
+void q_opengltimerquery_disconnect_notify(void* self, const void* signal) {
     QOpenGLTimerQuery_DisconnectNotify((QOpenGLTimerQuery*)self, (QMetaMethod*)signal);
 }
 
-void q_opengltimerquery_super_disconnect_notify(void* self, void* signal) {
+void q_opengltimerquery_super_disconnect_notify(void* self, const void* signal) {
     QOpenGLTimerQuery_SuperDisconnectNotify((QOpenGLTimerQuery*)self, (QMetaMethod*)signal);
 }
 
-void q_opengltimerquery_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_opengltimerquery_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QOpenGLTimerQuery_OnDisconnectNotify((QOpenGLTimerQuery*)self, (intptr_t)callback);
 }
 
-QObject* q_opengltimerquery_sender(void* self) {
+QObject* q_opengltimerquery_sender(const void* self) {
     return QOpenGLTimerQuery_Sender((QOpenGLTimerQuery*)self);
 }
 
-QObject* q_opengltimerquery_super_sender(void* self) {
-    return QOpenGLTimerQuery_SuperSender((QOpenGLTimerQuery*)self);
-}
-
-void q_opengltimerquery_on_sender(void* self, QObject* (*callback)()) {
-    QOpenGLTimerQuery_OnSender((QOpenGLTimerQuery*)self, (intptr_t)callback);
-}
-
-int32_t q_opengltimerquery_sender_signal_index(void* self) {
+int32_t q_opengltimerquery_sender_signal_index(const void* self) {
     return QOpenGLTimerQuery_SenderSignalIndex((QOpenGLTimerQuery*)self);
 }
 
-int32_t q_opengltimerquery_super_sender_signal_index(void* self) {
-    return QOpenGLTimerQuery_SuperSenderSignalIndex((QOpenGLTimerQuery*)self);
-}
-
-void q_opengltimerquery_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QOpenGLTimerQuery_OnSenderSignalIndex((QOpenGLTimerQuery*)self, (intptr_t)callback);
-}
-
-int32_t q_opengltimerquery_receivers(void* self, const char* signal) {
+int32_t q_opengltimerquery_receivers(const void* self, const char* signal) {
     return QOpenGLTimerQuery_Receivers((QOpenGLTimerQuery*)self, signal);
 }
 
-int32_t q_opengltimerquery_super_receivers(void* self, const char* signal) {
-    return QOpenGLTimerQuery_SuperReceivers((QOpenGLTimerQuery*)self, signal);
-}
-
-void q_opengltimerquery_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QOpenGLTimerQuery_OnReceivers((QOpenGLTimerQuery*)self, (intptr_t)callback);
-}
-
-bool q_opengltimerquery_is_signal_connected(void* self, void* signal) {
+bool q_opengltimerquery_is_signal_connected(const void* self, const void* signal) {
     return QOpenGLTimerQuery_IsSignalConnected((QOpenGLTimerQuery*)self, (QMetaMethod*)signal);
-}
-
-bool q_opengltimerquery_super_is_signal_connected(void* self, void* signal) {
-    return QOpenGLTimerQuery_SuperIsSignalConnected((QOpenGLTimerQuery*)self, (QMetaMethod*)signal);
-}
-
-void q_opengltimerquery_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QOpenGLTimerQuery_OnIsSignalConnected((QOpenGLTimerQuery*)self, (intptr_t)callback);
 }
 
 void q_opengltimerquery_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
@@ -467,15 +435,15 @@ QOpenGLTimeMonitor* q_opengltimemonitor_new2(void* parent) {
     return QOpenGLTimeMonitor_New2((QObject*)parent);
 }
 
-const QMetaObject* q_opengltimemonitor_meta_object(void* self) {
+const QMetaObject* q_opengltimemonitor_meta_object(const void* self) {
     return QOpenGLTimeMonitor_MetaObject((QOpenGLTimeMonitor*)self);
 }
 
-void q_opengltimemonitor_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_opengltimemonitor_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QOpenGLTimeMonitor_OnMetaObject((QOpenGLTimeMonitor*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_opengltimemonitor_super_meta_object(void* self) {
+const QMetaObject* q_opengltimemonitor_super_meta_object(const void* self) {
     return QOpenGLTimeMonitor_SuperMetaObject((QOpenGLTimeMonitor*)self);
 }
 
@@ -514,7 +482,7 @@ void q_opengltimemonitor_set_sample_count(void* self, int sampleCount) {
     QOpenGLTimeMonitor_SetSampleCount((QOpenGLTimeMonitor*)self, sampleCount);
 }
 
-int32_t q_opengltimemonitor_sample_count(void* self) {
+int32_t q_opengltimemonitor_sample_count(const void* self) {
     return QOpenGLTimeMonitor_SampleCount((QOpenGLTimeMonitor*)self);
 }
 
@@ -526,11 +494,11 @@ void q_opengltimemonitor_destroy(void* self) {
     QOpenGLTimeMonitor_Destroy((QOpenGLTimeMonitor*)self);
 }
 
-bool q_opengltimemonitor_is_created(void* self) {
+bool q_opengltimemonitor_is_created(const void* self) {
     return QOpenGLTimeMonitor_IsCreated((QOpenGLTimeMonitor*)self);
 }
 
-libqt_list /* of uint32_t */ q_opengltimemonitor_object_ids(void* self) {
+libqt_list /* of uint32_t */ q_opengltimemonitor_object_ids(const void* self) {
     libqt_list _arr = QOpenGLTimeMonitor_ObjectIds((QOpenGLTimeMonitor*)self);
     return _arr;
 }
@@ -539,16 +507,16 @@ int32_t q_opengltimemonitor_record_sample(void* self) {
     return QOpenGLTimeMonitor_RecordSample((QOpenGLTimeMonitor*)self);
 }
 
-bool q_opengltimemonitor_is_result_available(void* self) {
+bool q_opengltimemonitor_is_result_available(const void* self) {
     return QOpenGLTimeMonitor_IsResultAvailable((QOpenGLTimeMonitor*)self);
 }
 
-libqt_list /* of uint64_t */ q_opengltimemonitor_wait_for_samples(void* self) {
+libqt_list /* of uint64_t */ q_opengltimemonitor_wait_for_samples(const void* self) {
     libqt_list _arr = QOpenGLTimeMonitor_WaitForSamples((QOpenGLTimeMonitor*)self);
     return _arr;
 }
 
-libqt_list /* of uint64_t */ q_opengltimemonitor_wait_for_intervals(void* self) {
+libqt_list /* of uint64_t */ q_opengltimemonitor_wait_for_intervals(const void* self) {
     libqt_list _arr = QOpenGLTimeMonitor_WaitForIntervals((QOpenGLTimeMonitor*)self);
     return _arr;
 }
@@ -571,7 +539,7 @@ const char* q_opengltimemonitor_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-const char* q_opengltimemonitor_object_name(void* self) {
+const char* q_opengltimemonitor_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -582,19 +550,19 @@ void q_opengltimemonitor_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_opengltimemonitor_is_widget_type(void* self) {
+bool q_opengltimemonitor_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_opengltimemonitor_is_window_type(void* self) {
+bool q_opengltimemonitor_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_opengltimemonitor_is_quick_item_type(void* self) {
+bool q_opengltimemonitor_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_opengltimemonitor_signals_blocked(void* self) {
+bool q_opengltimemonitor_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -602,7 +570,7 @@ bool q_opengltimemonitor_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_opengltimemonitor_thread(void* self) {
+QThread* q_opengltimemonitor_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -626,7 +594,7 @@ void q_opengltimemonitor_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_opengltimemonitor_children(void* self) {
+libqt_list /* of QObject* */ q_opengltimemonitor_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -643,55 +611,55 @@ void q_opengltimemonitor_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_opengltimemonitor_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_opengltimemonitor_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_opengltimemonitor_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_opengltimemonitor_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_opengltimemonitor_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_opengltimemonitor_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_opengltimemonitor_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_opengltimemonitor_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_opengltimemonitor_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_opengltimemonitor_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_opengltimemonitor_disconnect3(void* self) {
+bool q_opengltimemonitor_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_opengltimemonitor_disconnect4(void* self, void* receiver) {
+bool q_opengltimemonitor_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_opengltimemonitor_disconnect5(void* param1) {
+bool q_opengltimemonitor_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_opengltimemonitor_dump_object_tree(void* self) {
+void q_opengltimemonitor_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_opengltimemonitor_dump_object_info(void* self) {
+void q_opengltimemonitor_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_opengltimemonitor_set_property(void* self, const char* name, void* value) {
+bool q_opengltimemonitor_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_opengltimemonitor_property(void* self, const char* name) {
+QVariant* q_opengltimemonitor_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_opengltimemonitor_dynamic_property_names(void* self) {
+const char** q_opengltimemonitor_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -712,7 +680,7 @@ QBindingStorage* q_opengltimemonitor_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_opengltimemonitor_binding_storage2(void* self) {
+const QBindingStorage* q_opengltimemonitor_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -724,11 +692,11 @@ void q_opengltimemonitor_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_opengltimemonitor_parent(void* self) {
+QObject* q_opengltimemonitor_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_opengltimemonitor_inherits(void* self, const char* classname) {
+bool q_opengltimemonitor_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -744,31 +712,31 @@ int32_t q_opengltimemonitor_start_timer23(void* self, int64_t time, int32_t time
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_opengltimemonitor_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_opengltimemonitor_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_opengltimemonitor_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_opengltimemonitor_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_opengltimemonitor_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_opengltimemonitor_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_opengltimemonitor_disconnect1(void* self, const char* signal) {
+bool q_opengltimemonitor_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_opengltimemonitor_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_opengltimemonitor_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_opengltimemonitor_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_opengltimemonitor_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_opengltimemonitor_disconnect23(void* self, void* receiver, const char* member) {
+bool q_opengltimemonitor_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -840,76 +808,44 @@ void q_opengltimemonitor_on_custom_event(void* self, void (*callback)(void*, voi
     QOpenGLTimeMonitor_OnCustomEvent((QOpenGLTimeMonitor*)self, (intptr_t)callback);
 }
 
-void q_opengltimemonitor_connect_notify(void* self, void* signal) {
+void q_opengltimemonitor_connect_notify(void* self, const void* signal) {
     QOpenGLTimeMonitor_ConnectNotify((QOpenGLTimeMonitor*)self, (QMetaMethod*)signal);
 }
 
-void q_opengltimemonitor_super_connect_notify(void* self, void* signal) {
+void q_opengltimemonitor_super_connect_notify(void* self, const void* signal) {
     QOpenGLTimeMonitor_SuperConnectNotify((QOpenGLTimeMonitor*)self, (QMetaMethod*)signal);
 }
 
-void q_opengltimemonitor_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_opengltimemonitor_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QOpenGLTimeMonitor_OnConnectNotify((QOpenGLTimeMonitor*)self, (intptr_t)callback);
 }
 
-void q_opengltimemonitor_disconnect_notify(void* self, void* signal) {
+void q_opengltimemonitor_disconnect_notify(void* self, const void* signal) {
     QOpenGLTimeMonitor_DisconnectNotify((QOpenGLTimeMonitor*)self, (QMetaMethod*)signal);
 }
 
-void q_opengltimemonitor_super_disconnect_notify(void* self, void* signal) {
+void q_opengltimemonitor_super_disconnect_notify(void* self, const void* signal) {
     QOpenGLTimeMonitor_SuperDisconnectNotify((QOpenGLTimeMonitor*)self, (QMetaMethod*)signal);
 }
 
-void q_opengltimemonitor_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_opengltimemonitor_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QOpenGLTimeMonitor_OnDisconnectNotify((QOpenGLTimeMonitor*)self, (intptr_t)callback);
 }
 
-QObject* q_opengltimemonitor_sender(void* self) {
+QObject* q_opengltimemonitor_sender(const void* self) {
     return QOpenGLTimeMonitor_Sender((QOpenGLTimeMonitor*)self);
 }
 
-QObject* q_opengltimemonitor_super_sender(void* self) {
-    return QOpenGLTimeMonitor_SuperSender((QOpenGLTimeMonitor*)self);
-}
-
-void q_opengltimemonitor_on_sender(void* self, QObject* (*callback)()) {
-    QOpenGLTimeMonitor_OnSender((QOpenGLTimeMonitor*)self, (intptr_t)callback);
-}
-
-int32_t q_opengltimemonitor_sender_signal_index(void* self) {
+int32_t q_opengltimemonitor_sender_signal_index(const void* self) {
     return QOpenGLTimeMonitor_SenderSignalIndex((QOpenGLTimeMonitor*)self);
 }
 
-int32_t q_opengltimemonitor_super_sender_signal_index(void* self) {
-    return QOpenGLTimeMonitor_SuperSenderSignalIndex((QOpenGLTimeMonitor*)self);
-}
-
-void q_opengltimemonitor_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QOpenGLTimeMonitor_OnSenderSignalIndex((QOpenGLTimeMonitor*)self, (intptr_t)callback);
-}
-
-int32_t q_opengltimemonitor_receivers(void* self, const char* signal) {
+int32_t q_opengltimemonitor_receivers(const void* self, const char* signal) {
     return QOpenGLTimeMonitor_Receivers((QOpenGLTimeMonitor*)self, signal);
 }
 
-int32_t q_opengltimemonitor_super_receivers(void* self, const char* signal) {
-    return QOpenGLTimeMonitor_SuperReceivers((QOpenGLTimeMonitor*)self, signal);
-}
-
-void q_opengltimemonitor_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QOpenGLTimeMonitor_OnReceivers((QOpenGLTimeMonitor*)self, (intptr_t)callback);
-}
-
-bool q_opengltimemonitor_is_signal_connected(void* self, void* signal) {
+bool q_opengltimemonitor_is_signal_connected(const void* self, const void* signal) {
     return QOpenGLTimeMonitor_IsSignalConnected((QOpenGLTimeMonitor*)self, (QMetaMethod*)signal);
-}
-
-bool q_opengltimemonitor_super_is_signal_connected(void* self, void* signal) {
-    return QOpenGLTimeMonitor_SuperIsSignalConnected((QOpenGLTimeMonitor*)self, (QMetaMethod*)signal);
-}
-
-void q_opengltimemonitor_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QOpenGLTimeMonitor_OnIsSignalConnected((QOpenGLTimeMonitor*)self, (intptr_t)callback);
 }
 
 void q_opengltimemonitor_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

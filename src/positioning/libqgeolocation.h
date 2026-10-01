@@ -20,14 +20,14 @@ QGeoLocation* q_geolocation_new();
 ///
 /// @param other QGeoLocation*
 ///
-QGeoLocation* q_geolocation_new2(void* other);
+QGeoLocation* q_geolocation_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeolocation.html#operator-eq)
 ///
 /// @param self QGeoLocation*
 /// @param other QGeoLocation*
 ///
-void q_geolocation_operator_assign(void* self, void* other);
+void q_geolocation_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeolocation.html#swap)
 ///
@@ -38,42 +38,42 @@ void q_geolocation_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeolocation.html#address)
 ///
-/// @param self QGeoLocation*
+/// @param self const QGeoLocation*
 ///
-QGeoAddress* q_geolocation_address(void* self);
+QGeoAddress* q_geolocation_address(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeolocation.html#setAddress)
 ///
 /// @param self QGeoLocation*
 /// @param address QGeoAddress*
 ///
-void q_geolocation_set_address(void* self, void* address);
+void q_geolocation_set_address(void* self, const void* address);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeolocation.html#coordinate)
 ///
-/// @param self QGeoLocation*
+/// @param self const QGeoLocation*
 ///
-QGeoCoordinate* q_geolocation_coordinate(void* self);
+QGeoCoordinate* q_geolocation_coordinate(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeolocation.html#setCoordinate)
 ///
 /// @param self QGeoLocation*
 /// @param position QGeoCoordinate*
 ///
-void q_geolocation_set_coordinate(void* self, void* position);
+void q_geolocation_set_coordinate(void* self, const void* position);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeolocation.html#boundingShape)
 ///
-/// @param self QGeoLocation*
+/// @param self const QGeoLocation*
 ///
-QGeoShape* q_geolocation_bounding_shape(void* self);
+QGeoShape* q_geolocation_bounding_shape(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeolocation.html#setBoundingShape)
 ///
 /// @param self QGeoLocation*
 /// @param shape QGeoShape*
 ///
-void q_geolocation_set_bounding_shape(void* self, void* shape);
+void q_geolocation_set_bounding_shape(void* self, const void* shape);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeolocation.html#extendedAttributes)
 ///
@@ -89,11 +89,11 @@ void q_geolocation_set_bounding_shape(void* self, void* shape);
 /// free(map.values);
 /// ```
 ///
-/// @param self QGeoLocation*
+/// @param self const QGeoLocation*
 ///
 /// @return libqt_map of const char* to QVariant*
 ///
-libqt_map q_geolocation_extended_attributes(void* self);
+libqt_map q_geolocation_extended_attributes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeolocation.html#setExtendedAttributes)
 ///
@@ -104,9 +104,9 @@ void q_geolocation_set_extended_attributes(void* self, libqt_map data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeolocation.html#isEmpty)
 ///
-/// @param self QGeoLocation*
+/// @param self const QGeoLocation*
 ///
-bool q_geolocation_is_empty(void* self);
+bool q_geolocation_is_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeolocation.html#dtor.QGeoLocation)
 ///
@@ -123,5 +123,5 @@ void q_geolocation_delete(void* self);
 /// @param location QGeoLocation*
 /// @param seed size_t
 ///
-size_t q_qgeolocation_h_q_hash(void* location, size_t seed);
+size_t q_qgeolocation_h_q_hash(const void* location, size_t seed);
 #endif
